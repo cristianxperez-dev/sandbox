@@ -1,0 +1,13 @@
+{
+  "name": "sandbox",
+  "private": true,
+  "description": "Sandbox by Cristian Perez — a static home for personal applications and experiments.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "serve": "node scripts/serve.mjs",
+    "dev": "node scripts/build.mjs && node scripts/serve.mjs",
+    "check": "node scripts/build.mjs && node scripts/check.mjs"
+  }
+}

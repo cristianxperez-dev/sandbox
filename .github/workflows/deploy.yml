@@ -1,0 +1,54 @@
+# Builds the site and publishes it with GitHub Pages.
+# One-time setup: repository Settings → Pages → Build and deployment → Source: "GitHub Actions".
+name: Deploy Sandbox
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Reports the live URL and path, e.g. https://cristianxperez-dev.github.io/sandbox
+      # (or https://your-domain.com once a custom domain is set in Settings → Pages),
+      # so nothing in the repository has to change when the domain does.
+      - id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Build and check
+        run: node scripts/build.mjs && node scripts/check.mjs
+        env:
+          SITE_URL: ${{ steps.pages.outputs.base_url }}
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}/
+
+      # Only _site/ is published — sources, scripts and docs stay out.
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

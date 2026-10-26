@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{SITE_NAME}} by {{AUTHOR}}</title>
+  <meta name="description" content="{{TAGLINE}} {{DESCRIPTION}}">
+  <meta name="theme-color" content="#FCF9F3">
+  <meta name="color-scheme" content="light">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{SITE_NAME}} by {{AUTHOR}}">
+  <meta property="og:title" content="{{SITE_NAME}} by {{AUTHOR}}">
+  <meta property="og:description" content="{{TAGLINE}}">
+  <meta property="og:image" content="{{OG_IMAGE}}">
+  <meta property="og:url" content="{{PAGE_URL}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="{{PAGE_URL}}">
+
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
+  <link rel="icon" href="assets/brand/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="assets/css/sandbox.css">
+  <link rel="preload" href="assets/brand/sandbox-logo.webp" as="image" type="image/webp">
+  <script>document.documentElement.classList.add("js")</script>
+  <script src="assets/js/directory.js" defer></script>
+</head>
+<body class="home">
+  <a class="skip-link" href="#apps">Skip to applications</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="./" aria-label="Sandbox home">
+        <img class="brand__mark" src="assets/brand/monogram-sm.png" alt="" width="44" height="41">
+        <span class="brand__name">Sandbox</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#apps">Applications</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero__inner">
+        <h1 id="hero-title" class="hero__logo">
+          <picture>
+            <source srcset="assets/brand/sandbox-logo.webp" type="image/webp">
+            <img src="assets/brand/sandbox-logo.png" alt="Sandbox by Cristian Perez" width="910" height="935">
+          </picture>
+        </h1>
+        <p class="hero__lede">{{TAGLINE}}</p>
+        <p class="hero__sub">A personal playground for things I&rsquo;ve built, ideas I&rsquo;m exploring, and projects still taking shape.</p>
+        <a class="hero__cue" href="#apps">
+          <span>Explore the collection</span>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <section id="apps" class="collection" aria-labelledby="apps-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">The Collection</p>
+          <h2 id="apps-title" class="section-title">Applications</h2>
+          <p class="section-count"><span data-count>{{APP_COUNT}}</span> <span data-count-word>{{APP_COUNT_WORD}}</span></p>
+        </div>
+
+        <div class="toolbar">
+          <label class="search">
+            <span class="visually-hidden">Search applications</span>
+            <svg class="search__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="4.75" stroke="currentColor" stroke-width="1.25"/><path d="M10.5 10.5 14 14" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/></svg>
+            <input type="search" id="search" placeholder="Search applications" autocomplete="off" spellcheck="false">
+            <kbd class="search__key" aria-hidden="true">/</kbd>
+          </label>
+          <div class="chips" role="group" aria-label="Filter by category">
+            {{FILTERS}}
+          </div>
+        </div>
+
+        <ul class="grid" id="grid" role="list">
+          {{CARDS}}
+        </ul>
+
+        <div class="empty" id="empty" hidden>
+          <p class="empty__title">Nothing here&nbsp;&mdash; yet.</p>
+          <p class="empty__text" id="empty-text">No applications match your search.</p>
+          <button type="button" class="button-quiet" id="clear">Clear search &amp; filters</button>
+        </div>
+
+        <p class="visually-hidden" id="results-status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section id="about" class="about" aria-labelledby="about-title">
+      <div class="wrap about__inner">
+        <div class="about__intro">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title" class="section-title">A workshop, <em>not a showroom.</em></h2>
+        </div>
+        <div class="about__body">
+          <p>Sandbox is where I keep the things I build for myself&nbsp;&mdash; tools for the kitchen, for remembering, for staying on track&nbsp;&mdash; and the experiments that don&rsquo;t belong anywhere else yet.</p>
+          <p>Some are polished. Some are half-finished. Each one is its own small, self-contained project with its own address, so feel free to wander, open anything, and come back later to see what&rsquo;s changed.</p>
+          <dl class="legend">
+            {{STATUS_LEGEND}}
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <a class="site-footer__mark" href="./" aria-label="Sandbox home"><img src="assets/brand/monogram-sm.png" alt="" width="30" height="28"></a>
+      <p>Built by {{AUTHOR}} <span aria-hidden="true">&middot;</span> &copy; <span data-year>{{YEAR}}</span></p>
+      <a class="site-footer__link" href="{{GITHUB_URL}}" rel="me noopener">GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{TITLE}}</title>
+  <meta name="description" content="{{APP_DESCRIPTION}}">
+  <meta name="theme-color" content="#FCF9F3">
+  <meta name="color-scheme" content="light">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{SITE_NAME}} by {{AUTHOR}}">
+  <meta property="og:title" content="{{APP_NAME}} — {{SITE_NAME}}">
+  <meta property="og:description" content="{{APP_DESCRIPTION}}">
+  <meta property="og:image" content="{{OG_IMAGE}}">
+  <meta property="og:url" content="{{PAGE_URL}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="{{PAGE_URL}}">
+
+  <link rel="icon" href="{{ROOT}}assets/brand/favicon.ico" sizes="any">
+  <link rel="icon" href="{{ROOT}}assets/brand/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="{{ROOT}}assets/brand/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="{{ROOT}}assets/css/sandbox.css">
+</head>
+<body class="placeholder-page">
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="{{ROOT}}" aria-label="Sandbox home">
+        <img class="brand__mark" src="{{ROOT}}assets/brand/monogram-sm.png" alt="" width="44" height="41">
+        <span class="brand__name">Sandbox</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="{{ROOT}}#apps">Applications</a>
+        <a href="{{ROOT}}#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="placeholder">
+    <div class="wrap placeholder__inner">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="{{ROOT}}">Sandbox</a><span aria-hidden="true">/</span><a href="{{ROOT}}#apps">Applications</a><span aria-hidden="true">/</span><span aria-current="page">{{APP_NAME}}</span>
+      </nav>
+
+      {{APP_ART}}
+
+      <div class="placeholder__meta">
+        <span class="card__category">{{APP_CATEGORY}}</span>
+        {{APP_STATUS}}
+      </div>
+      <h1 class="placeholder__title">{{APP_NAME}}</h1>
+      <p class="placeholder__desc">{{APP_DESCRIPTION}}</p>
+
+      <div class="placeholder__note">
+        <p class="placeholder__note-title">Awaiting integration</p>
+        <p>This project exists and is on its way into Sandbox. This page is its permanent address&nbsp;&mdash; once it moves in, the application itself will open right here.</p>
+      </div>
+
+      <a class="button-quiet" href="{{ROOT}}#apps">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H3M7 4 3 8l4 4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to the collection
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <a class="site-footer__mark" href="{{ROOT}}" aria-label="Sandbox home"><img src="{{ROOT}}assets/brand/monogram-sm.png" alt="" width="30" height="28"></a>
+      <p>Built by {{AUTHOR}} <span aria-hidden="true">&middot;</span> &copy; {{YEAR}}</p>
+      <a class="site-footer__link" href="{{GITHUB_URL}}" rel="me noopener">GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>
