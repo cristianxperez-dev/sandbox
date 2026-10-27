@@ -1,11 +1,24 @@
 [
   {
+    "id": "nutrition-macros",
+    "name": "Nutrition & Macros",
+    "description": "Nutrition, fitness, and macronutrient tracking, built around the way I actually eat and train.",
+    "discipline": "Health & Fitness",
+    "status": "in-development"
+  },
+  {
+    "id": "recollect",
+    "name": "Recollect",
+    "description": "A personal memory keeper for the people, experiences, and small details worth holding on to.",
+    "discipline": "Productivity",
+    "status": "in-development"
+  },
+  {
     "id": "replated-recipes",
     "name": "Replated Recipes",
     "description": "Restaurant-inspired dishes recreated for the home kitchen, each with a Simple and a Chef preparation mode.",
-    "category": "Food & Cooking",
+    "discipline": "Food & Wine",
     "status": "available",
-    "featured": true,
     "logoBackground": "#F4F0E9",
     "tags": [
       "recipes",
@@ -17,19 +30,5 @@
       "repo": "cristianxperez-dev/replated",
       "ref": "main"
     }
-  },
-  {
-    "id": "recollect",
-    "name": "Recollect",
-    "description": "A personal memory keeper for the people, experiences, and small details worth holding on to.",
-    "category": "Productivity",
-    "status": "in-development"
-  },
-  {
-    "id": "nutrition-macros",
-    "name": "Nutrition & Macros",
-    "description": "Nutrition, fitness, and macronutrient tracking, built around the way I actually eat and train.",
-    "category": "Lifestyle",
-    "status": "in-development"
   }
 ]

@@ -1,27 +1,23 @@
-// Homepage search + category filters. Cards are rendered at build time, so
-// the page is fully usable without this script; it only narrows the list.
-// The current query and category are mirrored into the URL (?q=…&category=…)
-// so filtered views can be shared and survive refresh/back navigation.
+// Homepage search + discipline filters. Entries are rendered at build time in
+// A–Z order, so the page is fully usable without this script; it only hides
+// what doesn't match, which keeps results in alphabetical order.
+// The current query and discipline are mirrored into the URL
+// (?q=…&discipline=…) so filtered views can be shared and survive refresh.
 
 (() => {
-  const grid = document.getElementById("grid");
+  const list = document.getElementById("directory");
   const search = document.getElementById("search");
   const empty = document.getElementById("empty");
   const emptyText = document.getElementById("empty-text");
   const status = document.getElementById("results-status");
-  const count = document.querySelector("[data-count]");
-  const countWord = document.querySelector("[data-count-word]");
   const chips = [...document.querySelectorAll(".chip")];
-  const cards = [...grid.querySelectorAll(".card")];
+  const entries = [...list.querySelectorAll(".entry")];
 
-  let category = "all";
+  let discipline = "all";
 
   for (const chip of chips) {
-    if (chip.dataset.filter !== "all" && chip.querySelector(".chip__count").textContent === "0") {
-      chip.dataset.empty = "";
-    }
     chip.addEventListener("click", () => {
-      category = chip.dataset.filter;
+      discipline = chip.dataset.filter;
       apply();
     });
   }
@@ -36,7 +32,7 @@
 
   document.getElementById("clear").addEventListener("click", () => {
     search.value = "";
-    category = "all";
+    discipline = "all";
     apply();
     search.focus();
   });
@@ -49,15 +45,10 @@
     search.focus();
   });
 
-  const header = document.querySelector(".site-header");
-  const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 8);
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
-
   // Page transitions only apply between Sandbox's own pages. Integrated apps
   // don't opt in, and Chrome logs an error in the app if one is attempted.
   const appUrls = new Set(
-    [...document.querySelectorAll(".card:not(.card--pending) .card__link")].map((a) => a.href)
+    [...document.querySelectorAll(".entry:not(.entry--pending) .entry__link")].map((a) => a.href)
   );
   window.addEventListener("pageswap", (e) => {
     const to = e.activation?.entry?.url?.split(/[?#]/)[0];
@@ -68,53 +59,40 @@
   const year = document.querySelector("[data-year]");
   if (year) year.textContent = new Date().getFullYear();
 
-  // Restore state from the URL.
+  // Restore state from the URL (?category= is the older name, still honoured).
   const params = new URLSearchParams(location.search);
   search.value = params.get("q") || "";
-  const fromUrl = params.get("category");
-  if (fromUrl && chips.some((c) => c.dataset.filter === fromUrl)) category = fromUrl;
-  if (search.value || category !== "all") apply({ initial: true });
+  const fromUrl = params.get("discipline") || params.get("category");
+  if (fromUrl && chips.some((c) => c.dataset.filter === fromUrl)) discipline = fromUrl;
+  if (search.value || discipline !== "all") apply();
 
-  function apply({ initial = false } = {}) {
+  function apply() {
     const terms = search.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
-    const filtered = terms.length > 0 || category !== "all";
+    const filtered = terms.length > 0 || discipline !== "all";
     let shown = 0;
 
-    for (const card of cards) {
+    for (const entry of entries) {
       const match =
-        (category === "all" || card.dataset.category === category) &&
-        terms.every((t) => card.dataset.search.includes(t));
-      const wasHidden = card.hidden;
-      card.hidden = !match;
-      if (match) {
-        if (wasHidden && !initial) {
-          card.classList.remove("is-revealing");
-          card.style.setProperty("--n", shown);
-          void card.offsetWidth; // restart the entrance animation
-          card.classList.add("is-revealing");
-        }
-        shown++;
-      }
+        (discipline === "all" || entry.dataset.disciplines.split("|").includes(discipline)) &&
+        terms.every((t) => entry.dataset.search.includes(t));
+      entry.hidden = !match;
+      if (match) shown++;
     }
 
-    grid.classList.toggle("is-filtered", filtered);
-    for (const chip of chips) chip.setAttribute("aria-pressed", String(chip.dataset.filter === category));
+    for (const chip of chips) chip.setAttribute("aria-pressed", String(chip.dataset.filter === discipline));
 
     empty.hidden = shown > 0;
     if (!shown) {
-      const label = category === "all" ? "" : ` in ${category}`;
+      const where = discipline === "all" ? "" : ` in ${discipline}`;
       emptyText.textContent = terms.length
-        ? `Nothing${label} matches “${search.value.trim()}”.`
-        : `Nothing${label} has moved in yet — it’s on the list.`;
+        ? `Nothing${where} matches “${search.value.trim()}”.`
+        : `Nothing${where} yet.`;
     }
-
-    count.textContent = shown;
-    countWord.textContent = shown === 1 ? "application" : "applications";
-    status.textContent = filtered ? `${shown} ${countWord.textContent} shown` : "";
+    status.textContent = filtered ? `${shown} application${shown === 1 ? "" : "s"} shown` : "";
 
     const next = new URLSearchParams();
     if (search.value.trim()) next.set("q", search.value.trim());
-    if (category !== "all") next.set("category", category);
+    if (discipline !== "all") next.set("discipline", discipline);
     const qs = next.toString();
     history.replaceState(null, "", qs ? `?${qs}${location.hash}` : location.pathname + location.hash);
   }

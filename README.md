@@ -2,9 +2,9 @@
 
 An evolving collection of ideas, experiments, and applications: a static website that holds a directory of personal apps. Each app lives in its own folder and has its own address.
 
-- **Homepage:** a searchable, filterable gallery of every app, generated from one registry file.
+- **Homepage:** an A–Z directory of every app with search and discipline filters, generated from one registry file.
 - **Apps:** each one is served at `/apps/<id>/`. An app either lives in its own repository and is pulled in at deploy time (the standard pattern, see §5), or sits directly in `apps/<id>/`. Plain HTML, CSS and JavaScript work as they are, with no rewrite and no framework.
-- **Hosting:** GitHub Pages, deployed by GitHub Actions on every push to `main`.
+- **Hosting:** production is **cperez.app** on Cloudflare Pages, which builds from `main` (configured in the Cloudflare dashboard, not in this repository). The GitHub Actions workflow below also publishes the same build to GitHub Pages.
 - **Dependencies:** none. Node.js 20+ runs a ~300-line build script, and nothing needs to be installed.
 
 ---
@@ -34,7 +34,7 @@ sandbox/
 │   ├── build.mjs              ← builds everything into _site/
 │   ├── check.mjs              ← verifies every link and image in _site/ resolves
 │   └── serve.mjs              ← local preview server that behaves like GitHub Pages
-├── sandbox.config.json        ← site name, copy, categories, statuses
+├── sandbox.config.json        ← site name, intro line, disciplines, statuses, public URL
 ├── CLAUDE.md                  ← step-by-step playbook Claude Code follows when adding apps
 └── .github/workflows/deploy.yml
 ```
@@ -57,11 +57,11 @@ You can also re-deploy without a code change from **Actions → Deploy Sandbox �
 
 ```bash
 npm run fetch        # pull apps that live in other repositories (needed once, and after they change)
-npm run dev          # build, then serve at http://localhost:4173/sandbox/
+npm run dev          # build, then serve at http://localhost:4173/
 npm run check        # build, then verify every page, link and image
 ```
 
-The preview server mimics GitHub Pages: it uses the same `/sandbox/` sub-path, the same trailing-slash redirects, and the same 404 page. Anything that works locally will work when deployed. To preview the future custom-domain layout instead, run `BASE_PATH=/ npm run dev` and open `http://localhost:4173/`.
+The preview server behaves like the hosts: trailing-slash redirects, `index.html` folders and the custom 404 page, served from the root as on cperez.app. To check the GitHub Pages sub-path layout instead, run `BASE_PATH=/sandbox/ npm run dev` and open `http://localhost:4173/sandbox/`.
 
 No `npm install` is needed. If you don't have npm, `node scripts/build.mjs && node scripts/serve.mjs` does the same thing.
 
@@ -83,8 +83,7 @@ Claude follows `CLAUDE.md`. To do it by hand:
      "id": "trip-planner",
      "name": "Trip Planner",
      "description": "One or two sentences that make someone want to open it.",
-     "category": "Travel",
-     "status": "prototype"
+     "discipline": "Travel"
    }
    ```
 
@@ -96,21 +95,20 @@ Claude follows `CLAUDE.md`. To do it by hand:
 |---|---|---|
 | `id` | yes | Folder name and URL slug. Lowercase letters, numbers, hyphens. |
 | `name` | yes | Display name. |
-| `description` | yes | Short line shown on the card and placeholder page. Also searchable. |
-| `category` | yes | One of the categories in `sandbox.config.json`. |
-| `status` | yes | `available`, `in-development`, or `prototype`. This is informational only and never blocks access. |
-| `featured` | no | `true` shows the app as a wide card at the top of the unfiltered gallery. |
+| `description` | yes | One sentence, ideally 10–20 words, saying what the app does. Shown in the directory and searchable. |
+| `discipline` | yes | The app's subject area: one of `disciplines` in `sandbox.config.json`. (Older entries may say `category`; it means the same thing.) |
+| `alsoIn` | no | Extra disciplines, e.g. `["Travel"]`. The app also appears under those filters. |
+| `status` | no | `available`, `in-development`, or `prototype`. Shown only on placeholder pages; never blocks access or changes the order. |
 | `logo` | no | Logo filename inside the app folder. Usually unnecessary because `logo.svg/.webp/.png/.jpg` is detected automatically. |
-| `logoBackground` | no | Colour behind the logo on the card, e.g. `"#1d2a38"`, so a logo can sit on its own brand colour. |
-| `logoFit` | no | `"cover"` makes the image fill the whole card panel (for artwork or screenshots). The default `"contain"` keeps the full logo visible. |
-| `updated` | no | `"2026-10"` or `"2026-10-26"`, shown as "Updated Oct 2026". |
+| `logoBackground` | no | Colour behind the logo tile, e.g. `"#1d2a38"`, so a logo can sit on its own brand colour. |
+| `logoFit` | no | `"cover"` makes the image fill the whole logo tile. The default `"contain"` keeps the full logo visible. |
 | `tags` | no | Extra search words, e.g. `["recipes", "dinner"]`. |
 | `returnLink` | no | Where the "back to Sandbox" button sits: `"bottom-left"` (default), `"bottom-right"`, `"top-left"`, `"top-right"`, or `false` to leave it out. |
 | `hidden` | no | `true` removes the app from the gallery while keeping its URL working. This is **not** privacy (see Security). |
 
-The order of entries in the registry is the order of the gallery, with featured apps placed first.
+The directory is always alphabetical by name, regardless of the order of entries in the registry, so a new app lands in the right place on its own.
 
-New categories go in the `categories` list in `sandbox.config.json`.
+Disciplines live in the `disciplines` list in `sandbox.config.json`; renaming, adding or reordering them is a config change only. A discipline gets a filter button only once at least one app uses it, in the order the list gives.
 
 ## 5. Apps from other repositories (the standard pattern)
 
@@ -141,7 +139,6 @@ Rules that keep apps from interfering with each other:
 - A fetched app is copied only into its own `apps/<id>/` folder.
 - Sandbox-side extras for that app (usually just the card `logo.png`) go in `apps/<id>/` in this repository. The build stops if one would replace a file from the app's repository, and also if an app has both a `source` and its own `apps/<id>/index.html`.
 - If an app can't be fetched or built, the deploy fails and the live site stays as it was. It is never silently replaced by a placeholder.
-- The card's "Updated" date comes from the deployed commit, unless `updated` is set.
 
 **Requirements for the app's repository:** the deployed `index.html` must use relative paths (`style.css`, `images/a.png`, never `/style.css`) so it works both under `/sandbox/` and on a custom domain. For build tools, that means a relative base, e.g. `base: "./"` in Vite. Hash-based routes (`#/recipe/…`) or real per-page folders both survive refreshes. Storage keys should carry the app's prefix (e.g. `replated:mode`).
 
@@ -170,14 +167,14 @@ An app without an `index.html` (or a `source`) automatically gets an "Awaiting i
 
 1. Copy the app's HTML into `apps/<id>/index.html`, and its other files next to it.
 2. Change any links that start with `/` (like `/style.css`) to relative ones (`style.css`). `npm run check` lists any that remain.
-3. Set its `status` in the registry if it changed.
+3. Update its `status` in the registry if it has one.
 4. Check, preview and push. The card switches to **Launch** on its own.
 
 ## 7. Changing an app's logo or description
 
 - **Logo:** replace the file in `apps/<id>/` with a new `logo.*`. If you switch formats, delete the old file, or set `"logo"` explicitly. Keep logos under ~1000px on the longest side. SVG or WebP is ideal. Transparent backgrounds and any aspect ratio work, and the image is never stretched.
-- **Description, name, category, status:** edit the entry in `apps/registry.json`.
-- **Homepage copy, categories, status labels, GitHub link:** edit `sandbox.config.json` (the hero sentence comes from `tagline`) or `site/index.html`.
+- **Description, name, discipline:** edit the entry in `apps/registry.json`.
+- **Intro line, disciplines, GitHub link:** edit `sandbox.config.json` (the line under "Applications" is `tagline`) or `site/index.html`.
 
 ## 8. Updating or removing an app
 

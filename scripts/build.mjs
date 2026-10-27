@@ -83,13 +83,13 @@ for (const app of apps) {
   }
 }
 
-const listed = apps.filter((a) => !a.hidden);
+// The directory is always A–Z by name, whatever order the registry is in.
+const listed = apps
+  .filter((a) => !a.hidden)
+  .sort((a, b) => a.name.localeCompare(b.name, "en", { sensitivity: "base", numeric: true }));
 render("index.html", {
-  APP_COUNT: String(listed.length),
-  APP_COUNT_WORD: listed.length === 1 ? "application" : "applications",
   FILTERS: renderFilters(listed),
-  CARDS: listed.map(renderCard).join("\n"),
-  STATUS_LEGEND: renderStatusLegend(),
+  ENTRIES: listed.map(renderEntry).join("\n"),
 });
 render("404.html", { BASE: basePath });
 
@@ -116,16 +116,22 @@ function validate(list) {
   const seen = new Set();
   for (const [i, app] of list.entries()) {
     const where = `apps/registry.json entry ${i + 1}${app?.id ? ` ("${app.id}")` : ""}`;
-    for (const key of ["id", "name", "description", "category", "status"]) {
+    for (const key of ["id", "name", "description"]) {
       if (!app[key] || typeof app[key] !== "string") fail(`${where}: "${key}" is required.`);
     }
+    const primary = app.discipline || app.category; // "category" is the pre-2026-10 name for the same field
+    if (!primary || typeof primary !== "string") fail(`${where}: "discipline" is required.`);
     if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(app.id))
       fail(`${where}: "id" must be lowercase letters, numbers and hyphens (it becomes the URL).`);
     if (seen.has(app.id)) fail(`${where}: duplicate id.`);
     seen.add(app.id);
-    if (!config.categories.includes(app.category))
-      fail(`${where}: unknown category "${app.category}". Add it to sandbox.config.json first.`);
-    if (!config.statuses[app.status])
+    if (app.alsoIn !== undefined && !Array.isArray(app.alsoIn))
+      fail(`${where}: "alsoIn" must be a list of disciplines.`);
+    for (const d of [primary, ...(app.alsoIn || [])]) {
+      if (!config.disciplines.includes(d))
+        fail(`${where}: unknown discipline "${d}". Add it to "disciplines" in sandbox.config.json first.`);
+    }
+    if (app.status !== undefined && !config.statuses[app.status])
       fail(`${where}: status must be one of ${Object.keys(config.statuses).join(", ")}.`);
     if (app.returnLink !== undefined && app.returnLink !== false && !RETURN_POSITIONS.includes(app.returnLink))
       fail(`${where}: "returnLink" must be false or one of ${RETURN_POSITIONS.join(", ")}.`);
@@ -159,14 +165,16 @@ function resolveApp(app) {
     app.logo || LOGO_NAMES.find((n) => existsSync(join(dir, n)) || (sourceDir && existsSync(join(sourceDir, n)))) || null;
   if (app.logo && !existsSync(join(dir, app.logo)) && !(sourceDir && existsSync(join(sourceDir, app.logo))))
     fail(`apps/registry.json ("${app.id}"): logo "${app.logo}" was not found in apps/${app.id}/ or the fetched source.`);
+  const discipline = app.discipline || app.category;
   return {
     ...app,
+    discipline,
+    disciplines: [discipline, ...(app.alsoIn || []).filter((d) => d !== discipline)],
     dir,
     sourceDir,
     logo,
     updated: app.updated || fetched?.date?.slice(0, 7),
     integrated: Boolean(sourceDir) || existsSync(join(dir, "index.html")),
-    featured: Boolean(app.featured),
     hidden: Boolean(app.hidden),
     tags: Array.isArray(app.tags) ? app.tags : [],
     returnLink: app.returnLink === false ? null : app.returnLink || "bottom-left",
@@ -211,53 +219,29 @@ function walk(dir) {
 
 // ---------------------------------------------------------------- markup
 
-function renderCard(app, i) {
-  const href = `apps/${app.id}/`;
-  const search = [app.name, app.description, app.category, ...app.tags].join(" ").toLowerCase();
-  const updated = app.updated ? formatMonth(app.updated) : "";
-  const cta = app.integrated
-    ? `<span class="card__cta">Launch<span class="card__arrow" aria-hidden="true">${ARROW}</span></span>`
-    : `<span class="card__cta card__cta--pending">Awaiting integration</span>`;
-
-  return `<li class="card${app.featured ? " card--featured" : ""}${app.integrated ? "" : " card--pending"}" data-category="${esc(app.category)}" data-search="${esc(search)}" style="--i:${i}">
-  <a class="card__link" href="${href}">
-    <div class="card__art"${artStyle(app)}>
-      ${logoMarkup(app, `apps/${app.id}/`)}
-      <span class="card__index" aria-hidden="true">${String(i + 1).padStart(2, "0")}</span>
-    </div>
-    <div class="card__body">
-      <div class="card__meta">
-        <span class="card__category">${esc(app.category)}</span>
-        ${statusBadge(app.status)}
-      </div>
-      <h3 class="card__title">${esc(app.name)}</h3>
-      <p class="card__desc">${esc(app.description)}</p>
-      <div class="card__foot">
-        ${cta}
-        ${updated ? `<span class="card__updated">Updated ${updated}</span>` : ""}
-      </div>
-    </div>
+function renderEntry(app) {
+  const search = [app.name, app.description, ...app.disciplines, ...app.tags].join(" ").toLowerCase();
+  const action = app.integrated
+    ? `<span class="entry__launch">Launch<span aria-hidden="true">${ARROW}</span></span>`
+    : `<span class="entry__soon">Coming soon</span>`;
+  return `<li class="entry${app.integrated ? "" : " entry--pending"}" data-disciplines="${esc(app.disciplines.join("|"))}" data-search="${esc(search)}">
+  <a class="entry__link" href="apps/${app.id}/">
+    <span class="entry__logo"${artStyle(app)}>${logoMarkup(app, `apps/${app.id}/`)}</span>
+    <span class="entry__text">
+      <span class="entry__name">${esc(app.name)}</span>
+      <span class="entry__desc">${esc(app.description)}</span>
+      <span class="entry__meta"><span class="entry__discipline">${esc(app.disciplines.join(" · "))}</span><span class="entry__sep" aria-hidden="true">·</span>${action}</span>
+    </span>
   </a>
 </li>`;
 }
 
+// One chip per discipline that actually has an app, in the order set in sandbox.config.json.
 function renderFilters(list) {
-  const counts = Object.fromEntries(config.categories.map((c) => [c, 0]));
-  for (const a of list) counts[a.category]++;
-  const chip = (value, label, count) =>
-    `<button type="button" class="chip" data-filter="${esc(value)}" aria-pressed="${value === "all"}">${esc(label)}<span class="chip__count">${count}</span></button>`;
-  return [chip("all", "All", list.length), ...config.categories.map((c) => chip(c, c, counts[c]))].join("\n");
-}
-
-function renderStatusLegend() {
-  const notes = {
-    available: "Complete enough to use every day.",
-    "in-development": "Working, and still actively changing.",
-    prototype: "An early idea, rough around the edges.",
-  };
-  return Object.entries(config.statuses)
-    .map(([key, label]) => `<div><dt>${statusBadge(key)}</dt><dd>${esc(notes[key] || label)}</dd></div>`)
-    .join("\n");
+  const used = config.disciplines.filter((d) => list.some((a) => a.disciplines.includes(d)));
+  const chip = (value, label) =>
+    `<button type="button" class="chip" data-filter="${esc(value)}" aria-pressed="${value === "all"}">${esc(label)}</button>`;
+  return [chip("all", "All"), ...used.map((d) => chip(d, d))].join("\n");
 }
 
 function renderPlaceholder(app) {
@@ -266,8 +250,8 @@ function renderPlaceholder(app) {
     TITLE: `${esc(app.name)} · Sandbox`,
     APP_NAME: esc(app.name),
     APP_DESCRIPTION: esc(app.description),
-    APP_CATEGORY: esc(app.category),
-    APP_STATUS: statusBadge(app.status),
+    APP_CATEGORY: esc(app.disciplines.join(" · ")),
+    APP_STATUS: app.status ? statusBadge(app.status) : "",
     APP_ART: `<div class="placeholder__art"${artStyle(app)}>${logoMarkup(app, "")}</div>`,
     PAGE_URL: siteUrl ? esc(`${siteUrl}apps/${app.id}/`) : "",
   });
@@ -296,7 +280,6 @@ function shared(root) {
     SITE_NAME: esc(config.name),
     AUTHOR: esc(config.author),
     TAGLINE: esc(config.tagline),
-    DESCRIPTION: esc(config.description),
     GITHUB_URL: esc(config.githubUrl || ""),
     OG_IMAGE: esc(`${siteUrl || root}assets/brand/og-image.png`),
     SITE_URL: esc(siteUrl),
@@ -330,11 +313,6 @@ function fill(tpl, tokens) {
 function initials(name) {
   const words = name.replace(/&/g, " ").split(/\s+/).filter(Boolean);
   return words.length > 1 ? words.slice(0, 2).map((w) => w[0]).join("").toUpperCase() : name.slice(0, 1).toUpperCase();
-}
-
-function formatMonth(value) {
-  const [y, m] = value.split("-").map(Number);
-  return new Date(Date.UTC(y, m - 1, 1)).toLocaleDateString("en-US", { month: "short", year: "numeric", timeZone: "UTC" });
 }
 
 function esc(s) {

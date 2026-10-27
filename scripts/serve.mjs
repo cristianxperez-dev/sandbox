@@ -2,8 +2,8 @@
 // Serves _site/ locally the way GitHub Pages does: trailing-slash redirects
 // for folders, index.html resolution, and 404.html for anything missing.
 //
-//   npm run serve                     → http://localhost:4173/sandbox/  (GitHub Pages project path)
-//   BASE_PATH=/ npm run serve         → http://localhost:4173/          (custom-domain layout)
+//   npm run serve                     → http://localhost:4173/          (cperez.app layout)
+//   BASE_PATH=/sandbox/ npm run serve → http://localhost:4173/sandbox/  (GitHub Pages project path)
 //   PORT=8080 npm run serve
 //
 // Build with the same BASE_PATH you serve with, so 404.html links line up:
@@ -16,7 +16,7 @@ import { fileURLToPath } from "node:url";
 
 const OUT = join(dirname(fileURLToPath(import.meta.url)), "..", "_site");
 const PORT = Number(process.env.PORT || 4173);
-let BASE = process.env.BASE_PATH || "/sandbox/";
+let BASE = process.env.BASE_PATH || "/";
 if (!BASE.endsWith("/")) BASE += "/";
 
 const TYPES = {

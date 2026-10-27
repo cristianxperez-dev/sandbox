@@ -24,10 +24,10 @@ Most apps live in their own GitHub repository and their own Claude Code conversa
 2. **Choose the id.** Use lowercase-hyphenated, matching the app's name (e.g. `replated-recipes`). If a registry entry or placeholder already exists for the app, reuse that id so its URL doesn't change.
 3. **Place the files** in `apps/<id>/`, with the main page as `index.html`. Preserve the app's own HTML, CSS, JS and branding. Change only what step 1 requires.
 4. **Add the logo** as `apps/<id>/logo.<ext>`. If it's a large raster, resize it to ≤1000px on the longest side, and use WebP where that keeps quality. Never redraw or restyle a supplied logo. With no logo, leave it out and the initials fallback is shown.
-5. **Register it** in `apps/registry.json`, or update the existing entry. Pick a `category` from `sandbox.config.json`. Add a new category there only if none fits and the owner agrees. Set `status` honestly and `updated` to the current month. Consider `logoBackground` if the logo was designed for a coloured backdrop.
-6. **Verify.** Run `node scripts/build.mjs && node scripts/check.mjs` and fix anything reported. Then serve with `node scripts/serve.mjs` (`http://localhost:4173/sandbox/`) and use Playwright to:
-   - load the homepage and confirm the card shows **Launch** and the logo,
-   - click through to `/sandbox/apps/<id>/`,
+5. **Register it** in `apps/registry.json`, or update the existing entry. Pick a `discipline` from `sandbox.config.json` (and `alsoIn` only if a second one genuinely applies). Add a new discipline there only if none fits and the owner agrees. Keep `description` to one sentence of 10–20 words. Consider `logoBackground` if the logo was designed for a coloured backdrop.
+6. **Verify.** Run `node scripts/build.mjs && node scripts/check.mjs` and fix anything reported. Then serve with `node scripts/serve.mjs` (`http://localhost:4173/`) and use Playwright to:
+   - load the homepage and confirm the entry sits in alphabetical order and shows **Launch** and the logo,
+   - click through to `/apps/<id>/`,
    - reload that URL directly and confirm no console errors and no failed requests,
    - check that the app works and the back-to-Sandbox button doesn't cover its controls. If it does, set `returnLink` to another corner or `false`.
 7. **Ship.** Commit with a message like `Add <Name> to Sandbox` and push. Pushing to `main` deploys.
