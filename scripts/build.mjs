@@ -90,11 +90,24 @@ for (const app of apps) {
   }
   mkdirSync(dest, { recursive: true });
 
-  if (app.integrated) {
+  if (app.url) {
+    // Hosted elsewhere: the old address forwards there, keeping any #/… deep link.
+    writeFileSync(join(dest, "index.html"), renderRedirect(app));
+  } else if (app.integrated) {
     if (app.returnLink) injectReturnLink(join(dest, "index.html"), app.returnLink);
   } else {
     writeFileSync(join(dest, "index.html"), versioned(renderPlaceholder(app)));
   }
+}
+
+// Cloudflare Pages answers these with a 301 before any HTML loads. Only the folder
+// itself is listed, so the Sandbox-side logo beside it keeps loading.
+const moved = apps.filter((a) => a.url);
+if (moved.length) {
+  writeFileSync(
+    join(OUT, "_redirects"),
+    moved.flatMap((a) => [`/apps/${a.id} ${a.url} 301`, `/apps/${a.id}/ ${a.url} 301`, `/apps/${a.id}/index.html ${a.url} 301`]).join("\n") + "\n"
+  );
 }
 
 // The directory is always A–Z by name, whatever order the registry is in.
@@ -108,7 +121,7 @@ render("index.html", {
 render("404.html", { BASE: basePath });
 
 if (siteUrl) {
-  const urls = ["", ...listed.map((a) => `apps/${a.id}/`)];
+  const urls = ["", ...listed.filter((a) => !a.url).map((a) => `apps/${a.id}/`)];
   writeFileSync(
     join(OUT, "sitemap.xml"),
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
@@ -152,6 +165,12 @@ function validate(list) {
     if (app.updated && !/^\d{4}-\d{2}(-\d{2})?$/.test(app.updated))
       fail(`${where}: "updated" must look like 2026-10 or 2026-10-26.`);
     if (app.source !== undefined) validateSource(app.source, where);
+    if (app.url !== undefined) {
+      if (typeof app.url !== "string" || !/^https:\/\/[^/\s]+\/$/.test(app.url))
+        fail(`${where}: "url" must be an https address ending in "/", e.g. https://app.example.com/.`);
+      if (app.source || existsSync(join(APPS, app.id, "index.html")))
+        fail(`${where}: has a "url" (hosted elsewhere), so it can't also have a "source" or apps/${app.id}/index.html.`);
+    }
     if (app.source && existsSync(join(APPS, app.id, "index.html")))
       fail(`${where}: has a "source" repository and also apps/${app.id}/index.html. Use one or the other.`);
   }
@@ -188,7 +207,7 @@ function resolveApp(app) {
     sourceDir,
     logo,
     updated: app.updated || fetched?.date?.slice(0, 7),
-    integrated: Boolean(sourceDir) || existsSync(join(dir, "index.html")),
+    integrated: Boolean(app.url) || Boolean(sourceDir) || existsSync(join(dir, "index.html")),
     hidden: Boolean(app.hidden),
     tags: Array.isArray(app.tags) ? app.tags : [],
     returnLink: app.returnLink === false ? null : app.returnLink || "bottom-left",
@@ -241,7 +260,7 @@ function renderEntry(app) {
       `<span class="entry__status">${esc(app.status ? config.statuses[app.status] : "Available")}</span>`
     : `<span class="entry__soon">Coming soon</span>`;
   return `<li class="entry${app.integrated ? "" : " entry--pending"}" data-disciplines="${esc(app.disciplines.join("|"))}" data-search="${esc(search)}">
-  <a class="entry__link" href="apps/${app.id}/">
+  <a class="entry__link" href="${app.url ? esc(app.url) : `apps/${app.id}/`}">
     <span class="entry__logo"${artStyle(app)}>${logoMarkup(app, `apps/${app.id}/`, { size: 56, decorative: true })}</span>
     <span class="entry__text">
       <span class="entry__name">${esc(app.name)}</span>
@@ -259,6 +278,27 @@ function renderFilters(list) {
   const chip = (value, label) =>
     `<button type="button" class="chip" data-filter="${esc(value)}" aria-pressed="${value === "all"}">${esc(label)}</button>`;
   return [chip("all", "All"), ...used.map((d) => chip(d, d))].join("\n");
+}
+
+// Fallback for hosts without _redirects (e.g. the GitHub Pages copy) and for anyone
+// landing on the old page directly. JavaScript carries the #/… part across.
+function renderRedirect(app) {
+  const to = esc(app.url);
+  return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>${esc(app.name)} has moved</title>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="${to}">
+  <script>location.replace(${JSON.stringify(app.url)} + location.hash);</script>
+  <meta http-equiv="refresh" content="0; url=${to}">
+</head>
+<body>
+  <p>${esc(app.name)} has moved to <a href="${to}">${to.replace(/^https:\/\/|\/$/g, "")}</a>.</p>
+</body>
+</html>
+`;
 }
 
 function renderPlaceholder(app) {

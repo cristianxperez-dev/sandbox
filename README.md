@@ -99,6 +99,7 @@ Claude follows `CLAUDE.md`. To do it by hand:
 | `discipline` | yes | The app's subject area: one of `disciplines` in `sandbox.config.json`. (Older entries may say `category`; it means the same thing.) |
 | `alsoIn` | no | Extra disciplines, e.g. `["Travel"]`. The app also appears under those filters. |
 | `status` | no | `available`, `in-development`, or `prototype`. Shown only on placeholder pages; never blocks access or changes the order. |
+| `url` | no | For an app hosted on its own address, e.g. `"https://replated.cperez.app/"`. The directory links there, nothing is built under `apps/<id>/` except the card logo, and the old `/apps/<id>/` address redirects to it (Cloudflare `_redirects` 301, plus a fallback page), keeping any `#/…` deep link. Can't be combined with `source`. |
 | `logo` | no | Logo filename inside the app folder. Usually unnecessary because `logo.svg/.webp/.png/.jpg` is detected automatically. |
 | `logoBackground` | no | Colour behind the logo tile, e.g. `"#1d2a38"`, so a logo can sit on its own brand colour. |
 | `logoFit` | no | `"cover"` makes the image fill the whole logo tile. The default `"contain"` keeps the full logo visible. |

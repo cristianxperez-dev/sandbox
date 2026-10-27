@@ -19,16 +19,12 @@
     "description": "Restaurant-inspired dishes recreated for the home kitchen, each with a Simple and a Chef preparation mode.",
     "discipline": "Food & Wine",
     "status": "available",
+    "url": "https://replated.cperez.app/",
     "logoBackground": "#F4F0E9",
     "tags": [
       "recipes",
       "restaurants",
       "cooking"
-    ],
-    "returnLink": "bottom-right",
-    "source": {
-      "repo": "cristianxperez-dev/replated",
-      "ref": "main"
-    }
+    ]
   }
 ]

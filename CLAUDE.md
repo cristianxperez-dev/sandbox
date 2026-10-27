@@ -13,6 +13,8 @@ Most apps live in their own GitHub repository and their own Claude Code conversa
 5. If the repository is private, the deploy needs the `APP_SOURCES_TOKEN` secret (fine-grained, Contents: read-only). The owner creates it, never you. Never put a token in any file.
 6. Commit, push to `main`. Redeploys after app updates: Actions → Deploy Sandbox → Run workflow.
 
+If the app is deployed on its own address instead (e.g. Replated at `https://replated.cperez.app/`), give its registry entry a `"url"` and no `source`. Sandbox then only lists it (logo in `apps/<id>/`) and redirects the old `/apps/<id>/` address there.
+
 ## Playbook: "Add this HTML application to Sandbox" (a one-off file with no repository of its own)
 
 1. **Inspect the app before moving it.**
