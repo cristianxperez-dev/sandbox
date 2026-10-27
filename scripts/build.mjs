@@ -17,6 +17,7 @@
 //              404.html, which can be served at any depth)
 
 import { existsSync, readFileSync, writeFileSync, mkdirSync, rmSync, cpSync, readdirSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { join, dirname, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -32,6 +33,7 @@ const RETURN_POSITIONS = ["bottom-left", "bottom-right", "top-left", "top-right"
 const RETURN_MARKER = "data-sandbox-return";
 // Never published from a fetched app, even if present in its deploy folder.
 const SOURCE_EXCLUDES = ["node_modules", "package.json", "package-lock.json", "README.md", "LICENSE"];
+const CHEVRON = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="m6 3.5 4.5 4.5L6 12.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 const ARROW = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
 // ---------------------------------------------------------------- config
@@ -58,6 +60,18 @@ cpSync(SITE, OUT, {
 });
 writeFileSync(join(OUT, ".nojekyll"), "");
 
+// Shared CSS/JS are referenced as file.css?v=<content hash>. A deploy can then
+// never pair new HTML with a stylesheet a browser or CDN cached from an older
+// deploy (which renders the directory as unstyled HTML).
+const assetVersion = new Map(
+  ["assets/css/sandbox.css", "assets/js/directory.js", "assets/js/sandbox-return.js"].map((f) => [
+    f,
+    createHash("sha256").update(readFileSync(join(OUT, f))).digest("hex").slice(0, 10),
+  ])
+);
+const versioned = (html) =>
+  html.replace(/(assets\/(?:css|js)\/[\w.-]+\.(?:css|js))(?=["'])/g, (m) => (assetVersion.has(m) ? `${m}?v=${assetVersion.get(m)}` : m));
+
 const placeholderTpl = read(join(SITE, "templates", "placeholder.html"));
 
 for (const app of apps) {
@@ -79,7 +93,7 @@ for (const app of apps) {
   if (app.integrated) {
     if (app.returnLink) injectReturnLink(join(dest, "index.html"), app.returnLink);
   } else {
-    writeFileSync(join(dest, "index.html"), renderPlaceholder(app));
+    writeFileSync(join(dest, "index.html"), versioned(renderPlaceholder(app)));
   }
 }
 
@@ -221,17 +235,20 @@ function walk(dir) {
 
 function renderEntry(app) {
   const search = [app.name, app.description, ...app.disciplines, ...app.tags].join(" ").toLowerCase();
+  // Desktop says "Launch"; phones show the status plus a chevron instead (CSS picks).
   const action = app.integrated
-    ? `<span class="entry__launch">Launch<span aria-hidden="true">${ARROW}</span></span>`
+    ? `<span class="entry__launch">Launch<span aria-hidden="true">${ARROW}</span></span>` +
+      `<span class="entry__status">${esc(app.status ? config.statuses[app.status] : "Available")}</span>`
     : `<span class="entry__soon">Coming soon</span>`;
   return `<li class="entry${app.integrated ? "" : " entry--pending"}" data-disciplines="${esc(app.disciplines.join("|"))}" data-search="${esc(search)}">
   <a class="entry__link" href="apps/${app.id}/">
-    <span class="entry__logo"${artStyle(app)}>${logoMarkup(app, `apps/${app.id}/`)}</span>
+    <span class="entry__logo"${artStyle(app)}>${logoMarkup(app, `apps/${app.id}/`, { size: 56, decorative: true })}</span>
     <span class="entry__text">
       <span class="entry__name">${esc(app.name)}</span>
       <span class="entry__desc">${esc(app.description)}</span>
       <span class="entry__meta"><span class="entry__discipline">${esc(app.disciplines.join(" · "))}</span><span class="entry__sep" aria-hidden="true">·</span>${action}</span>
     </span>
+    <span class="entry__chev" aria-hidden="true">${CHEVRON}</span>
   </a>
 </li>`;
 }
@@ -257,9 +274,12 @@ function renderPlaceholder(app) {
   });
 }
 
-function logoMarkup(app, prefix) {
+// `size` puts explicit dimensions on the image so it can never render at its
+// natural size, even before (or without) the stylesheet.
+function logoMarkup(app, prefix, { size, decorative } = {}) {
   if (app.logo) {
-    return `<img class="art__logo${app.logoFit === "cover" ? " art__logo--cover" : ""}" src="${prefix}${esc(app.logo)}" alt="${esc(app.name)} logo" loading="lazy" decoding="async">`;
+    const dims = size ? ` width="${size}" height="${size}"` : "";
+    return `<img class="art__logo${app.logoFit === "cover" ? " art__logo--cover" : ""}" src="${prefix}${esc(app.logo)}" alt="${decorative ? "" : `${esc(app.name)} logo`}"${dims} loading="lazy" decoding="async">`;
   }
   return `<span class="art__monogram" aria-hidden="true">${esc(initials(app.name))}</span>`;
 }
@@ -288,13 +308,13 @@ function shared(root) {
 
 function render(file, tokens) {
   const path = join(OUT, file);
-  writeFileSync(path, fill(read(path), { ...shared(""), PAGE_URL: esc(siteUrl), ...tokens }));
+  writeFileSync(path, versioned(fill(read(path), { ...shared(""), PAGE_URL: esc(siteUrl), ...tokens })));
 }
 
 function injectReturnLink(file, position) {
   let html = read(file);
   if (html.includes(RETURN_MARKER)) return;
-  const tag = `<script src="../../assets/js/sandbox-return.js" ${RETURN_MARKER} data-position="${position}" defer></script>`;
+  const tag = versioned(`<script src="../../assets/js/sandbox-return.js" ${RETURN_MARKER} data-position="${position}" defer></script>`);
   html = /<\/body>/i.test(html) ? html.replace(/<\/body>(?![\s\S]*<\/body>)/i, `${tag}\n</body>`) : `${html}\n${tag}\n`;
   writeFileSync(file, html);
 }

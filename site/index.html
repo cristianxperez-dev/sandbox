@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>{{SITE_NAME}} by {{AUTHOR}}</title>
   <meta name="description" content="{{TAGLINE}}">
   <meta name="theme-color" content="#FCF9F3">
@@ -25,6 +25,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap">
+  <!-- Critical layout, inlined so the directory stays a tidy list even if the
+       stylesheet is slow, blocked or stale. sandbox.css refines everything. -->
+  <style>
+    body{margin:0;background:#fcf9f3;color:#2a2826;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif}
+    .brand{display:inline-flex;align-items:center;gap:10px;color:inherit;text-decoration:none}
+    .brand__mark{width:28px;height:auto}
+    .brand__text{display:flex;flex-direction:column;line-height:1.15}
+    .chips{display:flex;gap:6px;overflow-x:auto}
+    .directory{list-style:none;margin:0;padding:0}
+    .entry__link{display:flex;align-items:center;gap:14px;color:inherit;text-decoration:none}
+    .entry__logo{flex:0 0 52px;width:52px;height:52px;overflow:hidden}
+    .entry__logo img{width:100%;height:100%;object-fit:contain}
+    .entry__text{display:flex;flex-direction:column;flex:1 1 auto;min-width:0}
+    .entry__chev svg,.entry__launch svg{width:14px;height:14px}
+    .wrap{padding:0 16px}.skip-link{position:absolute;left:-9999px}
+    .visually-hidden,.search__key{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+    .chip{flex:0 0 auto;white-space:nowrap}.entry{padding:10px 0}
+  </style>
   <link rel="stylesheet" href="assets/css/sandbox.css">
   <script src="assets/js/directory.js" defer></script>
 </head>
@@ -35,8 +53,10 @@
     <div class="wrap site-header__inner">
       <a class="brand" href="./" aria-label="Sandbox by Cristian Perez, home">
         <img class="brand__mark" src="assets/brand/monogram-sm.png" alt="" width="44" height="41">
-        <span class="brand__name">Sandbox</span>
-        <span class="brand__by">by Cristian Perez</span>
+        <span class="brand__text">
+          <span class="brand__name">Sandbox</span>
+          <span class="brand__by">by Cristian Perez</span>
+        </span>
       </a>
     </div>
   </header>

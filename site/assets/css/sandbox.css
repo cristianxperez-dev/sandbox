@@ -66,7 +66,9 @@ button { font: inherit; color: inherit; }
   width: 100%;
   max-width: calc(var(--max) + var(--gutter) * 2);
   margin-inline: auto;
-  padding-inline: var(--gutter);
+  /* keep content clear of the iPhone notch / rounded corners in landscape */
+  padding-left: max(var(--gutter), env(safe-area-inset-left));
+  padding-right: max(var(--gutter), env(safe-area-inset-right));
 }
 
 .visually-hidden {
@@ -126,8 +128,8 @@ button { font: inherit; color: inherit; }
   letter-spacing: 0.01em;
   color: var(--graphite);
 }
+.brand__text { display: inline-flex; flex-direction: row; align-items: baseline; gap: 12px; }
 .brand__by {
-  margin-left: 2px;
   padding-left: 12px;
   border-left: 1px solid var(--rule-strong);
   font-family: var(--serif);
@@ -205,7 +207,7 @@ button { font: inherit; color: inherit; }
   border-radius: 999px;
   background: var(--surface);
   font: inherit;
-  font-size: 15px;
+  font-size: 16px;          /* 16px or more stops iOS Safari zooming in on focus */
   color: var(--ink);
   transition: border-color 0.2s, box-shadow 0.2s;
   -webkit-appearance: none;
@@ -282,7 +284,9 @@ button { font: inherit; color: inherit; }
   text-decoration: none;
   transition: background 0.2s var(--ease);
 }
-.entry__link:hover { background: var(--paper-deep); }
+@media (hover: hover) {
+  .entry__link:hover { background: var(--paper-deep); }
+}
 .entry__link:focus-visible { outline-offset: 0; border-radius: var(--radius-sm); }
 
 .entry__logo {
@@ -331,7 +335,11 @@ button { font: inherit; color: inherit; }
   color: var(--ink);
 }
 .entry__launch svg { width: 14px; height: 14px; transition: transform 0.3s var(--ease); }
-.entry__link:hover .entry__launch svg { transform: translateX(3px); }
+@media (hover: hover) {
+  .entry__link:hover .entry__launch svg { transform: translateX(3px); }
+}
+/* phone-only pieces of each row */
+.entry__status, .entry__chev { display: none; }
 .entry__soon { font-style: italic; color: var(--mist); }
 
 /* logo artwork, shared with placeholder pages */
@@ -437,7 +445,7 @@ button { font: inherit; color: inherit; }
   color: var(--stone);
 }
 .site-footer__inner p { margin: 0; flex: 1; }
-.site-footer__inner { min-height: 72px; }
+.site-footer__inner { min-height: 72px; padding-bottom: env(safe-area-inset-bottom); }
 .site-footer__mark img { width: 26px; height: auto; opacity: 0.85; }
 .site-footer__link {
   text-decoration: none;
@@ -545,28 +553,91 @@ button { font: inherit; color: inherit; }
   .directory { grid-template-columns: 1fr; }
 }
 
+/* Phones: a compact list built for one thumb.
+   [logo 52] name / one-to-two-line description / discipline · status   [›] */
 @media (max-width: 600px) {
+  :root { --gutter: 16px; }
+
+  .site-header__inner { height: 56px; }
+  .brand { gap: 10px; }
+  .brand__mark { width: 26px; }
+  .brand__text { flex-direction: column; align-items: flex-start; gap: 1px; }
+  .brand__name { font-size: 1.1875rem; line-height: 1.05; }
+  .brand__by { padding-left: 0; border-left: 0; font-size: 0.8125rem; line-height: 1.1; }
+
+  .library { padding-top: 20px; padding-bottom: 40px; }
+  .library__intro { margin-bottom: 14px; }
+  .library__title { font-size: 1.875rem; }
+  .library__lede { margin-top: 4px; font-size: 0.875rem; line-height: 1.45; }
+
+  .finder { gap: 10px; padding-bottom: 12px; margin-bottom: 0; }
   .search { max-width: none; }
+  .search__icon { left: 14px; }
+  .search input { height: 46px; padding: 0 16px 0 40px; }
   .search__key { display: none; }
-  /* Chips scroll sideways on phones instead of wrapping into a wall. */
+
+  /* Chips scroll inside their own strip, bleeding to the screen edge with a
+     soft fade, so they never widen the page. */
   .chips {
     flex-wrap: nowrap;
     overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
     margin-inline: calc(var(--gutter) * -1);
     padding-inline: var(--gutter);
     scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent);
+    mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent);
   }
   .chips::-webkit-scrollbar { display: none; }
-  .chip { flex: 0 0 auto; }
-  .entry__link { gap: 14px; padding: 16px 8px; margin: 0 -8px; }
-  .entry__logo { flex-basis: 48px; width: 48px; height: 48px; border-radius: 10px; }
-  .entry__name { font-size: 21px; }
-  .entry__meta { font-size: 13px; }
-  .brand__by { display: none; }
+  .chip { flex: 0 0 auto; height: 34px; padding: 0 12px; font-size: 0.8125rem; }
+  .chip:last-child { margin-right: 20px; }
+
+  .directory { display: block; }
+  .entry__link {
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr) 16px;
+    align-items: center;
+    gap: 14px;
+    min-height: 72px;
+    margin: 0;
+    padding: 14px 0;
+    border-radius: 0;
+  }
+  .entry__link:active { background: var(--paper-deep); }
+  .entry__logo { width: 52px; height: 52px; flex-basis: 52px; border-radius: 12px; }
+  .entry__logo .art__monogram { font-size: 1.25rem; }
+  .entry__name {
+    font-family: var(--sans);
+    font-size: 1.0625rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.005em;
+    overflow-wrap: anywhere;
+  }
+  .entry__desc {
+    margin-top: 2px;
+    font-size: 0.84375rem;
+    line-height: 1.45;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+  }
+  .entry__meta { margin-top: 5px; gap: 2px 6px; font-size: 0.71875rem; line-height: 1.3; }
+  .entry__discipline { letter-spacing: 0.02em; }
+  .entry__launch { display: none; }
+  .entry__status { display: inline; color: var(--graphite); font-weight: 500; }
+  .entry__soon { font-style: normal; color: var(--mist); }
+  .entry__chev { display: grid; place-items: center; color: var(--mist); }
+  .entry--pending .entry__chev { opacity: 0.5; }
+
+  .empty { padding: 36px 16px; }
+  .site-footer__inner { min-height: 60px; font-size: 0.75rem; }
 }
 
 @media (max-width: 480px) {
-  .site-header__inner { height: 60px; }
   .site-nav a { font-size: 12px; }
 }
 
