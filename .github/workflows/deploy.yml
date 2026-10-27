@@ -1,11 +1,18 @@
 # Builds the site and publishes it with GitHub Pages.
 # One-time setup: repository Settings → Pages → Build and deployment → Source: "GitHub Actions".
+#
+# Apps that live in their own repositories (a "source" in apps/registry.json) are
+# pulled fresh on every run. After updating one of those apps, redeploy with
+# Actions → Deploy Sandbox → Run workflow.
 name: Deploy Sandbox
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
+  # Lets an app repository trigger a redeploy later (see README → "Apps from other repositories").
+  repository_dispatch:
+    types: [app-updated]
 
 permissions:
   contents: read
@@ -31,6 +38,13 @@ jobs:
       # so nothing in the repository has to change when the domain does.
       - id: pages
         uses: actions/configure-pages@v5
+
+      # Public app repositories need no token. For private ones, add a repository
+      # secret APP_SOURCES_TOKEN (fine-grained token, Contents: read-only).
+      - name: Fetch apps from their repositories
+        run: node scripts/fetch-apps.mjs
+        env:
+          APP_SOURCES_TOKEN: ${{ secrets.APP_SOURCES_TOKEN }}
 
       - name: Build and check
         run: node scripts/build.mjs && node scripts/check.mjs

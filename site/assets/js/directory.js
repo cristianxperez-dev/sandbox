@@ -54,6 +54,16 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
+  // Page transitions only apply between Sandbox's own pages. Integrated apps
+  // don't opt in, and Chrome logs an error in the app if one is attempted.
+  const appUrls = new Set(
+    [...document.querySelectorAll(".card:not(.card--pending) .card__link")].map((a) => a.href)
+  );
+  window.addEventListener("pageswap", (e) => {
+    const to = e.activation?.entry?.url?.split(/[?#]/)[0];
+    if (e.viewTransition && to && appUrls.has(to)) e.viewTransition.skipTransition();
+  });
+
   // Keep the footer year current between deploys.
   const year = document.querySelector("[data-year]");
   if (year) year.textContent = new Date().getFullYear();

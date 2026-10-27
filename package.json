@@ -5,6 +5,7 @@
   "type": "module",
   "engines": { "node": ">=20" },
   "scripts": {
+    "fetch": "node scripts/fetch-apps.mjs",
     "build": "node scripts/build.mjs",
     "serve": "node scripts/serve.mjs",
     "dev": "node scripts/build.mjs && node scripts/serve.mjs",

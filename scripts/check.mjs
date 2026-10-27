@@ -21,6 +21,7 @@ for (const file of walk(OUT).filter((f) => f.endsWith(".html") && !f.endsWith("4
   for (const [, ref] of html.matchAll(/(?:href|src|srcset)="([^"]+)"/g)) {
     const url = ref.split(/[?#\s]/)[0];
     if (!url || /^([a-z]+:|\/\/|#|\{\{|\$\{)/i.test(ref)) continue;
+    if (/['+`]|\$\{/.test(ref)) continue; // built in JavaScript, not a static link
     if (url.startsWith("/")) {
       problems.push(`${relative(OUT, file)}: root-absolute link "${ref}" will break under a GitHub Pages project path`);
       continue;

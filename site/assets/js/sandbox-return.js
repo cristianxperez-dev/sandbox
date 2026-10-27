@@ -29,8 +29,10 @@
         font: 500 12px/1 "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
         letter-spacing: 0.06em; text-transform: uppercase;
         opacity: 0.72;
-        transition: opacity .25s, gap .35s cubic-bezier(.22,.61,.36,1), padding .35s cubic-bezier(.22,.61,.36,1);
+        transition: opacity .25s, transform .35s cubic-bezier(.22,.61,.36,1), gap .35s cubic-bezier(.22,.61,.36,1), padding .35s cubic-bezier(.22,.61,.36,1);
       }
+      /* Tucked away while reading (scrolling down) so it never sits on the app's content. */
+      a.is-tucked { opacity: 0; pointer-events: none; transform: translateY(${v === "top" ? "-" : ""}12px); }
       a:hover, a:focus-visible { opacity: 1; gap: 8px; padding: 0 14px 0 9px; }
       a:focus-visible { outline: 1.5px solid #2a2826; outline-offset: 3px; }
       img { width: 22px; height: auto; display: block; }
@@ -46,6 +48,15 @@
       <img src="${mark}" alt="">
       <span aria-hidden="true">Sandbox</span>
     </a>`;
+
+  const link = root.querySelector("a");
+  let lastY = window.scrollY;
+  window.addEventListener("scroll", () => {
+    const y = window.scrollY;
+    if (Math.abs(y - lastY) < 8) return;
+    link.classList.toggle("is-tucked", y > lastY && y > 80 && !link.matches(":focus-visible"));
+    lastY = y;
+  }, { passive: true });
 
   const mount = () => document.body.appendChild(host);
   document.body ? mount() : document.addEventListener("DOMContentLoaded", mount);

@@ -3,6 +3,8 @@
 //
 //   site/            → the Sandbox shell (homepage, shared assets, 404)
 //   apps/<id>/       → each application, copied as-is
+//   .sources/<id>/   → apps pulled from their own repositories by
+//                      scripts/fetch-apps.mjs ("source" in the registry)
 //   apps/registry.json → metadata that drives the homepage and placeholders
 //
 // No dependencies. Everything is emitted with relative links, so the output
@@ -14,18 +16,22 @@
 //   BASE_PATH  URL path the site lives under, e.g. /sandbox/  (used only by
 //              404.html, which can be served at any depth)
 
-import { existsSync, readFileSync, writeFileSync, mkdirSync, rmSync, cpSync } from "node:fs";
-import { join, dirname } from "node:path";
+import { existsSync, readFileSync, writeFileSync, mkdirSync, rmSync, cpSync, readdirSync } from "node:fs";
+import { join, dirname, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = join(ROOT, "site");
 const APPS = join(ROOT, "apps");
 const OUT = join(ROOT, "_site");
+const SOURCES = join(ROOT, ".sources");
+const IN_CI = Boolean(process.env.CI);
 
 const LOGO_NAMES = ["logo.svg", "logo.webp", "logo.png", "logo.jpg", "logo.jpeg"];
 const RETURN_POSITIONS = ["bottom-left", "bottom-right", "top-left", "top-right"];
 const RETURN_MARKER = "data-sandbox-return";
+// Never published from a fetched app, even if present in its deploy folder.
+const SOURCE_EXCLUDES = ["node_modules", "package.json", "package-lock.json", "README.md", "LICENSE"];
 const ARROW = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
 // ---------------------------------------------------------------- config
@@ -56,7 +62,16 @@ const placeholderTpl = read(join(SITE, "templates", "placeholder.html"));
 
 for (const app of apps) {
   const dest = join(OUT, "apps", app.id);
+  if (app.sourceDir) {
+    cpSync(app.sourceDir, dest, { recursive: true, filter: (src) => !isExcluded(src, app) });
+  }
   if (existsSync(app.dir)) {
+    // Sandbox-side extras (e.g. the card logo) sit beside a fetched app but may never replace its files.
+    for (const file of app.sourceDir ? walk(app.dir) : []) {
+      const rel = relative(app.dir, file);
+      if (existsSync(join(dest, rel)))
+        fail(`apps/${app.id}/${rel} would overwrite a file from ${app.source.repo}. Rename or remove it.`);
+    }
     cpSync(app.dir, dest, { recursive: true, filter: (src) => !isHidden(src) });
   }
   mkdirSync(dest, { recursive: true });
@@ -116,25 +131,82 @@ function validate(list) {
       fail(`${where}: "returnLink" must be false or one of ${RETURN_POSITIONS.join(", ")}.`);
     if (app.updated && !/^\d{4}-\d{2}(-\d{2})?$/.test(app.updated))
       fail(`${where}: "updated" must look like 2026-10 or 2026-10-26.`);
-    if (app.logo && !existsSync(join(APPS, app.id, app.logo)))
-      fail(`${where}: logo "apps/${app.id}/${app.logo}" does not exist.`);
+    if (app.source !== undefined) validateSource(app.source, where);
+    if (app.source && existsSync(join(APPS, app.id, "index.html")))
+      fail(`${where}: has a "source" repository and also apps/${app.id}/index.html. Use one or the other.`);
   }
   return list;
 }
 
+function validateSource(source, where) {
+  if (!source || typeof source !== "object") fail(`${where}: "source" must be an object.`);
+  if (!/^[\w.-]+\/[\w.-]+$/.test(source.repo || ""))
+    fail(`${where}: source.repo must look like "owner/repository".`);
+  for (const key of ["ref", "path", "build"]) {
+    if (source[key] !== undefined && typeof source[key] !== "string") fail(`${where}: source.${key} must be a string.`);
+  }
+  if (source.path && (source.path.startsWith("/") || source.path.split(/[\\/]/).includes("..")))
+    fail(`${where}: source.path must be a folder inside the repository.`);
+  if (source.exclude !== undefined && !Array.isArray(source.exclude))
+    fail(`${where}: source.exclude must be a list of names.`);
+}
+
 function resolveApp(app) {
   const dir = join(APPS, app.id);
-  const logo = app.logo || LOGO_NAMES.find((n) => existsSync(join(dir, n))) || null;
+  const fetched = app.source ? readSourceManifest(app) : null;
+  const sourceDir = fetched ? join(SOURCES, app.id, app.source.path || ".") : null;
+  const logo =
+    app.logo || LOGO_NAMES.find((n) => existsSync(join(dir, n)) || (sourceDir && existsSync(join(sourceDir, n)))) || null;
+  if (app.logo && !existsSync(join(dir, app.logo)) && !(sourceDir && existsSync(join(sourceDir, app.logo))))
+    fail(`apps/registry.json ("${app.id}"): logo "${app.logo}" was not found in apps/${app.id}/ or the fetched source.`);
   return {
     ...app,
     dir,
+    sourceDir,
     logo,
-    integrated: existsSync(join(dir, "index.html")),
+    updated: app.updated || fetched?.date?.slice(0, 7),
+    integrated: Boolean(sourceDir) || existsSync(join(dir, "index.html")),
     featured: Boolean(app.featured),
     hidden: Boolean(app.hidden),
     tags: Array.isArray(app.tags) ? app.tags : [],
     returnLink: app.returnLink === false ? null : app.returnLink || "bottom-left",
   };
+}
+
+// Reads what scripts/fetch-apps.mjs left in .sources/. Missing in CI is fatal so a
+// deploy can never silently swap a live app for its placeholder.
+function readSourceManifest(app) {
+  const manifest = join(SOURCES, `${app.id}.json`);
+  const deployDir = join(SOURCES, app.id, app.source.path || ".");
+  if (!existsSync(manifest) || !existsSync(join(deployDir, "index.html"))) {
+    const msg = `"${app.id}" comes from ${app.source.repo} but hasn't been fetched` +
+      (existsSync(manifest) ? ` (no index.html in ${app.source.path || "the repository root"})` : "") +
+      ". Run: node scripts/fetch-apps.mjs";
+    if (IN_CI) fail(msg);
+    console.warn(`⚠ ${msg} — showing its placeholder for now.`);
+    return null;
+  }
+  const info = readJson(manifest);
+  if (info.repo !== app.source.repo || info.ref !== (app.source.ref || "main")) {
+    const msg = `"${app.id}": .sources/ holds ${info.repo}@${info.ref}, but the registry asks for ${app.source.repo}@${app.source.ref || "main"}. Run: node scripts/fetch-apps.mjs`;
+    if (IN_CI) fail(msg);
+    console.warn(`⚠ ${msg}`);
+  }
+  return info;
+}
+
+function isExcluded(path, app) {
+  if (isHidden(path)) return true;
+  const rel = relative(app.sourceDir, path);
+  if (!rel) return false;
+  const top = rel.split(/[\\/]/)[0];
+  return SOURCE_EXCLUDES.includes(top) || (app.source.exclude || []).includes(top);
+}
+
+function walk(dir) {
+  return readdirSync(dir, { withFileTypes: true }).flatMap((e) =>
+    isHidden(e.name) ? [] : e.isDirectory() ? walk(join(dir, e.name)) : [join(dir, e.name)]
+  );
 }
 
 // ---------------------------------------------------------------- markup

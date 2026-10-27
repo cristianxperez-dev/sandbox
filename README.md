@@ -3,7 +3,7 @@
 An evolving collection of ideas, experiments, and applications: a static website that holds a directory of personal apps. Each app lives in its own folder and has its own address.
 
 - **Homepage:** a searchable, filterable gallery of every app, generated from one registry file.
-- **Apps:** each one is a self-contained folder (`apps/<id>/`) served at `/apps/<id>/`. Plain HTML, CSS and JavaScript work as they are, with no rewrite and no framework.
+- **Apps:** each one is served at `/apps/<id>/`. An app either lives in its own repository and is pulled in at deploy time (the standard pattern, see §5), or sits directly in `apps/<id>/`. Plain HTML, CSS and JavaScript work as they are, with no rewrite and no framework.
 - **Hosting:** GitHub Pages, deployed by GitHub Actions on every push to `main`.
 - **Dependencies:** none. Node.js 20+ runs a ~300-line build script, and nothing needs to be installed.
 
@@ -28,7 +28,9 @@ sandbox/
 │   ├── assets/js/sandbox-return.js  ← the small "back to Sandbox" button inside apps
 │   └── templates/placeholder.html   ← page shown for apps that aren't integrated yet
 ├── brand/                     ← original logo file (source only, not published)
+├── .sources/                  ← apps fetched from their own repositories (git-ignored, rebuilt every deploy)
 ├── scripts/
+│   ├── fetch-apps.mjs         ← pulls apps that have a "source" repository into .sources/
 │   ├── build.mjs              ← builds everything into _site/
 │   ├── check.mjs              ← verifies every link and image in _site/ resolves
 │   └── serve.mjs              ← local preview server that behaves like GitHub Pages
@@ -44,7 +46,7 @@ sandbox/
 ## 2. How deployment works
 
 1. You push to `main` (directly or by merging a pull request).
-2. `.github/workflows/deploy.yml` runs: it asks GitHub Pages for the site's real URL, runs `scripts/build.mjs` with it, runs `scripts/check.mjs`, and uploads `_site/`.
+2. `.github/workflows/deploy.yml` runs: it asks GitHub Pages for the site's real URL, pulls each app that lives in its own repository (`scripts/fetch-apps.mjs`), runs `scripts/build.mjs`, runs `scripts/check.mjs`, and uploads `_site/`. The run's summary page lists the exact commit of every pulled app.
 3. GitHub Pages publishes it. The URL appears on the workflow run and under **Settings → Pages**.
 
 **One-time setup:** in the repository on GitHub, go to **Settings → Pages → Build and deployment → Source** and choose **GitHub Actions**. (GitHub Pages on a private repository requires a paid GitHub plan. On a free plan, the repository must be public.)
@@ -54,6 +56,7 @@ You can also re-deploy without a code change from **Actions → Deploy Sandbox �
 ## 3. Running locally
 
 ```bash
+npm run fetch        # pull apps that live in other repositories (needed once, and after they change)
 npm run dev          # build, then serve at http://localhost:4173/sandbox/
 npm run check        # build, then verify every page, link and image
 ```
@@ -109,28 +112,80 @@ The order of entries in the registry is the order of the gallery, with featured 
 
 New categories go in the `categories` list in `sandbox.config.json`.
 
-## 5. Replacing a placeholder with the real app
+## 5. Apps from other repositories (the standard pattern)
 
-An app without an `index.html` in its folder automatically gets an "Awaiting integration" page and an *Awaiting integration* card. To bring it in:
+An app with its own repository and its own Claude Code conversation stays there. Sandbox never copies its source code into this repository. Instead, the registry entry names the repository, and every deploy pulls the chosen branch, tag or commit and publishes it at `/apps/<id>/`.
+
+```json
+{
+  "id": "replated-recipes",
+  "name": "Replated Recipes",
+  …
+  "source": {
+    "repo": "cristianxperez-dev/replated",
+    "ref": "main"
+  }
+}
+```
+
+| `source` field | Required | What it does |
+|---|---|---|
+| `repo` | yes | `owner/repository` on GitHub. |
+| `ref` | no | Branch, tag, or full commit SHA to deploy. Defaults to `main`. Use a tag or SHA to pin a version. |
+| `path` | no | Folder inside the repository that holds the finished site, e.g. `dist`. Defaults to the repository root. It must contain `index.html`. |
+| `build` | no | Command run inside the checkout before publishing, e.g. `npm ci && npm run build`. Leave it out for plain HTML apps. |
+| `exclude` | no | Top-level names in the deploy folder never to publish, e.g. `["research", "tools"]`. Dotfiles, `node_modules`, `package*.json`, `README.md` and `LICENSE` are always skipped. |
+
+Rules that keep apps from interfering with each other:
+
+- A fetched app is copied only into its own `apps/<id>/` folder.
+- Sandbox-side extras for that app (usually just the card `logo.png`) go in `apps/<id>/` in this repository. The build stops if one would replace a file from the app's repository, and also if an app has both a `source` and its own `apps/<id>/index.html`.
+- If an app can't be fetched or built, the deploy fails and the live site stays as it was. It is never silently replaced by a placeholder.
+- The card's "Updated" date comes from the deployed commit, unless `updated` is set.
+
+**Requirements for the app's repository:** the deployed `index.html` must use relative paths (`style.css`, `images/a.png`, never `/style.css`) so it works both under `/sandbox/` and on a custom domain. For build tools, that means a relative base, e.g. `base: "./"` in Vite. Hash-based routes (`#/recipe/…`) or real per-page folders both survive refreshes. Storage keys should carry the app's prefix (e.g. `replated:mode`).
+
+### Redeploying after an app changes
+
+Push to the app's own repository as usual, then in Sandbox go to **Actions → Deploy Sandbox → Run workflow**. Every run pulls the latest commit of each app's `ref`. If `ref` is a pinned tag or SHA, update it in the registry instead.
+
+The workflow also accepts a `repository_dispatch` event of type `app-updated`. Later, an app repository can trigger the Sandbox redeploy automatically with a small workflow step that calls the GitHub API using a token allowed to dispatch to this repository.
+
+### Private app repositories
+
+Public repositories need nothing. For a private one:
+
+1. On GitHub, go to **Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token**.
+2. Set **Resource owner** to `cristianxperez-dev`, then **Repository access → Only select repositories**, and pick the private app repositories.
+3. Under **Repository permissions**, set **Contents: Read-only**. Metadata: Read-only is added automatically. Grant nothing else. Choose an expiry and set a reminder to renew it.
+4. In the **Sandbox** repository, go to **Settings → Secrets and variables → Actions → New repository secret**, name it `APP_SOURCES_TOKEN`, and paste the token.
+
+The token is used only for the git fetch. It is never written to disk or published, and it is removed from the environment before any `build` command runs. One token can cover every private app; add repositories to it as needed.
+
+To fetch private apps locally, run `APP_SOURCES_TOKEN=… npm run fetch`.
+
+## 6. Replacing a placeholder with the real app
+
+An app without an `index.html` (or a `source`) automatically gets an "Awaiting integration" page and an *Awaiting integration* card. If the app has its own repository, add a `source` as described in §5. To copy a one-off HTML file in directly instead:
 
 1. Copy the app's HTML into `apps/<id>/index.html`, and its other files next to it.
 2. Change any links that start with `/` (like `/style.css`) to relative ones (`style.css`). `npm run check` lists any that remain.
 3. Set its `status` in the registry if it changed.
 4. Check, preview and push. The card switches to **Launch** on its own.
 
-## 6. Changing an app's logo or description
+## 7. Changing an app's logo or description
 
 - **Logo:** replace the file in `apps/<id>/` with a new `logo.*`. If you switch formats, delete the old file, or set `"logo"` explicitly. Keep logos under ~1000px on the longest side. SVG or WebP is ideal. Transparent backgrounds and any aspect ratio work, and the image is never stretched.
 - **Description, name, category, status:** edit the entry in `apps/registry.json`.
 - **Homepage copy, categories, status labels, GitHub link:** edit `sandbox.config.json` (the hero sentence comes from `tagline`) or `site/index.html`.
 
-## 7. Updating or removing an app
+## 8. Updating or removing an app
 
-- **Update:** replace files inside `apps/<id>/` and push. The URL stays the same.
-- **Remove:** delete its entry from `apps/registry.json` and delete the `apps/<id>/` folder. The old URL will then show the Sandbox 404 page.
+- **Update:** for an app from another repository, push there and re-run the deploy (§5). For an app stored here, replace files inside `apps/<id>/` and push. The URL stays the same.
+- **Remove:** delete its entry from `apps/registry.json` and delete the `apps/<id>/` folder, if there is one. The old URL will then show the Sandbox 404 page.
 - **Unlist but keep the link working:** set `"hidden": true`.
 
-## 8. Connecting a custom domain later
+## 9. Connecting a custom domain later
 
 Nothing in the code needs to change, because all links are relative and the deploy workflow reads the real URL from GitHub.
 

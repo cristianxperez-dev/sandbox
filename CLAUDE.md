@@ -2,7 +2,18 @@
 
 Static site. `apps/registry.json` drives the homepage, `apps/<id>/` holds each app, and `node scripts/build.mjs` writes `_site/`. No dependencies and no framework. Keep it that way unless the owner asks otherwise. README.md has the full reference.
 
-## Playbook: "Add this HTML application to Sandbox"
+## Standard pattern: the app has its own repository
+
+Most apps live in their own GitHub repository and their own Claude Code conversation. Keep it that way. Never copy their source into Sandbox.
+
+1. Attach the app repository read-only and inspect the deployable output exactly as in step 1 of the playbook below. If something needs changing there (root-absolute paths, a Vite `base`, generic storage keys), tell the owner. That change belongs in the app's repository, not here.
+2. Add or update its registry entry with `"source": { "repo": "owner/name", "ref": "main" }`, plus `path`/`build`/`exclude` if needed (README §5). Reuse an existing id so the URL doesn't change.
+3. Put only Sandbox-side extras in `apps/<id>/`, normally the card `logo.png`. If the logo only exists embedded in the app, extract it unchanged.
+4. Run `node scripts/fetch-apps.mjs && node scripts/build.mjs && node scripts/check.mjs`, then do the Playwright checks in step 6 below.
+5. If the repository is private, the deploy needs the `APP_SOURCES_TOKEN` secret (fine-grained, Contents: read-only). The owner creates it, never you. Never put a token in any file.
+6. Commit, push to `main`. Redeploys after app updates: Actions → Deploy Sandbox → Run workflow.
+
+## Playbook: "Add this HTML application to Sandbox" (a one-off file with no repository of its own)
 
 1. **Inspect the app before moving it.**
    - Find every external file it loads: `<link>`, `<script src>`, `<img>`, `fetch()`, `url(...)` in CSS, fonts, JSON, service workers, manifests.
