@@ -51,10 +51,20 @@ window.CBT_DESTINATIONS = [
     id: "rehab", label: "Rehab", short: "RHB", level: "Rehab",
     tagLine: "Rehab Assignment · Houston Astros",
     facility: "CACTI Park of the Palm Beaches", address: "5454 N. Haverhill Road", city: "West Palm Beach, FL 33407",
-    accent: "#EB6E1F", logo: "logos/astros.webp", background: "backgrounds/rehab.jpg",
+    accent: "#EB6E1F", logo: "logos/astros.webp", background: "backgrounds/daikin-park.jpg",
     aliases: ["Rehab", "Rehabilitation", "Rehab Assignment"]
   }
 ];
 
-/* FCL and Rehab both use the Houston Astros logo; share one upload between them. */
-window.CBT_SHARED_LOGOS = { fcl: "astros", rehab: "astros" };
+/* Houston Only mode: when staff choose it, every tag uses this destination instead of the person's
+   assignment. It is not an assignment (never matched from a CSV) and never changes the roster. */
+window.CBT_HOUSTON = {
+  id: "houston", label: "Houston Astros", short: "HOU", level: "Major League",
+  tagLine: "Houston Astros",
+  facility: "Daikin Park", address: "501 Crawford Street", city: "Houston, TX 77002",
+  accent: "#EB6E1F", logo: "logos/astros.webp", background: "backgrounds/daikin-park.jpg",
+  aliases: []
+};
+
+/* FCL, Rehab and Houston all use the Houston Astros primary logo; share one upload between them. */
+window.CBT_SHARED_LOGOS = { fcl: "astros", rehab: "astros", houston: "astros" };

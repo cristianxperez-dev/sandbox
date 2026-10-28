@@ -80,6 +80,12 @@ select:focus,input:focus{outline:2px solid rgba(0,45,98,.25);border-color:var(--
 .chip[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:#fff}
 .chip.warn[aria-pressed=false]{border-color:#F3B48B;color:#A34A0E;background:#FFF6EF}
 .chip .n{opacity:.7;margin-left:4px;font-weight:600}
+.seg{display:inline-flex;align-items:center;gap:2px;padding:2px;border:1px solid var(--gray-3);border-radius:4px;background:#fff}
+.seg-l{font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--gray-5);padding:0 8px 0 6px}
+.seg button{border:0;background:transparent;border-radius:3px;padding:5px 11px;font-weight:700;font-size:12px;color:var(--gray-5);white-space:nowrap}
+.seg button[aria-pressed=true]{background:var(--navy);color:#fff}
+.seg button[data-mode=houston][aria-pressed=true]{background:var(--orange)}
+.mode-note{margin:0 0 12px;padding:9px 12px;border-left:3px solid var(--orange);background:#FFF8F2;font-size:12.5px}
 .tablewrap{border:1px solid var(--gray-3);border-radius:4px;overflow:auto;max-height:640px}
 table{width:100%;border-collapse:collapse;font-size:13px}
 th{position:sticky;top:0;background:var(--gray-2);z-index:1;text-align:left;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-5);font-weight:800;padding:8px;border-bottom:1px solid var(--gray-3);white-space:nowrap}
@@ -203,8 +209,11 @@ dialog::backdrop{background:rgba(0,27,61,.45)}
   <!-- Step 2 -->
   <section class="card" aria-labelledby="s2">
     <div class="card-h"><span class="step">2</span><h2 id="s2">Review tags</h2><span class="sub" id="reviewSub">No one added yet</span>
-      <div class="right"><button class="btn btn-sm" id="btnAdd2" type="button">+ Add person</button></div></div>
+      <div class="right">
+        <div class="seg" role="group" aria-label="Tag destination" id="tagMode"><span class="seg-l">Tag destination</span><button type="button" data-mode="affiliate" aria-pressed="true">By affiliate</button><button type="button" data-mode="houston" aria-pressed="false">Houston only</button></div>
+        <button class="btn btn-sm" id="btnAdd2" type="button">+ Add person</button></div></div>
     <div class="card-b">
+      <div class="mode-note" id="modeNote" hidden><b>Houston Only:</b> every tag prints for the Houston Astros · Daikin Park, 501 Crawford Street, Houston, TX 77002. Assignments in the list are unchanged; switch back to <b>By affiliate</b> at any time.</div>
       <div class="review">
         <div>
           <div class="toolbar">
@@ -273,6 +282,7 @@ dialog::backdrop{background:rgba(0,27,61,.45)}
       <li><b>Upload roster.</b> Drop a CSV with each person’s name and assignment, or add people by hand. Need a starting point? Use <b>Download CSV template</b>.</li>
       <li><b>Check the columns.</b> The app matches columns like <i>Name</i>, <i>Player Name</i>, <i>First Name / Last Name</i> and <i>Assignment / Affiliate / Team</i>. If it can’t, pick them yourself.</li>
       <li><b>Review.</b> Rows marked <b>Needs assignment</b> didn’t match a destination (for example “A” or a blank). Choose the right one; nothing is guessed. Edit names, set copies, and untick anyone you don’t need.</li>
+      <li><b>Tag destination.</b> <b>By affiliate</b> (the default) prints each person’s own assignment. <b>Houston only</b> prints a Houston Astros · Daikin Park tag for everyone in the list, whatever their assignment; it doesn’t change the list, and switching back restores the affiliate tags.</li>
       <li><b>Print.</b> Choose <b>Letter sheets</b> (6 per page) or <b>Individual tags</b> (4 × 3 in pages), then <b>Print</b> or <b>Download PDF</b>.</li>
     </ol>
     <h3>Printing</h3>

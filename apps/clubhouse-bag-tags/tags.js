@@ -19,14 +19,19 @@
     for (var s = max; s >= min - 1e-9; s -= 0.25) if (font.width(g, s, sp) <= maxW) return { size: s, glyphs: g };
     return null;
   }
-  // split a name into two balanced lines at a space or after a hyphen
-  function splits(name) {
-    var out = [], re = /( |-)/g, m;
-    while ((m = re.exec(name))) {
-      var cut = m.index + (m[1] === "-" ? 1 : 0);
-      out.push([name.slice(0, cut).trim(), name.slice(m.index + 1).trim()]);
-    }
-    return out.filter(function (p) { return p[0] && p[1]; });
+  // every way to break a name into n lines, at a space or after a hyphen
+  function breakInto(name, n) {
+    var cuts = [], re = /( |-)/g, m;
+    while ((m = re.exec(name))) cuts.push({ end: m.index + (m[1] === "-" ? 1 : 0), next: m.index + 1 });
+    var out = [];
+    (function pick(from, start, left, acc) {
+      if (left === 0) { var last = name.slice(start).trim(); if (last) out.push(acc.concat([last])); return; }
+      for (var i = from; i < cuts.length; i++) {
+        var part = name.slice(start, cuts[i].end).trim();
+        if (part) pick(i + 1, cuts[i].next, left - 1, acc.concat([part]));
+      }
+    })(0, 0, n - 1, []);
+    return out.slice(0, 400);
   }
 
   /* Lay out one tag. fonts: {bold, medium} TTFonts. dest: destination (with any staff overrides).
@@ -49,55 +54,83 @@
     }
     ops.push({ t: "rect", x: 0, y: 0, w: W, h: 3.2, c: accent, a: 1 });   // destination accent
 
-    // logo at the bottom
-    var bottom = H - 16, logoTop = bottom;
+    /* One centered stack, top to bottom: name, destination line, facility, street, city, logo.
+       Fixed gaps between sections (so every tag has the same rhythm); the whole stack is then
+       centered vertically, so short and long content both sit balanced on the tag. */
+    var MARGIN = 20, maxW = W - 2 * MARGIN, cap = function (f, s) { return f.capHeight * s / f.upm; };
+    var GAP = { nameLines: 0.3, toTeam: 11, toFacility: 7.5, line: 5.5, toLogo: 13 };
+
+    // logo: same visual area for every club (round, wide or tall), never stretched
+    var logo = null;
     if (art.logo) {
-      var lh = 46, lw = art.logo.w / art.logo.h * lh;
-      if (lw > 120) { lw = 120; lh = art.logo.h / art.logo.w * lw; }
-      logoTop = bottom - lh;
-      ops.push({ t: "img", key: art.logo.key, x: (W - lw) / 2, y: logoTop, w: lw, h: lh });
+      var ar = art.logo.w / art.logo.h, S = 48, lw = S * Math.sqrt(ar), lh = S / Math.sqrt(ar);
+      var k = Math.min(1, 52 / lh, 84 / lw);
+      logo = { w: lw * k, h: lh * k };
     } else if (dest) warnings.push("logo");
 
-    // text block
-    var maxW = W - 34, cap = function (f, s) { return f.capHeight * s / f.upm; };
     var nm = upper(name);
     if (!nm) { nm = "NAME"; warnings.push("name"); }
-    var lines;
-    var one = fit(B, nm, maxW, 32, 17, 0);
+    // one line if it fits at 17 pt or more; otherwise two balanced lines, then three, before shrinking
+    var lines, one = fit(B, nm, maxW, 30, 17, 0);
     if (one) lines = [{ size: one.size, glyphs: one.glyphs }];
     else {
       var best = null;
-      splits(nm).forEach(function (p) {
-        for (var s = 26; s >= 13; s -= 0.25) {
-          var g0 = B.shape(p[0]), g1 = B.shape(p[1]);
-          if (B.width(g0, s, 0) <= maxW && B.width(g1, s, 0) <= maxW) { if (!best || s > best.size) best = { size: s, l: [g0, g1] }; break; }
-        }
+      [[2, 24, 12], [3, 18, 10]].forEach(function (cfg) {
+        if (best && best.size >= 12) return;                    // two good lines beat three
+        breakInto(nm, cfg[0]).forEach(function (parts) {
+          var gs = parts.map(function (t) { return B.shape(t); });
+          for (var s = cfg[1]; s >= cfg[2]; s -= 0.25) {
+            if (gs.every(function (g) { return B.width(g, s, 0) <= maxW; })) { if (!best || s > best.size) best = { size: s, l: gs }; break; }
+          }
+        });
       });
       var single = fit(B, nm, maxW, 17, 6, 0) || { size: 6, glyphs: B.shape(nm) };
-      if (best && best.size >= Math.min(single.size + 2, 16)) lines = best.l.map(function (g) { return { size: best.size, glyphs: g }; });
+      if (best && best.size >= Math.min(single.size + 2, 15)) lines = best.l.map(function (g) { return { size: best.size, glyphs: g }; });
       else lines = [{ size: single.size, glyphs: single.glyphs }];
     }
     if (B.missing(nm).length) warnings.push("characters");
-    var nameSize = lines[0].size, nameCap = cap(B, nameSize), nameGap = nameSize * 0.3;
+    var nameSize = lines[0].size, nameCap = cap(B, nameSize), nameGap = nameSize * GAP.nameLines;
+
+    // an address line stays readable: it wraps onto a second line (at a comma if it can) rather than
+    // shrinking below 8 pt
+    function addressRows(text) {
+      var one = fit(M, text, maxW, 10, 8, 0.4);
+      if (one) return [one];
+      var best = null;
+      breakInto(text, 2).forEach(function (parts) {
+        var g = parts.map(function (t) { return M.shape(t); }), comma = /,$/.test(parts[0]) ? 0.5 : 0;
+        for (var s = 10; s >= 7; s -= 0.25) {
+          if (g.every(function (x) { return M.width(x, s, 0.4) <= maxW; })) { if (!best || s + comma > best.score) best = { score: s + comma, size: s, g: g }; break; }
+        }
+      });
+      if (best) return best.g.map(function (x) { return { size: best.size, glyphs: x }; });
+      return [fit(M, text, maxW, 8, 6.5, 0.4) || fit(M, text, maxW, 6.5, 4.5, 0)];
+    }
 
     var rows = [];
     if (dest) {
-      var tl = fit(B, upper(dest.tagLine || dest.label), maxW, 9, 6, 1.3) || fit(B, upper(dest.tagLine || dest.label), maxW, 6, 4, 0.4);
-      rows.push({ font: "bold", f: B, size: tl.size, glyphs: tl.glyphs, c: accent.map(function (x) { return Math.min(255, x + 18); }), sp: tl.size > 6 ? 1.3 : 0.4, gapBefore: 11.5 });
-      [dest.facility, dest.address, dest.city].forEach(function (line, i) {
-        if (!String(line || "").trim()) return;
-        var r = fit(M, upper(line), maxW, 10.5, 6.5, 0.45) || fit(M, upper(line), maxW, 6.5, 4.5, 0);
-        rows.push({ font: "medium", f: M, size: r.size, glyphs: r.glyphs, c: WHITE, sp: r.size >= 6.5 ? 0.45 : 0, gapBefore: i === 0 ? 8 : 5.4 });
+      var tlText = upper(dest.tagLine || dest.label);
+      var tl = fit(B, tlText, maxW, 8.5, 6, 1.4) || fit(B, tlText, maxW, 6, 4, 0.4);
+      rows.push({ font: "bold", f: B, size: tl.size, glyphs: tl.glyphs, c: accent.map(function (x) { return Math.min(255, x + 18); }), sp: tl.size >= 6 ? 1.4 : 0.4, gapBefore: GAP.toTeam });
+      var first = true;
+      [dest.facility, dest.address, dest.city].forEach(function (line) {
+        String(line || "").split(/\n/).forEach(function (part) {      // a multi-line address prints line by line
+          if (!part.trim()) return;
+          addressRows(upper(part)).forEach(function (r) {
+            rows.push({ font: "medium", f: M, size: r.size, glyphs: r.glyphs, c: WHITE, sp: r.size >= 6.5 ? 0.4 : 0, gapBefore: first ? GAP.toFacility : GAP.line });
+            first = false;
+          });
+        });
       });
     } else {
-      var na = fit(B, "ASSIGNMENT NEEDED", maxW, 9, 6, 1.3);
-      rows.push({ font: "bold", f: B, size: na.size, glyphs: na.glyphs, c: [255, 196, 160], sp: 1.3, gapBefore: 11.5 });
+      var na = fit(B, "ASSIGNMENT NEEDED", maxW, 8.5, 6, 1.4);
+      rows.push({ font: "bold", f: B, size: na.size, glyphs: na.glyphs, c: [255, 196, 160], sp: 1.4, gapBefore: GAP.toTeam });
       warnings.push("destination");
     }
     var blockH = lines.length * nameCap + (lines.length - 1) * nameGap;
     rows.forEach(function (r) { blockH += r.gapBefore + cap(r.f, r.size); });
-    var top = 18, areaBottom = art.logo ? logoTop - 12 : H - 20;
-    var y = top + Math.max(0, (areaBottom - top - blockH) / 2);
+    if (logo) blockH += GAP.toLogo + logo.h;
+    var y = Math.max(14, (H - blockH) * 0.47);              // a touch above center reads as centered
     lines.forEach(function (l, i) {
       y += nameCap;
       ops.push({ t: "text", font: "bold", size: l.size, x: (W - B.width(l.glyphs, l.size, 0)) / 2, y: y, glyphs: l.glyphs, c: WHITE, sp: 0 });
@@ -107,6 +140,7 @@
       y += r.gapBefore + cap(r.f, r.size);
       ops.push({ t: "text", font: r.font, size: r.size, x: (W - r.f.width(r.glyphs, r.size, r.sp)) / 2, y: y, glyphs: r.glyphs, c: r.c, sp: r.sp });
     });
+    if (logo) ops.push({ t: "img", key: art.logo.key, x: (W - logo.w) / 2, y: y + GAP.toLogo, w: logo.w, h: logo.h });
     if (nameSize < 13) warnings.push("long-name");
     return { ops: ops, warnings: warnings, nameSize: nameSize, nameLines: lines.length };
   };

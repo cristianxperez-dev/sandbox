@@ -5,11 +5,14 @@
   var CBT = window.CBT, $ = function (s, r) { return (r || document).querySelector(s); };
   var PREFIX = "clubhouse-bag-tags:";
   var DEFAULTS = window.CBT_DESTINATIONS, SHARED = window.CBT_SHARED_LOGOS || {};
+  var HOUSTON_DEF = window.CBT_HOUSTON, ALL_DEFS = DEFAULTS.concat(HOUSTON_DEF ? [HOUSTON_DEF] : []);
 
   /* ---------- state ---------- */
   var fonts = null;                    // {bold, medium} TTFonts
   var fontBytes = {};
-  var dests = [];                      // destinations with staff overrides applied
+  var dests = [];                      // the six assignable destinations, with staff overrides applied
+  var houston = null;                  // the Houston Only destination, with staff overrides applied
+  var outMode = "affiliate";           // "affiliate" or "houston": an output override only, never saved in the roster
   var art = {};                        // logo key / "background" → {blob, url, w, h, key, version}
   var roster = [];                     // [{uid, name, dest, raw, copies, selected}]
   var uidSeq = 0, focusUid = null, filter = "all", query = "";
@@ -24,6 +27,8 @@
   function store(k, v) { try { if (v === undefined) return JSON.parse(localStorage.getItem(PREFIX + k)); localStorage.setItem(PREFIX + k, JSON.stringify(v)); } catch (e) { return null; } }
   function logoKey(id) { return SHARED[id] || id; }
   function destById(id) { return dests.filter(function (d) { return d.id === id; })[0] || null; }
+  // the destination a person's tag prints for: their assignment, or Houston in Houston Only mode
+  function tagDest(p) { return outMode === "houston" ? houston : destById(p.dest); }
 
   /* ---------- browser storage for images (IndexedDB) ---------- */
   var dbp = null;
@@ -50,18 +55,20 @@
   var EDITABLE = ["tagLine", "facility", "address", "city", "accent"];
   function loadDests() {
     var saved = store("destinations") || {};
-    dests = DEFAULTS.map(function (d) {
+    var all = ALL_DEFS.map(function (d) {
       var o = {}; Object.keys(d).forEach(function (k) { o[k] = d[k]; });
       var s = saved[d.id] || {};
       EDITABLE.forEach(function (k) { if (typeof s[k] === "string") o[k] = s[k]; });
       return o;
     });
+    dests = all.filter(function (d) { return !HOUSTON_DEF || d.id !== HOUSTON_DEF.id; });
+    houston = HOUSTON_DEF ? all[all.length - 1] : null;
     matcher = CBT.buildMatcher(dests);
   }
   function saveDest(id, field, value) {
     var saved = store("destinations") || {};
     saved[id] = saved[id] || {};
-    var def = DEFAULTS.filter(function (d) { return d.id === id; })[0];
+    var def = ALL_DEFS.filter(function (d) { return d.id === id; })[0];
     if (value === def[field]) delete saved[id][field]; else saved[id][field] = value;
     store("destinations", saved);
     loadDests();
@@ -86,7 +93,7 @@
   // Images: "<logo key>" for logos, "bg:<destination id>" for a destination's ballpark photo, and
   // "background" for the photo used where a destination has none.
   function officialFile(k) {
-    var bg = /^bg:/.test(k), d = DEFAULTS.filter(function (x) { return bg ? "bg:" + x.id === k && x.background : logoKey(x.id) === k && x.logo; })[0];
+    var bg = /^bg:/.test(k), d = ALL_DEFS.filter(function (x) { return bg ? "bg:" + x.id === k && x.background : logoKey(x.id) === k && x.logo; })[0];
     return d ? (bg ? d.background : d.logo) : null;
   }
   function officialArt(k) {
@@ -95,8 +102,8 @@
     return fetch(file).then(function (r) { return r.ok ? r.blob() : null; }).then(function (b) { return b && setArt(k, b, true); }).catch(function () {});
   }
   function loadArt() {
-    var keys = Array.from(new Set(DEFAULTS.map(function (d) { return logoKey(d.id); })))
-      .concat(DEFAULTS.map(function (d) { return "bg:" + d.id; }), ["background"]);
+    var keys = Array.from(new Set(ALL_DEFS.map(function (d) { return logoKey(d.id); })))
+      .concat(ALL_DEFS.map(function (d) { return "bg:" + d.id; }), ["background"]);
     return Promise.all(keys.map(function (k) {
       return assetGet(k).then(function (blob) {
         if (blob) return setArt(k, blob);                        // a staff upload replaces the official file
@@ -136,11 +143,11 @@
   }
 
   /* ---------- tags ---------- */
-  function layoutFor(p) { var d = destById(p.dest); return CBT.layoutTag(p.name, d, fonts, artFor(d)); }
+  function layoutFor(p) { var d = tagDest(p); return CBT.layoutTag(p.name, d, fonts, artFor(d)); }
   function flagsFor(p, dupes) {
-    var f = [], d = destById(p.dest);
+    var f = [], d = tagDest(p);
     if (!String(p.name || "").trim()) f.push(["err", "Missing name"]);
-    if (!d) f.push(["err", p.raw ? "Needs assignment (“" + p.raw + "”)" : "Needs assignment"]);
+    if (!destById(p.dest)) f.push([outMode === "houston" ? "info" : "err", p.raw ? "Needs assignment (“" + p.raw + "”)" : "Needs assignment"]);
     if (d && !art[logoKey(d.id)]) f.push(["warn", "Logo missing"]);
     if (dupes && dupes.has(normName(p.name))) f.push(["info", "Duplicate name"]);
     if (p.name && fonts) {
@@ -156,7 +163,7 @@
     roster.forEach(function (p) { var k = normName(p.name); if (!k) return; if (seen.has(k)) d.add(k); seen.set(k, 1); });
     return d;
   }
-  function printable(p) { return p.name.trim() && destById(p.dest) && p.copies > 0; }
+  function printable(p) { return p.name.trim() && tagDest(p) && p.copies > 0; }
   function needsReview(p) { return !p.name.trim() || !destById(p.dest); }
 
   /* ---------- import ---------- */
@@ -274,7 +281,7 @@
     return '<option value=""' + (sel ? "" : " selected") + ">— Choose —</option>" + dests.map(function (d) { return '<option value="' + d.id + '"' + (sel === d.id ? " selected" : "") + ">" + esc(d.label) + "</option>"; }).join("");
   }
   function rowHtml(p, dupes) {
-    var d = destById(p.dest), flags = flagsFor(p, dupes), urls = artUrls();
+    var d = tagDest(p), flags = flagsFor(p, dupes), urls = artUrls();
     var thumb = fonts ? CBT.tagSVG(layoutFor(p).ops, urls, fonts, { label: "Tag for " + p.name }) : "";
     return '<tr data-uid="' + p.uid + '" class="' + (p.uid === focusUid ? "focus" : "") + (p.selected ? "" : " off") + '">' +
       '<td class="c-check"><input type="checkbox" data-k="sel" aria-label="Print tag for ' + esc(p.name) + '"' + (p.selected ? " checked" : "") + "></td>" +
@@ -295,7 +302,7 @@
   function refreshRow(p) {
     var tr = $('#rows tr[data-uid="' + p.uid + '"]');
     if (!tr) return;
-    var dupes = duplicates(), flags = flagsFor(p, dupes), d = destById(p.dest);
+    var dupes = duplicates(), flags = flagsFor(p, dupes), d = tagDest(p);
     tr.querySelector(".thumb").innerHTML = CBT.tagSVG(layoutFor(p).ops, artUrls(), fonts, { label: "Tag for " + p.name });
     tr.querySelector(".flags").innerHTML = flags.map(function (f) { return '<span class="flag ' + f[0] + '">' + esc(f[1]) + "</span>"; }).join("");
     tr.querySelector(".c-dest").innerHTML = d ? esc(d.facility) + "<br>" + esc(d.city) : "—";
@@ -310,10 +317,11 @@
       return;
     }
     focusUid = p.uid;
-    var d = destById(p.dest);
+    var d = tagDest(p), own = destById(p.dest);
     $("#bigPreview").innerHTML = CBT.tagSVG(layoutFor(p).ops, artUrls(), fonts, { label: "Tag for " + p.name });
     $("#sideInfo").innerHTML = '<div class="who">' + esc(p.name || "(no name)") + "</div>" +
       '<div class="where">' + (d ? esc(d.label) + "\n" + esc(d.facility) + "\n" + esc(d.address) + "\n" + esc(d.city) : "Choose an assignment to finish this tag.") + "</div>" +
+      (outMode === "houston" ? '<div class="size">Houston Only tag · assignment stays ' + esc(own ? own.label : "unassigned") + "</div>" : "") +
       '<div class="btns"><button class="btn btn-dark" type="button" id="oneTag"' + (printable(p) ? "" : " disabled") + ">Print this tag (4 × 3 in)</button>" +
       '<button class="btn" type="button" id="oneSheet"' + (printable(p) ? "" : " disabled") + ">Letter sheet with this tag</button></div>" +
       '<div class="size">' + (p.copies > 1 ? p.copies + " copies" : "1 copy") + " · exact 4 × 3 in at 100%</div>";
@@ -332,10 +340,10 @@
   function renderTotals() {
     var list = outputList(), tags = expand(list), skipped = list.filter(function (p) { return !printable(p) && p.copies > 0; }).length;
     var sheets = Math.ceil(tags.length / 6);
-    $("#totals").textContent = tags.length ? tags.length + " tag" + (tags.length === 1 ? "" : "s") + " · " + sheets + " sheet" + (sheets === 1 ? "" : "s") : "No tags to print yet";
+    $("#totals").textContent = (tags.length ? tags.length + " tag" + (tags.length === 1 ? "" : "s") + " · " + sheets + " sheet" + (sheets === 1 ? "" : "s") : "No tags to print yet") + (outMode === "houston" ? " · Houston Only" : "");
     $("#reviewSub").textContent = roster.length ? roster.length + " " + (roster.length === 1 ? "person" : "people") + " · " + roster.filter(function (p) { return p.selected; }).length + " selected" : "No one added yet";
     ["#sheetPrint", "#sheetSave", "#singlePrint", "#singleSave"].forEach(function (s) { $(s).disabled = !tags.length; });
-    $("#status").textContent = skipped ? skipped + " selected " + (skipped === 1 ? "person isn’t" : "people aren’t") + " included until they have a name and an assignment." : "";
+    $("#status").textContent = skipped ? skipped + " selected " + (skipped === 1 ? "person isn’t" : "people aren’t") + " included until they have " + (outMode === "houston" ? "a name." : "a name and an assignment.") : "";
     renderSheets(tags);
   }
   // print view: the Letter sheets as they will print (first pages)
@@ -391,7 +399,7 @@
       doc.addFont("FB", fonts.bold); doc.addFont("FM", fonts.medium);
       var images = {};
       var keys = new Set();
-      tags.forEach(function (p) { var a = artFor(destById(p.dest)); if (a.logo) keys.add(a.logo.src); if (a.background) keys.add(a.background.src); });
+      tags.forEach(function (p) { var a = artFor(tagDest(p)); if (a.logo) keys.add(a.logo.src); if (a.background) keys.add(a.background.src); });
       for (var k of keys) { var data = await pdfImage(k); images[art[k].key] = await doc.addImage(data); }
       var layouts = new Map();
       var L = function (p) { if (!layouts.has(p.uid)) layouts.set(p.uid, layoutFor(p).ops); return layouts.get(p.uid); };
@@ -416,7 +424,7 @@
       }
       var blob = await doc.output();
       var stamp = new Date().toISOString().slice(0, 10);
-      var name = "bag-tags-" + (kind === "single" ? "4x3" : "letter") + "-" + stamp + (people.length === 1 ? "-" + people[0].name.normalize("NFD").replace(/[^\w]+/g, "-").replace(/^-|-$/g, "").toLowerCase() : "") + ".pdf";
+      var name = "bag-tags-" + (outMode === "houston" ? "houston-" : "") + (kind === "single" ? "4x3" : "letter") + "-" + stamp + (people.length === 1 ? "-" + people[0].name.normalize("NFD").replace(/[^\w]+/g, "-").replace(/^-|-$/g, "").toLowerCase() : "") + ".pdf";
       var url = URL.createObjectURL(blob);
       if (win) { win.location.href = url; setTimeout(function () { URL.revokeObjectURL(url); }, 120000); }
       else downloadBlob(blob, name);
@@ -433,9 +441,9 @@
   /* ---------- Destinations & logos dialog ---------- */
   function renderDestDialog() {
     var shown = new Set(), html = '<p class="note" style="margin-top:0">The clubs’ official logos and ballpark photos are built in; FCL and Rehab use the Houston Astros logo. Address edits and replacement logos or photos are saved in this browser only.</p>';
-    dests.forEach(function (d) {
+    dests.concat(houston ? [houston] : []).forEach(function (d) {
       var k = logoKey(d.id), a = art[k], first = !shown.has(k); shown.add(k);
-      var def = DEFAULTS.filter(function (x) { return x.id === d.id; })[0];
+      var def = ALL_DEFS.filter(function (x) { return x.id === d.id; })[0];
       var edited = EDITABLE.some(function (f) { return d[f] !== def[f]; });
       html += '<div class="dest" data-id="' + d.id + '"><div><div class="logo-box">' + (a ? '<img src="' + a.url + '" alt="' + esc(d.label) + ' logo">' : '<div class="none">No logo yet</div>') + "</div>" +
         '<div class="lbtns">' + (first ? '<button class="btn btn-sm" type="button" data-act="logo">' + (a ? "Replace logo" : "Upload logo") + "</button>" + (a && !a.official ? '<button class="btn btn-sm" type="button" data-act="nologo">' + (DEFAULTS.some(function (x) { return logoKey(x.id) === k && x.logo; }) ? "Use official logo" : "Remove") + "</button>" : "") : '<span class="note">Same logo as FCL</span>') + "</div>" +
@@ -554,6 +562,14 @@
     $("#sheetSave").onclick = function () { exportTags("sheet", sel(), false); };
     $("#singlePrint").onclick = function () { exportTags("single", sel(), true); };
     $("#singleSave").onclick = function () { exportTags("single", sel(), false); };
+    // Tag destination: By affiliate / Houston Only. Changes only what the tags print, never the roster.
+    $("#tagMode").addEventListener("click", function (e) {
+      var b = e.target.closest("button[data-mode]"); if (!b || b.getAttribute("data-mode") === outMode) return;
+      outMode = b.getAttribute("data-mode");
+      $("#tagMode").querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+      $("#modeNote").hidden = outMode !== "houston";
+      renderAll();
+    });
     $("#btnHelp").onclick = function () { $("#dlgHelp").showModal(); };
     $("#btnDest").onclick = function () { renderDestDialog(); $("#dlgDest").showModal(); };
     document.querySelectorAll("dialog").forEach(function (d) {
