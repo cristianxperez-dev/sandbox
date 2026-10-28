@@ -7,7 +7,9 @@
    short     short code for filters and badges
    accent    accent colour on the tag, taken from the club's logo (lightened where needed to read on navy)
    logo      the club's official logo file inside logos/ (or null if there is none).
-   background  a ballpark photo inside backgrounds/ (4:3, 1600 × 1200 JPEG), shown under a navy wash, or null
+   background  a ballpark photo inside backgrounds/ (landscape JPEG, 1600 px or wider), shown under a navy wash, or null.
+             It is cropped to fill whatever tag size is chosen, never stretched.
+   focus     optional [x, y] (0 to 1) point of the photo kept in view when it is cropped; default the centre
              Staff can also upload a logo in the app; that copy stays in their browser.
    aliases   values recognized in an imported CSV (case, spaces and punctuation are ignored). Keep them
              unambiguous: a value that matches two destinations is flagged for review, never guessed. */
@@ -44,27 +46,28 @@ window.CBT_DESTINATIONS = [
     id: "fcl", label: "FCL", short: "FCL", level: "Rookie",
     tagLine: "FCL · Florida Complex League",
     facility: "CACTI Park of the Palm Beaches", address: "5454 N. Haverhill Road", city: "West Palm Beach, FL 33407",
-    accent: "#EB6E1F", logo: "logos/astros.webp", background: "backgrounds/fcl.jpg",
+    accent: "#EB6E1F", logo: "logos/astros.webp", background: "backgrounds/cacti-park.jpg", focus: [0.5, 0.45],
     aliases: ["FCL", "Florida Complex League", "FCL Astros", "Complex League"]
   },
   {
     id: "rehab", label: "Rehab", short: "RHB", level: "Rehab",
     tagLine: "Rehab Assignment · Houston Astros",
     facility: "CACTI Park of the Palm Beaches", address: "5454 N. Haverhill Road", city: "West Palm Beach, FL 33407",
-    accent: "#EB6E1F", logo: "logos/astros.webp", background: "backgrounds/daikin-park.jpg",
+    accent: "#EB6E1F", logo: "logos/astros.webp", background: "backgrounds/cacti-park.jpg", focus: [0.5, 0.45],
     aliases: ["Rehab", "Rehabilitation", "Rehab Assignment"]
   }
 ];
 
-/* Houston Only mode: when staff choose it, every tag uses this destination instead of the person's
-   assignment. It is not an assignment (never matched from a CSV) and never changes the roster. */
-window.CBT_HOUSTON = {
-  id: "houston", label: "Houston Astros", short: "HOU", level: "Major League",
+/* West Palm mode: when staff choose it, every tag uses this destination instead of the person's assignment
+   (Spring Training and centralized travel). It is not an assignment (never matched from a CSV), never changes
+   the roster, and prints Houston Astros branding only: no FCL, Rehab or affiliate wording. */
+window.CBT_WEST_PALM = {
+  id: "west-palm", label: "Houston Astros", short: "WPB", level: "West Palm",
   tagLine: "Houston Astros",
-  facility: "Daikin Park", address: "501 Crawford Street", city: "Houston, TX 77002",
-  accent: "#EB6E1F", logo: "logos/astros.webp", background: "backgrounds/daikin-park.jpg",
+  facility: "CACTI Park of the Palm Beaches", address: "5444 Haverhill Road", city: "West Palm Beach, FL 33407",
+  accent: "#EB6E1F", logo: "logos/astros.webp", background: "backgrounds/cacti-park.jpg", focus: [0.5, 0.45],
   aliases: []
 };
 
-/* FCL, Rehab and Houston all use the Houston Astros primary logo; share one upload between them. */
-window.CBT_SHARED_LOGOS = { fcl: "astros", rehab: "astros", houston: "astros" };
+/* FCL, Rehab and West Palm all use the Houston Astros primary logo; share one upload between them. */
+window.CBT_SHARED_LOGOS = { fcl: "astros", rehab: "astros", "west-palm": "astros" };

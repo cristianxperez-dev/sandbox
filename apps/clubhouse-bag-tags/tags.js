@@ -5,8 +5,10 @@
   "use strict";
   var CBT = global.CBT = global.CBT || {};
 
-  var W = 288, H = 216;                     // 4 × 3 in
-  CBT.TAG = { w: W, h: H };
+  /* Tag size in points. The default is a 3 × 5 in index card in landscape (5 in wide, 3 in tall).
+     The layout was designed at 4 × 3 in (REF) and scales from there to any size. */
+  CBT.TAG = { w: 360, h: 216 };
+  var REF = { w: 288, h: 216 };
   var NAVY_TOP = [11, 46, 99], NAVY_BOTTOM = [2, 24, 56], OVERLAY = [6, 22, 52], WHITE = [255, 255, 255];
 
   function hex(c) { var m = /^#?([0-9a-f]{6})$/i.exec(c || ""); var n = m ? parseInt(m[1], 16) : 0xEB6E1F; return [n >> 16, (n >> 8) & 255, n & 255]; }
@@ -35,102 +37,130 @@
   }
 
   /* Lay out one tag. fonts: {bold, medium} TTFonts. dest: destination (with any staff overrides).
-     art: {logo: {key, w, h} | null, background: {key, w, h} | null}. Returns {ops, warnings}. */
-  CBT.layoutTag = function (name, dest, fonts, art) {
+     art: {logo: {key, w, h} | null, background: {key, w, h, focus} | null}. size: {w, h} in points
+     (default CBT.TAG). Returns {ops, warnings, nameSize, nameLines}. */
+  CBT.layoutTag = function (name, dest, fonts, art, size) {
+    var W = (size || CBT.TAG).w, H = (size || CBT.TAG).h;
+    /* One scale for type, logo and spacing: as large as the height allows, never so large that the
+       width (a tall, narrow tag) or the area would crowd it. If the stack still doesn't fit inside the
+       safe margins (very long names or addresses on a small tag), it is laid out again a little smaller. */
+    var k = Math.min(H / REF.h, 1.2 * W / REF.w, Math.sqrt(W * H / (REF.w * REF.h)));
+    for (var tries = 0; tries < 12; tries++) {
+      var L = layout(name, dest, fonts, art, W, H, k);
+      if (L.fits) break;
+      k *= 0.92;
+    }
+    if (!L.fits) L.warnings.push("overflow");
+    // nameSize is given in 4 × 3 in terms, so one threshold ("long name, check preview") works at every size
+    return { ops: L.ops, warnings: L.warnings, nameSize: L.nameSize / k, nameLines: L.nameLines, scale: k };
+  };
+
+  function layout(name, dest, fonts, art, W, H, k) {
     var ops = [], warnings = [], B = fonts.bold, M = fonts.medium;
     var accent = hex(dest && dest.accent);
-    // background: the staff photo with a navy wash (like the reference), or a navy field drawing
+    // background: the ballpark photo, cropped to fill the tag (never stretched) under a navy wash,
+    // or a navy field drawing
     if (art.background) {
       var bw = art.background.w, bh = art.background.h, sc = Math.max(W / bw, H / bh);
-      ops.push({ t: "img", key: art.background.key, x: (W - bw * sc) / 2, y: (H - bh * sc) / 2, w: bw * sc, h: bh * sc, clip: [0, 0, W, H] });
+      var fx = (art.background.focus || [0.5, 0.5])[0], fy = (art.background.focus || [0.5, 0.5])[1];
+      var iw = bw * sc, ih = bh * sc;
+      var ix = Math.min(0, Math.max(W - iw, W / 2 - fx * iw)), iy = Math.min(0, Math.max(H - ih, H / 2 - fy * ih));
+      ops.push({ t: "img", key: art.background.key, x: ix, y: iy, w: iw, h: ih, clip: [0, 0, W, H] });
       ops.push({ t: "rect", x: 0, y: 0, w: W, h: H, c: OVERLAY, a: 0.74 });
     } else {
       ops.push({ t: "grad", x: 0, y: 0, w: W, h: H, c0: NAVY_TOP, c1: NAVY_BOTTOM });
       // a quiet ballpark: outfield arc, infield diamond and baselines
-      ops.push({ t: "arc", cx: W / 2, cy: H + 40, r: 200, a0: Math.PI * 1.18, a1: Math.PI * 1.82, c: WHITE, w: 1.1, a: 0.07 });
-      ops.push({ t: "arc", cx: W / 2, cy: H + 40, r: 128, a0: Math.PI * 1.22, a1: Math.PI * 1.78, c: WHITE, w: 0.8, a: 0.06 });
-      ops.push({ t: "path", pts: [[W / 2, H - 6], [W / 2 + 58, H - 64], [W / 2, H - 122], [W / 2 - 58, H - 64]], closed: true, c: WHITE, w: 0.9, a: 0.07 });
-      ops.push({ t: "path", pts: [[W / 2 - 150, H - 156], [W / 2, H - 6], [W / 2 + 150, H - 156]], c: WHITE, w: 0.7, a: 0.05 });
+      var u = H / REF.h;
+      ops.push({ t: "arc", cx: W / 2, cy: H + 40 * u, r: 200 * u, a0: Math.PI * 1.18, a1: Math.PI * 1.82, c: WHITE, w: 1.1, a: 0.07 });
+      ops.push({ t: "arc", cx: W / 2, cy: H + 40 * u, r: 128 * u, a0: Math.PI * 1.22, a1: Math.PI * 1.78, c: WHITE, w: 0.8, a: 0.06 });
+      ops.push({ t: "path", pts: [[W / 2, H - 6 * u], [W / 2 + 58 * u, H - 64 * u], [W / 2, H - 122 * u], [W / 2 - 58 * u, H - 64 * u]], closed: true, c: WHITE, w: 0.9, a: 0.07 });
+      ops.push({ t: "path", pts: [[W / 2 - 150 * u, H - 156 * u], [W / 2, H - 6 * u], [W / 2 + 150 * u, H - 156 * u]], c: WHITE, w: 0.7, a: 0.05 });
     }
-    ops.push({ t: "rect", x: 0, y: 0, w: W, h: 3.2, c: accent, a: 1 });   // destination accent
+    ops.push({ t: "rect", x: 0, y: 0, w: W, h: 3.2 * k, c: accent, a: 1 });   // destination accent
 
     /* One centered stack, top to bottom: name, destination line, facility, street, city, logo.
        Fixed gaps between sections (so every tag has the same rhythm); the whole stack is then
        centered vertically, so short and long content both sit balanced on the tag. */
-    var MARGIN = 20, maxW = W - 2 * MARGIN, cap = function (f, s) { return f.capHeight * s / f.upm; };
-    var GAP = { nameLines: 0.3, toTeam: 11, toFacility: 7.5, line: 5.5, toLogo: 13 };
+    var MARGIN = Math.max(14, 20 * k), maxW = W - 2 * MARGIN, cap = function (f, s) { return f.capHeight * s / f.upm; };
+    var GAP = { nameLines: 0.3, toTeam: 11 * k, toFacility: 7.5 * k, line: 5.5 * k, toLogo: 13 * k };
 
     // logo: same visual area for every club (round, wide or tall), never stretched
     var logo = null;
     if (art.logo) {
-      var ar = art.logo.w / art.logo.h, S = 48, lw = S * Math.sqrt(ar), lh = S / Math.sqrt(ar);
-      var k = Math.min(1, 52 / lh, 84 / lw);
-      logo = { w: lw * k, h: lh * k };
+      var ar = art.logo.w / art.logo.h, S = 48 * k, lw = S * Math.sqrt(ar), lh = S / Math.sqrt(ar);
+      var lk = Math.min(1, 52 * k / lh, 84 * k / lw);
+      logo = { w: lw * lk, h: lh * lk };
     } else if (dest) warnings.push("logo");
 
     var nm = upper(name);
     if (!nm) { nm = "NAME"; warnings.push("name"); }
-    // one line if it fits at 17 pt or more; otherwise two balanced lines, then three, before shrinking
-    var lines, one = fit(B, nm, maxW, 30, 17, 0);
+    // one line if it fits at 17 pt (at 4 × 3 in) or more; otherwise two balanced lines, then three, before shrinking
+    var lines, one = fit(B, nm, maxW, 30 * k, 17 * k, 0);
     if (one) lines = [{ size: one.size, glyphs: one.glyphs }];
     else {
       var best = null;
       [[2, 24, 12], [3, 18, 10]].forEach(function (cfg) {
-        if (best && best.size >= 12) return;                    // two good lines beat three
+        if (best && best.size >= 12 * k) return;                // two good lines beat three
         breakInto(nm, cfg[0]).forEach(function (parts) {
           var gs = parts.map(function (t) { return B.shape(t); });
-          for (var s = cfg[1]; s >= cfg[2]; s -= 0.25) {
+          for (var s = cfg[1] * k; s >= cfg[2] * k; s -= 0.25) {
             if (gs.every(function (g) { return B.width(g, s, 0) <= maxW; })) { if (!best || s > best.size) best = { size: s, l: gs }; break; }
           }
         });
       });
-      var single = fit(B, nm, maxW, 17, 6, 0) || { size: 6, glyphs: B.shape(nm) };
-      if (best && best.size >= Math.min(single.size + 2, 15)) lines = best.l.map(function (g) { return { size: best.size, glyphs: g }; });
+      var single = fit(B, nm, maxW, 17 * k, 6, 0) || { size: 6, glyphs: B.shape(nm) };
+      if (best && best.size >= Math.min(single.size + 2 * k, 15 * k)) lines = best.l.map(function (g) { return { size: best.size, glyphs: g }; });
       else lines = [{ size: single.size, glyphs: single.glyphs }];
     }
     if (B.missing(nm).length) warnings.push("characters");
     var nameSize = lines[0].size, nameCap = cap(B, nameSize), nameGap = nameSize * GAP.nameLines;
 
     // an address line stays readable: it wraps onto a second line (at a comma if it can) rather than
-    // shrinking below 8 pt
+    // shrinking below 8 pt (at 4 × 3 in)
     function addressRows(text) {
-      var one = fit(M, text, maxW, 10, 8, 0.4);
+      var one = fit(M, text, maxW, 10 * k, 8 * k, 0.4);
       if (one) return [one];
       var best = null;
       breakInto(text, 2).forEach(function (parts) {
         var g = parts.map(function (t) { return M.shape(t); }), comma = /,$/.test(parts[0]) ? 0.5 : 0;
-        for (var s = 10; s >= 7; s -= 0.25) {
+        for (var s = 10 * k; s >= 7 * k; s -= 0.25) {
           if (g.every(function (x) { return M.width(x, s, 0.4) <= maxW; })) { if (!best || s + comma > best.score) best = { score: s + comma, size: s, g: g }; break; }
         }
       });
       if (best) return best.g.map(function (x) { return { size: best.size, glyphs: x }; });
-      return [fit(M, text, maxW, 8, 6.5, 0.4) || fit(M, text, maxW, 6.5, 4.5, 0)];
+      return [fit(M, text, maxW, 8 * k, 6.5 * k, 0.4) || fit(M, text, maxW, 6.5 * k, 4.5, 0) || { size: 4.5, glyphs: M.shape(text) }];
     }
 
     var rows = [];
     if (dest) {
       var tlText = upper(dest.tagLine || dest.label);
-      var tl = fit(B, tlText, maxW, 8.5, 6, 1.4) || fit(B, tlText, maxW, 6, 4, 0.4);
-      rows.push({ font: "bold", f: B, size: tl.size, glyphs: tl.glyphs, c: accent.map(function (x) { return Math.min(255, x + 18); }), sp: tl.size >= 6 ? 1.4 : 0.4, gapBefore: GAP.toTeam });
+      var tl = fit(B, tlText, maxW, 8.5 * k, 6 * k, 1.4 * k) || fit(B, tlText, maxW, 6 * k, 4, 0.4) || { size: 4, glyphs: B.shape(tlText) };
+      rows.push({ font: "bold", f: B, size: tl.size, glyphs: tl.glyphs, c: accent.map(function (x) { return Math.min(255, x + 18); }), sp: tl.size >= 6 * k ? 1.4 * k : 0.4, gapBefore: GAP.toTeam });
       var first = true;
       [dest.facility, dest.address, dest.city].forEach(function (line) {
         String(line || "").split(/\n/).forEach(function (part) {      // a multi-line address prints line by line
           if (!part.trim()) return;
           addressRows(upper(part)).forEach(function (r) {
-            rows.push({ font: "medium", f: M, size: r.size, glyphs: r.glyphs, c: WHITE, sp: r.size >= 6.5 ? 0.4 : 0, gapBefore: first ? GAP.toFacility : GAP.line });
+            rows.push({ font: "medium", f: M, size: r.size, glyphs: r.glyphs, c: WHITE, sp: r.size >= 6.5 * k ? 0.4 : 0, gapBefore: first ? GAP.toFacility : GAP.line });
             first = false;
           });
         });
       });
     } else {
-      var na = fit(B, "ASSIGNMENT NEEDED", maxW, 8.5, 6, 1.4);
-      rows.push({ font: "bold", f: B, size: na.size, glyphs: na.glyphs, c: [255, 196, 160], sp: 1.4, gapBefore: GAP.toTeam });
+      var na = fit(B, "ASSIGNMENT NEEDED", maxW, 8.5 * k, 5, 1.4 * k) || { size: 5, glyphs: B.shape("ASSIGNMENT NEEDED") };
+      rows.push({ font: "bold", f: B, size: na.size, glyphs: na.glyphs, c: [255, 196, 160], sp: 1.4 * k, gapBefore: GAP.toTeam });
       warnings.push("destination");
     }
     var blockH = lines.length * nameCap + (lines.length - 1) * nameGap;
     rows.forEach(function (r) { blockH += r.gapBefore + cap(r.f, r.size); });
     if (logo) blockH += GAP.toLogo + logo.h;
-    var y = Math.max(14, (H - blockH) * 0.47);              // a touch above center reads as centered
+    // safe area: nothing within the margin of an edge (the top margin clears the accent band)
+    var top = Math.max(10, 12 * k), fits = blockH <= H - 2 * top;
+    var widest = 0;
+    lines.forEach(function (l) { widest = Math.max(widest, B.width(l.glyphs, l.size, 0)); });
+    rows.forEach(function (r) { widest = Math.max(widest, r.f.width(r.glyphs, r.size, r.sp)); });
+    if (widest > maxW + 0.01) fits = false;
+    var y = Math.max(top, (H - blockH) * 0.47);              // a touch above center reads as centered
     lines.forEach(function (l, i) {
       y += nameCap;
       ops.push({ t: "text", font: "bold", size: l.size, x: (W - B.width(l.glyphs, l.size, 0)) / 2, y: y, glyphs: l.glyphs, c: WHITE, sp: 0 });
@@ -141,16 +171,17 @@
       ops.push({ t: "text", font: r.font, size: r.size, x: (W - r.f.width(r.glyphs, r.size, r.sp)) / 2, y: y, glyphs: r.glyphs, c: r.c, sp: r.sp });
     });
     if (logo) ops.push({ t: "img", key: art.logo.key, x: (W - logo.w) / 2, y: y + GAP.toLogo, w: logo.w, h: logo.h });
-    if (nameSize < 13) warnings.push("long-name");
-    return { ops: ops, warnings: warnings, nameSize: nameSize, nameLines: lines.length };
-  };
+    if (nameSize < 13 * k) warnings.push("long-name");
+    ops.size = { w: W, h: H };
+    return { ops: ops, warnings: warnings, nameSize: nameSize, nameLines: lines.length, fits: fits };
+  }
 
   /* ---------- SVG preview from the same operations ---------- */
   function rgb(c) { return "rgb(" + c.join(",") + ")"; }
   function escXml(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   var gradId = 0;
   CBT.tagSVG = function (ops, urls, fonts, opt) {
-    var id = "g" + (++gradId), out = [];
+    var id = "g" + (++gradId), out = [], W = (ops.size || CBT.TAG).w, H = (ops.size || CBT.TAG).h;
     out.push('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + W + " " + H + '"' + (opt && opt.cls ? ' class="' + opt.cls + '"' : "") + ' role="img" aria-label="' + escXml((opt && opt.label) || "Bag tag preview") + '">');
     out.push('<defs><clipPath id="c' + id + '"><rect width="' + W + '" height="' + H + '"/></clipPath></defs><g clip-path="url(#c' + id + ')">');
     ops.forEach(function (o, i) {
@@ -174,6 +205,7 @@
 
   /* ---------- draw the same operations into a PDF page ---------- */
   CBT.drawTagPDF = function (page, ops, ox, oy, images) {
+    var W = (ops.size || CBT.TAG).w, H = (ops.size || CBT.TAG).h;
     page.save(); page.translate(ox, oy); page.clip(0, 0, W, H);
     ops.forEach(function (o) {
       if (o.t === "grad") page.gradient(o.x, o.y, o.w, o.h, o.c0, o.c1);

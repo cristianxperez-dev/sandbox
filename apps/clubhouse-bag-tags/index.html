@@ -59,7 +59,7 @@ main{max-width:1240px;margin:0 auto;padding:18px 20px 60px}
 .drop .big{font-size:18px;font-weight:800;color:var(--navy)}
 .drop p{margin:6px 0 14px;color:var(--gray-5)}
 .drop .btns{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
-.loaded{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.loaded{display:flex;align-items:center;gap:6px 12px;flex-wrap:wrap;margin-top:12px}
 .loaded .file{font-weight:700}
 .loaded .meta{color:var(--gray-5);font-size:12.5px}
 .mapping{margin-top:14px;padding:14px;border:1px solid var(--gray-3);border-radius:4px;background:var(--gray-1)}
@@ -84,8 +84,16 @@ select:focus,input:focus{outline:2px solid rgba(0,45,98,.25);border-color:var(--
 .seg-l{font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--gray-5);padding:0 8px 0 6px}
 .seg button{border:0;background:transparent;border-radius:3px;padding:5px 11px;font-weight:700;font-size:12px;color:var(--gray-5);white-space:nowrap}
 .seg button[aria-pressed=true]{background:var(--navy);color:#fff}
-.seg button[data-mode=houston][aria-pressed=true]{background:var(--orange)}
+.seg button[data-mode=west-palm][aria-pressed=true]{background:var(--orange)}
+.settings{display:flex;gap:10px 14px;flex-wrap:wrap;align-items:center;margin:0 0 12px}
+.dims{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--gray-5);font-weight:700}
+.dims input[type=number]{width:72px;min-height:30px;padding:4px 6px;text-align:center}
+.dims input[aria-invalid=true]{border-color:var(--red);outline-color:rgba(200,16,46,.25)}
+.size-msg{font-size:12px;color:#9B0E22}
 .mode-note{margin:0 0 12px;padding:9px 12px;border-left:3px solid var(--orange);background:#FFF8F2;font-size:12.5px}
+.loaded .saved{font-size:12px;font-weight:700;color:#1F6B3A}
+.loaded .saved.off{color:#9A3F07;font-weight:600}
+.btn-danger{background:var(--red);border-color:var(--red);color:#fff}
 .tablewrap{border:1px solid var(--gray-3);border-radius:4px;overflow:auto;max-height:640px}
 table{width:100%;border-collapse:collapse;font-size:13px}
 th{position:sticky;top:0;background:var(--gray-2);z-index:1;text-align:left;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-5);font-weight:800;padding:8px;border-bottom:1px solid var(--gray-3);white-space:nowrap}
@@ -176,7 +184,7 @@ dialog::backdrop{background:rgba(0,27,61,.45)}
   <div class="top-row">
     <div class="brand"><div class="b1">Houston Astros</div><div class="b2">Clubhouse <span>Bag Tags</span></div></div>
     <div class="top-actions">
-      <span class="privacy">Rosters stay in this browser tab</span>
+      <span class="privacy">Rosters stay on this device</span>
       <button class="hbtn" id="btnDest" type="button">Destinations &amp; logos</button>
       <button class="hbtn round" id="btnHelp" type="button" aria-label="How to use" title="How to use">?</button>
     </div>
@@ -210,10 +218,16 @@ dialog::backdrop{background:rgba(0,27,61,.45)}
   <section class="card" aria-labelledby="s2">
     <div class="card-h"><span class="step">2</span><h2 id="s2">Review tags</h2><span class="sub" id="reviewSub">No one added yet</span>
       <div class="right">
-        <div class="seg" role="group" aria-label="Tag destination" id="tagMode"><span class="seg-l">Tag destination</span><button type="button" data-mode="affiliate" aria-pressed="true">By affiliate</button><button type="button" data-mode="houston" aria-pressed="false">Houston only</button></div>
         <button class="btn btn-sm" id="btnAdd2" type="button">+ Add person</button></div></div>
     <div class="card-b">
-      <div class="mode-note" id="modeNote" hidden><b>Houston Only:</b> every tag prints for the Houston Astros · Daikin Park, 501 Crawford Street, Houston, TX 77002. Assignments in the list are unchanged; switch back to <b>By affiliate</b> at any time.</div>
+      <div class="settings">
+        <div class="seg" role="group" aria-label="Tag destination" id="tagMode"><span class="seg-l">Tag destination</span><button type="button" data-mode="affiliate" aria-pressed="true">By Affiliate</button><button type="button" data-mode="west-palm" aria-pressed="false">West Palm</button></div>
+        <div class="seg" role="group" aria-label="Tag size" id="tagSize"><span class="seg-l">Tag size</span><button type="button" data-size="3x5" aria-pressed="true" title="Index card, 5 in wide × 3 in tall">3 × 5</button><button type="button" data-size="4x6" aria-pressed="false" title="Index card, 6 in wide × 4 in tall">4 × 6</button><button type="button" data-size="custom" aria-pressed="false">Custom</button></div>
+        <span class="dims"><label for="sizeW">Width</label><input type="number" id="sizeW" min="1.5" max="8" step="0.125" inputmode="decimal" value="5"><span>×</span><label for="sizeH">Height</label><input type="number" id="sizeH" min="1.5" max="8" step="0.125" inputmode="decimal" value="3"><span>in</span></span>
+        <span class="size-msg" id="sizeMsg" role="status"></span>
+      </div>
+      <div class="mode-note" id="modeNote" hidden><b>West Palm:</b> every tag prints <span id="wpAddr">Houston Astros · CACTI Park of the Palm Beaches, 5444 Haverhill Road, West Palm Beach, FL 33407</span>, for Spring Training
+ and centralized travel. Assignments in the list are unchanged; switch back to <b>By Affiliate</b> at any time.</div>
       <div class="review">
         <div>
           <div class="toolbar">
@@ -233,7 +247,7 @@ dialog::backdrop{background:rgba(0,27,61,.45)}
         </div>
         <aside class="side card" aria-label="Tag preview">
           <div class="card-b"><div class="side-inner">
-            <div><h3>Tag preview · 4 × 3 in</h3><div class="preview-big" id="bigPreview"></div></div>
+            <div><h3>Tag preview · <span class="js-size">5 × 3 in</span></h3><div class="preview-big" id="bigPreview"></div></div>
             <div id="sideInfo"><p class="note">Select a row to preview its tag.</p></div>
           </div></div>
         </aside>
@@ -252,18 +266,18 @@ dialog::backdrop{background:rgba(0,27,61,.45)}
       </div>
       <div class="print-grid">
         <div class="opt">
-          <h3>Letter sheets · 6 tags per page</h3>
-          <p>US Letter (8.5 × 11 in), 2 columns × 3 rows of 4 × 3 in tags, with cutting guides.</p>
+          <h3 id="sheetHead">Letter sheets</h3>
+          <p id="sheetDesc">US Letter, with cutting guides.</p>
           <label class="note" style="display:flex;gap:6px;align-items:center;margin:-4px 0 12px"><input type="checkbox" id="cutLines" checked> Cut lines between tags</label>
           <div class="btns"><button class="btn btn-orange" id="sheetPrint" type="button">Print sheets</button><button class="btn" id="sheetSave" type="button">Download PDF</button></div>
         </div>
         <div class="opt">
-          <h3>Individual tags · 4 × 3 in pages</h3>
-          <p>One tag per page at exactly 4 × 3 in, for tag or label printers.</p>
+          <h3>Individual tags · <span class="js-size">5 × 3 in</span> pages</h3>
+          <p>One tag per page at exactly <span class="js-size">5 × 3 in</span>, for tag or label printers.</p>
           <div class="btns"><button class="btn btn-dark" id="singlePrint" type="button">Print tags</button><button class="btn" id="singleSave" type="button">Download PDF</button></div>
         </div>
       </div>
-      <div class="tip"><b>Print at Actual size (100%).</b> In the print dialog choose <b>Actual size</b>, <b>100%</b> or <b>Scale: 100</b>, never <b>Fit to page</b>, and paper size <b>US Letter</b> (or 4 × 3 in for individual tags). Measure the first tag: it should be exactly 4 in wide.</div>
+      <div class="tip"><b>Print at Actual size (100%).</b> In the print dialog choose <b>Actual size</b>, <b>100%</b> or <b>Scale: 100</b>, never <b>Fit to page</b>, and paper size <b>US Letter</b> (or <span class="js-size">5 × 3 in</span> for individual tags). Measure the first tag: it should be exactly <span class="js-size">5 × 3 in</span> (width × height).</div>
       <div class="status" id="status" role="status"></div>
       <div class="sheets" id="sheets"></div>
     </div>
@@ -282,31 +296,35 @@ dialog::backdrop{background:rgba(0,27,61,.45)}
       <li><b>Upload roster.</b> Drop a CSV with each person’s name and assignment, or add people by hand. Need a starting point? Use <b>Download CSV template</b>.</li>
       <li><b>Check the columns.</b> The app matches columns like <i>Name</i>, <i>Player Name</i>, <i>First Name / Last Name</i> and <i>Assignment / Affiliate / Team</i>. If it can’t, pick them yourself.</li>
       <li><b>Review.</b> Rows marked <b>Needs assignment</b> didn’t match a destination (for example “A” or a blank). Choose the right one; nothing is guessed. Edit names, set copies, and untick anyone you don’t need.</li>
-      <li><b>Tag destination.</b> <b>By affiliate</b> (the default) prints each person’s own assignment. <b>Houston only</b> prints a Houston Astros · Daikin Park tag for everyone in the list, whatever their assignment; it doesn’t change the list, and switching back restores the affiliate tags.</li>
-      <li><b>Print.</b> Choose <b>Letter sheets</b> (6 per page) or <b>Individual tags</b> (4 × 3 in pages), then <b>Print</b> or <b>Download PDF</b>.</li>
+      <li><b>Tag destination.</b> <b>By Affiliate</b> (the default) prints each person’s own assignment. <b>West Palm</b> prints a Houston Astros · CACTI Park of the Palm Beaches tag for everyone in the list, for Spring Training and centralized travel; it doesn’t change the list, and switching back restores the affiliate tags.</li>
+      <li><b>Tag size.</b> The default is a 3 × 5 index card in landscape (5 in wide × 3 in tall). Choose <b>4 × 6</b>, or <b>Custom</b> and type a width and height in inches. The preview, sheets and PDFs follow at once.</li>
+      <li><b>Print.</b> Choose <b>Letter sheets</b> (as many tags as fit per page) or <b>Individual tags</b> (one page per tag at the exact tag size), then <b>Print</b> or <b>Download PDF</b>.</li>
     </ol>
     <h3>Printing</h3>
     <ul>
       <li>Always print at <b>Actual size / 100%</b>. Never use <b>Fit to page</b>.</li>
-      <li>Letter sheets: cut along the cut lines and the marks in the margins. Each tag is exactly 4 × 3 in.</li>
+      <li>Letter sheets: cut along the cut lines and the marks in the margins. Each tag is exactly the size you chose. Some sizes fit best on a landscape page; the PDF is already landscape, so leave the print dialog on automatic orientation.</li>
       <li>For one tag, click its row, then <b>Print this tag</b>.</li>
     </ul>
     <h3>Destinations &amp; logos</h3>
     <ul>
       <li>The clubs’ official logos are built in. FCL and Rehab use the Houston Astros logo. To use a different file, choose <b>Replace logo</b>; it stays on this computer, and <b>Use official logo</b> switches back.</li>
       <li>You can change an address (for example an equipment-receiving address). Changes stay on this computer; <b>Reset</b> restores the default.</li>
-      <li>Each destination’s ballpark photo is built in and appears behind its tags: CACTI Park for FCL and Daikin Park for Rehab.</li>
+      <li>Each destination’s ballpark photo is built in and appears behind its tags: CACTI Park for FCL, Rehab and West Palm.</li>
     </ul>
     <h3>Privacy</h3>
     <ul>
-      <li>Rosters never leave your browser. Nothing is uploaded or saved, and the list is cleared when you close the tab.</li>
+      <li>Rosters never leave this device. Nothing is uploaded. The list is saved in this browser so it is still here after a refresh or when you come back; your settings (tag size, destination, print options) are saved too.</li>
+      <li>On a shared computer, use <b>Clear saved roster</b> (next to the file name) when you’re done. If the browser blocks storage (for example a private window), the app says so and the list lasts only until the tab closes.</li>
     </ul>
   </div>
 </dialog>
 
-<script src="destinations.js"></script>
-<script src="pdf.js"></script>
-<script src="tags.js"></script>
-<script src="app.js"></script>
+<!-- ?v= changes with every release so a browser never runs an older script against this page -->
+<script src="destinations.js?v=3"></script>
+<script src="pdf.js?v=3"></script>
+<script src="tags.js?v=3"></script>
+<script src="app.js?v=3"></script>
+
 </body>
 </html>
