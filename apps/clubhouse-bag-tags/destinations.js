@@ -44,14 +44,14 @@ window.CBT_DESTINATIONS = [
     id: "fcl", label: "FCL", short: "FCL", level: "Rookie",
     tagLine: "FCL · Florida Complex League",
     facility: "CACTI Park of the Palm Beaches", address: "5454 N. Haverhill Road", city: "West Palm Beach, FL 33407",
-    accent: "#EB6E1F", logo: "logos/astros.webp", background: null,
+    accent: "#EB6E1F", logo: "logos/astros.webp", background: "backgrounds/fcl.jpg",
     aliases: ["FCL", "Florida Complex League", "FCL Astros", "Complex League"]
   },
   {
     id: "rehab", label: "Rehab", short: "RHB", level: "Rehab",
     tagLine: "Rehab Assignment · Houston Astros",
     facility: "CACTI Park of the Palm Beaches", address: "5454 N. Haverhill Road", city: "West Palm Beach, FL 33407",
-    accent: "#EB6E1F", logo: "logos/astros.webp", background: null,
+    accent: "#EB6E1F", logo: "logos/astros.webp", background: "backgrounds/rehab.jpg",
     aliases: ["Rehab", "Rehabilitation", "Rehab Assignment"]
   }
 ];
