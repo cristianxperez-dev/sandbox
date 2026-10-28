@@ -1,0 +1,59 @@
+/* Clubhouse Bag Tags: the six built-in destinations. This is the one place to change them.
+
+   id        never change it (staff preferences and logos are saved against it)
+   label     the assignment as it appears in the app and on the tag
+   tagLine   the destination line printed on the tag, under the name
+   facility, address, city   the shipping address printed on the tag (staff can override these in the app)
+   short     short code for filters and badges
+   accent    accent colour on the tag (used on the dark tag background)
+   logo      a logo file inside logos/ (official asset supplied by the club), or null until one is added.
+             Staff can also upload a logo in the app; that copy stays in their browser.
+   aliases   values recognized in an imported CSV (case, spaces and punctuation are ignored). Keep them
+             unambiguous: a value that matches two destinations is flagged for review, never guessed. */
+window.CBT_DESTINATIONS = [
+  {
+    id: "sugar-land", label: "Sugar Land Space Cowboys", short: "SUG", level: "Triple-A",
+    tagLine: "Sugar Land Space Cowboys",
+    facility: "Constellation Field", address: "1 Stadium Drive", city: "Sugar Land, TX 77498",
+    accent: "#F6893B", logo: null,
+    aliases: ["Sugar Land", "Sugar Land Space Cowboys", "Space Cowboys", "SUG", "SL", "AAA", "Triple-A", "Triple A"]
+  },
+  {
+    id: "corpus-christi", label: "Corpus Christi Hooks", short: "CC", level: "Double-A",
+    tagLine: "Corpus Christi Hooks",
+    facility: "Whataburger Field", address: "734 E. Port Avenue", city: "Corpus Christi, TX 78401",
+    accent: "#5BC2E7", logo: null,
+    aliases: ["Corpus Christi", "Corpus Christi Hooks", "Corpus", "Hooks", "CC", "AA", "Double-A", "Double A"]
+  },
+  {
+    id: "asheville", label: "Asheville Tourists", short: "ASH", level: "High-A",
+    tagLine: "Asheville Tourists",
+    facility: "HomeTrust Park", address: "30 Buchanan Place", city: "Asheville, NC 28801",
+    accent: "#F2A900", logo: null,
+    aliases: ["Asheville", "Asheville Tourists", "Tourists", "ASH", "High-A", "High A", "A+"]
+  },
+  {
+    id: "fayetteville", label: "Fayetteville Woodpeckers", short: "FAY", level: "Low-A",
+    tagLine: "Fayetteville Woodpeckers",
+    facility: "Segra Stadium", address: "460 Hay Street", city: "Fayetteville, NC 28301",
+    accent: "#E8453C", logo: null,
+    aliases: ["Fayetteville", "Fayetteville Woodpeckers", "Woodpeckers", "FAY", "Low-A", "Low A", "Single-A", "Single A"]
+  },
+  {
+    id: "fcl", label: "FCL", short: "FCL", level: "Rookie",
+    tagLine: "FCL · Florida Complex League",
+    facility: "CACTI Park of the Palm Beaches", address: "5444 Haverhill Road", city: "West Palm Beach, FL 33407",
+    accent: "#EB6E1F", logo: null,
+    aliases: ["FCL", "Florida Complex League", "FCL Astros", "Complex League"]
+  },
+  {
+    id: "rehab", label: "Rehab", short: "RHB", level: "Rehab",
+    tagLine: "Rehab Assignment · Houston Astros",
+    facility: "CACTI Park of the Palm Beaches", address: "5444 Haverhill Road", city: "West Palm Beach, FL 33407",
+    accent: "#EB6E1F", logo: null,
+    aliases: ["Rehab", "Rehabilitation", "Rehab Assignment"]
+  }
+];
+
+/* FCL and Rehab both use the Houston Astros logo; share one upload between them. */
+window.CBT_SHARED_LOGOS = { fcl: "astros", rehab: "astros" };
