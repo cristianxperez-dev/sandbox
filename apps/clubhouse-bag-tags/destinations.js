@@ -7,6 +7,7 @@
    short     short code for filters and badges
    accent    accent colour on the tag, taken from the club's logo (lightened where needed to read on navy)
    logo      the club's official logo file inside logos/ (or null if there is none).
+   background  a ballpark photo inside backgrounds/ (4:3, 1600 × 1200 JPEG), shown under a navy wash, or null
              Staff can also upload a logo in the app; that copy stays in their browser.
    aliases   values recognized in an imported CSV (case, spaces and punctuation are ignored). Keep them
              unambiguous: a value that matches two destinations is flagged for review, never guessed. */
@@ -15,42 +16,42 @@ window.CBT_DESTINATIONS = [
     id: "sugar-land", label: "Sugar Land Space Cowboys", short: "SUG", level: "Triple-A",
     tagLine: "Sugar Land Space Cowboys",
     facility: "Constellation Field", address: "1 Stadium Drive", city: "Sugar Land, TX 77498",
-    accent: "#1EC3E0", logo: "logos/sugar-land.webp",
+    accent: "#1EC3E0", logo: "logos/sugar-land.webp", background: "backgrounds/sugar-land.jpg",
     aliases: ["Sugar Land", "Sugar Land Space Cowboys", "Space Cowboys", "SUG", "SL", "AAA", "Triple-A", "Triple A"]
   },
   {
     id: "corpus-christi", label: "Corpus Christi Hooks", short: "CC", level: "Double-A",
     tagLine: "Corpus Christi Hooks",
     facility: "Whataburger Field", address: "734 E. Port Avenue", city: "Corpus Christi, TX 78401",
-    accent: "#63A8DE", logo: "logos/corpus-christi.webp",
+    accent: "#63A8DE", logo: "logos/corpus-christi.webp", background: "backgrounds/corpus-christi.jpg",
     aliases: ["Corpus Christi", "Corpus Christi Hooks", "Corpus", "Hooks", "CC", "AA", "Double-A", "Double A"]
   },
   {
     id: "asheville", label: "Asheville Tourists", short: "ASH", level: "High-A",
     tagLine: "Asheville Tourists",
     facility: "HomeTrust Park", address: "30 Buchanan Place", city: "Asheville, NC 28801",
-    accent: "#6ECDB4", logo: "logos/asheville.webp",
+    accent: "#6ECDB4", logo: "logos/asheville.webp", background: "backgrounds/asheville.jpg",
     aliases: ["Asheville", "Asheville Tourists", "Tourists", "ASH", "High-A", "High A", "A+"]
   },
   {
     id: "fayetteville", label: "Fayetteville Woodpeckers", short: "FAY", level: "Low-A",
     tagLine: "Fayetteville Woodpeckers",
     facility: "Segra Stadium", address: "460 Hay Street", city: "Fayetteville, NC 28301",
-    accent: "#E2304A", logo: "logos/fayetteville.webp",
+    accent: "#E2304A", logo: "logos/fayetteville.webp", background: "backgrounds/fayetteville.jpg",
     aliases: ["Fayetteville", "Fayetteville Woodpeckers", "Woodpeckers", "FAY", "Low-A", "Low A", "Single-A", "Single A"]
   },
   {
     id: "fcl", label: "FCL", short: "FCL", level: "Rookie",
     tagLine: "FCL · Florida Complex League",
     facility: "CACTI Park of the Palm Beaches", address: "5454 N. Haverhill Road", city: "West Palm Beach, FL 33407",
-    accent: "#EB6E1F", logo: "logos/astros.webp",
+    accent: "#EB6E1F", logo: "logos/astros.webp", background: null,
     aliases: ["FCL", "Florida Complex League", "FCL Astros", "Complex League"]
   },
   {
     id: "rehab", label: "Rehab", short: "RHB", level: "Rehab",
     tagLine: "Rehab Assignment · Houston Astros",
     facility: "CACTI Park of the Palm Beaches", address: "5454 N. Haverhill Road", city: "West Palm Beach, FL 33407",
-    accent: "#EB6E1F", logo: "logos/astros.webp",
+    accent: "#EB6E1F", logo: "logos/astros.webp", background: null,
     aliases: ["Rehab", "Rehabilitation", "Rehab Assignment"]
   }
 ];
