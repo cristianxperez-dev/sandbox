@@ -77,20 +77,23 @@
     });
   }
   var versions = 0;
-  function setArt(k, blob) {
+  function setArt(k, blob, official) {
     if (art[k]) { URL.revokeObjectURL(art[k].url); delete art[k]; }
     if (!blob) return Promise.resolve();
-    return imageSize(blob).then(function (s) { art[k] = { blob: blob, url: s.url, w: s.w, h: s.h, img: s.img, key: k + "#" + (++versions) }; });
+    return imageSize(blob).then(function (s) { art[k] = { blob: blob, url: s.url, w: s.w, h: s.h, img: s.img, key: k + "#" + (++versions), official: !!official }; });
+  }
+  // the official logo file shipped in logos/ (named in destinations.js), if there is one
+  function officialLogo(k) {
+    var d = DEFAULTS.filter(function (x) { return logoKey(x.id) === k && x.logo; })[0];
+    if (!d) return Promise.resolve(null);
+    return fetch(d.logo).then(function (r) { return r.ok ? r.blob() : null; }).then(function (b) { return b && setArt(k, b, true); }).catch(function () {});
   }
   function loadArt() {
     var keys = Array.from(new Set(DEFAULTS.map(function (d) { return logoKey(d.id); }))).concat(["background"]);
     return Promise.all(keys.map(function (k) {
       return assetGet(k).then(function (blob) {
-        if (blob) return setArt(k, blob);
-        // an official file shipped in logos/ (named in destinations.js)
-        var d = DEFAULTS.filter(function (x) { return logoKey(x.id) === k && x.logo; })[0];
-        if (!d) return null;
-        return fetch(d.logo).then(function (r) { return r.ok ? r.blob() : null; }).then(function (b) { return b && setArt(k, b); }).catch(function () {});
+        if (blob) return setArt(k, blob);                        // a staff upload replaces the official file
+        return k === "background" ? null : officialLogo(k);
       }).catch(function () {});
     }));
   }
@@ -117,7 +120,7 @@
       p = new Promise(function (res) { c.toBlob(res, "image/jpeg", 0.86); }).then(function (b) { return b.arrayBuffer(); })
         .then(function (buf) { return { key: a.key, kind: "jpeg", bytes: new Uint8Array(buf), w: c.width, h: c.height }; });
     } else {
-      var lc = canvasFrom(a.img, 1000);
+      var lc = canvasFrom(a.img, 720);   // about 1000 dpi at tag size
       p = Promise.resolve({ key: a.key, kind: "rgba", data: lc.getContext("2d").getImageData(0, 0, lc.width, lc.height).data, w: lc.width, h: lc.height });
     }
     pdfImageCache.set(a.key, p);
@@ -421,13 +424,13 @@
 
   /* ---------- Destinations & logos dialog ---------- */
   function renderDestDialog() {
-    var shown = new Set(), html = '<p class="note" style="margin-top:0">Changes are saved in this browser only. Logos should be the clubs’ official files. FCL and Rehab share the Houston Astros logo.</p>';
+    var shown = new Set(), html = '<p class="note" style="margin-top:0">The clubs’ official logos are built in; FCL and Rehab use the Houston Astros logo. Address edits and replacement logos are saved in this browser only.</p>';
     dests.forEach(function (d) {
       var k = logoKey(d.id), a = art[k], first = !shown.has(k); shown.add(k);
       var def = DEFAULTS.filter(function (x) { return x.id === d.id; })[0];
       var edited = EDITABLE.some(function (f) { return d[f] !== def[f]; });
       html += '<div class="dest" data-id="' + d.id + '"><div><div class="logo-box">' + (a ? '<img src="' + a.url + '" alt="' + esc(d.label) + ' logo">' : '<div class="none">No logo yet</div>') + "</div>" +
-        '<div class="lbtns">' + (first ? '<button class="btn btn-sm" type="button" data-act="logo">' + (a ? "Replace logo" : "Upload logo") + "</button>" + (a ? '<button class="btn btn-sm" type="button" data-act="nologo">Remove</button>' : "") : '<span class="note">Same logo as FCL</span>') + "</div></div>" +
+        '<div class="lbtns">' + (first ? '<button class="btn btn-sm" type="button" data-act="logo">' + (a ? "Replace logo" : "Upload logo") + "</button>" + (a && !a.official ? '<button class="btn btn-sm" type="button" data-act="nologo">' + (DEFAULTS.some(function (x) { return logoKey(x.id) === k && x.logo; }) ? "Use official logo" : "Remove") + "</button>" : "") : '<span class="note">Same logo as FCL</span>') + "</div></div>" +
         "<div><h3>" + esc(d.label) + ' <span class="note">· ' + esc(d.level) + "</span></h3>" +
         '<div class="fields">' +
         '<div class="wide"><label>Line on tag</label><input type="text" data-f="tagLine" value="' + esc(d.tagLine) + '"></div>' +
@@ -466,7 +469,11 @@
         setArt(k, file).then(function () { assetPut(k, file); after(); toast(act === "bg" ? "Background photo saved in this browser" : "Logo saved in this browser"); })
           .catch(function (err) { toast(err.message); });
       });
-      else if (act === "nologo" || act === "nobg") { var k2 = act === "nobg" ? "background" : logoKey(id); setArt(k2, null); assetDel(k2); after(); }
+      else if (act === "nologo" || act === "nobg") {
+        var k2 = act === "nobg" ? "background" : logoKey(id);
+        setArt(k2, null); assetDel(k2);
+        (act === "nologo" ? officialLogo(k2) : Promise.resolve()).then(after);
+      }
       else if (act === "reset") { var saved = store("destinations") || {}; delete saved[id]; store("destinations", saved); loadDests(); after(); }
     });
   }

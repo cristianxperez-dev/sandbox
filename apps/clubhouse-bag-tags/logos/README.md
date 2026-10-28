@@ -1,7 +1,7 @@
 # Team logos
 
-Put the clubs' official logo files here (PNG with a transparent background, or SVG), then name each file
-in `../destinations.js` (`logo: "logos/<file>"`). For example `logos/corpus-christi.png`.
+The clubs' official logos, supplied by the Astros clubhouse (transparent WebP, at most 1000 px). Each one is
+named in `../destinations.js` (`logo: "logos/<file>"`). To replace one, keep the file name or update that line.
 
 FCL and Rehab share the Houston Astros logo: set the same file on both.
 
