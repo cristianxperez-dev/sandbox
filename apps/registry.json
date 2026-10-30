@@ -7,6 +7,15 @@
     "status": "in-development"
   },
   {
+    "id": "baseball-iq",
+    "name": "Baseball IQ",
+    "description": "A game-show style film review: players watch a play, name what stands out, and teams compete for points.",
+    "discipline": "Baseball",
+    "status": "available",
+    "returnLink": false,
+    "tags": ["game", "trivia", "film review", "video", "teams", "fast money", "baseball feud", "coaching"]
+  },
+  {
     "id": "recollect",
     "name": "Recollect",
     "description": "A private memory bank to capture, organize, and recall your professional experiences, people, and lessons.",
