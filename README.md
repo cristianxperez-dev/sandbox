@@ -203,7 +203,35 @@ GitHub Pages sites are **public**. Every file in `apps/` is downloadable by anyo
 
 - Never commit API keys, passwords, tokens, personal data, or anything confidential, including inside an app's JavaScript.
 - `hidden` and statuses are for presentation only. They are not access control.
-- An app that needs logins, a database, or private server-side processing needs separate infrastructure (for example a hosted backend). Sandbox can link to it, but it can't host the private parts.
+- An app that needs logins, a database, or private server-side processing needs separate infrastructure (for example a hosted backend). Sandbox can link to it, but it can't host the private parts. The one exception is Recollect's API (below), a Cloudflare Pages Function that refuses every request until it is configured.
+
+## Recollect: cloud storage
+
+Recollect (`apps/recollect/`) is a static page plus a small API in `functions/apps/recollect/api/[[path]].js`, a Cloudflare Pages Function that stores memories in a Cloudflare D1 database. `site/_routes.json` limits Functions to `/apps/recollect/api/*`, so the rest of the site stays fully static. The GitHub Pages copy has no Functions, so Recollect runs there in its original on-this-device-only mode.
+
+**How it's protected.** Cloudflare Access signs the owner in. The API does not rely on Access being in front of it: on every request it verifies the Access token itself (signature, issuer, audience, expiry) and checks the email against an allowlist. A request without a valid token is refused on any hostname, including `*.pages.dev` and preview URLs. Missing configuration means every request is refused. Queries are parameterized and filtered by the signed-in email. Requests must be same-origin with an `X-Recollect` header. The page sets a strict Content-Security-Policy. No secret is stored in this repository.
+
+**One-time setup (Cloudflare dashboard).** Until this is done, Recollect works on each device only and says so on its Data page.
+
+1. **D1:** Workers & Pages → D1 → *Create database*, name `recollect`.
+2. **Binding:** the Sandbox Pages project → Settings → Bindings → *Add* → D1 database, variable name `RECOLLECT_DB`, database `recollect`, for **Production** (use a separate database for Preview if you want previews to work).
+3. **Access:** Zero Trust → Access → Applications → *Add an application* → Self-hosted. Domain `cperez.app`, path `apps/recollect/api`. Policy: Allow, your email. Protecting only the `api` path keeps the Sandbox card's logo public; the app's **Sign in** button goes through `api/login`. After saving, copy the application's **Audience (AUD) tag**.
+4. **Variables:** the Pages project → Settings → Variables and Secrets (Production):
+   - `RECOLLECT_ACCESS_ISSUER`: `https://<your-team>.cloudflareaccess.com` (Zero Trust → Settings → Custom pages shows the team domain)
+   - `RECOLLECT_ACCESS_AUD`: the AUD tag from step 3
+   - `RECOLLECT_ALLOWED_EMAILS`: your email (comma-separate several)
+5. **Redeploy** (Deployments → latest → *Retry deployment*), open `https://cperez.app/apps/recollect/`, choose **Sign in**. The status in the top bar should read **Saved**. On the first sign-in from a device, everything already on that device is uploaded; nothing is replaced.
+
+The tables are created on first use. Deploys never touch the database, so memories survive every redeploy.
+
+**Backups and recovery.**
+- **Download cloud backup** (Data page) exports everything stored for your account in Recollect's backup format. **Restore** accepts it, or any earlier backup, and shows what will change before writing anything.
+- Deleted memories stay in **Recently deleted** until permanently deleted. The cloud keeps the last 50 versions of every memory, and a conflict between devices files the losing text there instead of discarding it.
+- D1 **Time Travel** can restore the whole database to any minute in the last 30 days (7 on the Free plan): `wrangler d1 time-travel restore recollect --timestamp=<time>`.
+
+**Shared origin.** Recollect lives on the same origin as the other Sandbox apps. Their code is yours and the Access cookie is HttpOnly, but a script running in another app on `cperez.app` could still call Recollect's API on your behalf. Moving Recollect to its own subdomain (like Replated) would isolate it fully if Sandbox ever hosts code you don't control.
+
+**Testing locally.** `npx wrangler pages dev _site --d1 RECOLLECT_DB=local` with the three variables passed as `--binding NAME=value`, and a test token issuer. Keep `.wrangler/` out of git (it is ignored).
 
 ## Things apps should know
 

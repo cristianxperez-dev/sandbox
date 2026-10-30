@@ -9,9 +9,12 @@
   {
     "id": "recollect",
     "name": "Recollect",
-    "description": "A personal memory keeper for the people, experiences, and small details worth holding on to.",
+    "description": "A private memory bank to capture, organize, and recall your professional experiences, people, and lessons.",
     "discipline": "Productivity",
-    "status": "in-development"
+    "status": "available",
+    "logoBackground": "#132842",
+    "returnLink": false,
+    "tags": ["memory", "memory bank", "journal", "notes", "career", "story bank", "archive"]
   },
   {
     "id": "replated-recipes",
