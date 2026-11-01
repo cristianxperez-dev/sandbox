@@ -23,7 +23,7 @@
     {
       "type": "p",
       "kind": "original",
-      "text": "Your economics coursework will help, but the emphasis here is executive: knowing which number answers which question, which assumption drives a result, and when a tidy calculation is hiding a judgment that belongs to the decision-makers. The Capital Allocation Lab lets you build a portfolio under a binding budget for a fictional hospital system. The case, The Budget Decision, puts a fictional club’s player development director between more people, better tools and deeper research capacity. The assignment asks you to write the kind of business case you would want to receive."
+      "text": "If you have studied economics, marginal analysis and opportunity cost will feel familiar; the emphasis here is executive: knowing which number answers which question, which assumption drives a result, and when a tidy calculation is hiding a judgment that belongs to the decision-makers. The Capital Allocation Lab lets you build a portfolio under a binding budget for a fictional hospital system. The case, The Budget Decision, puts a fictional club’s player development director between more people, better tools and deeper research capacity. The assignment asks you to write the kind of business case you would want to receive."
     },
     {
       "type": "p",
@@ -200,7 +200,7 @@
           {
             "type": "p",
             "kind": "original",
-            "text": "Executives who are not finance specialists often treat “the numbers” as one thing. They are at least three things, each answering a different question, and most expensive misunderstandings in budget meetings come from mixing them up: a proposal that “pays for itself” on a profit view may consume cash for years, and a cost-cutting move that improves this year’s cash may quietly create a liability on the balance sheet."
+            "text": "Executives who are not finance specialists often treat “the numbers” as one thing. They are at least three things, each answering a different question, and many expensive misunderstandings in budget meetings come from mixing them up: a proposal that “pays for itself” on a profit view may consume cash for years, and a cost-cutting move that improves this year’s cash may quietly create a liability on the balance sheet."
           },
           {
             "type": "prompt",
@@ -413,7 +413,7 @@
           {
             "type": "p",
             "kind": "original",
-            "text": "The statements also omit much of what matters most in knowledge-intensive organizations. Spending on people, training, research and internally developed software is largely expensed as it occurs, so an organization’s most valuable capabilities — a trained staff, a proprietary model, a reputation with recruits — usually do not appear as assets at all. A department that invests heavily in developing people looks costly on the income statement and asset-light on the balance sheet. That is an accounting convention, not evidence that the investment has no value, and it is one reason finance offices and operating leaders talk past each other."
+            "text": "The statements also omit much of what matters most in knowledge-intensive organizations. Spending on people, training and research is largely expensed as it occurs (some software development costs can be capitalized under specific rules), so an organization’s most valuable capabilities — a trained staff, a proprietary model, a reputation with recruits — usually do not appear as assets at all. A department that invests heavily in developing people looks costly on the income statement and asset-light on the balance sheet. That is an accounting convention, not evidence that the investment has no value, and it is one reason finance offices and operating leaders talk past each other."
           },
           {
             "type": "p",
@@ -851,7 +851,7 @@
           {
             "type": "p",
             "kind": "original",
-            "text": "Two further cautions. First, avoid double-counting risk: managers who both shade the cash flows down for risk and raise the discount rate for the same risk penalize the project twice. Choose one place to adjust and document it. Second, inflation must be handled consistently: discount nominal cash flows (which include expected price increases) at a nominal rate, or real cash flows at a real rate. Mixing them is one of the most common errors in departmental business cases."
+            "text": "Two further cautions. First, avoid double-counting risk: managers who both shade the cash flows down for risk and raise the discount rate for the same risk penalize the project twice. Choose one place to adjust and document it. Second, inflation must be handled consistently: discount nominal cash flows (which include expected price increases) at a nominal rate, or real cash flows at a real rate. Mixing them is an easy and consequential error in departmental business cases."
           },
           {
             "type": "depth",
@@ -860,9 +860,10 @@
               {
                 "type": "p",
                 "kind": "established",
-                "text": "In corporate finance the cost of equity is commonly estimated with the capital asset pricing model: the risk-free rate plus the asset’s sensitivity to market movements (beta) times the market risk premium. The cost of debt is the yield the organization pays to borrow, reduced by the tax deductibility of interest. WACC combines the two. Each input is an estimate, so a plausible range for WACC is often a percentage point or two wide.",
+                "text": "In corporate finance the cost of equity is commonly estimated with the capital asset pricing model: the risk-free rate plus the asset’s sensitivity to market movements (beta) times the market risk premium. The cost of debt is the yield the organization pays to borrow, reduced by the tax deductibility of interest. WACC combines the two. Each input is an estimate, so a plausible range for WACC is often a percentage point or two wide. Survey evidence indicates that large firms rely heavily on the capital asset pricing model in practice.",
                 "refs": [
-                  "R-dahlquist-2022-principles"
+                  "R-dahlquist-2022-principles",
+                  "R-graham-2001-theory"
                 ]
               },
               {
@@ -1204,7 +1205,7 @@
                 "Relevant: the only costs that belong in the comparison."
               ]
             ],
-            "note": "Original teaching device. The bottom row means “differs between options”; the top row means “the same under every option”."
+            "note": "Original teaching device. Only costs that are not yet incurred and differ between options belong in the comparison; a past purchase matters only through its salvage or reuse value."
           },
           {
             "type": "p",
@@ -1358,7 +1359,7 @@
           {
             "type": "p",
             "kind": "original",
-            "text": "Opportunity cost is most often neglected for staff time, because salaries are fixed and feel free. If an analyst spends ten hours a week on a manual report, the cost is not a quarter of her salary; it is the most valuable project she is not doing. One practical tool is a quarterly capacity ledger: list the department’s scarce hours, what currently consumes them, and the best unfunded use. Any new request must name which line it displaces."
+            "text": "Opportunity cost is especially easy to neglect for staff time, because salaries are fixed and feel free. If an analyst spends ten hours a week on a manual report, the cost is not a quarter of her salary; it is the most valuable project she is not doing. One practical tool is a quarterly capacity ledger: list the department’s scarce hours, what currently consumes them, and the best unfunded use. Any new request must name which line it displaces."
           },
           {
             "type": "p",
@@ -1565,7 +1566,7 @@
           {
             "type": "p",
             "kind": "original",
-            "text": "Look at the last three significant projects your organization approved. For each, ask a simple question: was the approved budget the median outcome — as likely to come in under as over — or was it the outcome if things went roughly to plan? Most people, answering honestly, realize the approved number was closer to the second. A plan describes what happens when the plan works. The distribution of what actually happens includes delays, scope changes, staff turnover, vendor problems and the occasional pleasant surprise."
+            "text": "Look at the last three significant projects your organization approved. For each, ask a simple question: was the approved budget the median outcome — as likely to come in under as over — or was it the outcome if things went roughly to plan? Many people, answering honestly, realize the approved number was closer to the second. A plan describes what happens when the plan works. The distribution of what actually happens includes delays, scope changes, staff turnover, vendor problems and the occasional pleasant surprise."
           },
           {
             "type": "prompt",
@@ -1782,7 +1783,7 @@
           {
             "type": "p",
             "kind": "contested",
-            "text": "The explanation for forecast errors is disputed. Love and Ahiaga-Dagbui argue that framing cost underestimation in transport projects as either honest error or deliberate lie is a false dichotomy, criticize the methods and conclusions of the influential earlier work by Flyvbjerg and colleagues, and emphasize causes such as scope change and rework, as well as how the baseline estimate is defined: an “overrun” measured from an early concept estimate looks much larger than one measured from a final contract price. Flyvbjerg has replied that this view will keep planners getting costs wrong. Both sides agree that large overruns are common; they disagree on why, and therefore on what fixes them. For an executive the practical point is that reference-class forecasting can be useful regardless of which explanation is right, but the definition of the baseline must be explicit before any claim about bias is accepted.",
+            "text": "The explanation for forecast errors is disputed. Love and Ahiaga-Dagbui argue that framing cost underestimation in transport projects as either honest error or deliberate lie is a false dichotomy when set against how large infrastructure is actually procured, describe the conclusions of influential earlier work by Flyvbjerg and colleagues as unfounded, and urge evidence-based approaches to setting cost estimates. Flyvbjerg has replied that this view will keep planners getting costs wrong. The dispute concerns why estimates go wrong, and therefore what fixes them. For an executive, two practical points follow: reference-class forecasting can be useful whichever explanation is right, because it corrects the forecast without needing to diagnose motives; and any claimed overrun depends on its baseline — an “overrun” measured from an early concept estimate looks much larger than one measured from a final contract price — so the baseline must be explicit before a claim about bias is accepted.",
             "refs": [
               "R-flyvbjerg-2008-curbing",
               "R-love-2018-debunking"
@@ -1999,7 +2000,7 @@
         },
         {
           "ref": "R-love-2018-debunking",
-          "use": "The critique of deception-based explanations of cost underestimation and of baseline definitions."
+          "use": "The critique of the error-or-lie explanation of cost underestimation."
         },
         {
           "ref": "R-dahlquist-2022-principles",
@@ -2043,7 +2044,7 @@
           {
             "type": "p",
             "kind": "original",
-            "text": "In most professional leagues, the club with the largest payroll is not the most efficient spender, and the most efficient spender rarely wins a title. Commentators treat this as proof that rich clubs waste money. An economist would ask a different question: what is the next win worth to each club? For a club on the edge of the postseason, a few additional wins can be worth far more than the same wins to a club certain to finish in last place or certain to qualify."
+            "text": "Picture a league table sorted by payroll efficiency — wins per dollar spent. The club at the top need not be the one with the largest payroll, and it may not be a contender at all. A common reaction is that the big spenders are wasting money. An economist would ask a different question: what is the next win worth to each club? For a club on the edge of the postseason, a few additional wins can be worth far more than the same wins to a club certain to finish in last place or certain to qualify."
           },
           {
             "type": "prompt",
@@ -2191,7 +2192,7 @@
           {
             "type": "p",
             "kind": "original",
-            "text": "Surplus value explains why player development matters economically. In leagues where early-career pay is constrained by collectively bargained rules, a player developed internally can deliver major-league-quality performance for several seasons at well below market pay. The surplus over those seasons is the return on the development investment, and it is often larger than anything the same money could buy on the open market. The difficulty is not the logic but the measurement: the uplift any program produces is small relative to the noise in player outcomes."
+            "text": "Surplus value explains why player development matters economically. In leagues where early-career pay is constrained by collectively bargained rules, a player developed internally can deliver major-league-quality performance for several seasons at well below market pay. The surplus over those seasons is the return on the development investment, and it can exceed what the same money would buy on the open market. The difficulty is not the logic but the measurement: the uplift any program produces is small relative to the noise in player outcomes."
           },
           {
             "type": "table",
@@ -2313,7 +2314,7 @@
           {
             "type": "p",
             "kind": "example",
-            "text": "Hypothetical illustration from technology and law: a software company weighing one senior engineer against two junior engineers, or a law firm weighing a lateral partner hire, faces the same questions. What is the marginal product of this person in this team, how much of their past output was produced by their former organization’s systems, and is the price inflated because several bidders competed? Firms that hire stars for their past numbers often discover the winner’s curse in the first year."
+            "text": "Hypothetical illustration from technology and law: a software company weighing one senior engineer against two junior engineers, or a law firm weighing a lateral partner hire, faces the same questions. What is the marginal product of this person in this team, how much of their past output was produced by their former organization’s systems, and is the price inflated because several bidders competed? A firm that wins a bidding contest for a star on the strength of past numbers should expect some disappointment for exactly that reason: the winning bid is the one most likely to have overestimated."
           },
           {
             "type": "mode",

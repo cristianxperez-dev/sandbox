@@ -103,7 +103,7 @@
       "Financing decisions are shaped by practical concerns such as financial flexibility, credit ratings and dilution more than by several textbook theories."
     ],
     "evidence": "observational",
-    "design": "Survey of 392 CFOs on cost of capital, capital budgeting and capital structure (U.S. and Canadian firms per the abstract record).",
+    "design": "Survey of 392 CFOs on cost of capital, capital budgeting and capital structure.",
     "strengths": "Large practitioner sample; links textbook theory to reported practice; widely cited benchmark.",
     "limitations": "Self-reported methods, not observed decisions; respondents may report what they believe they should do; data are now more than two decades old.",
     "contested": null,
@@ -256,7 +256,7 @@
     "design": "Method description plus a practice case (UK transport cost forecasting); builds on the author’s earlier quantitative studies of cost overruns.",
     "strengths": "Concrete, implementable method grounded in Kahneman and Tversky’s outside view; documented use by a government.",
     "limitations": "Practice account rather than a controlled test of forecast accuracy; the choice of reference class is a judgment; the “strategic misrepresentation” explanation is disputed by other researchers.",
-    "contested": "Love and Ahiaga-Dagbui (R-love-2018-debunking) dispute the deception-based explanation of cost underestimation and the methods behind it; Flyvbjerg and colleagues have published rebuttals.",
+    "contested": "Love and Ahiaga-Dagbui (R-love-2018-debunking) dispute the deception-based explanation of cost underestimation and the methods behind it; Flyvbjerg has published a rebuttal.",
     "generalizability": "Most transferable where an organization has many comparable past projects (IT systems, facilities, hires); weaker for genuinely novel initiatives with no meaningful reference class.",
     "readingMinutes": 45,
     "relevance": "Gives you a disciplined way to challenge a vendor’s or a colleague’s base case — and your own."
@@ -285,18 +285,18 @@
     },
     "summary": "A critique of the influential claim that cost underestimation in transport projects is best explained by optimism or deliberate deception. The authors argue that the “error or lie” framing is a false dichotomy, question the methodology and conclusions of the earlier work, and call for evidence-based approaches to setting capital cost estimates. Flyvbjerg replied that this view would keep planners getting costs wrong.",
     "arguments": [
-      "Framing cost underestimation as either honest error or deliberate lie is a false dichotomy given how large projects are actually procured.",
-      "Methodological choices — including when the baseline estimate is measured and how scope changes are treated — affect how large “overruns” appear.",
-      "Policy should rest on evidence about the causes of cost growth (such as scope change and rework), not only on behavioral explanations."
+      "Framing cost underestimation as either honest error or deliberate lie is a false dichotomy given how large infrastructure assets are actually procured.",
+      "The methodology, analysis and conclusions of Flyvbjerg, Holm and Buhl (2002) are questioned and described as unfounded.",
+      "Policy-makers should rely on evidence-based research when setting capital cost estimates at the front end of major transport projects."
     ],
     "evidence": "review",
     "design": "Critical methodological review and argument; no new controlled study.",
-    "strengths": "Forces precision about baselines and causal explanations; represents a live scholarly dispute.",
-    "limitations": "Polemical in tone; offers critique more than an alternative validated forecasting method; it disputes the explanation more than the existence of frequent overruns.",
+    "strengths": "Forces precision about causal explanations of forecast error; represents a live scholarly dispute.",
+    "limitations": "Polemical in tone; offers critique more than an alternative validated forecasting method; only the abstract and secondary summaries were seen for this record.",
     "contested": "Directly contests the explanation advanced by Flyvbjerg and colleagues (see R-flyvbjerg-2008-curbing); the dispute remains unresolved.",
-    "generalizability": "Reminds any organization that the measured size of a forecast error depends on definitions, and that behavioral and technical causes can co-exist.",
+    "generalizability": "Reminds any organization that a single behavioral explanation of forecast error should be tested against alternatives, and that behavioral and technical causes can co-exist.",
     "readingMinutes": 40,
-    "relevance": "Models the kind of skepticism you should apply even to a celebrated method: ask how the baseline was defined before accepting a claim about bias."
+    "relevance": "Models the kind of skepticism you should apply even to a celebrated explanation: ask what else could produce the pattern before accepting a claim about bias or deception."
   },
   {
     "id": "R-hakes-2006-economic",
