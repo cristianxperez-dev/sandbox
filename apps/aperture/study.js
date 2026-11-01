@@ -8,9 +8,20 @@
   const SECTIONS = [['explore', 'Explore'], ['understand', 'Understand'], ['challenge', 'Challenge'], ['apply', 'Apply'], ['retain', 'Retain']];
 
   /* ======================= Lesson reader ======================= */
+  AP.lecturesOn = () => !(window.APERTURE_CONFIG && window.APERTURE_CONFIG.lectures === false);
+  function pathSwitch(id, lec, lessonMinutes, current) {
+    const go = (view) => () => { AP.settings.lessonView = view; AP.save('settings', 'main', { ...AP.settings }); };
+    return h('nav', { class: 'pathswitch', 'aria-label': 'Choose how to learn this lesson' },
+      h('a', { href: `#/lesson/${id}/watch`, 'aria-current': current === 'watch' ? 'page' : null, onclick: go('watch') }, h('span', { class: 'label', text: 'Watch & Learn' }), h('b', { text: `Narrated lecture · ${lec.minutes} min` }), h('span', { text: `${lec.checkpoints} interactive checkpoints, captions, transcript` })),
+      h('a', { href: `#/lesson/${id}/read`, 'aria-current': current === 'read' ? 'page' : null, onclick: go('read') }, h('span', { class: 'label', text: 'Read & Explore' }), h('b', { text: `Written lesson · ${lessonMinutes} min` }), h('span', { text: 'Full text, diagrams, examples and methodological notes' })));
+  }
+
   S.lesson = async function (id, sectionHint) {
     const weekId = id.slice(0, 3);
     const [cat, w] = await Promise.all([AP.catalog(), AP.week(weekId)]);
+    const lec = AP.lecturesOn() && cat.lectures && cat.lectures[id];
+    if (lec && (sectionHint === 'watch' || (!sectionHint && AP.settings.lessonView === 'watch'))) return S.watch(id, lec, cat, w);
+    if (sectionHint === 'read') sectionHint = null;
     await AP.loadState(['note', 'bookmark']);
     const idx = w.lessons.findIndex((l) => l.id === id);
     const l = w.lessons[idx];
@@ -60,6 +71,7 @@
     const el = h('div', null,
       h('header', { class: 'pagehead' }, h('span', { class: 'label', text: `Week ${w.number} · Lesson ${idx + 1} of ${w.lessons.length} · ${l.minutes} min` }), h('h1', { text: l.title }), h('p', { class: 'lede', html: AP.inline(l.summary) }),
         h('details', { class: 'fold' }, h('summary', null, h('span', { class: 'label', text: 'Objectives' }), h('b', { text: `${l.objectives.length} learning objectives` })), h('div', { class: 'fold__body' }, h('ul', null, l.objectives.map((o) => h('li', { html: AP.inline(o) })))))),
+      lec ? pathSwitch(id, lec, l.minutes, 'read') : null,
       steps, h('div', { class: 'reader' }, art, side));
 
     // Highlights & notes on selection
@@ -143,6 +155,50 @@
       el, title: l.title, keepScroll: false,
       destroy() { window.removeEventListener('scroll', onScroll); document.removeEventListener('selectionchange', onSel); clearInterval(timer); selbar.remove(); persist(); quiz.destroy && quiz.destroy(); },
     };
+  };
+
+  /* ======================= Watch & Learn (narrated lecture) ======================= */
+  // Same lesson, same objectives, same comprehension check, same completion: finishing the lecture
+  // (or the check) completes the lesson, exactly as reading does. Checkpoints are formative.
+  S.watch = async function (id, lec, cat, w) {
+    const idx = w.lessons.findIndex((x) => x.id === id);
+    const l = w.lessons[idx];
+    await AP.loadState(['progress', 'lecture']);
+    if (!AP.cache[`lecture:${lec.id}`]) {
+      const res = await fetch(`data/lectures/${lec.id}.json?v=${encodeURIComponent(String(lec.duration))}`, { credentials: 'same-origin' });
+      if (!res.ok) throw new AP.ApiError(res.status, { message: 'The lecture could not be loaded.' });
+      AP.cache[`lecture:${lec.id}`] = await res.json();
+    }
+    const L = AP.cache[`lecture:${lec.id}`];
+    let rec = { section: 'explore', scroll: 0, done: false, seconds: 0, ...(AP.getRec('progress', id) || {}) };
+    const doneBtn = h('button', { class: 'btn btn--primary', onclick: () => markDone(), text: rec.done ? 'Completed ✓' : 'Mark lesson complete' });
+    function markDone() {
+      if (rec.done) return;
+      rec = { ...rec, done: true };
+      AP.save('progress', id, rec, { delay: 0 });
+      doneBtn.textContent = 'Completed ✓';
+      AP.toast('Lesson complete. Its review cards join your schedule tomorrow.');
+    }
+    const host = h('div');
+    const player = AP.Lecture.mount(host, {
+      lecture: L, saved: AP.getRec('lecture', L.id), settings: AP.settings,
+      onSave: (st) => AP.save('lecture', L.id, st, { delay: 600 }),
+      onComplete: () => markDone(),
+    });
+    host.addEventListener('click', (e) => { const a = e.target.closest('a[data-href="#check"]'); if (a) { e.preventDefault(); player.pause(); document.getElementById('check')?.scrollIntoView({ behavior: AP.settings.reducedMotion ? 'auto' : 'smooth' }); } });
+    const check = h('section', { class: 'rule', id: 'check' }, h('h2', { text: 'Comprehension check' }), h('p', { class: 'small muted', text: `The same ${l.check.length} questions as the written lesson — ${AP.local() ? 'scored in your browser' : 'graded on the server'}. Passing it also completes the lesson.` }));
+    const quiz = quizForm({ id: `${l.id}-check`, kind: 'check', items: l.check, set: 'main' }, { compact: true, onDone: () => markDone() });
+    check.appendChild(quiz.el);
+    const nextL = w.lessons[idx + 1];
+    const el = h('div', null,
+      h('header', { class: 'pagehead' }, h('span', { class: 'label', text: `Week ${w.number} · Lesson ${idx + 1} of ${w.lessons.length} · Watch & Learn` }), h('h1', { text: L.title }), h('p', { class: 'lede', text: `${l.title}. ${L.summary}` }),
+        h('details', { class: 'fold' }, h('summary', null, h('span', { class: 'label', text: 'Objectives' }), h('b', { text: `The lesson's ${l.objectives.length} learning objectives` })), h('div', { class: 'fold__body' }, h('ul', null, l.objectives.map((o) => h('li', { html: AP.inline(o) })))))),
+      pathSwitch(id, lec, l.minutes, 'watch'),
+      host,
+      h('p', { class: 'small muted', text: 'Optional and interchangeable with the written lesson: watching to the end, passing the comprehension check, or marking the lesson complete all count the same. Checkpoint answers are saved for your own review and are never graded. Shortcuts: Space play/pause · ← → 5 s · J/L 10 s · C captions.' }),
+      check,
+      h('div', { class: 'row rule' }, doneBtn, h('a', { class: 'btn', href: `#/lesson/${id}/read`, text: 'Open the written lesson' }), nextL ? h('a', { class: 'btn', href: `#/lesson/${nextL.id}`, text: `Next: ${nextL.title}` }) : h('a', { class: 'btn', href: `#/week/${w.id}`, text: 'Back to the week' })));
+    return { el, title: L.title, destroy() { player.destroy(); } };
   };
 
   async function diagnosticNeedsFoundation(w) {

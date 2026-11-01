@@ -8,7 +8,7 @@
     [/^$/, 'home', () => AP.views.home()],
     [/^curriculum$/, 'curriculum', () => AP.views.curriculum()],
     [/^week\/(w\d{2})$/, 'curriculum', (m) => AP.views.week(m[1])],
-    [/^lesson\/(w\d{2}-l\d)(?:\/(explore|understand|challenge|apply|retain))?$/, 'curriculum', (m) => AP.study.lesson(m[1], m[2])],
+    [/^lesson\/(w\d{2}-l\d)(?:\/(explore|understand|challenge|apply|retain|watch|read))?$/, 'curriculum', (m) => AP.study.lesson(m[1], m[2])],
     [/^case\/([a-z0-9-]+)$/, 'curriculum', (m) => AP.study.caseView(m[1])],
     [/^exercise\/([a-z0-9-]+)$/, 'labs', (m) => AP.study.exercise(m[1])],
     [/^assignment\/([a-z0-9-]+)$/, 'assessments', (m) => AP.study.assignment(m[1])],

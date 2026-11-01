@@ -1,0 +1,757 @@
+{
+  "id": "w01-l2-lecture",
+  "lesson": "w01-l2",
+  "title": "Why Intelligent People Make Irrational Decisions",
+  "subtitle": "Heuristics, base rates and the search for confirmation",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 2. It covers the same objectives — representativeness, availability and anchoring; base rates and natural frequencies; confirmation bias versus motivated reasoning; and the ecological-rationality critique — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "The screening puzzle",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 1 · Lesson 2 · Lecture",
+            "title": "Why intelligent people make irrational decisions",
+            "sub": "Heuristics, base rates and the search for confirmation"
+          },
+          "cues": [
+            {
+              "text": "This is a lecture about a puzzle that has embarrassed some of the most capable professionals in the world."
+            },
+            {
+              "text": "Not because they lack intelligence, but because the mind they bring to the problem was built for a different job."
+            },
+            {
+              "text": "We'll start with a number, and I'm going to ask you to commit to it before I explain anything."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "A screening test",
+            "items": [
+              {
+                "value": "1 in 100",
+                "label": "people screened have the condition"
+              },
+              {
+                "value": "90%",
+                "label": "of true cases test positive"
+              },
+              {
+                "value": "9%",
+                "label": "of healthy people also test positive"
+              }
+            ],
+            "note": "Synthetic numbers, from the Lesson 2 example."
+          },
+          "cues": [
+            {
+              "text": "A hospital network is evaluating a new screening test for a serious condition.",
+              "reveal": 0
+            },
+            {
+              "text": "In the population being screened, about one person in a hundred has the condition.",
+              "reveal": 1
+            },
+            {
+              "text": "The test catches ninety percent of the people who have it.",
+              "reveal": 2
+            },
+            {
+              "text": "And among people who do not have it, the test wrongly flags nine percent.",
+              "reveal": 3
+            },
+            {
+              "text": "A patient tests positive. What is the probability that this patient actually has the condition?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-estimate",
+            "type": "estimate",
+            "prompt": "A patient tests positive. What is the probability that the patient actually has the condition?",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "initial": 50,
+            "answer": 9,
+            "tolerance": 4,
+            "concept": "c-base-rate-neglect",
+            "feedback": {
+              "correct": "Close to the right answer. Most people land far higher, anchored on the 90% detection rate. Keep your reasoning in mind as we unpack why.",
+              "incorrect": "The right answer is about 9%. If your number was much higher, you are in very good company — and the next few minutes explain exactly where the intuition goes wrong."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Most people answer 80–90%.",
+              "The answer is about 9%."
+            ],
+            "sub": "When a condition is rare, even an accurate test produces more false alarms than true detections."
+          },
+          "cues": [
+            {
+              "text": "If you said something like eighty or ninety percent, you reasoned the way most people do.",
+              "reveal": 0
+            },
+            {
+              "text": "The correct answer is about nine percent.",
+              "reveal": 1
+            },
+            {
+              "text": "That is not a trick. The numbers are invented for the lesson, but the structure is the classic base-rate problem, and it appears every time a rare event meets an imperfect signal."
+            },
+            {
+              "text": "A fraud alert, a security screening, a drug test, a scouting report on a player who looks like a future star. Same structure, same trap."
+            },
+            {
+              "text": "To see why the trap works, we need to look at the shortcuts the mind uses when it estimates likelihood."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Three shortcuts",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Three heuristics",
+            "cards": [
+              {
+                "title": "Representativeness",
+                "q": "How much does this resemble the category?",
+                "fail": "Ignores base rates and sample size"
+              },
+              {
+                "title": "Availability",
+                "q": "How easily can I recall examples?",
+                "fail": "Overweights the vivid, recent and publicized"
+              },
+              {
+                "title": "Anchoring",
+                "q": "Start from a number, then adjust",
+                "fail": "Adjusts too little from arbitrary anchors"
+              }
+            ],
+            "refs": [
+              "R-tversky-1974-judgment"
+            ]
+          },
+          "cues": [
+            {
+              "text": "In 1974 Amos Tversky and Daniel Kahneman published a short paper in Science that changed how we think about judgment.",
+              "refs": [
+                "R-tversky-1974-judgment"
+              ]
+            },
+            {
+              "text": "Their claim was that when people judge probabilities, they quietly substitute an easier question for the hard one."
+            },
+            {
+              "text": "The first substitute is representativeness. Instead of asking how likely something is, we ask how much it resembles the category we have in mind.",
+              "reveal": 1
+            },
+            {
+              "text": "A positive test looks like disease. A candidate who looks like our past stars looks like success. Resemblance feels like probability, and it pushes the base rate out of view."
+            },
+            {
+              "text": "The second is availability. We judge how common something is by how easily examples come to mind.",
+              "reveal": 2
+            },
+            {
+              "text": "After one dramatic fraud case, an audit committee will spend its attention on that fraud type, while quieter and more frequent risks go unexamined."
+            },
+            {
+              "text": "The third is anchoring and adjustment. We start from whatever number is in front of us and move away from it, but not far enough.",
+              "reveal": 3
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "anchor",
+            "title": "The wheel of fortune",
+            "low": 10,
+            "high": 65,
+            "lowEstimate": 25,
+            "highEstimate": 45,
+            "question": "What percentage of African countries are in the United Nations?",
+            "refs": [
+              "R-tversky-1974-judgment"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Their most famous demonstration used a rigged wheel of fortune.",
+              "refs": [
+                "R-tversky-1974-judgment"
+              ],
+              "reveal": 0
+            },
+            {
+              "text": "Participants watched the wheel stop on a number, and were then asked what percentage of African countries were members of the United Nations."
+            },
+            {
+              "text": "People who saw the wheel stop at ten gave a median estimate of twenty-five percent.",
+              "reveal": 1
+            },
+            {
+              "text": "People who saw it stop at sixty-five gave a median estimate of forty-five percent.",
+              "reveal": 2
+            },
+            {
+              "text": "Everyone knew the wheel was random. The number still pulled the estimate toward it."
+            },
+            {
+              "text": "Tversky and Kahneman were careful to say these shortcuts are economical and usually effective. The problem is that their failures are systematic, so they are predictable, and that means we can design around them."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Which shortcut is at work?"
+            ],
+            "sub": "A short case decision."
+          },
+          "cues": [
+            {
+              "text": "Let's test whether you can spot one in the wild."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-heuristic",
+            "type": "choice",
+            "prompt": "Six weeks after a widely reported cyberattack on a competitor, a board reallocates most of next year's risk budget to that one attack type, although its own incident logs show phishing losses running ten times higher. Which heuristic best explains the decision?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Representativeness — the attack resembles the board's idea of a serious threat."
+              },
+              {
+                "id": "b",
+                "text": "Availability — a vivid, recent, publicized event is overweighted relative to frequent quiet losses."
+              },
+              {
+                "id": "c",
+                "text": "Anchoring — the board adjusted too little from last year's budget."
+              },
+              {
+                "id": "d",
+                "text": "None — following a competitor's experience is simply prudent."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-heuristics-biases",
+            "feedback": {
+              "a": "Resemblance plays a part, but the decisive feature here is recency and vividness: the event is easy to recall, so it feels frequent.",
+              "b": "Right. Ease of recall is standing in for frequency. The board's own logs — the base rate — tell a different story.",
+              "c": "Anchoring would predict too little change from last year. The board changed a lot, in the direction of the memorable event.",
+              "d": "Learning from a competitor can be sensible, but ignoring your own loss data in favor of one vivid case is the signature of availability."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Seeing the base rate",
+      "scenes": [
+        {
+          "visual": {
+            "type": "tree",
+            "title": "The same problem as counts",
+            "population": 1000,
+            "prevalence": 0.01,
+            "sensitivity": 0.9,
+            "falsePositive": 0.09,
+            "refs": [
+              "R-gigerenzer-1995-improve"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now let's solve the screening problem in a way that makes the answer almost obvious.",
+              "reveal": 0
+            },
+            {
+              "text": "Imagine one thousand people walking through the screening.",
+              "reveal": 1
+            },
+            {
+              "text": "About ten of them have the condition. Nine hundred and ninety do not.",
+              "reveal": 2
+            },
+            {
+              "text": "The test catches nine of the ten who are ill.",
+              "reveal": 3
+            },
+            {
+              "text": "But it also flags nine percent of the healthy people, and nine percent of nine hundred and ninety is about eighty-nine.",
+              "reveal": 4
+            },
+            {
+              "text": "So roughly ninety-eight people test positive, and only nine of them are actually ill. Nine out of ninety-eight is about nine percent.",
+              "reveal": 5
+            },
+            {
+              "text": "Nothing about the problem changed. Only the format did."
+            },
+            {
+              "text": "Gerd Gigerenzer and Ulrich Hoffrage showed this experimentally in 1995. When the same Bayesian problems were presented as natural frequencies, counts of cases from one reference population, people without statistical training reached the correct answer far more often, in up to about half of their inferences.",
+              "refs": [
+                "R-gigerenzer-1995-improve"
+              ]
+            },
+            {
+              "text": "Counts keep the base rate in front of you. Percentages let it slip away."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-prevalence",
+            "type": "explore",
+            "prompt": "Move the prevalence and watch the tree. Then answer: with a prevalence of 10 in 100 — the other rates unchanged — roughly what share of positive tests are true cases?",
+            "control": {
+              "param": "prevalence",
+              "label": "Prevalence",
+              "values": [
+                0.01,
+                0.02,
+                0.05,
+                0.1,
+                0.2,
+                0.3
+              ]
+            },
+            "options": [
+              {
+                "id": "a",
+                "text": "About 9%"
+              },
+              {
+                "id": "b",
+                "text": "About 25%"
+              },
+              {
+                "id": "c",
+                "text": "About 50%"
+              },
+              {
+                "id": "d",
+                "text": "About 90%"
+              }
+            ],
+            "answer": "c",
+            "concept": "c-bayes-rule",
+            "feedback": {
+              "a": "That is the answer at 1 in 100. At 10 in 100 there are ten times as many true cases among the positives.",
+              "b": "Closer, but count it out: of 1,000 people, 100 are ill and 90 test positive; of 900 healthy, 81 test positive. 90 of 171 is about 53%.",
+              "c": "Right — about 53%. Of 1,000 people, 90 true positives and 81 false positives. The test did not change; the base rate did.",
+              "d": "That is the test's detection rate, not the share of positives who are ill. Even at 10% prevalence, false alarms are almost as common as true detections."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Ask for the base rate before the story."
+            ],
+            "sub": "Of every 100 flagged, how many are real?"
+          },
+          "cues": [
+            {
+              "text": "The practical lesson is a habit of mind, and a habit of design."
+            },
+            {
+              "text": "When someone brings you a compelling case, a candidate, a deal, an alert, ask first: of all the cases that look like this, how many turn out to be real?"
+            },
+            {
+              "text": "And when you build dashboards and reports, write them in counts. A clinical system that says the model is ninety percent sensitive invites base-rate neglect. One that says, of every hundred patients flagged, about nine will have the condition, changes what people do with the alert."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Looking for what you want to find",
+      "scenes": [
+        {
+          "visual": {
+            "type": "triples",
+            "title": "Find the rule",
+            "example": "2, 4, 6",
+            "refs": [
+              "R-nickerson-1998-confirmation"
+            ]
+          },
+          "cues": [
+            {
+              "text": "So far we have looked at errors that happen even when we have no stake in the answer. Now we turn to the two habits that do the most damage to anyone who evaluates people, projects or evidence."
+            },
+            {
+              "text": "The first is confirmation bias. Raymond Nickerson's review defines it as seeking or interpreting evidence in ways that are partial to beliefs we already hold.",
+              "refs": [
+                "R-nickerson-1998-confirmation"
+              ]
+            },
+            {
+              "text": "A classic demonstration is Peter Wason's rule-discovery task. You are told that the sequence two, four, six follows a rule, and you may propose other sequences to find out what the rule is.",
+              "say": "A classic demonstration is Peter Wason's rule discovery task. You are told that the sequence two, four, six, follows a rule, and you may propose other sequences to find out what the rule is.",
+              "reveal": 1
+            },
+            {
+              "text": "Suppose your hypothesis is: numbers that go up by two."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-triples",
+            "type": "choice",
+            "prompt": "Your hypothesis is “numbers that increase by two.” Which sequence is the most informative one to test next?",
+            "options": [
+              {
+                "id": "a",
+                "text": "8, 10, 12"
+              },
+              {
+                "id": "b",
+                "text": "100, 102, 104"
+              },
+              {
+                "id": "c",
+                "text": "1, 7, 20"
+              },
+              {
+                "id": "d",
+                "text": "10, 12, 14"
+              }
+            ],
+            "answer": "c",
+            "concept": "c-confirmation-bias",
+            "feedback": {
+              "a": "This sequence fits your hypothesis, so a “yes” tells you almost nothing new. Most people test cases like this.",
+              "b": "Bigger numbers, same pattern — another confirming test. It cannot reveal that your hypothesis is too narrow.",
+              "c": "Right. A sequence your hypothesis says should fail is the one that can prove you wrong. If 1, 7, 20 also follows the rule, your hypothesis is too narrow — the rule in Wason's task is simply “any ascending numbers.”",
+              "d": "A confirming test again. The informative move is to propose a sequence your hypothesis predicts should break the rule."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Test the case that could prove you wrong."
+            ],
+            "sub": "In Wason's task, people mostly propose sequences that fit their hypothesis — and rarely discover that the rule is simply “any ascending numbers.”",
+            "refs": [
+              "R-nickerson-1998-confirmation"
+            ]
+          },
+          "cues": [
+            {
+              "text": "In the task, people overwhelmingly propose sequences that fit their own hypothesis, get a yes every time, and announce the wrong rule with confidence.",
+              "refs": [
+                "R-nickerson-1998-confirmation"
+              ]
+            },
+            {
+              "text": "The actual rule is just: any three ascending numbers. You only discover it by testing a case your hypothesis says should fail."
+            },
+            {
+              "text": "Nickerson stresses that none of this requires bad faith. It is how attention works when it is guided by a hypothesis."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "grid",
+            "title": "Two errors, two remedies",
+            "cols": [
+              "No stake in the conclusion",
+              "Stake in the conclusion"
+            ],
+            "rows": [
+              {
+                "label": "Open search",
+                "cells": [
+                  "Baseline judgment. Errors come mostly from heuristics. Remedy: base rates first, better formats.",
+                  "Directional goals steer the search. Remedy: separate champion from reviewer; state criteria first."
+                ]
+              },
+              {
+                "label": "Hypothesis-led search",
+                "cells": [
+                  "Confirmation bias narrows the search. Remedy: test what would prove you wrong.",
+                  "Both at once — the most dangerous cell. Remedy: independent reviewer, pre-registered criteria, a case against."
+                ]
+              }
+            ],
+            "order": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "refs": [
+              "R-nickerson-1998-confirmation",
+              "R-kunda-1990-case"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The second habit is motivated reasoning, and it adds a motive."
+            },
+            {
+              "text": "Ziva Kunda distinguished accuracy goals, which make us process information more carefully, from directional goals, which steer us toward a conclusion we already want.",
+              "refs": [
+                "R-kunda-1990-case"
+              ]
+            },
+            {
+              "text": "Her crucial observation was that directional reasoning is constrained. We reach the conclusion we want only when we can build a justification that would persuade a neutral observer. That is how we keep the feeling of being objective.",
+              "refs": [
+                "R-kunda-1990-case"
+              ]
+            },
+            {
+              "text": "Put the two ideas together and you get a simple map.",
+              "reveal": 1
+            },
+            {
+              "text": "Without a stake and with an open search, our errors come mostly from the heuristics we have already met.",
+              "reveal": 2
+            },
+            {
+              "text": "A hypothesis narrows the search: that is confirmation bias, and the remedy is to test what would prove you wrong.",
+              "reveal": 3
+            },
+            {
+              "text": "A personal stake steers the search: the remedy is to separate the person who champions a decision from the person who reviews it, and to state the criteria before the evidence arrives.",
+              "reveal": 4
+            },
+            {
+              "text": "And when both are present, when you designed the program and you are also judging it, you are in the most dangerous cell of all.",
+              "reveal": 5
+            },
+            {
+              "text": "Kunda's constraint is the lever for a leader. Raise the bar for what counts as a justification, and directional reasoning loses room to move."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Is “bias” the right word?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two readings of the evidence",
+            "left": {
+              "title": "Heuristics and biases",
+              "points": [
+                "Shortcuts produce systematic, predictable errors",
+                "Benchmark: probability theory and logic",
+                "Remedy: correct the judgment"
+              ]
+            },
+            "right": {
+              "title": "Ecological rationality",
+              "points": [
+                "Heuristics deliberately ignore information",
+                "Benchmark: success in a real environment",
+                "Simple rules can beat complex models under uncertainty"
+              ]
+            },
+            "refs": [
+              "R-gigerenzer-2011-heuristic",
+              "R-tversky-1974-judgment"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now I want to challenge the story I have just told you."
+            },
+            {
+              "text": "There is a serious alternative reading of this evidence, the ecological-rationality program led by Gerd Gigerenzer.",
+              "refs": [
+                "R-gigerenzer-2011-heuristic"
+              ],
+              "reveal": 1
+            },
+            {
+              "text": "On this view, heuristics are not glitches. They are strategies that deliberately ignore information, and whether they work depends on the environment they are used in.",
+              "reveal": 2
+            },
+            {
+              "text": "Gigerenzer and Wolfgang Gaissmaier argue that under high uncertainty and small samples, simple rules can predict as well as, or better than, complex models, because a complex model fitted to a little noisy data learns the noise along with the signal.",
+              "refs": [
+                "R-gigerenzer-2011-heuristic"
+              ]
+            },
+            {
+              "text": "So calling a heuristic a bias assumes the laboratory problem is the right yardstick. Tversky and Kahneman themselves described the shortcuts as usually effective. Much of the disagreement is about emphasis, and about which standard of good judgment to apply.",
+              "refs": [
+                "R-tversky-1974-judgment"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "replication",
+            "title": "Do the classic effects replicate?",
+            "total": 13,
+            "replicated": 10,
+            "failed": 2,
+            "samples": 36,
+            "refs": [
+              "R-klein-2014-investigating"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Which raises a fair question for a skeptical executive: how solid are these findings anyway?"
+            },
+            {
+              "text": "A coordinated replication project tested thirteen classic effects across thirty-six samples in many countries.",
+              "refs": [
+                "R-klein-2014-investigating"
+              ],
+              "reveal": 1
+            },
+            {
+              "text": "Ten replicated consistently, anchoring among them.",
+              "reveal": 2
+            },
+            {
+              "text": "Two social-priming effects did not.",
+              "reveal": 3
+            },
+            {
+              "text": "And the differences between labs, countries and online versus in-person settings were small compared with the differences between effects. The lesson is selective trust, not blanket belief or blanket dismissal."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Procedures, not awareness",
+            "steps": [
+              "Base rates before the story",
+              "Present data as counts",
+              "Independent reviewer without a stake",
+              "Criteria stated before the evidence",
+              "A deliberate case against"
+            ]
+          },
+          "cues": [
+            {
+              "text": "One last point, and it is the one I most want you to keep."
+            },
+            {
+              "text": "Knowing about a bias does not reliably protect you from it. People see bias easily in others and rarely in themselves."
+            },
+            {
+              "text": "That is why every remedy in this lesson is a procedure rather than an exhortation.",
+              "reveal": 1
+            },
+            {
+              "text": "Ask for the base rate before the story. Present evidence as counts.",
+              "reveal": 2
+            },
+            {
+              "text": "Give the review to someone without a stake.",
+              "reveal": 3
+            },
+            {
+              "text": "State the criteria before the evidence arrives.",
+              "reveal": 4
+            },
+            {
+              "text": "And assign someone to build the strongest case against the option everyone likes.",
+              "reveal": 5
+            },
+            {
+              "text": "A procedure works whether or not the person following it feels biased."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-challenge",
+            "type": "reflect",
+            "prompt": "Challenge or apply the argument. Think of a decision you championed — a hire, a program, a recommendation. What evidence, if it arrived next month, would make you recommend reversing it? If you cannot name any, what does that tell you?",
+            "concept": "c-motivated-reasoning"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Three questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Judgment Lab",
+                "detail": "Calibrate your confidence on 26 judgments",
+                "href": "#/exercise/w01-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Tversky & Kahneman (1974), Judgment under Uncertainty",
+                "href": "#/library/R-tversky-1974-judgment"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let's bring it together."
+            },
+            {
+              "text": "Heuristics substitute an easier question for a hard one. They are often good enough, and predictably wrong where base rates, sample sizes and arbitrary anchors matter."
+            },
+            {
+              "text": "Natural frequencies make base rates visible. Confirmation bias narrows the search, motivated reasoning steers it, and procedures counter both."
+            },
+            {
+              "text": "From here, take the comprehension check below. It is the same check as the written lesson. Then open the Judgment Lab to measure your own calibration, and read Tversky and Kahneman's original paper, which is shorter and more readable than its reputation suggests.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson remains here whenever you want the full detail, the examples from law, technology and player development, and the methodological notes. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

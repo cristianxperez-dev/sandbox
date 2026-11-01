@@ -125,3 +125,10 @@ database to any minute in the last 30 days (7 on the Free plan).
 `npx wrangler pages dev _site --d1 APERTURE_DB=local` with the three variables passed as
 `--binding NAME=value` and a local test token issuer (an `http://127.0.0.1` issuer is accepted
 only for local testing). Keep `.wrangler/` out of git.
+
+## Watch & Learn lectures
+
+Optional narrated, interactive lectures that teach an existing lesson (same objectives, sources and
+comprehension check; either path completes the lesson). Pilot: Week 1 · Lesson 2. Narration is
+rendered offline with the open Kokoro-82M voice model — no recurring cost. Production guide and costs:
+`aperture/docs/lectures.md`. Feature flag: `lectures` in `apps/aperture/config.js`.

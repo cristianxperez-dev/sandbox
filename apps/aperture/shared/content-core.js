@@ -63,6 +63,7 @@ export function index() {
     ix.exercises.set('capstone-presentation', { id: 'capstone-presentation', title: 'Capstone — decision presentation', lab: 'executive-communication-studio', engine: 'composer', config: presentationComposer(cap), assumptions: [], week: 'w14' });
   }
   ix.labs = new Map(CONTENT.labs.map((l) => [l.id, l]));
+  ix.lectures = new Map(Object.values(CONTENT.lectures || {}).map((l) => [l.id, l]));
   IX = ix;
   return ix;
 }
@@ -100,6 +101,7 @@ export function catalog() {
     labs: CONTENT.labs.map((l) => ({ ...l, exercises: [...ix.exercises.values()].filter((x) => x.lab === l.id).map((x) => ({ id: x.id, title: x.title, engine: x.engine, week: x.week, minutes: x.minutes || null })) })),
     concepts: CONTENT.concepts,
     glossary: CONTENT.glossary,
+    lectures: CONTENT.lectures || {},
     manifest: CONTENT.manifest,
   };
 }

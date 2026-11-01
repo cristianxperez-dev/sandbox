@@ -47,6 +47,7 @@ export function computeProgress({ attempts, cards, state, events, now = Date.now
       exercise: !!state.lab?.[w.exercise.id]?.data?.finished,
       reflection: !!(state.reflection?.[w.id]?.data?.answers || []).some((t) => t && t.trim()),
       caseAnalysis: !!(state.case?.[w.case.id]?.data?.analysis || '').trim(),
+      lectures: w.lessons.filter((l) => CONTENT.lectures && CONTENT.lectures[l.id]).map((l) => ({ lesson: l.id, id: CONTENT.lectures[l.id].id, completed: !!state.lecture?.[CONTENT.lectures[l.id].id]?.data?.completed })),
       started: done > 0 || !!q,
     };
   });
@@ -177,7 +178,8 @@ export function computeProgress({ attempts, cards, state, events, now = Date.now
     concepts: { introduced: concepts.length, mastered: concepts.filter((c) => c.status === 'mastered').length, review: concepts.filter((c) => c.status === 'review').length, list: concepts },
     domains, errors: errors.slice(0, 12), missedConcepts: missedConcepts.slice(0, 12),
     calibration: { quiz: calQuiz, lab: labCal.slice(-5), journal: calJournal },
-    retention, connections, time: { seconds },
+    retention, connections, time: { seconds: seconds + Object.values(state.lecture || {}).reduce((a, r) => a + (r.data.seconds || 0), 0) },
+    lectures: { available: Object.keys(CONTENT.lectures || {}).length, started: Object.keys(state.lecture || {}).length, completed: Object.values(state.lecture || {}).filter((r) => r.data.completed).length },
     insights, insightNote: 'Insights appear only when your responses meet the stated evidence threshold. They describe performance on APERTURE items, not personality or ability.',
     diagnostic: diag ? { submitted: diag.submitted, overall: autoRatio(diag) } : null,
   };

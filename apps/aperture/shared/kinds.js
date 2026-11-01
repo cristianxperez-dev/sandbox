@@ -72,6 +72,17 @@ export function makeKinds(ix) {
         return out;
       },
     },
+    lecture: {
+      key: (k) => ix.lectures && ix.lectures.has(k),
+      clean: (d) => {
+        const responses = {};
+        if (d.responses && typeof d.responses === 'object') for (const [id, r] of Object.entries(d.responses).slice(0, 40)) {
+          if (!/^cp-[a-z0-9-]{1,40}$/.test(id) || !r || typeof r !== 'object') continue;
+          responses[id] = { value: typeof r.value === 'number' ? (Number.isFinite(r.value) ? r.value : null) : str(r.value, 4000), correct: r.correct === true ? true : r.correct === false ? false : null, at: num(r.at, 0, 9e15) ?? Date.now() };
+        }
+        return { position: num(d.position, 0, 36000) ?? 0, furthest: num(d.furthest, 0, 36000) ?? 0, duration: num(d.duration, 0, 36000) ?? 0, completed: bool(d.completed), rate: num(d.rate, 0.5, 2.5) ?? 1, responses, seconds: Math.round(num(d.seconds, 0, 360000) ?? 0) };
+      },
+    },
     settings: {
       key: (k) => k === 'main',
       clean: (d) => ({
@@ -79,6 +90,7 @@ export function makeKinds(ix) {
         theme: ['light', 'dark', 'system'].includes(d.theme) ? d.theme : 'system', reducedMotion: bool(d.reducedMotion), serifBody: d.serifBody !== false,
         weeklyHours: num(d.weeklyHours, 1, 20) ?? 6, studyDays: strs(d.studyDays, 7, 3), adaptFromDiagnostic: d.adaptFromDiagnostic !== false,
         reminders: ['in-app', 'off'].includes(d.reminders) ? d.reminders : 'in-app', chatgptLink: d.chatgptLink !== false,
+        lessonView: d.lessonView === 'watch' ? 'watch' : 'read', captions: d.captions !== false,
       }),
     },
     profile: {
@@ -87,4 +99,4 @@ export function makeKinds(ix) {
     },
   };
 }
-export const STATE_KINDS = ['progress', 'bookmark', 'note', 'journal', 'draft', 'reflection', 'case', 'lab', 'settings', 'profile'];
+export const STATE_KINDS = ['progress', 'bookmark', 'note', 'journal', 'draft', 'reflection', 'case', 'lab', 'lecture', 'settings', 'profile'];

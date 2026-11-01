@@ -55,7 +55,7 @@ export async function handle(req, ctx) {
       case 'progress': {
         const [attempts, cards, state, events] = await Promise.all([
           store.listAttempts(db, owner), store.getCards(db, owner),
-          store.getState(db, owner, ['progress', 'lab', 'reflection', 'case', 'journal', 'draft']), store.listEvents(db, owner, Date.now() - 90 * 86400000),
+          store.getState(db, owner, ['progress', 'lab', 'reflection', 'case', 'journal', 'draft', 'lecture']), store.listEvents(db, owner, Date.now() - 90 * 86400000),
         ]);
         return [200, computeProgress({ attempts, cards, state, events })];
       }
@@ -114,7 +114,7 @@ export async function handle(req, ctx) {
 
 /* ---------------- learner records ---------------- */
 let KINDS = null;
-const kindsFor = (ix) => makeKinds({ lessons: ix.lessons, targets: ix.targets, concepts: ix.concepts, weeks: ix.weeks, cases: ix.cases, exercises: ix.exercises, drafts: ix.drafts });
+const kindsFor = (ix) => makeKinds({ lessons: ix.lessons, targets: ix.targets, concepts: ix.concepts, weeks: ix.weeks, cases: ix.cases, exercises: ix.exercises, drafts: ix.drafts, lectures: ix.lectures });
 export function validateRecord(ix, kind, key, data) {
   KINDS = KINDS || kindsFor(ix);
   const spec = KINDS[kind];

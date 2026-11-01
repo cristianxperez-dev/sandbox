@@ -3,7 +3,7 @@
               this browser (local.js). This is the current mode.
    "server" — secure accounts: Cloudflare Access sign-in, D1 storage, server-side grading via
               api/ (functions/apps/aperture/api). Requires the owner setup in aperture/README.md. */
-window.APERTURE_CONFIG = { mode: 'local' };
+window.APERTURE_CONFIG = { mode: 'local', lectures: true }; // lectures: feature flag for Watch & Learn
 (function () {
   let resolve, reject;
   const promise = new Promise((res, rej) => { resolve = res; reject = rej; });

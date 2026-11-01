@@ -10,6 +10,7 @@ import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync } from 
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
+import { buildLectures } from './lectures.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const BASE = join(HERE, '..');
@@ -139,6 +140,13 @@ const stats = {
   plannedHours: Math.round(weeks.reduce((a, w) => a + Object.values(w.hours).reduce((b, h) => b + h, 0), 0) * 10) / 10,
 };
 
+/* ---------- lectures (Watch & Learn) ---------- */
+const lectureErrors = [];
+const lessonIds = new Set(weeks.flatMap((w) => w.lessons.map((l) => l.id)));
+const { index: lectures, files: lectureFiles } = buildLectures({ base: BASE, appDir: join(BASE, '..', 'apps', 'aperture'), lessonIds, resources: new Set(lib.map((r) => r.id)), concepts, err: (w, m) => lectureErrors.push(`${w}: ${m}`) });
+if (lectureErrors.length) { console.error(`✖ ${lectureErrors.length} lecture error(s):\n  ` + lectureErrors.join('\n  ')); process.exit(1); }
+const lectureJson = Object.fromEntries(Object.entries(lectureFiles).map(([id, l]) => [id, JSON.stringify(l)]));
+
 const content = {
   schema: 1,
   semester: {
@@ -151,7 +159,7 @@ const content = {
     ],
     grading: { quizzes: 30, assignments: 25, midterm: 20, capstone: 25, mastery: 0.8 },
   },
-  stats, weeks, diagnostic, midterm, capstone, audit, labs, library: lib, concepts, glossary,
+  stats, weeks, diagnostic, midterm, capstone, audit, labs, library: lib, concepts, glossary, lectures,
   manifest: { generated: manifest.generated, method: manifest.method, totals: manifest.totals },
 };
 
@@ -160,13 +168,16 @@ const manifestJson = JSON.stringify(manifest, null, 2) + '\n';
 const md = renderManifest(manifest);
 if (CHECK) {
   const same = (p, s) => existsSync(p) && stripDate(readFileSync(p, 'utf8')) === stripDate(s);
-  if (!same(join(OUT, 'content.json'), json) || !same(join(OUT, 'manifest.json'), manifestJson) || !same(join(PUBLIC, 'content.json'), json)) { console.error('✖ aperture/build is out of date — run node aperture/tools/compile.mjs'); process.exit(1); }
+  const lecturesStale = Object.entries(lectureJson).some(([id, j]) => !same(join(PUBLIC, 'lectures', `${id}.json`), j));
+  if (lecturesStale || !same(join(OUT, 'content.json'), json) || !same(join(OUT, 'manifest.json'), manifestJson) || !same(join(PUBLIC, 'content.json'), json)) { console.error('✖ aperture/build is out of date — run node aperture/tools/compile.mjs'); process.exit(1); }
   console.log('✓ aperture/build is up to date'); process.exit(0);
 }
 mkdirSync(OUT, { recursive: true }); mkdirSync(DOCS, { recursive: true });
 writeFileSync(join(OUT, 'content.json'), json);
 mkdirSync(PUBLIC, { recursive: true });
 writeFileSync(join(PUBLIC, 'content.json'), json); // public beta: the whole course, answer keys included, is public
+mkdirSync(join(PUBLIC, 'lectures'), { recursive: true });
+for (const [id, j] of Object.entries(lectureJson)) writeFileSync(join(PUBLIC, 'lectures', `${id}.json`), j);
 writeFileSync(join(OUT, 'manifest.json'), manifestJson);
 writeFileSync(join(DOCS, 'source-manifest.md'), md);
 console.log(`✓ compiled ${stats.weeks} weeks, ${stats.lessons} lessons, ${stats.lessonWords.toLocaleString('en-US')} lesson words, ${lib.length} resources → aperture/build/content.json (${(json.length / 1024).toFixed(0)} KB)`);

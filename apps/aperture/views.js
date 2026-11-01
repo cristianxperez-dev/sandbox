@@ -132,7 +132,8 @@
     await AP.loadState(['reflection', 'lab', 'case', 'draft']);
     const p = prog.weeks.find((x) => x.id === id);
     const item = (label, href, title, desc, status) => h('li', null, h('a', { href }, h('span', { class: 'label', text: label }), h('span', null, h('span', { class: 'items__t', html: AP.inline(title) }), desc ? h('span', { class: 'items__d', html: AP.inline(desc) }) : null), status ? h('span', { class: `tag ${status[1] || ''}`, text: status[0] }) : h('span')));
-    const lessons = h('ol', { class: 'items' }, w.lessons.map((l, i) => item(`Lesson ${i + 1} · ${l.minutes} min`, `#/lesson/${l.id}`, l.title, l.summary, lessonDone(l.id) ? ['Done', 'tag--done'] : AP.getRec('progress', l.id) ? ['In progress', 'tag--accent'] : null)));
+    const lecOf = (l) => AP.lecturesOn && AP.lecturesOn() && cat.lectures && cat.lectures[l.id];
+    const lessons = h('ol', { class: 'items' }, w.lessons.map((l, i) => item(`Lesson ${i + 1} · ${l.minutes} min`, `#/lesson/${l.id}`, l.title, lecOf(l) ? `${l.summary} **Watch & Learn:** a ${lecOf(l).minutes}-minute narrated lecture covers this lesson.` : l.summary, lessonDone(l.id) ? ['Done', 'tag--done'] : AP.getRec('progress', l.id) ? ['In progress', 'tag--accent'] : lecOf(l) ? ['Lecture', ''] : null)));
     const labRec = AP.getRec('lab', w.exercise.id);
     const work = h('ul', { class: 'items' },
       item(`Exercise · ${w.exercise.minutes} min`, `#/exercise/${w.exercise.id}`, w.exercise.title, labName(cat, w.exercise.lab), labRec && labRec.finished ? ['Done', 'tag--done'] : labRec ? ['In progress', 'tag--accent'] : null),
