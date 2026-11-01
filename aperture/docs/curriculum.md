@@ -4,7 +4,7 @@
 
 Generated from the course content by `aperture/tools/docs.mjs`. An independent learning program: no academic credit, accreditation or university affiliation.
 
-**Totals:** 14 weeks · 60 lessons · 109,820 words of lesson instruction · 162 quiz questions (+56 reassessment, 131 comprehension checks) · 32 diagnostic and 0 midterm questions · 220 review cards · 259 glossary terms · 14 original cases · 18 capstone components · 197 library resources · about 99 planned hours.
+**Totals:** 14 weeks · 60 lessons · 109,820 words of lesson instruction · 162 quiz questions (+56 reassessment, 131 comprehension checks) · 32 diagnostic and 28 midterm questions · 220 review cards · 259 glossary terms · 15 original cases · 18 capstone components · 197 library resources · about 99 planned hours.
 
 **Grading:** quizzes 30%, applied assignments 25%, midterm 20%, capstone 25%. Mastery threshold 80%. Open-ended work is self-assessed against published rubrics and labelled so.
 
@@ -426,6 +426,10 @@ Generated from the course content by `aperture/tools/docs.mjs`. An independent l
 ## Baseline diagnostic
 
 32 auto-graded questions across nine domains. Never graded; it calibrates explanations and supplements and never skips material.
+
+## Midterm — Midterm — Judgment, Evidence and Influence Under Pressure
+
+Covers w01, w02, w03, w04, w05, w06, w07 · 20 questions plus 8 for reassessment · cumulative case: *Velmont Athletic and the Decision Machine*.
 
 ## Capstone — The Executive Capstone: Building an Advance and Strategic Coordination Department
 

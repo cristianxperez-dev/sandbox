@@ -1,0 +1,1668 @@
+{
+  "id": "midterm",
+  "title": "Midterm — Judgment, Evidence and Influence Under Pressure",
+  "minutes": 120,
+  "mastery": 0.8,
+  "covers": [
+    "w01",
+    "w02",
+    "w03",
+    "w04",
+    "w05",
+    "w06",
+    "w07"
+  ],
+  "intro": [
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "This midterm covers Weeks 1 through 7: judgment and its errors, incentives and motivation, learning and expertise, evidence and causal inference, leadership communication and trust, power and influence, and negotiation. It has two parts. First, read one original cumulative case, *Velmont Athletic and the Decision Machine*, and note your answers to its discussion questions before revealing the perspectives. Then answer 20 questions in nine formats; most of them draw on the case and its four exhibits, so keep it open. Allow about two hours."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "The midterm counts for 20% of the semester grade. The auto-graded questions are scored on the server; mastery is 80%. If you score below that, a reassessment draws on a reserve of further auto-graded questions after you revisit the lessons the results point to."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "Two questions are short written responses. They are **self-assessed**: you score your own answer against the rubric and model answer, and they are labelled self-assessed in your results. Score strictly — a generous self-assessment teaches you nothing. The model answers show one strong response, not the only one."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "The case has no single right answer. Each defensible recommendation trades off evidence, relationships, cost and time differently. What is assessed is the quality of your reasoning: whether you separate what is known from what is assumed, name the trade-offs, and say what would change your mind."
+    }
+  ],
+  "case": {
+    "id": "midterm-case",
+    "title": "Velmont Athletic and the Decision Machine",
+    "setting": "sports",
+    "minutes": 40,
+    "fiction": "All people, organizations and data in this case are fictional, and all figures are synthetic. Nothing in it describes any real club, league, vendor or product.",
+    "body": [
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "At 7:15 on a Monday morning, Mara Lindqvist read the calendar invitation a second time. In ten days the board of Velmont Athletic, a professional soccer club in the second division of its national league, would decide whether to sign a three-year agreement with Tessellate Performance, a company that sells video-based “decision training” for young players. Under the agenda item the chairman, Gideon Hale, had typed: “Academy recommendation — Mara to present.” Further down the same e-mail chain, the first-team head coach had already replied to everyone: “We should have done this a year ago.”"
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "Mara has run Velmont’s academy for eighteen months. Before that she led coach education for a national federation. The board hired her, in Hale’s words, to make the academy “produce players, not paperwork.” The academy has about 120 players aged nine to eighteen and 22 coaches. Three years ago the board set it one headline goal: more homegrown players appearing for the first team. Two seasons ago, before Mara arrived, the board added a bonus to support that goal: academy coaching staff share $6,000 for every professional contract the club offers to an academy player. Contract offers more than doubled. The number of graduates who actually play for the first team did not (Exhibit 2). Mara has a theory about why, but the bonus is now part of how her coaches are paid, and two senior coaches told her that removing it would mean “taking money off the people who do the work.” She has not raised it with the board."
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "The Tessellate question began with Dario Ferrante, now in his fourth season as head coach. Two seasons ago he led Velmont to promotion, and Hale describes him as the club’s most valuable employee. Ferrante saw Tessellate at a coaching conference and again at a club in the division above, then asked the under-18 lead coach, Sam Okoye, to run a pilot. Sam chose the fourteen players whose decision-making ratings had been lowest in the first half of the season — “the ones who need it most.” Each did three twenty-minute tablet sessions a week for ten weeks. A clip freezes, the player chooses to pass, shoot or dribble, and the app shows the right answer immediately. Sessions were organized by scenario: a block of counterattacks, then a block of set pieces, then a block of build-up play."
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "The results looked strong. The pilot players’ in-app score rose from 52 to 64. Their match decision ratings, assigned by academy coaches from video clips, rose from 5.1 to 6.0, while the other sixteen under-18 players slipped from 6.8 to 6.6 (Exhibit 1). Tessellate’s sales director, Colm Brennan, put the figures on a slide titled “Velmont: 23% better decisions in ten weeks.” The players liked the app. Ferrante told the staff meeting: “I have coached for twenty years. I watched those boys. They see the game faster. I don’t need a spreadsheet to tell me that.” He has mentioned in every meeting since that two clubs in the division above already use Tessellate."
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "Brennan’s package also includes what he calls “gamified engagement”: $25 in club-shop credit for every ten completed sessions, paid by the club. Tessellate’s brochure adds that the software “adapts to each player’s visual, auditory or kinesthetic learning style.” Mara read that line twice. At the federation she had once championed a learning-styles module for youth coaches; it was quietly dropped two years later, and she has been wary of confident training claims ever since. She knows some colleagues see her as the academic who slows things down. She also noticed, and wrote down, that part of her wanted the pilot to have failed because it was Ferrante’s idea."
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "Priya Raman, Velmont’s head of performance analysis, reports to Mara but also supports the first-team video analysts on match days. She is the only person who works regularly with both staffs, and most information between the academy and the first team passes through her. In a one-to-one meeting she told Mara three things. The coaches who rated the clips knew which players had been in the pilot. The pilot players had been chosen precisely because their ratings were unusually low. And when she asked Tessellate for retention data — scores weeks after training stops — Brennan replied that the company does not track it “because the tool is used continuously.”"
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "Priya had also run a small audit of the ratings themselves. She asked three coaches to rate the same six clips without seeing each other’s scores, and later slipped one clip back into Coach A’s queue (Exhibit 4). Everyone who saw the spread was surprised. Priya raised one of her points at a staff meeting. Ferrante answered, “With respect, the analytics department doesn’t coach,” and the room laughed. She has not raised it in a meeting since. Mara later learned that both of Priya’s predecessors left the role within two years, and that the exit notes described each of them as “not a team player.”"
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "Ferrante has no formal authority over the academy budget. That belongs to Mara and, above a threshold, to the board. But Hale speaks with him most days, the first team’s results drive the club’s revenue and the chairman’s standing in the city, and promotion made Ferrante the most respected voice in the building. Academy coaches want their players invited to first-team training, and Ferrante decides who is invited. Mara wrote in her notebook: “If I oppose it publicly, the academy loses its sponsor in the only room that matters. If I support it, I put my name on a number I don’t believe.”"
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "Then there is the deal itself (Exhibit 3). Brennan proposes $320,000 a year for three years, exclusivity — Velmont would agree not to use any other cognitive or perceptual training product — automatic renewal unless cancelled six months before expiry, and the right for Tessellate to keep anonymized player data to improve its product. He says the price holds only until the end of the month: “Another club in your division is ready to sign, and we take one club per division.” Mara cannot check this. Last spring Brennan told her a “conference discount” expired in a week; it was still on offer in July. He has also said the company badly wants “a flagship club in the second division,” and that one-season trials are “not our model.”"
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "Priya has sketched an alternative: the analysis team and academy coaches build their own video decision drills from Velmont’s match footage. She estimates $210,000 a year if it goes to plan, which she puts at 60 percent likely, and $300,000 a year if they need an outside contractor. It would take about a season to build; Tessellate could start in four weeks. Mara can see at least four options: recommend the agreement as proposed; recommend against it and fund the in-house drills; negotiate a one-season trial, designed so that it could actually show whether match decisions improve, with price tied to results; or defer for a year. She must also decide whether the contract bonus belongs in the same board paper, in a separate one, or nowhere yet."
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "Sam Okoye, who ran the pilot, is the person Mara worries about most. He is one of the academy’s best teachers, he chose the pilot players in good faith, and he has told colleagues that the pilot was “the first time the first team has noticed my group.” If Mara questions the pilot, Sam may hear it as a verdict on his work. If she endorses it, she asks the board to treat a well-meant but uncontrolled comparison as proof. Sam has also asked, twice, whether the academy will get more first-team training invitations once the deal is signed. Nobody has promised him that, but nobody has said no."
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "The board has five directors. Ruth Adeyemi, a former bank executive who chairs the finance committee, asks every department for “the decision on page one, and what would change your mind on page two.” Hale wants the academy and the first team to be seen pulling in the same direction. The board pack closes in six days."
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "At nine o’clock Priya knocked on the open door. “Dario has asked me to put the pilot numbers in the board pack,” she said. “Do you want me to add the caveats, or is that your call?” Mara realized she had not yet decided who decides."
+      }
+    ],
+    "exhibits": [
+      {
+        "title": "Exhibit 1 — The U18 pilot: decision-making ratings and in-app scores",
+        "type": "table",
+        "headers": [
+          "Group",
+          "Players",
+          "How chosen",
+          "Match decision rating, Aug–Dec (0–10)",
+          "Match decision rating, Jan–May (0–10)",
+          "Change",
+          "Tessellate in-app score, week 1 → week 10"
+        ],
+        "rows": [
+          [
+            "Pilot (used Tessellate)",
+            "14",
+            "Lowest first-half match decision ratings in the U18 squad",
+            "5.1",
+            "6.0",
+            "+0.9",
+            "52 → 64 (+23%)"
+          ],
+          [
+            "Rest of U18 squad",
+            "16",
+            "Everyone else",
+            "6.8",
+            "6.6",
+            "−0.2",
+            "Not measured"
+          ]
+        ],
+        "note": "Synthetic data. Assumptions: ratings are the average of academy coaches’ 0–10 scores on video clips of each player’s match decisions; the coaches knew which players were in the pilot; no player changed position or squad during the season; Tessellate’s in-app score is the share of correct choices on the vendor’s own clips."
+      },
+      {
+        "title": "Exhibit 2 — Academy contracts, first-team graduates and the coaching bonus",
+        "type": "table",
+        "headers": [
+          "Season",
+          "Bonus to academy coaching staff",
+          "Professional contracts offered to academy players",
+          "Of those, players with 10+ first-team league appearances to date",
+          "Bonus paid"
+        ],
+        "rows": [
+          [
+            "Three seasons ago",
+            "None",
+            "4",
+            "2",
+            "$0"
+          ],
+          [
+            "Two seasons ago",
+            "$6,000 per contract offered",
+            "9",
+            "2",
+            "$54,000"
+          ],
+          [
+            "Last season",
+            "$6,000 per contract offered",
+            "11",
+            "1",
+            "$66,000"
+          ]
+        ],
+        "note": "Synthetic data. Assumptions: contract offers are recommended by academy coaches and approved by the academy director; the most recent cohort has had less time to reach ten appearances, so its figure is incomplete."
+      },
+      {
+        "title": "Exhibit 3 — Tessellate’s proposal and Velmont’s alternatives",
+        "type": "table",
+        "headers": [
+          "Option",
+          "Annual cost",
+          "Term and conditions",
+          "Start",
+          "What is known about it"
+        ],
+        "rows": [
+          [
+            "Tessellate, as proposed",
+            "$320,000",
+            "Three years; exclusivity (no other cognitive or perceptual training product); automatic renewal unless cancelled six months before expiry; Tessellate keeps anonymized player data",
+            "Four weeks",
+            "Pilot in Exhibit 1; vendor reports no retention data"
+          ],
+          [
+            "In-house video decision drills (analysis team + coaches)",
+            "$210,000 if built on plan (estimated 60% likely); $300,000 if an outside contractor is needed (40%)",
+            "No external commitment",
+            "About one season to build",
+            "Priya Raman’s estimate; nothing built yet"
+          ],
+          [
+            "One-season Tessellate trial",
+            "Not yet priced",
+            "To be negotiated; Tessellate says trials are “not our model”",
+            "Four weeks",
+            "Would allow a designed comparison"
+          ],
+          [
+            "Defer",
+            "$0",
+            "Revisit next year",
+            "—",
+            "Ferrante opposes"
+          ]
+        ],
+        "note": "Synthetic data. Assumptions: probabilities are Priya Raman’s subjective estimates; costs include staff time; Brennan’s claim that another club in the division is ready to sign has not been verified."
+      },
+      {
+        "title": "Exhibit 4 — Rating audit: three coaches, the same six clips, rated independently",
+        "type": "table",
+        "headers": [
+          "Clip",
+          "Coach A",
+          "Coach B",
+          "Coach C"
+        ],
+        "rows": [
+          [
+            "1",
+            "8",
+            "6",
+            "7"
+          ],
+          [
+            "2",
+            "7",
+            "4",
+            "5"
+          ],
+          [
+            "3",
+            "6",
+            "7",
+            "5"
+          ],
+          [
+            "4",
+            "9",
+            "5",
+            "8"
+          ],
+          [
+            "5",
+            "7",
+            "6",
+            "6"
+          ],
+          [
+            "6",
+            "8",
+            "6",
+            "7"
+          ],
+          [
+            "Mean",
+            "7.5",
+            "5.7",
+            "6.3"
+          ]
+        ],
+        "note": "Synthetic data. Assumptions: 0–10 decision-quality scale; coaches did not see each other’s ratings; two weeks later Coach A re-rated clip 4, without knowing it was a repeat, and gave it 7. Nobody knows the “true” rating of any clip."
+      }
+    ],
+    "assumptions": [
+      "Velmont Athletic, Tessellate Performance and every person named are fictional; all figures are synthetic.",
+      "Match decision ratings are subjective 0–10 scores by academy coaches; there is no objective measure of decision quality in matches.",
+      "The board approves any external contract above $150,000 a year; the academy director recommends.",
+      "Priya Raman’s cost and probability estimates are honest but untested; she has never built a product of this kind.",
+      "Brennan’s claim about a rival club is unverified, and Velmont has no way to verify it before the board meets.",
+      "Nothing in the case says whether Tessellate improves match decisions; the available evidence cannot settle it."
+    ],
+    "questions": [
+      "What, if anything, does the pilot show about whether Tessellate improves players’ match decisions? Name each threat to that inference and the direction in which it pushes the estimate.",
+      "What should Mara recommend to the board, and how should she structure the first page so that Ferrante, Hale and Adeyemi can each act on it?",
+      "How should Mara handle Ferrante’s power and the coalition forming around the tool without either a public fight or a rubber stamp?",
+      "What are Velmont’s alternatives to Tessellate’s proposal, and which terms would Mara trade, insist on or make contingent in the next negotiation?",
+      "Should the coaching bonus be raised now, and how does it connect to the evidence problem in the pilot?"
+    ],
+    "perspectives": [
+      {
+        "title": "Run a real test before any multi-year commitment",
+        "text": "The pilot cannot separate the tool from regression to the mean, selection and unblinded ratings, and no retention or transfer data exist. Mara recommends a one-season trial with random assignment, blinded raters, a pre-stated match-decision outcome and a delayed retention test, priced with a contingent element and no exclusivity. She briefs Ferrante first and frames the trial as the way to prove his idea. The risk is that Tessellate refuses and walks, and that Ferrante reads a trial as distrust."
+      },
+      {
+        "title": "Sign, but restructure the deal",
+        "text": "The tool is plausible, the players like it, the start is fast and the first team’s sponsor matters. Mara supports adoption to preserve the academy’s relationship with Ferrante and the chairman, but negotiates away exclusivity and automatic renewal, secures data rights and caps the term at one year with an option. She states honestly in the board paper that effectiveness is unproven. The risk is spending $320,000 on an unmeasured tool and teaching the organization that a vivid pilot is enough."
+      },
+      {
+        "title": "Build in-house and use the money to fix measurement",
+        "text": "The expected cost of the in-house option is lower, it keeps the club’s data and knowledge inside, and it forces the academy to fix its noisy ratings first, which every future decision will need. The risk is a year’s delay, an unproven build, and a public split with the head coach that may cost the academy more than the tool would."
+      },
+      {
+        "title": "Fix the incentives first",
+        "text": "The contract bonus is paying for a proxy, and the ratings are noisy and unblinded; any new tool will be judged with the same broken instruments. Mara defers the vendor decision briefly and brings the board a paper on the measurement and incentive system. The risk is appearing to dodge the question the board actually asked and opening a fight with her own coaches at the same time as one with Ferrante."
+      }
+    ],
+    "application": "Player development in baseball faces the same structure. A vendor offers pitch-recognition or swing-decision training; a coordinator pilots it with the hitters who were slumping, and their numbers improve; the vendor turns the improvement into a slide; a respected manager or senior executive endorses it from intuition and from what other organizations use; incentives for staff reward promotions or signings rather than major-league value; and the analyst who sees the flaws sits between departments with little standing. The questions transfer directly: what the counterfactual is, whether gains in a drill are learning or performance and whether they transfer to games, what the measuring instruments are rewarding, whose dependence gives whom power, and how to negotiate a trial with contingent terms instead of a multi-year commitment."
+  },
+  "questions": [
+    {
+      "id": "mt-01",
+      "type": "numeric",
+      "prompt": "In the Velmont Athletic case, Brennan also offers an “elite decision-maker” screen. He says it flags 80% of academy players who later establish themselves in a professional first team, and flags 20% of those who do not. Assume (synthetic) that 10% of players in the screened age group go on to establish themselves. If a Velmont player is flagged, what is the probability that he goes on to establish himself? Answer in percent.",
+      "answer": {
+        "value": 30.8,
+        "tolerance": 0.5,
+        "unit": "%"
+      },
+      "working": "Use natural frequencies for 1,000 players. 100 will establish themselves; the screen flags 80% of them = 80. 900 will not; it flags 20% of them = 180. Flagged players = 80 + 180 = 260. Probability = 80 / 260 = 0.308, about 30.8%.",
+      "explanation": "Most flagged players are false positives because the base rate is low: 180 of the 260 flags come from the 900 players who will not make it. The “80% accurate” framing invites base-rate neglect; natural frequencies make the answer visible ([Gigerenzer & Hoffrage](R-gigerenzer-1995-improve)). A flag roughly triples the prior odds, which is useful information, but it does not make a player likely to succeed.",
+      "concepts": [
+        "c-base-rate-neglect",
+        "c-bayes-rule"
+      ],
+      "domain": "statistical-reasoning",
+      "lesson": "w01-l2",
+      "difficulty": "core",
+      "points": 1
+    },
+    {
+      "id": "mt-02",
+      "type": "multi",
+      "prompt": "Using Exhibit 4 of the Velmont Athletic case, select every conclusion the rating audit supports.",
+      "stimulus": [
+        {
+          "type": "table",
+          "kind": "original",
+          "caption": "Exhibit 4 — Rating audit: three coaches, the same six clips, rated independently",
+          "headers": [
+            "Clip",
+            "Coach A",
+            "Coach B",
+            "Coach C"
+          ],
+          "rows": [
+            [
+              "1",
+              "8",
+              "6",
+              "7"
+            ],
+            [
+              "2",
+              "7",
+              "4",
+              "5"
+            ],
+            [
+              "3",
+              "6",
+              "7",
+              "5"
+            ],
+            [
+              "4",
+              "9",
+              "5",
+              "8"
+            ],
+            [
+              "5",
+              "7",
+              "6",
+              "6"
+            ],
+            [
+              "6",
+              "8",
+              "6",
+              "7"
+            ],
+            [
+              "Mean",
+              "7.5",
+              "5.7",
+              "6.3"
+            ]
+          ],
+          "note": "Synthetic data. Assumptions: 0–10 decision-quality scale; coaches did not see each other’s ratings; two weeks later Coach A re-rated clip 4, without knowing it was a repeat, and gave it 7. Nobody knows the “true” rating of any clip."
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "There is level noise: Coach A rates every clip higher than Coach B does."
+        },
+        {
+          "id": "b",
+          "text": "There is pattern noise: the coaches disagree about which clips are better, not only about the overall level (clip 3, for example, is Coach B’s highest-rated clip but tied for Coach C’s lowest)."
+        },
+        {
+          "id": "c",
+          "text": "There is occasion noise: Coach A gave clip 4 a 9 and, two weeks later, a 7."
+        },
+        {
+          "id": "d",
+          "text": "Coach A is biased upward: his ratings are too high."
+        },
+        {
+          "id": "e",
+          "text": "The audit tells Velmont nothing, because nobody knows the correct rating for any clip."
+        },
+        {
+          "id": "f",
+          "text": "Averaging several coaches’ independent ratings would make the rating used for decisions less noisy."
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "f"
+      ],
+      "explanation": "Noise is unwanted variability in judgments that should be identical, and it can be measured without knowing the right answer ([Kahneman, Sibony & Sunstein](R-kahneman-2021-noise)). The exhibit shows all three components: level (A consistently high), pattern (coaches rank clips differently) and occasion (the same coach, same clip, different day). Bias, by contrast, is error relative to a true value, which is unknown here. Independent judgments averaged together are a standard decision-hygiene remedy.",
+      "optionFeedback": {
+        "d": "Calling A “too high” requires a true value. You only know A is higher than B and C; B might be the harsh one.",
+        "e": "This is the key point of noise audits: disagreement between judges who should agree is measurable and costly whatever the truth is."
+      },
+      "concepts": [
+        "c-noise",
+        "c-decision-hygiene"
+      ],
+      "domain": "behavioral-science",
+      "lesson": "w01-l4",
+      "difficulty": "core",
+      "points": 1
+    },
+    {
+      "id": "mt-03",
+      "type": "numeric",
+      "prompt": "A product director at a software company recorded three forecasts last quarter: 90% that a feature would ship by June (it did), 70% that monthly churn would fall below 5% (it did not), and 60% that a reseller would sign (it did). What is her mean Brier score? Give three decimals.",
+      "answer": {
+        "value": 0.22,
+        "tolerance": 0.005
+      },
+      "working": "Brier score per forecast = (probability − outcome)², with outcome 1 if it happened and 0 if not. Feature: (0.9 − 1)² = 0.01. Churn: (0.7 − 0)² = 0.49. Reseller: (0.6 − 1)² = 0.16. Mean = (0.01 + 0.49 + 0.16) / 3 = 0.66 / 3 = 0.220.",
+      "explanation": "Her mean Brier score is 0.220, only slightly better than the 0.25 that always saying 50% would earn. The confident miss on churn contributes 0.49 of the 0.66 total, which shows how a proper scoring rule punishes confident errors. Three forecasts are far too few to judge her calibration; the point of keeping score is to build a record large enough to do so.",
+      "concepts": [
+        "c-brier-score",
+        "c-calibration"
+      ],
+      "domain": "statistical-reasoning",
+      "lesson": "w01-l3",
+      "difficulty": "core",
+      "points": 1
+    },
+    {
+      "id": "mt-04",
+      "type": "flaw",
+      "prompt": "What is the central weakness in Ferrante’s argument?",
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "example",
+          "text": "In the Velmont Athletic case, Ferrante tells the staff meeting: “I have coached for twenty years. I watched those boys. They see the game faster. I don’t need a spreadsheet to tell me that.”"
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "He treats a confident intuition as validated in an environment where it cannot have been trained: the effect of a training tool on match decisions gives delayed, noisy and confounded feedback, so twenty years of coaching does not make this particular judgment reliable."
+        },
+        {
+          "id": "b",
+          "text": "Appeals to experience are always fallacious; expert judgment should never count in an evaluation."
+        },
+        {
+          "id": "c",
+          "text": "Fourteen players is too small a group for anything to be learned, so his observation is meaningless."
+        },
+        {
+          "id": "d",
+          "text": "He must be receiving money from Tessellate, which makes his testimony worthless."
+        }
+      ],
+      "answer": "a",
+      "explanation": "Intuition deserves trust when the environment is regular and the judge has had extensive practice with timely, clear feedback on that kind of judgment ([Kahneman & Klein](R-kahneman-2009-conditions)). Ferrante may have excellent intuitions about players, but he has never received clean feedback on whether a tablet tool changed decision-making, and he watched players he knew were in the pilot. His confidence is not evidence of accuracy.",
+      "optionFeedback": {
+        "b": "Too strong. Expert intuition is valid in high-validity environments; the question is whether this judgment falls in one.",
+        "c": "Small samples limit precision, but they do not make observation meaningless; the deeper problem is what his observation was calibrated against.",
+        "d": "Nothing in the case suggests a financial interest. Attributing motives without evidence is not a critique of the argument."
+      },
+      "errorTags": {
+        "b": "overgeneralizes-critique",
+        "c": "sample-size-only",
+        "d": "ad-hominem"
+      },
+      "concepts": [
+        "c-intuitive-expertise",
+        "c-metacognition"
+      ],
+      "domain": "behavioral-science",
+      "lesson": "w01-l1",
+      "difficulty": "core",
+      "points": 1
+    },
+    {
+      "id": "mt-05",
+      "type": "scenario",
+      "prompt": "Which explanation of Exhibit 2 is most consistent with what Weeks 2 and 4 taught?",
+      "stimulus": [
+        {
+          "type": "table",
+          "kind": "original",
+          "caption": "Exhibit 2 — Academy contracts, first-team graduates and the coaching bonus",
+          "headers": [
+            "Season",
+            "Bonus to academy coaching staff",
+            "Professional contracts offered to academy players",
+            "Of those, players with 10+ first-team league appearances to date",
+            "Bonus paid"
+          ],
+          "rows": [
+            [
+              "Three seasons ago",
+              "None",
+              "4",
+              "2",
+              "$0"
+            ],
+            [
+              "Two seasons ago",
+              "$6,000 per contract offered",
+              "9",
+              "2",
+              "$54,000"
+            ],
+            [
+              "Last season",
+              "$6,000 per contract offered",
+              "11",
+              "1",
+              "$66,000"
+            ]
+          ],
+          "note": "Synthetic data. Assumptions: contract offers are recommended by academy coaches and approved by the academy director; the most recent cohort has had less time to reach ten appearances, so its figure is incomplete."
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "The bonus pays for a measurable proxy (contracts offered) rather than the goal (first-team players); effort and recommendations shift toward what is paid for, and the proxy loses its meaning as it becomes a target."
+        },
+        {
+          "id": "b",
+          "text": "The coaches have become less committed since Mara arrived, which is a personnel problem."
+        },
+        {
+          "id": "c",
+          "text": "The academy’s talent has declined; the bonus is unrelated to the pattern."
+        },
+        {
+          "id": "d",
+          "text": "The bonus is too small to motivate the hard work of development; doubling it to $12,000 per contract would raise the number of first-team graduates."
+        },
+        {
+          "id": "e",
+          "text": "The exhibit proves that financial incentives never work in sport."
+        }
+      ],
+      "answer": "a",
+      "explanation": "Contract offers more than doubled while graduates who play did not rise — the classic signature of rewarding A while hoping for B ([Kerr](R-kerr-1975-folly)). With several tasks of unequal measurability, strong pay on the measurable one diverts effort and judgment from the others ([Holmström & Milgrom](R-holmstrom-1991-multitask)), and the indicator decays once pay depends on it (Goodhart, Campbell). The figures are suggestive, not proof: the latest cohort is incomplete and there is no comparison group.",
+      "optionFeedback": {
+        "b": "A disposition explanation skips the situational one; the pattern begins exactly when the payment rule changed, before Mara arrived.",
+        "c": "Possible in principle, but it does not explain why offers rose sharply at the same time; the timing points to the incentive.",
+        "d": "More pay on the same proxy would strengthen the distortion, not fix it.",
+        "e": "Overreach. The lesson is about what an incentive pays for, not that incentives never work."
+      },
+      "errorTags": {
+        "b": "disposition-over-situation",
+        "c": "ignores-timing",
+        "d": "more-of-the-same",
+        "e": "overgeneralization"
+      },
+      "concepts": [
+        "c-multitask-problem",
+        "c-goodharts-law",
+        "c-principal-agent-problem"
+      ],
+      "domain": "business-strategy",
+      "lesson": "w02-l3",
+      "difficulty": "core",
+      "points": 1
+    },
+    {
+      "id": "mt-06",
+      "type": "mc",
+      "prompt": "In the Velmont Athletic case, Brennan proposes $25 in club-shop credit for every ten completed Tessellate sessions. Which prediction is best supported by the research covered in Week 2?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Session counts will probably rise while the reward runs, but expected, tangible, task-contingent rewards tend to reduce free-choice engagement once they stop, and the reward pays for quantity of sessions rather than quality of attention."
+        },
+        {
+          "id": "b",
+          "text": "Rewards always increase motivation, so the credit is a low-cost way to guarantee lasting engagement."
+        },
+        {
+          "id": "c",
+          "text": "Any feedback, including the app’s immediate verbal praise, will undermine motivation just as the credit will."
+        },
+        {
+          "id": "d",
+          "text": "Adolescents do not respond to incentives, so the credit will have no effect either way."
+        }
+      ],
+      "answer": "a",
+      "explanation": "A meta-analysis found that expected, tangible, task-contingent rewards undermine later free-choice intrinsic interest, whereas informative positive feedback tends not to ([Deci, Koestner & Ryan](R-deci-1999-meta)). Incentives also predict quantity better than quality of performance. The design question is what the reward will signal and what it will pay for, not whether rewards “work”.",
+      "optionFeedback": {
+        "b": "Rewards often raise the rewarded behavior while they last; the evidence is about what happens to self-driven engagement afterward.",
+        "c": "The meta-analytic evidence distinguishes informative verbal feedback, which tends not to undermine interest, from tangible contingent rewards.",
+        "d": "There is no basis for that claim; incentives clearly affect adolescent behavior, which is why their design matters."
+      },
+      "errorTags": {
+        "b": "ignores-crowding-out",
+        "c": "conflates-feedback-and-reward",
+        "d": "unsupported-claim"
+      },
+      "concepts": [
+        "c-motivation-crowding-out",
+        "c-intrinsic-extrinsic-motivation"
+      ],
+      "domain": "behavioral-science",
+      "lesson": "w02-l2",
+      "difficulty": "core",
+      "points": 1
+    },
+    {
+      "id": "mt-07",
+      "type": "mc",
+      "prompt": "In the Velmont Athletic case, both of Priya Raman’s predecessors left the analysis role within two years, and the exit notes described each as “not a team player.” What is the best first inference?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A problem that recurs across different people in the same role is evidence about the role: examine its dual reporting, its status, and how dissent from it is received before concluding that the people were the problem."
+        },
+        {
+          "id": "b",
+          "text": "Velmont should screen the next analyst more carefully for agreeableness."
+        },
+        {
+          "id": "c",
+          "text": "Conformity research shows people always yield to the group, so the analysts should have conformed."
+        },
+        {
+          "id": "d",
+          "text": "Because the fundamental attribution error failed to replicate, personality is the most likely explanation."
+        }
+      ],
+      "answer": "a",
+      "explanation": "Week 2 taught a sequencing rule: diagnose the situation first when a pattern repeats across different occupants of a role. Priya’s experience at the staff meeting — a laugh, then silence — is a live example of how the role is treated. This does not deny that people differ; it changes where you look first.",
+      "optionFeedback": {
+        "b": "This treats a recurring role-level pattern as a selection problem and may simply hire someone who stays silent about real flaws.",
+        "c": "Conformity is real but varies with group size, culture and ambiguity, and silencing analysis is not a goal.",
+        "d": "The premise is false as stated, and the conclusion ignores the strongest evidence in the case: the same label attached to different people."
+      },
+      "errorTags": {
+        "b": "disposition-over-situation",
+        "c": "misreads-conformity",
+        "d": "misstates-replication-record"
+      },
+      "concepts": [
+        "c-situation-vs-disposition",
+        "c-psychological-safety"
+      ],
+      "domain": "organizational-behavior",
+      "lesson": "w02-l1",
+      "difficulty": "core",
+      "points": 1
+    },
+    {
+      "id": "mt-08",
+      "type": "research",
+      "prompt": "What is the best interpretation of these follow-up results?",
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "example",
+          "text": "After the Velmont pilot ended, Priya Raman assembled what data she could (synthetic). Tessellate’s in-app score for the fourteen pilot players was 52 in week 1 and 64 in week 10. Four weeks after sessions stopped for an international break, the players were retested on new clips of the same scenario types, presented in blocks as in training: average 56. They were also tested on clips from a different competition, with scenario types mixed in random order: average 53. No blinded match ratings exist."
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Most of the in-session gain looks like temporary performance rather than durable learning; blocked practice by scenario type may have inflated it; near transfer to unfamiliar mixed clips is close to baseline; and transfer to match decisions remains untested."
+        },
+        {
+          "id": "b",
+          "text": "The 23% in-session gain demonstrates learning; the retests are irrelevant because the tool is meant to be used continuously."
+        },
+        {
+          "id": "c",
+          "text": "The drop after the break shows the tool is harmful to decision-making."
+        },
+        {
+          "id": "d",
+          "text": "Because in-app scores rose, match decisions must also have improved, since decision skills transfer broadly across contexts."
+        },
+        {
+          "id": "e",
+          "text": "The retests prove the tool has no effect at all and should be rejected."
+        }
+      ],
+      "answer": "a",
+      "explanation": "Learning has to be inferred from delayed tests in changed contexts; in-session performance can mislead ([Soderstrom & Bjork](R-soderstrom-2015-learning)). A retained gain of 4 points on familiar-format clips and 1 point on mixed, unfamiliar clips is small, and blocked practice is the kind of schedule that flatters in-session scores. Far transfer to matches should be tested, not assumed ([Sala & Gobet](R-sala-2017-does)). The data are uncontrolled, so they are suggestive in both directions.",
+      "optionFeedback": {
+        "b": "Continuous use does not make retention irrelevant; it is the only way to know whether anything is being learned rather than rehearsed.",
+        "c": "Scores remained above baseline; there is no evidence of harm, only of a small retained gain.",
+        "d": "Far transfer is rare; the mixed-clip result is evidence against assuming it.",
+        "e": "Uncontrolled, small data cannot prove a null; they show the vendor’s headline overstates what is known."
+      },
+      "errorTags": {
+        "b": "performance-as-learning",
+        "c": "overreads-decline",
+        "d": "assumes-far-transfer",
+        "e": "proves-the-null"
+      },
+      "concepts": [
+        "c-learning-performance-distinction",
+        "c-transfer-of-learning",
+        "c-desirable-difficulties"
+      ],
+      "domain": "behavioral-science",
+      "lesson": "w03-l1",
+      "difficulty": "stretch",
+      "points": 1
+    },
+    {
+      "id": "mt-09",
+      "type": "flaw",
+      "prompt": "What is wrong with this argument?",
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "example",
+          "text": "A Velmont academy coach, opposing any spending on training tools, tells Mara: “A meta-analysis found that accumulated practice explains only a small share of the differences in performance among elite athletes. So more practice won’t help our players improve. We should put the money into scouting instead.”"
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Variance explained describes differences between people in a sample, not how much any one person can improve with practice; among elite athletes it is also shrunk because almost everyone practices a lot."
+        },
+        {
+          "id": "b",
+          "text": "The meta-analysis has been retracted, so its findings should be ignored."
+        },
+        {
+          "id": "c",
+          "text": "The coach is right that practice is irrelevant, but scouting is also a form of practice."
+        },
+        {
+          "id": "d",
+          "text": "Meta-analyses can never inform decisions about individual players."
+        }
+      ],
+      "answer": "a",
+      "explanation": "Accumulated practice explains a real but modest share of performance differences, and very little among elite performers ([Macnamara, Hambrick & Oswald](R-macnamara-2014-deliberate)). That statistic is about variation across people, not about the causal effect of practice for an individual; restricted range among elites makes it smaller still. The right lesson is not to use practice hours as a talent measure, not that practice is pointless.",
+      "optionFeedback": {
+        "b": "False. The meta-analysis is part of a live debate about definitions, not retracted.",
+        "c": "The premise is wrong: low variance explained does not mean practice is irrelevant to improvement.",
+        "d": "Too strong. Meta-analyses inform decisions; the error is misreading what variance explained measures."
+      },
+      "errorTags": {
+        "b": "invented-fact",
+        "c": "accepts-flawed-premise",
+        "d": "overgeneralization"
+      },
+      "concepts": [
+        "c-variance-explained",
+        "c-deliberate-practice"
+      ],
+      "domain": "statistical-reasoning",
+      "lesson": "w03-l2",
+      "difficulty": "stretch",
+      "points": 1
+    },
+    {
+      "id": "mt-10",
+      "type": "mc",
+      "prompt": "Tessellate’s brochure in the Velmont Athletic case says the software “adapts to each player’s visual, auditory or kinesthetic learning style.” How should Mara treat this claim?",
+      "options": [
+        {
+          "id": "a",
+          "text": "As unsupported: matching instruction to learning styles lacks evidence. It does not by itself show the product is useless, but it is a reason to demand retention and transfer evidence for every other claim."
+        },
+        {
+          "id": "b",
+          "text": "As a strength: individualizing to each player’s learning style is well established in sport science."
+        },
+        {
+          "id": "c",
+          "text": "As proof that the whole product is fraudulent and should be rejected without further evaluation."
+        },
+        {
+          "id": "d",
+          "text": "As irrelevant: brochure language has no bearing on how a vendor’s claims should be evaluated."
+        }
+      ],
+      "answer": "a",
+      "explanation": "A review of the learning-styles literature found no adequate evidence that matching instruction to a preferred style improves learning ([Pashler et al.](R-pashler-2008-learning)). Individualizing by knowledge, skill and need is sensible; individualizing by “style” is not supported. A myth in the marketing tells you something about the vendor’s evidentiary standards, which should raise the bar for the 23% claim.",
+      "optionFeedback": {
+        "b": "The opposite: the matching hypothesis lacks support in education and there is no stronger case in sport.",
+        "c": "Overreach. A weak marketing claim is a warning sign, not a test of whether the tool improves decisions.",
+        "d": "How a vendor talks about evidence is informative about how much independent verification its claims need."
+      },
+      "errorTags": {
+        "b": "endorses-myth",
+        "c": "overreaction",
+        "d": "ignores-signal"
+      },
+      "concepts": [
+        "c-learning-styles-myth",
+        "c-learning-measurement"
+      ],
+      "domain": "behavioral-science",
+      "lesson": "w03-l4",
+      "difficulty": "core",
+      "points": 1
+    },
+    {
+      "id": "mt-11",
+      "type": "research",
+      "prompt": "What is the most defensible reading of Exhibit 1?",
+      "stimulus": [
+        {
+          "type": "table",
+          "kind": "original",
+          "caption": "Exhibit 1 — The U18 pilot: decision-making ratings and in-app scores",
+          "headers": [
+            "Group",
+            "Players",
+            "How chosen",
+            "Match decision rating, Aug–Dec (0–10)",
+            "Match decision rating, Jan–May (0–10)",
+            "Change",
+            "Tessellate in-app score, week 1 → week 10"
+          ],
+          "rows": [
+            [
+              "Pilot (used Tessellate)",
+              "14",
+              "Lowest first-half match decision ratings in the U18 squad",
+              "5.1",
+              "6.0",
+              "+0.9",
+              "52 → 64 (+23%)"
+            ],
+            [
+              "Rest of U18 squad",
+              "16",
+              "Everyone else",
+              "6.8",
+              "6.6",
+              "−0.2",
+              "Not measured"
+            ]
+          ],
+          "note": "Synthetic data. Assumptions: ratings are the average of academy coaches’ 0–10 scores on video clips of each player’s match decisions; the coaches knew which players were in the pilot; no player changed position or squad during the season; Tessellate’s in-app score is the share of correct choices on the vendor’s own clips."
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "The pilot cannot attribute the +0.9 to Tessellate: players were selected for unusually low ratings on a noisy measure, so they would be expected to regress upward without any intervention; the comparison group differs by selection; and raters knew who was in the pilot."
+        },
+        {
+          "id": "b",
+          "text": "The tool works: the pilot group rose while the comparison group fell, and that difference cannot be explained by chance."
+        },
+        {
+          "id": "c",
+          "text": "With only fourteen players nothing can be learned, so the board should ignore the exhibit entirely."
+        },
+        {
+          "id": "d",
+          "text": "The tool harmed the rest of the squad, whose ratings fell."
+        },
+        {
+          "id": "e",
+          "text": "The effect is real but smaller than the vendor claims, roughly half of 23%."
+        }
+      ],
+      "answer": "a",
+      "explanation": "Selecting on extremes of a noisy measure produces regression to the mean with or without an intervention; Exhibit 4 shows the ratings are noisy. The comparison group was the higher-rated players, who would tend to drift down for the same reason. Unblinded raters add a further bias toward the pilot. The exhibit does not show the tool fails; it shows the design cannot tell.",
+      "optionFeedback": {
+        "b": "Opposite-direction drift is exactly what regression predicts for groups selected from opposite ends of a noisy distribution.",
+        "c": "Small samples limit precision, but the exhibit is informative: it shows why the design cannot answer the question, which shapes the next test.",
+        "d": "The comparison players never used the tool; their decline is what regression from high scores predicts.",
+        "e": "No valid effect estimate can be computed from this design, so “half the claim” is invented precision."
+      },
+      "errorTags": {
+        "b": "ignores-regression",
+        "c": "nihilism",
+        "d": "misattributes-change",
+        "e": "false-precision"
+      },
+      "concepts": [
+        "c-regression-to-the-mean",
+        "c-selection-bias",
+        "c-measurement-validity"
+      ],
+      "domain": "statistical-reasoning",
+      "lesson": "w04-l1",
+      "difficulty": "core",
+      "points": 1
+    },
+    {
+      "id": "mt-12",
+      "type": "numeric",
+      "prompt": "Brennan argues that comparing the pilot group’s change with the rest of the squad’s change “controls for everything.” Using Exhibit 1 of the Velmont Athletic case, compute that naive difference-in-differences estimate in rating points.",
+      "answer": {
+        "value": 1.1,
+        "tolerance": 0.01,
+        "unit": "rating points"
+      },
+      "working": "Pilot change = 6.0 − 5.1 = +0.9. Comparison change = 6.6 − 6.8 = −0.2. Difference-in-differences = 0.9 − (−0.2) = 1.1 rating points.",
+      "explanation": "The arithmetic gives 1.1 points, but the estimate is only credible if, without the tool, both groups would have followed parallel trends. Here the groups were chosen from opposite ends of a noisy rating, so regression to the mean predicts the low group rises and the high group falls even with no intervention: the parallel-trends assumption fails by design ([Angrist & Pischke](R-angrist-2014-mastering)). A method’s name does not supply its assumption.",
+      "concepts": [
+        "c-quasi-experimental-design",
+        "c-counterfactual",
+        "c-regression-to-the-mean"
+      ],
+      "domain": "statistical-reasoning",
+      "lesson": "w04-l3",
+      "difficulty": "stretch",
+      "points": 1
+    },
+    {
+      "id": "mt-13",
+      "type": "rank",
+      "prompt": "Mara wants to know next season whether Tessellate improves match decisions. Rank these designs from most to least able to support a causal conclusion.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Randomly assign U17 and U18 players, within position, to Tessellate or to equal time in coach-led video sessions; blinded raters score match clips; the outcome and analysis are pre-stated; a retention test follows six weeks after sessions end."
+        },
+        {
+          "id": "b",
+          "text": "Compare the change in Velmont’s U18 ratings, using Tessellate, with the change at a similar academy not using it over the same period, after checking that the two followed similar trends in previous seasons."
+        },
+        {
+          "id": "c",
+          "text": "Repeat last season’s pilot with the lowest-rated players and compare their ratings before and after."
+        },
+        {
+          "id": "d",
+          "text": "Collect testimonials from coaches at the two clubs in the division above that already use Tessellate."
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "explanation": "Randomization balances unobserved differences by design, and blinding, an active control and a pre-stated outcome remove further biases. A difference-in-differences comparison with a checked pre-trend is a credible second best. An uncontrolled before–after on low scorers is contaminated by regression to the mean. Testimonials from adopters are selected, unsystematic and shaped by the decision already made. Hierarchies rank typical protection against bias; each design still has to be judged on its execution.",
+      "concepts": [
+        "c-evidence-hierarchy",
+        "c-counterfactual",
+        "c-quasi-experimental-design"
+      ],
+      "domain": "statistical-reasoning",
+      "lesson": "w04-l5",
+      "difficulty": "core",
+      "points": 1
+    },
+    {
+      "id": "mt-14",
+      "type": "mc",
+      "prompt": "A digital-health startup announces a trial of its sleep app: “The improvement was statistically significant (p = 0.03), so there is a 97% probability that the app improves sleep.” What is the correct response?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The p-value is the probability of data at least this extreme if the app had no effect; it is not the probability the app works. That depends on prior plausibility and power; ask for the effect size with a confidence interval."
+        },
+        {
+          "id": "b",
+          "text": "The statement is correct: 1 − p is the probability the hypothesis is true."
+        },
+        {
+          "id": "c",
+          "text": "The result is meaningless because p-values should never be used."
+        },
+        {
+          "id": "d",
+          "text": "The result proves the effect is large, because small p-values mean big effects."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The American Statistical Association’s statement is explicit that a p-value does not measure the probability that a hypothesis is true, nor the size or importance of an effect ([Wasserstein & Lazar](R-wasserstein-2016-asa)). The credibility of a significant result depends on prior plausibility and power, as Bayes’ rule makes explicit. Estimates with intervals show what was learned.",
+      "optionFeedback": {
+        "b": "This is the most common misreading of a p-value; it inverts the conditional probability.",
+        "c": "Too strong. p-values carry information when interpreted correctly and reported with estimates.",
+        "d": "A small p-value can come from a tiny effect in a large sample; significance is not importance."
+      },
+      "errorTags": {
+        "b": "inverts-p-value",
+        "c": "nihilism",
+        "d": "significance-as-importance"
+      },
+      "concepts": [
+        "c-p-value",
+        "c-bayesian-updating"
+      ],
+      "domain": "statistical-reasoning",
+      "lesson": "w04-l1",
+      "difficulty": "core",
+      "points": 1
+    },
+    {
+      "id": "mt-15",
+      "type": "short",
+      "prompt": "Write the first 150–200 words of Mara’s board paper on the Tessellate decision in the Velmont Athletic case. The finance chair wants “the decision on page one.” State your recommendation, the two or three reasons that matter most, the key limitation of the evidence in language a non-specialist director will understand, the main risk of your recommendation, and the decision you need from the board. Any defensible recommendation can earn full marks. (Self-assessed against the rubric and model answer.)",
+      "modelAnswer": "Recommendation: approve a one-season, evaluated trial of Tessellate at no more than $160,000, with no exclusivity or automatic renewal, and decide on any multi-year agreement in June on the trial’s results. Reasons: first, the tool may help — players like it and the head coach, who proposed it, sees promise. Second, last season’s pilot cannot tell us whether it does. The players chosen had the lowest ratings, and low scores on a noisy measure tend to rise on their own; the rest of the squad, chosen for higher scores, drifted down for the same reason. The raters also knew who used the tool. Third, a three-year commitment of $960,000 with exclusivity would close off our in-house alternative before we know. The trial will compare randomly assigned players, with match clips rated by coaches who do not know who used the tool, and a retest six weeks after sessions stop. Main risk: Tessellate may refuse a trial; if so I recommend the in-house option. Decision needed: approval of the trial budget and terms. What would change my mind: a clear improvement in blinded match ratings.",
+      "rubric": [
+        {
+          "criterion": "Bottom line first: a specific recommendation and the decision requested appear in the opening sentences",
+          "points": 2,
+          "levels": [
+            "0 — recommendation missing or buried after background",
+            "1 — recommendation present but vague or the board’s decision is unclear",
+            "2 — specific recommendation and explicit ask up front"
+          ]
+        },
+        {
+          "criterion": "Evidence characterized honestly and accessibly (selection and regression, unblinded ratings, no retention data) without jargon or dismissiveness",
+          "points": 2,
+          "levels": [
+            "0 — repeats the 23% claim or dismisses the pilot without reasons",
+            "1 — names one limitation, or uses unexplained technical terms",
+            "2 — explains the core limitation in plain language and what would resolve it"
+          ]
+        },
+        {
+          "criterion": "Audience fit: respects Ferrante’s role and the board’s concerns; preserves trust while disagreeing",
+          "points": 2,
+          "levels": [
+            "0 — adversarial or blames individuals",
+            "1 — neutral but ignores the politics",
+            "2 — frames the recommendation so the head coach and chairman can support it without losing face"
+          ]
+        },
+        {
+          "criterion": "Risk and contingency: names the main risk of the recommendation and what would change the decision",
+          "points": 2,
+          "levels": [
+            "0 — no risk stated",
+            "1 — risk stated without a response",
+            "2 — risk, fallback and a stated update rule"
+          ]
+        }
+      ],
+      "concepts": [
+        "c-bluf-pyramid",
+        "c-audience-analysis",
+        "c-trustworthiness-abi"
+      ],
+      "domain": "communication",
+      "lesson": "w05-l4",
+      "difficulty": "stretch",
+      "points": 2
+    },
+    {
+      "id": "mt-16",
+      "type": "scenario",
+      "prompt": "What should Mara do next?",
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "example",
+          "text": "In the Velmont Athletic case, Priya raised a concern about the pilot at a staff meeting; Ferrante replied, “With respect, the analytics department doesn’t coach,” and the room laughed. Priya has not spoken up in a meeting since. Mara wants Priya’s analysis in front of the board and wants staff to keep surfacing problems."
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "At the next staff meeting, thank Priya for the specific concerns, say that the board paper will include the limitations of the evidence under Mara’s own name, and ask Ferrante a genuine question about what result would change his view."
+        },
+        {
+          "id": "b",
+          "text": "Tell Priya privately that she was right, but keep the caveats out of the board pack to protect the relationship with Ferrante."
+        },
+        {
+          "id": "c",
+          "text": "Ask Priya to present her critique to the board herself, without Mara’s endorsement, so the analysis speaks for itself."
+        },
+        {
+          "id": "d",
+          "text": "Circulate a memo to all staff on the replication crisis so that everyone understands why analysis matters."
+        },
+        {
+          "id": "e",
+          "text": "Ban humor in staff meetings so that no one feels mocked again."
+        }
+      ],
+      "answer": "a",
+      "explanation": "Psychological safety is a shared belief that speaking up is safe, and leaders set its price by how they respond to the first piece of bad news ([Edmondson](R-edmondson-1999-psychological)). Owning the caveats publicly protects Priya from bearing the political cost alone, signals integrity and benevolence (two of the three trustworthiness dimensions), and inviting Ferrante’s criteria keeps the disagreement about evidence rather than status. The evidence linking safety to performance is mostly correlational, but the mechanism here is direct: Priya has already gone silent.",
+      "optionFeedback": {
+        "b": "Private agreement with public silence teaches everyone that disclosure is costly and leaves the board misinformed.",
+        "c": "This shifts all the risk to the person with the least power and signals that Mara will not stand behind her own staff’s work.",
+        "d": "Generic education does not change the local price of speaking up, which was set by the response in the room.",
+        "e": "Psychological safety is not niceness or the absence of humor; it is whether candor is punished."
+      },
+      "errorTags": {
+        "b": "silence-for-harmony",
+        "c": "exposes-subordinate",
+        "d": "generic-fix",
+        "e": "safety-as-niceness"
+      },
+      "concepts": [
+        "c-psychological-safety",
+        "c-trustworthiness-abi",
+        "c-delegation-accountability"
+      ],
+      "domain": "organizational-behavior",
+      "lesson": "w05-l2",
+      "difficulty": "core",
+      "points": 1
+    },
+    {
+      "id": "mt-17",
+      "type": "multi",
+      "prompt": "In the Velmont Athletic case, which of the following are sources of Ferrante’s practical power over the Tessellate decision? Select all that apply.",
+      "options": [
+        {
+          "id": "a",
+          "text": "The chairman’s and the club’s dependence on first-team results, which Ferrante is seen to control."
+        },
+        {
+          "id": "b",
+          "text": "Expert and referent power from leading the club to promotion, as perceived by staff and directors."
+        },
+        {
+          "id": "c",
+          "text": "Control over something academy coaches value: which of their players are invited to first-team training."
+        },
+        {
+          "id": "d",
+          "text": "Formal authority to approve the academy’s budget."
+        },
+        {
+          "id": "e",
+          "text": "Formal authority to dismiss academy coaches."
+        },
+        {
+          "id": "f",
+          "text": "Frequent informal access to the chairman, outside the formal reporting line."
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "f"
+      ],
+      "explanation": "Practical power comes from what others depend on you for — important, discretionary resources with few alternatives ([Pfeffer & Salancik](R-pfeffer-1978-external)) — and from bases such as expert and referent power that exist in the targets’ perceptions ([French & Raven](R-french-1959-bases)). Ferrante has all of these, plus an informal channel to the chairman. The case states that he has no formal authority over the academy budget and gives no indication that he can dismiss academy staff: his power is real precisely because it is not on the chart.",
+      "optionFeedback": {
+        "d": "The case says the budget belongs to Mara and, above a threshold, the board.",
+        "e": "Nothing in the case gives him this authority; his leverage over coaches runs through invitations, not employment."
+      },
+      "concepts": [
+        "c-bases-of-power",
+        "c-power-dependence",
+        "c-formal-informal-authority"
+      ],
+      "domain": "organizational-behavior",
+      "lesson": "w06-l1",
+      "difficulty": "core",
+      "points": 1
+    },
+    {
+      "id": "mt-18",
+      "type": "decision",
+      "prompt": "Ferrante keeps pointing out that two clubs in the division above use Tessellate. The board meets in ten days. Mara wants neither a public fight nor a rubber stamp. What is her best next move?",
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "example",
+          "text": "Velmont Athletic case: Ferrante is the most influential voice with the chairman; academy coaches depend on him for first-team invitations; Mara controls the academy recommendation; the board pack closes in six days."
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "Meet Ferrante privately before the pack closes; frame a designed trial as the way to make his idea succeed and to protect him from a vendor’s inflated numbers; consult him on which outcomes coaches would trust, while stating in advance what she will not concede (random assignment, blinded ratings, no multi-year exclusivity before results)."
+        },
+        {
+          "id": "b",
+          "text": "Say nothing to Ferrante and present a full critique of the pilot directly to the board, so the evidence is heard without interference."
+        },
+        {
+          "id": "c",
+          "text": "Organize the academy coaches to sign a joint letter opposing the deal."
+        },
+        {
+          "id": "d",
+          "text": "Recommend the three-year deal, since two clubs in a higher division already use the tool and Velmont should not fall behind."
+        },
+        {
+          "id": "e",
+          "text": "Ask the chairman to instruct Ferrante to stay out of academy matters."
+        }
+      ],
+      "answer": "a",
+      "explanation": "Consultation and rational persuasion are the tactics most associated with commitment; pressure, legitimating and coalition tactics the least ([Yukl & Tracey](R-yukl-1992-consequences)). Issue selling works through packaging and process — framing the trial in terms of the head coach’s goals and raising it before the formal arena ([Dutton & Ashford](R-dutton-1993-selling)). Sharing control over design is co-optation; setting non-negotiables in advance keeps it from becoming capitulation. Adopting because peers adopt is mimetic isomorphism: it buys legitimacy, not evidence ([DiMaggio & Powell](R-dimaggio-1983-iron)).",
+      "optionFeedback": {
+        "b": "Surprising the most powerful stakeholder in the formal arena invites a public fight and gives him no way to support the trial without losing face.",
+        "c": "Coalition and pressure tactics produce resistance, and the coaches depend on Ferrante for invitations, so many will not sign or will resent being asked.",
+        "d": "Imitating higher-status peers is a legitimacy move; it does not tell Velmont whether the tool works here.",
+        "e": "Escalating to authority to silence a peer is a legitimating/pressure tactic and damages the relationship the academy needs."
+      },
+      "errorTags": {
+        "b": "ambush-in-formal-arena",
+        "c": "pressure-coalition",
+        "d": "mimetic-adoption",
+        "e": "escalation"
+      },
+      "concepts": [
+        "c-influence-tactics",
+        "c-issue-selling",
+        "c-cooptation",
+        "c-institutional-isomorphism"
+      ],
+      "domain": "organizational-behavior",
+      "lesson": "w06-l4",
+      "difficulty": "stretch",
+      "points": 1
+    },
+    {
+      "id": "mt-19",
+      "type": "numeric",
+      "prompt": "Using Exhibit 3 of the Velmont Athletic case, what is the expected annual cost of the in-house alternative to Tessellate, in thousands of dollars? Assume risk neutrality and take Priya’s probabilities at face value.",
+      "answer": {
+        "value": 246,
+        "tolerance": 1,
+        "unit": "$k"
+      },
+      "working": "Expected cost = 0.6 × $210k + 0.4 × $300k = $126k + $120k = $246k a year.",
+      "explanation": "The expected cost of the best alternative, $246k, is the starting point for Velmont’s reservation value, against Tessellate’s $320k ask. It is only a starting point: the in-house option starts a season later, is unproven and depends on subjective probabilities, while Tessellate brings exclusivity and data terms that carry their own costs. Turning a BATNA into a reservation value means pricing those differences explicitly rather than treating $246k as a ceiling or ignoring it.",
+      "concepts": [
+        "c-batna",
+        "c-reservation-value"
+      ],
+      "domain": "negotiation",
+      "lesson": "w07-l1",
+      "difficulty": "core",
+      "points": 1
+    },
+    {
+      "id": "mt-20",
+      "type": "short",
+      "prompt": "Write the negotiation plan Mara takes into her next meeting with Brennan in the Velmont Athletic case (150–250 words). Include: (1) Velmont’s BATNA and reservation value and how you adjusted them; (2) at least two issues to trade and one contingent term, with a trigger that is measurable and hard to manipulate; (3) how you will respond to “another club in your division is ready to sign”; (4) one line you will not cross in what you say. (Self-assessed against the rubric and model answer.)",
+      "modelAnswer": "BATNA: build in-house drills, expected cost about $246k a year but a season later and unproven. Adjusting for delay and execution risk, my reservation value for a one-year Tessellate agreement with no exclusivity is about $280k all-in; for a deal with exclusivity, nothing — exclusivity would forfeit the in-house option. Aspiration: a one-season trial at $150k fixed plus a contingent payment. Trades: Brennan wants a flagship club and a reference; we care most about evidence, flexibility and data. I offer public reference status, a case study if results are positive, and a two-year option at a pre-agreed price, in exchange for dropping exclusivity and automatic renewal, and Velmont owning its players’ data. Contingent term: a further $120k becomes payable only if, in a randomized comparison, blinded raters score the Tessellate group’s match decisions higher by a pre-stated margin at the six-week retest; Priya and an external analyst agree the protocol before the season starts. On the rival club: I will not argue about it. I will say our decision depends on our alternatives and on evidence, and that a deadline does not change either; if they prefer the other club, we will build in-house. Line I will not cross: I will not claim we have another vendor offer or a board decision we do not have; I will decline to disclose our reservation value rather than misstate it.",
+      "rubric": [
+        {
+          "criterion": "Structure: BATNA valued and translated into a reservation value with explicit adjustments; aspiration distinct from reservation",
+          "points": 2,
+          "levels": [
+            "0 — no BATNA or reservation value",
+            "1 — BATNA named but not valued or adjusted",
+            "2 — valued, adjusted with reasons, aspiration stated separately"
+          ]
+        },
+        {
+          "criterion": "Value creation: identifies issues valued differently by the two sides and trades them; contingent term with a measurable, manipulation-resistant trigger",
+          "points": 2,
+          "levels": [
+            "0 — price-only plan",
+            "1 — trades or contingency present but vague or easily gamed",
+            "2 — specific logroll and a well-specified contingent term"
+          ]
+        },
+        {
+          "criterion": "Handling the unverified deadline claim without escalating or capitulating; anchoring defense through own alternatives and target",
+          "points": 2,
+          "levels": [
+            "0 — accepts the deadline at face value or accuses Brennan of lying",
+            "1 — resists but without a principled basis",
+            "2 — calm response grounded in alternatives and criteria"
+          ]
+        },
+        {
+          "criterion": "Ethics: a clear disclosure policy that distinguishes declining to disclose from misstating or paltering",
+          "points": 2,
+          "levels": [
+            "0 — none, or plans a bluff about facts",
+            "1 — general commitment to honesty",
+            "2 — specific line that separates non-disclosure from deception"
+          ]
+        }
+      ],
+      "concepts": [
+        "c-contingent-contract",
+        "c-logrolling",
+        "c-negotiation-ethics",
+        "c-reservation-value"
+      ],
+      "domain": "negotiation",
+      "lesson": "w07-l2",
+      "difficulty": "stretch",
+      "points": 2
+    }
+  ],
+  "reserve": [
+    {
+      "id": "mt-rs1",
+      "type": "mc",
+      "prompt": "In the Velmont Athletic case, Mara noticed that part of her wanted the pilot to have failed because it was Ferrante’s idea. Which practice best protects her evaluation from motivated reasoning?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Before seeing any new data, write down what result would count as success or failure, and ask a colleague to write the strongest case for the tool."
+        },
+        {
+          "id": "b",
+          "text": "Rely on her self-awareness: now that she has noticed the bias, she can correct for it."
+        },
+        {
+          "id": "c",
+          "text": "Read only the critical research on decision-training tools, to balance Ferrante’s enthusiasm."
+        },
+        {
+          "id": "d",
+          "text": "Defer entirely to Ferrante, since her bias disqualifies her judgment."
+        }
+      ],
+      "answer": "a",
+      "explanation": "Motivated reasoning steers conclusions while preserving a feeling of objectivity ([Kunda](R-kunda-1990-case)), so awareness alone rarely corrects it. Effective debiasing is procedural: pre-stated criteria, an explicit case against your preferred view, and independent review. These constrain the reasoning before the data can be read selectively.",
+      "optionFeedback": {
+        "b": "Knowing about a bias does little to remove it; the feeling of objectivity is part of the problem.",
+        "c": "Searching only one side is confirmation bias in the opposite direction.",
+        "d": "Swapping one biased judge for another, with his own commitments, does not improve the decision."
+      },
+      "concepts": [
+        "c-motivated-reasoning",
+        "c-confirmation-bias",
+        "c-decision-hygiene"
+      ],
+      "domain": "behavioral-science",
+      "lesson": "w01-l2",
+      "difficulty": "core",
+      "points": 1
+    },
+    {
+      "id": "mt-rs2",
+      "type": "mc",
+      "prompt": "In a law firm’s voluntary pro bono rotation, two senior associates visibly skip their shifts and nothing happens. What does research on conditional cooperation predict for the rest of the group?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Contributions by others will tend to decline as visible free riding goes unaddressed; giving cooperators a way to respond to it tends to sustain cooperation."
+        },
+        {
+          "id": "b",
+          "text": "Others will contribute more to make up for the shortfall, out of altruism."
+        },
+        {
+          "id": "c",
+          "text": "Nothing will change, because pro bono work is intrinsically motivated."
+        },
+        {
+          "id": "d",
+          "text": "Everyone will stop immediately, because people are purely self-interested."
+        }
+      ],
+      "answer": "a",
+      "explanation": "Many people cooperate conditionally: they contribute if others do. In public-goods experiments, cooperation tends to unravel when free riding goes unpunished and holds up when cooperators can respond to it ([Fehr & Gächter](R-fehr-2000-fairness)). The managerial implication is to address visible free riding early, not to assume goodwill will absorb it.",
+      "optionFeedback": {
+        "b": "Some individuals compensate, but the typical pattern is decline as others see contributions are not reciprocated.",
+        "c": "Intrinsic motivation coexists with sensitivity to fairness; seeing others shirk changes the meaning of contributing.",
+        "d": "Pure self-interest predicts no contribution from the start, which is not what is observed; the decline is gradual and conditional."
+      },
+      "concepts": [
+        "c-reciprocity",
+        "c-social-norms"
+      ],
+      "domain": "behavioral-science",
+      "lesson": "w02-l4",
+      "difficulty": "core",
+      "points": 1
+    },
+    {
+      "id": "mt-rs3",
+      "type": "mc",
+      "prompt": "A hospital must make sure new nurses still remember a medication-dosing protocol three months after orientation. Which schedule has the strongest evidence for long-term retention?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Short practice quizzes on the protocol spread across several weeks, with feedback."
+        },
+        {
+          "id": "b",
+          "text": "Rereading the protocol several times in one sitting."
+        },
+        {
+          "id": "c",
+          "text": "Highlighting the key sections of the protocol document."
+        },
+        {
+          "id": "d",
+          "text": "One long session of massed practice the day before the nurses start on the ward."
+        }
+      ],
+      "answer": "a",
+      "explanation": "Retrieval practice and spacing have the strongest evidence of the common learning techniques ([Dunlosky et al.](R-dunlosky-2013-improving); [Roediger & Karpicke](R-roediger-2006-test-enhanced)). Rereading, highlighting and massed practice feel productive and can raise immediate performance, but they produce weaker delayed retention.",
+      "optionFeedback": {
+        "b": "Rereading builds familiarity, which feels like learning but supports retention poorly.",
+        "c": "Highlighting rates low in reviews of learning techniques.",
+        "d": "Massed practice can look good the next day and fade quickly; it optimizes performance now, not learning later."
+      },
+      "concepts": [
+        "c-retrieval-practice",
+        "c-spacing-effect"
+      ],
+      "domain": "behavioral-science",
+      "lesson": "w03-l1",
+      "difficulty": "core",
+      "points": 1
+    },
+    {
+      "id": "mt-rs4",
+      "type": "numeric",
+      "prompt": "A pharmaceutical research group tests many candidate compounds. Assume 10% of the hypotheses it tests are true, its studies have 50% power, and it uses a significance threshold of 0.05. What share of its statistically significant results reflect true effects? Answer in percent.",
+      "answer": {
+        "value": 52.6,
+        "tolerance": 0.5,
+        "unit": "%"
+      },
+      "working": "Out of 1,000 hypotheses: 100 are true, and 50% power yields 50 significant results. 900 are false, and α = 0.05 yields 45 false positives. Significant results = 95. True share = 50 / 95 = 52.6%.",
+      "explanation": "Only about half of the significant results are real, even with no misconduct, because the prior is low and power is modest. This is the logic behind the argument that many published findings are false ([Ioannidis](R-ioannidis-2005-most)). Raising power or testing more plausible hypotheses raises the share; analytic flexibility lowers it further.",
+      "concepts": [
+        "c-bayesian-updating",
+        "c-statistical-power",
+        "c-p-value"
+      ],
+      "domain": "statistical-reasoning",
+      "lesson": "w04-l1",
+      "difficulty": "stretch",
+      "points": 1
+    },
+    {
+      "id": "mt-rs5",
+      "type": "mc",
+      "prompt": "A consulting manager is giving feedback to an analyst whose client slides were confusing. Which feedback is most likely to improve the next deck, according to feedback intervention research?",
+      "options": [
+        {
+          "id": "a",
+          "text": "“Slide 4 mixes three findings; put the recommendation in the title and move the method to the appendix. Send me the revised title before Thursday.”"
+        },
+        {
+          "id": "b",
+          "text": "“You’re one of the smartest people on the team, so I know you can do better.”"
+        },
+        {
+          "id": "c",
+          "text": "“Honestly, this is the weakest deck I’ve seen from you this year.”"
+        },
+        {
+          "id": "d",
+          "text": "“Clients have high standards, and I expect you to meet them.”"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Feedback improves performance on average, yet a substantial share of feedback interventions reduce it; feedback that directs attention to the self tends to weaken effects, while task-focused feedback with a next step tends to help ([Kluger & DeNisi](R-kluger-1996-effects)). The first option is specific, about the task, and includes an action and a check-in.",
+      "optionFeedback": {
+        "b": "Praise of the person moves attention to the self and gives no information about the task.",
+        "c": "Negative person-focused comparison is the kind of feedback most likely to backfire.",
+        "d": "A general standard gives no information about what to change."
+      },
+      "concepts": [
+        "c-feedback-intervention-theory",
+        "c-coaching-effectiveness"
+      ],
+      "domain": "leadership-judgment",
+      "lesson": "w05-l3",
+      "difficulty": "core",
+      "points": 1
+    },
+    {
+      "id": "mt-rs6",
+      "type": "mc",
+      "prompt": "In the Velmont Athletic case, Priya Raman is the only person who works regularly with both the academy and the first-team analysts, and most information between them passes through her. What does network research suggest about this position?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It gives her early access to information from both groups and the ability to combine it, but it also makes her a bottleneck and a single point of failure; Velmont should build redundant ties between the groups."
+        },
+        {
+          "id": "b",
+          "text": "It gives her formal authority over both departments."
+        },
+        {
+          "id": "c",
+          "text": "It matters little, because strong ties within each group carry most new information."
+        },
+        {
+          "id": "d",
+          "text": "It guarantees that she will be trusted by both groups."
+        }
+      ],
+      "answer": "a",
+      "explanation": "Brokers across structural holes tend to see and combine ideas earlier ([Burt](R-burt-2004-structural)), and bridging weak ties carry new information between groups ([Granovetter](R-granovetter-1973-strength)). The evidence on brokerage is largely observational, and brokerage can cost trust. A single bridge is fragile: if Priya leaves, as her predecessors did, the connection goes with her.",
+      "optionFeedback": {
+        "b": "Network position is informal; it confers influence, not authority.",
+        "c": "The opposite: new information tends to travel through bridging ties, not dense ties within a group.",
+        "d": "Brokers can be seen as serving both sides and may be trusted less; trust networks differ from information networks."
+      },
+      "concepts": [
+        "c-structural-holes",
+        "c-informal-networks",
+        "c-weak-ties"
+      ],
+      "domain": "organizational-behavior",
+      "lesson": "w06-l2",
+      "difficulty": "core",
+      "points": 1
+    },
+    {
+      "id": "mt-rs7",
+      "type": "issue",
+      "prompt": "Spot every real commercial issue in Tessellate’s proposal to Velmont Athletic (Exhibit 3 of the case) that Mara should raise before any agreement. (General educational analysis, not legal advice.)",
+      "stimulus": [
+        {
+          "type": "table",
+          "kind": "original",
+          "caption": "Exhibit 3 — Tessellate’s proposal and Velmont’s alternatives",
+          "headers": [
+            "Option",
+            "Annual cost",
+            "Term and conditions",
+            "Start",
+            "What is known about it"
+          ],
+          "rows": [
+            [
+              "Tessellate, as proposed",
+              "$320,000",
+              "Three years; exclusivity (no other cognitive or perceptual training product); automatic renewal unless cancelled six months before expiry; Tessellate keeps anonymized player data",
+              "Four weeks",
+              "Pilot in Exhibit 1; vendor reports no retention data"
+            ],
+            [
+              "In-house video decision drills (analysis team + coaches)",
+              "$210,000 if built on plan (estimated 60% likely); $300,000 if an outside contractor is needed (40%)",
+              "No external commitment",
+              "About one season to build",
+              "Priya Raman’s estimate; nothing built yet"
+            ],
+            [
+              "One-season Tessellate trial",
+              "Not yet priced",
+              "To be negotiated; Tessellate says trials are “not our model”",
+              "Four weeks",
+              "Would allow a designed comparison"
+            ],
+            [
+              "Defer",
+              "$0",
+              "Revisit next year",
+              "—",
+              "Ferrante opposes"
+            ]
+          ],
+          "note": "Synthetic data. Assumptions: probabilities are Priya Raman’s subjective estimates; costs include staff time; Brennan’s claim that another club in the division is ready to sign has not been verified."
+        }
+      ],
+      "options": [
+        {
+          "id": "a",
+          "text": "The exclusivity clause may bar Velmont from using its own in-house decision drills, eliminating its main alternative for three years."
+        },
+        {
+          "id": "b",
+          "text": "Automatic renewal with a six-month notice window could extend the commitment if the club misses the deadline."
+        },
+        {
+          "id": "c",
+          "text": "Tessellate’s retention of player data raises questions of ownership, consent and the privacy of minors."
+        },
+        {
+          "id": "d",
+          "text": "The proposal ties price to nothing measurable: the vendor’s performance claim rests on its own test, with no remedy if results do not appear."
+        },
+        {
+          "id": "e",
+          "text": "The price is quoted in U.S. dollars."
+        },
+        {
+          "id": "f",
+          "text": "The proposal is set out in writing."
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "explanation": "Exclusivity removes the club’s alternative and thus its future bargaining power; automatic renewal shifts the burden of exit; data terms involve players under eighteen; and a fixed price for an unproven effect leaves the information asymmetry entirely with the vendor, which a contingent term could address. Currency and written form are not issues on the facts given.",
+      "optionFeedback": {
+        "e": "Nothing in the case suggests currency risk; the club’s costs are also in dollars.",
+        "f": "A written proposal is normal and desirable; the issues are in its terms."
+      },
+      "concepts": [
+        "c-contingent-contract",
+        "c-information-asymmetry",
+        "c-bargaining-power"
+      ],
+      "domain": "legal-reasoning",
+      "lesson": "w07-l2",
+      "difficulty": "core",
+      "points": 1
+    },
+    {
+      "id": "mt-rs8",
+      "type": "mc",
+      "prompt": "Brennan opens at $320,000 a year with a deadline. Mara worries the figure will pull her counteroffer upward. Which preparation does the negotiation research covered in Week 7 best support?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Before and during the meeting, focus deliberately on Velmont’s own alternatives and target and on Tessellate’s likely alternatives, rather than on Brennan’s number."
+        },
+        {
+          "id": "b",
+          "text": "Never make or hear a first offer; always wait for the other side to move twice."
+        },
+        {
+          "id": "c",
+          "text": "Split the difference between $320,000 and zero to show good faith."
+        },
+        {
+          "id": "d",
+          "text": "Ignore anchors: experienced executives are not influenced by them."
+        }
+      ],
+      "answer": "a",
+      "explanation": "Informed first offers tend to anchor settlements, and focusing on the other side’s alternatives, its reservation price or your own target reduces the anchor’s pull ([Galinsky & Mussweiler](R-galinsky-2001-first)). Most of this evidence comes from simulations, so it is robust in direction and less certain in field magnitude.",
+      "optionFeedback": {
+        "b": "You cannot always avoid hearing a first offer, and an informed first offer of your own can be an advantage.",
+        "c": "Splitting from an arbitrary pair of numbers lets the anchor set the outcome.",
+        "d": "Anchoring is among the most robust judgment effects and affects experts too."
+      },
+      "concepts": [
+        "c-first-offer-anchoring",
+        "c-batna"
+      ],
+      "domain": "negotiation",
+      "lesson": "w07-l3",
+      "difficulty": "core",
+      "points": 1
+    }
+  ]
+}
