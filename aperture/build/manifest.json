@@ -2,14 +2,14 @@
   "generated": "2026-11-01",
   "method": "Metadata verified through web-search results on the date shown per record. The build environment could not open pages, so every link is flagged link-untested until checked in a browser.",
   "totals": {
-    "resources": 178,
-    "metadataConfirmed": 155,
-    "partiallyConfirmed": 23,
+    "resources": 197,
+    "metadataConfirmed": 170,
+    "partiallyConfirmed": 27,
     "unverified": 0,
-    "linkUntested": 178,
-    "open": 62,
-    "restricted": 101,
-    "contested": 96,
+    "linkUntested": 197,
+    "open": 71,
+    "restricted": 111,
+    "contested": 109,
     "uncited": 0
   },
   "records": [
@@ -72,6 +72,26 @@
       ],
       "citedIn": [
         "w14-l1"
+      ]
+    },
+    {
+      "id": "R-dyck-2010-who",
+      "title": "Who Blows the Whistle on Corporate Fraud?",
+      "year": 2010,
+      "url": "https://doi.org/10.1111/j.1540-6261.2010.01614.x",
+      "doi": "10.1111/j.1540-6261.2010.01614.x",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume, issue, pages and DOI matched on EconPapers (RePEc) and EconBiz; an earlier NBER working paper (No. 12882) and a Harvard Law School Forum summary also appeared.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "w13",
+        "w13-l3"
       ]
     },
     {
@@ -245,6 +265,27 @@
       ]
     },
     {
+      "id": "R-tenbrunsel-2004-ethical",
+      "title": "Ethical Fading: The Role of Self-Deception in Unethical Behavior",
+      "year": 2004,
+      "url": "https://doi.org/10.1023/B:SORE.0000027411.35832.53",
+      "doi": "10.1023/B:SORE.0000027411.35832.53",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume 17, pages 223–236, June 2004 and DOI matched on ProQuest, Altmetric (Springer) and the University of Texas Ethics Unwrapped teaching notes.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "w13",
+        "w13-l2",
+        "w13-l3"
+      ]
+    },
+    {
       "id": "R-scheel-2021-excess",
       "title": "An Excess of Positive Results: Comparing the Standard Psychology Literature With Registered Reports",
       "year": 2021,
@@ -261,6 +302,26 @@
       "citedIn": [
         "w04-l2",
         "w04-l5"
+      ]
+    },
+    {
+      "id": "R-kristal-2020-signing",
+      "title": "Signing at the Beginning versus at the End Does Not Decrease Dishonesty",
+      "year": 2020,
+      "url": "https://doi.org/10.1073/pnas.1911695117",
+      "doi": "10.1073/pnas.1911695117",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, all seven authors, PNAS 117(13), pages 7103–7107 and DOI matched on PubMed Central (PMC7132248), Harvard Kennedy School, Duke Scholars and London Business School’s repository.",
+      "access": "open",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w13",
+        "w13-l2"
       ]
     },
     {
@@ -368,7 +429,8 @@
       ],
       "citedIn": [
         "w10",
-        "w10-l4"
+        "w10-l4",
+        "w13-l4"
       ]
     },
     {
@@ -532,6 +594,25 @@
       ]
     },
     {
+      "id": "R-brt-2019-statement",
+      "title": "Statement on the Purpose of a Corporation",
+      "year": 2019,
+      "url": "https://purpose.businessroundtable.org",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, issuing organization, release date (August 19, 2019) and the 181 CEO signatories matched on Business Roundtable’s purpose site (purpose.businessroundtable.org), the Business & Human Rights Resource Centre, Cooley PubCo and contemporaneous press. The URL is the Roundtable’s purpose site seen in results.",
+      "access": "open",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w13-l1"
+      ]
+    },
+    {
       "id": "R-massey-2013-losers",
       "title": "The Loser’s Curse: Decision Making and Market Efficiency in the National Football League Draft",
       "year": 2013,
@@ -650,7 +731,8 @@
       "citedIn": [
         "capstone",
         "w10",
-        "w10-l4"
+        "w10-l4",
+        "w13-l4"
       ]
     },
     {
@@ -934,6 +1016,27 @@
       ]
     },
     {
+      "id": "R-welsh-2015-slippery",
+      "title": "The Slippery Slope: How Small Ethical Transgressions Pave the Way for Larger Future Transgressions",
+      "year": 2015,
+      "url": "https://doi.org/10.1037/a0036950",
+      "doi": "10.1037/a0036950",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume, pages and DOI matched on the University of Arizona and Arizona State University research portals and an Association for Psychological Science news summary.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w13",
+        "w13-l2"
+      ]
+    },
+    {
       "id": "R-rousseau-2006-is",
       "title": "Is There Such a Thing as “Evidence-Based Management”?",
       "year": 2006,
@@ -1111,6 +1214,46 @@
       ]
     },
     {
+      "id": "R-gino-2009-when",
+      "title": "When Misconduct Goes Unnoticed: The Acceptability of Gradual Erosion in Others’ Unethical Behavior",
+      "year": 2009,
+      "url": "https://doi.org/10.1016/j.jesp.2009.03.013",
+      "doi": "10.1016/j.jesp.2009.03.013",
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume, issue, pages and DOI matched on scilit.net (confirmed by an earlier APERTURE writer). Whether this article has been retracted or flagged could not be confirmed either way from search results, so its status is recorded as unknown.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w13-l2"
+      ]
+    },
+    {
+      "id": "R-knight-1921-risk",
+      "title": "Risk, Uncertainty and Profit",
+      "year": 1921,
+      "url": "https://www.econlib.org/library/Knight/knRUP.html",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, author, 1921, Houghton Mifflin and the Hart, Schaffner & Marx prize-essay series matched on econlib.org (full text), library catalogues (Holy Cross, East Carolina) and Arizona State University’s centennial symposium page.",
+      "access": "open",
+      "license": "Full text hosted free by the Library of Economics and Liberty (econlib.org); public-domain status not confirmed.",
+      "flags": [
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w13-l4"
+      ]
+    },
+    {
       "id": "R-schmidt-1998-validity",
       "title": "The Validity and Utility of Selection Methods in Personnel Psychology: Practical and Theoretical Implications of 85 Years of Research Findings",
       "year": 1998,
@@ -1168,6 +1311,8 @@
       ],
       "citedIn": [
         "capstone",
+        "w13",
+        "w13-l4",
         "w14",
         "w14-l3"
       ]
@@ -1594,6 +1739,26 @@
         "w08",
         "w08-l1",
         "w08-l2"
+      ]
+    },
+    {
+      "id": "R-moriarty-2021-business",
+      "title": "Business Ethics",
+      "year": 2021,
+      "url": "https://plato.stanford.edu/entries/ethics-business/",
+      "doi": null,
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, author, encyclopedia and the 2016 original / Fall 2021 revision matched on the author’s CV (philpeople.org), the PhilPapers linked bibliography for the SEP entry (philpapers.org/sep/ethics-business) and Bentley University’s research listing. The exact “first published” day was not seen in search results.",
+      "access": "open",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w13-l1"
       ]
     },
     {
@@ -2133,6 +2298,27 @@
       ]
     },
     {
+      "id": "R-arrow-1974-environmental",
+      "title": "Environmental Preservation, Uncertainty, and Irreversibility",
+      "year": 1974,
+      "url": "https://ideas.repec.org/a/oup/qjecon/v88y1974i2p312-319..html",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, Quarterly Journal of Economics 88(2), pages 312–319 and May 1974 matched on IDEAS/RePEc, EconBiz and a library discovery record. The DOI was not shown in results and is omitted.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "no-doi",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "w13",
+        "w13-l4"
+      ]
+    },
+    {
       "id": "R-damschroder-2009-fostering",
       "title": "Fostering Implementation of Health Services Research Findings into Practice: A Consolidated Framework for Advancing Implementation Science",
       "year": 2009,
@@ -2196,6 +2382,26 @@
       ]
     },
     {
+      "id": "R-shu-2012-signing",
+      "title": "Signing at the Beginning Makes Ethics Salient and Decreases Dishonest Self-Reports in Comparison to Signing at the End",
+      "year": 2012,
+      "url": "https://doi.org/10.1073/pnas.1209746109",
+      "doi": "10.1073/pnas.1209746109",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, PNAS volume 109(38), pages 15197–15200 and DOI matched on PubMed Central (PMC3458378) and Duke Scholars. The September 2021 retraction matched on Retraction Watch, The Harvard Crimson, ScienceDaily’s update notice and the FORRT replication atlas.",
+      "access": "open",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w13",
+        "w13-l2"
+      ]
+    },
+    {
       "id": "R-kaplow-1992-rules",
       "title": "Rules Versus Standards: An Economic Analysis",
       "year": 1992,
@@ -2212,6 +2418,27 @@
       "citedIn": [
         "w11",
         "w11-l1"
+      ]
+    },
+    {
+      "id": "R-bebchuk-2020-illusory",
+      "title": "The Illusory Promise of Stakeholder Governance",
+      "year": 2020,
+      "url": "https://papers.ssrn.com/abstract=3544978",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, Cornell Law Review, pages 91–178 and 2020 matched on SSRN (abstract 3544978), the Cornell Law Review site and Harvard Law School’s bibliography. Sources disagree on the volume (SSRN: 106; HLS bibliography: 105); the SSRN volume is given.",
+      "access": "open",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "no-doi",
+        "contested"
+      ],
+      "citedIn": [
+        "w13",
+        "w13-l1"
       ]
     },
     {
@@ -2360,6 +2587,46 @@
       ]
     },
     {
+      "id": "R-bazerman-2011-blind",
+      "title": "Blind Spots: Why We Fail to Do What’s Right and What to Do about It",
+      "year": 2011,
+      "url": "https://www.pon.harvard.edu/shop/blind-spots-why-we-fail-to-do-whats-right-and-what-to-do-about-it/",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, publisher and year matched on library catalogues (Texas A&M, Austrian Academy of Sciences, ISBN 9780691147505) and the Program on Negotiation shop page.",
+      "access": "purchase",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w13-l2"
+      ]
+    },
+    {
+      "id": "R-bazerman-2025-inside",
+      "title": "Inside an Academic Scandal: A Story of Fraud and Betrayal",
+      "year": 2025,
+      "url": "https://www.harvard.com/book/9780262049887",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, author, publisher, year and ISBN 9780262049887 confirmed by an earlier APERTURE writer’s search and again on Harvard Book Store, Readings and Penguin Australia listings (September 2025 publication; one retailer lists October 2025). The URL is the Harvard Book Store listing; no MIT Press page appeared in results.",
+      "access": "purchase",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w13-l2"
+      ]
+    },
+    {
       "id": "R-mckay-2024-reporting",
       "title": "Reporting Bias, Not External Focus: A Robust Bayesian Meta-Analysis and Systematic Review of the External Focus of Attention Literature",
       "year": 2024,
@@ -2379,6 +2646,28 @@
       "citedIn": [
         "w03",
         "w03-l3"
+      ]
+    },
+    {
+      "id": "R-jensen-1976-theory",
+      "title": "Theory of the Firm: Managerial Behavior, Agency Costs and Ownership Structure",
+      "year": 1976,
+      "url": "https://papers.ssrn.com/abstract=94043",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, Journal of Financial Economics volume 3, pages 305–360 and 1976 matched on SSRN (abstract 94043), EconBiz and university course copies. The journal DOI did not appear in results, so it is omitted; the SSRN copy is free.",
+      "access": "open",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "no-doi",
+        "contested"
+      ],
+      "citedIn": [
+        "w13",
+        "w13-l1",
+        "w13-l3"
       ]
     },
     {
@@ -2461,6 +2750,28 @@
       "citedIn": [
         "w09",
         "w09-l2"
+      ]
+    },
+    {
+      "id": "R-friedman-1970-social",
+      "title": "The Social Responsibility of Business Is to Increase Its Profits",
+      "year": 1970,
+      "url": "https://doi.org/10.1007/978-3-540-70818-6_14",
+      "doi": null,
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, author, magazine and date (September 13, 1970) matched in a Springer reprint listing (which credits the New York Times Syndicate), a Chapman Law Review discussion and university course copies (e.g., psu.edu). The Times archive page did not appear in results; the URL is the DOI of the Springer reprint chapter seen in results (the reprint is paywalled).",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w13",
+        "w13-l1"
       ]
     },
     {
@@ -2560,6 +2871,26 @@
       ],
       "citedIn": [
         "capstone"
+      ]
+    },
+    {
+      "id": "R-nist-2023-artificial",
+      "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "year": 2023,
+      "url": "https://doi.org/10.6028/NIST.AI.100-1",
+      "doi": "10.6028/NIST.AI.100-1",
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, NIST AI 100-1 designation, January 2023 release, DOI 10.6028/NIST.AI.100-1 and the four core functions (Govern, Map, Measure, Manage) matched across several third-party summaries; NIST’s own page did not appear in search results.",
+      "access": "open",
+      "license": "U.S. government work. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested"
+      ],
+      "citedIn": [
+        "w13",
+        "w13-l3"
       ]
     },
     {
@@ -2883,6 +3214,26 @@
       ],
       "citedIn": [
         "w06-l3"
+      ]
+    },
+    {
+      "id": "R-freeman-1984-strategic",
+      "title": "Strategic Management: A Stakeholder Approach",
+      "year": 1984,
+      "url": "https://www.cambridge.org/core/books/abs/strategic-management/preface-to-the-2010-reissue/100B5E83DA2414E84D15C83C0EC29C7B",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, author, publisher (Pitman, Pitman Series in Business and Public Policy), 1984 copyright date and the 2010 Cambridge University Press reissue (ISBN 9780521151740, with a “Preface to the 2010 Reissue”) matched on cambridge.org, library catalogues (KIT, WorldCat) and booksellers. Freeman’s own account says the book appeared in summer 1983 with a 1984 copyright date.",
+      "access": "purchase",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w13-l1"
       ]
     },
     {
@@ -3427,7 +3778,8 @@
       ],
       "citedIn": [
         "w11",
-        "w11-l4"
+        "w11-l4",
+        "w13-l3"
       ]
     },
     {
@@ -3593,6 +3945,25 @@
       ]
     },
     {
+      "id": "R-marchau-2019-decision",
+      "title": "Decision Making under Deep Uncertainty: From Theory to Practice",
+      "year": 2019,
+      "url": "https://doi.org/10.1007/978-3-030-05252-2",
+      "doi": "10.1007/978-3-030-05252-2",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, four editors, Springer, 2019, DOI and open-access CC BY 4.0 status matched on link.springer.com and the OAPEN library (handle 20.500.12657/22900).",
+      "access": "open",
+      "license": "CC BY 4.0 (open access, as stated on Springer’s book page)",
+      "flags": [
+        "link-untested"
+      ],
+      "citedIn": [
+        "w13",
+        "w13-l4"
+      ]
+    },
+    {
       "id": "R-adair-2001-negotiation",
       "title": "Negotiation behavior when cultures collide: The United States and Japan",
       "year": 2001,
@@ -3612,6 +3983,26 @@
         "w07",
         "w07-l2",
         "w07-l4"
+      ]
+    },
+    {
+      "id": "R-obermeyer-2019-dissecting",
+      "title": "Dissecting Racial Bias in an Algorithm Used to Manage the Health of Populations",
+      "year": 2019,
+      "url": "https://doi.org/10.1126/science.aax2342",
+      "doi": "10.1126/science.aax2342",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, Science 366(6464), starting page 447, October 25, 2019 and DOI matched on UC Berkeley’s Center for Health Metrics news page, an FTC PrivacyCon 2020 presentation and SSRC citation records. The 17.7% and 46.5% figures matched in the same summaries.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "w13",
+        "w13-l3"
       ]
     },
     {

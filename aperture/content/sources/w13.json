@@ -1,0 +1,708 @@
+[
+  {
+    "id": "R-moriarty-2021-business",
+    "title": "Business Ethics",
+    "authors": [
+      "Jeffrey Moriarty"
+    ],
+    "publication": "The Stanford Encyclopedia of Philosophy (Fall 2021 Edition; revision of the 2016 entry), Metaphysics Research Lab, Stanford University",
+    "year": 2021,
+    "url": "https://plato.stanford.edu/entries/ethics-business/",
+    "doi": null,
+    "discipline": "ethics",
+    "type": "website",
+    "access": "open",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "partially-confirmed",
+      "evidence": "Title, author, encyclopedia and the 2016 original / Fall 2021 revision matched on the author’s CV (philpeople.org), the PhilPapers linked bibliography for the SEP entry (philpapers.org/sep/ethics-business) and Bentley University’s research listing. The exact “first published” day was not seen in search results.",
+      "link": "not-opened"
+    },
+    "summary": "A peer-reviewed encyclopedia survey of the philosophical debates in business ethics: what corporations are for, whether shareholder primacy or stakeholder theories better describe managers’ obligations, corporate moral agency, and the ethics of markets, pay, employment and marketing. It sets out the strongest arguments on each side rather than defending one view.",
+    "arguments": [
+      "The central question of corporate purpose — for whose benefit should a firm be run — has defensible shareholder-primacy and stakeholder answers, and each has known weaknesses.",
+      "Arguments about corporate purpose mix empirical claims (what produces good outcomes) with normative claims (what managers owe and to whom).",
+      "Whether a corporation can itself be a moral agent, and what follows for blame and responsibility, is a live philosophical dispute."
+    ],
+    "evidence": "review",
+    "design": null,
+    "strengths": "Even-handed, peer-reviewed by philosophers, free, and updated; a reliable map of the arguments.",
+    "limitations": "A philosophical survey: it clarifies arguments but does not settle empirical questions about which governance arrangements produce better results.",
+    "contested": "The entry itself documents contested positions; it does not take sides.",
+    "generalizability": "The arguments apply to any organization with owners, managers and affected parties, including sports organizations, though non-profit and league structures add their own complications.",
+    "readingMinutes": 50,
+    "relevance": "Gives you the vocabulary to argue about corporate purpose precisely instead of in slogans."
+  },
+  {
+    "id": "R-friedman-1970-social",
+    "title": "The Social Responsibility of Business Is to Increase Its Profits",
+    "authors": [
+      "Milton Friedman"
+    ],
+    "publication": "The New York Times Magazine, September 13, 1970; reprinted in a Springer volume (2007) with permission of the New York Times Syndicate",
+    "year": 1970,
+    "url": "https://doi.org/10.1007/978-3-540-70818-6_14",
+    "doi": null,
+    "discipline": "economics",
+    "type": "article",
+    "access": "paywalled",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "partially-confirmed",
+      "evidence": "Title, author, magazine and date (September 13, 1970) matched in a Springer reprint listing (which credits the New York Times Syndicate), a Chapman Law Review discussion and university course copies (e.g., psu.edu). The Times archive page did not appear in results; the URL is the DOI of the Springer reprint chapter seen in results (the reprint is paywalled).",
+      "link": "not-opened"
+    },
+    "summary": "Friedman argues that only people, not “business”, can have responsibilities; that a corporate executive is an employee of the owners and should conduct the business according to their desires, which generally means making as much money as possible while conforming to the basic rules of society in law and ethical custom; and that an executive who spends shareholders’ money on social goals they did not choose is in effect imposing a tax and deciding how to spend it without democratic accountability.",
+    "arguments": [
+      "Responsibility belongs to individuals; a corporate executive acts as the owners’ agent.",
+      "Profit-seeking is bounded by law and by ethical custom, and by honest competition without deception or fraud.",
+      "Executives who pursue social goals with other people’s money take on a quasi-governmental role without the legitimacy or accountability of government."
+    ],
+    "evidence": "theoretical",
+    "design": "Argumentative essay.",
+    "strengths": "A clear, compact statement of shareholder primacy, with an accountability argument that is often ignored by those who caricature it.",
+    "limitations": "Written for a general audience; assumes that law and custom adequately constrain harm and that owners want only profit.",
+    "contested": "Widely contested, most influentially by stakeholder theorists (R-freeman-1984-strategic) and by the 2019 Business Roundtable statement (R-brt-2019-statement); Bebchuk and Tallarita’s critique of stakeholderism (R-bebchuk-2020-illusory) revives part of its accountability argument.",
+    "generalizability": "Applies directly to investor-owned firms; less directly to non-profits, public bodies and organizations whose owners hold mixed objectives, such as many sports franchises.",
+    "readingMinutes": 20,
+    "relevance": "The canonical position you must be able to state fairly before you disagree with it."
+  },
+  {
+    "id": "R-freeman-1984-strategic",
+    "title": "Strategic Management: A Stakeholder Approach",
+    "authors": [
+      "R. Edward Freeman"
+    ],
+    "publication": "Pitman, Boston (Pitman Series in Business and Public Policy); reissued by Cambridge University Press, 2010",
+    "year": 1984,
+    "url": "https://www.cambridge.org/core/books/abs/strategic-management/preface-to-the-2010-reissue/100B5E83DA2414E84D15C83C0EC29C7B",
+    "doi": null,
+    "discipline": "management",
+    "type": "book",
+    "access": "purchase",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, author, publisher (Pitman, Pitman Series in Business and Public Policy), 1984 copyright date and the 2010 Cambridge University Press reissue (ISBN 9780521151740, with a “Preface to the 2010 Reissue”) matched on cambridge.org, library catalogues (KIT, WorldCat) and booksellers. Freeman’s own account says the book appeared in summer 1983 with a 1984 copyright date.",
+      "link": "not-opened"
+    },
+    "summary": "Freeman argues that managers cannot formulate strategy well while attending only to owners, because groups that can affect or are affected by the firm’s purpose — employees, customers, suppliers, communities and others — shape whether that purpose is achieved. He proposes stakeholder analysis as a managerial method and lays the foundation of what became stakeholder theory.",
+    "arguments": [
+      "A stakeholder is any group or individual who can affect or is affected by the achievement of the organization’s objectives.",
+      "Strategy must map stakeholders, understand their stakes and power, and design processes for dealing with them.",
+      "Attending to stakeholders is presented first as good management, with normative implications developed later in the literature."
+    ],
+    "evidence": "theoretical",
+    "design": "Conceptual book with managerial frameworks and illustrations.",
+    "strengths": "Changed the vocabulary of management; offers a practical way to see who matters to a decision.",
+    "limitations": "A broad definition of stakeholder makes the theory hard to falsify and gives little guidance when stakeholder interests conflict.",
+    "contested": "Critics argue that stakeholder governance weakens accountability (R-bebchuk-2020-illusory); defenders argue that shareholder primacy ignores harms not captured in prices (see R-moriarty-2021-business).",
+    "generalizability": "The mapping method transfers easily to sport, health and government; the normative claims depend on legal and ownership context.",
+    "readingMinutes": 60,
+    "relevance": "The source of the stakeholder map you will use in this week’s exercise and memo."
+  },
+  {
+    "id": "R-brt-2019-statement",
+    "title": "Statement on the Purpose of a Corporation",
+    "authors": [
+      "Business Roundtable"
+    ],
+    "publication": "Business Roundtable, Washington, DC, released August 19, 2019",
+    "year": 2019,
+    "url": "https://purpose.businessroundtable.org",
+    "doi": null,
+    "discipline": "management",
+    "type": "report",
+    "access": "open",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, issuing organization, release date (August 19, 2019) and the 181 CEO signatories matched on Business Roundtable’s purpose site (purpose.businessroundtable.org), the Business & Human Rights Resource Centre, Cooley PubCo and contemporaneous press. The URL is the Roundtable’s purpose site seen in results.",
+      "link": "not-opened"
+    },
+    "summary": "A one-page statement signed by 181 chief executives of large U.S. companies committing to deliver value to customers, invest in employees, deal fairly with suppliers, support communities and generate long-term value for shareholders. It replaced the Roundtable’s earlier position, held since 1997, that corporations exist principally to serve shareholders.",
+    "arguments": [
+      "Lists five constituencies — customers, employees, suppliers, communities and shareholders — as stakeholders to whom the signatories commit.",
+      "Frames long-term shareholder value as one commitment among several rather than the single purpose."
+    ],
+    "evidence": "practitioner",
+    "design": null,
+    "strengths": "A primary document of an important shift in executive rhetoric.",
+    "limitations": "A voluntary statement with no enforcement mechanism, no priority rule for conflicts and no change in legal duties.",
+    "contested": "Criticized as largely rhetorical: Bebchuk and Tallarita found little evidence that signatories changed governance documents (R-bebchuk-2020-illusory); the Council of Institutional Investors argued it weakened accountability to shareholders.",
+    "generalizability": "Describes large U.S. public companies; useful as a contrast case for any organization writing a purpose statement.",
+    "readingMinutes": 10,
+    "relevance": "A test case for distinguishing what an organization says about its purpose from what its governance makes it do."
+  },
+  {
+    "id": "R-bebchuk-2020-illusory",
+    "title": "The Illusory Promise of Stakeholder Governance",
+    "authors": [
+      "Lucian A. Bebchuk",
+      "Roberto Tallarita"
+    ],
+    "publication": "Cornell Law Review, 106, 91–178 (2020); SSRN working paper 3544978",
+    "year": 2020,
+    "url": "https://papers.ssrn.com/abstract=3544978",
+    "doi": null,
+    "discipline": "law",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, Cornell Law Review, pages 91–178 and 2020 matched on SSRN (abstract 3544978), the Cornell Law Review site and Harvard Law School’s bibliography. Sources disagree on the volume (SSRN: 106; HLS bibliography: 105); the SSRN volume is given.",
+      "link": "not-opened"
+    },
+    "summary": "The authors argue that stakeholderism — asking corporate leaders to weigh the interests of all constituencies — should be rejected even by those who care about stakeholders, because it insulates leaders from shareholders, reduces their accountability and offers stakeholders little real protection. Their empirical analysis of companies whose CEOs signed the 2019 Business Roundtable statement suggests the commitments were mostly for show.",
+    "arguments": [
+      "Corporate leaders have incentives that do not reward serving stakeholders at shareholders’ expense, so stakeholder discretion is unlikely to benefit stakeholders.",
+      "Expanding the list of constituencies leaders answer to makes them harder to hold accountable to any of them.",
+      "Stakeholder protection is better pursued through law, regulation and contracts than through managerial discretion."
+    ],
+    "evidence": "observational",
+    "design": "Legal and economic analysis combined with a review of governance documents and practices at companies whose CEOs signed the 2019 statement.",
+    "strengths": "Combines theory with evidence on what signatories actually did; sharpens the accountability problem.",
+    "limitations": "Evidence on stated commitments cannot show what stakeholder-oriented governance could achieve if designed differently; the policy preference for regulation over discretion is contestable.",
+    "contested": "Challenged by Colin Mayer (ECGI working paper 522/2020), who argues that purpose-oriented governance can be designed with accountability.",
+    "generalizability": "Most directly about large U.S. public companies; the accountability logic applies to any organization that adds objectives without adding a way to measure and enforce them.",
+    "readingMinutes": 90,
+    "relevance": "Teaches the governance question behind every values statement: who can hold the leader to it, and how?"
+  },
+  {
+    "id": "R-tenbrunsel-2004-ethical",
+    "title": "Ethical Fading: The Role of Self-Deception in Unethical Behavior",
+    "authors": [
+      "Ann E. Tenbrunsel",
+      "David M. Messick"
+    ],
+    "publication": "Social Justice Research, 17(2), 223–236",
+    "year": 2004,
+    "url": "https://doi.org/10.1023/B:SORE.0000027411.35832.53",
+    "doi": "10.1023/B:SORE.0000027411.35832.53",
+    "discipline": "psychology",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, journal, volume 17, pages 223–236, June 2004 and DOI matched on ProQuest, Altmetric (Springer) and the University of Texas Ethics Unwrapped teaching notes.",
+      "link": "not-opened"
+    },
+    "summary": "Tenbrunsel and Messick argue that much unethical behavior happens without a conscious ethical choice: self-deception removes the moral colors from a decision so that it is seen as a business or technical decision. They identify four enablers — euphemistic language, the slippery slope of gradual decisions, errors in perceiving causation, and constraints from how people see themselves — and argue that ethics training alone is likely to have limited effect.",
+    "arguments": [
+      "Ethical fading: the ethical aspects of a decision recede from view, so people act self-interestedly while believing their principles intact.",
+      "Euphemisms, gradual change, diffuse causation and self-image protect the self-deception.",
+      "Interventions should change how decisions are framed and structured, not only teach principles."
+    ],
+    "evidence": "theoretical",
+    "design": "Conceptual article drawing on prior experimental and case evidence.",
+    "strengths": "A precise, influential mechanism that explains how decent people participate in bad outcomes.",
+    "limitations": "A theoretical synthesis; the individual mechanisms vary in how well they have been tested and replicated.",
+    "contested": null,
+    "generalizability": "Highly relevant to organizations, where euphemism, gradualism and diffuse responsibility are structural features.",
+    "readingMinutes": 30,
+    "relevance": "The core mechanism of Lesson 2 and a practical warning about language in your own organization."
+  },
+  {
+    "id": "R-bazerman-2011-blind",
+    "title": "Blind Spots: Why We Fail to Do What’s Right and What to Do about It",
+    "authors": [
+      "Max H. Bazerman",
+      "Ann E. Tenbrunsel"
+    ],
+    "publication": "Princeton University Press, Princeton, NJ",
+    "year": 2011,
+    "url": "https://www.pon.harvard.edu/shop/blind-spots-why-we-fail-to-do-whats-right-and-what-to-do-about-it/",
+    "doi": null,
+    "discipline": "psychology",
+    "type": "book",
+    "access": "purchase",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, publisher and year matched on library catalogues (Texas A&M, Austrian Academy of Sciences, ISBN 9780691147505) and the Program on Negotiation shop page.",
+      "link": "not-opened"
+    },
+    "summary": "A book-length account of behavioral ethics: people overestimate how ethically they will act, misremember how ethically they did act, and fail to notice others’ unethical behavior when it serves them. The authors distinguish the “should self” that predicts and recalls from the “want self” that decides, and argue that organizations should design for predictable ethical failures rather than rely on good character.",
+    "arguments": [
+      "Bounded ethicality: systematic, often unconscious limits on ethical decision-making.",
+      "The gap between intended and actual ethical behavior is predictable and arises at prediction, action and recollection.",
+      "Informal culture and incentives often overwhelm formal ethics programs."
+    ],
+    "evidence": "review",
+    "design": "Synthesis of experimental research and cases for a general audience.",
+    "strengths": "Readable integration of the behavioral-ethics literature with practical recommendations.",
+    "limitations": "Written before the replication crisis reshaped the field; some cited studies — including work by researchers later involved in data-integrity controversies — have not held up, so individual findings need checking.",
+    "contested": "See Lesson 2’s contested block: at least one study from this research program was later retracted (R-shu-2012-signing) after a failed replication (R-kristal-2020-signing).",
+    "generalizability": "The general framework is widely applicable; specific effect claims should be verified study by study.",
+    "readingMinutes": 120,
+    "relevance": "The most accessible statement of why good intentions are not an ethics program."
+  },
+  {
+    "id": "R-welsh-2015-slippery",
+    "title": "The Slippery Slope: How Small Ethical Transgressions Pave the Way for Larger Future Transgressions",
+    "authors": [
+      "David T. Welsh",
+      "Lisa D. Ordóñez",
+      "Deirdre G. Snyder",
+      "Michael S. Christian"
+    ],
+    "publication": "Journal of Applied Psychology, 100(1), 114–127",
+    "year": 2015,
+    "url": "https://doi.org/10.1037/a0036950",
+    "doi": "10.1037/a0036950",
+    "discipline": "organizational-behavior",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, journal, volume, pages and DOI matched on the University of Arizona and Arizona State University research portals and an Association for Psychological Science news summary.",
+      "link": "not-opened"
+    },
+    "summary": "Across four multi-round studies, people who faced opportunities to cheat that began small and grew gradually were more likely to commit the larger transgression than people who faced the large opportunity abruptly. The authors link the effect to moral disengagement, which makes small steps easier to justify, and report that inducing a prevention focus weakened the pattern.",
+    "arguments": [
+      "Gradual escalation of opportunities increases later, larger unethical behavior compared with abrupt exposure.",
+      "Moral disengagement mediates the effect: small steps are easier to rationalize.",
+      "A prevention focus moderated the mediated effect."
+    ],
+    "evidence": "lab-experiment",
+    "design": "Four multi-round studies, including laboratory experiments with incentivized tasks in which cheating opportunities increased gradually or appeared abruptly.",
+    "strengths": "Multiple studies, a direct manipulation of gradualness and a tested mechanism; authored by a team independent of the 2009 observer study.",
+    "limitations": "Student and online samples with small monetary stakes; we found no large preregistered replication.",
+    "contested": "Not known to be contested; independent large-scale replication has not been located, so treat the effect as supported but not settled.",
+    "generalizability": "The mechanism plausibly transfers to organizations, where pressure often escalates in small steps; effect sizes in real workplaces are unknown.",
+    "readingMinutes": 40,
+    "relevance": "Evidence for why the first small exception is the decision that matters."
+  },
+  {
+    "id": "R-gino-2009-when",
+    "title": "When Misconduct Goes Unnoticed: The Acceptability of Gradual Erosion in Others’ Unethical Behavior",
+    "authors": [
+      "Francesca Gino",
+      "Max H. Bazerman"
+    ],
+    "publication": "Journal of Experimental Social Psychology, 45(4), 708–719",
+    "year": 2009,
+    "url": "https://doi.org/10.1016/j.jesp.2009.03.013",
+    "doi": "10.1016/j.jesp.2009.03.013",
+    "discipline": "psychology",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "partially-confirmed",
+      "evidence": "Title, authors, journal, volume, issue, pages and DOI matched on scilit.net (confirmed by an earlier APERTURE writer). Whether this article has been retracted or flagged could not be confirmed either way from search results, so its status is recorded as unknown.",
+      "link": "not-opened"
+    },
+    "summary": "In laboratory studies, observers who evaluated another person’s estimates were reported to be less likely to criticize unethical behavior when it developed gradually than when it appeared in one abrupt change. The paper is the origin of much of the “observer slippery slope” argument in behavioral ethics.",
+    "arguments": [
+      "Observers are reported to tolerate gradual erosion of ethical behavior more than abrupt change.",
+      "The paper argues that this helps explain why auditors and managers miss slowly developing misconduct."
+    ],
+    "evidence": "lab-experiment",
+    "design": "Laboratory experiments in which participants acted as approvers of others’ estimates that changed gradually or abruptly.",
+    "strengths": "A clear, testable design that addresses observers rather than actors.",
+    "limitations": "Small laboratory studies; the first author later became the subject of data-integrity allegations about other papers, which she denies, and this paper’s status could not be confirmed. Its findings should carry weight only where independent teams reproduce them.",
+    "contested": "Status unconfirmed. Independent evidence for the related actor-side slippery slope comes from R-welsh-2015-slippery; for the wider controversy see R-bazerman-2025-inside.",
+    "generalizability": "Plausible for oversight roles, but treat as unverified until independently replicated.",
+    "readingMinutes": 35,
+    "relevance": "A worked example of how to handle a well-known finding whose provenance is now uncertain."
+  },
+  {
+    "id": "R-shu-2012-signing",
+    "title": "Signing at the Beginning Makes Ethics Salient and Decreases Dishonest Self-Reports in Comparison to Signing at the End",
+    "authors": [
+      "Lisa L. Shu",
+      "Nina Mazar",
+      "Francesca Gino",
+      "Dan Ariely",
+      "Max H. Bazerman"
+    ],
+    "publication": "Proceedings of the National Academy of Sciences, 109(38), 15197–15200 (retracted September 2021)",
+    "year": 2012,
+    "url": "https://doi.org/10.1073/pnas.1209746109",
+    "doi": "10.1073/pnas.1209746109",
+    "discipline": "behavioral-economics",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, PNAS volume 109(38), pages 15197–15200 and DOI matched on PubMed Central (PMC3458378) and Duke Scholars. The September 2021 retraction matched on Retraction Watch, The Harvard Crimson, ScienceDaily’s update notice and the FORRT replication atlas.",
+      "link": "not-opened"
+    },
+    "summary": "The paper reported that asking people to sign an honesty statement at the top of a form, before reporting, reduced dishonest self-reports compared with signing at the bottom, including in a field study with an automobile insurer. PNAS retracted it in 2021 after independent analysts presented evidence that the field-study data were invalid; the same authors had earlier reported that the effect did not replicate.",
+    "arguments": [
+      "Originally claimed: signing first makes ethics salient at the moment of reporting and reduces cheating.",
+      "Now: retracted; the claim is not supported."
+    ],
+    "evidence": "field-experiment",
+    "design": "Two laboratory experiments and a field experiment with an insurer, as originally reported; the field data were later found invalid.",
+    "strengths": "None that survive: listed here as a documented retraction.",
+    "limitations": "Retracted. A large preregistered replication by the original authors and colleagues found no effect (R-kristal-2020-signing).",
+    "contested": "Retracted in 2021; failed replication R-kristal-2020-signing.",
+    "generalizability": "Do not apply. The idea had already been adopted in some government and industry forms, which shows how quickly an attractive finding can travel.",
+    "readingMinutes": 15,
+    "relevance": "A case study in how behavioral-ethics findings can fail — and why your policy should wait for replication."
+  },
+  {
+    "id": "R-kristal-2020-signing",
+    "title": "Signing at the Beginning versus at the End Does Not Decrease Dishonesty",
+    "authors": [
+      "Ariella S. Kristal",
+      "Ashley V. Whillans",
+      "Max H. Bazerman",
+      "Francesca Gino",
+      "Lisa L. Shu",
+      "Nina Mazar",
+      "Dan Ariely"
+    ],
+    "publication": "Proceedings of the National Academy of Sciences, 117(13), 7103–7107",
+    "year": 2020,
+    "url": "https://doi.org/10.1073/pnas.1911695117",
+    "doi": "10.1073/pnas.1911695117",
+    "discipline": "behavioral-economics",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, all seven authors, PNAS 117(13), pages 7103–7107 and DOI matched on PubMed Central (PMC7132248), Harvard Kennedy School, Duke Scholars and London Business School’s repository.",
+      "link": "not-opened"
+    },
+    "summary": "The original authors and two colleagues report that, across several conceptual replications and one preregistered direct replication with a large sample, signing an honesty pledge at the beginning of a form did not reduce dishonest reporting compared with signing at the end. They argue the scientific record needed correcting because the original finding had influenced policy.",
+    "arguments": [
+      "No effect of signing first on honest reporting in a preregistered, high-powered direct replication.",
+      "Conceptual replications also failed to find the effect.",
+      "Findings adopted by policymakers need correction when they fail to replicate."
+    ],
+    "evidence": "lab-experiment",
+    "design": "Five conceptual replications and one preregistered direct replication, with total samples reported in the thousands.",
+    "strengths": "Preregistered, high-powered, transparent, and published by the original authors themselves.",
+    "limitations": "Laboratory and online settings; it tests the signing effect, not every honesty intervention.",
+    "contested": "Contradicts R-shu-2012-signing, which was later retracted.",
+    "generalizability": "Directly relevant to any organization tempted to adopt “honesty nudges” from single studies.",
+    "readingMinutes": 20,
+    "relevance": "A model of self-correction and an example of the kind of evidence a policy decision should wait for."
+  },
+  {
+    "id": "R-bazerman-2025-inside",
+    "title": "Inside an Academic Scandal: A Story of Fraud and Betrayal",
+    "authors": [
+      "Max H. Bazerman"
+    ],
+    "publication": "MIT Press, Cambridge, MA",
+    "year": 2025,
+    "url": "https://www.harvard.com/book/9780262049887",
+    "doi": null,
+    "discipline": "psychology",
+    "type": "book",
+    "access": "purchase",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, author, publisher, year and ISBN 9780262049887 confirmed by an earlier APERTURE writer’s search and again on Harvard Book Store, Readings and Penguin Australia listings (September 2025 publication; one retailer lists October 2025). The URL is the Harvard Book Store listing; no MIT Press page appeared in results.",
+      "link": "not-opened"
+    },
+    "summary": "A first-person account by a senior behavioral-ethics researcher of the data-integrity scandal that touched papers he coauthored, including the retracted 2012 PNAS study. It describes how the problems were discovered, how coauthors and institutions responded, and what the episode reveals about incentives and verification in research.",
+    "arguments": [
+      "Research communities can fail to detect problematic data when trust among collaborators substitutes for verification.",
+      "Coauthors bear responsibility for checking the evidence they put their names to."
+    ],
+    "evidence": "qualitative",
+    "design": "Memoir and institutional account by a participant.",
+    "strengths": "An insider account of how an influential research program handled evidence of fraud.",
+    "limitations": "One participant’s perspective; others involved dispute parts of the story, and some disputes were in litigation.",
+    "contested": "The individuals accused deny the allegations; this course reports retractions as facts and does not adjudicate misconduct claims.",
+    "generalizability": "The governance lessons — verification, incentives, the cost of trust without checks — transfer to any data-reliant organization.",
+    "readingMinutes": 240,
+    "relevance": "Shows that ethics researchers face the same blind spots they study, which is the point of designing for them."
+  },
+  {
+    "id": "R-jensen-1976-theory",
+    "title": "Theory of the Firm: Managerial Behavior, Agency Costs and Ownership Structure",
+    "authors": [
+      "Michael C. Jensen",
+      "William H. Meckling"
+    ],
+    "publication": "Journal of Financial Economics, 3(4), 305–360",
+    "year": 1976,
+    "url": "https://papers.ssrn.com/abstract=94043",
+    "doi": null,
+    "discipline": "finance",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, Journal of Financial Economics volume 3, pages 305–360 and 1976 matched on SSRN (abstract 94043), EconBiz and university course copies. The journal DOI did not appear in results, so it is omitted; the SSRN copy is free.",
+      "link": "not-opened"
+    },
+    "summary": "Jensen and Meckling define an agency relationship as one in which principals engage an agent to act on their behalf with some delegated decision authority, and they show that when interests diverge the principal bears agency costs: monitoring expenditures, bonding expenditures by the agent, and the residual loss that remains. They use the framework to explain ownership structure and the use of debt and outside equity.",
+    "arguments": [
+      "Agency costs = monitoring costs + bonding costs + residual loss.",
+      "A manager who owns less than all of the firm bears only part of the cost of perquisites and shirking, so incentives diverge.",
+      "Ownership structure, contracts and monitoring arise to reduce agency costs, never to eliminate them."
+    ],
+    "evidence": "theoretical",
+    "design": "Formal economic theory with illustrative applications.",
+    "strengths": "Foundational and general: one of the most cited papers in economics and finance.",
+    "limitations": "Assumes self-interested, rational agents; underplays intrinsic motivation, professional norms and the behavioral limits covered in Lesson 2.",
+    "contested": "Its behavioral assumptions are criticized by stewardship and behavioral theorists; the core definition of agency costs is broadly accepted.",
+    "generalizability": "Applies to any delegation — owners to executives, executives to departments, clubs to agents and analysts.",
+    "readingMinutes": 75,
+    "relevance": "The vocabulary for every governance problem in Lesson 3."
+  },
+  {
+    "id": "R-dyck-2010-who",
+    "title": "Who Blows the Whistle on Corporate Fraud?",
+    "authors": [
+      "Alexander Dyck",
+      "Adair Morse",
+      "Luigi Zingales"
+    ],
+    "publication": "The Journal of Finance, 65(6), 2213–2253",
+    "year": 2010,
+    "url": "https://doi.org/10.1111/j.1540-6261.2010.01614.x",
+    "doi": "10.1111/j.1540-6261.2010.01614.x",
+    "discipline": "finance",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, journal, volume, issue, pages and DOI matched on EconPapers (RePEc) and EconBiz; an earlier NBER working paper (No. 12882) and a Harvard Law School Forum summary also appeared.",
+      "link": "not-opened"
+    },
+    "summary": "Studying a large sample of alleged corporate frauds at large U.S. companies, the authors ask who first brought each fraud to light. They find that detection relies less on the traditional governance actors — investors, the SEC and auditors — than on non-traditional actors such as employees, the media and industry regulators, and they examine the incentives that make each group more or less likely to speak.",
+    "arguments": [
+      "Fraud detection depends heavily on actors outside the formal governance system, especially employees.",
+      "Whistleblowing carries large personal costs, so monetary incentives and protections matter.",
+      "Incentives explain which actors detect fraud more than formal responsibility does."
+    ],
+    "evidence": "observational",
+    "design": "Hand-collected sample of alleged frauds at large U.S. firms, coding the first party to reveal each.",
+    "strengths": "Large, carefully coded sample; a question with direct governance implications.",
+    "limitations": "Only detected frauds are observed; undetected fraud is invisible, and the sample covers large U.S. companies in one period.",
+    "contested": null,
+    "generalizability": "The core point — the people closest to the work see problems first — generalizes widely, including to sports organizations.",
+    "readingMinutes": 45,
+    "relevance": "Evidence that a functioning speak-up channel is a governance control, not an HR courtesy."
+  },
+  {
+    "id": "R-nist-2023-artificial",
+    "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+    "authors": [
+      "National Institute of Standards and Technology"
+    ],
+    "publication": "NIST AI 100-1, U.S. Department of Commerce, January 2023",
+    "year": 2023,
+    "url": "https://doi.org/10.6028/NIST.AI.100-1",
+    "doi": "10.6028/NIST.AI.100-1",
+    "discipline": "public-policy",
+    "type": "report",
+    "access": "open",
+    "license": "U.S. government work. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "partially-confirmed",
+      "evidence": "Title, NIST AI 100-1 designation, January 2023 release, DOI 10.6028/NIST.AI.100-1 and the four core functions (Govern, Map, Measure, Manage) matched across several third-party summaries; NIST’s own page did not appear in search results.",
+      "link": "not-opened"
+    },
+    "summary": "A voluntary framework for organizations that design, develop, deploy or use AI systems. It describes characteristics of trustworthy AI and organizes risk management into four functions: Govern (a cross-cutting culture, policies and accountability), Map (context and potential impacts), Measure (assessment and tracking of risks) and Manage (prioritizing and acting on risks).",
+    "arguments": [
+      "AI risks are socio-technical: they depend on context of use as much as on the model.",
+      "Governance — roles, accountability, policies — is cross-cutting and applies throughout the AI lifecycle.",
+      "Risk management should be continuous, not a one-time approval."
+    ],
+    "evidence": "practitioner",
+    "design": null,
+    "strengths": "Free, widely referenced and written with broad public input; a shared vocabulary across industries.",
+    "limitations": "Voluntary and high level; it tells you what to consider, not what threshold of risk is acceptable.",
+    "contested": null,
+    "generalizability": "Designed to apply across sectors and organization sizes, including small analytics groups.",
+    "readingMinutes": 45,
+    "relevance": "A ready structure for governing any model your organization builds or buys."
+  },
+  {
+    "id": "R-obermeyer-2019-dissecting",
+    "title": "Dissecting Racial Bias in an Algorithm Used to Manage the Health of Populations",
+    "authors": [
+      "Ziad Obermeyer",
+      "Brian Powers",
+      "Christine Vogeli",
+      "Sendhil Mullainathan"
+    ],
+    "publication": "Science, 366(6464), 447–453",
+    "year": 2019,
+    "url": "https://doi.org/10.1126/science.aax2342",
+    "doi": "10.1126/science.aax2342",
+    "discipline": "economics",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, Science 366(6464), starting page 447, October 25, 2019 and DOI matched on UC Berkeley’s Center for Health Metrics news page, an FTC PrivacyCon 2020 presentation and SSRC citation records. The 17.7% and 46.5% figures matched in the same summaries.",
+      "link": "not-opened"
+    },
+    "summary": "The authors examined a widely used commercial algorithm that identifies patients for extra care-management help. At the same risk score, Black patients were considerably sicker than White patients, because the algorithm predicted health-care costs as a proxy for health needs and less money is spent on Black patients with the same level of need. Correcting the disparity would have raised the share of Black patients selected for extra help from 17.7% to 46.5%, and retraining on health measures rather than cost removed much of the bias.",
+    "arguments": [
+      "Bias entered through the choice of label (cost) rather than through race as an input.",
+      "An accurate prediction of the wrong target can produce unfair decisions.",
+      "Changing the target variable substantially reduced the bias."
+    ],
+    "evidence": "observational",
+    "design": "Analysis of data from a large academic hospital comparing algorithm risk scores with measures of health, with simulations of alternative targets.",
+    "strengths": "Real deployed algorithm, clear mechanism, and a constructive fix developed with the vendor.",
+    "limitations": "One algorithm and one health system’s data; the size of the bias elsewhere depends on how spending relates to need in each setting.",
+    "contested": null,
+    "generalizability": "The label-choice lesson generalizes to any predictive model in hiring, lending, policing or player evaluation that predicts a convenient proxy instead of the outcome that matters.",
+    "readingMinutes": 30,
+    "relevance": "The clearest demonstration that model governance starts with the question “what exactly are we predicting, and why?”."
+  },
+  {
+    "id": "R-knight-1921-risk",
+    "title": "Risk, Uncertainty and Profit",
+    "authors": [
+      "Frank H. Knight"
+    ],
+    "publication": "Houghton Mifflin, Boston (Hart, Schaffner & Marx prize essays, no. 31)",
+    "year": 1921,
+    "url": "https://www.econlib.org/library/Knight/knRUP.html",
+    "doi": null,
+    "discipline": "economics",
+    "type": "book",
+    "access": "open",
+    "license": "Full text hosted free by the Library of Economics and Liberty (econlib.org); public-domain status not confirmed.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, author, 1921, Houghton Mifflin and the Hart, Schaffner & Marx prize-essay series matched on econlib.org (full text), library catalogues (Holy Cross, East Carolina) and Arizona State University’s centennial symposium page.",
+      "link": "not-opened"
+    },
+    "summary": "Knight distinguishes measurable risk — situations where outcomes follow a known or estimable probability distribution, so they can be insured or pooled — from true uncertainty, where no such distribution can be known because each situation is unique. He argues that profit is the return to bearing uncertainty that cannot be insured, and that judgment under uncertainty is the entrepreneur’s and executive’s distinctive function.",
+    "arguments": [
+      "Risk is measurable and insurable; uncertainty is not.",
+      "Profit arises from uncertainty that cannot be converted into a known risk.",
+      "Executive judgment matters most where probabilities cannot be calculated."
+    ],
+    "evidence": "theoretical",
+    "design": "Economic theory.",
+    "strengths": "A durable distinction that still organizes modern thinking about deep uncertainty.",
+    "limitations": "Later decision theorists argue that subjective probabilities can always be assigned; Knight’s sharp boundary is better read as a spectrum.",
+    "contested": "Bayesian decision theory disputes that any uncertainty is strictly unquantifiable; deep-uncertainty methods (R-marchau-2019-decision) accept a practical version of Knight’s point.",
+    "generalizability": "Fundamental to any domain with novel, non-repeating decisions.",
+    "readingMinutes": 40,
+    "relevance": "Names the kind of decision that your analytics cannot settle for you."
+  },
+  {
+    "id": "R-marchau-2019-decision",
+    "title": "Decision Making under Deep Uncertainty: From Theory to Practice",
+    "authors": [
+      "Vincent A. W. J. Marchau",
+      "Warren E. Walker",
+      "Pieter J. T. M. Bloemen",
+      "Steven W. Popper"
+    ],
+    "publication": "Springer, Cham (edited volume)",
+    "year": 2019,
+    "url": "https://doi.org/10.1007/978-3-030-05252-2",
+    "doi": "10.1007/978-3-030-05252-2",
+    "discipline": "public-policy",
+    "type": "book",
+    "access": "open",
+    "license": "CC BY 4.0 (open access, as stated on Springer’s book page)",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, four editors, Springer, 2019, DOI and open-access CC BY 4.0 status matched on link.springer.com and the OAPEN library (handle 20.500.12657/22900).",
+      "link": "not-opened"
+    },
+    "summary": "An open-access edited volume that introduces decision making under deep uncertainty — situations in which parties cannot agree on the system model, the probability distributions of key inputs, or how to value outcomes — and presents five approaches: Robust Decision Making, Dynamic Adaptive Planning, Dynamic Adaptive Policy Pathways, Info-Gap Decision Theory and Engineering Options Analysis, with applications.",
+    "arguments": [
+      "Under deep uncertainty, seek strategies that perform acceptably across many plausible futures rather than optimally in one predicted future.",
+      "Plans should be adaptive: monitored with signposts and triggers that prompt pre-planned changes.",
+      "Exploring many scenarios computationally can reveal the conditions under which a strategy fails."
+    ],
+    "evidence": "review",
+    "design": "Edited volume of methodological chapters and applied case studies.",
+    "strengths": "Free, authoritative and practical; written by the developers of the methods.",
+    "limitations": "Most applications are in infrastructure, water and climate policy; evidence that these methods improve outcomes compared with alternatives is largely case-based.",
+    "contested": null,
+    "generalizability": "The logic — robustness, adaptivity, signposts — transfers to organizational strategy; the computational tools need data most organizations lack.",
+    "readingMinutes": 45,
+    "relevance": "Gives you a disciplined alternative to “pick the most likely forecast and optimize for it”."
+  },
+  {
+    "id": "R-arrow-1974-environmental",
+    "title": "Environmental Preservation, Uncertainty, and Irreversibility",
+    "authors": [
+      "Kenneth J. Arrow",
+      "Anthony C. Fisher"
+    ],
+    "publication": "The Quarterly Journal of Economics, 88(2), 312–319",
+    "year": 1974,
+    "url": "https://ideas.repec.org/a/oup/qjecon/v88y1974i2p312-319..html",
+    "doi": null,
+    "discipline": "economics",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, Quarterly Journal of Economics 88(2), pages 312–319 and May 1974 matched on IDEAS/RePEc, EconBiz and a library discovery record. The DOI was not shown in results and is omitted.",
+      "link": "not-opened"
+    },
+    "summary": "Arrow and Fisher show that when an action is irreversible and information about its costs will improve over time, the expected value of keeping options open is higher than a simple expected-value comparison suggests. Ignoring this value biases decisions toward irreversible commitment. The idea was later developed as “quasi-option value”.",
+    "arguments": [
+      "Irreversibility plus expected learning creates a value to waiting or preserving flexibility.",
+      "A cost–benefit analysis that ignores this value is biased toward irreversible action."
+    ],
+    "evidence": "theoretical",
+    "design": "Formal economic model.",
+    "strengths": "Short, rigorous and foundational for the economics of irreversible decisions.",
+    "limitations": "The value of waiting depends on whether learning will actually happen; delay can itself be irreversible.",
+    "contested": null,
+    "generalizability": "Applies to any decision that cannot be undone — closing a facility, releasing data, ending a relationship.",
+    "readingMinutes": 30,
+    "relevance": "The economic reason to treat irreversible decisions differently from reversible ones."
+  }
+]

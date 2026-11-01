@@ -4,7 +4,7 @@
 
 Generated from the course content by `aperture/tools/docs.mjs`. An independent learning program: no academic credit, accreditation or university affiliation.
 
-**Totals:** 13 weeks · 56 lessons · 102,469 words of lesson instruction · 151 quiz questions (+52 reassessment, 123 comprehension checks) · 32 diagnostic and 0 midterm questions · 204 review cards · 243 glossary terms · 13 original cases · 18 capstone components · 178 library resources · about 91 planned hours.
+**Totals:** 14 weeks · 60 lessons · 109,820 words of lesson instruction · 162 quiz questions (+56 reassessment, 131 comprehension checks) · 32 diagnostic and 0 midterm questions · 220 review cards · 259 glossary terms · 14 original cases · 18 capstone components · 197 library resources · about 99 planned hours.
 
 **Grading:** quizzes 30%, applied assignments 25%, midterm 20%, capstone 25%. Mastery threshold 80%. Open-ended work is self-assessed against published rubrics and labelled so.
 
@@ -364,6 +364,35 @@ Generated from the course content by `aperture/tools/docs.mjs`. An independent l
 **Exercise:** Change Simulator (branching engine, 35 min) · **Case:** The International Initiative (international) · **Quiz:** 11 questions, 9 types · **Assignment:** A 90-Day Implementation Roadmap · **Review cards:** 15 · **Glossary:** 18 terms
 
 **Looking ahead:** Implementation decisions are rarely only operational: the choice to standardize, to pause a site, to tie bonuses to a metric, or to replace a dissenting manager carries ethical and governance consequences. Week 13 turns to those responsibilities—decision rights, unintended consequences and institutional trust. In Week 14, this week’s roadmap becomes the capstone’s change-management strategy and first 90-day plan.
+
+## Week 13 — Ethics, Governance and Decisions Under Uncertainty
+
+*Executive Responsibility* · School of Law & Strategy · School of Business & Leadership · School of Behavioral & Social Science · 7.3 hours
+
+> What do leaders owe the people their decisions affect, and how should they decide responsibly when their own judgment is biased and the consequences cannot be known?
+
+**Objectives**
+
+- Apply consequentialist, duty-based, virtue and fairness questions to an organizational decision and identify where they diverge.
+- Evaluate competing accounts of corporate purpose and diagnose conflicts of interest and agency problems in a governance structure.
+- Explain bounded ethicality, ethical fading and the slippery slope, and weigh the supporting evidence according to its replication status.
+- Design governance for a predictive model, including its target variable, decision rights, validation and review triggers.
+- Choose and justify a decision strategy under deep uncertainty that accounts for robustness, irreversibility and who bears the downside.
+
+**Lessons**
+
+1. **What Executives Owe: Ethical Frameworks, Conflicts of Interest and the Purpose of the Organization** (45 min) — Four ethical frameworks ask different questions of the same decision, and the debate over shareholder versus stakeholder purpose is really a debate about accountability.
+2. **Good People, Bad Calls: Bounded Ethicality, Ethical Fading and the Slippery Slope** (45 min) — Most unethical organizational behavior is committed by people who do not experience themselves as choosing it; design for that, and hold the research behind it to the same standard you would hold any other evidence.
+3. **Governance, Accountability and Responsible AI** (50 min) — Governance is the set of structures that keeps decisions honest when individual judgment fails: agency costs explain why it is needed, speak-up channels show how problems surface, and model governance applies the same logic to algorithms.
+4. **Deciding When You Cannot Know: Deep Uncertainty, Robustness and Irreversibility** (50 min) — When probabilities cannot be trusted, choose strategies that hold up across many futures, commit in advance to what will change your course, and treat irreversible decisions — especially those that affect other people — with a different standard of care.
+
+**Required reading:** Tenbrunsel et al. (2004), *Ethical Fading: The Role of Self-Deception in Unethical Behavior* — Full article (14 pages).; Obermeyer et al. (2019), *Dissecting Racial Bias in an Algorithm Used to Manage the Health of Populations* — Full article; read the main text closely and skim the supplementary methods.; Marchau et al. (2019), *Decision Making under Deep Uncertainty: From Theory to Practice* — Chapter 1 (introduction to deep uncertainty) and the chapter on Robust Decision Making. Open access.
+
+**Optional reading:** Friedman (1970), *The Social Responsibility of Business Is to Increase Its Profits*; Bebchuk et al. (2020), *The Illusory Promise of Stakeholder Governance*; Kristal et al. (2020), *Signing at the Beginning versus at the End Does Not Decrease Dishonesty*; Technology (2023), *Artificial Intelligence Risk Management Framework (AI RMF 1.0)*; Dyck et al. (2010), *Who Blows the Whistle on Corporate Fraud?*
+
+**Exercise:** Executive Dilemma (branching engine, 40 min) · **Case:** The House Fund (finance) · **Quiz:** 11 questions, 10 types · **Assignment:** Executive decision memo on an ethical or governance dilemma · **Review cards:** 16 · **Glossary:** 16 terms
+
+**Looking ahead:** Week 14 brings the semester together. Its lessons on presenting and defending decisions to skeptical senior audiences and on judging decisions without outcome bias complete the cycle this week begins: decide responsibly before the outcome is known, defend the decision honestly, then learn from what happened without hindsight. The decision memo you write this week is a direct rehearsal for the capstone defense, where a board will ask exactly the questions about harms, safeguards and accountability that this week trains.
 
 ## Week 14 — The Executive Capstone
 
