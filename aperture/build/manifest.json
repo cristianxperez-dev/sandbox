@@ -2,17 +2,78 @@
   "generated": "2026-11-01",
   "method": "Metadata verified through web-search results on the date shown per record. The build environment could not open pages, so every link is flagged link-untested until checked in a browser.",
   "totals": {
-    "resources": 111,
-    "metadataConfirmed": 43,
-    "partiallyConfirmed": 12,
-    "unverified": 56,
-    "linkUntested": 111,
-    "open": 36,
-    "restricted": 67,
-    "contested": 55,
+    "resources": 156,
+    "metadataConfirmed": 90,
+    "partiallyConfirmed": 16,
+    "unverified": 50,
+    "linkUntested": 156,
+    "open": 50,
+    "restricted": 91,
+    "contested": 87,
     "uncited": 0
   },
   "records": [
+    {
+      "id": "R-galinsky-2001-first",
+      "title": "First offers as anchors: The role of perspective-taking and negotiator focus",
+      "year": 2001,
+      "url": "https://doi.org/10.1037/0022-3514.81.4.657",
+      "doi": "10.1037/0022-3514.81.4.657",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume, issue, pages and DOI matched on pubmed.ncbi.nlm.nih.gov (PMID 11642352); faculty listings at london.edu and kellogg.northwestern.edu agree. Findings below are taken from the PubMed abstract.",
+      "access": "paywalled",
+      "license": "© American Psychological Association. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w07",
+        "w07-l1",
+        "w07-l3"
+      ]
+    },
+    {
+      "id": "R-brandenburger-1996-value",
+      "title": "Value-based Business Strategy",
+      "year": 1996,
+      "url": "https://doi.org/10.1111/j.1430-9134.1996.00005.x",
+      "doi": "10.1111/j.1430-9134.1996.00005.x",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume 5, issue 1, pages 5–24 and DOI matched on EconPapers (RePEc) and Scilit; the abstract’s main points (definition of value, added value, asymmetries, four value-based strategies, cooperative game theory) appeared in the same records.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "w09",
+        "w09-l2"
+      ]
+    },
+    {
+      "id": "R-haynes-2009-surgical",
+      "title": "A Surgical Safety Checklist to Reduce Morbidity and Mortality in a Global Population",
+      "year": 2009,
+      "url": "https://doi.org/10.1056/NEJMsa0810119",
+      "doi": "10.1056/NEJMsa0810119",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, first author, journal, volume, issue, pages, year (Epub 14 January 2009) and DOI matched on PubMed (PMID 19144931); sample sizes and headline rates matched in press summaries; a repository copy appeared on dash.harvard.edu. The full author list was not displayed in results, so only the first author and study group are recorded.",
+      "access": "open",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w14-l1"
+      ]
+    },
     {
       "id": "R-kvarven-2020-comparing",
       "title": "Comparing meta-analyses and preregistered multiple-laboratory replication projects",
@@ -96,7 +157,8 @@
         "capstone",
         "w05",
         "w05-l2",
-        "w05-l3"
+        "w05-l3",
+        "w14-l4"
       ]
     },
     {
@@ -145,6 +207,27 @@
       ]
     },
     {
+      "id": "R-mcgahan-1997-much",
+      "title": "How Much Does Industry Matter, Really?",
+      "year": 1997,
+      "url": "https://ideas.repec.org/a/bla/stratm/v18y1997is1p15-30.html",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume 18, supplement issue S1 (July 1997) and pages 15–30 matched on RePEc/IDEAS and EconPapers, which also report the variance shares cited in the lesson. The DOI string appeared garbled in results, so it is omitted.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "no-doi",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w09-l2"
+      ]
+    },
+    {
       "id": "R-scheel-2021-excess",
       "title": "An Excess of Positive Results: Comparing the Standard Psychology Literature With Registered Reports",
       "year": 2021,
@@ -162,6 +245,26 @@
       "citedIn": [
         "w04-l2",
         "w04-l5"
+      ]
+    },
+    {
+      "id": "R-stinchcombe-1965-social",
+      "title": "Social Structure and Organizations",
+      "year": 1965,
+      "url": "https://libcat.scu.edu/Record/b1025658",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Author, chapter title, editor, book title, publisher, year and pages (142–193) matched in several citing sources, including a Wharton-hosted article on the liability of newness and a Duke repository paper; the 1965 Rand McNally Handbook matched in university library catalogs (libcat.scu.edu, Université de Nantes). Citing sources locate the liability-of-newness argument at pp. 148–150. The URL is a library catalog record for the Handbook.",
+      "access": "library",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w14",
+        "w14-l2"
       ]
     },
     {
@@ -193,19 +296,40 @@
       "year": 1991,
       "url": "https://doi.org/10.1093/jleo/7.special_issue.24",
       "doi": "10.1093/jleo/7.special_issue.24",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed by search in this session. Expected: Journal of Law, Economics, & Organization 7 (special issue), 24–52, DOI 10.1093/jleo/7.special_issue.24. Recorded from the writer's prior knowledge of a widely cited work; title, authors, year, venue and DOI must be confirmed before publication.",
-      "access": "paywalled",
+      "evidence": "Title, authors, journal, volume 7 special issue, pages 24–52 and the JSTOR stable record matched on the article front matter hosted at people.duke.edu; DOI matched on a scholarly index listing (synapsesocial.com). Search results note a later reprint with a different DOI.",
+      "access": "library",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
-        "link-untested",
-        "restricted-access"
+        "link-untested"
       ],
       "citedIn": [
         "w02",
-        "w02-l3"
+        "w02-l3",
+        "w08",
+        "w08-l3"
+      ]
+    },
+    {
+      "id": "R-flyvbjerg-2008-curbing",
+      "title": "Curbing Optimism Bias and Strategic Misrepresentation in Planning: Reference Class Forecasting in Practice",
+      "year": 2008,
+      "url": "https://doi.org/10.1080/09654310701747936",
+      "doi": "10.1080/09654310701747936",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, author, journal, volume, issue, pages and DOI matched on econpapers.repec.org, ideas.repec.org and ora.ox.ac.uk (Oxford repository record). One IDEAS listing shows a 2006 date (earlier online publication); citation databases use 2008 for the print issue.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w10",
+        "w10-l4"
       ]
     },
     {
@@ -372,6 +496,26 @@
       ]
     },
     {
+      "id": "R-massey-2013-losers",
+      "title": "The Loser’s Curse: Decision Making and Market Efficiency in the National Football League Draft",
+      "year": 2013,
+      "url": "https://doi.org/10.1287/mnsc.1120.1657",
+      "doi": "10.1287/mnsc.1120.1657",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume, issue, pages, July 2013 date and DOI matched on econpapers.repec.org and repository.upenn.edu; the method and main finding matched those records and a 2026 critique’s summary.",
+      "access": "open",
+      "license": "Copyright holder’s terms. A copy is listed in the University of Pennsylvania ScholarlyCommons repository (seen in search results, not opened). Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w10",
+        "w10-l5"
+      ]
+    },
+    {
       "id": "R-schwenk-1990-effects",
       "title": "Effects of Devil’s Advocacy and Dialectical Inquiry on Decision Making: A Meta-Analysis",
       "year": 1990,
@@ -460,18 +604,19 @@
       "year": 1993,
       "url": "https://doi.org/10.1287/mnsc.39.1.17",
       "doi": "10.1287/mnsc.39.1.17",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (Management Science, 39(1), 17–31) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
+      "evidence": "Title, authors, journal, volume, issue, pages and DOI matched on pubsonline.informs.org, econpapers.repec.org and ideas.repec.org; the abstract’s two-bias argument matched those records.",
       "access": "paywalled",
-      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access"
       ],
       "citedIn": [
-        "capstone"
+        "capstone",
+        "w10",
+        "w10-l4"
       ]
     },
     {
@@ -493,6 +638,26 @@
       ],
       "citedIn": [
         "w04-l2"
+      ]
+    },
+    {
+      "id": "R-lax-1986-manager",
+      "title": "The Manager as Negotiator: Bargaining for Cooperation and Competitive Gain",
+      "year": 1986,
+      "url": "https://www.simonandschuster.co.uk/books/Manager-as-Negotiator/David-A-Lax/9781439105207",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, publisher (Free Press) and year (c1986) matched in the CiNii catalogue (ci.nii.ac.jp) and on the publisher’s site (simonandschuster.co.uk, Free Press is a Simon & Schuster imprint); Chapter 2, “The Negotiator’s Dilemma: Creating and Claiming Value”, pp. 29–45, matched in University at Buffalo course reading guides (acsu.buffalo.edu).",
+      "access": "purchase",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "w07",
+        "w07-l2"
       ]
     },
     {
@@ -556,6 +721,26 @@
       ]
     },
     {
+      "id": "R-teece-1997-dynamic",
+      "title": "Dynamic Capabilities and Strategic Management",
+      "year": 1997,
+      "url": "https://doi.org/10.1002/(SICI)1097-0266(199708)18:7%3C509::AID-SMJ882%3E3.0.CO;2-Z",
+      "doi": "10.1002/(SICI)1097-0266(199708)18:7<509::AID-SMJ882>3.0.CO;2-Z",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume 18, issue 7, pages 509–533 (August 1997) matched on RePEc/IDEAS and EconPapers; the DOI appeared in full in a reference list and garbled on RePEc (an angle-bracket rendering problem). The definition of dynamic capabilities (p. 516) was confirmed from search-result excerpts.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w09-l3"
+      ]
+    },
+    {
       "id": "R-krackhardt-1993-informal",
       "title": "Informal Networks: The Company Behind the Chart",
       "year": 1993,
@@ -595,6 +780,27 @@
       ],
       "citedIn": [
         "w04-l3"
+      ]
+    },
+    {
+      "id": "R-urbach-2014-introduction",
+      "title": "Introduction of Surgical Safety Checklists in Ontario, Canada",
+      "year": 2014,
+      "url": "https://doi.org/10.1056/NEJMsa1308261",
+      "doi": "10.1056/NEJMsa1308261",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, first author, journal, volume, issue, pages, publication date (13 March 2014) and DOI matched on PubMed (PMID 24620866); design, sample size (about 200,000 procedures) and mortality rates matched in the abstract as reported by medical news summaries. Co-authors were not displayed in results and are not recorded.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w14",
+        "w14-l1"
       ]
     },
     {
@@ -804,18 +1010,20 @@
       "year": 2007,
       "url": "https://hbr.org/2007/09/performing-a-project-premortem",
       "doi": null,
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (Harvard Business Review, 85(9)) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
+      "evidence": "Title, author, venue, volume, issue, pages (18–19), September 2007 issue and the hbr.org URL matched in search results, including the Wikipedia pre-mortem entry and reprint listings; the entry also links the method to earlier prospective-hindsight research by Mitchell, Russo and Pennington (1989).",
       "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
-        "restricted-access"
+        "restricted-access",
+        "contested"
       ],
       "citedIn": [
-        "capstone"
+        "capstone",
+        "w14",
+        "w14-l3"
       ]
     },
     {
@@ -877,6 +1085,26 @@
       ]
     },
     {
+      "id": "R-arkes-1985-psychology",
+      "title": "The Psychology of Sunk Cost",
+      "year": 1985,
+      "url": "https://doi.org/10.1016/0749-5978(85)90049-4",
+      "doi": "10.1016/0749-5978(85)90049-4",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors (surnames and initials), journal, volume, pages and DOI matched on bibliographic records found by search (decisionsciencenews.com, bohrium/arXiv-indexed record, a university-hosted copy listing); the abstract’s findings matched those summaries.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w10-l3"
+      ]
+    },
+    {
       "id": "R-pashler-2008-learning",
       "title": "Learning Styles: Concepts and Evidence",
       "year": 2008,
@@ -897,6 +1125,25 @@
       ]
     },
     {
+      "id": "R-usarmy-1993-leaders",
+      "title": "A Leader’s Guide to After-Action Reviews (Training Circular 25-20)",
+      "year": 1993,
+      "url": "https://www.gurteen.com/gurteen/gurteen.nsf/id/X00006F6A/",
+      "doi": null,
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, issuing body (Headquarters, Department of the Army), series number (TC 25-20) and date (30 September 1993) matched in a Taiwan Ministry of National Defense document and in citations within a U.S. Army Research Institute report on dtic.mil; gurteen.com describes it as a leader’s guide to planning, preparing and conducting AARs that supplements FM 25-101. No official copy of the circular appeared in results; one source reports it was later replaced by a 2011 Combined Arms Center guide. The URL is a description page, not the circular.",
+      "access": "open",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested"
+      ],
+      "citedIn": [
+        "w14-l4"
+      ]
+    },
+    {
       "id": "R-roediger-2006-test-enhanced",
       "title": "Test-Enhanced Learning: Taking Memory Tests Improves Long-Term Retention",
       "year": 2006,
@@ -914,6 +1161,109 @@
       "citedIn": [
         "w03",
         "w03-l1"
+      ]
+    },
+    {
+      "id": "R-mintzberg-1980-structure",
+      "title": "Structure in 5's: A Synthesis of the Research on Organization Design",
+      "year": 1980,
+      "url": "https://doi.org/10.1287/mnsc.26.3.322",
+      "doi": "10.1287/mnsc.26.3.322",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, author, journal, volume 26, issue 3 (March 1980), pages 322–341 and DOI matched on RePEc (econpapers.repec.org, ideas.repec.org), which also lists the JSTOR stable record.",
+      "access": "library",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested"
+      ],
+      "citedIn": [
+        "w08",
+        "w08-l1"
+      ]
+    },
+    {
+      "id": "R-mintzberg-1985-strategies",
+      "title": "Of Strategies, Deliberate and Emergent",
+      "year": 1985,
+      "url": "https://doi.org/10.1002/smj.4250060306",
+      "doi": "10.1002/smj.4250060306",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume 6, issue 3 and pages 257–272 matched on RePEc/IDEAS and EconPapers. The DOI was seen on the publisher’s download stamp of a copy in search results, not on the Wiley landing page.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w09",
+        "w09-l1",
+        "w09-l4"
+      ]
+    },
+    {
+      "id": "R-oosterbeek-2004-cultural",
+      "title": "Cultural differences in ultimatum game experiments: Evidence from a meta-analysis",
+      "year": 2004,
+      "url": "https://doi.org/10.1023/B:EXEC.0000026978.14316.74",
+      "doi": "10.1023/B:EXEC.0000026978.14316.74",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume, issue, pages and DOI matched on cambridge.org, econpapers.repec.org and the Tinbergen Institute site (tinbergen.nl). A free working-paper version (EconWPA, January 2004, ewp-exp/0401003) appeared in search results. Findings below come from the abstract.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w07-l3",
+        "w07-l4"
+      ]
+    },
+    {
+      "id": "R-raiffa-1982-art",
+      "title": "The Art and Science of Negotiation",
+      "year": 1982,
+      "url": "https://ci.nii.ac.jp/ncid/BA00218858?l=en",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, author, year (1982), publisher (Belknap Press of Harvard University Press, Cambridge, MA), x + 373 pages and ISBN 0674048121 matched in the CiNii catalogue (ci.nii.ac.jp) and the Weber State University library catalogue; the book’s structure (two-party single-issue bargaining, two-party multi-issue bargaining, many-party negotiations; Panama Canal and Camp David cases) matched in catalogue and bookseller descriptions. A 1985 paperback exists.",
+      "access": "library",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested"
+      ],
+      "citedIn": [
+        "w07-l1",
+        "w07-l2",
+        "w07-l4"
+      ]
+    },
+    {
+      "id": "R-hackman-2002-leading",
+      "title": "Leading Teams: Setting the Stage for Great Performances",
+      "year": 2002,
+      "url": "https://bemis.marmot.org/Record/.b21167618",
+      "doi": null,
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, author, publisher (Harvard Business School Press) and 2002 date matched on library catalog records (bemis.marmot.org; openlibrary.telkomuniversity.ac.id) and bookseller listings with ISBN 9781578513338. The publisher’s own page was not seen.",
+      "access": "purchase",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "w08",
+        "w08-l4"
       ]
     },
     {
@@ -954,6 +1304,28 @@
       "citedIn": [
         "w04-l3",
         "w04-l5"
+      ]
+    },
+    {
+      "id": "R-hakes-2006-economic",
+      "title": "An Economic Evaluation of the Moneyball Hypothesis",
+      "year": 2006,
+      "url": "https://doi.org/10.1257/jep.20.3.173",
+      "doi": "10.1257/jep.20.3.173",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume 20, issue 3, pages 173–186 and DOI matched on EconPapers (RePEc) and EconBiz; findings (data 1999–2004; on-base percentage undervalued before the book; undervaluation diminished after publication) matched in multiple summaries. The American Economic Association distributes JEP articles free online; one search summary described the article as paywalled, so access should be checked when the link is first opened.",
+      "access": "open",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w09",
+        "w09-l4",
+        "w10",
+        "w10-l5"
       ]
     },
     {
@@ -1003,18 +1375,22 @@
       "year": 1991,
       "url": "https://doi.org/10.1177/014920639101700108",
       "doi": "10.1177/014920639101700108",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (Journal of Management, 17(1), 99–120) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
+      "evidence": "Title, author, journal, volume 17, issue 1, pages 99–120, publisher (SAGE) and DOI matched on BibBase, Scilit and CiNii; abstract content (value, rareness, imitability, substitutability) confirmed in the same records.",
       "access": "paywalled",
-      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
-        "restricted-access"
+        "restricted-access",
+        "contested"
       ],
       "citedIn": [
-        "capstone"
+        "capstone",
+        "w09",
+        "w09-l2",
+        "w09-l3",
+        "w09-l4"
       ]
     },
     {
@@ -1023,18 +1399,20 @@
       "year": 1974,
       "url": "https://doi.org/10.1287/inte.4.3.28",
       "doi": "10.1287/inte.4.3.28",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (Interfaces, 4(3), 28–36) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
+      "evidence": "Title, author, journal (Interfaces, INFORMS), volume 4, issue 3, pages 28–36, May 1974 and DOI matched on RePEc (econpapers.repec.org, ideas.repec.org) and scilit.com.",
       "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access"
       ],
       "citedIn": [
-        "capstone"
+        "capstone",
+        "w08",
+        "w08-l1",
+        "w08-l2"
       ]
     },
     {
@@ -1118,6 +1496,28 @@
       ],
       "citedIn": [
         "capstone"
+      ]
+    },
+    {
+      "id": "R-mazei-2015-meta",
+      "title": "A meta-analysis on gender differences in negotiation outcomes and their moderators",
+      "year": 2015,
+      "url": "https://doi.org/10.1037/a0038184",
+      "doi": "10.1037/a0038184",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, all six authors, journal, volume, issue, pages and DOI matched on the University of Münster research portal (cris-portal.uni-muenster.de); scope (51 studies, 10,888 participants, several countries) and the moderator findings matched in the APA press release (apa.org, December 2014). Published online November 2014, in the 2015 volume.",
+      "access": "paywalled",
+      "license": "© American Psychological Association. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w07",
+        "w07-l3",
+        "w07-l4"
       ]
     },
     {
@@ -1231,6 +1631,26 @@
       ]
     },
     {
+      "id": "R-graham-2001-theory",
+      "title": "The Theory and Practice of Corporate Finance: Evidence from the Field",
+      "year": 2001,
+      "url": "https://doi.org/10.1016/S0304-405X(01)00044-7",
+      "doi": "10.1016/S0304-405X(01)00044-7",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume, issue, pages and DOI matched on ideas.repec.org, econpapers.repec.org and scholars.duke.edu; the 392-CFO sample and the main findings matched the abstract shown there.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "w10",
+        "w10-l2"
+      ]
+    },
+    {
       "id": "R-french-1959-bases",
       "title": "The Bases of Social Power",
       "year": 1959,
@@ -1268,6 +1688,45 @@
       "citedIn": [
         "w03",
         "w03-l4"
+      ]
+    },
+    {
+      "id": "R-baron-1988-outcome",
+      "title": "Outcome Bias in Decision Evaluation",
+      "year": 1988,
+      "url": "https://doi.org/10.1037/0022-3514.54.4.569",
+      "doi": "10.1037/0022-3514.54.4.569",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume, issue, pages and year matched on a scanned copy hosted by the University of Florida, the Wikipedia outcome-bias entry and a PubMed Central replication article; a search on the DOI returned this article.",
+      "access": "library",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w14",
+        "w14-l4"
+      ]
+    },
+    {
+      "id": "R-bruderl-1990-organizational",
+      "title": "Organizational Mortality: The Liabilities of Newness and Adolescence",
+      "year": 1990,
+      "url": "https://doi.org/10.2307/2393316",
+      "doi": "10.2307/2393316",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume, issue, pages and year matched on the University of Mannheim repository (madoc.bib.uni-mannheim.de) and citing reference lists; the DOI matched in a citing review and corresponds to the JSTOR stable identifier 2393316. The abstract and data were not available in results; the description below relies on how citing work characterizes the paper.",
+      "access": "library",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w14-l2"
       ]
     },
     {
@@ -1390,7 +1849,12 @@
         "link-untested"
       ],
       "citedIn": [
-        "audit"
+        "audit",
+        "w10",
+        "w10-l1",
+        "w10-l2",
+        "w10-l3",
+        "w10-l4"
       ]
     },
     {
@@ -1512,6 +1976,49 @@
       "citedIn": [
         "w03",
         "w03-l3"
+      ]
+    },
+    {
+      "id": "R-thompson-1990-social",
+      "title": "Social perception in negotiation",
+      "year": 1990,
+      "url": "https://ideas.repec.org/a/eee/jobhdp/v47y1990i1p98-123.html",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume 47, issue 1, pages 98–123 and year matched on ideas.repec.org and on kellogg.northwestern.edu faculty research listings. The DOI was not shown in search results, so it is omitted. Findings below are taken from abstract-level descriptions and citing work.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "no-doi",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w07",
+        "w07-l2",
+        "w07-l3"
+      ]
+    },
+    {
+      "id": "R-colfer-2016-mirroring",
+      "title": "The Mirroring Hypothesis: Theory, Evidence, and Exceptions",
+      "year": 2016,
+      "url": "https://doi.org/10.1093/icc/dtw027",
+      "doi": "10.1093/icc/dtw027",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume 25, issue 5, pages 709–738 (2016) and DOI matched on the Harvard DASH repository record and RePEc (econpapers.repec.org, ideas.repec.org). An open author copy is listed on dash.harvard.edu; an earlier 2010 HBS working paper reviewed fewer studies.",
+      "access": "open",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w08",
+        "w08-l2"
       ]
     },
     {
@@ -1644,6 +2151,88 @@
       ]
     },
     {
+      "id": "R-jensen-1992-specific",
+      "title": "Specific and General Knowledge, and Organizational Structure",
+      "year": 1992,
+      "url": "https://papers.ssrn.com/abstract=6658",
+      "doi": "10.2139/ssrn.6658",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, editors (Werin and Wijkander), volume (Contract Economics, Blackwell, 1992) and pages 251–274 matched on econbiz.de and scilit.com; the SSRN version (abstract 6658, DOI 10.2139/ssrn.6658) matched on scilit.com and the author’s own listing. Search results note later reprints (Journal of Applied Corporate Finance, 1995).",
+      "access": "open",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested"
+      ],
+      "citedIn": [
+        "w08",
+        "w08-l2"
+      ]
+    },
+    {
+      "id": "R-watkins-2013-first",
+      "title": "The First 90 Days: Proven Strategies for Getting Up to Speed Faster and Smarter",
+      "year": 2013,
+      "url": "https://www.imd.org/research/books/first-90-days/",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, subtitle, author, publisher (Harvard Business Review Press), publication date (14 May 2013), ISBN 9781422188613 and description as the updated, expanded tenth-anniversary edition matched on retailer and public-library catalog listings; chapter topics (prepare yourself, accelerate your learning, match strategy to situation, negotiate success) matched in a library record; IMD’s page for the book appeared in results.",
+      "access": "purchase",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w14",
+        "w14-l2"
+      ]
+    },
+    {
+      "id": "R-porter-1996-what",
+      "title": "What Is Strategy?",
+      "year": 1996,
+      "url": "https://hbr.org/1996/11/what-is-strategy",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, author, year, journal, volume 74, issue 6 and pages 61–78 matched in a university course listing and a library bibliography; an article index summarized the same central argument. The hbr.org address is HBR’s archive address for the November 1996 issue; it was not returned in search results and the link was not opened.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w09",
+        "w09-l1"
+      ]
+    },
+    {
+      "id": "R-porter-2008-five",
+      "title": "The Five Competitive Forces That Shape Strategy",
+      "year": 2008,
+      "url": "https://store.hbr.org/product/the-five-competitive-forces-that-shape-strategy/R0801E",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, author, January 2008 issue, volume 86, issue 1 matched on the HBR Store (product R0801E) and a library catalogue; pages given as 78–93 in one citation and 79–93 in another catalogue. Confirmed as an update of Porter’s 1979 HBR article.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w09",
+        "w09-l2"
+      ]
+    },
+    {
       "id": "R-mitocw-2001-negotiation",
       "title": "Negotiation and Conflict Management (15.667, Spring 2001)",
       "year": 2001,
@@ -1658,7 +2247,9 @@
         "link-untested"
       ],
       "citedIn": [
-        "audit"
+        "audit",
+        "w07",
+        "w07-l5"
       ]
     },
     {
@@ -1678,6 +2269,25 @@
       ],
       "citedIn": [
         "audit"
+      ]
+    },
+    {
+      "id": "R-franklin-2019-principles",
+      "title": "Principles of Accounting, Volume 1: Financial Accounting",
+      "year": 2019,
+      "url": "https://openstax.org/books/principles-financial-accounting/pages/preface",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, the three authors and the CC BY-NC-SA 4.0 license matched on openstax.org (book preface); 2019 publication and Rice University as copyright holder matched on catalog and bookseller records (bookshare.org, abebooks.com, open.umn.edu). The chapter title “Introduction to Financial Statements” (Chapter 2) matched on the openstax.org preface listing.",
+      "access": "open",
+      "license": "CC BY-NC-SA 4.0 (OpenStax, Rice University). Linked, not reproduced; APERTURE summarizes in its own words.",
+      "flags": [
+        "link-untested"
+      ],
+      "citedIn": [
+        "w10",
+        "w10-l1"
       ]
     },
     {
@@ -1720,6 +2330,45 @@
       ]
     },
     {
+      "id": "R-bloom-2007-measuring",
+      "title": "Measuring and Explaining Management Practices Across Firms and Countries",
+      "year": 2007,
+      "url": "https://doi.org/10.1162/qjec.2007.122.4.1351",
+      "doi": "10.1162/qjec.2007.122.4.1351",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume 122, issue 4, pages 1351–1408 (November 2007) and DOI matched on RePEc (econpapers.repec.org) and econbiz.de; an earlier open version is NBER Working Paper 12216 (nber.org). Survey method details matched on the NBER Reporter and LSE Centre for Economic Performance pages.",
+      "access": "open",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w08-l3"
+      ]
+    },
+    {
+      "id": "R-bloom-2013-does",
+      "title": "Does Management Matter? Evidence from India",
+      "year": 2013,
+      "url": "https://doi.org/10.1093/qje/qjs044",
+      "doi": "10.1093/qje/qjs044",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume 128, issue 1, pages 1–51 and DOI matched on RePEc (econpapers.repec.org), LSE Research Online and the UK government research-outputs page. An open earlier version is NBER Working Paper 16658 (nber.org), which reports a smaller first-year productivity figure (11%) than the published article (17%).",
+      "access": "open",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w08",
+        "w08-l3"
+      ]
+    },
+    {
       "id": "R-bloom-2015-does",
       "title": "Does Working from Home Work? Evidence from a Chinese Experiment",
       "year": 2015,
@@ -1736,6 +2385,26 @@
       ],
       "citedIn": [
         "w04"
+      ]
+    },
+    {
+      "id": "R-bloom-2020-do",
+      "title": "Do Management Interventions Last? Evidence from India",
+      "year": 2020,
+      "url": "https://doi.org/10.1257/app.20180369",
+      "doi": "10.1257/app.20180369",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume 12, issue 2, pages 198–219 and DOI matched on RePEc (econpapers.repec.org). Open working-paper versions matched on nber.org (Working Paper 24249), the Stanford King Center page and the World Bank Open Knowledge Repository (Policy Research Working Paper 8339).",
+      "access": "open",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested"
+      ],
+      "citedIn": [
+        "w08",
+        "w08-l3",
+        "w08-l4"
       ]
     },
     {
@@ -1851,18 +2520,19 @@
       "year": 1967,
       "url": "https://doi.org/10.2307/2391211",
       "doi": "10.2307/2391211",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (Administrative Science Quarterly, 12(1), 1–47) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
-      "access": "paywalled",
+      "evidence": "Title, authors, journal, volume, issue, pages (1–47), June 1967 date and DOI matched on scienceopen.com and scilit.net records. Search results also distinguish it from the authors’ separate 1967 book, Organization and Environment.",
+      "access": "library",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
-        "restricted-access"
+        "contested"
       ],
       "citedIn": [
-        "capstone"
+        "capstone",
+        "w08-l1",
+        "w08-l3"
       ]
     },
     {
@@ -1907,6 +2577,26 @@
       ]
     },
     {
+      "id": "R-love-2018-debunking",
+      "title": "Debunking Fake News in a Post-Truth Era: The Plausible Untruths of Cost Underestimation in Transport Infrastructure Projects",
+      "year": 2018,
+      "url": "https://doi.org/10.1016/j.tra.2018.04.019",
+      "doi": "10.1016/j.tra.2018.04.019",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume, pages and DOI matched on econpapers.repec.org and espace.curtin.edu.au; the critique of Flyvbjerg, Holm and Buhl (2002) and the existence of a Flyvbjerg rebuttal matched trade-press coverage (transportxtra.com).",
+      "access": "open",
+      "license": "Copyright holder’s terms. An accepted manuscript is listed as open access in Curtin University’s espace repository (handle 20.500.11937/68682), seen in search results but not opened. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w10",
+        "w10-l4"
+      ]
+    },
+    {
       "id": "R-selznick-1949-tva",
       "title": "TVA and the Grass Roots: A Study in the Sociology of Formal Organization",
       "year": 1949,
@@ -1947,6 +2637,28 @@
       ]
     },
     {
+      "id": "R-priem-2001-is",
+      "title": "Is the Resource-Based “View” a Useful Perspective for Strategic Management Research?",
+      "year": 2001,
+      "url": "https://econbiz.de/Record/is-the-resource-based-view-a-useful-perspective-for-strategic-management-research-priem-richard/10003653519",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume 26, issue 1 and pages 22–40 matched on EconBiz, Scilit-linked records and reference lists on journals.aom.org. Search results gave conflicting DOIs, so the DOI is omitted and the EconBiz catalogue record is used as the link.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "no-doi",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w09",
+        "w09-l3"
+      ]
+    },
+    {
       "id": "R-cyert-1963-behavioral",
       "title": "A Behavioral Theory of the Firm",
       "year": 1963,
@@ -1983,6 +2695,45 @@
       "citedIn": [
         "w02",
         "w02-l2"
+      ]
+    },
+    {
+      "id": "R-rumelt-2011-good",
+      "title": "Good Strategy Bad Strategy: The Difference and Why It Matters",
+      "year": 2011,
+      "url": "https://penguinrandomhouse.com/books/208668/good-strategy-bad-strategy-by-richard-rumelt/9780307886231",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, author, publisher (Crown Business, New York), year 2011 and ISBN 9780307886231 matched in library catalogue records and the Penguin Random House listing. The kernel (diagnosis, guiding policy, coherent action) and the hallmarks of bad strategy were confirmed from multiple secondary summaries, not from the book text.",
+      "access": "purchase",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "w09",
+        "w09-l1"
+      ]
+    },
+    {
+      "id": "R-nelson-1982-evolutionary",
+      "title": "An Evolutionary Theory of Economic Change",
+      "year": 1982,
+      "url": "https://ci.nii.ac.jp/ncid/BA01195747",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, publisher (Belknap Press of Harvard University Press, Cambridge, Mass.) and year matched on the CiNii academic library record (ci.nii.ac.jp) and a Journal of Economic History book review on cambridge.org listing xi + 437 pages. The publisher’s own page was not seen; the link is a library catalog record.",
+      "access": "purchase",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "w08-l4"
       ]
     },
     {
@@ -2069,6 +2820,50 @@
       ]
     },
     {
+      "id": "R-fisher-1981-getting",
+      "title": "Getting to Yes: Negotiating Agreement Without Giving In",
+      "year": 1981,
+      "url": "https://en.wikipedia.org/wiki/Getting_to_Yes",
+      "doi": null,
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors (Roger Fisher, William Ury), 1981 first edition with Houghton Mifflin, later editions (1991, 2011) adding Bruce Patton, the four principles of principled negotiation and the origin of the term BATNA matched on en.wikipedia.org and an EBSCO Research Starters entry (ebsco.com). No publisher page was found in search results, so the URL is a reference page rather than the publisher’s.",
+      "access": "purchase",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w07",
+        "w07-l1",
+        "w07-l5"
+      ]
+    },
+    {
+      "id": "R-martin-2007-opposable",
+      "title": "The Opposable Mind: How Successful Leaders Win Through Integrative Thinking",
+      "year": 2007,
+      "url": "https://publishersweekly.com/9781422118924",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, author, year and publisher (Harvard Business School Press, ISBN 9781422118924) matched on publishersweekly.com, a Wikipedia entry and library listings. The companion article “How Successful Leaders Think” (Harvard Business Review, June 2007, vol. 85, no. 6, starting p. 60) matched in secondary listings; no official HBR page for it appeared in results, so it is not given its own record.",
+      "access": "purchase",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w14",
+        "w14-l1"
+      ]
+    },
+    {
       "id": "R-wasserstein-2016-asa",
       "title": "The ASA’s Statement on p-Values: Context, Process, and Purpose",
       "year": 2016,
@@ -2106,6 +2901,84 @@
       ],
       "citedIn": [
         "w06-l2"
+      ]
+    },
+    {
+      "id": "R-lewicki-1998-ethical",
+      "title": "Ethical and unethical bargaining tactics: An empirical study",
+      "year": 1998,
+      "url": "https://philarchive.org/rec/LEWEAU-2",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume 17, issue 6, pages 665–682 and year matched on philarchive.org and a library discovery record; sample and findings (320 Ohio State and 736 Harvard Business School MBA students rating 18 tactics on a 1–7 scale; five factors) matched in the Ohio State University news release (news.osu.edu). The DOI was not shown in search results.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "no-doi",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "w07-l5"
+      ]
+    },
+    {
+      "id": "R-brill-2026-losers",
+      "title": "The Loser’s Curse and the Critical Role of the Utility Function",
+      "year": 2026,
+      "url": "https://doi.org/10.1080/00031305.2025.2505512",
+      "doi": "10.1080/00031305.2025.2505512",
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, author surnames, journal, volume, issue, pages, 2026 date and DOI matched on econpapers.repec.org; the preprint and its earlier title matched on arxiv.org. Given names are recorded from the preprint listing as best known but were not displayed in the search snippets, so authorship is marked partially confirmed.",
+      "access": "open",
+      "license": "Copyright holder’s terms. An open preprint is on arXiv (2411.10400, first posted November 2024 as “The Loser’s Curse Revisited”); the published version may differ. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w10-l5"
+      ]
+    },
+    {
+      "id": "R-tannenbaum-2013-do",
+      "title": "Do Team and Individual Debriefs Enhance Performance? A Meta-Analysis",
+      "year": 2013,
+      "url": "https://doi.org/10.1177/0018720812448394",
+      "doi": "10.1177/0018720812448394",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume, issue, pages, year (online June 2012) and DOI matched on PubMed (PMID 23516804) and journals.sagepub.com; the main result (46 samples, N = 2,136, about 25%, d = .67) and moderators matched the abstract; a full-text copy appeared on cebma.org (Center for Evidence-Based Management).",
+      "access": "open",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested"
+      ],
+      "citedIn": [
+        "w14",
+        "w14-l4"
+      ]
+    },
+    {
+      "id": "R-frederick-2009-opportunity",
+      "title": "Opportunity Cost Neglect",
+      "year": 2009,
+      "url": "https://doi.org/10.1086/599764",
+      "doi": "10.1086/599764",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, all five authors, journal, volume, issue, pages, December 2009 issue and DOI matched on econpapers.repec.org, ideas.repec.org and profiles.wustl.edu; main findings matched the abstract and Yale School of Management news summaries.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "w10-l3"
       ]
     },
     {
@@ -2253,6 +3126,48 @@
       ]
     },
     {
+      "id": "R-rogers-2011-artful",
+      "title": "The Artful Dodger: Answering the Wrong Question the Right Way",
+      "year": 2011,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21517203/",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume, issue, pages and year matched on a PubMed-indexed listing (PMID 21517203), the American Psychological Association press release (EurekAlert) and Harvard Magazine; an author-hosted PDF appeared on toddrogers.scholars.harvard.edu. One result gave a DOI, but a second search could not confirm it, so no DOI is recorded.",
+      "access": "open",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "no-doi"
+      ],
+      "citedIn": [
+        "w14",
+        "w14-l3"
+      ]
+    },
+    {
+      "id": "R-rogers-2017-artful",
+      "title": "Artful paltering: The risks and rewards of using truthful statements to mislead others",
+      "year": 2017,
+      "url": "https://www.hks.harvard.edu/publications/artful-paltering-risks-and-rewards-using-truthful-statements-mislead-others",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume 112, issue 3, pages 456–473 and date (March 2017; online December 2016) matched on hks.harvard.edu and in the APA press release (apa.org, December 2016). The DOI did not appear in search results, so it is omitted. Findings come from the abstract and press release.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "no-doi",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w07",
+        "w07-l5"
+      ]
+    },
+    {
       "id": "R-gneezy-2011-when",
       "title": "When and Why Incentives (Don’t) Work to Modify Behavior",
       "year": 2011,
@@ -2291,6 +3206,28 @@
       ],
       "citedIn": [
         "w12-l4"
+      ]
+    },
+    {
+      "id": "R-adair-2001-negotiation",
+      "title": "Negotiation behavior when cultures collide: The United States and Japan",
+      "year": 2001,
+      "url": "https://doi.org/10.1037/0021-9010.86.3.371",
+      "doi": "10.1037/0021-9010.86.3.371",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume 86, issue 3, pages 371–385 and year matched in the ACNP union catalogue index (acnpsearch, University of Bologna) and a bibliographic database; the DOI was listed by one index and follows the journal’s DOI pattern. Findings below come from the abstract.",
+      "access": "paywalled",
+      "license": "© American Psychological Association. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w07",
+        "w07-l2",
+        "w07-l4"
       ]
     }
   ]
