@@ -2,14 +2,14 @@
   "generated": "2026-11-01",
   "method": "Metadata verified through web-search results on the date shown per record. The build environment could not open pages, so every link is flagged link-untested until checked in a browser.",
   "totals": {
-    "resources": 95,
-    "metadataConfirmed": 33,
-    "partiallyConfirmed": 9,
-    "unverified": 53,
-    "linkUntested": 95,
-    "open": 31,
-    "restricted": 58,
-    "contested": 42,
+    "resources": 111,
+    "metadataConfirmed": 43,
+    "partiallyConfirmed": 12,
+    "unverified": 56,
+    "linkUntested": 111,
+    "open": 36,
+    "restricted": 67,
+    "contested": 55,
     "uncited": 0
   },
   "records": [
@@ -31,6 +31,29 @@
       ],
       "citedIn": [
         "w04-l5"
+      ]
+    },
+    {
+      "id": "R-ammar-2023-myth",
+      "title": "The Myth of Contextual Interference Learning Benefit in Sports Practice: A Systematic Review and Meta-Analysis",
+      "year": 2023,
+      "url": "https://www.sciencedirect.com/science/article/pii/S1747938X23000301",
+      "doi": null,
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, journal, volume, year (May 2023) and author surnames matched in a library catalogue record (katalog.lib.cas.cz) and search-result summaries; the URL is built from the Elsevier article identifier shown in that catalogue record. Given names and DOI were not confirmed and are omitted.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested",
+        "no-doi",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w03",
+        "w03-l3"
       ]
     },
     {
@@ -151,13 +174,15 @@
       "verifiedOn": "2026-11-01",
       "evidence": "Not confirmed in this session: the shared web-search budget was exhausted before this record could be searched. Metadata entered from the standard citation; check title, venue, pages and DOI before relying on it.",
       "access": "paywalled",
-      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
       "flags": [
         "unverified",
         "link-untested",
         "restricted-access"
       ],
       "citedIn": [
+        "w03",
+        "w03-l3",
         "w05",
         "w05-l3"
       ]
@@ -261,6 +286,69 @@
       ],
       "citedIn": [
         "capstone"
+      ]
+    },
+    {
+      "id": "R-macnamara-2014-deliberate",
+      "title": "Deliberate Practice and Performance in Music, Games, Sports, Education, and Professions: A Meta-Analysis",
+      "year": 2014,
+      "url": "https://doi.org/10.1177/0956797614535810",
+      "doi": "10.1177/0956797614535810",
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, year, journal and DOI matched on sciencedaily.com (press release) and stafforini.com; domain-by-domain variance figures matched in the press release and a quoted abstract. Volume and pages were not confirmed and are omitted.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w03-l2"
+      ]
+    },
+    {
+      "id": "R-macnamara-2016-relationship",
+      "title": "The Relationship Between Deliberate Practice and Performance in Sports: A Meta-Analysis",
+      "year": 2016,
+      "url": "https://doi.org/10.1177/1745691616635591",
+      "doi": "10.1177/1745691616635591",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume, issue, pages and DOI matched in an author copy hosted by Purdue University’s Skill Learning and Performance Lab (hhs.purdue.edu), the Case Western Reserve University news release (case.edu) and the APS press release (psychologicalscience.org).",
+      "access": "open",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w03",
+        "w03-l2",
+        "w03-l4"
+      ]
+    },
+    {
+      "id": "R-macnamara-2019-role",
+      "title": "The Role of Deliberate Practice in Expert Performance: Revisiting Ericsson, Krampe & Tesch-Römer (1993)",
+      "year": 2019,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6731745",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume, issue, article number and publication date matched on pmc.ncbi.nlm.nih.gov (PMC6731745) and the Purdue University lab page (hhs.purdue.edu); data deposit matched on datadryad.org. The article DOI was not shown in results and is omitted.",
+      "access": "open",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "no-doi",
+        "contested"
+      ],
+      "citedIn": [
+        "w03",
+        "w03-l2"
       ]
     },
     {
@@ -750,6 +838,26 @@
       ]
     },
     {
+      "id": "R-sala-2017-does",
+      "title": "Does Far Transfer Exist? Negative Evidence From Chess, Music, and Working Memory Training",
+      "year": 2017,
+      "url": "https://doi.org/10.1177/0963721417712760",
+      "doi": "10.1177/0963721417712760",
+      "status": "unverified",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Not confirmed in this session: the shared web-search budget was exhausted before this record could be searched. Metadata entered from the standard citation; check title, venue, pages and DOI before relying on it.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "unverified",
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "w03-l4"
+      ]
+    },
+    {
       "id": "R-smith-2003-parachute",
       "title": "Parachute use to prevent death and major trauma related to gravitational challenge: systematic review of randomised controlled trials",
       "year": 2003,
@@ -766,6 +874,46 @@
       ],
       "citedIn": [
         "w04-l5"
+      ]
+    },
+    {
+      "id": "R-pashler-2008-learning",
+      "title": "Learning Styles: Concepts and Evidence",
+      "year": 2008,
+      "url": "https://doi.org/10.1111/j.1539-6053.2009.01038.x",
+      "doi": "10.1111/j.1539-6053.2009.01038.x",
+      "status": "unverified",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Not confirmed in this session: the shared web-search budget was exhausted before this record could be searched. Metadata entered from the standard citation; check title, venue, pages and DOI before relying on it.",
+      "access": "library",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "unverified",
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w03-l4"
+      ]
+    },
+    {
+      "id": "R-roediger-2006-test-enhanced",
+      "title": "Test-Enhanced Learning: Taking Memory Tests Improves Long-Term Retention",
+      "year": 2006,
+      "url": "https://doi.org/10.1111/j.1467-9280.2006.01693.x",
+      "doi": "10.1111/j.1467-9280.2006.01693.x",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume, issue, pages and DOI matched on pubmed.ncbi.nlm.nih.gov (PMID 16507066) and profiles.wustl.edu; design and findings matched in the PubMed abstract.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "w03",
+        "w03-l1"
       ]
     },
     {
@@ -973,6 +1121,29 @@
       ]
     },
     {
+      "id": "R-shea-1979-contextual",
+      "title": "Contextual Interference Effects on the Acquisition, Retention, and Transfer of a Motor Skill",
+      "year": 1979,
+      "url": "https://swov.nl/nl/publicatie/contextual-interference-effects-acquisition-retention-and-transfer-motor-skill",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume, issue, pages and year matched on the swov.nl library record and a scan of the original article; design and findings matched in later reviews indexed on pmc.ncbi.nlm.nih.gov. The DOI was not shown in results and is omitted.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "no-doi",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w03",
+        "w03-l1",
+        "w03-l3"
+      ]
+    },
+    {
       "id": "R-little-2011-littles",
       "title": "Little’s Law as Viewed on Its 50th Anniversary",
       "year": 2011,
@@ -990,6 +1161,28 @@
       "citedIn": [
         "w12",
         "w12-l3"
+      ]
+    },
+    {
+      "id": "R-dunlosky-2013-improving",
+      "title": "Improving Students’ Learning With Effective Learning Techniques: Promising Directions From Cognitive and Educational Psychology",
+      "year": 2013,
+      "url": "https://doi.org/10.1177/1529100612453266",
+      "doi": "10.1177/1529100612453266",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume, issue, pages and DOI matched on scholars.duke.edu (Duke Scholars record) and fds.duke.edu; the utility ratings matched in the eurekalert.org press release and a texasldcenter.org summary.",
+      "access": "library",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w03",
+        "w03-l1",
+        "w03-l3",
+        "w03-l4"
       ]
     },
     {
@@ -1055,6 +1248,26 @@
       "citedIn": [
         "w06",
         "w06-l1"
+      ]
+    },
+    {
+      "id": "R-sweller-2019-cognitive",
+      "title": "Cognitive Architecture and Instructional Design: 20 Years Later",
+      "year": 2019,
+      "url": "https://doi.org/10.1007/s10648-019-09465-5",
+      "doi": "10.1007/s10648-019-09465-5",
+      "status": "unverified",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Not confirmed in this session: the shared web-search budget was exhausted before this record could be searched. Metadata entered from the standard citation; check title, venue, pages and DOI before relying on it.",
+      "access": "open",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "unverified",
+        "link-untested"
+      ],
+      "citedIn": [
+        "w03",
+        "w03-l4"
       ]
     },
     {
@@ -1181,6 +1394,46 @@
       ]
     },
     {
+      "id": "R-ericsson-1993-role",
+      "title": "The Role of Deliberate Practice in the Acquisition of Expert Performance",
+      "year": 1993,
+      "url": "https://doi.org/10.1037/0033-295X.100.3.363",
+      "doi": "10.1037/0033-295X.100.3.363",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume, issue, pages and DOI matched in the KU Leuven Lirias repository record (lirias.kuleuven.be), scilit.net and the reference list of a 2016 reply by Macnamara and colleagues; the abstract’s ten-year claim matched in a summary of the paper.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w03-l2"
+      ]
+    },
+    {
+      "id": "R-ericsson-2019-deliberate",
+      "title": "Deliberate Practice and Proposed Limits on the Effects of Practice on the Acquisition of Expert Performance",
+      "year": 2019,
+      "url": "https://doi.org/10.3389/fpsyg.2019.02396",
+      "doi": "10.3389/fpsyg.2019.02396",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Authors, journal, volume, article number, date and DOI matched on frontiersin.org, pmc.ncbi.nlm.nih.gov (PMC6824411) and doaj.org; the reanalysis figures matched in the abstract text shown in results. Only the main title was confirmed; any subtitle is omitted.",
+      "access": "open",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w03",
+        "w03-l2"
+      ]
+    },
+    {
       "id": "R-rajkumar-2022-causal",
       "title": "A Causal Test of the Strength of Weak Ties",
       "year": 2022,
@@ -1238,6 +1491,27 @@
       "citedIn": [
         "w12",
         "w12-l4"
+      ]
+    },
+    {
+      "id": "R-chua-2021-superiority",
+      "title": "Superiority of External Attentional Focus for Motor Performance and Learning: Systematic Reviews and Meta-Analyses",
+      "year": 2021,
+      "url": "https://doi.org/10.1037/bul0000335",
+      "doi": "10.1037/bul0000335",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, author surnames, journal, volume, issue, pages and DOI matched on digitalscholarship.unlv.edu and pure.psu.edu; study counts and effect sizes matched in the abstract text shown in results. The first author’s full name matched; other given names are as commonly listed.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w03",
+        "w03-l3"
       ]
     },
     {
@@ -1348,6 +1622,28 @@
       ]
     },
     {
+      "id": "R-mckay-2024-reporting",
+      "title": "Reporting Bias, Not External Focus: A Robust Bayesian Meta-Analysis and Systematic Review of the External Focus of Attention Literature",
+      "year": 2024,
+      "url": "https://doi.org/10.1037/bul0000451",
+      "doi": "10.1037/bul0000451",
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Author surnames, journal, volume, issue, pages and DOI matched on experts.mcmaster.ca; findings matched in the abstract shown on x-mol.com. Title wording differs between listings (preprint and published versions), and given names were not confirmed and are omitted.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w03",
+        "w03-l3"
+      ]
+    },
+    {
       "id": "R-mitocw-2001-negotiation",
       "title": "Negotiation and Conflict Management (15.667, Spring 2001)",
       "year": 2001,
@@ -1440,6 +1736,29 @@
       ],
       "citedIn": [
         "w04"
+      ]
+    },
+    {
+      "id": "R-soderstrom-2015-learning",
+      "title": "Learning Versus Performance: An Integrative Review",
+      "year": 2015,
+      "url": "https://doi.org/10.1177/1745691615569000",
+      "doi": "10.1177/1745691615569000",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume, issue, pages and DOI matched on pubmed.ncbi.nlm.nih.gov (PMID 25910388); scope of the review matched in the PubMed abstract.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w03",
+        "w03-l1",
+        "w03-l3",
+        "w03-l4"
       ]
     },
     {
@@ -1807,6 +2126,27 @@
       ],
       "citedIn": [
         "capstone"
+      ]
+    },
+    {
+      "id": "R-czyz-2024-effect",
+      "title": "The Effect of Contextual Interference on Transfer in Motor Learning: A Systematic Review and Meta-Analysis",
+      "year": 2024,
+      "url": "https://doi.org/10.3389/fpsyg.2024.1377122",
+      "doi": "10.3389/fpsyg.2024.1377122",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, journal, volume, article number, publication date (14 August 2024) and DOI matched on frontiersin.org and pmc.ncbi.nlm.nih.gov (PMC11349744); effect sizes matched in the abstract text shown in results.",
+      "access": "open",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w03",
+        "w03-l3",
+        "w03-l4"
       ]
     },
     {
