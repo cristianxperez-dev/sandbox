@@ -943,6 +943,79 @@ body:not(.fm-off) #end [data-g="playAgain"]{background:transparent;color:var(--w
   .bd th{letter-spacing:.08em}
   #end .ov-foot,#end .ov-foot .grp{flex-wrap:wrap}
 }
+
+/* ===== GAME LIBRARY ===== */
+.lib{position:fixed;inset:0;z-index:3;overflow-y:auto;overscroll-behavior:contain;padding:0 0 48px}
+.lib-head{position:sticky;top:0;z-index:4;display:flex;align-items:center;gap:16px;padding:12px 24px;background:rgba(6,13,28,.88);backdrop-filter:blur(10px);border-bottom:1px solid rgba(138,180,230,.14)}
+.lib-head .grow{flex:1}
+.lib-head .brand .t{font-size:26px}.lib-head .brand .s{font-size:10.5px;margin-top:3px}.lib-head .ball{width:34px;height:34px}
+.lib-sbx{color:var(--gray);text-decoration:none;font-size:14px;letter-spacing:.04em;padding:8px 0;border-bottom:1px solid rgba(138,180,230,.25)}
+.lib-sbx:hover,.lib-sbx:focus-visible{color:var(--white);border-bottom-color:var(--orange)}
+.lib-hero{max-width:1320px;margin:0 auto;padding:34px 24px 10px;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:24px}
+.lib-title{margin:10px 0 0;font-family:var(--cond);font-weight:900;font-size:clamp(44px,7vw,92px);line-height:.88;letter-spacing:.01em;text-shadow:0 4px 0 rgba(0,0,0,.35),0 0 30px rgba(120,170,255,.3)}
+.lib-title b{color:var(--orange);font-weight:900}
+.lib-sub{margin:12px 0 0;font-family:var(--cond);font-weight:600;letter-spacing:.16em;color:var(--gray);font-size:14px}
+.lib-tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:22px}
+.lib-search{flex:1 1 260px;max-width:420px}
+.lib-search .in{padding:10px 13px;font-size:15px}
+.lib-sort{display:flex;align-items:center;gap:8px}
+.lib-sort span{font-family:var(--cond);font-weight:700;font-size:12px;letter-spacing:.2em;color:var(--gray)}
+.lib-sort .in{width:auto;padding:10px 12px;font-size:15px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.lib-host{width:min(300px,26vw);margin-bottom:-10px;filter:drop-shadow(0 18px 30px rgba(0,0,0,.45))}
+.lib-grid{max-width:1320px;margin:0 auto;padding:22px 24px 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.lib-card{position:relative;display:flex;flex-direction:column;gap:8px;padding:20px 20px 18px;border-radius:16px;border:1px solid rgba(138,180,230,.18);
+  background:linear-gradient(180deg,rgba(21,41,79,.72),rgba(9,20,42,.86));box-shadow:0 14px 40px rgba(0,0,0,.28);transition:border-color .2s,transform .2s}
+.lib-card:hover{border-color:rgba(255,122,26,.45)}
+.lib-card.last{border-color:rgba(255,122,26,.55);box-shadow:0 0 0 1px rgba(255,122,26,.25),0 14px 40px rgba(0,0,0,.3)}
+.lc-top{display:flex;flex-wrap:wrap;gap:6px;align-items:center;min-height:22px}
+.lc-pill{font-family:var(--cond);font-weight:800;font-size:11px;letter-spacing:.18em;padding:3px 9px;border-radius:999px;border:1px solid rgba(138,180,230,.35);color:var(--sky)}
+.lc-pill.s-ready{color:#9ff0c4;border-color:rgba(79,209,139,.5)}
+.lc-pill.s-completed{color:var(--gray);border-color:rgba(149,163,187,.4)}
+.lc-pill.s-draft{color:var(--orange-hi);border-color:rgba(255,122,26,.5)}
+.lc-pill.live{background:rgba(255,122,26,.14);color:var(--orange-hi);border-color:transparent}
+.lc-pill.last{background:rgba(138,180,230,.12);border-color:transparent}
+.lc-title{margin:2px 0 0;font-family:var(--cond);font-weight:900;font-size:28px;line-height:1;letter-spacing:.02em;text-transform:uppercase;overflow-wrap:anywhere}
+.lc-desc{margin:0;color:#c7d2e4;font-size:14.5px;line-height:1.4;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.lc-meta{font-family:var(--cond);font-weight:700;font-size:13px;letter-spacing:.14em;color:var(--orange-hi)}
+.lc-dates{font-size:12.5px;color:var(--gray)}
+.lc-acts{display:flex;gap:8px;margin-top:auto;padding-top:10px}
+.lc-acts .sb{flex:1;padding:11px 12px}
+.lc-acts .lc-more{flex:0 0 auto;width:46px;padding:11px 0;font-size:18px;line-height:1}
+.lib-empty{grid-column:1/-1;text-align:center;padding:50px 20px;border:1px dashed rgba(138,180,230,.3);border-radius:16px;color:var(--gray)}
+.lib-empty b{display:block;font-family:var(--cond);font-weight:800;font-size:24px;letter-spacing:.06em;color:var(--white);margin-bottom:6px}
+.lib-note{max-width:1320px;margin:22px auto 0;padding:0 24px;color:var(--gray-dim);font-size:13px}
+.lib-note b{color:var(--gray);font-weight:600}
+.lib-dlg{z-index:60;align-items:center}
+.ld-card{width:min(560px,100%);max-height:100%;overflow:auto;padding:24px;border-radius:18px;border:1px solid rgba(138,180,230,.25);background:linear-gradient(180deg,#132a52,#0a1630);box-shadow:0 30px 80px rgba(0,0,0,.6);animation:ovin .3s ease-out}
+.ld-card h2{margin:0 0 14px;font-family:var(--cond);font-weight:900;font-size:30px;letter-spacing:.02em;line-height:1;text-transform:uppercase}
+#ldB p{margin:0 0 12px;color:#c7d2e4;line-height:1.45}
+#ldB label{display:block;margin:0 0 14px}
+#ldB label>span{display:block;font-family:var(--cond);font-weight:700;font-size:12px;letter-spacing:.2em;color:var(--sky);margin-bottom:6px}
+#ldB textarea.in{min-height:84px;resize:vertical;font-family:var(--sans)}
+#ldB .chk{display:flex;align-items:center;gap:10px;margin:0 0 10px;color:#dfe6f2}
+#ldB .chk input{width:18px;height:18px;accent-color:var(--orange)}
+#ldB .ld-list{display:grid;gap:10px}
+#ldB .ld-list .sb{width:100%;text-align:left;padding:13px 14px}
+#ldB .ld-list small{display:block;font-family:var(--sans);font-weight:400;letter-spacing:0;color:var(--gray);font-size:13px;margin-top:3px;text-transform:none}
+.ld-err{color:#ff9d9d;font-size:14px;min-height:1.2em;margin:-6px 0 8px}
+.ld-acts{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px;margin-top:8px}
+.lib-conflict{position:fixed;left:50%;top:14px;transform:translateX(-50%);z-index:80;display:flex;gap:14px;align-items:center;max-width:calc(100% - 24px);
+  padding:12px 16px;border-radius:12px;background:#3a1a06;border:1px solid var(--orange);color:#ffe2c9;font-size:14px;box-shadow:0 14px 40px rgba(0,0,0,.5)}
+.s-gname{font-family:var(--cond);font-weight:800;font-size:18px;letter-spacing:.04em;text-transform:uppercase;max-width:28vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.save-ind{font-family:var(--cond);font-weight:700;font-size:12px;letter-spacing:.18em;color:var(--gray-dim);min-width:84px;transition:color .3s}
+.save-ind.saved{color:#7fdcaa}
+@media (max-width:700px){
+  .lib-head{padding:10px 14px}
+  .lib-hero{grid-template-columns:1fr;padding:24px 14px 4px}
+  .lib-host{display:none}
+  .lib-grid{padding:16px 14px 0;grid-template-columns:1fr}
+  .lib-note{padding:0 14px}
+  .lib-tools .sb.primary{flex:1 1 100%}
+  .lib-search{max-width:none}
+  .ld-card{padding:20px 16px}
+  .s-gname{max-width:60vw}
+}
 </style>
 </head>
 <body class="team-off">
@@ -970,6 +1043,41 @@ body:not(.fm-off) #end [data-g="playAgain"]{background:transparent;color:var(--w
   </defs>
 </svg>
 
+<!-- ===================== GAME LIBRARY ===================== -->
+<section class="lib" id="library" hidden aria-labelledby="libH">
+  <header class="lib-head">
+    <div class="brand">
+      <svg class="ball" aria-hidden="true"><use href="#ballSym"/></svg>
+      <div><div class="t">BASEBALL <b>IQ</b></div><div class="s">GAME LIBRARY</div></div>
+    </div>
+    <span class="grow"></span>
+    <a class="lib-sbx" href="../../">‹ Back to Sandbox</a>
+  </header>
+  <div class="lib-hero">
+    <div class="lib-hero-l">
+      <div class="st-kick">BASEBALL IQ · YOUR GAMES</div>
+      <h1 class="lib-title" id="libH">GAME <b>LIBRARY</b></h1>
+      <p class="lib-sub" id="libSub"></p>
+      <div class="lib-tools">
+        <button class="sb primary" id="libNew" type="button">+ CREATE GAME</button>
+        <label class="lib-search"><span class="sr">Search games</span><input class="in" id="libQ" type="search" placeholder="Search games, plays or answers" autocomplete="off"></label>
+        <label class="lib-sort"><span>SORT</span><select class="in" id="libSort"><option value="updated">Last edited</option><option value="name">Name</option><option value="created">Date created</option></select></label>
+        <button class="sb ghost" id="libIO" type="button">IMPORT / EXPORT</button>
+      </div>
+    </div>
+    <img class="host-img lib-host" alt="" width="944" height="706">
+  </div>
+  <div class="lib-grid" id="libGrid"></div>
+  <p class="lib-note">Games are saved in this browser on this device. To move them to another computer or keep a backup, use <b>IMPORT / EXPORT → EXPORT LIBRARY</b>.</p>
+</section>
+<div class="ov lib-dlg" id="libDlg" hidden role="dialog" aria-modal="true" aria-labelledby="ldT">
+  <div class="ld-card"><h2 id="ldT"></h2><div id="ldB"></div><div class="ld-acts" id="ldA"></div></div>
+</div>
+<div class="lib-conflict" id="libConflict" hidden role="alert">
+  <span>This game was changed in another tab or window. Saving is paused here so nothing is overwritten.</span>
+  <button class="sb sm primary" id="libReload" type="button">RELOAD</button>
+</div>
+<input type="file" id="fileLib" accept="application/json,.json" hidden>
 <!-- ===================== START SCREEN ===================== -->
 <section class="start" id="start" hidden>
   <div class="beam l"></div><div class="beam r"></div>
@@ -987,7 +1095,7 @@ body:not(.fm-off) #end [data-g="playAgain"]{background:transparent;color:var(--w
       <button class="sb ghost lg st-fm" id="stFm">⚡ FAST MONEY</button>
       <button class="sb ghost lg" id="stSetup">⚙ SETUP</button>
     </div>
-    <div class="st-hint"><kbd>ENTER</kbd> start · <kbd>F</kbd> full screen · <kbd>E</kbd> setup<a class="st-sbx" href="../../">‹ Back to Sandbox</a></div>
+    <div class="st-hint"><kbd>ENTER</kbd> start · <kbd>F</kbd> full screen · <kbd>E</kbd> setup<button class="st-sbx" id="stLib" type="button">‹ Game library</button></div>
   </div>
   <div class="st-right">
     <div class="st-hwrap">
@@ -1234,11 +1342,14 @@ body:not(.fm-off) #end [data-g="playAgain"]{background:transparent;color:var(--w
 <!-- ===================== SETUP ===================== -->
 <div id="setup" hidden>
   <header class="s-head">
+    <button class="sb ghost sm lib-back" id="bLib" type="button" title="Back to the game library (your edits are saved)">‹ LIBRARY</button>
     <div class="brand">
       <svg class="ball"><use href="#ballSym"/></svg>
       <div><div class="t">BASEBALL <b>IQ</b></div><div class="s">GAME REVIEW</div></div>
     </div>
     <span class="mode-tag">SETUP MODE</span>
+    <span class="s-gname" id="sGameName"></span>
+    <span class="save-ind" id="saveInd" aria-live="polite"></span>
     <label class="sess"><span>SESSION</span><input id="sessName" class="in" placeholder="e.g. GAME 127 REVIEW" maxlength="80"></label>
     <span class="grow"></span>
     <button class="sb ghost" id="bImport">IMPORT GAME</button>
@@ -1530,14 +1641,14 @@ function normPractice(x) {
 }
 function defaultState() {
   const plays = samplePlays();
-  return { version: DATA_VERSION, sessionName: 'GAME REVIEW', settings: defaultSettings(), plays,
+  return { version: DATA_VERSION, title: '', description: '', sessionName: 'GAME REVIEW', settings: defaultSettings(), plays,
     practice: samplePractice(), fastMoney: sampleFastMoney(), session: newSession(), ui: { mode: 'game', selected: plays[0].id, fmEdit: false, editPractice: false }, firstRun: true };
 }
 function load() {
   try {
-    const raw = localStorage.getItem(LS_KEY);
+    const raw = ACTIVE ? lsRead(GAME_KEY(ACTIVE)) : null;
     if (raw) {
-      const d = JSON.parse(raw);
+      const d = { ...obj(raw), session: lsRead(SESS_KEY(ACTIVE)) };
       if (Array.isArray(d.plays) && d.plays.length) {
         const seen = new Set();
         const migrated = num(d.version) < DATA_VERSION;
@@ -1546,6 +1657,7 @@ function load() {
         const plays = d.plays.map(p => normPlay(p, seen));
         return {
           version: DATA_VERSION,
+          title: str(d.title).trim().slice(0, 80), description: str(d.description).trim().slice(0, 400),
           sessionName: str(d.sessionName) || 'GAME REVIEW',
           settings,
           plays,
@@ -1558,21 +1670,147 @@ function load() {
       }
     }
   } catch (e) { console.warn('Could not load saved game', e); }
+  // A game that can't be read is never overwritten: back to the library instead.
+  if (ACTIVE) { openError = true; ACTIVE = null; try { sessionStorage.removeItem(OPEN_KEY); } catch (e) {} }
   return defaultState();
 }
 
+/* ================= GAME LIBRARY: STORAGE =================
+   Each game is saved on its own: its definition (plays, answers, practice play, Fast Money,
+   settings) under baseballIQ.game.<id>, and its live gameplay progress (scores, reveals,
+   strikes) under baseballIQ.session.<id>. The library index (baseballIQ.library.v1) holds each
+   game's title, description, status and dates. A browser tab works on one game at a time
+   (sessionStorage remembers which), so editing or playing one game never writes into another.
+   Videos stay in IndexedDB keyed by play id; play ids are unique per game. */
+const LIB_KEY = 'baseballIQ.library.v1', OPEN_KEY = 'baseballIQ.open', SORT_KEY = 'baseballIQ.librarySort';
+const GAME_KEY = id => 'baseballIQ.game.' + id, SESS_KEY = id => 'baseballIQ.session.' + id;
+const GAME_STATUS = { draft: 'DRAFT', ready: 'READY TO PLAY', completed: 'COMPLETED' };
+const GID_RE = /^[a-z0-9]{4,40}$/i;
+const nowISO = () => new Date().toISOString();
+const isoOr = (v, d) => (typeof v === 'string' && v && !isNaN(Date.parse(v))) ? new Date(v).toISOString() : d;
+const newGameId = () => 'g' + uid();
+function lsRead(k) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : null; } catch (e) { return null; } }
+function normMeta(m) {
+  m = obj(m); const t = nowISO();
+  return {
+    id: GID_RE.test(str(m.id)) ? str(m.id) : '', title: str(m.title).trim().slice(0, 80) || 'Untitled Game', description: str(m.description).trim().slice(0, 400),
+    status: GAME_STATUS[m.status] ? m.status : 'draft', createdAt: isoOr(m.createdAt, t), updatedAt: isoOr(m.updatedAt, isoOr(m.createdAt, t)), playedAt: isoOr(m.playedAt, null),
+    plays: Math.max(0, num(m.plays) | 0), answers: Math.max(0, num(m.answers) | 0), practice: !!m.practice, fastMoney: !!m.fastMoney, fmQuestions: Math.max(0, num(m.fmQuestions) | 0),
+  };
+}
+function libRead() { const l = lsRead(LIB_KEY); return l && Array.isArray(l.games) ? { ...l, games: l.games.map(normMeta).filter(g => g.id) } : null; }
+function libWrite(lib) { localStorage.setItem(LIB_KEY, JSON.stringify(lib)); }
+// Re-reads the index before each change, so a change made in another tab is never lost.
+function libUpdate(fn) { const lib = libRead() || { version: 1, games: [] }; fn(lib); libWrite(lib); return lib; }
+// The counts shown on a library card, from a game definition.
+function metaStats(def) {
+  const plays = Array.isArray(def.plays) ? def.plays : [], pr = obj(def.practice), fq = Array.isArray(obj(def.fastMoney).questions) ? def.fastMoney.questions : [];
+  // answers = rows with text (a new play starts with blank rows waiting to be filled)
+  return { plays: plays.length, answers: plays.reduce((a, p) => a + (Array.isArray(obj(p).observations) ? p.observations.filter(o => str(obj(o).text).trim()).length : 0), 0),
+    practice: pr.enabled !== false && Array.isArray(obj(pr.play).observations) && pr.play.observations.length > 0,
+    fastMoney: obj(def.settings).fastMoneyOn !== false && fq.length > 0, fmQuestions: fq.length };
+}
+function storeGame(id, def, session) {
+  localStorage.setItem(GAME_KEY(id), JSON.stringify(def));
+  localStorage.setItem(SESS_KEY(id), JSON.stringify(session || newSession()));
+}
+let libStorageBroken = false, openError = false;
+function initLibrary() {
+  const existing = libRead();
+  if (existing) return existing;
+  const t = nowISO(), lib = { version: 1, games: [], createdAt: t };
+  try {
+    const old = lsRead(LS_KEY);
+    if (old && Array.isArray(old.plays) && old.plays.length) {
+      // The game saved before the library existed becomes its first game. The old key is left
+      // untouched as a backup; nothing is deleted or reset.
+      // Stored in the current, complete format (same plays, answers and ids), so it compares and
+      // exports like any other game.
+      const id = newGameId(), def = defFromData(old, false);
+      if (num(old.version) < 2) def.settings.teamMode = true;
+      def.ui = { ...def.ui, mode: obj(old.ui).mode === 'setup' ? 'setup' : 'game' };
+      const name = str(old.sessionName).trim();
+      def.title = name && name.toUpperCase() !== 'GAME REVIEW' ? name.slice(0, 80) : 'My Baseball IQ Game';
+      def.description = '';
+      storeGame(id, def, normSession(old.session, def.plays));
+      lib.games.push(normMeta({ id, title: def.title, status: 'ready', createdAt: t, updatedAt: t, ...metaStats(def) }));
+      lib.migratedFrom = LS_KEY;
+    } else {
+      const id = newGameId(), { session, firstRun, ...def } = defaultState();
+      def.title = 'Example Game';
+      def.description = 'The sample plays: a practice play, three live plays and Fast Money. Play it, or duplicate it as a template.';
+      storeGame(id, def, session);
+      lib.games.push(normMeta({ id, title: def.title, description: def.description, status: 'ready', createdAt: t, updatedAt: t, ...metaStats(def) }));
+    }
+    lib.lastOpened = lib.games[0].id;
+    libWrite(lib);
+  } catch (e) { console.warn('Could not create the game library', e); libStorageBroken = true; }
+  return lib;
+}
+let LIB = initLibrary();
+// The game this tab has open (survives a refresh of this tab; a new tab starts at the library).
+let ACTIVE = null;
+try { const id = sessionStorage.getItem(OPEN_KEY); if (id && LIB.games.some(g => g.id === id)) ACTIVE = id; } catch (e) {}
+
 let state = load();
 let saveTimer = null;
-function save() { clearTimeout(saveTimer); saveTimer = setTimeout(saveNow, 200); }
+function save() { clearTimeout(saveTimer); saveTimer = setTimeout(saveNow, 200); markSaving(); }
+let savedDef = null, savedSess = null, savedContent = null, saveConflict = false;
+function splitForSave() {
+  const { firstRun, migrated, session, ...def } = state;
+  let sess = session;
+  if (practice) { def.plays = practice.livePlays; sess = practice.liveSession; }   // never persist the practice sandbox
+  return { def, sess };
+}
+// Only the open game is ever written; nothing is written while the library is showing.
 function saveNow() {
   clearTimeout(saveTimer);
+  if (!ACTIVE || saveConflict) return;
   try {
-    const { firstRun, migrated, ...rest } = state;
-    if (practice) { rest.plays = practice.livePlays; rest.session = practice.liveSession; }   // never persist the practice sandbox
-    localStorage.setItem(LS_KEY, JSON.stringify(rest));
+    const { def, sess } = splitForSave();
+    const d = JSON.stringify(def), s = JSON.stringify(sess), content = JSON.stringify({ ...def, ui: null });
+    const contentChanged = content !== savedContent, sessChanged = s !== savedSess;
+    if (d !== savedDef) { localStorage.setItem(GAME_KEY(ACTIVE), d); savedDef = d; }
+    if (sessChanged) { localStorage.setItem(SESS_KEY(ACTIVE), s); savedSess = s; }
+    if (contentChanged || sessChanged) {
+      const id = ACTIVE, t = nowISO();
+      libUpdate(lib => {
+        const m = lib.games.find(g => g.id === id); if (!m) return;
+        Object.assign(m, metaStats(def));
+        if (state.title) m.title = state.title;
+        m.description = state.description || '';
+        if (contentChanged) m.updatedAt = t;
+        if (sessChanged) m.playedAt = t;
+      });
+      savedContent = content;
+    }
+    markSaved();
   }
-  catch (e) { console.warn(e); toast('Couldn’t save setup to this browser. Use EXPORT GAME to keep a copy.'); }
+  catch (e) { console.warn(e); toast('Couldn’t save to this browser (storage full or blocked). Use EXPORT GAME to keep a copy.', 5000); markSaving('NOT SAVED'); }
 }
+function primeSaved() {
+  if (!ACTIVE) return;
+  const { def } = splitForSave();
+  // savedDef/savedSess hold what's on disk, so the first save rewrites a game stored in an older
+  // shape in the current one; savedContent is the loaded content, so that rewrite isn't an "edit".
+  try { savedDef = localStorage.getItem(GAME_KEY(ACTIVE)); savedSess = localStorage.getItem(SESS_KEY(ACTIVE)); } catch (e) {}
+  savedContent = JSON.stringify({ ...def, ui: null });
+}
+primeSaved();   // what's on disk now, so opening a game never counts as an edit
+let saveIndT = null;
+function markSaving(txt) { const el = $('#saveInd'); if (!el) return; clearTimeout(saveIndT); el.classList.remove('saved'); el.textContent = txt || 'SAVING…'; }
+function markSaved() {
+  const el = $('#saveInd'); if (!el || state.ui.mode !== 'setup') return;
+  clearTimeout(saveIndT); el.textContent = '✓ SAVED'; el.classList.add('saved');
+  saveIndT = setTimeout(() => el.classList.remove('saved'), 1800);
+}
+// Another tab changed this game: stop saving here so neither copy overwrites the other.
+window.addEventListener('storage', e => {
+  if (ACTIVE && (e.key === GAME_KEY(ACTIVE) && e.newValue !== savedDef || e.key === SESS_KEY(ACTIVE) && e.newValue !== savedSess || e.key === null)) {
+    saveConflict = true; $('#libConflict').hidden = false;
+  }
+  if (e.key === LIB_KEY && libOpen()) renderLibrary();
+});
 window.addEventListener('beforeunload', saveNow);
 
 const playById = id => state.plays.find(p => p.id === id) || (state.practice && state.practice.play.id === id ? state.practice.play : undefined);
@@ -1677,7 +1915,7 @@ function resetRoundScores(p) {
   delete s.rounds[p.id]; delete s.adjust[p.id]; delete s.summarized[p.id];
   return had;
 }
-function newGame() { state.session = newSession(); lastRevealed = null; save(); }
+function newGame() { state.session = newSession(); lastRevealed = null; save(); setGameStatus('ready', ['completed']); }
 
 /* ================= VIDEO STORAGE (IndexedDB) ================= */
 let idb = null;
@@ -2458,7 +2696,7 @@ function wrapHost(html) {
   return `<div class="fin-host"><img class="host-img" alt="Game host" width="944" height="706"></div><div class="fin-main">${html}</div>`;
 }
 function openEnd() {
-  hostSilence();
+  hostSilence(); setGameStatus('completed', ['ready', 'draft']);
   gv.pause(); closeOverlay('help'); clearFlow();
   const team = teamOn(), n = state.plays.length;
   const obsCount = state.plays.reduce((a, p) => a + p.observations.length, 0);
@@ -2618,7 +2856,7 @@ board.addEventListener('click', e => {
 
 /* ----- keyboard (game mode only; never while typing) ----- */
 window.addEventListener('keydown', e => {
-  if (state.ui.mode !== 'game') return;
+  if (!ACTIVE || libOpen() || !$('#libDlg').hidden || state.ui.mode !== 'game') return;
   const t = e.target;
   if (startOpen() && !(t && /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) {
     if (e.metaKey || e.ctrlKey || e.altKey) return;
@@ -2680,11 +2918,13 @@ document.addEventListener('pointerdown', poke, { passive: true });
 const hasFiles = e => e.dataTransfer && [...(e.dataTransfer.types || [])].includes('Files');
 window.addEventListener('dragover', e => {
   if (!hasFiles(e)) return; e.preventDefault();
+  if (!ACTIVE || libOpen()) return;
   if (state.ui.mode === 'game') $('#vFrame').classList.add('over');
 });
 window.addEventListener('dragleave', e => { if (!e.relatedTarget) $('#vFrame').classList.remove('over'); });
 window.addEventListener('drop', e => {
   if (!hasFiles(e)) return; e.preventDefault();
+  if (!ACTIVE || libOpen()) return;
   $('#vFrame').classList.remove('over');
   const f = e.dataTransfer.files[0];
   if (state.ui.mode === 'game') { if (f) setVideo(curPlay().id, f); }
@@ -2822,6 +3062,7 @@ function selPlay() {
 }
 function renderSetup() {
   $('#sessName').value = state.sessionName;
+  $('#sGameName').textContent = state.title || '';
   renderPlayList(); renderEditor(); syncSettingsUI(); renderSetupScoreboard(); updateStorageInfo();
 }
 const V_LABEL = { saved: 'video saved', saving: 'saving video…', session: 'video (this session)', missing: 'needs video', none: 'no video' };
@@ -3733,16 +3974,8 @@ $('#bResPrint').addEventListener('click', printResults);
 
 /* ----- game config import / export (JSON) ----- */
 $('#bExport').addEventListener('click', () => {
-  saveNow();
-  const data = {
-    app: 'baseball-iq', version: DATA_VERSION, exportedAt: new Date().toISOString(),
-    sessionName: state.sessionName, settings: state.settings,
-    plays: state.plays.map(p => ({ id: p.id, title: p.title, prompt: p.prompt, videoName: p.videoName,
-      observations: p.observations.map(o => ({ text: o.text, points: o.points })) })),
-    practice: { enabled: state.practice.enabled, play: { title: state.practice.play.title, prompt: state.practice.play.prompt, videoName: state.practice.play.videoName, observations: state.practice.play.observations.map(o => ({ text: o.text, points: o.points })) } },
-    fastMoney: { seconds: state.fastMoney.seconds, questions: state.fastMoney.questions.map(q => ({ q: q.q, answer: q.answer, points: q.points })) },
-  };
-  download(fileSlug() + '.json', JSON.stringify(data, null, 2), 'application/json');
+  const { def } = splitForSave();
+  download(slugOf(state.title || state.sessionName) + '.json', JSON.stringify(exportShape(def), null, 2), 'application/json');
   toast('Game exported (text and settings — video files aren’t included)', 3500);
 });
 $('#bImport').addEventListener('click', () => { const f = $('#fileImport'); f.value = ''; f.click(); });
@@ -3774,8 +4007,327 @@ $('#fileImport').addEventListener('change', async e => {
 $('#fileVideo').addEventListener('change', e => { const f = e.target.files[0]; const pid = e.target.dataset.pid; if (f && pid) setVideo(pid, f); });
 $('#bPresent').addEventListener('click', () => enterGame());
 
+/* ================= GAME LIBRARY: SCREEN =================
+   Home of the app: every saved game as a card (Play · Edit · ⋯). Opening a game reloads the
+   page with that game, so nothing from one game (scores, timers, practice, Fast Money) can
+   carry into another. */
+const libOpen = () => !$('#library').hidden;
+let libQuery = '', libSort = 'updated';
+try { libSort = ['updated', 'name', 'created'].includes(localStorage.getItem(SORT_KEY)) ? localStorage.getItem(SORT_KEY) : 'updated'; } catch (e) {}
+const plural = (n, w) => `${n} ${w}${n === 1 ? '' : 'S'}`;
+function fmtWhen(iso) {
+  if (!iso) return '';
+  const d = new Date(iso), t = new Date(), y = new Date(t); y.setDate(t.getDate() - 1);
+  const time = d.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+  if (d.toDateString() === t.toDateString()) return `today ${time}`;
+  if (d.toDateString() === y.toDateString()) return `yesterday ${time}`;
+  return d.toLocaleDateString([], { month: 'short', day: 'numeric', year: d.getFullYear() === t.getFullYear() ? undefined : 'numeric' });
+}
+// "In progress · Play 2 of 4" from a game's saved session, without loading the game.
+function progressLabel(id, plays) {
+  const s = lsRead(SESS_KEY(id)); if (!s || !plays) return '';
+  const rounds = Object.values(obj(s.rounds)), any = num(s.current) > 0 || rounds.length > 0 || Object.values(obj(s.revealed)).some(a => Array.isArray(a) && a.length);
+  if (!any) return '';
+  return `IN PROGRESS · PLAY ${Math.min(plays, (num(s.current) | 0) + 1)} OF ${plays}`;
+}
+function searchText(id) {
+  const d = obj(lsRead(GAME_KEY(id))), plays = Array.isArray(d.plays) ? d.plays : [];
+  return [d.sessionName, ...plays.map(p => [obj(p).title, obj(p).prompt, ...(Array.isArray(obj(p).observations) ? p.observations.map(o => obj(o).text) : [])].join(' '))].join(' ');
+}
+function showLibrary() {
+  ['start', 'game', 'setup'].forEach(id => { $('#' + id).hidden = true; });
+  $('#library').hidden = false;
+  document.body.classList.remove('idle', 'bar-hidden', 'practice');
+  document.title = 'Baseball IQ — Game Library';
+  $('#libQ').value = libQuery; $('#libSort').value = libSort;
+  renderLibrary();
+}
+function renderLibrary() {
+  LIB = libRead() || LIB;
+  const q = libQuery.trim().toLowerCase();
+  let games = LIB.games.slice();
+  if (q) games = games.filter(g => (g.title + ' ' + g.description + ' ' + searchText(g.id)).toLowerCase().includes(q));
+  if (libSort === 'name') games.sort((a, b) => a.title.localeCompare(b.title, undefined, { numeric: true, sensitivity: 'base' }));
+  else if (libSort === 'created') games.sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+  else games.sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
+  const n = LIB.games.length;
+  $('#libSub').textContent = libStorageBroken ? 'THIS BROWSER ISN’T ALLOWING STORAGE — GAMES CAN’T BE SAVED HERE' : `${plural(n, 'SAVED GAME')} ON THIS DEVICE`;
+  $('#libGrid').innerHTML = games.length ? games.map(g => {
+    const prog = progressLabel(g.id, g.plays), last = LIB.lastOpened === g.id;
+    const parts = [plural(g.plays, 'PLAY'), g.practice ? 'PRACTICE' : '', g.fastMoney ? 'FAST MONEY' : ''].filter(Boolean).join(' · ');
+    return `<article class="lib-card${last ? ' last' : ''}" data-id="${esc(g.id)}">
+      <div class="lc-top"><span class="lc-pill s-${g.status}">${GAME_STATUS[g.status]}</span>${prog ? `<span class="lc-pill live">${esc(prog)}</span>` : ''}${last ? '<span class="lc-pill last">LAST OPENED</span>' : ''}</div>
+      <h2 class="lc-title">${esc(g.title)}</h2>
+      ${g.description ? `<p class="lc-desc">${esc(g.description)}</p>` : ''}
+      <div class="lc-meta">${parts} · ${plural(g.answers, 'ANSWER')}</div>
+      <div class="lc-dates">Edited ${esc(fmtWhen(g.updatedAt))} · Created ${esc(fmtWhen(g.createdAt))}</div>
+      <div class="lc-acts">
+        <button class="sb primary" type="button" data-lib="play" aria-label="Play ${esc(g.title)}">▶ ${prog ? 'RESUME' : 'PLAY'}</button>
+        <button class="sb ghost" type="button" data-lib="edit" aria-label="Edit ${esc(g.title)}">✎ EDIT</button>
+        <button class="sb ghost lc-more" type="button" data-lib="more" aria-label="More for ${esc(g.title)}" title="Details, duplicate, export, delete">⋯</button>
+      </div></article>`;
+  }).join('') : `<div class="lib-empty">${n ? `<b>NO GAMES MATCH</b>Try another word, or clear the search.` : `<b>NO GAMES YET</b>Create your first game, or import one you exported.`}</div>`;
+}
+function openGame(id, mode) {
+  const def = lsRead(GAME_KEY(id));
+  if (!def) { toast('That game can’t be found. It may have been deleted in another tab.', 4000); renderLibrary(); return; }
+  try {
+    def.ui = { ...obj(def.ui), mode: mode === 'setup' ? 'setup' : 'game' };
+    localStorage.setItem(GAME_KEY(id), JSON.stringify(def));
+    libUpdate(l => { l.lastOpened = id; });
+    sessionStorage.setItem(OPEN_KEY, id);
+  } catch (e) { toast('This browser isn’t allowing storage, so games can’t be opened here.', 5000); return; }
+  location.reload();
+}
+// Back to the library: the open game is saved first, then this tab stops writing to it.
+function goLibrary() {
+  saveNow();
+  hostSilence(); if (fm) closeFastMoney(); restoreLive();
+  gv.pause(); clearFlow(); stopReactions(); ['tk', 'end', 'help', 'prDone'].forEach(closeOverlay);
+  if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
+  try { sessionStorage.removeItem(OPEN_KEY); } catch (e) {}
+  ACTIVE = null;
+  showLibrary();
+}
+
+/* ----- dialogs ----- */
+function libDialog(title, body, buttons) {
+  return new Promise(res => {
+    const ov = $('#libDlg');
+    $('#ldT').textContent = title; $('#ldB').innerHTML = body;
+    $('#ldA').innerHTML = buttons.map(b => `<button class="sb ${b.cls || 'ghost'}" data-v="${esc(b.value)}" type="button">${esc(b.label)}</button>`).join('');
+    ov.hidden = false;
+    const f = $('#ldB input:not([type=checkbox]), #ldB textarea') || $('#ldA .primary'); if (f) f.focus();
+    const done = v => {
+      if (v !== 'cancel' && ov._check && !ov._check(v)) return;   // stays open (e.g. title missing)
+      ov.hidden = true; ov._check = null; ov.removeEventListener('click', onClick); document.removeEventListener('keydown', onKey, true); res(v);
+    };
+    const onClick = e => { const b = e.target.closest('#ldA [data-v], #ldB [data-v]'); if (b) done(b.dataset.v); else if (e.target === ov) done('cancel'); };
+    const onKey = e => {
+      if (e.key === 'Escape') { e.preventDefault(); e.stopPropagation(); done('cancel'); }
+      else if (e.key === 'Enter' && e.target.tagName === 'INPUT') { e.preventDefault(); const p = $('#ldA .primary'); if (p) done(p.dataset.v); }
+    };
+    ov.addEventListener('click', onClick); document.addEventListener('keydown', onKey, true);
+  });
+}
+const requireTitle = () => { const v = $('#ldTitle').value.trim(); if (!v) { $('#ldErr').textContent = 'Give the game a title.'; $('#ldTitle').focus(); } return !!v; };
+const gameFields = (m, withStatus) => `
+  <label><span>GAME TITLE</span><input class="in" id="ldTitle" maxlength="80" value="${esc(m.title)}" placeholder="e.g. Spring Training 2027"></label>
+  <div class="ld-err" id="ldErr"></div>
+  <label><span>DESCRIPTION <small style="letter-spacing:0;font-family:var(--sans);font-weight:400;color:var(--gray)">(optional)</small></span><textarea class="in" id="ldDesc" maxlength="400" placeholder="Who it’s for, what it covers">${esc(m.description)}</textarea></label>
+  ${withStatus ? `<label><span>STATUS</span><select class="in" id="ldStatus">${Object.entries(GAME_STATUS).map(([k, v]) => `<option value="${k}"${m.status === k ? ' selected' : ''}>${v}</option>`).join('')}</select></label>` : ''}`;
+
+/* ----- create, duplicate, details, delete ----- */
+function addGame(def, meta, session) {
+  const id = newGameId(), t = nowISO();
+  storeGame(id, def, session || newSession());
+  libUpdate(lib => { lib.games.push(normMeta({ status: 'draft', createdAt: t, updatedAt: t, ...meta, id, title: def.title, description: def.description, ...metaStats(def) })); });
+  return id;
+}
+async function createGame() {
+  $('#libDlg')._check = requireTitle;
+  const v = await libDialog('Create a game', gameFields({ title: '', description: '' }, false) +
+    `<label class="chk"><input type="checkbox" id="ldPr" checked> Start with a practice play</label>
+     <label class="chk"><input type="checkbox" id="ldFm" checked> Include a Fast Money round</label>
+     <p style="font-size:13px;margin-top:4px">You’ll go straight to Setup to add plays and answers. Both extras come with sample content you can edit or switch off later.</p>`,
+    [{ label: 'CANCEL', value: 'cancel' }, { label: 'CREATE & EDIT', value: 'ok', cls: 'primary' }]);
+  if (v !== 'ok') return;
+  // the first play matches + ADD PLAY: five blank answers at 30, 25, 20, 15 and 10 points
+  const st = defaultState(), play = normPlay({ title: 'Play 1', prompt: DEFAULT_PROMPT, observations: [30, 25, 20, 15, 10].map(points => ({ text: '', points })) }, new Set());
+  const title = $('#ldTitle').value.trim().slice(0, 80);
+  const { session, firstRun, ...def } = st;
+  Object.assign(def, { title, description: $('#ldDesc').value.trim().slice(0, 400), sessionName: title.toUpperCase().slice(0, 80), plays: [play],
+    ui: { mode: 'setup', selected: play.id, fmEdit: false, editPractice: false } });
+  def.practice.enabled = $('#ldPr').checked;
+  def.settings.fastMoneyOn = $('#ldFm').checked;
+  try { openGame(addGame(def, { status: 'draft' }), 'setup'); } catch (e) { toast('Couldn’t save the new game (storage full or blocked).', 5000); }
+}
+// A game definition from any exported game (or a stored one). fresh: give plays, answers and
+// questions new ids so a copy never shares a video slot or progress with the original.
+function defFromData(data, fresh) {
+  data = obj(data);
+  const strip = p => { p = obj(p); return fresh ? { ...p, id: undefined, observations: (Array.isArray(p.observations) ? p.observations : []).map(o => ({ ...obj(o), id: undefined })) } : p; };
+  const seen = new Set();
+  const plays = (Array.isArray(data.plays) ? data.plays : []).slice(0, 300).map(p => normPlay(strip(p), seen));
+  if (!plays.length) return null;
+  const pr = obj(data.practice), fmq = obj(data.fastMoney);
+  const practice = pr.play ? normPractice({ ...pr, play: strip(pr.play) }) : samplePractice();
+  const fastMoney = data.fastMoney ? normFM(fresh ? { ...fmq, questions: (Array.isArray(fmq.questions) ? fmq.questions : []).map(q => ({ ...obj(q), id: undefined })) } : fmq) : sampleFastMoney();
+  const title = (str(data.title).trim() || str(data.sessionName).trim() || 'Imported Game').slice(0, 80);
+  return { version: DATA_VERSION, title, description: str(data.description).trim().slice(0, 400), sessionName: (str(data.sessionName).trim() || 'GAME REVIEW').slice(0, 80),
+    settings: normSettings(data.settings), plays, practice, fastMoney, ui: { mode: 'setup', selected: plays[0].id, fmEdit: false, editPractice: false } };
+}
+function duplicateGame(id) {
+  const m = LIB.games.find(g => g.id === id), def = defFromData(lsRead(GAME_KEY(id)), true);
+  if (!m || !def) { toast('That game couldn’t be read.'); return; }
+  def.title = `${m.title} (copy)`.slice(0, 80); def.description = m.description;
+  try { addGame(def, { status: 'draft' }); } catch (e) { toast('Couldn’t save the copy (storage full or blocked).', 5000); return; }
+  renderLibrary();
+  const vids = [...def.plays, def.practice.play].some(p => p.videoName);
+  toast(`Duplicated as “${def.title}”.` + (vids ? ' Videos aren’t copied — use RELINK VIDEOS BY FILENAME in Setup.' : ''), vids ? 6000 : 3000);
+}
+async function gameDetails(id) {
+  const m = LIB.games.find(g => g.id === id); if (!m) return;
+  $('#libDlg')._check = v => v !== 'save' || requireTitle();
+  const v = await libDialog('Game details', gameFields(m, true) +
+    `<p style="font-size:13px">${plural(m.plays, 'play')} · ${plural(m.answers, 'answer')}${m.fastMoney ? ` · Fast Money (${m.fmQuestions})` : ''}<br>Created ${esc(fmtWhen(m.createdAt))} · Edited ${esc(fmtWhen(m.updatedAt))}</p>`,
+    [{ label: 'DELETE', value: 'delete', cls: 'danger' }, { label: 'EXPORT', value: 'export' }, { label: 'DUPLICATE', value: 'dup' }, { label: 'CANCEL', value: 'cancel' }, { label: 'SAVE', value: 'save', cls: 'primary' }]);
+  if (v === 'save') {
+    const title = $('#ldTitle').value.trim().slice(0, 80), description = $('#ldDesc').value.trim().slice(0, 400), status = $('#ldStatus').value;
+    try {
+      const def = lsRead(GAME_KEY(id));
+      if (def) { def.title = title; def.description = description; localStorage.setItem(GAME_KEY(id), JSON.stringify(def)); }
+      const changed = title !== m.title || description !== m.description;
+      libUpdate(l => { const g = l.games.find(x => x.id === id); if (g) Object.assign(g, { title, description, status: GAME_STATUS[status] ? status : g.status }, changed ? { updatedAt: nowISO() } : {}); });
+    } catch (e) { toast('Couldn’t save (storage full or blocked).'); }
+    renderLibrary();
+  } else if (v === 'dup') duplicateGame(id);
+  else if (v === 'export') exportGameById(id);
+  else if (v === 'delete') deleteGame(id);
+}
+async function deleteGame(id) {
+  const m = LIB.games.find(g => g.id === id); if (!m) return;
+  const v = await libDialog('Delete this game?', `<p>“${esc(m.title)}” — its plays, answers, scores and any videos saved with it — will be removed from this browser. This can’t be undone.</p><p style="font-size:13px">Want a copy first? Export it, then delete.</p>`,
+    [{ label: 'CANCEL', value: 'cancel' }, { label: 'EXPORT FIRST', value: 'export' }, { label: 'DELETE GAME', value: 'delete', cls: 'danger' }]);
+  if (v === 'export') { exportGameById(id); return; }
+  if (v !== 'delete') return;
+  const def = obj(lsRead(GAME_KEY(id)));
+  const pids = [...(Array.isArray(def.plays) ? def.plays : []).map(p => obj(p).id), obj(obj(def.practice).play).id].filter(x => typeof x === 'string');
+  try {
+    localStorage.removeItem(GAME_KEY(id)); localStorage.removeItem(SESS_KEY(id));
+    libUpdate(l => { l.games = l.games.filter(g => g.id !== id); if (l.lastOpened === id) l.lastOpened = null; });
+  } catch (e) { toast('Couldn’t delete (storage blocked).'); return; }
+  if (idb) for (const pid of pids) await idbDel(pid);
+  renderLibrary(); toast(`Deleted “${m.title}”.`);
+}
+
+/* ----- import / export ----- */
+function exportShape(def) {
+  return {
+    app: 'baseball-iq', version: DATA_VERSION, exportedAt: new Date().toISOString(),
+    title: def.title || '', description: def.description || '', sessionName: def.sessionName, settings: def.settings,
+    plays: def.plays.map(p => ({ id: p.id, title: p.title, prompt: p.prompt, videoName: p.videoName, observations: p.observations.map(o => ({ text: o.text, points: o.points })) })),
+    practice: { enabled: def.practice.enabled, play: { title: def.practice.play.title, prompt: def.practice.play.prompt, videoName: def.practice.play.videoName, observations: def.practice.play.observations.map(o => ({ text: o.text, points: o.points })) } },
+    fastMoney: { seconds: def.fastMoney.seconds, questions: def.fastMoney.questions.map(q => ({ q: q.q, answer: q.answer, points: q.points })) },
+  };
+}
+const slugOf = t => (str(t).trim() || 'baseball-iq').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'baseball-iq';
+function exportGameById(id) {
+  const def = defFromData(lsRead(GAME_KEY(id)), false); const m = LIB.games.find(g => g.id === id);
+  if (!def) { toast('That game couldn’t be read.'); return; }
+  def.title = m ? m.title : def.title; def.description = m ? m.description : def.description;
+  download(slugOf(def.title) + '.json', JSON.stringify(exportShape(def), null, 2), 'application/json');
+  toast('Game exported (text and settings — video files aren’t included).', 3500);
+}
+function exportLibrary(name) {
+  const lib = libRead() || LIB;
+  const games = lib.games.map(m => ({ meta: m, game: lsRead(GAME_KEY(m.id)), session: lsRead(SESS_KEY(m.id)) })).filter(g => g.game);
+  download(name || `baseball-iq-library-${dateStamp()}.json`, JSON.stringify({ app: 'baseball-iq', kind: 'library', version: 1, exportedAt: nowISO(), games }, null, 2), 'application/json');
+  return games.length;
+}
+async function ioMenu() {
+  const v = await libDialog('Import & export', `<p>Games live in this browser. Export to keep a backup or to move games to another computer; import to bring them in.</p>
+    <div class="ld-list">
+      <button class="sb ghost" data-v="importGame" type="button">IMPORT A GAME<small>A single game (.json) exported from Baseball IQ. It’s added as a new game; nothing is replaced.</small></button>
+      <button class="sb ghost" data-v="importLib" type="button">IMPORT A LIBRARY BACKUP<small>Restore from a library backup. You choose to merge it with these games or replace them.</small></button>
+      <button class="sb ghost" data-v="exportLib" type="button">EXPORT LIBRARY<small>Every saved game in one backup file, including unfinished game progress. Videos aren’t included.</small></button>
+    </div>`, [{ label: 'CLOSE', value: 'cancel' }]);
+  if (v === 'exportLib') { const n = exportLibrary(); toast(`Library exported (${plural(n, 'game').toLowerCase()}).`); }
+  else if (v === 'importGame' || v === 'importLib') { const f = $('#fileLib'); f.dataset.kind = v; f.value = ''; f.click(); }
+}
+$('#fileLib').addEventListener('change', async e => {
+  const f = e.target.files[0]; if (!f) return;
+  if (f.size > 25 * 1024 * 1024) { toast('That file is too large to be a Baseball IQ game.', 4000); return; }
+  let data;
+  try { data = JSON.parse(await f.text()); } catch (err) { toast('That file isn’t valid JSON, so nothing was imported.', 4000); return; }
+  if (!data || typeof data !== 'object') { toast('That file isn’t a Baseball IQ game.', 4000); return; }
+  if (Array.isArray(data.games)) importLibrary(data, f.name);
+  else importGame(data, f.name);
+});
+function importGame(data, fname) {
+  const def = defFromData(data, true);
+  if (!def) { toast('No plays found in that file, so nothing was imported.', 4000); return; }
+  if (!str(data.title).trim() && !str(data.sessionName).trim()) def.title = fname.replace(/\.json$/i, '').slice(0, 80) || 'Imported Game';
+  try { addGame(def, { status: 'ready' }); } catch (e) { toast('Couldn’t save the imported game (storage full or blocked).', 5000); return; }
+  renderLibrary(); toast(`Imported “${def.title}” (${plural(def.plays.length, 'play').toLowerCase()}).`, 3500);
+}
+async function importLibrary(data, fname) {
+  const entries = data.games.map(e => {
+    e = obj(e); const raw = obj(e.game || e), def = defFromData(raw, false); if (!def) return null;
+    const meta = normMeta({ ...obj(e.meta), title: str(obj(e.meta).title) || def.title, description: obj(e.meta).description ?? def.description });
+    def.title = meta.title; def.description = meta.description;
+    return { meta, def, session: e.session };
+  }).filter(Boolean);
+  if (!entries.length) { toast('No games found in that file, so nothing was imported.', 4000); return; }
+  const when = isoOr(data.exportedAt, null);
+  const v = await libDialog('Import library backup', `<p><b>${plural(entries.length, 'game').toLowerCase()}</b> in ${esc(fname)}${when ? `, exported ${esc(fmtWhen(when))}` : ''}.</p>
+    <p><b>Merge</b> adds them to your ${plural(LIB.games.length, 'game').toLowerCase()}. Games you already have are skipped; changed versions come in as copies, so nothing is overwritten.</p>
+    <p><b>Replace</b> removes the games here and loads the backup instead. A backup of your current library downloads first.</p>`,
+    [{ label: 'CANCEL', value: 'cancel' }, { label: 'REPLACE', value: 'replace', cls: 'danger' }, { label: 'MERGE', value: 'merge', cls: 'primary' }]);
+  if (v !== 'merge' && v !== 'replace') return;
+  let added = 0, skipped = 0, copies = 0;
+  try {
+    if (v === 'replace') {
+      exportLibrary(`baseball-iq-library-before-restore-${dateStamp()}.json`);
+      const keep = new Set(entries.flatMap(x => [...x.def.plays, x.def.practice.play].map(p => p.id)));
+      for (const m of (libRead() || LIB).games) {
+        const d = obj(lsRead(GAME_KEY(m.id)));
+        const pids = [...(Array.isArray(d.plays) ? d.plays : []).map(p => obj(p).id), obj(obj(d.practice).play).id].filter(x => typeof x === 'string' && !keep.has(x));
+        localStorage.removeItem(GAME_KEY(m.id)); localStorage.removeItem(SESS_KEY(m.id));
+        if (idb) for (const pid of pids) await idbDel(pid);
+      }
+      libUpdate(l => { l.games = []; l.lastOpened = null; });
+    }
+    const lib = libRead() || { games: [] };
+    const usedIds = new Set(lib.games.map(g => g.id));
+    const usedPlays = new Set(lib.games.flatMap(g => { const d = obj(lsRead(GAME_KEY(g.id))); return [...(Array.isArray(d.plays) ? d.plays : []).map(p => obj(p).id), obj(obj(d.practice).play).id]; }));
+    const contentOf = d => JSON.stringify({ ...d, ui: null, title: null, description: null });
+    for (const x of entries) {
+      let { meta, def } = x, session = x.session;
+      if (meta.id && usedIds.has(meta.id)) {
+        const local = defFromData(lsRead(GAME_KEY(meta.id)), false);
+        if (local && contentOf(local) === contentOf(def)) { skipped++; continue; }
+        meta = { ...meta, id: '' }; def = defFromData(def, true); def.title = `${meta.title} (imported)`.slice(0, 80); def.description = meta.description; session = null; copies++;
+      } else if ([...def.plays, def.practice.play].some(p => usedPlays.has(p.id))) { def = defFromData(def, true); def.title = meta.title; def.description = meta.description; session = null; }
+      const id = meta.id && !usedIds.has(meta.id) ? meta.id : newGameId();
+      storeGame(id, def, session ? normSession(session, def.plays) : newSession());
+      usedIds.add(id); [...def.plays, def.practice.play].forEach(p => usedPlays.add(p.id));
+      libUpdate(l => { l.games.push(normMeta({ ...meta, id, title: def.title, description: def.description, ...metaStats(def) })); });
+      added++;
+    }
+  } catch (e) { console.warn(e); toast('The import stopped part-way (storage full or blocked). Games already imported were kept.', 6000); renderLibrary(); return; }
+  renderLibrary();
+  toast(v === 'replace' ? `Library restored: ${plural(added, 'game').toLowerCase()}.` : `Imported ${plural(added, 'game').toLowerCase()}${copies ? ` (${copies} as copies)` : ''}${skipped ? `, skipped ${skipped} already here` : ''}.`, 5000);
+}
+
+/* ----- library events ----- */
+$('#libNew').addEventListener('click', createGame);
+$('#libIO').addEventListener('click', ioMenu);
+$('#libQ').addEventListener('input', e => { libQuery = e.target.value; renderLibrary(); });
+$('#libSort').addEventListener('change', e => { libSort = e.target.value; try { localStorage.setItem(SORT_KEY, libSort); } catch (err) {} renderLibrary(); });
+$('#libGrid').addEventListener('click', e => {
+  const b = e.target.closest('[data-lib]'), card = e.target.closest('.lib-card'); if (!b || !card) return;
+  const id = card.dataset.id, a = b.dataset.lib;
+  if (a === 'play') openGame(id, 'game'); else if (a === 'edit') openGame(id, 'setup'); else if (a === 'more') gameDetails(id);
+});
+$('#libReload').addEventListener('click', () => location.reload());
+$('#stLib').addEventListener('click', goLibrary);
+$('#bLib').addEventListener('click', goLibrary);
+// The final scoreboard marks a game Completed; a fresh session puts it back to Ready to Play.
+function setGameStatus(status, onlyFrom) {
+  if (!ACTIVE) return;
+  try { libUpdate(l => { const g = l.games.find(x => x.id === ACTIVE); if (g && (!onlyFrom || onlyFrom.includes(g.status))) g.status = status; }); } catch (e) {}
+}
+
 /* ================= BOOT ================= */
 (async function boot() {
+  if (!ACTIVE) {   // no game open in this tab: the library is home
+    await idbOpen(); setHostImgs(); showLibrary();
+    if (openError) toast('That game couldn’t be opened (its saved data is unreadable). It hasn’t been changed.', 6000);
+    return;
+  }
+  document.title = `${state.title || 'Baseball IQ'} — Baseball IQ`;
+  saveNow();   // normalizes the stored copy if needed (never changes "last edited")
   applySettingsClasses();
   applyMode();
   await idbOpen();
