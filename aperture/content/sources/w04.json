@@ -1,0 +1,829 @@
+[
+  {
+    "id": "R-wasserstein-2016-asa",
+    "title": "The ASA’s Statement on p-Values: Context, Process, and Purpose",
+    "authors": [
+      "Ronald L. Wasserstein",
+      "Nicole A. Lazar"
+    ],
+    "publication": "The American Statistician, 70(2), 129–133",
+    "year": 2016,
+    "url": "https://doi.org/10.1080/00031305.2016.1154108",
+    "doi": "10.1080/00031305.2016.1154108",
+    "discipline": "statistics",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, journal, volume 70, issue 2, pages 129–133 and DOI matched in search results (EPA HERO reference record; tandfonline.com / informahealthcare.com DOI page). Free availability is believed but was not separately confirmed.",
+      "link": "not-opened"
+    },
+    "summary": "The American Statistical Association’s first formal statement on a matter of statistical practice. It sets out six principles about what p-values can and cannot tell you and explains why the board felt a statement was needed.",
+    "arguments": [
+      "A p-value measures how incompatible the data are with a specified statistical model, not the probability that the hypothesis is true.",
+      "Scientific conclusions and business or policy decisions should not rest only on whether a p-value passes a threshold.",
+      "Proper inference requires full reporting and transparency; a p-value does not measure the size or importance of an effect.",
+      "By itself a p-value is not a good measure of evidence regarding a model or hypothesis."
+    ],
+    "evidence": "review",
+    "design": null,
+    "strengths": "Consensus statement from a professional body after deliberation among statisticians with differing views; short and readable.",
+    "limitations": "Deliberately says what not to do more than what to do; the accompanying commentaries show statisticians still disagree about replacements (Bayesian methods, estimation, lower thresholds).",
+    "contested": "The principles are broadly accepted; what should replace threshold-based testing remains debated.",
+    "generalizability": "Fully general: applies to any analytics report, vendor study or internal A/B test that reports p-values.",
+    "readingMinutes": 20,
+    "relevance": "Gives you precise language for challenging analysts and vendors who treat “significant” as “true and important”."
+  },
+  {
+    "id": "R-tversky-1974-judgment",
+    "title": "Judgment under Uncertainty: Heuristics and Biases",
+    "authors": [
+      "Amos Tversky",
+      "Daniel Kahneman"
+    ],
+    "publication": "Science, 185(4157), 1124–1131",
+    "year": 1974,
+    "url": "https://doi.org/10.1126/science.185.4157.1124",
+    "doi": "10.1126/science.185.4157.1124",
+    "discipline": "psychology",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "© AAAS. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "author-knowledge (web-search budget exhausted)",
+      "status": "unverified",
+      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (Science 1974 article); title, authors, year, venue and DOI must be re-checked before release.",
+      "link": "not-opened"
+    },
+    "summary": "The classic statement of the representativeness, availability and anchoring heuristics. In the section on representativeness it discusses misconceptions of regression, including flight instructors who concluded that criticism works better than praise.",
+    "arguments": [
+      "People judge probability by resemblance and neglect base rates and sample size.",
+      "People fail to expect regression toward the mean and invent causal explanations for it.",
+      "Heuristics are useful but produce systematic, predictable errors."
+    ],
+    "evidence": "review",
+    "design": "Synthesis of the authors’ earlier experiments and illustrative problems.",
+    "strengths": "Seminal, highly cited, clearly argued.",
+    "limitations": "Many illustrations are vignette studies with student samples; later work debates how often these errors matter in natural environments.",
+    "contested": "The ecological-rationality school argues some biases shrink with natural frequencies; the regression point itself is a statistical fact, not contested.",
+    "generalizability": "The regression misconception transfers directly to coaching, performance review and turnaround management.",
+    "readingMinutes": 35,
+    "relevance": "The source of the flight-instructor example used in Lesson 1."
+  },
+  {
+    "id": "R-osc-2015-estimating",
+    "title": "Estimating the reproducibility of psychological science",
+    "authors": [
+      "Open Science Collaboration"
+    ],
+    "publication": "Science, 349(6251), aac4716",
+    "year": 2015,
+    "url": "https://doi.org/10.1126/science.aac4716",
+    "doi": "10.1126/science.aac4716",
+    "discipline": "psychology",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "© AAAS. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "author-knowledge (web-search budget exhausted)",
+      "status": "unverified",
+      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (Science 2015 article); title, authors, year, venue and DOI must be re-checked before release.",
+      "link": "not-opened"
+    },
+    "summary": "A large collaboration repeated 100 studies published in three leading psychology journals in 2008, using the original materials where possible. Replications produced much weaker evidence than the originals by every criterion examined.",
+    "arguments": [
+      "About 97% of the original studies reported significant results; about 36% of the replications did.",
+      "Mean replication effect sizes were roughly half the size of the original effects.",
+      "Original studies with stronger evidence (smaller p-values) were more likely to replicate."
+    ],
+    "evidence": "rct",
+    "design": "Coordinated direct replications of 100 published experimental and correlational studies, with pre-specified protocols.",
+    "strengths": "Scale, transparency, multiple pre-specified replication criteria.",
+    "limitations": "One attempt per study; some replications differed from originals in sample or setting; no single definition of “replicated”.",
+    "contested": "Gilbert et al. (2016) argued infidelities and sampling error made the estimate too pessimistic; the authors replied that the critique misread the design (see R-gilbert-2016-comment).",
+    "generalizability": "Direct evidence for academic psychology; the mechanisms (low power, flexible analysis, selective publication) are present in any organization’s internal analytics.",
+    "readingMinutes": 30,
+    "relevance": "The landmark that made the replication problem impossible to ignore."
+  },
+  {
+    "id": "R-gilbert-2016-comment",
+    "title": "Comment on “Estimating the reproducibility of psychological science”",
+    "authors": [
+      "Daniel T. Gilbert",
+      "Gary King",
+      "Stephen Pettigrew",
+      "Timothy D. Wilson"
+    ],
+    "publication": "Science, 351(6277), 1037",
+    "year": 2016,
+    "url": "https://doi.org/10.1126/science.aad7243",
+    "doi": "10.1126/science.aad7243",
+    "discipline": "psychology",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "© AAAS. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "author-knowledge (web-search budget exhausted)",
+      "status": "unverified",
+      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (Science 2016 technical comment); title, authors, year, venue and DOI must be re-checked before release.",
+      "link": "not-opened"
+    },
+    "summary": "A technical comment arguing that the Open Science Collaboration’s design could not support its pessimistic conclusion, because of sampling error, differences between original and replication studies, and low power of single replications.",
+    "arguments": [
+      "Even perfect replications will fail some of the time because of sampling error.",
+      "Several replications departed from the original populations or procedures.",
+      "The data are consistent with a more optimistic reading."
+    ],
+    "evidence": "review",
+    "design": "Reanalysis and critique of a published replication project.",
+    "strengths": "Forces precision about what a single failed replication does and does not show.",
+    "limitations": "Itself disputed by the OSC authors and others; does not provide new replication data.",
+    "contested": "Answered in the same issue by the original authors; most methodologists accept that the replication rate was low even if its exact value is uncertain (R-osc-2015-estimating).",
+    "generalizability": "A reminder that replication failures also have to be interpreted with power and fidelity in mind.",
+    "readingMinutes": 10,
+    "relevance": "Shows that the replication debate is itself an evidence debate, not a morality play."
+  },
+  {
+    "id": "R-simmons-2011-false-positive",
+    "title": "False-Positive Psychology: Undisclosed Flexibility in Data Collection and Analysis Allows Presenting Anything as Significant",
+    "authors": [
+      "Joseph P. Simmons",
+      "Leif D. Nelson",
+      "Uri Simonsohn"
+    ],
+    "publication": "Psychological Science, 22(11), 1359–1366",
+    "year": 2011,
+    "url": "https://doi.org/10.1177/0956797611417632",
+    "doi": "10.1177/0956797611417632",
+    "discipline": "methodology",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "author-knowledge (web-search budget exhausted)",
+      "status": "unverified",
+      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (Psychological Science 2011 article); title, authors, year, venue and DOI must be re-checked before release.",
+      "link": "not-opened"
+    },
+    "summary": "Using simulations and two deliberately absurd experiments, the authors show that common, individually defensible analytic choices can push the false-positive rate far above the nominal 5%. They propose disclosure requirements for authors and reviewers.",
+    "arguments": [
+      "Choosing among dependent variables, adding observations after peeking, adding covariates and dropping conditions each inflate false positives.",
+      "Combined, these researcher degrees of freedom can produce a false-positive rate above 60% in their simulation.",
+      "Simple disclosure rules would make this flexibility visible."
+    ],
+    "evidence": "theoretical",
+    "design": "Monte Carlo simulation plus two small demonstration experiments.",
+    "strengths": "Clear mechanism, memorable demonstration, practical remedies.",
+    "limitations": "Simulated rates depend on assumed combinations of choices; it does not estimate how often researchers actually do this.",
+    "contested": null,
+    "generalizability": "Applies to any dashboard or analysis where the analyst can choose metrics, windows, segments and stopping rules after seeing the data.",
+    "readingMinutes": 30,
+    "relevance": "The cleanest explanation of why an honest analyst can still produce false findings."
+  },
+  {
+    "id": "R-ioannidis-2005-most",
+    "title": "Why Most Published Research Findings Are False",
+    "authors": [
+      "John P. A. Ioannidis"
+    ],
+    "publication": "PLoS Medicine, 2(8), e124",
+    "year": 2005,
+    "url": "https://doi.org/10.1371/journal.pmed.0020124",
+    "doi": "10.1371/journal.pmed.0020124",
+    "discipline": "methodology",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Open access under the journal’s Creative Commons license (license version not re-confirmed). Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "author-knowledge (web-search budget exhausted)",
+      "status": "unverified",
+      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (PLoS Medicine 2005 essay); title, authors, year, venue and DOI must be re-checked before release.",
+      "link": "not-opened"
+    },
+    "summary": "An essay with a simple model: the probability that a statistically significant finding is true depends on the prior odds that tested hypotheses are true, statistical power, and bias. Under realistic values in many fields, most claimed findings would be false.",
+    "arguments": [
+      "Small studies, small effects, many tested relationships and flexible designs lower the chance a finding is true.",
+      "Financial interest and “hot” fields with many competing teams make it worse.",
+      "Significance alone says little; the prior and the power matter."
+    ],
+    "evidence": "theoretical",
+    "design": "Analytic model of positive predictive value with illustrative scenarios.",
+    "strengths": "Makes the base-rate logic of research explicit.",
+    "limitations": "The title’s claim depends on assumed inputs; critics argue empirical false-discovery rates in some fields are lower.",
+    "contested": "Some statisticians estimated lower false-discovery rates in medical literatures; the logical argument about priors and power is widely accepted.",
+    "generalizability": "Directly applies to a portfolio of internal experiments: if most ideas tested are long shots, most “wins” are noise.",
+    "readingMinutes": 25,
+    "relevance": "Connects Week 1 base rates to the reliability of research and analytics."
+  },
+  {
+    "id": "R-gelman-2014-beyond",
+    "title": "Beyond Power Calculations: Assessing Type S (Sign) and Type M (Magnitude) Errors",
+    "authors": [
+      "Andrew Gelman",
+      "John Carlin"
+    ],
+    "publication": "Perspectives on Psychological Science, 9(6), 641–651",
+    "year": 2014,
+    "url": "https://doi.org/10.1177/1745691614551642",
+    "doi": "10.1177/1745691614551642",
+    "discipline": "statistics",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "author-knowledge (web-search budget exhausted)",
+      "status": "unverified",
+      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (Perspectives on Psychological Science 2014 article); title, authors, year, venue and DOI must be re-checked before release.",
+      "link": "not-opened"
+    },
+    "summary": "Argues that the real danger of small, noisy studies is not only missing true effects but publishing estimates that are wildly exaggerated (type M) or even in the wrong direction (type S). Proposes design analysis based on a plausible external estimate of the effect.",
+    "arguments": [
+      "Conditioning on statistical significance in low-power studies exaggerates effect sizes.",
+      "With very low power, a meaningful share of significant results have the wrong sign.",
+      "Plausible effect sizes should come from outside the study at hand."
+    ],
+    "evidence": "theoretical",
+    "design": "Statistical argument with worked examples.",
+    "strengths": "Changes the question from “is it significant?” to “how wrong could this estimate be?”.",
+    "limitations": "Results depend on the assumed true effect, which is itself uncertain.",
+    "contested": null,
+    "generalizability": "Directly applies to pilots, small trials and short-window performance data.",
+    "readingMinutes": 35,
+    "relevance": "The core idea behind the Evidence Lab’s exaggeration ratio."
+  },
+  {
+    "id": "R-scheel-2021-excess",
+    "title": "An Excess of Positive Results: Comparing the Standard Psychology Literature With Registered Reports",
+    "authors": [
+      "Anne M. Scheel",
+      "Mitchell R. M. J. Schijen",
+      "Daniël Lakens"
+    ],
+    "publication": "Advances in Methods and Practices in Psychological Science, 4(2)",
+    "year": 2021,
+    "url": "https://doi.org/10.1177/25152459211007467",
+    "doi": "10.1177/25152459211007467",
+    "discipline": "methodology",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Open access (license not re-confirmed). Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "author-knowledge (web-search budget exhausted)",
+      "status": "unverified",
+      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (AMPPS 2021 article); title, authors, year, venue and DOI must be re-checked before release.",
+      "link": "not-opened"
+    },
+    "summary": "Compares the share of supported first hypotheses in a sample of standard psychology papers with a sample of Registered Reports, in which journals accept the study before results are known. Positive results were far rarer among Registered Reports.",
+    "arguments": [
+      "About 96% of standard reports supported their first hypothesis, against about 44% of Registered Reports.",
+      "The gap is consistent with publication bias and flexible analysis in the standard literature.",
+      "Registered Reports are a practical structural remedy."
+    ],
+    "evidence": "observational",
+    "design": "Comparison of two samples of published articles coded for hypothesis support.",
+    "strengths": "Simple, transparent comparison with an informative contrast group.",
+    "limitations": "Registered Reports may test different, riskier hypotheses; the comparison is not randomized.",
+    "contested": null,
+    "generalizability": "Supports pre-commitment devices for internal studies: decide what counts as success before the data arrive.",
+    "readingMinutes": 25,
+    "relevance": "Shows what the literature looks like when results cannot shape publication."
+  },
+  {
+    "id": "R-angrist-2010-credibility",
+    "title": "The Credibility Revolution in Empirical Economics: How Better Research Design Is Taking the Con out of Econometrics",
+    "authors": [
+      "Joshua D. Angrist",
+      "Jörn-Steffen Pischke"
+    ],
+    "publication": "Journal of Economic Perspectives, 24(2), 3–30",
+    "year": 2010,
+    "url": "https://doi.org/10.1257/jep.24.2.3",
+    "doi": "10.1257/jep.24.2.3",
+    "discipline": "economics",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Free to read from the American Economic Association (terms not re-confirmed). Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "author-knowledge (web-search budget exhausted)",
+      "status": "unverified",
+      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (JEP 2010 article); title, authors, year, venue and DOI must be re-checked before release.",
+      "link": "not-opened"
+    },
+    "summary": "Argues that empirical economics became more credible because researchers focused on research design — randomized trials and natural experiments — rather than on elaborate models. Reviews how designs such as instrumental variables, regression discontinuity and differences-in-differences answer causal questions.",
+    "arguments": [
+      "Design-based studies make the source of identifying variation explicit.",
+      "Randomized and quasi-experimental evidence has changed conclusions in labor, education and health economics.",
+      "Structural modeling and macroeconomics have been slower to adopt design-based standards."
+    ],
+    "evidence": "review",
+    "design": null,
+    "strengths": "Readable overview by two leading practitioners; free to read.",
+    "limitations": "An advocate’s account; critics argue design-based studies answer narrow questions with limited external validity.",
+    "contested": "Deaton and Cartwright, among others, argue the credibility gained comes at a cost in generalizability (R-deaton-2018-understanding).",
+    "generalizability": "The design logic transfers to any organization evaluating its own programs.",
+    "readingMinutes": 50,
+    "relevance": "The intellectual backbone of Lesson 3."
+  },
+  {
+    "id": "R-angrist-2014-mastering",
+    "title": "Mastering ’Metrics: The Path from Cause to Effect",
+    "authors": [
+      "Joshua D. Angrist",
+      "Jörn-Steffen Pischke"
+    ],
+    "publication": "Princeton University Press",
+    "year": 2014,
+    "url": "https://press.princeton.edu/books/paperback/9780691152844/mastering-metrics",
+    "doi": null,
+    "discipline": "economics",
+    "type": "book",
+    "access": "purchase",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "author-knowledge (web-search budget exhausted)",
+      "status": "unverified",
+      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (Princeton University Press book; publication year printed as 2014/2015 in different listings and the URL slug must be re-checked); title, authors, year, venue and DOI must be re-checked before release.",
+      "link": "not-opened"
+    },
+    "summary": "An introductory text built around five tools: randomized trials, regression, instrumental variables, regression discontinuity and differences-in-differences, each taught through real studies. Written for readers without heavy mathematics.",
+    "arguments": [
+      "Every causal question is a comparison with a counterfactual.",
+      "Good designs make treated and comparison groups comparable in ways regression alone cannot guarantee.",
+      "Each design rests on a specific, checkable assumption."
+    ],
+    "evidence": "textbook",
+    "design": null,
+    "strengths": "Clear intuition, real examples, honest about assumptions.",
+    "limitations": "Introductory; little on DAGs, heterogeneity or machine-learning approaches.",
+    "contested": null,
+    "generalizability": "The five tools are the standard toolkit for program evaluation in any organization.",
+    "readingMinutes": 60,
+    "relevance": "The best single book for an executive who wants to read causal claims competently."
+  },
+  {
+    "id": "R-card-1994-minimum",
+    "title": "Minimum Wages and Employment: A Case Study of the Fast-Food Industry in New Jersey and Pennsylvania",
+    "authors": [
+      "David Card",
+      "Alan B. Krueger"
+    ],
+    "publication": "American Economic Review, 84(4), 772–793",
+    "year": 1994,
+    "url": "https://www.nber.org/papers/w4509",
+    "doi": null,
+    "discipline": "economics",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "author-knowledge (web-search budget exhausted)",
+      "status": "unverified",
+      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (AER 1994 article; URL is the NBER working-paper version and its number must be re-checked); title, authors, year, venue and DOI must be re-checked before release.",
+      "link": "not-opened"
+    },
+    "summary": "Compares fast-food employment in New Jersey, which raised its minimum wage in 1992, with neighboring eastern Pennsylvania, which did not, before and after the increase. Finds no reduction in employment in New Jersey relative to Pennsylvania.",
+    "arguments": [
+      "A neighboring comparison region can stand in for the counterfactual trend.",
+      "The difference-in-differences estimate showed no employment loss.",
+      "The result challenged the textbook competitive prediction."
+    ],
+    "evidence": "quasi-experimental",
+    "design": "Difference-in-differences using telephone surveys of fast-food restaurants before and after the policy change.",
+    "strengths": "Transparent design; a natural experiment on a contested policy.",
+    "limitations": "Survey measurement error; a single state pair; short horizon.",
+    "contested": "Neumark and Wascher (2000) found employment declines using payroll records; Card and Krueger replied with other data (R-neumark-2000-minimum). The wider minimum-wage literature remains debated.",
+    "generalizability": "A canonical example of how a comparison group can be both persuasive and attackable.",
+    "readingMinutes": 45,
+    "relevance": "The case study for difference-in-differences and for how expert disagreement works."
+  },
+  {
+    "id": "R-neumark-2000-minimum",
+    "title": "Minimum Wages and Employment: A Case Study of the Fast-Food Industry in New Jersey and Pennsylvania: Comment",
+    "authors": [
+      "David Neumark",
+      "William Wascher"
+    ],
+    "publication": "American Economic Review, 90(5), 1362–1396",
+    "year": 2000,
+    "url": "https://doi.org/10.1257/aer.90.5.1362",
+    "doi": "10.1257/aer.90.5.1362",
+    "discipline": "economics",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "author-knowledge (web-search budget exhausted)",
+      "status": "unverified",
+      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (AER 2000 comment); title, authors, year, venue and DOI must be re-checked before release.",
+      "link": "not-opened"
+    },
+    "summary": "Re-estimates the New Jersey minimum-wage effect using payroll records collected from restaurants rather than telephone survey responses, and finds employment declines in New Jersey relative to Pennsylvania.",
+    "arguments": [
+      "Measurement of the outcome can reverse a conclusion.",
+      "Payroll data show a negative employment effect.",
+      "Survey data used in the original contained substantial noise."
+    ],
+    "evidence": "quasi-experimental",
+    "design": "Difference-in-differences with an alternative payroll dataset.",
+    "strengths": "Directly tests the sensitivity of a famous result to measurement.",
+    "limitations": "Data collection and sample construction were themselves criticized.",
+    "contested": "Card and Krueger’s reply in the same issue used other administrative data and found small or no effects (R-card-1994-minimum).",
+    "generalizability": "Shows that the same design with different measurement can tell a different story.",
+    "readingMinutes": 40,
+    "relevance": "The other side of the Lesson 3 debate."
+  },
+  {
+    "id": "R-funder-2019-evaluating",
+    "title": "Evaluating Effect Size in Psychological Research: Sense and Nonsense",
+    "authors": [
+      "David C. Funder",
+      "Daniel J. Ozer"
+    ],
+    "publication": "Advances in Methods and Practices in Psychological Science, 2(2), 156–168",
+    "year": 2019,
+    "url": "https://doi.org/10.1177/2515245919847202",
+    "doi": "10.1177/2515245919847202",
+    "discipline": "methodology",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Open access (license not re-confirmed). Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "author-knowledge (web-search budget exhausted)",
+      "status": "unverified",
+      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (AMPPS 2019 article); title, authors, year, venue and DOI must be re-checked before release.",
+      "link": "not-opened"
+    },
+    "summary": "Argues that conventional labels for effect sizes (small, medium, large) are uninformative and that effects should be judged against benchmarks and consequences. Small effects can matter when they accumulate over many occasions or people; very large effects in small studies are probably overestimates.",
+    "arguments": [
+      "Report and interpret effect sizes in context, with confidence intervals.",
+      "Small effects can be consequential in the long run or at scale.",
+      "Implausibly large effects from small samples should be distrusted."
+    ],
+    "evidence": "review",
+    "design": null,
+    "strengths": "Practical, balanced guidance.",
+    "limitations": "Offers judgment criteria rather than a rule; benchmark choice remains subjective.",
+    "contested": null,
+    "generalizability": "Directly applicable to judging internal metrics and vendor claims.",
+    "readingMinutes": 35,
+    "relevance": "Teaches how to ask “is this big enough to matter?”."
+  },
+  {
+    "id": "R-campbell-1979-assessing",
+    "title": "Assessing the impact of planned social change",
+    "authors": [
+      "Donald T. Campbell"
+    ],
+    "publication": "Evaluation and Program Planning, 2(1), 67–90",
+    "year": 1979,
+    "url": "https://doi.org/10.1016/0149-7189(79)90048-X",
+    "doi": "10.1016/0149-7189(79)90048-X",
+    "discipline": "methodology",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "author-knowledge (web-search budget exhausted)",
+      "status": "unverified",
+      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (Evaluation and Program Planning 1979 article); title, authors, year, venue and DOI must be re-checked before release.",
+      "link": "not-opened"
+    },
+    "summary": "A wide-ranging essay on evaluating social programs. It contains the principle now called Campbell’s law: the more a quantitative indicator is used for social decisions, the more it is corrupted and the more it distorts the process it was meant to monitor.",
+    "arguments": [
+      "Indicators used for high-stakes decisions invite corruption and distortion.",
+      "Program evaluation needs experimental and quasi-experimental designs.",
+      "Multiple indicators are safer than a single one."
+    ],
+    "evidence": "theoretical",
+    "design": null,
+    "strengths": "Foundational, from a founder of quasi-experimental design.",
+    "limitations": "Argument by example rather than systematic evidence.",
+    "contested": null,
+    "generalizability": "Applies to every scorecard, quota and KPI system, including player-development metrics.",
+    "readingMinutes": 45,
+    "relevance": "The research-methods version of Goodhart’s law."
+  },
+  {
+    "id": "R-kvarven-2020-comparing",
+    "title": "Comparing meta-analyses and preregistered multiple-laboratory replication projects",
+    "authors": [
+      "Amanda Kvarven",
+      "Eirik Strømland",
+      "Magnus Johannesson"
+    ],
+    "publication": "Nature Human Behaviour, 4, 423–434",
+    "year": 2020,
+    "url": "https://doi.org/10.1038/s41562-019-0787-z",
+    "doi": "10.1038/s41562-019-0787-z",
+    "discipline": "methodology",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "author-knowledge (web-search budget exhausted)",
+      "status": "unverified",
+      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (Nature Human Behaviour 2020 article); title, authors, year, venue and DOI must be re-checked before release.",
+      "link": "not-opened"
+    },
+    "summary": "Compares meta-analyses with large preregistered multi-lab replications of the same psychological effects. Meta-analytic effect sizes were substantially larger, on average roughly three times the replication estimates, and bias-correction methods did not fully close the gap.",
+    "arguments": [
+      "Meta-analyses of a biased literature inherit its bias.",
+      "Bias-adjustment methods help only partly.",
+      "Large preregistered replications are a better benchmark than meta-analyses of published studies."
+    ],
+    "evidence": "meta-analysis",
+    "design": "Paired comparison of meta-analytic and multi-lab replication estimates for the same effects.",
+    "strengths": "A direct test of meta-analysis against a strong benchmark.",
+    "limitations": "Limited number of effect pairs; psychology only.",
+    "contested": null,
+    "generalizability": "Warns against treating any summary of published studies as the truth, in any field.",
+    "readingMinutes": 35,
+    "relevance": "Why the top of the evidence pyramid can still be wrong."
+  },
+  {
+    "id": "R-deaton-2018-understanding",
+    "title": "Understanding and misunderstanding randomized controlled trials",
+    "authors": [
+      "Angus Deaton",
+      "Nancy Cartwright"
+    ],
+    "publication": "Social Science & Medicine, 210, 2–21",
+    "year": 2018,
+    "url": "https://doi.org/10.1016/j.socscimed.2017.12.005",
+    "doi": "10.1016/j.socscimed.2017.12.005",
+    "discipline": "economics",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Open access (Creative Commons license believed; not re-confirmed). Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "author-knowledge (web-search budget exhausted)",
+      "status": "unverified",
+      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (Social Science & Medicine 2018 article); title, authors, year, venue and DOI must be re-checked before release.",
+      "link": "not-opened"
+    },
+    "summary": "Argues that randomized trials are valuable but widely misunderstood. Randomization balances confounders only in expectation, estimates average effects that may hide heterogeneity, and says little by itself about whether a result will hold elsewhere.",
+    "arguments": [
+      "A single trial does not guarantee balance in the sample actually drawn.",
+      "Average treatment effects can conceal people who are harmed.",
+      "Using a result elsewhere requires understanding why it worked."
+    ],
+    "evidence": "theoretical",
+    "design": null,
+    "strengths": "Rigorous critique from an economist and a philosopher of science.",
+    "limitations": "Some trialists argue it understates how RCT practice already addresses these concerns.",
+    "contested": "Design-based economists defend randomized evidence as the most credible available (R-angrist-2010-credibility).",
+    "generalizability": "Central for anyone importing results from another organization or league.",
+    "readingMinutes": 60,
+    "relevance": "The strongest case for treating evidence hierarchies as a starting point, not a verdict."
+  },
+  {
+    "id": "R-smith-2003-parachute",
+    "title": "Parachute use to prevent death and major trauma related to gravitational challenge: systematic review of randomised controlled trials",
+    "authors": [
+      "Gordon C. S. Smith",
+      "Jill P. Pell"
+    ],
+    "publication": "BMJ, 327(7429), 1459–1461",
+    "year": 2003,
+    "url": "https://doi.org/10.1136/bmj.327.7429.1459",
+    "doi": "10.1136/bmj.327.7429.1459",
+    "discipline": "methodology",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "author-knowledge (web-search budget exhausted)",
+      "status": "unverified",
+      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (BMJ 2003 Christmas article); title, authors, year, venue and DOI must be re-checked before release.",
+      "link": "not-opened"
+    },
+    "summary": "A satirical systematic review that finds no randomized trials of parachutes and concludes, tongue in cheek, that their effectiveness is unproven. The point is that demanding RCT evidence for every intervention can be absurd when effects are huge and mechanisms obvious.",
+    "arguments": [
+      "Some effects are so large that observational evidence suffices.",
+      "Rigid hierarchies can be misused to dismiss strong non-randomized evidence."
+    ],
+    "evidence": "practitioner",
+    "design": "Satirical systematic review.",
+    "strengths": "Memorable illustration of a real methodological point.",
+    "limitations": "Satire; the large-effect argument does not apply to the modest effects typical in management.",
+    "contested": null,
+    "generalizability": "Useful as a limit case: most organizational effects are nothing like parachutes.",
+    "readingMinutes": 10,
+    "relevance": "Shows when design hierarchy should bend."
+  },
+  {
+    "id": "R-rossouw-2002-risks",
+    "title": "Risks and benefits of estrogen plus progestin in healthy postmenopausal women: principal results from the Women’s Health Initiative randomized controlled trial",
+    "authors": [
+      "Jacques E. Rossouw",
+      "Writing Group for the Women’s Health Initiative Investigators"
+    ],
+    "publication": "JAMA, 288(3), 321–333",
+    "year": 2002,
+    "url": "https://doi.org/10.1001/jama.288.3.321",
+    "doi": "10.1001/jama.288.3.321",
+    "discipline": "methodology",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "author-knowledge (web-search budget exhausted)",
+      "status": "unverified",
+      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (JAMA 2002 article; author list abbreviated); title, authors, year, venue and DOI must be re-checked before release.",
+      "link": "not-opened"
+    },
+    "summary": "Reports the principal results of a large randomized trial of combined hormone therapy. The trial was stopped early because overall risks, including increased coronary heart disease and breast cancer, exceeded benefits — contrary to the cardiovascular protection suggested by earlier observational studies.",
+    "arguments": [
+      "Randomized evidence contradicted a widely accepted observational finding.",
+      "The earlier observational association was plausibly driven by healthier women choosing therapy."
+    ],
+    "evidence": "rct",
+    "design": "Multicenter randomized, placebo-controlled trial in postmenopausal women.",
+    "strengths": "Large, randomized, clinically decisive.",
+    "limitations": "Later analyses debated whether timing of initiation explains differences from observational data.",
+    "contested": "Subsequent work on the timing hypothesis argues effects differ by age at initiation; the confounding lesson stands.",
+    "generalizability": "A canonical warning about healthy-user selection in any observational comparison.",
+    "readingMinutes": 30,
+    "relevance": "The cleanest real example of confounding reversing a conclusion."
+  },
+  {
+    "id": "R-bloom-2015-does",
+    "title": "Does Working from Home Work? Evidence from a Chinese Experiment",
+    "authors": [
+      "Nicholas Bloom",
+      "James Liang",
+      "John Roberts",
+      "Zhichun Jenny Ying"
+    ],
+    "publication": "The Quarterly Journal of Economics, 130(1), 165–218",
+    "year": 2015,
+    "url": "https://doi.org/10.1093/qje/qju032",
+    "doi": "10.1093/qje/qju032",
+    "discipline": "economics",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "author-knowledge (web-search budget exhausted)",
+      "status": "unverified",
+      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (QJE 2015 article; an NBER working-paper version is believed to be freely available); title, authors, year, venue and DOI must be re-checked before release.",
+      "link": "not-opened"
+    },
+    "summary": "A randomized experiment at a Chinese travel agency’s call center in which volunteers were randomly assigned to work from home or in the office. Home workers’ performance rose and attrition fell; when offered a choice afterwards, many workers switched.",
+    "arguments": [
+      "Working from home raised measured performance in this setting.",
+      "Attrition fell among home workers.",
+      "Self-selection after the experiment changed who worked from home."
+    ],
+    "evidence": "field-experiment",
+    "design": "Randomized field experiment among volunteer call-center employees, followed by a period of free choice.",
+    "strengths": "Randomization inside a real firm with objective performance data.",
+    "limitations": "One firm, one occupation, volunteers only, a measurable and solitary task.",
+    "contested": null,
+    "generalizability": "Strong internal validity; transfer to collaborative or creative work is uncertain.",
+    "readingMinutes": 60,
+    "relevance": "Assignment option (organizational behavior)."
+  },
+  {
+    "id": "R-yeager-2019-national",
+    "title": "A national experiment reveals where a growth mindset improves achievement",
+    "authors": [
+      "David S. Yeager",
+      "Paul Hanselman",
+      "Gregory M. Walton",
+      "Jared S. Murray",
+      "Robert Crosnoe",
+      "Chandra Muller",
+      "et al."
+    ],
+    "publication": "Nature, 573, 364–369",
+    "year": 2019,
+    "url": "https://doi.org/10.1038/s41586-019-1466-y",
+    "doi": "10.1038/s41586-019-1466-y",
+    "discipline": "education",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Open access (license not re-confirmed). Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "author-knowledge (web-search budget exhausted)",
+      "status": "unverified",
+      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (Nature 2019 article; author list abbreviated); title, authors, year, venue and DOI must be re-checked before release.",
+      "link": "not-opened"
+    },
+    "summary": "A preregistered randomized trial of a short online growth-mindset intervention in a nationally representative sample of U.S. ninth-grade students. Average effects on grades were small and concentrated among lower-achieving students and in schools whose peer norms supported the message.",
+    "arguments": [
+      "A brief intervention produced small average improvements in grades among lower-achieving students.",
+      "Effects depended on school context.",
+      "Preregistration and independent data processing constrained analytic flexibility."
+    ],
+    "evidence": "rct",
+    "design": "Preregistered, nationally representative randomized trial with independent analysis.",
+    "strengths": "Preregistered, large, representative; designed to test heterogeneity.",
+    "limitations": "Small effects; outcomes are grades; heterogeneity analysis relies on modeling choices.",
+    "contested": "Meta-analyses of mindset interventions disagree about average effect size and the role of moderators.",
+    "generalizability": "Shows how small, context-dependent effects should be reported.",
+    "readingMinutes": 45,
+    "relevance": "Assignment option (education / learning)."
+  },
+  {
+    "id": "R-baicker-2013-oregon",
+    "title": "The Oregon Experiment — Effects of Medicaid on Clinical Outcomes",
+    "authors": [
+      "Katherine Baicker",
+      "Sarah L. Taubman",
+      "Heidi L. Allen",
+      "Mira Bernstein",
+      "Jonathan H. Gruber",
+      "Joseph P. Newhouse",
+      "et al."
+    ],
+    "publication": "New England Journal of Medicine, 368(18), 1713–1722",
+    "year": 2013,
+    "url": "https://doi.org/10.1056/NEJMsa1212321",
+    "doi": "10.1056/NEJMsa1212321",
+    "discipline": "public-policy",
+    "type": "journal-article",
+    "access": "free-registration",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "author-knowledge (web-search budget exhausted)",
+      "status": "unverified",
+      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (NEJM 2013 article; author list abbreviated; free access believed, not confirmed); title, authors, year, venue and DOI must be re-checked before release.",
+      "link": "not-opened"
+    },
+    "summary": "Uses Oregon’s 2008 lottery for Medicaid slots to estimate the effects of coverage two years later. Coverage increased use of care, reduced depression and financial strain, but produced no statistically significant improvement in measured blood pressure, cholesterol or glycated hemoglobin.",
+    "arguments": [
+      "A lottery created a randomized comparison for a major policy.",
+      "Some outcomes improved; measured physical-health markers did not significantly change.",
+      "Whether the null physical-health findings reflect no effect or insufficient power is debated."
+    ],
+    "evidence": "rct",
+    "design": "Randomized lottery with instrumental-variable estimates of the effect of coverage.",
+    "strengths": "Randomization of a real policy; pre-specified analysis.",
+    "limitations": "Two-year horizon; low prevalence of the targeted conditions limited power; one state.",
+    "contested": "Commentators disagreed about whether the physical-health results show no effect or an underpowered test.",
+    "generalizability": "Excellent for practicing the difference between “no evidence of effect” and “evidence of no effect”.",
+    "readingMinutes": 45,
+    "relevance": "Assignment option (healthcare / policy)."
+  },
+  {
+    "id": "R-miller-2018-surprised",
+    "title": "Surprised by the Hot Hand Fallacy? A Truth in the Law of Small Numbers",
+    "authors": [
+      "Joshua B. Miller",
+      "Adam Sanjurjo"
+    ],
+    "publication": "Econometrica, 86(6), 2019–2047",
+    "year": 2018,
+    "url": "https://doi.org/10.3982/ECTA14943",
+    "doi": "10.3982/ECTA14943",
+    "discipline": "behavioral-economics",
+    "type": "journal-article",
+    "access": "library",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "author-knowledge (web-search budget exhausted)",
+      "status": "unverified",
+      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (Econometrica 2018 article; working-paper versions are believed to circulate freely but were not confirmed); title, authors, year, venue and DOI must be re-checked before release.",
+      "link": "not-opened"
+    },
+    "summary": "Shows that a standard way of measuring streak shooting is biased: in finite sequences, the proportion of successes following a run of successes is expected to be below the true rate. Correcting this bias reverses the classic conclusion that the hot hand in basketball is a fallacy.",
+    "arguments": [
+      "Selecting outcomes that follow streaks within finite sequences creates a downward bias.",
+      "Reanalysis of the original controlled shooting data shows evidence of streak shooting.",
+      "A celebrated “bias” finding rested partly on a statistical artifact."
+    ],
+    "evidence": "theoretical",
+    "design": "Mathematical proof plus reanalysis of controlled shooting data.",
+    "strengths": "Rigorous; overturns a famous result through measurement logic.",
+    "limitations": "Size and practical importance of the hot hand in games remains debated.",
+    "contested": "The original hot-hand-fallacy research (Gilovich, Vallone and Tversky, 1985) concluded the opposite; debate continues about effect size in game conditions.",
+    "generalizability": "Directly relevant to sports performance analysis and to any streak-based judgment.",
+    "readingMinutes": 60,
+    "relevance": "Assignment option (sports performance)."
+  }
+]

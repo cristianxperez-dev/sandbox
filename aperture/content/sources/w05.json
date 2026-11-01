@@ -1,0 +1,307 @@
+[
+  {
+    "id": "R-meindl-1985-romance",
+    "title": "The Romance of Leadership",
+    "authors": [
+      "James R. Meindl",
+      "Sanford B. Ehrlich",
+      "Janet M. Dukerich"
+    ],
+    "publication": "Administrative Science Quarterly, 30(1), 78–102",
+    "year": 1985,
+    "url": "https://doi.org/10.2307/2392813",
+    "doi": "10.2307/2392813",
+    "discipline": "organizational-behavior",
+    "type": "journal-article",
+    "access": "library",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, journal, year, volume 30 issue 1, pages 78–102 and DOI 10.2307/2392813 matched on scilit.com; volume and pages matched in later citations (Durham repository memorial piece, Collinson et al. 2007). An erratum is indexed at ASQ 30(2), p. 294 (JSTOR record via katalog.lib.cas.cz).",
+      "link": "not-opened"
+    },
+    "summary": "Meindl and colleagues argue that people hold a romanticized view of leadership: they explain organizational outcomes by pointing to leaders, and they do so more strongly when outcomes are extreme. The paper reports several studies, consistent with that attributional bias. It reframes part of “leadership” as something observers construct after the fact.",
+    "arguments": [
+      "Observers over-attribute organizational performance to leaders relative to other causes.",
+      "The tendency strengthens when outcomes are unusually good or unusually bad.",
+      "Leadership is partly a perception held by followers and observers, not only a property of the leader."
+    ],
+    "evidence": "observational",
+    "design": "A set of empirical studies (a secondary description counts five); design details were not confirmed in search results.",
+    "strengths": "Seminal, widely cited, and opens a falsifiable alternative explanation for why leaders receive credit and blame.",
+    "limitations": "Older studies; shows that attributions are inflated, not that leaders have no effect.",
+    "contested": "Not a replication controversy; the debate is about how large real leader effects are relative to attributions. Read alongside R-vanknippenberg-2013-critical, which argues that outcome-contaminated perceptions also distort leadership measures.",
+    "generalizability": "High for any field where outcomes are noisy and visible (sports, markets, hospitals, politics). Treat as a strong caution, not a precise estimate.",
+    "readingMinutes": 50,
+    "relevance": "Every evaluation of a manager, coach or executive in a high-variance environment is exposed to this bias, including your own reputation."
+  },
+  {
+    "id": "R-judge-2004-transformational",
+    "title": "Transformational and Transactional Leadership: A Meta-Analytic Test of Their Relative Validity",
+    "authors": [
+      "Timothy A. Judge",
+      "Ronald F. Piccolo"
+    ],
+    "publication": "Journal of Applied Psychology, 89(5), 755–768",
+    "year": 2004,
+    "url": "https://doi.org/10.1037/0021-9010.89.5.755",
+    "doi": "10.1037/0021-9010.89.5.755",
+    "discipline": "organizational-behavior",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, journal, volume 89, pages 755–768 and DOI matched in abstract copies (academicnewsletter.sufe.edu.cn, core.ac.uk listings); abstract figures .44 (transformational), .39 (contingent reward), −.37 (laissez-faire) and “626 correlations from 87 sources” matched in the same results.",
+      "link": "not-opened"
+    },
+    "summary": "A meta-analysis of the full-range model of leadership. Transformational leadership showed the highest overall validity, but contingent reward, a transactional behavior, was close behind and stronger on several criteria; laissez-faire leadership was negatively related to the criteria.",
+    "arguments": [
+      "Overall validity of .44 for transformational leadership across 626 correlations from 87 sources.",
+      "Contingent reward (.39) is nearly as strongly related to outcomes and stronger for some criteria.",
+      "Laissez-faire leadership relates negatively (−.37) to the criteria."
+    ],
+    "evidence": "meta-analysis",
+    "design": "Meta-analysis of 626 correlations from 87 sources relating leadership dimensions to criteria such as follower satisfaction, motivation and leader effectiveness.",
+    "strengths": "Large evidence base; directly compares transformational and transactional behaviors.",
+    "limitations": "Inherits the designs of the primary studies, many of which rate leadership and outcomes from the same source; correlations are not causal estimates.",
+    "contested": "R-vanknippenberg-2013-critical argues that the measures behind these correlations are confounded with the outcomes they predict, so the size of the validities may overstate leader effects.",
+    "generalizability": "Moderate. Associations appear across many settings, but subjective criteria dominate; transfer to objective team performance is less certain.",
+    "readingMinutes": 45,
+    "relevance": "Gives you the strongest pro-transformational numbers in the field, so you can weigh them against the critique rather than against a slogan."
+  },
+  {
+    "id": "R-vanknippenberg-2013-critical",
+    "title": "A Critical Assessment of Charismatic—Transformational Leadership Research: Back to the Drawing Board?",
+    "authors": [
+      "Daan van Knippenberg",
+      "Sim B. Sitkin"
+    ],
+    "publication": "Academy of Management Annals, 7(1), 1–60",
+    "year": 2013,
+    "url": "https://doi.org/10.1080/19416520.2013.759433",
+    "doi": "10.1080/19416520.2013.759433",
+    "discipline": "organizational-behavior",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder's terms. Linked, not reproduced. An author copy appears on a University of Colorado faculty page.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, journal, volume 7 issue 1, pages 1–60 and DOI matched on scholars.duke.edu and econbiz.de; abstract content matched in the same results; an author PDF is listed on leeds-faculty.colorado.edu.",
+      "link": "not-opened"
+    },
+    "summary": "A critical review concluding that charismatic–transformational leadership research rests on unclear definitions, underspecified causal models, constructs confounded with their effects, and measurement tools that do not reproduce the theorized structure. The authors recommend abandoning the umbrella construct and studying more precisely defined leader behaviors.",
+    "arguments": [
+      "The construct lacks a clear conceptual definition.",
+      "Causal models linking it to outcomes are underspecified.",
+      "Measures are confounded with effects: items partly describe outcomes rather than behaviors.",
+      "Dominant questionnaires do not show the dimensional structure the theory claims."
+    ],
+    "evidence": "review",
+    "design": null,
+    "strengths": "Systematic, methodologically focused critique by established leadership scholars in a top review outlet.",
+    "limitations": "A critique, not new data; some scholars defend the construct’s usefulness, and practice has not followed the recommendation.",
+    "contested": "Contrasts with the positive meta-analytic validities in R-judge-2004-transformational; the disagreement is about what those correlations mean.",
+    "generalizability": "The measurement lessons apply to any rating-based evaluation of leaders, including staff and coach evaluations in sport.",
+    "readingMinutes": 90,
+    "relevance": "Teaches you to ask what a leadership score actually measures before you use it to hire, develop or judge people."
+  },
+  {
+    "id": "R-mayer-1995-integrative",
+    "title": "An Integrative Model of Organizational Trust",
+    "authors": [
+      "Roger C. Mayer",
+      "James H. Davis",
+      "F. David Schoorman"
+    ],
+    "publication": "Academy of Management Review, 20(3), 709–734",
+    "year": 1995,
+    "url": "https://doi.org/10.5465/amr.1995.9508080335",
+    "doi": "10.5465/amr.1995.9508080335",
+    "discipline": "management",
+    "type": "journal-article",
+    "access": "library",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "partially-confirmed",
+      "evidence": "Title, authors, journal, year, volume 20 issue 3 and pages 709–734 matched on bibbase.org and verdi.cs.ucl.ac.uk. Two DOIs appear in results: 10.2307/258792 (JSTOR, bibbase) and 10.5465/amr.1995.9508080335 (linked by explore.psychsafety.com); the AOM DOI is used here but was not resolved directly.",
+      "link": "not-opened"
+    },
+    "summary": "Defines trust as willingness to be vulnerable to another party and separates it from trustworthiness. Perceived trustworthiness rests on ability, benevolence and integrity, moderated by the trustor’s propensity to trust; trust leads to risk-taking in the relationship, whose outcomes update the perceptions.",
+    "arguments": [
+      "Trust is a willingness to accept vulnerability, distinct from its antecedents.",
+      "Trustworthiness has three factors: ability, benevolence and integrity.",
+      "Trust propensity differs between people and matters most when information is scarce.",
+      "Trust produces risk-taking, and outcomes feed back into perceived trustworthiness."
+    ],
+    "evidence": "theoretical",
+    "design": null,
+    "strengths": "Clear definitions that later empirical work has used widely; distinguishes causes of trust from trust itself.",
+    "limitations": "A conceptual model; its components were tested later by other researchers rather than in this paper.",
+    "contested": null,
+    "generalizability": "High as a diagnostic frame across industries; the relative weight of each factor likely varies by context and relationship stage.",
+    "readingMinutes": 60,
+    "relevance": "Lets you diagnose which part of trust is broken — competence, care or consistency — instead of treating trust as a mood."
+  },
+  {
+    "id": "R-edmondson-1999-psychological",
+    "title": "Psychological Safety and Learning Behavior in Work Teams",
+    "authors": [
+      "Amy Edmondson"
+    ],
+    "publication": "Administrative Science Quarterly, 44(2), 350–383",
+    "year": 1999,
+    "url": "https://doi.org/10.2307/2666999",
+    "doi": "10.2307/2666999",
+    "discipline": "organizational-behavior",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder's terms. Linked, not reproduced. A copy is posted on an MIT course page.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, sole author, journal, volume 44 issue 2, pages 350–383 and DOI matched on dash.harvard.edu, citedrive.com and a journal index (acnpsearch); sample of 51 work teams in a manufacturing company and findings matched in the abstract; a PDF is listed on web.mit.edu.",
+      "link": "not-opened"
+    },
+    "summary": "Introduces team psychological safety — a shared belief that the team is safe for interpersonal risk-taking — and studies it in 51 work teams of one manufacturing company. Psychological safety was associated with learning behavior, which in turn mediated its relationship with team performance; team efficacy was not associated with learning once safety was controlled.",
+    "arguments": [
+      "Psychological safety is a team-level shared belief, not a personality trait.",
+      "It is associated with learning behaviors such as asking for help and discussing errors.",
+      "Learning behavior mediates the link between safety and team performance.",
+      "Team structures, including context support and team-leader coaching, shape safety."
+    ],
+    "evidence": "observational",
+    "design": "Field study of 51 work teams in one manufacturing company measuring antecedent, process and outcome variables.",
+    "strengths": "Defines the construct with care and tests a full antecedent–process–outcome model in real teams.",
+    "limitations": "One company; largely cross-sectional, so the direction of causation cannot be established.",
+    "contested": "The construct is well supported as a correlate of learning; causal claims rest on later work, summarized meta-analytically in R-frazier-2017-psychological.",
+    "generalizability": "Broad across team-based work; the mechanism (speaking up) is plausible in medicine, aviation, software and coaching staffs, but effect sizes are not transferable.",
+    "readingMinutes": 60,
+    "relevance": "The founding empirical paper for the idea; read it to see what it does and does not claim before you encounter its popular versions."
+  },
+  {
+    "id": "R-frazier-2017-psychological",
+    "title": "Psychological Safety: A Meta-Analytic Review and Extension",
+    "authors": [
+      "M. Lance Frazier",
+      "Stav Fainshmidt",
+      "Ryan L. Klinger",
+      "Amir Pezeshkan",
+      "Veselina Vracheva"
+    ],
+    "publication": "Personnel Psychology, 70(1), 113–165",
+    "year": 2017,
+    "url": "https://doi.org/10.1111/peps.12183",
+    "doi": "10.1111/peps.12183",
+    "discipline": "organizational-behavior",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder's terms. Linked, not reproduced. Open copy in the Old Dominion University repository.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, five authors, journal, volume 70 issue 1, pages 113–165 and DOI matched on econbiz.de, zendy.io and university repositories (digitalcommons.odu.edu, mdsoar.org); 136 independent samples, over 22,000 individuals and nearly 5,000 groups matched in the abstract.",
+      "link": "not-opened"
+    },
+    "summary": "A meta-analysis of the antecedents and outcomes of psychological safety pooling 136 independent samples (over 22,000 individuals, nearly 5,000 groups). It compares the relative strength of antecedents, tests whether safety predicts task performance and citizenship behavior beyond positive leader relations and engagement, and checks whether design characteristics and national culture change the results.",
+    "arguments": [
+      "Pools a large evidence base on psychological safety across individual and group levels.",
+      "Ranks antecedents by relative strength rather than treating them as equal.",
+      "Tests incremental prediction beyond leader relations and work engagement.",
+      "Examines whether study design and national culture moderate the validities."
+    ],
+    "evidence": "meta-analysis",
+    "design": "Meta-analysis of 136 independent samples (over 22,000 individuals and nearly 5,000 groups).",
+    "strengths": "Largest synthesis in the library on the topic; explicitly checks design moderators.",
+    "limitations": "Inherits mostly correlational primary studies; incremental-validity tests cannot establish causation.",
+    "contested": null,
+    "generalizability": "Moderate to high for knowledge-work teams; sport and high-reliability settings are represented less directly.",
+    "readingMinutes": 75,
+    "relevance": "Gives you the evidence base behind a popular idea so you can use it without overselling it."
+  },
+  {
+    "id": "R-kluger-1996-effects",
+    "title": "The Effects of Feedback Interventions on Performance: A Historical Review, a Meta-Analysis, and a Preliminary Feedback Intervention Theory",
+    "authors": [
+      "Avraham N. Kluger",
+      "Angelo DeNisi"
+    ],
+    "publication": "Psychological Bulletin, 119(2), 254–284",
+    "year": 1996,
+    "url": "https://doi.org/10.1037/0033-2909.119.2.254",
+    "doi": "10.1037/0033-2909.119.2.254",
+    "discipline": "psychology",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "unverified",
+      "evidence": "Not confirmed in this session: the shared web-search budget was exhausted before this record could be searched. Metadata entered from the standard citation; check title, venue, pages and DOI before relying on it.",
+      "link": "not-opened"
+    },
+    "summary": "A historical review and meta-analysis of feedback interventions. Feedback improved performance on average, but a large share of interventions reduced performance. The authors propose feedback intervention theory: feedback works by directing attention, and it helps less, or harms, when it draws attention away from the task toward the self.",
+    "arguments": [
+      "Feedback interventions have a positive average effect but highly variable results.",
+      "A substantial share of feedback interventions lowered performance.",
+      "Feedback that directs attention to the self (praise or criticism of the person) tends to weaken effects; feedback about the task and how to improve it tends to help."
+    ],
+    "evidence": "meta-analysis",
+    "design": "Meta-analysis of feedback-intervention studies with a control condition, plus a theoretical synthesis.",
+    "strengths": "Seminal; the variability finding has shaped feedback research for three decades.",
+    "limitations": "Many included studies were laboratory tasks; workplace coaching conversations are richer than the interventions coded.",
+    "contested": null,
+    "generalizability": "The attention mechanism is plausible across settings; precise effect sizes should not be transferred to managerial conversations.",
+    "readingMinutes": 90,
+    "relevance": "The strongest single correction to the belief that more feedback is always better."
+  },
+  {
+    "id": "R-jones-2016-effectiveness",
+    "title": "The Effectiveness of Workplace Coaching: A Meta-Analysis of Learning and Performance Outcomes from Coaching",
+    "authors": [
+      "Rebecca J. Jones",
+      "Stephen A. Woods",
+      "Yves R. F. Guillaume"
+    ],
+    "publication": "Journal of Occupational and Organizational Psychology, 89(2), 249–277",
+    "year": 2016,
+    "url": "https://doi.org/10.1111/joop.12119",
+    "doi": "10.1111/joop.12119",
+    "discipline": "organizational-behavior",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "unverified",
+      "evidence": "Not confirmed in this session: the shared web-search budget was exhausted before this record could be searched. Metadata entered from the standard citation; check before relying on it.",
+      "link": "not-opened"
+    },
+    "summary": "A meta-analysis of workplace coaching studies reporting positive average effects on learning and performance outcomes, and examining moderators of those effects.",
+    "arguments": [
+      "Workplace coaching shows positive average effects on learning and performance outcomes.",
+      "Effects vary by outcome type and coaching arrangement.",
+      "The primary literature is small relative to the size of the coaching industry."
+    ],
+    "evidence": "meta-analysis",
+    "design": "Meta-analysis of workplace coaching studies.",
+    "strengths": "Focuses on organizational coaching rather than therapy or education.",
+    "limitations": "Small number of primary studies; many rely on self-reported outcomes; coached people are rarely randomly selected.",
+    "contested": null,
+    "generalizability": "Moderate for managerial coaching; transfer to athletic coaching of skills is not established by this work.",
+    "readingMinutes": 60,
+    "relevance": "Calibrates how much you should expect from coaching programs you buy or run."
+  }
+]

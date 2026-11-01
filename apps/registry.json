@@ -1,5 +1,23 @@
 [
   {
+    "id": "aperture",
+    "name": "APERTURE",
+    "description": "A private graduate-level program in behavior, evidence, strategy, finance, law and leadership, with labs and assessments.",
+    "discipline": "Other / Experimental",
+    "status": "available",
+    "returnLink": false,
+    "logoBackground": "#F2EBDD",
+    "tags": [
+      "learning",
+      "education",
+      "executive education",
+      "leadership",
+      "strategy",
+      "research",
+      "private"
+    ]
+  },
+  {
     "id": "nutrition-macros",
     "name": "Nutrition & Macros",
     "description": "Nutrition, fitness, and macronutrient tracking, built around the way I actually eat and train.",
@@ -13,7 +31,16 @@
     "discipline": "Baseball",
     "status": "available",
     "returnLink": false,
-    "tags": ["game", "trivia", "film review", "video", "teams", "fast money", "baseball feud", "coaching"]
+    "tags": [
+      "game",
+      "trivia",
+      "film review",
+      "video",
+      "teams",
+      "fast money",
+      "baseball feud",
+      "coaching"
+    ]
   },
   {
     "id": "recollect",
@@ -23,7 +50,15 @@
     "status": "available",
     "logoBackground": "#132842",
     "returnLink": false,
-    "tags": ["memory", "memory bank", "journal", "notes", "career", "story bank", "archive"]
+    "tags": [
+      "memory",
+      "memory bank",
+      "journal",
+      "notes",
+      "career",
+      "story bank",
+      "archive"
+    ]
   },
   {
     "id": "replated-recipes",

@@ -1,0 +1,455 @@
+[
+  {
+    "id": "R-sull-2015-strategy",
+    "title": "Why Strategy Execution Unravels—and What to Do About It",
+    "authors": [
+      "Donald Sull",
+      "Rebecca Homkes",
+      "Charles Sull"
+    ],
+    "publication": "Harvard Business Review, 93(3), 58–67 (March 2015)",
+    "year": 2015,
+    "url": "https://hbr.org/2015/03/why-strategy-execution-unravelsand-what-to-do-about-it",
+    "doi": null,
+    "discipline": "strategy",
+    "type": "practitioner-article",
+    "access": "paywalled",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, the three authors, March 2015 issue, volume 93(3) and pages 58–67 matched in a library catalog record (library.au.int); the 2015 date and 10-page length matched on iveypublishing.ca. The URL is HBR’s standard article path and was not opened.",
+      "link": "not-opened"
+    },
+    "summary": "Drawing on a multi-year survey program of managers in several hundred companies, the authors argue that strategy execution rarely fails for the reasons executives assume. They identify five widely held beliefs—execution equals alignment, execution means sticking to the plan, communication equals understanding, a performance culture drives execution, and execution should be driven from the top—and argue each is wrong or incomplete.",
+    "arguments": [
+      "Vertical alignment (bosses and direct reports) is usually stronger than horizontal coordination across functions; the authors report that only a small minority of managers say they can always rely on colleagues in other units.",
+      "Adherence to the original plan matters less than the organization’s ability to reallocate people and money as conditions change.",
+      "Frequent communication does not guarantee understanding: many middle managers in their surveys could not name their company’s top priorities.",
+      "Execution depends heavily on distributed middle-manager judgment, not only on top-down control."
+    ],
+    "evidence": "practitioner",
+    "design": "Large-scale manager survey program reported in a practitioner journal; not peer-reviewed and without comparison groups.",
+    "strengths": "Very large sample by practitioner standards; directly challenges popular assumptions with data rather than anecdote; concrete, testable diagnostic questions.",
+    "limitations": "Self-reported perceptions, no causal design, survey instrument and sampling not fully documented in the article; findings describe correlates of reported execution problems, not their proven causes.",
+    "contested": null,
+    "generalizability": "Likely transfers to most multi-unit organizations, including sports organizations, as a diagnostic checklist; treat the specific percentages as indicative of one survey population.",
+    "readingMinutes": 30,
+    "relevance": "Gives you a vocabulary for diagnosing why a well-chosen initiative stalls—especially the gap between vertical alignment and cross-functional coordination that dominates most implementation work."
+  },
+  {
+    "id": "R-repenning-2001-nobody",
+    "title": "Nobody Ever Gets Credit for Fixing Problems that Never Happened: Creating and Sustaining Process Improvement",
+    "authors": [
+      "Nelson P. Repenning",
+      "John D. Sterman"
+    ],
+    "publication": "California Management Review, 43(4), 64–88",
+    "year": 2001,
+    "url": "https://doi.org/10.2307/41166101",
+    "doi": "10.2307/41166101",
+    "discipline": "management",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, journal, volume 43(4), pages 64–88 and DOI 10.2307/41166101 matched on cmr.berkeley.edu and journals.sagepub.com; an author-hosted copy is linked from John Sterman’s MIT faculty page (web.mit.edu/jsterman).",
+      "link": "not-opened"
+    },
+    "summary": "Using field studies of improvement programs and system-dynamics models, the authors explain why organizations that adopt proven improvement methods so often fail to sustain them. Under pressure to hit targets, people “work harder” instead of “working smarter”; the time diverted from improvement lets capability erode, which raises pressure further—a self-reinforcing capability trap. Managers then tend to blame people rather than the system.",
+    "arguments": [
+      "Improvement competes with production for the same scarce time; short-run pressure systematically favors production.",
+      "Working harder produces immediate gains while capability decays slowly and invisibly, so the trap is hard to see from inside.",
+      "Managers tend to attribute performance shortfalls to worker effort rather than to the system, reinforcing pressure and control.",
+      "Escaping the trap requires deliberately protecting improvement time and accepting a temporary dip in output."
+    ],
+    "evidence": "qualitative",
+    "design": "Comparative field studies of process-improvement initiatives combined with formal system-dynamics modelling.",
+    "strengths": "Mechanism-rich explanation that links individual attribution, incentives and system structure; widely used in operations and healthcare improvement teaching; award-winning article.",
+    "limitations": "Case-based evidence from a limited number of organizations; the models illustrate plausible dynamics rather than estimate effect sizes.",
+    "contested": null,
+    "generalizability": "The mechanism is generic to any setting where improvement work competes with daily output—hospitals, software teams, coaching staffs. Confidence in the mechanism is moderate to high; in any specific magnitude, low.",
+    "readingMinutes": 50,
+    "relevance": "Explains why departments that are “too busy to improve” stay busy, and why blaming staff for implementation shortfalls is usually the wrong diagnosis."
+  },
+  {
+    "id": "R-kotter-1995-leading",
+    "title": "Leading Change: Why Transformation Efforts Fail",
+    "authors": [
+      "John P. Kotter"
+    ],
+    "publication": "Harvard Business Review, 73(2), 59–67 (March–April 1995)",
+    "year": 1995,
+    "url": "https://hbr.org/1995/05/leading-change-why-transformation-efforts-fail-2",
+    "doi": null,
+    "discipline": "management",
+    "type": "practitioner-article",
+    "access": "paywalled",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "partially-confirmed",
+      "evidence": "Title, author, HBR volume 73(2), March–April 1995 and pages 59–67 matched on psnet.ahrq.gov and sebokwiki.org (reprint 95204). The hbr.org URL follows HBR’s article path but could not be checked; the date in that path may differ from the print issue.",
+      "link": "not-opened"
+    },
+    "summary": "Kotter’s influential practitioner article lists eight errors he observed in corporate transformation efforts and, by implication, eight steps for leading change: establish urgency, form a guiding coalition, create a vision, communicate it, empower others to act, plan for short-term wins, consolidate gains, and institutionalize new approaches. It later became the basis of his book of the same name.",
+    "arguments": [
+      "Transformation is a multi-phase process; skipping phases creates an illusion of speed.",
+      "Insufficient urgency and an under-powered guiding coalition are common early errors.",
+      "Visible short-term wins sustain commitment through a long change effort.",
+      "Changes are not secure until they are anchored in the organization’s norms and succession."
+    ],
+    "evidence": "practitioner",
+    "design": "Experience-based synthesis from the author’s observation of corporate change efforts; no systematic data reported.",
+    "strengths": "Clear, memorable sequence; directs attention to coalition and communication problems that analytical leaders often neglect.",
+    "limitations": "Not empirically tested in the article; linear sequence; success and failure judged retrospectively by the author. Later empirical tests of the full model are limited.",
+    "contested": "Widely used but weakly tested; its sequencing and universality are questioned by scholars, and the popular “70% of change fails” figure sometimes attached to it lacks a valid evidential base (see R-hughes-2011-do).",
+    "generalizability": "Useful as a checklist in any organization; do not treat the order of steps or their completeness as validated.",
+    "readingMinutes": 25,
+    "relevance": "The most common change model you will meet in boardrooms; you need to know it, use what is useful, and recognize what it does not prove."
+  },
+  {
+    "id": "R-hughes-2011-do",
+    "title": "Do 70 Per Cent of All Organizational Change Initiatives Really Fail?",
+    "authors": [
+      "Mark Hughes"
+    ],
+    "publication": "Journal of Change Management, 11(4), 451–464",
+    "year": 2011,
+    "url": "https://doi.org/10.1080/14697017.2011.630506",
+    "doi": "10.1080/14697017.2011.630506",
+    "discipline": "management",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "partially-confirmed",
+      "evidence": "Title, author, journal, volume 11(4), pages 451–464 and December 2011 publication matched on research.brighton.ac.uk (University of Brighton repository). The DOI was given in the search query and is consistent with the journal’s DOI pattern but was not shown on an authoritative page in the results.",
+      "link": "not-opened"
+    },
+    "summary": "Hughes traces the widely repeated claim that about 70 per cent of organizational change initiatives fail to the published sources usually cited for it and concludes that there is no valid and reliable empirical evidence supporting the figure. Some of the sources concerned narrower programs such as business-process reengineering, and others offered the figure without a documented method.",
+    "arguments": [
+      "The 70 per cent figure circulates as a narrative, not as a measured base rate.",
+      "The five sources examined do not provide valid and reliable evidence for a general failure rate of organizational change.",
+      "“Failure” is rarely defined, making any single rate across all change initiatives hard to measure.",
+      "Repeating the figure may itself shape how change is managed and justified."
+    ],
+    "evidence": "review",
+    "design": "Critical review tracing the evidence behind five frequently cited sources of the 70 per cent claim.",
+    "strengths": "Goes back to primary sources; a model of how to audit a popular statistic.",
+    "limitations": "Shows the absence of evidence for 70 per cent, not that change usually succeeds; does not produce an alternative base rate.",
+    "contested": "Challenges claims associated with practitioner literature (see R-kotter-1995-leading); the author revisited the topic in later work.",
+    "generalizability": "The methodological lesson—ask where a number comes from and what its denominator is—applies to every field, including sport.",
+    "readingMinutes": 35,
+    "relevance": "Trains the reflex of checking the provenance of a statistic before using it to justify urgency or budget."
+  },
+  {
+    "id": "R-cummings-2016-unfreezing",
+    "title": "Unfreezing Change as Three Steps: Rethinking Kurt Lewin’s Legacy for Change Management",
+    "authors": [
+      "Stephen Cummings",
+      "Todd Bridgman",
+      "Kenneth G. Brown"
+    ],
+    "publication": "Human Relations, 69(1), 33–60",
+    "year": 2016,
+    "url": "https://doi.org/10.1177/0018726715577707",
+    "doi": "10.1177/0018726715577707",
+    "discipline": "management",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, journal, volume 69(1), pages 33–60 and DOI matched on the Victoria University of Wellington repository (openaccess.wgtn.ac.nz, which hosts an accepted manuscript) and iro.uiowa.edu; the Paper of the Year 2016 award is reported on wgtn.ac.nz.",
+      "link": "not-opened"
+    },
+    "summary": "The authors compare what Kurt Lewin actually wrote about change with how the “unfreeze–change–refreeze” model is presented in later textbooks and argue that Lewin never developed such a model: it took its familiar form after his death in 1947. They suggest that treating the three-step model as the field’s foundation has narrowed how change is taught and studied.",
+    "arguments": [
+      "The three-step model attributed to Lewin is largely a later reconstruction.",
+      "Lewin’s broader work—field theory, group dynamics and action research—is richer and less linear than the model bearing his name.",
+      "Foundational myths shape what a field treats as settled; re-examining them opens space for new approaches."
+    ],
+    "evidence": "review",
+    "design": "Historical and textual analysis comparing Lewin’s writings with later accounts.",
+    "strengths": "Primary-source scholarship; highly cited and widely read in its journal.",
+    "limitations": "A historiographical argument: it changes how we read the model’s pedigree, not whether a staged view of change is useful.",
+    "contested": "Some scholars defend the practical value of a staged view regardless of its attribution.",
+    "generalizability": "Applies to how any leader uses inherited frameworks: know where a model comes from before treating it as evidence.",
+    "readingMinutes": 45,
+    "relevance": "Shows that even the most-taught change model rests on a shaky citation trail—useful discipline for an evidence-minded executive."
+  },
+  {
+    "id": "R-weiner-2009-theory",
+    "title": "A Theory of Organizational Readiness for Change",
+    "authors": [
+      "Bryan J. Weiner"
+    ],
+    "publication": "Implementation Science, 4, Article 67",
+    "year": 2009,
+    "url": "https://doi.org/10.1186/1748-5908-4-67",
+    "doi": "10.1186/1748-5908-4-67",
+    "discipline": "organizational-behavior",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, author, journal, year and article number 67 matched on implementationscience.biomedcentral.com and pmc.ncbi.nlm.nih.gov (PMC2770024); the DOI matches the publisher’s PDF path.",
+      "link": "not-opened"
+    },
+    "summary": "Weiner defines organizational readiness for change as a shared psychological state with two parts: change commitment (members’ shared resolve to implement the change) and change efficacy (their shared belief in their collective capability to do so). Efficacy depends on how people appraise task demands, available resources and situational factors. He argues that many different strategies can raise readiness—there is no single best way.",
+    "arguments": [
+      "Readiness is a collective, not merely individual, state.",
+      "Commitment is strongest when people want to change because they value it, weaker when they feel obliged or have no choice.",
+      "Efficacy rests on appraisals of task demands, resources and circumstances.",
+      "Higher readiness is expected to produce more initiative, persistence and cooperative behavior during implementation."
+    ],
+    "evidence": "theoretical",
+    "design": "Theoretical article synthesizing motivation and social-cognitive theory; proposes testable relationships.",
+    "strengths": "Precise definitions that can be measured; open access; widely used in implementation science.",
+    "limitations": "A theory, not a test; later empirical studies give mixed support for some of its paths.",
+    "contested": null,
+    "generalizability": "Developed with health-care organizations in mind but stated generally; plausible for any organization introducing new practices.",
+    "readingMinutes": 35,
+    "relevance": "Gives you two separate things to diagnose before rollout—do people want this, and do they believe they can do it?—each with different remedies."
+  },
+  {
+    "id": "R-spear-1999-decoding",
+    "title": "Decoding the DNA of the Toyota Production System",
+    "authors": [
+      "Steven Spear",
+      "H. Kent Bowen"
+    ],
+    "publication": "Harvard Business Review, September–October 1999",
+    "year": 1999,
+    "url": "https://hbr.org/1999/09/decoding-the-dna-of-the-toyota-production-system",
+    "doi": null,
+    "discipline": "management",
+    "type": "practitioner-article",
+    "access": "paywalled",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "partially-confirmed",
+      "evidence": "Title, both authors (Harvard Business School), the September–October 1999 issue and the four-year study of Toyota plants matched on copies indexed at uottawa.ca and labqualityconfab.com and on Steven Spear’s Wikipedia entry. Volume and page numbers were not confirmed, so they are omitted; the hbr.org URL follows HBR’s pattern and was not opened.",
+      "link": "not-opened"
+    },
+    "summary": "Based on a multi-year study of Toyota and its suppliers, the authors argue that Toyota’s performance comes not from visible tools such as kanban cards or andon cords but from tacit rules: work is highly specified, connections between people are direct and unambiguous, pathways are simple, and improvements are made by the scientific method at the lowest possible level. The rigid specification of work is what makes flexibility and learning possible.",
+    "arguments": [
+      "Specified work turns every activity into a testable hypothesis, so deviations become visible immediately.",
+      "Direct customer–supplier connections and simple pathways make problems traceable to their source.",
+      "Improvement is experimentation, done by the people doing the work, under the guidance of a teacher.",
+      "Organizations that copy the tools without the underlying rules rarely reproduce the results."
+    ],
+    "evidence": "qualitative",
+    "design": "Multi-year field study of Toyota and supplier plants, reported in a practitioner journal.",
+    "strengths": "Deep field observation; moves the discussion from tools to mechanisms; widely used in healthcare and service operations.",
+    "limitations": "Focused on one exemplary company; rules are inferred by the authors; not a comparative test of performance effects.",
+    "contested": null,
+    "generalizability": "The rules apply most directly to repetitive work but have been adapted widely; transfer depends on management capability, not on tool adoption.",
+    "readingMinutes": 40,
+    "relevance": "Shows how standardization and learning can reinforce each other—central to any operations or development system you design."
+  },
+  {
+    "id": "R-little-2011-littles",
+    "title": "Little’s Law as Viewed on Its 50th Anniversary",
+    "authors": [
+      "John D. C. Little"
+    ],
+    "publication": "Operations Research, 59(3), 536–549",
+    "year": 2011,
+    "url": "https://doi.org/10.1287/opre.1110.0940",
+    "doi": "10.1287/opre.1110.0940",
+    "discipline": "statistics",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, author, journal, volume 59(3), pages 536–549 and DOI matched on econpapers.repec.org and cir.nii.ac.jp; a copy is indexed on people.cs.umass.edu.",
+      "link": "not-opened"
+    },
+    "summary": "Fifty years after his 1961 proof that the long-run average number of items in a queuing system equals the arrival rate multiplied by the average time each item spends in the system (L = λW), Little reviews how the result has been extended and used, with emphasis on practice in operations management and computing, and proves versions of the law for finite observation periods.",
+    "arguments": [
+      "L = λW holds under very general conditions for long-run averages, without assumptions about arrival or service distributions.",
+      "In practice it links work-in-process, throughput and cycle time: knowing two gives the third.",
+      "Finite-period versions matter for managers, who observe real systems over limited windows."
+    ],
+    "evidence": "theoretical",
+    "design": "Review and mathematical exposition, with proofs of finite-period versions.",
+    "strengths": "Authoritative account by the law’s originator; bridges theory and practical use.",
+    "limitations": "Mathematical; the law describes averages and says nothing by itself about variability or causes.",
+    "contested": null,
+    "generalizability": "Applies to any flow of work—patients, cases, tickets, contracts, player evaluations—when measured consistently over a stable period.",
+    "readingMinutes": 45,
+    "relevance": "The single most useful equation for reasoning about backlogs and lead times in any operation you run."
+  },
+  {
+    "id": "R-taras-2010-examining",
+    "title": "Examining the Impact of Culture’s Consequences: A Three-Decade, Multilevel, Meta-Analytic Review of Hofstede’s Cultural Value Dimensions",
+    "authors": [
+      "Vas Taras",
+      "Bradley L. Kirkman",
+      "Piers Steel"
+    ],
+    "publication": "Journal of Applied Psychology, 95(3), 405–439",
+    "year": 2010,
+    "url": "https://doi.org/10.1037/a0018938",
+    "doi": "10.1037/a0018938",
+    "discipline": "psychology",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, journal, volume 95(3), pages 405–439 and DOI 10.1037/a0018938 matched in search results; a post-print is held in the University of Calgary repository (prism.ucalgary.ca), which notes it is not the copy of record.",
+      "link": "not-opened"
+    },
+    "summary": "A meta-analysis of 598 studies covering more than 200,000 individuals tests how well Hofstede’s original four cultural value dimensions predict organizational outcomes. Relationships are modest on average (an overall absolute weighted correlation of about .18 at the individual level), stronger for emotions and attitudes than for behaviors and job performance, and stronger in culturally “tighter” countries.",
+    "arguments": [
+      "Cultural values have real but modest predictive power for work outcomes.",
+      "They predict job performance, absenteeism and turnover less well than personality and demographics do, but predict commitment and citizenship behavior better.",
+      "Effects are strongest for emotions, then attitudes, then behaviors, and weakest for performance.",
+      "Context matters: effects are larger in tighter societies with stronger norms."
+    ],
+    "evidence": "meta-analysis",
+    "design": "Multilevel meta-analysis of 598 studies (more than 200,000 individuals).",
+    "strengths": "Very large evidence base; tests the dimensions against outcomes rather than assuming them; compares with other predictors.",
+    "limitations": "Depends on the quality of primary studies, most of which are correlational; aggregate effects say little about any one person or workplace.",
+    "contested": "Hofstede’s framework itself is criticized on conceptual and methodological grounds (see R-mcsweeney-2002-hofstedes).",
+    "generalizability": "Supports using cultural dimensions as weak priors about groups, not as predictions about individuals or as the main design input for a rollout.",
+    "readingMinutes": 50,
+    "relevance": "Lets you use cultural frameworks with calibrated confidence instead of either dismissing or over-applying them."
+  },
+  {
+    "id": "R-mcsweeney-2002-hofstedes",
+    "title": "Hofstede’s Model of National Cultural Differences and Their Consequences: A Triumph of Faith—A Failure of Analysis",
+    "authors": [
+      "Brendan McSweeney"
+    ],
+    "publication": "Human Relations, 55(1), 89–118",
+    "year": 2002,
+    "url": "https://doi.org/10.1177/0018726702551004",
+    "doi": "10.1177/0018726702551004",
+    "discipline": "management",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, author, journal, volume 55(1), pages 89–118 and DOI 10.1177/0018726702551004 matched on citedrive.com, scinapse.io and the Royal Holloway repository (pure.royalholloway.ac.uk, which lists a variant title using “Identification”).",
+      "link": "not-opened"
+    },
+    "summary": "McSweeney challenges the assumptions behind Hofstede’s claim to have identified national cultures from survey data collected within one multinational company, questioning whether a nation has a single, uniform, enduring culture and whether such a culture can be treated as a systematic cause of behavior. Hofstede published a reply in the same journal, followed by a rejoinder.",
+    "arguments": [
+      "Survey responses from employees of one company may not represent a whole national culture.",
+      "Treating national culture as uniform and causal ignores variation within countries and the influence of institutions, organizations and situations.",
+      "Correlations between country scores and outcomes do not establish that culture caused them."
+    ],
+    "evidence": "theoretical",
+    "design": "Conceptual and methodological critique.",
+    "strengths": "Precise identification of assumptions that users of cultural dimensions often leave implicit.",
+    "limitations": "A critique, not new data; Hofstede and others dispute several of its readings.",
+    "contested": "Directly contested by Hofstede’s published reply; meta-analytic evidence finds modest predictive validity for the dimensions (see R-taras-2010-examining).",
+    "generalizability": "Applies wherever leaders reason from national stereotypes to individual behavior—including international player development.",
+    "readingMinutes": 50,
+    "relevance": "Protects you from the most common misuse of cultural frameworks: explaining an individual or a single site by a country score."
+  },
+  {
+    "id": "R-damschroder-2009-fostering",
+    "title": "Fostering Implementation of Health Services Research Findings into Practice: A Consolidated Framework for Advancing Implementation Science",
+    "authors": [
+      "Laura J. Damschroder",
+      "David C. Aron",
+      "Rosalind E. Keith",
+      "Susan R. Kirsh",
+      "Jeffery A. Alexander",
+      "Julie C. Lowery"
+    ],
+    "publication": "Implementation Science, 4, Article 50",
+    "year": 2009,
+    "url": "https://doi.org/10.1186/1748-5908-4-50",
+    "doi": "10.1186/1748-5908-4-50",
+    "discipline": "public-policy",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, all six authors, journal, article 50, 7 August 2009 publication and DOI matched on implementationscience.biomedcentral.com, pubmed.ncbi.nlm.nih.gov (19664226) and deepblue.lib.umich.edu.",
+      "link": "not-opened"
+    },
+    "summary": "The authors consolidate constructs from published implementation theories into the Consolidated Framework for Implementation Research (CFIR), organized in five domains: characteristics of the intervention, the outer setting, the inner setting, characteristics of the individuals involved, and the process of implementation. CFIR is a common vocabulary for diagnosing why an effective practice takes hold in one setting and not another, and for structuring evaluations across studies.",
+    "arguments": [
+      "Effective interventions frequently fail to produce results when moved into new settings; context explains much of the difference.",
+      "Constructs from many theories can be merged into one structured menu covering five domains.",
+      "Interventions have core components and an adaptable periphery that can be tailored locally.",
+      "The framework is meant to guide formative evaluation and to accumulate knowledge across studies."
+    ],
+    "evidence": "review",
+    "design": "Review and synthesis of published implementation theories, with constructs selected for conceptual or empirical support and measurability.",
+    "strengths": "Open access; widely adopted; gives a systematic checklist of contextual factors.",
+    "limitations": "A determinant framework, not a predictive model; many constructs; developed in health services. The authors published an updated version in 2022.",
+    "contested": null,
+    "generalizability": "Designed for health care but used across education, social services and other sectors; works as a diagnostic structure for any multi-site rollout.",
+    "readingMinutes": 45,
+    "relevance": "Gives you a disciplined way to separate what must stay constant in a rollout from what each site should adapt."
+  },
+  {
+    "id": "R-kostova-1999-transnational",
+    "title": "Transnational Transfer of Strategic Organizational Practices: A Contextual Perspective",
+    "authors": [
+      "Tatiana Kostova"
+    ],
+    "publication": "Academy of Management Review, 24(2), 308–324",
+    "year": 1999,
+    "url": "https://doi.org/10.2307/259084",
+    "doi": "10.2307/259084",
+    "discipline": "management",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, author, journal, volume 24(2), pages 308–324 matched across several indexes (scinapse.io, proquest.com, academicnewsletter.sufe.edu.cn); DOI 10.2307/259084 matched on the last.",
+      "link": "not-opened"
+    },
+    "summary": "Kostova defines the success of transferring a practice across borders within a multinational as its institutionalization at the receiving unit and proposes a model in which factors at three levels—country (the institutional distance between home and host settings), organization, and individual relationships—shape whether the practice takes hold.",
+    "arguments": [
+      "Transfer success means institutionalization: the practice is both implemented and given meaning and value by the recipients.",
+      "The greater the difference between the regulatory, cognitive and normative environments of the two countries, the harder the transfer.",
+      "Organizational culture and relationships between units (trust, identification, dependence) also shape transfer."
+    ],
+    "evidence": "theoretical",
+    "design": "Theoretical model with propositions; later tested empirically by the author and colleagues.",
+    "strengths": "Gives precise vocabulary for why a practice can be followed on paper but not believed in.",
+    "limitations": "Propositions rather than tests in this article; measurement of institutional distance is difficult.",
+    "contested": null,
+    "generalizability": "Directly relevant to multi-country organizations, including sports organizations with international academies.",
+    "readingMinutes": 40,
+    "relevance": "Explains why a development system can be “implemented” at a foreign site while staff privately ignore it—and what to work on instead."
+  }
+]

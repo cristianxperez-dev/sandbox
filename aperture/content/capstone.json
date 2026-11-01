@@ -1,0 +1,3935 @@
+{
+  "id": "capstone",
+  "title": "The Executive Capstone: Building an Advance and Strategic Coordination Department",
+  "fiction": "All people, organizations, leagues and data in this capstone are fictional and synthetic. The Port Calder Lamplighters and the Meridian League are invented; nothing describes or is modeled on any real club’s internal structure. Legal points are educational and general — not legal advice.",
+  "organization": {
+    "name": "Port Calder Lamplighters (fictional)",
+    "context": "A fictional mid-market club in the fictional 30-club Meridian League. Payroll sits in the league’s lower-middle third; the club finished 79–83 last season, four games out of the final postseason place. It operates a minor-league system of five affiliates and an international academy, and has just created a Department of Advance and Strategic Coordination. All people, organizations, figures and events are invented."
+  },
+  "scenario": [
+    {
+      "type": "h",
+      "text": "An appointment with a deadline"
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "It is the second week of November. Miriam Castellanos, president of baseball operations of the Port Calder Lamplighters, has just appointed you to lead a department that did not exist a month ago: the Department of Advance and Strategic Coordination. Its charter, two paragraphs long and approved by ownership, says the department will “prepare the major-league staff for every opponent, coordinate game-strategy preparation, communicate with the coaching staff, and integrate research and analytics with player development and the front office.” Advance here means advance scouting and preparation: knowing the next opponent’s hitters, pitchers, bullpen and habits well enough that the manager and coaches can act on it before and during the series."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "Castellanos was direct about the deadline. You will present a first-year strategy to her and to general manager Theo Lindqvist on January 20. The club’s finance committee locks the baseball-operations budget on January 31, pitchers and catchers report to spring training on February 12, and Opening Day is March 26. “I do not need a perfect plan,” she told you. “I need one I can defend to ownership, that the coaches will not ignore, and that does not set off a war with three other departments.”"
+    },
+    {
+      "type": "h",
+      "text": "Why the department exists"
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "Last season exposed the cost of preparation that belonged to everyone and therefore to no one. Advance work was spread across four groups. Two analysts in the Research and Analytics department, led by director Sanjay Mehra, wrote opponent reports on top of their model-building work. The Video department, where coordinator Tomás Ibarra runs a small team, cut clips on request. The Pro Scouting department, run by Graham Pettibone, sent two advance scouts on the road to see upcoming opponents in person. And bench coach Ernesto Villalba, a former catcher, assembled the pieces into the pre-series meeting the night before each series, largely from memory and his own notes."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "The arrangement produced good reports and visible failures. The club’s incident log (Exhibit 6) records late reports, a positioning card that was two weeks out of date, a relief matchup the report had flagged, and an opponent report forwarded to a personal messaging group. No one can show that any single failure cost a game, and you know that one season of outcomes is a noisy judge. But the president, the manager and two veteran players have each, separately, described the process as “improvised.” The new department is the organization’s answer."
+    },
+    {
+      "type": "h",
+      "text": "What you inherit"
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "You inherit a mandate, a budget envelope and very few people. Finance has set a base personnel envelope of $1,150,000 a year, fully loaded, which must cover your own position (Exhibit 2). There is a separate three-year strategic investment fund with $1,000,000 of commitment authority for technology, research and contracted coverage, released only against a written case. Vice president of finance Martin Osei has told you that years two and three are planning figures, not promises: growth beyond three percent a year will depend on indicators you propose and he accepts."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "The people are harder. Mehra has agreed to lend senior analyst Kenji Moraes at sixty percent of his time until May 31, and no longer; Mehra regards opponent modeling as research and expects his department to keep ownership of the models and the code. Ibarra’s video team supports the whole baseball-operations group and he does not want to lose a coordinator to you. Pettibone believes the two road scouts are scouts, not analysts, and that their reports should continue to come through him. Each of these leaders has a reasonable case, and each controls something you need."
+    },
+    {
+      "type": "h",
+      "text": "The staff on the field"
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "Field manager Walt Brannigan is in the final guaranteed year of his contract. He is respected, decisive and openly skeptical. “I have had analysts hand me forty pages on a Tuesday for a Wednesday game,” he told you at your first meeting. “Give me three things I can use, give them to me early, and do not tell me how to run my bullpen.” Pitching coach Dana Whitlock is an early adopter who already builds her own pitch-sequencing notes. Hitting coach Corey Akintola wants video above all and trusts numbers only when they match what he sees. Villalba has run the pre-series meetings for six years; he is warm toward you and quietly worried that the new department will replace him."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "A stakeholder survey run by Castellanos’s office in October (Exhibit 4) is consistent with these conversations. Coaches rated the timeliness and length of reports poorly and their accuracy reasonably well. Players were more favorable than coaches toward video and less favorable toward written reports. Front-office staff rated cross-department communication as the weakest element of the current process. The survey had small groups and a single wave; it tells you where to look, not what to conclude."
+    },
+    {
+      "type": "h",
+      "text": "Development, research and the front office"
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "Player development director Lucía Arbeláez wants something from you that is not in the charter’s first sentence. Prospects called up in midseason arrive knowing a different vocabulary and a different set of reports. She asks for shared terms, shared report formats, and a pipeline that tells her coaches what the major-league staff will expect of a call-up. Lindqvist wants a weekly strategic summary that connects advance work to roster decisions. Mehra wants a research agenda that his group, not yours, sets. Your charter mentions integration; it does not say who decides."
+    },
+    {
+      "type": "h",
+      "text": "International coverage"
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "The Meridian League has signed a growing number of players directly from professional leagues abroad, and the Lamplighters will face at least eleven such players next season, most of them with no league history. International scouting director Inés Carvajal has scouts and contacts in several of those leagues, but her department is organized around signing amateurs at the academy, and her scouts report in Spanish and, in one region, in a third language. She is willing to help, but not if her scouts become, in her words, “free labor for the big-league staff.” Any arrangement has to respect her signing calendar, her budget and the confidentiality of her own work."
+    },
+    {
+      "type": "h",
+      "text": "Data, privacy and the law"
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "The department will touch more sensitive data than any of its predecessors. Opponent data is largely public or licensed; the risk there is contractual, because two current vendor licenses restrict how data may be shared and stored. Your own players’ data is different. Coaches want advance reports to include each Lamplighters pitcher’s workload, recovery and readiness markers, some drawn from wearable devices and the medical staff. Associate general counsel Rebecca Thorne has warned that health-related and biometric information is governed by the collective bargaining agreement, by the club’s own policies and, for players at the international academy, some of them minors, by the law of other jurisdictions. She has asked that no player health data be shared beyond the medical and performance staff until a data-access policy exists. The incident in Exhibit 6 involving a personal messaging group has made her request harder to refuse."
+    },
+    {
+      "type": "h",
+      "text": "Technology choices"
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "Three technology paths are on the table (Exhibit 5). A vendor platform could be running by spring training but would leave the club dependent on a supplier that also serves rivals. An in-house pipeline built with Mehra’s engineers would be owned by the club but would not be fully ready until midseason, and would give Research and Analytics substantial influence over your daily work. A minimal option, secure tablets and a shared report template, would be cheap and fast and would leave the hard problems unsolved. Whatever you choose, coaches will judge it in April by whether the first few reports are right, short and on time."
+    },
+    {
+      "type": "h",
+      "text": "The decision in front of you"
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "You have roughly nine weeks to design the department, win enough support to launch it, and present a plan that is honest about what it does not know. You cannot fund every position in the staffing market (Exhibit 3); you cannot please every department head; and you cannot prove in advance that the department will change results on the field. Castellanos has asked for a strategic memorandum, an executive summary, an organizational chart, a budget model, an implementation roadmap, a decision presentation and, privately, your own reflection on what the exercise revealed about you as a leader. She has also promised to ask hard questions."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "Several defensible strategies are available. You could build a lean, coach-facing service that does a few things exceptionally well and leaves research to Mehra. You could build a coordination hub that owns the full preparation process, absorbing people and budget from other departments. You could stage the department, starting narrow and expanding only when agreed indicators are met. Each has costs that someone else will feel. Your task across the next seven weeks is to choose, to show your reasoning, and to be ready to defend it."
+    }
+  ],
+  "exhibits": [
+    {
+      "title": "Exhibit 1 — Current advance workflow and hours (last season, average in-season week)",
+      "type": "table",
+      "headers": [
+        "Activity",
+        "Who does it now",
+        "Hours per week",
+        "Typical delivery",
+        "Main complaint"
+      ],
+      "rows": [
+        [
+          "Opposing-hitter reports",
+          "Research and Analytics (2 analysts, part-time)",
+          30,
+          "Day of the first game, early afternoon",
+          "Late and long (average 22 pages)"
+        ],
+        [
+          "Opposing-pitcher and bullpen reports",
+          "Research and Analytics",
+          28,
+          "Day of the first game",
+          "Bullpen usage notes often stale"
+        ],
+        [
+          "Defensive positioning cards",
+          "Research and Analytics",
+          12,
+          "Updated every 2–3 weeks",
+          "Not updated after opponent roster moves"
+        ],
+        [
+          "Video packaging",
+          "Video department (shared)",
+          45,
+          "On request, 24–48 hours",
+          "Requests compete with other departments"
+        ],
+        [
+          "In-person advance coverage",
+          "Pro Scouting (2 road scouts)",
+          80,
+          "Written notes by email",
+          "Notes not linked to the data reports"
+        ],
+        [
+          "Pre-series meeting preparation",
+          "Bench coach",
+          9,
+          "Night before the series",
+          "Depends on one person"
+        ],
+        [
+          "Spanish-language player materials",
+          "Informal (coaches, players)",
+          4,
+          "Inconsistent",
+          "Often missing"
+        ],
+        [
+          "International-league player coverage",
+          "None formal",
+          0,
+          "Not delivered",
+          "No coverage of players new to the league"
+        ],
+        [
+          "Data access and security",
+          "Nobody assigned",
+          0,
+          "Not applicable",
+          "Incidents in Exhibit 6"
+        ]
+      ],
+      "note": "Synthetic data. Assumptions: hours are estimates reconstructed from staff interviews, not time records; a season has about 26 in-season weeks and 52 series; road-scout hours include travel."
+    },
+    {
+      "title": "Exhibit 2 — Budget envelope (Year 1, with Years 2–3 planning figures)",
+      "type": "table",
+      "headers": [
+        "Line",
+        "Year 1",
+        "Year 2 (planning)",
+        "Year 3 (planning)",
+        "Conditions"
+      ],
+      "rows": [
+        [
+          "Base personnel envelope (fully loaded, includes department head)",
+          "$1,150,000",
+          "$1,184,500",
+          "$1,220,000",
+          "Growth above 3% per year requires indicators accepted by Finance"
+        ],
+        [
+          "Department operating budget (travel, meetings, devices, training)",
+          "$180,000",
+          "$185,000",
+          "$190,000",
+          "Travel for in-person coverage must come from this line"
+        ],
+        [
+          "Strategic investment fund (three-year commitment authority)",
+          "$1,000,000 committed in Year 0",
+          "Net project cash flows",
+          "Net project cash flows",
+          "Released project by project against a written case (Capital Allocation Lab)"
+        ],
+        [
+          "Loaned analyst time (Research and Analytics)",
+          "60% of one senior analyst to May 31",
+          "None",
+          "None",
+          "Not charged to your envelope; ends May 31"
+        ],
+        [
+          "Finance planning conventions",
+          "$60 per analyst hour; $350,000 per run",
+          "Same",
+          "Same",
+          "Run value = synthetic $3.5M per win ÷ an assumed 10 runs per win"
+        ]
+      ],
+      "note": "Synthetic data. Assumptions: all amounts in U.S. dollars and invented; the run-value convention is a contested planning assumption set by the fictional finance office, not an estimate of real market prices; any position funded outside the base envelope must be explained."
+    },
+    {
+      "title": "Exhibit 3 — Staffing market costs (fully loaded annual cost, in-season hours available for assigned work)",
+      "type": "table",
+      "headers": [
+        "Role",
+        "Annual cost",
+        "Hours per week",
+        "Core skills",
+        "Market note"
+      ],
+      "rows": [
+        [
+          "Director, Advance and Strategic Coordination (you)",
+          "$235,000",
+          25,
+          "Leadership, strategy, communication",
+          "Already appointed"
+        ],
+        [
+          "Advance operations manager",
+          "$150,000",
+          40,
+          "Leadership, operations, analysis",
+          "Adds a management layer"
+        ],
+        [
+          "Senior advance analyst",
+          "$132,000",
+          50,
+          "Analysis, modeling, communication",
+          "Competitive market; two candidates hold other offers until mid-December"
+        ],
+        [
+          "Advance analyst",
+          "$96,000",
+          50,
+          "Analysis, video",
+          "Several qualified candidates"
+        ],
+        [
+          "Video and advance coordinator",
+          "$74,000",
+          55,
+          "Video, operations",
+          "Could transfer from the Video department"
+        ],
+        [
+          "Coaching-staff liaison (bilingual)",
+          "$118,000",
+          50,
+          "Communication, coaching, Spanish, video",
+          "Former players and coaches are the main pool"
+        ],
+        [
+          "Advance scout (in-person)",
+          "$112,000",
+          45,
+          "Scouting, communication",
+          "Two exist in Pro Scouting"
+        ],
+        [
+          "International pro coverage coordinator",
+          "$104,000",
+          45,
+          "Scouting, international, Spanish, analysis",
+          "Could be shared with International Scouting"
+        ],
+        [
+          "Data engineer",
+          "$148,000",
+          45,
+          "Engineering, data governance",
+          "Research and Analytics competes for the same people"
+        ],
+        [
+          "Research scientist",
+          "$155,000",
+          45,
+          "Research, modeling, analysis",
+          "Overlaps with Research and Analytics"
+        ],
+        [
+          "Operations and governance coordinator",
+          "$80,000",
+          45,
+          "Operations, data governance, communication",
+          "Generalist role"
+        ]
+      ],
+      "note": "Synthetic data. Assumptions: costs include salary, benefits and payroll taxes at an assumed 25% load; hours are in-season weekly hours available after meetings and travel overhead; figures are invented and not market survey results."
+    },
+    {
+      "title": "Exhibit 4 — Stakeholder survey, October (mean ratings, 1 = very poor, 5 = very good)",
+      "type": "table",
+      "headers": [
+        "Item",
+        "Coaching staff (n = 9)",
+        "Players (n = 21)",
+        "Front office (n = 12)",
+        "Player development (n = 8)"
+      ],
+      "rows": [
+        [
+          "Accuracy of opponent information",
+          3.6,
+          3.4,
+          3.8,
+          3.5
+        ],
+        [
+          "Timeliness of reports",
+          2.1,
+          2.9,
+          2.6,
+          2.8
+        ],
+        [
+          "Length and usability",
+          1.9,
+          2.4,
+          3.1,
+          2.7
+        ],
+        [
+          "Usefulness of video",
+          3.9,
+          4.2,
+          3.5,
+          3.7
+        ],
+        [
+          "Communication across departments",
+          2.6,
+          "Not asked",
+          2,
+          2.2
+        ],
+        [
+          "Trust that information is handled confidentially",
+          3,
+          2.5,
+          3.4,
+          3.1
+        ],
+        [
+          "Support for a dedicated department",
+          2.8,
+          3.6,
+          4.1,
+          3.9
+        ]
+      ],
+      "note": "Synthetic data. Assumptions: single wave, voluntary response (response rates unknown), small groups, so differences of less than about half a point should not be over-read; items were written by the president’s office without pretesting."
+    },
+    {
+      "title": "Exhibit 5 — Technology options",
+      "type": "table",
+      "headers": [
+        "Option",
+        "Year 0 cost",
+        "Annual cost after Year 0",
+        "Ready by",
+        "Main advantages",
+        "Main risks"
+      ],
+      "rows": [
+        [
+          "A. Vendor opponent-analytics platform",
+          "$380,000 (setup and first license year)",
+          "$140,000 license",
+          "Spring training",
+          "Fast; maintained by vendor; coach-friendly views",
+          "Rivals use the same tool; data-sharing limits in the license; exit costs"
+        ],
+        [
+          "B. In-house pipeline built with Research and Analytics",
+          "$520,000 (engineering time and infrastructure)",
+          "$90,000 maintenance",
+          "Midseason (about July)",
+          "Club owns code and models; tailored",
+          "Late; depends on another department; key-person risk"
+        ],
+        [
+          "C. Minimal: secure tablets and shared templates",
+          "$150,000 (devices, management software, access logging)",
+          "$40,000",
+          "Spring training",
+          "Cheap; fixes delivery and security first",
+          "Does not reduce analyst hours; no new capability"
+        ],
+        [
+          "Add-on: automated video tagging",
+          "$290,000",
+          "$60,000",
+          "May",
+          "Cuts video hours; searchable library",
+          "Accuracy uncertain for international-league video"
+        ]
+      ],
+      "note": "Synthetic data. Assumptions: quotes are invented and non-binding; options A and B largely substitute for each other; option C can be combined with either; costs exclude staff time inside your envelope."
+    },
+    {
+      "title": "Exhibit 6 — Incident log (last season, abridged)",
+      "type": "table",
+      "headers": [
+        "Date",
+        "Incident",
+        "Immediate consequence",
+        "Root cause recorded"
+      ],
+      "rows": [
+        [
+          "April 18",
+          "Opponent hitter report delivered 40 minutes before first pitch",
+          "Not reviewed by hitting coach",
+          "Analyst also finishing a research deadline"
+        ],
+        [
+          "May 9",
+          "Positioning card used against a hitter traded to the opponent 13 days earlier",
+          "Card discarded mid-game",
+          "No owner for roster-change updates"
+        ],
+        [
+          "June 2",
+          "Relief pitcher used against a hitter the report flagged as a poor matchup",
+          "Manager says he never saw the note",
+          "Note was on page 17"
+        ],
+        [
+          "July 21",
+          "Opponent report forwarded to a personal messaging group including a former staff member",
+          "Vendor warned of license breach",
+          "No device or sharing policy"
+        ],
+        [
+          "August 14",
+          "Spanish-speaking reliever received report summary only in English",
+          "Player asked a teammate to translate in the bullpen",
+          "No translation responsibility"
+        ],
+        [
+          "September 3",
+          "A pitcher’s recovery marker appeared in a report shared with the full coaching staff",
+          "Player complained to the union representative",
+          "Health data mixed into the advance report template"
+        ]
+      ],
+      "note": "Synthetic data. Assumptions: entries are invented; the log was kept informally by the president’s office and is probably incomplete; no causal link to game outcomes is established."
+    }
+  ],
+  "assumptions": [
+    "All people, clubs, leagues, figures and events are fictional; the Meridian League and the Port Calder Lamplighters are invented.",
+    "All numbers are synthetic and chosen for teaching; none describes a real club’s budget, staffing or internal structure.",
+    "The department head’s cost is included in the base personnel envelope.",
+    "The loaned senior analyst is not charged to your envelope and leaves on May 31.",
+    "Legal points in this capstone are educational and general — not legal advice. Consult a qualified attorney about any specific agreement or data practice.",
+    "Health and biometric data of players are governed by agreements and laws that the fictional counsel, not the department, interprets.",
+    "Finance’s run-value convention ($350,000 per run) is a contested planning assumption; your work should show how conclusions change if it is wrong.",
+    "The field manager decides in-game strategy; the department recommends. Changing that is possible but would itself be a major decision to defend."
+  ],
+  "components": [
+    {
+      "id": "k01",
+      "number": 1,
+      "title": "Department mission and vision",
+      "week": 9,
+      "draws": [
+        "w05",
+        "w08",
+        "w09"
+      ],
+      "words": [
+        150,
+        300
+      ],
+      "tool": null,
+      "deliverable": "memo",
+      "guidance": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "A mission says what the department does, for whom, and what it will not do. A vision says what will be different in three years if it succeeds. Both are tools for saying no. A mission that could be pasted into any department (“to provide world-class insight”) gives nobody guidance when the hitting coach and the general manager ask for incompatible things on the same afternoon."
+        },
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Treat any claim that a mission statement by itself improves performance as unproven; this course does not rely on it. The mechanism worth designing for is alignment and decision guidance (helping people choose between competing requests), not inspiration. Write for that mechanism."
+        },
+        {
+          "type": "table",
+          "kind": "original",
+          "caption": "Testing a mission statement",
+          "headers": [
+            "Test",
+            "Weak version",
+            "Strong version"
+          ],
+          "rows": [
+            [
+              "Customer",
+              "“The organization”",
+              "Named primary customer (for example, the major-league staff) and named secondary ones"
+            ],
+            [
+              "Scope",
+              "Everything analytical",
+              "What the department owns, shares and does not do"
+            ],
+            [
+              "Exclusion",
+              "None",
+              "At least one explicit “we do not”"
+            ],
+            [
+              "Distinctiveness",
+              "Could fit any club",
+              "Draws on a capability that is hard to copy, such as trust with this coaching staff"
+            ],
+            [
+              "Check",
+              "Unfalsifiable",
+              "Someone could observe in June whether you are living it"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "kind": "established",
+          "text": "Use the resource-based view to sharpen the vision. Data feeds and software can be bought by every rival; a working relationship between analysts, scouts and a skeptical coaching staff is socially complex and slow to imitate. A vision built on the second is more defensible than one built on the first.",
+          "refs": [
+            "R-barney-1991-firm"
+          ]
+        },
+        {
+          "type": "prompt",
+          "text": "Write the one sentence you would want Walt Brannigan to repeat to his coaches in April. Does your mission make that sentence true?"
+        }
+      ],
+      "prompts": [
+        "Who is the department’s primary customer, and what happens when a secondary customer’s request conflicts with that customer’s needs?",
+        "Name one thing the department will deliberately not do in Year 1, and who will be disappointed.",
+        "Which capability in your vision would a rival find hardest to copy, and why?"
+      ],
+      "template": [
+        {
+          "heading": "Mission (one or two sentences)",
+          "guidance": "What you do, for whom, and the boundary."
+        },
+        {
+          "heading": "Vision (three-year horizon)",
+          "guidance": "An observable state, not an adjective."
+        },
+        {
+          "heading": "What we will not do",
+          "guidance": "Two or three explicit exclusions with a one-line reason each."
+        },
+        {
+          "heading": "How to test it",
+          "guidance": "What a visitor would see in June if the mission were real."
+        }
+      ]
+    },
+    {
+      "id": "k02",
+      "number": 2,
+      "title": "Strategic priorities",
+      "week": 9,
+      "draws": [
+        "w01",
+        "w09",
+        "w10"
+      ],
+      "words": [
+        400,
+        700
+      ],
+      "tool": null,
+      "deliverable": "memo",
+      "guidance": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Strategy begins with a diagnosis: a clear statement of the critical problem. Exhibits 1, 4 and 6 point to several candidates: late and overlong reports, no owner for updates, unsafe data handling, no international coverage, and weak cross-department communication. They are not equally important, and they are not equally solvable in Year 1. Your priorities should follow from a diagnosis you can state in two sentences."
+        },
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Then choose a guiding policy, the overall approach, and three to five priorities that are coherent with it. More than five is a list, not a strategy. A useful discipline from Week 9: for each priority, name what you will stop or decline to fund because of it. If nothing is displaced, you have not made a choice."
+        },
+        {
+          "type": "matrix",
+          "kind": "original",
+          "caption": "Sorting candidate priorities (practitioner heuristic)",
+          "x": [
+            "Low value to the primary customer",
+            "High value to the primary customer"
+          ],
+          "y": [
+            "Hard to deliver in Year 1",
+            "Feasible in Year 1"
+          ],
+          "cells": [
+            [
+              "Decline or defer explicitly",
+              "Stage: build foundations now, deliver in Year 2"
+            ],
+            [
+              "Do only if nearly free",
+              "Year 1 priorities"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "kind": "established",
+          "text": "Distinguish competitive priorities from hygiene. Fixing data security will not win a game, but failing at it can end the department. Hygiene items belong in the plan and the budget; they should not crowd out the one or two priorities that could create advantage that is hard to imitate.",
+          "refs": [
+            "R-barney-1991-firm"
+          ]
+        },
+        {
+          "type": "p",
+          "kind": "application",
+          "text": "Write each priority as an outcome with an owner and a first indicator, not as an activity. “Build a dashboard” is an activity. “Coaches receive a two-page opponent brief by 10 a.m. on the day before every series” is an outcome you can check."
+        }
+      ],
+      "prompts": [
+        "State your diagnosis in two sentences. Which exhibit supports it most and which least?",
+        "For each priority, what will you stop, defer or refuse?",
+        "Which priority is hygiene and which could create lasting advantage?",
+        "If the January budget comes in 15% below the envelope, which priority goes first?"
+      ],
+      "template": [
+        {
+          "heading": "Diagnosis",
+          "guidance": "The critical problem, with evidence from the exhibits and its limits."
+        },
+        {
+          "heading": "Guiding policy",
+          "guidance": "The overall approach in one paragraph."
+        },
+        {
+          "heading": "Priorities (three to five)",
+          "guidance": "Each as an outcome, owner and first indicator."
+        },
+        {
+          "heading": "What we are not doing",
+          "guidance": "Displaced work and who bears the cost."
+        },
+        {
+          "heading": "Sequencing logic",
+          "guidance": "Why this order."
+        }
+      ]
+    },
+    {
+      "id": "k03",
+      "number": 3,
+      "title": "Organizational structure",
+      "week": 8,
+      "draws": [
+        "w06",
+        "w08"
+      ],
+      "words": [
+        300,
+        500
+      ],
+      "tool": "orgdesign",
+      "deliverable": "orgchart",
+      "guidance": [
+        {
+          "type": "p",
+          "kind": "established",
+          "text": "Structure is a bet about which coordination problems matter most. Galbraith’s information-processing view is the most useful lens here: the more uncertain the task, the more information has to move during execution, and a structure either reduces the need for that information or builds capacity to process it. Advance preparation is a high-uncertainty, deadline-driven task with daily exceptions such as trades, injuries and bullpen fatigue.",
+          "refs": [
+            "R-galbraith-1974-organization"
+          ]
+        },
+        {
+          "type": "p",
+          "kind": "established",
+          "text": "Your department is itself an integrating mechanism between differentiated groups (coaches, analysts, scouts, video, player development). Lawrence and Lorsch found that integrators are effective when others see them as competent and balanced rather than as agents of one side. If your structure looks like an outpost of Research and Analytics, coaches will treat it that way.",
+          "refs": [
+            "R-lawrence-1967-differentiation"
+          ]
+        },
+        {
+          "type": "table",
+          "kind": "original",
+          "caption": "Three structural options",
+          "headers": [
+            "Option",
+            "How it works",
+            "Strength",
+            "Main cost"
+          ],
+          "rows": [
+            [
+              "Lean service cell",
+              "Small team reporting to you; borrows video, scouting and research",
+              "Cheap, fast to start",
+              "Depends on other departments’ goodwill"
+            ],
+            [
+              "Coordination hub",
+              "Absorbs advance scouts, a video coordinator and analysts",
+              "Clear ownership of the whole process",
+              "Turf conflict; larger budget"
+            ],
+            [
+              "Matrix",
+              "Staff stay in home departments with a dotted line to you",
+              "Low disruption",
+              "Two bosses; priorities collide in-season"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Use the Organization Builder to test your choice: it checks cost, span of control, layers, hours against capacity, skill coverage and single points of failure. A chart that passes every check can still fail politically; one that fails a check can still be right if you can explain why."
+        },
+        {
+          "type": "prompt",
+          "text": "Which exception, a midweek trade or a sudden bullpen injury, would expose your structure fastest? Trace who learns about it and who acts."
+        }
+      ],
+      "prompts": [
+        "Which of the three structural options did you choose, and what coordination problem does it solve best?",
+        "Where does information about a midweek roster change enter your structure, and how long until it reaches a positioning card?",
+        "How will coaches see your department: as balanced integrator or as analytics’ outpost? What in the structure signals that?"
+      ],
+      "template": [
+        {
+          "heading": "Chosen structure and rationale",
+          "guidance": "Option, why, and the main alternative you rejected."
+        },
+        {
+          "heading": "Reporting lines and interfaces",
+          "guidance": "To whom you report; dotted lines; how Video, Pro Scouting, Research and Analytics, Player Development and International Scouting connect."
+        },
+        {
+          "heading": "Builder results",
+          "guidance": "Cost, spans, layers, coverage and the checks you accept failing, with reasons."
+        }
+      ]
+    },
+    {
+      "id": "k04",
+      "number": 4,
+      "title": "Staffing model",
+      "week": 8,
+      "draws": [
+        "w02",
+        "w03",
+        "w08"
+      ],
+      "words": [
+        400,
+        700
+      ],
+      "tool": "orgdesign",
+      "deliverable": "orgchart",
+      "guidance": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "The base envelope ($1,150,000 including you) cannot buy every role in Exhibit 3. A staffing model answers four questions: which roles, in what order, with what skills, and how you will select people. The Builder makes the first three concrete; the fourth is where many new departments fail quietly."
+        },
+        {
+          "type": "p",
+          "kind": "contested",
+          "text": "On selection, the evidence has moved. An influential 1998 synthesis ranked general mental ability tests at the top of selection methods; a 2022 re-analysis argued that earlier corrections for range restriction were overstated, lowered most estimates, and placed structured interviews at or near the top. The defensible default for a small specialist team is structured interviews and realistic work samples (for example, a two-page brief from real but anonymized data) scored against criteria fixed in advance.",
+          "refs": [
+            "R-schmidt-1998-validity",
+            "R-sackett-2022-revisiting"
+          ]
+        },
+        {
+          "type": "table",
+          "kind": "original",
+          "caption": "Staffing trade-offs to resolve",
+          "headers": [
+            "Choice",
+            "Option A",
+            "Option B",
+            "What tips it"
+          ],
+          "rows": [
+            [
+              "Management layer",
+              "Hire an operations manager",
+              "You manage everyone directly",
+              "Span of control and your own hours"
+            ],
+            [
+              "Road coverage",
+              "Absorb the two advance scouts",
+              "Buy their reports from Pro Scouting",
+              "Integration value vs. turf and cost"
+            ],
+            [
+              "Coach interface",
+              "Bilingual liaison",
+              "Analysts present directly",
+              "Survey timeliness and usability scores"
+            ],
+            [
+              "Engineering",
+              "Own data engineer",
+              "Rely on Research and Analytics",
+              "Technology option chosen in k07"
+            ],
+            [
+              "Continuity",
+              "Two people can do each critical task",
+              "Specialists only",
+              "A 162-game season with travel and illness"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "kind": "application",
+          "text": "Design for motivation as well as coverage. Week 2’s self-determination lens suggests analysts who never see their work used, or never get credit for it, disengage. Build visible use and credit into roles, and be honest that in-season hours in professional baseball are long."
+        },
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Plan for May 31, when the loaned analyst leaves. A staffing model that works only with borrowed capacity has a known failure date."
+        }
+      ],
+      "prompts": [
+        "Which roles do you fund in Year 1, which do you defer, and what work goes undone as a result?",
+        "Which critical work item is covered by only one person, and what is your backup plan?",
+        "Describe the work sample you would use to hire your first analyst and how you would score it.",
+        "What happens to report quality on June 1?"
+      ],
+      "template": [
+        {
+          "heading": "Roles funded and deferred",
+          "guidance": "Table of positions, cost, hours and hiring order."
+        },
+        {
+          "heading": "Coverage and backup",
+          "guidance": "Critical work, primary and backup owner."
+        },
+        {
+          "heading": "Selection method",
+          "guidance": "Structured interview and work sample, with scoring criteria."
+        },
+        {
+          "heading": "Development and retention",
+          "guidance": "How people grow and why they stay."
+        },
+        {
+          "heading": "Transition from loaned capacity",
+          "guidance": "Plan for May 31."
+        }
+      ]
+    },
+    {
+      "id": "k05",
+      "number": 5,
+      "title": "Decision rights",
+      "week": 8,
+      "draws": [
+        "w06",
+        "w08",
+        "w13"
+      ],
+      "words": [
+        300,
+        500
+      ],
+      "tool": "orgdesign",
+      "deliverable": "orgchart",
+      "guidance": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Most coordination failures in Exhibit 6 are decision-rights failures: nobody owned roster-change updates, nobody decided what goes on page one, nobody approved data sharing. Assign roles for the decisions that create or destroy the most value, not for every task."
+        },
+        {
+          "type": "p",
+          "kind": "established",
+          "text": "Use a vocabulary such as Recommend, Input, Decide and Informed (the Builder’s labels, adapted from the consulting RAPID framework). It is a practitioner heuristic with anecdotal support, useful because it forces one name into the “Decide” box; it is not evidence that clarity alone improves results.",
+          "refs": [
+            "R-rogers-2006-who"
+          ]
+        },
+        {
+          "type": "table",
+          "kind": "original",
+          "caption": "Starter decision-rights grid (adapt it)",
+          "headers": [
+            "Decision",
+            "Advance",
+            "Field manager",
+            "Research and Analytics",
+            "Counsel / president"
+          ],
+          "rows": [
+            [
+              "In-game strategy",
+              "Recommend",
+              "Decide",
+              "Input",
+              "Informed"
+            ],
+            [
+              "Content of player-facing report",
+              "Decide",
+              "Input",
+              "Input",
+              "Informed"
+            ],
+            [
+              "Defensive positioning for a series",
+              "Recommend",
+              "Decide",
+              "Input",
+              "Informed"
+            ],
+            [
+              "Access to player health data",
+              "Input",
+              "Input",
+              "Input",
+              "Decide (policy)"
+            ],
+            [
+              "Research agenda",
+              "Input or Decide?",
+              "Input",
+              "Decide or Input?",
+              "Informed"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Watch the boundary between Input and veto. If the hitting coach’s Input can stop a report, he holds a hidden Decide. Name those cases or remove them."
+        },
+        {
+          "type": "prompt",
+          "text": "Which decision would you most like to Decide but should only Recommend? Write down why the person who Decides will accept your recommendation more often if you do not claim the call."
+        }
+      ],
+      "prompts": [
+        "Which five to eight decisions matter most, and who holds Decide on each?",
+        "Where have you given yourself Decide, and how will the affected leader react?",
+        "Which Input rights are really vetoes?"
+      ],
+      "template": [
+        {
+          "heading": "Decision-rights grid",
+          "guidance": "Five to eight decisions by role."
+        },
+        {
+          "heading": "Contested decisions",
+          "guidance": "Where you expect disagreement and how you will resolve it."
+        },
+        {
+          "heading": "Escalation path",
+          "guidance": "Who breaks ties, how fast, and in-season."
+        }
+      ]
+    },
+    {
+      "id": "k06",
+      "number": 6,
+      "title": "Budget and resource allocation",
+      "week": 10,
+      "draws": [
+        "w09",
+        "w10"
+      ],
+      "words": [
+        500,
+        800
+      ],
+      "tool": "allocation",
+      "deliverable": "budget",
+      "guidance": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Your budget has three parts that behave differently: a recurring personnel envelope, a small operating line, and a one-time investment fund for three-year projects. Do not mix them. Recurring commitments are hard to reverse; one-time investments can be staged."
+        },
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Use the Capital Allocation Lab to compare the eight candidate investments by net present value, internal rate of return, payback and profitability index, and to see the best portfolio within the $1,000,000 fund. Then interrogate it. Most of the benefit streams depend on finance’s run-value convention; switch scenarios and watch which projects survive. A project whose value is entirely hours saved is more robust than one whose value is entirely runs."
+        },
+        {
+          "type": "p",
+          "kind": "established",
+          "text": "Expect your estimates to be optimistic. Kahneman and Lovallo describe how planners take the inside view of one project and neglect the distribution of outcomes for similar ones. Before accepting any benefit figure, ask what share of comparable technology rollouts or new departments hit their first-year targets, and adjust.",
+          "refs": [
+            "R-kahneman-1993-timid"
+          ]
+        },
+        {
+          "type": "table",
+          "kind": "original",
+          "caption": "Questions every line must answer",
+          "headers": [
+            "Question",
+            "Why it matters"
+          ],
+          "rows": [
+            [
+              "Recurring or one-time?",
+              "Recurring costs bind future years"
+            ],
+            [
+              "Hard savings or estimated value?",
+              "Hard savings survive skeptics"
+            ],
+            [
+              "What happens in the low scenario?",
+              "Shows which projects are fragile"
+            ],
+            [
+              "What is the opportunity cost?",
+              "The best alternative use of the same money"
+            ],
+            [
+              "What is not in the cash flows?",
+              "Legal obligations, trust, reversibility"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "kind": "application",
+          "text": "Some projects should be funded even with a negative NPV, for example data governance if counsel concludes it is required. Say so explicitly rather than inflating its benefits to make the numbers work."
+        }
+      ],
+      "prompts": [
+        "Which portfolio do you choose, and how does it differ from the lab’s NPV-maximizing portfolio? Why?",
+        "Which project’s case depends most on the run-value convention, and what is your answer if finance halves it?",
+        "What recurring commitments are you creating for Years 2 and 3?",
+        "What would you cut first if the envelope fell by 10%?"
+      ],
+      "template": [
+        {
+          "heading": "Year 1 budget table",
+          "guidance": "Personnel, operating and investments, by line."
+        },
+        {
+          "heading": "Investment portfolio",
+          "guidance": "Projects chosen, NPV at the base rate, low-scenario result."
+        },
+        {
+          "heading": "Departures from the NPV ranking",
+          "guidance": "Projects funded or declined for non-financial reasons."
+        },
+        {
+          "heading": "Three-year view",
+          "guidance": "Recurring commitments and what must be true to grow."
+        },
+        {
+          "heading": "Sensitivity",
+          "guidance": "Run-value and discount-rate changes that would alter the choice."
+        }
+      ]
+    },
+    {
+      "id": "k07",
+      "number": 7,
+      "title": "Technology and analytical infrastructure",
+      "week": 10,
+      "draws": [
+        "w04",
+        "w09",
+        "w10",
+        "w11"
+      ],
+      "words": [
+        500,
+        800
+      ],
+      "tool": null,
+      "deliverable": "memo",
+      "guidance": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Exhibit 5 is a build-versus-buy decision with a political edge. Evaluate it on four axes: time to value (spring training or July), control and ownership of code and models, dependence (on a vendor or on another department), and the contractual terms that govern data use and exit."
+        },
+        {
+          "type": "p",
+          "kind": "contested",
+          "text": "Adoption will decide whether any option works. Lab experiments found that people who watched an algorithm err became less willing to rely on it than on a human forecaster, even when the algorithm was better; a later series found that letting users adjust the output, even within narrow limits, sharply increased use. Other experiments found the opposite default among lay people, algorithm appreciation, while experienced professionals discounted algorithmic advice. The honest reading: reactions depend on who the users are and whether they have seen errors, and veteran coaches who will see the first public miss are the worrying case.",
+          "refs": [
+            "R-dietvorst-2015-algorithm",
+            "R-logg-2019-algorithm",
+            "R-dietvorst-2018-overcoming"
+          ]
+        },
+        {
+          "type": "flow",
+          "kind": "original",
+          "caption": "Designing for the first visible error",
+          "steps": [
+            {
+              "label": "Before launch",
+              "text": "Tell coaches the expected error rate and what a miss will look like."
+            },
+            {
+              "label": "Bounded override",
+              "text": "Let coaches adjust within stated limits and record the adjustment."
+            },
+            {
+              "label": "First miss",
+              "text": "Review it openly within 48 hours; separate bad luck from bad model."
+            },
+            {
+              "label": "Learn",
+              "text": "Compare model, override and outcome over many cases, not one."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "kind": "application",
+          "text": "Treat data governance as infrastructure, not paperwork: access tiers, device management, logging and retention are design decisions you make now. Check vendor terms with counsel before you commit; the July incident in Exhibit 6 is a license problem as well as a security one."
+        }
+      ],
+      "prompts": [
+        "Which technology option do you choose, and what must be true by Opening Day for it to succeed?",
+        "How will coaches be able to adjust or override outputs, and how will you learn from overrides?",
+        "What happens to your infrastructure if the vendor raises prices or Research and Analytics reprioritizes?"
+      ],
+      "template": [
+        {
+          "heading": "Decision and rationale",
+          "guidance": "Option chosen and the main rejected alternative."
+        },
+        {
+          "heading": "Architecture in plain language",
+          "guidance": "Data in, processing, outputs, delivery devices, access tiers."
+        },
+        {
+          "heading": "Adoption design",
+          "guidance": "Override rights, error communication and training."
+        },
+        {
+          "heading": "Dependencies and exit",
+          "guidance": "Vendor or internal dependencies and how you could leave."
+        }
+      ]
+    },
+    {
+      "id": "k08",
+      "number": 8,
+      "title": "Stakeholder engagement",
+      "week": 9,
+      "draws": [
+        "w05",
+        "w06",
+        "w07"
+      ],
+      "words": [
+        500,
+        800
+      ],
+      "tool": null,
+      "deliverable": "memo",
+      "guidance": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Map each stakeholder by power over your success, interest in your work and current stance. A power and interest grid is a practitioner heuristic, not a measured model; its value is forcing you to write down assumptions you can test in conversation."
+        },
+        {
+          "type": "p",
+          "kind": "established",
+          "text": "Network position matters, and the right position depends on the change. In a field study of change initiatives in a national health system, change agents with ties to potential resisters did better on some kinds of change and not others; how far the change departed from established norms moderated which networks helped. A department that reorganizes how coaches prepare is a divergent change for many of them.",
+          "refs": [
+            "R-battilana-2012-change"
+          ]
+        },
+        {
+          "type": "table",
+          "kind": "original",
+          "caption": "Interest behind the position (fill in)",
+          "headers": [
+            "Stakeholder",
+            "Stated position",
+            "Likely interest",
+            "What you can offer",
+            "What you need"
+          ],
+          "rows": [
+            [
+              "Sanjay Mehra",
+              "Keep models and code",
+              "Research credibility, staff, budget",
+              "Co-authorship, research agenda input",
+              "Analyst time and data access"
+            ],
+            [
+              "Graham Pettibone",
+              "Scouts report through him",
+              "Status of scouting, career paths",
+              "Joint reports, credit",
+              "Integration of road notes"
+            ],
+            [
+              "Ernesto Villalba",
+              "Silent",
+              "Role, respect",
+              "A named role in the meeting",
+              "His knowledge and the coaches’ trust"
+            ],
+            [
+              "Inés Carvajal",
+              "No free labor",
+              "Signing calendar, budget",
+              "Paid coverage, shared contacts",
+              "Scout reports on foreign-league players"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "kind": "application",
+          "text": "Use Week 7’s distinction between positions and interests: most of these leaders are negotiating, even if nobody calls it that. Plan the order of conversations, what you will trade, and what you will not trade."
+        },
+        {
+          "type": "prompt",
+          "text": "Who is the highest-power neutral in your map? What is the first conversation you will have with that person, and what will you ask rather than tell?"
+        }
+      ],
+      "prompts": [
+        "Who are the three stakeholders whose opposition would sink the department, and what does each need?",
+        "What will you trade with Research and Analytics, and what is your walk-away?",
+        "How will you protect Ernesto Villalba’s standing while changing the meeting he runs?",
+        "Which coach is your first ally, and is that the right signal to send?"
+      ],
+      "template": [
+        {
+          "heading": "Map",
+          "guidance": "Power, interest and stance for 8–10 stakeholders, with your evidence."
+        },
+        {
+          "heading": "Interests and exchanges",
+          "guidance": "What each needs and what you can offer."
+        },
+        {
+          "heading": "Sequence of engagement",
+          "guidance": "Order of conversations before January 20 and before Opening Day."
+        },
+        {
+          "heading": "Non-negotiables",
+          "guidance": "What you will not trade, and why."
+        }
+      ]
+    },
+    {
+      "id": "k09",
+      "number": 9,
+      "title": "Legal and ethical considerations",
+      "week": 11,
+      "draws": [
+        "w11",
+        "w13"
+      ],
+      "words": [
+        600,
+        900
+      ],
+      "tool": null,
+      "deliverable": "memo",
+      "guidance": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Educational material about general legal concepts — not legal advice. Consult a qualified attorney about any specific agreement or data practice. In this capstone, your job is to spot issues and frame questions for counsel, not to resolve them."
+        },
+        {
+          "type": "p",
+          "kind": "established",
+          "text": "Separate three kinds of data. Opponent data is mostly public or licensed; the issues are contractual (license scope, sharing, storage, exit). Your own players’ performance data is sensitive and governed by agreements and club policy. Health and biometric data is the most sensitive: comprehensive privacy regimes such as the EU’s General Data Protection Regulation treat data concerning health as a special category and require purpose limitation and data minimisation. The GDPR appears here only as an example of a strict regime; whether any regime applies to a given player is a question for counsel.",
+          "refs": [
+            "R-eu-2016-regulation"
+          ]
+        },
+        {
+          "type": "p",
+          "kind": "established",
+          "text": "A neutral way to structure your governance plan is the NIST Privacy Framework’s functions: identify what data you hold and why, govern it with policy and roles, control processing, communicate with the people the data describes, and protect it. It is voluntary guidance, not a statement of what any law requires.",
+          "refs": [
+            "R-nist-2020-nist"
+          ]
+        },
+        {
+          "type": "table",
+          "kind": "original",
+          "caption": "Issue-spotting starter (questions for counsel, not conclusions)",
+          "headers": [
+            "Area",
+            "Issue in the scenario",
+            "Question for counsel"
+          ],
+          "rows": [
+            [
+              "Vendor license",
+              "July report forwarded outside the club",
+              "What do current licenses permit for sharing, storage and devices?"
+            ],
+            [
+              "Player health data",
+              "Recovery marker in a coaches’ report",
+              "Who may see readiness data, for what purpose, under the agreement and policy?"
+            ],
+            [
+              "Minors abroad",
+              "Academy players in other jurisdictions",
+              "Which law governs collection and transfer of their data?"
+            ],
+            [
+              "Employment",
+              "Moving staff between departments",
+              "Do role changes alter terms, reporting or confidentiality obligations?"
+            ],
+            [
+              "Intellectual property",
+              "Models built with Research and Analytics",
+              "Who owns code and models built jointly or by contractors?"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "kind": "application",
+          "text": "Ethics goes beyond compliance. Ask who bears the risk of each use of data, whether the player would recognize the use as fair, and what you would do if a coach asked for something lawful but corrosive to trust. Write down the line you will hold before someone asks you to cross it."
+        }
+      ],
+      "prompts": [
+        "Which data uses will you refuse in Year 1 even if they are lawful, and why?",
+        "What questions will you take to counsel before signing any vendor contract?",
+        "How will you handle data about academy players who are minors?",
+        "Who in your structure is accountable for a data incident?"
+      ],
+      "template": [
+        {
+          "heading": "Disclaimer",
+          "guidance": "State that this is issue spotting for counsel, not legal advice."
+        },
+        {
+          "heading": "Data inventory and tiers",
+          "guidance": "What data, from whom, for what purpose, who sees it."
+        },
+        {
+          "heading": "Issues for counsel",
+          "guidance": "Contract, privacy, employment and IP questions."
+        },
+        {
+          "heading": "Ethical commitments",
+          "guidance": "Lines you will hold and how they are enforced."
+        },
+        {
+          "heading": "Incident response",
+          "guidance": "Who does what in the first 24 hours."
+        }
+      ]
+    },
+    {
+      "id": "k10",
+      "number": 10,
+      "title": "Organizational communication",
+      "week": 11,
+      "draws": [
+        "w05",
+        "w06",
+        "w12"
+      ],
+      "words": [
+        400,
+        650
+      ],
+      "tool": null,
+      "deliverable": "memo",
+      "guidance": [
+        {
+          "type": "p",
+          "kind": "established",
+          "text": "Exhibit 6’s June incident, a warning on page 17, is a communication design failure. The research on information overload across organizational fields describes a consistent pattern: beyond a point, more information lowers decision quality, and the remedy is filtering, structure and timing rather than effort.",
+          "refs": [
+            "R-eppler-2004-concept"
+          ]
+        },
+        {
+          "type": "p",
+          "kind": "established",
+          "text": "Meetings have their own failure mode. In hidden-profile experiments, groups discussed information everyone already shared and neglected information held by one member. Your pre-series meeting is a hidden-profile setting: the road scout, the catcher and the analyst each know different things. Structure the meeting so unique information is asked for by name.",
+          "refs": [
+            "R-stasser-1985-pooling"
+          ]
+        },
+        {
+          "type": "table",
+          "kind": "original",
+          "caption": "Communication architecture (adapt)",
+          "headers": [
+            "Audience",
+            "Product",
+            "Timing",
+            "Length",
+            "Language"
+          ],
+          "rows": [
+            [
+              "Field manager",
+              "Three-point brief",
+              "10 a.m. day before series",
+              "One page",
+              "English and Spanish as needed"
+            ],
+            [
+              "Coaches",
+              "Opponent brief plus video",
+              "Day before series",
+              "Two pages plus clips",
+              "Bilingual"
+            ],
+            [
+              "Players",
+              "Video and one-page card",
+              "Day of first game",
+              "One page",
+              "Player’s preferred language"
+            ],
+            [
+              "GM and president",
+              "Weekly strategic summary",
+              "Monday",
+              "One page",
+              "English"
+            ],
+            [
+              "Player development",
+              "Monthly shared-language note",
+              "Monthly",
+              "Two pages",
+              "Bilingual"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "kind": "application",
+          "text": "Translation is not an afterthought. A report a player cannot read comfortably is a report he did not receive. Budget the time and assign the owner."
+        }
+      ],
+      "prompts": [
+        "What is on page one of the coaches’ brief, and who decides?",
+        "How will your pre-series meeting surface what only one person knows?",
+        "What is the bilingual standard, and who checks it?"
+      ],
+      "template": [
+        {
+          "heading": "Audiences and products",
+          "guidance": "Who receives what, when, how long, in which language."
+        },
+        {
+          "heading": "Meeting design",
+          "guidance": "Agenda, roles and how unique information is surfaced."
+        },
+        {
+          "heading": "Rules of the road",
+          "guidance": "Length limits, deadlines, version control and confidentiality."
+        }
+      ]
+    },
+    {
+      "id": "k11",
+      "number": 11,
+      "title": "Performance indicators",
+      "week": 12,
+      "draws": [
+        "w04",
+        "w08",
+        "w12"
+      ],
+      "words": [
+        400,
+        650
+      ],
+      "tool": null,
+      "deliverable": "roadmap",
+      "guidance": [
+        {
+          "type": "p",
+          "kind": "established",
+          "text": "Choose a small set of indicators that tell you whether the department is working and that you would be comfortable having people optimize. Kerr’s classic essay shows that organizations get the behavior they reward, not the behavior they hope for; Campbell warned that the more an indicator is used for consequential decisions, the more it is corrupted and the more it distorts the activity it monitors.",
+          "refs": [
+            "R-kerr-1975-folly",
+            "R-campbell-1979-assessing"
+          ]
+        },
+        {
+          "type": "table",
+          "kind": "original",
+          "caption": "A balanced indicator set (example structure)",
+          "headers": [
+            "Type",
+            "Example",
+            "Gaming risk",
+            "Counterweight"
+          ],
+          "rows": [
+            [
+              "Leading: delivery",
+              "Share of briefs delivered by deadline",
+              "Thin, rushed reports",
+              "Coach usability rating"
+            ],
+            [
+              "Leading: use",
+              "Share of recommendations discussed in the pre-series meeting",
+              "Padding the agenda",
+              "Count of recommendations acted on"
+            ],
+            [
+              "Quality",
+              "Accuracy of positioning and pitch-mix forecasts, scored after the series",
+              "Hedged forecasts",
+              "Proper scoring rule such as the Brier score"
+            ],
+            [
+              "Trust",
+              "Coach and player survey, twice a season",
+              "Small samples",
+              "Report with intervals, not point estimates"
+            ],
+            [
+              "Lagging: outcomes",
+              "Runs or outs in situations the department targeted",
+              "Noise, small samples",
+              "Multi-season view; never a bonus trigger"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Resist the temptation to promise wins or runs as a Year 1 indicator. With dozens of series and noisy outcomes, any estimate of the department’s effect on run prevention will be imprecise; report it, but do not let it decide the department’s fate in October."
+        }
+      ],
+      "prompts": [
+        "Which three indicators would you show the president in October, and what would each look like if the department were failing?",
+        "How could your own staff game each indicator, and what counterweight prevents it?",
+        "Which indicator would you refuse to tie to compensation, and why?"
+      ],
+      "template": [
+        {
+          "heading": "Indicator set",
+          "guidance": "Five to eight indicators by type with definitions and owners."
+        },
+        {
+          "heading": "Targets and baselines",
+          "guidance": "Starting values from the exhibits and Year 1 targets."
+        },
+        {
+          "heading": "Gaming and counterweights",
+          "guidance": "How each could be gamed and what balances it."
+        },
+        {
+          "heading": "Review cadence",
+          "guidance": "Who reviews which indicator, how often."
+        }
+      ]
+    },
+    {
+      "id": "k12",
+      "number": 12,
+      "title": "Research and evidence standards",
+      "week": 10,
+      "draws": [
+        "w01",
+        "w04",
+        "w13"
+      ],
+      "words": [
+        400,
+        700
+      ],
+      "tool": null,
+      "deliverable": "memo",
+      "guidance": [
+        {
+          "type": "p",
+          "kind": "established",
+          "text": "Your department’s product is evidence, so it needs written standards for what counts as evidence. Evidence-based management, as Rousseau framed it, combines the best available research with local data, professional judgment and the values of those affected. It is a discipline of transparency about each source, not deference to any single one.",
+          "refs": [
+            "R-rousseau-2006-is"
+          ]
+        },
+        {
+          "type": "p",
+          "kind": "established",
+          "text": "Two standards matter most for a small department. First, separate prediction from postdiction: write down before the season what result would count as success for a new practice, and label everything else exploratory. Second, distrust large effects from small samples: when studies or seasons are small and noisy, the estimates that look impressive tend to exaggerate the true effect and can have the wrong sign.",
+          "refs": [
+            "R-nosek-2018-preregistration",
+            "R-gelman-2014-beyond"
+          ]
+        },
+        {
+          "type": "table",
+          "kind": "original",
+          "caption": "Evidence labels for every recommendation",
+          "headers": [
+            "Label",
+            "Meaning",
+            "Example use"
+          ],
+          "rows": [
+            [
+              "Established",
+              "Replicated research or multi-season internal evidence",
+              "Platoon tendencies of a long-tenured hitter"
+            ],
+            [
+              "Indicated",
+              "Consistent but limited data",
+              "A new reliever’s pitch mix over 60 pitches"
+            ],
+            [
+              "Scout or coach judgment",
+              "Expert observation not yet in the data",
+              "Road scout sees a changed delivery"
+            ],
+            [
+              "Hypothesis",
+              "Plausible, untested",
+              "A sequencing idea for a hitter new to the league"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "kind": "application",
+          "text": "Agree with Research and Analytics on who reviews whose work. A simple rule, that any claim that drives a structural change is reviewed by someone outside the team that produced it, protects both departments."
+        }
+      ],
+      "prompts": [
+        "What evidence labels will appear on your reports, and who assigns them?",
+        "What will you write down before Opening Day about how you will evaluate the department’s own impact?",
+        "How will you handle a coach’s observation that contradicts the data?"
+      ],
+      "template": [
+        {
+          "heading": "Principles",
+          "guidance": "Three to five standards in plain language."
+        },
+        {
+          "heading": "Evidence labels",
+          "guidance": "Definitions and examples."
+        },
+        {
+          "heading": "Pre-specified evaluations",
+          "guidance": "What you will test in Year 1 and what result would change your mind."
+        },
+        {
+          "heading": "Review and disagreement",
+          "guidance": "Who reviews, and how conflicts with coaches or Research and Analytics are settled."
+        }
+      ]
+    },
+    {
+      "id": "k13",
+      "number": 13,
+      "title": "Change management strategy",
+      "week": 12,
+      "draws": [
+        "w05",
+        "w06",
+        "w12"
+      ],
+      "words": [
+        500,
+        800
+      ],
+      "tool": null,
+      "deliverable": "roadmap",
+      "guidance": [
+        {
+          "type": "p",
+          "kind": "established",
+          "text": "Kotter’s eight steps are the vocabulary most executives know: urgency, guiding coalition, vision, communication, empowerment, short-term wins, consolidation, culture. Treat them as a practitioner heuristic drawn from consulting observation, with limited direct testing and a linear sequence that rarely matches real change.",
+          "refs": [
+            "R-kotter-1995-leading"
+          ]
+        },
+        {
+          "type": "p",
+          "kind": "established",
+          "text": "The broader quantitative literature on how employees react to change points to process variables you control: participation in shaping the change, quality and timing of information, and trust in the people leading it, along with how the change affects each person. Those levers fit a coaching staff better than slogans about urgency.",
+          "refs": [
+            "R-oreg-2011-change"
+          ]
+        },
+        {
+          "type": "matrix",
+          "kind": "original",
+          "caption": "Pace and participation",
+          "x": [
+            "Low participation",
+            "High participation"
+          ],
+          "y": [
+            "Slow pace",
+            "Fast pace"
+          ],
+          "cells": [
+            [
+              "Drift: little resistance, little change",
+              "Co-design: slower start, durable adoption"
+            ],
+            [
+              "Imposition: quick launch, fragile",
+              "Sprint with a coalition: demanding, possible before spring training"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "kind": "established",
+          "text": "Plan the first visible win and the first visible failure. The win should be something coaches feel within two weeks of spring training (for example, briefs that arrive on time and fit on two pages). The failure will come; decide now how you will review it openly without blame, because staff report errors only where it feels safe to do so.",
+          "refs": [
+            "R-edmondson-1999-psychological"
+          ]
+        }
+      ],
+      "prompts": [
+        "Where on the pace and participation matrix will you operate, and why there?",
+        "What is your first visible win, and when will coaches notice it?",
+        "How will you respond to the first public error?",
+        "What will you not change in Year 1 to keep trust?"
+      ],
+      "template": [
+        {
+          "heading": "Readiness assessment",
+          "guidance": "Who is ready, who is not, and your evidence."
+        },
+        {
+          "heading": "Approach",
+          "guidance": "Pace, participation and coalition."
+        },
+        {
+          "heading": "Early wins and the first failure",
+          "guidance": "What, when and how reviewed."
+        },
+        {
+          "heading": "Resistance",
+          "guidance": "Expected forms and responses that respect legitimate concerns."
+        }
+      ]
+    },
+    {
+      "id": "k14",
+      "number": 14,
+      "title": "First 90-day implementation plan",
+      "week": 12,
+      "draws": [
+        "w05",
+        "w08",
+        "w12"
+      ],
+      "words": [
+        500,
+        800
+      ],
+      "tool": null,
+      "deliverable": "roadmap",
+      "guidance": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Your 90 days run from your appointment in November to about February 10, the eve of spring training. They contain a hard deadline (January 20), a budget lock (January 31) and a hiring market that closes in mid-December. Sequence by dependency: you cannot finalize staffing before the structure, or the structure before the key decision-rights conversations."
+        },
+        {
+          "type": "flow",
+          "kind": "original",
+          "caption": "A dependency-driven sequence (example)",
+          "steps": [
+            {
+              "label": "Days 1–20: listen",
+              "text": "Interviews with coaches, department heads, counsel; validate the exhibits."
+            },
+            {
+              "label": "Days 15–35: decide structure",
+              "text": "Choose structure, offer first hires before mid-December."
+            },
+            {
+              "label": "Days 30–60: agree rights",
+              "text": "Decision rights with the manager and Research and Analytics; data policy with counsel."
+            },
+            {
+              "label": "Days 55–70: present",
+              "text": "January 20 strategy; January 31 budget lock."
+            },
+            {
+              "label": "Days 70–90: rehearse",
+              "text": "Dry-run briefs on spring-training opponents; fix delivery."
+            }
+          ]
+        },
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "First-90-day frameworks for new leaders are practitioner heuristics. The useful parts are generic: learn before you change, secure early agreement on expectations with your boss, and pick early wins that build credibility for harder changes later."
+        },
+        {
+          "type": "p",
+          "kind": "application",
+          "text": "For each workstream, name an owner, a dependency, a deadline and the signal that it is off track. A plan with no signals will tell you it is fine until it is not."
+        }
+      ],
+      "prompts": [
+        "What must be true by January 20, and what can wait until spring training?",
+        "Which dependency is most likely to slip, and what is your fallback?",
+        "What will you have learned by day 30 that could change the plan?"
+      ],
+      "template": [
+        {
+          "heading": "Objectives for the 90 days",
+          "guidance": "Three to five outcomes."
+        },
+        {
+          "heading": "Workstreams and timeline",
+          "guidance": "Owner, start, end, dependency, signal of trouble."
+        },
+        {
+          "heading": "Key meetings and decisions",
+          "guidance": "Dates and what each must produce."
+        },
+        {
+          "heading": "Fallbacks",
+          "guidance": "What you do if a hire, a decision or the budget slips."
+        }
+      ]
+    },
+    {
+      "id": "k15",
+      "number": 15,
+      "title": "Longer-term strategic roadmap",
+      "week": 13,
+      "draws": [
+        "w09",
+        "w10",
+        "w12"
+      ],
+      "words": [
+        400,
+        700
+      ],
+      "tool": null,
+      "deliverable": "roadmap",
+      "guidance": [
+        {
+          "type": "p",
+          "kind": "established",
+          "text": "A new department runs on assumptions, not facts. Discovery-driven planning proposes organizing a roadmap around the assumptions that must be true, with milestones where those assumptions are tested before more resources are committed. It is a practitioner method with little controlled evidence, but it fits a department whose value case is unproven.",
+          "refs": [
+            "R-mcgrath-1995-discovery"
+          ]
+        },
+        {
+          "type": "table",
+          "kind": "original",
+          "caption": "A gated three-year roadmap (example structure)",
+          "headers": [
+            "Gate",
+            "When",
+            "Assumption tested",
+            "If confirmed",
+            "If not"
+          ],
+          "rows": [
+            [
+              "G1",
+              "End of May",
+              "Coaches use the brief and rate it usable",
+              "Hire second analyst",
+              "Redesign the product before adding staff"
+            ],
+            [
+              "G2",
+              "October",
+              "Forecast accuracy beats last season’s baseline",
+              "Request Year 2 growth",
+              "Hold envelope flat; fix methods"
+            ],
+            [
+              "G3",
+              "Mid Year 2",
+              "Player development uses shared formats",
+              "Expand integration role",
+              "Keep integration informal"
+            ],
+            [
+              "G4",
+              "End of Year 2",
+              "International coverage changes preparation for new players",
+              "Extend coverage",
+              "Return to scout-only coverage"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Make reversibility explicit. Some Year 1 choices, such as a three-year vendor contract or moving people out of other departments, are expensive to undo. A roadmap that stages irreversible choices behind evidence is easier to defend than one that commits everything in January."
+        }
+      ],
+      "prompts": [
+        "What are the three assumptions your department most depends on, and when will you test each?",
+        "Which Year 1 commitments are hard to reverse, and why are they worth it?",
+        "What would cause you to recommend shrinking the department?"
+      ],
+      "template": [
+        {
+          "heading": "Three-year objectives",
+          "guidance": "What the department will look like."
+        },
+        {
+          "heading": "Assumptions and gates",
+          "guidance": "Assumption, test, date, decision."
+        },
+        {
+          "heading": "Investment staging",
+          "guidance": "What is funded at each gate."
+        },
+        {
+          "heading": "Exit and shrink conditions",
+          "guidance": "What would make you recommend less."
+        }
+      ]
+    },
+    {
+      "id": "k16",
+      "number": 16,
+      "title": "Risk register and alternative scenarios",
+      "week": 13,
+      "draws": [
+        "w01",
+        "w10",
+        "w13"
+      ],
+      "words": [
+        500,
+        900
+      ],
+      "tool": null,
+      "deliverable": "memo",
+      "guidance": [
+        {
+          "type": "p",
+          "kind": "established",
+          "text": "Start with a premortem: imagine it is October and the department has failed, and have each person you trust write down why. The technique is a practitioner method with limited controlled evidence, but it legitimizes dissent and surfaces risks people otherwise keep to themselves.",
+          "refs": [
+            "R-klein-2007-performing"
+          ]
+        },
+        {
+          "type": "table",
+          "kind": "original",
+          "caption": "Risk register format",
+          "headers": [
+            "Risk",
+            "Likelihood (1–5)",
+            "Impact (1–5)",
+            "Early warning signal",
+            "Mitigation",
+            "Owner"
+          ],
+          "rows": [
+            [
+              "Manager disengages after an early miss",
+              3,
+              5,
+              "Briefs unopened for a week",
+              "Bounded override; private review",
+              "Director"
+            ],
+            [
+              "Loaned analyst leaves before replacement",
+              4,
+              3,
+              "No hire by April",
+              "Hire before May; cross-train",
+              "Operations manager"
+            ],
+            [
+              "Health data shared improperly",
+              2,
+              5,
+              "Any request outside policy",
+              "Access tiers; audit log",
+              "Governance coordinator"
+            ],
+            [
+              "Vendor price rise or exit",
+              2,
+              3,
+              "Renewal notice",
+              "Exit clause; data export rights",
+              "Director with counsel"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "kind": "established",
+          "text": "Then write two or three alternative scenarios: coherent stories about how the year could unfold differently, for example a manager change in June, a 15% budget cut, or a breakthrough in coach adoption. For each, state what you would do differently and which early signal would tell you it is happening. Use the outside view when estimating likelihoods: how often do new analytical units or technology rollouts hit their first-year plans?",
+          "refs": [
+            "R-kahneman-1993-timid"
+          ]
+        }
+      ],
+      "prompts": [
+        "What are the five risks most likely to end the department in Year 1?",
+        "What early signal would tell you each is happening?",
+        "Describe one scenario in which your strategy is wrong, and what you would do.",
+        "Which risk will you accept without mitigation, and why?"
+      ],
+      "template": [
+        {
+          "heading": "Premortem summary",
+          "guidance": "Reasons for failure that emerged."
+        },
+        {
+          "heading": "Risk register",
+          "guidance": "Eight to twelve risks scored with signals, mitigations and owners."
+        },
+        {
+          "heading": "Alternative scenarios",
+          "guidance": "Two or three scenarios with triggers and responses."
+        },
+        {
+          "heading": "Accepted risks",
+          "guidance": "What you will live with and why."
+        }
+      ]
+    },
+    {
+      "id": "k17",
+      "number": 17,
+      "title": "Executive presentation",
+      "week": 14,
+      "draws": [
+        "w05",
+        "w06",
+        "w09",
+        "w10"
+      ],
+      "words": [
+        800,
+        1300
+      ],
+      "tool": "composer",
+      "deliverable": "presentation",
+      "guidance": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Your audience is two senior leaders with forty minutes and many other priorities. Lead with the recommendation and the decision you need from them, then the reasons, then the risks. Answer-first structures (for example, BLUF) are practitioner heuristics; they work because a busy reader gets the decision even if attention runs out early."
+        },
+        {
+          "type": "p",
+          "kind": "established",
+          "text": "Information overload lowers decision quality. Cut every slide that does not change the decision, and move detail to an appendix or the memo. A useful test: could Castellanos explain your recommendation to ownership in two sentences after the meeting?",
+          "refs": [
+            "R-eppler-2004-concept"
+          ]
+        },
+        {
+          "type": "table",
+          "kind": "original",
+          "caption": "A ten-slide spine (example)",
+          "headers": [
+            "Slide",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "1",
+              "Recommendation and decisions requested"
+            ],
+            [
+              "2",
+              "Diagnosis with evidence and its limits"
+            ],
+            [
+              "3",
+              "Mission and three priorities"
+            ],
+            [
+              "4",
+              "Structure and staffing"
+            ],
+            [
+              "5",
+              "Decision rights"
+            ],
+            [
+              "6",
+              "Budget and investments"
+            ],
+            [
+              "7",
+              "First 90 days and gates"
+            ],
+            [
+              "8",
+              "Indicators"
+            ],
+            [
+              "9",
+              "Top risks and what we will not do"
+            ],
+            [
+              "10",
+              "What we need from you"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "kind": "application",
+          "text": "Rehearse the transitions and the time. At about 130 to 150 words per minute, a ten-minute talk is roughly 1,300 to 1,500 words; leave most of the meeting for questions."
+        }
+      ],
+      "prompts": [
+        "What exact decisions are you asking the president and GM to make?",
+        "Which slide could you delete without changing the decision?",
+        "What is your two-sentence summary for ownership?"
+      ],
+      "template": [
+        {
+          "heading": "Slide outline",
+          "guidance": "Ten to twelve slide titles, each a full-sentence claim."
+        },
+        {
+          "heading": "Speaker notes",
+          "guidance": "What you will say, within the word range."
+        },
+        {
+          "heading": "Decisions requested",
+          "guidance": "The asks, stated precisely."
+        },
+        {
+          "heading": "Appendix list",
+          "guidance": "Detail held back for questions."
+        }
+      ]
+    },
+    {
+      "id": "k18",
+      "number": 18,
+      "title": "Written defense of major decisions",
+      "week": 14,
+      "draws": [
+        "w01",
+        "w04",
+        "w07",
+        "w13"
+      ],
+      "words": [
+        1000,
+        1600
+      ],
+      "tool": null,
+      "deliverable": "presentation",
+      "guidance": [
+        {
+          "type": "p",
+          "kind": "established",
+          "text": "Pick the four to six decisions that a skeptic would attack hardest, and write the strongest case against each before you write your reply. Meta-analytic evidence from mostly laboratory studies found that structured dissent methods such as devil’s advocacy produced better decisions than accepting an expert recommendation uncritically.",
+          "refs": [
+            "R-schwenk-1990-effects"
+          ]
+        },
+        {
+          "type": "p",
+          "kind": "established",
+          "text": "Write the defense before you know what the president thinks. Research on accountability finds that expecting to justify a decision to an audience whose views are unknown, before deciding, promotes more careful and self-critical reasoning; accountability to a known audience tends to produce conformity, and accountability after the fact tends to produce defensive justification.",
+          "refs": [
+            "R-lerner-1999-accounting"
+          ]
+        },
+        {
+          "type": "table",
+          "kind": "original",
+          "caption": "Structure for each decision",
+          "headers": [
+            "Element",
+            "Content"
+          ],
+          "rows": [
+            [
+              "Decision",
+              "What you chose, in one sentence"
+            ],
+            [
+              "Best alternative",
+              "The strongest option you rejected"
+            ],
+            [
+              "Strongest objection",
+              "Stated as its best advocate would state it"
+            ],
+            [
+              "Reply",
+              "Evidence, reasoning and what you concede"
+            ],
+            [
+              "What would change my mind",
+              "A specific observable signal"
+            ],
+            [
+              "Confidence",
+              "A probability that the decision is right, recorded in the Decision Journal"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Concede where you should. A defense that concedes a real weakness and shows how you will monitor it is more credible than one that claims every choice is optimal."
+        },
+        {
+          "type": "prompt",
+          "text": "Which of your decisions would you reverse if Walt Brannigan were replaced in June? If the answer is “none”, check again."
+        }
+      ],
+      "prompts": [
+        "Which four to six decisions are most vulnerable, and what is the best case against each?",
+        "Where do you concede, and how will you monitor that weakness?",
+        "What would change your mind on each decision?",
+        "Record each decision and confidence in the Strategic Decision Journal with a review date."
+      ],
+      "template": [
+        {
+          "heading": "Decisions defended",
+          "guidance": "Four to six, each with the structure in the guidance."
+        },
+        {
+          "heading": "Concessions",
+          "guidance": "Weaknesses you accept and how you will monitor them."
+        },
+        {
+          "heading": "Forecasts",
+          "guidance": "Probabilities and resolve-by dates for key assumptions."
+        }
+      ]
+    }
+  ],
+  "deliverables": [
+    {
+      "id": "memo",
+      "title": "Strategic memorandum",
+      "description": "The comprehensive strategy addressed to the president and GM: recommendation first, then diagnosis, mission, priorities, technology, stakeholders, legal and ethical issues, communication, evidence standards and risks, with structure, budget and roadmap summarized and referenced. Assembling it from the components requires cutting: integrate, do not staple. Self-assessed against this rubric.",
+      "components": [
+        "k01",
+        "k02",
+        "k07",
+        "k08",
+        "k09",
+        "k10",
+        "k12",
+        "k16"
+      ],
+      "words": [
+        3000,
+        4500
+      ],
+      "rubric": [
+        {
+          "id": "m1",
+          "criterion": "Diagnosis and strategic coherence",
+          "weight": 25,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "A sharp diagnosis grounded in the exhibits, with their limits stated; priorities, structure and budget all follow from it and displace named work."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Clear diagnosis and mostly coherent priorities; one or two choices are not traced back to it."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Diagnosis is a list of problems; priorities are plausible but not clearly connected."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "No real diagnosis; priorities are generic or contradictory."
+            }
+          ]
+        },
+        {
+          "id": "m2",
+          "criterion": "Use of evidence",
+          "weight": 20,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Distinguishes research, synthetic exhibit data and judgment; states evidence strength and replication status; avoids over-reading small samples."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Uses evidence appropriately with minor over-claiming."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Cites evidence selectively or treats heuristics as science."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "Assertions without evidence, or invented support."
+            }
+          ]
+        },
+        {
+          "id": "m3",
+          "criterion": "Stakeholder, legal and ethical judgment",
+          "weight": 20,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Interests of each key stakeholder addressed with concrete exchanges; legal issues framed as questions for counsel; ethical lines stated and enforceable."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Main stakeholders and legal issues covered; ethics present but general."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Stakeholders listed without strategy; legal issues partly missed."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "Ignores turf, data or legal issues, or gives legal conclusions as advice."
+            }
+          ]
+        },
+        {
+          "id": "m4",
+          "criterion": "Trade-offs and risks",
+          "weight": 20,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Names the strongest alternatives and what is sacrificed; risk register with signals and owners; at least one scenario where the strategy is wrong."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Trade-offs and risks named; some lack signals or owners."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Risks are generic; alternatives barely considered."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "Presents the plan as risk-free."
+            }
+          ]
+        },
+        {
+          "id": "m5",
+          "criterion": "Executive writing",
+          "weight": 15,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Recommendation and decisions requested in the first paragraph; within the word range; every section earns its place."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Clear and organized with some excess length."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Recommendation buried; uneven structure."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "Hard to follow; outside the range by a wide margin."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "summary",
+      "title": "Executive summary",
+      "description": "A one-page summary that the president could forward to ownership unchanged: recommendation, why, cost, first-year milestones, top risks and the decisions requested. Self-assessed against this rubric.",
+      "components": [
+        "k01",
+        "k02",
+        "k06",
+        "k14",
+        "k16"
+      ],
+      "words": [
+        400,
+        600
+      ],
+      "rubric": [
+        {
+          "id": "s1",
+          "criterion": "Recommendation first",
+          "weight": 30,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Recommendation and requested decisions in the first two sentences, specific enough to act on."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Recommendation early but slightly vague."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Recommendation present but after context."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "No clear recommendation."
+            }
+          ]
+        },
+        {
+          "id": "s2",
+          "criterion": "Selection of content",
+          "weight": 25,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Only what changes the decision: cost, milestones, top risks; nothing a reader must reconstruct."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Mostly decision-relevant; minor clutter."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Important items missing or buried among details."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "A compressed memo rather than a summary."
+            }
+          ]
+        },
+        {
+          "id": "s3",
+          "criterion": "Honesty about uncertainty",
+          "weight": 25,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "States what is unknown and how the plan will learn it; no promised wins."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Notes uncertainty briefly."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Implies more certainty than the evidence supports."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "Promises outcomes the department cannot control."
+            }
+          ]
+        },
+        {
+          "id": "s4",
+          "criterion": "Concision and clarity",
+          "weight": 20,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Within range, plain language, short sentences."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Clear with minor excess."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Wordy or jargon-heavy."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "Exceeds the page or unclear."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "orgchart",
+      "title": "Organizational chart",
+      "description": "The chart built in the Organization Builder with a narrative explaining structure, staffing and decision rights, the Builder checks you pass and those you accept failing, and why. Self-assessed against this rubric; the Builder’s checks are automated and transparent.",
+      "components": [
+        "k03",
+        "k04",
+        "k05"
+      ],
+      "words": [
+        900,
+        1500
+      ],
+      "rubric": [
+        {
+          "id": "o1",
+          "criterion": "Fit between structure and work",
+          "weight": 25,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Structure follows the coordination problems in the scenario; critical work covered with backups; capacity matches hours."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Good fit with one coverage gap acknowledged."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Several critical items uncovered or overloaded."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "Chart unrelated to the work."
+            }
+          ]
+        },
+        {
+          "id": "o2",
+          "criterion": "Budget and staffing realism",
+          "weight": 20,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Within the base envelope or overage explicitly justified; hiring order and the May 31 transition planned; structured selection method."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Within budget; transition plan thin."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Budget or capacity problems unexplained."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "Ignores the envelope."
+            }
+          ]
+        },
+        {
+          "id": "o3",
+          "criterion": "Decision rights",
+          "weight": 25,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "One Decide per decision; manager’s authority respected or a change explicitly defended; hidden vetoes named."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Clear rights with one ambiguity."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Several decisions with no or multiple deciders."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "No decision rights."
+            }
+          ]
+        },
+        {
+          "id": "o4",
+          "criterion": "Interfaces with other departments",
+          "weight": 15,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Each interface (Research and Analytics, Video, Pro Scouting, Player Development, International Scouting) defined with what flows and who owns it."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Most interfaces defined."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Interfaces mentioned but not designed."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "Other departments ignored."
+            }
+          ]
+        },
+        {
+          "id": "o5",
+          "criterion": "Explanation of checks",
+          "weight": 15,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Every failed Builder check is discussed with a reason or a fix."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Most checks discussed."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Checks reported without interpretation."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "Checks not reported."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "budget",
+      "title": "Budget model",
+      "description": "A Year 1 budget with a three-year view: personnel envelope, operating line and the investment portfolio from the Capital Allocation Lab, with NPV results, scenario tests and a narrative explaining departures from the NPV ranking. Self-assessed against this rubric; the lab’s calculations are automated.",
+      "components": [
+        "k06"
+      ],
+      "words": [
+        500,
+        900
+      ],
+      "rubric": [
+        {
+          "id": "b1",
+          "criterion": "Completeness and accuracy",
+          "weight": 25,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "All lines reconcile to the envelope; recurring and one-time costs separated; three-year commitments shown."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Minor reconciliation gaps."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Mixes recurring and one-time; omissions."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "Numbers do not reconcile."
+            }
+          ]
+        },
+        {
+          "id": "b2",
+          "criterion": "Investment reasoning",
+          "weight": 25,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Uses NPV, IRR and PI correctly, explains ranking disagreements and opportunity cost, and justifies any departure from the NPV-best portfolio."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Correct use with thin justification."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Relies on one metric without interpretation."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "No financial reasoning."
+            }
+          ]
+        },
+        {
+          "id": "b3",
+          "criterion": "Sensitivity and assumptions",
+          "weight": 25,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Tests the run-value convention, discount rate and low scenario; names which conclusions are fragile; applies an outside-view adjustment."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Some sensitivity testing."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Assumptions stated but untested."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "Assumptions hidden."
+            }
+          ]
+        },
+        {
+          "id": "b4",
+          "criterion": "Non-financial considerations",
+          "weight": 25,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Legal, trust and reversibility considerations integrated explicitly, not smuggled into inflated benefits."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Mentioned and partly integrated."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Mentioned only."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "Ignored or disguised as cash flows."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "roadmap",
+      "title": "Implementation roadmap",
+      "description": "The first 90 days, change approach, indicators and the gated three-year roadmap in one document, with owners, dependencies, signals and decision gates. Self-assessed against this rubric.",
+      "components": [
+        "k11",
+        "k13",
+        "k14",
+        "k15"
+      ],
+      "words": [
+        1500,
+        2500
+      ],
+      "rubric": [
+        {
+          "id": "r1",
+          "criterion": "Sequencing and dependencies",
+          "weight": 25,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Sequence driven by dependencies and the fixed dates (mid-December hiring, January 20, January 31, February 12); fallbacks for likely slips."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Sensible sequence; fallbacks thin."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Timeline without dependencies."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "A list of tasks without order."
+            }
+          ]
+        },
+        {
+          "id": "r2",
+          "criterion": "Change approach",
+          "weight": 20,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Evidence-informed levers (participation, information, trust) with Kotter labelled a heuristic; early win and first failure planned."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Reasonable approach with partial evidence."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Slogans or step model applied mechanically."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "No change approach."
+            }
+          ]
+        },
+        {
+          "id": "r3",
+          "criterion": "Indicators",
+          "weight": 25,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Balanced leading and lagging indicators with baselines, targets, gaming risks and counterweights; no win promises."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Good indicators with one weakness."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Indicators easily gamed or not measurable."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "No indicators or only outcome promises."
+            }
+          ]
+        },
+        {
+          "id": "r4",
+          "criterion": "Gates and reversibility",
+          "weight": 20,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Assumptions tested at named gates with pre-committed decisions; irreversible commitments staged."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Gates present, decisions vague."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Calendar without gates."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "No longer-term view."
+            }
+          ]
+        },
+        {
+          "id": "r5",
+          "criterion": "Usability",
+          "weight": 10,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "A manager could run the plan from this document."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Mostly usable."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Requires interpretation."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "Not usable."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "presentation",
+      "title": "Decision presentation",
+      "description": "Ten to twelve slides with speaker notes, drafted in the Executive Communication Studio, plus the written defense of major decisions prepared for the president’s questions. Self-assessed against this rubric; the Studio’s text metrics are automated.",
+      "components": [
+        "k17",
+        "k18"
+      ],
+      "words": [
+        1800,
+        2900
+      ],
+      "rubric": [
+        {
+          "id": "p1",
+          "criterion": "Answer first and decisions requested",
+          "weight": 25,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Opens with the recommendation and precise asks; every slide is a claim that supports them."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Clear opening; some slides descriptive."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Recommendation appears late."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "No clear ask."
+            }
+          ]
+        },
+        {
+          "id": "p2",
+          "criterion": "Economy",
+          "weight": 20,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Within time and word range; detail moved to the appendix."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Slightly long."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Overloaded slides."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "Reads the memo aloud."
+            }
+          ]
+        },
+        {
+          "id": "p3",
+          "criterion": "Quality of the defense",
+          "weight": 30,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Strongest objections stated fairly; replies use evidence; real concessions; what would change your mind is specific."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Good defense with one strawman."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Objections weak or replies defensive."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "No genuine objections addressed."
+            }
+          ]
+        },
+        {
+          "id": "p4",
+          "criterion": "Calibration",
+          "weight": 15,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Probabilities recorded for key decisions and assumptions with review dates in the Decision Journal."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Probabilities given without review dates."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Vague confidence words only."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "No statement of confidence."
+            }
+          ]
+        },
+        {
+          "id": "p5",
+          "criterion": "Audience fit",
+          "weight": 10,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Anticipates what the president, GM and ownership each need."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Mostly fitted to the audience."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Generic audience."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "Wrong audience."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reflection",
+      "title": "Reflection on strengths and areas for development",
+      "description": "A private reflection, drawing on your capstone work, your learning profile and your Decision Journal, on what you demonstrated and where you need to develop. Self-assessed; research reviews find self-assessment only modestly accurate ([Dunning, Heath and Suls 2004](R-dunning-2004-flawed)), so anchor every claim to evidence from your own work.",
+      "components": [
+        "k17",
+        "k18"
+      ],
+      "words": [
+        800,
+        1200
+      ],
+      "rubric": [
+        {
+          "id": "f1",
+          "criterion": "Evidence-anchored self-assessment",
+          "weight": 30,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Every strength and gap is tied to specific evidence: quiz patterns, rubric scores, a decision you changed, feedback received."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Most claims anchored."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Mostly impressions."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "Generic self-description."
+            }
+          ]
+        },
+        {
+          "id": "f2",
+          "criterion": "Candor about development areas",
+          "weight": 25,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Names at least two real development areas with concrete examples from the capstone."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Names development areas with thin examples."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Development areas are disguised strengths."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "No development areas."
+            }
+          ]
+        },
+        {
+          "id": "f3",
+          "criterion": "Integration across schools",
+          "weight": 20,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Connects behavioral, business and legal reasoning in how you made capstone decisions."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Some cross-school connections."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Treats schools separately."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "No connections."
+            }
+          ]
+        },
+        {
+          "id": "f4",
+          "criterion": "Forward plan",
+          "weight": 25,
+          "levels": [
+            {
+              "score": 4,
+              "label": "Exemplary",
+              "descriptor": "Specific practices, with a review date and a way to know whether they worked."
+            },
+            {
+              "score": 3,
+              "label": "Proficient",
+              "descriptor": "Plan with some specifics."
+            },
+            {
+              "score": 2,
+              "label": "Developing",
+              "descriptor": "Intentions without practices."
+            },
+            {
+              "score": 1,
+              "label": "Beginning",
+              "descriptor": "No plan."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tools": {
+    "orgdesign": {
+      "brief": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Build the Department of Advance and Strategic Coordination for the Port Calder Lamplighters (fictional). You start as the only position. Add positions from the role menu, assign the in-season weekly work to them, and assign decision roles (Recommend, Decide, Input, Informed). All costs and hours are synthetic (Exhibit 3)."
+        },
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "The base personnel envelope is $1,150,000 including your own position. The work list totals about 324 hours a week; you will not cover everything well. Decide what goes unassigned, what is bought from another department, and what you defer, and explain it in your narrative. Seasonal fellows or contractors funded from the investment fund are not positions here."
+        },
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "The Builder’s checks are transparent rules, not judgments of quality: a chart that passes every check can still fail politically, and one that fails a check can be right if you can explain why."
+        }
+      ],
+      "budget": 1150000,
+      "roles": [
+        {
+          "id": "director",
+          "label": "Director, Advance and Strategic Coordination",
+          "cost": 235000,
+          "hours": 25,
+          "skills": [
+            "leadership",
+            "strategy",
+            "communication"
+          ]
+        },
+        {
+          "id": "opsmgr",
+          "label": "Advance operations manager",
+          "cost": 150000,
+          "hours": 40,
+          "skills": [
+            "leadership",
+            "operations",
+            "analysis",
+            "communication"
+          ]
+        },
+        {
+          "id": "senior",
+          "label": "Senior advance analyst",
+          "cost": 132000,
+          "hours": 50,
+          "skills": [
+            "analysis",
+            "modeling",
+            "communication"
+          ]
+        },
+        {
+          "id": "analyst",
+          "label": "Advance analyst",
+          "cost": 96000,
+          "hours": 50,
+          "skills": [
+            "analysis",
+            "video"
+          ]
+        },
+        {
+          "id": "video",
+          "label": "Video and advance coordinator",
+          "cost": 74000,
+          "hours": 55,
+          "skills": [
+            "video",
+            "operations"
+          ]
+        },
+        {
+          "id": "liaison",
+          "label": "Coaching-staff liaison (bilingual)",
+          "cost": 118000,
+          "hours": 50,
+          "skills": [
+            "communication",
+            "coaching",
+            "spanish",
+            "video"
+          ]
+        },
+        {
+          "id": "scout",
+          "label": "Advance scout (in-person)",
+          "cost": 112000,
+          "hours": 45,
+          "skills": [
+            "scouting",
+            "communication"
+          ]
+        },
+        {
+          "id": "intl",
+          "label": "International pro coverage coordinator",
+          "cost": 104000,
+          "hours": 45,
+          "skills": [
+            "scouting",
+            "international",
+            "spanish",
+            "analysis"
+          ]
+        },
+        {
+          "id": "engineer",
+          "label": "Data engineer",
+          "cost": 148000,
+          "hours": 45,
+          "skills": [
+            "engineering",
+            "data-governance"
+          ]
+        },
+        {
+          "id": "scientist",
+          "label": "Research scientist",
+          "cost": 155000,
+          "hours": 45,
+          "skills": [
+            "research",
+            "modeling",
+            "analysis"
+          ]
+        },
+        {
+          "id": "govcoord",
+          "label": "Operations and governance coordinator",
+          "cost": 80000,
+          "hours": 45,
+          "skills": [
+            "operations",
+            "data-governance",
+            "communication"
+          ]
+        }
+      ],
+      "work": [
+        {
+          "id": "w1",
+          "label": "Opposing-hitter briefs for each series",
+          "hours": 35,
+          "skills": [
+            "analysis"
+          ],
+          "critical": true
+        },
+        {
+          "id": "w2",
+          "label": "Opposing-pitcher and bullpen briefs",
+          "hours": 35,
+          "skills": [
+            "analysis"
+          ],
+          "critical": true
+        },
+        {
+          "id": "w3",
+          "label": "Defensive positioning cards and roster-change updates",
+          "hours": 18,
+          "skills": [
+            "analysis",
+            "modeling"
+          ],
+          "critical": true
+        },
+        {
+          "id": "w4",
+          "label": "Video packaging and tagging for coaches and players",
+          "hours": 60,
+          "skills": [
+            "video"
+          ],
+          "critical": true
+        },
+        {
+          "id": "w5",
+          "label": "Pre-series meeting with the coaching staff (prepare and attend)",
+          "hours": 10,
+          "skills": [
+            "communication",
+            "coaching"
+          ],
+          "critical": true
+        },
+        {
+          "id": "w6",
+          "label": "Daily game-strategy brief for the field manager",
+          "hours": 12,
+          "skills": [
+            "strategy",
+            "communication"
+          ],
+          "critical": true
+        },
+        {
+          "id": "w7",
+          "label": "In-person advance coverage of upcoming opponents",
+          "hours": 45,
+          "skills": [
+            "scouting"
+          ]
+        },
+        {
+          "id": "w8",
+          "label": "Spanish-language player materials and one-on-one sessions",
+          "hours": 15,
+          "skills": [
+            "spanish",
+            "communication"
+          ]
+        },
+        {
+          "id": "w9",
+          "label": "Data pipeline, access controls and audit logging",
+          "hours": 25,
+          "skills": [
+            "engineering",
+            "data-governance"
+          ],
+          "critical": true
+        },
+        {
+          "id": "w10",
+          "label": "Research agenda and evaluation of the department’s impact",
+          "hours": 20,
+          "skills": [
+            "research",
+            "modeling"
+          ]
+        },
+        {
+          "id": "w11",
+          "label": "Player development integration (shared language, call-up preparation)",
+          "hours": 10,
+          "skills": [
+            "communication",
+            "analysis"
+          ]
+        },
+        {
+          "id": "w12",
+          "label": "Coverage of players new to the league from abroad",
+          "hours": 15,
+          "skills": [
+            "international",
+            "scouting"
+          ]
+        },
+        {
+          "id": "w13",
+          "label": "Weekly strategic summary for the GM and president",
+          "hours": 6,
+          "skills": [
+            "strategy",
+            "communication"
+          ]
+        },
+        {
+          "id": "w14",
+          "label": "Stakeholder feedback loop and incident review",
+          "hours": 6,
+          "skills": [
+            "operations",
+            "communication"
+          ]
+        },
+        {
+          "id": "w15",
+          "label": "Department administration, budget and hiring",
+          "hours": 12,
+          "skills": [
+            "leadership",
+            "operations"
+          ]
+        }
+      ],
+      "decisions": [
+        {
+          "id": "d1",
+          "label": "In-game strategy (lineups, bullpen use, defensive alignment within the rules)"
+        },
+        {
+          "id": "d2",
+          "label": "Content and format of the player-facing opponent report"
+        },
+        {
+          "id": "d3",
+          "label": "Defensive positioning recommendations for a series"
+        },
+        {
+          "id": "d4",
+          "label": "Which player data the department may access and share"
+        },
+        {
+          "id": "d5",
+          "label": "Technology platform selection (vendor or in-house)"
+        },
+        {
+          "id": "d6",
+          "label": "The department’s annual research agenda"
+        },
+        {
+          "id": "d7",
+          "label": "Hiring and assignment of department staff"
+        },
+        {
+          "id": "d8",
+          "label": "Content of the weekly strategic summary to the GM and president"
+        }
+      ],
+      "limits": {
+        "span": [
+          2,
+          6
+        ],
+        "maxLayers": 3
+      },
+      "start": [
+        {
+          "id": "head",
+          "role": "director",
+          "reportsTo": null
+        }
+      ],
+      "rules": [
+        {
+          "id": "x1",
+          "text": "The field manager decides in-game strategy (d1) under the scenario’s assumptions. If your chart gives the department “Decide” on d1 or d3, explain why the manager would accept it and what happens when he disagrees."
+        },
+        {
+          "id": "x2",
+          "text": "Data access (d4) is set by club policy with counsel. The department may Recommend or give Input; if you assign it “Decide”, explain how that is consistent with counsel’s request in the scenario."
+        },
+        {
+          "id": "x3",
+          "text": "Spanish-language work (w8) needs at least one position with the Spanish skill; one bilingual person covering all of it is a single point of failure across a 162-game season."
+        },
+        {
+          "id": "x4",
+          "text": "In-person coverage (w7) and international coverage (w12) involve travel; a position carrying either cannot also be the backup for the daily manager brief (w6)."
+        },
+        {
+          "id": "x5",
+          "text": "Video work currently sits in the Video department and road scouts in Pro Scouting. Assigning w4 or w7 inside your department means proposing to move people or budget; address it in your decision rights and stakeholder components."
+        },
+        {
+          "id": "x6",
+          "text": "The loaned senior analyst leaves on May 31 and is not in the role menu. Any chart that relies on borrowed analysis must show who covers w1–w3 from June 1."
+        }
+      ]
+    },
+    "allocation": {
+      "mode": "capital",
+      "brief": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Choose which of eight candidate investments to fund from the three-year strategic investment fund: $1,000,000 of Year 0 commitment authority (Exhibit 2). Cash flows are synthetic: Year 0 is the up-front outlay; Years 1–3 are net benefits after recurring costs."
+        },
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Benefits combine two very different things: hard savings (analyst and video hours at finance’s $60 per hour, avoided fees and travel) and estimated run value at finance’s contested convention of $350,000 per run. Each project’s notes show the split. Scenario multipliers apply to benefits only. Several projects interact: the vendor platform (p1) and in-house pipeline (p2) largely substitute for each other, and the governance program (p4) may be required by counsel regardless of its NPV."
+        },
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "This is a teaching model of capital budgeting, not a forecast of what any department is worth."
+        }
+      ],
+      "budget": 1000000,
+      "currency": "USD",
+      "rate": {
+        "default": 0.08,
+        "min": 0.02,
+        "max": 0.16,
+        "step": 0.005,
+        "label": "Discount rate (cost of capital)"
+      },
+      "projects": [
+        {
+          "id": "p1",
+          "label": "Vendor opponent-analytics platform (Exhibit 5, option A)",
+          "description": "Licensed platform with coach-facing views, running by spring training.",
+          "cashflows": [
+            -380000,
+            190000,
+            215000,
+            225000
+          ],
+          "scenarios": {
+            "low": 0.6,
+            "base": 1,
+            "high": 1.2
+          },
+          "notes": "Year 0 = setup and first license year. Benefits net of a $140,000 annual license: about 1,700 analyst hours a year saved (≈ $100,000) plus an assumed 0.65–0.85 runs a year from faster, cleaner briefs. Roughly two thirds of the benefit is run value.",
+          "nonfinancial": "Rivals use the same tool; license limits on sharing; exit costs and data-export rights need counsel’s review."
+        },
+        {
+          "id": "p2",
+          "label": "In-house pipeline built with Research and Analytics (option B)",
+          "description": "Club-owned data pipeline and models, fully ready around July.",
+          "cashflows": [
+            -520000,
+            110000,
+            290000,
+            390000
+          ],
+          "scenarios": {
+            "low": 0.5,
+            "base": 1,
+            "high": 1.4
+          },
+          "notes": "Year 0 = engineering time and infrastructure. Benefits net of $90,000 maintenance; small in Year 1 because the pipeline is late, larger later as tailored models mature. Mostly run value; highly uncertain.",
+          "nonfinancial": "Club owns the code and models (a resource rivals cannot buy); depends on another department; key-person risk. Largely duplicates p1."
+        },
+        {
+          "id": "p3",
+          "label": "Secure delivery: managed tablets, access tiers, logging (option C)",
+          "description": "Devices and software that control who sees which report.",
+          "cashflows": [
+            -150000,
+            60000,
+            70000,
+            75000
+          ],
+          "scenarios": {
+            "low": 0.7,
+            "base": 1,
+            "high": 1.1
+          },
+          "notes": "Benefits = printing and distribution time saved plus expected loss avoided from license breaches and data incidents (probability × cost, both assumed).",
+          "nonfinancial": "Directly addresses the July and September incidents in Exhibit 6; supports trust of players and counsel."
+        },
+        {
+          "id": "p4",
+          "label": "Data governance program (policy, inventory, training, privacy review)",
+          "description": "Written data-access policy, data inventory, staff training and an external privacy review.",
+          "cashflows": [
+            -110000,
+            35000,
+            45000,
+            45000
+          ],
+          "scenarios": {
+            "low": 0.8,
+            "base": 1,
+            "high": 1.1
+          },
+          "notes": "Benefits are only avoided costs of incidents and rework, conservatively estimated; no run value assumed.",
+          "nonfinancial": "May be required by counsel and the collective bargaining agreement; protects health data and minors’ data. A negative NPV is not a reason to skip a legal obligation."
+        },
+        {
+          "id": "p5",
+          "label": "Research fellowship and impact evaluation (two seasonal fellows a year)",
+          "description": "Contracted seasonal researchers who run pre-specified evaluations of the department’s practices.",
+          "cashflows": [
+            -140000,
+            25000,
+            85000,
+            165000
+          ],
+          "scenarios": {
+            "low": 0.3,
+            "base": 1,
+            "high": 1.8
+          },
+          "notes": "Back-loaded: value arises only if evaluations identify practices worth keeping or stopping. Almost entirely run value; widest uncertainty of any project.",
+          "nonfinancial": "Builds the evidence the department needs to justify Year 2 growth; fellows are contractors, not Builder positions; intellectual-property terms needed."
+        },
+        {
+          "id": "p6",
+          "label": "Contracted coverage of players from foreign leagues",
+          "description": "Part-time contract scouts in two foreign leagues plus translation, coordinated with International Scouting.",
+          "cashflows": [
+            -210000,
+            85000,
+            95000,
+            105000
+          ],
+          "scenarios": {
+            "low": 0.5,
+            "base": 1,
+            "high": 1.3
+          },
+          "notes": "Benefits = run value from better preparation for about eleven players new to the league, plus travel avoided by staff scouts.",
+          "nonfinancial": "Requires agreement with the international scouting director; contractor confidentiality terms; respects her signing calendar."
+        },
+        {
+          "id": "p7",
+          "label": "Coach co-design and bilingual education program",
+          "description": "Spring-training workshops, embedded sessions and bilingual materials co-designed with coaches.",
+          "cashflows": [
+            -80000,
+            45000,
+            55000,
+            60000
+          ],
+          "scenarios": {
+            "low": 0.4,
+            "base": 1,
+            "high": 1.5
+          },
+          "notes": "Benefits assume higher use of recommendations (more of the department’s work is acted on), valued in runs; small and uncertain.",
+          "nonfinancial": "Addresses the coaches’ usability ratings and algorithm-aversion risk; signals respect for the bench coach’s role."
+        },
+        {
+          "id": "p8",
+          "label": "Automated video tagging (Exhibit 5 add-on)",
+          "description": "Software that tags and indexes video automatically.",
+          "cashflows": [
+            -290000,
+            110000,
+            125000,
+            135000
+          ],
+          "scenarios": {
+            "low": 0.6,
+            "base": 1,
+            "high": 1.1
+          },
+          "notes": "Benefits net of $60,000 a year: mostly video hours saved (hard savings) and faster clip delivery; accuracy for foreign-league video unknown.",
+          "nonfinancial": "Could reduce the need to move a video coordinator from the Video department, easing turf conflict."
+        }
+      ],
+      "questions": [
+        "Which portfolio maximizes NPV within the fund, and does it include the governance program? What do you do about that?",
+        "Rank the projects by NPV, IRR and profitability index. Where do the rankings disagree, and which ranking should guide a budget-constrained choice?",
+        "Set the scenario to low. Which projects remain positive, and what do they have in common?",
+        "Suppose finance halves the run-value convention. Which projects’ cases collapse, and which survive on hard savings?",
+        "What does choosing p1 versus p2 say about your view of competitive advantage and of your relationship with Research and Analytics?"
+      ],
+      "key": {
+        "insights": "At 8%, the NPV-maximizing portfolio within $1,000,000 funds the vendor platform, secure delivery, the research fellowship, foreign-league coverage and the coach program (about $960,000 of outlay), and leaves out data governance, whose NPV is slightly negative, and the in-house pipeline. A careful analyst notices three things. First, governance may be a legal requirement, in which case it is a constraint, not a candidate; funding it forces a swap, typically dropping or shrinking foreign-league coverage or secure delivery. Second, the projects with the highest IRR and profitability index (the coach program and the fellowship) are small and the most uncertain; in the low scenario the fellowship’s NPV falls sharply, while secure delivery and video tagging, which rest more on hard savings, hold up better. Third, the vendor platform beats the in-house pipeline on NPV mainly because it delivers value earlier; the pipeline’s case rests on ownership and later-year run value, which the cash flows only partly capture. Halving the run-value convention exposes how much of every case depends on one contested number."
+      }
+    },
+    "composer": {
+      "scenario": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Draft your speaker notes for the January 20 decision presentation to the president of baseball operations and the general manager of the Port Calder Lamplighters (fictional). You have forty minutes; plan to speak for about ten and leave the rest for questions."
+        }
+      ],
+      "audience": [
+        {
+          "who": "Miriam Castellanos, president of baseball operations",
+          "cares": "A plan she can defend to ownership; no war between departments; honest risks."
+        },
+        {
+          "who": "Theo Lindqvist, general manager",
+          "cares": "Connection to roster decisions; cost; what changes on the field and when."
+        }
+      ],
+      "formats": [
+        {
+          "id": "talk",
+          "label": "Ten-minute presentation (speaker notes)",
+          "words": [
+            1300,
+            1500
+          ],
+          "wpm": 140
+        },
+        {
+          "id": "brief",
+          "label": "One-page executive summary",
+          "words": [
+            400,
+            600
+          ]
+        },
+        {
+          "id": "verbal",
+          "label": "60-second version for ownership",
+          "words": [
+            130,
+            165
+          ],
+          "wpm": 150
+        }
+      ],
+      "checklist": [
+        "Recommendation and decisions requested in the first two sentences",
+        "Each slide title is a full-sentence claim",
+        "Cost and first-year milestones stated with numbers",
+        "Top three risks and what you will not do are named",
+        "No promise of wins or runs",
+        "Ends with the specific decisions you need"
+      ]
+    }
+  },
+  "milestones": [
+    {
+      "week": 8,
+      "text": "Read the scenario and exhibits. Build a first chart in the Organization Builder and draft k03 structure, k04 staffing and k05 decision rights."
+    },
+    {
+      "week": 9,
+      "text": "Draft k01 mission and vision, k02 strategic priorities and k08 stakeholder engagement; revise the Week 8 chart so structure follows strategy."
+    },
+    {
+      "week": 10,
+      "text": "Run the Capital Allocation Lab and draft k06 budget, k07 technology and k12 research and evidence standards."
+    },
+    {
+      "week": 11,
+      "text": "Draft k09 legal and ethical considerations (issues for counsel, not conclusions) and k10 organizational communication."
+    },
+    {
+      "week": 12,
+      "text": "Draft k11 indicators, k13 change management and k14 the first 90 days; assemble the roadmap deliverable."
+    },
+    {
+      "week": 13,
+      "text": "Run a premortem; draft k15 roadmap and k16 risk register and scenarios; revisit k09 with Week 13’s ethics and governance lens; assemble the strategic memo and budget model."
+    },
+    {
+      "week": 14,
+      "text": "Draft k17 presentation in the Communication Studio and k18 written defense; write the executive summary and reflection; self-assess each deliverable against its rubric and log key decisions in the Decision Journal."
+    }
+  ],
+  "defense": [
+    "Why should ownership fund a new department when you cannot show it will change a single game result this year?",
+    "You are spending most of the investment fund on things whose value depends on finance’s run-value convention. What is your plan if that number is half as large?",
+    "Walt Brannigan told you not to tell him how to run his bullpen. What, specifically, will your department do the first time he ignores a recommendation and loses the game?",
+    "Why did you not simply give Sanjay Mehra the budget and let Research and Analytics run Advance?",
+    "You took road scouts or video staff from other departments, or you did not. Either way, defend the choice to the department head who loses out.",
+    "What happens on June 1, when the loaned analyst leaves, if your hires have not worked out?",
+    "Counsel says no player health data in advance reports. The pitching coach says she cannot prepare without readiness information. Who wins, and how?",
+    "Why buy a platform that our rivals also use, or why build one that will not be ready until July?",
+    "Which of your indicators could your own staff game, and how would I know?",
+    "What did you decide not to do, and who will be unhappy about it?",
+    "If I cut your Year 1 budget by fifteen percent tomorrow, what goes first, and why that?",
+    "What evidence in October would lead you to recommend shrinking the department you are asking me to create?"
+  ]
+}

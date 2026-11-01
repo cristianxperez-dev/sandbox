@@ -1,5 +1,8 @@
 {
   "version": 1,
-  "include": ["/apps/recollect/api/*"],
+  "include": [
+    "/apps/recollect/api/*",
+    "/apps/aperture/api/*"
+  ],
   "exclude": []
 }

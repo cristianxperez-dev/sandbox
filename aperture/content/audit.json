@@ -1,0 +1,878 @@
+{
+  "title": "Research audit: reference programs and open resources behind APERTURE Semester I",
+  "updated": "2026-11-01",
+  "disclaimer": "APERTURE is an independent, self-directed learning experience. It has no affiliation with, endorsement by, accreditation from, or partnership with any university or school named in this audit, and completing it earns no academic credit or degree. The programs below are programs whose public curricula informed this course; descriptions summarize public web pages as seen in search results on 2026-11-01 and may not reflect current requirements.",
+  "method": [
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "This audit examined fifteen reference programs in three cohorts of five: PhD programs in organizational behavior and behavioral science, MBA programs, and joint JD/MBA programs. The cohorts and starting institutions were chosen by the owner of APERTURE as a reference set. The audit does not rank them and makes no claim that they are the “top five” in any category; no ranking methodology was applied, and other strong programs (for example at Yale, Princeton, Columbia, MIT, Duke and elsewhere) could have served."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "For each program the audit searched the official domains of the school (for example hbs.edu, gsb.stanford.edu, wharton.upenn.edu, mitsloan.mit.edu, chicagobooth.edu, kellogg.northwestern.edu, law.upenn.edu, hls.harvard.edu and university catalogs) for program pages, degree requirements, handbooks and course descriptions. The owner’s official starting URLs were used for the ten PhD and JD/MBA programs; official curriculum URLs for the five MBA programs were taken from search results on those schools’ domains."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "**Environment limitation.** Pages could not be opened from the build environment: direct fetches failed, so every statement rests on the titles and text excerpts that web search returned on 2026-11-01. Each program therefore carries a verification record with its link marked “not-opened” and a note on which fields matched on which domain. Where search results disagreed (for example unit counts in different handbook years), the audit reports the disagreement instead of choosing silently. Programs whose key requirements rested on dated or ambiguous documents are marked partially confirmed."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "The audit recorded, per program, what public pages confirm about core areas, required or first-year core courses, research-methods training and distinctive features, then mapped each program to the APERTURE weeks it informed. Public program pages describe structures and course titles, not full syllabi, so no claim is made about the week-by-week content of any course. The search budget available to the audit ran out before every candidate open resource could be checked; resources that could not be confirmed are omitted and listed under gaps."
+    }
+  ],
+  "criteria": [
+    {
+      "id": "cr-transparency",
+      "label": "Curricular transparency",
+      "description": "The program publishes enough about its required courses, methods training and milestones on official pages to be described without guessing."
+    },
+    {
+      "id": "cr-coverage",
+      "label": "Disciplinary coverage",
+      "description": "Together the programs span the three APERTURE schools — behavioral and social science, business and leadership, law and strategy — and each program adds something the others lack."
+    },
+    {
+      "id": "cr-rigor",
+      "label": "Research orientation and methodological rigor",
+      "description": "The program trains students to evaluate or produce evidence (statistics, experimental and non-experimental design, research papers), which supports APERTURE’s evidence discipline."
+    },
+    {
+      "id": "cr-relevance",
+      "label": "Relevance to the learner’s objectives",
+      "description": "The curriculum addresses executive breadth the learner wants: judgment, motivation, leadership, organizations, strategy, finance, negotiation, law and ethics."
+    },
+    {
+      "id": "cr-application",
+      "label": "Practical application",
+      "description": "The program shows how knowledge is turned into decisions — cases, simulations, field work, capstones — which informs APERTURE’s exercises and cases."
+    },
+    {
+      "id": "cr-openness",
+      "label": "Availability of open companion material",
+      "description": "Related open educational resources exist (MIT OpenCourseWare, Open Yale Courses, OpenStax) so the learner can go deeper without paywalls."
+    }
+  ],
+  "programs": [
+    {
+      "id": "P-hbs-phd-ob",
+      "category": "phd",
+      "name": "PhD in Organizational Behavior",
+      "institution": "Harvard Business School with the Harvard Kenneth C. Griffin Graduate School of Arts and Sciences",
+      "url": "https://www.hbs.edu/doctoral/phd-programs/organizational-behavior",
+      "verified": {
+        "date": "2026-11-01",
+        "method": "web-search",
+        "status": "metadata-confirmed",
+        "evidence": "Program name, URL and the micro/macro track structure matched on hbs.edu (program and program-requirements pages); joint administration with Harvard Griffin GSAS and the sociology link matched on gsas.harvard.edu and sociology.fas.harvard.edu.",
+        "link": "not-opened"
+      },
+      "summary": "A doctoral program, offered jointly by HBS and Harvard’s Griffin GSAS, that trains scholars to use the concepts and methods of psychology and sociology to study behavior and management in organizations. Students follow a micro (psychology-oriented) or macro (sociology-oriented) track; coursework and a field examination occupy roughly the first two years, followed by a research apprenticeship, a qualifying paper, a field research requirement, teaching and a dissertation typically made of three papers.",
+      "coreAreas": [
+        "Micro organizational behavior (individual and group behavior, psychology-based)",
+        "Macro organizational behavior (organizations and institutions, sociology-based)",
+        "Business administration context"
+      ],
+      "methods": [
+        "Psychology and sociology research methods",
+        "Research apprenticeship (about 100 hours by end of year two)",
+        "Qualifying paper by end of year three",
+        "Field research requirement"
+      ],
+      "distinctive": "Explicit two-discipline design (psychology and sociology) with course access across Harvard schools and MIT, and a required field research component tying theory to real organizations.",
+      "informs": [
+        "w01",
+        "w02",
+        "w04",
+        "w06",
+        "w08"
+      ],
+      "howUsed": "Its micro/macro split shaped APERTURE’s decision to teach behavior at three levels — individual judgment and motivation (Weeks 1–2), social systems and power (Week 6) and organizational design (Week 8) — and its apprenticeship and field-research requirements informed the applied, evidence-graded assignments of Week 4.",
+      "limitations": "Public pages describe milestones and tracks, not a full required-course list or syllabi; course choices are approved individually each semester, so no fixed core reading list could be confirmed. Requirements may differ by entering year."
+    },
+    {
+      "id": "P-stanford-phd-ob",
+      "category": "phd",
+      "name": "PhD in Organizational Behavior",
+      "institution": "Stanford Graduate School of Business",
+      "url": "https://www.gsb.stanford.edu/programs/phd/fields/organizational-behavior",
+      "verified": {
+        "date": "2026-11-01",
+        "method": "web-search",
+        "status": "metadata-confirmed",
+        "evidence": "Field name, URL, micro and macro subareas, topics and track requirements (course numbers OB 654, OB 670, OB 675, OB 678, PSYCH 252) matched on gsb.stanford.edu field and track-requirement pages.",
+        "link": "not-opened"
+      },
+      "summary": "A doctoral field split into Micro OB, which draws mainly on psychology (cognition and decision-making, moral judgment, negotiation and bargaining, leadership, personality), and Macro OB, which trains researchers in organization theory and economic sociology (organizational culture, social networks and diffusion, labor-market inequality). Both tracks take a first-year proseminar and a field exam; the micro track requires statistics, micro research methods and a recurring experimental-research design course, while the macro track requires a research-design course, core theory courses and an econometrics or methods sequence.",
+      "coreAreas": [
+        "Cognition and decision-making",
+        "Moral judgment",
+        "Negotiation and bargaining",
+        "Leadership and personality",
+        "Organization theory and economic sociology",
+        "Social networks and diffusion",
+        "Organizational culture"
+      ],
+      "methods": [
+        "PSYCH 252 Statistical Methods for Behavioral and Social Sciences",
+        "OB 675 Micro Research Methods",
+        "OB 678 Design and Process of Experimental Research (each year, years 1–3, micro track)",
+        "OB 670 Designing Social Research (macro track)",
+        "Econometrics or methods sequence (macro track)"
+      ],
+      "distinctive": "Unusually explicit, repeated training in experimental design for micro students, and a topical list that spans judgment, ethics, negotiation and networks — almost the full behavioral spine of APERTURE.",
+      "informs": [
+        "w01",
+        "w02",
+        "w04",
+        "w05",
+        "w06",
+        "w07",
+        "w13"
+      ],
+      "howUsed": "Its micro topics set the scope of Weeks 1, 2, 5 and 7 (judgment, motivation, leadership, negotiation) and its macro topics the network and culture content of Week 6; its methods sequence is the model for Week 4’s emphasis on design before statistics, and moral judgment informs Week 13.",
+      "limitations": "Track pages list course numbers and requirements but not syllabi or reading lists; field-exam timing differs between pages. Specific weekly content of the courses could not be confirmed."
+    },
+    {
+      "id": "P-wharton-phd-mgmt",
+      "category": "phd",
+      "name": "PhD in Management (organizational behavior, organization theory and strategy specializations)",
+      "institution": "The Wharton School, University of Pennsylvania",
+      "url": "https://doctoral.wharton.upenn.edu/management/",
+      "verified": {
+        "date": "2026-11-01",
+        "method": "web-search",
+        "status": "metadata-confirmed",
+        "evidence": "Program name, URL and specializations (Entrepreneurship, Human and Social Capital, Multinational Management, Organizational Behavior, Organizational Theory, Strategy) matched on doctoral.wharton.upenn.edu; required foundations and elective seminars matched on catalog.upenn.edu; milestones matched on the department handbook (mgmt.wharton.upenn.edu / doctoral-inside.wharton.upenn.edu).",
+        "link": "not-opened"
+      },
+      "summary": "A flexible, interdisciplinary management doctorate with six specializations. The university catalog lists required foundations in Economic Foundations of Management, Psychological Foundations of Research in Management, Foundations of Organizational Theory and a Seminar in Research Design, plus a methods sequence and specialization electives such as Seminar in Corporate Strategy, Seminar in Strategy and Organization Design, Technology and Innovation Strategy, Non-Market Strategy, Seminar in Macro-Organizational Behavior and Applied Research Methods in OB. Students sit a second-year qualifying exam and defend a second-year paper.",
+      "coreAreas": [
+        "Economic foundations of management",
+        "Psychological foundations of management research",
+        "Organization theory",
+        "Corporate strategy and organization design",
+        "Technology, innovation and non-market strategy",
+        "Entrepreneurship",
+        "Human and social capital"
+      ],
+      "methods": [
+        "Seminar in Research Design",
+        "Statistics sequence and additional research-methods units",
+        "Applied Research Methods in OB (elective)",
+        "Second-year paper and qualifying exam"
+      ],
+      "distinctive": "The only PhD in the set that joins behavioral, sociological and economic foundations with formal strategy seminars, which makes it the bridge between APERTURE’s behavioral and business schools.",
+      "informs": [
+        "w02",
+        "w04",
+        "w08",
+        "w09",
+        "w12"
+      ],
+      "howUsed": "Its three foundations (economic, psychological, organizational) mirror APERTURE’s three-school design; its strategy and organization-design seminars informed Weeks 8–9 and its innovation and non-market strategy topics Week 12’s treatment of technology adoption.",
+      "limitations": "Unit counts differ between the catalog and handbook versions found; seminar syllabi were not available in search results, so content is inferred from course titles only."
+    },
+    {
+      "id": "P-kellogg-phd-mors",
+      "category": "phd",
+      "name": "PhD in Management & Organizations",
+      "institution": "Kellogg School of Management, Northwestern University",
+      "url": "https://www.kellogg.northwestern.edu/doctoral/programs/management-and-organizations/",
+      "verified": {
+        "date": "2026-11-01",
+        "method": "web-search",
+        "status": "partially-confirmed",
+        "evidence": "Program name, URL, first-year structure (nine courses, psychology and sociology foundations) and milestones matched on kellogg.northwestern.edu and catalogs.northwestern.edu. Exam and candidacy details come from a 2020 program-guidelines PDF on kellogg.northwestern.edu and may be out of date; a full current course list was not found.",
+        "link": "not-opened"
+      },
+      "summary": "A doctorate that, per the Northwestern catalog, integrates psychological, sociological, economic and complex-systems perspectives on organizations. First-year students take nine courses that give a broad theoretical grounding in psychology and sociology; a preliminary exam after year one covers four substantive core courses and two core methods courses. Students give research talks in years two and three, write an empirical candidacy paper and serve as research or teaching assistants. A separate joint program with Sociology exists.",
+      "coreAreas": [
+        "Psychology of individuals and groups in organizations",
+        "Sociology of organizations",
+        "Economic perspectives on organizations",
+        "Complex-systems perspectives"
+      ],
+      "methods": [
+        "Two core methods courses (covered by the preliminary exam)",
+        "Macro-organizational research methods (joint sociology track)",
+        "Empirical candidacy paper"
+      ],
+      "distinctive": "Explicit inclusion of complex-systems thinking alongside psychology and sociology.",
+      "informs": [
+        "w02",
+        "w04",
+        "w06",
+        "w08",
+        "w12"
+      ],
+      "howUsed": "Its complex-systems perspective informed the systems-thinking, feedback-loop and unintended-consequence material in Weeks 8 and 12; its psychology-plus-sociology first year reinforced the pairing of motivation (Week 2) with power and networks (Week 6).",
+      "limitations": "Only a partial course list was found (two macro course titles in the joint sociology program); the most detailed requirements came from a 2020 guideline document. Micro course titles and syllabi could not be confirmed."
+    },
+    {
+      "id": "P-booth-phd-bs",
+      "category": "phd",
+      "name": "PhD in Behavioral Science",
+      "institution": "University of Chicago Booth School of Business",
+      "url": "https://www.chicagobooth.edu/phd/dissertation-areas/behavioral-science",
+      "verified": {
+        "date": "2026-11-01",
+        "method": "web-search",
+        "status": "partially-confirmed",
+        "evidence": "Program name, URL, disciplinary basis (cognitive and social psychology, economics), joint Psychology and Business PhD and the Roman Family Center for Decision Research link matched on chicagobooth.edu. Course and exam requirements come from a Booth PhD guidebook whose current version could not be confirmed.",
+        "link": "not-opened"
+      },
+      "summary": "A Booth dissertation area whose research draws on theory and methods from cognitive and social psychology, economics and related fields, closely tied to the Roman Family Center for Decision Research, which studies decision making in individual, interpersonal, organizational, consumer and legal settings. Per the program guidebook, students take topical proseminars and research-methods courses (at least one experimental and one non-experimental), sit a second-year qualifying exam with a research report, write a curriculum paper and complete a dissertation. A joint PhD with the Department of Psychology is available.",
+      "coreAreas": [
+        "Judgment and decision making",
+        "Social psychology",
+        "Consumer behavior",
+        "Behavioral economics"
+      ],
+      "methods": [
+        "At least one experimental methods course",
+        "At least one non-experimental methods course",
+        "Second-year qualifying exam with research report",
+        "Curriculum paper"
+      ],
+      "distinctive": "The set’s purest decision-science program: the research center’s scope (individual through legal decisions) runs across all three APERTURE schools.",
+      "informs": [
+        "w01",
+        "w03",
+        "w04",
+        "w07",
+        "w13"
+      ],
+      "howUsed": "It is the primary model for Week 1 (judgment, calibration, biases) and for the decision-under-uncertainty thread in Weeks 7 and 13; its requirement of both experimental and non-experimental methods shaped Week 4’s balance between randomized and observational designs; its cognitive-psychology basis supports the memory and retrieval material in Week 3.",
+      "limitations": "Requirements were confirmed only through guidebook excerpts of uncertain date; proseminar topics and syllabi were not visible. Admission and current course details should be checked with the program office."
+    },
+    {
+      "id": "P-hbs-mba",
+      "category": "mba",
+      "name": "MBA Program (Required Curriculum, FIELD and Elective Curriculum)",
+      "institution": "Harvard Business School",
+      "url": "https://www.hbs.edu/mba/academic-experience/curriculum",
+      "verified": {
+        "date": "2026-11-01",
+        "method": "web-search",
+        "status": "metadata-confirmed",
+        "evidence": "Curriculum page URL, Required Curriculum courses by term (Class of 2028), 30 elective credits, FIELD and the case method matched on hbs.edu (curriculum page, MBA handbook section 2.4 and 2.7, case-method page, faculty curriculum pages).",
+        "link": "not-opened"
+      },
+      "summary": "All first-year students take the same Required Curriculum and FIELD. Term 1: Finance 1, Financial Reporting and Control, Leadership and Organizational Behavior (LEAD), Marketing, Strategy, and Technology and Operations Management. Term 2: Business, Government and the International Economy; Data Science and AI for Leaders; The Entrepreneurial Manager; Finance 2; Leadership and Corporate Accountability; and Purpose of the Firm. Students then take the equivalent of 30 elective credits. Teaching relies on the case method: students read about 500 cases, each ending in a decision.",
+      "coreAreas": [
+        "Finance and financial reporting",
+        "Leadership and organizational behavior",
+        "Strategy",
+        "Marketing",
+        "Technology and operations management",
+        "Business, government and the international economy",
+        "Data science and AI for leaders",
+        "Entrepreneurial management",
+        "Leadership and corporate accountability",
+        "Purpose of the firm"
+      ],
+      "methods": [
+        "Data Science and AI for Leaders (required)",
+        "Case method (decision-forcing discussion)",
+        "FIELD (year-long experiential course with a Global Capstone)"
+      ],
+      "distinctive": "Decision-forcing cases as the dominant pedagogy, a required course on corporate accountability and the firm’s purpose, and LEAD’s arc from team culture to organizational design to career strategy.",
+      "informs": [
+        "w03",
+        "w04",
+        "w05",
+        "w08",
+        "w09",
+        "w10",
+        "w12",
+        "w13",
+        "w14"
+      ],
+      "howUsed": "Its case method is the model for APERTURE’s weekly original cases with incomplete information and more than one defensible answer; LEAD informed Weeks 5 and 8, Finance 1–2 and Financial Reporting Week 10, Strategy Week 9, TOM Week 12, Leadership and Corporate Accountability and Data Science and AI for Leaders Week 13, and FIELD’s capstone the incremental Week 14 capstone; LEAD and FIELD’s learning-by-doing design also informed Week 3.",
+      "limitations": "Course descriptions were available for LEAD, Finance 1 and FIELD only; the Strategy course description and all syllabi were not visible. HBS cases are proprietary and are not used or reproduced; APERTURE writes its own cases."
+    },
+    {
+      "id": "P-stanford-mba",
+      "category": "mba",
+      "name": "MBA Program (first-year curriculum)",
+      "institution": "Stanford Graduate School of Business",
+      "url": "https://www.gsb.stanford.edu/programs/mba/academic-experience/curriculum/first-year",
+      "verified": {
+        "date": "2026-11-01",
+        "method": "web-search",
+        "status": "metadata-confirmed",
+        "evidence": "First-year page URL, the Analytical, Leadership and Management Foundations structure and course descriptions (data analysis, finance, financial accounting, microeconomics, optimization and simulation modeling, Leadership Foundations, Ethics, Managing Groups and Teams, Organizational Behavior, Leadership Labs, Executive Challenge) matched on gsb.stanford.edu.",
+        "link": "not-opened"
+      },
+      "summary": "The first-year core is divided into Analytical Foundations (data analysis, finance, financial accounting, microeconomics, optimization and simulation modeling), Leadership Foundations (a course on what kind of leader to be, taught in five-to-six-person squads, plus Ethics, Managing Groups and Teams, and Organizational Behavior) and Management Foundations (marketing, operations, general management and strategy, non-market strategy), with a choice among categories. Leadership Labs, a required autumn course, has squads practice through simulations and culminates in the Executive Challenge, a day of role-played business cases judged by alumni.",
+      "coreAreas": [
+        "Data analysis and decision modeling",
+        "Finance and financial accounting",
+        "Microeconomics",
+        "Leadership, ethics and organizational behavior",
+        "Groups and teams",
+        "Marketing and operations",
+        "Strategy and non-market strategy"
+      ],
+      "methods": [
+        "Data analysis for inference and decisions",
+        "Optimization and simulation modeling",
+        "Simulation-based leadership practice with structured reflection"
+      ],
+      "distinctive": "Leadership taught as deliberate practice in small squads with simulations and feedback, and a required ethics course grounded in research on human behavior.",
+      "informs": [
+        "w02",
+        "w03",
+        "w04",
+        "w05",
+        "w09",
+        "w10",
+        "w12",
+        "w13",
+        "w14"
+      ],
+      "howUsed": "Leadership Labs and the Executive Challenge are the model for APERTURE’s simulators and branching conversations (Week 5) and the capstone defense (Week 14); the Ethics course’s use of behavioral research informed Week 13; Analytical Foundations informed Weeks 4 and 10; non-market strategy informed Week 9; Organizational Behavior and Managing Groups and Teams informed Week 2; the practice-and-reflection design of Leadership Labs informed Week 3; the operations foundation informed Week 12.",
+      "limitations": "No single current numbered list of required courses was found; older lists are dated. Syllabi and readings were not visible."
+    },
+    {
+      "id": "P-wharton-mba",
+      "category": "mba",
+      "name": "MBA Program (fixed and flexible core)",
+      "institution": "The Wharton School, University of Pennsylvania",
+      "url": "https://mba.wharton.upenn.edu/mba-curriculum/",
+      "verified": {
+        "date": "2026-11-01",
+        "method": "web-search",
+        "status": "metadata-confirmed",
+        "evidence": "Curriculum URL, fixed core (MGMT 6100 Foundations of Teamwork and Leadership; MKTG 6110; BEPP 6110/6120 microeconomics; STAT 6130/6210; WHCP 6160 or 6180) and flexible core (accounting, corporate finance FNCE 6110/6210, macroeconomics, legal studies and business ethics LGST 6110/6120/6130, operations) matched on mba.wharton.upenn.edu and mba-inside.wharton.upenn.edu core-curriculum pages and guides.",
+        "link": "not-opened"
+      },
+      "summary": "The core has a fixed portion taken with one’s cohort in the first fall — Foundations of Teamwork and Leadership, Marketing Management, microeconomics, statistics and a management or entrepreneurial communication course — and a flexible portion taken any time: accounting, corporate finance, macroeconomics, legal studies and business ethics, operations and further management and marketing options. A writing requirement also applies.",
+      "coreAreas": [
+        "Teamwork and leadership",
+        "Management communication",
+        "Microeconomics and statistics",
+        "Marketing",
+        "Accounting and corporate finance",
+        "Macroeconomics",
+        "Legal studies and business ethics",
+        "Operations, information and decisions"
+      ],
+      "methods": [
+        "Statistics core (STAT 6130 or 6210)",
+        "Operations and analytics options (for example Business Analytics)"
+      ],
+      "distinctive": "A required legal-studies and business-ethics component inside the MBA core and a dedicated communication requirement with persuasive-writing options.",
+      "informs": [
+        "w04",
+        "w05",
+        "w10",
+        "w11",
+        "w12",
+        "w13"
+      ],
+      "howUsed": "Its communication core informed Week 5’s three-format writing assignment (memo, brief, verbal); its legal-studies-and-ethics requirement supported placing law and ethics (Weeks 11 and 13) inside a general-management semester; statistics and operations informed Weeks 4 and 12; accounting and finance informed Week 10.",
+      "limitations": "Course numbers and credit values change by class year; negotiation appears in older core documents but could not be confirmed as part of the current core. Syllabi were not visible."
+    },
+    {
+      "id": "P-mitsloan-mba",
+      "category": "mba",
+      "name": "MBA Program (first-semester core)",
+      "institution": "MIT Sloan School of Management",
+      "url": "https://mitsloan.mit.edu/mba/explore-program/mba-curriculum",
+      "verified": {
+        "date": "2026-11-01",
+        "method": "web-search",
+        "status": "partially-confirmed",
+        "evidence": "Curriculum URL and the core structure (six required courses, one core elective, optional proseminar) matched on mitsloan.mit.edu and mbapolicyhandbook.mit.edu; Data, Models and Decisions (15.060) and Organizational Processes (15.311) descriptions and 15.002 Leadership Challenges for an Inclusive World matched on official MIT pages. The remaining course names (Economic Analysis, Communication for Leaders, Financial Accounting) appeared in MIT search-result text but a complete official list was not shown in one place.",
+        "link": "not-opened"
+      },
+      "summary": "The first semester (the Core) has six required courses, one core elective (for example Managerial Finance, 15.401) and an optional certificate proseminar. Required courses include Data, Models and Decisions (probability, decision analysis, statistics, regression, simulation and optimization), Organizational Processes (organizations seen through strategic-design, political and cultural lenses, with a team project), Economic Analysis, Communication for Leaders, Financial Accounting, and Leadership Challenges for an Inclusive World. MIT OpenCourseWare publishes a collection of first-semester core materials.",
+      "coreAreas": [
+        "Data, models and decisions",
+        "Organizational processes (design, political and cultural lenses)",
+        "Economic analysis",
+        "Communication for leaders",
+        "Financial accounting",
+        "Inclusive leadership"
+      ],
+      "methods": [
+        "15.060 Data, Models and Decisions (probability, decision analysis, regression, simulation, optimization)",
+        "Core team project"
+      ],
+      "distinctive": "The three-lens model of organizations (strategic design, political, cultural) and a quantitative decision course in the first semester; open course materials through MIT OpenCourseWare.",
+      "informs": [
+        "w01",
+        "w04",
+        "w05",
+        "w06",
+        "w08",
+        "w10",
+        "w14"
+      ],
+      "howUsed": "The three lenses of Organizational Processes directly informed the pairing of Week 6 (political lens: power and coalitions) with Week 8 (design lens: structure and decision rights) and the culture material in both; Data, Models and Decisions informed Weeks 1 and 4 (probability and decision analysis); Communication for Leaders informed Week 5.",
+      "limitations": "The full official six-course list was not confirmed on a single official page; syllabi were not visible except through older OCW versions, which may differ from current teaching."
+    },
+    {
+      "id": "P-booth-mba",
+      "category": "mba",
+      "name": "Full-Time MBA Program (flexible curriculum)",
+      "institution": "University of Chicago Booth School of Business",
+      "url": "https://www.chicagobooth.edu/mba/academics/curriculum",
+      "verified": {
+        "date": "2026-11-01",
+        "method": "web-search",
+        "status": "metadata-confirmed",
+        "evidence": "Curriculum URL, LEAD as the only required course, foundations in accounting, microeconomics and statistics, the functions / leadership-and-management / business-environment requirement (one course from seven of eight categories) and Leadership & Management basic courses (Managing the Workplace, Managing in Organizations, Power and Influence) matched on chicagobooth.edu and intranet.chicagobooth.edu degree-requirement pages.",
+        "link": "not-opened"
+      },
+      "summary": "Booth’s only required course is LEAD, taken in the first quarter, which builds skills in negotiation, team building and interpersonal communication. Students otherwise satisfy foundations (one course each in financial accounting, microeconomics and statistics, with advanced alternatives) and choose one course from seven of eight categories spanning functions (finance, marketing, operations, strategy), leadership and management (for example Managing the Workplace, Managing in Organizations, Power and Influence) and the business environment.",
+      "coreAreas": [
+        "Leadership, negotiation and interpersonal communication (LEAD)",
+        "Financial accounting",
+        "Microeconomics",
+        "Statistics",
+        "Finance, marketing, operations and strategy",
+        "Leadership and management, including power and influence",
+        "Business environment"
+      ],
+      "methods": [
+        "Business statistics foundation (or advanced alternative)",
+        "Decision-making category within the distribution requirement"
+      ],
+      "distinctive": "A discipline-first, highly flexible curriculum with a single required leadership course and a behavioral-science faculty group that teaches decision-making and power courses to MBAs.",
+      "informs": [
+        "w01",
+        "w04",
+        "w05",
+        "w06",
+        "w07",
+        "w09",
+        "w10",
+        "w12"
+      ],
+      "howUsed": "LEAD’s pairing of negotiation with interpersonal communication informed the link between Week 5 and Week 7; Power and Influence informed Week 6; the foundations-first logic (accounting, microeconomics, statistics) informed the foundation-mode prerequisites in Weeks 4, 9 and 10; the behavioral-science group informed Week 1; the operations function informed Week 12.",
+      "limitations": "Public and intranet pages use different category labels; course titles behind several category course numbers could not be confirmed. Syllabi were not visible."
+    },
+    {
+      "id": "P-hls-hbs-jdmba",
+      "category": "jdmba",
+      "name": "JD/MBA Joint Degree Program in Law and Business",
+      "institution": "Harvard Law School and Harvard Business School",
+      "url": "https://www.hbs.edu/mba/academic-experience/joint-degree-programs/harvard-law-school",
+      "verified": {
+        "date": "2026-11-01",
+        "method": "web-search",
+        "status": "metadata-confirmed",
+        "evidence": "Program URL, four-year structure, credit requirements, joint seminar and separate admission matched on hbs.edu (JD/MBA, curriculum and handbook 2.17 pages) and hls.harvard.edu (joint degree page); HLS first-year required courses matched on hls.harvard.edu (J.D. requirements and 2026–2027 Handbook of Academic Policies).",
+        "link": "not-opened"
+      },
+      "summary": "A four-year program: one full year at each school in either order (the first-year core curricula of HLS and HBS), then two years of simultaneous enrollment with at least 52 upper-level law credits (including 36 HLS classroom credits) and 24 HBS elective credits. All students take a year-long Joint Degree Program Seminar taught by HLS and/or HBS faculty and meet professional-responsibility, written-work and pro bono requirements. The HLS first year includes Civil Procedure, Constitutional Law, Contracts, Criminal Law, Legislation and Regulation, Property, Torts, and Legal Research and Writing.",
+      "coreAreas": [
+        "Contracts",
+        "Torts and property",
+        "Legislation and regulation",
+        "Constitutional law and civil procedure",
+        "Professional responsibility",
+        "Full HBS Required Curriculum",
+        "Integrative law-and-business seminar"
+      ],
+      "methods": [
+        "Legal research and writing (with moot court)",
+        "Case method in both schools"
+      ],
+      "distinctive": "A dedicated integrative seminar that brings law and business faculty together for joint-degree students, plus the full required cores of both schools.",
+      "informs": [
+        "w07",
+        "w11",
+        "w13",
+        "w14"
+      ],
+      "howUsed": "The first-year law core (contracts, torts, regulation) set the scope of Week 11’s legal-literacy lessons; Legislation and Regulation informed its regulatory-context lesson; professional responsibility informed Week 13; the integrative seminar is the model for a capstone that requires legal and ethical considerations alongside strategy (Week 14).",
+      "limitations": "Seminar topics are not published; pro bono hours differ between HLS (50) and HBS (40) pages. Law-school course syllabi were not visible."
+    },
+    {
+      "id": "P-sls-gsb-jdmba",
+      "category": "jdmba",
+      "name": "Joint JD/MBA Degree",
+      "institution": "Stanford Law School and Stanford Graduate School of Business",
+      "url": "https://www.gsb.stanford.edu/programs/mba/academic-experience/joint-dual-degrees/jd",
+      "verified": {
+        "date": "2026-11-01",
+        "method": "web-search",
+        "status": "metadata-confirmed",
+        "evidence": "Program URL, unit totals, quarter count, sequencing options and admission rules matched on gsb.stanford.edu (JD/MBA page) and law.stanford.edu (Law and Business, policies and standards pages).",
+        "link": "not-opened"
+      },
+      "summary": "A program of about four years (11–12 consecutive quarters) requiring admission to both schools. Students complete the GSB autumn-quarter core in their first GSB quarter and its distribution requirements by the end of their first GSB year, at least 80 units at the Law School and at least 80 at the GSB (84 MBA units in total), and five quarters of GSB residency. The GSB lists three sequencing paths; the Law School notes that students generally begin at SLS.",
+      "coreAreas": [
+        "Stanford Law School first-year curriculum",
+        "Stanford GSB first-year core (analytical, leadership and management foundations)",
+        "Upper-level law and business electives"
+      ],
+      "methods": [
+        "GSB data analysis and optimization core",
+        "Law School research and writing (not detailed in results)"
+      ],
+      "distinctive": "Flexible sequencing across three paths and a large share of cross-listed units, letting students design their own law-business mix.",
+      "informs": [
+        "w07",
+        "w11"
+      ],
+      "howUsed": "Its flexible-sequencing logic supported APERTURE’s choice to interleave law content (Weeks 7 and 11) with business content rather than isolate it in a block.",
+      "limitations": "Search results did not show Stanford Law’s first-year course list or any joint-degree-specific course; content is inferred from the two schools’ cores."
+    },
+    {
+      "id": "P-penn-wharton-jdmba",
+      "category": "jdmba",
+      "name": "Carey JD/MBA Program (three-year)",
+      "institution": "University of Pennsylvania Carey Law School and The Wharton School",
+      "url": "https://mba.wharton.upenn.edu/carey-jd-mba-program/",
+      "verified": {
+        "date": "2026-11-01",
+        "method": "web-search",
+        "status": "metadata-confirmed",
+        "evidence": "Program URL, three-year sequence, summer courses designed for the program, credit requirements and the JD/MBA capstone matched on mba.wharton.upenn.edu, law.upenn.edu (JD/MBA and course-overview pages) and catalog.upenn.edu.",
+        "link": "not-opened"
+      },
+      "summary": "A three-year integrated program: the regular Law 1L curriculum, a first summer of Law and Wharton courses designed specifically for the program (professional responsibility is typically taught then), a second year of Wharton core and law courses, a summer internship, and a third year combining Law and Wharton courses with a required JD/MBA Capstone. The capstone follows a company through start-up structuring and initial capital raising, exit or mergers and acquisitions, and restructuring in hands-on boot camps. Law requirements include 86 credits, experiential learning, pro bono work and a senior writing requirement.",
+      "coreAreas": [
+        "Law 1L curriculum",
+        "Wharton MBA core (including accounting and corporate finance)",
+        "Professional responsibility",
+        "Business transactions across the corporate life cycle"
+      ],
+      "methods": [
+        "Experiential learning requirement (six credits)",
+        "Senior research and writing requirement"
+      ],
+      "distinctive": "A transaction-focused capstone that follows one company from formation to restructuring — law and finance in a single applied sequence.",
+      "informs": [
+        "w10",
+        "w11",
+        "w13",
+        "w14"
+      ],
+      "howUsed": "Its life-cycle capstone informed the design of Week 11’s contract lab (provisions read for business risk and negotiation priorities, not doctrine) and the Week 14 capstone’s integration of budget, legal and governance components.",
+      "limitations": "Summer course titles and capstone syllabi were not visible; older materials give different credit totals."
+    },
+    {
+      "id": "P-nu-kellogg-jdmba",
+      "category": "jdmba",
+      "name": "JD-MBA Program (three-year)",
+      "institution": "Northwestern Pritzker School of Law and Kellogg School of Management",
+      "url": "https://www.kellogg.northwestern.edu/programs/full-time-mba/jd-mba-program/",
+      "verified": {
+        "date": "2026-11-01",
+        "method": "web-search",
+        "status": "metadata-confirmed",
+        "evidence": "Program name, three-year sequence and credit rules matched on kellogg.northwestern.edu (JD-MBA program page) and catalogs.northwestern.edu (JD-MBA joint degree). The search result showed the page at a .aspx address; the owner-supplied URL is used.",
+        "link": "not-opened"
+      },
+      "summary": "A three-year program: a first year exclusively at the Law School, a summer of Kellogg coursework, a second year full-time at Kellogg completing at least 16 Kellogg credits including the core, a law or business internship, and a third year back at the Law School. Students must complete 16 Kellogg credits and 85 law credit hours; up to 27 Kellogg credits may count toward the JD, and some cores (financial accounting, finance, microeconomics) can be waived.",
+      "coreAreas": [
+        "First-year law curriculum",
+        "Kellogg MBA core (including financial accounting, finance and microeconomics)",
+        "Upper-level law electives"
+      ],
+      "methods": [
+        "Kellogg core analytics (not detailed in results)"
+      ],
+      "distinctive": "A compressed three-year design that requires business foundations to be learned quickly and applied immediately in law coursework.",
+      "informs": [
+        "w10",
+        "w11"
+      ],
+      "howUsed": "Its compressed sequence supported APERTURE’s foundation-mode prerequisites, which teach just enough accounting and microeconomics to make Weeks 10 and 11 usable for a non-specialist.",
+      "limitations": "Joint-degree-specific courses and law syllabi were not visible; older materials cite different law-credit totals."
+    },
+    {
+      "id": "P-uchicago-booth-jdmba",
+      "category": "jdmba",
+      "name": "JD/MBA Joint-Degree Program (three- and four-year)",
+      "institution": "University of Chicago Law School and Chicago Booth",
+      "url": "https://www.chicagobooth.edu/mba/joint-degree/jd-mba",
+      "verified": {
+        "date": "2026-11-01",
+        "method": "web-search",
+        "status": "metadata-confirmed",
+        "evidence": "Program URL, the three-year and four-year structures, course totals and admission rules matched on chicagobooth.edu (JD/MBA page and press release) and law.uchicago.edu (three-year class planning and joint degrees pages).",
+        "link": "not-opened"
+      },
+      "summary": "Two formats. The accelerated three-year track: the standard 1L year at the Law School, a year at Booth (with Doctoroff Business Leadership Program credits), and a final law year, plus two Booth courses in summer terms; admission requires acceptance by both schools and the Doctoroff program. The four-year track adds a second law year and splits the final year between Booth and the Law School. Students complete 1,400 units of Booth coursework plus LEAD and 105 law credit hours.",
+      "coreAreas": [
+        "First-year law curriculum",
+        "Booth LEAD and foundations",
+        "Business leadership programming (Doctoroff)",
+        "Upper-level law electives"
+      ],
+      "methods": [
+        "Booth statistics foundation"
+      ],
+      "distinctive": "A business-leadership program built into the accelerated joint degree, reflecting the economic approach to law associated with both schools.",
+      "informs": [
+        "w07",
+        "w09",
+        "w11"
+      ],
+      "howUsed": "Its combination of law with Booth’s economics-first foundations informed Week 11’s treatment of contracts as incentive and risk-allocation devices and Week 7’s principal-agent material.",
+      "limitations": "Doctoroff program content and law syllabi were not visible; Booth pages differ on whether first-year law students may still apply to the three-year track."
+    }
+  ],
+  "oer": [
+    {
+      "ref": "R-oyc-2007-introduction",
+      "note": "Open foundation for the behavioral-science school (Weeks 1–3). Recorded 2007, before the replication crisis: treat some social-psychology findings as historical and cross-check against later replications."
+    },
+    {
+      "ref": "R-mitocw-2001-negotiation",
+      "note": "Open graduate negotiation course from a reference MBA school; simulations, self-assessments and third-party conflict management support Weeks 7 and 11."
+    },
+    {
+      "ref": "R-black-2019-organizational",
+      "note": "Open organizational behavior textbook mapping onto every MBA leadership and OB core; reference for Weeks 2, 5, 6 and 8."
+    },
+    {
+      "ref": "R-bright-2019-principles",
+      "note": "Open management survey; vocabulary and foundation-mode background for Weeks 8, 9 and 12."
+    },
+    {
+      "ref": "R-dahlquist-2022-principles",
+      "note": "Open finance textbook covering statements, time value of money, valuation and capital budgeting; backbone for Week 10 and the capstone budget model."
+    },
+    {
+      "ref": "R-mitocw-2003-team",
+      "note": "Partially confirmed archived MIT Sloan team-project course; listed as a model for structuring the incremental capstone, not as subject content."
+    }
+  ],
+  "synthesis": [
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "Read together, the fifteen programs agree on more than their marketing suggests. The five doctoral programs share a two- or three-discipline foundation: psychology for individual judgment, motivation and group behavior; sociology for networks, institutions and culture; and, at Wharton and Booth, economics for incentives and decisions. Every one of them front-loads research-methods training — Stanford’s micro track repeats an experimental-design course for three years, Booth requires both experimental and non-experimental methods, Wharton requires a research-design seminar and Kellogg examines two core methods courses after year one. The message is that behavioral knowledge is only as good as the evidence behind it."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "The five MBA programs converge on a recognizable core: financial accounting and corporate finance, microeconomics, statistics or data analysis, strategy, operations, marketing, and leadership and organizational behavior. Several cores also reach beyond the classic functions. HBS now requires Data Science and AI for Leaders, Leadership and Corporate Accountability, and Purpose of the Firm; Stanford requires Ethics and practices leadership through simulations in Leadership Labs; Wharton puts legal studies and business ethics and a communication course in its core; MIT Sloan teaches organizations through strategic-design, political and cultural lenses; Booth’s single required course, LEAD, joins negotiation with interpersonal communication. Leadership, in other words, is taught as a skill that requires practice and feedback, and accountability and ethics are treated as core, not elective."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "The JD/MBA programs add a layer of institutional literacy. Their law cores (contracts, torts, property, legislation and regulation, civil procedure, constitutional law) and professional-responsibility requirements teach how rules allocate risk and constrain organizations. Their distinctive features are integrative: Harvard’s joint seminar, Penn’s transaction capstone following one company from formation to restructuring, and the compressed three-year designs at Penn, Northwestern and Chicago, which force business foundations to be learned quickly and used at once."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "APERTURE’s fourteen weeks reflect this shared structure. Weeks 1–4 correspond to the doctoral foundations: judgment and decision science (the Booth and Stanford micro model), motivation and social behavior, learning, and a research-literacy week built on the methods emphasis common to all five PhD programs. Weeks 5–8 correspond to the MBA leadership and organization cores, with negotiation placed in Week 7 as Booth, Stanford’s micro OB topics and the MIT negotiation course suggest. Weeks 9–10 correspond to the strategy and finance cores, Week 11 to the first-year law curriculum read for legal literacy, Weeks 12–13 to operations, governance and accountability, and Week 14 to the capstones and integrative experiences that HBS, Stanford, Penn and Harvard’s joint program use."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "APERTURE also departs from these programs on purpose. It is a self-directed program for a single learner and grants no credit, degree or credential. It does not train researchers: it teaches the learner to judge evidence, not to produce publishable studies, so methods are compressed into one week and then applied throughout. It does not train lawyers: Week 11 aims at issue spotting and knowing when to call counsel, and it is labelled as general education, not legal advice. It replaces proprietary cases and course packs with original cases built on fictional organizations and synthetic data, and it links open resources rather than reproducing copyrighted materials. Finally, it grades the evidence behind every major claim and names replication failures, which program pages — written to describe programs, not to evaluate findings — do not do. The reference programs set the breadth; APERTURE’s own standards set the depth and the honesty of the evidence."
+    }
+  ],
+  "mapping": [
+    {
+      "week": "w01",
+      "programs": [
+        "P-booth-phd-bs",
+        "P-stanford-phd-ob",
+        "P-hbs-phd-ob",
+        "P-mitsloan-mba",
+        "P-booth-mba"
+      ],
+      "how": "Booth’s decision-research focus and Stanford’s micro-OB topic of cognition and decision-making set the content (heuristics, calibration, base rates); the psychology-based micro track at Harvard reinforced starting with individual judgment; MIT’s Data, Models and Decisions informed the probability and decision-analysis framing; Booth’s behavioral-science faculty group informed the managerial angle."
+    },
+    {
+      "week": "w02",
+      "programs": [
+        "P-stanford-phd-ob",
+        "P-hbs-phd-ob",
+        "P-kellogg-phd-mors",
+        "P-wharton-phd-mgmt",
+        "P-stanford-mba"
+      ],
+      "how": "The psychological foundations shared by the PhD programs (motivation, social influence, group behavior) and the economic foundations at Wharton (incentives) shaped a week that joins social psychology with incentive design; Stanford’s Organizational Behavior and Managing Groups and Teams courses informed the managerial application."
+    },
+    {
+      "week": "w03",
+      "programs": [
+        "P-stanford-mba",
+        "P-hbs-mba",
+        "P-booth-phd-bs"
+      ],
+      "how": "No reference program teaches learning science or motor learning directly; the week draws on the practice-and-feedback design of Stanford’s Leadership Labs and HBS’s LEAD and FIELD, and on the cognitive-psychology basis of Booth’s program, with Open Yale PSYC 110 as the open foundation. Most content rests on the research literature rather than program pages."
+    },
+    {
+      "week": "w04",
+      "programs": [
+        "P-stanford-phd-ob",
+        "P-booth-phd-bs",
+        "P-wharton-phd-mgmt",
+        "P-kellogg-phd-mors",
+        "P-hbs-phd-ob",
+        "P-mitsloan-mba",
+        "P-hbs-mba",
+        "P-wharton-mba",
+        "P-stanford-mba",
+        "P-booth-mba"
+      ],
+      "how": "Every PhD program’s methods core (experimental and non-experimental design, research-design seminars, statistics sequences, Harvard’s research apprenticeship and field-research requirement) set the scope; MIT’s Data, Models and Decisions, HBS’s Data Science and AI for Leaders, Stanford’s data-analysis core and the Wharton and Booth statistics requirements set the executive level of the treatment."
+    },
+    {
+      "week": "w05",
+      "programs": [
+        "P-hbs-mba",
+        "P-stanford-mba",
+        "P-wharton-mba",
+        "P-mitsloan-mba",
+        "P-booth-mba",
+        "P-stanford-phd-ob"
+      ],
+      "how": "Leadership cores (HBS LEAD, Stanford Leadership Foundations and Leadership Labs, Wharton Foundations of Teamwork and Leadership, Booth LEAD) and communication requirements (Wharton management communication, MIT Communication for Leaders) shaped the coaching, feedback and three-format writing work; Stanford’s micro-OB leadership topic informed the evidence review of leadership theories."
+    },
+    {
+      "week": "w06",
+      "programs": [
+        "P-mitsloan-mba",
+        "P-booth-mba",
+        "P-stanford-phd-ob",
+        "P-hbs-phd-ob",
+        "P-kellogg-phd-mors"
+      ],
+      "how": "MIT’s political and cultural lenses and Booth’s Power and Influence course set the frame; the macro-OB and sociology tracks at Stanford, Harvard and Kellogg (networks, diffusion, institutions, culture) informed the network and legitimacy material."
+    },
+    {
+      "week": "w07",
+      "programs": [
+        "P-booth-mba",
+        "P-stanford-phd-ob",
+        "P-booth-phd-bs",
+        "P-hls-hbs-jdmba",
+        "P-uchicago-booth-jdmba",
+        "P-sls-gsb-jdmba"
+      ],
+      "how": "Booth’s LEAD (negotiation with interpersonal communication) and Stanford’s micro-OB topic of negotiation and bargaining set the scope; Booth’s decision research informed anchoring and judgment in bargaining; the JD/MBA programs informed contractual commitments and principal-agent material; MIT OCW 15.667 is the open companion."
+    },
+    {
+      "week": "w08",
+      "programs": [
+        "P-mitsloan-mba",
+        "P-hbs-mba",
+        "P-wharton-phd-mgmt",
+        "P-kellogg-phd-mors",
+        "P-hbs-phd-ob"
+      ],
+      "how": "MIT’s strategic-design lens, HBS LEAD’s progression to organizational design, Wharton’s organization-theory and strategy-and-organization-design seminars and Kellogg’s complex-systems perspective informed structure, decision rights, coordination and systems thinking."
+    },
+    {
+      "week": "w09",
+      "programs": [
+        "P-hbs-mba",
+        "P-stanford-mba",
+        "P-wharton-phd-mgmt",
+        "P-booth-mba",
+        "P-uchicago-booth-jdmba"
+      ],
+      "how": "The MBA strategy cores (HBS Strategy, Stanford general management, strategy and non-market strategy, Booth’s strategy function) and Wharton’s doctoral strategy seminars (corporate, innovation, non-market) set the content; the economics-first foundations at Booth informed opportunity cost and trade-offs."
+    },
+    {
+      "week": "w10",
+      "programs": [
+        "P-hbs-mba",
+        "P-stanford-mba",
+        "P-wharton-mba",
+        "P-mitsloan-mba",
+        "P-booth-mba",
+        "P-penn-wharton-jdmba",
+        "P-nu-kellogg-jdmba"
+      ],
+      "how": "All five MBA cores require financial accounting and corporate finance (HBS Finance 1–2 and Financial Reporting and Control; Stanford finance and accounting; Wharton flexible core; MIT Financial Accounting and Managerial Finance option; Booth accounting foundation); the JD/MBA programs’ waivable finance and accounting cores informed the foundation-level entry point."
+    },
+    {
+      "week": "w11",
+      "programs": [
+        "P-hls-hbs-jdmba",
+        "P-sls-gsb-jdmba",
+        "P-penn-wharton-jdmba",
+        "P-nu-kellogg-jdmba",
+        "P-uchicago-booth-jdmba",
+        "P-wharton-mba"
+      ],
+      "how": "The first-year law cores (contracts, torts, legislation and regulation) set the legal-literacy scope; Penn’s transaction capstone informed reading provisions for business risk; Wharton’s legal-studies core supported teaching law to managers rather than lawyers."
+    },
+    {
+      "week": "w12",
+      "programs": [
+        "P-hbs-mba",
+        "P-stanford-mba",
+        "P-wharton-mba",
+        "P-booth-mba",
+        "P-wharton-phd-mgmt",
+        "P-kellogg-phd-mors"
+      ],
+      "how": "Operations cores (HBS Technology and Operations Management, Stanford operations, Wharton operations options, Booth’s operations function) and Wharton’s technology-and-innovation strategy seminar informed implementation and technology adoption; Kellogg’s systems perspective informed feedback loops."
+    },
+    {
+      "week": "w13",
+      "programs": [
+        "P-hbs-mba",
+        "P-stanford-mba",
+        "P-wharton-mba",
+        "P-hls-hbs-jdmba",
+        "P-penn-wharton-jdmba",
+        "P-stanford-phd-ob",
+        "P-booth-phd-bs"
+      ],
+      "how": "HBS’s Leadership and Corporate Accountability, Purpose of the Firm and Data Science and AI for Leaders, Stanford’s Ethics course, Wharton’s legal-studies and business-ethics requirement and the JD/MBA professional-responsibility requirements informed governance, accountability and data ethics; Stanford’s moral-judgment topic and Booth’s decision research informed ethical decision-making under uncertainty."
+    },
+    {
+      "week": "w14",
+      "programs": [
+        "P-hbs-mba",
+        "P-stanford-mba",
+        "P-penn-wharton-jdmba",
+        "P-hls-hbs-jdmba",
+        "P-mitsloan-mba"
+      ],
+      "how": "HBS’s FIELD Global Capstone, Stanford’s Executive Challenge, Penn’s JD/MBA Capstone, Harvard’s integrative joint seminar and MIT’s core team project informed an incremental, integrative capstone with a defended recommendation."
+    }
+  ],
+  "gaps": [
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "**Syllabi.** Public program pages describe structures, course titles and milestones, not syllabi, reading lists or weekly topics. No claim is made about what any course teaches week by week, and no course’s readings were used."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "**Pages not opened.** Every statement rests on search-result excerpts from 2026-11-01. Several programs showed conflicting figures across handbook years (Wharton PhD unit counts, HLS/HBS pro bono hours, Northwestern law credits, Booth’s three-year eligibility, Stanford PhD field-exam timing); these are reported, not resolved."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "**Incomplete course lists.** MIT Sloan’s full six-course core, Stanford GSB’s current numbered course list, Kellogg’s micro-track courses, Booth PhD proseminar topics and the course titles behind several Booth MBA category numbers could not be confirmed. Negotiation could not be confirmed as part of Wharton’s current MBA core."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "**Thin coverage of learning science.** None of the reference programs teaches learning science, skill acquisition or motor learning as a core subject; Week 3 relies on the research literature rather than on program curricula."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "**Open resources not yet confirmed.** The search budget ran out before OpenStax Business Law I Essentials, OpenStax Business Ethics, Open Yale ECON 159 Game Theory (only its title and address were seen), and MIT OpenCourseWare courses in behavioral economics and statistics could be verified. They are omitted rather than cited from memory and should be checked in a later session. The MIT OpenCourseWare collection of Sloan first-semester core materials was seen in search results but its publication details were not."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "**Faculty publications.** The owner asked for faculty research to be considered; the audit did not attempt to characterize faculty publications at the program level, because doing so from search excerpts would risk misattribution. Faculty research enters APERTURE through the verified resource records of each week."
+    }
+  ]
+}

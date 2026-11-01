@@ -1,0 +1,1517 @@
+{
+  "id": "diagnostic",
+  "title": "Baseline diagnostic",
+  "minutes": 45,
+  "intro": [
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "This baseline diagnostic has 32 short questions spread across the nine domains of the semester: behavioral science, statistical reasoning, business strategy, financial literacy, legal reasoning, negotiation, organizational behavior, leadership judgment and communication. Most items ask you to reason through a situation rather than recall a definition. Expect it to take about 45 minutes. Answer without looking anything up; the point is an honest starting picture, not a high score."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "The diagnostic is never graded and never counts toward any mark. It does two things. It calibrates how APERTURE pitches explanations and which optional supplemental exercises it suggests to you in each domain. It also gives your learning profile a starting point, so that later suggestions rest on your actual responses rather than assumptions. It never lets you skip foundational material: every lesson stays in your path whatever you score, because strong performance on a few items is not mastery of a field."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "This is a knowledge and reasoning check, not a personality or psychological assessment. It measures nothing about who you are, only how you answered these questions today. Some items are deliberately stretch-level, so missing several is expected. After you submit, each answer comes with an explanation, and each domain shows a short interpretation and the lessons most worth revisiting."
+    }
+  ],
+  "questions": [
+    {
+      "id": "dg-01",
+      "type": "mc",
+      "domain": "behavioral-science",
+      "difficulty": "core",
+      "lesson": "w01-l2",
+      "concepts": [
+        "c-confirmation-bias"
+      ],
+      "prompt": "After a strong first impression, an interviewer spends most of the interview asking questions that invite the candidate to describe successes, and few that could reveal weaknesses. Which pattern does this best illustrate?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Confirmation bias: searching for evidence that fits the belief already held"
+        },
+        {
+          "id": "b",
+          "text": "Anchoring: adjusting too little from an initial number"
+        },
+        {
+          "id": "c",
+          "text": "The availability heuristic: judging frequency by how easily examples come to mind"
+        },
+        {
+          "id": "d",
+          "text": "The sunk-cost effect: continuing because of what has already been invested"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The interviewer has a hypothesis (this candidate is strong) and gathers information in a way that can mostly confirm it. Confirmation bias covers both biased search and biased interpretation. The remedy is structural: plan questions in advance that could disconfirm the impression, and ask every candidate the same ones.",
+      "optionFeedback": {
+        "b": "Anchoring concerns insufficient adjustment from a starting value, usually a number. No numeric estimate is involved here.",
+        "c": "Availability is about judging frequency or probability by ease of recall. The interviewer is not estimating how common something is.",
+        "d": "Nothing has been invested yet that the interviewer is trying to recover. The issue is how evidence is sought, not escalation of commitment."
+      },
+      "errorTags": {
+        "b": "labels-any-first-impression-as-anchoring",
+        "c": "confuses-availability-with-confirmation",
+        "d": "confuses-sunk-cost-with-confirmation"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-02",
+      "type": "scenario",
+      "domain": "behavioral-science",
+      "difficulty": "core",
+      "lesson": "w01-l2",
+      "concepts": [
+        "c-sunk-cost",
+        "c-opportunity-cost"
+      ],
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "A hospital network has spent $4.0 million over two years building its own scheduling software. Finishing it will cost another $1.5 million. A commercial product that meets the same requirements now costs $0.6 million to license and deploy, and the internal team agrees it would work. At the steering committee, the sponsor says: “We cannot walk away from four million dollars of work.” (All figures are synthetic.)"
+        }
+      ],
+      "prompt": "Which consideration should drive the committee’s decision?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The $4.0 million already spent, because abandoning it would waste the investment"
+        },
+        {
+          "id": "b",
+          "text": "A comparison of the future costs and benefits of each option from today, treating the $4.0 million as unrecoverable"
+        },
+        {
+          "id": "c",
+          "text": "The sponsor’s reputation, because changing course signals weak leadership"
+        },
+        {
+          "id": "d",
+          "text": "The total cost of each path including past spending: $5.5 million against $0.6 million"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Money already spent cannot be recovered whatever the committee chooses, so it should not decide between the options. The relevant comparison is forward-looking: $1.5 million plus remaining risk for the internal build against $0.6 million plus switching costs for the commercial product, along with any real differences in fit, control or reusable assets. Honoring sunk costs is a common, well-documented error, and the sponsor’s sentence is its classic form.",
+      "optionFeedback": {
+        "a": "This is the sunk-cost error itself. The $4.0 million is gone under either option.",
+        "c": "Reputational concerns are real, but deciding on them turns a sunk-cost error into an agency problem. A leader who stops a failing project on good evidence usually gains credibility.",
+        "d": "Adding past spending to one option makes the comparison look lopsided, but it double-counts money that cannot be affected by the choice. Use only future cash flows."
+      },
+      "errorTags": {
+        "a": "honors-sunk-costs",
+        "c": "substitutes-reputation-for-analysis",
+        "d": "includes-sunk-costs-in-comparison"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-03",
+      "type": "research",
+      "domain": "behavioral-science",
+      "difficulty": "stretch",
+      "lesson": "w01-l3",
+      "concepts": [
+        "c-calibration",
+        "c-overconfidence"
+      ],
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "A fictional consulting firm asked 40 analysts to attach a probability to each of their yes/no forecasts over one year. The table groups forecasts by the stated probability. (Synthetic data.)"
+        },
+        {
+          "type": "table",
+          "kind": "original",
+          "caption": "Stated probability vs. how often the forecast came true",
+          "headers": [
+            "Stated probability",
+            "Forecasts",
+            "Came true"
+          ],
+          "rows": [
+            [
+              "60%",
+              210,
+              "61%"
+            ],
+            [
+              "70%",
+              340,
+              "66%"
+            ],
+            [
+              "80%",
+              420,
+              "69%"
+            ],
+            [
+              "90%",
+              380,
+              "71%"
+            ],
+            [
+              "99%",
+              150,
+              "78%"
+            ]
+          ],
+          "note": "Synthetic data for a diagnostic item."
+        }
+      ],
+      "prompt": "What is the best interpretation of this table?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The analysts are well calibrated, because most forecasts came true"
+        },
+        {
+          "id": "b",
+          "text": "The analysts are reasonably calibrated at moderate probabilities but increasingly overconfident as stated probability rises"
+        },
+        {
+          "id": "c",
+          "text": "The analysts are underconfident, because outcomes improve as stated probability rises"
+        },
+        {
+          "id": "d",
+          "text": "Nothing can be concluded without knowing which forecasts were about the most important questions"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Calibration compares stated probability with observed frequency. At 60% the hit rate (61%) matches; at 90% and 99% the hit rates (71% and 78%) fall far short, so the gap widens as confidence rises. That widening gap is the typical signature of overconfidence in the form called overprecision. Outcomes do rise with stated probability, which shows some discrimination, but discrimination is not calibration.",
+      "optionFeedback": {
+        "a": "A high overall hit rate says nothing about calibration. A forecaster who says 99% and is right 78% of the time is miscalibrated even though most forecasts came true.",
+        "c": "Underconfidence would mean hit rates above the stated probabilities. Here they are below them at every level above 60%.",
+        "d": "Importance matters for decisions, but calibration is defined on the probabilities themselves. The table supports a clear conclusion about calibration."
+      },
+      "errorTags": {
+        "a": "confuses-accuracy-with-calibration",
+        "c": "confuses-discrimination-with-underconfidence",
+        "d": "refuses-to-infer-from-adequate-data"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-04",
+      "type": "multi",
+      "domain": "behavioral-science",
+      "difficulty": "stretch",
+      "lesson": "w01-l1",
+      "concepts": [
+        "c-dual-process",
+        "c-intuitive-expertise"
+      ],
+      "prompt": "Which statements about fast and slow thinking are defensible given current research? Select all that apply.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Intuitive judgment can be highly accurate in environments that are regular and give practitioners rapid, clear feedback."
+        },
+        {
+          "id": "b",
+          "text": "“System 1” and “System 2” refer to two separate, identifiable brain regions."
+        },
+        {
+          "id": "c",
+          "text": "Whether the mind has two distinct kinds of processing, or a continuum, is still debated among researchers."
+        },
+        {
+          "id": "d",
+          "text": "Slowing down and deliberating reliably improves the accuracy of any judgment."
+        },
+        {
+          "id": "e",
+          "text": "A strong feeling of confidence is a dependable signal that an intuitive judgment is correct."
+        }
+      ],
+      "answer": [
+        "a",
+        "c"
+      ],
+      "explanation": "Research on expert intuition finds that skilled intuition develops where the environment has stable cues and learners get timely feedback, and fails where those conditions are missing. The two-systems vocabulary is a useful description, but whether there are two kinds of processing is contested, and the systems are not brain regions. Deliberation helps on some problems and hurts on others, and subjective confidence tracks familiarity and fluency as much as accuracy.",
+      "optionFeedback": {
+        "a": "Correct. Regularity plus feedback is the condition under which intuition can be trusted.",
+        "b": "Incorrect. The systems are a functional description, not anatomy. Even advocates treat them as labels for types of processing.",
+        "c": "Correct. Critics argue the dichotomy is too clean and that properties attributed to each system do not cluster as claimed.",
+        "d": "Incorrect. Deliberation can rationalize a poor initial answer or override a well-trained intuition; its value depends on the task.",
+        "e": "Incorrect. Confidence reflects how coherent and fluent a judgment feels, which can be high in environments where accuracy is low."
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-05",
+      "type": "numeric",
+      "domain": "statistical-reasoning",
+      "difficulty": "core",
+      "lesson": "w04-l1",
+      "concepts": [
+        "c-base-rate-neglect",
+        "c-bayes-rule"
+      ],
+      "prompt": "A screening test is used in a population where 1% of people have a condition. The test detects 90% of people who have it (sensitivity) and gives a positive result for 9% of people who do not (false-positive rate). A person tests positive. What is the probability, in percent, that they have the condition? Round to one decimal place.",
+      "answer": {
+        "value": 9.2,
+        "tolerance": 0.6,
+        "unit": "%"
+      },
+      "working": "Use natural frequencies for 1,000 people. 10 have the condition; 90% of them, 9 people, test positive. 990 do not have it; 9% of them, about 89.1 people, test positive. Total positives = 9 + 89.1 = 98.1. Probability of the condition given a positive = 9 / 98.1 ≈ 9.2%.",
+      "explanation": "Because the condition is rare, false positives from the large healthy group outnumber true positives from the small affected group by about ten to one. Most people intuitively answer near 90%, which confuses the test’s sensitivity with the probability of the condition given a positive result. Converting percentages into counts of people makes the base rate visible.",
+      "points": 1
+    },
+    {
+      "id": "dg-06",
+      "type": "flaw",
+      "domain": "statistical-reasoning",
+      "difficulty": "core",
+      "lesson": "w04-l2",
+      "concepts": [
+        "c-regression-to-the-mean"
+      ],
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "“Last quarter we identified our ten worst-performing branch offices and sent their managers to an intensive coaching program. This quarter those ten offices improved their results by an average of 18%, while the company as a whole was flat. The coaching clearly works, and we should roll it out everywhere.” (Fictional memo.)"
+        }
+      ],
+      "prompt": "What is the most important flaw in this argument?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The sample of ten offices is too small for any conclusion"
+        },
+        {
+          "id": "b",
+          "text": "Offices selected for extreme low performance tend to move toward the average on their own, so improvement is expected even without coaching"
+        },
+        {
+          "id": "c",
+          "text": "Coaching programs have never been shown to work in any setting"
+        },
+        {
+          "id": "d",
+          "text": "Comparing with the company as a whole is unfair because larger offices dominate the average"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Performance in any quarter combines stable ability with luck. Offices chosen because they were worst are disproportionately those that had bad luck, and their luck is unlikely to repeat, so they tend to improve next quarter regardless of intervention. That is regression to the mean. A fair test compares the coached offices with similarly low-performing offices that were not coached, ideally assigned at random.",
+      "optionFeedback": {
+        "a": "Small samples add noise, but the deeper problem would remain with 100 offices: selecting on an extreme score guarantees some rebound.",
+        "c": "This overstates the case. The argument may reach a true conclusion; the problem is that this evidence cannot show it.",
+        "d": "The comparison is weak, but the main reason is not office size. Even a perfectly weighted comparison would not remove the rebound expected from selecting the worst performers."
+      },
+      "errorTags": {
+        "a": "blames-sample-size-for-design-flaw",
+        "c": "overgeneralizes-skepticism",
+        "d": "misses-regression-to-the-mean"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-07",
+      "type": "research",
+      "domain": "statistical-reasoning",
+      "difficulty": "stretch",
+      "lesson": "w04-l2",
+      "concepts": [
+        "c-confounding",
+        "c-selection-bias"
+      ],
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Fictional study summary: “Among 3,200 employees of a logistics company, those who voluntarily joined the wellness program took 30% fewer sick days the following year than those who did not join (p < .01). The program reduces absence and should be made mandatory.”"
+        }
+      ],
+      "prompt": "Which is the strongest reason to doubt the causal conclusion?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The p-value is too large to trust"
+        },
+        {
+          "id": "b",
+          "text": "Employees who chose to join may already have differed from non-joiners in health, motivation or job type, which could explain the gap"
+        },
+        {
+          "id": "c",
+          "text": "The study should have measured sick days over five years instead of one"
+        },
+        {
+          "id": "d",
+          "text": "A 30% difference is too large to be believable"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Participation was self-selected, so joiners and non-joiners may differ in ways that independently affect absence: healthier or more conscientious people are more likely to join a wellness program. The correlation is real, but the causal effect of the program is not identified. Random assignment, or at minimum comparison with baseline absence for the same people, would be needed before mandating it.",
+      "optionFeedback": {
+        "a": "A p-value below .01 indicates the gap is unlikely to be pure chance. The problem is not chance but confounding.",
+        "c": "A longer window could add information, but it would not fix the self-selection problem.",
+        "d": "Large differences are entirely plausible when groups differ at baseline. Size is not the issue; attribution is."
+      },
+      "errorTags": {
+        "a": "misreads-p-value",
+        "c": "focuses-on-duration-not-design",
+        "d": "judges-plausibility-by-size"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-08",
+      "type": "mc",
+      "domain": "statistical-reasoning",
+      "difficulty": "stretch",
+      "lesson": "w04-l3",
+      "concepts": [
+        "c-practical-significance"
+      ],
+      "prompt": "An analysis of 200,000 customers finds that those who received a redesigned onboarding email scored 0.3 points higher on a 100-point satisfaction scale than those who received the old one (p < .001; the two groups were randomly assigned). What is the best interpretation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The new email has a large effect on satisfaction, because the result is highly significant"
+        },
+        {
+          "id": "b",
+          "text": "The difference is very unlikely to be zero, but it is small; whether it matters depends on cost and on what 0.3 points means for behavior"
+        },
+        {
+          "id": "c",
+          "text": "The result is probably a false positive, because very small p-values usually indicate an error"
+        },
+        {
+          "id": "d",
+          "text": "Random assignment means the 0.3-point effect will hold for every individual customer"
+        }
+      ],
+      "answer": "b",
+      "explanation": "With 200,000 people, even tiny real differences produce very small p-values. Statistical significance speaks to whether an effect is distinguishable from zero, not to whether it is large or worth acting on. The decision turns on effect size in context: what a 0.3-point change predicts for retention or revenue, and what the redesign costs.",
+      "optionFeedback": {
+        "a": "Significance is not magnitude. A p-value this small with a huge sample is compatible with a trivially small effect.",
+        "c": "Nothing about a small p-value implies an error. Large samples are expected to produce small p-values for small real effects.",
+        "d": "Randomization identifies the average effect across the group, not a uniform effect for each person."
+      },
+      "errorTags": {
+        "a": "equates-significance-with-importance",
+        "c": "distrusts-small-p-values",
+        "d": "confuses-average-with-individual-effect"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-09",
+      "type": "mc",
+      "domain": "business-strategy",
+      "difficulty": "core",
+      "lesson": "w09-l1",
+      "concepts": [
+        "c-sustainable-advantage"
+      ],
+      "prompt": "A regional insurer outperforms rivals because it adopted a pricing software package two years earlier than they did. The vendor sells the same package to anyone. What does strategy research suggest about this advantage?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It is likely durable, because being first creates a permanent lead"
+        },
+        {
+          "id": "b",
+          "text": "It is likely temporary, because a resource that competitors can buy on the open market is easy to imitate"
+        },
+        {
+          "id": "c",
+          "text": "It is durable as long as the insurer keeps paying for upgrades"
+        },
+        {
+          "id": "d",
+          "text": "It cannot be assessed without the software’s technical specifications"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Sustained advantage generally rests on resources or capabilities that are valuable, rare and hard to imitate or substitute. Software that anyone can license is valuable but neither rare nor hard to copy, so rivals can close the gap by buying it. A durable edge would have to come from something harder to copy, such as how the insurer’s people combine the tool with proprietary data and routines.",
+      "optionFeedback": {
+        "a": "First-mover advantages exist only under specific conditions, such as switching costs or network effects. Nothing here suggests them.",
+        "c": "Rivals can buy the same upgrades. Paying for something available to everyone does not make it rare.",
+        "d": "The strategic question does not depend on technical detail. Availability to competitors is the decisive fact."
+      },
+      "errorTags": {
+        "a": "overrates-first-mover-advantage",
+        "c": "confuses-spending-with-advantage",
+        "d": "over-requests-information"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-10",
+      "type": "decision",
+      "domain": "business-strategy",
+      "difficulty": "core",
+      "lesson": "w09-l1",
+      "concepts": [
+        "c-strategic-tradeoffs"
+      ],
+      "prompt": "A mid-sized airline’s leadership wants to be both the lowest-cost carrier in its markets and the premium choice for business travelers, and has funded initiatives toward both. Margins are falling and both customer segments rate it as average. As the executive asked to recommend a next step, what is the strongest move?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Increase funding to both sets of initiatives so each can reach scale"
+        },
+        {
+          "id": "b",
+          "text": "Force an explicit choice of position and identify which activities to stop because they serve the other position"
+        },
+        {
+          "id": "c",
+          "text": "Hire a consulting firm to benchmark competitors before changing anything"
+        },
+        {
+          "id": "d",
+          "text": "Cut costs evenly across all departments to restore margins"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Positions that require incompatible activities (dense seating and quick turns versus lounges and flexible service) create trade-offs. Trying to serve both often produces a muddled offer that neither segment prefers. Strategy is as much about what to stop doing as what to do, so the first move is to choose and then align activities to the choice.",
+      "optionFeedback": {
+        "a": "More money does not remove the incompatibility between the two positions; it makes the muddle more expensive.",
+        "c": "Benchmarking can inform the choice, but deferring the choice while margins fall is itself a decision, and probably a costly one.",
+        "d": "Across-the-board cuts avoid the strategic question and may damage whichever position the airline eventually chooses."
+      },
+      "errorTags": {
+        "a": "avoids-trade-offs",
+        "c": "defers-decision",
+        "d": "treats-strategy-as-cost-cutting"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-11",
+      "type": "rank",
+      "domain": "business-strategy",
+      "difficulty": "stretch",
+      "lesson": "w09-l2",
+      "concepts": [
+        "c-sustainable-advantage",
+        "c-imitability"
+      ],
+      "prompt": "Rank these sources of a firm’s advantage from hardest for a competitor to imitate (first) to easiest (last).",
+      "options": [
+        {
+          "id": "a",
+          "text": "A decade-old network of trusted relationships and working routines spread across many people in the organization"
+        },
+        {
+          "id": "b",
+          "text": "A patent on a key process with eight years remaining"
+        },
+        {
+          "id": "c",
+          "text": "An exclusive one-year supply contract with a key vendor"
+        },
+        {
+          "id": "d",
+          "text": "Analytics software sold openly to every company in the industry"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "explanation": "Socially complex, path-dependent assets such as relationships and embedded routines are the hardest to copy because rivals cannot buy them or even see clearly how they work. A patent gives legal protection for a defined period, though competitors can sometimes design around it. A one-year exclusive contract protects for a short time and can be rebid. Software anyone can license offers no barrier.",
+      "optionFeedback": {
+        "a": "Hardest to imitate: it took years to build, involves many people and cannot be purchased.",
+        "b": "Strong but bounded: legal protection lasts a set period and can sometimes be designed around.",
+        "c": "Short-lived: the contract expires within a year and rivals can compete for the next one.",
+        "d": "Easiest: competitors can acquire the same tool at market price."
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-12",
+      "type": "scenario",
+      "domain": "business-strategy",
+      "difficulty": "stretch",
+      "lesson": "w09-l2",
+      "concepts": [
+        "c-five-forces",
+        "c-industry-structure"
+      ],
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "A fictional industry: forty small firms sell an identical cleaning chemical to large hospital chains. Customers switch suppliers at no cost after each annual tender, new firms can enter by renting a mixing facility, and three hospital purchasing groups account for most demand."
+        }
+      ],
+      "prompt": "What is the most likely profitability of a typical firm in this industry, and why?",
+      "options": [
+        {
+          "id": "a",
+          "text": "High, because hospitals always need cleaning chemicals"
+        },
+        {
+          "id": "b",
+          "text": "Low, because powerful buyers, an undifferentiated product, easy entry and many rivals push prices toward cost"
+        },
+        {
+          "id": "c",
+          "text": "High for the largest firm, because scale always guarantees superior margins"
+        },
+        {
+          "id": "d",
+          "text": "Unpredictable, because profitability depends only on each firm’s management quality"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Industry structure shapes how much value firms can capture. Concentrated buyers with zero switching costs, an identical product, low entry barriers and many competitors all push prices toward cost. Steady demand does not help if the firms cannot capture value from it.",
+      "optionFeedback": {
+        "a": "Steady demand is not the same as profitability. The question is who captures the value.",
+        "c": "Scale can help on cost, but with powerful buyers and an identical product even the largest firm faces heavy price pressure.",
+        "d": "Management matters, but structure sets the range of likely outcomes; ignoring it is a common error."
+      },
+      "errorTags": {
+        "a": "confuses-demand-with-profitability",
+        "c": "overrates-scale",
+        "d": "ignores-industry-structure"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-13",
+      "type": "numeric",
+      "domain": "financial-literacy",
+      "difficulty": "core",
+      "lesson": "w10-l1",
+      "concepts": [
+        "c-npv",
+        "c-time-value-of-money"
+      ],
+      "prompt": "A project costs $1,000 today and returns $600 at the end of year 1 and $600 at the end of year 2. At a 10% discount rate, what is its net present value in dollars? Round to the nearest cent.",
+      "answer": {
+        "value": 41.32,
+        "tolerance": 1,
+        "unit": "$"
+      },
+      "working": "Present value of year 1 = 600 / 1.10 = 545.45. Present value of year 2 = 600 / 1.10² = 600 / 1.21 = 495.87. NPV = 545.45 + 495.87 − 1,000 = 41.32.",
+      "explanation": "Net present value discounts each future cash flow back to today and subtracts the initial cost. The project returns $1,200 in total, but money received later is worth less than money today at a 10% cost of capital, so the surplus shrinks to about $41. A positive NPV means the project earns more than the required return.",
+      "points": 1
+    },
+    {
+      "id": "dg-14",
+      "type": "mc",
+      "domain": "financial-literacy",
+      "difficulty": "core",
+      "lesson": "w10-l1",
+      "concepts": [
+        "c-opportunity-cost"
+      ],
+      "prompt": "A company owns the building it occupies outright, with no mortgage. A tenant has offered to rent the whole building for $200,000 a year. When deciding whether to keep using it as headquarters, what is the annual economic cost of occupying the building?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Zero, because the company owns it and pays no rent"
+        },
+        {
+          "id": "b",
+          "text": "About $200,000, the rent the company gives up by occupying it"
+        },
+        {
+          "id": "c",
+          "text": "Only maintenance and property taxes"
+        },
+        {
+          "id": "d",
+          "text": "The original purchase price divided by the building’s expected life"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Opportunity cost is the value of the best alternative given up. By occupying the building, the company forgoes $200,000 a year in rent, which is a real economic cost even though no cash leaves the firm. Ignoring it makes owned assets look free and distorts location and space decisions.",
+      "optionFeedback": {
+        "a": "No cash rent is paid, but the forgone rental income is a real cost of choosing to occupy.",
+        "c": "Maintenance and taxes are costs, but they leave out the largest one: the income given up.",
+        "d": "Historical cost and accounting depreciation do not measure what the company gives up now."
+      },
+      "errorTags": {
+        "a": "ignores-opportunity-cost",
+        "c": "counts-only-cash-costs",
+        "d": "uses-historical-cost"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-15",
+      "type": "mc",
+      "domain": "financial-literacy",
+      "difficulty": "stretch",
+      "lesson": "w10-l2",
+      "concepts": [
+        "c-cash-vs-profit",
+        "c-working-capital"
+      ],
+      "prompt": "A fast-growing equipment supplier reports a healthy accounting profit every quarter, yet it is close to running out of cash. Which explanation is most likely?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Its accountants are misreporting profit"
+        },
+        {
+          "id": "b",
+          "text": "Customers pay 90 days after delivery while the firm pays suppliers and staff up front, so growth ties up more and more cash in receivables and inventory"
+        },
+        {
+          "id": "c",
+          "text": "Profitable companies cannot run out of cash, so the report must be wrong"
+        },
+        {
+          "id": "d",
+          "text": "Its tax rate is too high"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Profit is recognized when sales are made; cash arrives when customers pay. A growing firm that extends credit and builds inventory must finance the gap between paying its costs and collecting from customers, so its working capital needs rise with sales. This is why profitable firms can still fail for lack of cash, and why executives read the cash-flow statement alongside the income statement.",
+      "optionFeedback": {
+        "a": "Misreporting is possible but not the most likely explanation; the pattern described is a normal feature of fast growth on credit terms.",
+        "c": "Profitable companies do run out of cash. Profit and cash are measured differently and on different timing.",
+        "d": "Taxes reduce cash, but they are a fraction of profit and cannot explain a profitable firm running dry on their own."
+      },
+      "errorTags": {
+        "a": "assumes-misreporting",
+        "c": "equates-profit-with-cash",
+        "d": "misattributes-cash-shortfall"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-16",
+      "type": "numeric",
+      "domain": "financial-literacy",
+      "difficulty": "stretch",
+      "lesson": "w10-l2",
+      "concepts": [
+        "c-break-even",
+        "c-contribution-margin"
+      ],
+      "prompt": "A training academy has fixed annual costs of $300,000. It charges $50 per session, and each session costs $30 in variable costs (coach time and facility hourly fees). How many sessions per year must it sell to break even?",
+      "answer": {
+        "value": 15000,
+        "tolerance": 0,
+        "unit": "sessions"
+      },
+      "working": "Contribution margin per session = price − variable cost = 50 − 30 = $20. Break-even volume = fixed costs / contribution margin = 300,000 / 20 = 15,000 sessions.",
+      "explanation": "Each session contributes $20 toward covering fixed costs after paying for its own variable costs. Fixed costs of $300,000 require 15,000 such contributions before the academy makes any profit. Break-even analysis is a simple, transparent way to test whether a pricing or volume plan is realistic.",
+      "points": 1
+    },
+    {
+      "id": "dg-17",
+      "type": "mc",
+      "domain": "legal-reasoning",
+      "difficulty": "core",
+      "lesson": "w11-l1",
+      "concepts": [
+        "c-consideration",
+        "c-contract-formation"
+      ],
+      "prompt": "Educational question about general U.S. common-law principles (not legal advice). A business owner tells a former employee, “Next month I will give you $5,000 as thanks for your years here.” Nothing is asked in return, the former employee does nothing in reliance on the promise, and the owner later changes their mind. What is the main reason a court would generally not enforce this promise as a contract?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It was not in writing"
+        },
+        {
+          "id": "b",
+          "text": "There was no consideration: nothing was bargained for or given in exchange for the promise"
+        },
+        {
+          "id": "c",
+          "text": "The amount is too small for a court to hear the claim"
+        },
+        {
+          "id": "d",
+          "text": "Promises made to former employees are never enforceable"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Under general common-law principles, a contract requires consideration, something bargained for in exchange for the promise. A promise to make a gift lacks it, so it is generally unenforceable. Doctrines such as promissory estoppel can protect someone who reasonably and foreseeably relied on a promise to their detriment, which is why the question specifies that there was no reliance.",
+      "optionFeedback": {
+        "a": "Most contracts do not need to be in writing. Writing requirements apply to specific categories, and this is not the main issue.",
+        "c": "Small claims are routinely heard. The amount is not the obstacle.",
+        "d": "Promises to former employees can be enforceable when supported by consideration, such as a release of claims in a severance agreement."
+      },
+      "errorTags": {
+        "a": "overstates-writing-requirement",
+        "c": "confuses-jurisdiction-with-validity",
+        "d": "overgeneralizes-rule"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-18",
+      "type": "issue",
+      "domain": "legal-reasoning",
+      "difficulty": "stretch",
+      "lesson": "w11-l2",
+      "concepts": [
+        "c-ip-assignment",
+        "c-restrictive-covenant",
+        "c-scope-ambiguity"
+      ],
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Fictional excerpt from a consulting agreement (educational exercise, not legal advice): “1. Consultant shall provide analytics services as reasonably requested by Client from time to time. 2. All work product, including any tools, code or methods Consultant developed before this Agreement, shall become the exclusive property of Client. 3. For five years after termination, Consultant shall not provide services to any organization in Client’s industry anywhere in the world. 4. Either party may terminate this Agreement on 30 days’ written notice. 5. Client shall pay $10,000 per month within 30 days of receiving each invoice.”"
+        }
+      ],
+      "prompt": "Select every clause that raises a real issue a careful reader should question before signing.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Clause 1: the scope of services is open-ended and undefined"
+        },
+        {
+          "id": "b",
+          "text": "Clause 2: the ownership transfer reaches tools and methods the consultant created before the engagement"
+        },
+        {
+          "id": "c",
+          "text": "Clause 3: the restriction is broad in duration, geography and scope, and its enforceability varies by jurisdiction"
+        },
+        {
+          "id": "d",
+          "text": "Clause 4: mutual termination on 30 days’ notice is unusual and probably unenforceable"
+        },
+        {
+          "id": "e",
+          "text": "Clause 5: payment within 30 days of invoice is an unlawful delay"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "explanation": "Clause 1 leaves the workload to the client’s discretion, which invites disputes over what was promised. Clause 2 would transfer the consultant’s pre-existing intellectual property, typically handled instead by a license or a carve-out. Clause 3 is a sweeping non-compete; many jurisdictions limit or refuse to enforce restrictions of this breadth, and the rules differ widely. Clauses 4 and 5 are ordinary commercial terms.",
+      "optionFeedback": {
+        "a": "Real issue: undefined scope is a common source of disputes and unpaid work.",
+        "b": "Real issue: assigning pre-existing tools could prevent the consultant from using their own methods elsewhere.",
+        "c": "Real issue: duration, worldwide reach and an industry-wide bar make this restriction unusually broad; enforceability depends on the governing law.",
+        "d": "Not an issue: mutual termination on notice is a common, generally enforceable term. Whether 30 days is long enough is a business question.",
+        "e": "Not an issue: net-30 payment is a standard commercial term."
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-19",
+      "type": "decision",
+      "domain": "legal-reasoning",
+      "difficulty": "core",
+      "lesson": "w13-l1",
+      "concepts": [
+        "c-conflict-of-interest",
+        "c-duty-of-loyalty"
+      ],
+      "prompt": "You are about to recommend a data vendor to your organization’s purchasing committee. You then learn that a close family member holds a significant ownership stake in that vendor. The vendor is genuinely the strongest bid. What is the best next move?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Proceed with the recommendation, since the vendor is the best choice on the merits"
+        },
+        {
+          "id": "b",
+          "text": "Disclose the relationship promptly under the organization’s conflict-of-interest policy and step back from the decision, letting others evaluate the bids"
+        },
+        {
+          "id": "c",
+          "text": "Quietly withdraw the vendor from consideration to avoid any appearance of a problem"
+        },
+        {
+          "id": "d",
+          "text": "Ask the family member to sell the stake before the committee meets, without telling anyone"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Those who act for an organization owe it loyalty, which includes not deciding matters in which they have an undisclosed personal interest. Prompt disclosure and recusal protect both the organization and you, and allow the committee to choose the best vendor if it really is the best. The merits of the bid do not cure an undisclosed conflict.",
+      "optionFeedback": {
+        "a": "Even if the choice is right, deciding with an undisclosed conflict breaches the duty to the organization and taints the decision.",
+        "c": "Silently removing the best bid harms the organization and still hides the conflict.",
+        "d": "A private arrangement without disclosure does not resolve the conflict and could create new problems."
+      },
+      "errorTags": {
+        "a": "merits-excuse-conflict",
+        "c": "conceals-conflict",
+        "d": "conceals-conflict"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-20",
+      "type": "mc",
+      "domain": "negotiation",
+      "difficulty": "core",
+      "lesson": "w07-l1",
+      "concepts": [
+        "c-batna"
+      ],
+      "prompt": "In negotiation analysis, what most directly determines the point at which you should walk away from a deal?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The other side’s first offer"
+        },
+        {
+          "id": "b",
+          "text": "Your best alternative to a negotiated agreement: what you will do if this deal fails"
+        },
+        {
+          "id": "c",
+          "text": "The amount you hope to achieve"
+        },
+        {
+          "id": "d",
+          "text": "The midpoint between the two opening positions"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Your BATNA, the best course of action available if no agreement is reached, sets the minimum value a deal must offer. Accept a deal worse than your BATNA and you are worse off for having agreed; refuse one better than your BATNA and you lose value. Improving your BATNA before negotiating is often the most effective way to improve the outcome.",
+      "optionFeedback": {
+        "a": "The other side’s first offer is information and may anchor you, but it says nothing about what you could get elsewhere.",
+        "c": "Your aspiration shapes what you ask for, not the point at which walking away becomes better than agreeing.",
+        "d": "Splitting the difference is a convention, not a measure of your alternatives."
+      },
+      "errorTags": {
+        "a": "anchored-on-counterpart",
+        "c": "confuses-aspiration-with-reservation",
+        "d": "relies-on-split-the-difference"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-21",
+      "type": "scenario",
+      "domain": "negotiation",
+      "difficulty": "stretch",
+      "lesson": "w07-l2",
+      "concepts": [
+        "c-logrolling",
+        "c-integrative-negotiation"
+      ],
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "A software firm is negotiating a service contract with a hospital (fictional). Two issues remain: price and contract length. Through careful questions, the firm learns that the hospital cares far more about price than length, because its budget is fixed this year. The firm cares far more about length, because longer contracts lower its financing costs. Both sides have been bargaining issue by issue, conceding a little on each."
+        }
+      ],
+      "prompt": "Which approach is most likely to create more value for both sides?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Continue splitting the difference on each issue separately"
+        },
+        {
+          "id": "b",
+          "text": "Propose a package: a lower price in exchange for a longer contract"
+        },
+        {
+          "id": "c",
+          "text": "Hold firm on both issues to signal strength"
+        },
+        {
+          "id": "d",
+          "text": "Ask the hospital to name its walk-away price first"
+        }
+      ],
+      "answer": "b",
+      "explanation": "When parties value issues differently, trading across them, giving ground on what matters less to you for gains on what matters more, can leave both better off than compromising issue by issue. This is logrolling, the core move of integrative negotiation. It requires discovering priorities, which the firm has done, and negotiating packages rather than single issues.",
+      "optionFeedback": {
+        "a": "Splitting each issue leaves value on the table, because it ignores the different priorities.",
+        "c": "Rigidity on both issues blocks the trade that would help both sides and risks impasse.",
+        "d": "Asking for the walk-away price tries to claim value, not create it, and is unlikely to get a truthful answer."
+      },
+      "errorTags": {
+        "a": "negotiates-issue-by-issue",
+        "c": "equates-firmness-with-value",
+        "d": "focuses-on-claiming-only"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-22",
+      "type": "numeric",
+      "domain": "negotiation",
+      "difficulty": "core",
+      "lesson": "w07-l1",
+      "concepts": [
+        "c-zopa",
+        "c-reservation-price"
+      ],
+      "prompt": "A seller will not accept less than $420,000 for a property (her reservation price). A buyer will pay at most $460,000 (his reservation price). How large, in dollars, is the zone of possible agreement?",
+      "answer": {
+        "value": 40000,
+        "tolerance": 0,
+        "unit": "$"
+      },
+      "working": "The zone of possible agreement runs from the seller’s minimum ($420,000) to the buyer’s maximum ($460,000). Size = 460,000 − 420,000 = $40,000.",
+      "explanation": "A deal is possible at any price between the seller’s minimum and the buyer’s maximum. The $40,000 zone is the surplus the two sides divide; where the final price lands within it depends on information, anchors and skill. If the buyer’s maximum were below the seller’s minimum, there would be no zone and no deal on price alone.",
+      "points": 1
+    },
+    {
+      "id": "dg-23",
+      "type": "mc",
+      "domain": "organizational-behavior",
+      "difficulty": "core",
+      "lesson": "w05-l2",
+      "concepts": [
+        "c-psychological-safety"
+      ],
+      "prompt": "Two hospital units have similar patients and staffing. Unit A records three times as many reported medication errors as Unit B. Before concluding that Unit A is less safe, what is the most important alternative explanation to consider?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Unit A’s staff are less competent"
+        },
+        {
+          "id": "b",
+          "text": "Staff in Unit A may feel safer reporting mistakes, so more of its errors are recorded rather than more errors occurring"
+        },
+        {
+          "id": "c",
+          "text": "Unit B is understaffed"
+        },
+        {
+          "id": "d",
+          "text": "Medication errors are random and cannot be compared"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Reported errors combine errors that happen with the willingness to report them. In teams where people believe they will not be punished or embarrassed for speaking up, more errors surface, and those teams can learn faster. A higher count may therefore signal a healthier reporting climate rather than worse performance; independent audits of actual errors are needed to tell the difference.",
+      "optionFeedback": {
+        "a": "This accepts the numbers at face value. The measure depends on reporting behavior, not only on what happens.",
+        "c": "The question says staffing is similar, and understaffing in B would not explain fewer reports.",
+        "d": "Errors are not purely random, and comparison is possible with better measures."
+      },
+      "errorTags": {
+        "a": "ignores-measurement-process",
+        "c": "ignores-stated-facts",
+        "d": "overgeneralizes-skepticism"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-24",
+      "type": "flaw",
+      "domain": "organizational-behavior",
+      "difficulty": "stretch",
+      "lesson": "w02-l2",
+      "concepts": [
+        "c-principal-agent",
+        "c-goodharts-law"
+      ],
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Fictional proposal: “Our research analysts are not productive enough. Starting next quarter, each analyst’s bonus will be based on the number of reports they publish. More reports means more insight for the business, so this aligns everyone’s incentives with our goals.”"
+        }
+      ],
+      "prompt": "What is the central flaw in this proposal?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Analysts are motivated only by money, so the bonus is unnecessary"
+        },
+        {
+          "id": "b",
+          "text": "Rewarding a countable proxy will shift effort toward the proxy, producing more but shorter or lower-value reports, while unmeasured qualities such as accuracy and depth suffer"
+        },
+        {
+          "id": "c",
+          "text": "Quarterly bonuses are always less effective than annual ones"
+        },
+        {
+          "id": "d",
+          "text": "Analysts will not notice the change in incentives"
+        }
+      ],
+      "answer": "b",
+      "explanation": "When a measure becomes the basis for reward, people optimize the measure, and its link to the underlying goal weakens. Where a job has several dimensions and only some are measurable, strong incentives on the measurable one pull effort away from the rest. The proposal assumes that report count tracks insight; incentives are likely to break that link.",
+      "optionFeedback": {
+        "a": "The flaw is not whether money motivates; it is that the incentive rewards the wrong thing.",
+        "c": "Timing matters, but no general rule makes quarterly bonuses always worse. That is not the core problem.",
+        "d": "People respond to incentives quickly; the risk is that they will notice and respond in unintended ways."
+      },
+      "errorTags": {
+        "a": "misidentifies-motivation-issue",
+        "c": "focuses-on-timing",
+        "d": "underestimates-incentive-response"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-25",
+      "type": "multi",
+      "domain": "organizational-behavior",
+      "difficulty": "core",
+      "lesson": "w02-l1",
+      "concepts": [
+        "c-self-determination-theory",
+        "c-intrinsic-motivation"
+      ],
+      "prompt": "Self-determination theory proposes that people are more likely to sustain high-quality motivation when certain basic psychological needs are supported. Which of the following are among those needs? Select all that apply.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Autonomy: experiencing one’s actions as self-endorsed"
+        },
+        {
+          "id": "b",
+          "text": "Competence: feeling effective and capable"
+        },
+        {
+          "id": "c",
+          "text": "Relatedness: feeling connected to others"
+        },
+        {
+          "id": "d",
+          "text": "Fear of punishment: knowing that mistakes carry penalties"
+        },
+        {
+          "id": "e",
+          "text": "Status ranking: knowing exactly where one stands against peers"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "explanation": "Self-determination theory names three basic needs: autonomy, competence and relatedness. Environments that support them tend to foster more self-endorsed motivation; environments built on pressure and control tend to produce motivation that is more fragile. Status comparisons and threat can drive effort in the short term but are not among the theory’s basic needs.",
+      "optionFeedback": {
+        "a": "Correct. Autonomy is one of the three basic needs.",
+        "b": "Correct. Competence is one of the three basic needs.",
+        "c": "Correct. Relatedness is one of the three basic needs.",
+        "d": "Incorrect. Threat is a form of controlling pressure, which the theory associates with lower-quality motivation.",
+        "e": "Incorrect. Social comparison can motivate, but it is not one of the theory’s basic needs."
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-26",
+      "type": "decision",
+      "domain": "leadership-judgment",
+      "difficulty": "core",
+      "lesson": "w08-l2",
+      "concepts": [
+        "c-delegation",
+        "c-decision-rights"
+      ],
+      "prompt": "You lead a department of twelve. A capable manager reporting to you has asked to own the redesign of the department’s onboarding process. You have strong views about how it should look and limited time. What is the best way to proceed?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Keep the project yourself, because your views are already formed and it will be faster"
+        },
+        {
+          "id": "b",
+          "text": "Delegate it with a clear statement of the goal, constraints, decision rights and check-in points, and share your views as input rather than instructions"
+        },
+        {
+          "id": "c",
+          "text": "Delegate it fully and ask to see only the finished result"
+        },
+        {
+          "id": "d",
+          "text": "Delegate it, then review and rewrite each draft so the result matches your view"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Effective delegation transfers real ownership while making expectations explicit: what success looks like, what is non-negotiable, who decides what, and when progress will be reviewed. Offering your views as input respects the manager’s ownership and still gives them your knowledge. This builds the manager’s capability and frees your time.",
+      "optionFeedback": {
+        "a": "Keeping the work saves time once but trains no one and signals distrust to a capable manager.",
+        "c": "Hands-off delegation without agreed goals or check-ins risks a result that misses constraints you could have named at the start.",
+        "d": "Delegating and then rewriting removes ownership in practice, demotivates and wastes both people’s time."
+      },
+      "errorTags": {
+        "a": "under-delegates",
+        "c": "abdicates",
+        "d": "pseudo-delegates"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-27",
+      "type": "scenario",
+      "domain": "leadership-judgment",
+      "difficulty": "stretch",
+      "lesson": "w01-l3",
+      "concepts": [
+        "c-outcome-bias",
+        "c-process-vs-outcome"
+      ],
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Two fictional regional directors each chose whether to launch a new product line. Director A gathered market data, wrote down her assumptions, estimated a 70% chance of success and launched; an unforeseeable supply shock made the launch fail. Director B launched after a single conversation with a friendly customer, wrote nothing down, and the launch succeeded because a competitor unexpectedly exited the market."
+        }
+      ],
+      "prompt": "As their manager, how should you evaluate the two decisions?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Director B made the better decision, because results are what count"
+        },
+        {
+          "id": "b",
+          "text": "Director A’s decision process was stronger; the outcomes mostly reflect events neither could foresee, so judge the process and the information available at the time"
+        },
+        {
+          "id": "c",
+          "text": "Both decisions were equally good, because they were equally uncertain"
+        },
+        {
+          "id": "d",
+          "text": "Neither can be evaluated until each has made at least twenty similar decisions"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Outcome bias is judging a decision by its result rather than by the quality of reasoning given what was knowable. Under uncertainty, good decisions sometimes fail and poor ones sometimes succeed. Rewarding B and penalizing A would teach the organization to skip analysis. Over many decisions, outcomes do inform you about judgment, so records like A’s are what make that later evaluation possible.",
+      "optionFeedback": {
+        "a": "This is outcome bias. B’s success came from an event unrelated to B’s reasoning.",
+        "c": "The situations may have been equally uncertain, but the processes were not equally good.",
+        "d": "A track record helps, but you can still judge the process of each single decision now."
+      },
+      "errorTags": {
+        "a": "outcome-bias",
+        "c": "ignores-process-quality",
+        "d": "over-requests-information"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-28",
+      "type": "rank",
+      "domain": "leadership-judgment",
+      "difficulty": "core",
+      "lesson": "w01-l3",
+      "concepts": [
+        "c-decision-hygiene",
+        "c-noise"
+      ],
+      "prompt": "A leadership team must estimate next year’s demand for a new service. Rank these ways of gathering the team’s judgment from most likely to produce an accurate estimate (first) to least likely (last).",
+      "options": [
+        {
+          "id": "a",
+          "text": "Each member writes an estimate and reasoning independently; the estimates are shared and discussed, then averaged or revised"
+        },
+        {
+          "id": "b",
+          "text": "The team discusses openly and then votes on a number"
+        },
+        {
+          "id": "c",
+          "text": "The most senior leader states an estimate first, then others comment on it"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "explanation": "Independent estimates preserve the diversity of information each person holds, and averaging independent judgments tends to cancel individual errors. Open discussion before anyone commits lets early or confident voices dominate and makes errors correlated. When the most senior person speaks first, their number anchors everyone else and others may defer, so the group adds little beyond one opinion.",
+      "optionFeedback": {
+        "a": "Best: independence first, discussion second.",
+        "b": "Middle: discussion helps share information, but without prior independent estimates the group converges early and errors become correlated.",
+        "c": "Worst: the leader’s estimate anchors the group and invites deference."
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-29",
+      "type": "decision",
+      "domain": "leadership-judgment",
+      "difficulty": "stretch",
+      "lesson": "w12-l2",
+      "concepts": [
+        "c-change-management",
+        "c-piloting"
+      ],
+      "prompt": "You believe a new evidence-based scheduling process would help a 300-person operation, but several respected supervisors openly doubt it, and the data supporting it come from another organization. What is the strongest next move?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Mandate the change across the operation immediately, to show resolve"
+        },
+        {
+          "id": "b",
+          "text": "Run a time-limited pilot in units that volunteer, agree in advance with skeptics on what results would count as success or failure, and decide on expansion from the results"
+        },
+        {
+          "id": "c",
+          "text": "Drop the idea, because resistance means it will fail"
+        },
+        {
+          "id": "d",
+          "text": "Wait until every supervisor agrees before doing anything"
+        }
+      ],
+      "answer": "b",
+      "explanation": "A pilot tests whether evidence from elsewhere transfers to this setting, limits the cost of being wrong, and turns skeptics into co-designers of the test. Agreeing on success criteria beforehand prevents both sides from reinterpreting the results afterward. This keeps the principle (decide on evidence) while respecting legitimate uncertainty.",
+      "optionFeedback": {
+        "a": "A mandate ignores real uncertainty about transfer and spends goodwill you may need later.",
+        "c": "Resistance carries information, but it is not proof the idea is wrong; dropping it forgoes a possible improvement.",
+        "d": "Unanimity is rarely reachable and gives any single person a veto over improvement."
+      },
+      "errorTags": {
+        "a": "imposes-change",
+        "c": "treats-resistance-as-verdict",
+        "d": "requires-unanimity"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-30",
+      "type": "mc",
+      "domain": "communication",
+      "difficulty": "core",
+      "lesson": "w05-l1",
+      "concepts": [
+        "c-bluf",
+        "c-audience-adaptation"
+      ],
+      "prompt": "You are writing a one-page memo asking a busy chief executive to approve a budget request. According to the widely used practitioner convention known as “bottom line up front”, how should the memo begin?",
+      "options": [
+        {
+          "id": "a",
+          "text": "With the background and history of the problem, so the reader understands the context"
+        },
+        {
+          "id": "b",
+          "text": "With the recommendation and the decision you need, followed by the reasons and supporting detail"
+        },
+        {
+          "id": "c",
+          "text": "With the data tables, so the reader can draw their own conclusions"
+        },
+        {
+          "id": "d",
+          "text": "With the risks of the proposal, to show balance"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Busy decision-makers read the top of a document most carefully. Stating the recommendation and the decision required first tells the reader why they are reading and what to look for in the rest. This is a practitioner heuristic rather than a research finding, but it reflects a sound principle: organize around the reader’s decision, not the writer’s process.",
+      "optionFeedback": {
+        "a": "Background first makes the reader work to find the point and risks losing them before the request.",
+        "c": "Raw data without a conclusion transfers the analytic work to the reader.",
+        "d": "Risks belong in the memo, but leading with them buries the request and can frame the proposal negatively."
+      },
+      "errorTags": {
+        "a": "buries-the-lead",
+        "c": "data-dump",
+        "d": "buries-the-lead"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-31",
+      "type": "flaw",
+      "domain": "communication",
+      "difficulty": "core",
+      "lesson": "w05-l2",
+      "concepts": [
+        "c-relative-vs-absolute-risk"
+      ],
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Fictional briefing slide: “The new protocol cuts the risk of a serious complication by 50%. We recommend adopting it immediately.” Background data, not on the slide: the complication occurs in 2 of every 1,000 patients under the current protocol and 1 of every 1,000 under the new one, which costs substantially more per patient."
+        }
+      ],
+      "prompt": "What is the main problem with how the slide communicates the evidence?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It overstates the result: the risk did not really fall by half"
+        },
+        {
+          "id": "b",
+          "text": "It reports only the relative reduction, hiding that the absolute reduction is 1 in 1,000 patients, which decision-makers need to weigh against cost"
+        },
+        {
+          "id": "c",
+          "text": "It should have reported the result as a p-value"
+        },
+        {
+          "id": "d",
+          "text": "It uses numbers, which senior audiences find confusing"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Going from 2 to 1 in 1,000 is a 50% relative reduction and a 0.1-percentage-point absolute reduction; both are accurate. Presenting only the relative figure makes the benefit sound large and hides the information needed to weigh it against cost, such as how many patients must be treated to prevent one complication (here, 1,000). Good risk communication gives absolute numbers and the baseline.",
+      "optionFeedback": {
+        "a": "The relative reduction is accurate; the problem is that it is incomplete.",
+        "c": "A p-value addresses chance, not the size or decision-relevance of the benefit.",
+        "d": "Numbers are essential here; the issue is which numbers are shown."
+      },
+      "errorTags": {
+        "a": "misreads-relative-risk",
+        "c": "misplaces-significance",
+        "d": "avoids-quantification"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-32",
+      "type": "scenario",
+      "domain": "communication",
+      "difficulty": "stretch",
+      "lesson": "w05-l1",
+      "concepts": [
+        "c-audience-adaptation",
+        "c-communicating-uncertainty"
+      ],
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "You have built a forecasting model that you believe would improve how a fictional regional hospital allocates nurses across shifts. You will present it to a group of experienced nurse managers who have run scheduling successfully for years and are skeptical of “black-box” tools. You have 15 minutes."
+        }
+      ],
+      "prompt": "Which opening approach is most likely to earn a fair hearing?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Explain the model’s technical architecture in detail to establish credibility"
+        },
+        {
+          "id": "b",
+          "text": "Start from a scheduling problem the managers already recognize, show how the model would have performed on past weeks they remember, and be explicit about where it is uncertain and where their judgment remains essential"
+        },
+        {
+          "id": "c",
+          "text": "State that the model is more accurate than human judgment and that research supports replacing intuition with algorithms"
+        },
+        {
+          "id": "d",
+          "text": "Send the full technical report in advance and use the meeting only for questions"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Persuading expert audiences starts with their problem, not your method. Showing performance on cases they know lets them check the model against their own experience, and naming its limits signals honesty and leaves room for their expertise. Overclaiming or leading with technical detail tends to trigger defensiveness in exactly the people whose cooperation the model needs.",
+      "optionFeedback": {
+        "a": "Technical depth may impress specialists but does not address what these managers care about: whether it would help them.",
+        "c": "Framing the model as a replacement for their judgment invites resistance and overstates what any single model can show.",
+        "d": "A long report in advance is rarely read and gives up the chance to connect the model to their experience."
+      },
+      "errorTags": {
+        "a": "leads-with-method",
+        "c": "overclaims",
+        "d": "outsources-persuasion"
+      },
+      "points": 1
+    }
+  ],
+  "interpretation": {
+    "behavioral-science": {
+      "strong": "Your answers show that you recognize common judgment errors in context and distinguish well-supported claims about intuition and deliberation from popular overstatements. In Week 1, focus on the contested edges: where heuristics serve well and where the replication record is weak.",
+      "developing": "You recognize some judgment errors but not all of them, or you identified a bias without seeing its structural remedy. Pay particular attention to the mechanisms in Week 1 and to the difference between naming a bias and designing a process that reduces it.",
+      "foundation": "The vocabulary of heuristics, biases and calibration is new territory, which is exactly what Week 1 is built for. Use Foundation mode, which adds prerequisite explanations, and do the Judgment Lab slowly, writing a sentence on why you chose each confidence level.",
+      "lessons": [
+        "w01-l1",
+        "w01-l2",
+        "w01-l3"
+      ]
+    },
+    "statistical-reasoning": {
+      "strong": "You handled base rates, regression to the mean and the difference between statistical and practical significance correctly. Week 4 will extend this to causal inference and research design; the stretch material there is worth your time.",
+      "developing": "You answered some statistical items correctly but missed others, often where an intuitive reading competes with the arithmetic. Week 4’s worked examples and the Evidence Lab simulations are designed for this; convert percentages into counts whenever you can.",
+      "foundation": "Statistical reasoning is a skill built through practice, not a fixed talent. Start Week 4 in Foundation mode, work every numerical example by hand, and use natural frequencies (counts of people) rather than percentages for conditional probabilities.",
+      "lessons": [
+        "w04-l1",
+        "w04-l2",
+        "w04-l3"
+      ]
+    },
+    "business-strategy": {
+      "strong": "You reasoned well about trade-offs, imitability and industry structure. In Week 9, push toward the harder questions: when strategic frameworks mislead, and how to make strategic choices with incomplete information.",
+      "developing": "You recognized some strategic principles but treated others intuitively. Week 9 will give you the core frameworks; practice stating explicitly what a strategy chooses not to do.",
+      "foundation": "Competitive strategy has its own vocabulary and logic. Week 9 introduces it from first principles; read the foundation notes and keep a short list of the frameworks with one example each from outside sport.",
+      "lessons": [
+        "w09-l1",
+        "w09-l2",
+        "w09-l3"
+      ]
+    },
+    "financial-literacy": {
+      "strong": "You applied discounting, opportunity cost, break-even and the profit-versus-cash distinction correctly. Week 10’s stretch problems on capital allocation and valuation will test the edges of this.",
+      "developing": "You handled some financial reasoning but not all of it, perhaps the calculation but not the interpretation, or the reverse. In Week 10, work each example both ways: compute it, then say in one sentence what it means for the decision.",
+      "foundation": "Finance is a language with a small number of core ideas. Week 10 starts from the time value of money and opportunity cost; Foundation mode adds step-by-step calculations, and the Financial Decision Studio shows every formula.",
+      "lessons": [
+        "w10-l1",
+        "w10-l2",
+        "w10-l3"
+      ]
+    },
+    "legal-reasoning": {
+      "strong": "You spotted contract-formation and drafting issues and handled the conflict-of-interest scenario well. Weeks 11 and 13 will deepen this; remember throughout that this course builds legal literacy, not legal advice.",
+      "developing": "You recognized some legal issues but missed others, or flagged ordinary commercial terms as problems. Week 11’s Contract Lab trains exactly this: distinguishing real issues from standard terms.",
+      "foundation": "Legal reasoning is unfamiliar ground for most executives. Week 11 introduces contracts from the basics (offer, acceptance, consideration), and Week 13 covers duties and governance. The material is educational and general, never advice about your own situation.",
+      "lessons": [
+        "w11-l1",
+        "w11-l2",
+        "w13-l1"
+      ]
+    },
+    "negotiation": {
+      "strong": "You reasoned correctly about alternatives, the bargaining zone and value creation through trades. Week 7’s simulator will test whether that knowledge holds up under time pressure and incomplete information.",
+      "developing": "You understood some negotiation concepts but not all. Week 7 will connect BATNA, reservation prices and integrative trades into one framework; prepare each simulation round in writing.",
+      "foundation": "Negotiation analysis rests on a few precise ideas: your alternative, your walk-away point and the other side’s priorities. Week 7 introduces them with worked examples before the simulation.",
+      "lessons": [
+        "w07-l1",
+        "w07-l2",
+        "w07-l3"
+      ]
+    },
+    "organizational-behavior": {
+      "strong": "You read reporting, incentive and motivation problems with care, including how measurement shapes behavior. Weeks 2 and 8 will extend this into incentive design and organizational structure.",
+      "developing": "You recognized some organizational dynamics but took others at face value, such as a metric or an incentive scheme. Week 2’s Incentive Designer will help you trace how rewards change behavior.",
+      "foundation": "Organizational behavior asks why people in organizations act as they do. Weeks 2 and 8 introduce the core theories of motivation, incentives and structure, with foundation notes for each.",
+      "lessons": [
+        "w02-l1",
+        "w02-l2",
+        "w08-l1"
+      ]
+    },
+    "leadership-judgment": {
+      "strong": "You separated decision process from outcome, preferred independent judgment before group discussion, and chose delegation and change approaches that balance principle with uncertainty. Keep testing these instincts in the Week 1 decision journal and Week 12.",
+      "developing": "Some of your choices favored speed, control or results over process. That is a common pattern under pressure. Week 1’s decision journal and Week 12’s material on execution and change will give you structures to slow down when it matters.",
+      "foundation": "Leadership judgment is learned through structured reflection on real decisions. Start your Week 1 decision journal now and use it every week; Weeks 8 and 12 add the organizational side.",
+      "lessons": [
+        "w01-l3",
+        "w08-l2",
+        "w12-l2"
+      ]
+    },
+    "communication": {
+      "strong": "You organized communication around the reader’s decision and handled risk figures carefully. Week 5’s Executive Communication Studio will push for shorter, sharper recommendations.",
+      "developing": "You recognized some communication principles but not all, often around how to present numbers or how to approach a skeptical expert audience. Week 5 addresses both, with practice drafts.",
+      "foundation": "Executive communication is a craft with learnable conventions. Week 5 starts with structure (recommendation first) and with presenting uncertainty honestly; draft in the Communication Studio, which reports length and clarity metrics.",
+      "lessons": [
+        "w05-l1",
+        "w05-l2",
+        "w05-l3"
+      ]
+    }
+  }
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "behavioral-decision-lab",
+    "name": "Behavioral Decision Lab",
+    "school": "behavioral",
+    "summary": "Probability estimates, calibration, hypothetical outcomes and decisions under competing obligations.",
+    "description": "Practice the judgments that sit underneath every executive decision: how confident to be, how to weigh base rates against vivid stories, and how to act when obligations collide. Scores here are about calibration and reasoning, not about being right by luck.",
+    "engines": ["calibration", "branching"]
+  },
+  {
+    "id": "negotiation-simulator",
+    "name": "Negotiation Simulator",
+    "school": "law",
+    "summary": "Multi-round, multi-issue bargaining against a rule-based counterpart with explicit assumptions.",
+    "description": "Negotiate packages across several issues against a counterpart whose behavior follows published rules. The debrief shows the value you created and claimed, the trades that mattered, and the deals you left on the table.",
+    "engines": ["negotiation"]
+  },
+  {
+    "id": "organizational-design-studio",
+    "name": "Organizational Design Studio",
+    "school": "business",
+    "summary": "Design incentives, practice systems, structures, stakeholder strategies and change sequences.",
+    "description": "Adjust responsibilities, reporting lines, staffing, incentives and budgets, and see which design risks each choice creates. Every effect is an ordinal teaching heuristic with its rationale and sources shown.",
+    "engines": ["design", "orgdesign", "stakeholder", "branching"]
+  },
+  {
+    "id": "research-critique-lab",
+    "name": "Research Critique Lab",
+    "school": "behavioral",
+    "summary": "Simulate how sample size, selection, measurement and multiple testing distort what studies report.",
+    "description": "Run thousands of simulated studies to see sampling error, publication filters and undisclosed multiple testing at work, then apply the same skepticism to real research with the critique rubric.",
+    "engines": ["simulation"]
+  },
+  {
+    "id": "financial-decision-studio",
+    "name": "Financial Decision Studio",
+    "school": "business",
+    "summary": "Budgets, discounted cash flows, capital rationing and strategic resource allocation.",
+    "description": "Compare investments by NPV, IRR, payback and profitability index under scenarios, find the opportunity cost of a portfolio, and test whether a resource allocation actually expresses a strategy.",
+    "engines": ["allocation"]
+  },
+  {
+    "id": "executive-communication-studio",
+    "name": "Executive Communication Studio",
+    "school": "business",
+    "summary": "Difficult conversations, recommendations in three lengths, and decision presentations.",
+    "description": "Rehearse conversations where trust and clarity pull against each other, and draft recommendations against transparent text measures (length, speaking time, sentence load, hedging) and a self-check list. Content is never machine-graded.",
+    "engines": ["branching", "composer"]
+  },
+  {
+    "id": "contract-issue-spotting-lab",
+    "name": "Contract Issue-Spotting Lab",
+    "school": "law",
+    "summary": "Read fictional agreements clause by clause and flag commercial and legal risk.",
+    "description": "Practice legal-commercial reasoning on fictional documents: flag clauses, classify the risk, and compare your reading with an annotated key. Educational material about general legal concepts — not legal advice.",
+    "engines": ["issues"]
+  },
+  {
+    "id": "strategic-decision-journal",
+    "name": "Strategic Decision Journal",
+    "school": "behavioral",
+    "summary": "Structured records of consequential decisions, forecasts and later reviews.",
+    "description": "Record decisions before you know how they turn out: options, assumptions, what would change your mind and probability forecasts with resolve-by dates. Resolving forecasts later builds your personal calibration record.",
+    "engines": []
+  }
+]
