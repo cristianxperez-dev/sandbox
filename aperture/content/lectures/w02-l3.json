@@ -1,0 +1,756 @@
+{
+  "id": "w02-l3-lecture",
+  "lesson": "w02-l3",
+  "title": "Rewarding A, Hoping for B",
+  "subtitle": "Agency, multitasking and gaming",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 3. It covers the same objectives — the principal–agent problem, the multitask model, the difference between improving, gaming and falsifying a measure, and payout shape, horizon and monitoring as design levers — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "A system that paid for the wrong thing",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 2 · Lesson 3 · Lecture",
+            "title": "Rewarding A, hoping for B",
+            "sub": "Agency, multitasking and gaming"
+          },
+          "cues": [
+            {
+              "text": "Every incentive system pays for a measure. And every measure is an imperfect proxy for what the organization actually wants."
+            },
+            {
+              "text": "That gap sounds academic. Here's what it looks like at scale."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "A $100 million penalty.",
+              "Sales targets and incentive pay.",
+              "Accounts opened without consent."
+            ],
+            "sub": "Consumer Financial Protection Bureau, September 2016",
+            "refs": [
+              "R-cfpb-2016-consumer"
+            ]
+          },
+          "cues": [
+            {
+              "text": "In September two thousand sixteen, the U.S. Consumer Financial Protection Bureau announced a one hundred million dollar penalty against Wells Fargo Bank.",
+              "reveal": 0,
+              "refs": [
+                "R-cfpb-2016-consumer"
+              ]
+            },
+            {
+              "text": "The bureau stated that employees, working under sales targets and incentive-compensation programs,",
+              "reveal": 1,
+              "refs": [
+                "R-cfpb-2016-consumer"
+              ]
+            },
+            {
+              "text": "had opened deposit and credit-card accounts without customers' knowledge or consent. It ordered remediation.",
+              "reveal": 2,
+              "refs": [
+                "R-cfpb-2016-consumer"
+              ]
+            },
+            {
+              "text": "The bank wasn't short of codes of conduct. And most of its employees presumably didn't set out to deceive anyone."
+            },
+            {
+              "text": "So here is the puzzle. Something about the system made a large number of people behave in ways that harmed customers, and eventually the bank itself."
+            },
+            {
+              "text": "It's tempting to call it a moral failure by bad actors. Some of it was. But the more useful question for a leader is structural. What did the system pay for? What could it observe? And what would a reasonable person under pressure do?"
+            },
+            {
+              "text": "We'll answer with three tools: the principal-agent problem, the multitask model, and the habit of comparing what is rewarded with what is hoped for."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Why incentives exist",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "term": "Principal–agent problem",
+            "definition": "A principal delegates work to an agent whose actions it cannot fully observe and whose interests differ.",
+            "example": "An owner and a manager. A public and an official."
+          },
+          "cues": [
+            {
+              "text": "Start with the basic structure."
+            },
+            {
+              "text": "A principal, an owner, a manager, a public, delegates work to an agent: an employee, a contractor, an official. The principal can't fully observe what the agent does, and their interests don't perfectly coincide.",
+              "reveal": 1
+            },
+            {
+              "text": "That describes almost every working relationship you have.",
+              "reveal": 2
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two frictions",
+            "left": {
+              "title": "Hidden action",
+              "points": [
+                "Moral hazard",
+                "Principal sees outcomes, not effort",
+                "Outcomes are affected by luck"
+              ]
+            },
+            "right": {
+              "title": "Hidden information",
+              "points": [
+                "Adverse selection",
+                "The agent knows more about ability, client and difficulty"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Two frictions follow."
+            },
+            {
+              "text": "Hidden action, also called moral hazard. The principal sees outcomes but not effort, and outcomes are affected by luck.",
+              "reveal": 1
+            },
+            {
+              "text": "Hidden information, or adverse selection. The agent knows things, about their own ability, the client, how hard the task is, that the principal doesn't.",
+              "reveal": 2
+            },
+            {
+              "text": "Incentive pay is a response to hidden action. If you can't see effort, pay for something correlated with it."
+            },
+            {
+              "text": "But notice the cost. Pay now depends on noise, and on whatever the measure misses."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "High-powered: pay moves with the measure.",
+              "Low-powered: pay barely moves."
+            ],
+            "sub": "Most pay mixes a salary base, a variable part, promotion and reputation."
+          },
+          "cues": [
+            {
+              "text": "Economists describe incentives by their power: how much pay changes when a measured output changes.",
+              "reveal": 0
+            },
+            {
+              "text": "A piece rate or an uncapped commission is high-powered. A fixed salary is low-powered.",
+              "reveal": 1
+            },
+            {
+              "text": "High power sharpens effort on the measure. It also shifts risk onto the agent, whose pay now varies with luck, and it magnifies any gap between the measure and the goal."
+            },
+            {
+              "text": "Most real pay mixes a low-powered base with a higher-powered part, plus promotion and reputation, which are powerful incentives even when no bonus exists."
+            },
+            {
+              "text": "Which brings us to the real problem. Almost nobody does just one thing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Where effort goes",
+      "scenes": [
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Several tasks.",
+              "One is easy to measure.",
+              "Another is not."
+            ],
+            "sub": "Holmström and Milgrom's multitask model",
+            "refs": [
+              "R-holmstrom-1991-multitask"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Bengt Holmström and Paul Milgrom built a model of exactly this situation: an agent dividing effort among tasks that differ in how well they can be measured.",
+              "reveal": 0,
+              "refs": [
+                "R-holmstrom-1991-multitask"
+              ]
+            },
+            {
+              "text": "Suppose one task is measured precisely,",
+              "reveal": 1
+            },
+            {
+              "text": "and another only poorly. Test your intuition on a case.",
+              "reveal": 2
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-multitask",
+            "type": "choice",
+            "concept": "c-multitask-problem",
+            "prompt": "A hypothetical investment bank pays analysts on the number of deals they help close each quarter. Research that would kill bad deals early is not measured. What does the multitask model predict?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Effort rises on both tasks, since motivated analysts do more of everything."
+              },
+              {
+                "id": "b",
+                "text": "Effort shifts toward closing deals and away from research that would kill bad deals."
+              },
+              {
+                "id": "c",
+                "text": "Nothing changes, because professionals ignore bonuses."
+              },
+              {
+                "id": "d",
+                "text": "Research improves, because more deals means more learning."
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "The model assumes effort is limited and divided among tasks. A strong incentive on one task pulls effort away from the others.",
+              "b": "Right. The strongly rewarded, well-measured task draws effort away from the poorly measured one — even though the unmeasured research matters.",
+              "c": "The model assumes, realistically, that agents respond to what is paid. That is exactly what makes the diversion predictable.",
+              "d": "Nothing in the incentive rewards research that stops deals. The model predicts that research is the task that loses effort."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Design responses",
+            "refs": [
+              "R-holmstrom-1991-multitask"
+            ],
+            "steps": [
+              "Weaken the incentive on the measured task",
+              "Pay a salary",
+              "Group tasks of similar measurability",
+              "Treat job design and ownership as incentives"
+            ]
+          },
+          "cues": [
+            {
+              "text": "That's the model's core prediction. A strong incentive on the measured task pulls effort away from the poorly measured one. In the bank, deals get pushed toward quarter end, and the research that would say no quietly shrinks.",
+              "reveal": 0,
+              "refs": [
+                "R-holmstrom-1991-multitask"
+              ]
+            },
+            {
+              "text": "So what should a principal do when the poorly measured task matters?"
+            },
+            {
+              "text": "Sometimes the best answer is to weaken the incentive on the measured task.",
+              "reveal": 1,
+              "refs": [
+                "R-holmstrom-1991-multitask"
+              ]
+            },
+            {
+              "text": "Or to pay a salary.",
+              "reveal": 2
+            },
+            {
+              "text": "Or to redesign the job, so that tasks with similar measurability are grouped together.",
+              "reveal": 3,
+              "refs": [
+                "R-holmstrom-1991-multitask"
+              ]
+            },
+            {
+              "text": "The model treats job design and asset ownership as incentive instruments in their own right. And it explains why so many professionals are paid salaries rather than piece rates.",
+              "reveal": 4,
+              "refs": [
+                "R-holmstrom-1991-multitask"
+              ]
+            },
+            {
+              "text": "For the bank, that might mean paying on deal quality over a longer horizon, deferring part of the bonus, and protecting a review role whose job is to say no."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "The multitask problem in one picture",
+            "x": [
+              "Measure is a weak proxy",
+              "Measure is a strong proxy"
+            ],
+            "y": [
+              "Few other tasks",
+              "Many other important tasks"
+            ],
+            "cells": [
+              [
+                "Danger zone: low-powered pay and judgment",
+                "Incentives can work; watch neglected tasks"
+              ],
+              [
+                "Gaming risk: tighten measurement first",
+                "High-powered incentives work well"
+              ]
+            ]
+          },
+          "cues": [
+            {
+              "text": "Here's the model as a picture. It's a teaching map, not a formula."
+            },
+            {
+              "text": "Top left: many other important tasks, and a measure that's a weak proxy for the goal. That's the danger zone. Strong incentives divert effort and invite gaming. Use low-powered pay and judgment.",
+              "reveal": 1
+            },
+            {
+              "text": "Top right: many tasks, but a strong proxy. Incentives can work, if you monitor the neglected tasks and consider separating roles.",
+              "reveal": 2
+            },
+            {
+              "text": "Bottom left: few tasks, a weak proxy. Gaming the proxy is the risk, so tighten measurement before raising power.",
+              "reveal": 3
+            },
+            {
+              "text": "Bottom right: simple production with clear quality checks. High-powered incentives work well here.",
+              "reveal": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Measures under pressure",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Rewarding A, hoping for B",
+            "refs": [
+              "R-kerr-1975-folly"
+            ],
+            "left": {
+              "title": "Rewarded",
+              "points": [
+                "Individual statistics",
+                "Grant volume",
+                "Visible activity"
+              ]
+            },
+            "right": {
+              "title": "Hoped for",
+              "points": [
+                "Teamwork",
+                "Teaching",
+                "Results"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "In nineteen seventy-five, Steven Kerr published an essay collecting examples from government, war, medicine, universities, sport and business.",
+              "reveal": 0,
+              "refs": [
+                "R-kerr-1975-folly"
+              ]
+            },
+            {
+              "text": "Organizations rewarded individual statistics, grant volume and visible activity,",
+              "reveal": 1,
+              "refs": [
+                "R-kerr-1975-folly"
+              ]
+            },
+            {
+              "text": "while hoping for teamwork, teaching and results.",
+              "reveal": 2,
+              "refs": [
+                "R-kerr-1975-folly"
+              ]
+            },
+            {
+              "text": "Kerr traced the problem to a fascination with objective, easily counted criteria, and a reluctance to reward behavior that's hard to observe.",
+              "refs": [
+                "R-kerr-1975-folly"
+              ]
+            },
+            {
+              "text": "It's a practitioner essay built on illustrations, not a systematic study. But its diagnostic question has lasted because it works: what does this system actually pay for?"
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "How a good metric decays",
+            "steps": [
+              {
+                "label": "Selection",
+                "text": "Chosen because it tracks the goal"
+              },
+              {
+                "label": "Coupling",
+                "text": "Pay, promotion or rank attached"
+              },
+              {
+                "label": "Search",
+                "text": "Cheapest ways to move it"
+              },
+              {
+                "label": "Divergence",
+                "text": "Measure moves, goal does not"
+              },
+              {
+                "label": "Decay",
+                "text": "Still read as if it tracked the goal"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "A related idea usually travels as an aphorism. Goodhart's law, in its popular wording: when a measure becomes a target, it ceases to be a good measure. Campbell's law says that social indicators used for decisions come under corruption pressure."
+            },
+            {
+              "text": "Treat both as heuristics with broad practical support, not laws with known effect sizes. Here's the mechanism they describe."
+            },
+            {
+              "text": "A measure is chosen because, before anyone was paid on it, it correlated with the goal.",
+              "reveal": 1
+            },
+            {
+              "text": "Then pay, promotion or rank are attached to it.",
+              "reveal": 2
+            },
+            {
+              "text": "People search for the cheapest ways to move the measure.",
+              "reveal": 3
+            },
+            {
+              "text": "Cheap routes, picking easy cases, shifting timing, relabelling, even fabrication, move the measure without moving the goal.",
+              "reveal": 4
+            },
+            {
+              "text": "And the measure stops tracking the goal, while leaders keep reading it as if it did.",
+              "reveal": 5
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Three ways a number can rise",
+            "cards": [
+              {
+                "title": "Improving",
+                "q": "More of the real work",
+                "fail": "What the measure was meant to reward"
+              },
+              {
+                "title": "Gaming",
+                "q": "Move the measure, not the goal",
+                "fail": "Easy cases, timing, relabelling"
+              },
+              {
+                "title": "Falsifying",
+                "q": "Record what didn't happen",
+                "fail": "Fraud"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "That gives us three different things that can sit behind a rising number."
+            },
+            {
+              "text": "Improving the measure: doing more of the real work it was meant to capture.",
+              "reveal": 1
+            },
+            {
+              "text": "Gaming the measure: moving the number without moving the goal, by choosing easy cases, shifting timing, or relabelling.",
+              "reveal": 2
+            },
+            {
+              "text": "And falsifying it: recording things that didn't happen. That's fraud.",
+              "reveal": 3
+            },
+            {
+              "text": "Consider a hypothetical city target that emergency patients be seen within a fixed time. Waiting times fall. But some hospitals start the clock later, hold ambulances outside, or relabel areas so patients count as seen sooner."
+            },
+            {
+              "text": "The multitask lens predicted it. Time to first contact is a weak proxy for timely, appropriate care, and staff have many other tasks. The fix isn't a bigger bonus. Audit how the clock starts, pair the target with outcome measures, and leave room for clinical judgment.",
+              "refs": [
+                "R-holmstrom-1991-multitask"
+              ]
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-gaming",
+            "type": "choice",
+            "concept": "c-goodharts-law",
+            "prompt": "A hypothetical call center measures agents on average call length. One agent starts transferring difficult calls to another queue just before they would run long. Which is this?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Improving the measure"
+              },
+              {
+                "id": "b",
+                "text": "Gaming the measure"
+              },
+              {
+                "id": "c",
+                "text": "Falsifying the measure"
+              },
+              {
+                "id": "d",
+                "text": "None of these — just efficient work"
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "Improving would mean resolving calls faster. Here the hard calls are still unresolved; they have only moved off this agent’s record.",
+              "b": "Right. The number improves while the goal — resolving customers’ problems — does not. Nothing false is recorded, so it is gaming rather than fraud.",
+              "c": "Falsifying means recording something that did not happen. Each transfer really happened; the measure is being moved, not faked.",
+              "d": "The customer’s problem takes as long or longer to resolve. The agent’s measure moved; the organization’s goal did not."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Payout shapes and what they invite",
+            "cards": [
+              {
+                "title": "Threshold (cliff)",
+                "q": "Bonus only above a target",
+                "fail": "Pull forward or hold back; give up if out of reach"
+              },
+              {
+                "title": "Capped",
+                "q": "Commission stops at a ceiling",
+                "fail": "Defer work once the cap is reached"
+              },
+              {
+                "title": "Tournament",
+                "q": "Bonus for top ranks",
+                "fail": "High effort, less cooperation, possible sabotage"
+              },
+              {
+                "title": "Deferred or clawback",
+                "q": "Vests over years; recoverable",
+                "fail": "Longer horizon; higher retention cost"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Moving a call to another queue doesn't improve service. It moves the number. That's gaming, and because it's predictable, design can make it less attractive."
+            },
+            {
+              "text": "The shape of the payout decides which games pay. Each shape here is a tendency to watch for, not a measured effect."
+            },
+            {
+              "text": "A linear commission per unit invites steady effort on volume, and neglect of unmeasured quality."
+            },
+            {
+              "text": "A threshold, a bonus only above a target, invites pulling sales forward or holding them back near the line, and giving up when the target is out of reach.",
+              "reveal": 1
+            },
+            {
+              "text": "A cap invites deferring work once the cap is reached.",
+              "reveal": 2
+            },
+            {
+              "text": "A tournament, a bonus for the top ranks, invites high effort, but also less cooperation and possible sabotage.",
+              "reveal": 3
+            },
+            {
+              "text": "Deferral and clawback lengthen the horizon and reduce churning of short-term numbers, at a higher retention cost.",
+              "reveal": 4
+            },
+            {
+              "text": "Here's one to read for yourself."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-cap",
+            "type": "choice",
+            "concept": "c-payout-shape",
+            "prompt": "A hypothetical sales rep’s commission stops at a quarterly ceiling, which she reaches in week ten of a thirteen-week quarter. A large client is ready to sign now. What does the payout shape invite?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Sign now — more sales always pay."
+              },
+              {
+                "id": "b",
+                "text": "Delay the signing into next quarter."
+              },
+              {
+                "id": "c",
+                "text": "Nothing; the cap has no effect on timing."
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "Above the cap, another sale earns her nothing this quarter. The shape removes the reward for signing now.",
+              "b": "Right. A cap invites deferring work once it is reached, so the deal earns commission next quarter. The organization loses or delays revenue to a payout shape.",
+              "c": "Timing is exactly what caps and thresholds distort. The shape makes the same sale worth more next quarter than this one."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Against the easy conclusions",
+      "scenes": [
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Incentives work.",
+              "That's why they're dangerous."
+            ],
+            "refs": [
+              "R-cerasoli-2014-intrinsic",
+              "R-holmstrom-1991-multitask"
+            ]
+          },
+          "cues": [
+            {
+              "text": "If you held that deal back, you read the cap correctly. Now let me push against two easy conclusions from this lecture.",
+              "reveal": 0
+            },
+            {
+              "text": "The first is that incentives don't work. That's just as wrong. The forty-year meta-analysis from the previous lesson found incentives related to the quantity of performance, and the multitask model assumes, realistically, that agents respond to what's paid.",
+              "reveal": 1,
+              "refs": [
+                "R-cerasoli-2014-intrinsic",
+                "R-holmstrom-1991-multitask"
+              ]
+            },
+            {
+              "text": "Gaming is the predictable side effect of an incentive that works, on the wrong measure. It isn't evidence that incentives fail. The executive judgment is where to set power, not whether to have it."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Incentives send signals.",
+              "Systems explain. They don't excuse."
+            ],
+            "refs": [
+              "R-gneezy-2011-when",
+              "R-cfpb-2016-consumer"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The second objection: agents aren't only maximizing pay. Gneezy, Meier and Rey-Biel argue that incentives send signals, about what the principal expects, what the task is worth, and whether the agent is trusted.",
+              "reveal": 0,
+              "refs": [
+                "R-gneezy-2011-when"
+              ]
+            },
+            {
+              "text": "A heavily monitored, high-powered scheme can tell people they aren't trusted. And some respond by doing exactly what's paid, and nothing more."
+            },
+            {
+              "text": "Agency theory adds a subtlety. Pay should rest on measures that are informative about effort, measures that move when effort moves and barely move otherwise. Measures dominated by luck load risk onto people without improving effort."
+            },
+            {
+              "text": "Comparing people with peers who face the same shocks filters out common luck. The cost is that colleagues become rivals, and cooperation can suffer."
+            },
+            {
+              "text": "A third limit concerns blame. Systemic explanations can become an excuse. Regulators held the institution accountable in the Wells Fargo matter, and individuals who falsified records made choices.",
+              "reveal": 1,
+              "refs": [
+                "R-cfpb-2016-consumer"
+              ]
+            },
+            {
+              "text": "The lesson isn't that individuals bear no responsibility. It's that a system that reliably produces misconduct across many people is a leadership failure, whatever else it is."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-reflect",
+            "type": "reflect",
+            "concept": "c-principal-agent-problem",
+            "prompt": "Your best-performing team has beaten its target four quarters running, and two departing members hint that “everyone knows how the numbers are made.” Think of a real measure in your own organization: what would you audit, which patterns would you compare with peers, and what finding would trigger a deeper inquiry? Decide that before you look."
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "The same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Incentive Designer",
+                "detail": "This week's exercise",
+                "href": "#/exercise/w02-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Kerr (1975), On the Folly of Rewarding A, While Hoping for B",
+                "href": "#/library/R-kerr-1975-folly"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "The proportionate move there is to audit the measure rather than the people, and to make that review routine across all teams so it isn't an accusation."
+            },
+            {
+              "text": "Let's bring it together."
+            },
+            {
+              "text": "Incentives exist because principals can't observe effort. They're dangerous because every measure is an imperfect proxy, and paying on it loads luck onto the agent."
+            },
+            {
+              "text": "With several tasks of differing measurability, strong incentives on the measured ones divert effort from the rest. Sometimes the right answer is weaker incentives or a redesigned job."
+            },
+            {
+              "text": "Measures decay under pressure, and payout shape, horizon and monitoring decide which games pay. In baseball operations, think of scouts judged on how many signings reach a level, or analysts judged on report counts. Ask Kerr's question first: what does this system actually pay for?"
+            },
+            {
+              "text": "Next, take the comprehension check below. It's the same check as the written lesson. Then open the Incentive Designer, where you trace misalignments like these through a fictional organization, and read Kerr's original essay.",
+              "reveal": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

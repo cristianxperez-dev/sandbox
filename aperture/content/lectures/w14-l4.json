@@ -1,0 +1,667 @@
+{
+  "id": "w14-l4-lecture",
+  "lesson": "w14-l4",
+  "title": "Learning When the Scoreboard Lies",
+  "subtitle": "The leader’s learning agenda: outcomes, process and after-action reviews",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 4. It covers the same objectives — decision quality versus outcome quality and outcome bias, designing an after-action review from Army practice and the debrief evidence, and a personal evidence practice sized to a small number of major decisions — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Two trials",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 14 · Lesson 4 · Lecture",
+            "title": "Learning when the scoreboard lies",
+            "sub": "Outcomes, process and after-action reviews"
+          },
+          "cues": [
+            {
+              "text": "Two drug companies. Two big bets. One leader is pushed out, the other is promoted."
+            },
+            {
+              "text": "The question for this last lecture is simple: which organization learned the right lesson?"
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Which organization learned?",
+            "left": {
+              "title": "Company A",
+              "points": [
+                "Careful reading of earlier data",
+                "Large late-stage trial fails",
+                "Head of research leaves"
+              ]
+            },
+            "right": {
+              "title": "Company B",
+              "points": [
+                "Thinner evidence, racing a rival",
+                "Trial succeeds",
+                "Executive promoted"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "This is a hypothetical composite."
+            },
+            {
+              "text": "One company approves a large late-stage trial on a careful reading of earlier data. The trial fails. The board asks who approved it, and the head of research leaves within the year.",
+              "reveal": 1
+            },
+            {
+              "text": "Three years earlier, a competitor approved a trial on thinner evidence, partly to beat a rival to market. It succeeded, and the executive who pushed it was promoted.",
+              "reveal": 2
+            },
+            {
+              "text": "Now ask what each will do the next time the evidence is mixed."
+            },
+            {
+              "text": "Most organizations learn from outcomes because outcomes are visible and decisions are not. What was known, what was assumed, which alternatives were considered, what probability was assigned: usually, no record exists."
+            },
+            {
+              "text": "So the review reconstructs the decision from the outcome. And that reconstruction is exactly where bias does its work."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Outcome bias",
+      "scenes": [
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Same decision. Same information.",
+              "Rated better when it turned out well."
+            ],
+            "sub": "Baron and Hershey, 1988 — five studies."
+          },
+          "cues": [
+            {
+              "text": "In five studies, Jonathan Baron and John Hershey gave people descriptions of decisions made under uncertainty, medical choices and monetary gambles, and told them how things turned out.",
+              "reveal": 0,
+              "refs": [
+                "R-baron-1988-outcome"
+              ]
+            },
+            {
+              "text": "People rated the same decision as better reasoned, and the decision-maker as more competent, when the outcome was good. The information available at the time was identical.",
+              "reveal": 1,
+              "refs": [
+                "R-baron-1988-outcome"
+              ]
+            },
+            {
+              "text": "Here is the striking part. Participants who said outcomes should not affect such evaluations were influenced by them anyway. Knowing about the bias did not protect them.",
+              "refs": [
+                "R-baron-1988-outcome"
+              ]
+            },
+            {
+              "text": "The studies used students and written scenarios, so they establish the direction of the bias rather than its size in organizations. A later pre-registered replication of the first experiment reproduced the effect. There is little reason to think executives are immune.",
+              "refs": [
+                "R-baron-1988-outcome"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "Decision quality versus outcome quality",
+            "x": [
+              "Bad outcome",
+              "Good outcome"
+            ],
+            "y": [
+              "Poor process",
+              "Sound process"
+            ],
+            "cells": [
+              [
+                "Bad luck: keep the process; was the risk priced and disclosed?",
+                "Deserved success: reinforce it, but ask how much was luck"
+              ],
+              [
+                "Deserved failure: the process predicted it — fix the process",
+                "Dumb luck: the most dangerous cell"
+              ]
+            ]
+          },
+          "cues": [
+            {
+              "text": "Separate the two questions, and you get a simple map. Process runs bottom to top, outcome left to right."
+            },
+            {
+              "text": "Sound process, bad outcome: bad luck. Keep the process, and check whether the risk was priced and disclosed.",
+              "reveal": 1
+            },
+            {
+              "text": "Sound process, good outcome: deserved success. Reinforce it, but still ask how much was luck.",
+              "reveal": 2
+            },
+            {
+              "text": "Poor process, bad outcome: deserved failure. The process predicted it. Fix the process.",
+              "reveal": 3
+            },
+            {
+              "text": "And poor process, good outcome: dumb luck. The most dangerous cell, because it teaches the wrong lesson.",
+              "reveal": 4
+            },
+            {
+              "text": "An organization that judges by outcomes promotes people who took unpriced risks that paid off, and punishes sound bets that failed. It selects for luck and for timidity at the same time."
+            },
+            {
+              "text": "Try placing our two companies."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-cell",
+            "type": "choice",
+            "prompt": "Suppose a later review finds that the competitor’s trial, the one approved on thin evidence to beat a rival, was a poorly reasoned bet that happened to succeed. In which cell does it belong, and what does promoting its champion teach?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Deserved success — the result vindicates the reasoning."
+              },
+              {
+                "id": "b",
+                "text": "Dumb luck — promoting its champion teaches people that unpriced risks are rewarded."
+              },
+              {
+                "id": "c",
+                "text": "Bad luck — the process was sound."
+              },
+              {
+                "id": "d",
+                "text": "Deserved failure — the process predicted the result."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-outcome-bias",
+            "feedback": {
+              "a": "That is outcome bias in action: letting the result rate the reasoning. A good outcome does not make a poor process sound.",
+              "b": "Right. Poor process, good outcome — the cell where organizations learn the wrong lesson and promote luck.",
+              "c": "Bad luck is a sound process with a bad outcome — closer to the first company’s situation, if its reading of the data was careful.",
+              "d": "Deserved failure needs a bad outcome. This trial succeeded."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Write the decision down before the outcome."
+            ],
+            "sub": "Decision, alternatives, assumptions, probabilities, what would change your mind."
+          },
+          "cues": [
+            {
+              "text": "Dumb luck is the cell most organizations never examine, because nothing went wrong."
+            },
+            {
+              "text": "Judging process separately is hard because process is rarely recorded. That is what the decision journal from Week One is for: a dated record of the decision, the alternatives, the key assumptions, your probabilities and what would change your mind, written before the outcome is known."
+            },
+            {
+              "text": "Without it, every review of a decision is a review of its outcome, wearing the costume of a review of the decision."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "After-action reviews",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "The core questions of an AAR",
+            "steps": [
+              "What was supposed to happen?",
+              "What actually happened?",
+              "Why was there a difference?",
+              "What will we sustain, and what will we change?"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Organizations need a routine that makes this separation habitual. One of the best documented is the United States Army’s after-action review.",
+              "refs": [
+                "R-usarmy-1993-leaders"
+              ]
+            },
+            {
+              "text": "The Army’s nineteen ninety-three training circular presents it as a professional discussion of an event, focused on performance standards, that lets participants discover for themselves what happened, why, and how to sustain strengths and improve weaknesses.",
+              "refs": [
+                "R-usarmy-1993-leaders"
+              ]
+            },
+            {
+              "text": "It distinguishes formal reviews, with facilitators and data, from informal ones held on the spot. The practice has since been adapted in firefighting, healthcare and business.",
+              "refs": [
+                "R-usarmy-1993-leaders"
+              ]
+            },
+            {
+              "text": "First: what was supposed to happen? Re-establish the plan as it was understood at the time, not rewritten in light of the outcome.",
+              "reveal": 1
+            },
+            {
+              "text": "Second: what actually happened? Build a shared factual account from several vantage points, not just the most senior person’s.",
+              "reveal": 2
+            },
+            {
+              "text": "Third: why was there a difference? Look at conditions, decisions and execution, and don’t stop at the first person to blame.",
+              "reveal": 3
+            },
+            {
+              "text": "Fourth: what will we sustain, and what will we change? Specific, owned actions with dates, not a list of lessons learned that nobody revisits.",
+              "reveal": 4
+            },
+            {
+              "text": "The emphasis on discovery is the point. A review that tells people what they did wrong produces compliance. One that helps them see it produces learning."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "Do debriefs work?",
+            "items": [
+              {
+                "value": "46",
+                "label": "samples pooled"
+              },
+              {
+                "value": "2,136",
+                "label": "participants"
+              },
+              {
+                "value": "≈25%",
+                "label": "average performance gain over controls"
+              }
+            ],
+            "note": "Tannenbaum and Cerasoli (2013), meta-analysis."
+          },
+          "cues": [
+            {
+              "text": "Does debriefing actually improve performance? The strongest summary is a meta-analysis by Scott Tannenbaum and Christopher Cerasoli.",
+              "refs": [
+                "R-tannenbaum-2013-do"
+              ]
+            },
+            {
+              "text": "They pooled forty-six samples of team and individual debriefs, from published and unpublished research,",
+              "reveal": 1,
+              "refs": [
+                "R-tannenbaum-2013-do"
+              ]
+            },
+            {
+              "text": "with two thousand one hundred thirty-six participants.",
+              "reveal": 2,
+              "refs": [
+                "R-tannenbaum-2013-do"
+              ]
+            },
+            {
+              "text": "On average, debriefs improved performance over control conditions by approximately twenty-five percent, a standardized effect of about zero point six seven.",
+              "reveal": 3,
+              "refs": [
+                "R-tannenbaum-2013-do"
+              ]
+            },
+            {
+              "text": "Effects were stronger when debriefs were aligned with specific objectives, and facilitation and structure looked like contributors.",
+              "refs": [
+                "R-tannenbaum-2013-do"
+              ]
+            },
+            {
+              "text": "One catch. To count, an intervention had to meet the authors’ definition of a debrief. A loosely run lessons-learned meeting is not what that estimate describes.",
+              "refs": [
+                "R-tannenbaum-2013-do"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "A personal evidence practice",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Four parts",
+            "cards": [
+              {
+                "title": "Decision journal",
+                "q": "Written before the outcome",
+                "fail": "Set the bar high enough to sustain it"
+              },
+              {
+                "title": "Forecasts",
+                "q": "Probabilities with resolve-by dates",
+                "fail": "Scored with the Brier score"
+              },
+              {
+                "title": "Scheduled reviews",
+                "q": "A personal AAR on the review date",
+                "fail": "Review successes, not only failures"
+              },
+              {
+                "title": "Learning agenda",
+                "q": "Three to five questions this year",
+                "fail": "Each paired with evidence of improvement"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Organizations need after-action reviews. Individual leaders need a personal version, borrowed from earlier weeks."
+            },
+            {
+              "text": "A decision journal for consequential decisions. A few serious entries a month beats a daily habit abandoned by spring.",
+              "reveal": 1
+            },
+            {
+              "text": "Forecasts with probabilities attached, each with a resolve-by date, so your calibration can be scored with the Brier score from Week One.",
+              "reveal": 2
+            },
+            {
+              "text": "Scheduled reviews: a personal after-action review on the review date, judging process and outcome separately, and covering some successes as well as failures.",
+              "reveal": 3
+            },
+            {
+              "text": "And a learning agenda: three to five questions you are trying to answer better this year, such as, how accurately do I forecast how long implementations take? Each paired with the evidence that would show improvement.",
+              "reveal": 4
+            },
+            {
+              "text": "There is a statistical catch, though. Let’s find it with numbers."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Twenty forecasts at 70%",
+            "lines": [
+              {
+                "label": "Expected hits if perfectly calibrated",
+                "value": "14 of 20"
+              },
+              {
+                "label": "Standard error: √(0.7 × 0.3 ÷ 20)",
+                "value": "≈ 0.10"
+              },
+              {
+                "label": "Rough 95% range: 0.70 ± 1.96 × 0.10",
+                "value": "≈ 50% to 90%"
+              }
+            ],
+            "result": {
+              "label": "Width of the range",
+              "value": "≈ 40 points"
+            },
+            "note": "Synthetic calculation, normal approximation."
+          },
+          "cues": [
+            {
+              "text": "Suppose you make twenty forecasts at seventy percent confidence. The numbers are illustrative."
+            },
+            {
+              "text": "If you are perfectly calibrated, you expect fourteen to come true.",
+              "reveal": 1
+            },
+            {
+              "text": "But chance produces variation. The standard error of a proportion here works out to about zero point one.",
+              "reveal": 2
+            },
+            {
+              "text": "So a rough ninety-five percent range for your hit rate runs from about fifty to ninety percent. Anywhere from ten to eighteen hits, even if your judgment is perfect.",
+              "reveal": 3
+            },
+            {
+              "text": "That range is about forty points wide. Twenty forecasts cannot reliably tell a well-calibrated forecaster from a substantially overconfident one.",
+              "reveal": 4
+            },
+            {
+              "text": "So how many do you need? Make a guess before the next chart."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-width",
+            "type": "estimate",
+            "prompt": "With 100 forecasts at 70% confidence, perfectly calibrated, about how wide is the rough 95% range for your hit rate, in percentage points?",
+            "min": 0,
+            "max": 60,
+            "step": 1,
+            "unit": " points",
+            "initial": 30,
+            "answer": 18,
+            "tolerance": 4,
+            "concept": "c-learning-agenda",
+            "feedback": {
+              "correct": "Close. The standard error falls to about 0.046, so the range runs from roughly 61% to 79% — about 18 points.",
+              "incorrect": "About 18 points. The standard error falls to about 0.046, so the range runs from roughly 61% to 79%. Five times the forecasts buys a little more than twice the precision."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "bars",
+            "title": "Range width by number of forecasts",
+            "unit": "points",
+            "items": [
+              {
+                "label": "10 forecasts",
+                "value": 57
+              },
+              {
+                "label": "20 forecasts",
+                "value": 40
+              },
+              {
+                "label": "50 forecasts",
+                "value": 25
+              },
+              {
+                "label": "100 forecasts",
+                "value": 18
+              },
+              {
+                "label": "200 forecasts",
+                "value": 13
+              }
+            ],
+            "note": "Synthetic calculation: ±1.96 standard errors around a true 70% hit rate, rounded."
+          },
+          "cues": [
+            {
+              "text": "Ten forecasts: a range fifty-seven points wide.",
+              "reveal": 1
+            },
+            {
+              "text": "Twenty: forty points.",
+              "reveal": 2
+            },
+            {
+              "text": "Fifty: twenty-five.",
+              "reveal": 3
+            },
+            {
+              "text": "A hundred: about eighteen points, roughly sixty-one to seventy-nine percent.",
+              "reveal": 4
+            },
+            {
+              "text": "Two hundred: thirteen.",
+              "reveal": 5
+            },
+            {
+              "text": "Executives make few large decisions, outcomes depend on much they don’t control, and feedback can take years. A record of big results says little about judgment."
+            },
+            {
+              "text": "The implication is not to stop keeping score. It is to score many smaller, faster-resolving forecasts, about timelines, adoption, costs, other people’s reactions, so your record grows faster than your career-defining decisions do."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "How reviews fail",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Where reviews go wrong",
+            "cards": [
+              {
+                "title": "Blame",
+                "q": "Reviews used to assign fault",
+                "fail": "The factual account becomes a negotiated story"
+              },
+              {
+                "title": "Only failures",
+                "q": "Successes go unreviewed",
+                "fail": "Dumb luck is never examined"
+              },
+              {
+                "title": "Records",
+                "q": "Written reviews can become evidence",
+                "fail": "Ask counsel first, then still learn"
+              },
+              {
+                "title": "The average",
+                "q": "A pooled gain of about 25%",
+                "fail": "Not a promise for your organization"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the honest limits of all this."
+            },
+            {
+              "text": "When reviews are used to assign blame, people stop telling the truth in them, and the shared factual account becomes a negotiated story.",
+              "reveal": 1
+            },
+            {
+              "text": "That is the psychological-safety problem again. In Amy Edmondson’s field study of work teams, a shared belief that the team was safe for interpersonal risk was associated with learning behaviors such as discussing errors.",
+              "refs": [
+                "R-edmondson-1999-psychological"
+              ]
+            },
+            {
+              "text": "Leaders also over-review failures and under-review successes, which leaves the dumb-luck cell unexamined. Review a sample of successes on the same schedule, with the same questions.",
+              "reveal": 2
+            },
+            {
+              "text": "There is a legal dimension too. This is general educational information, not legal advice. Depending on the jurisdiction, internal reviews can become evidence later. Where there is legal exposure, ask counsel how to conduct the review before you hold it. It may change the format; it should not stop the learning.",
+              "reveal": 3
+            },
+            {
+              "text": "And the meta-analytic average is not a promise. The pooled studies vary in setting, task and design. The moderators are more useful than the headline: align with objectives, add structure, and consider a facilitator who is not the most senior person present.",
+              "reveal": 4,
+              "refs": [
+                "R-tannenbaum-2013-do"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Review the reviews."
+            ],
+            "sub": "Were the actions done? Did the conditions come back?"
+          },
+          "cues": [
+            {
+              "text": "One last move turns a ritual into a learning system. A hypothetical cloud-software company runs blameless post-incident reviews on the after-action logic."
+            },
+            {
+              "text": "Six months later, its head of reliability asks a second-order question. Of the twenty-two actions assigned across all reviews, how many were completed? Did the same contributing conditions reappear?"
+            },
+            {
+              "text": "That second review tests whether the first ones changed anything."
+            },
+            {
+              "text": "The same holds in player development, where outcomes are public and noisy. A group that records its promotion reasoning and probabilities at the time, and reviews successes and failures on a fixed schedule, can begin to separate its judgment from the variance of player outcomes."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-reflect",
+            "type": "reflect",
+            "prompt": "Draft one question for your own learning agenda for the year after this course — about judgment, influence, leading others or a developing lens. What evidence would show you are improving, and how many quick-resolving observations could you collect in a year?",
+            "concept": "c-learning-agenda"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "After the semester",
+      "scenes": [
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "The same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Decision Presentation Studio",
+                "detail": "Draft and defend a decision opening",
+                "href": "#/exercise/w14-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Baron & Hershey (1988), Outcome Bias in Decision Evaluation",
+                "href": "#/library/R-baron-1988-outcome"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together, for this lesson and for the course."
+            },
+            {
+              "text": "Judge process and outcome separately, because outcomes reward luck and punish sound bets. Write decisions down before the outcome is known."
+            },
+            {
+              "text": "Make the separation routine with after-action reviews: what was supposed to happen, what did, why, and what you will sustain or change. Keep them safe from blame."
+            },
+            {
+              "text": "And for you as an individual, the unit of learning is the forecast, not the career-defining decision. There are too few of those to learn from."
+            },
+            {
+              "text": "Next, take the comprehension check, the same as the written lesson. Then the Decision Presentation Studio. And read Baron and Hershey’s introduction, first experiment and general discussion.",
+              "reveal": 1
+            },
+            {
+              "text": "No course will grade your decisions from here. A journal, a forecast log and a review date on your calendar can. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

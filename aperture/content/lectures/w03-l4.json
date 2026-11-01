@@ -1,0 +1,615 @@
+{
+  "id": "w03-l4-lecture",
+  "lesson": "w03-l4",
+  "title": "Individualize by What People Know, Not by Labels",
+  "subtitle": "Expertise, transfer, cognitive load, learning-style myths and measurement",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 4 of Week 3. It covers the same objectives — cognitive load and the expertise reversal effect, near versus far transfer, why the learning-styles matching hypothesis lacks support, and how to design a measurement plan that separates learning from performance — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Two ways to individualize",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 3 · Lesson 4 · Lecture",
+            "title": "Individualize by what people know, not by labels",
+            "sub": "Expertise, transfer and the coach’s job"
+          },
+          "cues": [
+            {
+              "text": "Everyone wants personalized development. The question this lecture asks is: personalized by what?"
+            },
+            {
+              "text": "Here are two organizations that both individualize, in very different ways. Both are invented."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two tailored programs",
+            "left": {
+              "title": "Consulting firm",
+              "points": [
+                "Questionnaire: visual, auditory or kinesthetic",
+                "Materials matched to each label",
+                "Excellent satisfaction scores"
+              ]
+            },
+            "right": {
+              "title": "Hospital simulation center",
+              "points": [
+                "Novices: detailed worked cases",
+                "Experienced clinicians: unscripted scenarios"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "A consulting firm classifies each new analyst as a visual, auditory or kinesthetic learner, and tailors the materials. Diagrams, recordings, hands-on workshops.",
+              "reveal": 1
+            },
+            {
+              "text": "Satisfaction scores are excellent, and the head of learning cites them at budget time."
+            },
+            {
+              "text": "Across town, a hospital simulation center tailors differently. Novices work through detailed worked cases. Experienced clinicians go straight to unscripted scenarios.",
+              "reveal": 2
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-two-programs",
+            "type": "choice",
+            "prompt": "Which organization’s way of individualizing is better supported by learning research?",
+            "options": [
+              {
+                "id": "a",
+                "text": "The consulting firm — its satisfaction scores show matching works."
+              },
+              {
+                "id": "b",
+                "text": "The hospital — it individualizes by what learners already know."
+              },
+              {
+                "id": "c",
+                "text": "Both equally — any individualization helps."
+              },
+              {
+                "id": "d",
+                "text": "Neither — everyone should get identical instruction."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-cognitive-load",
+            "feedback": {
+              "a": "Satisfaction cannot test matching. Nobody was given mismatched materials, and learners tend to prefer whatever feels fluent.",
+              "b": "Right. Prior knowledge changes which methods work — that is the expertise reversal effect. Self-assigned style labels have not passed their test.",
+              "c": "The two approaches rest on very different evidence. One has research support; the other failed the test it requires.",
+              "d": "Individual differences in learning are real. The question is which ones to use."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Cognitive load and expertise",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two memory systems",
+            "left": {
+              "title": "Working memory",
+              "points": [
+                "Conscious processing right now",
+                "A few new elements at a time",
+                "Lost within seconds unless rehearsed"
+              ]
+            },
+            "right": {
+              "title": "Long-term memory",
+              "points": [
+                "Effectively unlimited",
+                "Organized patterns, or schemas",
+                "Many elements treated as one"
+              ]
+            },
+            "refs": [
+              "R-sweller-2019-cognitive"
+            ]
+          },
+          "cues": [
+            {
+              "text": "If you chose the hospital, here’s why. Start with how memory is built."
+            },
+            {
+              "text": "Working memory is where you process information right now. It handles only a few new elements at a time, and loses them within seconds unless rehearsed.",
+              "reveal": 1
+            },
+            {
+              "text": "Long-term memory is effectively unlimited, and stores organized knowledge, sometimes called schemas, that lets you treat many elements as one.",
+              "reveal": 2,
+              "refs": [
+                "R-sweller-2019-cognitive"
+              ]
+            },
+            {
+              "text": "A chess master sees a familiar position as a single pattern. A novice sees many separate pieces. Much of expertise is a large library of such patterns, available instantly."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Cognitive load theory",
+            "term": "Expertise reversal effect",
+            "definition": "Methods that help novices — fully worked examples, detailed guidance — can become redundant or even harmful for learners who already have the knowledge.",
+            "example": "Step-by-step instruction that a novice needs can slow an experienced performer down.",
+            "refs": [
+              "R-sweller-2019-cognitive"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Cognitive load theory, updated by John Sweller and colleagues in twenty nineteen, builds instruction on that architecture.",
+              "refs": [
+                "R-sweller-2019-cognitive"
+              ]
+            },
+            {
+              "text": "New information must squeeze through limited working memory. So instruction should manage the load inherent in the material, and cut load created by poor presentation: redundancy, split attention between sources, unnecessary search.",
+              "refs": [
+                "R-sweller-2019-cognitive"
+              ]
+            },
+            {
+              "text": "One of its most practical findings is the expertise reversal effect. Methods that help novices, like worked examples and detailed guidance, can become redundant or harmful for learners who already have the knowledge.",
+              "reveal": 1,
+              "refs": [
+                "R-sweller-2019-cognitive"
+              ]
+            },
+            {
+              "text": "So the right amount of instruction belongs to the learner and the task together, not to the coach’s philosophy.",
+              "reveal": 2
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Instruction that fits working memory",
+            "steps": [
+              "One point at a time",
+              "Show before you tell",
+              "Remove the redundant",
+              "Fade guidance as knowledge grows",
+              "Check understanding by retrieval"
+            ]
+          },
+          "cues": [
+            {
+              "text": "For a coach, the translation is direct. A novice given five technical points after a repetition can process perhaps one. The rest is noise."
+            },
+            {
+              "text": "Give the single most important cue, let the learner try, and stack cues only once the first is automatic.",
+              "reveal": 1
+            },
+            {
+              "text": "For movement, a demonstration often carries in one look what a paragraph cannot.",
+              "reveal": 2
+            },
+            {
+              "text": "Don’t narrate what the learner can already see, or present the same information in two places at once.",
+              "reveal": 3
+            },
+            {
+              "text": "Give beginners scaffolding, and experienced performers questions and open problems.",
+              "reveal": 4
+            },
+            {
+              "text": "And ask the learner to state the cue or plan back from memory before the next attempt.",
+              "reveal": 5
+            },
+            {
+              "text": "Expertise also changes perception. Experts notice meaningful cues, a defender’s shift, an abnormal vital sign, that novices miss. That’s why experts often teach novices poorly: the steps they no longer notice are the ones the novice needs."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-novice-cues",
+            "type": "choice",
+            "prompt": "After each repetition, a coach gives a novice five detailed technical corrections. The novice is improving slowly. What is the best first change?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Write all five corrections on a card so the novice can reread them."
+              },
+              {
+                "id": "b",
+                "text": "Give the single most important cue, let the novice try, and add others once it is automatic."
+              },
+              {
+                "id": "c",
+                "text": "Switch to unscripted, open scenarios with no instruction at all."
+              },
+              {
+                "id": "d",
+                "text": "Keep the five corrections, since detailed guidance always helps novices."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-cognitive-load",
+            "feedback": {
+              "a": "Rereading five points still overloads working memory, and rereading is a low-utility technique.",
+              "b": "Right. Working memory can handle perhaps one new point at a time. Stack cues only when the first is automatic.",
+              "c": "Removing guidance suits experienced performers. For a novice, open problems with no support are likely to overwhelm.",
+              "d": "Novices do need guidance, but five new points at once exceeds what working memory can process."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "How far does learning travel?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "How far will it transfer?",
+            "steps": [
+              "Same skill, same context — high; that is retention",
+              "Same skill, new context — moderate",
+              "Related skill — possible if demands overlap",
+              "Distant domain — rare; unproven until tested"
+            ],
+            "refs": [
+              "R-sala-2017-does"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Transfer is using learning in a context different from the one where it was acquired. Near transfer, to a similar task, is common. Far transfer, to a substantially different domain, is the hope behind many training products."
+            },
+            {
+              "text": "Here is a practical scale. Rehearsing a procedure in the room where it will be performed: high, but that’s really retention.",
+              "reveal": 1
+            },
+            {
+              "text": "A protocol learned in simulation used on a ward at night: moderate, better when practice resembles the real context.",
+              "reveal": 2
+            },
+            {
+              "text": "Interviewing skills from recruiting used in client discovery: possible when demands overlap, and it must be taught for.",
+              "reveal": 3
+            },
+            {
+              "text": "Puzzle apps expected to improve on-field decision speed: rare. Treat that claim as unproven until directly tested.",
+              "reveal": 4
+            },
+            {
+              "text": "Giovanni Sala and Fernand Gobet reviewed meta-analyses of chess instruction, music training and working-memory training. Far transfer to general cognitive or academic abilities was rare, and apparent effects shrank as study quality improved.",
+              "refs": [
+                "R-sala-2017-does"
+              ]
+            },
+            {
+              "text": "Even within motor learning, the transfer advantage of random practice was smaller and uncertain in applied settings compared with the lab.",
+              "refs": [
+                "R-czyz-2024-effect"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "A testable idea that failed its test",
+      "scenes": [
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "What matching predicts",
+            "x": [
+              "Taught verbally",
+              "Taught visually"
+            ],
+            "y": [
+              "Verbal learners",
+              "Visual learners"
+            ],
+            "cells": [
+              [
+                "Visual learners, taught verbally: worse",
+                "Visual learners, taught visually: best"
+              ],
+              [
+                "Verbal learners, taught verbally: best",
+                "Verbal learners, taught visually: worse"
+              ]
+            ],
+            "refs": [
+              "R-pashler-2008-learning"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the consulting firm. The learning-styles idea says people learn best when instruction matches their preferred modality. Harold Pashler and colleagues asked what evidence would support it.",
+              "refs": [
+                "R-pashler-2008-learning"
+              ]
+            },
+            {
+              "text": "Classify learners by style, randomly assign each group to matched or mismatched instruction, and give everyone the same test. If matching works, the results must cross over.",
+              "refs": [
+                "R-pashler-2008-learning"
+              ]
+            },
+            {
+              "text": "Visual learners taught verbally should do worse,",
+              "reveal": 1
+            },
+            {
+              "text": "and visual learners taught visually should do best.",
+              "reveal": 2
+            },
+            {
+              "text": "Verbal learners taught verbally should do best,",
+              "reveal": 3
+            },
+            {
+              "text": "and verbal learners taught visually should do worse. Each group wins with its own style.",
+              "reveal": 4
+            },
+            {
+              "text": "Pashler and colleagues found that well-designed tests of this kind were virtually absent, the few that existed did not support the claim, and the evidence did not justify spending on style assessment and matched instruction.",
+              "refs": [
+                "R-pashler-2008-learning"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Match instruction to the content,",
+              "and to what the learner already knows —",
+              "not to a label."
+            ],
+            "sub": "A movement is easier to show; a relationship is easier to see in a chart."
+          },
+          "cues": [
+            {
+              "text": "Two points stop us from overcorrecting. People genuinely have preferences, and some content is better taught one way for everyone. A movement is easier to show than to describe.",
+              "reveal": 0
+            },
+            {
+              "text": "That is matching instruction to the content, not to the learner’s label.",
+              "reveal": 1
+            },
+            {
+              "text": "And individual differences are real. They just aren’t captured by sensory styles. The best-supported difference is prior knowledge and skill, because it changes which methods work.",
+              "reveal": 2,
+              "refs": [
+                "R-sweller-2019-cognitive"
+              ]
+            },
+            {
+              "text": "Practice history matters too, but in sport it explains a minority of performance differences, so other factors are in play. Motivation, physical traits, injury history and life circumstances also differ. Individualize by measured stage and need.",
+              "refs": [
+                "R-macnamara-2016-relationship"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Limits and a vendor pitch",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two kinds of difficulty",
+            "left": {
+              "title": "Extraneous load — cut it",
+              "points": [
+                "Confusing explanations",
+                "Too many cues",
+                "Poorly designed materials"
+              ]
+            },
+            "right": {
+              "title": "Productive difficulty — dose it",
+              "points": [
+                "Retrieve instead of reread",
+                "Mix tasks once basics are stable",
+                "Fade guidance"
+              ]
+            },
+            "refs": [
+              "R-sweller-2019-cognitive"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now let me push back on this lesson. Cognitive load theory has limits. Load is hard to measure directly, much of the research relies on self-rated mental effort, and most studies concern academic and technical material, not motor skills.",
+              "refs": [
+                "R-sweller-2019-cognitive"
+              ]
+            },
+            {
+              "text": "Applying it to a coach on a practice field is a reasonable analogy, but an extrapolation a program should test, not assume."
+            },
+            {
+              "text": "There’s also a tension with this week’s earlier lessons. Cognitive load theory says reduce difficulty. Desirable difficulties say add some. Which is it?"
+            },
+            {
+              "text": "Separate the sources. Extraneous load, confusing explanations, too many cues, should be cut.",
+              "reveal": 1
+            },
+            {
+              "text": "Productive difficulty, retrieving, mixing once basics are stable, fading guidance, can be added in calibrated doses. A coach who hits a novice with mixed tasks and ten cues is creating the wrong kind.",
+              "reveal": 2
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "An evidence ledger for a pitch",
+            "left": {
+              "title": "Supported",
+              "points": [
+                "Spaced retrieval for knowledge",
+                "Delayed retention testing"
+              ]
+            },
+            "right": {
+              "title": "Hypothesis or not supported",
+              "points": [
+                "Drills that build “motor engrams”: hypothesis",
+                "Mastery at ten thousand hours: not supported",
+                "Learning-style matching: not supported"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Here’s where it pays off. A vendor, invented for this example, proposes a three-year development platform. It profiles learning styles, builds motor engrams through high-repetition drills, guarantees mastery at ten thousand logged hours, uses spaced retrieval, and includes delayed retention testing."
+            },
+            {
+              "text": "Your staff are enthusiastic, and a competitor has already signed. Build a ledger."
+            },
+            {
+              "text": "Spaced retrieval for knowledge, and delayed retention testing, are supported. Ask how intervals are set, and whether you can export the retention data.",
+              "reveal": 1
+            },
+            {
+              "text": "Engram-building drills are a hypothesis dressed as neuroscience. Mastery at ten thousand hours is not supported as stated. Learning-style matching is not supported. Ask whether it was ever tested against mismatched instruction.",
+              "reveal": 2
+            },
+            {
+              "text": "Accept the supported parts, ask the vendor to drop the rest, and tie renewal to retention and transfer data from your own pilot. The competitor’s decision is not evidence."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Measuring what lasts",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "What each measure tells you",
+            "cards": [
+              {
+                "title": "Practice success",
+                "q": "Current performance",
+                "fail": "Inflated by blocked, guided practice"
+              },
+              {
+                "title": "Delayed retention check",
+                "q": "What survives forgetting",
+                "fail": "Skipped because it’s inconvenient"
+              },
+              {
+                "title": "Transfer test",
+                "q": "Adaptability in new conditions",
+                "fail": "Hard to standardize; rarely designed"
+              },
+              {
+                "title": "Confidence and coach ratings",
+                "q": "Beliefs and judgment",
+                "fail": "Share the same fluency illusions"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Finally, the measurement plan, because a development system is only as good as its measures of learning."
+            },
+            {
+              "text": "Success during practice measures current performance, and blocked, guided, constant practice inflates it. A test at the end of a session can rank methods in the wrong order.",
+              "reveal": 1
+            },
+            {
+              "text": "A delayed retention check shows what remains after forgetting has had time to act. It is the measure most often skipped.",
+              "reveal": 2
+            },
+            {
+              "text": "A transfer test in new conditions shows adaptability. It’s hard to standardize, so it is often never designed.",
+              "reveal": 3
+            },
+            {
+              "text": "Learner confidence and satisfaction capture beliefs, and are often higher for weaker methods. Coach ratings share the same illusions unless calibrated against delayed tests. Competition outcomes matter most, but are noisy, delayed and shaped by many causes besides training.",
+              "reveal": 4
+            },
+            {
+              "text": "And this is why the consulting firm’s satisfaction data could never test matching. No one received mismatched materials, and learners may simply prefer what feels fluent. Whenever you meet a personalization claim, ask who got the non-personalized version, and what was measured, when.",
+              "refs": [
+                "R-pashler-2008-learning"
+              ]
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-ledger",
+            "type": "reflect",
+            "prompt": "List three beliefs about learning that are common in your field. Place each in the ledger — supported, contested, hypothesis or not supported — and write the one piece of evidence that would move it.",
+            "concept": "c-learning-measurement"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Learning Architect",
+                "detail": "Design a practice and measurement plan for this week",
+                "href": "#/exercise/w03-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Soderstrom & Bjork (2015), Learning Versus Performance",
+                "href": "#/library/R-soderstrom-2015-learning"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Working memory is limited and expertise is stored knowledge, so the right amount of instruction depends on what the learner already knows."
+            },
+            {
+              "text": "Far transfer is rare; expect skills to travel only where demands overlap. Learning-style matching lacks the crossover evidence it needs, so individualize by knowledge, skill and need."
+            },
+            {
+              "text": "Cut extraneous load, dose productive difficulty, label every element by its evidence, and measure retention and transfer. Be candid that some elements are hypotheses under test. That candor is what lets a system improve instead of merely persisting."
+            },
+            {
+              "text": "Next, take the comprehension check below, the same as the written lesson. Then complete the Learning Architect exercise, and return to Soderstrom and Bjork’s review for the measurement argument behind this whole week.",
+              "reveal": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

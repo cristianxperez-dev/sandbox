@@ -1,0 +1,765 @@
+{
+  "id": "w08-l1-lecture",
+  "lesson": "w08-l1",
+  "title": "The Chart Is a Theory",
+  "subtitle": "Differentiation, integration and information load",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 1. It covers the same objectives — differentiation and integration, Galbraith’s information-processing strategies, Mintzberg’s coordinating mechanisms and the arithmetic of span of control — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Same chart, opposite results",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 8 · Lesson 1 · Lecture",
+            "title": "The chart is a theory",
+            "sub": "Differentiation, integration and information load"
+          },
+          "cues": [
+            {
+              "text": "Here is a reorganization that sounds unanswerable."
+            },
+            {
+              "text": "Two regional banks, in the same year, merge their fraud-detection team and their credit-underwriting team into one risk analytics unit. The banks are hypothetical, but you have probably lived through this film."
+            },
+            {
+              "text": "Both teams build models on customer data. Both report to the chief risk officer. Both complain that the other hoards data. So why not put them together?"
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Bank A: the merged unit thrives.",
+              "Bank B: its best fraud analysts leave.",
+              "Same boxes. Opposite results."
+            ],
+            "sub": "What does the chart not show?"
+          },
+          "cues": [
+            {
+              "text": "In one bank, the merged unit thrives.",
+              "reveal": 0
+            },
+            {
+              "text": "In the other, the best fraud analysts are gone within a year, and fraud losses climb.",
+              "reveal": 1
+            },
+            {
+              "text": "Identical boxes on the chart, opposite outcomes. So the answer cannot be on the chart.",
+              "reveal": 2
+            },
+            {
+              "text": "Here is what the chart hides. Fraud work runs on minutes. An attack begins on a Saturday night, and someone must change a rule before Sunday morning."
+            },
+            {
+              "text": "Credit work runs on quarters. A cutoff change is tested, documented, reviewed and defended to regulators."
+            },
+            {
+              "text": "These teams live on different clocks, with different definitions of a good outcome and different needs for supervision. Merging them can let them share data and talent. Or it can force one rhythm onto work that needs another."
+            },
+            {
+              "text": "By the end of this lecture you will have the vocabulary to tell which, and the arithmetic to put a cost on the choice."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Two opposing forces",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Force one",
+            "term": "Differentiation",
+            "definition": "How far subunits develop different goals, time horizons, styles and formality as each adapts to its own environment.",
+            "example": "Fraud lives on minutes; credit lives on quarters.",
+            "refs": [
+              "R-lawrence-1967-differentiation"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The vocabulary comes from Paul Lawrence and Jay Lorsch, who framed organization design as a tension between two forces.",
+              "reveal": 0,
+              "refs": [
+                "R-lawrence-1967-differentiation"
+              ]
+            },
+            {
+              "text": "The first is differentiation: the degree to which subunits come to differ in their goals, their time horizons, their interpersonal styles and how formally they are run, as each adapts to its own slice of the environment.",
+              "reveal": 1,
+              "refs": [
+                "R-lawrence-1967-differentiation"
+              ]
+            },
+            {
+              "text": "Our fraud and credit teams are a textbook case. Different clocks, different goals, different styles.",
+              "reveal": 2
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Force two",
+            "term": "Integration",
+            "definition": "The quality of collaboration among subunits that the organization needs to achieve unity of effort.",
+            "example": "Integrators work when seen as competent and balanced.",
+            "refs": [
+              "R-lawrence-1967-differentiation"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The second force is integration: the quality of collaboration among those subunits that the organization needs in order to act as one.",
+              "reveal": 1,
+              "refs": [
+                "R-lawrence-1967-differentiation"
+              ]
+            },
+            {
+              "text": "Now the surprising part. Comparing organizations in the same industrial environment, Lawrence and Lorsch found that the more effective ones were not the least differentiated.",
+              "refs": [
+                "R-lawrence-1967-differentiation"
+              ]
+            },
+            {
+              "text": "They achieved both: the differentiation their environment demanded, and the integration needed to hold it together."
+            },
+            {
+              "text": "And there is a sting in it. Because differentiated units see the world differently, the more differentiation you need, the harder and more deliberate your integration must be."
+            },
+            {
+              "text": "Their work also suggests that dedicated integrators succeed when people see them as competent and balanced, not as agents of one side.",
+              "reveal": 2,
+              "refs": [
+                "R-lawrence-1967-differentiation"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "No single best structure.",
+              "Only fit or misfit."
+            ],
+            "sub": "Fit: the coordination the work requires, at a cost you can bear.",
+            "refs": [
+              "R-lawrence-1967-differentiation",
+              "R-galbraith-1974-organization"
+            ]
+          },
+          "cues": [
+            {
+              "text": "This is the heart of contingency theory. There is no single best structure.",
+              "reveal": 0,
+              "refs": [
+                "R-lawrence-1967-differentiation",
+                "R-galbraith-1974-organization"
+              ]
+            },
+            {
+              "text": "There are only structures that fit or misfit their task and their environment.",
+              "reveal": 1
+            },
+            {
+              "text": "And fit is not a matter of taste. A structure fits when it supplies the coordination the work actually requires, at a cost the organization can bear."
+            },
+            {
+              "text": "Which raises the obvious question. How do you know how much coordination the work requires?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Structure processes information",
+      "scenes": [
+        {
+          "visual": {
+            "type": "flow",
+            "title": "When uncertainty rises",
+            "steps": [
+              {
+                "label": "Task uncertainty",
+                "text": "More unknowns during the work"
+              },
+              {
+                "label": "More information",
+                "text": "Must flow among decision-makers"
+              },
+              {
+                "label": "More exceptions",
+                "text": "Rules and targets stop covering them"
+              },
+              {
+                "label": "Hierarchy overloads",
+                "text": "Managers become the bottleneck"
+              }
+            ],
+            "refs": [
+              "R-galbraith-1974-organization"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Jay Galbraith gave the most useful answer. Treat the organization as an information-processing system.",
+              "reveal": 0,
+              "refs": [
+                "R-galbraith-1974-organization"
+              ]
+            },
+            {
+              "text": "His starting proposition is about uncertainty.",
+              "reveal": 1
+            },
+            {
+              "text": "The more uncertain a task, the more information must flow among decision-makers while the work is under way.",
+              "reveal": 2,
+              "refs": [
+                "R-galbraith-1974-organization"
+              ]
+            },
+            {
+              "text": "Routine work is easy. You coordinate it with rules and programs, by referring exceptions up the hierarchy, and by setting targets that leave the method to the people doing it."
+            },
+            {
+              "text": "But as uncertainty rises, the exceptions multiply.",
+              "reveal": 3
+            },
+            {
+              "text": "Every unusual case climbs the hierarchy, until the managers themselves become the bottleneck.",
+              "reveal": 4
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Galbraith’s four strategies",
+            "cards": [
+              {
+                "title": "Slack resources",
+                "q": "Loosen targets, schedules or capacity",
+                "fail": "Idle capacity that quietly becomes permanent"
+              },
+              {
+                "title": "Self-contained units",
+                "q": "Give each unit every skill it needs",
+                "fail": "Duplicated specialists, thinner depth"
+              },
+              {
+                "title": "Vertical information systems",
+                "q": "Move better data to decision-makers faster",
+                "fail": "System cost; the top can still overload"
+              },
+              {
+                "title": "Lateral relations",
+                "q": "Let units coordinate directly",
+                "fail": "Meetings, blurred authority, dual bosses"
+              }
+            ],
+            "refs": [
+              "R-galbraith-1974-organization"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Galbraith saw two families of response. You can reduce the need to process information, or you can increase your capacity to process it.",
+              "reveal": 0,
+              "refs": [
+                "R-galbraith-1974-organization"
+              ]
+            },
+            {
+              "text": "To reduce the need, create slack: longer lead times, spare capacity, buffers, less demanding targets. Picture a hospital that keeps a few staffed beds open for surges instead of re-planning every shift.",
+              "reveal": 1
+            },
+            {
+              "text": "The cost is idle capacity, and slack has a habit of becoming permanent."
+            },
+            {
+              "text": "Or create self-contained units that hold every skill a product, customer or region needs, so fewer cross-unit decisions arise. The price is duplicated specialists and thinner depth in each specialty.",
+              "reveal": 2
+            },
+            {
+              "text": "To increase capacity, invest in vertical information systems that move better data up and down, faster. But more data can still drown the person at the top.",
+              "reveal": 3
+            },
+            {
+              "text": "Or build lateral relations: direct contact, liaison roles, task forces, teams, integrating roles and, at the extreme, a matrix. Decisions get made across units without climbing the hierarchy, at the price of meetings and ambiguous authority.",
+              "reveal": 4
+            },
+            {
+              "text": "Here is the line to remember. Each strategy has a cost. Choosing none of them means accepting lower performance by default.",
+              "refs": [
+                "R-galbraith-1974-organization"
+              ]
+            },
+            {
+              "text": "Let us try the menu on a case. It is invented, like every example in this lecture."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-strategy",
+            "type": "choice",
+            "concept": "c-information-processing-view",
+            "prompt": "A hypothetical logistics company sends every delayed-shipment exception to its operations director, who now has a three-day backlog. The director proposes giving each region its own planners, carrier contracts and customer-service staff. Which of Galbraith’s strategies is this, and what is its main cost?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Slack resources — the main cost is idle capacity."
+              },
+              {
+                "id": "b",
+                "text": "Self-contained units — the main cost is duplicated specialists and thinner depth."
+              },
+              {
+                "id": "c",
+                "text": "A vertical information system — the main cost is the system and overload at the top."
+              },
+              {
+                "id": "d",
+                "text": "Lateral relations — the main cost is meetings and ambiguous authority."
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "Slack would loosen delivery promises or add buffer capacity. The proposal instead gives each region everything it needs, so fewer exceptions cross regions.",
+              "b": "Right. Self-contained units reduce the need for information processing by cutting cross-unit decisions. The bill is paid in duplicated planners and thinner specialist depth.",
+              "c": "A vertical system would move better data to the director faster. The proposal moves the decisions away from the director instead.",
+              "d": "Lateral relations would let regions coordinate directly with each other. The proposal makes each region able to act without needing the others at all."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Reduce the load, or raise the capacity.",
+              "Either way, name the cost."
+            ],
+            "sub": "Most good designs combine two strategies."
+          },
+          "cues": [
+            {
+              "text": "That proposal was self-contained units. It cuts the information load by cutting cross-region decisions, and it pays in duplicated staff.",
+              "reveal": 0
+            },
+            {
+              "text": "Notice the discipline the menu imposes. Picture a hospital whose emergency department and elective surgery service fight constantly over beds.",
+              "reveal": 1
+            },
+            {
+              "text": "Hold a few beds in reserve, and accept idle cost. Give surgery its own recovery ward, and accept duplication. Build a real-time bed board, and accept systems cost. Or appoint a bed coordinator with authority to arbitrate, and accept a new role and some conflict."
+            },
+            {
+              "text": "A thoughtful leader usually combines two of these, and is explicit about the cost of each."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Five ways to coordinate",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Five coordinating mechanisms",
+            "steps": [
+              "Direct supervision",
+              "Standardized work processes",
+              "Standardized outputs",
+              "Standardized skills",
+              "Mutual adjustment"
+            ],
+            "refs": [
+              "R-mintzberg-1980-structure"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Galbraith tells you how much coordination you need. Henry Mintzberg tells you what kinds there are.",
+              "reveal": 0,
+              "refs": [
+                "R-mintzberg-1980-structure"
+              ]
+            },
+            {
+              "text": "Synthesizing the research on structure, he named five coordinating mechanisms.",
+              "refs": [
+                "R-mintzberg-1980-structure"
+              ]
+            },
+            {
+              "text": "Direct supervision: one person instructs the others.",
+              "reveal": 1
+            },
+            {
+              "text": "Standardization of work processes: the method itself is specified.",
+              "reveal": 2
+            },
+            {
+              "text": "Standardization of outputs: the result is specified, and the method is left open.",
+              "reveal": 3
+            },
+            {
+              "text": "Standardization of skills: the training is specified, so trained people can coordinate almost automatically.",
+              "reveal": 4
+            },
+            {
+              "text": "And mutual adjustment: people coordinate through informal communication.",
+              "reveal": 5
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Five configurations",
+            "steps": [
+              "Simple structure — direct supervision",
+              "Machine bureaucracy — standardized processes",
+              "Professional bureaucracy — standardized skills",
+              "Divisionalized form — standardized outputs",
+              "Adhocracy — mutual adjustment"
+            ],
+            "refs": [
+              "R-mintzberg-1980-structure"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Mintzberg argued that organizations cluster into five configurations, each dominated by one mechanism and pulled by one part of the organization.",
+              "reveal": 0,
+              "refs": [
+                "R-mintzberg-1980-structure"
+              ]
+            },
+            {
+              "text": "A simple structure, like a founder-led startup, runs on direct supervision from the top.",
+              "reveal": 1
+            },
+            {
+              "text": "A machine bureaucracy, like claims processing, runs on work processes designed by planners and analysts.",
+              "reveal": 2
+            },
+            {
+              "text": "A professional bureaucracy, a hospital, a law firm, a university, runs on the standardized skills of its professionals.",
+              "reveal": 3
+            },
+            {
+              "text": "A divisionalized form runs on standardized outputs, with division managers held to results.",
+              "reveal": 4
+            },
+            {
+              "text": "And an adhocracy, a research lab or a consulting engagement, runs on mutual adjustment inside project teams.",
+              "reveal": 5
+            },
+            {
+              "text": "These are ideal types. Real organizations do not fit the boxes neatly. Their value is the question they force: which mechanism is actually doing the work here, and is it the right one for the task?"
+            },
+            {
+              "text": "Try to coordinate surgeons with detailed process scripts and you will meet resistance, because they already coordinate through shared training. Let an adhocracy drift into standard procedures, and it loses the improvisation it exists to produce."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "The arithmetic of spans",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Where design meets arithmetic",
+            "term": "Span of control",
+            "definition": "The number of people who report directly to one manager.",
+            "example": "Wider: fewer managers and layers. Narrower: more coaching, more layers."
+          },
+          "cues": [
+            {
+              "text": "Now for the part where design meets arithmetic.",
+              "reveal": 0
+            },
+            {
+              "text": "Span of control is the number of people who report directly to one manager.",
+              "reveal": 1
+            },
+            {
+              "text": "Wider spans mean fewer managers and fewer layers, so information passes through fewer filters and decisions sit closer to the work. Narrower spans buy more coaching time per person, at the price of more managers and more layers.",
+              "reveal": 2
+            },
+            {
+              "text": "There is no research-backed universal number. The right span depends on how similar and standardized the work is, how expert the reports are, how much of the manager’s time goes elsewhere, how dispersed the team is and how much development each person needs."
+            },
+            {
+              "text": "But once you choose a span, the consequences are arithmetic. Let us do some."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Span of five, 1,000 staff",
+            "lines": [
+              {
+                "label": "Frontline staff",
+                "value": "1,000"
+              },
+              {
+                "label": "First-line managers, 1,000 ÷ 5",
+                "value": "200"
+              },
+              {
+                "label": "Next layer, 200 ÷ 5",
+                "value": "40"
+              },
+              {
+                "label": "Next two layers, 40 ÷ 5, then 8 ÷ 5 rounded up",
+                "value": "8 + 2"
+              },
+              {
+                "label": "Top executive",
+                "value": "1"
+              }
+            ],
+            "result": {
+              "label": "Total managers, in five layers",
+              "value": "251"
+            },
+            "note": "Synthetic arithmetic: divide by the span and round up until one executive remains."
+          },
+          "cues": [
+            {
+              "text": "Take one thousand frontline staff. The numbers are invented, and the method is simple: divide each level by the span and round up until a single executive remains.",
+              "reveal": 0
+            },
+            {
+              "text": "Start with the thousand people on the front line.",
+              "reveal": 1
+            },
+            {
+              "text": "With a span of five, they need two hundred first-line managers.",
+              "reveal": 2
+            },
+            {
+              "text": "Those two hundred need forty managers above them.",
+              "reveal": 3
+            },
+            {
+              "text": "Forty need eight. Eight, rounded up, need two.",
+              "reveal": 4
+            },
+            {
+              "text": "And two need one executive.",
+              "reveal": 5
+            },
+            {
+              "text": "Add it up: two hundred and fifty-one managers, in five layers. About twenty-five managers for every hundred frontline staff.",
+              "reveal": 6
+            },
+            {
+              "text": "Now widen the span to twelve, for the same thousand people. Before I show you, make an estimate."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-span",
+            "type": "estimate",
+            "concept": "c-span-of-control",
+            "prompt": "Same 1,000 frontline staff, but every manager now has a span of 12. Rounding up at each level until one executive remains, how many managers are there in total?",
+            "min": 0,
+            "max": 260,
+            "step": 1,
+            "unit": " managers",
+            "initial": 150,
+            "answer": 92,
+            "tolerance": 8,
+            "feedback": {
+              "correct": "Right: 84 first-line managers, 7 above them and 1 executive — 92 in three layers.",
+              "incorrect": "The answer is 92: 1,000 ÷ 12 rounds up to 84, 84 ÷ 12 is 7, and 7 needs one executive. Most people underestimate how fast layers collapse as spans widen."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "Span five versus span twelve",
+            "items": [
+              {
+                "value": "251 → 92",
+                "label": "total managers"
+              },
+              {
+                "value": "5 → 3",
+                "label": "management layers"
+              },
+              {
+                "value": "25 → 9",
+                "label": "managers per 100 staff, rounded"
+              }
+            ],
+            "note": "Synthetic arithmetic, from the Lesson 1 table."
+          },
+          "cues": [
+            {
+              "text": "Here is the answer. Eighty-four first-line managers, seven above them, one executive. Ninety-two managers.",
+              "reveal": 1
+            },
+            {
+              "text": "Two whole layers gone.",
+              "reveal": 2
+            },
+            {
+              "text": "And almost two thirds of the management positions removed: from about twenty-five per hundred staff to about nine.",
+              "reveal": 3
+            },
+            {
+              "text": "That is why delayering appeals to finance teams."
+            },
+            {
+              "text": "It is also why it is risky. Every manager you remove was absorbing exceptions, coaching people and translating between levels."
+            },
+            {
+              "text": "If rules, information systems and lateral links do not absorb that load, the managers who remain become Galbraith’s bottleneck. The saving and the risk are the same number, seen from two sides.",
+              "refs": [
+                "R-galbraith-1974-organization"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Limits, and what to keep",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Four objections",
+            "cards": [
+              {
+                "title": "People are not channels",
+                "q": "Organizations are also political systems",
+                "fail": "Efficient routing fails if it strips status"
+              },
+              {
+                "title": "Copying ideal types",
+                "q": "Most organizations are hybrids",
+                "fail": "Diagnosis gets replaced by imitation"
+              },
+              {
+                "title": "Does structure matter that much?",
+                "q": "Reorganizations are visible and quick",
+                "fail": "The chart changes; the problem stays"
+              },
+              {
+                "title": "Fit after the fact",
+                "q": "Fit defined as whatever winners did",
+                "fail": "A theory that cannot fail"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now let me argue against what I have just taught you.",
+              "reveal": 0
+            },
+            {
+              "text": "First, the information-processing view treats people as channels and decisions as data transfers. Real organizations are also political systems. A structure that routes information beautifully can still fail if it strips a powerful group of status or control.",
+              "reveal": 1
+            },
+            {
+              "text": "Second, ideal types tempt leaders to copy a configuration instead of diagnosing their own work. A hospital is a professional bureaucracy in the operating room, a machine bureaucracy in billing and an adhocracy in its innovation unit.",
+              "reveal": 2
+            },
+            {
+              "text": "Third, structure may matter less than executives believe. Reorganizations are visible, quick to announce and easy to credit to a new leader.",
+              "reveal": 3
+            },
+            {
+              "text": "The course’s working hypothesis, and it is a hypothesis, not an established finding, is that many reorganizations change the chart while leaving the real coordination problem untouched, and pay a transition cost by breaking informal routines."
+            },
+            {
+              "text": "Fourth, the evidence itself. Lawrence and Lorsch compared a small number of organizations at one point in time. That is excellent for generating hypotheses and weak at ruling out alternatives. A better-managed firm might achieve both forces simply because it is better managed.",
+              "reveal": 4,
+              "refs": [
+                "R-lawrence-1967-differentiation"
+              ]
+            },
+            {
+              "text": "Worse, if fit is defined after the fact as whatever the successful organizations did, the theory cannot fail. So when someone says a structure fits your strategy, ask what observation would have shown that it did not."
+            },
+            {
+              "text": "There is also a rival account: incentives rather than information. A self-contained unit can be measured on its own results, which sharpens accountability and tempts it to optimize locally. The next two lessons pick up that thread."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-reflect",
+            "type": "reflect",
+            "concept": "c-differentiation-integration",
+            "prompt": "Name the two most differentiated units in your own organization. What integrating mechanism connects them today, and what does it cost? If that mechanism disappeared, which loss would show up on a dashboard, and which would not?"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Organization Builder",
+                "detail": "Build a chart under a budget; it checks spans, layers and cost",
+                "href": "#/exercise/w08-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Galbraith (1974), Organization Design: An Information Processing View",
+                "href": "#/library/R-galbraith-1974-organization"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let us bring it together."
+            },
+            {
+              "text": "Structure divides work so specialists can go deep, then spends money and attention to reconnect them. The uncertainty of the work sets how much reconnecting you need."
+            },
+            {
+              "text": "Galbraith’s four strategies, Mintzberg’s five mechanisms and the arithmetic of spans tell you how to supply it and what it will cost. And fit is a hypothesis to test, not a label to award after the fact."
+            },
+            {
+              "text": "In player development, for example, differentiation is built in: field coaches on a daily clock, analysts on longer horizons, medical staff bound by health standards. The question is never how to erase those differences, only which mechanism connects them, and at what cost."
+            },
+            {
+              "text": "From here, take the comprehension check below. It is the same check as the written lesson. Then open the Organization Builder, and read Galbraith’s short article, which repays a careful reading.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson is here whenever you want the tables, the methodological note and the executive scenario in full. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

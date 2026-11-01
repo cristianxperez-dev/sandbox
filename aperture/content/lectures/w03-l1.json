@@ -1,0 +1,760 @@
+{
+  "id": "w03-l1-lecture",
+  "lesson": "w03-l1",
+  "title": "Why the Best Training Can Look Like the Worst",
+  "subtitle": "Learning versus performance, retrieval, spacing and interleaving",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 1 of Week 3. It covers the same objectives — the learning–performance distinction, retrieval practice, spacing and interleaving ranked by their evidence, and how to diagnose a training program that rewards performance over learning — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Two hospitals",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 3 · Lesson 1 · Lecture",
+            "title": "Why the best training can look like the worst",
+            "sub": "Learning versus performance"
+          },
+          "cues": [
+            {
+              "text": "Here is an uncomfortable idea to start with. The training session that looks best on the day may be the one that teaches the least."
+            },
+            {
+              "text": "And the session that looks messy, slow and frustrating may be the one people still remember when it matters."
+            },
+            {
+              "text": "Let me show you a scene, and I want you to make a prediction before I explain anything."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Same protocol, two designs",
+            "left": {
+              "title": "Hospital A",
+              "points": [
+                "Polished two-day course",
+                "Instructor walks through it",
+                "Trainees reread a card",
+                "Near-perfect Friday scores"
+              ]
+            },
+            "right": {
+              "title": "Hospital B",
+              "points": [
+                "Same content over three weeks",
+                "Recall from memory first",
+                "Scenarios mixed unpredictably",
+                "More errors, lower ratings"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Two hospitals train new nurses on the same rapid-response protocol. The scenario is hypothetical."
+            },
+            {
+              "text": "Hospital A runs a polished two-day course. Instructors walk through the algorithm, trainees reread a laminated card, and on Friday afternoon nearly everyone passes the checklist.",
+              "reveal": 1
+            },
+            {
+              "text": "Hospital B spreads the same content over three weeks. Every short session begins with trainees trying to rebuild the algorithm from memory before they see it.",
+              "reveal": 2
+            },
+            {
+              "text": "Its scenarios are mixed, so nobody knows which emergency comes next. Its trainees make more mistakes and rate the course as harder and less satisfying."
+            },
+            {
+              "text": "Now picture a real alarm on a night shift, six weeks later."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-hospitals",
+            "type": "choice",
+            "prompt": "Which hospital’s nurses score higher on the Friday of training, and which group is more likely to recall the algorithm correctly six weeks later on a night shift?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Hospital A on Friday, and Hospital A six weeks later."
+              },
+              {
+                "id": "b",
+                "text": "Hospital A on Friday, but Hospital B six weeks later."
+              },
+              {
+                "id": "c",
+                "text": "Hospital B on both occasions."
+              },
+              {
+                "id": "d",
+                "text": "No meaningful difference — the content was identical."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-learning-performance-distinction",
+            "feedback": {
+              "a": "Friday is right, but the research pattern says the ranking tends to flip after a delay. Easy practice produces fluent performance that fades.",
+              "b": "Right. That crossover — easy practice wins now, effortful practice wins later — is the central idea of this week.",
+              "c": "Effortful practice usually looks worse during training, so Hospital A is the likely winner on Friday. The advantage for B shows up after a delay.",
+              "d": "Same content, different design. How practice is arranged changes what survives a delay, even when the material is identical."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "timeline",
+            "title": "The testing-effect experiment",
+            "events": [
+              {
+                "when": "Study",
+                "text": "Read a prose passage, then restudy it or take a recall test"
+              },
+              {
+                "when": "5 minutes",
+                "text": "Restudying wins"
+              },
+              {
+                "when": "2 days",
+                "text": "Testing wins"
+              },
+              {
+                "when": "1 week",
+                "text": "Testing still wins; restudiers were more confident"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "If you chose Hospital A on Friday and Hospital B on the night shift, you already hold the core idea. A classic experiment makes it concrete.",
+              "refs": [
+                "R-roediger-2006-test-enhanced"
+              ]
+            },
+            {
+              "text": "Henry Roediger and Jeffrey Karpicke had students read prose passages, then either restudy them or take a recall test with no feedback.",
+              "reveal": 1,
+              "refs": [
+                "R-roediger-2006-test-enhanced"
+              ]
+            },
+            {
+              "text": "On a test five minutes later, restudying won.",
+              "reveal": 2
+            },
+            {
+              "text": "On tests two days later and one week later, the students who had been tested remembered more.",
+              "reveal": 3,
+              "refs": [
+                "R-roediger-2006-test-enhanced"
+              ]
+            },
+            {
+              "text": "And here is the sting. The students who restudied felt more confident about how much they would remember. Their confidence pointed the wrong way.",
+              "reveal": 4,
+              "refs": [
+                "R-roediger-2006-test-enhanced"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Two quantities that look like one",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Performance is not learning",
+            "left": {
+              "title": "Performance",
+              "points": [
+                "What you see during or right after practice",
+                "Easy to observe",
+                "Can rise without learning"
+              ]
+            },
+            "right": {
+              "title": "Learning",
+              "points": [
+                "A relatively permanent change in capability",
+                "Shows up as retention and transfer",
+                "Must be inferred later"
+              ]
+            },
+            "refs": [
+              "R-soderstrom-2015-learning"
+            ]
+          },
+          "cues": [
+            {
+              "text": "So we need two words, because we have been using one word for two different things."
+            },
+            {
+              "text": "Performance is what a learner does during practice or immediately after it. It is visible, and it is what most dashboards record.",
+              "reveal": 1
+            },
+            {
+              "text": "Learning is a relatively permanent change in capability. It shows up as retention, doing it later, and transfer, doing it under new conditions.",
+              "reveal": 2,
+              "refs": [
+                "R-soderstrom-2015-learning"
+              ]
+            },
+            {
+              "text": "Nicholas Soderstrom and Robert Bjork reviewed decades of research in animal, motor and verbal learning, and the distinction runs through all of it.",
+              "refs": [
+                "R-soderstrom-2015-learning"
+              ]
+            },
+            {
+              "text": "Learning can happen without visible gains in performance. Performance can rise without producing learning. And some manipulations push the two in opposite directions.",
+              "refs": [
+                "R-soderstrom-2015-learning"
+              ]
+            },
+            {
+              "text": "That is why only a test after a delay, or in a changed context, can reveal learning. You cannot see it in the session itself."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Stored well is not the same as easy to reach now.",
+              "Effortful, successful retrieval builds what lasts."
+            ],
+            "sub": "A framing from Bjork’s research program, discussed in Soderstrom and Bjork’s review.",
+            "refs": [
+              "R-soderstrom-2015-learning"
+            ]
+          },
+          "cues": [
+            {
+              "text": "One way to picture this separates two things: how well something is stored, and how easily you can retrieve it at this moment.",
+              "reveal": 0,
+              "refs": [
+                "R-soderstrom-2015-learning"
+              ]
+            },
+            {
+              "text": "Repeating the same thing, rereading, being told the answer, all make retrieval easy right now. Current performance looks great, but little is added to durable storage."
+            },
+            {
+              "text": "Practice that makes retrieval effortful, but still successful, does more to strengthen what will be available later.",
+              "reveal": 1,
+              "refs": [
+                "R-soderstrom-2015-learning"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "Two outcomes, four zones",
+            "x": [
+              "Low in-session performance",
+              "High in-session performance"
+            ],
+            "y": [
+              "Low long-term learning",
+              "High long-term learning"
+            ],
+            "cells": [
+              [
+                "Desirable difficulty: looks worse, lasts",
+                "Rare ideal: fluent and durable"
+              ],
+              [
+                "Undesirable difficulty: confusion without success",
+                "Illusion zone: looks excellent, fades"
+              ]
+            ]
+          },
+          "cues": [
+            {
+              "text": "Put the two quantities on two axes and you get four zones."
+            },
+            {
+              "text": "Top left is desirable difficulty: retrieval, spacing, mixing problems. Practice looks worse, and it lasts.",
+              "reveal": 1
+            },
+            {
+              "text": "Top right is the rare ideal, fluent and durable, usually because the skill is already well learned.",
+              "reveal": 2
+            },
+            {
+              "text": "Bottom left is undesirable difficulty: tasks beyond the learner, overload, confusion without success.",
+              "reveal": 3
+            },
+            {
+              "text": "And bottom right is the illusion zone. Massed repetition, rereading, constant guidance. It looks excellent and it fades. That is where Hospital A lives.",
+              "reveal": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Three desirable difficulties",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "How each difficulty works",
+            "cards": [
+              {
+                "title": "Retrieval practice",
+                "q": "Pull it out of memory, then check",
+                "fail": "Peeking and nodding is rereading in disguise"
+              },
+              {
+                "title": "Spacing",
+                "q": "Same practice, spread across sessions",
+                "fail": "Takes longer on the calendar"
+              },
+              {
+                "title": "Interleaving",
+                "q": "Mix problem types in one session",
+                "fail": "Feels chaotic; the value is in choosing"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Desirable difficulties are conditions that slow down or complicate practice, yet improve retention and transfer. Let’s take the three that matter most."
+            },
+            {
+              "text": "Retrieval practice means pulling information out of memory instead of putting it back in. A low-stakes quiz. Explaining a procedure before checking it. Answering what would you do next before the answer appears.",
+              "reveal": 1
+            },
+            {
+              "text": "The retrieval must be genuinely effortful. Looking at the answer and nodding along is just rereading in disguise."
+            },
+            {
+              "text": "Spacing means spreading the same amount of practice over more sessions. The gaps allow some forgetting, which makes the next retrieval harder and more productive.",
+              "reveal": 2
+            },
+            {
+              "text": "Notice the awkward part for organizations. Spacing takes longer on the calendar, even when total practice time is identical. It collides with the boot-camp model."
+            },
+            {
+              "text": "Interleaving means mixing different kinds of problems within a session. Its value is that it forces a choice.",
+              "reveal": 3
+            },
+            {
+              "text": "In a block of identical problems, you never practice deciding which approach applies. In a mixed set, choosing is part of the task. That matters whenever the real challenge is recognizing what situation you are in."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Ten techniques, one utility rating each."
+            ],
+            "sub": "Dunlosky and colleagues, two thousand thirteen.",
+            "refs": [
+              "R-dunlosky-2013-improving"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Are these three equally well supported? John Dunlosky and colleagues reviewed ten common study techniques and gave each an overall utility rating.",
+              "reveal": 0,
+              "refs": [
+                "R-dunlosky-2013-improving"
+              ]
+            },
+            {
+              "text": "Before I show you the ratings, make a call."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-ranking",
+            "type": "choice",
+            "prompt": "Which pair of techniques received the HIGH utility rating in the review of ten learning techniques?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Rereading and highlighting"
+              },
+              {
+                "id": "b",
+                "text": "Practice testing and distributed practice"
+              },
+              {
+                "id": "c",
+                "text": "Interleaved practice and self-explanation"
+              },
+              {
+                "id": "d",
+                "text": "Summarization and the keyword mnemonic"
+              }
+            ],
+            "answer": "b",
+            "concept": "c-retrieval-practice",
+            "feedback": {
+              "a": "These are the most popular techniques and among the weakest. Both were rated low: they create familiarity, which feels like knowing but is not recall.",
+              "b": "Right. Retrieval practice and spacing have the broadest support of the ten.",
+              "c": "Both were rated moderate. They are promising, but their evidence base was narrower at the time.",
+              "d": "Both were rated low in the review."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Evidence ratings",
+            "cards": [
+              {
+                "title": "High",
+                "q": "Practice testing; distributed practice",
+                "fail": "Broadest support of the ten"
+              },
+              {
+                "title": "Moderate",
+                "q": "Interleaving; elaborative interrogation; self-explanation",
+                "fail": "Promising, narrower evidence base"
+              },
+              {
+                "title": "Low",
+                "q": "Rereading; highlighting; summarization; keyword mnemonic; imagery",
+                "fail": "Familiarity mistaken for recall"
+              }
+            ],
+            "refs": [
+              "R-dunlosky-2013-improving"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Here is the ranking."
+            },
+            {
+              "text": "High utility: practice testing, which is retrieval practice, and distributed practice, which is spacing.",
+              "reveal": 1,
+              "refs": [
+                "R-dunlosky-2013-improving"
+              ]
+            },
+            {
+              "text": "Moderate: interleaved practice, elaborative interrogation and self-explanation. Interleaving sits here because its evidence base was narrower.",
+              "reveal": 2,
+              "refs": [
+                "R-dunlosky-2013-improving"
+              ]
+            },
+            {
+              "text": "Low: summarization, highlighting, the keyword mnemonic, imagery for text, and rereading. The techniques people use most are among the weakest.",
+              "reveal": 3,
+              "refs": [
+                "R-dunlosky-2013-improving"
+              ]
+            },
+            {
+              "text": "One boundary matters. This review concerns academic material: facts, concepts and problem solving. Its strongest conclusions apply to knowledge that must be retrieved later.",
+              "refs": [
+                "R-dunlosky-2013-improving"
+              ]
+            },
+            {
+              "text": "Motor skills have their own literature. A classic laboratory study by Shea and Morgan shows the same learning-versus-performance pattern, but how far it carries into real practice is less certain, as the motor-learning lesson shows.",
+              "refs": [
+                "R-shea-1979-contextual"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Why everyone prefers the wrong condition",
+      "scenes": [
+        {
+          "visual": {
+            "type": "flow",
+            "title": "How easy practice misleads",
+            "steps": [
+              {
+                "label": "Easy condition",
+                "text": "Massed, guided practice"
+              },
+              {
+                "label": "High fluency",
+                "text": "Few errors; feels productive"
+              },
+              {
+                "label": "Misread signal",
+                "text": "Fluency taken as learning"
+              },
+              {
+                "label": "Delay or new context",
+                "text": "Retrieval fails"
+              },
+              {
+                "label": "Wrong lesson",
+                "text": "Blame the learner, not the design"
+              }
+            ],
+            "refs": [
+              "R-soderstrom-2015-learning",
+              "R-roediger-2006-test-enhanced"
+            ]
+          },
+          "cues": [
+            {
+              "text": "If the evidence is this good, why do organizations keep choosing the easy condition? Because the feeling of learning comes from fluency."
+            },
+            {
+              "text": "Massed, repetitive, guided practice keeps the answer close at hand.",
+              "reveal": 1
+            },
+            {
+              "text": "Performance rises quickly, errors are rare, and the session feels productive.",
+              "reveal": 2
+            },
+            {
+              "text": "Learner and instructor both read that fluency as learning, and rate the session highly. Remember the restudiers: they were the confident ones. And Soderstrom and Bjork document the same misreading among learners and instructors across many paradigms.",
+              "reveal": 3,
+              "refs": [
+                "R-roediger-2006-test-enhanced",
+                "R-soderstrom-2015-learning"
+              ]
+            },
+            {
+              "text": "Days later, or under different conditions, retrieval fails.",
+              "reveal": 4
+            },
+            {
+              "text": "And then the wrong lesson is drawn. The failure gets blamed on the learner, the pressure or the context, never on the practice design.",
+              "reveal": 5
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Three limits",
+            "cards": [
+              {
+                "title": "Difficulty is a dose",
+                "q": "The learner must eventually succeed",
+                "fail": "Failure without feedback may teach nothing"
+              },
+              {
+                "title": "Uneven evidence",
+                "q": "Retrieval and spacing are strongest",
+                "fail": "Strong for facts is not strong for a swing"
+              },
+              {
+                "title": "Sometimes you need performance now",
+                "q": "Tomorrow’s inspection, tonight’s game",
+                "fail": "Warm-up repetition may be exactly right"
+              }
+            ],
+            "refs": [
+              "R-dunlosky-2013-improving"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now let me argue against my own story, because three limits keep this idea honest."
+            },
+            {
+              "text": "First, a difficulty is desirable only if the learner can eventually succeed. Retrieval that fails completely with no feedback may teach nothing. Difficulty is a dose, not a virtue.",
+              "reveal": 1
+            },
+            {
+              "text": "Second, the evidence is uneven. Retrieval and spacing rest on broad bodies of work. Interleaving was rated only moderate. A principle that is strong for vocabulary or medical facts is not automatically strong for a surgical knot or a negotiation.",
+              "reveal": 2,
+              "refs": [
+                "R-dunlosky-2013-improving"
+              ]
+            },
+            {
+              "text": "Third, organizations do not only want learning. A team facing tomorrow’s inspection, a pilot about to take a check ride, needs performance now.",
+              "reveal": 3
+            },
+            {
+              "text": "The distinction does not tell you to always choose difficulty. It tells you to know which outcome you are buying."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "An immediate test does not just underestimate.",
+              "It can pick the wrong winner."
+            ],
+            "sub": "When conditions cross over, the retention interval decides the verdict.",
+            "refs": [
+              "R-roediger-2006-test-enhanced"
+            ]
+          },
+          "cues": [
+            {
+              "text": "And one methodological point that is easy to miss."
+            },
+            {
+              "text": "In the testing-effect experiments, the ranking of conditions reversed between the five-minute test and the delayed tests.",
+              "reveal": 0,
+              "refs": [
+                "R-roediger-2006-test-enhanced"
+              ]
+            },
+            {
+              "text": "When two conditions cross over like that, an end-of-session test does not merely underestimate the better method. It picks the wrong winner.",
+              "reveal": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Diagnosing a program",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Buying the evidence cheaply",
+            "steps": [
+              "Run both designs for one cohort",
+              "Add a delayed retention test",
+              "Add a transfer test nobody practiced",
+              "Measure confidence separately from competence",
+              "Announce in advance: the new design will look worse"
+            ]
+          },
+          "cues": [
+            {
+              "text": "So how do you diagnose a training program? Imagine you run a development department. Success rates in practice are rising, satisfaction is at a record high, every module finishes on time."
+            },
+            {
+              "text": "A new staff member proposes a redesign that will make success rates fall and satisfaction drop for a while. Your budget review is in six weeks, and your people are proud of the current numbers."
+            },
+            {
+              "text": "The question is not whether the new design is better. You don’t know yet. The question is what evidence you would need, and how to buy it cheaply."
+            },
+            {
+              "text": "Run both designs for one cohort.",
+              "reveal": 1
+            },
+            {
+              "text": "Add a retention test after a delay long enough for forgetting, ideally matched to how long the skill must last.",
+              "reveal": 2
+            },
+            {
+              "text": "Add a transfer test in conditions neither group practiced, because practice supplies cues that real conditions will not.",
+              "reveal": 3
+            },
+            {
+              "text": "Keep self-ratings separate from performance. Confidence is data about beliefs, not about memory.",
+              "reveal": 4
+            },
+            {
+              "text": "And tell your own leadership in advance that the new design is expected to look worse during sessions. Pre-registering that expectation stops the experiment being killed by the very signal it predicts.",
+              "reveal": 5
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Where the trap hides",
+            "left": {
+              "title": "What dashboards show",
+              "points": [
+                "Quiz minutes after the course",
+                "Success inside each session",
+                "Satisfaction and completion"
+              ]
+            },
+            "right": {
+              "title": "What reveals learning",
+              "points": [
+                "A brief quiz months later",
+                "A cold check after days off",
+                "A transfer check in new conditions"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "The same trap appears everywhere. A bank’s compliance course ends with a quiz minutes after the content, and nearly everyone passes.",
+              "reveal": 1
+            },
+            {
+              "text": "A better design would quiz employees again, briefly, months later, and teach by asking questions first.",
+              "reveal": 2
+            },
+            {
+              "text": "In player development, practice data like strike rates in a bullpen session or contact quality in the cage are performance measures, taken in conditions the practice itself controls."
+            },
+            {
+              "text": "Durable learning shows up later and elsewhere: the first session after a few days off, a different drill, a game. A program that wants to know if its designs work needs scheduled cold checks and transfer checks."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-own-program",
+            "type": "reflect",
+            "prompt": "Name one training program you have led or attended. What did it measure, and when? What single change to its measurement would have told you whether anyone actually learned?",
+            "concept": "c-desirable-difficulties"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Learning Architect",
+                "detail": "Design a practice and measurement plan for this week",
+                "href": "#/exercise/w03-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Soderstrom & Bjork (2015), Learning Versus Performance",
+                "href": "#/library/R-soderstrom-2015-learning"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Performance is what you see during practice. Learning is what remains after a delay and carries into new conditions, and the two can move in opposite directions."
+            },
+            {
+              "text": "Retrieval practice and spacing have the strongest evidence. Interleaving is promising, on a narrower base. All three feel worse while they work, so learners, instructors and dashboards prefer the weaker option."
+            },
+            {
+              "text": "The defense is measurement: delayed tests, transfer tests, and confidence kept apart from competence."
+            },
+            {
+              "text": "Next, take the comprehension check below, the same check as the written lesson. Then open the Learning Architect exercise, and read Soderstrom and Bjork’s review, especially the sections on motor learning, verbal learning and metacognition.",
+              "reveal": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

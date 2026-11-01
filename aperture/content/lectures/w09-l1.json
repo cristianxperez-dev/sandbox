@@ -1,0 +1,890 @@
+{
+  "id": "w09-l1-lecture",
+  "lesson": "w09-l1",
+  "title": "The Plan Nobody Objected To",
+  "subtitle": "What strategy is — and what it is not",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 1. It covers the same objectives — operational effectiveness versus strategic positioning, trade-offs and fit, and rewriting aspirations as a strategy kernel — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "A plan with nothing to object to",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 9 · Lesson 1 · Lecture",
+            "title": "The plan nobody objected to",
+            "sub": "What strategy is — and what it is not"
+          },
+          "cues": [
+            {
+              "text": "Picture a board meeting at a regional health system. The five-year plan is on the table, and the vote is unanimous."
+            },
+            {
+              "text": "Nobody objects. Not one question about what gets cut."
+            },
+            {
+              "text": "I want to argue that the unanimous vote is the warning sign."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "“The most trusted provider of world-class care…”",
+              "Thirty-one initiatives.",
+              "Nothing to object to."
+            ],
+            "sub": "A fictional health system’s five-year plan"
+          },
+          "cues": [
+            {
+              "text": "Here is the strategy statement. To be the most trusted provider of world-class care in the region, through clinical excellence, innovation, a culture of caring and operational efficiency.",
+              "reveal": 0
+            },
+            {
+              "text": "Underneath it sit thirty-one initiatives, each with an owner, a budget line and a dashboard.",
+              "reveal": 1
+            },
+            {
+              "text": "Now a simple test. Name one thing this plan tells the system to stop doing. One kind of patient, service or partner it tells the system to turn away.",
+              "reveal": 2
+            },
+            {
+              "text": "Take a moment. Most people come up empty, and that is the point."
+            },
+            {
+              "text": "The plan lists desirable outcomes and worthy activities. It does not choose. A competitor would learn nothing from it, and any department head could use it to justify almost any budget request."
+            },
+            {
+              "text": "This lecture is about that failure: the absence of choice dressed up as ambition. And it is everywhere. The software company that wants to lead every segment. The law firm promising full-service excellence. The sports organization that will win now and build for the future."
+            },
+            {
+              "text": "By the end, you should be able to ask three questions of any plan. Where is it distinctive? What problem does it solve? And what does it refuse?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Better is not different",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two ways to perform well",
+            "left": {
+              "title": "Operational effectiveness",
+              "points": [
+                "Same activities, done better",
+                "Best practice, benchmarking, technology",
+                "Copied quickly",
+                "Gains drift to customers and suppliers"
+              ]
+            },
+            "right": {
+              "title": "Strategic positioning",
+              "points": [
+                "Different activities, or the same done differently",
+                "Choices about customers, needs, access",
+                "Copied slowly, if built on trade-offs and fit",
+                "Some gains stay with the organization"
+              ]
+            },
+            "refs": [
+              "R-porter-1996-what"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Michael Porter’s nineteen ninety-six essay starts with a distinction most executives skip.",
+              "refs": [
+                "R-porter-1996-what"
+              ]
+            },
+            {
+              "text": "Operational effectiveness means performing similar activities better than rivals. Faster cycle times, fewer defects, lower costs, better use of technology.",
+              "reveal": 1,
+              "refs": [
+                "R-porter-1996-what"
+              ]
+            },
+            {
+              "text": "Strategic positioning means performing different activities from rivals, or similar activities in different ways, so that you deliver a distinctive mix of value.",
+              "reveal": 2,
+              "refs": [
+                "R-porter-1996-what"
+              ]
+            },
+            {
+              "text": "Porter does not say operational effectiveness is unimportant. It is necessary for superior performance. His claim is that it is not sufficient.",
+              "refs": [
+                "R-porter-1996-what"
+              ]
+            },
+            {
+              "text": "Why not? Because its techniques travel. Benchmarking, consultants and best-practice networks spread every improvement across an industry."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "The best-practice treadmill",
+            "steps": [
+              {
+                "label": "One firm improves"
+              },
+              {
+                "label": "Practice diffuses",
+                "text": "Benchmarks, consultants, networks"
+              },
+              {
+                "label": "Rivals converge"
+              },
+              {
+                "label": "Gains pass on",
+                "text": "To customers and suppliers"
+              }
+            ],
+            "refs": [
+              "R-porter-1996-what"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Follow the chain. One firm finds a better way of working.",
+              "reveal": 1
+            },
+            {
+              "text": "Within a few years, the practice has spread through the industry.",
+              "reveal": 2
+            },
+            {
+              "text": "Rivals become more alike. Porter calls this competitive convergence.",
+              "reveal": 3,
+              "refs": [
+                "R-porter-1996-what"
+              ]
+            },
+            {
+              "text": "And when everyone is equally efficient, the gains from all that improvement flow to customers and suppliers, not to any one firm. You are running faster just to stay level.",
+              "reveal": 4,
+              "refs": [
+                "R-porter-1996-what"
+              ]
+            },
+            {
+              "text": "Let me check you can see the difference in a live case."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-oe",
+            "type": "choice",
+            "prompt": "A regional bank matches its rivals’ mobile app features, adopts the same branch-staffing software and cuts processing errors by a third. Its leadership calls this “our strategy”. What is the best description?",
+            "concept": "c-operational-effectiveness",
+            "options": [
+              {
+                "id": "a",
+                "text": "Strategic positioning: the bank now does things differently."
+              },
+              {
+                "id": "b",
+                "text": "Operational effectiveness: necessary, but rivals can match it, so it is unlikely to sustain an advantage."
+              },
+              {
+                "id": "c",
+                "text": "A strategy kernel: it has a diagnosis and coherent actions."
+              },
+              {
+                "id": "d",
+                "text": "Straddling: the bank is occupying two positions at once."
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "The bank is doing the same things as its rivals, only better. Nothing here is different in kind.",
+              "b": "Right. Matching rivals’ practices is operational effectiveness. It is worth doing, but the same tools are available to everyone, so the improvement tends to converge rather than differentiate.",
+              "c": "There is no diagnosis of a critical challenge here, only improvements. Coherent actions need a guiding policy to cohere around.",
+              "d": "Straddling means carrying the costs of two incompatible positions. The bank has not chosen any position yet."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Trade-offs and fit",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Where a position can come from",
+            "cards": [
+              {
+                "title": "Variety",
+                "q": "A particular range of products or services",
+                "fail": "Defensible only with trade-offs"
+              },
+              {
+                "title": "Needs",
+                "q": "Most needs of one customer group",
+                "fail": "Defensible only with trade-offs"
+              },
+              {
+                "title": "Access",
+                "q": "Customers reached differently — geography, scale, channel",
+                "fail": "Defensible only with trade-offs"
+              }
+            ],
+            "refs": [
+              "R-porter-1996-what"
+            ]
+          },
+          "cues": [
+            {
+              "text": "If the bank’s improvements are not a strategy, what would be? Porter describes three sources of a position.",
+              "refs": [
+                "R-porter-1996-what"
+              ]
+            },
+            {
+              "text": "You can serve a particular variety of products or services.",
+              "reveal": 1,
+              "refs": [
+                "R-porter-1996-what"
+              ]
+            },
+            {
+              "text": "You can serve most of the needs of a particular group of customers.",
+              "reveal": 2,
+              "refs": [
+                "R-porter-1996-what"
+              ]
+            },
+            {
+              "text": "Or you can serve customers who differ in how they are accessed: by geography, by scale, by channel.",
+              "reveal": 3,
+              "refs": [
+                "R-porter-1996-what"
+              ]
+            },
+            {
+              "text": "But a position alone is not enough. It becomes defensible only when it involves trade-offs: choices where more of one thing means less of another.",
+              "refs": [
+                "R-porter-1996-what"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "No meals. No assigned seats.",
+              "Customers assemble their own furniture.",
+              "A rival who copies half ends up straddling."
+            ],
+            "sub": "Porter’s illustrations of trade-offs",
+            "refs": [
+              "R-porter-1996-what"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Porter’s illustrations make this concrete. A low-fare airline deliberately offered no meals, no assigned seats and no baggage transfers to other carriers.",
+              "reveal": 0,
+              "refs": [
+                "R-porter-1996-what"
+              ]
+            },
+            {
+              "text": "A furniture retailer had its customers collect and assemble their own furniture.",
+              "reveal": 1,
+              "refs": [
+                "R-porter-1996-what"
+              ]
+            },
+            {
+              "text": "Each choice lowers cost for the specialist. For a rival serving a different customer, the same choice would be a defect."
+            },
+            {
+              "text": "Trade-offs arise for three reasons. Activities that suit one position do not suit another. A reputation for one kind of value is hard to combine with its opposite. And incompatible activities are hard to coordinate.",
+              "refs": [
+                "R-porter-1996-what"
+              ]
+            },
+            {
+              "text": "Now watch what happens when someone copies without accepting the trade-offs. Porter describes a full-service airline that launched a low-fare service on some routes while keeping its full-service apparatus elsewhere.",
+              "reveal": 2,
+              "refs": [
+                "R-porter-1996-what"
+              ]
+            },
+            {
+              "text": "The hybrid matched neither the specialist’s costs nor its own service standard. That is straddling: the costs of two positions and the advantages of neither.",
+              "refs": [
+                "R-porter-1996-what"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Fit: activities that reinforce one another."
+            ],
+            "sub": "Consistency · reinforcement · optimization of effort",
+            "refs": [
+              "R-porter-1996-what"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The last element is fit, the way activities reinforce one another.",
+              "reveal": 0,
+              "refs": [
+                "R-porter-1996-what"
+              ]
+            },
+            {
+              "text": "Porter distinguishes simple consistency with the strategy, activities that actively reinforce each other, and coordination that optimizes effort across the whole system.",
+              "refs": [
+                "R-porter-1996-what"
+              ]
+            },
+            {
+              "text": "A competitor can copy any single practice. Copying the whole system is another matter. Let’s put a number on that, and the numbers here are invented for illustration."
+            },
+            {
+              "text": "Suppose a rival has a ninety percent chance of successfully copying any one of your activities, and each attempt is independent. You run ten activities that only pay off together. What is the chance it copies all ten?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-fit",
+            "type": "estimate",
+            "prompt": "A rival has a 90% chance of copying any one activity, independently. What is the chance it successfully copies all ten of your mutually reinforcing activities?",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "initial": 80,
+            "answer": 35,
+            "tolerance": 5,
+            "concept": "c-activity-fit",
+            "feedback": {
+              "correct": "Right, about 35%. Each copy is likely, but the probabilities multiply across the system.",
+              "incorrect": "It is about 35%. Ninety percent sounds safe for the imitator, but ten independent ninety-percent chances multiply to roughly one in three."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Why systems protect",
+            "lines": [
+              {
+                "label": "Copy one activity",
+                "value": "0.90"
+              },
+              {
+                "label": "Copy two linked activities",
+                "value": "0.9 × 0.9 = 0.81"
+              },
+              {
+                "label": "Copy ten linked activities",
+                "value": "0.9 multiplied ten times"
+              }
+            ],
+            "result": {
+              "label": "Chance of copying the whole system",
+              "value": "≈ 0.35"
+            },
+            "note": "Illustrative numbers, not empirical, from the Lesson 1 example."
+          },
+          "cues": [
+            {
+              "text": "One activity: ninety percent.",
+              "reveal": 1
+            },
+            {
+              "text": "Two linked activities: point nine times point nine, which is eighty-one percent.",
+              "reveal": 2
+            },
+            {
+              "text": "Ten linked activities: point nine multiplied by itself ten times.",
+              "reveal": 3
+            },
+            {
+              "text": "That comes to about thirty-five percent. The individual odds barely changed. The system did the work.",
+              "reveal": 4
+            },
+            {
+              "text": "The numbers are illustrative, not empirical. The logic is robust: when value depends on the combination, the odds of successful imitation multiply. In Porter’s formulation, the essence of strategy is choosing what not to do.",
+              "refs": [
+                "R-porter-1996-what"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "The kernel of a good strategy",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Rumelt’s kernel",
+            "steps": [
+              "Diagnosis — name and explain the critical challenge",
+              "Guiding policy — the overall approach that channels action",
+              "Coherent actions — coordinated, mutually reinforcing commitments"
+            ],
+            "refs": [
+              "R-rumelt-2011-good"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Porter separates strategy from operational improvement. Richard Rumelt separates strategy from goals. His test, drawn from decades of consulting and teaching, works at any level of an organization.",
+              "refs": [
+                "R-rumelt-2011-good"
+              ]
+            },
+            {
+              "text": "A good strategy has a kernel of three parts. First, a diagnosis: it names and explains the critical challenge, the obstacle that, once overcome, unlocks progress.",
+              "reveal": 1,
+              "refs": [
+                "R-rumelt-2011-good"
+              ]
+            },
+            {
+              "text": "Second, a guiding policy: the overall approach to that challenge. It channels and constrains action without specifying every step.",
+              "reveal": 2,
+              "refs": [
+                "R-rumelt-2011-good"
+              ]
+            },
+            {
+              "text": "Third, coherent actions: coordinated commitments of resources and policy that carry out the guiding policy and reinforce one another.",
+              "reveal": 3,
+              "refs": [
+                "R-rumelt-2011-good"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Hallmarks of bad strategy",
+            "cards": [
+              {
+                "title": "Fluff",
+                "q": "Grand language that restates the obvious",
+                "fail": "“World-class care through excellence”"
+              },
+              {
+                "title": "No challenge faced",
+                "q": "The obstacle is never named",
+                "fail": "Nothing to concentrate on"
+              },
+              {
+                "title": "Goals as strategy",
+                "q": "Targets with no route to them",
+                "fail": "Every budget request fits"
+              },
+              {
+                "title": "Bad objectives",
+                "q": "A jumble, or as hard as the problem",
+                "fail": "Thirty-one initiatives"
+              }
+            ],
+            "refs": [
+              "R-rumelt-2011-good"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Rumelt also catalogues what bad strategy looks like. Our health-system plan is a near-perfect specimen.",
+              "refs": [
+                "R-rumelt-2011-good"
+              ]
+            },
+            {
+              "text": "Fluff: grand language that restates the obvious.",
+              "reveal": 1,
+              "refs": [
+                "R-rumelt-2011-good"
+              ]
+            },
+            {
+              "text": "Failure to face the challenge: the plan never names the obstacle.",
+              "reveal": 2,
+              "refs": [
+                "R-rumelt-2011-good"
+              ]
+            },
+            {
+              "text": "Mistaking goals for strategy: most trusted, world-class. Those are destinations, not routes.",
+              "reveal": 3,
+              "refs": [
+                "R-rumelt-2011-good"
+              ]
+            },
+            {
+              "text": "And strategic objectives that are either a jumble of unrelated items or as hard as the original problem. Thirty-one initiatives is a jumble.",
+              "reveal": 4,
+              "refs": [
+                "R-rumelt-2011-good"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "From vision statement to kernel",
+            "left": {
+              "title": "Vision version",
+              "points": [
+                "World-class care through excellence",
+                "Grow across all lines and places",
+                "Thirty-one initiatives",
+                "Stops: nothing"
+              ]
+            },
+            "right": {
+              "title": "Kernel version",
+              "points": [
+                "Diagnosis: patient flow is the binding constraint",
+                "Policy: most reliable for complex inpatient care",
+                "Actions: discharge capacity, on-time surgery starts",
+                "Stops: two suburban clinics, one new service line"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "So let’s rewrite the plan. The facts I’m about to give you are invented for the example."
+            },
+            {
+              "text": "Suppose the analysis shows three things. Emergency departments hold admitted patients because beds are full of people waiting for discharge to rehabilitation and long-term care. Surgery loses money because operating rooms start late and cancel often. And a national competitor is opening clinics in the wealthiest suburbs.",
+              "reveal": 1
+            },
+            {
+              "text": "The diagnosis: patient flow is the binding constraint. Discharge delays fill beds, which blocks admissions and cancels surgery. Growth initiatives will fail until flow improves.",
+              "reveal": 2
+            },
+            {
+              "text": "The guiding policy: become the region’s most reliable system for complex inpatient care. Compete on flow and outcomes, not on outpatient convenience in suburbs it cannot win."
+            },
+            {
+              "text": "The coherent actions: contract with two post-acute operators for guaranteed discharge capacity, reorganize operating-room scheduling around on-time first cases, and redirect the suburban clinic budget to bed flow."
+            },
+            {
+              "text": "And what stops: two suburban clinic openings are paused, and a new service line that would compete for the same beds is declined."
+            },
+            {
+              "text": "Notice three things. The diagnosis is a causal claim that could be wrong and can be checked. The policy rules out attractive options. And the list of what stops is as concrete as the list of what starts."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Prerequisite",
+            "term": "Opportunity cost",
+            "definition": "The value of the best alternative you give up by making a choice.",
+            "example": "Each of thirty-one initiatives costs the stronger version of the others you could have built."
+          },
+          "cues": [
+            {
+              "text": "Underneath all of this sits one economic idea. Opportunity cost is the value of the best alternative you give up by making a choice.",
+              "reveal": 1
+            },
+            {
+              "text": "Budget, leaders’ attention and your best people can each be spent only once. Fund thirty-one initiatives, and the cost of each is the stronger version of the others you could have built.",
+              "reveal": 2
+            },
+            {
+              "text": "So an initiative can be worthwhile on its own and still be a poor choice. And resources that look free rarely are. The analyst with spare capacity, the facility already paid for, the leader’s extra afternoon: all have other uses."
+            },
+            {
+              "text": "The question is never only, is this good? It is, is this better than what we would do instead?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-kernel",
+            "type": "choice",
+            "prompt": "A mid-sized litigation firm’s aspiration is “full-service excellence”. Partner time is increasingly consumed by low-margin document review, while a few regulatory clients generate most of the profit. Which statement is a diagnosis in Rumelt’s sense?",
+            "concept": "c-strategy-kernel",
+            "options": [
+              {
+                "id": "a",
+                "text": "We will be the most respected firm in the region."
+              },
+              {
+                "id": "b",
+                "text": "Partner time is consumed by work clients will not pay premium rates for."
+              },
+              {
+                "id": "c",
+                "text": "Concentrate on complex regulatory matters where judgment commands a premium."
+              },
+              {
+                "id": "d",
+                "text": "Grow revenue by fifteen percent a year."
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "That is an aspiration — fluff in Rumelt’s terms. It names no obstacle and cannot be wrong.",
+              "b": "Right. It names the critical challenge and makes a causal claim that could be checked against the firm’s own data.",
+              "c": "That is the guiding policy — the approach to the challenge. It only makes sense once the diagnosis has been stated.",
+              "d": "That is a goal. Rumelt’s point is that a goal is not a strategy: it says where you want to be, not how you will overcome what is in the way."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Every action implies a refusal."
+            ],
+            "sub": "Diagnose · decide the approach · concentrate · name what stops"
+          },
+          "cues": [
+            {
+              "text": "The firm’s full kernel would follow. Guiding policy: concentrate on complex regulatory matters. Coherent actions: refer or outsource high-volume review, recruit two regulatory specialists, reprice the remaining work."
+            },
+            {
+              "text": "Each action implies a refusal, and the firm will lose some clients it serves today. That loss is the price of the position."
+            },
+            {
+              "text": "The same discipline applies to a player-development philosophy that promises individualized development for every player, cutting-edge technology, elite coaching and a winning culture. A kernel would name the scarcest input, perhaps skilled coaching hours at the lower levels, and concentrate there, with a list of programs to retire."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Plan or pattern?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Intended and realized strategy",
+            "steps": [
+              "Intended: what leaders plan",
+              "Deliberate: intended and realized",
+              "Unrealized: intended, never happened",
+              "Emergent: never intended, happened anyway",
+              "Real strategies sit on a continuum"
+            ],
+            "refs": [
+              "R-mintzberg-1985-strategies"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now let me unsettle everything I’ve said, because the story so far assumes strategy is a choice made at the top."
+            },
+            {
+              "text": "Henry Mintzberg and James Waters separated the intended strategy, what leaders plan, from the realized strategy, the pattern that actually appears in what the organization does.",
+              "reveal": 1,
+              "refs": [
+                "R-mintzberg-1985-strategies"
+              ]
+            },
+            {
+              "text": "Intended strategies that are realized are deliberate.",
+              "reveal": 2,
+              "refs": [
+                "R-mintzberg-1985-strategies"
+              ]
+            },
+            {
+              "text": "Intended strategies that never happen are unrealized.",
+              "reveal": 3,
+              "refs": [
+                "R-mintzberg-1985-strategies"
+              ]
+            },
+            {
+              "text": "And patterns that nobody intended but appear anyway are emergent.",
+              "reveal": 4,
+              "refs": [
+                "R-mintzberg-1985-strategies"
+              ]
+            },
+            {
+              "text": "Purely deliberate and purely emergent strategies are the two ends of a continuum. Real ones sit in between, like an umbrella strategy, where leaders set broad boundaries and let the specifics emerge from people closer to the work.",
+              "reveal": 5,
+              "refs": [
+                "R-mintzberg-1985-strategies"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Where good strategy comes from",
+            "left": {
+              "title": "Positioning view",
+              "points": [
+                "Deliberate analysis",
+                "Choose, accept trade-offs, build fit",
+                "Risk of too little: drift"
+              ]
+            },
+            "right": {
+              "title": "Emergent view",
+              "points": [
+                "Learning by acting",
+                "Plans can blind leaders",
+                "Risk of too much: rigidity"
+              ]
+            },
+            "refs": [
+              "R-porter-1996-what",
+              "R-mintzberg-1985-strategies"
+            ]
+          },
+          "cues": [
+            {
+              "text": "So the two traditions disagree. The positioning view stresses deliberate analysis and commitment.",
+              "reveal": 1,
+              "refs": [
+                "R-porter-1996-what"
+              ]
+            },
+            {
+              "text": "The emergent view stresses learning: organizations often discover what works by acting, and detailed plans can blind leaders to what their own people are already finding.",
+              "reveal": 2,
+              "refs": [
+                "R-mintzberg-1985-strategies"
+              ]
+            },
+            {
+              "text": "Neither side has a decisive empirical win. This is a contested question about which risk is larger in your setting: drift without deliberate choice, or rigidity with too much of it.",
+              "refs": [
+                "R-porter-1996-what",
+                "R-mintzberg-1985-strategies"
+              ]
+            },
+            {
+              "text": "A practical synthesis: decide deliberately on the few commitments that are costly to reverse, and treat the rest as experiments whose results are allowed to change the plan."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Limits of the evidence",
+            "cards": [
+              {
+                "title": "Case-based",
+                "q": "Argued from theory and chosen cases",
+                "fail": "Survivorship: failed trade-offs are unseen"
+              },
+              {
+                "title": "Moving frontier",
+                "q": "Technology can deliver more of both",
+                "fail": "Yesterday’s trade-offs may stop binding"
+              },
+              {
+                "title": "Kernel untested",
+                "q": "A practitioner checklist",
+                "fail": "No study shows kernels outperform"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "And the frameworks themselves deserve skepticism. Neither Porter’s essay nor Rumelt’s book is a statistical test. Both argue from theory and carefully chosen cases.",
+              "reveal": 1,
+              "refs": [
+                "R-porter-1996-what",
+                "R-rumelt-2011-good"
+              ]
+            },
+            {
+              "text": "The examples are mostly winners, so we rarely see the organizations that made equally sharp trade-offs and failed. And success stories are told afterward, when a lucky sequence is easy to describe as a coherent plan."
+            },
+            {
+              "text": "Trade-offs are not permanent either. Online banking lowered cost and raised convenience at once. When technology moves the frontier, re-examine which trade-offs still bind.",
+              "reveal": 2
+            },
+            {
+              "text": "Rumelt’s kernel is a practitioner heuristic, not a tested model. No study shows that plans with a diagnosis outperform plans without one.",
+              "reveal": 3,
+              "refs": [
+                "R-rumelt-2011-good"
+              ]
+            },
+            {
+              "text": "Its value is that each element can be inspected and found wrong. That is more than you can say for a vision statement, which cannot be wrong because it says nothing. Treat these tools as disciplined questions, not validated laws."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-pattern",
+            "type": "reflect",
+            "prompt": "Look at what your own unit actually funded and staffed last year, not what its plan says. What realized strategy does that pattern reveal, and what would a kernel for your unit tell you to stop?",
+            "concept": "c-emergent-strategy"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Three questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Strategy Table",
+                "detail": "Choose a posture and allocate a budget to match it",
+                "href": "#/exercise/w09-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Porter (1996), What Is Strategy?",
+                "href": "#/library/R-porter-1996-what"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Operational effectiveness is necessary but copyable. A defensible position rests on trade-offs and on activities that reinforce each other."
+            },
+            {
+              "text": "Rumelt’s kernel turns that into a test: diagnosis, guiding policy, coherent actions. And Mintzberg reminds us that the strategy you actually have is the pattern in what you do and fund."
+            },
+            {
+              "text": "Next, take the comprehension check below, the same check as the written lesson. Then open the Strategy Table, and read Porter’s essay, What Is Strategy.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson stays here for the full tables, the methodological note and the executive twist. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

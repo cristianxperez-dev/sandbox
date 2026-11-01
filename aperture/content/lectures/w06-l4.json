@@ -1,0 +1,727 @@
+{
+  "id": "w06-l4-lecture",
+  "lesson": "w06-l4",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "title": "Getting Things Done Without Authority",
+  "subtitle": "Influence tactics, issue selling and the ethics of persuasion",
+  "summary": "A narrated, interactive version of Lesson 4. It covers the same objectives — influence tactics by commitment and direction; Dutton and Ashford’s issue selling; compliance principles and their replication record; and tests that separate persuasion from manipulation — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Three requests, no authority",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 6 · Lesson 4 · Lecture",
+            "title": "Getting things done without authority",
+            "sub": "Influence tactics, issue selling and the ethics of persuasion"
+          },
+          "cues": [
+            {
+              "text": "Most executive work is influence without authority. Over peers with their own priorities, over bosses who set the agenda, over partners outside the organization."
+            },
+            {
+              "text": "So the question is not whether you influence. It is how, and what the evidence says about each way."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "One product manager, three asks",
+            "steps": [
+              "Two weeks of a security engineer from another team",
+              "A change to the sales team’s demonstration script",
+              "Her vice president raising a pricing problem with the chief executive"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Meet a hypothetical product manager at a software company. She needs three things she does not control."
+            },
+            {
+              "text": "Two weeks of a security engineer’s time from another team.",
+              "reveal": 1
+            },
+            {
+              "text": "A change to the sales team’s demonstration script.",
+              "reveal": 2
+            },
+            {
+              "text": "And her vice president’s willingness to raise a pricing problem with the chief executive.",
+              "reveal": 3
+            },
+            {
+              "text": "One colleague says: escalate early, copy the vice president on everything, and make it clear the chief executive wants this. Another says: figure out what each person needs, and start there. Keep both in mind."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "What are you trying to produce?",
+            "left": {
+              "title": "Compliance",
+              "points": [
+                "Does what was asked",
+                "Often minimally",
+                "Without believing in it"
+              ]
+            },
+            "right": {
+              "title": "Commitment",
+              "points": [
+                "Agrees inwardly",
+                "Works to make it succeed",
+                "Even where no one can monitor"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "First, define the target outcome. Influence researchers distinguish three."
+            },
+            {
+              "text": "Compliance: the target does what was asked, often minimally, without believing in it.",
+              "reveal": 1
+            },
+            {
+              "text": "Commitment: the target agrees inwardly and works to make the request succeed, including in ways no one can monitor.",
+              "reveal": 2
+            },
+            {
+              "text": "And resistance: refusing, delaying, arguing, or complying in form only."
+            },
+            {
+              "text": "For most changes that matter, compliance is not enough, because the work depends on effort and judgment no one can supervise. The real question is: will they want it to work?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Which tactics build commitment",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Yukl and Tracey’s pattern",
+            "left": {
+              "title": "Most associated with commitment",
+              "points": [
+                "Rational persuasion",
+                "Inspirational appeals",
+                "Consultation"
+              ]
+            },
+            "right": {
+              "title": "Least effective",
+              "points": [
+                "Pressure",
+                "Legitimating tactics",
+                "Coalition tactics"
+              ]
+            },
+            "refs": [
+              "R-yukl-1992-consequences"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Gary Yukl and J. Bruce Tracey studied the tactics managers used with subordinates, peers and bosses, and asked the targets how committed they became.",
+              "refs": [
+                "R-yukl-1992-consequences"
+              ]
+            },
+            {
+              "text": "Three tactics were most associated with commitment. Rational persuasion: logic and evidence. Inspirational appeals: linking the request to the target’s values. And consultation: inviting the target to help shape the plan.",
+              "reveal": 1,
+              "refs": [
+                "R-yukl-1992-consequences"
+              ]
+            },
+            {
+              "text": "Three were least effective. Pressure: demands, threats, persistent checking. Legitimating tactics: appeals to rules, authority or precedent. And coalition tactics: enlisting others to push the target.",
+              "reveal": 2,
+              "refs": [
+                "R-yukl-1992-consequences"
+              ]
+            },
+            {
+              "text": "Notice what that means for the first colleague’s advice. “The chief executive wants this” is a legitimating tactic. It may get a script changed, and leave a quietly unconvinced sales team."
+            },
+            {
+              "text": "And coalition tactics scoring poorly does not contradict Lesson 3. Assembling support for a proposal strengthens its legitimacy. Using allies to push one person feels to that person like being outnumbered. That is pressure in another form."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Ingratiation and exchange:",
+              "worked with peers and subordinates,",
+              "not with the boss."
+            ],
+            "refs": [
+              "R-yukl-1992-consequences"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Direction matters too. Two tactics sit in the middle: ingratiation, building goodwill before a request, and exchange, offering something in return.",
+              "refs": [
+                "R-yukl-1992-consequences"
+              ]
+            },
+            {
+              "text": "They were moderately effective with subordinates and peers.",
+              "reveal": 1,
+              "refs": [
+                "R-yukl-1992-consequences"
+              ]
+            },
+            {
+              "text": "But not with superiors. Think about the product manager’s third request.",
+              "reveal": 2,
+              "refs": [
+                "R-yukl-1992-consequences"
+              ]
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-upward",
+            "type": "choice",
+            "prompt": "The product manager needs her vice president to raise a pricing problem with the chief executive. Based on Yukl and Tracey’s pattern, which opening is most likely to produce commitment?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Offer to take on a project the VP dislikes in return"
+              },
+              {
+                "id": "b",
+                "text": "Present evidence on lost revenue tied to goals the VP owns"
+              },
+              {
+                "id": "c",
+                "text": "Ask two other managers to press the VP as well"
+              },
+              {
+                "id": "d",
+                "text": "Point out that company policy requires raising pricing risks"
+              }
+            ],
+            "answer": "b",
+            "concept": "c-influence-tactics",
+            "feedback": {
+              "a": "That is exchange. It was moderately effective with peers and subordinates, but not upward.",
+              "b": "Right. Rational persuasion is useful in every direction and is the default upward, and linking it to the VP’s own goals adds a sense of shared purpose.",
+              "c": "That is a coalition tactic aimed at one person, among the least associated with commitment. It can feel like ganging up.",
+              "d": "That is a legitimating tactic. It may produce compliance, but rarely commitment."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Why the ranking is softer than it looks",
+            "cards": [
+              {
+                "title": "Common method",
+                "q": "Same person reports tactic and commitment",
+                "fail": "A general impression drives both"
+              },
+              {
+                "title": "Selection",
+                "q": "Pressure used where resistance is expected",
+                "fail": "Pressure looks worse than it is"
+              },
+              {
+                "title": "Labeling",
+                "q": "Liked requests called “persuasion”",
+                "fail": "Resented ones called “pressure”"
+              }
+            ],
+            "refs": [
+              "R-yukl-1992-consequences"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Before you treat that as a law, a methodological caution. This was a correlational field study.",
+              "refs": [
+                "R-yukl-1992-consequences"
+              ]
+            },
+            {
+              "text": "When the same person reports both the tactic and their own commitment, a general impression of the agent can drive both answers.",
+              "reveal": 1
+            },
+            {
+              "text": "Agents choose tactics in light of expected resistance. A manager expecting strong opposition is more likely to use pressure, so pressure may look worse partly because of where it is used.",
+              "reveal": 2
+            },
+            {
+              "text": "And targets may label a request they liked as persuasion, and one they resented as pressure.",
+              "reveal": 3
+            },
+            {
+              "text": "Collecting reports from targets, as Yukl and Tracey did, reduces some of this but not all. The pattern is consistent enough to act on. The precise ranking is less certain than a table makes it look.",
+              "refs": [
+                "R-yukl-1992-consequences"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Selling an issue upward",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Dutton and Ashford’s two levers",
+            "left": {
+              "title": "Packaging",
+              "points": [
+                "Framing: opportunity or threat",
+                "Linking to goals leaders own",
+                "Bundling, or separating"
+              ]
+            },
+            "right": {
+              "title": "Process",
+              "points": [
+                "Timing and windows",
+                "Formal or informal channel",
+                "Who else is involved"
+              ]
+            },
+            "refs": [
+              "R-dutton-1993-selling"
+            ]
+          },
+          "cues": [
+            {
+              "text": "That third request is a special kind of upward influence. Jane Dutton and Susan Ashford called it selling issues.",
+              "refs": [
+                "R-dutton-1993-selling"
+              ]
+            },
+            {
+              "text": "Middle managers shape what top management attends to by drawing attention to trends, problems and opportunities, and framing them.",
+              "refs": [
+                "R-dutton-1993-selling"
+              ]
+            },
+            {
+              "text": "Their framework treats issue selling three ways at once: as upward influence, as claiming that something deserves attention, and as impression management, because the seller’s image is at stake.",
+              "refs": [
+                "R-dutton-1993-selling"
+              ]
+            },
+            {
+              "text": "Whether you even try depends on your perceived chance of success, and on image risk. Whether you succeed depends on two things.",
+              "refs": [
+                "R-dutton-1993-selling"
+              ]
+            },
+            {
+              "text": "Packaging: how the issue is framed, and whether it is bundled with concerns leaders already hold.",
+              "reveal": 1,
+              "refs": [
+                "R-dutton-1993-selling"
+              ]
+            },
+            {
+              "text": "And process: timing, the formality of the channel, and whether others are involved.",
+              "reveal": 2,
+              "refs": [
+                "R-dutton-1993-selling"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "Planning the pricing conversation",
+            "steps": [
+              {
+                "label": "Read",
+                "text": "What is leadership worried about?"
+              },
+              {
+                "label": "Frame",
+                "text": "Revenue goals the VP owns"
+              },
+              {
+                "label": "Channel",
+                "text": "Private first conversation"
+              },
+              {
+                "label": "Involve",
+                "text": "Offer to co-present"
+              },
+              {
+                "label": "Time",
+                "text": "Watch the windows"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Apply it to the pricing problem."
+            },
+            {
+              "text": "Read the context: what is leadership already worried about, and what does raising this now cost?",
+              "reveal": 1
+            },
+            {
+              "text": "Frame it in terms of revenue goals the vice president owns.",
+              "reveal": 2
+            },
+            {
+              "text": "Choose a private first conversation, not a meeting where the vice president could be surprised.",
+              "reveal": 3
+            },
+            {
+              "text": "Offer to co-present, so the vice president does not carry the risk alone.",
+              "reveal": 4
+            },
+            {
+              "text": "And watch the timing. Budget cycles, crises and leadership transitions open and close windows.",
+              "reveal": 5
+            },
+            {
+              "text": "Image risk is real. A nurse raising a staffing risk may be seen as a complainer, unless it is framed around patient-safety goals leaders have publicly committed to."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Compliance principles and their record",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Cialdini’s compliance principles",
+            "steps": [
+              "Reciprocity",
+              "Commitment and consistency",
+              "Social proof",
+              "Liking",
+              "Authority",
+              "Scarcity"
+            ],
+            "refs": [
+              "R-cialdini-2004-social"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now a different research tradition. Robert Cialdini’s program identified principles through which people are moved to comply.",
+              "refs": [
+                "R-cialdini-2004-social"
+              ]
+            },
+            {
+              "text": "Reciprocity: we feel obliged to return favors and concessions.",
+              "reveal": 1
+            },
+            {
+              "text": "Commitment and consistency: we act in line with what we have already said or done.",
+              "reveal": 2
+            },
+            {
+              "text": "Social proof: we look to what similar others do.",
+              "reveal": 3
+            },
+            {
+              "text": "And liking, authority and scarcity.",
+              "reveal": 6
+            },
+            {
+              "text": "In a review with Noah Goldstein, Cialdini organized these around three goals they serve: being accurate, affiliating with others, and keeping a positive self-concept. Much influence, they argued, works subtly, outside awareness.",
+              "refs": [
+                "R-cialdini-2004-social"
+              ]
+            },
+            {
+              "text": "They also stressed norms: descriptive norms, what people do, and injunctive norms, what people approve of.",
+              "refs": [
+                "R-cialdini-2004-social"
+              ]
+            },
+            {
+              "text": "So here is the skeptical question. How much of this replicates?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-replication",
+            "type": "choice",
+            "prompt": "A colleague says: “Compliance principles are proven science — use the techniques and agreement will follow.” What is the most defensible reading of the evidence?",
+            "options": [
+              {
+                "id": "a",
+                "text": "They are proven; every classic effect has replicated"
+              },
+              {
+                "id": "b",
+                "text": "They have been debunked by the replication crisis"
+              },
+              {
+                "id": "c",
+                "text": "They name real mechanisms, but specific effect sizes are uncertain and vary"
+              },
+              {
+                "id": "d",
+                "text": "They work between colleagues exactly as with strangers"
+              }
+            ],
+            "answer": "c",
+            "concept": "c-compliance-principles",
+            "feedback": {
+              "a": "Some classic findings held up well, but others in the broader literature proved smaller or less consistent than early studies suggested.",
+              "b": "Too strong. The door-in-the-face technique, for example, replicated decades later. The picture is mixed, not empty.",
+              "c": "Right. Hold a mixed picture: real mechanisms, uncertain effect sizes, some findings replicating better than others.",
+              "d": "Most experiments involve one-off requests between strangers. Colleagues remember how they were treated, which changes the calculation."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "One direct replication",
+            "items": [
+              {
+                "value": "1975",
+                "label": "original door-in-the-face study"
+              },
+              {
+                "value": "2021",
+                "label": "direct replication on a German campus"
+              },
+              {
+                "value": "410",
+                "label": "people approached"
+              }
+            ],
+            "note": "Genschow and colleagues, 2021.",
+            "refs": [
+              "R-genschow-2021-does"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The picture is mixed, and you should hold it that way."
+            },
+            {
+              "text": "Some classics held up. In the door-in-the-face technique, a large request that is refused increases compliance with a smaller one. Cialdini and colleagues reported it in nineteen seventy-five.",
+              "reveal": 1,
+              "refs": [
+                "R-genschow-2021-does"
+              ]
+            },
+            {
+              "text": "In twenty twenty-one, Oliver Genschow and colleagues replicated it directly on a German university campus,",
+              "reveal": 2,
+              "refs": [
+                "R-genschow-2021-does"
+              ]
+            },
+            {
+              "text": "with four hundred and ten people, finding compliance rates similar to the original, consistent with the reciprocity explanation. The authors caution that this is one replication of one finding.",
+              "reveal": 3,
+              "refs": [
+                "R-genschow-2021-does"
+              ]
+            },
+            {
+              "text": "Other effects in the broader literature proved smaller or less consistent than early studies suggested. And the two thousand four review predates the replication crisis.",
+              "refs": [
+                "R-cialdini-2004-social"
+              ]
+            },
+            {
+              "text": "And there is a mismatch of settings. A technique that wins one request between strangers but feels manipulative once noticed can cost more over the next ten interactions than it gained in the first."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Where persuasion becomes manipulation",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Three ethical tests",
+            "steps": [
+              "Disclosure: would it still work if they knew?",
+              "Interest: does it serve their judgment and interests?",
+              "Reversibility: would you accept it used on you?"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Influence is not ethically neutral, and executives are rarely taught where the lines are. Three practical tests help."
+            },
+            {
+              "text": "The disclosure test: would the approach still work, and would you still be comfortable, if the target knew exactly what you were doing and why? Reasons and consultation pass easily. Manufactured scarcity or a staged concession does not.",
+              "reveal": 1
+            },
+            {
+              "text": "The interest test: does it help the target decide in light of their own interests and values, or does it bypass their judgment?",
+              "reveal": 2
+            },
+            {
+              "text": "The reversibility test: would you accept being influenced this way by someone with the opposite goal?",
+              "reveal": 3
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "Persuasion and manipulation",
+            "x": [
+              "Bypasses judgment",
+              "Engages judgment"
+            ],
+            "y": [
+              "Disregards their interests",
+              "Respects their interests"
+            ],
+            "cells": [
+              [
+                "Paternalistic nudge: contested, needs transparency",
+                "Persuasion: the default"
+              ],
+              [
+                "Manipulation: off limits",
+                "Hard bargaining: legitimate, costly if repeated"
+              ]
+            ]
+          },
+          "cues": [
+            {
+              "text": "Put two of those questions on axes."
+            },
+            {
+              "text": "Respecting the target’s interests but bypassing their judgment is a paternalistic nudge. It is contested, and needs transparency and a defensible reason.",
+              "reveal": 1
+            },
+            {
+              "text": "Respecting interests and engaging judgment is persuasion: honest reasons for a choice that serves the target too. That is the default.",
+              "reveal": 2
+            },
+            {
+              "text": "Exploiting a bias to win agreement against the target’s interest is manipulation. Off limits.",
+              "reveal": 3
+            },
+            {
+              "text": "Honest arguments pursued for your side only is hard bargaining. Legitimate, but costly to trust if repeated.",
+              "reveal": 4
+            },
+            {
+              "text": "One caution about culture. Where relationships carry more of the weight of cooperation, personal appeals may be expected rather than suspect. That is a hypothesis to check against local norms, not a stereotype to apply."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "A vendor says the price expires at five today."
+            ],
+            "sub": "You are now the target."
+          },
+          "cues": [
+            {
+              "text": "As you gain authority, you become the target far more often than the agent. So run the test from the other side."
+            },
+            {
+              "text": "A hypothetical vendor tells you a discount expires at five o’clock today, and no one can explain why."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-ethics",
+            "type": "choice",
+            "prompt": "A vendor presses you to sign today because a discount “expires at five”, with no reason given. Which test most directly exposes the tactic, and what routine follows?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Disclosure: a manufactured deadline would fail if explained; delay decisions made under artificial deadlines"
+              },
+              {
+                "id": "b",
+                "text": "Reversibility: you would use the same tactic, so it is fine"
+              },
+              {
+                "id": "c",
+                "text": "None: scarcity is a proven principle, so the deadline is legitimate"
+              }
+            ],
+            "answer": "a",
+            "concept": "c-ethics-of-influence",
+            "feedback": {
+              "a": "Right. Manufactured scarcity does not survive disclosure. Delaying decisions made under artificial deadlines lets you be persuaded by reasons rather than steered by technique.",
+              "b": "Reversibility asks whether you would accept it from someone with the opposite goal, not whether you would use it yourself.",
+              "c": "Scarcity names a real mechanism, but a deadline with no reason is exactly what fails the disclosure test."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Influence Map",
+                "detail": "Rate power, interest and stance of ten people in a fictional hospital system",
+                "href": "#/exercise/w06-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "French & Raven (1959), The Bases of Social Power",
+                "href": "#/library/R-french-1959-bases"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Picking up from that, let’s bring the lecture together."
+            },
+            {
+              "text": "Reasons, purpose and consultation tend to produce commitment. Pressure, appeals to rules and ganging up tend to produce compliance or resistance. Ingratiation and exchange worked with peers and subordinates, not upward."
+            },
+            {
+              "text": "Issue selling depends on packaging and process, and carries image risk. Compliance principles are real mechanisms with uncertain effect sizes. And if an attempt would fail once disclosed, it is probably manipulation."
+            },
+            {
+              "text": "Next, take the comprehension check below, the same check as the written lesson. Then the Influence Map, and French and Raven’s chapter, this week’s required reading.",
+              "reveal": 1
+            },
+            {
+              "text": "Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,667 @@
+{
+  "id": "w14-l2-lecture",
+  "lesson": "w14-l2",
+  "title": "Borrowed Legitimacy",
+  "subtitle": "Building a function from zero: newness, legitimacy and the first ninety days",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 2. It covers the same objectives — Stinchcombe’s liability of newness and the liability-of-adolescence alternative, research versus first-ninety-days practitioner advice, and sequencing a new function’s early months to turn sponsor-based legitimacy into earned legitimacy — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "What runs out first?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 14 · Lesson 2 · Lecture",
+            "title": "Borrowed legitimacy",
+            "sub": "Newness, legitimacy and the first ninety days"
+          },
+          "cues": [
+            {
+              "text": "Every new unit is launched the same way: a sponsor, a budget and an announcement."
+            },
+            {
+              "text": "A few years later, some are indispensable. Others have been merged, renamed or quietly starved."
+            },
+            {
+              "text": "This lecture is about what separates them, and it is usually not the quality of the idea."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "A delivery unit. A data-science group. A cyber command.",
+              "Same launch. Different fates."
+            ],
+            "sub": "Illustrative types, not specific cases."
+          },
+          "cues": [
+            {
+              "text": "Think of the types. A health ministry creates a delivery unit to push reforms across agencies. A retail bank creates a central data-science group. An army forms a new cyber command. These are illustrative types, not real cases.",
+              "reveal": 0
+            },
+            {
+              "text": "The ones that fade often fail not because the idea was wrong, but because the unit never became part of how the organization actually decides.",
+              "reveal": 1
+            },
+            {
+              "text": "So here is the prediction I want from you before we go further."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-scarce",
+            "type": "choice",
+            "prompt": "In its first year, what is a new internal unit most likely to run short of?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Money"
+              },
+              {
+                "id": "b",
+                "text": "Talent"
+              },
+              {
+                "id": "c",
+                "text": "The trust and relationships of the people whose behavior it needs to change"
+              }
+            ],
+            "answer": "c",
+            "concept": "c-organizational-legitimacy",
+            "feedback": {
+              "a": "The intuitive answer — but money is what the launch announcement provides. The scarcer resource is one you cannot buy with a budget.",
+              "b": "Also intuitive, and hiring can be hard. But talent arrives with the launch too. The research points to something older units accumulate just by having been around.",
+              "c": "Right. Relationships, routines and credibility are what older units have and new ones lack — and they are hard to buy."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "The liability of newness",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Stinchcombe, 1965",
+            "term": "Liability of newness",
+            "definition": "A higher proportion of new organizations fail than old ones — for structural reasons, not weak leaders."
+          },
+          "cues": [
+            {
+              "text": "The intuitive answers are money or talent, because those are what the announcement provides. The research tradition on new organizations points to a third resource."
+            },
+            {
+              "text": "In a nineteen sixty-five chapter, the sociologist Arthur Stinchcombe argued that a higher proportion of new organizations fail than old ones, and that the reasons are structural.",
+              "reveal": 1,
+              "refs": [
+                "R-stinchcombe-1965-social"
+              ]
+            },
+            {
+              "text": "He called the combined effect the liability of newness. It became one of the most tested ideas in organizational sociology.",
+              "refs": [
+                "R-stinchcombe-1965-social"
+              ]
+            },
+            {
+              "text": "He described four mechanisms. Let’s translate each one into the life of an internal function.",
+              "refs": [
+                "R-stinchcombe-1965-social"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Four mechanisms inside an organization",
+            "cards": [
+              {
+                "title": "Roles",
+                "q": "Roles must be invented, then learned",
+                "fail": "Work falls between chairs — write role charters"
+              },
+              {
+                "title": "Routines",
+                "q": "Routines are costly to build",
+                "fail": "Every request a negotiation — set fixed rhythms early"
+              },
+              {
+                "title": "Strangers",
+                "q": "Cooperation among strangers",
+                "fail": "Conflict read as bad faith — joint work, explicit norms"
+              },
+              {
+                "title": "Ties",
+                "q": "No stable ties to those served",
+                "fail": "Work “interesting” but unused — embed liaisons"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "One. New organizations must invent roles and teach them to people who have never performed them. In a new function, nobody, including the new staff, knows exactly what the analyst or the liaison does, so work falls between chairs.",
+              "reveal": 1,
+              "refs": [
+                "R-stinchcombe-1965-social"
+              ]
+            },
+            {
+              "text": "Two. Inventing routines is costly in time, conflict and inefficiency. There is no weekly cadence yet, so every request becomes a negotiation.",
+              "reveal": 2,
+              "refs": [
+                "R-stinchcombe-1965-social"
+              ]
+            },
+            {
+              "text": "Three. New organizations depend on cooperation among strangers, and trust between strangers is thin. Early disagreements get read as bad faith.",
+              "reveal": 3,
+              "refs": [
+                "R-stinchcombe-1965-social"
+              ]
+            },
+            {
+              "text": "Four. They lack stable ties to the people they serve, who have every reason to stay with providers whose behavior they can predict.",
+              "reveal": 4,
+              "refs": [
+                "R-stinchcombe-1965-social"
+              ]
+            },
+            {
+              "text": "That last one is the quiet killer. A new function does not compete with nothing. It competes with habits."
+            },
+            {
+              "text": "The remedies on screen, from role charters to embedded liaisons, are this course’s translation of Stinchcombe, not tested findings."
+            },
+            {
+              "text": "Let’s see if you can diagnose one."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-mechanism",
+            "type": "choice",
+            "prompt": "Eight months in, line managers call a new analytics unit’s reports “really interesting” — then keep asking their long-time contacts in finance for the numbers they actually use. Which mechanism is most directly at work?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Roles must be invented and learned"
+              },
+              {
+                "id": "b",
+                "text": "Routines are costly to build"
+              },
+              {
+                "id": "c",
+                "text": "Cooperation among strangers"
+              },
+              {
+                "id": "d",
+                "text": "No stable ties to those served"
+              }
+            ],
+            "answer": "d",
+            "concept": "c-liability-of-newness",
+            "feedback": {
+              "a": "Role confusion shows up as duplicated work and requests sent to the wrong person. Here the managers know what the unit does; they just do not rely on it.",
+              "b": "Missing routines make every deliverable bespoke. The issue here is not the unit’s cadence but whom the users trust.",
+              "c": "Thin trust inside the team and with partners matters, but the signature here is users staying with established providers.",
+              "d": "Right. The users have sources whose reliability they know. The remedy is embedded liaisons and solving a problem the user names rather than one the unit prefers."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Legitimacy: borrowed and earned",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Sources of legitimacy",
+            "left": {
+              "title": "Borrowed",
+              "points": [
+                "Sponsor authority: “the chief executive created us”",
+                "Arrives on day one",
+                "Decays as attention moves on"
+              ]
+            },
+            "right": {
+              "title": "Earned",
+              "points": [
+                "Results: “they solved my problem”",
+                "Relationships: “I know and trust them”",
+                "Arrive slowly, then compound"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Those managers were withholding something underneath all four mechanisms: legitimacy."
+            },
+            {
+              "text": "Legitimacy is the generalized belief, among the people who matter, that a unit’s actions are appropriate and worth relying on."
+            },
+            {
+              "text": "A new function can draw it from several sources. Its sponsor’s authority. Conformity to accepted standards: we do what serious organizations in this field do. Results. And relationships."
+            },
+            {
+              "text": "Authority-based legitimacy arrives on the first day, and it decays as the sponsor’s attention moves elsewhere.",
+              "reveal": 1
+            },
+            {
+              "text": "Results and relationships arrive slowly, and they compound.",
+              "reveal": 2
+            },
+            {
+              "text": "So here is the central task of a new function’s leader: convert the first kind into the second two, before the first runs out."
+            },
+            {
+              "text": "And remember Week Six. Legitimacy is partly a network property. Earn the trust of one respected line manager and you gain more than a customer. You gain a broker who vouches for you in rooms you never enter."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Newness or adolescence?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "bars",
+            "title": "Honeymoon, then adolescence",
+            "unit": "relative risk",
+            "items": [
+              {
+                "label": "Months 0–6",
+                "value": 2
+              },
+              {
+                "label": "Months 7–12",
+                "value": 4
+              },
+              {
+                "label": "Months 13–18",
+                "value": 7
+              },
+              {
+                "label": "Months 19–24",
+                "value": 6
+              },
+              {
+                "label": "Months 25–36",
+                "value": 4
+              },
+              {
+                "label": "Months 37–48",
+                "value": 3
+              }
+            ],
+            "note": "Synthetic, stylized curve shape for teaching; not data from any study."
+          },
+          "cues": [
+            {
+              "text": "So when is a new unit in most danger? Stinchcombe’s simple version predicts risk is highest at founding and declines with age.",
+              "refs": [
+                "R-stinchcombe-1965-social"
+              ]
+            },
+            {
+              "text": "Josef Brüderl and Rudolf Schüssler contrasted that with a liability of adolescence: risk starts low, rises, and only then declines.",
+              "refs": [
+                "R-bruderl-1990-organizational"
+              ]
+            },
+            {
+              "text": "This chart is invented, a stylized shape for teaching, not data from any study."
+            },
+            {
+              "text": "Early on, risk is low. Their explanation is a honeymoon: new organizations begin with an endowment of resources, commitments and goodwill that carries them for a while.",
+              "reveal": 1,
+              "refs": [
+                "R-bruderl-1990-organizational"
+              ]
+            },
+            {
+              "text": "Then risk climbs.",
+              "reveal": 2
+            },
+            {
+              "text": "The dangerous period comes when that endowment is used up before the organization has proven itself.",
+              "reveal": 3,
+              "refs": [
+                "R-bruderl-1990-organizational"
+              ]
+            },
+            {
+              "text": "Only after that does each additional period of survival make the next one safer.",
+              "reveal": 4
+            },
+            {
+              "text": "Researchers describe this with a hazard rate: the chance of failing in a short period, given survival up to its start.",
+              "reveal": 5
+            },
+            {
+              "text": "Which shape appears depends on the population studied and on how initial resources are taken into account. The debate is about the shape of the curve, not whether newness creates risk.",
+              "reveal": 6,
+              "refs": [
+                "R-stinchcombe-1965-social",
+                "R-bruderl-1990-organizational"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "What must be true before the honeymoon ends?"
+            ],
+            "sub": "Usually: the first budget cycle judged on results, not hope."
+          },
+          "cues": [
+            {
+              "text": "For an internal function, the honeymoon is concrete. A sponsor’s attention. A first-year budget approved on promise. Colleagues willing to give a new team the benefit of the doubt."
+            },
+            {
+              "text": "All three are depreciating assets."
+            },
+            {
+              "text": "So the practical question is not only how to survive the launch. It is what must be true before the honeymoon ends, typically at the first budget cycle in which the unit is judged on results rather than on hope."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Ninety days: a practitioner horizon",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Research and playbooks, side by side",
+            "left": {
+              "title": "Research on new organizations",
+              "points": [
+                "Structural fragility; risk may peak later",
+                "Little direct evidence on sequencing",
+                "Window depends on the initial endowment"
+              ]
+            },
+            "right": {
+              "title": "First-ninety-days playbooks",
+              "points": [
+                "Learn, diagnose, agree expectations",
+                "Secure early wins",
+                "Ninety days as a planning convention"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Most practical guidance on starting a leadership role comes from practitioners. Among the most widely used is Michael Watkins’s The First Ninety Days, first published in two thousand three and updated in two thousand thirteen.",
+              "refs": [
+                "R-watkins-2013-first"
+              ]
+            },
+            {
+              "text": "Watkins organizes a transition around tasks such as accelerating your learning, matching strategy to the situation, negotiating success with your boss and securing early wins.",
+              "refs": [
+                "R-watkins-2013-first"
+              ]
+            },
+            {
+              "text": "His situational typology, start-up, turnaround, accelerated growth, realignment and sustaining success, argues that what you do first depends on what you inherited. A new function is a start-up: nothing to fix, everything to build. The main risk is building the wrong thing well.",
+              "refs": [
+                "R-watkins-2013-first"
+              ],
+              "say": "His situational typology, start up, turnaround, accelerated growth, realignment and sustaining success, argues that what you do first depends on what you inherited. A new function is a start up: nothing to fix, everything to build. The main risk is building the wrong thing well."
+            },
+            {
+              "text": "Now set the two traditions side by side. The research explains why new units are fragile, from whole-organization mortality data. It says little directly about sequencing inside firms.",
+              "reveal": 1
+            },
+            {
+              "text": "The playbooks give sequencing advice from practitioner experience. Plausible, but untested by controlled studies, and no replication literature exists for its prescriptions.",
+              "reveal": 2,
+              "refs": [
+                "R-watkins-2013-first"
+              ]
+            },
+            {
+              "text": "Where both agree is on what creates durable standing: stable ties to those served, and routines others depend on. The mechanism is well argued; the magnitudes are unknown."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "A new office’s first year",
+            "steps": [
+              {
+                "label": "Weeks 1–4",
+                "text": "Listen and map"
+              },
+              {
+                "label": "Weeks 5–10",
+                "text": "One problem, one partner"
+              },
+              {
+                "label": "Weeks 11–16",
+                "text": "Routines"
+              },
+              {
+                "label": "Months 5–9",
+                "text": "Rights and ties"
+              },
+              {
+                "label": "Months 10–12",
+                "text": "Prove and renew"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Here is one defensible sequence, for a hypothetical city Office of Performance and Data with four staff and a mayor’s mandate."
+            },
+            {
+              "text": "Weeks one to four: listen and map. Ask each department head which decisions they find hardest and which data they distrust.",
+              "reveal": 1
+            },
+            {
+              "text": "Weeks five to ten: choose one department that wants help with a problem it names, and deliver a modest, finished answer.",
+              "reveal": 2
+            },
+            {
+              "text": "Weeks eleven to sixteen: set a fixed monthly cadence with that partner, and publish what the office will and will not do.",
+              "reveal": 3
+            },
+            {
+              "text": "Months five to nine: agree written decision rights with the mayor’s office and two more departments, and embed a liaison.",
+              "reveal": 4
+            },
+            {
+              "text": "Months ten to twelve: present results in your partners’ words at the first budget review, and ask for the next mandate.",
+              "reveal": 5
+            },
+            {
+              "text": "Notice what is missing: a city-wide dashboard in month one, or a public scorecard ranking departments. Done early, each spends legitimacy the office has not yet earned."
+            },
+            {
+              "text": "The sequence trades speed of visible activity for durability of standing. Which raises a question about early wins."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-early-win",
+            "type": "choice",
+            "prompt": "In week six, a new unit launches a polished executive dashboard with a launch email from the sponsor. Users did not ask for it, and nobody owns its maintenance. By the receiver’s test, what is it?",
+            "options": [
+              {
+                "id": "a",
+                "text": "An early win — it is visible and fast."
+              },
+              {
+                "id": "b",
+                "text": "A publicity win — its value lies mainly in the announcement."
+              },
+              {
+                "id": "c",
+                "text": "A routine — it will create a regular cadence."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-early-wins",
+            "feedback": {
+              "a": "Visible and fast is exactly the temptation. Ask whether users would value it if it came from someone else — nobody asked for it.",
+              "b": "Right. A win borrowed from the future: a dashboard nobody maintains by month nine damages credibility more than no dashboard.",
+              "c": "A routine is a reliable rhythm others depend on. An unowned one-off product is the opposite."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Cautions and the spine of year one",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Three cautions",
+            "cards": [
+              {
+                "title": "An analogy",
+                "q": "Mortality research studies whole organizations",
+                "fail": "Internal units are merged or starved, not dissolved"
+              },
+              {
+                "title": "Early wins",
+                "q": "Visible, fast projects",
+                "fail": "Publicity wins borrowed from the future"
+              },
+              {
+                "title": "“Ninety days”",
+                "q": "A planning convention",
+                "fail": "Plan to the first serious resource review"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now, the limits of everything I have just told you."
+            },
+            {
+              "text": "First, the newness research is about whole organizations, whose death is a recordable event. An internal unit rarely dies that way. Applying it inside a firm is a reasonable analogy, not a tested result. Say so when you use it.",
+              "reveal": 1,
+              "refs": [
+                "R-stinchcombe-1965-social"
+              ]
+            },
+            {
+              "text": "Second, the early-wins advice has a dark side. Under pressure, leaders pick projects that are visible and fast, which are not always the ones that matter.",
+              "reveal": 2
+            },
+            {
+              "text": "Third, ninety days carries false precision. Organizations run on budget cycles, seasons and board calendars. The real window is the time until your first serious resource review: four months, or fourteen.",
+              "reveal": 3,
+              "refs": [
+                "R-watkins-2013-first"
+              ]
+            },
+            {
+              "text": "And a word on evidence. Advice from leaders whose launches succeeded omits those who followed the same advice and failed. Population studies avoid that, but they infer the mechanisms rather than measure them. Neither is a randomized test.",
+              "refs": [
+                "R-stinchcombe-1965-social",
+                "R-bruderl-1990-organizational"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Your sponsor leaves in month five.",
+              "What legitimacy is left?"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Here is the stress test. The executive who created your function takes a job elsewhere in month five. Your borrowed legitimacy just fell sharply, and the successor did not choose you.",
+              "reveal": 0
+            },
+            {
+              "text": "What remains is whatever you earned. A function that built relationships with line managers and delivered work they asked for can survive. One that relied on the sponsor’s name to get meetings often cannot.",
+              "reveal": 1
+            },
+            {
+              "text": "So brief the successor early. Bring evidence of value in the words of the people you serve. And ask explicitly for the decision rights you need, rather than assuming the old mandate carries over."
+            },
+            {
+              "text": "One application. A new department in professional baseball faces the same mechanisms, and the season is a hard calendar on which the honeymoon expires. The adolescence pattern argues for holding the hard decision-rights conversations before the first off-season budget review, not after."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-reflect",
+            "type": "reflect",
+            "prompt": "Apply the argument to a function you lead or might build. When is its first serious resource review? By that date, what results-based and relationship-based legitimacy must exist — and which decision rights are still only borrowed from a sponsor?",
+            "concept": "c-liability-of-adolescence"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "The same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Decision Presentation Studio",
+                "detail": "Draft and defend a decision opening",
+                "href": "#/exercise/w14-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Klein (2007), Performing a Project Premortem",
+                "href": "#/library/R-klein-2007-performing"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s pull it together."
+            },
+            {
+              "text": "New functions are fragile for structural reasons: roles, routines, trust and ties take time to build."
+            },
+            {
+              "text": "Some are protected at first by their endowment and are most vulnerable when it runs out. Practitioner playbooks help with sequencing, but they are not evidence."
+            },
+            {
+              "text": "Listen, solve one named problem, build routines, secure written rights, then prove value in your users’ words, before the borrowed legitimacy runs out."
+            },
+            {
+              "text": "Next, take the comprehension check, the same as the written lesson. Then open the Decision Presentation Studio, and read Gary Klein’s short piece on the premortem.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson holds the full tables and methodological notes. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

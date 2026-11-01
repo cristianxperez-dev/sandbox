@@ -1,0 +1,823 @@
+{
+  "id": "w02-l2-lecture",
+  "lesson": "w02-l2",
+  "title": "When Rewards Backfire — and When They Don’t",
+  "subtitle": "Self-determination, rewards and crowding out",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 2. It covers the same objectives — self-determination theory’s autonomous and controlled motivation and its three needs, the conditions under which rewards do and do not undermine intrinsic motivation, and how intrinsic motivation and incentives jointly predict performance — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "The day-care puzzle",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 2 · Lesson 2 · Lecture",
+            "title": "When rewards backfire — and when they don’t",
+            "sub": "Self-determination, rewards and crowding out"
+          },
+          "cues": [
+            {
+              "text": "Two claims dominate popular writing on motivation. Pay people for what you want. And money destroys intrinsic motivation."
+            },
+            {
+              "text": "By the end of this lecture, you'll see why both are half right, and how to decide which half applies to a given piece of work."
+            },
+            {
+              "text": "Let's start with a prediction."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Parents arrive late.",
+              "A modest fine is introduced.",
+              "What happens to late pickups?"
+            ],
+            "refs": [
+              "R-gneezy-2011-when"
+            ]
+          },
+          "cues": [
+            {
+              "text": "A group of day-care centers has a problem. Some parents arrive late to collect their children, and a teacher has to stay behind.",
+              "reveal": 0
+            },
+            {
+              "text": "Management introduces a modest fine for late pickup.",
+              "reveal": 1
+            },
+            {
+              "text": "What happens to the number of late pickups? And what happens later, when the fine is removed?",
+              "reveal": 2
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-daycare",
+            "type": "choice",
+            "concept": "c-motivation-crowding-out",
+            "prompt": "Day-care centers introduce a modest fine for late pickup, and later remove it. What happened to late pickups in the field experiment?",
+            "options": [
+              {
+                "id": "a",
+                "text": "They fell, and stayed low after the fine was removed."
+              },
+              {
+                "id": "b",
+                "text": "They fell while the fine applied, then returned to the old level."
+              },
+              {
+                "id": "c",
+                "text": "They rose, and stayed high after the fine was removed."
+              },
+              {
+                "id": "d",
+                "text": "They did not change."
+              }
+            ],
+            "answer": "c",
+            "feedback": {
+              "a": "This is the standard price prediction, and most people make it. The fine did something besides raise the price of lateness.",
+              "b": "A reasonable guess if the fine were only a price. In the experiment, late pickups went the other way.",
+              "c": "Right. Late pickups rose after the fine was introduced, and stayed high after it was removed. The next scene explains why.",
+              "d": "The fine had a clear effect — just not the intended one."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Late pickups rose.",
+              "They stayed high after the fine was removed."
+            ],
+            "sub": "The fine changed what lateness meant.",
+            "refs": [
+              "R-gneezy-2011-when"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Most people predict a decline. In the field experiment that Gneezy, Meier and Rey-Biel discuss, conducted in Israeli day-care centers, late pickups rose after the fine was introduced.",
+              "reveal": 0,
+              "refs": [
+                "R-gneezy-2011-when"
+              ]
+            },
+            {
+              "text": "And they stayed high after the fine was removed.",
+              "reveal": 1,
+              "refs": [
+                "R-gneezy-2011-when"
+              ]
+            },
+            {
+              "text": "The standard economic prediction treated the fine as a price increase on lateness. But the fine did something else. It changed what lateness meant."
+            },
+            {
+              "text": "Before, being late meant imposing on a teacher who stayed out of goodwill. Afterwards, it was a service you could buy, at a price lower than many parents expected the guilt to cost."
+            },
+            {
+              "text": "The fine supplied a new frame, and the old frame didn't come back when the price disappeared. This lecture is about that second channel: what incentives communicate, and how they interact with the reasons people already have for their work."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Motivation differs in kind",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two kinds of motivation",
+            "refs": [
+              "R-ryan-2000-self"
+            ],
+            "left": {
+              "title": "Autonomous",
+              "points": [
+                "Interest in the activity",
+                "Or its value, internalized"
+              ]
+            },
+            "right": {
+              "title": "Controlled",
+              "points": [
+                "Rewards and punishments",
+                "Guilt",
+                "Wanting to look good"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Self-determination theory, developed by Edward Deci and Richard Ryan, starts from a simple claim. The most important question isn't how much motivation someone has. It's what kind.",
+              "reveal": 0,
+              "refs": [
+                "R-ryan-2000-self"
+              ]
+            },
+            {
+              "text": "Autonomous motivation comes from interest in the activity itself, or from having internalized its value.",
+              "reveal": 1,
+              "refs": [
+                "R-ryan-2000-self"
+              ]
+            },
+            {
+              "text": "Controlled motivation comes from pressure: rewards, punishments, guilt, or the wish to look good.",
+              "reveal": 2,
+              "refs": [
+                "R-ryan-2000-self"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Three proposed needs",
+            "refs": [
+              "R-ryan-2000-self"
+            ],
+            "cards": [
+              {
+                "title": "Autonomy",
+                "q": "Feeling that my actions are self-endorsed",
+                "fail": "Supported by plans people help design"
+              },
+              {
+                "title": "Competence",
+                "q": "Feeling effective",
+                "fail": "Supported by feedback framed as information about progress"
+              },
+              {
+                "title": "Relatedness",
+                "q": "Feeling connected to others",
+                "fail": "Supported by trusted relationships"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "The theory proposes three basic psychological needs. When a setting supports them, autonomous motivation is fostered.",
+              "reveal": 0,
+              "refs": [
+                "R-ryan-2000-self"
+              ]
+            },
+            {
+              "text": "Autonomy: feeling that your actions are self-endorsed.",
+              "reveal": 1
+            },
+            {
+              "text": "Competence: feeling effective.",
+              "reveal": 2
+            },
+            {
+              "text": "Relatedness: feeling connected to others.",
+              "reveal": 3
+            },
+            {
+              "text": "Note the word proposed. These are the theory's claims about what people need, and it proposes them as universal.",
+              "refs": [
+                "R-ryan-2000-self"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "From pressure to identity",
+            "refs": [
+              "R-ryan-2000-self"
+            ],
+            "steps": [
+              {
+                "label": "Amotivation",
+                "text": "No intention to act"
+              },
+              {
+                "label": "External",
+                "text": "For a reward, or to avoid a sanction"
+              },
+              {
+                "label": "Introjected",
+                "text": "To avoid guilt or protect self-image"
+              },
+              {
+                "label": "Identified",
+                "text": "Because I value the outcome"
+              },
+              {
+                "label": "Integrated",
+                "text": "The value is part of who I am"
+              },
+              {
+                "label": "Intrinsic",
+                "text": "The activity itself is enjoyable"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Here's the part popular accounts usually miss. The theory does not treat extrinsic motivation as uniformly bad.",
+              "reveal": 0,
+              "refs": [
+                "R-ryan-2000-self"
+              ]
+            },
+            {
+              "text": "It describes a continuum. At one end, amotivation: no intention to act at all.",
+              "reveal": 1
+            },
+            {
+              "text": "Then external regulation: doing it for the reward, or to avoid a sanction.",
+              "reveal": 2
+            },
+            {
+              "text": "Introjected regulation: doing it to avoid guilt or protect your self-image.",
+              "reveal": 3
+            },
+            {
+              "text": "Identified regulation: doing it because you value the outcome.",
+              "reveal": 4
+            },
+            {
+              "text": "Integrated regulation: the value has become part of who you are.",
+              "reveal": 5
+            },
+            {
+              "text": "And at the far end, intrinsic motivation: the activity itself is interesting or enjoyable.",
+              "reveal": 6
+            },
+            {
+              "text": "So extrinsically motivated work can become autonomous when people understand and endorse its purpose. Picture a compliance officer who finds documentation dull, yet does it autonomously because she values what it protects.",
+              "refs": [
+                "R-ryan-2000-self"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "When rewards undermine",
+      "scenes": [
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "Rewards in the laboratory",
+            "refs": [
+              "R-deci-1999-meta"
+            ],
+            "items": [
+              {
+                "value": "128",
+                "label": "experiments in the meta-analysis"
+              },
+              {
+                "value": "Free choice",
+                "label": "later voluntary engagement with an interesting task"
+              }
+            ],
+            "note": "Deci, Koestner and Ryan (1999)."
+          },
+          "cues": [
+            {
+              "text": "So when do rewards actually hurt? Deci, Koestner and Ryan pooled one hundred twenty-eight experiments in a meta-analysis.",
+              "reveal": 1,
+              "refs": [
+                "R-deci-1999-meta"
+              ]
+            },
+            {
+              "text": "The outcome was specific: people's later, freely chosen engagement with an interesting task. What do they do when the reward is gone and nobody is watching?",
+              "reveal": 2,
+              "refs": [
+                "R-deci-1999-meta"
+              ]
+            },
+            {
+              "text": "The answer depended on the reward."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Reward features and their effects",
+            "refs": [
+              "R-deci-1999-meta"
+            ],
+            "cards": [
+              {
+                "title": "Expected, tangible, task-contingent",
+                "q": "Undermines",
+                "fail": "Felt as control over behavior"
+              },
+              {
+                "title": "Unexpected tangible reward",
+                "q": "Little effect",
+                "fail": "Could not have controlled the choice"
+              },
+              {
+                "title": "Positive verbal feedback",
+                "q": "Tends to enhance",
+                "fail": "Informs competence"
+              },
+              {
+                "title": "Uninteresting task",
+                "q": "Little effect",
+                "fail": "Little intrinsic motivation to lose"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Expected, tangible rewards made contingent on doing, completing or performing well at the task reduced later free-choice intrinsic motivation.",
+              "reveal": 1,
+              "refs": [
+                "R-deci-1999-meta"
+              ]
+            },
+            {
+              "text": "An unexpected tangible reward, handed over after the task, had little effect. It couldn't have controlled the choice to engage.",
+              "reveal": 2
+            },
+            {
+              "text": "Positive verbal feedback tended to enhance intrinsic motivation.",
+              "reveal": 3,
+              "refs": [
+                "R-deci-1999-meta"
+              ]
+            },
+            {
+              "text": "And if the task wasn't interesting to begin with, there was little intrinsic motivation to undermine.",
+              "reveal": 4
+            },
+            {
+              "text": "The authors explain the pattern with cognitive evaluation theory, a part of self-determination theory. A reward experienced as controlling reduces felt autonomy. A reward experienced as informational, telling you you're competent, does not.",
+              "refs": [
+                "R-deci-1999-meta"
+              ]
+            },
+            {
+              "text": "Keep the setting in mind: laboratory tasks, mostly short sessions. Now apply the mechanism."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-framing",
+            "type": "choice",
+            "concept": "c-self-determination-theory",
+            "prompt": "A manager wants to recognize an analyst’s excellent, self-initiated risk review without undermining her interest in this kind of work. Which message best fits cognitive evaluation theory?",
+            "options": [
+              {
+                "id": "a",
+                "text": "“Do three more of these and you’ll get the bonus we agreed.”"
+              },
+              {
+                "id": "b",
+                "text": "“Your review caught a risk nobody else saw — that is strong, careful work.”"
+              },
+              {
+                "id": "c",
+                "text": "“Keep this up, or the bonus goes away.”"
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "An expected, tangible reward made contingent on doing the task is the pattern most associated with undermining later free-choice interest.",
+              "b": "Right. Specific positive feedback informs competence rather than controlling behavior, and in the experiments that kind of reward tended to enhance intrinsic motivation.",
+              "c": "This frames the reward as control, with a threat attached — the feature that reduces felt autonomy."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two effects of every incentive",
+            "refs": [
+              "R-gneezy-2011-when"
+            ],
+            "left": {
+              "title": "Price effect",
+              "points": [
+                "Makes the behavior costlier or more rewarding",
+                "What standard economics predicts"
+              ]
+            },
+            "right": {
+              "title": "Psychological effect",
+              "points": [
+                "Changes what the task means",
+                "Changes what the behavior signals"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "If you chose the specific recognition, you have the core distinction: information about competence, not control over behavior."
+            },
+            {
+              "text": "The day-care case shows a related but distinct mechanism, which economists call motivation crowding out.",
+              "reveal": 0,
+              "refs": [
+                "R-gneezy-2011-when"
+              ]
+            },
+            {
+              "text": "Gneezy, Meier and Rey-Biel argue that an incentive has two effects at once. First, the direct price effect that standard economics predicts.",
+              "reveal": 1,
+              "refs": [
+                "R-gneezy-2011-when"
+              ]
+            },
+            {
+              "text": "Second, a psychological effect on how people interpret the task, and what their behavior signals.",
+              "reveal": 2,
+              "refs": [
+                "R-gneezy-2011-when"
+              ]
+            },
+            {
+              "text": "When the second runs opposite to the first, and is larger, incentives backfire. That's the day-care fine."
+            },
+            {
+              "text": "Payments can also weaken the image value of doing good. Volunteering looks less virtuous when it's paid. And paying for a task can teach people that it must be unpleasant.",
+              "refs": [
+                "R-gneezy-2011-when"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Jointly, not instead",
+      "scenes": [
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "Forty years of performance evidence",
+            "refs": [
+              "R-cerasoli-2014-intrinsic"
+            ],
+            "items": [
+              {
+                "value": "183",
+                "label": "samples across school, work and physical domains"
+              },
+              {
+                "value": "200,000+",
+                "label": "participants"
+              },
+              {
+                "value": "Medium to strong",
+                "label": "link between intrinsic motivation and performance"
+              }
+            ],
+            "note": "Cerasoli, Nicklin and Ford (2014)."
+          },
+          "cues": [
+            {
+              "text": "If the story ended there, you might conclude that incentives should be avoided. It doesn't end there."
+            },
+            {
+              "text": "Cerasoli, Nicklin and Ford ran a forty-year meta-analysis covering one hundred eighty-three samples across school, work and physical domains,",
+              "reveal": 1,
+              "refs": [
+                "R-cerasoli-2014-intrinsic"
+              ]
+            },
+            {
+              "text": "with more than two hundred thousand participants.",
+              "reveal": 2,
+              "refs": [
+                "R-cerasoli-2014-intrinsic"
+              ]
+            },
+            {
+              "text": "Intrinsic motivation predicted performance with medium to strong correlations, and it stayed predictive when incentives were present.",
+              "reveal": 3,
+              "refs": [
+                "R-cerasoli-2014-intrinsic"
+              ]
+            },
+            {
+              "text": "Two refinements make this useful for design."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "What each relates to most",
+            "refs": [
+              "R-cerasoli-2014-intrinsic"
+            ],
+            "left": {
+              "title": "Intrinsic motivation",
+              "points": [
+                "More closely tied to quality",
+                "Matters more when incentives are indirect"
+              ]
+            },
+            "right": {
+              "title": "Incentives",
+              "points": [
+                "More closely tied to quantity",
+                "Direct ties shrink intrinsic motivation’s role"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "First, the authors report that intrinsic motivation was more closely related to the quality of performance,",
+              "reveal": 1,
+              "refs": [
+                "R-cerasoli-2014-intrinsic"
+              ]
+            },
+            {
+              "text": "and incentives more closely related to its quantity.",
+              "reveal": 2,
+              "refs": [
+                "R-cerasoli-2014-intrinsic"
+              ]
+            },
+            {
+              "text": "Second, salience mattered. When incentives were directly tied to performance, intrinsic motivation was a weaker predictor. When incentives were only indirectly tied, it was stronger.",
+              "refs": [
+                "R-cerasoli-2014-intrinsic"
+              ]
+            },
+            {
+              "text": "A caution. Much of this evidence is correlational. Interest might drive performance, doing well might make work enjoyable, or ability might drive both. And the salience finding compares studies rather than randomly assigning salience."
+            },
+            {
+              "text": "The undermining experiments have the opposite profile: strong causal evidence in artificial settings. Neither alone answers a compensation committee's question. Together, they justify a cautious claim: how incentives are framed and coupled to output plausibly changes how much intrinsic motivation contributes."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "Where direct incentives fit",
+            "x": [
+              "Mostly volume, easily measured",
+              "Mostly quality and judgment"
+            ],
+            "y": [
+              "Low interest in the task",
+              "High interest in the task"
+            ],
+            "cells": [
+              [
+                "Can raise volume; watch voluntary extra effort",
+                "Protect autonomy; informational recognition"
+              ],
+              [
+                "Direct incentives tend to raise output",
+                "Invest in selection, standards and review"
+              ]
+            ]
+          },
+          "cues": [
+            {
+              "text": "Put that together and you get a design heuristic. It's drawn from the evidence, but it is a heuristic, not a measured model."
+            },
+            {
+              "text": "Where interest is high and the work is mostly volume, incentives can raise output, but watch for crowding out of voluntary extra effort.",
+              "reveal": 1
+            },
+            {
+              "text": "Where interest is high and the work is mostly quality and judgment, protect autonomy. Use informational recognition and indirect rewards rather than tight pay for output.",
+              "reveal": 2
+            },
+            {
+              "text": "Where interest is low and the work is volume, direct incentives tend to raise output, with little intrinsic motivation at stake.",
+              "reveal": 3
+            },
+            {
+              "text": "And where interest is low but quality matters, incentives struggle to reach what counts. Invest in selection, standards and review.",
+              "reveal": 4
+            },
+            {
+              "text": "Try it on a case."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-discharge",
+            "type": "choice",
+            "concept": "c-intrinsic-extrinsic-motivation",
+            "prompt": "A hypothetical teaching hospital wants to cut a backlog of discharge summaries. The task is high-volume and low in interest, but quality matters to the next clinician, and residents care about being seen as good doctors. Which design fits the evidence best?",
+            "options": [
+              {
+                "id": "a",
+                "text": "A per-document piece rate."
+              },
+              {
+                "id": "b",
+                "text": "A modest team-level bonus for backlog reduction, plus audited quality feedback framed as information about competence."
+              },
+              {
+                "id": "c",
+                "text": "No incentive at all; rely on an appeal to professionalism."
+              },
+              {
+                "id": "d",
+                "text": "A fine for every overdue summary."
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "A piece rate would likely raise volume, but it couples pay tightly to the quantity of documents and gives quality nothing to anchor on.",
+              "b": "Right. The incentive carries the volume part of the job without tight per-document coupling, and the quality part is carried by feedback that informs competence.",
+              "c": "For a low-interest, high-volume task, the evidence suggests incentives can help with quantity. Leaving them out forgoes that.",
+              "d": "A fine risks the day-care problem: it can turn a professional obligation into a price, and it reads as control rather than information."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "The case against",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "A long-running argument",
+            "refs": [
+              "R-deci-1999-meta"
+            ],
+            "left": {
+              "title": "Cameron, Pierce and colleagues",
+              "points": [
+                "Negative effects narrow and often absent",
+                "Verbal rewards and rewards for meeting standards can raise interest"
+              ]
+            },
+            "right": {
+              "title": "Deci, Koestner and Ryan",
+              "points": [
+                "Earlier analyses miscoded studies",
+                "Combined conditions that should be separated"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "That hospital design blends both instruments: a modest incentive for volume, information for quality. Now let me challenge the whole framework."
+            },
+            {
+              "text": "The undermining effect has been contested for decades. Cameron, Pierce and colleagues argued in their own meta-analyses that the negative effects of reward were narrow and often absent, and that verbal rewards and rewards for meeting performance standards could increase interest.",
+              "reveal": 1,
+              "refs": [
+                "R-deci-1999-meta"
+              ]
+            },
+            {
+              "text": "Deci, Koestner and Ryan responded that the earlier analyses had miscoded studies and combined conditions that should have been separated.",
+              "reveal": 2,
+              "refs": [
+                "R-deci-1999-meta"
+              ]
+            },
+            {
+              "text": "The forty-year meta-analysis partly reconciles the camps. Incentives and intrinsic motivation both matter for performance, while direct, salient incentives change how much the intrinsic part contributes. It reconciles. It doesn't settle.",
+              "refs": [
+                "R-cerasoli-2014-intrinsic"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Three limits",
+            "steps": [
+              "Lab minutes, not sustained work",
+              "Most jobs already pay contingently",
+              "Crowding out can run in reverse"
+            ]
+          },
+          "cues": [
+            {
+              "text": "And three limits deserve emphasis."
+            },
+            {
+              "text": "First, most undermining experiments measure minutes of voluntary play with a puzzle after a short session. The mechanism is credible. The size of the effect in a salaried job is unknown.",
+              "reveal": 1
+            },
+            {
+              "text": "Second, almost all paid work already involves expected, contingent pay. The real question is rarely whether to pay. It's how salient, and how tightly coupled to specific outputs, a payment should be.",
+              "reveal": 2
+            },
+            {
+              "text": "Third, crowding out can run in reverse. Crowding in happens when an incentive is read as recognition of competence, or as evidence that the organization values the work.",
+              "reveal": 3
+            },
+            {
+              "text": "There's a selection effect too. Strong pay-for-output systems attract people who like them and repel people who don't. Output may rise partly because different people now work there, which is good or bad depending on what the unmeasured part of the job requires."
+            },
+            {
+              "text": "One application. In player development, players and staff are usually highly motivated about the core craft. Plans they help design, feedback framed as progress, delivered in trusted relationships: that fits the theory. Routine, high-volume tasks may respond well to simple, visible accountability."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "The same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Incentive Designer",
+                "detail": "This week's exercise",
+                "href": "#/exercise/w02-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Gneezy, Meier & Rey-Biel (2011), When and Why Incentives (Don’t) Work to Modify Behavior",
+                "href": "#/library/R-gneezy-2011-when"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let's bring it together."
+            },
+            {
+              "text": "Motivation differs in kind. Autonomous motivation is sustained by support for autonomy, competence and relatedness."
+            },
+            {
+              "text": "Expected, tangible rewards contingent on an interesting task can undermine later voluntary engagement. Informative feedback does not. And incentives carry meaning: a price can replace a norm, and the norm may not return."
+            },
+            {
+              "text": "Yet intrinsic motivation and incentives jointly predict performance, the first more for quality, the second more for quantity. So don't ask whether to pay. Ask how salient and how tightly coupled each incentive should be, for each part of the work."
+            },
+            {
+              "text": "Next, take the comprehension check below. It's the same check as the written lesson. Then open the Incentive Designer, and read the review by Gneezy, Meier and Rey-Biel, where the day-care fine comes from.",
+              "reveal": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

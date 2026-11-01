@@ -1,0 +1,720 @@
+{
+  "id": "w13-l3-lecture",
+  "lesson": "w13-l3",
+  "title": "Who Asked What It Predicts?",
+  "subtitle": "Governance, accountability and responsible AI",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 3. It covers the same objectives — agency-cost reasoning and its remedies, why employees detect wrongdoing and what makes speak-up channels work, and a govern–map–measure–manage sequence for predictive models — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "An accurate model, an unfair result",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 13 · Lesson 3 · Lecture",
+            "title": "Who asked what it predicts?",
+            "sub": "Governance when individual judgment fails"
+          },
+          "cues": [
+            {
+              "text": "In twenty nineteen, a team of researchers examined a commercial algorithm that health systems used to decide which patients should get extra care-management help.",
+              "refs": [
+                "R-obermeyer-2019-dissecting"
+              ]
+            },
+            {
+              "text": "The algorithm did not use race as an input. And it predicted what it was designed to predict quite well.",
+              "refs": [
+                "R-obermeyer-2019-dissecting"
+              ]
+            },
+            {
+              "text": "Yet at the same risk score, Black patients were considerably sicker than White patients.",
+              "refs": [
+                "R-obermeyer-2019-dissecting"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "What the model was asked to predict",
+            "left": {
+              "title": "What it predicted",
+              "points": [
+                "Future health-care costs"
+              ]
+            },
+            "right": {
+              "title": "What the hospital needed",
+              "points": [
+                "Future health needs"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "The cause was the choice of target."
+            },
+            {
+              "text": "The model predicted future health-care costs,",
+              "reveal": 1,
+              "refs": [
+                "R-obermeyer-2019-dissecting"
+              ]
+            },
+            {
+              "text": "as a stand-in for health needs.",
+              "reveal": 2
+            },
+            {
+              "text": "And less money had historically been spent on Black patients with the same level of need. So an accurate prediction of spending produced an unfair allocation of help.",
+              "refs": [
+                "R-obermeyer-2019-dissecting"
+              ]
+            },
+            {
+              "text": "Before I show you the size of the effect, make a guess."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-share",
+            "type": "estimate",
+            "concept": "c-algorithmic-bias",
+            "prompt": "As deployed, Black patients made up 17.7% of those automatically selected for extra help. The researchers then estimated the share if the disparity were removed. What do you think it would be?",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "initial": 20,
+            "answer": 46.5,
+            "tolerance": 8,
+            "feedback": {
+              "correct": "Close. The researchers estimated the share would rise from 17.7% to 46.5% — more than two and a half times the deployed share.",
+              "incorrect": "The researchers estimated 46.5%, up from 17.7%. Most people guess a modest correction; a biased target can distort an allocation far more than intuition suggests."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "bars",
+            "title": "Black patients among those auto-selected",
+            "unit": "%",
+            "items": [
+              {
+                "label": "As deployed, predicting cost",
+                "value": 17.7
+              },
+              {
+                "label": "Disparity removed, simulated",
+                "value": 46.5
+              }
+            ],
+            "note": "As reported by Obermeyer et al. (2019) for the health system they studied."
+          },
+          "cues": [
+            {
+              "text": "Here are the reported figures."
+            },
+            {
+              "text": "As deployed, seventeen point seven percent of the patients automatically selected for extra help were Black.",
+              "reveal": 1,
+              "refs": [
+                "R-obermeyer-2019-dissecting"
+              ]
+            },
+            {
+              "text": "Removing the disparity would raise that to forty-six point five percent.",
+              "reveal": 2,
+              "refs": [
+                "R-obermeyer-2019-dissecting"
+              ]
+            },
+            {
+              "text": "And retraining on direct measures of health, rather than cost, removed much of the bias.",
+              "refs": [
+                "R-obermeyer-2019-dissecting"
+              ]
+            },
+            {
+              "text": "So here is the question I want to leave hanging. In a hospital that bought this tool, whose job was it to ask, what exactly is this predicting? And did that person have the authority to stop it?"
+            },
+            {
+              "text": "Governance is the general answer to that question: structures that make someone responsible for asking, give them the information and authority to act, and hold them accountable for doing so."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Why governance exists",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Three agency costs",
+            "cards": [
+              {
+                "title": "Monitoring",
+                "q": "Audits, reporting, oversight",
+                "fail": "Paid by the principal"
+              },
+              {
+                "title": "Bonding",
+                "q": "Commitments by the agent",
+                "fail": "Reassure, but cost the agent"
+              },
+              {
+                "title": "Residual loss",
+                "q": "What remains despite both",
+                "fail": "Never fully disappears"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "The theory underneath comes from Michael Jensen and William Meckling. An agency relationship is one where a principal engages an agent to act on their behalf, with delegated authority.",
+              "refs": [
+                "R-jensen-1976-theory"
+              ]
+            },
+            {
+              "text": "When interests diverge, the principal bears agency costs, and there are three of them.",
+              "refs": [
+                "R-jensen-1976-theory"
+              ]
+            },
+            {
+              "text": "Monitoring: audits, reporting, oversight.",
+              "reveal": 1
+            },
+            {
+              "text": "Bonding: commitments the agent makes to reassure the principal.",
+              "reveal": 2
+            },
+            {
+              "text": "And residual loss: what remains, because monitoring is never perfect.",
+              "reveal": 3
+            },
+            {
+              "text": "Why do interests diverge? A manager who owns a small share of the firm bears only a small share of the cost of shirking or self-dealing. The divergence is predictable, not personal.",
+              "refs": [
+                "R-jensen-1976-theory"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "Delegation all the way down",
+            "steps": [
+              {
+                "label": "Owners"
+              },
+              {
+                "label": "Executives"
+              },
+              {
+                "label": "Department heads"
+              },
+              {
+                "label": "Analysts and coaches"
+              },
+              {
+                "label": "Models"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the key move. That structure repeats at every level."
+            },
+            {
+              "text": "Owners delegate to executives.",
+              "reveal": 2
+            },
+            {
+              "text": "Executives to department heads, and department heads to analysts and coaches.",
+              "reveal": 4
+            },
+            {
+              "text": "And increasingly, everyone delegates to models.",
+              "reveal": 5
+            },
+            {
+              "text": "Each delegation creates an information gap and a possible divergence of interest. Governance is the design of that delegation: who decides, on what information, under whose review, with what consequences."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Three families of remedy",
+            "cards": [
+              {
+                "title": "Monitoring",
+                "q": "Make behavior visible: audits, validation, committees",
+                "fail": "Costly; monitors are agents too"
+              },
+              {
+                "title": "Incentives",
+                "q": "Align payoffs: equity, deferred pay, clawbacks",
+                "fail": "Rewards what is measured; invites gaming"
+              },
+              {
+                "title": "Structure",
+                "q": "Separate roles: builder and validator, two signatures",
+                "fail": "Slows decisions; can diffuse responsibility"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "There are three families of remedy, and each has a price."
+            },
+            {
+              "text": "Monitoring makes the agent’s behavior visible: audits, independent review, model validation, board committees. It is costly, and monitors have their own agency problems.",
+              "reveal": 1
+            },
+            {
+              "text": "Incentives align the agent’s payoff with the principal’s: equity, deferred pay, clawbacks. But they reward what is measured, and can encourage gaming.",
+              "reveal": 2
+            },
+            {
+              "text": "Structure separates roles so no one person controls a whole decision: builder and validator separated, two-signature approvals, recusal. It slows decisions and can diffuse responsibility.",
+              "reveal": 3
+            },
+            {
+              "text": "One more piece from the law, offered as general education, not legal advice. In Smith versus Van Gorkom, the Delaware Supreme Court held directors liable for approving a merger after a brief meeting without adequate information.",
+              "refs": [
+                "R-delaware-1985-smith"
+              ]
+            },
+            {
+              "text": "The governance lesson: accountability attaches to the quality of the process, what you knew, asked and documented, and not only to the outcome.",
+              "refs": [
+                "R-delaware-1985-smith"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Who sees problems first",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Who brought frauds to light?",
+            "left": {
+              "title": "Less than you’d expect",
+              "points": [
+                "Investors",
+                "The SEC",
+                "Auditors"
+              ]
+            },
+            "right": {
+              "title": "More than you’d expect",
+              "points": [
+                "Employees",
+                "The media",
+                "Industry regulators"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Monitoring assumes the monitors see the problem. Do they?"
+            },
+            {
+              "text": "Alexander Dyck, Adair Morse and Luigi Zingales studied a large sample of alleged frauds at large U.S. companies and asked who first brought each one to light.",
+              "refs": [
+                "R-dyck-2010-who"
+              ]
+            },
+            {
+              "text": "Detection relied less on the actors formally charged with oversight: investors, the SEC and auditors,",
+              "reveal": 1,
+              "refs": [
+                "R-dyck-2010-who"
+              ]
+            },
+            {
+              "text": "and more on employees, the media and industry regulators.",
+              "reveal": 2,
+              "refs": [
+                "R-dyck-2010-who"
+              ]
+            },
+            {
+              "text": "They also found that whistleblowing is personally costly, and that incentives and protections help explain who speaks.",
+              "refs": [
+                "R-dyck-2010-who"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "A speak-up channel works when",
+            "steps": [
+              "Reports reach someone independent of those reported on",
+              "Retaliation is credibly prevented",
+              "Reporters learn what happened",
+              "Small, ambiguous concerns are welcome"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The implication is direct. If the people closest to the work see problems first, then the channel from them to someone with authority is a primary control."
+            },
+            {
+              "text": "It works when reports reach someone independent of the people reported on,",
+              "reveal": 1
+            },
+            {
+              "text": "when retaliation is credibly prevented,",
+              "reveal": 2
+            },
+            {
+              "text": "when reporters learn what happened,",
+              "reveal": 3
+            },
+            {
+              "text": "and when small problems are welcomed, not only large ones.",
+              "reveal": 4
+            },
+            {
+              "text": "The last condition connects to the previous lesson. Ethical fading makes insiders blind to slow drift, so a channel that welcomes early, ambiguous concerns catches the slope while it is still shallow.",
+              "refs": [
+                "R-tenbrunsel-2004-ethical"
+              ]
+            },
+            {
+              "text": "Now a test of how you would read your own data."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-reports",
+            "type": "choice",
+            "concept": "c-whistleblowing",
+            "prompt": "Over two years, the number of concerns raised through your organization’s speak-up channel has fallen by half. What is the best reading?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Good news: there are fewer problems"
+              },
+              {
+                "id": "b",
+                "text": "Ambiguous: fewer problems, or a channel people no longer trust"
+              },
+              {
+                "id": "c",
+                "text": "Bad news: problems are certainly being hidden"
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "Possibly — but report counts only show what people chose to report. The same fall would appear if people stopped trusting the channel.",
+              "b": "Right. The count alone cannot tell the two apart. Pair it with anonymous surveys asking whether people would feel safe raising a concern.",
+              "c": "That overcorrects. A fall can reflect genuine improvement. The point is that the count is ambiguous, so you need a second measure."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "We only see the frauds that were found.",
+              "The robust lesson is qualitative."
+            ]
+          },
+          "cues": [
+            {
+              "text": "The same selection problem limits the fraud evidence itself."
+            },
+            {
+              "text": "Dyck, Morse and Zingales could study only frauds that were eventually detected. Undetected frauds are invisible, so the data cannot say what share of all wrongdoing employees catch.",
+              "refs": [
+                "R-dyck-2010-who"
+              ]
+            },
+            {
+              "text": "Their sample is large U.S. companies in a particular period, and later changes to whistleblower rewards and protections may have shifted the pattern.",
+              "refs": [
+                "R-dyck-2010-who"
+              ]
+            },
+            {
+              "text": "So the robust lesson is qualitative: insiders see problems first, and their incentives to speak matter.",
+              "reveal": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Models are delegated decisions",
+      "scenes": [
+        {
+          "visual": {
+            "type": "flow",
+            "title": "Govern, map, measure, manage",
+            "steps": [
+              {
+                "label": "Govern",
+                "text": "Owner, independent validator, who overrides and stops, review date"
+              },
+              {
+                "label": "Map",
+                "text": "The decision, exact target, who is affected, harm of a wrong score"
+              },
+              {
+                "label": "Measure",
+                "text": "Accuracy overall and by group; is the target a biased proxy?"
+              },
+              {
+                "label": "Manage",
+                "text": "Deploy, limit, redesign the target, or stop; monitor drift"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Back to the hospital. A model is a delegated decision-maker, so the same logic applies."
+            },
+            {
+              "text": "The U.S. National Institute of Standards and Technology’s AI Risk Management Framework, published in twenty twenty-three, organizes the work into four functions.",
+              "refs": [
+                "R-nist-2023-artificial"
+              ]
+            },
+            {
+              "text": "Govern is cross-cutting: policies, roles, accountability and culture across the model’s life. In practice, name the owner, a validator independent of the builder, who can override, who can stop it, and the review date.",
+              "reveal": 1,
+              "refs": [
+                "R-nist-2023-artificial"
+              ]
+            },
+            {
+              "text": "Map establishes context: the decision it informs, the exact target variable, who is affected, and what harm a wrong score causes.",
+              "reveal": 2
+            },
+            {
+              "text": "Measure assesses and tracks risk: accuracy overall and by relevant group, whether the target is a biased proxy, and performance on data the builders did not see.",
+              "reveal": 3
+            },
+            {
+              "text": "Manage acts on the risks: deploy, deploy with limits and human review, redesign the target, or do not deploy. Then monitor drift and complaints.",
+              "reveal": 4
+            },
+            {
+              "text": "The framework is voluntary, and it stresses that AI risks are socio-technical. They depend on how a system is used as much as on how it is built.",
+              "refs": [
+                "R-nist-2023-artificial"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Ask the label question first.",
+              "What exactly does it predict?"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Of all those steps, the one the hospital missed was in Map: the label question. Let’s practise it."
+            },
+            {
+              "text": "Hypothetical. A regional bank adopts a vendor model to flag small-business loans for expedited approval. Mapping reveals it was trained on past approvals. So it predicts what loan officers approved, not which loans were repaid, and past approvals may embed the officers’ own biases.",
+              "reveal": 1
+            },
+            {
+              "text": "The response: change the target to repayment where data allow, test across neighborhoods, require human review for declined applicants near the threshold, and set a review date."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-label",
+            "type": "choice",
+            "concept": "c-algorithmic-bias",
+            "prompt": "Hypothetical. A city’s model ranks buildings for inspection by predicting past recorded code violations. What is the main governance risk?",
+            "options": [
+              {
+                "id": "a",
+                "text": "The model is probably inaccurate"
+              },
+              {
+                "id": "b",
+                "text": "Recorded violations depend on where inspectors chose to look, so the model can confirm itself"
+              },
+              {
+                "id": "c",
+                "text": "Inspectors may override it too often"
+              },
+              {
+                "id": "d",
+                "text": "There is no risk if no protected attribute is an input"
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "It may predict recorded violations very well. The problem is what it predicts, not how well.",
+              "b": "Right. Sending inspectors back to the same neighborhoods generates more recorded violations there, which confirms the model. The fix is partly technical — some random inspections to measure true rates — and partly governance: someone accountable for checking the feedback loop.",
+              "c": "Overrides need a record and review, but they are not the main risk here. The target itself is shaped by past inspection choices.",
+              "d": "The hospital case shows why not. Bias can enter through the label even when no protected attribute is used."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Before any model goes live",
+            "steps": [
+              "Decision rights: who recommends, decides, can stop",
+              "Separation: the champion is not the only validator",
+              "Records: version, data, target, validation, overrides",
+              "Channel: “this model is wrong about this person”"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The inspection case shows the pattern. Here is a short list to take with you."
+            },
+            {
+              "text": "Decision rights: write who recommends, who decides, who must be consulted and who can stop a model-informed decision.",
+              "reveal": 1
+            },
+            {
+              "text": "Separation: the person who builds or champions a model should not be its only validator.",
+              "reveal": 2
+            },
+            {
+              "text": "Records: keep the version, data, target and validation results for each model, and a log of overrides.",
+              "reveal": 3
+            },
+            {
+              "text": "Channel: make it easy for an analyst or coach to say, this model is wrong about this person, and have it reviewed.",
+              "reveal": 4
+            },
+            {
+              "text": "In player development, ask whether an injury-risk flag or a projection predicts the outcome that matters, long-term health or future value, or a convenient proxy, like past playing time, which reflects past opportunity."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "The limits of oversight",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Three cautions",
+            "cards": [
+              {
+                "title": "More oversight",
+                "q": "Every monitor is itself an agent",
+                "fail": "Rubber stamps; responsibility diffuses"
+              },
+              {
+                "title": "Fairness",
+                "q": "Several statistical definitions",
+                "fail": "Usually cannot all hold when base rates differ"
+              },
+              {
+                "title": "Human override",
+                "q": "A person can overrule the score",
+                "fail": "Deference, or selective bias reintroduced"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now let me argue against the lecture’s own enthusiasm for governance."
+            },
+            {
+              "text": "More oversight is not always better governance. Every monitor is itself an agent. Committees become rubber stamps, compliance optimizes for documentation, and a stack of approvals diffuses responsibility until nobody feels accountable.",
+              "reveal": 1
+            },
+            {
+              "text": "That is errors in perceiving causation, built into an org chart. Good governance gives each decision one clear owner and a small number of genuine checks."
+            },
+            {
+              "text": "Second, fairness has more than one definition: equal error rates, equal selection rates, scores that mean the same thing for every group. When base rates differ, they generally cannot all be satisfied at once.",
+              "reveal": 2
+            },
+            {
+              "text": "Choosing among them is a value judgment, not a technical one. It belongs to accountable decision-makers, not to whoever writes the code."
+            },
+            {
+              "text": "Third, human override is not a cure-all. People defer to scores they don’t understand, or override selectively in ways that reintroduce bias. Keep a record of overrides and review whether they improved decisions.",
+              "reveal": 3
+            },
+            {
+              "text": "And a last scene. A powerful executive commissioned a model, chose the vendor, and now proposes to chair its validation committee. Nobody doubts his competence. The problem is structural. Propose that validation report elsewhere, as standard practice that protects him too."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Executive Dilemma",
+                "detail": "The week’s exercise: work a hard decision end to end",
+                "href": "#/exercise/w13-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Obermeyer et al. (2019), Dissecting Racial Bias in an Algorithm",
+                "href": "#/library/R-obermeyer-2019-dissecting"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Agency costs, monitoring, bonding and residual loss, explain why governance exists at every level of delegation."
+            },
+            {
+              "text": "Insiders are among the most important sources of detection, so a trusted speak-up channel is a control system."
+            },
+            {
+              "text": "And a predictive model is a delegated decision-maker. Name its owner and validator, map its target, measure it by group, and manage it with review dates."
+            },
+            {
+              "text": "Take the comprehension check below. It is the same check as the written lesson. Then open the week’s exercise, Executive Dilemma, and read Obermeyer and colleagues closely. It is the clearest account you will find of how a target variable goes wrong.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson stays here for the full examples and notes. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

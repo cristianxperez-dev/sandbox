@@ -1,0 +1,689 @@
+{
+  "id": "w10-l1-lecture",
+  "lesson": "w10-l1",
+  "title": "Record Profit, Empty Bank Account",
+  "subtitle": "Three statements, one story: profit, cash and position",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 1. It covers the same objectives — what each financial statement measures, accrual versus cash accounting, how the statements link, reconciling profit to operating cash flow, and translating a proposal into expense, cash and balance-sheet effects — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Profitable and short of cash",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 10 · Lesson 1 · Lecture",
+            "title": "Record profit, empty bank account",
+            "sub": "Three statements, one story: profit, cash and position"
+          },
+          "cues": [
+            {
+              "text": "Picture a company whose income statement shows record profit in the same quarter it struggles to make payroll."
+            },
+            {
+              "text": "Nobody has committed fraud. Its customers pay sixty days after they are invoiced, its sales doubled, and it bought new equipment for cash."
+            },
+            {
+              "text": "The accountants say the company earned money. The treasurer says the company is short of it. Here is the uncomfortable part: they are both right."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "Kestrelwick Software, year one",
+            "items": [
+              {
+                "value": "$10.0M",
+                "label": "subscriptions sold, all on credit"
+              },
+              {
+                "value": "$7.0M",
+                "label": "actually collected from customers"
+              },
+              {
+                "value": "$2.25M",
+                "label": "reported net income"
+              },
+              {
+                "value": "$2.0M",
+                "label": "equipment bought for cash on day one"
+              }
+            ],
+            "note": "Synthetic data: a fictional company from the lesson."
+          },
+          "cues": [
+            {
+              "text": "Let me give you a fictional company to carry through this whole lecture. It is called Kestrelwick Software, and the numbers here are invented.",
+              "reveal": 0
+            },
+            {
+              "text": "In its first year it sells ten million dollars of subscriptions, all on credit.",
+              "reveal": 1
+            },
+            {
+              "text": "It collects seven million of that. The other three million is still owed by customers at year end.",
+              "reveal": 2
+            },
+            {
+              "text": "After salaries, hosting, depreciation and tax, it reports net income of two and a quarter million dollars.",
+              "reveal": 3
+            },
+            {
+              "text": "And on its first day it spent two million dollars of cash on equipment expected to last four years.",
+              "reveal": 4
+            },
+            {
+              "text": "So here is my question. How much cash did Kestrelwick generate from its operations, before the equipment purchase and before the founders’ money? Commit to a number."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-ocf",
+            "type": "estimate",
+            "prompt": "Kestrelwick reports $2.25 million of net income. Roughly how much cash did its operations generate in year one? (in $ thousands)",
+            "min": 0,
+            "max": 3000,
+            "step": 50,
+            "unit": "$ thousand",
+            "initial": 1500,
+            "answer": 50,
+            "tolerance": 100,
+            "concept": "c-cash-vs-profit",
+            "feedback": {
+              "correct": "Right — about $50 thousand. Profit of $2.25 million, and almost no operating cash. The next chapters trace exactly where the $2.2 million went.",
+              "incorrect": "The answer is about $50 thousand — almost nothing, against $2.25 million of profit. If you guessed much higher, that is the instinct this lesson corrects. We will trace the gap line by line."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Three statements, three questions",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Three statements, three questions",
+            "cards": [
+              {
+                "title": "Income statement",
+                "q": "How did we perform over the period?",
+                "fail": "Accrual profit is not cash"
+              },
+              {
+                "title": "Balance sheet",
+                "q": "What do we own and owe at a moment?",
+                "fail": "A snapshot, not a trend"
+              },
+              {
+                "title": "Cash flow statement",
+                "q": "Where did cash come from and go?",
+                "fail": "Read alone, it hides earned revenue"
+              }
+            ],
+            "refs": [
+              "R-franklin-2019-principles",
+              "R-dahlquist-2022-principles"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Fifty thousand dollars. Against two and a quarter million of profit. To see how that is possible, we need to separate what most executives treat as one thing called the numbers."
+            },
+            {
+              "text": "There are at least three things, and each answers a different question. Standard introductory texts build all three from the same transactions.",
+              "refs": [
+                "R-franklin-2019-principles",
+                "R-dahlquist-2022-principles"
+              ]
+            },
+            {
+              "text": "The income statement reports performance over a period. Revenues minus expenses equals net income.",
+              "reveal": 1,
+              "refs": [
+                "R-franklin-2019-principles"
+              ]
+            },
+            {
+              "text": "The balance sheet reports position at a single moment: what the organization owns, its assets; what it owes, its liabilities; and the residual that belongs to owners, its equity.",
+              "reveal": 2,
+              "refs": [
+                "R-franklin-2019-principles"
+              ]
+            },
+            {
+              "text": "Assets always equal liabilities plus equity. Every transaction changes at least two accounts, so the equation holds after each one.",
+              "refs": [
+                "R-franklin-2019-principles"
+              ]
+            },
+            {
+              "text": "The statement of cash flows reports where cash came from and where it went, split into operating, investing and financing activities.",
+              "reveal": 3,
+              "refs": [
+                "R-franklin-2019-principles"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "The source of the gap",
+            "term": "Accrual accounting",
+            "definition": "Revenue is recognized when it is earned, and expenses are matched to the period whose revenue they helped produce — not when cash moves.",
+            "example": "Kestrelwick earned $10.0M of revenue, though only $7.0M had arrived in the bank."
+          },
+          "cues": [
+            {
+              "text": "Now the key idea. The income statement is prepared on an accrual basis.",
+              "reveal": 0,
+              "refs": [
+                "R-franklin-2019-principles",
+                "R-dahlquist-2022-principles"
+              ]
+            },
+            {
+              "text": "Revenue counts when it is earned, when the service is delivered, not when the customer pays. And expenses are matched to the period whose revenue they helped produce.",
+              "reveal": 1,
+              "refs": [
+                "R-franklin-2019-principles"
+              ]
+            },
+            {
+              "text": "Cash accounting, by contrast, records only receipts and payments.",
+              "refs": [
+                "R-dahlquist-2022-principles"
+              ]
+            },
+            {
+              "text": "Accrual accounting gives a better picture of performance. That is why it exists. But it also creates the gap between profit and cash that this whole lesson is about.",
+              "reveal": 2,
+              "refs": [
+                "R-franklin-2019-principles",
+                "R-dahlquist-2022-principles"
+              ]
+            },
+            {
+              "text": "Kestrelwick earned ten million dollars. It was paid seven. Both statements are true at once."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "The anatomy of the gap",
+      "scenes": [
+        {
+          "visual": {
+            "type": "calc",
+            "title": "From profit to operating cash",
+            "lines": [
+              {
+                "label": "Net income",
+                "value": "$2,250k"
+              },
+              {
+                "label": "+ Depreciation (non-cash expense)",
+                "value": "+$500k"
+              },
+              {
+                "label": "− Increase in receivables",
+                "value": "−$3,000k"
+              },
+              {
+                "label": "+ Increase in payables",
+                "value": "+$300k"
+              }
+            ],
+            "result": {
+              "label": "Cash from operations",
+              "value": "$50k"
+            },
+            "note": "Synthetic data. Indirect method; no interest, inventory or distributions."
+          },
+          "cues": [
+            {
+              "text": "Let’s reconcile the two, the way the cash flow statement does it. This is called the indirect method. We start from profit and adjust."
+            },
+            {
+              "text": "Start with net income: two million, two hundred and fifty thousand dollars.",
+              "reveal": 1
+            },
+            {
+              "text": "Add back depreciation of five hundred thousand. The equipment cost two million and is spread over four years, so half a million reduced profit this year. But no cash left the bank for it this year. The cash left on day one.",
+              "reveal": 2
+            },
+            {
+              "text": "Subtract the three million dollar increase in receivables. That revenue was earned and counted in profit, but it is sitting in customers’ hands, not yours.",
+              "reveal": 3
+            },
+            {
+              "text": "Add the three hundred thousand increase in payables. The hosting bill was one and a half million. Kestrelwick expensed all of it but had only paid one point two million by year end.",
+              "reveal": 4
+            },
+            {
+              "text": "The result: fifty thousand dollars of cash from operations.",
+              "reveal": 5
+            },
+            {
+              "text": "Every gap between profit and cash has an anatomy like this. Non-cash expenses, working capital, and, as we will see, capital spending."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "The direct check",
+            "lines": [
+              {
+                "label": "Cash collected from customers",
+                "value": "$7,000k"
+              },
+              {
+                "label": "Salaries paid",
+                "value": "−$5,000k"
+              },
+              {
+                "label": "Hosting paid",
+                "value": "−$1,200k"
+              },
+              {
+                "label": "Tax paid",
+                "value": "−$750k"
+              }
+            ],
+            "result": {
+              "label": "Cash from operations",
+              "value": "$50k"
+            },
+            "note": "Synthetic data. Direct and indirect methods must agree."
+          },
+          "cues": [
+            {
+              "text": "You can confirm it directly, by simply following the money."
+            },
+            {
+              "text": "Seven million collected.",
+              "reveal": 1
+            },
+            {
+              "text": "Five million out for salaries.",
+              "reveal": 2
+            },
+            {
+              "text": "One point two million out for hosting.",
+              "reveal": 3
+            },
+            {
+              "text": "Seven hundred and fifty thousand out for tax, at twenty-five percent of operating profit.",
+              "reveal": 4
+            },
+            {
+              "text": "Fifty thousand again. The two methods must agree. If they ever don’t, something has been misclassified.",
+              "reveal": 5
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "How the three statements link",
+            "steps": [
+              {
+                "label": "Income statement",
+                "text": "Net income $2,250k"
+              },
+              {
+                "label": "Equity",
+                "text": "Retained earnings +$2,250k"
+              },
+              {
+                "label": "Operating cash",
+                "text": "$50k after adjustments"
+              },
+              {
+                "label": "Investing & financing",
+                "text": "−$2,000k equipment, +$2,500k founders"
+              },
+              {
+                "label": "Balance sheet cash",
+                "text": "Ending cash $550k"
+              }
+            ],
+            "refs": [
+              "R-franklin-2019-principles"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now trace the links between the statements, because this is where the story closes.",
+              "refs": [
+                "R-franklin-2019-principles"
+              ]
+            },
+            {
+              "text": "Net income comes out of the income statement.",
+              "reveal": 1
+            },
+            {
+              "text": "Whatever is not paid out to owners becomes retained earnings, in equity on the balance sheet. Kestrelwick paid nothing out, so retained earnings equal the full two and a quarter million.",
+              "reveal": 2,
+              "refs": [
+                "R-franklin-2019-principles"
+              ]
+            },
+            {
+              "text": "The same net income is the starting line for operating cash flow, which we just reconciled to fifty thousand.",
+              "reveal": 3
+            },
+            {
+              "text": "Then investing and financing. Minus two million for equipment. Plus two and a half million from the founders.",
+              "reveal": 4
+            },
+            {
+              "text": "Beginning cash of zero, plus a change of five hundred and fifty thousand, gives ending cash of five hundred and fifty thousand, which must equal the cash line on the balance sheet.",
+              "reveal": 5
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Balance sheet, end of year one",
+            "left": {
+              "title": "Assets: $5,050k",
+              "points": [
+                "Cash $550k",
+                "Receivables $3,000k",
+                "Equipment, net $1,500k"
+              ]
+            },
+            "right": {
+              "title": "Liabilities & equity: $5,050k",
+              "points": [
+                "Payables $300k",
+                "Founders’ capital $2,500k",
+                "Retained earnings $2,250k"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "And here is the balance sheet that results."
+            },
+            {
+              "text": "On the asset side: cash of five hundred and fifty thousand, receivables of three million, and equipment of one and a half million, which is its cost less one year of depreciation. Five million and fifty thousand in total.",
+              "reveal": 1
+            },
+            {
+              "text": "On the other side: payables of three hundred thousand, the founders’ two and a half million, and retained earnings of two and a quarter million. Also five million and fifty thousand.",
+              "reveal": 2
+            },
+            {
+              "text": "Notice why buying the equipment did not hit profit all at once. Two million left the bank on day one, but only half a million was recognized as expense. The rest sits on the balance sheet as an asset."
+            },
+            {
+              "text": "Let’s try that reading on a real-world shape."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-backlog",
+            "type": "choice",
+            "prompt": "At a hospital, a revenue-cycle backlog lets receivables grow by several weeks of billings. The income statement is unchanged, cash tightens, and the finance office proposes a hiring freeze. What is the underlying problem?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Profitability — the hospital is earning too little."
+              },
+              {
+                "id": "b",
+                "text": "Collection — revenue is earned but stuck in receivables."
+              },
+              {
+                "id": "c",
+                "text": "Depreciation — non-cash expenses are distorting cash."
+              },
+              {
+                "id": "d",
+                "text": "Capital spending — too much cash is going into equipment."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-cash-vs-profit",
+            "feedback": {
+              "a": "The income statement is unchanged, so reported performance has not deteriorated. The cash squeeze has a working-capital cause.",
+              "b": "Right. This is Kestrelwick’s receivables line in a hospital. Cutting staff attacks profitability, which is not the problem; fixing collection is.",
+              "c": "Depreciation reduces profit without using cash, so it widens profit relative to cash in the other direction. It is not what changed here.",
+              "d": "Nothing in the scenario involves new equipment. The changed line is receivables — earned but not collected."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Neither number is the truth",
+      "scenes": [
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Statements are disciplined,",
+              "not neutral."
+            ],
+            "sub": "Every figure rests on estimates: useful lives, collectability, when revenue counts as earned."
+          },
+          "cues": [
+            {
+              "text": "A leader who reads only the profit line in that hospital cuts the wrong thing. The real problem is collection. Now let me push back on everything I have shown you so far, because the statements look more objective than they are."
+            },
+            {
+              "text": "Every figure rests on estimates and conventions. How long will the equipment last? How much of those receivables will never be collected? When does a multi-year contract’s revenue count as earned?",
+              "reveal": 1
+            },
+            {
+              "text": "Two well-run organizations with identical economics can report different profits because they made different, defensible estimates. When a number surprises you, ask which estimate drives it before asking whether the business changed."
+            },
+            {
+              "text": "And the statements leave out much of what matters most. Spending on people, training and research is largely expensed as it occurs. Some software development costs can be capitalized under specific rules, but a trained staff or a reputation with recruits usually appears nowhere as an asset."
+            },
+            {
+              "text": "So a department that invests heavily in developing people looks costly on the income statement and asset-light on the balance sheet. That is an accounting convention, not evidence the investment is worthless."
+            },
+            {
+              "text": "Neither profit nor cash is the truth. Cash can be flattered for a quarter by delaying supplier payments or cutting maintenance. Profit can be flattered by optimistic estimates. Each is harder to manipulate when read alongside the other two statements."
+            },
+            {
+              "text": "The habit to build is triangulation. When profit rises and operating cash falls for several periods, find the working-capital or estimation story that explains it."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "Three ways to say “cash generation”",
+            "items": [
+              {
+                "value": "$3.5M",
+                "label": "EBITDA"
+              },
+              {
+                "value": "$50k",
+                "label": "Cash from operations"
+              },
+              {
+                "value": "−$1.95M",
+                "label": "Free cash flow"
+              }
+            ],
+            "note": "Synthetic data: Kestrelwick, year one."
+          },
+          "cues": [
+            {
+              "text": "One more trap, because you will hear these terms in budget meetings."
+            },
+            {
+              "text": "EBITDA, earnings before interest, taxes, depreciation and amortization, is popular as a rough measure of operating cash generation. For Kestrelwick it is three and a half million dollars.",
+              "reveal": 1,
+              "say": "ee bit dah, earnings before interest, taxes, depreciation and amortization, is popular as a rough measure of operating cash generation. For Kestrelwick it is three and a half million dollars."
+            },
+            {
+              "text": "But operating cash flow is fifty thousand, because EBITDA ignores growth in working capital.",
+              "reveal": 2,
+              "say": "But operating cash flow is fifty thousand, because ee bit dah ignores growth in working capital."
+            },
+            {
+              "text": "And free cash flow, commonly defined as operating cash minus capital spending, is minus one point nine five million. A growth company consuming cash, which is normal, provided someone will finance it.",
+              "reveal": 3
+            },
+            {
+              "text": "Any adjusted earnings figure deserves the same treatment. Find the reconciliation to the standard number, and read each adjustment as a claim that must be justified."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Translating a proposal",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "A $750k platform, two treatments",
+            "left": {
+              "title": "Buy and capitalize",
+              "points": [
+                "Year-one cash out: $750k",
+                "Year-one expense: $150k",
+                "Balance sheet: $600k asset"
+              ]
+            },
+            "right": {
+              "title": "License as a subscription",
+              "points": [
+                "Year-one cash out: $150k",
+                "Year-one expense: $150k",
+                "Balance sheet: no asset",
+                "Repeats every year"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Now the practical payoff: translating your own proposals."
+            },
+            {
+              "text": "Suppose a player development department proposes a seven hundred and fifty thousand dollar data platform. To keep the arithmetic simple, I will invent a five-year life and a subscription with the same total cost."
+            },
+            {
+              "text": "If the club buys and capitalizes it, all seven hundred and fifty thousand leaves the bank at once. But this year’s expense is only one year of depreciation, one hundred and fifty thousand, and six hundred thousand sits on the balance sheet as an asset.",
+              "reveal": 1
+            },
+            {
+              "text": "If it is licensed instead, the full annual fee of one hundred and fifty thousand hits the operating budget, and it does so every year. No asset appears.",
+              "reveal": 2
+            },
+            {
+              "text": "The economics are the same. But the two proposals look different in the budget review, and they may follow different approval tracks."
+            },
+            {
+              "text": "So ask early how finance will treat any large upfront payment, and present both the cash profile and the reported-expense profile, so no one is surprised later."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "“It is accretive to earnings”",
+            "steps": [
+              "Cash profile for three years, including integration",
+              "New liabilities: contracts, retention, leases",
+              "Which estimates flatter year one?",
+              "What would the money earn elsewhere?"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The same lens protects you in a bigger meeting. A finance partner says a proposed acquisition of a small analytics vendor is accretive to earnings in year one. The claim may be true and still incomplete. Ask four questions."
+            },
+            {
+              "text": "What is the cash profile for the first three years, including integration costs?",
+              "reveal": 1
+            },
+            {
+              "text": "What new liabilities come with it: contracts, retention bonuses, lease obligations?",
+              "reveal": 2
+            },
+            {
+              "text": "Which estimates make year-one earnings look good, for example a long amortization period for what was bought?",
+              "reveal": 3
+            },
+            {
+              "text": "And what would the same money earn in its next-best use? You won’t resolve all four in ten minutes, but asking them changes what the meeting decides.",
+              "reveal": 4
+            },
+            {
+              "text": "Before we close, take this to your own desk."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-own-proposal",
+            "type": "reflect",
+            "prompt": "Name one decision in your current work whose cash profile and reported-expense profile differ. Which one does your organization’s approval process actually look at — and what obligations does the decision create that this year’s budget will not show?",
+            "concept": "c-three-statement-linkage"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Three questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Capital Allocation Lab",
+                "detail": "Put cash, expense and value side by side on real proposals",
+                "href": "#/exercise/w10-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Franklin, Graybeal & Cooper (2019) Principles of Accounting, Chapter 2",
+                "href": "#/library/R-franklin-2019-principles"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "The income statement measures accrual performance over a period. The balance sheet measures position at a moment. The cash flow statement reconciles profit to the change in cash."
+            },
+            {
+              "text": "Profit and cash diverge through non-cash expenses, working capital and capital spending, and every divergence has an anatomy you can trace. Read the three together, and know how your own proposals will be classified."
+            },
+            {
+              "text": "Next, take the comprehension check below. It is the same check as the written lesson. Then open the Capital Allocation Lab, and read the chapter on financial statements in the Franklin textbook.",
+              "reveal": 1,
+              "refs": [
+                "R-franklin-2019-principles"
+              ]
+            },
+            {
+              "text": "The written lesson stays here with the full tables and the examples from law, government and healthcare. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,721 @@
+{
+  "id": "w07-l2-lecture",
+  "lesson": "w07-l2",
+  "title": "Growing the Pie Without Giving It Away",
+  "subtitle": "Integrative bargaining, logrolling and contingent contracts",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 2. It covers the same objectives — distributive, integrative and compatible issues; logrolling, contingent contracts and the Pareto frontier; and the negotiator’s dilemma — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "What changed in week seven",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 7 · Lesson 2 · Lecture",
+            "title": "Growing the pie without giving it away",
+            "sub": "Integrative bargaining, logrolling and contingent contracts"
+          },
+          "cues": [
+            {
+              "text": "Here is a negotiation that took six weeks to go nowhere, and one day to succeed."
+            },
+            {
+              "text": "The interesting question is what happened on that one day, because it was not a concession, a threat or a clever closing line."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "A three-year hosting deal",
+            "left": {
+              "title": "Weeks one to six",
+              "points": [
+                "$400,000 a year apart on fee",
+                "Each calls the other difficult"
+              ]
+            },
+            "right": {
+              "title": "Week seven",
+              "points": [
+                "In-country hosting",
+                "Slightly higher fee",
+                "Longer term"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "A cloud-services provider and a mid-sized bank are negotiating a three-year hosting agreement. This is a hypothetical example."
+            },
+            {
+              "text": "After six weeks they are four hundred thousand dollars a year apart on the fee, and each negotiator has told colleagues the other side is difficult.",
+              "reveal": 1
+            },
+            {
+              "text": "Then a junior lawyer for the bank asks a simple question: why does the provider keep resisting the bank's request to store all data in-country?"
+            },
+            {
+              "text": "The answer surprises everyone. The provider already runs an in-country data center with spare capacity. It had assumed the bank wanted something costly and bespoke."
+            },
+            {
+              "text": "And the bank cares far more about data residency, which its supervisors scrutinize, than about the fee."
+            },
+            {
+              "text": "Within a day they agree: in-country hosting, a slightly higher fee, and the longer term the provider wanted for its own financing. Both sides report a better deal than they expected.",
+              "reveal": 2
+            },
+            {
+              "text": "Nothing about either side's interests changed in week seven. What changed was what each side knew about the other's priorities. That is this lecture in one sentence."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Two activities, one conversation",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Lax and Sebenius: two activities",
+            "left": {
+              "title": "Creating value",
+              "points": [
+                "Share information about priorities",
+                "Invent options",
+                "Solve problems jointly"
+              ]
+            },
+            "right": {
+              "title": "Claiming value",
+              "points": [
+                "Withhold sensitive information",
+                "Anchor",
+                "Commit to favorable terms"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "David Lax and James Sebenius describe every negotiation as two intertwined activities.",
+              "refs": [
+                "R-lax-1986-manager"
+              ]
+            },
+            {
+              "text": "Creating value enlarges what is available to divide. You do it by sharing information about priorities, inventing options and solving problems together.",
+              "reveal": 1,
+              "refs": [
+                "R-lax-1986-manager"
+              ]
+            },
+            {
+              "text": "Claiming value decides who gets what. You do it by withholding sensitive information, anchoring and committing to favorable terms.",
+              "reveal": 2,
+              "refs": [
+                "R-lax-1986-manager"
+              ]
+            },
+            {
+              "text": "Their central claim is that these two cannot be pulled apart. Earlier advice tended to address one or the other. Managers face both, in the same conversation, often in the same sentence.",
+              "refs": [
+                "R-lax-1986-manager"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Three kinds of issue",
+            "cards": [
+              {
+                "title": "Distributive",
+                "q": "My gain is your loss, point for point",
+                "fail": "Fee, price of a building"
+              },
+              {
+                "title": "Integrative",
+                "q": "We value the issues differently",
+                "fail": "Trades leave both better off"
+              },
+              {
+                "title": "Compatible",
+                "q": "We both want the same outcome",
+                "fail": "Often goes unnoticed"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "To create value you first have to diagnose your issues. There are three kinds."
+            },
+            {
+              "text": "An issue is distributive when one side's gain is the other's loss, point for point. The fee in a license. The price of a building.",
+              "reveal": 1
+            },
+            {
+              "text": "Bargaining is integrative when you can find agreements that leave both of you better off than other agreements you could reach, usually because you value the issues differently.",
+              "reveal": 2
+            },
+            {
+              "text": "And some issues are compatible: both sides want the same thing, confidentiality, say, or an early start, without realizing it.",
+              "reveal": 3
+            },
+            {
+              "text": "Most real negotiations are mixed. The skill is telling which issue is which."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Where joint value comes from",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Differences create value",
+            "steps": [
+              "Priorities → logrolling",
+              "Forecasts → contingent contracts",
+              "Risk tolerance → shift risk to the cheaper bearer",
+              "Time preferences → re-time payments",
+              "Capabilities and costs → assign to the lower-cost party"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Here's the counterintuitive part. Joint value comes from differences between the parties, not from what they have in common."
+            },
+            {
+              "text": "Different priorities let you logroll: concede what matters less to you for what matters more.",
+              "reveal": 1
+            },
+            {
+              "text": "Different forecasts let you write a contingent contract, where terms depend on an observable outcome.",
+              "reveal": 2
+            },
+            {
+              "text": "Different risk tolerance lets you shift a risk to the party that bears it more cheaply.",
+              "reveal": 3
+            },
+            {
+              "text": "Different time preferences let you re-time payments or deliverables.",
+              "reveal": 4
+            },
+            {
+              "text": "And different capabilities let you assign each task to whoever does it more cheaply. That was the in-country data center.",
+              "reveal": 5
+            },
+            {
+              "text": "Raiffa's analysis makes the structural point. With one issue, every gain for one side is a loss for the other. With several issues valued differently, the parties can trade across them and improve both positions.",
+              "refs": [
+                "R-raiffa-1982-art"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "Hospital and licensor: point values",
+            "items": [
+              {
+                "value": "Speed",
+                "label": "hospital 0 / 15 / 30 · licensor 10 / 5 / 0"
+              },
+              {
+                "value": "Length",
+                "label": "licensor 0 / 15 / 30 · hospital 10 / 5 / 0"
+              },
+              {
+                "value": "Price",
+                "label": "licensor 20 / 10 / 0 · hospital 0 / 10 / 20"
+              }
+            ],
+            "note": "Synthetic point schedules from the lesson."
+          },
+          "cues": [
+            {
+              "text": "Let's watch a logroll happen. A hospital is licensing software. The points here are invented, the kind of confidential schedule researchers hand to negotiators."
+            },
+            {
+              "text": "Rollout speed matters a lot to the hospital: up to thirty points for fast. To the licensor, speed is worth at most ten.",
+              "reveal": 1
+            },
+            {
+              "text": "Contract length is the mirror image. Three years is worth thirty to the licensor and nothing to the hospital, which would rather have one year, worth ten.",
+              "reveal": 2
+            },
+            {
+              "text": "Price is purely distributive: twenty points at stake, and whatever one side gains, the other loses.",
+              "reveal": 3
+            },
+            {
+              "text": "If they split the difference on everything, medium speed, two years, middle price, each side scores thirty. Now suppose instead the hospital gets fast rollout, the licensor gets three years, and price stays in the middle. How many points does each side get?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-logroll",
+            "type": "estimate",
+            "prompt": "Fast rollout, a three-year term, middle price. How many points does EACH side get? (Splitting everything gives 30 each.)",
+            "min": 0,
+            "max": 60,
+            "step": 5,
+            "unit": "points",
+            "initial": 30,
+            "answer": 40,
+            "tolerance": 0,
+            "concept": "c-logrolling",
+            "feedback": {
+              "correct": "Right: the hospital gets 30 for speed, 0 for length and 10 for price; the licensor gets 0, 30 and 10. Forty each.",
+              "incorrect": "Each side gets 40. Hospital: 30 (fast) + 0 (three years) + 10 (middle price). Licensor: 0 + 30 + 10. Both beat the 30 they got from splitting."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "bars",
+            "title": "Joint points by package",
+            "unit": "points",
+            "items": [
+              {
+                "label": "Split the difference",
+                "value": 60
+              },
+              {
+                "label": "Hospital wins every issue",
+                "value": 60
+              },
+              {
+                "label": "Logroll on speed and length",
+                "value": 80
+              }
+            ],
+            "note": "Synthetic data from the lesson’s point schedules."
+          },
+          "cues": [
+            {
+              "text": "Forty each. Splitting the difference gave sixty joint points.",
+              "reveal": 1
+            },
+            {
+              "text": "Now a package where the hospital wins every issue: fast, one year, low price. The hospital scores sixty; the licensor scores zero. Joint total: still sixty.",
+              "reveal": 2
+            },
+            {
+              "text": "The logroll gives eighty. And both sides are better off than under the split, forty against thirty.",
+              "reveal": 3
+            },
+            {
+              "text": "So the logroll is not a compromise. It is an improvement. And winning every issue grew nothing; the hospital just captured everything."
+            },
+            {
+              "text": "Notice where the gain came from. Price sat in the middle in both of the first two packages. All the extra value came from speed and length."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Efficiency",
+            "term": "Pareto frontier",
+            "definition": "The set of agreements where no package could make one side better off without making the other worse off.",
+            "example": "Efficient is not fair: a deal giving one side almost everything can sit on the frontier."
+          },
+          "cues": [
+            {
+              "text": "Keep trading until nothing can help one side without hurting the other, and you reach the Pareto frontier."
+            },
+            {
+              "text": "An agreement below it is inefficient. Some other package would be better for at least one party and worse for neither. That is not a moral failing; it is money, time or capability that nobody receives.",
+              "reveal": 1
+            },
+            {
+              "text": "But efficiency says nothing about fairness. So you face two separate questions: are we on the frontier, and where on it are we?",
+              "reveal": 2
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "Where to trade, where to claim",
+            "x": [
+              "Matters little to them",
+              "Matters a lot to them"
+            ],
+            "y": [
+              "Matters little to you",
+              "Matters a lot to you"
+            ],
+            "cells": [
+              [
+                "Ask for it; trade for it",
+                "Genuinely distributive: claim carefully"
+              ],
+              [
+                "Settle quickly; goodwill",
+                "Give it, but get credit"
+              ]
+            ]
+          },
+          "cues": [
+            {
+              "text": "A simple matrix turns this into a plan."
+            },
+            {
+              "text": "Issues that matter a lot to you and little to them: ask for them, and trade for them.",
+              "reveal": 1
+            },
+            {
+              "text": "Issues that matter a lot to both: genuinely distributive. Prepare criteria and claim carefully.",
+              "reveal": 2
+            },
+            {
+              "text": "Low stakes for both: settle quickly and use them as goodwill.",
+              "reveal": 3
+            },
+            {
+              "text": "Cheap for you, valuable to them: give it, but get credit. Your trades live in the two off-diagonal cells.",
+              "reveal": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Why we miss it, and betting on disagreement",
+      "scenes": [
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Most negotiators assume",
+              "the other side wants the opposite."
+            ],
+            "sub": "Thompson and Hastie: the fixed-pie perception."
+          },
+          "cues": [
+            {
+              "text": "If trades like this exist, why do capable people miss them?"
+            },
+            {
+              "text": "Leigh Thompson and Reid Hastie reported that most negotiators enter talks expecting the other side's interests to be completely opposed to their own.",
+              "reveal": 1,
+              "refs": [
+                "R-thompson-1990-social"
+              ]
+            },
+            {
+              "text": "They argued that this misperception of the other side's interests is a primary cause of inefficient agreements. It is the fixed-pie perception, and its signature is splitting the difference issue by issue.",
+              "refs": [
+                "R-thompson-1990-social"
+              ]
+            },
+            {
+              "text": "A related mistake shows up on compatible issues. If you concede something the other side wanted anyway, or demand payment for it, you waste value or credibility."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "A pharmacy-software sale",
+            "left": {
+              "title": "Founder",
+              "points": [
+                "Values company at $90M",
+                "Based on her growth forecast"
+              ]
+            },
+            "right": {
+              "title": "Private-equity buyer",
+              "points": [
+                "Will pay $78M",
+                "Doubts the forecast"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Differences in forecast can create value too. A private-equity buyer and the founder of a pharmacy-software company are twelve million dollars apart. The numbers are synthetic."
+            },
+            {
+              "text": "The founder values the company at ninety million, on her growth forecast.",
+              "reveal": 1
+            },
+            {
+              "text": "The buyer will pay seventy-eight million on its own view.",
+              "reveal": 2
+            },
+            {
+              "text": "Neither is going to talk the other out of a forecast. Which instrument fits?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-instrument",
+            "type": "choice",
+            "prompt": "The founder and the buyer disagree mainly about next year’s growth. Which instrument best addresses that obstacle?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Split the difference at $84M."
+              },
+              {
+                "id": "b",
+                "text": "A logroll: the founder gives up price in exchange for a longer consulting role."
+              },
+              {
+                "id": "c",
+                "text": "$78M at closing plus up to $12M if audited recurring revenue beats an agreed target."
+              },
+              {
+                "id": "d",
+                "text": "Walk away: the parties are too far apart."
+              }
+            ],
+            "answer": "c",
+            "concept": "c-contingent-contract",
+            "feedback": {
+              "a": "A split leaves the founder below her valuation and the buyer above its own. It ignores the source of the gap, a disagreement about the future.",
+              "b": "Logrolls exploit different priorities across issues. The obstacle here is different forecasts, which a contingent term addresses directly.",
+              "c": "Right. An earnout pays each side on its own forecast: the founder gets paid if she is right, and the buyer pays more only when the business is worth more.",
+              "d": "The gap may be bridgeable without either side changing its forecast. Walking away gives up value a contingent term could capture."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "When contingent terms work",
+            "steps": [
+              "Trigger observable and measurable without dispute",
+              "Hard for the controlling party to manipulate",
+              "Does not distort behavior elsewhere",
+              "Enforceable: who measures, when, disputes"
+            ]
+          },
+          "cues": [
+            {
+              "text": "An earnout pays each side on its own forecast, so both may prefer it to any fixed price. Performance bonuses, success fees, price-adjustment clauses and options to extend work the same way. But only under conditions."
+            },
+            {
+              "text": "The trigger must be observable to both sides and measurable without dispute.",
+              "reveal": 1
+            },
+            {
+              "text": "The party that controls the outcome must not be able to manipulate the measure easily.",
+              "reveal": 2
+            },
+            {
+              "text": "The contingency must not distort behavior elsewhere, like a revenue target that rewards discounting.",
+              "reveal": 3
+            },
+            {
+              "text": "And the terms must be enforceable: who measures, when, and how disputes are resolved.",
+              "reveal": 4
+            },
+            {
+              "text": "In the pharmacy deal, the drafting decides whether the earnout creates value or a lawsuit: who controls pricing and sales hiring after closing, how revenue is defined, and whether acquisitions count. Week Eleven returns to these clauses."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "The negotiator’s dilemma",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Keeping “win–win” honest",
+            "cards": [
+              {
+                "title": "Empirical question",
+                "q": "Is there integrative potential here?",
+                "fail": "Creative-sounding concessions are still concessions"
+              },
+              {
+                "title": "Who gets it?",
+                "q": "Efficient is not the same as fair",
+                "fail": "A deal can be efficient and lopsided"
+              },
+              {
+                "title": "Third parties",
+                "q": "Who else is affected?",
+                "fail": "Joint gains can be collusion"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Time to push back on the lecture's own enthusiasm. Win–win is one of the most abused phrases in management."
+            },
+            {
+              "text": "Integrative potential is an empirical question. One issue, one shot, no relationship: that can be genuinely distributive, and pretending otherwise just invites concessions labelled creative.",
+              "reveal": 1
+            },
+            {
+              "text": "Creating value says nothing about who gets it. A sharper licensor could have taken most of the logroll's gain by also holding price high.",
+              "reveal": 2
+            },
+            {
+              "text": "And joint gains can come at third parties' expense. Two department heads trading support for each other's budgets may both win while the organization loses.",
+              "reveal": 3
+            },
+            {
+              "text": "Even the fixed-pie finding needs care. The error is assuming opposition without checking. In a genuinely distributive negotiation, the fixed-pie view is simply correct, and later work makes exactly that point. The skill is diagnosis.",
+              "refs": [
+                "R-thompson-1990-social"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Reveal or conceal?",
+            "left": {
+              "title": "Reveal priorities",
+              "points": [
+                "Cooperative counterpart trades efficiently",
+                "Opportunist charges heavily for it"
+              ]
+            },
+            "right": {
+              "title": "Conceal priorities",
+              "points": [
+                "You are protected",
+                "Efficient trades are harder to find"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Which brings us to the sharpest form of the problem: the negotiator's dilemma.",
+              "refs": [
+                "R-lax-1986-manager"
+              ]
+            },
+            {
+              "text": "Say you reveal that implementation speed matters enormously to you. A cooperative counterpart will trade for it efficiently. An opportunistic one will concede speed slowly and charge you heavily for it.",
+              "reveal": 1,
+              "refs": [
+                "R-lax-1986-manager"
+              ]
+            },
+            {
+              "text": "Conceal your priorities and you protect yourself, but you make the efficient trade harder to find.",
+              "reveal": 2
+            },
+            {
+              "text": "Because creating and claiming are linked, neither pure openness nor pure secrecy is safe.",
+              "refs": [
+                "R-lax-1986-manager"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Managing the dilemma (practitioner heuristics)",
+            "steps": [
+              "Share relative priorities, not reservation values",
+              "Reciprocate disclosure in small steps",
+              "Offer several equivalent packages at once",
+              "Ask diagnostic questions"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Experienced negotiators manage it with moves that are practitioner heuristics, not tested rules."
+            },
+            {
+              "text": "Share relative priorities first: speed matters more to us than term. Say that long before anything resembling a reservation value.",
+              "reveal": 1
+            },
+            {
+              "text": "Reciprocate disclosure in small steps, and notice whether the other side does the same.",
+              "reveal": 2
+            },
+            {
+              "text": "Put two or three complete packages of equal value to you on the table at once, often called multiple equivalent simultaneous offers, and learn from the one they prefer.",
+              "reveal": 3
+            },
+            {
+              "text": "And ask diagnostic questions. What would a longer term let you do? That question is exactly what unlocked the hosting deal.",
+              "reveal": 4
+            },
+            {
+              "text": "Researchers measure all this with point schedules like the hospital example. That makes efficiency measurable, at a cost in realism. Studies that code what managers actually say, like Adair, Okumura and Brett's, link patterns of information exchange to the joint gains pairs reach. You'll meet that design again in Lesson Four.",
+              "refs": [
+                "R-adair-2001-negotiation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Enlarge, then divide",
+      "scenes": [
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Negotiation Chamber",
+                "detail": "Four issues, six rounds: test your guess about splitting",
+                "href": "#/exercise/w07-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Lax & Sebenius (1986), The Manager as Negotiator, ch. 2",
+                "href": "#/library/R-lax-1986-manager"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let's bring it together."
+            },
+            {
+              "text": "Most negotiations mix distributive, integrative and compatible issues. Value comes from differences: in priorities, forecasts, risk, timing and capability."
+            },
+            {
+              "text": "Logrolls and contingent terms move agreements toward the frontier. Firm, criteria-based claiming decides where on it you land. And because the moves that create value also expose you, disclose relative priorities in small, reciprocated steps."
+            },
+            {
+              "text": "The same structure appears in a technology agreement, where a buyer may care more about data access and support in its busiest weeks than a modest fee difference, or when two departments share one scarce specialist and need her at different times."
+            },
+            {
+              "text": "Take the comprehension check below; it matches the written lesson. Then go into the Negotiation Chamber, with its four issues, and see how much value you leave on the table. And read Lax and Sebenius's chapter on the negotiator's dilemma.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson has the full tables and the methodological note. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

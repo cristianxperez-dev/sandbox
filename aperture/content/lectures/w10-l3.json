@@ -1,0 +1,647 @@
+{
+  "id": "w10-l3-lecture",
+  "lesson": "w10-l3",
+  "title": "The Seventy-Nine Dollar Seat",
+  "subtitle": "Thinking at the margin: cost behavior, unit economics and capital rationing",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 3. It covers the same objectives — cost behavior, contribution margin and break-even; relevant versus sunk and allocated costs; pricing opportunity cost, including staff time; and choosing projects under a binding budget — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Twenty empty seats",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 10 · Lesson 3 · Lecture",
+            "title": "The seventy-nine dollar seat",
+            "sub": "Thinking at the margin"
+          },
+          "cues": [
+            {
+              "text": "A one-hundred-and-eighty-seat flight leaves in two hours with twenty empty seats."
+            },
+            {
+              "text": "The finance team’s report says the average cost per seat on this route is about one hundred and eighty dollars. A last-minute buyer offers seventy-nine."
+            },
+            {
+              "text": "Selling below average cost sounds like a loss. Is it? The numbers in this example are invented, but the structure is everywhere."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "One more passenger",
+            "items": [
+              {
+                "value": "$180",
+                "label": "average cost per seat on the route"
+              },
+              {
+                "value": "$79",
+                "label": "last-minute offer"
+              },
+              {
+                "value": "$25",
+                "label": "extra cost of carrying one more passenger"
+              }
+            ],
+            "note": "Synthetic numbers, from the lesson’s example."
+          },
+          "cues": [
+            {
+              "text": "Here is what you need to know.",
+              "reveal": 0
+            },
+            {
+              "text": "Average cost per seat: one hundred and eighty dollars.",
+              "reveal": 1
+            },
+            {
+              "text": "The offer: seventy-nine dollars.",
+              "reveal": 2
+            },
+            {
+              "text": "Almost all of the flight’s cost, the aircraft, the crew, most of the fuel, the airport fees, is already committed whether the seat is filled or not. Carrying one more passenger adds a little fuel, a snack and a booking fee: say twenty-five dollars.",
+              "reveal": 3
+            },
+            {
+              "text": "So by how much does selling this seat change the flight’s result? Give me a number, positive or negative."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-seat",
+            "type": "estimate",
+            "prompt": "By how much does selling the seat for $79 change the flight’s result?",
+            "min": -150,
+            "max": 100,
+            "step": 1,
+            "unit": "$",
+            "initial": -100,
+            "answer": 54,
+            "tolerance": 4,
+            "concept": "c-marginal-analysis",
+            "feedback": {
+              "correct": "Right: $79 minus the $25 marginal cost adds $54 — provided it does not teach full-fare customers to wait for bargains.",
+              "incorrect": "The sale adds $54: $79 of revenue minus $25 of extra cost. The $180 average includes costs that are incurred whether or not the seat is sold, so it is the wrong yardstick."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Three ideas in one seat",
+            "steps": [
+              "Costs behave differently as activity changes",
+              "Only costs that differ and lie ahead count",
+              "Every choice forgoes an alternative"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Fifty-four dollars better off, not a hundred worse. If you were anchored on the average, you were not alone. That one seat holds the three ideas of this lesson."
+            },
+            {
+              "text": "First, costs behave differently as activity changes, and averages hide that behavior.",
+              "reveal": 1
+            },
+            {
+              "text": "Second, the only costs that belong in a decision are those that differ between the options and have not yet been incurred.",
+              "reveal": 2
+            },
+            {
+              "text": "Third, every choice uses something that could have been used elsewhere. Here, a seat that might have gone to a later, higher-paying buyer. That forgone alternative is a real cost, even though no invoice records it.",
+              "reveal": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "How costs behave",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Three kinds of cost",
+            "cards": [
+              {
+                "title": "Variable",
+                "q": "Rises in proportion to activity",
+                "fail": "Supplies per procedure, fees per order"
+              },
+              {
+                "title": "Fixed",
+                "q": "Flat within a range and horizon",
+                "fail": "Over three years, almost nothing is fixed"
+              },
+              {
+                "title": "Step-fixed",
+                "q": "Flat, then jumps",
+                "fail": "One supervisor per twelve staff"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Start with cost behavior."
+            },
+            {
+              "text": "Variable costs rise in proportion to activity: supplies per procedure, transaction fees per order.",
+              "reveal": 1
+            },
+            {
+              "text": "Fixed costs do not change within a relevant range and time horizon: rent, a salaried team, a software license. And notice that word horizon. Over a quarter, most salaries are fixed. Over three years, almost everything is variable, because you can choose not to renew.",
+              "reveal": 2
+            },
+            {
+              "text": "Step-fixed costs are flat over a range and then jump, like one supervisor for every twelve staff.",
+              "reveal": 3
+            },
+            {
+              "text": "That is why average cost misleads. Take a tutoring program with ninety thousand dollars of fixed staff cost and two hundred dollars of materials per student. With three hundred students, the average is five hundred dollars per student. But the three hundred and first student costs two hundred, unless the program is at capacity and needs a new tutor. Then that student costs a whole tutor."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "An evening imaging shift, per month",
+            "lines": [
+              {
+                "label": "Price per scan",
+                "value": "$400"
+              },
+              {
+                "label": "Variable cost per scan",
+                "value": "−$150"
+              },
+              {
+                "label": "Contribution margin per scan",
+                "value": "$250"
+              },
+              {
+                "label": "Fixed cost of the shift ÷ $250",
+                "value": "$30,000 ÷ $250"
+              }
+            ],
+            "result": {
+              "label": "Break-even volume",
+              "value": "120 scans"
+            },
+            "note": "Synthetic data from the lesson’s hospital example."
+          },
+          "cues": [
+            {
+              "text": "Two numbers answer most should-we-add-this questions faster than a full income statement. Let’s use a hospital considering an evening imaging shift. The numbers are invented."
+            },
+            {
+              "text": "Average reimbursement is four hundred dollars a scan.",
+              "reveal": 1
+            },
+            {
+              "text": "Supplies and per-scan fees are one hundred and fifty.",
+              "reveal": 2
+            },
+            {
+              "text": "So each scan contributes two hundred and fifty dollars toward fixed costs and then profit. That is the contribution margin: price minus variable cost per unit.",
+              "reveal": 3
+            },
+            {
+              "text": "Opening the shift costs thirty thousand dollars a month in staff and utilities. Divide by two hundred and fifty.",
+              "reveal": 4
+            },
+            {
+              "text": "Break-even volume: one hundred and twenty scans a month.",
+              "reveal": 5
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Break-even as a risk tool",
+            "lines": [
+              {
+                "label": "Expected 160 scans: 160 × $250 − $30,000",
+                "value": "+$10,000"
+              },
+              {
+                "label": "Only 110 scans: 110 × $250 − $30,000",
+                "value": "−$2,500"
+              },
+              {
+                "label": "Price falls to $350: $30,000 ÷ $200",
+                "value": "150 scans to break even"
+              }
+            ],
+            "result": {
+              "label": "Margin of safety at expected volume",
+              "value": "40 scans, 25%"
+            },
+            "note": "Synthetic data."
+          },
+          "cues": [
+            {
+              "text": "Expected volume is one hundred and sixty scans, so the shift makes ten thousand dollars a month.",
+              "reveal": 1
+            },
+            {
+              "text": "But at one hundred and ten scans, it loses two and a half thousand.",
+              "reveal": 2
+            },
+            {
+              "text": "And if reimbursement falls fifty dollars, to three hundred and fifty, the margin shrinks to two hundred and break-even rises by thirty scans, to one hundred and fifty.",
+              "reveal": 3
+            },
+            {
+              "text": "The cushion is forty scans over break-even, a margin of safety of only twenty-five percent. Before approving, ask how confident the volume forecast is, and what in the contract environment could move the price.",
+              "reveal": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Which costs count?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "Is this cost relevant to the decision?",
+            "x": [
+              "Already incurred (sunk)",
+              "Not yet incurred"
+            ],
+            "y": [
+              "Same under every option",
+              "Differs between options"
+            ],
+            "cells": [
+              [
+                "Past payment irrelevant; only salvage or reuse value counts",
+                "Relevant: the only costs that belong in the comparison"
+              ],
+              [
+                "Irrelevant twice over: ignore it",
+                "Irrelevant to the choice, though it stays in the budget"
+              ]
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the second idea: which costs belong in a decision. Two questions sort every cost. Has it already been incurred? And does it differ between the options?"
+            },
+            {
+              "text": "Already spent, but something about it differs between options: the past payment is irrelevant. Only its salvage or reuse value can count.",
+              "reveal": 1
+            },
+            {
+              "text": "Not yet spent and different between options: relevant. These are the only costs that belong in the comparison.",
+              "reveal": 2
+            },
+            {
+              "text": "Already spent and the same either way: irrelevant twice over.",
+              "reveal": 3
+            },
+            {
+              "text": "Not yet spent, but the same under every option: irrelevant to the choice, though it still belongs in the budget.",
+              "reveal": 4
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two neglects, two experiments",
+            "left": {
+              "title": "Sunk-cost effect",
+              "points": [
+                "People keep investing in an unpromising, nearly finished project",
+                "Sunk cost raised rated chances of success",
+                "Economics courses did not reduce it",
+                "Proposed motive: not wanting to appear wasteful"
+              ]
+            },
+            "right": {
+              "title": "Opportunity-cost neglect",
+              "points": [
+                "The forgone alternative is invisible in records",
+                "People ignore it unless prompted",
+                "A simple reminder reduced purchases",
+                "Effort alone rarely fixes it"
+              ]
+            },
+            "refs": [
+              "R-arkes-1985-psychology",
+              "R-frederick-2009-opportunity"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Simple to state. Hard to live by, as two lines of research show."
+            },
+            {
+              "text": "The sunk-cost effect is the tendency to continue because money, time or effort has already been invested. In Arkes and Blumer’s classic studies, people facing a nearly finished but now unpromising project tended to keep investing. The best-known scenario involves an airline president and a research project.",
+              "reveal": 1,
+              "refs": [
+                "R-arkes-1985-psychology"
+              ]
+            },
+            {
+              "text": "People with a sunk cost also rated the project’s chances of success as higher. Prior courses in economics did not reduce the effect. And the authors connect it to a wish not to appear wasteful.",
+              "refs": [
+                "R-arkes-1985-psychology"
+              ]
+            },
+            {
+              "text": "The mirror-image error is neglecting opportunity cost, the value of the best alternative forgone. In studies by Frederick and colleagues, simply reminding buyers that money not spent could go to other purchases reduced purchase rates and shifted choices toward cheaper options.",
+              "reveal": 2,
+              "refs": [
+                "R-frederick-2009-opportunity"
+              ]
+            },
+            {
+              "text": "The authors argue that greater effort alone does not usually overcome the neglect. So the fix is procedural. Alternatives that are not written into the proposal are rarely weighed.",
+              "refs": [
+                "R-frederick-2009-opportunity"
+              ]
+            },
+            {
+              "text": "Now apply the matrix to a decision that trips up a lot of organizations."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-overhead",
+            "type": "choice",
+            "prompt": "A service line earns $500k of revenue, has $300k of variable costs and is allocated $250k of shared overhead, so it reports a $50k loss. The overhead will not disappear if the line closes. What happens to the organization if it closes the line?",
+            "options": [
+              {
+                "id": "a",
+                "text": "It is $50k better off — the reported loss disappears."
+              },
+              {
+                "id": "b",
+                "text": "It is unchanged — the line roughly breaks even."
+              },
+              {
+                "id": "c",
+                "text": "It is $200k worse off — it loses the line’s contribution and keeps the overhead."
+              },
+              {
+                "id": "d",
+                "text": "It is $250k better off — the overhead is removed."
+              }
+            ],
+            "answer": "c",
+            "concept": "c-marginal-analysis",
+            "feedback": {
+              "a": "The loss is an artifact of the allocation. The $250k of overhead does not disappear; it is reallocated to the remaining lines.",
+              "b": "The line contributes $500k − $300k = $200k toward shared costs. Closing it forfeits that.",
+              "c": "Right. The $200k contribution is lost and the $250k is spread over the other lines, which now look less profitable — inviting the next closure. That is the death spiral.",
+              "d": "The scenario says the overhead will not disappear. Only avoidable costs belong in the decision."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Not “is this team valuable?”",
+              "but “what does one more change?”"
+            ],
+            "sub": "Marginal analysis: add while the next unit’s benefit exceeds its full cost, including opportunity cost."
+          },
+          "cues": [
+            {
+              "text": "Two hundred thousand dollars worse off, and the other lines now look less profitable. That is why decisions should use avoidable costs, not allocations."
+            },
+            {
+              "text": "Put these ideas together and you get marginal analysis. Keep adding an activity while the incremental benefit of the next unit exceeds its incremental cost, including opportunity cost."
+            },
+            {
+              "text": "The second analyst on a project may add more than the first. The fifth may add less than she would elsewhere. The right question is never whether a team is valuable, but what one more, or one fewer, would change.",
+              "reveal": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "When the budget binds",
+      "scenes": [
+        {
+          "visual": {
+            "type": "calc",
+            "title": "A $1,000k budget, four good projects",
+            "lines": [
+              {
+                "label": "P1 $600k, NPV $180k · P2 $400k, NPV $140k",
+                "value": "PI 1.30 · 1.35"
+              },
+              {
+                "label": "P3 $500k, NPV $160k · P4 $300k, NPV $75k",
+                "value": "PI 1.32 · 1.25"
+              },
+              {
+                "label": "Rank by PI: P2 + P3, $900k spent",
+                "value": "NPV $300k"
+              },
+              {
+                "label": "Other feasible sets: P1+P4, P3+P4, P2+P4",
+                "value": "NPV $255k, $235k, $215k"
+              }
+            ],
+            "result": {
+              "label": "Best combination: P1 + P2, $1,000k spent",
+              "value": "NPV $320k"
+            },
+            "note": "Synthetic data. Projects cannot be split."
+          },
+          "cues": [
+            {
+              "text": "Last idea. If you could raise unlimited money at your cost of capital, you would accept every positive-NPV project. Inside a club, a hospital or an agency, budgets are fixed by policy, so capital is rationed.",
+              "say": "Last idea. If you could raise unlimited money at your cost of capital, you would accept every positive-N P V project. Inside a club, a hospital or an agency, budgets are fixed by policy, so capital is rationed."
+            },
+            {
+              "text": "Then the question becomes which set of projects creates the most total NPV within the budget. Here is a budget of one million dollars and four projects, all with positive NPV. The numbers are invented.",
+              "say": "Then the question becomes which set of projects creates the most total N P V within the budget. Here is a budget of one million dollars and four projects, all with positive N P V. The numbers are invented."
+            },
+            {
+              "text": "The textbook ranking tool is the profitability index, present value of future cash flows divided by cost, which is NPV per dollar plus one. P2 ranks first at one point three five, then P3, then P1, then P4.",
+              "reveal": 1,
+              "refs": [
+                "R-dahlquist-2022-principles"
+              ],
+              "say": "The textbook ranking tool is the profitability index, present value of future cash flows divided by cost, which is N P V per dollar plus one. P two ranks first at one point three five, then P three, then P one, then P four."
+            },
+            {
+              "text": "For projects you can split, you fund down that list and you are done.",
+              "reveal": 2,
+              "refs": [
+                "R-dahlquist-2022-principles"
+              ]
+            },
+            {
+              "text": "But these cannot be split. Fund P2 and P3, and you spend nine hundred thousand for three hundred thousand of NPV, with a hundred thousand stranded that no remaining project can use.",
+              "reveal": 3,
+              "say": "But these cannot be split. Fund P two and P three, and you spend nine hundred thousand for three hundred thousand of N P V, with a hundred thousand stranded that no remaining project can use."
+            },
+            {
+              "text": "So check the feasible combinations. The other pairs that fit produce less.",
+              "reveal": 4
+            },
+            {
+              "text": "And P1 plus P2 spends the whole budget for three hundred and twenty thousand. The twenty thousand difference is the opportunity cost of a rule of thumb.",
+              "reveal": 5,
+              "say": "And P one plus P two spends the whole budget for three hundred and twenty thousand. The twenty thousand difference is the opportunity cost of a rule of thumb."
+            },
+            {
+              "text": "Notice what rationing implies about value. Under a binding budget, each project’s real cost is not just its price but the NPV of whatever it displaces.",
+              "say": "Notice what rationing implies about value. Under a binding budget, each project’s real cost is not just its price but the N P V of whatever it displaces."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Limits, and the scarcest resource",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Where the logic needs care",
+            "cards": [
+              {
+                "title": "Sunk cost can carry information",
+                "q": "Learning may lower the remaining cost",
+                "fail": "Translate it into forward-looking terms"
+              },
+              {
+                "title": "Marginal effects are rarely observed",
+                "q": "We know totals, guess the margin",
+                "fail": "Treat the guess as a forecast"
+              },
+              {
+                "title": "Marginal pricing as policy",
+                "q": "Every seat at $79",
+                "fail": "Fixed costs never get covered"
+              }
+            ],
+            "refs": [
+              "R-arkes-1985-psychology"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now let me argue against my own lecture, because this logic can be overused."
+            },
+            {
+              "text": "Sunk-cost reasoning is not always an error. A team that spent two years learning a system may now finish it cheaply. That is a lower remaining cost, not a sunk-cost argument. Honoring a commitment can protect reputation, and abandoning projects at the first setback teaches staff that nothing will be supported long enough to work. The discipline is to translate each into forward-looking costs and benefits.",
+              "reveal": 1,
+              "refs": [
+                "R-arkes-1985-psychology"
+              ]
+            },
+            {
+              "text": "Second, marginal analysis is easy to state and hard to do. Organizations know what a function costs in total and only guess what one more person would change. That guess deserves the scrutiny of any forecast: a reference class, a range, and a statement of what would prove it wrong.",
+              "reveal": 2
+            },
+            {
+              "text": "Third, contribution-margin thinking has a trap. If every decision is judged only against variable cost, prices drift down and fixed costs are never covered. The airline that fills every seat at seventy-nine dollars goes bankrupt. Marginal pricing is right for genuinely spare capacity, and wrong as a standing policy.",
+              "reveal": 3
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Pricing staff time",
+            "term": "Capacity ledger",
+            "definition": "Each quarter, list the department’s scarce hours, what consumes them, and the best unfunded use. Every new request names the line it displaces.",
+            "example": "Ten hours a week on a manual report costs the best project not being done."
+          },
+          "cues": [
+            {
+              "text": "The same trap hides in staffing. A department that accepts every small extra task because it uses existing people eventually discovers its people were not spare."
+            },
+            {
+              "text": "Opportunity cost is easiest to neglect for staff time, because salaries are fixed and feel free. If an analyst spends ten hours a week on a manual report, the cost is not a quarter of her salary. It is the most valuable project she is not doing.",
+              "reveal": 1
+            },
+            {
+              "text": "One practical tool is a quarterly capacity ledger. List the scarce hours, what consumes them, and the best unfunded use. Any new request must name which line it displaces.",
+              "reveal": 2
+            },
+            {
+              "text": "In player development, the scarcest resource is usually expert attention: coaches’ and analysts’ hours with players. A figure like development cost per player says little about what one more instructor at a particular affiliate would change, for which players."
+            },
+            {
+              "text": "And one conjecture from this course, labelled as such: departments that make every proposal name its displaced alternative may approve fewer projects but realize more value per dollar. It follows from the opportunity-cost findings, but to our knowledge it has not been tested in organizational budgeting.",
+              "refs": [
+                "R-frederick-2009-opportunity"
+              ]
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-displace",
+            "type": "reflect",
+            "prompt": "Name one recurring commitment in your area — a report, a meeting, a program — that would not survive the question “what does this displace?” What is the best alternative use of the hours or money it consumes?",
+            "concept": "c-opportunity-cost"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Three questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Capital Allocation Lab",
+                "detail": "Allocate a fixed budget across competing proposals",
+                "href": "#/exercise/w10-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Dahlquist & Knight (2022) Principles of Finance, Chapter 16",
+                "href": "#/library/R-dahlquist-2022-principles"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Decide at the margin. Count only incremental, future, avoidable costs and benefits. Contribution margin and break-even volume show how an activity’s economics change with volume."
+            },
+            {
+              "text": "Sunk costs are irrelevant except for salvage value. Allocated overhead is often unavoidable. Opportunity cost is real even when no invoice records it. And under a binding budget, maximize total NPV across feasible combinations, not project by project.",
+              "say": "Sunk costs are irrelevant except for salvage value. Allocated overhead is often unavoidable. Opportunity cost is real even when no invoice records it. And under a binding budget, maximize total N P V across feasible combinations, not project by project."
+            },
+            {
+              "text": "Next, take the comprehension check below, the same check as the written lesson. Then the Capital Allocation Lab puts a fixed budget in your hands, and the Dahlquist and Knight chapter covers the profitability index and capital budgeting.",
+              "reveal": 1,
+              "refs": [
+                "R-dahlquist-2022-principles"
+              ]
+            },
+            {
+              "text": "The written lesson keeps the unit-economics note and the examples from technology and the military. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,771 @@
+{
+  "id": "w07-l1-lecture",
+  "lesson": "w07-l1",
+  "title": "Decided Before Anyone Speaks",
+  "subtitle": "Alternatives, reservation values and the zone of agreement",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 1. It covers the same objectives — BATNA, reservation value, aspiration and ZOPA; pricing an uncertain alternative; when a deal is possible and what to do when it is not; and what bargaining power really consists of — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Two candidates, one offer",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 7 · Lesson 1 · Lecture",
+            "title": "Decided before anyone speaks",
+            "sub": "Alternatives, reservation values and the zone of agreement"
+          },
+          "cues": [
+            {
+              "text": "Most people think a negotiation is won or lost at the table. In what they say, how they say it, how hard they push."
+            },
+            {
+              "text": "This lecture argues something less glamorous. Most negotiations are largely decided before anyone opens their mouth."
+            },
+            {
+              "text": "Let's start with a scene."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Same skill, same offer",
+            "left": {
+              "title": "Candidate A",
+              "points": [
+                "Written outside offer",
+                "Expires Friday"
+              ]
+            },
+            "right": {
+              "title": "Candidate B",
+              "points": [
+                "No outside offer",
+                "Eager to leave her current job"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Two senior data engineers interview for the same role at a payments company. Equally skilled, equally articulate. This is a hypothetical example."
+            },
+            {
+              "text": "The first holds a written offer from another firm, and it expires on Friday.",
+              "reveal": 1
+            },
+            {
+              "text": "The second has only her current job, which she is eager to leave.",
+              "reveal": 2
+            },
+            {
+              "text": "The company makes both of them the same initial offer. Who is in the stronger position?"
+            },
+            {
+              "text": "You knew instantly. Almost everyone does. But here is the harder question: what exactly does that strength consist of? How large is it? And what should the second candidate do about it?"
+            },
+            {
+              "text": "By the end of this lecture you'll be able to answer all three, precisely."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "The hauler wants twenty-two percent more.",
+              "What can the city do without it?"
+            ],
+            "sub": "A hypothetical renegotiation."
+          },
+          "cues": [
+            {
+              "text": "Change industries. A mid-sized city is renegotiating its waste-collection contract, and the incumbent hauler asks for a twenty-two percent increase.",
+              "reveal": 0
+            },
+            {
+              "text": "The city's position depends far less on its negotiator's charm than on one question: could the city run collection itself, or bid the work to a second hauler, and at what cost?",
+              "reveal": 1
+            },
+            {
+              "text": "If that answer is known and credible, the demand meets a ceiling. If nobody has done the work, the city is negotiating with nothing behind it. And the hauler can usually tell."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Four numbers on each side",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Fisher and Ury, 1981",
+            "term": "BATNA",
+            "definition": "Best alternative to a negotiated agreement: what you will actually do if no deal is reached.",
+            "example": "Accept the other offer. Bring collection in-house. Keep the old system."
+          },
+          "cues": [
+            {
+              "text": "The vocabulary comes from Roger Fisher and William Ury's book, Getting to Yes.",
+              "refs": [
+                "R-fisher-1981-getting"
+              ]
+            },
+            {
+              "text": "They introduced the term BATNA, the best alternative to a negotiated agreement. Their argument was that your BATNA, not some arbitrary bottom line, is the standard against which any proposed deal should be measured.",
+              "reveal": 1,
+              "refs": [
+                "R-fisher-1981-getting"
+              ]
+            },
+            {
+              "text": "Notice that a BATNA is a course of action, not a number. Accept the other firm's offer. Bring waste collection in-house. Keep the old system.",
+              "reveal": 2
+            },
+            {
+              "text": "You develop it by listing what you could actually do without this counterpart, improving the most promising options, and then choosing the best one.",
+              "refs": [
+                "R-fisher-1981-getting"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "From action to numbers",
+            "steps": [
+              "Reservation value: indifferent between deal and BATNA",
+              "Aspiration: what you are realistically aiming for",
+              "Opening: the first number on the table"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The analytic tradition associated with Howard Raiffa's The Art and Science of Negotiation turns that course of action into a number.",
+              "refs": [
+                "R-raiffa-1982-art"
+              ]
+            },
+            {
+              "text": "Your reservation value is the point at which you are indifferent between agreeing and taking your BATNA. Worse than that, you walk.",
+              "reveal": 1,
+              "refs": [
+                "R-raiffa-1982-art"
+              ]
+            },
+            {
+              "text": "Your aspiration is the outcome you are realistically trying to achieve. It sits well above your reservation value.",
+              "reveal": 2
+            },
+            {
+              "text": "And your opening offer sits at or beyond your aspiration, so you have room to concede.",
+              "reveal": 3
+            },
+            {
+              "text": "Here is the asymmetry worth remembering. The reservation value protects you from bad deals. The aspiration protects you from mediocre ones."
+            },
+            {
+              "text": "Negotiators who prepare only a reservation value tend to settle near it, because it is the only number they have thought hard about."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "A software license, both sides",
+            "lines": [
+              {
+                "label": "Licensor reservation value",
+                "value": "$1.6M a year"
+              },
+              {
+                "label": "Licensee reservation value",
+                "value": "$2.1M a year"
+              },
+              {
+                "label": "Aspirations",
+                "value": "Licensor $2.0M · Licensee $1.7M"
+              },
+              {
+                "label": "Openings",
+                "value": "Licensor $2.4M · Licensee $1.5M"
+              }
+            ],
+            "result": {
+              "label": "Zone of possible agreement",
+              "value": "$1.6M to $2.1M, a $0.5M surplus"
+            },
+            "note": "Synthetic numbers from the lesson."
+          },
+          "cues": [
+            {
+              "text": "Let's put numbers on both sides of a software license. The numbers here are invented."
+            },
+            {
+              "text": "The licensor could license to a smaller customer instead. Counting the sales effort that would still take, it will accept no less than one point six million dollars a year.",
+              "reveal": 1
+            },
+            {
+              "text": "The licensee could keep its incumbent system, at one point eight million all-in, but it values better defect detection at about three hundred thousand more. So it will pay up to two point one million.",
+              "reveal": 2
+            },
+            {
+              "text": "Each side aims higher than its floor. The licensor hopes for two million; the licensee for one point seven.",
+              "reveal": 3
+            },
+            {
+              "text": "And each opens beyond its aspiration: two point four million from the licensor, one point five from the licensee.",
+              "reveal": 4
+            },
+            {
+              "text": "Where the most the buyer would pay exceeds the least the seller would accept, every price in between beats walking away for both. That overlap is the zone of possible agreement, the ZOPA. Here it runs from one point six to two point one million, a surplus of half a million a year.",
+              "reveal": 5,
+              "refs": [
+                "R-raiffa-1982-art"
+              ]
+            },
+            {
+              "text": "Notice that both aspirations sit inside the zone, and both openings sit outside it. And only the openings are visible to the other side. Everything else is hidden, or merely claimed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Pricing an uncertain alternative",
+      "scenes": [
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "An offer that might vanish",
+            "items": [
+              {
+                "value": "$180,000",
+                "label": "outside offer, if it holds"
+              },
+              {
+                "value": "70%",
+                "label": "your estimate that it holds"
+              },
+              {
+                "value": "$150,000",
+                "label": "current salary, if it does not"
+              }
+            ],
+            "note": "Hypothetical numbers."
+          },
+          "cues": [
+            {
+              "text": "Real alternatives are rarely certain. Go back to our engineer. Suppose her outside offer might be withdrawn."
+            },
+            {
+              "text": "If it holds, it is worth one hundred eighty thousand dollars a year.",
+              "reveal": 1
+            },
+            {
+              "text": "She judges it seventy percent likely to hold.",
+              "reveal": 2
+            },
+            {
+              "text": "If it falls through, she stays at her current salary of one hundred fifty thousand. Again, invented numbers.",
+              "reveal": 3
+            },
+            {
+              "text": "Before I show you the arithmetic: what is that uncertain alternative worth, as a single figure?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-expected",
+            "type": "estimate",
+            "prompt": "What is the expected value of the engineer’s uncertain alternative, in thousands of dollars a year?",
+            "min": 150,
+            "max": 180,
+            "step": 1,
+            "unit": "thousand $",
+            "initial": 165,
+            "answer": 171,
+            "tolerance": 2,
+            "concept": "c-reservation-value",
+            "feedback": {
+              "correct": "Right: 0.7 × 180 + 0.3 × 150 = 126 + 45 = 171 thousand. The next scene works it through.",
+              "incorrect": "The expected value is 171 thousand: 0.7 × 180 + 0.3 × 150 = 126 + 45. Many people simply average the two figures and get 165, which ignores the probabilities."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Expected value of the alternative",
+            "lines": [
+              {
+                "label": "Offer holds: 0.7 × $180,000",
+                "value": "$126,000"
+              },
+              {
+                "label": "Offer withdrawn: 0.3 × $150,000",
+                "value": "$45,000"
+              }
+            ],
+            "result": {
+              "label": "Expected value",
+              "value": "$171,000"
+            },
+            "note": "Hypothetical numbers from the lesson."
+          },
+          "cues": [
+            {
+              "text": "A probability-weighted average, called an expected value, gives a starting point."
+            },
+            {
+              "text": "Seventy percent of one hundred eighty thousand is one hundred twenty-six thousand.",
+              "reveal": 1
+            },
+            {
+              "text": "Thirty percent of one hundred fifty thousand is forty-five thousand.",
+              "reveal": 2
+            },
+            {
+              "text": "Add them and the alternative is worth about one hundred seventy-one thousand dollars.",
+              "reveal": 3
+            },
+            {
+              "text": "But a starting point is not a verdict. Someone who dislikes risk might set her reservation value somewhat below that figure."
+            },
+            {
+              "text": "Someone desperate to leave might set it above, because staying has costs the salary figure leaves out."
+            },
+            {
+              "text": "Either adjustment is legitimate. What matters is that it is deliberate and written down before the conversation, not improvised under pressure."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Is there a deal to be had?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "Selling a piece of equipment",
+            "items": [
+              {
+                "value": "$2.6M",
+                "label": "least the seller will accept"
+              },
+              {
+                "value": "$2.3M",
+                "label": "most the buyer will pay"
+              }
+            ],
+            "note": "Synthetic numbers."
+          },
+          "cues": [
+            {
+              "text": "Now flip the question. Not where will the deal land, but should there be a deal at all?"
+            },
+            {
+              "text": "A seller will accept no less than two point six million dollars for a piece of equipment.",
+              "reveal": 1
+            },
+            {
+              "text": "The buyer will pay no more than two point three million. Invented numbers again.",
+              "reveal": 2
+            },
+            {
+              "text": "Both sides have been talking for weeks and everyone is invested. What should happen next?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-nozopa",
+            "type": "choice",
+            "prompt": "The seller’s reservation value is $2.6M; the buyer’s is $2.3M. Both reservation values are honestly set. What is the correct outcome?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Split the difference at $2.45M."
+              },
+              {
+                "id": "b",
+                "text": "A polite impasse: each side takes its alternative."
+              },
+              {
+                "id": "c",
+                "text": "Whoever is more persistent should keep pushing until the other gives in."
+              },
+              {
+                "id": "d",
+                "text": "Each side should lower its reservation value to keep the deal alive."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-zopa",
+            "feedback": {
+              "a": "At $2.45M the seller gets less than its alternative is worth, so it is worse off than walking away. Splitting the difference across a gap just shares a loss.",
+              "b": "Right. The reservation values do not overlap, so there is no ZOPA: no price leaves both better off than their alternatives. Walking away is the success here.",
+              "c": "Persistence cannot create a zone that does not exist. If one side “gives in”, it accepts a deal worse than its BATNA.",
+              "d": "Reservation values should move for reasons — new information about value — not because talks have dragged on. Fatigue and sunk effort are not reasons."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "No overlap, no deal.",
+              "Impasse can be the right answer."
+            ],
+            "sub": "Reservation values move for reasons, not for fatigue."
+          },
+          "cues": [
+            {
+              "text": "When reservation values do not overlap, no agreement is better for both sides than their alternatives. The correct outcome is a polite impasse.",
+              "reveal": 0,
+              "refs": [
+                "R-raiffa-1982-art"
+              ]
+            },
+            {
+              "text": "That feels like failure. It is not. A negotiator who signs below her BATNA has lost, however warm the handshake.",
+              "reveal": 1
+            },
+            {
+              "text": "One caution. Reservation values should move when you learn something real, say, what the other system actually does, or how long implementation will take."
+            },
+            {
+              "text": "They should not move because you are tired, because you have already spent three months, or because the counterpart is pleasant."
+            },
+            {
+              "text": "And before you declare impasse, ask whether you've been treating a several-issue deal as a single price. That is where Lesson Two picks up."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Intensive-care staffing contract",
+            "lines": [
+              {
+                "label": "Hospital BATNA: hire plus overtime",
+                "value": "$112 an hour"
+              },
+              {
+                "label": "Agency BATNA: place nurses elsewhere",
+                "value": "$98 an hour"
+              },
+              {
+                "label": "Agency opening",
+                "value": "$125 an hour"
+              }
+            ],
+            "result": {
+              "label": "ZOPA",
+              "value": "$98 to $112, $14 surplus per hour"
+            },
+            "note": "Synthetic numbers from the lesson."
+          },
+          "cues": [
+            {
+              "text": "When a zone does exist, what do you do with it? Take a hospital negotiating with a nurse staffing agency for intensive-care coverage. The numbers are synthetic."
+            },
+            {
+              "text": "Accelerating permanent hiring and paying overtime in the meantime would cost the hospital about one hundred twelve dollars an hour, all-in. That is its reservation value.",
+              "reveal": 1
+            },
+            {
+              "text": "The agency could place the same nurses elsewhere; it would accept as little as ninety-eight dollars from this hospital.",
+              "reveal": 2
+            },
+            {
+              "text": "The agency opens at one hundred twenty-five.",
+              "reveal": 3
+            },
+            {
+              "text": "The zone runs from ninety-eight to one hundred twelve, fourteen dollars of surplus per hour.",
+              "reveal": 4
+            },
+            {
+              "text": "First, an opening outside the zone is normal. It tells you about the agency's strategy, not its reservation value."
+            },
+            {
+              "text": "Second, the strong response is a counter near the hospital's aspiration, say one hundred three dollars, justified by published regional rates, plus a credible signal of its alternative: we have approved twenty permanent positions and interviews start next month."
+            },
+            {
+              "text": "Third, decide in advance what would legitimately move your number. A guarantee of the same nurses for the full term cuts training costs. That is a reason to pay more. Learning the agency is impatient is not a reason to pay below fair value, if you will renew."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "What bargaining power is",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Sources of bargaining power",
+            "cards": [
+              {
+                "title": "Alternatives",
+                "q": "Who needs this deal less?",
+                "fail": "An unpriced BATNA gives away the advantage"
+              },
+              {
+                "title": "Deadlines",
+                "q": "How do alternatives change over time?",
+                "fail": "Exploding offers can be a claiming tactic"
+              },
+              {
+                "title": "Commitments",
+                "q": "Can you credibly not accept less?",
+                "fail": "A manufactured limit destroys credibility"
+              },
+              {
+                "title": "Reputation",
+                "q": "What will tomorrow's alternatives be?",
+                "fail": "Hard claiming today shrinks future options"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "So what was the first engineer's strength? In this frame, bargaining power is not a personality trait. It is primarily the relative cost of no deal."
+            },
+            {
+              "text": "The side whose alternative is closer to the value of the agreement needs it less, and can credibly claim more of the zone. That is the engineer with the written offer.",
+              "reveal": 1
+            },
+            {
+              "text": "Deadlines matter because they change alternatives over time. Her offer expires Friday; after that, her position changes.",
+              "reveal": 2
+            },
+            {
+              "text": "Commitments matter because a credible statement that you cannot accept less, a board resolution, a published price schedule, moves the other side's estimate of your reservation value.",
+              "reveal": 3
+            },
+            {
+              "text": "And reputation matters because, in repeated relationships, how you claim today shapes which alternatives you will have tomorrow.",
+              "reveal": 4
+            },
+            {
+              "text": "And the second engineer? Her move is to work on her alternative before she negotiates, and to price what staying really costs her."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "You know your numbers.",
+              "You only estimate theirs."
+            ],
+            "sub": "Most tactics try to move those estimates."
+          },
+          "cues": [
+            {
+              "text": "Underneath all of this sits information asymmetry. Each side knows its own reservation value and has to estimate the other's.",
+              "reveal": 0
+            },
+            {
+              "text": "So distributive bargaining becomes a contest of estimates. Each side tries to learn the other's number, conceal its own, and persuade the other that its own is less flexible than it really is.",
+              "reveal": 1
+            },
+            {
+              "text": "This is the board's limit. We have another bidder. The long silence after an offer. The deadline that appears late in the process. Each one is an attempt to move your estimate."
+            },
+            {
+              "text": "Knowing the structure helps here too. In Galinsky and Mussweiler's experiments, the advantage of making the first offer disappeared when the recipient concentrated on the offerer's alternatives, the offerer's reservation price, or the recipient's own target.",
+              "refs": [
+                "R-galinsky-2001-first"
+              ]
+            },
+            {
+              "text": "Treat those countermeasures as promising rather than settled, especially for high-stakes field negotiations, where the evidence is thinner than in the lab. But the logic is clear: preparation gives you a reference point that is not their number.",
+              "refs": [
+                "R-galinsky-2001-first"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Where the model simplifies",
+            "cards": [
+              {
+                "title": "One number?",
+                "q": "Alternatives differ in risk, role, quality",
+                "fail": "Wanting a deal makes you undervalue your BATNA"
+              },
+              {
+                "title": "Power is more",
+                "q": "Coalitions, law, scrutiny, relationships",
+                "fail": "A strong BATNA may still settle generously"
+              },
+              {
+                "title": "Single issue",
+                "q": "Real deals have several issues",
+                "fail": "One price hides value-creating trades"
+              },
+              {
+                "title": "Getting to Yes",
+                "q": "Practitioner prescription, no data",
+                "fail": "Thin on the moment someone gives up money"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now let me argue against my own lecture. This structure is the most useful single preparation tool in negotiation. It is also a simplification."
+            },
+            {
+              "text": "Alternatives are rarely one number. Collapsing a job offer or a second vendor into a figure takes judgment, and that is where self-deception enters. People who want a deal tend to undervalue their alternatives.",
+              "reveal": 1
+            },
+            {
+              "text": "Power is not only alternatives. A city with a strong alternative may still settle generously, because a gap in service would be politically intolerable.",
+              "reveal": 2
+            },
+            {
+              "text": "The model is single-issue at heart. Treat a five-issue deal as one price and you hide the trades that create value.",
+              "reveal": 3
+            },
+            {
+              "text": "And Getting to Yes itself is practitioner prescription drawn from its authors' experience, not a report of controlled studies. Later lab work on joint gains is broadly consistent with it, but it says less about the distributive moment. Read it as a vocabulary and a set of heuristics.",
+              "reveal": 4,
+              "refs": [
+                "R-fisher-1981-getting"
+              ]
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-batna-reflect",
+            "type": "reflect",
+            "prompt": "Pick a negotiation you expect in the next six months. Write what you will do if no agreement is reached, then what the other side will do. Which answer are you less sure of, and what would it cost to find out?",
+            "concept": "c-batna"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Before the meeting",
+      "scenes": [
+        {
+          "visual": {
+            "type": "flow",
+            "title": "Preparation runs backward",
+            "steps": [
+              {
+                "label": "Interests",
+                "text": "Why a deal at all?"
+              },
+              {
+                "label": "Alternatives",
+                "text": "List and improve"
+              },
+              {
+                "label": "BATNA",
+                "text": "Best, honestly valued"
+              },
+              {
+                "label": "Reservation value",
+                "text": "Worst acceptable terms"
+              },
+              {
+                "label": "Aspiration",
+                "text": "Ambitious, defensible"
+              },
+              {
+                "label": "Opening",
+                "text": "Justified by criteria"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Whatever you just wrote down, here is how to build on it. Preparation runs backward, from alternatives to the opening offer."
+            },
+            {
+              "text": "Start with interests: why do you want a deal at all?",
+              "reveal": 1
+            },
+            {
+              "text": "List your alternatives, and improve the best ones before you negotiate.",
+              "reveal": 2
+            },
+            {
+              "text": "Choose your BATNA and value it honestly.",
+              "reveal": 3
+            },
+            {
+              "text": "Convert it into a reservation value, with the assumptions written beside it.",
+              "reveal": 4
+            },
+            {
+              "text": "Set an aspiration inside your estimate of the zone.",
+              "reveal": 5
+            },
+            {
+              "text": "And choose an opening you can justify with criteria. Then do the same estimate for the other side, as a range, with a confidence level.",
+              "reveal": 6
+            },
+            {
+              "text": "The same questions govern the negotiations most leaders actually face. A technology license, a facility lease, or your own budget request, whose BATNA might be a smaller pilot or a reallocation. Price that before the meeting."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Negotiation Chamber",
+                "detail": "Four issues, six rounds, against a rule-based counterpart",
+                "href": "#/exercise/w07-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Galinsky & Mussweiler (2001), First offers as anchors",
+                "href": "#/library/R-galinsky-2001-first"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let's bring it together."
+            },
+            {
+              "text": "Your BATNA is a course of action. Your reservation value translates it into the worst terms you should accept here. Your aspiration decides how much of the zone you try to claim."
+            },
+            {
+              "text": "A deal is possible only when reservation values overlap. When they do not, impasse is the right answer. And bargaining power is mostly the relative cost of no deal, which you can often change before you ever sit down."
+            },
+            {
+              "text": "Take the comprehension check below; it is the same as the written lesson's. Then try the Negotiation Chamber, and read Galinsky and Mussweiler on first offers, which sets up Lesson Three.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson stays here for the full examples and the methodological notes. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

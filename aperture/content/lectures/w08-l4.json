@@ -1,0 +1,696 @@
+{
+  "id": "w08-l4-lecture",
+  "lesson": "w08-l4",
+  "title": "The Organization Beneath the Chart",
+  "subtitle": "Routines, culture and teams",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 4. It covers the same objectives — routines as organizational memory and why reorganizations and turnover erase them, Hackman’s five conditions for team design, and the difference between team structure and team climate — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Two units, one protocol",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 8 · Lesson 4 · Lecture",
+            "title": "The organization beneath the chart",
+            "sub": "Routines, culture and teams"
+          },
+          "cues": [
+            {
+              "text": "Picture two intensive care units in the same hospital system. They are hypothetical, but stay with me."
+            },
+            {
+              "text": "Same written protocols. Similar staffing ratios. The same chief nursing officer."
+            },
+            {
+              "text": "One reliably catches deteriorating patients early. The other does not. Where would you look for the difference?"
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "What a visitor notices",
+            "steps": [
+              "The night charge nurse walks every room at three a.m.",
+              "The respiratory therapist joins rounds uninvited",
+              "New nurses keep one mentor for six weeks"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Not in the binder. A visitor who spends a week in both units notices small things.",
+              "reveal": 0
+            },
+            {
+              "text": "In the first unit, the night charge nurse walks every room at three in the morning and asks each nurse one question.",
+              "reveal": 1
+            },
+            {
+              "text": "The respiratory therapist joins rounds without being invited.",
+              "reveal": 2
+            },
+            {
+              "text": "New nurses are paired with the same mentor for six weeks.",
+              "reveal": 3
+            },
+            {
+              "text": "None of this is in the protocol. All of it is how the unit actually works."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Practices that paid off were dropped",
+              "when the managers who carried them left."
+            ],
+            "sub": "The puzzle from the textile follow-up.",
+            "refs": [
+              "R-bloom-2020-do"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Remember the puzzle that closed the last lesson. In the textile follow-up, roughly half of the adopted practices had been dropped about nine years later,",
+              "reveal": 0,
+              "refs": [
+                "R-bloom-2020-do"
+              ]
+            },
+            {
+              "text": "and among the reasons most often given were turnover among managers and a lack of directors’ time.",
+              "reveal": 1,
+              "refs": [
+                "R-bloom-2020-do"
+              ]
+            },
+            {
+              "text": "This lecture explains why. Formal design, structure, decision rights and measures, creates the frame. What fills the frame is a set of routines that people build and maintain, often without noticing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "How organizations remember",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Nelson and Winter",
+            "term": "Organizational routines",
+            "definition": "Regular, predictable patterns of activity through which an organization does its work.",
+            "example": "The organization’s counterpart of an individual’s skills.",
+            "refs": [
+              "R-nelson-1982-evolutionary"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Richard Nelson and Sidney Winter put routines at the center of their evolutionary theory of the firm.",
+              "reveal": 0,
+              "refs": [
+                "R-nelson-1982-evolutionary"
+              ]
+            },
+            {
+              "text": "Routines are the regular, predictable patterns of activity through which an organization does its work, from how it schedules production to how it decides what to investigate next.",
+              "reveal": 1,
+              "refs": [
+                "R-nelson-1982-evolutionary"
+              ]
+            },
+            {
+              "text": "Their claim is that routines are the main way organizations store operational knowledge. Much of it is tacit, held in coordinated habits rather than documents. That makes routines the organizational counterpart of an individual’s skills.",
+              "reveal": 2,
+              "refs": [
+                "R-nelson-1982-evolutionary"
+              ]
+            },
+            {
+              "text": "And routines are also a truce. They settle, for the time being, conflicts over who does what, so work can go on without constant renegotiation.",
+              "refs": [
+                "R-nelson-1982-evolutionary"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two faces of one routine",
+            "refs": [
+              "R-nelson-1982-evolutionary"
+            ],
+            "left": {
+              "title": "Reliability",
+              "points": [
+                "No need to re-plan coordinated action",
+                "Knowledge kept without documents",
+                "Capabilities hard to copy"
+              ]
+            },
+            "right": {
+              "title": "Resistance to change",
+              "points": [
+                "Changing it reopens the truce",
+                "Discards knowledge no one wrote down",
+                "Change lags the environment"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Two implications follow, and they are the same fact seen twice.",
+              "reveal": 0
+            },
+            {
+              "text": "Routines make organizations reliable. Coordinated action does not have to be re-planned every time, and it is hard for rivals to copy.",
+              "reveal": 1,
+              "refs": [
+                "R-nelson-1982-evolutionary"
+              ]
+            },
+            {
+              "text": "And routines make organizations resistant to change. Changing one reopens the truce and throws away knowledge that no one wrote down. That is why organizations often change more slowly than their environments.",
+              "reveal": 2,
+              "refs": [
+                "R-nelson-1982-evolutionary"
+              ]
+            },
+            {
+              "text": "Now you can see why a reorganization or a departure is costly even when the new design is better on paper. The chart can be redrawn in a day. The tacit routines it breaks have to be rebuilt."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "How a practice becomes the organization",
+            "steps": [
+              {
+                "label": "Decision",
+                "text": "A leader introduces a weekly case review"
+              },
+              {
+                "label": "Repetition",
+                "text": "Performed on a cadence; mistakes corrected"
+              },
+              {
+                "label": "Routine",
+                "text": "Runs without the leader"
+              },
+              {
+                "label": "Norm",
+                "text": "Skipping it feels wrong"
+              },
+              {
+                "label": "Risk",
+                "text": "Stability can become inertia"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Here is how a practice becomes part of the organization.",
+              "reveal": 0
+            },
+            {
+              "text": "A leader introduces it, say a weekly case review.",
+              "reveal": 1
+            },
+            {
+              "text": "People perform it on a cadence, and mistakes get corrected.",
+              "reveal": 2
+            },
+            {
+              "text": "Eventually it runs without the leader. Roles and hand-offs are tacitly understood.",
+              "reveal": 3
+            },
+            {
+              "text": "Then it becomes a norm. Skipping it feels wrong, and newcomers learn it by watching.",
+              "reveal": 4
+            },
+            {
+              "text": "And here is the risk. If the routine stops fitting the work, the same stability becomes inertia.",
+              "reveal": 5
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "Routine strength and change",
+            "x": [
+              "Environment stable",
+              "Environment turbulent"
+            ],
+            "y": [
+              "Routines weak",
+              "Routines strong"
+            ],
+            "cells": [
+              [
+                "Reliable efficiency",
+                "Competence trap"
+              ],
+              [
+                "Wasted effort: every case improvised",
+                "Improvisation without memory"
+              ]
+            ]
+          },
+          "cues": [
+            {
+              "text": "Put routine strength against the pace of change in the environment.",
+              "reveal": 0
+            },
+            {
+              "text": "Strong routines in a stable world give you reliable efficiency. The organization performs well and cheaply.",
+              "reveal": 1
+            },
+            {
+              "text": "Strong routines in a turbulent world give you a competence trap: well-practiced routines that no longer fit.",
+              "reveal": 2
+            },
+            {
+              "text": "Weak routines in a stable world waste effort. Every case is improvised and quality varies.",
+              "reveal": 3
+            },
+            {
+              "text": "Weak routines in a turbulent world are adaptable, but lessons are lost as fast as they are learned.",
+              "reveal": 4
+            },
+            {
+              "text": "Let us try a diagnosis."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-routines",
+            "type": "choice",
+            "concept": "c-organizational-routines",
+            "prompt": "A hypothetical claims unit has run the same tightly practiced review process for a decade and was once the most efficient in its company. Its products and fraud patterns have changed sharply, and its error rate is now rising, although staff follow the process faithfully. Which cell describes it?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Reliable efficiency — the routines are strong, so performance will recover."
+              },
+              {
+                "id": "b",
+                "text": "Competence trap — strong routines that no longer fit a changed environment."
+              },
+              {
+                "id": "c",
+                "text": "Wasted effort — staff are improvising each case."
+              },
+              {
+                "id": "d",
+                "text": "Improvisation without memory — the unit is adapting but losing its lessons."
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "Reliable efficiency needs a stable environment. Here the environment has changed, and faithful execution of an outdated routine is the problem, not the cure.",
+              "b": "Right. The very stability that made the unit efficient now resists the change it needs. Changing the routine will reopen the truce and cost tacit knowledge, so plan for that transition cost.",
+              "c": "The staff are not improvising; they follow a strong routine faithfully. That is the opposite cell.",
+              "d": "That cell has weak routines. This unit’s routines are strong — which is exactly why it struggles to adapt."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Culture you can see",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "A working definition, for design",
+            "term": "Culture",
+            "definition": "Shared assumptions about what is rewarded, what is tolerated and how work really gets done, made visible in routines.",
+            "example": "Watch what happens to someone who raises bad news."
+          },
+          "cues": [
+            {
+              "text": "That claims unit will tell you its problem is culture. But culture is one of the most used and least precise words in management.",
+              "reveal": 0
+            },
+            {
+              "text": "For design purposes, this course uses a working definition, and it is ours, not a research finding: culture is the set of shared assumptions about what is rewarded, what is tolerated and how work really gets done, made visible in routines.",
+              "reveal": 1
+            },
+            {
+              "text": "The definition is deliberately behavioral. You learn a culture by watching which routines persist when no one is checking, what happens to someone who raises bad news, and which rules are actually enforced.",
+              "reveal": 2
+            },
+            {
+              "text": "It also implies that culture changes mainly when routines, rewards and decision rights change. Not when a values statement does."
+            },
+            {
+              "text": "So be skeptical of culture claims. A line like culture eats strategy is a slogan, not a finding. When someone offers culture to explain a failure, ask which routine, reward or decision right produced the behavior."
+            },
+            {
+              "text": "If the explanation cannot name one, it may be dodging a harder diagnosis, or blaming the people inside a system for the system’s design."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Designing the conditions for teams",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Hackman’s five conditions",
+            "steps": [
+              "A real team",
+              "A compelling direction",
+              "An enabling structure",
+              "A supportive context",
+              "Expert coaching"
+            ],
+            "refs": [
+              "R-hackman-2002-leading"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Teams are where many routines are built. And J. Richard Hackman, who spent decades studying work teams, made a claim that runs against much popular leadership advice.",
+              "reveal": 0,
+              "refs": [
+                "R-hackman-2002-leading"
+              ]
+            },
+            {
+              "text": "How well a team performs depends less on the leader’s personal style than on whether the leader has designed and supported the team so its members can manage themselves.",
+              "refs": [
+                "R-hackman-2002-leading"
+              ]
+            },
+            {
+              "text": "He summarized the conditions in five parts, as guiding principles to apply to each situation, not a formula. First, a real team: clear boundaries, genuine interdependence, reasonably stable membership. Can every member name every other member?",
+              "reveal": 1,
+              "refs": [
+                "R-hackman-2002-leading"
+              ]
+            },
+            {
+              "text": "Second, a compelling direction: a clear, challenging, consequential purpose that members could state consistently in one sentence.",
+              "reveal": 2
+            },
+            {
+              "text": "Third, an enabling structure: a well-designed task, the right size and mix of people, and a few explicit norms of conduct.",
+              "reveal": 3
+            },
+            {
+              "text": "Fourth, a supportive context: rewards, information, training and resources from the wider organization.",
+              "reveal": 4
+            },
+            {
+              "text": "And fifth, expert coaching: competent help with how the team works together, when it can use it. The diagnostic questions here are the course’s, not Hackman’s.",
+              "reveal": 5
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "A rapid-response team, diagnosed",
+            "cards": [
+              {
+                "title": "Real team?",
+                "q": "Membership rotates daily",
+                "fail": "Fixed pairings for a month"
+              },
+              {
+                "title": "Structure?",
+                "q": "No bedside roles, no speaking norm",
+                "fail": "A short bedside role script"
+              },
+              {
+                "title": "Context?",
+                "q": "Wards judged on how rarely they call",
+                "fail": "Remove the discouraging measure"
+              },
+              {
+                "title": "Coaching?",
+                "q": "Nobody reviews its cases",
+                "fail": "Weekly fifteen-minute case review"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Watch the conditions at work on a hypothetical hospital rapid-response team, called to deteriorating patients on general wards. Its direction is clear: rescue patients before cardiac arrest.",
+              "reveal": 0
+            },
+            {
+              "text": "But it is a real team only on paper. Membership rotates daily, so the same nurse, therapist and physician rarely work together twice. Fix: fixed pairings for a month at a time.",
+              "reveal": 1
+            },
+            {
+              "text": "Its structure is weak: no agreed bedside roles, no norm about who speaks first. Fix: a short role script.",
+              "reveal": 2
+            },
+            {
+              "text": "The context undermines it, because ward managers are judged on how rarely their wards call the team. Fix: remove that measure.",
+              "reveal": 3
+            },
+            {
+              "text": "And no one reviews its cases. Fix: a weekly fifteen-minute review. Notice that none of this requires a more charismatic leader. The design changes the conditions, not the people.",
+              "reveal": 4
+            },
+            {
+              "text": "One more distinction before you try it. Not every group is a team. A working group shares information but its members are accountable for separate outputs. A team shares a collective output. A crew is a team of interchangeable experts who can perform at once, like a flight crew. These are teaching distinctions."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-team",
+            "type": "choice",
+            "concept": "c-team-design-conditions",
+            "prompt": "A hypothetical analytics group of fourteen people meets weekly. Each analyst produces separate reports for different executives and is evaluated individually. The head wants it to “act like a team” and plans an off-site on trust. Following Hackman, what is the first question to settle?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Whether the group needs a more inspiring leader."
+              },
+              {
+                "id": "b",
+                "text": "Whether it is a real team at all — does the work make members depend on one another?"
+              },
+              {
+                "id": "c",
+                "text": "Whether the members trust each other enough."
+              },
+              {
+                "id": "d",
+                "text": "Whether fourteen is the right size for a team."
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "Hackman’s central claim is that conditions matter more than the leader’s personal style. A new leader would not change what the work requires.",
+              "b": "Right. With separate outputs and individual evaluation, this is a working group. Decide first whether the work needs interdependence; if not, a team design only adds meetings.",
+              "c": "Climate matters, but it comes after structure. Trust will not create interdependence the work does not require.",
+              "d": "Size belongs to an enabling structure, but that question only matters once you know the work calls for a real team."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Structure and climate need each other",
+            "refs": [
+              "R-edmondson-1999-psychological"
+            ],
+            "left": {
+              "title": "Structure creates channels",
+              "points": [
+                "A review routine",
+                "A defined role for raising risks",
+                "A decision owner who must respond"
+              ]
+            },
+            "right": {
+              "title": "Climate decides use",
+              "points": [
+                "Psychological safety",
+                "A shared belief that interpersonal risk is safe"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Rotating membership and an off-site on trust mix up two different things. Hackman’s conditions are structural. In Week Five you met team climate, in particular psychological safety.",
+              "reveal": 0
+            },
+            {
+              "text": "Structure creates the channels through which bad news and new ideas can travel: a review routine, a defined role for raising risks, a decision owner who must respond.",
+              "reveal": 1
+            },
+            {
+              "text": "Climate decides whether anyone uses them. Amy Edmondson defines psychological safety as a shared belief that the team is safe for interpersonal risk-taking, and her field study linked team structures, such as context support and leader coaching, to it.",
+              "reveal": 2,
+              "refs": [
+                "R-edmondson-1999-psychological"
+              ]
+            },
+            {
+              "text": "So the two need each other. A team with a perfect charter and a leader who punishes dissent will not learn. A team with a warm climate and no routine for reviewing its errors will feel good, and repeat them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Limits, and protecting what works",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Where the view runs out",
+            "cards": [
+              {
+                "title": "Routines explain everything?",
+                "q": "A label for whatever persists",
+                "fail": "And people adjust routines constantly"
+              },
+              {
+                "title": "Teams cost something",
+                "q": "Coordination costs, process losses",
+                "fail": "Individual work gains only meetings"
+              },
+              {
+                "title": "Stability versus mobility",
+                "q": "Stable membership is hard",
+                "fail": "People move across projects"
+              },
+              {
+                "title": "Hard evidence",
+                "q": "Tacit, surveyed, not randomized",
+                "fail": "Strong on mechanism, weak on size"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the limits.",
+              "reveal": 0
+            },
+            {
+              "text": "The routine-centered view has critics. If routines explain everything that persists, the concept risks becoming a label for whatever we observe. And the people who perform routines adjust them constantly, so the line between routine and improvisation is blurrier than the theory suggests.",
+              "reveal": 1
+            },
+            {
+              "text": "Teams incur coordination costs and process losses. For work that is truly individual, a team design adds meetings without adding value. The five conditions also say little about the politics of who gets onto a team.",
+              "reveal": 2
+            },
+            {
+              "text": "Stable membership collides with organizations that move people often across projects.",
+              "reveal": 3
+            },
+            {
+              "text": "And the evidence is hard to pin down. Routines are partly tacit, so much research on them is qualitative, historical or theoretical. Team studies often ask the same members to rate both process and performance, and teams are not randomly assigned to good conditions. Read Hackman’s conditions as a well-grounded diagnostic framework, not as separately estimated causal effects.",
+              "reveal": 4
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "A veteran retires in four months",
+            "left": {
+              "title": "Staffing problem",
+              "points": [
+                "Ask her to write it all down",
+                "Captures the rules, not the judgment"
+              ]
+            },
+            "right": {
+              "title": "Design problem",
+              "points": [
+                "Pair a successor at every review",
+                "Record the routine as it runs",
+                "Split the role, or redesign it"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Here is the practical test. A high-performing unit depends on one veteran coordinator who runs the weekly case review, keeps the master schedule and knows which exceptions matter. She retires in four months. Nothing is documented.",
+              "reveal": 0
+            },
+            {
+              "text": "Treat it as a staffing problem and you ask her to write everything down. You will capture the rules, but not the judgment.",
+              "reveal": 1
+            },
+            {
+              "text": "Treat it as a design problem and the options multiply: pair a successor with her for every review, record the routine as it runs, split the role across two people, or redesign the routine to depend less on one person. Each protects a different kind of knowledge.",
+              "reveal": 2
+            },
+            {
+              "text": "The same moves apply in player development, where much of what makes a department good lives in routines: how information travels when a player moves between levels, and how a new coach learns the methods. Write down the hand-offs, test them by watching a real one, and pair new staff long enough to absorb the tacit parts."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-reflect",
+            "type": "reflect",
+            "concept": "c-organizational-routines",
+            "prompt": "Which routine in your organization would disappear if one person left tomorrow? What would you do this month to protect it — and is that a staffing answer or a design answer?"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Organization Builder",
+                "detail": "Build a chart under a budget; it checks skills and single points of failure",
+                "href": "#/exercise/w08-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Bloom, Eifert & Mahajan (2013), Does Management Matter? Evidence from India",
+                "href": "#/library/R-bloom-2013-does"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let us bring it together."
+            },
+            {
+              "text": "Routines store what organizations know and settle who does what. They make organizations reliable, and slow to change, which is why reorganizations and departures can destroy capability that appears in no document."
+            },
+            {
+              "text": "Culture is best read through routines, rewards and decision rights, not slogans. And team performance depends heavily on conditions a leader can design, while psychological safety decides whether the channels that structure creates are actually used."
+            },
+            {
+              "text": "From here, take the comprehension check below, the same check as the written lesson. Then open the Organization Builder, and read the textile experiment whose follow-up opened this lecture.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson is here for Hackman’s table of diagnostic questions, the methodological note and more cases. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,666 @@
+{
+  "id": "w03-l3-lecture",
+  "lesson": "w03-l3",
+  "title": "Strong in the Lab, Contested on the Field",
+  "subtitle": "Motor learning: practice schedules, feedback, attention and a live debate",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 3 of Week 3. It covers the same objectives — contextual interference, practice variability, feedback frequency and attentional focus; grading each by laboratory, applied and bias-corrected evidence; and comparing information-processing and ecological-dynamics accounts — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Blocked or mixed?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 3 · Lesson 3 · Lecture",
+            "title": "Strong in the lab, contested on the field",
+            "sub": "Practice schedules, feedback, attention — and a live debate"
+          },
+          "cues": [
+            {
+              "text": "Coaches in surgery, aviation, music, the military and sport now hear the same prescriptions. Randomize practice. Give less feedback. Cue attention outward."
+            },
+            {
+              "text": "Each one has a real research base. Each one also has a real weakness. This lecture is about telling the two apart."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two suturing afternoons",
+            "left": {
+              "title": "Instructor one: blocked",
+              "points": [
+                "Twenty of technique one, then two, then three",
+                "A comment after nearly every stitch"
+              ]
+            },
+            "right": {
+              "title": "Instructor two: mixed",
+              "points": [
+                "Three techniques in unpredictable order",
+                "Summary feedback every few stitches"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "A surgical residency teaches interns three suturing techniques. The program is hypothetical."
+            },
+            {
+              "text": "One instructor runs blocked practice: twenty repetitions of the first technique, then the second, then the third, with a comment after nearly every stitch.",
+              "reveal": 1
+            },
+            {
+              "text": "The other mixes the three in an unpredictable order and gives a brief summary of feedback every few stitches.",
+              "reveal": 2
+            },
+            {
+              "text": "By the end of the afternoon, the blocked group’s stitches look markedly better, and those interns leave confident."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-suturing",
+            "type": "choice",
+            "prompt": "Ten days later, without warm-up, both groups are tested — and also asked to tie a fourth pattern neither practiced. Based on the laboratory pattern, which result is most likely?",
+            "options": [
+              {
+                "id": "a",
+                "text": "The blocked group wins both, as it did at the end of the session."
+              },
+              {
+                "id": "b",
+                "text": "The mixed group wins both the delayed test and the new pattern."
+              },
+              {
+                "id": "c",
+                "text": "The mixed group wins the delayed test, but the blocked group wins the new pattern."
+              },
+              {
+                "id": "d",
+                "text": "No difference once ten days have passed."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-contextual-interference",
+            "feedback": {
+              "a": "That is the in-session ranking. In the laboratory, the ranking tends to reverse on retention and transfer tests.",
+              "b": "Right — that is the laboratory pattern. Whether it holds this strongly in applied settings is the debate we will reach shortly.",
+              "c": "In the founding experiment, random practice did better on transfer too, especially on the most complex transfer task.",
+              "d": "In the laboratory the difference persists, and favors the schedule that looked worse during practice."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "timeline",
+            "title": "Shea and Morgan, 1979",
+            "events": [
+              {
+                "when": "Acquisition",
+                "text": "Blocked practice performs better"
+              },
+              {
+                "when": "Retention",
+                "text": "Random practice remembers more"
+              },
+              {
+                "when": "Transfer",
+                "text": "Random practice adapts better"
+              }
+            ],
+            "refs": [
+              "R-shea-1979-contextual"
+            ]
+          },
+          "cues": [
+            {
+              "text": "John Shea and Robyn Morgan ran the laboratory version. Participants learned three movement patterns, knocking down barriers in set sequences, either in blocks or in a random order.",
+              "refs": [
+                "R-shea-1979-contextual"
+              ]
+            },
+            {
+              "text": "Three phases matter. In acquisition, learners practice under the conditions being compared. Blocked practice performed better.",
+              "reveal": 1,
+              "refs": [
+                "R-shea-1979-contextual"
+              ]
+            },
+            {
+              "text": "In retention, after a delay, everyone performs the practiced skill under the same conditions. Random practice did better, especially when tested in a random order.",
+              "reveal": 2,
+              "refs": [
+                "R-shea-1979-contextual"
+              ]
+            },
+            {
+              "text": "In transfer, everyone performs a variation. Random practice did better again, especially on the most complex task.",
+              "reveal": 3,
+              "refs": [
+                "R-shea-1979-contextual"
+              ]
+            },
+            {
+              "text": "The schedule that looked worse taught more. That is the contextual interference effect. And notice that a coaching evaluation that stops at the end of acquisition is measuring performance alone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Four principles",
+      "scenes": [
+        {
+          "visual": {
+            "type": "bars",
+            "title": "Random over blocked: transfer effects",
+            "unit": "SMD",
+            "items": [
+              {
+                "label": "Overall, 34 studies",
+                "value": 0.55
+              },
+              {
+                "label": "Laboratory",
+                "value": 0.75
+              },
+              {
+                "label": "Applied settings",
+                "value": 0.34
+              },
+              {
+                "label": "Young participants",
+                "value": 0.12
+              }
+            ],
+            "note": "Source: Czyż, Wójcik and Solarská (2024). Standardized mean differences.",
+            "refs": [
+              "R-czyz-2024-effect"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Blocked practice repeats one task, serial practice cycles in a fixed order, random practice mixes unpredictably. How big is the random-practice advantage?"
+            },
+            {
+              "text": "A twenty twenty-four meta-analysis of thirty-four studies found that random practice improved transfer, with a medium overall effect, a standardized difference of zero point five five.",
+              "reveal": 1,
+              "refs": [
+                "R-czyz-2024-effect"
+              ]
+            },
+            {
+              "text": "In laboratory studies it was larger, zero point seven five.",
+              "reveal": 2,
+              "refs": [
+                "R-czyz-2024-effect"
+              ]
+            },
+            {
+              "text": "Hold the other two bars for a moment. We will need them in the challenge.",
+              "reveal": 4
+            },
+            {
+              "text": "Why might mixing help? Two explanations compete, and both are hypotheses. Reconstruction says switching forces you to rebuild the movement plan each time, which strengthens it. Elaboration says holding several tasks at once invites comparison of what distinguishes them."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Variability and feedback",
+            "cards": [
+              {
+                "title": "Practice variability",
+                "q": "Vary distance, spot, conditions",
+                "fail": "Plausible and widely used; size uncertain here"
+              },
+              {
+                "title": "Knowledge of results",
+                "q": "The outcome: where it landed",
+                "fail": "Augmented feedback is a design choice"
+              },
+              {
+                "title": "Knowledge of performance",
+                "q": "The movement: elbow, hands",
+                "fail": "Too much can create dependence"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "A related idea is variability within one skill: throwing to different distances, putting from different spots.",
+              "reveal": 1
+            },
+            {
+              "text": "Information-processing theories say varied practice builds a better general rule. Ecological approaches say variation teaches adaptation. This course’s sources include no current meta-analysis on it, so treat it as plausible, with its size uncertain."
+            },
+            {
+              "text": "Now feedback. Learners always get intrinsic feedback, what they see and feel. Coaches add augmented feedback. Knowledge of results is the outcome: where the ball landed.",
+              "reveal": 2
+            },
+            {
+              "text": "Knowledge of performance is about the movement pattern itself, like the elbow angle.",
+              "reveal": 3
+            },
+            {
+              "text": "The guidance hypothesis proposes that frequent feedback boosts practice performance but can impair retention, because learners lean on it instead of detecting their own errors. Reduced feedback is one of the manipulations Soderstrom and Bjork review as separating performance from learning.",
+              "refs": [
+                "R-soderstrom-2015-learning"
+              ]
+            },
+            {
+              "text": "The applied evidence is less clear, and the right frequency likely depends on the learner’s stage. A wider meta-analysis by Kluger and DeNisi found feedback helps on average but varies widely, with a substantial share of interventions lowering performance, especially when feedback pointed at the self rather than the task. That record could not be re-verified in this edition.",
+              "refs": [
+                "R-kluger-1996-effects"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Where to point attention",
+            "left": {
+              "title": "Internal focus",
+              "points": [
+                "On body movements",
+                "“Extend your elbow”"
+              ]
+            },
+            "right": {
+              "title": "External focus",
+              "points": [
+                "On the movement’s effect",
+                "“Send it toward the far post”"
+              ]
+            },
+            "refs": [
+              "R-chua-2021-superiority"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The fourth principle is attentional focus. An internal focus directs attention to the body: extend your elbow.",
+              "reveal": 1
+            },
+            {
+              "text": "An external focus directs it to the effect: send the ball toward the far post.",
+              "reveal": 2
+            },
+            {
+              "text": "A twenty twenty-one set of meta-analyses by Chua and colleagues pooled seventy-three studies for performance and forty for learning.",
+              "refs": [
+                "R-chua-2021-superiority"
+              ]
+            },
+            {
+              "text": "They reported an external-focus advantage of about zero point two six for performance, and about zero point five eight for both retention and transfer, with no significant moderation by age, health or skill.",
+              "refs": [
+                "R-chua-2021-superiority"
+              ]
+            },
+            {
+              "text": "That is a substantial learning effect. Now, a researcher reanalyzes the same literature and corrects for publication bias. Predict what survives."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-focus",
+            "type": "estimate",
+            "prompt": "The 2021 meta-analyses reported an external-focus retention advantage of about g = 0.58. After a 2024 correction for publication bias, roughly what retention effect remains?",
+            "min": 0,
+            "max": 0.6,
+            "step": 0.01,
+            "unit": "g",
+            "initial": 0.4,
+            "answer": 0.15,
+            "tolerance": 0.08,
+            "concept": "c-attentional-focus",
+            "feedback": {
+              "correct": "Close — about 0.15 for retention, with performance near 0.01 and transfer about 0.09. Most of the reported effect disappears.",
+              "incorrect": "The corrected retention estimate was about 0.15, with performance near 0.01 and transfer about 0.09. Most of the reported advantage did not survive."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "The challenge",
+      "scenes": [
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "External focus, after bias correction",
+            "items": [
+              {
+                "value": "g ≈ 0.01",
+                "label": "performance"
+              },
+              {
+                "value": "g ≈ 0.15",
+                "label": "retention"
+              },
+              {
+                "value": "g ≈ 0.09",
+                "label": "transfer"
+              }
+            ],
+            "note": "McKay, Corson and Seedu (2024), robust Bayesian meta-analysis.",
+            "refs": [
+              "R-mckay-2024-reporting"
+            ]
+          },
+          "cues": [
+            {
+              "text": "In twenty twenty-four, McKay and colleagues reanalyzed the literature with robust Bayesian methods and found moderate to strong evidence of publication bias in every analysis.",
+              "refs": [
+                "R-mckay-2024-reporting"
+              ]
+            },
+            {
+              "text": "After correction: about zero point zero one for performance,",
+              "reveal": 1,
+              "refs": [
+                "R-mckay-2024-reporting"
+              ]
+            },
+            {
+              "text": "zero point one five for retention,",
+              "reveal": 2
+            },
+            {
+              "text": "and zero point zero nine for transfer. Bayes factors favored no effect.",
+              "reveal": 3,
+              "refs": [
+                "R-mckay-2024-reporting"
+              ]
+            },
+            {
+              "text": "Be fair to both sides. Bias-correction methods rest on their own assumptions, so this does not prove external cues never help. But the principle cannot be presented as established. It is cheap to use. Don’t oversell it."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Contextual interference in practice",
+            "left": {
+              "title": "Czyż et al., 2024",
+              "points": [
+                "Medium effect overall",
+                "Applied settings: 0.34, not significant",
+                "Young participants: 0.12"
+              ]
+            },
+            "right": {
+              "title": "Ammar et al., 2023",
+              "points": [
+                "Little evidence of applied benefit",
+                "Calls the benefit a myth"
+              ]
+            },
+            "refs": [
+              "R-czyz-2024-effect",
+              "R-ammar-2023-myth"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Back to those two bars I asked you to hold. The same meta-analysis that found a medium overall effect found that in applied settings it was small and not statistically significant, zero point three four.",
+              "reveal": 1,
+              "refs": [
+                "R-czyz-2024-effect"
+              ]
+            },
+            {
+              "text": "In young participants, it was negligible, zero point one two.",
+              "refs": [
+                "R-czyz-2024-effect"
+              ]
+            },
+            {
+              "text": "A twenty twenty-three meta-analysis of sport practice by Ammar and colleagues went further. It found little evidence that the benefit generalizes to physical education and sport, and called it a myth.",
+              "reveal": 2,
+              "refs": [
+                "R-ammar-2023-myth"
+              ]
+            },
+            {
+              "text": "The two groups have since exchanged published critiques. The defensible position: mixing practice is a reasonable default for learners who already have a stable basic pattern, not a law."
+            },
+            {
+              "text": "And the young-participant result is consistent with a widely used idea, often called the challenge point: the useful level of difficulty depends on the learner’s skill. It is consistent, not proof. Calibrate difficulty to each learner rather than maximizing it.",
+              "refs": [
+                "R-czyz-2024-effect"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "A working grade for each principle",
+            "cards": [
+              {
+                "title": "Random over blocked",
+                "q": "Lab: consistent",
+                "fail": "Applied: small, disputed — a default to test"
+              },
+              {
+                "title": "Varied over constant",
+                "q": "Lab: classic support",
+                "fail": "Not reviewed here — size unknown"
+              },
+              {
+                "title": "Faded feedback",
+                "q": "Lab: supported",
+                "fail": "Applied: uneven — fade, don’t remove"
+              },
+              {
+                "title": "External focus",
+                "q": "Lab: medium pooled effect",
+                "fail": "Bias-corrected: near zero — contested"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "So grade each principle on three kinds of evidence: laboratory, applied, and bias-corrected."
+            },
+            {
+              "text": "Random over blocked: consistent in the lab, small and disputed in applied settings. A moderate default to test, a weak mandate.",
+              "reveal": 1
+            },
+            {
+              "text": "Varied over constant: classic support, but not reviewed in this course’s sources. A plausible default of unknown size.",
+              "reveal": 2
+            },
+            {
+              "text": "Reduced or faded feedback: supported in laboratory work, uneven in practice. Fade it rather than remove it.",
+              "reveal": 3
+            },
+            {
+              "text": "External focus: a medium pooled effect that falls to near zero after correction. Contested.",
+              "reveal": 4
+            },
+            {
+              "text": "Compare that with retrieval and spacing for knowledge like rules and protocols, which are strong. Motor skill is a separate question."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "What is being learned?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two ways to explain skill",
+            "left": {
+              "title": "Information processing",
+              "points": [
+                "Learns motor programs and rules",
+                "Coach explains, demonstrates, corrects",
+                "Structured progressions",
+                "Critique: lab tasks unlike real skills"
+              ]
+            },
+            "right": {
+              "title": "Ecological dynamics",
+              "points": [
+                "Learns to perceive and adapt",
+                "Coach designs constraints, says less",
+                "Representative tasks",
+                "Critique: hard to falsify, few trials"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Underneath the prescriptions sits a deeper disagreement about what is being learned."
+            },
+            {
+              "text": "Information-processing accounts treat the learner as a system that perceives, decides and executes, storing motor programs and rules that practice refines. The coach explains, demonstrates, corrects and schedules.",
+              "reveal": 1
+            },
+            {
+              "text": "Ecological dynamics treats skill as an adaptive relationship between performer and environment. The performer learns to perceive opportunities for action and coordinate under changing constraints.",
+              "reveal": 2
+            },
+            {
+              "text": "Its method, the constraints-led approach, manipulates the individual, the task and the environment, field size, equipment, rules, opponents, so that effective solutions emerge, instead of prescribing one technical model."
+            },
+            {
+              "text": "Each has a typical criticism. Laboratory tasks are unlike real skills, and explicit instruction can crowd out adaptation. On the other side, the ecological view is hard to falsify, has few head-to-head trials, and may underuse instruction where it helps."
+            },
+            {
+              "text": "Few studies compare a full constraints-led program with a well-designed traditional one on retention and transfer in real competition. When a coaching philosophy is defended mainly by its own theory, ask what outcome data would change the proponent’s mind."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "“Building the engram”",
+              "adds confidence, not evidence."
+            ],
+            "sub": "The testable question stays behavioral: after a delay, without the coach, in a new context — can they do it?"
+          },
+          "cues": [
+            {
+              "text": "One more piece of vocabulary to be careful with. Coaches say a drill is building the engram."
+            },
+            {
+              "text": "Engram means the physical trace of a memory in the nervous system, and neuroscience has made real progress, mostly in animal studies of simple learning. But no coach can watch one form.",
+              "reveal": 1
+            },
+            {
+              "text": "Any drill can be said to build one, and any failure blamed on one not yet consolidated. Treat that language as a cue to ask for retention and transfer data."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Redesigning a drill",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "A catcher receiving progression",
+            "steps": [
+              "Blocked work until the basic pattern is stable",
+              "Then mix pitch types and locations from live arms",
+              "Outcome feedback, summarized after short sets",
+              "Cues about the target or ball, not body parts",
+              "A weekly cold check of what lasts"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s apply it, using player development as one illustration. A common catcher receiving drill uses a pitching machine set to one location and speed, in blocks, with technique comments after most reps."
+            },
+            {
+              "text": "High success, constant conditions, internal cues, heavy guidance. A redesign might keep blocked work only until the basic pattern is stable,",
+              "reveal": 1
+            },
+            {
+              "text": "then mix pitch types and locations from live arms,",
+              "reveal": 2
+            },
+            {
+              "text": "give outcome-based feedback summarized after short sets,",
+              "reveal": 3
+            },
+            {
+              "text": "use cues about the target or the ball rather than body parts,",
+              "reveal": 4
+            },
+            {
+              "text": "and add a weekly cold check. Neither design is proven superior for a given player. The professional step is to label which elements are evidence-based defaults, which are hypotheses, and to measure what lasts.",
+              "reveal": 5
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-own-skill",
+            "type": "reflect",
+            "prompt": "Choose a skill you have taught or learned. What were its practice schedule, feedback pattern and main cue? Which would you change first — and what result two weeks later would convince you the change helped, or did not?",
+            "concept": "c-desirable-difficulties"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Three questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Learning Architect",
+                "detail": "Design a practice and measurement plan for this week",
+                "href": "#/exercise/w03-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Czyż et al. (2024), Contextual Interference and Transfer",
+                "href": "#/library/R-czyz-2024-effect"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Random practice, varied practice, reduced feedback and external cues all try to trade in-session performance for retention and transfer."
+            },
+            {
+              "text": "Contextual interference is robust in the laboratory and small and contested in applied settings. The external-focus advantage shrinks to near zero after bias correction. And the two theoretical camps disagree, with little head-to-head evidence."
+            },
+            {
+              "text": "Calibrate difficulty to the learner, use the principles as defaults to test, and judge every drill by retention and transfer."
+            },
+            {
+              "text": "Next, take the comprehension check below, the same as the written lesson. Then continue the Learning Architect exercise, and read the Czyż meta-analysis, focusing on results by setting and age.",
+              "reveal": 1,
+              "say": "Next, take the comprehension check below, the same as the written lesson. Then continue the Learning Architect exercise, and read the Chish meta-analysis, focusing on results by setting and age."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

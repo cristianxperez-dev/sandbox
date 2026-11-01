@@ -1,0 +1,673 @@
+{
+  "id": "w12-l4-lecture",
+  "lesson": "w12-l4",
+  "title": "The Same Practice, a Different Place",
+  "subtitle": "Implementation across cultures and institutions",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 4 of Week 12. It covers the same objectives — calibrated use of cultural-dimension frameworks, institutional distance and internalization, the CFIR domains, and core components versus adaptable periphery — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "The silent stores",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 12 · Lesson 4 · Lecture",
+            "title": "The same practice, a different place",
+            "sub": "Implementation across cultures and institutions"
+          },
+          "cues": [
+            {
+              "text": "A practice works beautifully at headquarters. You roll it out abroad, and nothing happens."
+            },
+            {
+              "text": "What is the first explanation that comes to mind? Hold on to it. We are going to test it."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "An open-door escalation policy",
+            "items": [
+              {
+                "value": "Rising",
+                "label": "escalations at home-country stores"
+              },
+              {
+                "value": "Near zero",
+                "label": "escalations in two other countries, for a year"
+              },
+              {
+                "value": "“Too deferential”",
+                "label": "the regional team’s diagnosis"
+              }
+            ],
+            "note": "Hypothetical retailer from the lesson; no real organization."
+          },
+          "cues": [
+            {
+              "text": "A hypothetical global retailer introduces an open-door policy. Any employee who sees a safety or ethics problem can raise it directly with the regional director, bypassing the store manager."
+            },
+            {
+              "text": "At home-country stores, escalations rise, and several serious problems are caught early.",
+              "reveal": 1
+            },
+            {
+              "text": "At stores in two other countries, escalations stay near zero for a whole year.",
+              "reveal": 2
+            },
+            {
+              "text": "The regional team concludes that employees there are too deferential to hierarchy, and proposes mandatory training on speaking up.",
+              "reveal": 3
+            },
+            {
+              "text": "You are asked to review that proposal before it goes ahead."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-silent",
+            "type": "choice",
+            "prompt": "Escalations under the new policy stay near zero in two countries. The regional team wants mandatory speaking-up training. What should you do first?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Approve the training: deference to hierarchy is well documented in cultural research."
+              },
+              {
+                "id": "b",
+                "text": "Check local labor rules, recent history, the translated policy, store managers’ behavior and language barriers."
+              },
+              {
+                "id": "c",
+                "text": "Drop the policy in those countries; it does not fit the culture."
+              },
+              {
+                "id": "d",
+                "text": "Rank the stores by escalation rate and publish the league table."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-institutional-distance",
+            "feedback": {
+              "a": "Country averages are weak predictors, and many local explanations predict exactly the same silence. Training fixes only one of them.",
+              "b": "Right. Each of these predicts the same silence and needs a different remedy. Diagnose before you intervene.",
+              "c": "That accepts the culture explanation untested — and gives up on catching serious problems in those stores.",
+              "d": "A ranking measures the symptom, not its cause, and invites gaming."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Same silence, different causes",
+            "cards": [
+              {
+                "title": "Rules",
+                "q": "Labor law or works agreements",
+                "fail": "Bypassing a manager is risky"
+              },
+              {
+                "title": "History",
+                "q": "A complainer was recently dismissed",
+                "fail": "Speaking up looks dangerous"
+              },
+              {
+                "title": "Translation",
+                "q": "Policy reads as “inform on colleagues”",
+                "fail": "The words mean something else"
+              },
+              {
+                "title": "Local gatekeepers",
+                "q": "Managers discourage it; director speaks no local language",
+                "fail": "The channel is blocked"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Here are alternatives the lesson offers, each predicting the same silence."
+            },
+            {
+              "text": "Local labor law or works agreements may make bypassing a manager risky.",
+              "reveal": 1
+            },
+            {
+              "text": "There may be a recent history in which an employee who complained was dismissed.",
+              "reveal": 2
+            },
+            {
+              "text": "The translated policy may read as an invitation to inform on colleagues.",
+              "reveal": 3
+            },
+            {
+              "text": "Or store managers quietly discourage escalation, or the regional director simply does not speak the local language.",
+              "reveal": 4
+            },
+            {
+              "text": "National culture explanations are tempting because they are available, flattering to headquarters, and impossible to disprove in a single meeting."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Culture: a weak prior",
+      "scenes": [
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "Do cultural dimensions predict?",
+            "items": [
+              {
+                "value": "598",
+                "label": "studies meta-analyzed"
+              },
+              {
+                "value": "200,000+",
+                "label": "individuals"
+              },
+              {
+                "value": "≈ .18",
+                "label": "overall absolute correlation, individual level"
+              }
+            ],
+            "note": "Taras, Kirkman and Steel (2010)."
+          },
+          "cues": [
+            {
+              "text": "Start with the frameworks themselves. Geert Hofstede described national cultures on a few dimensions, originally power distance, individualism versus collectivism, uncertainty avoidance, and masculinity versus femininity."
+            },
+            {
+              "text": "Later frameworks, such as the GLOBE project, separate what people report their society does from what they think it should do. These give a quick language for difference. But how well do they predict?",
+              "say": "Later frameworks, such as the Globe project, separate what people report their society does from what they think it should do. These give a quick language for difference. But how well do they predict?"
+            },
+            {
+              "text": "Vas Taras, Bradley Kirkman and Piers Steel meta-analyzed five hundred ninety-eight studies,",
+              "refs": [
+                "R-taras-2010-examining"
+              ],
+              "reveal": 1
+            },
+            {
+              "text": "covering more than two hundred thousand individuals.",
+              "refs": [
+                "R-taras-2010-examining"
+              ],
+              "reveal": 2
+            },
+            {
+              "text": "Hofstede’s four original dimensions were related to organizational outcomes, but modestly: an overall absolute weighted correlation of about point one eight at the individual level.",
+              "refs": [
+                "R-taras-2010-examining"
+              ],
+              "reveal": 3
+            },
+            {
+              "text": "Cultural values predicted emotions and attitudes better than behaviors, and job performance least well.",
+              "refs": [
+                "R-taras-2010-examining"
+              ]
+            },
+            {
+              "text": "They predicted performance, absenteeism and turnover less well than personality and demographics, but commitment and citizenship behavior better. And effects were larger in culturally tighter countries, with stronger norms.",
+              "refs": [
+                "R-taras-2010-examining"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Calibrated use of country scores",
+            "left": {
+              "title": "Reasonable",
+              "points": [
+                "A weak prior that attitudes to hierarchy may differ across sites"
+              ]
+            },
+            "right": {
+              "title": "Not supported",
+              "points": [
+                "Predicting one person’s reaction",
+                "Explaining one site’s poor adoption",
+                "Designing a global practice around country scores"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "So what does that license?"
+            },
+            {
+              "text": "It is reasonable to anticipate that attitudes toward hierarchy or uncertainty may differ across sites. As a weak prior.",
+              "refs": [
+                "R-taras-2010-examining"
+              ],
+              "reveal": 1
+            },
+            {
+              "text": "It is not reasonable to predict how a particular manager will react, to explain one site’s poor adoption, or to design the core of a global practice around country scores.",
+              "reveal": 2
+            },
+            {
+              "text": "There is a statistical reason too. A country score is an average. Inferring an individual’s attitude from it is the ecological fallacy. Two countries can differ on average while most of their people overlap."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Is the framework valid at all?",
+            "left": {
+              "title": "McSweeney’s critique",
+              "points": [
+                "One company’s employees can’t represent a nation",
+                "National culture is not uniform",
+                "Correlation is not cause"
+              ]
+            },
+            "right": {
+              "title": "The other side",
+              "points": [
+                "Hofstede replied in print, disputing it",
+                "Meta-analysis: real but modest effects"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "And some scholars go further. Brendan McSweeney argues that Hofstede’s claim rests on doubtful assumptions.",
+              "refs": [
+                "R-mcsweeney-2002-hofstedes"
+              ]
+            },
+            {
+              "text": "That survey answers from employees of one multinational can represent a nation. That national culture is uniform within a country. And that it operates as a systematic cause of behavior.",
+              "refs": [
+                "R-mcsweeney-2002-hofstedes"
+              ],
+              "reveal": 1
+            },
+            {
+              "text": "Hofstede replied in print, disputing the critique. And the meta-analysis offers a middle position: the dimensions do relate to outcomes, but modestly and unevenly.",
+              "refs": [
+                "R-mcsweeney-2002-hofstedes",
+                "R-taras-2010-examining"
+              ],
+              "reveal": 2
+            },
+            {
+              "text": "The defensible conclusion is calibrated use. Not wholesale acceptance, and not wholesale dismissal."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Implemented or internalized?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "Implementation versus internalization",
+            "x": [
+              "Not carried out as prescribed",
+              "Carried out as prescribed"
+            ],
+            "y": [
+              "Staff do not value it",
+              "Staff value it"
+            ],
+            "cells": [
+              [
+                "Latent support: remove the obstacles",
+                "Institutionalized: survives leadership changes"
+              ],
+              [
+                "Rejected: re-examine fit and the case",
+                "Ceremonial: audits fine, results flat"
+              ]
+            ]
+          },
+          "cues": [
+            {
+              "text": "If culture is a weak prior, what explains more? Often, institutions."
+            },
+            {
+              "text": "Culture means shared values and norms. Institutions are the rules of the game: laws and regulations, professional norms, and taken-for-granted assumptions about how things are done. Implementation problems are often institutional problems described as cultural ones."
+            },
+            {
+              "text": "Tatiana Kostova defines a successful transfer of a practice across countries as its institutionalization at the receiving unit. It is carried out as prescribed, and employees come to see it as valuable and legitimate.",
+              "refs": [
+                "R-kostova-1999-transnational"
+              ]
+            },
+            {
+              "text": "She proposes that transfer gets harder as institutional distance grows, meaning differences in regulations, shared cognitive frameworks and social norms. Organizational culture, trust and identification with the parent also matter.",
+              "refs": [
+                "R-kostova-1999-transnational"
+              ]
+            },
+            {
+              "text": "Picture two questions. Is it done? Is it valued? Staff value it but it is not done: latent support. Something is blocking it.",
+              "reveal": 1
+            },
+            {
+              "text": "Done and valued: institutionalized. It survives leadership changes.",
+              "reveal": 2
+            },
+            {
+              "text": "Neither done nor valued: rejected. Re-examine fit and the case for the change.",
+              "reveal": 3
+            },
+            {
+              "text": "And done, but privately dismissed: ceremonial. This is the executive’s blind spot. Training completed, forms filed, audits clean, results unchanged.",
+              "reveal": 4
+            },
+            {
+              "text": "The only reliable tests are behavior when nobody is checking, and whether staff can explain in their own words why the practice matters."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Which quadrant?"
+            ],
+            "sub": "A short case decision."
+          },
+          "cues": [
+            {
+              "text": "Try one. A hypothetical hospital site has nurses who strongly support a new handover practice."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-quadrant",
+            "type": "choice",
+            "prompt": "Nurses at a hypothetical site say the new handover practice is valuable, but it is rarely carried out because the shift-scheduling system leaves no overlap time. Which quadrant is this, and what follows?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Ceremonial — tighten audits."
+              },
+              {
+                "id": "b",
+                "text": "Latent support — remove the scheduling obstacle."
+              },
+              {
+                "id": "c",
+                "text": "Rejected — rebuild the case for the change."
+              },
+              {
+                "id": "d",
+                "text": "Institutionalized — no action needed."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-institutional-distance",
+            "feedback": {
+              "a": "Ceremonial means done on paper but not valued. Here it is valued but not done.",
+              "b": "Right. The belief is there; a rule or system is blocking the behavior. Fix the obstacle, not the attitude.",
+              "c": "The nurses already see the value. Persuasion would be wasted effort.",
+              "d": "Institutionalized requires the practice to be carried out. It rarely is."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "A structured diagnosis",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "The five CFIR domains",
+            "steps": [
+              "Intervention characteristics",
+              "Outer setting",
+              "Inner setting",
+              "Individuals involved",
+              "Process of implementation"
+            ]
+          },
+          "cues": [
+            {
+              "text": "So how do you diagnose a multi-site rollout without drowning in possibilities?"
+            },
+            {
+              "text": "Laura Damschroder and colleagues consolidated constructs from many published implementation theories into one framework, known by its initials as CFIR, organized in five domains.",
+              "say": "Laura Damschroder and colleagues consolidated constructs from many published implementation theories into one framework, known by its initials as C F I R, organized in five domains.",
+              "refs": [
+                "R-damschroder-2009-fostering"
+              ]
+            },
+            {
+              "text": "The intervention itself. Which components produce the benefit, and which are packaging you could change?",
+              "refs": [
+                "R-damschroder-2009-fostering"
+              ],
+              "reveal": 1
+            },
+            {
+              "text": "The outer setting. Which laws, regulators, unions, professional bodies or community expectations shape what is possible here?",
+              "reveal": 2
+            },
+            {
+              "text": "The inner setting. Does the site have the structure, resources, leadership engagement and readiness to implement now?",
+              "reveal": 3
+            },
+            {
+              "text": "The individuals. Who are the local opinion leaders, and what do they believe about the practice?",
+              "reveal": 4
+            },
+            {
+              "text": "And the process. Who plans and leads locally, how will the site reflect and adjust, and when will it evaluate?",
+              "reveal": 5
+            },
+            {
+              "text": "Readiness from Lesson Two sits inside the inner setting. A site may lack commitment because the practice clashes with local professional norms, or lack efficacy because training, language support or staffing is missing. Different remedies again.",
+              "refs": [
+                "R-weiner-2009-theory"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "Where to standardize, where to adapt",
+            "x": [
+              "Periphery adapted locally",
+              "Periphery standardized"
+            ],
+            "y": [
+              "Core diluted",
+              "Core held constant"
+            ],
+            "cells": [
+              [
+                "Adapted fidelity: active ingredients protected",
+                "Rigid fidelity: invites ceremonial adoption"
+              ],
+              [
+                "Drift: each site reinvents it",
+                "Hollow uniformity: same forms, no active ingredient"
+              ]
+            ]
+          },
+          "cues": [
+            {
+              "text": "CFIR also draws a distinction that may be the most useful idea in this lesson: an intervention’s core components versus its adaptable periphery.",
+              "refs": [
+                "R-damschroder-2009-fostering"
+              ]
+            },
+            {
+              "text": "Protect the core and let sites adapt the periphery, and you get adapted fidelity. The active ingredients survive; language, scheduling, roles and examples fit each site.",
+              "reveal": 1
+            },
+            {
+              "text": "Standardize everything, and you get rigid fidelity. It works where institutions resemble headquarters, and invites ceremonial adoption elsewhere.",
+              "reveal": 2
+            },
+            {
+              "text": "Let sites change everything, and you get drift. Results become impossible to compare and often disappear.",
+              "reveal": 3
+            },
+            {
+              "text": "And the worst case: identical forms everywhere, but the active ingredient quietly dropped. Hollow uniformity.",
+              "reveal": 4
+            },
+            {
+              "text": "The practical procedure: before rollout, write down the two to four components you believe produce the benefit, with the evidence for each. Everything else is periphery by default."
+            },
+            {
+              "text": "Ask each site to propose its adaptations and to say how it will measure the core. Then review those adaptations against the core list, not against headquarters’ habits."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-core",
+            "type": "reflect",
+            "prompt": "Think of a practice you might transfer between two sites. List the two to four core components you believe produce the benefit, and three periphery elements you would let each site adapt. What evidence supports your core list?",
+            "concept": "c-fidelity-adaptation"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Frameworks are not forecasts",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Limits of this toolkit",
+            "cards": [
+              {
+                "title": "Not a forecast",
+                "q": "CFIR lists what might matter",
+                "fail": "It doesn’t predict which sites succeed"
+              },
+              {
+                "title": "Health-care roots",
+                "q": "Built from health-services research",
+                "fail": "Business and sport use is by analogy"
+              },
+              {
+                "title": "Adaptation as drift",
+                "q": "Better local fit",
+                "fail": "Sites adapt the hard parts away"
+              },
+              {
+                "title": "Fidelity as rigidity",
+                "q": "Identical forms everywhere",
+                "fail": "Ceremonial adoption"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Before you leave with a new framework, let me temper it."
+            },
+            {
+              "text": "CFIR is a determinant framework, a structured list of what might matter. It does not predict which sites will succeed. And its constructs are many; choose the few most plausible for your setting.",
+              "refs": [
+                "R-damschroder-2009-fostering"
+              ],
+              "reveal": 1
+            },
+            {
+              "text": "Its evidence base is concentrated in health care. Using it in business or sport rests on analogy.",
+              "reveal": 2
+            },
+            {
+              "text": "Adaptation can become drift. Without an explicit core list, every site will adapt the hard parts away.",
+              "reveal": 3
+            },
+            {
+              "text": "And fidelity can become rigidity: a practice that exists on paper and nowhere else.",
+              "reveal": 4
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Core indicators: identical everywhere.",
+              "Periphery: reported locally.",
+              "Context: always alongside."
+            ],
+            "sub": "Executive twist: headquarters wants one scorecard."
+          },
+          "cues": [
+            {
+              "text": "Now a typical executive twist. Headquarters wants one global scorecard to rank sites that differ in labor law, customer mix and staff tenure.",
+              "reveal": 0
+            },
+            {
+              "text": "A single ranking rewards the site whose institutions most resemble headquarters. Refusing comparison leaves the board blind. So report the core indicators identically everywhere,",
+              "reveal": 1
+            },
+            {
+              "text": "report periphery measures locally, and add context columns like turnover, regulatory constraints and start date, so differences read as information rather than a league table.",
+              "reveal": 2
+            },
+            {
+              "text": "The same thinking applies to a player development system running a home complex and an international academy. Ask whether the core is the written plan or the weekly player and coach review, and let local coaches adapt the rest."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Change Simulator",
+                "detail": "This week’s exercise: roll a practice out across sites",
+                "href": "#/exercise/w12-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Damschroder et al. (2009), the CFIR framework",
+                "href": "#/library/R-damschroder-2009-fostering"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "National-culture frameworks are weak priors about groups, never predictions about individuals. Institutions often explain more."
+            },
+            {
+              "text": "The real test of a transferred practice is internalization, not implementation, and compliance metrics cannot see ceremonial adoption. CFIR structures the diagnosis, and the core and periphery distinction tells you what to hold constant. Fidelity to purpose beats uniformity of form."
+            },
+            {
+              "text": "Next, take the comprehension check below, the same check as the written lesson. Then open the Change Simulator, and read the background and domain descriptions in Damschroder and colleagues’ paper.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson keeps the full tables and the note on the ecological fallacy. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

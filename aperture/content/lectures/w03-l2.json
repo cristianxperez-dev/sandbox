@@ -1,0 +1,730 @@
+{
+  "id": "w03-l2-lecture",
+  "lesson": "w03-l2",
+  "title": "The Ten-Thousand-Hour Question",
+  "subtitle": "Deliberate practice, variance explained and the debate over expertise",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 2 of Week 3. It covers the same objectives — what deliberate practice is and is not, how to read variance explained, and both sides of the deliberate-practice debate including the replication of its founding study — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "An attractive idea",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 3 · Lesson 2 · Lecture",
+            "title": "The ten-thousand-hour question",
+            "sub": "What explains expertise?"
+          },
+          "cues": [
+            {
+              "text": "Picture an internal mastery academy at a software company. The company is invented, but the pitch will sound familiar."
+            },
+            {
+              "text": "Expertise takes ten thousand hours of deliberate practice. So every engineer logs practice hours in a dashboard, and promotion committees see the totals."
+            },
+            {
+              "text": "It’s an attractive idea. It is egalitarian, measurable and actionable. Anyone can become excellent, and the path is time."
+            },
+            {
+              "text": "This lecture asks whether the evidence supports it. And I want your intuition on record first."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Across studies of sport:",
+              "how much of the difference between athletes is practice?"
+            ],
+            "sub": "Commit to a number before we look."
+          },
+          "cues": [
+            {
+              "text": "Think about all the studies that compare athletes, beginners to professionals, and relate how much they practiced to how well they perform."
+            },
+            {
+              "text": "What share of the differences in performance between those athletes do you think is explained by differences in practice?",
+              "reveal": 1
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-share",
+            "type": "estimate",
+            "prompt": "Across studies of sport, what share of the differences in performance between athletes is explained by differences in accumulated practice?",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "initial": 50,
+            "answer": 18,
+            "tolerance": 6,
+            "concept": "c-variance-explained",
+            "feedback": {
+              "correct": "Close. A sport meta-analysis put it at about 18% — real, but a minority of the differences. Hold on to the elite-athlete figure coming next.",
+              "incorrect": "The meta-analytic answer is about 18%. If you guessed much higher, you are in good company — the popular account implies practice explains most of the differences."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "What deliberate practice actually is",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Ericsson, Krampe and Tesch-Römer, 1993",
+            "term": "Deliberate practice",
+            "definition": "Effortful activity designed to improve a specific, current weakness — usually designed by a teacher, with immediate feedback and repetition with refinement.",
+            "example": "A violinist working one bar at a time on a passage her teacher flagged.",
+            "refs": [
+              "R-ericsson-1993-role"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Before we touch the numbers, we need the definition, because the whole debate turns on it."
+            },
+            {
+              "text": "In nineteen ninety-three, Anders Ericsson, Ralf Krampe and Clemens Tesch-Römer proposed that expert performance results from a long period of deliberate practice.",
+              "refs": [
+                "R-ericsson-1993-role"
+              ],
+              "say": "In nineteen ninety-three, Anders Ericsson, Ralf Krampe and Clemens Tesch Römer proposed that expert performance results from a long period of deliberate practice."
+            },
+            {
+              "text": "They defined it as effortful activity designed specifically to improve current performance. Typically a teacher identifies the weakness and designs the task, and feedback is immediate.",
+              "reveal": 1,
+              "refs": [
+                "R-ericsson-1993-role"
+              ]
+            },
+            {
+              "text": "Think of a violinist working one bar at a time on a passage her teacher flagged. That is the picture.",
+              "reveal": 2
+            },
+            {
+              "text": "They argued that many traits once attributed to innate talent are the product of intense practice extended over at least ten years. Their evidence came from music students at different skill levels, whose retrospective practice estimates were higher in the more skilled groups.",
+              "refs": [
+                "R-ericsson-1993-role"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Not all time on a skill counts",
+            "cards": [
+              {
+                "title": "Play",
+                "q": "Goal: enjoyment",
+                "fail": "Self-directed, little feedback"
+              },
+              {
+                "title": "Work or competition",
+                "q": "Goal: an outcome now",
+                "fail": "Performing what you can already do"
+              },
+              {
+                "title": "Structured practice",
+                "q": "Goal: general improvement",
+                "fail": "Planned, but not individualized"
+              },
+              {
+                "title": "Deliberate practice",
+                "q": "Goal: fix an identified weakness",
+                "fail": "Effortful, expert-designed, immediate feedback"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "So deliberate practice is not time on task. It helps to separate it from its neighbors."
+            },
+            {
+              "text": "Play is for enjoyment: pickup games, self-directed, little feedback.",
+              "reveal": 1
+            },
+            {
+              "text": "Work or competition produces an outcome now. You perform what you can already do, and the feedback is noisy and delayed. A routine surgical list. A league match.",
+              "reveal": 2
+            },
+            {
+              "text": "Structured practice aims at improvement in general. A weekly team training session is planned, but not individualized.",
+              "reveal": 3
+            },
+            {
+              "text": "And deliberate practice targets one identified weakness, is usually not much fun, and depends on someone who knows what the next improvement should be. That boundary between structured and deliberate practice is exactly what the two sides later dispute.",
+              "reveal": 4,
+              "refs": [
+                "R-ericsson-1993-role"
+              ]
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-which-activity",
+            "type": "choice",
+            "prompt": "A salesperson spends her week in four ways. Which comes closest to the ORIGINAL definition of deliberate practice? The scenario is invented.",
+            "options": [
+              {
+                "id": "a",
+                "text": "Making forty routine client calls, as she does every week."
+              },
+              {
+                "id": "b",
+                "text": "Attending the monthly group workshop on presentation skills."
+              },
+              {
+                "id": "c",
+                "text": "Rehearsing the one objection her manager flagged, recorded and critiqued after each attempt."
+              },
+              {
+                "id": "d",
+                "text": "Role-playing pitches with colleagues for fun at an offsite."
+              }
+            ],
+            "answer": "c",
+            "concept": "c-deliberate-practice",
+            "feedback": {
+              "a": "That is work: producing an outcome with skills she already has. Feedback is noisy and delayed, and nothing targets a specific weakness.",
+              "b": "That is structured practice: planned, aimed at general improvement, but not individualized to her weakness.",
+              "c": "Right. A specific weakness identified by someone with expertise, effortful repetition, and immediate feedback with refinement.",
+              "d": "That is closer to play: enjoyable and self-directed, without targeted feedback."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "A practice-quality checklist",
+            "steps": [
+              "Target: a specific, current weakness",
+              "Difficulty: near the edge of capability",
+              "Feedback: quick and accurate",
+              "Design: by someone with expertise",
+              "Attention: engaged, not autopilot",
+              "Follow-up: checked after a delay"
+            ],
+            "refs": [
+              "R-ericsson-2019-deliberate"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Here’s the part of the theory that has aged well. As a description of good practice, it is excellent. That is why coaches, surgeons and music teachers embraced it. It describes good teaching."
+            },
+            {
+              "text": "You can turn it into a checklist for any session. Is there a specific target, stated before the session starts?",
+              "reveal": 1
+            },
+            {
+              "text": "Is the work near the edge of capability, hard enough to produce errors, not so hard that success is impossible?",
+              "reveal": 2
+            },
+            {
+              "text": "Does feedback arrive quickly and accurately? Did someone with expertise design the task?",
+              "reveal": 4
+            },
+            {
+              "text": "Is the performer mentally engaged? And is progress checked later, after a delay?",
+              "reveal": 6
+            },
+            {
+              "text": "Both sides of the debate agree on this much: stop measuring practice only by its duration. Ericsson and Kyle Harwell urge recording concentration, error analysis and problem solving, not hours alone.",
+              "refs": [
+                "R-ericsson-2019-deliberate"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Reading variance explained",
+      "scenes": [
+        {
+          "visual": {
+            "type": "calc",
+            "title": "From correlation to variance explained",
+            "lines": [
+              {
+                "label": "Correlation between practice and performance",
+                "value": "r = 0.42"
+              },
+              {
+                "label": "Square it",
+                "value": "0.42 × 0.42 = 0.1764"
+              }
+            ],
+            "result": {
+              "label": "Variance explained",
+              "value": "about 18%"
+            },
+            "note": "For a single predictor, variance explained is the square of the correlation."
+          },
+          "cues": [
+            {
+              "text": "Now the numbers. Researchers report how much of the variance in performance practice explains. Let’s make sure that phrase means something."
+            },
+            {
+              "text": "Take a group of people who differ in performance. Some of those differences line up with differences in how much they practiced."
+            },
+            {
+              "text": "The share of the spread in performance you can predict from the spread in practice is the variance explained. For one predictor, it is the correlation squared."
+            },
+            {
+              "text": "A correlation of about zero point four two,",
+              "reveal": 1
+            },
+            {
+              "text": "multiplied by itself, gives about zero point one eight,",
+              "reveal": 2
+            },
+            {
+              "text": "or roughly eighteen percent of the variance explained. A correlation that sounds respectable becomes a share that sounds small.",
+              "reveal": 3
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Three cautions",
+            "cards": [
+              {
+                "title": "Between people",
+                "q": "Describes differences in a sample",
+                "fail": "Not how much one person can improve"
+              },
+              {
+                "title": "Depends on spread",
+                "q": "If everyone practices alike…",
+                "fail": "Practice can’t explain differences, even if essential"
+              },
+              {
+                "title": "Small can matter",
+                "q": "Competition is decided at the margin",
+                "fail": "A modest share can still be decisive"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Three cautions, and they matter more than the number itself."
+            },
+            {
+              "text": "First, variance explained describes differences between people in a particular sample. It says nothing direct about how much any individual would improve by practicing more.",
+              "reveal": 1
+            },
+            {
+              "text": "Second, it depends on how much the sample varies. If everyone practices about the same amount, practice cannot explain differences among them, even if it is essential for all of them.",
+              "reveal": 2
+            },
+            {
+              "text": "Third, a small share can still matter a great deal where small differences decide outcomes. So a modest figure does not mean practice is unimportant.",
+              "reveal": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "What the evidence found",
+      "scenes": [
+        {
+          "visual": {
+            "type": "bars",
+            "title": "Variance explained by practice",
+            "unit": "%",
+            "items": [
+              {
+                "label": "Games",
+                "value": 26
+              },
+              {
+                "label": "Music",
+                "value": 21
+              },
+              {
+                "label": "Sports",
+                "value": 18
+              },
+              {
+                "label": "Education",
+                "value": 4
+              },
+              {
+                "label": "Professions (less than 1%)",
+                "value": 1
+              }
+            ],
+            "note": "Source: Macnamara, Hambrick and Oswald (2014). Professions plotted at 1 as an upper bound.",
+            "refs": [
+              "R-macnamara-2014-deliberate"
+            ]
+          },
+          "cues": [
+            {
+              "text": "So what did the research find? Brooke Macnamara, David Hambrick and Frederick Oswald pooled studies across five domains.",
+              "refs": [
+                "R-macnamara-2014-deliberate"
+              ]
+            },
+            {
+              "text": "Deliberate practice explained about twenty-six percent of performance variance in games.",
+              "reveal": 1,
+              "refs": [
+                "R-macnamara-2014-deliberate"
+              ]
+            },
+            {
+              "text": "About twenty-one percent in music.",
+              "reveal": 2
+            },
+            {
+              "text": "About eighteen percent in sports.",
+              "reveal": 3
+            },
+            {
+              "text": "Four percent in education.",
+              "reveal": 4
+            },
+            {
+              "text": "And less than one percent in professions. Their conclusion: practice is important, but not as important as had been argued.",
+              "reveal": 5,
+              "refs": [
+                "R-macnamara-2014-deliberate"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "The sport meta-analysis",
+            "items": [
+              {
+                "value": "about 18%",
+                "label": "of performance differences, all athletes"
+              },
+              {
+                "value": "about 1%",
+                "label": "among elite athletes"
+              }
+            ],
+            "note": "Macnamara, Moreau and Hambrick (2016).",
+            "refs": [
+              "R-macnamara-2016-relationship"
+            ]
+          },
+          "cues": [
+            {
+              "text": "A sport-specific meta-analysis came out in the same place. Your estimate from the start of this lecture is about to meet the evidence.",
+              "refs": [
+                "R-macnamara-2016-relationship"
+              ]
+            },
+            {
+              "text": "Across athletes, accumulated practice explained about eighteen percent of the differences in performance.",
+              "reveal": 1,
+              "refs": [
+                "R-macnamara-2016-relationship"
+              ]
+            },
+            {
+              "text": "Among elite athletes, it explained only about one percent.",
+              "reveal": 2,
+              "refs": [
+                "R-macnamara-2016-relationship"
+              ]
+            },
+            {
+              "text": "The popular account implies practice explains most of the differences and matters most at the top. Under a fifth overall, and close to nothing among the elite, contradicts both. If your estimate was far above this, that gap marks a belief held more strongly than the evidence warrants."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Elite samples are selected.",
+              "Everyone in them practiced a lot."
+            ],
+            "sub": "Height predicts little about scoring among professional basketball players — almost all of them are tall."
+          },
+          "cues": [
+            {
+              "text": "But wait. Does one percent mean practice stops mattering at the top? No. This is range restriction."
+            },
+            {
+              "text": "Elite samples are selected. Everyone in them has practiced a great deal, so practice barely varies within the sample, and a variable that barely varies cannot predict much.",
+              "reveal": 1
+            },
+            {
+              "text": "Height is the classic example. It predicts little about scoring among professional basketball players, although almost all of them are tall."
+            },
+            {
+              "text": "So the elite result shows that differences in hours are not what separates people who have all practiced a lot. For comparing elite candidates, practice history is weak evidence. For designing a pathway, practice quality is still central."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-range",
+            "type": "choice",
+            "prompt": "In an invented firm, years of experience barely predict client results among its senior partners, all of whom have at least fifteen years. Which conclusion is best supported?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Experience doesn’t matter for consulting, so hire juniors."
+              },
+              {
+                "id": "b",
+                "text": "Among people who all have a lot of experience, differences in years don’t separate strong from weak partners."
+              },
+              {
+                "id": "c",
+                "text": "Each partner would improve very little with more experience, so stop developing them."
+              },
+              {
+                "id": "d",
+                "text": "The finding must be an error, because experience obviously matters."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-variance-explained",
+            "feedback": {
+              "a": "That overreaches. The sample is restricted to experienced people, so experience may have been essential to get there even if it barely varies now.",
+              "b": "Right. That is range restriction: a variable that barely varies within a selected group cannot explain much of the variation in it.",
+              "c": "Variance explained describes differences between people in a sample, not how much any individual would gain.",
+              "d": "No error is needed. A low figure is exactly what range restriction predicts in a selected sample."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "The debate at full strength",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two readings of the evidence",
+            "left": {
+              "title": "Ericsson and Harwell",
+              "points": [
+                "Critics counted structured practice",
+                "Matching studies only: 29%",
+                "61% after correction for measurement error",
+                "Measure quality, not just hours"
+              ]
+            },
+            "right": {
+              "title": "The critics",
+              "points": [
+                "All available studies: modest shares",
+                "Founding violin study: smaller effect on replication",
+                "Teacher-designed practice rated less relevant"
+              ]
+            },
+            "refs": [
+              "R-ericsson-2019-deliberate",
+              "R-macnamara-2014-deliberate",
+              "R-macnamara-2019-role"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The founding study was itself revisited. Macnamara and Megha Maitra replicated the violin study and did not reproduce its core finding. The relationship was substantial, but considerably smaller.",
+              "refs": [
+                "R-macnamara-2019-role"
+              ]
+            },
+            {
+              "text": "Participants also rated teacher-designed practice as less relevant to improvement than practice alone, which complicates the original definition.",
+              "refs": [
+                "R-macnamara-2019-role"
+              ]
+            },
+            {
+              "text": "Now the defense. Ericsson and Harwell argue the meta-analyses averaged across activities that don’t meet the original definition, what they call structured practice.",
+              "reveal": 1,
+              "refs": [
+                "R-ericsson-2019-deliberate"
+              ]
+            },
+            {
+              "text": "Restricting to studies that match the definition, they report that practice explains twenty-nine percent, and sixty-one percent after correcting for measurement error.",
+              "refs": [
+                "R-ericsson-2019-deliberate"
+              ]
+            },
+            {
+              "text": "On the other side: estimates from all available studies, and a direct replication that found a smaller effect.",
+              "reveal": 2,
+              "refs": [
+                "R-macnamara-2014-deliberate",
+                "R-macnamara-2019-role"
+              ]
+            },
+            {
+              "text": "APERTURE’s reading: a reanalysis of a small, selected subset, with corrections that depend on uncertain reliability estimates, is a weaker basis than its headline suggests. But the critics’ broad definitions may indeed dilute the effect of high-quality practice. Honestly, the size of the effect is unresolved."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "From a correlation to a rule",
+            "steps": [
+              {
+                "label": "Original claim",
+                "text": "Skilled groups reported more practice"
+              },
+              {
+                "label": "Simplification",
+                "text": "An average becomes a threshold"
+              },
+              {
+                "label": "Generalization",
+                "text": "Applied to everyone, everywhere"
+              },
+              {
+                "label": "Causal leap",
+                "text": "Practice assumed to cause skill"
+              },
+              {
+                "label": "Policy",
+                "text": "Organizations count hours"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "And two problems sit under both sides. Almost all of this evidence is correlational and retrospective: people estimate, years later, how much they practiced."
+            },
+            {
+              "text": "And causation can run backward. People who start out better often enjoy it more and get more coaching and opportunity, so they practice more."
+            },
+            {
+              "text": "Watch how a modest group-level finding became a popular rule. Skilled groups reported more practice.",
+              "reveal": 1
+            },
+            {
+              "text": "A group average gets retold as a threshold number of hours.",
+              "reveal": 2
+            },
+            {
+              "text": "The number is applied to every domain and every person.",
+              "reveal": 3
+            },
+            {
+              "text": "Practice is assumed to cause the skill difference, rather than skill or support causing more practice.",
+              "reveal": 4
+            },
+            {
+              "text": "And organizations count hours as a measure of development. The sport meta-analysis authors instead suggest studying other factors, like starting age and certain cognitive abilities, while stressing that practice still matters. Expertise is multifactorial.",
+              "reveal": 5,
+              "refs": [
+                "R-macnamara-2016-relationship"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Design with it, don’t select with it",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two uses of the theory",
+            "left": {
+              "title": "Use it to design",
+              "points": [
+                "Specific targets",
+                "Effortful work near the edge",
+                "Immediate feedback",
+                "Log practice quality"
+              ]
+            },
+            "right": {
+              "title": "Don’t use it to select",
+              "points": [
+                "Hours as a talent measure",
+                "Years of experience as proof",
+                "Volume as the main driver"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "So here is how a leader acts without settling the debate. Suppose your department proposes a twenty percent increase in practice time, funded by cutting individualized coaching. The figure is invented."
+            },
+            {
+              "text": "The research cited supports individualized, feedback-rich, effortful practice, which is precisely what the proposal cuts.",
+              "reveal": 1
+            },
+            {
+              "text": "It does not support the idea that more hours of generic practice reliably produce better outcomes. Ask for a small trial that varies quality rather than quantity, with retention and transfer measures, and track injury and burnout risk.",
+              "reveal": 2
+            },
+            {
+              "text": "In player development, the theory works best as a session-quality checklist and worst as a talent theory. Logging hours is easy. Logging target, difficulty, feedback and outcome is harder and far more informative."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Learning Architect",
+                "detail": "Design a practice and measurement plan for this week",
+                "href": "#/exercise/w03-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Macnamara et al. (2016), Deliberate Practice and Performance in Sports",
+                "href": "#/library/R-macnamara-2016-relationship"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s pull it together."
+            },
+            {
+              "text": "Deliberate practice is defined by quality: targeted, effortful, expert-designed and feedback-rich. That description remains useful."
+            },
+            {
+              "text": "Accumulated practice explains a real but modest share of performance differences, about eighteen percent in sport and about one percent among elite athletes. The founding study replicated with a smaller effect, and the debate over definitions is unresolved."
+            },
+            {
+              "text": "Use the theory to design practice. Don’t use hours as a talent measure."
+            },
+            {
+              "text": "Next, take the comprehension check below, the same as the written lesson. Then continue the Learning Architect exercise, and read the sport meta-analysis by Macnamara and colleagues: the abstract, introduction and general discussion.",
+              "reveal": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,813 @@
+{
+  "id": "w02-l1-lecture",
+  "lesson": "w02-l1",
+  "title": "Is It the Person or the Room?",
+  "subtitle": "The power of the situation, and what survived replication",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 1. It covers the same objectives — why observers over-attribute behavior to character, what the meta-analytic evidence on conformity shows, and how to classify classic findings by their replication record — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Three units, one instinct",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 2 · Lesson 1 · Lecture",
+            "title": "Is it the person or the room?",
+            "sub": "The power of the situation — and what survived replication"
+          },
+          "cues": [
+            {
+              "text": "Here's a scene you may have lived through in some form."
+            },
+            {
+              "text": "Three units in a large hospital system all post poor hand-hygiene audit results in the same quarter."
+            },
+            {
+              "text": "The chief nursing officer's first instinct is to find the careless nurses and retrain them. Hold on to that instinct. We're going to take it apart."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Three units, three situations",
+            "steps": [
+              "Unit one: dispensers at the far end of each room",
+              "Unit two: a senior physician skips it, unchallenged",
+              "Unit three: audits announced, except on night shift"
+            ]
+          },
+          "cues": [
+            {
+              "text": "First, notice the assumption inside that instinct: that the cause lives inside individual people.",
+              "reveal": 0
+            },
+            {
+              "text": "Now add three facts. This is a hypothetical composite, but you may recognize the pattern."
+            },
+            {
+              "text": "In the first unit, the sanitizer dispensers sit at the far end of every room.",
+              "reveal": 1
+            },
+            {
+              "text": "In the second, a respected senior physician routinely skips hand hygiene, and nobody says a word.",
+              "reveal": 2
+            },
+            {
+              "text": "In the third, audits are announced in advance everywhere except on night shift.",
+              "reveal": 3
+            },
+            {
+              "text": "Every one of those facts is a feature of the situation. And each one predicts the pattern of failures better than any personality inventory would."
+            },
+            {
+              "text": "So here's a quick decision before we go any further."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-diagnose",
+            "type": "choice",
+            "concept": "c-situation-vs-disposition",
+            "prompt": "In a hypothetical agency, three different people have held the same analyst role in two years, and each was described by the manager as “not detail-oriented.” What does that pattern most strongly suggest?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Hiring has been unlucky three times; tighten the screen."
+              },
+              {
+                "id": "b",
+                "text": "The pattern is evidence about the role; examine its measures, norms and friction before the next hire."
+              },
+              {
+                "id": "c",
+                "text": "The manager is certainly the problem; replace the manager."
+              },
+              {
+                "id": "d",
+                "text": "Nothing can be inferred without personality testing."
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "Possible, but three people failing the same way in the same role is exactly the pattern a situational cause produces. A stricter screen would change the people and might leave the problem where it is.",
+              "b": "Right. A problem that recurs across different people in the same role is evidence about the role. Investigate the situation first.",
+              "c": "The manager is part of the situation and worth examining, but jumping to one person is the same dispositional reflex aimed at a different target.",
+              "d": "You can infer quite a lot from the pattern itself. Recurrence across people is diagnostic, and personality scores would not reveal the incentives or norms of the role."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "The observer's lopsided view",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "A reliable default, not a law",
+            "term": "Fundamental attribution error",
+            "definition": "Explaining others' behavior by their character while underweighting the pressures acting on them.",
+            "example": "Also called correspondence bias."
+          },
+          "cues": [
+            {
+              "text": "If you chose to look at the role, you followed the rule this lesson is built on. A problem that keeps recurring across different people in the same role is evidence about the role."
+            },
+            {
+              "text": "So why is that so hard to see? Because observers are systematically lopsided."
+            },
+            {
+              "text": "Social psychologists call it the fundamental attribution error. We explain other people's behavior by their dispositions, their character, ability or attitude, and we underweight the pressures acting on them.",
+              "reveal": 1
+            },
+            {
+              "text": "You'll also hear it called correspondence bias.",
+              "reveal": 2
+            },
+            {
+              "text": "A word of care. The term is standard, but how universal and how large the tendency is has been debated. Treat it as a reliable default, not a law."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Same deadline, two views",
+            "left": {
+              "title": "When I miss it",
+              "points": [
+                "Competing demands",
+                "Late data",
+                "An unclear brief"
+              ]
+            },
+            "right": {
+              "title": "When a colleague misses it",
+              "points": [
+                "The colleague",
+                "Their character",
+                "Their attitude"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Here's the structure underneath it."
+            },
+            {
+              "text": "When you miss a deadline, you see everything around you: the competing demands, the late data, the unclear brief.",
+              "reveal": 1
+            },
+            {
+              "text": "When a colleague misses one, you see the colleague.",
+              "reveal": 2
+            },
+            {
+              "text": "Situational forces are often invisible from outside. Incentives, informal norms, who's in the room, what happened the last time someone raised a concern."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Four levers observers underweight",
+            "cards": [
+              {
+                "title": "Incentives and measures",
+                "q": "What would a reasonable person do if paid exactly this way?",
+                "fail": "Misread as: “they only care about their numbers”"
+              },
+              {
+                "title": "Group norms",
+                "q": "What happens to the person who behaves differently?",
+                "fail": "Misread as: “that team has a culture problem”"
+              },
+              {
+                "title": "Status and audience",
+                "q": "Who was in the room, and what did dissent cost last time?",
+                "fail": "Misread as: “he folds under pressure”"
+              },
+              {
+                "title": "Friction and defaults",
+                "q": "How many steps does compliance take versus the shortcut?",
+                "fail": "Misread as: “they don't follow the process”"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "The lesson offers a simple diagnostic grid with four levers. It's a teaching device, not an empirical taxonomy, but it earns its keep."
+            },
+            {
+              "text": "First, incentives and measures. The misreading is: they only care about their numbers. The better question: what would a reasonable person do if paid exactly this way?",
+              "reveal": 1
+            },
+            {
+              "text": "Second, group norms. Not: that team has a culture problem. Instead: what happens to the person who behaves differently?",
+              "reveal": 2
+            },
+            {
+              "text": "Third, status and audience. Not: he folds under pressure. Instead: who was in the room, and what did dissent cost last time?",
+              "reveal": 3
+            },
+            {
+              "text": "Fourth, friction and defaults. Not: they don't follow the process. Instead: how many steps does compliance take, compared with the shortcut?",
+              "reveal": 4
+            },
+            {
+              "text": "Go back to the hospital. The physician is a norm. The distant dispensers are friction. The announced audits are a measure. Three levers, and no careless nurses required."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Conformity: real, but variable",
+      "scenes": [
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "A unanimous group.",
+              "An obviously wrong answer.",
+              "Many people go along."
+            ],
+            "sub": "Asch's line-judgment task",
+            "refs": [
+              "R-bond-1996-culture"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The most studied demonstration of situational power is Solomon Asch's line-judgment task.",
+              "reveal": 0,
+              "refs": [
+                "R-bond-1996-culture"
+              ]
+            },
+            {
+              "text": "A participant sits with a group of confederates. On some trials, they all give the same obviously wrong answer about which line matches a reference line.",
+              "reveal": 1
+            },
+            {
+              "text": "And many participants go along with the group on at least some trials.",
+              "reveal": 2,
+              "refs": [
+                "R-bond-1996-culture"
+              ]
+            },
+            {
+              "text": "The question for an executive isn't whether that's dramatic. It's what the accumulated evidence shows."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "What changes the size of conformity",
+            "refs": [
+              "R-bond-1996-culture"
+            ],
+            "cards": [
+              {
+                "title": "Majority size",
+                "q": "Larger unanimous majorities",
+                "fail": "More conformity"
+              },
+              {
+                "title": "Culture",
+                "q": "More collectivist cultures",
+                "fail": "More conformity"
+              },
+              {
+                "title": "Era",
+                "q": "U.S. samples after Asch's original work",
+                "fail": "Conformity declined over the decades"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Rod Bond and Peter Smith pooled studies that used Asch's task in a meta-analysis.",
+              "reveal": 0,
+              "refs": [
+                "R-bond-1996-culture"
+              ]
+            },
+            {
+              "text": "Their first conclusion: conformity is real and repeatable.",
+              "reveal": 0,
+              "refs": [
+                "R-bond-1996-culture"
+              ]
+            },
+            {
+              "text": "Their second: its size varies. It rises with the size of the majority.",
+              "reveal": 1,
+              "refs": [
+                "R-bond-1996-culture"
+              ]
+            },
+            {
+              "text": "It's larger in more collectivist cultures.",
+              "reveal": 2,
+              "refs": [
+                "R-bond-1996-culture"
+              ]
+            },
+            {
+              "text": "And in U.S. samples, it declined over the decades after Asch's original work.",
+              "reveal": 3,
+              "refs": [
+                "R-bond-1996-culture"
+              ]
+            },
+            {
+              "text": "That combination, real but variable, is what most robust social findings look like. The direction generalizes. The rate does not."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "What the evidence does and does not show",
+            "left": {
+              "title": "It does show",
+              "points": [
+                "People shift toward unanimous groups",
+                "Especially when they care about belonging",
+                "The effect is repeatable"
+              ]
+            },
+            "right": {
+              "title": "It does not show",
+              "points": [
+                "A fixed rate you can quote",
+                "That your meeting will match the lab",
+                "The same size across cultures and eras"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "So let's be precise about what this evidence does and doesn't show."
+            },
+            {
+              "text": "It does show that people shift toward unanimous groups, especially when they care about belonging to the group.",
+              "reveal": 1
+            },
+            {
+              "text": "It doesn't give you a rate you can carry into your boardroom. That depends on culture, era, stakes and how ambiguous the judgment is.",
+              "reveal": 2
+            },
+            {
+              "text": "Organizational judgments are usually far more ambiguous than the length of a line. That plausibly makes social influence stronger. Then again, dissent can be rewarded, which makes it weaker."
+            },
+            {
+              "text": "Because the size depends on the setting, the sensible response is structural rather than exhortative. Try it on a case."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-workshop",
+            "type": "choice",
+            "concept": "c-conformity",
+            "prompt": "In a hypothetical consulting firm, junior analysts rarely contradict partners' hypotheses in client workshops, and several engagements later turn out to rest on a wrong premise. Which change best fits the conformity evidence?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Send the analysts to assertiveness training."
+              },
+              {
+                "id": "b",
+                "text": "Collect every participant’s written estimate before discussion, and have the most senior person speak last."
+              },
+              {
+                "id": "c",
+                "text": "Ask partners to say that they welcome disagreement."
+              },
+              {
+                "id": "d",
+                "text": "Hire more confident analysts."
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "This treats a situational pressure as a personal deficit. The evidence suggests changing the structure of the meeting rather than the people in it.",
+              "b": "Right. Recording independent views before discussion, and letting the most senior person speak last, removes the unanimous signal before anyone has committed. Nobody has to become braver.",
+              "c": "An exhortation leaves the structure untouched. People still hear the senior view first, and the cost of dissent is unchanged.",
+              "d": "This is the dispositional reflex again. New hires would walk into the same meeting structure and face the same pressure."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "The audit",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Prerequisite",
+            "term": "Replication",
+            "definition": "A new study, using the same procedure on new participants, produces a similar result.",
+            "example": "Direct: repeat the method. Conceptual: test the idea a different way."
+          },
+          "cues": [
+            {
+              "text": "The written-estimates fix works because the meeting changes, not the people. Now for the uncomfortable half of the lesson."
+            },
+            {
+              "text": "Social psychology built its reputation on dramatic demonstrations. Over the last fifteen years, it has also become a leader in auditing itself. You need both the insight and the audit."
+            },
+            {
+              "text": "First, a definition. A finding replicates when a new study, using the same procedure on new participants, produces a similar result.",
+              "reveal": 1
+            },
+            {
+              "text": "A direct replication repeats the method as closely as possible. A conceptual replication tests the same idea a different way. Direct replications are the stronger test, because conceptual ones can succeed for different reasons, or quietly go unpublished when they fail.",
+              "reveal": 2
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Why honest findings fail",
+            "steps": [
+              "Small samples give noisy estimates",
+              "Flexible analysis reports what worked",
+              "Journals prefer significant results",
+              "Published effects end up inflated"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Why would a published result fail to replicate? None of the common reasons requires fraud."
+            },
+            {
+              "text": "Small samples produce noisy estimates.",
+              "reveal": 1
+            },
+            {
+              "text": "Flexibility in analysis lets researchers try several outcomes or exclusion rules and report the one that worked.",
+              "reveal": 2
+            },
+            {
+              "text": "And publication filters favor significant results.",
+              "reveal": 3
+            },
+            {
+              "text": "Put them together, and published effects are, on average, larger than the true effects. A famous result is not the same as a reliable one.",
+              "reveal": 4
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "Repeating one hundred studies",
+            "refs": [
+              "R-osc-2015-estimating"
+            ],
+            "items": [
+              {
+                "value": "100",
+                "label": "studies from three leading journals"
+              },
+              {
+                "value": "≈ ½",
+                "label": "average replication effect versus the original"
+              },
+              {
+                "value": "Lower",
+                "label": "replication rate in social than cognitive psychology"
+              }
+            ],
+            "note": "Open Science Collaboration (2015)."
+          },
+          "cues": [
+            {
+              "text": "In two thousand fifteen, the Open Science Collaboration repeated one hundred studies from three leading psychology journals, using high-powered designs and, where possible, the original materials.",
+              "reveal": 1,
+              "refs": [
+                "R-osc-2015-estimating"
+              ]
+            },
+            {
+              "text": "Most originals had reported significant results. Far fewer replications did, and the replication effects averaged roughly half the original estimates.",
+              "reveal": 2,
+              "refs": [
+                "R-osc-2015-estimating"
+              ]
+            },
+            {
+              "text": "Social psychology studies replicated less often than cognitive psychology studies.",
+              "reveal": 3,
+              "refs": [
+                "R-osc-2015-estimating"
+              ]
+            },
+            {
+              "text": "And one detail matters a great deal. Originals with larger effects and stronger statistical evidence were more likely to hold up. The strength of the original evidence is itself information.",
+              "reveal": 3,
+              "refs": [
+                "R-osc-2015-estimating"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Ego depletion:",
+              "more than twenty labs,",
+              "one preregistered protocol,",
+              "a pooled effect near zero."
+            ],
+            "refs": [
+              "R-hagger-2016-multilab"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Then there is the cautionary tale every manager should know.",
+              "reveal": 0
+            },
+            {
+              "text": "Ego depletion is the idea that self-control draws on a limited resource that gets used up by earlier acts of self-control. It spread widely into leadership and productivity advice."
+            },
+            {
+              "text": "A registered replication report had more than twenty laboratories",
+              "reveal": 1,
+              "refs": [
+                "R-hagger-2016-multilab"
+              ]
+            },
+            {
+              "text": "run one preregistered protocol.",
+              "reveal": 2,
+              "refs": [
+                "R-hagger-2016-multilab"
+              ]
+            },
+            {
+              "text": "The pooled effect was close to zero.",
+              "reveal": 3,
+              "refs": [
+                "R-hagger-2016-multilab"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "A working classification",
+            "cards": [
+              {
+                "title": "Conformity to unanimous groups",
+                "q": "Robust, variable in size",
+                "fail": "Collect independent judgments first"
+              },
+              {
+                "title": "Over-attribution to character",
+                "q": "Widely supported default; size varies",
+                "fail": "Investigate the role before the person"
+              },
+              {
+                "title": "Ego depletion",
+                "q": "Failed a large preregistered test",
+                "fail": "Do not build policy on it"
+              },
+              {
+                "title": "Published effects at face value",
+                "q": "Not supported",
+                "fail": "Look for meta-analyses and preregistered replications"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "So here's a working classification. It reflects the evidence summarized in this lesson, not a final verdict."
+            },
+            {
+              "text": "Conformity: robust, and variable in size. Use it by collecting independent judgments before discussion.",
+              "reveal": 1,
+              "refs": [
+                "R-bond-1996-culture"
+              ]
+            },
+            {
+              "text": "Over-attribution to character: a widely supported default, whose size varies by culture and prompt. Use it by investigating the role before the person.",
+              "reveal": 2
+            },
+            {
+              "text": "Ego depletion: failed a large preregistered multi-lab test. Do not build policy on it.",
+              "reveal": 3,
+              "refs": [
+                "R-hagger-2016-multilab"
+              ]
+            },
+            {
+              "text": "And the general claim that published social-psychology effects are reliable at face value: not supported. Discount single classic studies, and look for meta-analyses and preregistered replications.",
+              "reveal": 4,
+              "refs": [
+                "R-osc-2015-estimating"
+              ]
+            },
+            {
+              "text": "Your turn to classify."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-classify",
+            "type": "choice",
+            "concept": "c-replication-record",
+            "prompt": "A workshop facilitator says: “Research proves that groups always make people abandon correct judgments.” How should you classify the finding behind the claim?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Robust and universal — quote it as stated."
+              },
+              {
+                "id": "b",
+                "text": "Robust in direction but context-dependent in size — the “always” overreaches."
+              },
+              {
+                "id": "c",
+                "text": "Failed to replicate — ignore it."
+              },
+              {
+                "id": "d",
+                "text": "Untested — there is no relevant evidence."
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "The direction is robust, but the meta-analysis shows the size varies with majority size, culture and era. “Always” is not what the evidence says.",
+              "b": "Right. Conformity to unanimous groups is real and repeatable, but its size depends on majority size, culture, era and how ambiguous the judgment is.",
+              "c": "That classification belongs to ego depletion, not conformity. Conformity in Asch-type tasks is supported by meta-analytic evidence.",
+              "d": "There is a large body of evidence, pooled in a meta-analysis of studies using Asch’s task."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Arguing with the audit",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two sides of the debate",
+            "refs": [
+              "R-osc-2015-estimating",
+              "R-hagger-2016-multilab"
+            ],
+            "left": {
+              "title": "The objections",
+              "points": [
+                "Some replications differed in population or procedure",
+                "One replication cannot prove an effect false",
+                "The ego-depletion manipulation was too weak"
+              ]
+            },
+            "right": {
+              "title": "The reply",
+              "points": [
+                "Conditions no one can specify in advance are no basis for design",
+                "Inflation has held across later many-lab projects"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "If you caught the word always, good. Now let me argue against the audit itself."
+            },
+            {
+              "text": "The replication debate isn't settled in every detail. Critics of the two thousand fifteen project argued that some replications differed from the originals in population or procedure, and that a single replication can't establish that an effect is false.",
+              "reveal": 1,
+              "refs": [
+                "R-osc-2015-estimating"
+              ]
+            },
+            {
+              "text": "Proponents of ego depletion argued that the multi-lab protocol used too weak a manipulation.",
+              "reveal": 1,
+              "refs": [
+                "R-hagger-2016-multilab"
+              ]
+            },
+            {
+              "text": "Those objections deserve a hearing. But they cut both ways."
+            },
+            {
+              "text": "If an effect appears only under narrow conditions that its proponents can't specify in advance, it isn't a reliable basis for designing organizations.",
+              "reveal": 2
+            },
+            {
+              "text": "And the broader conclusion, that published effects are often inflated and some celebrated ones aren't real, has held across later many-laboratory projects.",
+              "reveal": 2,
+              "refs": [
+                "R-osc-2015-estimating"
+              ]
+            },
+            {
+              "text": "One more precision. A preregistered null is strong evidence that the standard ego-depletion paradigm doesn't produce a meaningful effect. It's weaker evidence about every possible version of self-control fatigue. What you need to know is that the confident popular version has no reliable support.",
+              "refs": [
+                "R-hagger-2016-multilab"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Situations matter.",
+              "So do people."
+            ],
+            "sub": "Diagnosing the situation first is a sequencing rule, not a denial of character."
+          },
+          "cues": [
+            {
+              "text": "There's also a mirror-image error, and smart leaders make it.",
+              "reveal": 0
+            },
+            {
+              "text": "Having learned that situations matter, some conclude that individual differences don't. That overcorrects. Ability, conscientiousness and expertise predict performance in many jobs, and selection decisions rest on that fact.",
+              "reveal": 1
+            },
+            {
+              "text": "Situations also select people. A sales floor with aggressive targets attracts and keeps people who are comfortable with them."
+            },
+            {
+              "text": "The mature position is interactional. People differ, situations differ, and the same incentive or norm produces different behavior in different people."
+            },
+            {
+              "text": "So when you inherit a puzzle, ask a comparison question. Does the pattern follow the person across roles, or the role across people? You will rarely get a clean answer, so decide what would change your mind before you look."
+            },
+            {
+              "text": "And one last irony. Classic findings became famous partly because many people repeated them: textbooks, consultants and speakers citing each other. Popularity is a social signal, not an evidential one."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-reflect",
+            "type": "reflect",
+            "concept": "c-situation-vs-disposition",
+            "prompt": "Think of someone in your organization who was labelled “not a team player” or “not coachable.” Name one feature of their situation — what they were measured on, who they reported to, what their peers were doing — that could have produced the same behavior in most people. Then name the evidence that would tell you it was the person after all."
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "The same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Incentive Designer",
+                "detail": "This week's exercise",
+                "href": "#/exercise/w02-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Kerr (1975), On the Folly of Rewarding A, While Hoping for B",
+                "href": "#/library/R-kerr-1975-folly"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let's bring it together."
+            },
+            {
+              "text": "Observers over-attribute behavior to character, so a problem that recurs across people in the same role is evidence about the role."
+            },
+            {
+              "text": "Conformity is real and repeatable, but its size depends on majority size, culture, era and ambiguity. Design meetings to capture independent views first."
+            },
+            {
+              "text": "And the replication record is mixed. Some classics hold, many effects are smaller than published, and ego depletion failed a rigorous test. Diagnose the role before the person, and check the evidence before you quote the study."
+            },
+            {
+              "text": "Next, take the comprehension check below. It's the same check as the written lesson. Then open this week's exercise, the Incentive Designer, and read Steven Kerr's essay on rewarding one thing while hoping for another. It sets up the lessons that follow.",
+              "reveal": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

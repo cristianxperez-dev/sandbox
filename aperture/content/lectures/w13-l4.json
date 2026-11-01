@@ -1,0 +1,717 @@
+{
+  "id": "w13-l4-lecture",
+  "lesson": "w13-l4",
+  "title": "When Nobody Can Give You the Number",
+  "subtitle": "Deep uncertainty, robustness and irreversibility",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 4. It covers the same objectives — risk versus deep uncertainty and the fragility of expected value, robust and adaptive decisions with signposts, triggers and precommitment, and extra care for irreversible decisions — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "The probability nobody has",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 13 · Lesson 4 · Lecture",
+            "title": "When nobody can give you the number",
+            "sub": "Deciding under deep uncertainty"
+          },
+          "cues": [
+            {
+              "text": "Early spring. A health department must decide whether to buy a large stock of vaccine for a new respiratory virus. The scenario is hypothetical."
+            },
+            {
+              "text": "If the virus spreads widely in autumn, the stock saves many lives and is worth its cost several times over. If it fades, the money is gone, and the department is accused of waste."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Forecasts: “almost certainly minor” to “severe”.",
+              "Finance asks: what is the probability of a severe season?",
+              "Is there an honest number?"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The epidemiologists offer forecasts ranging from almost certainly minor to severe, and they cannot agree how likely each is."
+            },
+            {
+              "text": "The finance office asks the director for the probability of a severe season, so it can compute an expected value.",
+              "reveal": 1
+            },
+            {
+              "text": "Is there an honest number the epidemiologists can give? And if not, what should the director ask for instead? Keep your answer in mind. We will come back to this decision at the end.",
+              "reveal": 2
+            },
+            {
+              "text": "First, let’s make sure we agree on what finance wants to compute."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "One option, two outcomes",
+            "items": [
+              {
+                "value": "+100",
+                "label": "with probability 0.3"
+              },
+              {
+                "value": "−20",
+                "label": "with probability 0.7"
+              }
+            ],
+            "note": "Synthetic numbers for illustration."
+          },
+          "cues": [
+            {
+              "text": "Expected value is the probability-weighted average of an option’s outcomes. The numbers here are invented."
+            },
+            {
+              "text": "Say an option pays one hundred with probability zero point three,",
+              "reveal": 1
+            },
+            {
+              "text": "and loses twenty with probability zero point seven.",
+              "reveal": 2
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-ev",
+            "type": "estimate",
+            "concept": "c-knightian-uncertainty",
+            "prompt": "What is the expected value of this option? (Invented numbers: gain 100 with probability 0.3, lose 20 with probability 0.7.)",
+            "min": -20,
+            "max": 100,
+            "step": 1,
+            "unit": "",
+            "initial": 40,
+            "answer": 16,
+            "tolerance": 0,
+            "feedback": {
+              "correct": "Right: 0.3 × 100 is 30, 0.7 × −20 is −14, and 30 − 14 is 16.",
+              "incorrect": "It is 16: 0.3 × 100 = 30, plus 0.7 × −20 = −14, so 30 − 14 = 16. Weight each outcome by its probability, then add."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Expected value, one option",
+            "lines": [
+              {
+                "label": "Gain 100 with probability 0.3",
+                "value": "0.3 × 100 = 30"
+              },
+              {
+                "label": "Lose 20 with probability 0.7",
+                "value": "0.7 × −20 = −14"
+              }
+            ],
+            "result": {
+              "label": "Expected value",
+              "value": "16"
+            },
+            "note": "Synthetic numbers for illustration."
+          },
+          "cues": [
+            {
+              "text": "Weight each outcome by its probability. Zero point three times one hundred is thirty.",
+              "reveal": 1
+            },
+            {
+              "text": "Zero point seven times minus twenty is minus fourteen.",
+              "reveal": 2
+            },
+            {
+              "text": "Thirty minus fourteen. The expected value is sixteen.",
+              "reveal": 3
+            },
+            {
+              "text": "That is the right criterion under three conditions: the probabilities are reliable, the decision repeats so the average is actually realised, and no single outcome is catastrophic."
+            },
+            {
+              "text": "Now look at the vaccine decision. The probabilities are disputed. The decision happens once. And one outcome costs lives. All three conditions fail."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Risk is not uncertainty",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Knight’s distinction",
+            "left": {
+              "title": "Risk",
+              "points": [
+                "Known or estimable probabilities",
+                "Losses can be pooled and insured"
+              ]
+            },
+            "right": {
+              "title": "Uncertainty",
+              "points": [
+                "Each situation too unique",
+                "No reliable distribution"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Frank Knight drew the line in nineteen twenty-one.",
+              "refs": [
+                "R-knight-1921-risk"
+              ]
+            },
+            {
+              "text": "Risk is when outcomes follow a known or estimable probability distribution, so losses can be pooled and insured.",
+              "reveal": 1,
+              "refs": [
+                "R-knight-1921-risk"
+              ]
+            },
+            {
+              "text": "Uncertainty is when each situation is unique enough that no reliable distribution exists.",
+              "reveal": 2,
+              "refs": [
+                "R-knight-1921-risk"
+              ]
+            },
+            {
+              "text": "Knight argued that profit is the reward for bearing uncertainty that cannot be insured, and that judgment in such situations is the distinctive job of the entrepreneur and the executive.",
+              "refs": [
+                "R-knight-1921-risk"
+              ]
+            },
+            {
+              "text": "Is the line real? Later decision theorists argued that a rational person can always express beliefs as subjective probabilities. So treat Knight’s line as a spectrum rather than a wall.",
+              "refs": [
+                "R-knight-1921-risk",
+                "R-marchau-2019-decision"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Marchau and colleagues",
+            "term": "Deep uncertainty",
+            "definition": "The parties cannot agree on how the system works, on the probabilities of key inputs, or on how to value the outcomes.",
+            "example": "Then the strategy optimal for one best-estimate future is fragile."
+          },
+          "cues": [
+            {
+              "text": "The modern literature takes a practical version of Knight’s point, under the name deep uncertainty.",
+              "refs": [
+                "R-marchau-2019-decision"
+              ]
+            },
+            {
+              "text": "Decisions are deeply uncertain when the parties cannot agree on how the system works, on the probability distributions of key inputs, or on how to value the outcomes.",
+              "reveal": 1,
+              "refs": [
+                "R-marchau-2019-decision"
+              ]
+            },
+            {
+              "text": "Under those conditions, the edited volume by Vincent Marchau and colleagues argues, choosing the strategy that is optimal for a single best-estimate future is fragile.",
+              "reveal": 2,
+              "refs": [
+                "R-marchau-2019-decision"
+              ]
+            },
+            {
+              "text": "The better question is which strategy performs acceptably across many plausible futures, and can be adapted as the future reveals itself.",
+              "refs": [
+                "R-marchau-2019-decision"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Where expected value breaks",
+            "cards": [
+              {
+                "title": "Known probabilities",
+                "q": "Experts disagree; estimates lean toward the favourite",
+                "fail": "Ask at what probability the decision flips"
+              },
+              {
+                "title": "Repeated decisions",
+                "q": "It happens once",
+                "fail": "Look at the whole distribution, not the mean"
+              },
+              {
+                "title": "Nothing ruinous",
+                "q": "Some outcomes end careers or lives",
+                "fail": "Avoid unacceptable worst cases"
+              },
+              {
+                "title": "Deciders bear outcomes",
+                "q": "Others bear much of the downside",
+                "fail": "Apply duty and fairness to the tail"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s make that concrete. Expected value quietly assumes four things."
+            },
+            {
+              "text": "That probabilities are known. In practice experts disagree, and estimates lean toward the preferred option. So test the decision across a range of probabilities, and ask at what probability it flips.",
+              "reveal": 1
+            },
+            {
+              "text": "That the decision repeats. Usually it happens once. So look at the distribution of outcomes, not only its mean.",
+              "reveal": 2
+            },
+            {
+              "text": "That nothing is ruinous. But some outcomes end careers, organizations or lives. Avoid options with unacceptable worst cases, even if the average looks attractive.",
+              "reveal": 3
+            },
+            {
+              "text": "And that those who decide bear the outcomes. Often patients, players or customers bear the downside. That is where the duty and fairness questions from the first lesson apply, to the tail.",
+              "reveal": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Robust and adaptive",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Three shared ideas",
+            "steps": [
+              "Explore many plausible futures, not one forecast",
+              "Seek strategies acceptable across them",
+              "Build adaptation in: signposts and triggers"
+            ]
+          },
+          "cues": [
+            {
+              "text": "So what do you do instead? Marchau and colleagues present five approaches developed for deep uncertainty, including Robust Decision Making and Dynamic Adaptive Policy Pathways.",
+              "refs": [
+                "R-marchau-2019-decision"
+              ]
+            },
+            {
+              "text": "They differ in technique but share three ideas.",
+              "refs": [
+                "R-marchau-2019-decision"
+              ]
+            },
+            {
+              "text": "Explore many plausible futures instead of one forecast.",
+              "reveal": 1
+            },
+            {
+              "text": "Seek strategies that perform acceptably across them, accepting a little less performance in the most likely future to avoid failure in the others.",
+              "reveal": 2
+            },
+            {
+              "text": "And build adaptation into the plan in advance. Signposts are indicators that tell you which future is unfolding. Triggers are thresholds at which pre-planned actions happen.",
+              "reveal": 3,
+              "refs": [
+                "R-marchau-2019-decision"
+              ]
+            },
+            {
+              "text": "Robust Decision Making reverses the usual analysis. Instead of asking what will happen and what is best given that, it asks: under what conditions would this strategy fail? Then it judges whether those conditions are plausible enough to worry about."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two tools for the plan",
+            "left": {
+              "title": "Premortem",
+              "points": [
+                "Imagine it failed badly",
+                "Each person writes why",
+                "A practitioner heuristic"
+              ]
+            },
+            "right": {
+              "title": "Precommitment",
+              "points": [
+                "Decide now what a signal will trigger",
+                "Make reversing it costly in the moment"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Two tools help you find those failure conditions and act on them."
+            },
+            {
+              "text": "Gary Klein’s premortem: the team imagines the decision has been implemented and has failed badly, and each member writes down why.",
+              "reveal": 1,
+              "refs": [
+                "R-klein-2007-performing"
+              ]
+            },
+            {
+              "text": "Klein argues this prospective hindsight legitimises dissent and generates more specific risks than asking what could go wrong. It is a practitioner heuristic, not a rigorously tested intervention.",
+              "refs": [
+                "R-klein-2007-performing"
+              ]
+            },
+            {
+              "text": "Precommitment means deciding in advance what you will do when a specified signal appears, and making that costly to reverse in the moment. Ulysses tied to the mast.",
+              "reveal": 2
+            },
+            {
+              "text": "Why bother? Because once a decision is made, sunk costs, reputation and escalation make leaders reluctant to change course. A written stopping rule, a budget cap needing board approval, or an automatic pause if a fairness metric crosses a threshold all do the work in advance."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-trigger",
+            "type": "choice",
+            "concept": "c-robust-decision-making",
+            "prompt": "A team is planning a new product launch under deep uncertainty. Which of these is a trigger rather than a signpost?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Tracking competitors’ pricing each month"
+              },
+              {
+                "id": "b",
+                "text": "If returns exceed a stated rate by a set date, the launch pauses automatically"
+              },
+              {
+                "id": "c",
+                "text": "Watching early customer reviews for signs of a quality problem"
+              },
+              {
+                "id": "d",
+                "text": "Holding a premortem before launch"
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "That is a signpost: an indicator that tells you which future is unfolding. It does not say what you will do.",
+              "b": "Right. A trigger is a threshold tied to a pre-planned action — and making the pause automatic is precommitment.",
+              "c": "Another signpost. Useful, but without a threshold and an action it leaves the decision to the moment, when sunk costs push against change.",
+              "d": "A premortem generates failure stories before commitment. It can help you choose signposts and triggers, but it is neither."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "The vaccine, three options",
+            "cards": [
+              {
+                "title": "A: full purchase",
+                "q": "Life-saving if severe",
+                "fail": "Costly if minor"
+              },
+              {
+                "title": "B: no purchase",
+                "q": "Cheap if minor",
+                "fail": "Catastrophic if severe"
+              },
+              {
+                "title": "C: partial plus option",
+                "q": "Acceptable in all three futures",
+                "fail": "Best in none"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "A trigger is exactly what the vaccine director needs. Instead of a single probability, she asks for three plausible autumn scenarios, minor, moderate and severe, and how each option performs in each."
+            },
+            {
+              "text": "Option A, full purchase, is costly if minor and life-saving if severe.",
+              "reveal": 1
+            },
+            {
+              "text": "Option B, no purchase, is cheap if minor and catastrophic if severe.",
+              "reveal": 2
+            },
+            {
+              "text": "Option C buys a partial stock now, plus a contractual option to buy more by a fixed date, at a premium. It is not best in any single scenario, but it is acceptable in all three.",
+              "reveal": 3
+            },
+            {
+              "text": "Then she sets signposts, such as hospitalisation data from the southern hemisphere’s season and early case growth, and a precommitted trigger: if a named indicator crosses a threshold by a set date, the option is exercised without further debate."
+            },
+            {
+              "text": "The ethical lens adds one thing. Those who bear the cost of under-buying are the most vulnerable residents, which argues for weighting the severe tail heavily."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "What you cannot undo",
+      "scenes": [
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "Reversibility and stakes",
+            "x": [
+              "Easily reversed",
+              "Hard to reverse"
+            ],
+            "y": [
+              "Low stakes for others",
+              "High stakes for others"
+            ],
+            "cells": [
+              [
+                "Move, but monitor, keep a fast undo, tell those affected",
+                "Highest care: independent review, robustness test, triggers, consult those at risk"
+              ],
+              [
+                "Decide quickly, delegate, learn by trying",
+                "Slow down to check the irreversible part; short premortem"
+              ]
+            ]
+          },
+          "cues": [
+            {
+              "text": "Notice what made Option C attractive. It kept a door open. There is a theory of why that matters."
+            },
+            {
+              "text": "Kenneth Arrow and Anthony Fisher showed that when an action is irreversible and information will improve over time, keeping options open has a value that a simple expected-value comparison misses.",
+              "refs": [
+                "R-arrow-1974-environmental"
+              ]
+            },
+            {
+              "text": "Ignore that value, and decisions are biased toward irreversible commitment. The idea was later called quasi-option value, a close cousin of the real-options reasoning you met in finance.",
+              "refs": [
+                "R-arrow-1974-environmental"
+              ]
+            },
+            {
+              "text": "So sort decisions on two axes: how reversible, and how high the stakes for other people."
+            },
+            {
+              "text": "High stakes but easily reversed: move, with monitoring and a fast way to undo it, and tell those affected what you are trying.",
+              "reveal": 1
+            },
+            {
+              "text": "High stakes and hard to reverse: the highest standard of care. Independent review, a robustness test across futures, precommitted triggers, and consultation with or disclosure to those who bear the risk.",
+              "reveal": 2
+            },
+            {
+              "text": "Low stakes and reversible: decide quickly, delegate, learn by trying. Most operational choices live here.",
+              "reveal": 3
+            },
+            {
+              "text": "Low stakes but hard to reverse: slow down just enough to check the irreversible element, run a short premortem, and keep a record.",
+              "reveal": 4
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Once released, data cannot be recalled.",
+              "Is there a reversible alternative?"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Try it on a hypothetical. A company considers publishing a large dataset of user interactions for researchers."
+            },
+            {
+              "text": "Once released, data cannot be recalled, and re-identification techniques improve over time. Under what future techniques would these users be identifiable? And who bears the harm? Both questions point to the top-right cell."
+            },
+            {
+              "text": "But a reversible alternative exists: access in a controlled environment, with audit logs, which can be revoked.",
+              "reveal": 1
+            },
+            {
+              "text": "Player development has the same shape. Releasing a player, changing a pitcher’s mechanics or workload, or sharing his medical data with a partner all have irreversible elements that fall on someone other than the decision-maker. Write down the futures, the signals, the trigger, and who bears the downside."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Caution is not free",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "The limits of this lecture",
+            "cards": [
+              {
+                "title": "Delay can be irreversible",
+                "q": "The vaccine not bought in spring",
+                "fail": "Paralysis cedes ground to rivals"
+              },
+              {
+                "title": "Timid choices",
+                "q": "Each risk judged alone",
+                "fail": "Good bets rejected"
+              },
+              {
+                "title": "Robustness is subjective too",
+                "q": "Someone picks the futures",
+                "fail": "Make the choices explicit"
+              },
+              {
+                "title": "Evidence is case-based",
+                "q": "Few controlled comparisons",
+                "fail": "Use for logic, not effect sizes"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the challenge. Everything I’ve said could be turned into an excuse for never deciding."
+            },
+            {
+              "text": "Caution is not free. Waiting is only valuable if it produces information, and delay can itself be irreversible: the vaccine not bought in spring cannot be bought in autumn. Most decisions are reversible and should be made fast.",
+              "reveal": 1
+            },
+            {
+              "text": "Daniel Kahneman and Dan Lovallo described bold forecasts from the inside view of a single project, and timid choices from evaluating each risk in isolation, so organizations reject individually risky but collectively attractive bets.",
+              "reveal": 2,
+              "refs": [
+                "R-kahneman-1993-timid"
+              ]
+            },
+            {
+              "text": "Robustness asks you to avoid unacceptable outcomes, not every loss."
+            },
+            {
+              "text": "Robustness has its own subjectivity. Someone chooses which futures count as plausible and what counts as acceptable. Make those choices explicit, invite people with different views to add futures, and record why some were excluded.",
+              "reveal": 3
+            },
+            {
+              "text": "And the evidence for these methods is mainly case-based: applications in water management, infrastructure and climate adaptation. Controlled comparisons of decision quality are rare.",
+              "reveal": 4,
+              "refs": [
+                "R-marchau-2019-decision"
+              ]
+            },
+            {
+              "text": "Reference-class forecasting has stronger quantitative support for correcting optimism, and it complements robustness: the outside view widens the futures you take seriously.",
+              "refs": [
+                "R-flyvbjerg-2008-curbing"
+              ]
+            },
+            {
+              "text": "The honest summary: these are disciplined ways to think, supported by strong theory and practical experience, not interventions with measured effect sizes."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "When the board wants one number",
+            "steps": [
+              "Give a range and its basis",
+              "Say what would move it",
+              "Promise the stopping conditions",
+              "Name the first review date",
+              "State the worst outcome ruled out"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Finally, back to the question from the start. A board member asks, what is the probability this works? You don’t have an honest single number."
+            },
+            {
+              "text": "Give a range and its basis, for example, on comparable initiatives, somewhere between a third and two thirds succeed.",
+              "reveal": 1
+            },
+            {
+              "text": "Say what would move it.",
+              "reveal": 2
+            },
+            {
+              "text": "Then shift to what you can promise: the conditions under which you will stop,",
+              "reveal": 3
+            },
+            {
+              "text": "the date of the first review,",
+              "reveal": 4
+            },
+            {
+              "text": "and the worst outcome you have ruled out. That is a better commitment than a probability you cannot defend.",
+              "reveal": 5
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-matrix",
+            "type": "reflect",
+            "concept": "c-irreversibility",
+            "prompt": "Take a decision you expect to face in the next year. Place it in the reversibility–stakes matrix. Write one signpost and one precommitted trigger for it."
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Executive Dilemma",
+                "detail": "The week’s exercise: work a hard decision end to end",
+                "href": "#/exercise/w13-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Marchau et al. (2019), Decision Making under Deep Uncertainty",
+                "href": "#/library/R-marchau-2019-decision"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Risk has reliable probabilities; deep uncertainty does not. Expected value becomes fragile when probabilities are guesses, decisions are one-off and some outcomes are ruinous."
+            },
+            {
+              "text": "Robust and adaptive approaches ask which strategy performs acceptably across many futures, and build in signposts, triggers and precommitment."
+            },
+            {
+              "text": "Irreversibility carries an economic value of flexibility, and an ethical weight when others bear the downside. But most decisions are reversible, and they deserve speed, not ceremony."
+            },
+            {
+              "text": "Take the comprehension check below. It is the same check as the written lesson. Then open the week’s exercise, Executive Dilemma, and read the first chapter of Marchau and colleagues and their chapter on Robust Decision Making.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson stays here for the full examples and notes. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

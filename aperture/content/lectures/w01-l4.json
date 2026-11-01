@@ -1,0 +1,663 @@
+{
+  "id": "w01-l4-lecture",
+  "lesson": "w01-l4",
+  "title": "The Error Nobody Measures",
+  "subtitle": "Noise, decision hygiene and intellectual humility",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 4. It covers the same objectives — bias versus noise and the three kinds of noise, designing decision-hygiene procedures, and intellectual humility with the difference between decision quality and outcome quality — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Two underwriters, one file",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 1 · Lesson 4 · Lecture",
+            "title": "The error nobody measures",
+            "sub": "Noise, decision hygiene and intellectual humility"
+          },
+          "cues": [
+            {
+              "text": "Picture a fictional insurance company. Two experienced underwriters price commercial policies. Both are respected, and both have priced policies like these for years."
+            },
+            {
+              "text": "For years the company has assumed its professionals differ by a few percent at most. Same training, same guidelines, same kinds of cases."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Same cases. Same expertise.",
+              "Gaps several times larger than anyone expected."
+            ],
+            "sub": "Nobody was careless."
+          },
+          "cues": [
+            {
+              "text": "Then someone finally does the obvious thing. Both underwriters price the same set of policies, independently."
+            },
+            {
+              "text": "The gaps between their quotes are often several times larger than anyone expected.",
+              "reveal": 1
+            },
+            {
+              "text": "Nobody was careless. Each applied years of experience. They simply weighted the facts of each case differently, and one was systematically stricter than the other."
+            },
+            {
+              "text": "The scenario is fictional. But Kahneman, Sibony and Sunstein describe noise audits like this one in real organizations, and report that the variability far exceeded what executives expected.",
+              "refs": [
+                "R-kahneman-2021-noise"
+              ]
+            },
+            {
+              "text": "Pause for a second and ask: in your organization, which recurring judgment would show the widest gap between two equally qualified people looking at the same case? Ratings? Hiring scores? Budget approvals? Player evaluations?"
+            },
+            {
+              "text": "Hold that judgment in mind. By the end of this lecture you'll know how to measure that gap, and what to do about it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Bias and noise",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two components of error",
+            "left": {
+              "title": "Bias",
+              "points": [
+                "Shots clustered off center",
+                "Errors in a predictable direction",
+                "You need the right answer to see it"
+              ]
+            },
+            "right": {
+              "title": "Noise",
+              "points": [
+                "Shots scattered",
+                "Unwanted variability in judgments that should match",
+                "Measurable without the right answer"
+              ]
+            },
+            "refs": [
+              "R-kahneman-2021-noise"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Think of judgment as shooting at a target.",
+              "refs": [
+                "R-kahneman-2021-noise"
+              ]
+            },
+            {
+              "text": "Bias is when the shots cluster away from the center. A predictable direction of error. The first three lessons this week were mostly about bias.",
+              "reveal": 1,
+              "refs": [
+                "R-kahneman-2021-noise"
+              ]
+            },
+            {
+              "text": "Noise is when the shots are scattered. Unwanted variability in judgments that should be identical. In this framework, overall error combines the two.",
+              "reveal": 2,
+              "refs": [
+                "R-kahneman-2021-noise"
+              ]
+            },
+            {
+              "text": "Here's the remarkable part. You can measure noise without knowing where the center is. Turn the target around so you can't see the bullseye. You can still see the scatter. All you need is several judgments of the same case.",
+              "refs": [
+                "R-kahneman-2021-noise"
+              ]
+            },
+            {
+              "text": "That is what a noise audit does, and it is why noise is such a practical concept for a leader. You do not need to know the right answer to discover that your system is inconsistent."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Three kinds of system noise",
+            "cards": [
+              {
+                "title": "Level noise",
+                "q": "Some judges are harsher or more lenient overall",
+                "fail": "Remedy: calibration sessions, relative scales"
+              },
+              {
+                "title": "Pattern noise",
+                "q": "Judges react differently to particular features",
+                "fail": "Remedy: separate structured criteria, aggregation"
+              },
+              {
+                "title": "Occasion noise",
+                "q": "The same judge varies from moment to moment",
+                "fail": "Remedy: independent second judgments, checklists"
+              }
+            ],
+            "refs": [
+              "R-kahneman-2021-noise"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The authors divide system noise, the variability across judges who should be interchangeable, into three parts.",
+              "refs": [
+                "R-kahneman-2021-noise"
+              ]
+            },
+            {
+              "text": "Level noise. Some judges are generally harsher or more lenient. One manager rates everyone a point higher than peers do. Remedies: calibration sessions, relative scales, normalization.",
+              "reveal": 1,
+              "refs": [
+                "R-kahneman-2021-noise"
+              ]
+            },
+            {
+              "text": "Pattern noise. Judges react differently to particular features of particular cases. One interviewer heavily rewards confidence; another penalizes it. Remedies: structured criteria scored separately, and aggregation.",
+              "reveal": 2,
+              "refs": [
+                "R-kahneman-2021-noise"
+              ]
+            },
+            {
+              "text": "Occasion noise. The same judge would judge the same case differently at another time, when tired, rushed, or in a different mood. Remedies: independent second judgments, checklists, rules about timing.",
+              "reveal": 3,
+              "refs": [
+                "R-kahneman-2021-noise"
+              ]
+            },
+            {
+              "text": "Let's see if you can tell them apart."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-noise-type",
+            "type": "choice",
+            "prompt": "A lender reviews its credit officers’ files. On applications of similar quality, each officer approves noticeably fewer late in the afternoon than in the morning, though overall approval rates are similar across officers. Which kind of noise is this mainly?",
+            "concept": "c-noise",
+            "options": [
+              {
+                "id": "a",
+                "text": "Level noise"
+              },
+              {
+                "id": "b",
+                "text": "Pattern noise"
+              },
+              {
+                "id": "c",
+                "text": "Occasion noise"
+              },
+              {
+                "id": "d",
+                "text": "Bias, not noise"
+              }
+            ],
+            "answer": "c",
+            "feedback": {
+              "a": "Level noise would show some officers approving more than others across the board. Here the officers look alike overall; what varies is the moment.",
+              "b": "Pattern noise is about judges reacting differently to particular features of cases. Here the same judge changes with the time of day.",
+              "c": "Right. The same judge, on equivalent files, decides differently depending on when. Independent second judgments, checklists or timing rules are the usual remedies.",
+              "d": "Afternoon strictness could look like a directional error, but from the applicant’s side it is arbitrary scatter: the same file gets a different answer depending on when it is read."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Running a noise audit",
+            "steps": [
+              "Several judges, the same real cases, independently",
+              "For each case, measure the spread",
+              "Judge’s mean versus overall mean: level noise",
+              "What remains: pattern noise, occasion mixed in",
+              "Report it as a property of the system"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Occasion noise is the hardest to see, because you only catch it if the same judge sees the same case twice. Here is how an audit catches the other two."
+            },
+            {
+              "text": "Several judges evaluate the same set of realistic cases from actual work, independently.",
+              "reveal": 1
+            },
+            {
+              "text": "For each case, compute the spread of their judgments, then average across cases.",
+              "reveal": 2
+            },
+            {
+              "text": "Compare each judge's average with the overall average, and you have an estimate of level noise.",
+              "reveal": 3
+            },
+            {
+              "text": "The case-by-judge variation that remains estimates pattern noise, with occasion noise mixed in.",
+              "reveal": 4
+            },
+            {
+              "text": "And present the results as a property of the system, not a ranking of individuals. Otherwise the audit will never be repeated.",
+              "reveal": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Decision hygiene",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "The remedy",
+            "term": "Decision hygiene",
+            "definition": "Procedures that prevent errors without knowing in advance which error they prevent.",
+            "example": "Like handwashing: you never see the infection it stopped."
+          },
+          "cues": [
+            {
+              "text": "So what do you do about noise? The authors call the remedies decision hygiene, by analogy with handwashing.",
+              "refs": [
+                "R-kahneman-2021-noise"
+              ]
+            },
+            {
+              "text": "Hygiene prevents errors without knowing in advance which error it prevents. You never see the infection that handwashing stopped.",
+              "reveal": 1,
+              "refs": [
+                "R-kahneman-2021-noise"
+              ]
+            },
+            {
+              "text": "And the analogy is useful for a second reason: you do not need to diagnose the direction of an error to reduce it.",
+              "reveal": 2
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Independent errors partly cancel.",
+              "Discussion first makes errors correlated.",
+              "Averaging cannot remove a shared bias."
+            ]
+          },
+          "cues": [
+            {
+              "text": "Start with the most powerful practice: aggregate several independent judgments. Why does that work?"
+            },
+            {
+              "text": "If several judges make independent errors, some too high and some too low, averaging cancels part of the scatter. The more independent the judges, the more cancellation."
+            },
+            {
+              "text": "But if they discuss first, they converge on the most confident voice. Their errors become correlated, and averaging stops helping.",
+              "reveal": 1
+            },
+            {
+              "text": "And one limit to remember. Averaging does nothing for a bias they all share. If every judge is too optimistic, the average is too optimistic as well.",
+              "reveal": 2
+            },
+            {
+              "text": "Aggregation also produced the most accurate forecasts in the tournament from the last lesson.",
+              "refs": [
+                "R-mellers-2014-psychological"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "A hygienic evaluation process",
+            "steps": [
+              {
+                "label": "Define",
+                "text": "Separate dimensions, each scored"
+              },
+              {
+                "label": "Sequence",
+                "text": "Only the information each needs"
+              },
+              {
+                "label": "Judge alone",
+                "text": "Score independently, in writing"
+              },
+              {
+                "label": "Aggregate",
+                "text": "Show the spread, not just the mean"
+              },
+              {
+                "label": "Discuss",
+                "text": "Large disagreements only"
+              }
+            ],
+            "refs": [
+              "R-kahneman-2021-noise"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now put the practices together into a process you could run on any recurring judgment.",
+              "refs": [
+                "R-kahneman-2021-noise"
+              ]
+            },
+            {
+              "text": "Define. Agree on the separate dimensions to be assessed and how each is scored. That is structuring a complex judgment.",
+              "reveal": 1,
+              "refs": [
+                "R-kahneman-2021-noise"
+              ]
+            },
+            {
+              "text": "Sequence. Give judges only the information each dimension needs, in a set order, so irrelevant or biasing information does not arrive too early.",
+              "reveal": 2,
+              "refs": [
+                "R-kahneman-2021-noise"
+              ]
+            },
+            {
+              "text": "Judge alone. Each judge scores each dimension independently, and writes it down.",
+              "reveal": 3
+            },
+            {
+              "text": "Aggregate. Combine the scores, and show the spread, not just the average.",
+              "reveal": 4
+            },
+            {
+              "text": "Discuss. Spend the meeting only on the large disagreements, and form the overall judgment last.",
+              "reveal": 5
+            },
+            {
+              "text": "Two more practices from the authors' list complete it: use relative rather than absolute scales where you can, and take the outside view.",
+              "refs": [
+                "R-kahneman-2021-noise"
+              ]
+            },
+            {
+              "text": "Here's a design problem."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-hygiene",
+            "type": "choice",
+            "prompt": "An engineering promotion committee always hears one strong advocate present each candidate first, then discusses and votes. Which single change is the best decision-hygiene fix?",
+            "concept": "c-decision-hygiene",
+            "options": [
+              {
+                "id": "a",
+                "text": "Choose more experienced advocates."
+              },
+              {
+                "id": "b",
+                "text": "Have each member score the written packet on separate dimensions before the meeting, show the spread, and discuss only large disagreements."
+              },
+              {
+                "id": "c",
+                "text": "Let the most senior member speak first, to set a clear standard."
+              },
+              {
+                "id": "d",
+                "text": "Extend the discussion so every view is heard before voting."
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "A better advocate is a stronger anchor, not a weaker one. The problem is that everyone hears one view before forming their own.",
+              "b": "Right. Independent, structured scores before discussion keep errors uncorrelated, and showing the spread focuses the meeting where judges actually disagree.",
+              "c": "That replaces one anchor with a more powerful one. Seniority speaking first makes later judgments converge on it.",
+              "d": "More discussion after the anchor has landed tends to converge on the most confident voice. Independence has to come before discussion."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Humility, process and outcome",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "A metacognitive skill",
+            "term": "Intellectual humility",
+            "definition": "Recognizing the limits of your beliefs and knowledge, and that your beliefs might be wrong.",
+            "example": "It varies with situations and can be encouraged; it is not only a fixed trait."
+          },
+          "cues": [
+            {
+              "text": "Procedures need a person underneath who wants them to work. That brings us to intellectual humility."
+            },
+            {
+              "text": "Tenelle Porter and colleagues reviewed a growing literature on it. Across definitions, the common core is metacognitive: recognizing the limits of your beliefs and knowledge, and that your beliefs might be wrong.",
+              "reveal": 1,
+              "refs": [
+                "R-porter-2022-predictors"
+              ]
+            },
+            {
+              "text": "Their review treats it as something that varies with situations and can be encouraged, not only a fixed trait. And it reports associations with more careful handling of evidence.",
+              "reveal": 2,
+              "refs": [
+                "R-porter-2022-predictors"
+              ]
+            },
+            {
+              "text": "With an important caution, which we will come back to: much of that evidence is correlational, and drawn from Western samples.",
+              "refs": [
+                "R-porter-2022-predictors"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Proportional updating",
+            "left": {
+              "title": "Under-updating",
+              "points": [
+                "Ignoring evidence that cuts against you",
+                "Confirmation bias, motivated reasoning"
+              ]
+            },
+            "right": {
+              "title": "Over-updating",
+              "points": [
+                "Swinging wildly on one vivid data point",
+                "Availability"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "In practice, humility shows up as proportional updating: moving your belief by an amount that matches the strength of the new evidence."
+            },
+            {
+              "text": "Move too little, ignoring evidence that cuts against you, and you are in the territory of confirmation bias and motivated reasoning from Lesson Two.",
+              "reveal": 1
+            },
+            {
+              "text": "Move too much, swinging on one vivid data point, and you are in the territory of availability.",
+              "reveal": 2
+            },
+            {
+              "text": "A humble forecaster treats each belief as a probability, revises it when evidence arrives, and can tell you in advance what evidence would move it, and by how much."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "Process and outcome",
+            "x": [
+              "Bad outcome",
+              "Good outcome"
+            ],
+            "y": [
+              "Poor process",
+              "Sound process"
+            ],
+            "cells": [
+              [
+                "Bad luck: do not punish",
+                "Deserved success: record why"
+              ],
+              [
+                "Deserved failure: learn",
+                "Dumb luck: the most dangerous cell"
+              ]
+            ]
+          },
+          "cues": [
+            {
+              "text": "Humility has one more job: judging decisions fairly. Under uncertainty, good decisions sometimes produce bad outcomes, and bad decisions sometimes produce good ones."
+            },
+            {
+              "text": "Sound process, bad outcome: bad luck. Do not punish it. Check whether the risk was understood and sized.",
+              "reveal": 1
+            },
+            {
+              "text": "Sound process, good outcome: deserved success. Record why, so it can be repeated.",
+              "reveal": 2
+            },
+            {
+              "text": "Poor process, bad outcome: deserved failure. Learn from the process.",
+              "reveal": 3
+            },
+            {
+              "text": "And poor process, good outcome: dumb luck. The most dangerous cell, because success reinforces a poor process.",
+              "reveal": 4
+            },
+            {
+              "text": "Judging a decision only by its outcome is called outcome bias. It rewards luck, punishes sound risk-taking, and teaches the organization the wrong lessons. Week fourteen returns to it."
+            },
+            {
+              "text": "The tool that makes the distinction possible is a contemporaneous record: what you knew, what you assumed, what you predicted, and why. Without it, after the fact, you can't tell bad luck from deserved failure, or dumb luck from deserved success. That record is this week's assignment."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "The case against hygiene",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Costs and limits",
+            "steps": [
+              "Some variability is valuable",
+              "Rules can embed their designer’s bias",
+              "Humility is not indecision",
+              "Procedures can be gamed"
+            ]
+          },
+          "cues": [
+            {
+              "text": "I've made a strong case for consistency. Now let's argue against it."
+            },
+            {
+              "text": "First, some variability is valuable. Diverse judgments can surface information a single standard would suppress. In creative or novel decisions, disagreement may be exactly what you want before you decide.",
+              "reveal": 1,
+              "refs": [
+                "R-kahneman-2021-noise"
+              ]
+            },
+            {
+              "text": "Second, rigid rules and scoring templates can embed the biases of whoever designed them, and make those biases harder to see, because they look objective. Reviewers of the noise argument raised both points, and the authors accept that hygiene has costs and that rules can be biased.",
+              "reveal": 2,
+              "refs": [
+                "R-kahneman-2021-noise"
+              ]
+            },
+            {
+              "text": "So reduce noise in repeated judgments that should be consistent: ratings, triage, pricing. Preserve deliberate diversity where you want options generated rather than cases judged."
+            },
+            {
+              "text": "Third, humility is not indecision, and it is not deferring to the loudest expert. And the research base is younger than it looks. Much of it is correlational and self-reported, so claims that humble leaders produce better organizational results are hypotheses, not findings.",
+              "reveal": 3,
+              "refs": [
+                "R-porter-2022-predictors"
+              ]
+            },
+            {
+              "text": "Fourth, procedures can be gamed by the very motives they restrain. A champion who knows the scoring dimensions can write to them. A committee can discuss only large disagreements until the most senior view becomes the consensus.",
+              "reveal": 4
+            },
+            {
+              "text": "Ziva Kunda showed that people reach the conclusions they prefer when they can build a respectable justification. A procedure can become that justification. Hygiene works when someone owns it, and audits it.",
+              "refs": [
+                "R-kunda-1990-case"
+              ]
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-reflect",
+            "type": "reflect",
+            "prompt": "Return to the recurring judgment you named at the start. Sketch one hygiene change you could make to it — what would judges score independently, and what would they see first? Then name one way your own change could be gamed, and who would audit it.",
+            "concept": "c-decision-hygiene"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Three questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Judgment Lab",
+                "detail": "Calibrate your confidence on 26 judgments",
+                "href": "#/exercise/w01-x"
+              },
+              {
+                "label": "Decision Journal",
+                "detail": "This week’s assignment: the contemporaneous record",
+                "href": "#/assignment/w01-as"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Kahneman & Klein (2009), Conditions for Intuitive Expertise",
+                "href": "#/library/R-kahneman-2009-conditions"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let's bring it together."
+            },
+            {
+              "text": "Error has two components: bias and noise. Noise comes as level, pattern and occasion noise, it can be measured with a noise audit, and it can be reduced by decision hygiene: independent judgments, structure, sequenced information, relative scales, the outside view and aggregation."
+            },
+            {
+              "text": "Hygiene has costs and can be gamed, so use it where consistency matters. And intellectual humility, at its core the recognition that you might be wrong, shows up as proportional updating, and as judging decisions by their process, not only their outcome."
+            },
+            {
+              "text": "From here, take the comprehension check below. It is the same check as the written lesson. Then the Judgment Lab, the decision journal that gives you the contemporaneous record, and, if you have not yet, Kahneman and Klein's paper.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson stays here, with the examples from law, healthcare and player development, and how to introduce hygiene without insulting your experts. That completes Week One. Thank you for thinking it through with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

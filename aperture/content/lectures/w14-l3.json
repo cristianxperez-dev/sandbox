@@ -1,0 +1,622 @@
+{
+  "id": "w14-l3-lecture",
+  "lesson": "w14-l3",
+  "title": "The Argument Under Questioning",
+  "subtitle": "Presenting and defending decisions to senior leaders and boards",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 3. It covers the same objectives — a decision-first opening with an explicit warrant, the premortem and the steelmanned alternative, direct answers and why fluent dodges are a governance risk, and composure versus projected certainty — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Slide thirty-one",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 14 · Lesson 3 · Lecture",
+            "title": "The argument under questioning",
+            "sub": "Presenting and defending decisions to boards"
+          },
+          "cues": [
+            {
+              "text": "Fifteen minutes. Forty slides. And in minute four, the board chair interrupts."
+            },
+            {
+              "text": "This lecture is about what happens next, and how to be ready for it."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "“What are you asking us to approve?”",
+              "“And what happens if you’re wrong?”",
+              "“It’s on slide thirty-one.”"
+            ],
+            "sub": "A composite board meeting, not a real one."
+          },
+          "cues": [
+            {
+              "text": "Picture a hospital system’s board meeting. It is a composite, not a real one. The chief strategy officer is four minutes in when the chair says: before you go on, what are you asking us to approve?",
+              "reveal": 0
+            },
+            {
+              "text": "And what happens if you are wrong?",
+              "reveal": 1
+            },
+            {
+              "text": "The officer says the answer is on slide thirty-one. The meeting never recovers.",
+              "reveal": 2
+            },
+            {
+              "text": "The analysis was excellent. The problem was the shape. It was organized like a research paper, background, method, results, conclusion, for an audience that needed it organized like a decision."
+            },
+            {
+              "text": "Boards and owners are not hostile by default, but their role is skeptical. They carry responsibility for decisions they did not analyze, and their main instrument is the question."
+            },
+            {
+              "text": "So a decision presentation is an argument, tested in real time by people who know less about your subject than you do, and more about the consequences of being wrong."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Organize for a decision",
+      "scenes": [
+        {
+          "visual": {
+            "type": "flow",
+            "title": "A three-minute decision opening",
+            "steps": [
+              {
+                "label": "The ask",
+                "text": "What decision, from whom, by when"
+              },
+              {
+                "label": "Recommendation",
+                "text": "One sentence"
+              },
+              {
+                "label": "Reason",
+                "text": "The one or two that carry weight"
+              },
+              {
+                "label": "Alternative",
+                "text": "Why the strongest one loses here"
+              },
+              {
+                "label": "Risk",
+                "text": "Main failure mode and early signal"
+              },
+              {
+                "label": "Request",
+                "text": "What you want approved today"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "In Week Five you met answer-first communication: the military convention called bottom line up front, and the consulting pyramid principle. Both are practitioner heuristics, not research findings."
+            },
+            {
+              "text": "But their logic is strongest exactly here. If the meeting is cut short, the essential content has landed. And every later piece of evidence can be judged against a claim the audience already knows."
+            },
+            {
+              "text": "For a decision, answer-first means something specific. Within the first minute, the audience knows six things."
+            },
+            {
+              "text": "The ask: what decision you need, from whom, and by when.",
+              "reveal": 1
+            },
+            {
+              "text": "Your recommendation, in one sentence.",
+              "reveal": 2
+            },
+            {
+              "text": "The one or two reasons that carry the most weight, with the strength of their evidence.",
+              "reveal": 3
+            },
+            {
+              "text": "The strongest alternative, and why it loses here.",
+              "reveal": 4
+            },
+            {
+              "text": "The main way this could fail, and the early signal you will watch.",
+              "reveal": 5
+            },
+            {
+              "text": "And exactly what you want approved today, and what you will bring back.",
+              "reveal": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Where questions land",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Toulmin’s parts of an argument",
+            "steps": [
+              "Claim: what you recommend",
+              "Grounds: the evidence",
+              "Warrant: why that evidence supports that claim",
+              "Qualifier: how confident you are",
+              "Rebuttal: when the claim would not hold"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Underneath the format sits an argument. The philosopher Stephen Toulmin offered a useful way to take one apart."
+            },
+            {
+              "text": "The claim is what you recommend.",
+              "reveal": 1
+            },
+            {
+              "text": "The grounds are your evidence.",
+              "reveal": 2
+            },
+            {
+              "text": "The warrant is why that evidence supports that claim.",
+              "reveal": 3
+            },
+            {
+              "text": "The qualifier says how confident you are.",
+              "reveal": 4
+            },
+            {
+              "text": "And the rebuttal names the conditions under which the claim would not hold.",
+              "reveal": 5
+            },
+            {
+              "text": "Most weak presentations state a claim and grounds and leave the warrant implicit. And the warrant is precisely where skeptical questions land."
+            },
+            {
+              "text": "If the warrant is false, the grounds are irrelevant, and a board member who spots it will stop listening. So say the warrant out loud, and say how you checked it."
+            },
+            {
+              "text": "Let’s practice spotting one. The numbers here are invented."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-warrant",
+            "type": "choice",
+            "prompt": "A presenter says: “We recommend extending the mentoring program to every region. In the pilot region, first-year resignations fell by a fifth.” Which statement is the warrant?",
+            "options": [
+              {
+                "id": "a",
+                "text": "“We recommend extending the mentoring program to every region.”"
+              },
+              {
+                "id": "b",
+                "text": "“In the pilot region, first-year resignations fell by a fifth.”"
+              },
+              {
+                "id": "c",
+                "text": "“The pilot region resembles the other regions in the ways that drive resignations.”"
+              },
+              {
+                "id": "d",
+                "text": "“We are fairly confident in this estimate.”"
+              }
+            ],
+            "answer": "c",
+            "feedback": {
+              "a": "That is the claim — what is being recommended.",
+              "b": "That is the grounds — the evidence. On its own it says nothing about the other regions.",
+              "c": "Right. The warrant connects pilot evidence to a network-wide claim. If the pilot region is unusual, the grounds stop mattering — which is exactly where a board member will push.",
+              "d": "That is a qualifier — how confident the presenter is, not why the evidence supports the claim."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Stress-test before the room",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Gary Klein · practitioner method",
+            "term": "Premortem",
+            "definition": "Imagine it is the future and the plan has failed. Each person writes, independently, why it failed.",
+            "example": "Collect the reasons. Then revise the plan."
+          },
+          "cues": [
+            {
+              "text": "The pilot region might be unusual. Better that you find that out before the board does. Here are two cheap ways to meet your strongest objections first."
+            },
+            {
+              "text": "The first is the premortem, proposed by the research psychologist Gary Klein.",
+              "refs": [
+                "R-klein-2007-performing"
+              ]
+            },
+            {
+              "text": "The team imagines that it is some time in the future and the plan has failed. Not that it might fail. That it has. Each member writes down, independently, the reasons it failed.",
+              "reveal": 1,
+              "refs": [
+                "R-klein-2007-performing"
+              ]
+            },
+            {
+              "text": "The leader collects the reasons, and the plan is revised. The risks should change the plan, not just be recorded.",
+              "reveal": 2,
+              "refs": [
+                "R-klein-2007-performing"
+              ]
+            },
+            {
+              "text": "Klein grounds the method in earlier laboratory research on prospective hindsight: imagining an event as having already happened makes it easier to generate explanations for it.",
+              "refs": [
+                "R-klein-2007-performing"
+              ]
+            },
+            {
+              "text": "He also argues it gives permission to dissent. In a normal review, raising a risk can feel like disloyalty. In a premortem, it is the assignment.",
+              "refs": [
+                "R-klein-2007-performing"
+              ]
+            },
+            {
+              "text": "One honest label: this is a practitioner method, and its benefits in organizations have not been measured in controlled trials.",
+              "refs": [
+                "R-klein-2007-performing"
+              ]
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-premortem",
+            "type": "choice",
+            "prompt": "Why does a premortem tell the team the plan has failed, rather than asking what might go wrong?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Imagining a failure as certain makes reasons for it easier to generate, and makes raising them the assignment rather than disloyalty."
+              },
+              {
+                "id": "b",
+                "text": "Because most plans do fail, so certainty is realistic."
+              },
+              {
+                "id": "c",
+                "text": "Because it lets the leader identify who was responsible in advance."
+              }
+            ],
+            "answer": "a",
+            "concept": "c-premortem",
+            "feedback": {
+              "a": "Right — prospective hindsight, plus permission to dissent. Both are Klein’s rationale.",
+              "b": "The method makes no claim about base rates of failure. The certainty is a device for generating explanations.",
+              "c": "The opposite: the premortem is about surfacing risks people would otherwise keep to themselves, not assigning blame."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Straw man or steelman?",
+            "left": {
+              "title": "Straw man",
+              "points": [
+                "A weak version of the other view",
+                "Built to be knocked down",
+                "Collapses when a board member favors it"
+              ]
+            },
+            "right": {
+              "title": "Steelman",
+              "points": [
+                "The strongest version",
+                "One its best advocate would endorse",
+                "Shows your choice survived a serious rival"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Klein’s question, why did it fail, is half the stress test. The other half is the option you rejected."
+            },
+            {
+              "text": "A straw man is a weak version of an opposing view, built to be knocked down.",
+              "reveal": 1
+            },
+            {
+              "text": "A steelman is the strongest version: the one its most thoughtful advocate would recognize and endorse.",
+              "reveal": 2
+            },
+            {
+              "text": "Writing the steelman tests whether you rejected the option for a good reason. It prepares you for the board member who favors it. And it shows that your recommendation survived contact with a serious alternative, which is much of what the board is trying to judge."
+            },
+            {
+              "text": "It is a practitioner discipline, not a tested intervention. But it applies Week One’s remedy for confirmation bias to your own recommendation: find the best case against your view before someone else supplies it."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "One hard question, answered well",
+            "steps": [
+              "Answer directly",
+              "Concede what is true",
+              "Name the evidence and its weakness",
+              "Say what would change your mind"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Watch both tools pay off. A hypothetical: the head of an asset manager’s new risk function recommends closing a popular but illiquid fund to new retail investors."
+            },
+            {
+              "text": "Her premortem produced nine failure stories. Three recurred: sales routes clients to a similar affiliate product, competitors capture the clients, and the decision leaks before clients are told."
+            },
+            {
+              "text": "The steelman of the alternative, keep the fund open with liquidity limits and stronger disclosure, is genuinely strong. But counsel says those limits may not be available under the fund documents without investor consent. That binds, and she says so in the first minute."
+            },
+            {
+              "text": "The chair asks: if the alternative is so strong, why not try it first?"
+            },
+            {
+              "text": "She answers directly: because we may not be allowed to impose the limits it relies on.",
+              "reveal": 1
+            },
+            {
+              "text": "She concedes what is true: if counsel confirms we can, I would prefer it.",
+              "reveal": 2
+            },
+            {
+              "text": "She names the evidence and its weakness: the liquidity analysis covers the last two years, which did not include a severe outflow.",
+              "reveal": 3
+            },
+            {
+              "text": "And she says what would change her recommendation. The answer is strong because the steelman was written in advance.",
+              "reveal": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "The artful dodge",
+      "scenes": [
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Answer the question asked — or one like it?"
+            ],
+            "sub": "Rogers and Norton, 2011: four studies of debate answers."
+          },
+          "cues": [
+            {
+              "text": "Now an uncomfortable finding. Answering a hard question honestly is harder than it sounds, partly because evasion often works."
+            },
+            {
+              "text": "In four studies, Todd Rogers and Michael Norton showed people debate answers. The speaker answered the question asked, a similar question, or a clearly different one.",
+              "refs": [
+                "R-rogers-2011-artful"
+              ]
+            },
+            {
+              "text": "When the answer addressed a similar question, many listeners did not notice the switch. They rated the speaker as trustworthy and likable as one who had answered directly.",
+              "refs": [
+                "R-rogers-2011-artful"
+              ]
+            },
+            {
+              "text": "They were harsher on a clearly different answer, and on a speaker who answered the right question but stumbled. A smooth dodger could be preferred to a halting answerer.",
+              "refs": [
+                "R-rogers-2011-artful"
+              ]
+            },
+            {
+              "text": "Then the researchers displayed the original question on screen while the speaker answered. In the American Psychological Association’s summary, without the question visible, thirty-nine percent of listeners detected the dodge. Predict the share with it visible.",
+              "refs": [
+                "R-rogers-2011-artful"
+              ]
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-dodge",
+            "type": "estimate",
+            "prompt": "Without the question displayed, 39% of listeners detected the dodge. With the question displayed while the speaker answered, what share detected it?",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "initial": 50,
+            "answer": 88,
+            "tolerance": 8,
+            "concept": "c-question-dodging",
+            "feedback": {
+              "correct": "Close. In the summary, detection rose from 39% to 88%. Keeping the question visible is the remedy — and skilled board members keep it visible by asking again.",
+              "incorrect": "Detection rose from 39% to 88% of listeners. A visible question makes a dodge easy to catch — which is why you should assume a good chair will ask it again."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Why refuse the bargain",
+            "cards": [
+              {
+                "title": "Repeated players",
+                "q": "Boards compare what you said with what happened",
+                "fail": "Evasions accumulate into a record"
+              },
+              {
+                "title": "Governance",
+                "q": "Accurate information must reach those responsible",
+                "fail": "A dodge corrupts the channel"
+              },
+              {
+                "title": "The remedy",
+                "q": "Visible questions expose dodges",
+                "fail": "Assume the question will be asked again"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Eighty-eight percent. So the research implies that fluency can substitute for honesty, in the short run. Here are three reasons to refuse that bargain.",
+              "refs": [
+                "R-rogers-2011-artful"
+              ]
+            },
+            {
+              "text": "First, boards and owners are repeated players. They see you again, compare what you said with what happened, and build a record of evasions even when single dodges pass unnoticed.",
+              "reveal": 1
+            },
+            {
+              "text": "Second, governance. The role you studied in Week Thirteen depends on accurate information reaching the people who carry final responsibility. An answer engineered to avoid the question corrupts that channel. This is a governance risk, not a technique.",
+              "reveal": 2
+            },
+            {
+              "text": "Third, the experiments show the remedy. When the question stays visible, dodges are caught. Skilled board members keep it visible by asking again. Assume yours will.",
+              "reveal": 3,
+              "refs": [
+                "R-rogers-2011-artful"
+              ]
+            },
+            {
+              "text": "And a limit on the evidence itself. The listeners had no stake and no history with the speaker. A board member who read the pre-read and knows your record is a different listener. The studies show a mechanism, not how often dodges succeed in boardrooms.",
+              "refs": [
+                "R-rogers-2011-artful"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Presence, redefined",
+            "left": {
+              "title": "Projected certainty",
+              "points": [
+                "Fluent, smooth, never stumbling",
+                "“We’re confident it will work.”",
+                "Rewarded in the moment"
+              ]
+            },
+            "right": {
+              "title": "Composure under questioning",
+              "points": [
+                "Listen to the actual question",
+                "Answer it; concede what is true",
+                "“I don’t know yet — here is when I will.”"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Which brings back executive presence. In Week Five you treated it as other people’s inference about your judgment, and saw that the research on presence itself is thin."
+            },
+            {
+              "text": "The dodging studies add a warning. The cues people use to infer confidence, fluency and smoothness, are separable from the substance of an answer, and audiences reward them.",
+              "reveal": 1,
+              "refs": [
+                "R-rogers-2011-artful"
+              ]
+            },
+            {
+              "text": "A better working definition is composure under questioning. Stay calm. Listen to the actual question. Answer it directly. Concede what is true. And say I don’t know yet, here is how and when I will find out, when that is the honest answer.",
+              "reveal": 2
+            },
+            {
+              "text": "Suppose an owner asks what your exposure is if the league changes a rule next year, and you do not know. The strong answer says so, names the two things the exposure depends on, and commits to a date for a range."
+            },
+            {
+              "text": "It concedes ignorance and turns a weakness into a next step. It is almost always the strongest answer available, and the one you will be most tempted to avoid."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Limits and synthesis",
+      "scenes": [
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "A homogeneous team writes a homogeneous premortem.",
+              "The structure is preparation, not a script."
+            ]
+          },
+          "cues": [
+            {
+              "text": "Two final cautions. The premortem surfaces only the risks a team can imagine. It can generate so many that none is prioritized. And its benefit size is unknown.",
+              "reveal": 0,
+              "refs": [
+                "R-klein-2007-performing"
+              ]
+            },
+            {
+              "text": "So rank the failure stories by likelihood and severity, and invite at least one person from outside the team to write one.",
+              "refs": [
+                "R-klein-2007-performing"
+              ]
+            },
+            {
+              "text": "And structure can be overdone. A founder who wants to think aloud, or a board in crisis, will not follow your six steps. If the chair’s first question is about the risk, start with the risk. You did the work to answer in any order.",
+              "reveal": 1
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "The same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Decision Presentation Studio",
+                "detail": "A three-minute opening, one slide, and your hardest-question answer",
+                "href": "#/exercise/w14-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Klein (2007), Performing a Project Premortem",
+                "href": "#/library/R-klein-2007-performing"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Lead with the ask and the recommendation. Make the warrant explicit. Stress-test with a premortem, and write the steelman of the option you rejected."
+            },
+            {
+              "text": "Then answer the question asked. Fluency can hide evasion, which is exactly why you should not use it that way. Presence is composure, not certainty."
+            },
+            {
+              "text": "Next, take the comprehension check, the same one as the written lesson. Then open the Decision Presentation Studio and draft your opening three ways. And read Gary Klein’s premortem article. It is two pages.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson keeps the full table of hard questions and the methodological notes. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

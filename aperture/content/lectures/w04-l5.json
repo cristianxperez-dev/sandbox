@@ -1,0 +1,585 @@
+{
+  "id": "w04-l5-lecture",
+  "lesson": "w04-l5",
+  "title": "Parachutes, Pyramids and Degrees of Belief",
+  "subtitle": "Evidence hierarchies, meta-analysis and their limits",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 5. It covers the same objectives — the logic and limits of evidence hierarchies, reading a meta-analysis for heterogeneity and publication bias, and combining imperfect evidence into a stated, revisable degree of belief — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "No trials of parachutes",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 4 · Lesson 5 · Lecture",
+            "title": "Parachutes, pyramids and degrees of belief",
+            "sub": "Evidence hierarchies, meta-analysis and their limits"
+          },
+          "cues": [
+            {
+              "text": "In two thousand three, a leading medical journal published a systematic review that found no randomized trials at all of its intervention. The intervention was the parachute."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Effectiveness of parachutes:",
+              "not rigorously evaluated."
+            ],
+            "sub": "Smith and Pell (2003), tongue in cheek.",
+            "refs": [
+              "R-smith-2003-parachute"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Gordon Smith and Jill Pell searched for randomized controlled trials of parachutes for preventing death in people jumping from aircraft. They found none.",
+              "reveal": 0,
+              "refs": [
+                "R-smith-2003-parachute"
+              ]
+            },
+            {
+              "text": "They concluded, tongue in cheek, that the effectiveness of parachutes had not been rigorously evaluated, and suggested advocates of evidence-based medicine might volunteer for a trial.",
+              "reveal": 1,
+              "refs": [
+                "R-smith-2003-parachute"
+              ]
+            },
+            {
+              "text": "The satire makes a serious point. A rigid hierarchy that demands randomized evidence for everything becomes absurd when an effect is enormous and its mechanism obvious.",
+              "refs": [
+                "R-smith-2003-parachute"
+              ]
+            },
+            {
+              "text": "But remember hormone therapy from the last lesson: a modest effect, a plausible story, strong selection, and decades of observational evidence overturned by one trial.",
+              "refs": [
+                "R-rossouw-2002-risks"
+              ]
+            },
+            {
+              "text": "This final lesson pulls the week together. You've seen how noise, flexible analysis, weak designs, poor measures and selective publication mislead. Now the question is what to believe when evidence is mixed, which is the normal condition of executive work."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "The pyramid and its logic",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "A typical evidence hierarchy",
+            "steps": [
+              "Systematic reviews and meta-analyses of good trials",
+              "Randomized controlled trials",
+              "Quasi-experiments",
+              "Cohort, case-control and adjusted observational studies",
+              "Case series, anecdotes, expert opinion"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Here's a simplified hierarchy, common in medicine and policy, from the top."
+            },
+            {
+              "text": "Systematic reviews and meta-analyses of good trials protect against chance, but inherit the bias of what they include.",
+              "reveal": 1
+            },
+            {
+              "text": "Randomized trials protect against confounding and selection into treatment, but can be small, lose participants, or study narrow populations.",
+              "reveal": 2
+            },
+            {
+              "text": "Quasi-experiments protect against some confounding by design, but rest on untestable assumptions and give local effects.",
+              "reveal": 3
+            },
+            {
+              "text": "Observational studies with adjustment handle measured confounders, not unmeasured ones or reverse causation.",
+              "reveal": 4
+            },
+            {
+              "text": "And anecdotes and expert opinion protect against very little: selection, memory and motivated reasoning all get in.",
+              "reveal": 5
+            },
+            {
+              "text": "Now the crucial point. This is a ranking of typical protection against bias, not a ranking of truth. Other things equal, which design is less likely to mislead? Other things are rarely equal."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "What moves evidence up or down",
+            "steps": [
+              "Large relative to plausible bias?",
+              "A dose-response pattern?",
+              "Different designs agree?",
+              "Direct: your population and outcome?",
+              "Precise enough to matter?"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Medicine's mature grading systems adjust ratings for risk of bias, imprecision, inconsistency, indirectness and publication bias, and upward for very large effects or dose-response. You can do the same informally, with five questions."
+            },
+            {
+              "text": "Is the effect large relative to plausible bias? A tenfold difference is hard to explain by confounding. A ten percent difference is easy.",
+              "reveal": 1
+            },
+            {
+              "text": "Is there a dose-response pattern, more exposure, more effect?",
+              "reveal": 2
+            },
+            {
+              "text": "Do studies with different designs and different weaknesses agree?",
+              "reveal": 3
+            },
+            {
+              "text": "Is the evidence direct: your population, intervention and outcome?",
+              "reveal": 4
+            },
+            {
+              "text": "And is it precise enough to tell an effect that matters from one that doesn't?",
+              "reveal": 5
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-hierarchy",
+            "type": "choice",
+            "prompt": "Which evidence deserves the most weight for your decision about adults in your own industry?",
+            "options": [
+              {
+                "id": "a",
+                "text": "One small randomized trial in a different population, with heavy attrition and an indirect outcome."
+              },
+              {
+                "id": "b",
+                "text": "A large, consistent observational literature in your population, with a big effect and a dose-response pattern."
+              },
+              {
+                "id": "c",
+                "text": "An expert's confident opinion, because it is the most recent."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-evidence-hierarchy",
+            "feedback": {
+              "a": "Its starting rank is high, but small size, heavy attrition and indirectness all move it down. It can deserve less than its rank suggests.",
+              "b": "Right. Size relative to plausible bias, dose-response, consistency and directness can lift a lower-ranked design above a weak, indirect trial.",
+              "c": "Expert opinion offers little protection against selection, memory and motivated reasoning, however recent."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "What pooling can and cannot do",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Reading a meta-analysis",
+            "left": {
+              "title": "What pooling does",
+              "points": [
+                "Weights studies by precision",
+                "Shrinks random error",
+                "Tests for heterogeneity"
+              ]
+            },
+            "right": {
+              "title": "What it cannot do",
+              "points": [
+                "Remove bias every study shares",
+                "Restore the file drawer",
+                "Make one number fit every setting"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Right: a lower-ranked design can earn more weight. Now the top of the pyramid."
+            },
+            {
+              "text": "A meta-analysis combines estimates from several studies, weighting each by its precision, so large studies count more. The summary has a narrower interval than any single study. Its great strength is reducing random error.",
+              "reveal": 1
+            },
+            {
+              "text": "It also lets you examine heterogeneity: whether studies disagree more than chance predicts. A fixed-effect model assumes one common effect. A random-effects model assumes the true effect varies, and estimates the average and the spread."
+            },
+            {
+              "text": "When heterogeneity is large, a single pooled number misleads. \"It depends\" is the finding, and the spread tells you how different the result could be in your setting."
+            },
+            {
+              "text": "What pooling can't do is remove bias that every included study shares. If small null studies went unpublished, the meta-analysis averages a filtered sample.",
+              "reveal": 2
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "bars",
+            "title": "A meta-analysis of a filtered literature",
+            "items": [
+              {
+                "label": "True effect",
+                "value": 0.1
+              },
+              {
+                "label": "Average of all studies run",
+                "value": 0.1
+              },
+              {
+                "label": "Average of published, significant studies",
+                "value": 0.5
+              },
+              {
+                "label": "Large preregistered replication",
+                "value": 0.1
+              }
+            ],
+            "note": "Synthetic: 30 per group, true d = 0.1, only significant positive results published; rounded."
+          },
+          "cues": [
+            {
+              "text": "Here's a simulation. The numbers are invented."
+            },
+            {
+              "text": "The true effect is point one.",
+              "reveal": 1
+            },
+            {
+              "text": "Across every study actually run, small ones of thirty per group, the average is point one. Honest.",
+              "reveal": 2
+            },
+            {
+              "text": "But if only significant positive results are published, the published average is about point five. Five times the truth, and a meta-analysis of that literature would be precise and wrong.",
+              "reveal": 3
+            },
+            {
+              "text": "A large preregistered replication would be expected to land back near point one.",
+              "reveal": 4
+            },
+            {
+              "text": "That's not just a simulation. Amanda Kvarven and colleagues compared meta-analyses with large preregistered multi-laboratory replications of the same psychological effects. The meta-analytic estimates were, on average, roughly three times larger.",
+              "refs": [
+                "R-kvarven-2020-comparing"
+              ]
+            },
+            {
+              "text": "Common bias-correction methods reduced the gap but didn't close it.",
+              "refs": [
+                "R-kvarven-2020-comparing"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Detecting the filter",
+            "term": "Funnel plot",
+            "definition": "Each study's effect against its precision. Missing small null studies leave the funnel lopsided.",
+            "example": "But asymmetry can also come from genuine heterogeneity."
+          },
+          "cues": [
+            {
+              "text": "Analysts try to detect the filter with a funnel plot."
+            },
+            {
+              "text": "Without bias, small studies scatter symmetrically around the pooled effect. With publication bias, the small studies with small or negative effects are missing, and the funnel is lopsided.",
+              "reveal": 1
+            },
+            {
+              "text": "Tests and corrections try to adjust for that. All have limits. Asymmetry can come from genuine heterogeneity, and corrections rely on assumptions about how the filter worked.",
+              "reveal": 2
+            },
+            {
+              "text": "So the most reliable remedy is structural, not statistical: registered studies and reports whose publication doesn't depend on results.",
+              "refs": [
+                "R-scheel-2021-excess"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Combining lines of evidence",
+      "scenes": [
+        {
+          "visual": {
+            "type": "flow",
+            "title": "From evidence to a belief",
+            "steps": [
+              {
+                "label": "Prior",
+                "text": "Base rate, mechanism, earlier evidence"
+              },
+              {
+                "label": "Weigh",
+                "text": "Design, power, measures, relevance"
+              },
+              {
+                "label": "Agree?",
+                "text": "Different weaknesses, same answer?"
+              },
+              {
+                "label": "Posterior",
+                "text": "A degree of belief and range"
+              },
+              {
+                "label": "Decide",
+                "text": "Costs and reversibility"
+              },
+              {
+                "label": "Monitor",
+                "text": "What would change your mind"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "So how do you combine imperfect evidence? Bayesian reasoning gives you discipline."
+            },
+            {
+              "text": "Start with a prior based on base rates, mechanism and earlier studies.",
+              "reveal": 1
+            },
+            {
+              "text": "Each new piece of evidence shifts the belief by its likelihood ratio: how much more likely that evidence would be if the claim were true than if it were false. Strong designs with large samples have large likelihood ratios. Weak, flexible studies have small ones, because they'd often come out positive even if the claim were false.",
+              "reveal": 2
+            },
+            {
+              "text": "Independent lines of evidence with different assumptions, a trial, a natural experiment, a mechanism study, a dose-response pattern, are worth more together than several studies sharing one bias. That's triangulation.",
+              "reveal": 3
+            },
+            {
+              "text": "Then state a degree of belief and a plausible range,",
+              "reveal": 4
+            },
+            {
+              "text": "act if the expected value is positive given costs and reversibility,",
+              "reveal": 5
+            },
+            {
+              "text": "and name the evidence that would change your mind, and go collect it.",
+              "reveal": 6
+            },
+            {
+              "text": "Let's try one. The numbers are invented. You think there's a thirty percent chance a new scheduling policy reduces staff burnout. A well-designed pilot comes back positive, a result that would occur eighty percent of the time if the policy works, and twenty percent if it doesn't. What's your updated belief?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-update",
+            "type": "estimate",
+            "prompt": "Prior: 30% chance the policy works. The pilot’s positive result would occur 80% of the time if it works and 20% of the time if it does not. What is your updated probability that it works?",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "initial": 50,
+            "answer": 63,
+            "tolerance": 5,
+            "concept": "c-bayesian-updating",
+            "feedback": {
+              "correct": "Right: about 63%. Better than even, not certain.",
+              "incorrect": "About 63%. Prior odds of 0.3 to 0.7 times a likelihood ratio of 4 gives posterior odds of about 1.7, which is a probability of about 63% — better than even, not certain."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Updating with odds",
+            "lines": [
+              {
+                "label": "Prior odds",
+                "value": "0.3 ÷ 0.7 ≈ 0.43"
+              },
+              {
+                "label": "Likelihood ratio",
+                "value": "0.8 ÷ 0.2 = 4"
+              },
+              {
+                "label": "Posterior odds",
+                "value": "0.43 × 4 ≈ 1.71"
+              }
+            ],
+            "result": {
+              "label": "Updated probability",
+              "value": "1.71 ÷ 2.71 ≈ 63%"
+            },
+            "note": "Synthetic numbers, from the lesson's worked problem."
+          },
+          "cues": [
+            {
+              "text": "Work in odds. Thirty to seventy is about point four three.",
+              "reveal": 1
+            },
+            {
+              "text": "The likelihood ratio is eighty over twenty, which is four.",
+              "reveal": 2
+            },
+            {
+              "text": "Multiply: posterior odds of about one point seven one.",
+              "reveal": 3
+            },
+            {
+              "text": "Convert back, and you get about sixty-three percent. Better than even. Not certain. One good pilot moved you a long way, and still left room for doubt.",
+              "reveal": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "The limits of the pyramid",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two critiques, opposite directions",
+            "left": {
+              "title": "Over-trusting the top",
+              "points": [
+                "A trial gives one average",
+                "In one population",
+                "Mechanism needed to apply it"
+              ]
+            },
+            "right": {
+              "title": "Under-trusting the top",
+              "points": [
+                "Observational studies have misled",
+                "Hormone therapy the canonical case",
+                "Intuitions about confounding fail"
+              ]
+            },
+            "refs": [
+              "R-deaton-2018-understanding",
+              "R-angrist-2010-credibility"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the challenge. Two critiques pull in opposite directions."
+            },
+            {
+              "text": "Deaton and Cartwright argue that ranking designs encourages people to treat randomized results as the answer, when a trial gives an average effect in one population and says little about elsewhere without understanding the mechanism.",
+              "reveal": 1,
+              "refs": [
+                "R-deaton-2018-understanding"
+              ]
+            },
+            {
+              "text": "Advocates of design-based evidence reply that observational studies have repeatedly misled, hormone therapy above all, and that the hierarchy exists because our intuitions about confounding are unreliable.",
+              "reveal": 2,
+              "refs": [
+                "R-rossouw-2002-risks",
+                "R-angrist-2010-credibility"
+              ]
+            },
+            {
+              "text": "Both are right, about different failure modes. One warns against over-trusting the top of the pyramid, the other against under-trusting it."
+            },
+            {
+              "text": "And the parachute is often misused. It applies when effects are dramatic and mechanisms unambiguous. Most organizational interventions have modest effects, competing explanations and strong selection. For them, hormone therapy is the better lesson.",
+              "refs": [
+                "R-smith-2003-parachute"
+              ]
+            },
+            {
+              "text": "Finally, most organizational decisions never accumulate a literature. There will be no meta-analysis of your reorganization. Use the hierarchy to decide which internal evidence to trust, a staggered rollout over a testimonial, and borrow priors from related fields, discounted for context."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Sixty studies say yes.",
+              "Your four regions say nothing.",
+              "Neither settles it."
+            ]
+          },
+          "cues": [
+            {
+              "text": "Here's the hardest version. A meta-analysis of sixty studies says a peer-mentoring program improves retention, with a modest pooled effect and substantial heterogeneity."
+            },
+            {
+              "text": "Your own staggered rollout across four regions shows no effect, with a wide interval. Your head of people says sixty studies can't be wrong. Your finance chief says our data say it doesn't work.",
+              "reveal": 1
+            },
+            {
+              "text": "A better frame: the literature sets a prior that the program helps somewhere. The heterogeneity says context matters. Your data are too imprecise to overturn that prior or confirm it.",
+              "reveal": 2
+            },
+            {
+              "text": "So the decision turns on cost, on whether your context resembles the settings where it worked, and on designing the next phase to be informative. Your own data are the most relevant evidence you have, and often the most biased. Relevance doesn't excuse design. Build the comparison in from the start."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-posterior",
+            "type": "reflect",
+            "prompt": "Write a one-sentence posterior belief about an intervention in your own field — for example, “probably positive and modest; we would be surprised by an effect larger than X” — and name the specific evidence that would change it.",
+            "concept": "c-bayesian-updating"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Evidence Lab",
+                "detail": "Run the file-drawer preset and see pooling mislead",
+                "href": "#/exercise/w04-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Angrist & Pischke (2010), The Credibility Revolution in Empirical Economics",
+                "href": "#/library/R-angrist-2010-credibility"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let's bring the week together."
+            },
+            {
+              "text": "Evidence hierarchies rank designs by typical protection against bias. They're a sensible default, adjusted for size, consistency, mechanism and relevance."
+            },
+            {
+              "text": "Meta-analyses reduce random error but not shared bias, and large heterogeneity means the average is not the answer. Combine lines of evidence with different weaknesses, state a degree of belief, and name what would change it."
+            },
+            {
+              "text": "Next, take the comprehension check below, the same check as the written lesson. Then open the Evidence Lab and run the file-drawer preset, and read Angrist and Pischke on why research design earns credibility.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson has the full grading table and notes. Thank you for working through this week with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

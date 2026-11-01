@@ -1,0 +1,768 @@
+{
+  "id": "w04-l1-lecture",
+  "lesson": "w04-l1",
+  "title": "Luck, Noise and the Number Everyone Misreads",
+  "subtitle": "Signal, noise and the meaning of p",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 1. It covers the same objectives — regression to the mean, confidence intervals and p-values read correctly, and power and prior plausibility — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "The improvement plan that always works",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 4 · Lesson 1 · Lecture",
+            "title": "Luck, noise and the number everyone misreads",
+            "sub": "Signal, noise and the meaning of p"
+          },
+          "cues": [
+            {
+              "text": "Let me describe a management success story, and then I want you to tell me whether you believe it."
+            },
+            {
+              "text": "A regional hospital system ranks its twenty emergency departments every quarter on how long patients wait to see a provider. The scenario is hypothetical, but the pattern is everywhere."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "One quarter, two stories",
+            "steps": [
+              {
+                "label": "Rank",
+                "text": "Twenty departments by wait time"
+              },
+              {
+                "label": "Worst three",
+                "text": "Consultant, workshop, dashboards"
+              },
+              {
+                "label": "Best three",
+                "text": "A congratulatory letter"
+              },
+              {
+                "label": "Next quarter",
+                "text": "Worst improve, best get worse"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Each quarter, the departments are ranked from fastest to slowest.",
+              "reveal": 1
+            },
+            {
+              "text": "The three worst are put on an improvement plan. A consultant visits, managers attend a workshop, dashboards go up in the break rooms.",
+              "reveal": 2
+            },
+            {
+              "text": "The three best get a congratulatory letter.",
+              "reveal": 3
+            },
+            {
+              "text": "Next quarter, all three of the worst improve markedly. All three of the best get worse.",
+              "reveal": 4
+            },
+            {
+              "text": "The chief operating officer concludes that improvement plans work and that praise breeds complacency."
+            },
+            {
+              "text": "Before I say anything else: if the plan had done nothing at all, how many of the three worst departments would you expect to improve?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-worst-three",
+            "type": "estimate",
+            "prompt": "If the improvement plan had done nothing at all, how many of the three worst departments would you expect to improve next quarter?",
+            "min": 0,
+            "max": 3,
+            "step": 1,
+            "unit": " departments",
+            "initial": 1,
+            "answer": 3,
+            "tolerance": 1,
+            "concept": "c-regression-to-the-mean",
+            "feedback": {
+              "correct": "Yes. With a noisy measure, departments selected for being extreme are expected to drift back toward the middle with or without any intervention. Most of them, often all of them, improve.",
+              "incorrect": "Expect most, often all three, to improve with no plan at all. They were selected partly for bad luck, and luck is redrawn next quarter. The next few minutes explain why."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Praise did not backfire.",
+              "Criticism did not work.",
+              "Luck was redrawn."
+            ],
+            "sub": "Tversky and Kahneman: regression mistaken for a feedback effect."
+          },
+          "cues": [
+            {
+              "text": "Amos Tversky and Daniel Kahneman described exactly this pattern in flight training.",
+              "reveal": 0,
+              "refs": [
+                "R-tversky-1974-judgment"
+              ]
+            },
+            {
+              "text": "Instructors noticed that cadets praised after an unusually smooth landing usually did worse next time, while cadets criticized after a rough landing usually improved.",
+              "refs": [
+                "R-tversky-1974-judgment"
+              ]
+            },
+            {
+              "text": "So the instructors concluded that criticism works and praise backfires.",
+              "reveal": 1,
+              "refs": [
+                "R-tversky-1974-judgment"
+              ]
+            },
+            {
+              "text": "Tversky and Kahneman's point was that the instructors had discovered regression to the mean and mistaken it for a causal effect of their own feedback.",
+              "reveal": 2,
+              "refs": [
+                "R-tversky-1974-judgment"
+              ]
+            },
+            {
+              "text": "This lecture is about keeping signal and noise apart. Four tools: regression to the mean, the confidence interval, the p-value and statistical power. None needs advanced mathematics. All are misunderstood by many people who will present evidence to you."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "A true level plus luck",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "The core idea",
+            "term": "Reliability",
+            "definition": "The share of variation in a measure that is stable from period to period.",
+            "example": "High reliability: last quarter predicts next. Low: last quarter is mostly noise."
+          },
+          "cues": [
+            {
+              "text": "Think of any measured result as two parts added together."
+            },
+            {
+              "text": "A department's wait time, a fund's annual return, a salesperson's monthly bookings, a hitter's average over three weeks. Each is a stable underlying level, plus a transient part that does not repeat."
+            },
+            {
+              "text": "The transient part includes genuine randomness, measurement error, and temporary circumstances, like a flu outbreak or an easy schedule."
+            },
+            {
+              "text": "The share of the variation that is stable has a name: reliability.",
+              "reveal": 1
+            },
+            {
+              "text": "When reliability is high, last period predicts next period well. When it is low, last period is mostly noise.",
+              "reveal": 2
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "Why selected extremes drift back",
+            "steps": [
+              {
+                "label": "Measure",
+                "text": "True level plus noise"
+              },
+              {
+                "label": "Select",
+                "text": "Pick the extremes"
+              },
+              {
+                "label": "Hidden bias",
+                "text": "Extremes carry extreme noise"
+              },
+              {
+                "label": "Re-measure",
+                "text": "Noise redrawn, level stays"
+              },
+              {
+                "label": "Drift",
+                "text": "Toward average, with or without action"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now select units because they were extreme.",
+              "reveal": 1
+            },
+            {
+              "text": "The worst three departments are, on average, departments with a somewhat worse true level, and a bad draw of luck that quarter.",
+              "reveal": 2
+            },
+            {
+              "text": "Next quarter the true level persists, but the luck is redrawn.",
+              "reveal": 4
+            },
+            {
+              "text": "So on average they move back toward the middle. The best performers do the same in reverse.",
+              "reveal": 5
+            },
+            {
+              "text": "Here's the key. Regression to the mean is not a force, and it needs no intervention. It is a consequence of selecting on a noisy measure. The lower the reliability, and the more extreme the selection, the bigger the drift."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "The regression-adjusted forecast",
+            "lines": [
+              {
+                "label": "Reliability of the score",
+                "value": "0.5"
+              },
+              {
+                "label": "Team before coaching",
+                "value": "20 points below average"
+              },
+              {
+                "label": "Expected with no coaching",
+                "value": "0.5 × −20 = 10 below"
+              },
+              {
+                "label": "Observed after coaching",
+                "value": "6 below"
+              }
+            ],
+            "result": {
+              "label": "Credit the coaching with at most",
+              "value": "about 4 points"
+            },
+            "note": "Synthetic numbers, from the lesson's worked problem."
+          },
+          "cues": [
+            {
+              "text": "This gives you a simple prediction rule. Your best forecast of next period is not last period's value. It is a weighted average of that value and the group mean, with the weight on the observed value equal to the reliability."
+            },
+            {
+              "text": "Let's run it. The numbers here are invented. An engagement score has a reliability of one half."
+            },
+            {
+              "text": "A team scores twenty points below the company average and gets coaching.",
+              "reveal": 2
+            },
+            {
+              "text": "With no coaching at all, we'd expect it to sit about half of twenty, so ten points below.",
+              "reveal": 3
+            },
+            {
+              "text": "Next quarter it is six below. A fourteen point improvement.",
+              "reveal": 4
+            },
+            {
+              "text": "But ten of those fourteen points were expected anyway. The coaching gets credit for about four at most, and even that needs a comparison group.",
+              "reveal": 5
+            },
+            {
+              "text": "The only clean way to know whether an intervention did anything is to compare treated units with similarly extreme units that were not treated, ideally chosen at random."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Intervals and p-values, read correctly",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Same centre, different lessons",
+            "left": {
+              "title": "−1 to +9 minutes",
+              "points": [
+                "Plausibly nothing",
+                "Plausibly a lot",
+                "The study taught little"
+              ]
+            },
+            "right": {
+              "title": "3.8 to 4.2 minutes",
+              "points": [
+                "A precise gain",
+                "Supports a confident decision"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Every estimate travels with its uncertainty. The typical size of sample-to-sample variation is the standard error, and an estimate without it is half a fact."
+            },
+            {
+              "text": "A ninety-five percent confidence interval comes from a procedure that, across many repeated samples, would capture the true value ninety-five percent of the time."
+            },
+            {
+              "text": "In practice, read it as the range of effects reasonably compatible with the data, under the analysis assumptions."
+            },
+            {
+              "text": "Two features matter more than whether it excludes zero. Its location tells you the most plausible magnitudes. Its width tells you how much the study actually taught you.",
+              "reveal": 1
+            },
+            {
+              "text": "An interval from minus one to plus nine minutes, and one from three point eight to four point two, can share a centre. Only the second supports a confident operational decision.",
+              "reveal": 2
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "American Statistical Association, 2016",
+            "term": "p-value",
+            "definition": "How likely data at least this extreme would be, if a specified model, usually no effect, were true and all its assumptions held.",
+            "example": "It is about the data given the hypothesis, not the hypothesis given the data."
+          },
+          "cues": [
+            {
+              "text": "Now the number everyone misreads.",
+              "reveal": 0
+            },
+            {
+              "text": "A p-value is the probability of getting data at least as extreme as what you observed, if a specified statistical model were correct. Usually that model says the true effect is zero.",
+              "reveal": 1,
+              "refs": [
+                "R-wasserstein-2016-asa"
+              ]
+            },
+            {
+              "text": "In two thousand sixteen, the American Statistical Association issued its first formal statement on a matter of statistical practice, precisely to correct widespread misuse of this number.",
+              "refs": [
+                "R-wasserstein-2016-asa"
+              ]
+            },
+            {
+              "text": "Notice the direction. The p-value is about the data, given the hypothesis. Executives almost always want the reverse.",
+              "reveal": 2
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "What p = .03 is not",
+            "cards": [
+              {
+                "title": "Not a fluke rate",
+                "q": "A 3% chance it is a fluke?",
+                "fail": "That is the hypothesis given the data"
+              },
+              {
+                "title": "Not truth",
+                "q": "A 97% chance it is real?",
+                "fail": "Depends on prior plausibility and power"
+              },
+              {
+                "title": "Not size",
+                "q": "So the effect is large?",
+                "fail": "Huge samples make tiny effects significant"
+              },
+              {
+                "title": "Not absence",
+                "q": "p = .06 means no effect?",
+                "fail": "Not significant is not evidence of absence"
+              }
+            ],
+            "refs": [
+              "R-wasserstein-2016-asa"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Suppose a report says p equals point oh three. Let's go through what people conclude.",
+              "reveal": 0,
+              "refs": [
+                "R-wasserstein-2016-asa"
+              ]
+            },
+            {
+              "text": "There's a three percent chance the result is a fluke. No. That is a statement about the hypothesis given the data.",
+              "reveal": 1
+            },
+            {
+              "text": "There's a ninety-seven percent chance the effect is real. No. That depends on prior plausibility and power, which the p-value ignores.",
+              "reveal": 2
+            },
+            {
+              "text": "The effect is large or important. No. The statement is explicit that a p-value does not measure size or importance, and a tiny effect in a huge sample can produce a tiny p-value.",
+              "reveal": 3,
+              "refs": [
+                "R-wasserstein-2016-asa"
+              ]
+            },
+            {
+              "text": "And p equals point oh six means there is no effect. Also no. Absence of significance is not evidence of absence, especially in small samples.",
+              "reveal": 4
+            },
+            {
+              "text": "The statement adds two more principles: decisions should not rest only on whether a p-value crosses a threshold, and proper inference requires full reporting.",
+              "refs": [
+                "R-wasserstein-2016-asa"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Which reading is right?"
+            ],
+            "sub": "A short case decision."
+          },
+          "cues": [
+            {
+              "text": "Let's see whether that sticks under pressure."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-pvalue",
+            "type": "choice",
+            "prompt": "A pilot reduced complaint rates by an estimated 11%, with a 95% interval from −2% to +23% and p = 0.09. Which reading is most defensible?",
+            "options": [
+              {
+                "id": "a",
+                "text": "It failed: the result is not significant, so the program does nothing."
+              },
+              {
+                "id": "b",
+                "text": "It is directionally positive, so roll it out."
+              },
+              {
+                "id": "c",
+                "text": "The program could plausibly do nothing or a great deal; decide on the cost of being wrong each way."
+              },
+              {
+                "id": "d",
+                "text": "There is a 91% chance the program works."
+              }
+            ],
+            "answer": "c",
+            "concept": "c-confidence-interval",
+            "feedback": {
+              "a": "This reasons from the threshold. The interval includes large benefits as well as zero; not significant is not evidence of no effect.",
+              "b": "Also reasoning from the threshold, just in the other direction. The interval includes zero and even a small harm.",
+              "c": "Right. The interval shows the range of plausible effects. If extending the pilot is cheap and reversible, buy more information; if full rollout is expensive and hard to undo, it is not yet justified.",
+              "d": "One minus the p-value is not the probability the program works. That probability depends on prior plausibility and power."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Power and the probability you actually want",
+      "scenes": [
+        {
+          "visual": {
+            "type": "bars",
+            "title": "Power to detect a modest true effect",
+            "unit": "%",
+            "items": [
+              {
+                "label": "20 per group",
+                "value": 15
+              },
+              {
+                "label": "50 per group",
+                "value": 32
+              },
+              {
+                "label": "100 per group",
+                "value": 56
+              },
+              {
+                "label": "175 per group",
+                "value": 80
+              },
+              {
+                "label": "250 per group",
+                "value": 92
+              }
+            ],
+            "note": "Synthetic: effect of 0.3 standard deviations, two-sided test at 5%, from the lesson's illustration; rounded."
+          },
+          "cues": [
+            {
+              "text": "That pilot is a good bridge to the last tool. Statistical power is the probability that a study produces a significant result when a true effect of a given size exists."
+            },
+            {
+              "text": "It depends on the size of the effect, the noise in the measure, the sample size and the significance threshold."
+            },
+            {
+              "text": "Take a modest effect, about a third of a standard deviation. With twenty people per group, power is roughly fifteen percent. The study misses the true effect about eighty-five times in a hundred.",
+              "reveal": 1
+            },
+            {
+              "text": "Fifty per group, about a third.",
+              "reveal": 2
+            },
+            {
+              "text": "A hundred per group, just over half.",
+              "reveal": 3
+            },
+            {
+              "text": "It takes about a hundred and seventy-five per group to reach eighty percent,",
+              "reveal": 4
+            },
+            {
+              "text": "and two hundred and fifty to reach the low nineties.",
+              "reveal": 5
+            },
+            {
+              "text": "Low power has a less obvious cost too, and it's the subject of the next lesson: when a low-powered study does reach significance, its estimate is usually far too large."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "One hundred ideas tested",
+            "lines": [
+              {
+                "label": "Ideas that genuinely work",
+                "value": "10 of 100"
+              },
+              {
+                "label": "Real wins at 50% power",
+                "value": "5"
+              },
+              {
+                "label": "False wins at 5% threshold",
+                "value": "5% of 90 = 4.5"
+              },
+              {
+                "label": "All significant wins",
+                "value": "9.5"
+              }
+            ],
+            "result": {
+              "label": "Share of wins that are false",
+              "value": "roughly half"
+            },
+            "note": "Synthetic numbers, from the lesson's methodological note."
+          },
+          "cues": [
+            {
+              "text": "Here is the question you actually care about: given this result, how likely is it that the effect is real? That is a posterior probability, and Bayes' rule says it depends on three things. The prior, the power, and the threshold."
+            },
+            {
+              "text": "Suppose your analytics team tests a hundred product ideas, and perhaps ten genuinely work. Invented numbers, but realistic in spirit.",
+              "reveal": 1
+            },
+            {
+              "text": "With power of fifty percent, about five of the ten real effects come back significant.",
+              "reveal": 2
+            },
+            {
+              "text": "And five percent of the ninety ideas that do nothing, about four and a half, come back significant by chance.",
+              "reveal": 3
+            },
+            {
+              "text": "So you have roughly nine and a half wins.",
+              "reveal": 4
+            },
+            {
+              "text": "Roughly half of them are false.",
+              "reveal": 5
+            },
+            {
+              "text": "Raise power to eighty percent, and about eight of twelve and a half wins are real. Lower the prior to one in a hundred, and false wins dominate."
+            },
+            {
+              "text": "This is the logic of John Ioannidis's argument that, under realistic priors, power and bias, many claimed findings in some fields are likely to be false.",
+              "refs": [
+                "R-ioannidis-2005-most"
+              ]
+            },
+            {
+              "text": "It also explains why the same p-value should move you more for a plausible, mechanistically grounded claim than for a surprising one. It is week one's base-rate reasoning, applied to research.",
+              "refs": [
+                "R-ioannidis-2005-most"
+              ]
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-surprising",
+            "type": "choice",
+            "prompt": "Two studies each report p = .03. Study A tests a well-grounded mechanism with a large sample. Study B tests a surprising claim with 20 people per group. Which result should move your belief more?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Study A — higher prior plausibility and higher power."
+              },
+              {
+                "id": "b",
+                "text": "Study B — overcoming that much noise implies a large effect."
+              },
+              {
+                "id": "c",
+                "text": "Both equally — the p-values are identical."
+              }
+            ],
+            "answer": "a",
+            "concept": "c-statistical-power",
+            "feedback": {
+              "a": "Right. The probability that a significant result is true rises with prior plausibility and with power. Same p, very different credibility.",
+              "b": "Tempting, but low power and a surprising hypothesis both lower the chance that a significant result is true, and small significant studies tend to overstate effects.",
+              "c": "The p-value ignores prior plausibility and power, which is exactly why identical p-values can deserve very different degrees of belief."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Pushback, and what to ask for",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Three serious objections",
+            "cards": [
+              {
+                "title": "Just train people",
+                "q": "P-values are fine; misreading is the problem",
+                "fail": "Partly right, but intervals carry more"
+              },
+              {
+                "title": "Go Bayesian",
+                "q": "Ask for posterior probabilities directly",
+                "fail": "Priors can flatter; state them, add a skeptical one"
+              },
+              {
+                "title": "Not all drift is luck",
+                "q": "Interventions can work; levels change",
+                "fail": "Tools never substitute for a comparison group"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now let me argue against myself, because three objections deserve a serious answer."
+            },
+            {
+              "text": "First: p-values are fine, people just misread them, so train people better. Partly right. A p-value correctly understood is a legitimate measure of surprise under a model. But a tool routinely misread by trained researchers is a poor tool for executive communication. Estimates with intervals carry the same information, and more.",
+              "reveal": 1
+            },
+            {
+              "text": "Second: Bayesians say ask for posterior probabilities directly. Attractive. But priors can be chosen to flatter a conclusion, and a hidden prior is no more transparent than a hidden analysis plan. The disciplined position is to ask for the prior to be stated, and for the result under a skeptical prior as well.",
+              "reveal": 2
+            },
+            {
+              "text": "Third: not everything that drifts toward the mean is regression. Interventions can work, and true levels can change.",
+              "reveal": 3
+            },
+            {
+              "text": "The statistical statement's emphasis on context and full reporting is the reminder here. Tools never substitute for design. The question is always: what was the comparison group?",
+              "refs": [
+                "R-wasserstein-2016-asa"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Before you credit an intervention",
+            "steps": [
+              "Record the forecast without it",
+              "Judge against the forecast, not the slump",
+              "Compare with similar untreated extremes",
+              "Prefer reliable process measures"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Player development is an ideal environment for regression to the mean. Early-season statistics have low reliability, and nearly every intervention is triggered by an extreme."
+            },
+            {
+              "text": "A hitter opens badly, gets a mechanical adjustment, improves three weeks later, and the adjustment gets the credit. A pitcher has a great first month, is promoted, and then struggles to adjust. Some of each story may be true."
+            },
+            {
+              "text": "So before an intervention, record the forecast for the player without it, the observed value shrunk toward his longer-run baseline or the group mean.",
+              "reveal": 1
+            },
+            {
+              "text": "Judge the intervention against that forecast, not against the slump.",
+              "reveal": 2
+            },
+            {
+              "text": "Where possible, compare with similarly extreme players who did not receive it, or randomize who gets it first.",
+              "reveal": 3
+            },
+            {
+              "text": "And when you must judge quickly, prefer process measures with higher reliability over short-sample outcomes.",
+              "reveal": 4
+            },
+            {
+              "text": "The same discipline applies to the audited school, the replaced portfolio-company manager, and last year's top fund. The honest benchmark is the regression-adjusted forecast, not last year's extreme."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-reflect",
+            "type": "reflect",
+            "prompt": "Think of a recent intervention in your organization that was triggered by an unusually bad result. What would the regression-adjusted forecast have been without it, and what comparison would tell you whether it worked?",
+            "concept": "c-regression-to-the-mean"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Evidence Lab",
+                "detail": "Simulate regression, power and false wins yourself",
+                "href": "#/exercise/w04-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Wasserstein & Lazar (2016), The ASA’s Statement on p-Values",
+                "href": "#/library/R-wasserstein-2016-asa"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let's bring it together."
+            },
+            {
+              "text": "Observed results are a stable level plus noise. Select on extremes, and they drift back toward the mean, whatever you did in between."
+            },
+            {
+              "text": "A p-value measures surprise under a null model. Not the truth of a claim, not the size of an effect. Ask for estimates with intervals, sample sizes and power, and remember that how far a significant result should move you depends on prior plausibility and power."
+            },
+            {
+              "text": "From here, take the comprehension check below, the same check as the written lesson. Then open the Evidence Lab, and read the American Statistical Association's statement. It is about five pages.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson stays here for the full detail and the methodological notes. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

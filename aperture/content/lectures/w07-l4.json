@@ -1,0 +1,674 @@
+{
+  "id": "w07-l4-lecture",
+  "lesson": "w07-l4",
+  "title": "The People Who Are Not in the Room",
+  "subtitle": "Agents, constituencies, coalitions and culture in negotiation",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 4. It covers the same objectives — diagnosing principal–agent problems and designing mandates, planning the internal negotiation and ratification, and adapting across cultures without stereotyping — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "An excellent deal that stalled",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 7 · Lesson 4 · Lecture",
+            "title": "The people who are not in the room",
+            "sub": "Agents, constituencies, coalitions and culture"
+          },
+          "cues": [
+            {
+              "text": "So far this week, two people have sat across a table and bargained for themselves."
+            },
+            {
+              "text": "Executive negotiations almost never look like that. The person at the table is acting for someone else, the deal must be approved by people who were not there, and the other side may run on different rules entirely."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "timeline",
+            "title": "A device contract, step by step",
+            "events": [
+              {
+                "when": "Four months",
+                "text": "Nine percent off, guaranteed supply, nurse training"
+              },
+              {
+                "when": "Finance committee",
+                "text": "Cardiology objects to the device"
+              },
+              {
+                "when": "Same meeting",
+                "text": "Why five years, if a rival arrives in eighteen months?"
+              },
+              {
+                "when": "After the delay",
+                "text": "Vendor withdraws the training"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "A hospital network's chief procurement officer has negotiated for four months with a medical-device maker. This is a hypothetical example."
+            },
+            {
+              "text": "She reaches a five-year agreement she considers excellent: a nine percent price reduction, guaranteed supply, and training for nursing staff.",
+              "reveal": 1
+            },
+            {
+              "text": "At the board's finance committee, it stalls. Cardiology objects that the contract standardizes on a device its surgeons consider inferior.",
+              "reveal": 2
+            },
+            {
+              "text": "The chief financial officer asks why the term is five years when a competing product is expected within eighteen months.",
+              "reveal": 3
+            },
+            {
+              "text": "Told of the delay, the device maker withdraws the training commitment.",
+              "reveal": 4
+            },
+            {
+              "text": "The external negotiation was skilled. The internal one never happened. This lecture is about the negotiations that happen away from the table."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Agents and principals",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "The core problem",
+            "term": "Principal–agent problem",
+            "definition": "One party, the agent, acts for another, the principal, whose interests or information differ.",
+            "example": "A broker paid a percentage of price gains little from holding out for a slightly better deal."
+          },
+          "cues": [
+            {
+              "text": "A principal–agent problem arises when one party, the agent, acts for another, the principal, whose interests or information differ.",
+              "reveal": 1
+            },
+            {
+              "text": "Negotiation is full of them. The sales executive paid on signed bookings rather than profitability."
+            },
+            {
+              "text": "The broker paid a percentage of price, who gains little from holding out for a slightly better deal.",
+              "reveal": 2
+            },
+            {
+              "text": "The department head negotiating a vendor contract her successor will live with. The adviser whose fees grow with the length of a dispute."
+            },
+            {
+              "text": "But agents are not just a problem. They bring expertise, market knowledge, emotional distance, and a built-in reason to pause: I need to take this back to my client."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Agent risks and their controls",
+            "cards": [
+              {
+                "title": "Knows more than you",
+                "q": "Can you judge the deal?",
+                "fail": "Control: reasoning and comparables in writing"
+              },
+              {
+                "title": "Divergent pay",
+                "q": "Paid for volume, speed or hours?",
+                "fail": "Control: align incentives before the mandate"
+              },
+              {
+                "title": "Overcommitment",
+                "q": "What may the agent agree?",
+                "fail": "Control: a written mandate"
+              },
+              {
+                "title": "Agent-to-agent ties",
+                "q": "Whose career does the deal serve?",
+                "fail": "Control: principal contact at key moments"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Each benefit has a matching risk, and each risk has a control. This is a practitioner synthesis, with hypothetical examples."
+            },
+            {
+              "text": "The agent knows more than the principal, who cannot judge the deal. Control: require the agent's reasoning, comparables and alternatives in writing.",
+              "reveal": 1
+            },
+            {
+              "text": "Incentives diverge, because the agent is paid for volume, speed or hours rather than outcome. Control: review and align incentives before you grant the mandate.",
+              "reveal": 2
+            },
+            {
+              "text": "The agent overcommits, or the counterpart goes around the agent. Control: a written mandate saying what the agent may agree and what needs approval.",
+              "reveal": 3
+            },
+            {
+              "text": "And agents may close deals that serve their careers or their relationship with the other side's agent. Control: principal-to-principal contact at key moments.",
+              "reveal": 4
+            },
+            {
+              "text": "Agency changes behavior, too. In the meta-analysis by Mazei and colleagues, women obtained better economic outcomes when negotiating on behalf of another person than for themselves.",
+              "refs": [
+                "R-mazei-2015-meta"
+              ]
+            },
+            {
+              "text": "Acting as an advocate can license an assertiveness that self-advocacy does not, one reason organizations often assign a negotiation to someone other than the person who benefits."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Spot the agency risk."
+            ],
+            "sub": "A short case decision."
+          },
+          "cues": [
+            {
+              "text": "Let's apply that. Here is an agent with a familiar pay structure."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-agent",
+            "type": "choice",
+            "prompt": "Your company hires a sales executive to negotiate a large multi-year supply contract. She is paid a bonus on signed bookings, not on the contract’s profitability. What is the most important principal–agent risk?",
+            "options": [
+              {
+                "id": "a",
+                "text": "She will hold out too long for a better price."
+              },
+              {
+                "id": "b",
+                "text": "She will be eager to sign, conceding margin or terms that hurt profitability."
+              },
+              {
+                "id": "c",
+                "text": "She lacks market knowledge."
+              },
+              {
+                "id": "d",
+                "text": "There is no agency risk: she works for the company."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-principal-agent-problem",
+            "feedback": {
+              "a": "Her pay points the other way: a bonus on bookings rewards signing, not holding out.",
+              "b": "Right. Paid on bookings rather than profitability, she gains from closing and bears little of the cost of weak terms. Align pay and write a mandate with margin limits.",
+              "c": "Possible, but nothing in the case suggests it. The visible problem is the incentive structure.",
+              "d": "Being an employee does not align interests. The bonus formula creates a gap between what pays her and what pays the company."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "The internal negotiation comes first",
+      "scenes": [
+        {
+          "visual": {
+            "type": "flow",
+            "title": "Two-level preparation",
+            "steps": [
+              {
+                "label": "Map constituencies",
+                "text": "Approve, implement, veto"
+              },
+              {
+                "label": "Negotiate the mandate",
+                "text": "In writing"
+              },
+              {
+                "label": "Negotiate externally",
+                "text": "Report bad news early"
+              },
+              {
+                "label": "Ratify",
+                "text": "A package, not a surprise"
+              },
+              {
+                "label": "Implement",
+                "text": "Value is realized here"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Every external deal is also an internal one. Think of it as negotiating at two levels at once."
+            },
+            {
+              "text": "Start by mapping constituencies: who must approve, who will implement, and who can veto or quietly undermine.",
+              "reveal": 1
+            },
+            {
+              "text": "Then negotiate the mandate with them: interests, reservation value, authority limits and acceptable trades, written down.",
+              "reveal": 2
+            },
+            {
+              "text": "Negotiate externally within that mandate, and report signals back early, especially bad news.",
+              "reveal": 3
+            },
+            {
+              "text": "Bring back a package and its reasoning, not a surprise.",
+              "reveal": 4
+            },
+            {
+              "text": "And remember that the people who live with the deal decide whether its value is ever realized. In our hospital, cardiology and finance were never in step one.",
+              "reveal": 5
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Ratification constraints",
+            "left": {
+              "title": "Genuine constraint",
+              "points": [
+                "“Our board will not approve beyond three years”",
+                "Moves their estimate of your reservation value"
+              ]
+            },
+            "right": {
+              "title": "Manufactured constraint",
+              "points": [
+                "A form of deception",
+                "Discovery damages every later claim"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Ratification constraints cut both ways. A narrow mandate makes you predictable and slows the deal."
+            },
+            {
+              "text": "But a genuine constraint, our board will not approve a term beyond three years, can move the other side's estimate of your reservation value, as Lesson One described.",
+              "reveal": 1
+            },
+            {
+              "text": "The constraint helps only if it is real. A manufactured one is deception, and when it is discovered, it damages every claim you make afterwards.",
+              "reveal": 2
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Three or more parties",
+            "steps": [
+              "Map who needs whom",
+              "Sequence commitments deliberately",
+              "Identify blocking coalitions",
+              "Keep side deals able to survive discovery"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Raiffa's analysis treats negotiations among many parties as a distinct problem. Once three or more are involved, subsets can agree among themselves and present terms to the rest.",
+              "refs": [
+                "R-raiffa-1982-art"
+              ]
+            },
+            {
+              "text": "So the question is not only what each party gets, but who is inside the agreement.",
+              "refs": [
+                "R-raiffa-1982-art"
+              ]
+            },
+            {
+              "text": "Map who needs whom. Leverage depends on which coalitions a party could join or block.",
+              "reveal": 1
+            },
+            {
+              "text": "Sequence deliberately. Early commitments from respected parties make later ones easier; a visible early refusal can unravel a coalition.",
+              "reveal": 2
+            },
+            {
+              "text": "Identify blocking coalitions. Parties that cannot build an agreement can often stop one.",
+              "reveal": 3
+            },
+            {
+              "text": "And keep side arrangements transparent enough to survive discovery by the others.",
+              "reveal": 4
+            },
+            {
+              "text": "Picture three allied governments sharing the cost of a joint training facility, with a contractor as a fourth party. Hypothetical again. Two governments quietly agree a formula and present it to the third as nearly settled."
+            },
+            {
+              "text": "The third does not fight the formula. It uses a real ratification constraint: its legislature needs a share of the local work, which the contractor values little. Disclosed openly, the constraint creates value."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Across cultures",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Adair, Okumura and Brett, 2001",
+            "left": {
+              "title": "U.S. managers",
+              "points": [
+                "Shared information directly",
+                "Asked and answered about priorities",
+                "Avoided influence tactics"
+              ]
+            },
+            "right": {
+              "title": "Japanese managers",
+              "points": [
+                "Exchanged information indirectly",
+                "Used influence with each other",
+                "Adapted with U.S. partners"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Wendi Adair, Tetsushi Okumura and Jeanne Brett studied Japanese and U.S. managers negotiating an integrative simulation, with partners from their own culture and from the other.",
+              "refs": [
+                "R-adair-2001-negotiation"
+              ]
+            },
+            {
+              "text": "U.S. negotiators shared information directly, asking and answering questions about priorities, and avoided influence tactics, within and across cultures.",
+              "reveal": 1,
+              "refs": [
+                "R-adair-2001-negotiation"
+              ]
+            },
+            {
+              "text": "Japanese negotiators exchanged information more indirectly and used influence with each other, but adapted their behavior with U.S. partners.",
+              "reveal": 2,
+              "refs": [
+                "R-adair-2001-negotiation"
+              ]
+            },
+            {
+              "text": "The key result: intercultural pairs reached lower joint gains than same-culture pairs, and culturally typical behaviors partly explained the gap.",
+              "refs": [
+                "R-adair-2001-negotiation"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "One asks directly.",
+              "One infers from offers.",
+              "Each thinks the other is evasive."
+            ],
+            "sub": "The mechanism matters more than the national profile."
+          },
+          "cues": [
+            {
+              "text": "The mechanism is more useful than the national profiles. Imagine one negotiator who discovers priorities by asking direct questions.",
+              "reveal": 0
+            },
+            {
+              "text": "And another who infers priorities from the pattern of offers.",
+              "reveal": 1
+            },
+            {
+              "text": "Each may conclude the other is evasive, or naive. And the trades that depend on shared information go unfound.",
+              "reveal": 2
+            },
+            {
+              "text": "The remedy is to make the routine explicit. Say how you would like to exchange information, and notice how your counterpart prefers to."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "How much does culture explain?",
+            "left": {
+              "title": "Differences are real",
+              "points": [
+                "Systematic behavior differences by group",
+                "Consequences for joint gains"
+              ]
+            },
+            "right": {
+              "title": "Labels predict poorly",
+              "points": [
+                "Cultural indices explained little of regional variation",
+                "Large variation within any country"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "How much does national culture explain? This one is contested, and both sides have evidence."
+            },
+            {
+              "text": "On one side, studies like Adair, Okumura and Brett's find systematic differences between national groups, with consequences for joint gains.",
+              "reveal": 1,
+              "refs": [
+                "R-adair-2001-negotiation"
+              ]
+            },
+            {
+              "text": "On the other, the ultimatum-game meta-analysis by Oosterbeek and colleagues found that regional differences in responder behavior were, with one exception, not explained by standard cultural classifications such as Hofstede's and Inglehart's.",
+              "reveal": 2,
+              "refs": [
+                "R-oosterbeek-2004-cultural"
+              ]
+            },
+            {
+              "text": "Both can hold at once. Behavior differs on average across groups, yet the indices used to label cultures predict it poorly, and variation within any country is large.",
+              "refs": [
+                "R-adair-2001-negotiation",
+                "R-oosterbeek-2004-cultural"
+              ]
+            },
+            {
+              "text": "Inferring an individual from a group average is the ecological fallacy. Distributions overlap heavily; your counterpart's training, industry, age and organization may matter more than nationality."
+            },
+            {
+              "text": "And mind the coverage. This evidence compares the United States with Japan. Applying it to, say, Caribbean partners is reasoned inference, useful, but not evidence about that setting.",
+              "refs": [
+                "R-adair-2001-negotiation"
+              ]
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-culture",
+            "type": "choice",
+            "prompt": "You are about to negotiate with a counterpart whose country is often described as preferring indirect communication. What approach does the evidence best support?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Script an indirect style in advance to match the national profile."
+              },
+              {
+                "id": "b",
+                "text": "Ignore culture entirely; process differences do not affect outcomes."
+              },
+              {
+                "id": "c",
+                "text": "Make the information-exchange process explicit, and adapt to how this counterpart actually behaves."
+              },
+              {
+                "id": "d",
+                "text": "Insist on your own direct style, since adapting signals weakness."
+              }
+            ],
+            "answer": "c",
+            "concept": "c-cross-cultural-negotiation",
+            "feedback": {
+              "a": "That is the ecological fallacy: a group average does not tell you how this person negotiates, and imitation can read as condescension.",
+              "b": "Mismatched information-exchange routines were associated with lower joint gains, so process differences do matter.",
+              "c": "Right. Talk explicitly about how you will exchange priorities and confirm understandings, and adapt to observed behavior rather than a label.",
+              "d": "Adaptation is part of the skill: negotiators in the study did adapt across cultures, and refusing to can leave trades unfound."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Tensions without tidy answers",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Three tensions",
+            "cards": [
+              {
+                "title": "Aligning pay",
+                "q": "Pay on closing, or on long-run results?",
+                "fail": "Eager to close, or overcautious"
+              },
+              {
+                "title": "Mandate versus speed",
+                "q": "Build support first, or move fast?",
+                "fail": "Forgiveness later spends credibility"
+              },
+              {
+                "title": "Adapting",
+                "q": "Adjust your style, or imitate theirs?",
+                "fail": "Imitation can read as condescension"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "If you just chose the explicit, adaptive approach, here is where that and everything else in this lecture runs into trouble."
+            },
+            {
+              "text": "Aligning an agent's pay is harder than it sounds. Pay on closing and the agent becomes eager to close; pay only on long-run outcomes and the agent becomes overcautious. Every formula creates its own distortion, which Week Eight treats in depth.",
+              "reveal": 1
+            },
+            {
+              "text": "Building a mandate takes time, and time can weaken your external position. Negotiating first and seeking forgiveness later sometimes works, but it spends credibility, and invites the collapse we saw in the hospital.",
+              "reveal": 2
+            },
+            {
+              "text": "And adaptation has limits. Adapting how you exchange information is evidence-based. Imitating what you believe their culture to be can read as condescension, and your counterpart may be adapting to you.",
+              "reveal": 3
+            },
+            {
+              "text": "The most robust move is meta-communication: talking explicitly about how you will negotiate, how each side approves decisions, and how you will confirm understandings."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "When your mandate is ambiguous",
+            "steps": [
+              "Write the mandate you think you have",
+              "Get a one-line confirmation",
+              "Name the constituencies to consult",
+              "Define overpaying against an alternative",
+              "Say truthfully what needs approval"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the uncomfortable case: you are the agent. Your president says, get the partnership with the overseas training facility done this month, but don't overpay. You ask for a number. The answer is: use your judgment."
+            },
+            {
+              "text": "Write the mandate you think you have: target, reservation value, the trades you may make and the issues you may not concede.",
+              "reveal": 1
+            },
+            {
+              "text": "Send it to the president for a one-line confirmation before you negotiate.",
+              "reveal": 2
+            },
+            {
+              "text": "Name the constituencies you will consult, finance, legal, compliance, and the staff who will use the facility, and what each must see.",
+              "reveal": 3
+            },
+            {
+              "text": "Define overpaying in terms of an alternative: what would you do if this facility were unavailable, and what would that cost?",
+              "reveal": 4
+            },
+            {
+              "text": "And plan how to tell the counterpart, truthfully, which terms you can agree and which need approval.",
+              "reveal": 5
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-constituents",
+            "type": "reflect",
+            "prompt": "List everyone who would have to approve, implement or live with the outcome of a negotiation you expect to face this year. Which of them have you not yet consulted, and why not?",
+            "concept": "c-principal-agent-problem"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Before the first meeting",
+      "scenes": [
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Negotiation Chamber",
+                "detail": "Plan how you will exchange information on four issues",
+                "href": "#/exercise/w07-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "MIT OpenCourseWare (2001), Negotiation and Conflict Management",
+                "href": "#/library/R-mitocw-2001-negotiation"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Keep that list of constituencies beside you. Now let's bring it together."
+            },
+            {
+              "text": "The person at the table is often an agent whose incentives and information differ from the principal's, so write mandates and align pay before negotiating."
+            },
+            {
+              "text": "Every external deal is an internal negotiation first. Ratification limits what you can agree and, when it is real, adds credibility. With three or more parties, coalitions and sequence shape outcomes as much as offers do."
+            },
+            {
+              "text": "Across cultures, mismatched information-exchange routines cost joint value. Make the process explicit, and adapt to the counterpart you observe, not to a nationality."
+            },
+            {
+              "text": "A partnership for an overseas player academy, for instance, may involve a landowner, an operator, community stakeholders, intermediaries and your own compliance staff. Speaking the language helps; it is not the same as sharing a negotiating routine. Confirm understandings in writing, in both languages."
+            },
+            {
+              "text": "Take the comprehension check below; it matches the written lesson. Then go into the Negotiation Chamber, and look at the MIT course materials on negotiation styles and bargaining tactics.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson has the full tables and the notes on culture and the ecological fallacy. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -113,7 +113,7 @@ export function lintScript(s, ctx, err, warn = () => {}) {
   return { refs, cps, cueCount, wordCount, cpIds };
 }
 
-export function buildLectures({ base, appDir, lessonIds, lessons, resources, concepts, exercises, err }) {
+export function buildLectures({ base, appDir, lessonIds, lessons, resources, concepts, exercises, err, partial = false }) {
   const dir = join(base, 'content', 'lectures');
   if (!existsSync(dir)) return { index: {}, files: {} };
   const ctx = { lessons: lessons || new Map([...lessonIds].map((id) => [id, null])), resources, concepts, exercises: exercises || new Set() };
@@ -129,8 +129,8 @@ export function buildLectures({ base, appDir, lessonIds, lessons, resources, con
     const t = existsSync(tf) ? JSON.parse(readFileSync(tf, 'utf8')) : null;
     const audioRel = t && t.audio ? t.audio : `media/lectures/${s.id}/narration.mp3`;
     const audio = join(appDir, audioRel);
-    if (!t || !existsSync(audio)) { err(where, `narration missing — run python3 aperture/tools/narrate.py ${s.lesson}`); continue; }
-    if (t.narration?.hash !== narrationHash(s)) { err(where, `narration is stale (script text changed) — run python3 aperture/tools/narrate.py ${s.lesson}`); continue; }
+    if (!t || !existsSync(audio)) { if (!partial) err(where, `narration missing — run python3 aperture/tools/narrate.py ${s.lesson}`); continue; }
+    if (t.narration?.hash !== narrationHash(s)) { if (!partial) err(where, `narration is stale (script text changed) — run python3 aperture/tools/narrate.py ${s.lesson}`); continue; }
     const out = { ...s, duration: t.duration, minutes: Math.round(t.duration / 60), narration: t.narration,
       audio: audioRel, audioAlt: null, captions: `media/lectures/${s.id}/captions.vtt`, transcriptFile: `media/lectures/${s.id}/transcript.txt`,
       audioBytes: statSync(audio).size, refs: [...lint.refs].sort(), chapters: [] };

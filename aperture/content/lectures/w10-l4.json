@@ -1,0 +1,634 @@
+{
+  "id": "w10-l4-lecture",
+  "lesson": "w10-l4",
+  "title": "The Plan Is Not the Forecast",
+  "subtitle": "Valuation under uncertainty: scenarios, options and the outside view",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 4. It covers the same objectives — sensitivity and scenario analysis with expected NPV and dispersion, why the base case is not the expected case, valuing a simple real option, and reference-class forecasting with the dispute over why forecasts fail — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Bold forecasts, timid choices",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 10 · Lesson 4 · Lecture",
+            "title": "The plan is not the forecast",
+            "sub": "Scenarios, options and the outside view"
+          },
+          "cues": [
+            {
+              "text": "Think of the last three significant projects your organization approved."
+            },
+            {
+              "text": "For each one, ask: was the approved budget the median outcome, as likely to come in under as over? Or was it the outcome if things went roughly to plan?"
+            },
+            {
+              "text": "Answering honestly, many people realize it was the second. A plan describes what happens when the plan works. What actually happens includes delays, scope changes, turnover, vendor problems, and the occasional pleasant surprise."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two opposing errors",
+            "left": {
+              "title": "Bold forecasts",
+              "points": [
+                "Inside view: anchored on this plan’s specifics",
+                "Neglects how similar past cases turned out"
+              ]
+            },
+            "right": {
+              "title": "Timid choices",
+              "points": [
+                "Each risky option judged in isolation",
+                "Ignores that many bets partly cancel"
+              ]
+            },
+            "refs": [
+              "R-kahneman-1993-timid"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Daniel Kahneman and Dan Lovallo argued that managerial decisions combine two opposing errors.",
+              "refs": [
+                "R-kahneman-1993-timid"
+              ]
+            },
+            {
+              "text": "Forecasts are too bold, because decision-makers adopt an inside view. They anchor on the specifics of the plan and neglect the statistics of similar past cases, which they call the outside view.",
+              "reveal": 1,
+              "refs": [
+                "R-kahneman-1993-timid"
+              ]
+            },
+            {
+              "text": "Yet choices are too timid, because each risky option is evaluated in isolation, rather than as one of many bets whose risks partly cancel.",
+              "reveal": 2,
+              "refs": [
+                "R-kahneman-1993-timid"
+              ]
+            },
+            {
+              "text": "Both errors come from treating the decision at hand as unique. This lecture gives you three disciplines against them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "What drives the answer?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Pallister Health telehealth platform",
+            "lines": [
+              {
+                "label": "Upfront cost",
+                "value": "$2,000,000"
+              },
+              {
+                "label": "Net benefit: $600,000 a year for 5 years",
+                "value": "× 3.88965 at 9%"
+              },
+              {
+                "label": "Present value of benefits",
+                "value": "$2,333,791"
+              }
+            ],
+            "result": {
+              "label": "Base-case NPV",
+              "value": "$333,791"
+            },
+            "note": "Synthetic data. Pallister Health is fictional."
+          },
+          "cues": [
+            {
+              "text": "Meet a fictional hospital, Pallister Health. Its numbers are invented for the lesson."
+            },
+            {
+              "text": "It is considering a two million dollar telehealth platform.",
+              "reveal": 1
+            },
+            {
+              "text": "The plan says six hundred thousand dollars a year of net cash benefit for five years. At a nine percent discount rate, the five-year annuity factor is about three point eight nine.",
+              "reveal": 2
+            },
+            {
+              "text": "So the benefits are worth about two million, three hundred and thirty-four thousand dollars today.",
+              "reveal": 3
+            },
+            {
+              "text": "And the NPV is about three hundred and thirty-four thousand. Approve? That single number hides everything interesting.",
+              "reveal": 4,
+              "say": "And the N P V is about three hundred and thirty-four thousand. Approve? That single number hides everything interesting."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "bars",
+            "title": "Swing in NPV, one input at a time",
+            "unit": "$ thousands",
+            "items": [
+              {
+                "label": "Annual benefit ±20%",
+                "value": 934
+              },
+              {
+                "label": "Useful life 4 vs 6 years",
+                "value": 748
+              },
+              {
+                "label": "Upfront cost ±10%",
+                "value": 400
+              },
+              {
+                "label": "Discount rate 7% vs 11%",
+                "value": 243
+              }
+            ],
+            "note": "Synthetic. Range of NPV between the low and high setting, as in a tornado chart."
+          },
+          "cues": [
+            {
+              "text": "Sensitivity analysis changes one input at a time and watches the NPV move.",
+              "say": "Sensitivity analysis changes one input at a time and watches the N P V move."
+            },
+            {
+              "text": "Move annual benefits twenty percent either way and NPV swings from about minus one hundred and thirty-three thousand to about plus eight hundred thousand.",
+              "reveal": 1,
+              "say": "Move annual benefits twenty percent either way and N P V swings from about minus one hundred and thirty-three thousand to about plus eight hundred thousand."
+            },
+            {
+              "text": "Shorten the useful life to four years and NPV turns negative. Stretch it to six and it more than doubles.",
+              "reveal": 2,
+              "say": "Shorten the useful life to four years and N P V turns negative. Stretch it to six and it more than doubles."
+            },
+            {
+              "text": "Ten percent on the upfront cost moves NPV by two hundred thousand either way.",
+              "reveal": 3,
+              "say": "Ten percent on the upfront cost moves N P V by two hundred thousand either way."
+            },
+            {
+              "text": "And the discount rate, which finance meetings often spend the most time on, moves it least of all.",
+              "reveal": 4
+            },
+            {
+              "text": "Break-even sharpens the point. NPV falls to zero if annual benefits are about five hundred and fourteen thousand dollars, only fourteen point three percent below plan. That is the sentence for the decision-makers: this project is worth doing if benefits come within fourteen percent of plan.",
+              "say": "Break-even sharpens the point. N P V falls to zero if annual benefits are about five hundred and fourteen thousand dollars, only fourteen point three percent below plan. That is the sentence for the decision-makers: this project is worth doing if benefits come within fourteen percent of plan."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "Three coherent scenarios",
+            "items": [
+              {
+                "value": "−$366k",
+                "label": "Low: benefits 30% below plan · 25%"
+              },
+              {
+                "value": "$334k",
+                "label": "Base: the plan · 50%"
+              },
+              {
+                "value": "$801k",
+                "label": "High: benefits 20% above plan · 25%"
+              }
+            ],
+            "note": "Synthetic data."
+          },
+          "cues": [
+            {
+              "text": "Sensitivity moves one input at a time. But inputs are linked: low adoption usually means lower benefits and a longer ramp. Scenario analysis moves them together in coherent stories."
+            },
+            {
+              "text": "Pallister’s team defines three. A low scenario, benefits thirty percent below plan, with a probability of twenty-five percent. NPV about minus three hundred and sixty-six thousand.",
+              "reveal": 1,
+              "say": "Pallister’s team defines three. A low scenario, benefits thirty percent below plan, with a probability of twenty-five percent. N P V about minus three hundred and sixty-six thousand."
+            },
+            {
+              "text": "The base case, fifty percent likely, at three hundred and thirty-four thousand.",
+              "reveal": 2
+            },
+            {
+              "text": "And a high scenario, benefits twenty percent above plan, twenty-five percent likely, at about eight hundred and one thousand.",
+              "reveal": 3
+            },
+            {
+              "text": "What is the expected NPV, the probability-weighted average of these three? Estimate it before I tell you.",
+              "say": "What is the expected N P V, the probability-weighted average of these three? Estimate it before I tell you."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-expected-npv",
+            "type": "estimate",
+            "prompt": "With NPVs of −$366k (25%), $334k (50%) and $801k (25%), what is Pallister’s expected NPV? (in $ thousands)",
+            "min": -400,
+            "max": 800,
+            "step": 5,
+            "unit": "$ thousand",
+            "initial": 334,
+            "answer": 275,
+            "tolerance": 15,
+            "concept": "c-scenario-analysis",
+            "feedback": {
+              "correct": "Right — about $275 thousand, below the $334 thousand base case.",
+              "incorrect": "Expected NPV is about $275 thousand: 0.25 × (−366) + 0.50 × 334 + 0.25 × 801. Notice it is below the base case — the next scene explains why."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "bars",
+            "title": "Pallister NPV by scenario",
+            "unit": "$ thousands",
+            "items": [
+              {
+                "label": "Low (25%)",
+                "value": -366
+              },
+              {
+                "label": "Base (50%)",
+                "value": 334
+              },
+              {
+                "label": "High (25%)",
+                "value": 801
+              },
+              {
+                "label": "Expected value",
+                "value": 275
+              }
+            ],
+            "note": "Synthetic. Expected NPV = 0.25 × (−366,346) + 0.50 × 333,791 + 0.25 × 800,549 ≈ $275,446."
+          },
+          "cues": [
+            {
+              "text": "About two hundred and seventy-five thousand. Let’s see why it sits below the base case."
+            },
+            {
+              "text": "The downside is a thirty percent cut.",
+              "reveal": 1
+            },
+            {
+              "text": "The base sits in the middle.",
+              "reveal": 2
+            },
+            {
+              "text": "The upside is only a twenty percent gain.",
+              "reveal": 3
+            },
+            {
+              "text": "Because the downside is larger than the upside, the probability-weighted average is pulled below the plan. Base cases are usually built as the plan works, which is not the same thing as the expected case.",
+              "reveal": 4
+            },
+            {
+              "text": "And expected value is not the whole story. The standard deviation of NPV across these scenarios is about four hundred and seventeen thousand dollars, and by the team’s own estimate there is a one-in-four chance of destroying about three hundred and sixty-six thousand.",
+              "say": "And expected value is not the whole story. The standard deviation of N P V across these scenarios is about four hundred and seventeen thousand dollars, and by the team’s own estimate there is a one-in-four chance of destroying about three hundred and sixty-six thousand."
+            },
+            {
+              "text": "Whether that is acceptable depends on who is betting. A hospital system making dozens of such investments can rely on averages. A small clinic betting its reserves cannot."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "The value of changing course",
+      "scenes": [
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Invest now, or pilot first? At 9%",
+            "lines": [
+              {
+                "label": "High demand: $800k a year for 5 years",
+                "value": "PV $3,111,721"
+              },
+              {
+                "label": "Low demand: $300k a year for 5 years",
+                "value": "PV $1,166,895"
+              },
+              {
+                "label": "Invest now: 0.5 × (3,111,721 + 1,166,895) − 2,000,000",
+                "value": "$139,308"
+              },
+              {
+                "label": "Pilot ($150k), invest at year 1 only if high: 0.5 × (3,111,721 − 2,000,000) ÷ 1.09 − 150,000",
+                "value": "$359,964"
+              }
+            ],
+            "result": {
+              "label": "Value of flexibility",
+              "value": "$220,656"
+            },
+            "note": "Synthetic. The pilot reveals demand perfectly; delay changes neither cost nor benefits; the pilot itself earns nothing."
+          },
+          "cues": [
+            {
+              "text": "Standard NPV assumes a now-or-never commitment. Real projects often let managers wait, stage, expand or abandon as they learn. These are real options: the right, but not the obligation, to act later.",
+              "say": "Standard N P V assumes a now-or-never commitment. Real projects often let managers wait, stage, expand or abandon as they learn. These are real options: the right, but not the obligation, to act later."
+            },
+            {
+              "text": "Take a new version of the platform. If demand is high, benefits are eight hundred thousand a year for five years, worth about three point one one million today.",
+              "reveal": 1
+            },
+            {
+              "text": "If demand is low, three hundred thousand a year, worth about one point one seven million. Each is equally likely.",
+              "reveal": 2
+            },
+            {
+              "text": "Invest the two million now, and the expected NPV is about one hundred and thirty-nine thousand. Inside that average is a low branch where investing destroys about eight hundred and thirty-three thousand.",
+              "reveal": 3,
+              "say": "Invest the two million now, and the expected N P V is about one hundred and thirty-nine thousand. Inside that average is a low branch where investing destroys about eight hundred and thirty-three thousand."
+            },
+            {
+              "text": "Alternatively, pilot for a year at a cost of one hundred and fifty thousand, and invest at the end of the year only if demand proves high. Discount that branch back a year, subtract the pilot, and the expected NPV is about three hundred and sixty thousand.",
+              "reveal": 4,
+              "say": "Alternatively, pilot for a year at a cost of one hundred and fifty thousand, and invest at the end of the year only if demand proves high. Discount that branch back a year, subtract the pilot, and the expected N P V is about three hundred and sixty thousand."
+            },
+            {
+              "text": "The flexibility is worth about two hundred and twenty-one thousand dollars, even though the pilot delays benefits and costs money that a confident planner would call wasted. Its value comes from avoiding the low branch.",
+              "reveal": 5
+            },
+            {
+              "text": "So options are most valuable when uncertainty is high, the decision is hard to reverse, and waiting will actually reveal information. They are worth little when delay forfeits the opportunity, for example when a competitor will take the market."
+            },
+            {
+              "text": "Now test a common situation."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-pilots",
+            "type": "choice",
+            "prompt": "An organization pilots every major initiative, but it has never cancelled a pilot: each one rolls out regardless of early results. What are its pilots worth as real options?",
+            "options": [
+              {
+                "id": "a",
+                "text": "A lot — piloting always creates abandonment value."
+              },
+              {
+                "id": "b",
+                "text": "Very little — an option has value only if the organization will act on what it learns, including stopping."
+              },
+              {
+                "id": "c",
+                "text": "It depends only on how uncertain demand is."
+              },
+              {
+                "id": "d",
+                "text": "Exactly the pilot cost — the option is worth what it costs."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-real-options",
+            "feedback": {
+              "a": "Piloting creates value only by letting you avoid the bad branch. If the bad branch is taken anyway, the pilot just delays the launch.",
+              "b": "Right. Organizations that never cancel pilots do not own abandonment options; they own slow launches.",
+              "c": "Uncertainty is necessary but not sufficient. The organization must also act on what it learns, and keeping the option open must cost less than it is worth.",
+              "d": "Cost and value are different things. Here the pilot’s value is close to zero because it never changes the decision."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Taking the outside view",
+      "scenes": [
+        {
+          "visual": {
+            "type": "flow",
+            "title": "Reference-class forecasting",
+            "steps": [
+              {
+                "label": "Identify the class",
+                "text": "Past projects similar enough to inform this one"
+              },
+              {
+                "label": "Establish the distribution",
+                "text": "Actual overruns, adoption, delays — not an average"
+              },
+              {
+                "label": "Position and adjust",
+                "text": "Adjust only for documented differences"
+              }
+            ],
+            "refs": [
+              "R-flyvbjerg-2008-curbing",
+              "R-kahneman-1993-timid"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Right: that organization owns slow launches, not options. The third discipline attacks the forecast itself."
+            },
+            {
+              "text": "Bent Flyvbjerg developed reference-class forecasting as a practical application of the outside view. He describes its first use in planning practice for cost forecasts of large UK transport investments, including the Edinburgh Tram and London’s Crossrail.",
+              "refs": [
+                "R-flyvbjerg-2008-curbing",
+                "R-kahneman-1993-timid"
+              ]
+            },
+            {
+              "text": "Step one: identify a class of past projects similar enough to inform this one.",
+              "reveal": 1,
+              "refs": [
+                "R-flyvbjerg-2008-curbing"
+              ]
+            },
+            {
+              "text": "Step two: collect their actual outcomes, cost overruns, adoption rates, delays, as a distribution, not an average.",
+              "reveal": 2,
+              "refs": [
+                "R-flyvbjerg-2008-curbing"
+              ]
+            },
+            {
+              "text": "Step three: place the new project in that distribution, and adjust only for specific, documented reasons it differs.",
+              "reveal": 3,
+              "refs": [
+                "R-flyvbjerg-2008-curbing"
+              ]
+            },
+            {
+              "text": "Flyvbjerg attributes systematic forecast errors to two causes. Optimism bias, an unintentional cognitive tendency. And strategic misrepresentation, deliberately understating costs or overstating benefits to win approval. He argues a reference class sidesteps both.",
+              "refs": [
+                "R-flyvbjerg-2008-curbing"
+              ]
+            },
+            {
+              "text": "One more hazard: survivorship bias. Benchmarks and vendor case studies come disproportionately from projects that succeeded. When a vendor says clients like you saw a thirty percent improvement, ask how many clients like you bought it, and what happened to the ones you aren’t hearing about."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Why do forecasts go wrong?",
+            "left": {
+              "title": "Flyvbjerg",
+              "points": [
+                "Optimism bias and strategic misrepresentation",
+                "Use reference-class forecasting"
+              ]
+            },
+            "right": {
+              "title": "Love & Ahiaga-Dagbui",
+              "points": [
+                "“Error or lie” is a false dichotomy",
+                "Earlier conclusions called unfounded",
+                "Use evidence-based cost estimates"
+              ]
+            },
+            "refs": [
+              "R-flyvbjerg-2008-curbing",
+              "R-love-2018-debunking"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the challenge. The explanation for forecast errors is genuinely disputed.",
+              "refs": [
+                "R-flyvbjerg-2008-curbing",
+                "R-love-2018-debunking"
+              ]
+            },
+            {
+              "text": "On one side, Flyvbjerg’s account: honest optimism, plus deliberate misrepresentation.",
+              "reveal": 1,
+              "refs": [
+                "R-flyvbjerg-2008-curbing"
+              ]
+            },
+            {
+              "text": "On the other, Peter Love and Dominic Ahiaga-Dagbui argue that framing transport cost underestimation as either honest error or deliberate lie is a false dichotomy, given how large infrastructure is actually procured. They call the conclusions of influential earlier work by Flyvbjerg and colleagues unfounded, and urge evidence-based approaches to cost estimates.",
+              "reveal": 2,
+              "refs": [
+                "R-love-2018-debunking"
+              ]
+            },
+            {
+              "text": "Flyvbjerg has replied that their view will keep planners getting costs wrong. The dispute is about why estimates go wrong, and therefore what fixes them. It remains unresolved.",
+              "refs": [
+                "R-flyvbjerg-2008-curbing",
+                "R-love-2018-debunking"
+              ]
+            },
+            {
+              "text": "Two practical points survive it. Reference-class forecasting can help whichever side is right, because it corrects the forecast without diagnosing motives. And any claimed overrun depends on its baseline. An overrun measured from an early concept estimate looks far larger than one measured from a final contract price."
+            },
+            {
+              "text": "The method has its own limits, too. Choosing the class is a judgment, and a motivated analyst can pick a flattering one. Small organizations may have few comparable cases, and novel initiatives may have none. If the organization has genuinely improved, the past will be too pessimistic. So state the class, its size and why it fits, and show the forecast under a reasonable alternative class."
+            },
+            {
+              "text": "And real-options language is easily abused. Almost any project can be said to create strategic options. Insist on the three conditions: uncertainty will actually be resolved, you will act on what you learn, and keeping the option costs less than it is worth."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "One number for the board",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "When the board wants one number",
+            "steps": [
+              "The expected NPV",
+              "The range you are, say, 80% confident in",
+              "The assumption that would flip the decision, and how you will learn it early"
+            ]
+          },
+          "cues": [
+            {
+              "text": "So what do you say when your board chair asks for the number on a major facility investment? A single figure invites false precision. Refusing looks like you don’t know."
+            },
+            {
+              "text": "A practical compromise is three sentences. First, the expected NPV.",
+              "reveal": 1,
+              "say": "A practical compromise is three sentences. First, the expected N P V."
+            },
+            {
+              "text": "Second, the range within which you are, say, eighty percent confident.",
+              "reveal": 2
+            },
+            {
+              "text": "Third, the one assumption that would flip the decision, and your plan for learning it early. Boards rarely object to uncertainty that is quantified and paired with a plan. They object to surprises.",
+              "reveal": 3
+            },
+            {
+              "text": "In baseball operations, the same structure fits a new player development technology center. Assemble the reference class, the organization’s own past facility and technology projects, before accepting the vendor’s estimate. Then ask whether it can be staged: equip one affiliate, measure usage and player outcomes for a season, then expand."
+            },
+            {
+              "text": "Staging costs a year of benefits elsewhere. It buys protection against the low-adoption branch, which your own reference class may well show is not rare."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-reference-class",
+            "type": "reflect",
+            "prompt": "Name a reference class you could assemble for a decision you face this year. How many cases would it contain, who would object to it, and is your current base case the median outcome or the “plan works” outcome?",
+            "concept": "c-reference-class-forecasting"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Three questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Capital Allocation Lab",
+                "detail": "Stress-test proposals with scenarios and staging",
+                "href": "#/exercise/w10-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Dahlquist & Knight (2022) Principles of Finance, Chapter 16",
+                "href": "#/library/R-dahlquist-2022-principles"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Sensitivity analysis finds the assumptions that matter. Scenario analysis combines them into coherent stories and yields an expected NPV that is usually below the base case. Expected value does not capture risk. Dispersion and the size of the downside relative to your resources do.",
+              "say": "Sensitivity analysis finds the assumptions that matter. Scenario analysis combines them into coherent stories and yields an expected N P V that is usually below the base case. Expected value does not capture risk. Dispersion and the size of the downside relative to your resources do."
+            },
+            {
+              "text": "Real options value the ability to learn before committing, but only if you will act on what you learn. And reference-class forecasting corrects inside-view optimism, though why forecasts fail is still debated."
+            },
+            {
+              "text": "Next, take the comprehension check below, the same check as the written lesson. Then bring these tools to the Capital Allocation Lab, and read the Dahlquist and Knight chapter on how companies think about investing.",
+              "reveal": 1,
+              "refs": [
+                "R-dahlquist-2022-principles"
+              ]
+            },
+            {
+              "text": "The written lesson keeps the notes on Monte Carlo simulation and risk adjustment. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

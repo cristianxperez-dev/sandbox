@@ -1,0 +1,696 @@
+{
+  "id": "w08-l2-lecture",
+  "lesson": "w08-l2",
+  "title": "Who Decides?",
+  "subtitle": "Decision rights, knowledge and coordination",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 2. It covers the same objectives — specific versus general knowledge, the costs of centralizing and decentralizing, RACI and RAPID as practitioner tools, and Conway’s law with its mixed evidence — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Two executives, both half right",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 8 · Lesson 2 · Lecture",
+            "title": "Who decides?",
+            "sub": "Decision rights, knowledge and coordination"
+          },
+          "cues": [
+            {
+              "text": "Let me tell you about a bank that changed its mind twice, and lost money both times."
+            },
+            {
+              "text": "The bank is hypothetical. The pattern is not."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "timeline",
+            "title": "One bank, three regimes",
+            "events": [
+              {
+                "when": "Phase one",
+                "text": "Branch managers approve small-business loans; losses are low"
+              },
+              {
+                "when": "Phase two",
+                "text": "Approval centralized; approvals slow, the portfolio shrinks"
+              },
+              {
+                "when": "Phase three",
+                "text": "Decentralized again; losses on volume-driven loans"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "At first, branch managers approve small-business loans up to a set limit. They know things no model captures: that the bakery owner has run three businesses well, that the new shopping strip is half empty.",
+              "reveal": 1
+            },
+            {
+              "text": "Losses are low."
+            },
+            {
+              "text": "Then a new chief credit officer, citing inconsistency and two fraud cases, moves approval to a head-office team with a scoring model.",
+              "reveal": 2
+            },
+            {
+              "text": "Approval times triple. Branch managers stop sending their best prospects. The portfolio shrinks."
+            },
+            {
+              "text": "Two years later, a different executive decentralizes again, and loses money on a wave of loans approved by branch managers who are paid on volume.",
+              "reveal": 3
+            },
+            {
+              "text": "Here is the question. Which executive was wrong?"
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Neither was foolish.",
+              "Each saw half of a real trade-off."
+            ]
+          },
+          "cues": [
+            {
+              "text": "The answer is neither. Each saw half of a real trade-off.",
+              "reveal": 0
+            },
+            {
+              "text": "The first saw that branch managers held knowledge the center could not cheaply obtain.",
+              "reveal": 1
+            },
+            {
+              "text": "The second saw that people paid on volume will not always use that knowledge in the bank’s interest."
+            },
+            {
+              "text": "The design problem is getting both halves right at once. And it is the same problem whether the decision is a loan, a hospital discharge, a software release or a player’s promotion."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Knowledge has a shipping cost",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two kinds of knowledge",
+            "refs": [
+              "R-jensen-1992-specific"
+            ],
+            "left": {
+              "title": "General knowledge",
+              "points": [
+                "Cheap to transmit",
+                "Prices, volumes, a model score",
+                "A regulation"
+              ]
+            },
+            "right": {
+              "title": "Specific knowledge",
+              "points": [
+                "Costly to transmit",
+                "Tacit, perishable or local",
+                "A nurse’s sense of decline"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Michael Jensen and William Meckling built a theory of organizational structure on one distinction.",
+              "reveal": 0,
+              "refs": [
+                "R-jensen-1992-specific"
+              ]
+            },
+            {
+              "text": "General knowledge is cheap to move. A price, a volume, a model score, a regulation. You can send it up the hierarchy at almost no cost.",
+              "reveal": 1,
+              "refs": [
+                "R-jensen-1992-specific"
+              ]
+            },
+            {
+              "text": "Specific knowledge is costly to move. It is tacit, perishable or local. A nurse’s sense that a patient is deteriorating before the vital signs show it. A branch manager’s read of a borrower.",
+              "reveal": 2,
+              "refs": [
+                "R-jensen-1992-specific"
+              ]
+            },
+            {
+              "text": "Because specific knowledge is expensive to ship, every organization faces a choice. Move the knowledge up to where the decision rights are, or move the decision rights down to where the knowledge is."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Where costs are lowest",
+            "lines": [
+              {
+                "label": "Head office: information 8 + agency 1",
+                "value": "9"
+              },
+              {
+                "label": "Region: information 4 + agency 3",
+                "value": "7"
+              },
+              {
+                "label": "Branch: information 2 + agency 6",
+                "value": "8"
+              }
+            ],
+            "result": {
+              "label": "Lowest total cost",
+              "value": "Region, 7"
+            },
+            "note": "Synthetic cost units, to illustrate the Jensen and Meckling trade-off.",
+            "refs": [
+              "R-jensen-1992-specific"
+            ]
+          },
+          "cues": [
+            {
+              "text": "But moving rights down is not free. The people who now hold the rights have their own interests, and the organization must spend on monitoring, measurement and incentives to keep their decisions aligned. Those are agency costs.",
+              "reveal": 0,
+              "refs": [
+                "R-jensen-1992-specific"
+              ]
+            },
+            {
+              "text": "So picture the trade-off with some invented numbers. Keep the decision at head office: poor information costs eight units, agency costs only one. Total, nine.",
+              "reveal": 1
+            },
+            {
+              "text": "Move it to the region: information cost falls to four, agency cost rises to three. Total, seven.",
+              "reveal": 2
+            },
+            {
+              "text": "Push it all the way to the branch: information cost falls to two, but agency cost jumps to six. Total, eight.",
+              "reveal": 3
+            },
+            {
+              "text": "The best level is not the lowest or the highest. It is the one that minimizes the sum. That is Jensen and Meckling’s picture: as rights move lower, information costs fall and agency costs rise.",
+              "reveal": 4,
+              "refs": [
+                "R-jensen-1992-specific"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "Where should the decision sit?",
+            "x": [
+              "Knowledge is general",
+              "Knowledge is specific"
+            ],
+            "y": [
+              "Interests aligned",
+              "Interests diverge"
+            ],
+            "cells": [
+              [
+                "Centralize: move the information up",
+                "Decentralize with strong controls, or realign roles"
+              ],
+              [
+                "Either level: choose for speed and consistency",
+                "Decentralize: put the right with the knowledge"
+              ]
+            ]
+          },
+          "cues": [
+            {
+              "text": "Two questions, then, locate a decision. What kind of knowledge does it need? And do the decision-maker’s interests line up with the organization’s?",
+              "reveal": 0
+            },
+            {
+              "text": "General knowledge and diverging interests: centralize. Moving the information up is cheap, and it keeps the right away from local self-interest.",
+              "reveal": 1
+            },
+            {
+              "text": "Specific knowledge and diverging interests: the hard case. Decentralize, but with a strong control system of measures, audits and rewards, or redesign the role so interests align.",
+              "reveal": 2
+            },
+            {
+              "text": "General knowledge and aligned interests: either level works, so choose for speed and consistency.",
+              "reveal": 3
+            },
+            {
+              "text": "Specific knowledge and aligned interests: decentralize. Put the right where the knowledge lives.",
+              "reveal": 4
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "One system, three legs",
+            "steps": [
+              {
+                "label": "Decision rights",
+                "text": "Who decides what"
+              },
+              {
+                "label": "Measurement",
+                "text": "How performance is seen"
+              },
+              {
+                "label": "Rewards",
+                "text": "What decisions earn"
+              }
+            ],
+            "refs": [
+              "R-jensen-1992-specific"
+            ]
+          },
+          "cues": [
+            {
+              "text": "That hard cell explains Jensen and Meckling’s most important claim.",
+              "reveal": 0
+            },
+            {
+              "text": "Structure is not just the assignment of decision rights.",
+              "reveal": 1,
+              "refs": [
+                "R-jensen-1992-specific"
+              ]
+            },
+            {
+              "text": "It is that assignment, plus the system that measures performance,",
+              "reveal": 2
+            },
+            {
+              "text": "plus the system that rewards and punishes. The three must be designed together.",
+              "reveal": 3,
+              "refs": [
+                "R-jensen-1992-specific"
+              ]
+            },
+            {
+              "text": "Go back to our bank. Phase three decentralized the right but left the reward on volume. One leg moved; the others did not. Change one, and the others must change too."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Sorting decisions, not choosing sides",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "What each pole buys",
+            "left": {
+              "title": "Centralization",
+              "points": [
+                "Consistency",
+                "Economies of scale",
+                "Concentrated expertise",
+                "Coordination across units",
+                "Protection from local self-interest"
+              ]
+            },
+            "right": {
+              "title": "Decentralization",
+              "points": [
+                "Speed",
+                "Local adaptation",
+                "Use of specific knowledge",
+                "Motivation from ownership"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "With that frame, the old debate between centralizing and decentralizing stops being a philosophy and becomes a list of trade-offs.",
+              "reveal": 0
+            },
+            {
+              "text": "Centralization buys consistency, economies of scale, concentrated expertise, coordination across units, and protection against local self-interest.",
+              "reveal": 1
+            },
+            {
+              "text": "Decentralization buys speed, local adaptation, use of specific knowledge, and the motivation that comes from owning a decision.",
+              "reveal": 2
+            },
+            {
+              "text": "Every organization centralizes some decisions and decentralizes others. The skill is in sorting decisions, not in choosing a side."
+            },
+            {
+              "text": "And remember Galbraith’s self-contained units from Lesson One. They are one form of decentralization: they move decisions to where the work is by giving each unit what it needs.",
+              "refs": [
+                "R-galbraith-1974-organization"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Five sorting signals",
+            "steps": [
+              "Where does the knowledge sit?",
+              "How costly is inconsistency?",
+              "How fast must it be decided?",
+              "Does it affect other units?",
+              "Are local interests aligned?"
+            ]
+          },
+          "cues": [
+            {
+              "text": "So for any single decision, ask five questions.",
+              "reveal": 0
+            },
+            {
+              "text": "Where does the knowledge sit? Specific, local or perishable knowledge pulls the decision down.",
+              "reveal": 1
+            },
+            {
+              "text": "How costly is inconsistency? Fairness, legal exposure, brand or safety pull it up.",
+              "reveal": 2
+            },
+            {
+              "text": "How fast must it be made? A decision that loses value within hours pulls it down.",
+              "reveal": 3
+            },
+            {
+              "text": "Does one unit’s choice affect many others? Interdependence pulls it up.",
+              "reveal": 4
+            },
+            {
+              "text": "And are local incentives aligned, or easily monitored? If not, either pull it up or fix the incentives.",
+              "reveal": 5
+            },
+            {
+              "text": "These signals interact, so weigh them rather than count them. Let us weigh some."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-locate",
+            "type": "choice",
+            "concept": "c-centralization-tradeoff",
+            "prompt": "A hypothetical hotel chain is deciding who sets nightly room rates. Demand shifts by the hour with local events that hotel managers see first, and local variation in price is harmless. But hotel managers are paid a bonus on occupancy alone. What is the best design?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Centralize pricing at head office to protect against local self-interest."
+              },
+              {
+                "id": "b",
+                "text": "Decentralize pricing to hotel managers and leave the occupancy bonus as it is."
+              },
+              {
+                "id": "c",
+                "text": "Decentralize pricing, and change the measure and reward to revenue per room, with periodic audits."
+              },
+              {
+                "id": "d",
+                "text": "Give pricing to a committee of all hotel managers so no one decides alone."
+              }
+            ],
+            "answer": "c",
+            "feedback": {
+              "a": "This protects against self-interest but throws away the specific, perishable knowledge of local demand, and slows a decision that loses value by the hour.",
+              "b": "The right is in the right place, but the reward is not. Paid on occupancy alone, managers will cut prices to fill rooms — the bank’s phase three all over again.",
+              "c": "Right. Specific knowledge plus diverging interests: decentralize and redesign the other two legs. Rights, measures and rewards move together.",
+              "d": "A committee adds coordination cost and blurs ownership without fixing the incentive. Nobody clearly decides, and the occupancy bonus still pulls prices down."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Writing it down, and Conway’s mirror",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Practitioner tools, not findings",
+            "left": {
+              "title": "RACI",
+              "points": [
+                "Unit: tasks and deliverables",
+                "Responsible, Accountable, Consulted, Informed",
+                "One owner: Accountable",
+                "Failure: everyone becomes Consulted"
+              ]
+            },
+            "right": {
+              "title": "RAPID",
+              "points": [
+                "Unit: decisions",
+                "Recommend, Agree, Perform, Input, Decide",
+                "One owner: Decide",
+                "Failure: too many Agree roles"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Once you know where a decision should sit, you need to write it down. Two practitioner tools help. Let me be clear: these are heuristics from management practice, not research findings. Their value lies in the conversation they force.",
+              "reveal": 0
+            },
+            {
+              "text": "RACI works on tasks. For each one: who is Responsible and does the work, who is Accountable and signs off, ideally exactly one person, who is Consulted beforehand, and who is Informed afterward. Its typical failure is that everyone becomes Consulted.",
+              "reveal": 1
+            },
+            {
+              "text": "RAPID, which came out of management consulting, works on decisions. Who Recommends, who must Agree, which is a formal veto to use sparingly, who Performs the decision, who gives Input, and the one person who Decides.",
+              "reveal": 2
+            },
+            {
+              "text": "Its typical failure is the opposite of speed: pile up Agree roles, and you rebuild gridlock with a nicer label."
+            },
+            {
+              "text": "A useful test for either grid. For each recurring decision, could a new employee identify the one person who decides within a minute? If not, the grid is decoration."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "Conway’s observation, tested",
+            "items": [
+              {
+                "value": "1968",
+                "label": "Conway: designs mirror communication structures"
+              },
+              {
+                "value": "142",
+                "label": "empirical studies reviewed by Colfer and Baldwin"
+              },
+              {
+                "value": "Common",
+                "label": "but not universal across industries and firms"
+              }
+            ],
+            "note": "Source: Colfer and Baldwin, 2016.",
+            "refs": [
+              "R-colfer-2016-mirroring"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now a different angle on structure: what it does to the things an organization builds.",
+              "reveal": 0
+            },
+            {
+              "text": "In nineteen sixty-eight a programmer, Melvin Conway, observed that organizations which design systems tend to produce designs that mirror their own communication structures.",
+              "reveal": 1,
+              "refs": [
+                "R-colfer-2016-mirroring"
+              ]
+            },
+            {
+              "text": "Researchers later restated this as the mirroring hypothesis: the ties among people and units will correspond to the technical dependencies in the work. Lyra Colfer and Carliss Baldwin reviewed one hundred and forty-two empirical studies.",
+              "reveal": 2,
+              "refs": [
+                "R-colfer-2016-mirroring"
+              ]
+            },
+            {
+              "text": "Their verdict: mirroring is common, but not universal, across industries and firms.",
+              "reveal": 3,
+              "refs": [
+                "R-colfer-2016-mirroring"
+              ]
+            },
+            {
+              "text": "The main exceptions came from open collaborative projects, mostly in software, where distributed contributors coordinated through shared code, documentation and tools rather than organizational ties.",
+              "refs": [
+                "R-colfer-2016-mirroring"
+              ]
+            },
+            {
+              "text": "So treat Conway’s law as an observation and a design heuristic, not a law of nature. If a patient record is fragmented along department lines, look at how the teams that built it communicate."
+            },
+            {
+              "text": "Practitioners talk about an inverse Conway maneuver: organize teams around the architecture you want. But the exceptions are the warning. When coordination can travel through shared standards and transparent tools, the mirror can be broken."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Where the theory runs out",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Four limits",
+            "cards": [
+              {
+                "title": "Informal power",
+                "q": "Who really holds a veto?",
+                "fail": "The grid lists rights nobody honors"
+              },
+              {
+                "title": "Hidden costs of discretion",
+                "q": "Unequal treatment, fragmented learning",
+                "fail": "Fairness and legal exposure"
+              },
+              {
+                "title": "Crises centralize",
+                "q": "Speed, or anxious control?",
+                "fail": "Unpracticed delegation fails on the day"
+              },
+              {
+                "title": "Evidence is hard to get",
+                "q": "How did empowered firms get empowered?",
+                "fail": "Correlation mistaken for a recipe"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the limits, because this theory is tidier than the world.",
+              "reveal": 0
+            },
+            {
+              "text": "First, it assumes formal rights are the rights that matter. In practice, whoever controls a key relationship or a scarce resource may hold an effective veto that appears in no grid.",
+              "reveal": 1
+            },
+            {
+              "text": "Second, discretion has costs outside the trade-off. Local decisions produce unequal treatment, a fairness or legal problem in hiring, lending or clinical care. And ten units solving the same problem ten ways learn more slowly than one that pools its experience.",
+              "reveal": 2
+            },
+            {
+              "text": "Third, crises pull decisions to the center, sometimes for good reasons and sometimes because anxious leaders want control. An organization that never practiced decentralized decisions will not perform them well on the day the center is overwhelmed.",
+              "reveal": 3
+            },
+            {
+              "text": "Fourth, the evidence. Jensen and Meckling’s argument is theory, built from first principles. Organizations choose how much to decentralize in response to the same hidden conditions that drive performance, so a raw correlation tells you little.",
+              "reveal": 4,
+              "refs": [
+                "R-jensen-1992-specific"
+              ]
+            },
+            {
+              "text": "When someone says empowered organizations outperform, ask how those organizations came to be empowered."
+            },
+            {
+              "text": "And Conway cuts both ways: mirroring is common enough to take seriously, and broken often enough that reorganizing teams is neither necessary nor sufficient to change what they build.",
+              "refs": [
+                "R-colfer-2016-mirroring"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Name the owner.",
+              "Place the veto where the constraint is.",
+              "Write down what would reverse it."
+            ],
+            "sub": "A temporary, explicit allocation beats a permanent, implicit one."
+          },
+          "cues": [
+            {
+              "text": "Let me make this practical with one application. Take a player development department deciding whether to move a player between levels. Field staff, analysts, medical staff and the department head each hold different knowledge.",
+              "reveal": 0
+            },
+            {
+              "text": "One defensible sketch, and it is only one: the position coordinator Recommends, analysts and coaches give Input, the department head Decides.",
+              "reveal": 1
+            },
+            {
+              "text": "Medical staff hold an Agree right, a veto, limited to health clearance, not performance judgment. The veto sits exactly where the non-negotiable constraint sits.",
+              "reveal": 2
+            },
+            {
+              "text": "And when a decision has no owner at all and the clock is running, name one for this decision only, and write down what evidence after the fact would trigger a reversal."
+            },
+            {
+              "text": "What a sketch like this cannot settle is whether people will share information honestly. That depends on the other two legs, measures and rewards, and on the routines of Lesson Four."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-reflect",
+            "type": "reflect",
+            "concept": "c-decision-rights",
+            "prompt": "Pick one decision in your organization that is made slowly. Who actually makes it, who believes they make it, and who holds the knowledge that matters most? Is the bottleneck the location of knowledge, the fear of agency costs, or the absence of a single decision owner?"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Organization Builder",
+                "detail": "Build a chart under a budget; it checks spans, layers and cost",
+                "href": "#/exercise/w08-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Jensen & Meckling (1992), Specific and General Knowledge, and Organizational Structure",
+                "href": "#/library/R-jensen-1992-specific"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let us bring it together."
+            },
+            {
+              "text": "Decision rights belong where the knowledge is cheapest to find. But delegation creates agency costs, so rights, measures and rewards are one system."
+            },
+            {
+              "text": "Centralize or decentralize decision by decision, weighing knowledge, the cost of inconsistency, speed, interdependence and alignment. Record the answer with a labelled practitioner tool. And expect what you build to mirror how your teams communicate, while remembering the mirror can be broken."
+            },
+            {
+              "text": "From here, take the comprehension check below, the same check as the written lesson. Then open the Organization Builder, and read the sections of Jensen and Meckling on specific knowledge and decision rights.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson stays here for the full tables, the decision-rights sketch and the executive scenario. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

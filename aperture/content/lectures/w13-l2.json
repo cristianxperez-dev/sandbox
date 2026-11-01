@@ -1,0 +1,752 @@
+{
+  "id": "w13-l2-lecture",
+  "lesson": "w13-l2",
+  "title": "Nobody Decided to Do It",
+  "subtitle": "Bounded ethicality, ethical fading and the slippery slope",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 2. It covers the same objectives — bounded ethicality and the four enablers of ethical fading, the evidence for the slippery slope including the field’s retraction, and procedures that keep ethics visible — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Four quarters",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 13 · Lesson 2 · Lecture",
+            "title": "Nobody decided to do it",
+            "sub": "How good people make bad calls"
+          },
+          "cues": [
+            {
+              "text": "Here is a story with no villain in it. It is hypothetical, and it happens all the time."
+            },
+            {
+              "text": "A software company’s quarterly sales report needs a number by Friday. Watch what happens over one year."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "timeline",
+            "title": "One year of small steps",
+            "events": [
+              {
+                "when": "Q1",
+                "text": "A deal is booked two days early: “basically signed”"
+              },
+              {
+                "when": "Q2",
+                "text": "A side letter gives an easy exit: “standard flexibility”"
+              },
+              {
+                "when": "Q3",
+                "text": "A pilot counts as a full-year contract"
+              },
+              {
+                "when": "Q4",
+                "text": "The auditor: revenue overstated for a year"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "In the first quarter, a regional manager books a deal two days early, because the contract is basically signed.",
+              "reveal": 1
+            },
+            {
+              "text": "In the second, finance accepts a side letter giving the customer an easy exit. It is standard flexibility.",
+              "reveal": 2
+            },
+            {
+              "text": "In the third, the company counts a pilot as a full-year contract, in line with expected conversion.",
+              "reveal": 3
+            },
+            {
+              "text": "In the fourth, an auditor finds that revenue has been overstated for a year.",
+              "reveal": 4
+            },
+            {
+              "text": "And every person involved says, sincerely, that they never decided to misstate anything. So where did it begin?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-when",
+            "type": "choice",
+            "concept": "c-slippery-slope",
+            "prompt": "Which answer best fits this lesson’s argument about where the problem began?",
+            "options": [
+              {
+                "id": "a",
+                "text": "In the first quarter, with the first small exception"
+              },
+              {
+                "id": "b",
+                "text": "In the third quarter, when the step became clearly aggressive"
+              },
+              {
+                "id": "c",
+                "text": "In the fourth quarter, when the auditor found it"
+              },
+              {
+                "id": "d",
+                "text": "Nowhere: no one made a decision, so there was no ethical problem"
+              }
+            ],
+            "answer": "a",
+            "feedback": {
+              "a": "That is where this lesson lands. The first exception set the reference point that made every later step look small. The precedent was the real decision.",
+              "b": "The third step looks worst on its own, but it only felt acceptable because the first two had moved the baseline. That is how a slope works.",
+              "c": "The audit is where it was discovered, not where it began. An outsider sees the cumulative distance; insiders see only the last step.",
+              "d": "This is the puzzle the lesson takes seriously. People can take part in wrongdoing without experiencing an ethical choice — which is exactly why it has to be designed against."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "The usual view: people know right from wrong, and choose.",
+              "Here, nobody seems to have chosen."
+            ]
+          },
+          "cues": [
+            {
+              "text": "Hold on to that answer. The conventional view of ethics says people know right from wrong and choose."
+            },
+            {
+              "text": "The sales story is uncomfortable because nobody seems to have chosen. Behavioral ethics studies exactly this: how ordinary thinking lets people take part in wrongdoing without experiencing an ethical choice, and what organizations can do about it.",
+              "reveal": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Bounded ethicality",
+      "scenes": [
+        {
+          "visual": {
+            "type": "flow",
+            "title": "Three moments, one gap",
+            "steps": [
+              {
+                "label": "Before",
+                "text": "The “should self” predicts ethical behavior"
+              },
+              {
+                "label": "During",
+                "text": "The “want self” takes over"
+              },
+              {
+                "label": "After",
+                "text": "Memory makes it more ethical than it was"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Max Bazerman and Ann Tenbrunsel call this bounded ethicality: systematic, often unconscious limits on our ability to act ethically, by analogy with bounded rationality.",
+              "refs": [
+                "R-bazerman-2011-blind"
+              ]
+            },
+            {
+              "text": "Their central observation is a gap that shows up at three moments.",
+              "refs": [
+                "R-bazerman-2011-blind"
+              ]
+            },
+            {
+              "text": "Before a decision, people predict they will act ethically. That is the should self talking.",
+              "reveal": 1
+            },
+            {
+              "text": "At the moment of decision, a want self, focused on immediate rewards, takes over.",
+              "reveal": 2
+            },
+            {
+              "text": "Afterward, people remember their behavior as more ethical than it was.",
+              "reveal": 3
+            },
+            {
+              "text": "So individuals and organizations consistently overestimate how ethical they are.",
+              "refs": [
+                "R-bazerman-2011-blind"
+              ]
+            },
+            {
+              "text": "The same authors add two uncomfortable points. People are poor at noticing others’ unethical behavior when noticing would be costly: a colleague, a source of revenue, a member of their group. And informal culture and incentives frequently overpower formal ethics programs.",
+              "refs": [
+                "R-bazerman-2011-blind"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "How the color drains out",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Tenbrunsel and Messick",
+            "term": "Ethical fading",
+            "definition": "The moral colors of a decision drain away, so it is experienced as a business, technical or legal question.",
+            "example": "People then act self-interestedly while believing their principles are intact."
+          },
+          "cues": [
+            {
+              "text": "Tenbrunsel and David Messick described the process that produces this gap. They called it ethical fading.",
+              "refs": [
+                "R-tenbrunsel-2004-ethical"
+              ]
+            },
+            {
+              "text": "The moral colors of a decision drain away, so it is experienced as a business decision, a technical decision or a legal question rather than an ethical one.",
+              "reveal": 1
+            },
+            {
+              "text": "Once that has happened, people can act self-interestedly while believing their principles are intact. They are not lying to you. They are deceiving themselves.",
+              "reveal": 2
+            },
+            {
+              "text": "Tenbrunsel and Messick identified four enablers of that self-deception.",
+              "refs": [
+                "R-tenbrunsel-2004-ethical"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Four enablers of ethical fading",
+            "cards": [
+              {
+                "title": "Euphemistic language",
+                "q": "Moral words become neutral or technical",
+                "fail": "“Revenue acceleration” for booking early"
+              },
+              {
+                "title": "The slippery slope",
+                "q": "Small steps make the next one feel normal",
+                "fail": "Each quarter slightly more aggressive"
+              },
+              {
+                "title": "Errors in perceiving causation",
+                "q": "Responsibility diffuses across people, systems, time",
+                "fail": "“The model recommended it”; “legal approved it”"
+              },
+              {
+                "title": "Constraints of self-image",
+                "q": "We protect our view of ourselves as good",
+                "fail": "“I wouldn’t mislead customers, so this isn’t misleading”"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "First, euphemistic language. Moral words get replaced with neutral or technical ones. Revenue acceleration, for booking deals early. Collateral damage, for harmed bystanders.",
+              "reveal": 1,
+              "refs": [
+                "R-tenbrunsel-2004-ethical"
+              ]
+            },
+            {
+              "text": "Second, the slippery slope. Small steps make each next step feel normal. That is our sales story.",
+              "reveal": 2
+            },
+            {
+              "text": "Third, errors in perceiving causation. Responsibility is spread across people, systems or time. The model made the recommendation. Legal approved it.",
+              "reveal": 3
+            },
+            {
+              "text": "Fourth, constraints of self-image. I am not the kind of person who would mislead customers, so this cannot be misleading.",
+              "reveal": 4
+            },
+            {
+              "text": "The examples here are invented, but the four enablers are Tenbrunsel and Messick’s."
+            },
+            {
+              "text": "Now the practical conclusion they drew, and it is a surprising one for anyone who runs a compliance program.",
+              "refs": [
+                "R-tenbrunsel-2004-ethical"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Why training alone falls short",
+            "left": {
+              "title": "Teach principles",
+              "points": [
+                "Assumes people see the issue",
+                "Fading means they don’t"
+              ]
+            },
+            "right": {
+              "title": "Change the frame",
+              "points": [
+                "Restructure how decisions are made",
+                "Keep the ethical dimension visible"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "If the problem is that people do not see the ethical issue, then teaching them principles is likely to have limited effect.",
+              "reveal": 1,
+              "refs": [
+                "R-tenbrunsel-2004-ethical"
+              ]
+            },
+            {
+              "text": "They already have the principles. What they lack, in the moment, is the perception that the principles apply."
+            },
+            {
+              "text": "So interventions need to change how decisions are framed and structured, so the ethical dimension stays visible.",
+              "reveal": 2,
+              "refs": [
+                "R-tenbrunsel-2004-ethical"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "The slippery slope, tested",
+      "scenes": [
+        {
+          "visual": {
+            "type": "flow",
+            "title": "How a slope runs inside an organization",
+            "steps": [
+              {
+                "label": "Pressure",
+                "text": "A target or deadline"
+              },
+              {
+                "label": "Small exception",
+                "text": "Defensible, often euphemized"
+              },
+              {
+                "label": "Rationalization",
+                "text": "The new reference point"
+              },
+              {
+                "label": "Normalization",
+                "text": "The next step looks small"
+              },
+              {
+                "label": "Discovery",
+                "text": "Outsiders see the distance"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Is the slippery slope real, or just a good metaphor? It has been tested directly."
+            },
+            {
+              "text": "David Welsh, Lisa Ordóñez, Deirdre Snyder and colleagues ran four multi-round studies.",
+              "refs": [
+                "R-welsh-2015-slippery"
+              ]
+            },
+            {
+              "text": "Participants whose cheating opportunities began small and grew gradually were more likely to commit the larger transgression than participants who faced the large opportunity abruptly.",
+              "refs": [
+                "R-welsh-2015-slippery"
+              ]
+            },
+            {
+              "text": "Here is how that plays out in an organization. Pressure, a target or a deadline, creates a reason to bend a rule a little.",
+              "reveal": 1
+            },
+            {
+              "text": "A small, defensible-sounding exception is taken, often with a euphemism.",
+              "reveal": 2
+            },
+            {
+              "text": "It is justified, and becomes the new reference point.",
+              "reveal": 3
+            },
+            {
+              "text": "The next, slightly larger step now looks small by comparison.",
+              "reveal": 4
+            },
+            {
+              "text": "And when an outsider finally looks, they see the cumulative distance. Insiders still see only the last step.",
+              "reveal": 5
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Mechanism and moderator",
+            "left": {
+              "title": "Mechanism",
+              "points": [
+                "How the cause works",
+                "Here: moral disengagement"
+              ]
+            },
+            "right": {
+              "title": "Moderator",
+              "points": [
+                "When the effect is stronger or weaker",
+                "Here: a prevention focus weakened it"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Welsh and colleagues also looked inside the effect, and two terms help here."
+            },
+            {
+              "text": "A mechanism is the process through which a cause produces its effect. Here it was moral disengagement: small steps are easier to justify, and each justification lowers the bar for the next.",
+              "reveal": 1,
+              "refs": [
+                "R-welsh-2015-slippery"
+              ]
+            },
+            {
+              "text": "A moderator changes the strength of an effect. Here, inducing a prevention focus weakened it.",
+              "reveal": 2,
+              "refs": [
+                "R-welsh-2015-slippery"
+              ]
+            },
+            {
+              "text": "If you know the mechanism, you can target it. If you know a moderator, you know when the problem is worst. But each claim needs its own evidence, and both are weaker than the main effect when they come from a single study."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "The field’s own blind spot",
+      "scenes": [
+        {
+          "visual": {
+            "type": "timeline",
+            "title": "The honesty-pledge study",
+            "events": [
+              {
+                "when": "2012",
+                "text": "PNAS: signing first reduces dishonest reports"
+              },
+              {
+                "when": "2020",
+                "text": "Large preregistered replication: no effect"
+              },
+              {
+                "when": "2021",
+                "text": "PNAS retracts the 2012 paper"
+              },
+              {
+                "when": "Later",
+                "text": "Allegations about other papers: denied, contested in court"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the challenge. This research field has had its own integrity crisis, and it would be inconsistent to teach ethical blind spots while ignoring it."
+            },
+            {
+              "text": "In twenty twelve, a team including Bazerman and Francesca Gino reported in PNAS that signing an honesty pledge at the top of a form reduced dishonest reports compared with signing at the bottom, partly on the basis of a field study with an insurer.",
+              "reveal": 1,
+              "refs": [
+                "R-shu-2012-signing"
+              ]
+            },
+            {
+              "text": "In twenty twenty, the original authors and colleagues reported a large, preregistered direct replication and several conceptual replications. They found no effect.",
+              "reveal": 2,
+              "refs": [
+                "R-kristal-2020-signing"
+              ]
+            },
+            {
+              "text": "In twenty twenty-one, after independent analysts presented evidence that the field-study data were invalid, PNAS retracted the twenty twelve paper.",
+              "reveal": 3,
+              "refs": [
+                "R-shu-2012-signing"
+              ]
+            },
+            {
+              "text": "Gino later became the subject of public data-integrity allegations about other papers. She denies them and has contested them in court. Bazerman has written a book-length account of the affair from his side.",
+              "reveal": 4,
+              "refs": [
+                "R-bazerman-2025-inside"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "A retraction is a reported fact.",
+              "An allegation is not a finding.",
+              "Weight comes from independent reproduction."
+            ]
+          },
+          "cues": [
+            {
+              "text": "So how should you weigh any of this? The course’s policy is simple, and I would suggest it for your own organization."
+            },
+            {
+              "text": "A retraction is a reported fact. We report retractions and failed replications."
+            },
+            {
+              "text": "A misconduct allegation is not a finding. This course does not adjudicate misconduct claims, and neither should you on the strength of headlines.",
+              "reveal": 1
+            },
+            {
+              "text": "And a finding earns weight when teams independent of the original authors reproduce it.",
+              "reveal": 2
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "What the rule leaves standing",
+            "cards": [
+              {
+                "title": "Actor-side slope",
+                "q": "Supported by an independent team",
+                "fail": "No large preregistered replication yet"
+              },
+              {
+                "title": "Observer-side slope",
+                "q": "Widely cited, 2009 lab finding",
+                "fail": "Plausible but unverified"
+              },
+              {
+                "title": "Signing first",
+                "q": "Retracted; failed replication",
+                "fail": "Do not use"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Apply the rule to this lesson."
+            },
+            {
+              "text": "The actor-side slippery slope, the one about our own behavior, is supported by an independent team, Welsh and colleagues, though not yet by a large preregistered replication.",
+              "reveal": 1,
+              "refs": [
+                "R-welsh-2015-slippery"
+              ]
+            },
+            {
+              "text": "Gino and Bazerman’s two thousand nine laboratory finding, that observers tolerate gradual erosion in others’ behavior more than abrupt change, is widely cited. The course could not confirm whether that paper has been flagged.",
+              "reveal": 2,
+              "refs": [
+                "R-gino-2009-when"
+              ]
+            },
+            {
+              "text": "Until independent teams reproduce it, treat the observer version as plausible but unverified.",
+              "refs": [
+                "R-gino-2009-when"
+              ]
+            },
+            {
+              "text": "And the signing-first effect should not be used.",
+              "reveal": 3,
+              "refs": [
+                "R-shu-2012-signing",
+                "R-kristal-2020-signing"
+              ]
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-weight",
+            "type": "choice",
+            "concept": "c-slippery-slope",
+            "prompt": "A colleague wants to cite the observer slippery slope — that people tolerate gradual erosion in others more than abrupt change — as settled science in a board paper. Under the course’s evidence rule, what is the right status?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Settled: it is widely cited"
+              },
+              {
+                "id": "b",
+                "text": "Plausible but unverified until independent teams reproduce it"
+              },
+              {
+                "id": "c",
+                "text": "False: one of its authors faces allegations about other papers"
+              },
+              {
+                "id": "d",
+                "text": "Retracted, like the signing-first paper"
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "Citation counts measure attention, not reproduction. Under the rule, weight comes from independent teams reproducing a finding.",
+              "b": "Right. The finding is plausible, the course could not confirm its status, and no independent reproduction has been located — so it is treated as unverified, not as false.",
+              "c": "That breaks the rule twice. An allegation is not a finding, and allegations about other papers say nothing about whether this result holds. The status turns on independent reproduction.",
+              "d": "No retraction is reported for this paper; the course could not confirm whether it has been flagged. Only the 2012 signing-first paper is reported as retracted."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "What lab evidence can show",
+            "left": {
+              "title": "Strong on",
+              "points": [
+                "Clean causal identification",
+                "The conceptual insight"
+              ]
+            },
+            "right": {
+              "title": "Weak on",
+              "points": [
+                "Small acts, small sums, students",
+                "Effect size in a real finance department"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "There is a broader limit too. Most behavioral-ethics experiments measure small acts of cheating, like misreporting a die roll, for small sums, usually with students or online participants."
+            },
+            {
+              "text": "That gives clean causal identification.",
+              "reveal": 1
+            },
+            {
+              "text": "It gives poor ecological validity. Real misconduct involves bigger stakes, longer time scales, groups and legal consequences. A lab effect can be real and still tell you little about its size in a finance department.",
+              "reveal": 2
+            },
+            {
+              "text": "So separate the insight from the effect size. That euphemism and gradualism make wrongdoing easier to rationalize fits lab work, case histories and organizational research. That a particular nudge cuts cheating by a particular amount is a far stronger claim, and signing first shows how such claims fail."
+            },
+            {
+              "text": "And notice the irony. The pledge idea was adopted before it was replicated because it was simple and appealing. The attractive result faded the question of evidence quality, trust among collaborators substituted for verification, and each person could locate responsibility elsewhere."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Designing against fading",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Structural remedies",
+            "steps": [
+              "Name decisions in plain language",
+              "Set bright lines before pressure arrives",
+              "Treat the first exception as the decision",
+              "Compare against the original baseline",
+              "Assign the harm question",
+              "Reward early reporting"
+            ]
+          },
+          "cues": [
+            {
+              "text": "If the problem is that the ethical dimension disappears, the remedies are structural. None of them requires assuming bad intent."
+            },
+            {
+              "text": "Name decisions in plain language. Write, we will charge some customers more because they are tired, before you write time-of-day optimization.",
+              "reveal": 1
+            },
+            {
+              "text": "Set bright lines before the pressure arrives. We never book revenue before signature is harder to erode step by step than judgment under deadline.",
+              "reveal": 2
+            },
+            {
+              "text": "Treat the first exception as the decision. When a small exception sets a precedent, give it the same review as a large one.",
+              "reveal": 3
+            },
+            {
+              "text": "Compare against the original baseline, not the last step. A transport agency that charts its actual bridge-inspection interval over ten years against the written standard will see drift no single budget cycle revealed.",
+              "reveal": 4
+            },
+            {
+              "text": "Assign the harm question: one person in the meeting asks who is harmed and whether they would accept the rule.",
+              "reveal": 5
+            },
+            {
+              "text": "And reward early reporting, visibly. Otherwise the cheapest moment to stop a slide is lost.",
+              "reveal": 6
+            },
+            {
+              "text": "In player development, fading hides inside performance language. Managing workload for roster flexibility can mean protecting a player’s health, or obscuring that the decision serves the organization at his expense. Write it once in plain words: what, why, and who bears the risk."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-euphemism",
+            "type": "reflect",
+            "concept": "c-ethical-fading",
+            "prompt": "Write down one euphemism common in your organization or industry. Translate it into plain words. Does the decision it describes look different?"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Executive Dilemma",
+                "detail": "The week’s exercise: work a hard decision end to end",
+                "href": "#/exercise/w13-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Tenbrunsel & Messick (2004), Ethical Fading",
+                "href": "#/library/R-tenbrunsel-2004-ethical"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Bounded ethicality means we predict, act and remember less ethically than we believe. Ethical fading drains the moral content through euphemism, gradual steps, diffuse causation and self-image."
+            },
+            {
+              "text": "The actor-side slippery slope has independent experimental support. The observer version needs independent replication, and the signing-first effect was retracted."
+            },
+            {
+              "text": "Take the comprehension check below. It is the same check as the written lesson. Then open the week’s exercise, Executive Dilemma, and read Tenbrunsel and Messick’s short paper, which repays a close reading.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson stays here for the full examples and methodological notes. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

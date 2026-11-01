@@ -1,0 +1,762 @@
+{
+  "id": "w14-l1-lecture",
+  "lesson": "w14-l1",
+  "title": "Six Lenses, One Decision",
+  "subtitle": "Integrative judgment: lenses, binding constraints and decision hygiene",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 1. It covers the same objectives — the six-lens review and the binding constraint, integrative resolution versus compromise and trade-off, and why the same surgical checklist produced different results in different settings — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Everyone is right",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 14 · Lesson 1 · Lecture",
+            "title": "Six lenses, one decision",
+            "sub": "Integrative judgment for executives"
+          },
+          "cues": [
+            {
+              "text": "You have probably sat in this meeting. Five smart people, five excellent analyses, and at the end of it, no decision anyone can stand behind."
+            },
+            {
+              "text": "This lecture is about why that happens, and about a disciplined way to stop it."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Four service centers. Consolidate into one?",
+              "Every specialist is right.",
+              "None is answering the decision."
+            ],
+            "sub": "A hypothetical composite, not a real bank."
+          },
+          "cues": [
+            {
+              "text": "Picture a regional bank. This is an invented composite, not a real one. The chief operating officer is deciding whether to fold four customer-service centers into one.",
+              "reveal": 0
+            },
+            {
+              "text": "Finance shows annual savings. Strategy warns that service quality is one of the few things that sets the bank apart from bigger competitors."
+            },
+            {
+              "text": "Human resources says the most experienced agents will not relocate. Legal flags a lease with three years to run and an expensive break clause, plus advance-notice obligations a large layoff can trigger."
+            },
+            {
+              "text": "And the head of ethics and compliance asks what the bank owes a town where it is the largest private employer."
+            },
+            {
+              "text": "Every one of them is right.",
+              "reveal": 1
+            },
+            {
+              "text": "And not one of them is answering the decision.",
+              "reveal": 2
+            },
+            {
+              "text": "Notice what is missing. Not analysis. There is plenty of that. What is missing is a method for combining analyses written in different units: dollars, legal exposure, loyalty, reputation, probability."
+            },
+            {
+              "text": "A specialist’s job is to be right about one lens. An executive’s job is to be right about the decision."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Six questions in the room",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "The six-lens review",
+            "steps": [
+              "Behavior: will people actually do it?",
+              "Evidence: how do we know it is true?",
+              "Strategy: does it build or spend advantage?",
+              "Finance: cost, return, timing — versus what?",
+              "Law: permitted, required, forbidden?",
+              "Ethics: who bears the cost? Defensible in public?"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The first tool condenses the whole semester into six questions. Treat it as a written protocol, answered before anyone argues."
+            },
+            {
+              "text": "Behavior asks whether the people who must act on this will actually do it, and what they will do instead. Ignore it, and you get plans that assume compliance.",
+              "reveal": 1
+            },
+            {
+              "text": "Evidence asks how we know the key causal claim is true, and how strong that knowledge is. Ignore it, and you act on a pilot that simply regressed to the mean.",
+              "reveal": 2
+            },
+            {
+              "text": "Strategy asks whether this builds or spends an advantage, and what we are choosing not to do. The failure here is many good initiatives that add up to no position.",
+              "reveal": 3
+            },
+            {
+              "text": "Finance asks what it costs, what it returns, when, and compared with what. Ignore opportunity cost and the timing of cash, and the numbers flatter you.",
+              "reveal": 4
+            },
+            {
+              "text": "Law asks what we are permitted, required and forbidden to do, and who decides that. The classic failure is discovering a contract term or notice obligation after the announcement.",
+              "reveal": 5
+            },
+            {
+              "text": "And ethics asks who bears the costs, who was consulted, and whether we could defend this in public. Ignore it, and you get legal, profitable choices that destroy trust.",
+              "reveal": 6
+            },
+            {
+              "text": "One honest caveat. This list is a teaching device, a synthesis of the course. It is not a validated instrument."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "The lenses interact.",
+              "Trace the interactions.",
+              "Don’t staple six memos together."
+            ]
+          },
+          "cues": [
+            {
+              "text": "Organization design and negotiation are not on it, deliberately. They are the machinery every lens runs through: who holds the decision right, and what each party will accept."
+            },
+            {
+              "text": "More important, the lenses are not independent. Law constrains strategy. Behavior decides whether finance’s projections ever materialize. Evidence sets how much weight any projection deserves.",
+              "reveal": 0
+            },
+            {
+              "text": "And ethics changes what employees, customers and regulators will tolerate, which changes the behavior forecast."
+            },
+            {
+              "text": "So an integrated judgment is one in which those interactions have been traced.",
+              "reveal": 1
+            },
+            {
+              "text": "Not one in which six memos have been stapled together.",
+              "reveal": 2
+            },
+            {
+              "text": "And notice the word written. Each lens answers independently, on paper, before discussion, so the most senior or most confident voice does not set the anchor. That is decision hygiene, and we will come back to it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Which lens binds?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Borrowed from optimization",
+            "term": "Binding constraint",
+            "definition": "A constraint that actually limits the choice. Relax it and the outcome improves; relax a non-binding one and nothing changes.",
+            "example": "A $500,000 hiring budget binds only if your best plan costs more than $500,000."
+          },
+          "cues": [
+            {
+              "text": "The second tool comes from optimization."
+            },
+            {
+              "text": "A constraint binds when it actually limits the solution. Relax it, and the outcome improves. Relax a constraint that does not bind, and nothing changes.",
+              "reveal": 1
+            },
+            {
+              "text": "A simple case. A hiring budget of five hundred thousand dollars does not bind if your best plan costs four hundred thousand. It binds if your best plan costs six hundred fifty thousand.",
+              "reveal": 2
+            },
+            {
+              "text": "In executive decisions, the binding constraint is the consideration that eliminates options before any of the others are weighed."
+            },
+            {
+              "text": "Most decisions face many constraints but only one or two that bind. Find those first, and you know where analysis will pay and where it is decoration."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Does finance bind at this site?",
+            "lines": [
+              {
+                "label": "Savings from closing this site, per year",
+                "value": "$1.2M"
+              },
+              {
+                "label": "Savings over the three years left on the lease",
+                "value": "$3.6M"
+              },
+              {
+                "label": "Cost to break the lease",
+                "value": "$4.0M"
+              }
+            ],
+            "result": {
+              "label": "Net effect of closing it now",
+              "value": "−$0.4M"
+            },
+            "note": "Synthetic numbers for illustration."
+          },
+          "cues": [
+            {
+              "text": "Let’s put numbers on the bank. They are invented for illustration."
+            },
+            {
+              "text": "Say closing one particular site saves one point two million dollars a year.",
+              "reveal": 1
+            },
+            {
+              "text": "Over the three years left on its lease, that is three point six million.",
+              "reveal": 2
+            },
+            {
+              "text": "But breaking the lease costs four million.",
+              "reveal": 3
+            },
+            {
+              "text": "Close it now, and the bank is four hundred thousand dollars worse off over those three years. For that site, finance binds.",
+              "reveal": 4
+            },
+            {
+              "text": "The discussion doesn’t end. Now it is about timing, or about which site to close."
+            },
+            {
+              "text": "Elsewhere, another lens might bind. If employment agreements prohibit relocation without bargaining, law binds, and the discussion becomes the bargaining."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Every specialist thinks their lens binds."
+            ],
+            "sub": "A hard constraint — or a price we could choose to pay?"
+          },
+          "cues": [
+            {
+              "text": "Here is the trap. Each specialist assumes their own lens is the one that binds."
+            },
+            {
+              "text": "Finance treats legal exposure as a cost to be priced. Lawyers treat financial upside as irrelevant to whether a duty exists. Operators treat both as overhead."
+            },
+            {
+              "text": "Your job is to make that assumption explicit and test it. Is this a hard constraint, or a price the organization could choose to pay? And who has the authority to say which?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-binding",
+            "type": "choice",
+            "prompt": "A software company wants to launch a feature that trains a recommendation model on customers’ usage data. Sales wants it for renewal season; a beta with ten volunteer customers looked good; the build cost is modest. Counsel says some customer agreements may not permit model training without consent. Which lens binds first?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Finance — the renewal value has not been measured."
+              },
+              {
+                "id": "b",
+                "text": "Evidence — volunteer beta customers are not typical customers."
+              },
+              {
+                "id": "c",
+                "text": "Law — some agreements may forbid the use without consent."
+              },
+              {
+                "id": "d",
+                "text": "Strategy — competitors can copy the interface."
+              }
+            ],
+            "answer": "c",
+            "concept": "c-binding-constraint",
+            "feedback": {
+              "a": "A real gap, but an unmeasured return does not remove the option; it lowers confidence in it. Something else eliminates options first.",
+              "b": "An important weakness — selection again — but weak evidence affects how much weight to give the beta, not whether the feature may ship.",
+              "c": "Right. Until counsel confirms which agreements permit the use, the feature cannot ship to everyone. That constraint sets the feasible set; the other lenses optimize inside it.",
+              "d": "Copying risk matters for the strategy case, but the data, not the interface, is the advantage — and nothing here forbids shipping on strategic grounds."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "A third option",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Three ways to resolve a conflict",
+            "cards": [
+              {
+                "title": "Integrative resolution",
+                "q": "A new option better than both originals",
+                "fail": "You must say what it does better than each"
+              },
+              {
+                "title": "Compromise",
+                "q": "Halfway: every lens satisfied a little",
+                "fail": "Design by committee — no lens served enough"
+              },
+              {
+                "title": "Clean trade-off",
+                "q": "Choose one model and accept its cost",
+                "fail": "Often clearest to execute, measure and explain"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Law binds there. Until counsel answers, the feature cannot ship to everyone. But that does not mean the answer is simply to wait."
+            },
+            {
+              "text": "This is where the third tool comes in, and it comes from a practitioner."
+            },
+            {
+              "text": "Roger Martin, then dean of the University of Toronto’s Rotman School of Management, proposed that many leaders he studied shared a habit he called integrative thinking.",
+              "refs": [
+                "R-martin-2007-opposable"
+              ]
+            },
+            {
+              "text": "Hold two opposing models in mind, and instead of choosing one, construct a new option that keeps elements of both and is better than either.",
+              "reveal": 1,
+              "refs": [
+                "R-martin-2007-opposable"
+              ]
+            },
+            {
+              "text": "In his account, integrative thinkers treat more factors as relevant, accept that causes can run in several directions, keep the whole problem in view while working on its parts, and refuse an unpleasant trade-off until they have searched for a creative resolution.",
+              "refs": [
+                "R-martin-2007-opposable"
+              ]
+            },
+            {
+              "text": "That is not a compromise, which satisfies every lens a little and none of them enough. The strategic equivalent of a product designed by committee.",
+              "reveal": 2,
+              "refs": [
+                "R-martin-2007-opposable"
+              ]
+            },
+            {
+              "text": "And it is not a clean trade-off: choosing one model and accepting its cost. Sometimes that is the better decision, because it is clearer to execute, to measure and to explain.",
+              "reveal": 3
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Launch or wait? A third option",
+            "left": {
+              "title": "The two camps",
+              "points": [
+                "Sales: launch to everyone now",
+                "Legal: wait until every agreement is checked"
+              ]
+            },
+            "right": {
+              "title": "The integrative option",
+              "points": [
+                "Opt-in launch where agreements clearly allow it",
+                "Plain-language notice",
+                "Measure renewals against a comparison group"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Back to the hypothetical software company. One camp says launch now. The other says wait.",
+              "reveal": 1
+            },
+            {
+              "text": "The integrative option is neither. Launch on an opt-in basis to customers whose agreements clearly allow it, with plain-language notice, while measuring renewal effects against a comparison group.",
+              "reveal": 2
+            },
+            {
+              "text": "Why is that integrative rather than a compromise? Because it beats both originals on what each side cared about. It keeps the strategic learning. It respects the legal constraint. It reduces the ethical exposure. And it yields better evidence than the volunteer beta."
+            },
+            {
+              "text": "The review did not produce that answer. It made the binding constraint visible early, exposed a weak piece of evidence and gave each lens a place to be heard. The judgment is still yours."
+            },
+            {
+              "text": "Here is the test to carry: if you cannot say what the new option does better than both originals, you have a compromise. Say so, honestly.",
+              "refs": [
+                "R-martin-2007-opposable"
+              ]
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-integrative",
+            "type": "choice",
+            "prompt": "At the bank, one director wants to close a site now; another wants to keep all four open. The team proposes keeping all four open with shorter hours. Asked what this does better than either original plan, nobody can say. What is it?",
+            "options": [
+              {
+                "id": "a",
+                "text": "An integrative resolution — it keeps elements of both positions."
+              },
+              {
+                "id": "b",
+                "text": "A compromise — it splits the difference without beating either original."
+              },
+              {
+                "id": "c",
+                "text": "A clean trade-off — it chooses one model and accepts the cost."
+              },
+              {
+                "id": "d",
+                "text": "A binding constraint — it removes options before others are weighed."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-integrative-thinking",
+            "feedback": {
+              "a": "Keeping elements of both is necessary but not sufficient. In Martin’s sense the new option must be better than either original, and nobody can say how this one is.",
+              "b": "Right. It satisfies both camps a little and neither enough. Call it a compromise — and consider whether a clean trade-off would be clearer.",
+              "c": "A clean trade-off would pick one position, close or keep, and accept its cost. This option picks neither.",
+              "d": "A binding constraint is a limit on the options, not an option. This is a proposed resolution."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Integrative thinking is a useful prompt.",
+              "It is not established science."
+            ],
+            "sub": "A practitioner heuristic."
+          },
+          "cues": [
+            {
+              "text": "A fair warning, though. Martin’s evidence is drawn from conversations and teaching with leaders who were already successful.",
+              "refs": [
+                "R-martin-2007-opposable"
+              ]
+            },
+            {
+              "text": "That exposes it to survivorship, and to the stories successful people tell about their own thinking. And there is no controlled evidence that training integrative thinking improves decisions.",
+              "reveal": 1,
+              "refs": [
+                "R-martin-2007-opposable"
+              ]
+            },
+            {
+              "text": "So use it for what it is. When the six lenses split into two camps, it prompts you to look for a third option before you declare a trade-off."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "One checklist, two results",
+      "scenes": [
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "The 2009 checklist study",
+            "items": [
+              {
+                "value": "8",
+                "label": "hospitals in eight cities"
+              },
+              {
+                "value": "1.5% → 0.8%",
+                "label": "death rate, before → after"
+              },
+              {
+                "value": "11.0% → 7.0%",
+                "label": "inpatient complications, before → after"
+              }
+            ],
+            "note": "Haynes et al. (2009). Before-and-after design, not randomized."
+          },
+          "cues": [
+            {
+              "text": "Now, decision hygiene. In Week One you met procedures that reduce error without having to diagnose which bias is at work: independent judgments before discussion, structured criteria, an outside view, a designated dissenter."
+            },
+            {
+              "text": "A checklist is one of those tools, and it gives us one of the most instructive natural experiments in organizational practice."
+            },
+            {
+              "text": "In a study published in two thousand nine, researchers working with the World Health Organization introduced a nineteen-item surgical safety checklist in eight hospitals in eight cities.",
+              "reveal": 1,
+              "refs": [
+                "R-haynes-2009-surgical"
+              ]
+            },
+            {
+              "text": "Comparing three thousand seven hundred thirty-three patients treated before with three thousand nine hundred fifty-five after, the death rate fell from one point five percent to zero point eight percent.",
+              "reveal": 2,
+              "refs": [
+                "R-haynes-2009-surgical"
+              ]
+            },
+            {
+              "text": "Inpatient complications fell from eleven percent to seven percent.",
+              "reveal": 3,
+              "refs": [
+                "R-haynes-2009-surgical"
+              ]
+            },
+            {
+              "text": "It was a before-and-after comparison, not a randomized trial. But the size of the change and the variety of settings made the checklist a model for health systems around the world.",
+              "refs": [
+                "R-haynes-2009-surgical"
+              ]
+            },
+            {
+              "text": "Then a whole province required it. Make a prediction."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-ontario",
+            "type": "choice",
+            "prompt": "Ontario, Canada, required its hospitals to adopt surgical safety checklists. A study of roughly 200,000 procedures compared periods before and after adoption. What do you predict it found?",
+            "options": [
+              {
+                "id": "a",
+                "text": "A drop in deaths about as large as in the 2009 study."
+              },
+              {
+                "id": "b",
+                "text": "A smaller but clearly significant drop in deaths."
+              },
+              {
+                "id": "c",
+                "text": "No statistically significant reduction in deaths or complications."
+              },
+              {
+                "id": "d",
+                "text": "A significant rise in deaths."
+              }
+            ],
+            "answer": "c",
+            "concept": "c-checklist-implementation",
+            "feedback": {
+              "a": "That is the intuitive prediction if the tool itself does the work. The provincial study did not find it.",
+              "b": "Reasonable, but mortality went from 0.71% to 0.65% — a difference that was not statistically significant.",
+              "c": "Right. Mortality was 0.71% before and 0.65% after, not significant, with no significant fall in complications. The next scene asks why.",
+              "d": "Nothing in the study points to harm. Mortality was slightly lower after adoption, but not significantly."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Same tool, different conditions",
+            "left": {
+              "title": "2009 study",
+              "points": [
+                "Hospitals volunteered",
+                "Training and attention",
+                "Large drops in deaths and complications"
+              ]
+            },
+            "right": {
+              "title": "Ontario mandate",
+              "points": [
+                "Adoption required by the province",
+                "About 200,000 procedures",
+                "Mortality 0.71% → 0.65%, not significant",
+                "Lower baseline mortality"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "On the left, the two thousand nine hospitals volunteered, and they implemented the checklist with training and attention.",
+              "reveal": 1,
+              "refs": [
+                "R-haynes-2009-surgical"
+              ]
+            },
+            {
+              "text": "On the right, Ontario’s study covered roughly two hundred thousand procedures at virtually all of the province’s surgical hospitals, comparing three-month periods before and after adoption.",
+              "reveal": 2,
+              "refs": [
+                "R-urbach-2014-introduction"
+              ]
+            },
+            {
+              "text": "Operative mortality was zero point seven one percent before and zero point six five percent after. Not statistically significant, and no significant reduction in complications.",
+              "refs": [
+                "R-urbach-2014-introduction"
+              ]
+            },
+            {
+              "text": "Do the two contradict each other? Not necessarily."
+            },
+            {
+              "text": "Volunteering, attention and training may themselves have improved care, and a before-and-after design cannot separate that from the tool.",
+              "refs": [
+                "R-haynes-2009-surgical"
+              ]
+            },
+            {
+              "text": "Ontario adopted under a mandate, from a lower baseline. With mortality that low, even a real proportional improvement would be small in absolute terms and hard to detect.",
+              "refs": [
+                "R-urbach-2014-introduction"
+              ]
+            },
+            {
+              "text": "A common interpretation is that a checklist works through the team that uses it, not through the paper. How much of each explanation is right is still argued. Neither study randomized hospitals.",
+              "refs": [
+                "R-haynes-2009-surgical",
+                "R-urbach-2014-introduction"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Hygiene tools work through people."
+            ],
+            "sub": "Explanation, senior participation, attention to whether it changes anything."
+          },
+          "cues": [
+            {
+              "text": "The executive lesson is about integration, not surgery."
+            },
+            {
+              "text": "A hygiene tool is an intervention in behavior. It works through the people who use it: whether they understand its purpose, whether senior people model it, whether it fits the workflow, and whether it is used to think or merely to comply.",
+              "reveal": 0
+            },
+            {
+              "text": "A decision checklist imposed on a leadership team that regards it as paperwork will be completed, and ignored."
+            },
+            {
+              "text": "The six-lens review lives under the same rule. Introduce it the way the successful checklist sites did: with explanation, with senior participation and with attention to whether it changes anything."
+            },
+            {
+              "text": "And when two credible studies disagree, the useful question is rarely which one is right. It is what differs between their conditions, and which set your own situation resembles."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Limits, then synthesis",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Where integration goes wrong",
+            "cards": [
+              {
+                "title": "Paralysis",
+                "q": "Waiting to hear every lens before acting",
+                "fail": "Missing the window — ask how hard it is to undo"
+              },
+              {
+                "title": "Committee compromise",
+                "q": "A third option that pleases everyone a little",
+                "fail": "Name what it beats, or call it a compromise"
+              },
+              {
+                "title": "Uneven fluency",
+                "q": "Leaders over-weight the lenses they know",
+                "fail": "Give each lens a named, written owner"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now let me argue against my own case. Integration has real failure modes."
+            },
+            {
+              "text": "First, it can become a license for paralysis. Insist on hearing every lens, and you can miss the window in which acting mattered.",
+              "reveal": 1
+            },
+            {
+              "text": "The remedy is proportion. A reversible, low-stakes decision needs two lenses and a day. An irreversible one with legal exposure needs all six and a written record. Asking how hard this would be to undo is itself a hygiene step."
+            },
+            {
+              "text": "Second, the search for a third option can collapse into the committee compromise we just named.",
+              "reveal": 2,
+              "refs": [
+                "R-martin-2007-opposable"
+              ]
+            },
+            {
+              "text": "Third, most leaders are not equally fluent in all six lenses, and they over-weight the ones they know. An analytics leader may underweight behavior; a leader trained in coaching may do the reverse.",
+              "reveal": 3
+            },
+            {
+              "text": "The protection is structural, not personal. Assign each lens to a named person who answers in writing, and pay particular attention to the lens whose owner is the most junior person in the room."
+            },
+            {
+              "text": "One application from player development. A new biomechanical assessment across an organization’s affiliates touches all six lenses, from coaches’ trust to athlete data and consent. A written review before the pilot costs an afternoon. Skipping a lens can cost a season of trust."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-reflect",
+            "type": "reflect",
+            "prompt": "Apply or challenge the argument. Pick a decision you face now. Which lens do you suspect binds — and is it truly a hard constraint, or a price you could choose to pay? Which lens are you least fluent in, and who could own it in writing?",
+            "concept": "c-binding-constraint"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "The same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Decision Presentation Studio",
+                "detail": "Draft a decision opening in which one lens binds",
+                "href": "#/exercise/w14-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Klein (2007), Performing a Project Premortem",
+                "href": "#/library/R-klein-2007-performing"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Six lenses, answered independently and in writing. Find the constraint that binds, and test whether it is truly hard or merely expensive."
+            },
+            {
+              "text": "When two lenses conflict, search for an option better than both, and call a compromise a compromise."
+            },
+            {
+              "text": "And remember the checklists: a process works through the behavior of the people who run it."
+            },
+            {
+              "text": "Next, take the comprehension check, the same one as the written lesson. Then open the Decision Presentation Studio, and read Gary Klein’s two-page piece on the premortem, another hygiene tool you will use this week.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson keeps the full tables and methodological notes. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

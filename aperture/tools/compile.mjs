@@ -145,7 +145,7 @@ const lectureErrors = [];
 const lessonIds = new Set(weeks.flatMap((w) => w.lessons.map((l) => l.id)));
 const lessonMap = new Map(weeks.flatMap((w) => w.lessons.map((l) => [l.id, l])));
 const exerciseIds = new Set(weeks.flatMap((w) => [w.exercise.id, `${w.assignment.id}-studio`]));
-const { index: lectures, files: lectureFiles } = buildLectures({ base: BASE, appDir: join(BASE, '..', 'apps', 'aperture'), lessonIds, lessons: lessonMap, resources: new Set(lib.map((r) => r.id)), concepts, exercises: exerciseIds, err: (w, m) => lectureErrors.push(`${w}: ${m}`) });
+const { index: lectures, files: lectureFiles } = buildLectures({ base: BASE, appDir: join(BASE, '..', 'apps', 'aperture'), lessonIds, lessons: lessonMap, resources: new Set(lib.map((r) => r.id)), concepts, exercises: exerciseIds, partial: args.includes('--partial-lectures'), err: (w, m) => lectureErrors.push(`${w}: ${m}`) });
 if (lectureErrors.length) { console.error(`✖ ${lectureErrors.length} lecture error(s):\n  ` + lectureErrors.join('\n  ')); process.exit(1); }
 const lectureJson = Object.fromEntries(Object.entries(lectureFiles).map(([id, l]) => [id, JSON.stringify(l)]));
 

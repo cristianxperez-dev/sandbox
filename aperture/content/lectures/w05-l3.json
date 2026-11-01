@@ -1,0 +1,663 @@
+{
+  "id": "w05-l3-lecture",
+  "lesson": "w05-l3",
+  "title": "When Feedback Makes People Worse",
+  "subtitle": "Coaching, feedback and managing through others",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 3 of Week 5. It covers the same objectives — why many feedback interventions backfire, how to structure a difficult conversation, how to match delegation to readiness and stakes, and what coaching meta-analyses can and cannot show — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "A prediction about feedback",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 5 · Lesson 3 · Lecture",
+            "title": "When feedback makes people worse",
+            "sub": "Coaching, feedback and managing through others"
+          },
+          "cues": [
+            {
+              "text": "Most managers believe two things about feedback: it is reliably good, and more is better."
+            },
+            {
+              "text": "Today I want to test the first belief, and then show you where a senior leader’s real leverage lies."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Feedback vs. no feedback.",
+              "How often was feedback worse?"
+            ],
+            "sub": "Commit to a number first."
+          },
+          "cues": [
+            {
+              "text": "Imagine researchers gathering every study they can find in which people got feedback on their performance, and comparing them with similar people who got none."
+            },
+            {
+              "text": "Across all those studies, what share of feedback interventions made performance worse than no feedback at all?",
+              "reveal": 1
+            },
+            {
+              "text": "Most managers guess something small, under one in ten. Make your own guess."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-share",
+            "type": "estimate",
+            "concept": "c-feedback-intervention-theory",
+            "prompt": "Across studies comparing feedback with no feedback, roughly what share of feedback interventions reduced performance?",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "initial": 10,
+            "answer": 35,
+            "tolerance": 10,
+            "feedback": {
+              "correct": "Close. In Kluger and DeNisi’s analysis, more than a third of feedback interventions reduced performance — even though the average effect was positive.",
+              "incorrect": "The answer is more than a third. Kluger and DeNisi found a positive average effect, but results varied widely, and more than a third of interventions made performance worse."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Where attention goes",
+      "scenes": [
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "Kluger and DeNisi, 1996",
+            "items": [
+              {
+                "value": "Positive",
+                "label": "average effect of feedback"
+              },
+              {
+                "value": "> 1 in 3",
+                "label": "interventions reduced performance"
+              }
+            ],
+            "note": "Review and meta-analysis of feedback interventions.",
+            "refs": [
+              "R-kluger-1996-effects"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Avraham Kluger and Angelo DeNisi ran that review and meta-analysis.",
+              "refs": [
+                "R-kluger-1996-effects"
+              ]
+            },
+            {
+              "text": "Feedback improved performance on average.",
+              "reveal": 1,
+              "refs": [
+                "R-kluger-1996-effects"
+              ]
+            },
+            {
+              "text": "But results were highly variable, and more than a third of interventions reduced performance.",
+              "reveal": 2,
+              "refs": [
+                "R-kluger-1996-effects"
+              ]
+            },
+            {
+              "text": "A positive average with a wide spread means some interventions helped a lot and others hurt. So the useful question is not does feedback work. It is what separates the ones that work from the ones that backfire."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "Feedback intervention theory, simplified",
+            "steps": [
+              {
+                "label": "Feedback message",
+                "text": "performance differs from a standard"
+              },
+              {
+                "label": "Attention moves",
+                "text": "to the task, or to the self"
+              },
+              {
+                "label": "Task focus",
+                "text": "effort and strategy adjust"
+              },
+              {
+                "label": "Self focus",
+                "text": "defend, discount, disengage"
+              }
+            ],
+            "refs": [
+              "R-kluger-1996-effects"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Their answer is feedback intervention theory. We regulate behavior by comparing performance with standards, and attention is limited.",
+              "refs": [
+                "R-kluger-1996-effects"
+              ]
+            },
+            {
+              "text": "A feedback message says performance differs from a standard.",
+              "reveal": 1
+            },
+            {
+              "text": "Then attention moves, among the details of the task, the motivation to do it, and the self: identity, competence, standing.",
+              "reveal": 2
+            },
+            {
+              "text": "If attention stays on the task and on how to close the gap, effort and strategy adjust, and performance tends to improve.",
+              "reveal": 3
+            },
+            {
+              "text": "If attention moves to the self, energy goes to protecting self-image. People defend, discount the source, or disengage, and performance can fall.",
+              "reveal": 4,
+              "refs": [
+                "R-kluger-1996-effects"
+              ]
+            },
+            {
+              "text": "A hypothetical radiology department posted a monthly ranking of report turnaround. Some improved, but careful readers began to rush, and the talk shifted to who was at the bottom. The feedback was accurate. What it drew attention to was status."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "The same issue, two ways",
+            "left": {
+              "title": "Self-focused",
+              "points": [
+                "“You’re disorganized.”",
+                "“You’re not a strong storyteller.”",
+                "“You’re a natural.”"
+              ]
+            },
+            "right": {
+              "title": "Task-focused",
+              "points": [
+                "“Two pending labs weren’t in the handoff.”",
+                "“Move the recommendation to slide one.”",
+                "“You gave the trade-off first.”"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Hear the difference. Self-focused: you’re disorganized. You’re not a strong storyteller.",
+              "reveal": 1
+            },
+            {
+              "text": "Task-focused: two pending labs weren’t in the handoff, use the checklist before you leave. The recommendation is on slide fourteen, move it to slide one.",
+              "reveal": 2
+            },
+            {
+              "text": "Notice that praise can be self-focused too. You’re a natural tells someone nothing to repeat. Your summary let the committee decide in ten minutes because you gave the trade-off first tells them exactly what worked."
+            },
+            {
+              "text": "Now try it yourself."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-rewrite",
+            "type": "choice",
+            "concept": "c-feedback-intervention-theory",
+            "prompt": "An analyst often rejects colleagues’ suggestions in model reviews. Which feedback is most consistent with feedback intervention theory?",
+            "options": [
+              {
+                "id": "a",
+                "text": "“Your peers think you’re arrogant in reviews.”"
+              },
+              {
+                "id": "b",
+                "text": "“In Tuesday’s review you rejected three suggestions without asking why they were made. Ask one question before you reject.”"
+              },
+              {
+                "id": "c",
+                "text": "“You’re one of our smartest analysts, but you need to be more of a team player.”"
+              },
+              {
+                "id": "d",
+                "text": "“You rank last on the team’s collaboration scores this quarter.”"
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "This targets identity and reports others’ judgment of the person. It invites defense of self-image rather than a change in behavior.",
+              "b": "Right. A specific, verifiable behavior and a concrete next step keep attention on the task.",
+              "c": "The praise and the criticism are both about the person. “Team player” gives nothing specific to change.",
+              "d": "A ranking draws attention to status — like the radiology dashboard — and says nothing about what to do differently."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "The hard conversation",
+      "scenes": [
+        {
+          "visual": {
+            "type": "flow",
+            "title": "Five steps — a practitioner heuristic",
+            "steps": [
+              {
+                "label": "Purpose",
+                "text": "why we meet, what I want for you"
+              },
+              {
+                "label": "Observation",
+                "text": "specific, verifiable behavior"
+              },
+              {
+                "label": "Impact",
+                "text": "effect on the work, no labels"
+              },
+              {
+                "label": "Inquiry",
+                "text": "ask, and listen"
+              },
+              {
+                "label": "Agreement",
+                "text": "next behavior, review date"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "That kind of sentence lives inside a conversation. Here is a five-step structure. It is a practitioner heuristic, not a tested protocol."
+            },
+            {
+              "text": "Purpose: say why you are meeting, and what you want for the person.",
+              "reveal": 1
+            },
+            {
+              "text": "Observation: a specific, verifiable behavior, what you saw or heard, and when.",
+              "reveal": 2
+            },
+            {
+              "text": "Impact: the effect on the work or on others, without labeling the person.",
+              "reveal": 3
+            },
+            {
+              "text": "Inquiry: ask for their view and listen. You may be missing context.",
+              "reveal": 4
+            },
+            {
+              "text": "Agreement: a specific next behavior, and a date to review it.",
+              "reveal": 5
+            },
+            {
+              "text": "Defensiveness is the predictable response when a message threatens identity. You can’t prevent it, but you can lower the threat: keep observations specific, don’t bury the message under sweeteners, and allow silence after the hard sentence."
+            },
+            {
+              "text": "If someone says, so you think I’m the problem, separate identity from behavior. Your analysis is the best on the team. I’m talking about one behavior in reviews that is costing you influence."
+            },
+            {
+              "text": "The same logic holds on a practice field. A player told you lack mental toughness gets feedback about the self. A player told after a two-strike foul your setup widens, let’s rehearse resetting your stance, gets feedback about the task. And a coordinator who corrects a coach in front of players makes the correction about status."
+            },
+            {
+              "text": "And narrow it. In a hypothetical agency, a manager told her contractor oversight is weak arrives with documentation of every meeting. What moves the conversation is one gap: two invoices approved without the deliverable check. Ask what made that check hard. Often the answer is a system problem the leader can fix."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Managing through others",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "A delegation continuum — a heuristic",
+            "steps": [
+              "1 Tell: “Do it this way.”",
+              "2 Consult: “Recommend; I decide.”",
+              "3 Agree: “Decide, check before acting.”",
+              "4 Act and report: “Act; tell me what you did.”",
+              "5 Own: “It’s yours; results quarterly.”"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the bigger lever. Managing through others is mostly design, not conversation. How you delegate and follow up shapes more than any single feedback talk."
+            },
+            {
+              "text": "Delegation runs along a continuum. This version is a practitioner heuristic, a synthesis of common management texts, not an empirically calibrated instrument."
+            },
+            {
+              "text": "Level one, tell: do it this way. For a novice in this domain, with high stakes and no time.",
+              "reveal": 1
+            },
+            {
+              "text": "Level two, consult: give me your recommendation, I decide. Useful when you are building judgment.",
+              "reveal": 2
+            },
+            {
+              "text": "Level three, agree: decide, but check with me before acting. Sound reasoning, stakes still high.",
+              "reveal": 3
+            },
+            {
+              "text": "Level four, act and report. A track record in this domain, and reversible decisions.",
+              "reveal": 4
+            },
+            {
+              "text": "Level five, own: it’s yours, I’ll ask about results quarterly, and you will not second-guess.",
+              "reveal": 5
+            },
+            {
+              "text": "The right level depends on demonstrated readiness in this specific kind of decision, and on the cost of an error. Here is where it goes wrong."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-delegation",
+            "type": "choice",
+            "concept": "c-delegation-accountability",
+            "prompt": "A manager hands a senior associate a client workshop “to run.” The associate redesigns the agenda; on the morning of the workshop the manager overrides it in front of the partner. Each now sees the other as untrustworthy. What is the best repair?",
+            "options": [
+              {
+                "id": "a",
+                "text": "A feedback conversation about the associate’s judgment in redesigning the agenda."
+              },
+              {
+                "id": "b",
+                "text": "A conversation about the delegation level that was never stated — and agreeing it before the next piece of work."
+              },
+              {
+                "id": "c",
+                "text": "Moving the associate back to level one on all work until trust is rebuilt."
+              },
+              {
+                "id": "d",
+                "text": "Nothing; the conflict will fade after the next successful workshop."
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "That treats a delegation failure as a performance failure. The associate thought “run it” meant level four or five.",
+              "b": "Right. The associate heard level four; the manager meant level two or three. Accountability is agreeing who decides before the work starts.",
+              "c": "Readiness is domain-specific, and the problem was ambiguity, not demonstrated incompetence. A blanket demotion would damage trust further.",
+              "d": "Unstated levels tend to recur. Ambiguity followed by disappointment is the most common senior leadership error the lesson names."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Ambiguity, then disappointment.",
+              "Agree who decides before the work."
+            ],
+            "sub": "Many accountability failures are delegation failures in disguise."
+          },
+          "cues": [
+            {
+              "text": "The workshop case is invented, but you will recognize it. Accountability, in this frame, is an agreement about what success looks like, who decides, and when results are discussed, made before the work starts."
+            },
+            {
+              "text": "The most common error at senior levels is not harshness. It is ambiguity, followed by disappointment.",
+              "reveal": 1
+            },
+            {
+              "text": "Player development has both layers. Coaches coach players, and coordinators coach coaches. An affiliate coach who thinks he owns a player’s plan, while the organization thinks he is executing it, will feel every adjustment from above as distrust."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "What coaching evidence shows",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Why coaching studies are hard",
+            "cards": [
+              {
+                "title": "Selection",
+                "q": "Who gets coached?",
+                "fail": "High-potentials or people in trouble"
+              },
+              {
+                "title": "Self-report",
+                "q": "Who rates the outcome?",
+                "fail": "The coachee, who invested time"
+              },
+              {
+                "title": "No placebo",
+                "q": "Method or attention?",
+                "fail": "Any senior attention may help"
+              },
+              {
+                "title": "Publication filter",
+                "q": "Which studies appear?",
+                "fail": "Positive provider results more likely"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Coaching is a longer relationship, with feedback as one ingredient among goal setting, questioning and practice."
+            },
+            {
+              "text": "Rebecca Jones, Stephen Woods and Yves Guillaume meta-analyzed workplace coaching and found positive average effects on learning and performance outcomes, varying by outcome and arrangement.",
+              "refs": [
+                "R-jones-2016-effectiveness"
+              ]
+            },
+            {
+              "text": "Now the challenge to everything in this lecture. The coaching literature is small relative to the industry, and many studies rely on self-report.",
+              "refs": [
+                "R-jones-2016-effectiveness"
+              ]
+            },
+            {
+              "text": "Selection: coaching goes to high-potentials or people in trouble, so the groups differ before it starts.",
+              "reveal": 1
+            },
+            {
+              "text": "Self-report: the coachee, who invested time and may like the coach, often rates the result.",
+              "reveal": 2
+            },
+            {
+              "text": "No placebo: any attention from a senior person may help.",
+              "reveal": 3
+            },
+            {
+              "text": "And a publication filter: positive results from providers are more likely to be written up.",
+              "reveal": 4
+            },
+            {
+              "text": "The feedback meta-analysis has limits too. It drew heavily on laboratory and narrow tasks, without the careers and politics of a real conversation with a senior employee. And neither literature tells you which coaching method works best.",
+              "refs": [
+                "R-kluger-1996-effects"
+              ]
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-coaching",
+            "type": "choice",
+            "concept": "c-coaching-effectiveness",
+            "prompt": "A coaching provider says the meta-analytic evidence proves its program will raise your managers’ performance. What is the most defensible response?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Accept it — coaching meta-analysis shows positive average effects."
+              },
+              {
+                "id": "b",
+                "text": "Reject it — coaching has no evidence base."
+              },
+              {
+                "id": "c",
+                "text": "Average effects are positive but come from a small, largely self-report literature; ask for objective outcomes, a comparison group and the share who did not improve."
+              },
+              {
+                "id": "d",
+                "text": "Ask which method the meta-analysis identified as best and check the provider uses it."
+              }
+            ],
+            "answer": "c",
+            "feedback": {
+              "a": "A positive average across studies does not show that this program, with these managers, will work — and the literature has selection and self-report problems.",
+              "b": "Too strong. The meta-analysis does find positive average effects; the issue is their strength and generality.",
+              "c": "Right. That is the careful buyer’s position: credit the average, then ask for the evidence a weak literature cannot supply.",
+              "d": "The literature does not tell you which specific coaching method works best, so this question has no answer to check against."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two open questions",
+            "left": {
+              "title": "Feedforward",
+              "points": [
+                "Suggestions about the future",
+                "Fits the theory",
+                "Thin evidence — a hypothesis"
+              ]
+            },
+            "right": {
+              "title": "Cold task focus",
+              "points": [
+                "Some need security first",
+                "Benevolence changes how it lands"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Two final nuances. Feedforward, asking for suggestions about the future rather than verdicts on the past, is a popular practitioner technique.",
+              "reveal": 1
+            },
+            {
+              "text": "Its logic fits the theory, since it keeps attention on the next task. But treat it as a plausible design idea with a thin evidence base, not an established finding."
+            },
+            {
+              "text": "And purely task-focused feedback can turn cold. Some people need to hear that their standing is secure before they can attend to the task.",
+              "reveal": 2
+            },
+            {
+              "text": "The same sentence lands differently from a manager whose benevolence is trusted than from one whose benevolence is in doubt. That is last lesson’s trust model at work, and team-leader coaching was one of the structures linked to psychological safety.",
+              "refs": [
+                "R-mayer-1995-integrative",
+                "R-edmondson-1999-psychological"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Synthesis",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "The high performer who undermines peers",
+            "left": {
+              "title": "Name it now",
+              "points": [
+                "Specific behaviors and costs",
+                "Explicit agreement",
+                "Follow-up",
+                "Risk: she leaves"
+              ]
+            },
+            "right": {
+              "title": "Wait",
+              "points": [
+                "Protects a key deliverable",
+                "Also a decision",
+                "Signals what the organization values"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "One last scene, to pull the pieces together. Your most productive direct report delivers outstanding work, and is often dismissive of colleagues in meetings. Two people have asked to move off her projects."
+            },
+            {
+              "text": "There is no formal complaint, some colleagues privately admire her, and losing her would hurt a key deliverable. A clean answer does not exist."
+            },
+            {
+              "text": "The task-focused path is to name specific behaviors and their costs, make an explicit agreement, and follow up, accepting the risk that she leaves.",
+              "reveal": 1
+            },
+            {
+              "text": "The alternative is to wait. But waiting is also a decision. It tells everyone else what the organization values.",
+              "reveal": 2
+            },
+            {
+              "text": "Feedback theory, the conversation structure and delegation clarity are not a script for this case. They are how you make the trade-off deliberately rather than by default."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Leadership Conversation Simulator",
+                "detail": "Test a hard conversation with a high performer",
+                "href": "#/exercise/w05-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Mayer, Davis & Schoorman (1995), An Integrative Model of Organizational Trust",
+                "href": "#/library/R-mayer-1995-integrative"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Feedback helps on average but backfires often, and the difference lies largely in where it sends attention: toward the task and the next step, or toward the self.",
+              "refs": [
+                "R-kluger-1996-effects"
+              ]
+            },
+            {
+              "text": "A hard conversation lowers threat with purpose, observation, impact, inquiry and agreement. Coaching shows positive average effects, from an imperfect literature.",
+              "refs": [
+                "R-jones-2016-effectiveness"
+              ]
+            },
+            {
+              "text": "And managing through others depends on explicit delegation levels and accountability agreements, made before the work starts."
+            },
+            {
+              "text": "Take the comprehension check below, the same as the written lesson. Then go to the simulator and try the high performer who undermines peers. Waiting is also a decision. And read Mayer and colleagues on trust.",
+              "reveal": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

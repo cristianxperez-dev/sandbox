@@ -1,0 +1,740 @@
+{
+  "id": "w07-l5-lecture",
+  "lesson": "w07-l5",
+  "title": "True, Misleading, or False?",
+  "subtitle": "Deception, commitments and difficult conversations in negotiation",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 5. It covers the same objectives — classifying tactics from tough bargaining to deception, the evidence on how paltering is judged and what it costs, a personal disclosure policy and the general difference between estimates and commitments, and planning a difficult conversation — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Are you talking to anyone else?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 7 · Lesson 5 · Lecture",
+            "title": "True, misleading, or false?",
+            "sub": "Deception, commitments and difficult conversations"
+          },
+          "cues": [
+            {
+              "text": "Every negotiator withholds information. That is not the ethical question. The question is what else you do with what you know."
+            },
+            {
+              "text": "One housekeeping note before we start. Part of this lecture touches legal concepts. It is general educational material, not legal advice. For any specific agreement, consult a qualified attorney."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Four possible answers",
+            "steps": [
+              "“Yes, we’re in discussions with another provider.”",
+              "“We’ve spoken with other providers.”",
+              "“I’m not going to get into that.”",
+              "“No, you’re our only option.”"
+            ]
+          },
+          "cues": [
+            {
+              "text": "You are near the end of a negotiation over a two-year analytics contract. The vendor's account executive asks you directly: are you talking to anyone else? This is a hypothetical example."
+            },
+            {
+              "text": "The truth: you held one exploratory call with a competitor four months ago, and never followed up. Here are four answers you could give."
+            },
+            {
+              "text": "A. Yes, we're in discussions with another provider.",
+              "reveal": 1
+            },
+            {
+              "text": "B. We've spoken with other providers.",
+              "reveal": 2
+            },
+            {
+              "text": "C. I'm not going to get into that.",
+              "reveal": 3
+            },
+            {
+              "text": "D. No, you're our only option.",
+              "reveal": 4
+            },
+            {
+              "text": "Which would you be comfortable seeing quoted, word for word, in an e-mail to your own leadership? Hold that thought, and make one call now."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-palter-spot",
+            "type": "choice",
+            "prompt": "Which answer is literally true but chosen to create a false impression?",
+            "options": [
+              {
+                "id": "a",
+                "text": "A — “Yes, we’re in discussions with another provider.”"
+              },
+              {
+                "id": "b",
+                "text": "B — “We’ve spoken with other providers.”"
+              },
+              {
+                "id": "c",
+                "text": "C — “I’m not going to get into that.”"
+              },
+              {
+                "id": "d",
+                "text": "D — “No, you’re our only option.”"
+              }
+            ],
+            "answer": "b",
+            "concept": "c-negotiation-ethics",
+            "feedback": {
+              "a": "A one-off call four months ago is not “discussions”. Answer A is close to a false statement, not a true one.",
+              "b": "Right. It is literally true — you did speak with a provider — but it is chosen because the vendor will misunderstand it. That has a name: paltering.",
+              "c": "C is an open refusal. The vendor knows it has not been told, so nothing false is implied.",
+              "d": "D is false, and you know it: a plain lie by commission."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "A spectrum, not a line",
+      "scenes": [
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "Lewicki and Robinson, 1998",
+            "items": [
+              {
+                "value": "320 and 736",
+                "label": "MBA respondents at two business schools"
+              },
+              {
+                "value": "18",
+                "label": "bargaining tactics rated"
+              },
+              {
+                "value": "5",
+                "label": "clusters of tactics, similar in both samples"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "How do people actually judge these moves? Roy Lewicki and Robert Robinson surveyed MBA students at two business schools.",
+              "refs": [
+                "R-lewicki-1998-ethical"
+              ]
+            },
+            {
+              "text": "Three hundred twenty respondents at one, seven hundred thirty-six at the other.",
+              "reveal": 1,
+              "refs": [
+                "R-lewicki-1998-ethical"
+              ]
+            },
+            {
+              "text": "They rated how appropriate eighteen bargaining tactics were.",
+              "reveal": 2,
+              "refs": [
+                "R-lewicki-1998-ethical"
+              ]
+            },
+            {
+              "text": "A factor analysis found five clusters of tactics, similar across both samples.",
+              "reveal": 3,
+              "refs": [
+                "R-lewicki-1998-ethical"
+              ]
+            },
+            {
+              "text": "The extremes drew agreement. Tough but not outright dishonest tactics, like inflating an opening demand, were widely accepted. Outright lies and bribery were widely rejected.",
+              "refs": [
+                "R-lewicki-1998-ethical"
+              ]
+            },
+            {
+              "text": "And judgments differed by person. In their samples, women and older, more experienced students were more conservative, and acceptability varied by school and nationality.",
+              "refs": [
+                "R-lewicki-1998-ethical"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "The disclosure spectrum",
+            "steps": [
+              "Declining to disclose: widely accepted",
+              "Ambitious opening: widely accepted",
+              "Bluffing about limits: contested",
+              "Paltering: acceptable to palterers, like lying to targets",
+              "False statement of fact: widely rejected"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Laid out as a spectrum, which is the lesson's own synthesis of the research, it looks like this."
+            },
+            {
+              "text": "Declining to disclose, I'm not going to share our budget: widely accepted. Its cost is slower value creation if you overuse it.",
+              "reveal": 1
+            },
+            {
+              "text": "An ambitious opening, well above your target: widely accepted as competitive bargaining, with a risk of insult and impasse if extreme.",
+              "reveal": 2
+            },
+            {
+              "text": "Bluffing about limits, this is our final offer when it is not: contested. Called, it costs credibility.",
+              "reveal": 3
+            },
+            {
+              "text": "Paltering, which we'll unpack in a moment: the people who do it think it is acceptable; the people it targets judge it like lying.",
+              "reveal": 4
+            },
+            {
+              "text": "And a false statement of fact, inventing a competing bid: widely rejected, with legal exposure in many jurisdictions and the risk the deal unwinds.",
+              "reveal": 5
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Three ways to mislead, one way not to",
+            "cards": [
+              {
+                "title": "Lying by commission",
+                "q": "Stating what you believe false",
+                "fail": "“We have a competing bid at $1.2 million.”"
+              },
+              {
+                "title": "Lying by omission",
+                "q": "Passively leaving out what matters",
+                "fail": "Where silence itself misleads"
+              },
+              {
+                "title": "Paltering",
+                "q": "Actively saying true things to mislead",
+                "fail": "“We’ve spoken with other providers.”"
+              },
+              {
+                "title": "Declining to answer",
+                "q": "Openly refusing to share",
+                "fail": "Not deception: they know they weren’t told"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "It helps to separate the mechanisms precisely."
+            },
+            {
+              "text": "Lying by commission is stating something you believe to be false.",
+              "reveal": 1
+            },
+            {
+              "text": "Lying by omission is passively leaving out information you know the other side would consider important, in a context where silence misleads.",
+              "reveal": 2
+            },
+            {
+              "text": "Paltering is actively saying true things, selected to create a false belief.",
+              "reveal": 3
+            },
+            {
+              "text": "And declining to answer is openly refusing to share. That is not deception at all; the other side knows it has not been told.",
+              "reveal": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Paltering and the perception gap",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Rogers, Zeckhauser and Gino, 2017",
+            "term": "Paltering",
+            "definition": "The active use of truthful statements to create a misleading impression.",
+            "example": "Different from lying by commission (false statements) and by omission (passive withholding)."
+          },
+          "cues": [
+            {
+              "text": "Todd Rogers and colleagues named a tactic most codes of conduct miss.",
+              "refs": [
+                "R-rogers-2017-artful"
+              ]
+            },
+            {
+              "text": "Paltering is the active use of truthful statements to create a misleading impression.",
+              "reveal": 1,
+              "refs": [
+                "R-rogers-2017-artful"
+              ]
+            },
+            {
+              "text": "It differs from lying by commission, which uses false statements, and from lying by omission, which passively withholds.",
+              "reveal": 2,
+              "refs": [
+                "R-rogers-2017-artful"
+              ]
+            },
+            {
+              "text": "They studied it across two pilot studies and six experiments, with more than seventeen hundred fifty participants. Before I give you the results, a prediction.",
+              "refs": [
+                "R-rogers-2017-artful"
+              ]
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-target-view",
+            "type": "choice",
+            "prompt": "In Rogers and colleagues’ experiments, how did the TARGETS of paltering judge it?",
+            "options": [
+              {
+                "id": "a",
+                "text": "As clearly more ethical than lying, because every statement was true."
+              },
+              {
+                "id": "b",
+                "text": "About as unethical as making false statements."
+              },
+              {
+                "id": "c",
+                "text": "As normal competitive bargaining."
+              },
+              {
+                "id": "d",
+                "text": "They rarely noticed it, so had no view."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-negotiation-ethics",
+            "feedback": {
+              "a": "That is how palterers and outside observers tended to see it. Targets did not.",
+              "b": "Right. Targets judged paltering about as unethical as false statements, while palterers judged it more favorably — a perception gap.",
+              "c": "Ambitious openings are seen that way. Paltering was judged far more harshly by those it targeted.",
+              "d": "The study measured targets’ judgments when the palter was detected; they judged it about as harshly as lying."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "What paltering did",
+            "left": {
+              "title": "Benefit",
+              "points": [
+                "Helped negotiators claim value"
+              ]
+            },
+            "right": {
+              "title": "Costs",
+              "points": [
+                "More impasse",
+                "Harm to the palterer’s reputation",
+                "Targets: about as unethical as lying"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "In the short run, paltering worked. It helped negotiators claim value.",
+              "reveal": 1,
+              "refs": [
+                "R-rogers-2017-artful"
+              ]
+            },
+            {
+              "text": "But it also made impasse more likely and harmed the palterer's reputation. Targets judged it about as unethical as false statements, while palterers and outside observers judged it more favorably.",
+              "reveal": 2,
+              "refs": [
+                "R-rogers-2017-artful"
+              ]
+            },
+            {
+              "text": "And many people preferred paltering to outright lying. That is exactly why it is common.",
+              "refs": [
+                "R-rogers-2017-artful"
+              ]
+            },
+            {
+              "text": "One caution about strength of evidence: no independent replication of these negotiation studies was confirmed when the course's sources were checked. Treat it as a multi-study paper from one team, consistent with other work but not yet established by it.",
+              "refs": [
+                "R-rogers-2017-artful"
+              ]
+            },
+            {
+              "text": "Still, the perception gap is the executive lesson. People who palter feel more honest than the people they mislead think they are. And in repeated relationships, the target's judgment is the one that becomes your reputation."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "What binds you, and what you will say",
+      "scenes": [
+        {
+          "visual": {
+            "type": "flow",
+            "title": "From conversation to commitment",
+            "steps": [
+              {
+                "label": "Exploratory talk",
+                "text": "Generally not binding"
+              },
+              {
+                "label": "Proposal",
+                "text": "Withdrawal rules vary"
+              },
+              {
+                "label": "Term sheet",
+                "text": "Often nonbinding, except named clauses"
+              },
+              {
+                "label": "Signed agreement",
+                "text": "Binding"
+              },
+              {
+                "label": "Performance",
+                "text": "Reputation rides on it"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the legal layer, in general terms only, and remember, not legal advice. Statements made in negotiation differ in legal weight."
+            },
+            {
+              "text": "In many common-law systems, opinions, estimates of value and statements about your own willingness to pay are generally treated differently from statements of material fact."
+            },
+            {
+              "text": "A misrepresentation of a material fact that the other side relies on can expose a party to claims such as fraud or misrepresentation, and can let the other side unwind the agreement."
+            },
+            {
+              "text": "Documents vary too. Exploratory talk is generally not binding, but misstatements of material fact can still carry risk.",
+              "reveal": 1
+            },
+            {
+              "text": "Whether a proposal can be withdrawn depends on the legal system and its wording.",
+              "reveal": 2
+            },
+            {
+              "text": "A term sheet or letter of intent may bind in part, say confidentiality or exclusivity clauses, or not at all, depending on its wording and the governing law. Even an exchange of e-mails can sometimes form a contract.",
+              "reveal": 3
+            },
+            {
+              "text": "A signed agreement binds, and its representations and warranties allocate the risk of factual misstatements.",
+              "reveal": 4
+            },
+            {
+              "text": "And after signing, reputation and renewal ride on whether commitments are kept. Rules differ across jurisdictions, including between common-law and civil-law systems; Week Eleven develops this.",
+              "reveal": 5
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-fact",
+            "type": "choice",
+            "prompt": "Selling an office building, which statement is most likely to be treated as a statement of material fact rather than an opinion or estimate?",
+            "options": [
+              {
+                "id": "a",
+                "text": "“This is the best location in the district.”"
+              },
+              {
+                "id": "b",
+                "text": "“We think the building is worth at least what we’re asking.”"
+              },
+              {
+                "id": "c",
+                "text": "“The roof was replaced last year.”"
+              },
+              {
+                "id": "d",
+                "text": "“We wouldn’t go much lower than this.”"
+              }
+            ],
+            "answer": "c",
+            "concept": "c-negotiation-ethics",
+            "feedback": {
+              "a": "A sales opinion. Statements like this are generally treated differently from statements of fact (general concepts only, not legal advice).",
+              "b": "An estimate of value — the kind of statement that, in many common-law systems, is generally treated differently from a material fact.",
+              "c": "Right. Whether the roof was replaced is a checkable fact a buyer could rely on. If false, it can create legal exposure. General concepts only — not legal advice.",
+              "d": "A statement about your own willingness to pay or accept, generally treated differently from a statement of material fact."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "A personal disclosure policy",
+            "steps": [
+              "Never state what I believe false",
+              "Never arrange truths to mislead on material matters",
+              "Decline openly to discuss limits and alternatives",
+              "Mark commitments versus estimates",
+              "Correct material misstatements promptly",
+              "Verify claims; rely on written terms"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The roof is a fact; your view of the price is not. That distinction belongs in your own rules, so here is a disclosure policy, written before the pressure arrives."
+            },
+            {
+              "text": "I will not state anything I believe to be false.",
+              "reveal": 1
+            },
+            {
+              "text": "I will not arrange true statements to create a belief I know to be false about a material matter.",
+              "reveal": 2
+            },
+            {
+              "text": "I may decline to discuss my reservation value, my alternatives or internal deliberations, and I will say so openly.",
+              "reveal": 3
+            },
+            {
+              "text": "I will make clear which statements are commitments and which are estimates or intentions.",
+              "reveal": 4
+            },
+            {
+              "text": "If I learn I have made a material misstatement, I will correct it promptly.",
+              "reveal": 5
+            },
+            {
+              "text": "And I will verify material claims made to me, and rely on written terms for what matters most.",
+              "reveal": 6
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "D is a lie. A is close to one.",
+              "B is a palter. C is honest but guarded.",
+              "Better: refuse, then return to substance."
+            ]
+          },
+          "cues": [
+            {
+              "text": "Back to the vendor's question. Answer D is a lie by commission, and A is close to one, since a call four months ago is not discussions.",
+              "reveal": 0
+            },
+            {
+              "text": "B is a palter. C is honest and protects your position, at the cost of sounding guarded.",
+              "reveal": 1
+            },
+            {
+              "text": "A stronger honest answer combines refusal with substance: we explored alternatives earlier in the year; I won't go into detail; what will decide this is value and fit, and here is where your proposal still falls short.",
+              "reveal": 2
+            },
+            {
+              "text": "It is true, it invites no misleading inference, and it returns the conversation to criteria."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-policy",
+            "type": "reflect",
+            "prompt": "Which line of the disclosure policy would be hardest for you to keep under pressure, and in what kind of negotiation? What would you need to say instead of the tempting answer?",
+            "concept": "c-negotiation-ethics"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Where serious people disagree",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Three ethical positions",
+            "cards": [
+              {
+                "title": "Game with conventions",
+                "q": "Everyone knows “final offer” may not be",
+                "fail": "Permits bluffing about limits"
+              },
+              {
+                "title": "Deception is wrong",
+                "q": "It treats the other person as a means",
+                "fail": "Rejects bluffing and paltering"
+              },
+              {
+                "title": "Consequences",
+                "q": "What does it do to trust and institutions?",
+                "fail": "Judges each tactic by its effects"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Whatever you wrote, notice that you just made a philosophical choice. The evidence does not settle the philosophy, and serious people disagree."
+            },
+            {
+              "text": "One position treats bargaining as a game with known conventions. Everyone understands that this is our final offer may not be, so bluffing deceives no one who understands the game.",
+              "reveal": 1
+            },
+            {
+              "text": "A second holds that deception is wrong regardless of convention, because it treats the other person as a means.",
+              "reveal": 2
+            },
+            {
+              "text": "A third judges tactics by consequences: what they do to trust, to the relationship, and to the institutions that make deals possible.",
+              "reveal": 3
+            },
+            {
+              "text": "All three permit declining to answer. They part company over bluffing and paltering."
+            },
+            {
+              "text": "What the evidence does do is undercut one rationalization: that a tactic is fine because everyone does it. Judgments differ by person, experience and context, and targets judge paltering more harshly than palterers do.",
+              "refs": [
+                "R-lewicki-1998-ethical",
+                "R-rogers-2017-artful"
+              ]
+            },
+            {
+              "text": "A note on the designs. Lewicki and Robinson measured stated judgments, not behavior. Rogers and colleagues measured behavior, but with modest stakes, engineered detection, and no legal consequences. Together: the middle of the spectrum is genuinely contested, and palterers underestimate the costs.",
+              "refs": [
+                "R-lewicki-1998-ethical",
+                "R-rogers-2017-artful"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Selective about what you disclose.",
+              "Scrupulous about what you say."
+            ],
+            "sub": "Decline freely. Never invent. Never mislead with truths."
+          },
+          "cues": [
+            {
+              "text": "There is also a strategic tension with Lesson Two. The negotiator's dilemma rewards some concealment, and total transparency can be exploited.",
+              "reveal": 0
+            },
+            {
+              "text": "The resolution most experienced negotiators reach: be selective about what you disclose, and scrupulous about the truth of what you say.",
+              "reveal": 1
+            },
+            {
+              "text": "And if you discover the other side lied, say a claimed competing offer was invented, separate the decision from the anger. Raise it factually and observe the response. If you proceed, rely less on statements and more on structure: representations, performance metrics, step-in rights, shorter initial terms. And tell the people who will manage the relationship."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Difficult conversations",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Planning a difficult conversation",
+            "steps": [
+              "Open with process before substance",
+              "Acknowledge their account first",
+              "Distinguish intent from impact",
+              "Say what you can and cannot commit to",
+              "Consider a neutral third party"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Some negotiations are less about a deal than a conflict. A staff member who believes a promotion was promised. A partner who feels misled. A colleague whose project you are about to cancel."
+            },
+            {
+              "text": "Fisher and Ury's advice to separate the people from the problem is a practitioner heuristic, not tested science. But it captures the core move: treat the relationship and the substance as two problems, each needing attention.",
+              "refs": [
+                "R-fisher-1981-getting"
+              ]
+            },
+            {
+              "text": "Graduate negotiation teaching treats this as part of the field. MIT's open course numbered fifteen point six six seven, for example, devotes sessions to dispute prevention, mediation and difficult people.",
+              "refs": [
+                "R-mitocw-2001-negotiation"
+              ]
+            },
+            {
+              "text": "Open with process: what you hope the conversation will accomplish, and how you propose to proceed.",
+              "reveal": 1
+            },
+            {
+              "text": "Acknowledge the other person's account before offering yours. Acknowledgment is not agreement.",
+              "reveal": 2
+            },
+            {
+              "text": "Distinguish intent from impact: I did not intend to mislead you, and I can see that you were misled.",
+              "reveal": 3
+            },
+            {
+              "text": "Say what you can and cannot commit to, and do not soften a no into an implied later you cannot honor.",
+              "reveal": 4
+            },
+            {
+              "text": "And when the relationship itself has become the obstacle, consider a neutral third party.",
+              "reveal": 5
+            },
+            {
+              "text": "Where the circle of agents, coaches, vendors and partners is small, as in player development, this compounds. If a coaching candidate asks whether a role is funded and you don't know, say so: the budget is not approved; here is what I can commit to, and when I will know more."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Negotiation Chamber",
+                "detail": "Answer hard questions without lying, across six rounds",
+                "href": "#/exercise/w07-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "MIT OpenCourseWare (2001), Negotiation and Conflict Management",
+                "href": "#/library/R-mitocw-2001-negotiation"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let's bring it together."
+            },
+            {
+              "text": "Tactics form a spectrum. Declining to disclose and ambitious openings are widely accepted; false statements of fact are not. Paltering sits in between in the minds of those who use it, and beside lying in the minds of those it targets."
+            },
+            {
+              "text": "Some misstatements carry legal weight, so keep estimates, intentions and commitments clearly distinct. Write your disclosure policy before you need it. And in a difficult conversation, treat the relationship and the substance as separate problems."
+            },
+            {
+              "text": "Take the comprehension check below; it is the same as the written lesson's. Then return to the Negotiation Chamber, and look at the MIT course materials on bargaining tactics.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson keeps the full spectrum table and the methodological notes. Thank you for working through this week with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

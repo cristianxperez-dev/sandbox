@@ -1,0 +1,669 @@
+{
+  "id": "w12-l2-lecture",
+  "lesson": "w12-l2",
+  "title": "The Statistic Nobody Measured",
+  "subtitle": "Change models and the evidence behind them",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 2 of Week 12. It covers the same objectives — the evidence behind the 70 per cent failure claim, Kotter’s eight steps and the three-step model as practitioner heuristics, readiness as commitment and efficacy, and resistance as information — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Seventy percent of what?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 12 · Lesson 2 · Lecture",
+            "title": "The statistic nobody measured",
+            "sub": "Change models and the evidence behind them"
+          },
+          "cues": [
+            {
+              "text": "Open almost any change-management presentation, and somewhere near the start you will meet the same number."
+            },
+            {
+              "text": "About seventy percent of organizational change initiatives fail."
+            },
+            {
+              "text": "It is a useful number. It makes change sound hard, it justifies specialists, and it creates urgency. Today we ask a simple question: where did it come from?"
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "“70% of change initiatives fail.”",
+              "Failure out of what? Defined how? Measured when?"
+            ],
+            "sub": "Before you trust a rate, ask for its denominator."
+          },
+          "cues": [
+            {
+              "text": "Think about what someone would have had to measure to know this.",
+              "reveal": 0
+            },
+            {
+              "text": "A denominator: seventy percent of which initiatives? A definition of failure. And a point in time when failure was judged.",
+              "reveal": 1
+            },
+            {
+              "text": "A researcher named Mark Hughes went looking for exactly that. He traced the figure through five frequently cited published sources.",
+              "refs": [
+                "R-hughes-2011-do"
+              ]
+            },
+            {
+              "text": "What do you think he found?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-seventy",
+            "type": "choice",
+            "prompt": "Mark Hughes traced the 70 per cent change-failure figure through five frequently cited sources. What did he conclude?",
+            "options": [
+              {
+                "id": "a",
+                "text": "The figure is well supported by a large multi-company study."
+              },
+              {
+                "id": "b",
+                "text": "The true rate is lower, closer to 50 per cent."
+              },
+              {
+                "id": "c",
+                "text": "There is no valid and reliable empirical evidence for the figure."
+              },
+              {
+                "id": "d",
+                "text": "The figure is accurate, but only for small firms."
+              }
+            ],
+            "answer": "c",
+            "concept": "c-change-failure-rate-myth",
+            "feedback": {
+              "a": "No. Hughes found no such study behind the figure; some sources gave it without describing how it was obtained.",
+              "b": "Hughes did not replace the number with another one. His point is that nobody has measured a general rate at all.",
+              "c": "Right. The narrative is widespread, but Hughes found no valid and reliable empirical evidence behind it.",
+              "d": "Nothing in the sources supports a firm-size version either. Some concerned narrower programs such as business-process reengineering."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Four ways a change can “fail”",
+            "cards": [
+              {
+                "title": "Implementation",
+                "q": "Never carried out as designed",
+                "fail": "Says nothing about the idea itself"
+              },
+              {
+                "title": "Effectiveness",
+                "q": "Carried out, but no intended results",
+                "fail": "The design may be the problem"
+              },
+              {
+                "title": "Sustainability",
+                "q": "Results appeared, then faded",
+                "fail": "Invisible if judged early"
+              },
+              {
+                "title": "Net cost",
+                "q": "Goals met, at too high a price",
+                "fail": "Trust, turnover, side effects"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Hughes concluded that, although the seventy percent story is everywhere, there is no valid and reliable empirical evidence for it.",
+              "refs": [
+                "R-hughes-2011-do"
+              ]
+            },
+            {
+              "text": "Some of the sources concerned narrower programs, such as business-process reengineering. Others presented the figure without describing how it was obtained.",
+              "refs": [
+                "R-hughes-2011-do"
+              ]
+            },
+            {
+              "text": "Part of the problem is that failure is rarely defined. Consider four meanings."
+            },
+            {
+              "text": "An implementation failure: the change was never carried out as designed.",
+              "reveal": 1
+            },
+            {
+              "text": "An effectiveness failure: it was carried out, but did not produce the intended results.",
+              "reveal": 2
+            },
+            {
+              "text": "A sustainability failure: results appeared, then faded.",
+              "reveal": 3
+            },
+            {
+              "text": "Or the change met its goals, at a cost in trust, turnover or side effects that outweighed them.",
+              "reveal": 4
+            },
+            {
+              "text": "And there are measurement problems too. Initiatives are not registered in advance. Their goals shift. Leaders tend to recall success, and consultants hired after trouble tend to see failure."
+            },
+            {
+              "text": "Hughes also suggests that repeating the figure may itself shape how change is managed and justified. A number nobody measured can still steer budgets and tactics.",
+              "refs": [
+                "R-hughes-2011-do"
+              ]
+            },
+            {
+              "text": "Implementation science takes a slower route: prospective studies that define outcomes in advance and measure them at every site. Less quotable, far more useful."
+            },
+            {
+              "text": "None of this means change usually succeeds. It means nobody knows the base rate. The better question is conditional: among initiatives like this one, in settings like ours, what predicted the outcome?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Two famous models",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two staged models",
+            "left": {
+              "title": "Unfreeze – change – refreeze",
+              "points": [
+                "Credited to Kurt Lewin",
+                "Familiar form took shape after his death in 1947",
+                "His actual work was more iterative"
+              ]
+            },
+            "right": {
+              "title": "Kotter’s eight steps",
+              "points": [
+                "Published 1995 as eight errors",
+                "Drawn from consulting observation",
+                "Experience-based synthesis, not tested theory"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "If the statistic is folklore, what about the models built on top of it?"
+            },
+            {
+              "text": "The most famous is a three-step sequence: unfreeze, change, refreeze. It is usually credited to the social psychologist Kurt Lewin.",
+              "reveal": 1
+            },
+            {
+              "text": "Stephen Cummings, Todd Bridgman and Kenneth Brown compared Lewin’s own writings with later presentations. They argue he never developed such a model.",
+              "refs": [
+                "R-cummings-2016-unfreezing"
+              ]
+            },
+            {
+              "text": "Its familiar form took shape after his death in nineteen forty-seven. His actual work on group dynamics and action research was richer and more iterative.",
+              "refs": [
+                "R-cummings-2016-unfreezing"
+              ]
+            },
+            {
+              "text": "The second is John Kotter’s eight steps, published in nineteen ninety-five as eight errors he had observed in transformation efforts.",
+              "refs": [
+                "R-kotter-1995-leading"
+              ],
+              "reveal": 2
+            },
+            {
+              "text": "It is drawn from his consulting experience. A synthesis, not a tested theory.",
+              "refs": [
+                "R-kotter-1995-leading"
+              ]
+            },
+            {
+              "text": "Both remain popular for good reasons. They are memorable, and they point at real problems."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Kotter’s steps as a checklist",
+            "left": {
+              "title": "Useful reminders",
+              "points": [
+                "Explain why the status quo is costly",
+                "Secure credible allies",
+                "Show early evidence of progress",
+                "Keep going after first wins"
+              ]
+            },
+            "right": {
+              "title": "Watch out for",
+              "points": [
+                "Manufactured crises",
+                "Allies with no frontline credibility",
+                "Easy wins that dodge the root cause",
+                "Declaring victory too early"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "So how should you use Kotter’s list? As a practitioner checklist for a planning conversation."
+            },
+            {
+              "text": "Read it as reminders. Explain why the status quo is costly. Secure people with authority and credibility. Show early progress. Keep going after the first wins.",
+              "reveal": 1
+            },
+            {
+              "text": "And read each step with its shadow. Urgency can become a manufactured crisis that erodes trust when exposed. A guiding coalition can be senior allies with no credibility on the frontline.",
+              "reveal": 2
+            },
+            {
+              "text": "Short-term wins can be easy wins that avoid the root cause. And communicating a vision can slide into confusing message volume with understanding."
+            },
+            {
+              "text": "The criticism is about status, not usefulness. These models are often presented as established findings, when they are heuristics.",
+              "refs": [
+                "R-kotter-1995-leading",
+                "R-cummings-2016-unfreezing"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Readiness you can diagnose",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Weiner, 2009",
+            "term": "Readiness for change",
+            "definition": "A shared state with two parts: commitment — we want to — and efficacy — we can.",
+            "example": "Commitment is strongest when people value the change, not merely comply."
+          },
+          "cues": [
+            {
+              "text": "Here is an idea from implementation science that is more precise, and that you can actually measure."
+            },
+            {
+              "text": "Bryan Weiner defines organizational readiness for change as a shared psychological state with two parts.",
+              "refs": [
+                "R-weiner-2009-theory"
+              ],
+              "reveal": 1
+            },
+            {
+              "text": "Change commitment is the group’s shared resolve to implement the change. Change efficacy is its shared belief that it can carry it out.",
+              "refs": [
+                "R-weiner-2009-theory"
+              ]
+            },
+            {
+              "text": "Commitment is strongest when people value the change. It is weaker when they comply because they feel obliged, or feel they have no choice.",
+              "refs": [
+                "R-weiner-2009-theory"
+              ],
+              "reveal": 2
+            },
+            {
+              "text": "Efficacy depends on how people appraise the task, the resources available and the circumstances. And Weiner argues there is no single best way to raise readiness.",
+              "refs": [
+                "R-weiner-2009-theory"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "Commitment by efficacy",
+            "x": [
+              "Low efficacy: “we can’t”",
+              "High efficacy: “we can”"
+            ],
+            "y": [
+              "Low commitment",
+              "High commitment"
+            ],
+            "cells": [
+              [
+                "Willing but unsure: training, tools, time, practice",
+                "Ready: move quickly, keep feedback open"
+              ],
+              [
+                "Not ready: clarify the problem, test the design",
+                "Capable skeptics: evidence, involvement, address losses"
+              ]
+            ]
+          },
+          "cues": [
+            {
+              "text": "Put the two parts on a grid, because the remedies differ."
+            },
+            {
+              "text": "A group that wants the change but doubts it can do it is willing but unsure. It needs training, tools, time and early practice.",
+              "reveal": 1
+            },
+            {
+              "text": "High on both? Ready. Move quickly, keep feedback loops open, and guard against overconfidence.",
+              "reveal": 2
+            },
+            {
+              "text": "Low on both? Not ready. Clarify the problem and test the design with the people affected before scaling anything.",
+              "reveal": 3
+            },
+            {
+              "text": "And a group that could do it but does not want to? Capable skeptics. Show evidence, involve them in design, and address what they would lose.",
+              "reveal": 4
+            },
+            {
+              "text": "Many rollouts fail by applying the commitment remedy, more inspiring communication, to an efficacy problem."
+            },
+            {
+              "text": "Let’s try it on a case. A hypothetical law firm is introducing software that drafts first versions of routine agreements."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-readiness",
+            "type": "choice",
+            "prompt": "In the hypothetical law firm, associates can use the drafting software easily but believe it undermines their development. Which response fits their readiness pattern?",
+            "options": [
+              {
+                "id": "a",
+                "text": "More training on the software."
+              },
+              {
+                "id": "b",
+                "text": "Redesign their training path so automation does not remove learning, and involve them in the design."
+              },
+              {
+                "id": "c",
+                "text": "An all-hands message on why the firm must move fast."
+              },
+              {
+                "id": "d",
+                "text": "Nothing: high efficacy means they are ready."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-readiness-for-change",
+            "feedback": {
+              "a": "That is the efficacy remedy, and associates already score high on efficacy. Training does little for a group that doesn’t see why the change is worth making.",
+              "b": "Right. High efficacy, low commitment: capable skeptics. Address what they would lose — their development — and give them a role in the design.",
+              "c": "Urgency messaging does not answer their actual concern, which is about their own development.",
+              "d": "Readiness needs both parts. Efficacy without commitment is the capable-skeptic quadrant."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Same rollout, two groups,",
+              "two different remedies."
+            ],
+            "sub": "Associates: commitment problem. Paralegals: efficacy problem."
+          },
+          "cues": [
+            {
+              "text": "The associates are capable skeptics. They need a redesigned training path.",
+              "reveal": 0
+            },
+            {
+              "text": "Now suppose the paralegals show the opposite pattern. They want the software, but lack training time. Willing but unsure. They need protected learning time and early practice.",
+              "reveal": 1
+            },
+            {
+              "text": "One rollout, two groups, two remedies. A single campaign would have fitted neither."
+            },
+            {
+              "text": "The same logic applies in a player development department adopting a new assessment protocol. Veteran coaches may be capable skeptics; newer coaches may be willing but unsure."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Resistance as information",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Classify the objection first",
+            "cards": [
+              {
+                "title": "Content",
+                "q": "The design is wrong",
+                "fail": "The only type that should change the design"
+              },
+              {
+                "title": "Process",
+                "q": "We weren’t consulted or informed",
+                "fail": "Fix involvement, not the design"
+              },
+              {
+                "title": "Consequences",
+                "q": "Status, workload, job security",
+                "fail": "Answer honestly; don’t overpromise"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Which brings us to resistance. The standard models mostly treat it as an obstacle. Let me suggest treating it as data."
+            },
+            {
+              "text": "People facing an ambiguous change build an account of what it means for them. Will they be judged by a new metric? Will their expertise still count? Is this a prelude to cuts?"
+            },
+            {
+              "text": "Sometimes resistance is self-interest or habit. Often it contains information the designers lacked: a workflow the system cannot handle, a hidden cost, a promise broken last time."
+            },
+            {
+              "text": "So classify each objection before you respond. Is it about content: the design is wrong?",
+              "reveal": 1
+            },
+            {
+              "text": "About process: people were not consulted or informed?",
+              "reveal": 2
+            },
+            {
+              "text": "Or about consequences for the person: status, workload, job security?",
+              "reveal": 3
+            },
+            {
+              "text": "Each needs a different answer. And only content objections should change the design."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "“The templates can’t handle cross-border clauses.”"
+            ],
+            "sub": "Heard during the hypothetical law-firm rollout."
+          },
+          "cues": [
+            {
+              "text": "Back to the law firm. Here is an objection from someone who drafts these agreements every day."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-objection",
+            "type": "choice",
+            "prompt": "“The templates can’t handle cross-border clauses.” What type of objection is this, and what is the right response?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Content — test it, and if true, change the scope of the rollout."
+              },
+              {
+                "id": "b",
+                "text": "Process — involve drafters in configuration and publish decisions."
+              },
+              {
+                "id": "c",
+                "text": "Consequence — reassure the person about their role."
+              },
+              {
+                "id": "d",
+                "text": "Habit — hold firm and repeat the case for change."
+              }
+            ],
+            "answer": "a",
+            "concept": "c-resistance-as-information",
+            "feedback": {
+              "a": "Right. It is a claim about the design itself. Test it; if it is true, the objection has just saved the rollout from a real flaw.",
+              "b": "Involvement matters, but this objection makes a specific, testable claim about what the templates can do. That is content.",
+              "c": "Nothing here is about status or security. Reassurance would ignore what could be a genuine flaw.",
+              "d": "Treating a testable design claim as habit throws away exactly the information the designers lacked."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "What the critics get wrong",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Fair criticisms, and a limit",
+            "cards": [
+              {
+                "title": "Linearity",
+                "q": "Stages imply a sequence",
+                "fail": "Real change loops back"
+              },
+              {
+                "title": "Top-down",
+                "q": "Written for the change leader",
+                "fail": "Recipients appear only as resistance"
+              },
+              {
+                "title": "Survivorship",
+                "q": "Lessons from memorable cases",
+                "fail": "Quiet changes are ignored"
+              },
+              {
+                "title": "Readiness ≠ destiny",
+                "q": "Willing and confident",
+                "fail": "Not the same as a wise change"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now, a fair challenge to this lecture. Is the staged-model tradition simply wrong?"
+            },
+            {
+              "text": "Not quite. Kotter’s list captures problems many leaders recognize, like weak coalitions and declaring victory too soon. And some scholars defend the practical value of a staged view, whoever first drew it.",
+              "refs": [
+                "R-kotter-1995-leading",
+                "R-cummings-2016-unfreezing"
+              ]
+            },
+            {
+              "text": "The criticisms worth keeping are more specific. Staged models imply a straight line, while real change loops back as designs are tested.",
+              "reveal": 1
+            },
+            {
+              "text": "They are written from the leader’s perspective, so the people receiving the change appear mainly as resistance.",
+              "reveal": 2
+            },
+            {
+              "text": "They learn from memorable successes and failures, and ignore the many quiet changes that simply worked or faded.",
+              "reveal": 3
+            },
+            {
+              "text": "And the limit applies to my own preferred tool too. High readiness can produce effort without results if the change itself is a poor idea. Readiness measures willingness and confidence, not wisdom.",
+              "reveal": 4
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Urgency built on local facts",
+              "survives scrutiny."
+            ],
+            "sub": "Urgency built on folklore does not."
+          },
+          "cues": [
+            {
+              "text": "One last scene. Your chief executive wants to open a rollout by announcing that seventy percent of transformations fail, so we must move fast."
+            },
+            {
+              "text": "Correcting the chief executive in public is costly. Repeating the number risks your credibility with skeptical professionals who may check it."
+            },
+            {
+              "text": "A better path: offer a stronger opening built on your own evidence, the specific cost of the status quo here, and explain privately why the borrowed statistic is a liability.",
+              "reveal": 1
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Change Simulator",
+                "detail": "This week’s exercise: diagnose readiness and resistance",
+                "href": "#/exercise/w12-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Hughes (2011), Do 70 Per Cent of All Change Initiatives Really Fail?",
+                "href": "#/library/R-hughes-2011-do"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "The seventy percent figure has no valid and reliable evidential base. Ask for definitions and denominators.",
+              "refs": [
+                "R-hughes-2011-do"
+              ]
+            },
+            {
+              "text": "Kotter’s eight steps and the three-step model credited to Lewin are practitioner heuristics. Use them as checklists, not as science."
+            },
+            {
+              "text": "Readiness has two parts, commitment and efficacy, with different remedies. And resistance is information: classify it as content, process or consequence before you respond."
+            },
+            {
+              "text": "Next, take the comprehension check below, the same check as the written lesson. Then open the Change Simulator, and read Hughes’s short, sharp audit of the seventy percent claim.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson keeps the full Kotter table and the methodological notes. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

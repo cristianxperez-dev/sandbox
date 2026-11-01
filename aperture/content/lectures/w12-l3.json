@@ -1,0 +1,646 @@
+{
+  "id": "w12-l3-lecture",
+  "lesson": "w12-l3",
+  "title": "Why Work Clogs",
+  "subtitle": "Operations: flow, bottlenecks, variability and standard work",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 3 of Week 12. It covers the same objectives — Little’s law, bottlenecks and the cost of high utilization, standard work as a testable hypothesis, and an operating rhythm that pairs leading and lagging indicators — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Busier and slower",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 12 · Lesson 3 · Lecture",
+            "title": "Why work clogs",
+            "sub": "Operations: flow, bottlenecks, variability and standard work"
+          },
+          "cues": [
+            {
+              "text": "Here is a scene that plays out in almost every organization that tries to move faster."
+            },
+            {
+              "text": "Leadership approves more work, asks everyone to parallelize, and two months later the team is busier than ever, and delivering more slowly."
+            },
+            {
+              "text": "That is not bad luck, and it is not laziness. It follows from an identity. Let’s find it together."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "A software team",
+            "items": [
+              {
+                "value": "8",
+                "label": "engineers"
+              },
+              {
+                "value": "40",
+                "label": "work items in progress"
+              },
+              {
+                "value": "10",
+                "label": "items completed per week"
+              }
+            ],
+            "note": "Synthetic numbers, from the lesson’s hypothetical team."
+          },
+          "cues": [
+            {
+              "text": "A hypothetical software team. The numbers are invented."
+            },
+            {
+              "text": "Eight engineers.",
+              "reveal": 1
+            },
+            {
+              "text": "Forty work items in progress at any moment.",
+              "reveal": 2
+            },
+            {
+              "text": "And the team finishes about ten items a week.",
+              "reveal": 3
+            },
+            {
+              "text": "On average, how long does an item now spend in progress, from start to finish?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-leadtime",
+            "type": "estimate",
+            "prompt": "Forty items in progress, about ten completed per week. On average, how many weeks does an item spend in progress?",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "weeks",
+            "initial": 1,
+            "answer": 4,
+            "tolerance": 0.5,
+            "concept": "c-littles-law",
+            "feedback": {
+              "correct": "Right — about four weeks: forty items divided by ten per week.",
+              "incorrect": "It is about four weeks: forty items in progress divided by ten completed per week. The next scene shows why that is an identity, not an opinion."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Little’s law",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Little, 1961",
+            "term": "Work-in-process = throughput × lead time",
+            "definition": "For a stable system over the long run, average items in the system equal the completion rate times the average time each item spends there.",
+            "example": "Know two, and you know the third. No assumptions about arrival or service patterns."
+          },
+          "cues": [
+            {
+              "text": "The answer is about four weeks. Forty items divided by ten per week."
+            },
+            {
+              "text": "First, three words. Throughput is the rate at which work is completed. Work-in-process is the number of items started but not finished. Lead time is how long an item takes from start to finish."
+            },
+            {
+              "text": "Keep those words strict. Most operational arguments go wrong because people use them loosely, treating busy as if it meant productive."
+            },
+            {
+              "text": "John Little proved in nineteen sixty-one that, for a stable system over the long run, average work-in-process equals throughput multiplied by average lead time.",
+              "refs": [
+                "R-little-2011-littles"
+              ],
+              "reveal": 1
+            },
+            {
+              "text": "It needs no assumptions about how arrivals or task times are distributed. That is why it applies so widely: contracts, patients, claims, code.",
+              "refs": [
+                "R-little-2011-littles"
+              ],
+              "reveal": 2
+            },
+            {
+              "text": "In his fiftieth-anniversary review, Little stresses its practical use in operations and computing, and proves versions for finite observation periods, which is how managers actually see their systems.",
+              "refs": [
+                "R-little-2011-littles"
+              ]
+            },
+            {
+              "text": "So when the team started more work without finishing faster, the only thing that could give was lead time. More in progress, same throughput, longer wait."
+            },
+            {
+              "text": "Many change programs fail exactly this way. Six initiatives launched at once, all competing for the same scarce specialists, and none of them finishes."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "A benefits office",
+            "lines": [
+              {
+                "label": "Claims open",
+                "value": "2,400"
+              },
+              {
+                "label": "Decided per week",
+                "value": "400"
+              },
+              {
+                "label": "Average lead time: 2,400 ÷ 400",
+                "value": "6 weeks"
+              },
+              {
+                "label": "Target lead time",
+                "value": "3 weeks"
+              }
+            ],
+            "result": {
+              "label": "Open claims needed: 3 × 400",
+              "value": "1,200"
+            },
+            "note": "Hypothetical office from the lesson; synthetic numbers."
+          },
+          "cues": [
+            {
+              "text": "Now use it as a management tool. A hypothetical public benefits office, with invented numbers."
+            },
+            {
+              "text": "Two thousand four hundred claims are open.",
+              "reveal": 1
+            },
+            {
+              "text": "It decides about four hundred a week.",
+              "reveal": 2
+            },
+            {
+              "text": "So the average claim waits about six weeks.",
+              "reveal": 3
+            },
+            {
+              "text": "A legislator demands three weeks.",
+              "reveal": 4
+            },
+            {
+              "text": "At the same throughput, halving lead time requires halving work-in-process, to about twelve hundred open claims.",
+              "reveal": 5
+            },
+            {
+              "text": "That is a concrete target, measurable every week, and tied directly to what the legislator cares about."
+            },
+            {
+              "text": "One caution. Little’s law describes averages, not causes, and it holds when the system is reasonably stable. If the backlog grows every week, report that trend beside the ratio.",
+              "refs": [
+                "R-little-2011-littles"
+              ]
+            },
+            {
+              "text": "The same arithmetic applies in player development. If eighteen players await a full review and staff complete six a week, the average wait is three weeks. Invented numbers again, but long enough for a player’s first month at a new level to pass without a plan."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Bottlenecks and slack",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Working the constraint",
+            "steps": [
+              "Identify the constraint",
+              "Get the most out of it",
+              "Subordinate other steps to its pace",
+              "Only then add capacity",
+              "Look again: it will move"
+            ]
+          },
+          "cues": [
+            {
+              "text": "How do you raise throughput? Not by speeding up everything."
+            },
+            {
+              "text": "In a chain of dependent steps, output can be no faster than the slowest step relative to its demand. Capacity added anywhere else becomes idle time or inventory."
+            },
+            {
+              "text": "A practitioner tradition, often called the theory of constraints, turns that into a sequence. Identify the constraint.",
+              "reveal": 1
+            },
+            {
+              "text": "Get the most out of it. Never let it sit idle, and never feed it defective inputs.",
+              "reveal": 2
+            },
+            {
+              "text": "Subordinate the other steps to its pace.",
+              "reveal": 3
+            },
+            {
+              "text": "Only then add capacity.",
+              "reveal": 4
+            },
+            {
+              "text": "And look again, because the bottleneck will move. In change programs it is often a person: the one data engineer, the one bilingual trainer, the executive whose sign-off everything needs.",
+              "reveal": 5
+            },
+            {
+              "text": "Back to the benefits office. Suppose the bottleneck is medical-evidence review: four specialists, almost fully busy, while intake and eligibility have spare capacity."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-bottleneck",
+            "type": "choice",
+            "prompt": "The benefits office’s bottleneck is medical-evidence review. Leadership proposes overtime across the whole office. What is the better first move?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Overtime for everyone — more hours means more claims decided."
+              },
+              {
+                "id": "b",
+                "text": "Stop sending incomplete files to the specialists, shift routine checks to trained generalists, and limit claims released into review."
+              },
+              {
+                "id": "c",
+                "text": "Speed up intake so claims reach review sooner."
+              },
+              {
+                "id": "d",
+                "text": "Hire more eligibility staff."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-bottleneck-constraint",
+            "feedback": {
+              "a": "Overtime upstream adds work in front of the bottleneck and lengthens its queue. Output is still capped by review.",
+              "b": "Right. Quality at the constraint, offload the constraint, and limit work released into it. That raises output where it is actually capped.",
+              "c": "Faster intake feeds the queue at review. Lead times get longer, not shorter.",
+              "d": "Eligibility already has spare capacity. Adding more there increases idle time, not output."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "bars",
+            "title": "Wait grows as utilization rises",
+            "unit": "× task time",
+            "items": [
+              {
+                "label": "50% busy",
+                "value": 1
+              },
+              {
+                "label": "70% busy",
+                "value": 2.3
+              },
+              {
+                "label": "80% busy",
+                "value": 4
+              },
+              {
+                "label": "90% busy",
+                "value": 9
+              },
+              {
+                "label": "95% busy",
+                "value": 19
+              }
+            ],
+            "note": "Synthetic illustration from the textbook single-server queue: wait ÷ task time = u ÷ (1 − u). Real systems differ in magnitude."
+          },
+          "cues": [
+            {
+              "text": "Notice that word, almost fully busy. Leaders often aim to keep expensive people fully utilized. With variability, that is costly."
+            },
+            {
+              "text": "Queueing theory shows that waiting time rises non-linearly as utilization approaches one hundred percent. These numbers come from the simplest textbook queue; real systems differ in size but share the shape."
+            },
+            {
+              "text": "At half busy, the average wait is about one task time.",
+              "reveal": 1
+            },
+            {
+              "text": "At seventy percent, about two point three.",
+              "reveal": 2
+            },
+            {
+              "text": "At eighty percent, four.",
+              "reveal": 3
+            },
+            {
+              "text": "At ninety percent, nine.",
+              "reveal": 4
+            },
+            {
+              "text": "And at ninety-five percent, nineteen. The last few points of utilization cost more than all the rest.",
+              "reveal": 5
+            },
+            {
+              "text": "A resource with no slack cannot absorb surprises, and implementation is mostly surprises. Spare capacity at the bottleneck is not waste. It keeps lead times stable."
+            },
+            {
+              "text": "So when the bottleneck is one person, protecting that person’s time from meetings and ad hoc requests, and limiting how much work is opened at once, may do more than hiring elsewhere."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Standard work as an experiment",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Four rules, after Spear and Bowen",
+            "cards": [
+              {
+                "title": "Specified work",
+                "q": "Content, sequence, timing, outcome",
+                "fail": "Without it, deviations are invisible"
+              },
+              {
+                "title": "Direct connections",
+                "q": "Unambiguous yes-or-no signals",
+                "fail": "Problems can’t be traced"
+              },
+              {
+                "title": "Simple pathways",
+                "q": "Every product and service flows directly",
+                "fail": "Tangled routes hide causes"
+              },
+              {
+                "title": "Scientific improvement",
+                "q": "At the lowest level, with a teacher",
+                "fail": "Change by decree, not test"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now a different question. Once work is flowing, how does it get better?"
+            },
+            {
+              "text": "Steven Spear and Kent Bowen studied Toyota and its suppliers over several years. They concluded that performance rested not on the visible tools but on tacit rules.",
+              "refs": [
+                "R-spear-1999-decoding"
+              ]
+            },
+            {
+              "text": "One: all work is highly specified as to content, sequence, timing and outcome.",
+              "refs": [
+                "R-spear-1999-decoding"
+              ],
+              "reveal": 1
+            },
+            {
+              "text": "Two: every connection between an internal customer and supplier is direct, with an unambiguous yes-or-no signal.",
+              "reveal": 2
+            },
+            {
+              "text": "Three: the pathway for every product and service is simple and direct.",
+              "reveal": 3
+            },
+            {
+              "text": "Four: every improvement is made by the scientific method, under a teacher’s guidance, at the lowest possible level of the organization.",
+              "refs": [
+                "R-spear-1999-decoding"
+              ],
+              "reveal": 4
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "The standard as a hypothesis",
+            "steps": [
+              {
+                "label": "Specify",
+                "text": "How, and what result"
+              },
+              {
+                "label": "Predict",
+                "text": "Done this way, gives this"
+              },
+              {
+                "label": "Observe",
+                "text": "Deviation is visible"
+              },
+              {
+                "label": "Investigate",
+                "text": "Workers and coach find the cause"
+              },
+              {
+                "label": "Revise",
+                "text": "The next hypothesis"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Here is the paradox at the heart of their account. Rigid specification is what makes flexibility possible.",
+              "refs": [
+                "R-spear-1999-decoding"
+              ]
+            },
+            {
+              "text": "You write down how the work should be done and what result it should produce.",
+              "reveal": 1
+            },
+            {
+              "text": "That specification is a prediction: done this way, it will give this result.",
+              "reveal": 2
+            },
+            {
+              "text": "Because the expectation is explicit, any deviation shows up at once.",
+              "reveal": 3
+            },
+            {
+              "text": "The people doing the work, with a coach, investigate where it happened.",
+              "reveal": 4
+            },
+            {
+              "text": "And they revise the standard. The new version becomes the next hypothesis.",
+              "reveal": 5
+            },
+            {
+              "text": "Spear and Bowen also argue that organizations copying the visible tools without these rules rarely get the results. Many lean programs became boards and slogans.",
+              "refs": [
+                "R-spear-1999-decoding"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "An operating rhythm",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two speeds of indicator",
+            "left": {
+              "title": "Leading",
+              "points": [
+                "Behaviors or conditions",
+                "Weekly, actionable",
+                "Discharge plan by day two",
+                "Age of oldest open review"
+              ]
+            },
+            "right": {
+              "title": "Lagging",
+              "points": [
+                "Outcomes you care about",
+                "Late, mixed causes",
+                "Thirty-day readmissions",
+                "Skill change over a season"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "How do you keep all this running? Through an operating rhythm: daily huddles, weekly operating reviews, monthly or quarterly strategy reviews."
+            },
+            {
+              "text": "Each level needs indicators at the right speed."
+            },
+            {
+              "text": "Leading indicators measure behaviors or conditions believed to drive results, like the share of patients with a discharge plan by day two. You can act on them this week.",
+              "reveal": 1
+            },
+            {
+              "text": "Lagging indicators measure the outcomes you ultimately care about, like thirty-day readmissions. They arrive late and mix many causes.",
+              "reveal": 2
+            },
+            {
+              "text": "In player development, a weekly huddle might track the age of the oldest open player review, beside skill change over a season."
+            },
+            {
+              "text": "But here is the catch. A leading indicator is only as good as its causal link to the outcome. That link is an assumption, and you should test it."
+            },
+            {
+              "text": "And once a leading indicator becomes a target, people may move the number without the behavior. That is the Goodhart problem you met in Week Eight."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-indicators",
+            "type": "reflect",
+            "prompt": "Name one leading and one lagging indicator for a change you care about. What causal assumption links them, and how could you check it — or how could the leading indicator be gamed?",
+            "concept": "c-leading-lagging-indicators"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Limits, and the trap again",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Where these tools mislead",
+            "cards": [
+              {
+                "title": "Hidden bottleneck",
+                "q": "Attention or a hand-off rule",
+                "fail": "May shift weekly in knowledge work"
+              },
+              {
+                "title": "Over-standardizing",
+                "q": "Specify expert work tightly",
+                "fail": "Removes judgment experts need"
+              },
+              {
+                "title": "No slack",
+                "q": "Run near full utilization",
+                "fail": "Improvement is deferred: the trap"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let me argue against my own case. These tools came from factories and queues. Do they really transfer?"
+            },
+            {
+              "text": "In knowledge work, the bottleneck may be a decision-maker’s attention or a hand-off rule, not a machine, and it may move every week.",
+              "reveal": 1
+            },
+            {
+              "text": "Standardization can freeze bad practice or suppress judgment. In complex surgery, litigation or coaching, over-specification can remove the discretion experts need. Spear and Bowen’s answer is that the people doing the work write the standards, and revise them constantly.",
+              "refs": [
+                "R-spear-1999-decoding"
+              ],
+              "reveal": 2
+            },
+            {
+              "text": "And remember the capability trap from Lesson One. It has an operations form. A unit near full utilization cannot absorb improvement work, so improvement is deferred, defects rise and utilization climbs further.",
+              "refs": [
+                "R-repenning-2001-nobody"
+              ],
+              "reveal": 3
+            },
+            {
+              "text": "Repenning and Sterman’s cases suggest the way out is deliberate slack for improvement, and tolerating a temporary drop in measured output.",
+              "refs": [
+                "R-repenning-2001-nobody"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Change Simulator",
+                "detail": "This week’s exercise: run a change and watch the queues",
+                "href": "#/exercise/w12-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Sull, Homkes & Sull (2015), Why Strategy Execution Unravels",
+                "href": "#/library/R-sull-2015-strategy"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Work-in-process equals throughput times lead time, so starting more without finishing faster only lengthens queues."
+            },
+            {
+              "text": "The bottleneck sets the pace, and variability makes fully utilized resources slow. Standard work turns every deviation into an experiment. And an operating rhythm pairs indicators you can act on weekly with outcomes that confirm results."
+            },
+            {
+              "text": "Next, take the comprehension check below, the same check as the written lesson. Then try the Change Simulator, and continue with this week’s required reading.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson keeps the worked tables and the note on when Little’s law misleads. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

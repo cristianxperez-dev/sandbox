@@ -1,0 +1,681 @@
+{
+  "id": "w05-l1-lecture",
+  "lesson": "w05-l1",
+  "title": "Is Leadership a Cause or a Story?",
+  "subtitle": "What leadership research can and cannot tell you",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 1 of Week 5. It covers the same objectives — the families of leadership theory, the romance of leadership, and how to read meta-analytic leadership correlations against the measurement critique — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Two chief executives",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 5 · Lesson 1 · Lecture",
+            "title": "Is leadership a cause or a story?",
+            "sub": "What leadership research can and cannot tell you"
+          },
+          "cues": [
+            {
+              "text": "Let me start with two people you have never met, because they are invented, and a question about them."
+            },
+            {
+              "text": "By the end of this lecture I want you to be a little more suspicious of every leadership reputation you hold, including your own."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Same decisions, different stories",
+            "left": {
+              "title": "Chief executive A",
+              "points": [
+                "Similar regional system",
+                "Similar decisions",
+                "A competitor closes",
+                "Called a visionary"
+              ]
+            },
+            "right": {
+              "title": "Chief executive B",
+              "points": [
+                "Similar regional system",
+                "Similar decisions",
+                "Reimbursement is cut",
+                "Said to have lost the room"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Two hospital chief executives inherit similar regional systems. Both are respected by their staffs, and both make broadly similar decisions."
+            },
+            {
+              "text": "In the first system, a competitor closes and patient volumes jump. Two years later the trade press calls this executive a visionary.",
+              "reveal": 1
+            },
+            {
+              "text": "In the second, a change in reimbursement cuts revenue. This executive is now described as a leader who lost the room.",
+              "reveal": 2
+            },
+            {
+              "text": "Here is the problem. Nothing in their behavior changed. The outcomes changed, and the story about leadership followed the outcomes."
+            },
+            {
+              "text": "You have seen this with founders who are geniuses in a boom and obstacles in a downturn, and with managers whose tactical reputation tracks the team record."
+            },
+            {
+              "text": "So the uncomfortable question for today is this: how much of what we call leadership causes results, and how much is a story we tell about results?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Six families of theory",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Who leaders are, what they do",
+            "cards": [
+              {
+                "title": "Trait",
+                "q": "Stable characteristics help people lead",
+                "fail": "Modest correlations; emerging is not being effective"
+              },
+              {
+                "title": "Behavioral",
+                "q": "Consideration and structuring of work",
+                "fail": "Same people rate behavior and outcome"
+              },
+              {
+                "title": "Contingency",
+                "q": "The best behavior depends on the situation",
+                "fail": "Interactions hard to replicate"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Leadership research has moved through several families of theory. None has been simply refuted, and none has delivered the portable recipe that the management-book market implies."
+            },
+            {
+              "text": "The trait family says some stable characteristics make people more likely to emerge as leaders or to be effective. The evidence is correlations with personality and ability measures.",
+              "reveal": 1
+            },
+            {
+              "text": "Its weakness: the correlations are modest, and being seen as a leader is not the same thing as being an effective one."
+            },
+            {
+              "text": "The behavioral family says what leaders do matters more than who they are, mainly consideration for people and structuring of work. The catch is that the same followers usually rate both the behavior and the outcome.",
+              "reveal": 2
+            },
+            {
+              "text": "Contingency theories say the best behavior depends on the situation, such as task structure, follower readiness and authority. Those interactions are hard to replicate, and many popular models have thin support.",
+              "reveal": 3
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Vision, relationships, attribution",
+            "cards": [
+              {
+                "title": "Charismatic–transformational",
+                "q": "Vision and modeling lift performance",
+                "fail": "Defined partly by its effects"
+              },
+              {
+                "title": "Leader–member exchange",
+                "q": "Relationship quality differs by follower",
+                "fail": "Good exchange may follow good performance"
+              },
+              {
+                "title": "Attribution / romance",
+                "q": "Leadership is partly an observer inference",
+                "fail": "Shows inflation, not zero effect"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "The charismatic and transformational family says leaders who articulate a vision, model values and stimulate followers produce performance beyond expectations.",
+              "reveal": 1
+            },
+            {
+              "text": "It has a large questionnaire literature and sizable meta-analytic correlations. But the construct is defined partly by its effects, and its measurement structure is disputed. Hold that thought."
+            },
+            {
+              "text": "Leader–member exchange says leaders form relationships of different quality with different followers, and quality matters. The evidence is mostly correlational, so good relationships may follow good performance rather than cause it.",
+              "reveal": 2
+            },
+            {
+              "text": "And the attribution family says leadership is partly an inference observers make to explain outcomes. Its limit is important: it shows inflated credit and blame, not that leaders have no effect.",
+              "reveal": 3
+            },
+            {
+              "text": "Notice the pattern in the weaknesses. Again and again, the outcome leaks into the measure of the leader. That is why the attribution family deserves a closer look."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "The romance of leadership",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Meindl and colleagues, 1985",
+            "term": "Romance of leadership",
+            "definition": "A preference for explaining organizational outcomes by pointing to leaders — strongest when outcomes are extreme.",
+            "example": "A record year or a terrible one produces more leadership talk, not more leadership."
+          },
+          "cues": [
+            {
+              "text": "James Meindl and his colleagues described what they called the romance of leadership.",
+              "refs": [
+                "R-meindl-1985-romance"
+              ]
+            },
+            {
+              "text": "People prefer to explain organizational outcomes by pointing to leaders, and over-attribute performance to them relative to other causes.",
+              "reveal": 1,
+              "refs": [
+                "R-meindl-1985-romance"
+              ]
+            },
+            {
+              "text": "And the preference strengthens when outcomes are extreme, unusually good or unusually bad.",
+              "refs": [
+                "R-meindl-1985-romance"
+              ]
+            },
+            {
+              "text": "Why? Not because leadership changed. Observers need an explanation, and the leader is the most visible candidate.",
+              "reveal": 2
+            },
+            {
+              "text": "That also tells you when to predict distortion: after an extreme result, in a noisy setting, when the leader is highly visible. Let me give you a case to test that."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-romance",
+            "type": "choice",
+            "concept": "c-romance-of-leadership",
+            "prompt": "A software company replaces its engineering vice president after two missed launches. The new leader arrives just as a cloud vendor fixes the outage that caused both slips, and the next launch ships on time. Survey ratings of her vision jump. What should the board ask first?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Which parts of her style can be built into the leadership curriculum?"
+              },
+              {
+                "id": "b",
+                "text": "What changed in the environment, and only then what she specifically did differently?"
+              },
+              {
+                "id": "c",
+                "text": "Whether her survey ratings are high enough to justify promotion."
+              },
+              {
+                "id": "d",
+                "text": "Nothing — on-time delivery after a change of leader proves the leader mattered."
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "That skips the diagnosis. The outage fix arrived with her, so the ratings may be following the outcome rather than her behavior.",
+              "b": "Right. The romance-of-leadership analysis asks first what changed around her, then what she did differently, and only then whether those behaviors are teachable.",
+              "c": "The ratings rose after a success she may not have caused. That is exactly the pattern the romance of leadership predicts, so they are weak evidence on their own.",
+              "d": "The timing fits a leader effect, but it fits the vendor fix just as well. A striking turnaround is when attribution to the leader is most inflated."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "The strongest positive evidence",
+      "scenes": [
+        {
+          "visual": {
+            "type": "bars",
+            "title": "Three leadership dimensions",
+            "unit": "r",
+            "items": [
+              {
+                "label": "Transformational",
+                "value": 0.44
+              },
+              {
+                "label": "Contingent reward",
+                "value": 0.39
+              },
+              {
+                "label": "Laissez-faire",
+                "value": -0.37
+              }
+            ],
+            "note": "Judge & Piccolo (2004), overall validities. Correlations, not causal effects.",
+            "refs": [
+              "R-judge-2004-transformational"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The vice president case is invented, but the question it raises is real. So what is the best positive evidence for a leadership style?"
+            },
+            {
+              "text": "Timothy Judge and Ronald Piccolo pooled six hundred twenty-six correlations from eighty-seven sources on the so-called full-range model of leadership.",
+              "refs": [
+                "R-judge-2004-transformational"
+              ]
+            },
+            {
+              "text": "Transformational leadership showed an overall validity of point four four with criteria such as follower satisfaction, motivation and rated leader effectiveness.",
+              "reveal": 1,
+              "refs": [
+                "R-judge-2004-transformational"
+              ]
+            },
+            {
+              "text": "Contingent reward, the plain transactional practice of agreeing goals and rewarding their achievement, came next at point three nine, and it was the stronger predictor for several criteria.",
+              "reveal": 2,
+              "refs": [
+                "R-judge-2004-transformational"
+              ]
+            },
+            {
+              "text": "Laissez-faire leadership, which is really the absence of leadership, was negatively related, at minus point three seven.",
+              "reveal": 3,
+              "refs": [
+                "R-judge-2004-transformational"
+              ]
+            },
+            {
+              "text": "Before I interpret point four four, make a prediction."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-variance",
+            "type": "estimate",
+            "concept": "c-transformational-leadership-critique",
+            "prompt": "A correlation of .44 links transformational leadership ratings with outcomes. Roughly what share of the variation in the outcome is statistically associated with those ratings?",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "initial": 44,
+            "answer": 19,
+            "tolerance": 5,
+            "feedback": {
+              "correct": "Right — about a fifth. Squaring .44 gives about .19, which is large for social science but leaves most of the variation to other things.",
+              "incorrect": "It is about 19%. Squaring the correlation gives the share of variance: .44 × .44 ≈ .19. Many people read .44 as 44%, which overstates it more than twofold."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Reading a correlation of .44",
+            "lines": [
+              {
+                "label": "Correlation, r",
+                "value": ".44"
+              },
+              {
+                "label": "Squared, r²",
+                "value": ".44 × .44 ≈ .19"
+              },
+              {
+                "label": "Associated with other things",
+                "value": "about 4 in 5"
+              }
+            ],
+            "result": {
+              "label": "Share of variance",
+              "value": "roughly one fifth"
+            },
+            "note": "Says nothing yet about direction."
+          },
+          "cues": [
+            {
+              "text": "Here is the arithmetic. A correlation runs from minus one to plus one.",
+              "reveal": 1
+            },
+            {
+              "text": "Square it and you get the share of variance in one measure associated with the other. Point four four squared is about point one nine.",
+              "reveal": 2
+            },
+            {
+              "text": "So roughly four fifths of the variation in outcomes is associated with other things.",
+              "reveal": 3
+            },
+            {
+              "text": "A fifth is large by social-science standards. But it says nothing about direction. Leaders may improve teams, or successful teams may rate their leaders more generously.",
+              "reveal": 4
+            },
+            {
+              "text": "Even before any critique, two practical points follow. First, the gap between transformational leadership and contingent reward is small. Setting clear expectations and following through is not a lesser kind of leadership."
+            },
+            {
+              "text": "Second, the strongest single finding is about absence. Leaders who avoid decisions and withdraw from problems are associated with worse outcomes. Much of the value here is a warning against abdication, not a formula for inspiration."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "What are the correlations measuring?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Four problems with the construct",
+            "cards": [
+              {
+                "title": "Definition",
+                "q": "What exactly is it?",
+                "fail": "No clear conceptual definition"
+              },
+              {
+                "title": "Causal model",
+                "q": "How does it produce outcomes?",
+                "fail": "Underspecified"
+              },
+              {
+                "title": "Confounding",
+                "q": "Behavior or effect?",
+                "fail": "Items partly describe outcomes"
+              },
+              {
+                "title": "Measurement",
+                "q": "Do the dimensions hold?",
+                "fail": "Questionnaires miss the claimed structure"
+              }
+            ],
+            "refs": [
+              "R-vanknippenberg-2013-critical"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now I want to argue against the strongest evidence I just showed you."
+            },
+            {
+              "text": "Daan van Knippenberg and Sim Sitkin reviewed charismatic and transformational research and found four problems.",
+              "refs": [
+                "R-vanknippenberg-2013-critical"
+              ]
+            },
+            {
+              "text": "The construct lacks a clear definition.",
+              "reveal": 1
+            },
+            {
+              "text": "The causal model linking it to outcomes is underspecified.",
+              "reveal": 2
+            },
+            {
+              "text": "The construct is confounded with its effects.",
+              "reveal": 3
+            },
+            {
+              "text": "And the dominant questionnaires do not reproduce the dimensional structure the theory claims. Their recommendation was to abandon the umbrella construct and study more precisely defined behaviors.",
+              "reveal": 4,
+              "refs": [
+                "R-vanknippenberg-2013-critical"
+              ]
+            },
+            {
+              "text": "Defenders point to how consistent the meta-analytic associations are. So the live disagreement is not whether the correlations exist. It is what they mean.",
+              "refs": [
+                "R-judge-2004-transformational",
+                "R-vanknippenberg-2013-critical"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two ways to ask about a leader",
+            "left": {
+              "title": "Outcome-laden item",
+              "points": [
+                "“Inspires me to perform beyond expectations”",
+                "Partly reports my own effort"
+              ]
+            },
+            "right": {
+              "title": "Behavior-based item",
+              "points": [
+                "“Explained the reasons for a decision”",
+                "“Asked my view before deciding”",
+                "An outsider could verify it"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "The confounding problem is easiest to hear in a survey item."
+            },
+            {
+              "text": "Suppose the question is whether your leader inspires you to perform beyond expectations. If you say yes, you have partly reported an outcome, your own extra effort.",
+              "reveal": 1
+            },
+            {
+              "text": "Correlate that answer with your effort, and you are partly correlating a measure with itself."
+            },
+            {
+              "text": "A behavior-based item asks instead whether the leader explained the reasons for a decision, or asked for your view before deciding. An outside observer could check that.",
+              "reveal": 2
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "A possible loop — a hypothesis",
+            "steps": [
+              {
+                "label": "Team succeeds",
+                "text": "for whatever reason"
+              },
+              {
+                "label": "Credit goes to leader",
+                "text": "romance of leadership"
+              },
+              {
+                "label": "Leader rated inspiring",
+                "text": "outcome-laden items"
+              },
+              {
+                "label": "Rating “predicts” success",
+                "text": "that produced it"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Combine the two critiques and a troubling loop appears. Let me be clear that this is the course’s own synthesis, a hypothesis, not a finding from either paper."
+            },
+            {
+              "text": "A team succeeds, for whatever reason.",
+              "reveal": 1
+            },
+            {
+              "text": "Followers credit the leader.",
+              "reveal": 2
+            },
+            {
+              "text": "They rate that leader as more inspiring.",
+              "reveal": 3
+            },
+            {
+              "text": "And the rating then appears to predict the success that produced it. That would make rating-based research look stronger than the causal effect underneath.",
+              "reveal": 4
+            },
+            {
+              "text": "Three further problems make leader effects hard to estimate. Common-source variance, when one person rates both leader and outcome. Selection, because leaders are not randomly assigned to teams. And outcome noise, which swamps the signal in a single quarter or season."
+            },
+            {
+              "text": "The strongest designs use outside coders, independent outcomes and some accidental variation in who leads, such as a rotation rule or a sudden departure. They are rare."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Judge behavior, not reputation",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Behaviors worth watching",
+            "steps": [
+              "Sets clear goals",
+              "Follows through on commitments",
+              "Gives task-focused feedback",
+              "Decides rather than avoids",
+              "Consistent relationships across the team"
+            ]
+          },
+          "cues": [
+            {
+              "text": "So do leaders matter? Yes. None of this says they do not. It says we know less than training programs imply about which behaviors matter, how much, and where."
+            },
+            {
+              "text": "The working stance is to treat named styles as loose bundles, and watch specific behaviors whose effects are plausible and observable."
+            },
+            {
+              "text": "Does this leader set clear goals?",
+              "reveal": 1
+            },
+            {
+              "text": "Follow through on commitments?",
+              "reveal": 2
+            },
+            {
+              "text": "Give feedback about the task?",
+              "reveal": 3
+            },
+            {
+              "text": "Make decisions rather than avoid them?",
+              "reveal": 4
+            },
+            {
+              "text": "And build relationships of consistent quality across the whole team?",
+              "reveal": 5
+            },
+            {
+              "text": "In player development, for instance, a coordinator whose affiliates produce a few breakout prospects is often credited with a method. With small numbers and noisy development, look instead at the plans, the consistency of coaching cues, and how fast problems were escalated."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Questions for a vendor’s claim",
+            "steps": [
+              "Who rated performance and engagement?",
+              "Who enrolled, and what about non-enrollees?",
+              "What happened to the whole organization?",
+              "Which observable behaviors change?",
+              "What would a staged pilot cost?"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now picture a vendor slide. The claim is invented: managers who completed a transformational leadership program saw team scores rise thirty percent in a year."
+            },
+            {
+              "text": "Who rated performance, and were they the same people who rated the managers?",
+              "reveal": 1
+            },
+            {
+              "text": "Which managers enrolled, volunteers or high-potentials, and what happened to comparable managers who did not?",
+              "reveal": 2
+            },
+            {
+              "text": "What happened to the organization as a whole that year?",
+              "reveal": 3
+            },
+            {
+              "text": "Which specific behaviors does the program change, and how would an outsider see them?",
+              "reveal": 4
+            },
+            {
+              "text": "And what would a small pilot with a comparison group cost? None of these questions is hostile to development. They separate a program that changes behaviors from one that changes ratings.",
+              "reveal": 5
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-own-leader",
+            "type": "reflect",
+            "concept": "c-romance-of-leadership",
+            "prompt": "Name one leader you evaluate regularly — possibly yourself. Write two behavior-based questions you could answer about them without looking at results. Then ask: how much of your current opinion rests on outcomes they only partly controlled?"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Leadership Conversation Simulator",
+                "detail": "Practise the week’s leadership conversations",
+                "href": "#/exercise/w05-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Meindl, Ehrlich & Dukerich (1985), The Romance of Leadership",
+                "href": "#/library/R-meindl-1985-romance"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Six families of theory, each with a real core claim and a weakness, and the weakness is often that outcomes leak into the measure."
+            },
+            {
+              "text": "Observers romanticize leaders, most of all after extreme results. The best meta-analysis finds transformational leadership correlates about point four four with outcomes, contingent reward close behind, and abdication clearly harmful.",
+              "refs": [
+                "R-meindl-1985-romance",
+                "R-judge-2004-transformational"
+              ]
+            },
+            {
+              "text": "And the critics argue those correlations may partly measure outcomes. So judge leaders, including yourself, on observable behavior and decision process.",
+              "refs": [
+                "R-vanknippenberg-2013-critical"
+              ]
+            },
+            {
+              "text": "Take the comprehension check below, the same one as the written lesson. Then try the Leadership Conversation Simulator, and read Meindl and colleagues, starting with the introduction and discussion.",
+              "reveal": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

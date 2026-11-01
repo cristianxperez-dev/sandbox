@@ -1,0 +1,798 @@
+{
+  "id": "w09-l2-lecture",
+  "lesson": "w09-l2",
+  "title": "Who Keeps the Value?",
+  "subtitle": "Industry structure and value capture",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 2. It covers the same objectives — the five forces, value created and added value, and the evidence on industry versus firm effects with its limits — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Great value, poor returns",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 9 · Lesson 2 · Lecture",
+            "title": "Who keeps the value?",
+            "sub": "Industry structure and value capture"
+          },
+          "cues": [
+            {
+              "text": "Here is a puzzle that has sat in strategy classrooms for decades."
+            },
+            {
+              "text": "Air travel is enormously valuable to the people who use it. Airlines move vast numbers of passengers. And yet airlines are the textbook example of an industry whose structure keeps returns low.",
+              "refs": [
+                "R-porter-2008-five"
+              ]
+            },
+            {
+              "text": "Meanwhile, some of the firms that supply them have done considerably better.",
+              "refs": [
+                "R-porter-2008-five"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Value is created in the act of flying.",
+              "Much of it is captured elsewhere."
+            ],
+            "sub": "By passengers through low fares, and by suppliers with stronger bargaining positions",
+            "refs": [
+              "R-porter-2008-five"
+            ]
+          },
+          "cues": [
+            {
+              "text": "So where does the value go?",
+              "reveal": 0
+            },
+            {
+              "text": "Much of it is captured elsewhere: by passengers, through low fares, and by suppliers with stronger bargaining positions.",
+              "reveal": 1,
+              "refs": [
+                "R-porter-2008-five"
+              ]
+            },
+            {
+              "text": "Now a second case, invented for this lecture. A start-up builds a tool that saves hospitals thousands of staff hours a year. Customers love it."
+            },
+            {
+              "text": "But three competitors offer similar tools. Hospitals can switch at every annual renewal. And the cloud provider hosting the software raises its prices every year."
+            },
+            {
+              "text": "The start-up creates a lot of value and keeps very little. Its problem is not the product. It is its position in the structure of the market."
+            },
+            {
+              "text": "So this lecture separates two questions executives tend to merge. Value creation: how much better off is everyone because this activity exists? And value capture: who ends up with that value?"
+            },
+            {
+              "text": "A strategy that answers only the first produces grateful customers and an exhausted organization."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "The five forces",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Five forces shape profitability",
+            "steps": [
+              "Threat of new entrants",
+              "Bargaining power of suppliers",
+              "Bargaining power of buyers",
+              "Threat of substitutes",
+              "Rivalry among existing competitors"
+            ],
+            "refs": [
+              "R-porter-2008-five"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Michael Porter’s framework, first published in nineteen seventy-nine and restated in two thousand eight, says the average profitability of an industry is shaped by five forces.",
+              "refs": [
+                "R-porter-2008-five"
+              ]
+            },
+            {
+              "text": "The threat of new entrants. Easy entry caps the price customers will pay.",
+              "reveal": 1,
+              "refs": [
+                "R-porter-2008-five"
+              ]
+            },
+            {
+              "text": "The bargaining power of suppliers, who push input costs up.",
+              "reveal": 2,
+              "refs": [
+                "R-porter-2008-five"
+              ]
+            },
+            {
+              "text": "The bargaining power of buyers, who bargain prices down.",
+              "reveal": 3,
+              "refs": [
+                "R-porter-2008-five"
+              ]
+            },
+            {
+              "text": "The threat of substitutes: a different product that meets the same need, like video conferencing standing in for a business trip.",
+              "reveal": 4
+            },
+            {
+              "text": "And rivalry among existing competitors. Intense rivalry, especially on price, hands value to customers. Think of commodity chemicals in a downturn: many similar firms, slow growth, high fixed costs, hard exit.",
+              "reveal": 5
+            },
+            {
+              "text": "Strong forces push returns down. The key move is to find the strongest one or two, because they matter most, and they differ from industry to industry.",
+              "refs": [
+                "R-porter-2008-five"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Forces versus factors",
+            "left": {
+              "title": "Forces",
+              "points": [
+                "Entry",
+                "Suppliers",
+                "Buyers",
+                "Substitutes",
+                "Rivalry"
+              ]
+            },
+            "right": {
+              "title": "Factors that act through them",
+              "points": [
+                "Industry growth",
+                "Technology",
+                "Government policy",
+                "Complementary products"
+              ]
+            },
+            "refs": [
+              "R-porter-2008-five"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Porter is just as careful about what the framework leaves out.",
+              "refs": [
+                "R-porter-2008-five"
+              ]
+            },
+            {
+              "text": "The five forces are on the left.",
+              "reveal": 1
+            },
+            {
+              "text": "Growth, technology, government policy and complementary products are on the right. They are factors, not forces. They matter only through their effect on the five.",
+              "reveal": 2,
+              "refs": [
+                "R-porter-2008-five"
+              ]
+            },
+            {
+              "text": "Take growth. Rapid growth does not guarantee profits if it attracts entrants and strengthens suppliers.",
+              "refs": [
+                "R-porter-2008-five"
+              ]
+            },
+            {
+              "text": "Porter also warns against defining an industry too broadly or too narrowly, and against listing forces without asking how they are shifting.",
+              "refs": [
+                "R-porter-2008-five"
+              ]
+            },
+            {
+              "text": "And watch for a common misuse: treating the framework as a form, and rating every force medium. It earns its keep only when it singles out the force that drives profitability and shows where a firm can stand so that force bites least."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "The value line",
+      "scenes": [
+        {
+          "visual": {
+            "type": "bars",
+            "title": "One software contract",
+            "unit": "$ thousand / year",
+            "items": [
+              {
+                "label": "Customer’s willingness to pay",
+                "value": 500
+              },
+              {
+                "label": "Price",
+                "value": 300
+              },
+              {
+                "label": "Firm’s cost",
+                "value": 180
+              },
+              {
+                "label": "Suppliers’ opportunity cost",
+                "value": 120
+              }
+            ],
+            "note": "Synthetic example from the Lesson 2 value line.",
+            "refs": [
+              "R-brandenburger-1996-value"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Adam Brandenburger and Harborne Stuart offered a sharper lens for a single firm, built on cooperative game theory. Picture a vertical line.",
+              "refs": [
+                "R-brandenburger-1996-value"
+              ]
+            },
+            {
+              "text": "At the top is the customer’s willingness to pay: the most the customer would pay rather than go without. Here, five hundred thousand dollars a year. These numbers are invented.",
+              "reveal": 1,
+              "refs": [
+                "R-brandenburger-1996-value"
+              ]
+            },
+            {
+              "text": "The price is three hundred thousand.",
+              "reveal": 2
+            },
+            {
+              "text": "The firm’s cost, what it pays its suppliers and staff, is one hundred eighty thousand.",
+              "reveal": 3
+            },
+            {
+              "text": "At the bottom is the suppliers’ opportunity cost, the least they would accept: one hundred twenty thousand.",
+              "reveal": 4,
+              "refs": [
+                "R-brandenburger-1996-value"
+              ]
+            },
+            {
+              "text": "The distance from top to bottom is the value created: five hundred minus one hundred twenty, which is three hundred eighty thousand.",
+              "refs": [
+                "R-brandenburger-1996-value"
+              ]
+            },
+            {
+              "text": "Price and cost divide it. The customer keeps two hundred thousand. The firm keeps one hundred twenty. The suppliers keep sixty."
+            },
+            {
+              "text": "Notice the symmetry. You can create value by raising the customer’s willingness to pay, or by lowering your suppliers’ opportunity cost, for instance by being an easier customer to supply.",
+              "refs": [
+                "R-brandenburger-1996-value"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Brandenburger and Stuart",
+            "term": "Added value",
+            "definition": "The value created by all players together, minus the value created if one player were removed.",
+            "example": "A firm cannot capture more than its added value.",
+            "refs": [
+              "R-brandenburger-1996-value"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the central idea.",
+              "reveal": 0
+            },
+            {
+              "text": "Added value is the value created by all the players together, minus the value that would be created if one particular player were removed.",
+              "reveal": 1,
+              "refs": [
+                "R-brandenburger-1996-value"
+              ]
+            },
+            {
+              "text": "Brandenburger and Stuart show that, under their assumptions, a firm cannot capture more than its added value. And positive added value requires an asymmetry: something you do that rivals cannot.",
+              "reveal": 2,
+              "refs": [
+                "R-brandenburger-1996-value"
+              ]
+            },
+            {
+              "text": "So try it. The customer’s next-best option is a rival product it values at four hundred twenty thousand a year. The rival’s suppliers and staff would accept one hundred fifty thousand. What is your added value, in thousands?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-added",
+            "type": "estimate",
+            "prompt": "With you, value created is 500 − 120 = 380 (thousand). The rival alternative: willingness to pay 420, opportunity cost 150. What is your added value, in $ thousands per year?",
+            "min": 0,
+            "max": 400,
+            "step": 10,
+            "unit": "k",
+            "initial": 200,
+            "answer": 110,
+            "tolerance": 10,
+            "concept": "c-added-value",
+            "feedback": {
+              "correct": "Right: 380 with you, 270 without you, so 110 of added value.",
+              "incorrect": "It is 110. With you the system creates 380; without you, 420 − 150 = 270. The difference is what you add."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "How much profit is defensible?",
+            "lines": [
+              {
+                "label": "Value created with you",
+                "value": "500 − 120 = 380"
+              },
+              {
+                "label": "Value created without you",
+                "value": "420 − 150 = 270"
+              },
+              {
+                "label": "Customer can get elsewhere",
+                "value": "270 of surplus"
+              },
+              {
+                "label": "Highest price you can hold",
+                "value": "500 − 270 = 230"
+              }
+            ],
+            "result": {
+              "label": "Added value, the cap on your margin",
+              "value": "110 (today: 120)"
+            },
+            "note": "Synthetic, in $ thousand per year.",
+            "refs": [
+              "R-brandenburger-1996-value"
+            ]
+          },
+          "cues": [
+            {
+              "text": "With you, the system creates three hundred eighty thousand.",
+              "reveal": 1
+            },
+            {
+              "text": "Without you, four hundred twenty minus one hundred fifty, which is two hundred seventy.",
+              "reveal": 2
+            },
+            {
+              "text": "If the rival competes hard and prices down to its cost, the customer can get two hundred seventy thousand of surplus elsewhere. You must leave it at least that much.",
+              "reveal": 3
+            },
+            {
+              "text": "So your price can be at most two hundred thirty thousand.",
+              "reveal": 4
+            },
+            {
+              "text": "And your margin at most one hundred ten. Today you earn one hundred twenty. That extra ten depends on the rival not competing hard.",
+              "reveal": 5
+            },
+            {
+              "text": "That is the practical use of added value: it tells you how much of today’s profit is defensible. No amount of negotiating skill gets you far past it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "How much does industry matter?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Industry or business unit?"
+            ],
+            "sub": "A variance decomposition of business-unit profitability",
+            "refs": [
+              "R-mcgahan-1997-much"
+            ]
+          },
+          "cues": [
+            {
+              "text": "If structure shapes profitability, a natural question follows. How much of the difference between business units comes from the industry they are in, and how much from the unit itself?"
+            },
+            {
+              "text": "Anita McGahan and Michael Porter decomposed the variance in business-unit profitability across United States industries, in a study published in nineteen ninety-seven.",
+              "refs": [
+                "R-mcgahan-1997-much"
+              ]
+            },
+            {
+              "text": "Before I show you the result, make a guess. What share of the variance did they attribute to industry effects?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-industry",
+            "type": "estimate",
+            "prompt": "What share of the variance in business-unit profitability did McGahan and Porter (1997) attribute to industry effects?",
+            "min": 0,
+            "max": 80,
+            "step": 1,
+            "unit": "%",
+            "initial": 40,
+            "answer": 19,
+            "tolerance": 6,
+            "concept": "c-industry-vs-firm-effects",
+            "feedback": {
+              "correct": "Right, roughly 19% — meaningful, but smaller than the business-specific share.",
+              "incorrect": "They reported roughly 19% for industry, against roughly 32% for business-specific effects."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "bars",
+            "title": "Share of variance in profitability",
+            "unit": "%",
+            "items": [
+              {
+                "label": "Business-specific",
+                "value": 32
+              },
+              {
+                "label": "Industry",
+                "value": 19
+              },
+              {
+                "label": "Corporate parent",
+                "value": 4
+              },
+              {
+                "label": "Year",
+                "value": 2
+              }
+            ],
+            "note": "Rounded figures reported by McGahan and Porter (1997). The remaining variance was not attributed to these four effects.",
+            "refs": [
+              "R-mcgahan-1997-much"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Business-specific effects: roughly thirty-two percent.",
+              "reveal": 1,
+              "refs": [
+                "R-mcgahan-1997-much"
+              ]
+            },
+            {
+              "text": "Industry effects: roughly nineteen percent.",
+              "reveal": 2,
+              "refs": [
+                "R-mcgahan-1997-much"
+              ]
+            },
+            {
+              "text": "The corporate parent: about four percent.",
+              "reveal": 3,
+              "refs": [
+                "R-mcgahan-1997-much"
+              ]
+            },
+            {
+              "text": "And the year: about two percent.",
+              "reveal": 4,
+              "refs": [
+                "R-mcgahan-1997-much"
+              ]
+            },
+            {
+              "text": "Industry mattered less in manufacturing and more in service sectors such as lodging and entertainment, wholesale and retail trade, and transportation.",
+              "refs": [
+                "R-mcgahan-1997-much"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Reading a variance study",
+            "cards": [
+              {
+                "title": "Association",
+                "q": "Describes spread across a sample",
+                "fail": "Does not identify causes"
+              },
+              {
+                "title": "Residual",
+                "q": "“Business-specific” is partly leftover",
+                "fail": "Includes luck and accounting quirks"
+              },
+              {
+                "title": "Not your decision",
+                "q": "An average across thousands of units",
+                "fail": "Your sector may differ"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now, how should you read those numbers?"
+            },
+            {
+              "text": "A variance decomposition answers a descriptive question. It shows association, not cause.",
+              "reveal": 1
+            },
+            {
+              "text": "The business-specific share is partly a residual. It includes good strategy, but also luck, accounting differences and anything else particular to the unit. And industry boundaries are borrowed from classification codes that may not match how competitors see their market.",
+              "reveal": 2
+            },
+            {
+              "text": "An average across thousands of businesses is not the importance of industry for your decision. Results also shift with sample, period and method, which is why the literature reports a range.",
+              "reveal": 3
+            },
+            {
+              "text": "So treat the study as evidence that both levels matter, not as a precise ratio to quote in a board meeting."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Same numbers, two readings",
+            "left": {
+              "title": "Positioning tradition",
+              "points": [
+                "Industry share is sizable",
+                "It varies by sector",
+                "Where to compete is first-order"
+              ]
+            },
+            "right": {
+              "title": "Resource-based tradition",
+              "points": [
+                "Firm share is larger",
+                "What happens inside matters more",
+                "Lesson 3 develops this view"
+              ]
+            },
+            "refs": [
+              "R-mcgahan-1997-much",
+              "R-barney-1991-firm"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Which brings us to a real, contested disagreement."
+            },
+            {
+              "text": "Scholars in the positioning tradition point to the sizable, sector-varying industry share, and say choosing where to compete is a first-order decision.",
+              "reveal": 1,
+              "refs": [
+                "R-mcgahan-1997-much"
+              ]
+            },
+            {
+              "text": "Scholars in the resource-based tradition point to the larger business-specific share, and say what happens inside the firm matters more.",
+              "reveal": 2,
+              "refs": [
+                "R-barney-1991-firm"
+              ]
+            },
+            {
+              "text": "Both readings fit the same numbers, because the numbers describe association, not mechanism. The practical answer: analyze both. Structure sets the average and the range. The firm decides where it lands within it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Limits, and a worked case",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Where the tools strain",
+            "cards": [
+              {
+                "title": "Static",
+                "q": "A snapshot of structure",
+                "fail": "Technology reshapes markets faster"
+              },
+              {
+                "title": "Adversarial",
+                "q": "Buyers and suppliers as threats",
+                "fail": "Misses co-investment and platforms"
+              },
+              {
+                "title": "Boundaries",
+                "q": "Who counts as a rival?",
+                "fail": "Streaming versus games versus sleep"
+              },
+              {
+                "title": "A ceiling",
+                "q": "Added value caps capture",
+                "fail": "It is not a forecast"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let me now argue against the tools I’ve just taught you."
+            },
+            {
+              "text": "The five forces are largely static. They describe structure at one moment, while technology can reshape a market faster than any analysis is updated.",
+              "reveal": 1
+            },
+            {
+              "text": "They treat buyers and suppliers mainly as threats. Yet many profitable strategies are cooperative: co-investing with suppliers, joint standards with rivals, platforms where the key question is whose position in the network is hardest to bypass.",
+              "reveal": 2
+            },
+            {
+              "text": "Industry boundaries are the analyst’s choice. Is a streaming service competing with other streamers, with video games, or with sleep? The answer changes which forces look strong.",
+              "reveal": 3
+            },
+            {
+              "text": "And added value is a ceiling, not a forecast. You may capture far less if you negotiate poorly or customers don’t perceive the difference. Its inputs are rarely observed; you estimate them from pricing experiments, lost deals and walk-away terms.",
+              "reveal": 4
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "A fictional analytics vendor",
+            "steps": [
+              "Buyer power: high — big teams can build in-house",
+              "Substitutes: rising — free phone toolkits",
+              "Supplier power: moderate — two camera makers",
+              "Entry: moderate — validation is costly",
+              "Rivalry: moderate to high — annual renewals"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now apply it. A fictional company sells motion-capture and analytics software to professional teams across several sports. The judgments are synthetic."
+            },
+            {
+              "text": "Buyers: a few hundred elite teams, and the largest can hire engineers and build it themselves.",
+              "reveal": 1
+            },
+            {
+              "text": "Substitutes: free pose-estimation toolkits on phones, and staff doing manual video analysis.",
+              "reveal": 2
+            },
+            {
+              "text": "Suppliers: camera hardware from two specialist makers, plus cloud hosting.",
+              "reveal": 3
+            },
+            {
+              "text": "Entry: computer-vision talent is mobile, but validated accuracy is costly to establish.",
+              "reveal": 4
+            },
+            {
+              "text": "Rivalry: four direct competitors and annual renewals that invite price competition.",
+              "reveal": 5
+            },
+            {
+              "text": "Which force is decisive, and what does it mean for value capture?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-vendor",
+            "type": "choice",
+            "prompt": "For the fictional sports-analytics vendor, which reading of the five-forces scan is strongest?",
+            "concept": "c-five-forces",
+            "options": [
+              {
+                "id": "a",
+                "text": "Rivalry is decisive; the vendor should cut price to win renewals."
+              },
+              {
+                "id": "b",
+                "text": "Buyer power through backward integration is decisive; price is capped by what a buyer could not easily reproduce."
+              },
+              {
+                "id": "c",
+                "text": "All five forces are moderate, so the industry is average."
+              },
+              {
+                "id": "d",
+                "text": "Supplier power is decisive because there are only two camera makers."
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "Rivalry matters, but price-cutting gives away value. The tighter cap is the buyer’s ability to build the product itself.",
+              "b": "Right. A well-resourced buyer can make the product itself, so the vendor’s added value is what that buyer could not easily reproduce: validated accuracy, workflow, time saved and pooled learning.",
+              "c": "That is the fill-in-the-form misuse. The framework earns its keep by finding the one or two forces that drive profitability.",
+              "d": "Supplier power is real but moderate; keeping two hardware sources manages it. It is not what caps the price."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Price above your added value,",
+              "and the buyer builds its own."
+            ],
+            "sub": "Added value applies to players and staff, too"
+          },
+          "cues": [
+            {
+              "text": "The decisive force is buyer power through backward integration. The vendor’s added value is not capture technology as such, which a determined buyer can approximate.",
+              "reveal": 0
+            },
+            {
+              "text": "It is what the buyer could not easily reproduce: validated accuracy, an accumulated workflow, time saved for scarce staff, and learning pooled across clients where contracts and consent allow. Price above that, and the buyer builds its own.",
+              "reveal": 1
+            },
+            {
+              "text": "The same lens works inside player development. When competing to sign a player, ask what your development system offers that the next-best organization does not. If the honest answer is nothing distinctive, the signing is won on money alone."
+            },
+            {
+              "text": "And scarce coaches and analysts hold supplier power. Their opportunity cost is set by their best alternative employer."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Strategy Table",
+                "detail": "Choose a posture and allocate a budget to match it",
+                "href": "#/exercise/w09-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Porter (1996), What Is Strategy?",
+                "href": "#/library/R-porter-1996-what"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Creating value and capturing it are different problems. The five forces explain how structure divides value, and the strongest one or two matter most."
+            },
+            {
+              "text": "Value created is willingness to pay minus suppliers’ opportunity cost, and a firm captures no more than its added value. Both industry and firm matter, and the evidence does not settle which matters more for your decision."
+            },
+            {
+              "text": "Next, take the comprehension check below, the same check as the written lesson. Then open the Strategy Table, and read Porter’s essay, What Is Strategy, this week’s required reading.",
+              "reveal": 1
+            },
+            {
+              "text": "Before celebrating what you create, ask who can take it away. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

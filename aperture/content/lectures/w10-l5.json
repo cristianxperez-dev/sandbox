@@ -1,0 +1,599 @@
+{
+  "id": "w10-l5-lecture",
+  "lesson": "w10-l5",
+  "title": "What Is the Next Win Worth?",
+  "subtitle": "Paying for wins: the economics of talent spending",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 5. It covers the same objectives — marginal revenue product and the nonlinear value of a win, cost per marginal win and surplus value, the evidence and dispute over mispricing in sports labor markets, and a stress-tested business case for development spending — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "The efficiency table",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 10 · Lesson 5 · Lecture",
+            "title": "What is the next win worth?",
+            "sub": "The economics of talent spending"
+          },
+          "cues": [
+            {
+              "text": "Picture a league table sorted by payroll efficiency: wins per dollar spent."
+            },
+            {
+              "text": "The club at the top need not have the biggest payroll. It may not even be a contender. A common reaction is that the big spenders are wasting money."
+            },
+            {
+              "text": "An economist asks a different question. Not what did a win cost, but what is the next win worth, to this club, right now?"
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "About 88 wins usually qualify.",
+              "Club X is projected for 72. Club Y for 87."
+            ],
+            "sub": "A fictional league."
+          },
+          "cues": [
+            {
+              "text": "Let me make it concrete with a fictional league, where about eighty-eight wins usually qualify for the postseason.",
+              "reveal": 0
+            },
+            {
+              "text": "One club is projected for seventy-two wins. Another is projected for eighty-seven.",
+              "reveal": 1
+            },
+            {
+              "text": "Which club should value one additional win more?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-next-win",
+            "type": "choice",
+            "prompt": "In a league where about 88 wins usually qualify for the postseason, to which club is one additional win likely worth more?",
+            "options": [
+              {
+                "id": "a",
+                "text": "The 72-win club — it has more room to improve."
+              },
+              {
+                "id": "b",
+                "text": "The 87-win club — it sits right at the qualification threshold."
+              },
+              {
+                "id": "c",
+                "text": "Neither — a win is worth the same to every club."
+              },
+              {
+                "id": "d",
+                "text": "Whichever club has the larger payroll."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-marginal-revenue-product",
+            "feedback": {
+              "a": "Room to improve is not the same as value. One win moves a 72-win club from far out of contention to still far out of contention.",
+              "b": "Right. Near the threshold, a win can change whether the club qualifies, so it is worth far more. Your answer would be wrong if, say, the 87-win club was certain to qualify anyway.",
+              "c": "That assumption is exactly what the lesson questions: the money value of a win depends on where the club stands.",
+              "d": "Payroll affects what a club can spend, not what the next win is worth to it."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Marginal revenue product",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Labor economics",
+            "term": "Marginal revenue product",
+            "definition": "The additional revenue from employing a worker: marginal product (extra wins) × marginal revenue of that output (revenue per extra win).",
+            "example": "Pay up to the marginal revenue product; the difference between value and pay is the employer’s surplus."
+          },
+          "cues": [
+            {
+              "text": "The eighty-seven-win club, almost certainly. To see why, we need one idea from labor economics."
+            },
+            {
+              "text": "A worker’s marginal revenue product is the additional revenue the organization earns from employing that worker. It is the worker’s marginal product, here additional wins, multiplied by the marginal revenue of that output, the revenue an additional win brings.",
+              "reveal": 1
+            },
+            {
+              "text": "A rational employer would pay up to that amount. The difference between the value and the pay is the employer’s surplus.",
+              "reveal": 2
+            },
+            {
+              "text": "Marginal product usually diminishes as you add more of an input, because other inputs become the constraint. That holds for players, and for paralegals or engineers. Every hiring decision in any industry is an estimate of this product, made with incomplete information."
+            },
+            {
+              "text": "Talent spending, in other words, is capital allocation. It commits money now for an uncertain stream of future contribution, so every tool from this week applies: discounting, marginal analysis, opportunity cost, scenarios and reference classes."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "bars",
+            "title": "Revenue from one more win, by win total",
+            "unit": "$ millions",
+            "items": [
+              {
+                "label": "70–74 wins",
+                "value": 0.6
+              },
+              {
+                "label": "75–79 wins",
+                "value": 0.8
+              },
+              {
+                "label": "80–84 wins",
+                "value": 1.5
+              },
+              {
+                "label": "85–89 wins",
+                "value": 3.5
+              },
+              {
+                "label": "90–94 wins",
+                "value": 2.5
+              },
+              {
+                "label": "95–99 wins",
+                "value": 1.2
+              }
+            ],
+            "note": "Synthetic teaching illustration; not an estimate for any real league."
+          },
+          "cues": [
+            {
+              "text": "What is distinctive about sports is that wins are relative to rivals, and the money value of a win depends on where the club stands. Here is an invented win-value curve, purely for teaching."
+            },
+            {
+              "text": "At seventy to seventy-four wins, one more win brings about six hundred thousand dollars.",
+              "reveal": 1
+            },
+            {
+              "text": "A bit more in the high seventies.",
+              "reveal": 2
+            },
+            {
+              "text": "Rising in the low eighties.",
+              "reveal": 3
+            },
+            {
+              "text": "Then it peaks, around three and a half million, in the eighty-five to eighty-nine band, right at the threshold.",
+              "reveal": 4
+            },
+            {
+              "text": "Past the threshold it falls again, as qualification becomes likely anyway.",
+              "reveal": 5
+            },
+            {
+              "text": "And at ninety-five or more, a win adds relatively little.",
+              "reveal": 6
+            },
+            {
+              "text": "The shape matters more than the numbers. The same player is worth more to a contender than to a rebuilding club, which is why trading a veteran from a rebuilding club to a contender can create value for both: the player’s marginal revenue product differs between them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Cost per marginal win",
+      "scenes": [
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Cost per marginal win",
+            "lines": [
+              {
+                "label": "Replacement-level baseline",
+                "value": "$60M payroll ≈ 45 wins"
+              },
+              {
+                "label": "Club A: (200 − 60) ÷ (92 − 45) = 140 ÷ 47",
+                "value": "$2.98M per win"
+              },
+              {
+                "label": "Club E: (75 − 60) ÷ (81 − 45) = 15 ÷ 36",
+                "value": "$0.42M per win"
+              }
+            ],
+            "result": {
+              "label": "Efficiency ratio",
+              "value": "An average, not a margin"
+            },
+            "note": "Synthetic data from a fictional 162-game league."
+          },
+          "cues": [
+            {
+              "text": "Now the efficiency measure itself. Cost per marginal win divides spending above a replacement-level baseline by wins above that baseline. The clubs here are fictional."
+            },
+            {
+              "text": "Say a replacement-level roster costs sixty million dollars and wins about forty-five games.",
+              "reveal": 1
+            },
+            {
+              "text": "Club A spends two hundred million and wins ninety-two. That is one hundred and forty million above baseline for forty-seven extra wins: about two point nine eight million per marginal win.",
+              "reveal": 2
+            },
+            {
+              "text": "Club E spends seventy-five million and wins eighty-one. Fifteen million for thirty-six wins: about four hundred and twenty thousand per win. Strikingly efficient.",
+              "reveal": 3
+            },
+            {
+              "text": "But an average ratio says little about the marginal decision.",
+              "reveal": 4
+            },
+            {
+              "text": "Club A’s last few wins carried it from the high eighties into the low nineties, the band where, on our invented curve, each win was worth two and a half to three and a half million. Its spending may have been rational despite poor average efficiency."
+            },
+            {
+              "text": "And Club E, at eighty-one wins, might have gained more by spending to reach the threshold than by protecting its ratio. Efficiency is a property of the whole roster. Value is created at the margin."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Can talent be mispriced?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "What the evidence shows",
+            "cards": [
+              {
+                "title": "Hakes & Sauer, 1999–2004",
+                "q": "On-base percentage underpaid relative to wins",
+                "fail": "The gap largely closed once the idea spread"
+              },
+              {
+                "title": "Massey & Thaler",
+                "q": "Top NFL draft picks priced above their surplus",
+                "fail": "Consistent with overconfidence, they argue"
+              }
+            ],
+            "refs": [
+              "R-hakes-2006-economic",
+              "R-massey-2013-losers"
+            ]
+          },
+          "cues": [
+            {
+              "text": "If clubs value wins differently, can the market for talent misprice skills? Two studies say it can."
+            },
+            {
+              "text": "Jahn Hakes and Raymond Sauer tested the claim, popularized by the book Moneyball, that baseball’s labor market mispriced skills. Using player productivity and salary data from nineteen ninety-nine to two thousand four, they estimated how batting skills contributed to winning and how each was paid.",
+              "reveal": 1,
+              "refs": [
+                "R-hakes-2006-economic"
+              ]
+            },
+            {
+              "text": "On-base percentage contributed more to winning than salaries reflected before the book appeared. Once the idea spread, the pricing gap largely disappeared.",
+              "refs": [
+                "R-hakes-2006-economic"
+              ]
+            },
+            {
+              "text": "Cade Massey and Richard Thaler examined the National Football League draft. They compared the price of draft picks, what teams give up for them in draft-day trades, with the surplus value the players deliver: performance value minus compensation.",
+              "reveal": 2,
+              "refs": [
+                "R-massey-2013-losers"
+              ]
+            },
+            {
+              "text": "They found top picks significantly overvalued. The very earliest picks yield less surplus on average than later first-round picks, a pattern they argue is inconsistent with efficient markets and consistent with behavioral explanations such as overconfidence.",
+              "refs": [
+                "R-massey-2013-losers"
+              ]
+            },
+            {
+              "text": "But should we conclude that teams paying for top picks are making a mistake?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-objective",
+            "type": "choice",
+            "prompt": "Brill and Wyner re-examined the loser’s curse. What is the core of their critique of the conclusion that top draft picks are overvalued?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Massey and Thaler measured draft-day trade prices incorrectly."
+              },
+              {
+                "id": "b",
+                "text": "The conclusion depends on assuming teams should maximize expected surplus; if elite players are disproportionately valuable, paying a premium can be rational."
+              },
+              {
+                "id": "c",
+                "text": "The mispricing disappeared once the research was published."
+              },
+              {
+                "id": "d",
+                "text": "Top picks actually deliver more average surplus than later picks."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-marginal-revenue-product",
+            "feedback": {
+              "a": "Brill and Wyner do not dispute Massey and Thaler’s evidence about prices and average surplus. What they dispute is the yardstick.",
+              "b": "Right. Whether a price is “too high” depends on the objective. If championships depend on a few elite players, raising the chance of landing one may justify the premium.",
+              "c": "That is the erosion pattern from Hakes and Sauer’s baseball study, not Brill and Wyner’s argument.",
+              "d": "The average-surplus finding stands. The dispute is whether average surplus is the right measure of value."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "State the objective",
+              "before calling a price “too high.”"
+            ],
+            "sub": "Expected wins, championship probability, profit, development throughput.",
+            "refs": [
+              "R-massey-2013-losers",
+              "R-brill-2026-losers"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Ryan Brill and Abraham Wyner argued that Massey and Thaler’s conclusion hinges on assuming teams should maximize expected surplus value.",
+              "refs": [
+                "R-brill-2026-losers"
+              ]
+            },
+            {
+              "text": "If outcomes are highly skewed and a transformational player is disproportionately valuable, for instance because championships depend on a few elite players, then a team that prioritizes the chance of landing such a player may rationally pay a premium for top picks.",
+              "refs": [
+                "R-brill-2026-losers"
+              ]
+            },
+            {
+              "text": "Massey and Thaler’s evidence about prices and average surplus stands. What is disputed is whether average surplus is the right yardstick. So the lesson for executives: state the objective before calling any talent decision efficient or wasteful.",
+              "reveal": 1,
+              "refs": [
+                "R-massey-2013-losers",
+                "R-brill-2026-losers"
+              ]
+            },
+            {
+              "text": "And expect edges to erode. The baseball mispricing disappeared once the insight became public. Any advantage built on a measurable, imitable insight should be valued over a short horizon. Sustained advantage is more likely to come from capabilities that are hard to copy, like integrated development systems, culture and relationships, which are also the hardest to value in a spreadsheet.",
+              "refs": [
+                "R-hakes-2006-economic"
+              ]
+            },
+            {
+              "text": "Three more cautions. Wins are relative, so league-wide spending races can raise costs without raising anyone’s expected wins. Competitive bidding invites the winner’s curse: the highest of many error-prone bids is likely the one that overestimated. And payroll and wins correlate partly because winning raises the revenue that funds payroll, so cross-club comparisons cannot show how many wins a dollar buys."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "A business case for development",
+      "scenes": [
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "Development spending: the assumptions",
+            "items": [
+              {
+                "value": "$1.5M",
+                "label": "additional spending this year"
+              },
+              {
+                "value": "0.3",
+                "label": "extra players per year reaching 2 wins a season"
+              },
+              {
+                "value": "$5.0M",
+                "label": "assumed market price of one win"
+              },
+              {
+                "value": "$1.0M",
+                "label": "salary per cost-controlled season"
+              }
+            ],
+            "note": "Synthetic assumptions; not estimates for any real league or club."
+          },
+          "cues": [
+            {
+              "text": "Here is where surplus value earns its place. In leagues where early-career pay is constrained by collectively bargained rules, a player developed internally can deliver major-league-quality performance for several seasons at well below market pay. That surplus is the return on development."
+            },
+            {
+              "text": "Let’s value one extra year of development spending. Every number here is an assumption, invented for illustration. One and a half million dollars of extra spending.",
+              "reveal": 1
+            },
+            {
+              "text": "Suppose it produces zero point three additional players who reach a two-win-per-season level.",
+              "reveal": 2
+            },
+            {
+              "text": "A win is priced at five million on the market.",
+              "reveal": 3
+            },
+            {
+              "text": "And each of those players earns a million dollars a season in cost-controlled years five, six and seven, discounted at eight percent. Before I show the calculation: what uplift, in additional players per year of spending, would make this program break even?",
+              "reveal": 4
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-breakeven-uplift",
+            "type": "estimate",
+            "prompt": "At what uplift — additional 2-win players per year of $1.5M spending — does the program break even?",
+            "min": 0,
+            "max": 0.6,
+            "step": 0.002,
+            "unit": "players",
+            "initial": 0.3,
+            "answer": 0.088,
+            "tolerance": 0.03,
+            "concept": "c-marginal-analysis",
+            "feedback": {
+              "correct": "Right — about 0.088 players a year, fewer than one per decade of spending.",
+              "incorrect": "Break-even is about 0.088 players a year — fewer than one useful player per decade of spending. The next scene shows the arithmetic, and why that low bar is less reassuring than it sounds."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Valuing one year of development spending",
+            "lines": [
+              {
+                "label": "Surplus per player-season: 2 × $5.0M − $1.0M",
+                "value": "$9.0M"
+              },
+              {
+                "label": "Expected surplus a season: 0.3 × $9.0M",
+                "value": "$2.7M"
+              },
+              {
+                "label": "PV at 8%, years 5–7: 2.7 × 1.89424",
+                "value": "$5.11M"
+              },
+              {
+                "label": "NPV: 5.11 − 1.50",
+                "value": "$3.61M"
+              }
+            ],
+            "result": {
+              "label": "Break-even uplift: 1.5 ÷ (9.0 × 1.89424)",
+              "value": "0.088 players"
+            },
+            "note": "Synthetic data and assumptions for illustration."
+          },
+          "cues": [
+            {
+              "text": "Each qualifying player-season is worth two wins at five million, minus a million in salary: nine million of surplus.",
+              "reveal": 1
+            },
+            {
+              "text": "Times zero point three players: two point seven million of expected surplus per season.",
+              "reveal": 2
+            },
+            {
+              "text": "Discounted at eight percent over years five, six and seven, that is about five point one one million today.",
+              "reveal": 3
+            },
+            {
+              "text": "Subtract the one and a half million spent, and the NPV is about three point six one million.",
+              "reveal": 4,
+              "say": "Subtract the one and a half million spent, and the N P V is about three point six one million."
+            },
+            {
+              "text": "And break-even uplift is just zero point zero eight eight players a year. Fewer than one useful player per decade of spending.",
+              "reveal": 5
+            },
+            {
+              "text": "That sounds like an easy case. Now read it through this week’s lens. The answer is driven almost entirely by two assumptions, the uplift and the price of a win, and neither can be observed directly."
+            },
+            {
+              "text": "Worse, an uplift of a tenth of a player a year would be practically impossible to detect in one organization’s outcomes, which are dominated by noise. So the case rests on evidence about mechanisms and intermediate outcomes, not on the headline NPV.",
+              "say": "Worse, an uplift of a tenth of a player a year would be practically impossible to detect in one organization’s outcomes, which are dominated by noise. So the case rests on evidence about mechanisms and intermediate outcomes, not on the headline N P V."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "A credible development case",
+            "steps": [
+              "The mechanism: what changes, in which players",
+              "Intermediate measures that should move within a season",
+              "The assumption chain to expected surplus",
+              "The break-even uplift",
+              "Leading indicators agreed in advance: continue, expand or stop"
+            ]
+          },
+          "cues": [
+            {
+              "text": "So how should a development department make its case? In the club’s language of value, surplus over cost, while being candid about uncertainty."
+            },
+            {
+              "text": "State the mechanism: what will change in which players’ development.",
+              "reveal": 1
+            },
+            {
+              "text": "Name the intermediate measures that should move within a season: skill metrics, durability, availability.",
+              "reveal": 2
+            },
+            {
+              "text": "Lay out the assumption chain that converts those into expected surplus.",
+              "reveal": 3
+            },
+            {
+              "text": "Give the break-even uplift.",
+              "reveal": 4
+            },
+            {
+              "text": "And because outcome data will be too noisy for years, agree in advance on the leading indicators that would justify continuing, expanding or stopping. That pre-commitment protects the department from both premature cancellation and sunk-cost persistence.",
+              "reveal": 5
+            },
+            {
+              "text": "The same discipline answers an owner who asks why not add twenty million of payroll. Where are we on the win-value curve? What is the realistic marginal product of that money in this market? What is the opportunity cost: development, facilities, future flexibility? And what objective are we optimizing this year?"
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Capital Allocation Lab",
+                "detail": "Build and stress-test a talent or development investment case",
+                "href": "#/exercise/w10-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Hakes & Sauer (2006) An Economic Evaluation of the Moneyball Hypothesis",
+                "href": "#/library/R-hakes-2006-economic"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Value talent as surplus over cost: marginal product times the marginal value of output, minus pay, discounted for time and risk. The value of a win is nonlinear, so average efficiency ratios mislead about marginal decisions."
+            },
+            {
+              "text": "Talent markets can misprice skills, and such edges erode. Whether a price is too high depends on the objective, which must be stated. And development earns its return through surplus in cost-controlled years, but the uplift is hard to measure, so pre-agreed leading indicators matter."
+            },
+            {
+              "text": "Next, take the comprehension check below, the same check as the written lesson. Then finish the week in the Capital Allocation Lab, and read Hakes and Sauer’s article, which is open access.",
+              "reveal": 1,
+              "refs": [
+                "R-hakes-2006-economic"
+              ]
+            },
+            {
+              "text": "The written lesson keeps the methodological note on estimating the value of a win, and examples from European football, technology and law. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

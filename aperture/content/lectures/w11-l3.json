@@ -1,0 +1,779 @@
+{
+  "id": "w11-l3-lecture",
+  "lesson": "w11-l3",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "title": "Who May Leave, Where They May Go, Who Owns the Work",
+  "subtitle": "Employment agreements, restrictive covenants and ownership of work",
+  "summary": "A narrated, interactive version of Lesson 3 of the law week. It covers the same objectives — at-will employment and its exceptions, the four main post-employment and ownership clauses, the U.S. non-compete landscape as of late 2026 including the fate of the FTC's 2024 rule, and the evidence on non-competes with narrower alternatives — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "A clause nobody negotiates",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 11 · Lesson 3 · Lecture",
+            "title": "Who may leave, where they may go, who owns the work",
+            "sub": "Employment agreements and restrictive covenants"
+          },
+          "cues": [
+            {
+              "text": "First, an important note. This is general educational material about legal concepts, not legal advice. For any specific agreement, consult a qualified attorney."
+            },
+            {
+              "text": "Employment law varies by state, by country and by occupation, and non-compete law in particular has changed repeatedly. So I will give dates, and you should treat every one as a timestamp on how current the statement is."
+            },
+            {
+              "text": "Let's start with a prediction."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "How many United States workers are bound by a non-compete right now?"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Think about the whole United States labor force: engineers and executives, but also hourly workers in every kind of job."
+            },
+            {
+              "text": "What share of them do you think are bound by a non-compete agreement right now?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-prevalence",
+            "type": "estimate",
+            "prompt": "What share of U.S. labor force participants were bound by a non-compete at the time of a large national survey published in 2021?",
+            "min": 0,
+            "max": 60,
+            "step": 1,
+            "unit": "%",
+            "initial": 30,
+            "answer": 18,
+            "tolerance": 4,
+            "concept": "c-restrictive-covenants",
+            "feedback": {
+              "correct": "Close. The survey estimated about 18 percent bound at the time, and 38 percent who had signed one at some point.",
+              "incorrect": "The survey estimate was about 18 percent bound at the time, with 38 percent having signed one at some point. The next numbers matter even more."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "A national survey of 11,505 workers",
+            "items": [
+              {
+                "value": "18%",
+                "label": "bound by a non-compete"
+              },
+              {
+                "value": "38%",
+                "label": "had agreed to one at some point"
+              },
+              {
+                "value": "10%",
+                "label": "said they negotiated over it"
+              },
+              {
+                "value": "1 in 3",
+                "label": "first saw it after accepting the offer"
+              }
+            ],
+            "note": "Starr, Prescott and Bishara (2021).",
+            "refs": [
+              "R-starr-2021-noncompete"
+            ]
+          },
+          "cues": [
+            {
+              "text": "A nationally representative survey of eleven thousand five hundred and five workers, published by Evan Starr, J. J. Prescott and Norman Bishara in twenty twenty-one, estimated about eighteen percent were bound.",
+              "reveal": 1,
+              "refs": [
+                "R-starr-2021-noncompete"
+              ]
+            },
+            {
+              "text": "Thirty-eight percent had agreed to one at some point.",
+              "reveal": 2,
+              "refs": [
+                "R-starr-2021-noncompete"
+              ]
+            },
+            {
+              "text": "Only about ten percent said they had negotiated over the clause.",
+              "reveal": 3,
+              "refs": [
+                "R-starr-2021-noncompete"
+              ]
+            },
+            {
+              "text": "And roughly one in three first saw it after they had already accepted the job.",
+              "reveal": 4,
+              "refs": [
+                "R-starr-2021-noncompete"
+              ]
+            },
+            {
+              "text": "Non-competes showed up in high-paying jobs, but also in low-wage jobs, and even in states whose courts will not enforce them.",
+              "refs": [
+                "R-starr-2021-noncompete"
+              ]
+            },
+            {
+              "text": "Common, rarely negotiated, sometimes unenforceable where it is used. That combination is a signal. The clause may work less through courts than through the behavior of people who believe it binds them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "The default and the clauses",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "The United States default",
+            "term": "Employment at will",
+            "definition": "Without a fixed term, either party may end the relationship at any time, for any lawful reason or none, without liability.",
+            "example": "Limits: statutes against discrimination and retaliation, public-policy exceptions, contracts promising more, and union \"just cause\" protection.",
+            "refs": [
+              "R-valbrune-2019-business"
+            ]
+          },
+          "cues": [
+            {
+              "text": "To see why those clauses matter, start with the default."
+            },
+            {
+              "text": "In most United States jurisdictions, employment without a fixed term is presumed to be at will. Either side may end it at any time, for any lawful reason or none, without liability.",
+              "reveal": 1,
+              "refs": [
+                "R-valbrune-2019-business"
+              ]
+            },
+            {
+              "text": "The presumption has real limits. Employers may not fire for reasons statutes forbid, such as discrimination on protected characteristics or retaliation for protected activity.",
+              "reveal": 2,
+              "refs": [
+                "R-valbrune-2019-business"
+              ]
+            },
+            {
+              "text": "Many states recognize exceptions for terminations that violate public policy. And an individual contract can promise more, such as a fixed term or termination only for defined cause.",
+              "refs": [
+                "R-valbrune-2019-business"
+              ]
+            },
+            {
+              "text": "Where employees have a union, the collective agreement usually replaces at-will status with just-cause protection and a grievance procedure."
+            },
+            {
+              "text": "Outside the United States, at will is unusual. Many countries, including most of Latin America, require notice, severance or both."
+            },
+            {
+              "text": "Here is the consequence. Because the relationship can end quickly, the clauses that operate after it ends often carry more economic weight than the clauses describing the job."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Clauses that follow you out the door",
+            "cards": [
+              {
+                "title": "Non-compete",
+                "q": "No competing work for a period and area",
+                "fail": "Protects secrets and goodwill; disputes over breadth"
+              },
+              {
+                "title": "Non-solicitation",
+                "q": "No poaching clients or colleagues",
+                "fail": "Who counts as a client?"
+              },
+              {
+                "title": "Confidentiality",
+                "q": "No using or disclosing confidential information",
+                "fail": "Must exclude public information and general skill"
+              },
+              {
+                "title": "Invention assignment",
+                "q": "Who owns work product and inventions",
+                "fail": "Personal time, side projects, prior work"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Four clauses do most of that work, and each protects a different interest."
+            },
+            {
+              "text": "A non-compete bars working for, or starting, a competing business for a period and an area. It aims at trade secrets, client relationships and training investment.",
+              "reveal": 1
+            },
+            {
+              "text": "A non-solicitation clause bars recruiting the employer's clients, or former colleagues. It protects relationships and workforce stability. The fight is usually over who counts as a client.",
+              "reveal": 2
+            },
+            {
+              "text": "A confidentiality clause bars using or disclosing confidential information. The question is whether public information and general skill are carved out.",
+              "reveal": 3
+            },
+            {
+              "text": "And invention assignment decides who owns work product. The disputes come from work on personal time, outside the job, or before employment began. Some agreements add garden leave, a paid notice period during which you may not work elsewhere.",
+              "reveal": 4
+            },
+            {
+              "text": "Where non-competes are enforceable, courts typically ask two things. Does the restraint protect a legitimate interest, such as trade secrets or customer goodwill, rather than simply avoiding competition? And are its duration, geography and scope reasonable?",
+              "refs": [
+                "R-valbrune-2019-business",
+                "R-starr-2021-noncompete"
+              ]
+            },
+            {
+              "text": "States differ on an overbroad clause. Some courts narrow it, some strike only the offending words, some refuse it entirely. That is one reason employers draft broadly, and workers cannot easily tell what binds them."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Who owns the code?",
+            "left": {
+              "title": "Employee",
+              "points": [
+                "Work within the scope of employment",
+                "Generally a work made for hire",
+                "Employer owns it"
+              ]
+            },
+            "right": {
+              "title": "Independent contractor",
+              "points": [
+                "Contractor generally owns the copyright",
+                "Unless a signed writing assigns it",
+                "Or limited categories, agreed in writing"
+              ]
+            },
+            "refs": [
+              "R-valbrune-2019-business"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now ownership. Under United States copyright law, work an employee creates within the scope of employment is generally a work made for hire, owned by the employer.",
+              "reveal": 1,
+              "refs": [
+                "R-valbrune-2019-business"
+              ]
+            },
+            {
+              "text": "Contractors are different. The contractor generally owns the copyright unless a signed writing assigns it, or the work falls in limited statutory categories and the parties agree in writing. That is why consulting agreements have assignment clauses.",
+              "reveal": 2,
+              "refs": [
+                "R-valbrune-2019-business"
+              ]
+            },
+            {
+              "text": "Some states limit how far invention assignment can reach into inventions made on the employee's own time, without company resources, unrelated to the business. Counsel can say whether such a statute applies."
+            },
+            {
+              "text": "The practical safeguard for both sides: a schedule of prior and excluded projects, attached at signing, and a clear definition of the employer's line of business."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "The landscape, as of November 2026",
+      "scenes": [
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Mostly state law.",
+              "And moving in both directions."
+            ],
+            "sub": "Orientation only, never a statement of current law in a particular state."
+          },
+          "cues": [
+            {
+              "text": "Non-compete law in the United States is predominantly state law, and it is moving."
+            },
+            {
+              "text": "Practitioner summaries commonly list California, Minnesota, North Dakota and Oklahoma among states that refuse to enforce most employee non-competes, each with exceptions such as the sale of a business."
+            },
+            {
+              "text": "Many other states enforce reasonable non-competes but restrict them with income thresholds, advance notice or occupation rules."
+            },
+            {
+              "text": "In twenty twenty-five, the trend split.",
+              "reveal": 1
+            },
+            {
+              "text": "Wyoming enacted a statute, effective July first, twenty twenty-five, voiding most non-competes, with exceptions that include the sale of a business and executive roles."
+            },
+            {
+              "text": "Florida's Choice Act, effective in July twenty twenty-five, moved the other way, widening enforceability of certain non-compete and garden-leave agreements for covered workers above a wage threshold."
+            },
+            {
+              "text": "Any list like this dates quickly. Treat it as orientation, never as current law for a particular state."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "timeline",
+            "title": "The FTC non-compete rule",
+            "events": [
+              {
+                "when": "Jan 2023",
+                "text": "Rule proposed"
+              },
+              {
+                "when": "May 7, 2024",
+                "text": "Final rule published; effective date set for Sept 4, 2024"
+              },
+              {
+                "when": "Aug 20, 2024",
+                "text": "Texas federal court sets the rule aside"
+              },
+              {
+                "when": "Sept 5, 2025",
+                "text": "Commission votes 3–1 to drop its appeals"
+              },
+              {
+                "when": "Feb 2026",
+                "text": "Rule removed from the Code of Federal Regulations"
+              }
+            ],
+            "refs": [
+              "R-ftc-2024-non-compete"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Then there is the federal story, and the dates matter.",
+              "refs": [
+                "R-ftc-2024-non-compete"
+              ]
+            },
+            {
+              "text": "In January twenty twenty-three, the Federal Trade Commission proposed a rule treating most worker non-competes as an unfair method of competition.",
+              "reveal": 1,
+              "refs": [
+                "R-ftc-2024-non-compete"
+              ]
+            },
+            {
+              "text": "The final rule was published on May seventh, twenty twenty-four, scheduled to take effect on September fourth, twenty twenty-four.",
+              "reveal": 2,
+              "refs": [
+                "R-ftc-2024-non-compete"
+              ]
+            },
+            {
+              "text": "It never took effect. On August twentieth, twenty twenty-four, a federal district court in Texas set it aside, holding that the agency lacked statutory authority and that the rule was arbitrary and capricious.",
+              "reveal": 3,
+              "refs": [
+                "R-ftc-2024-non-compete"
+              ]
+            },
+            {
+              "text": "On September fifth, twenty twenty-five, the Commission voted three to one to dismiss its appeals and accept that outcome.",
+              "reveal": 4,
+              "refs": [
+                "R-ftc-2024-non-compete"
+              ]
+            },
+            {
+              "text": "And in February twenty twenty-six, the vacated rule was removed from the Code of Federal Regulations. The agency says it will pursue individual cases instead.",
+              "reveal": 5,
+              "refs": [
+                "R-ftc-2024-non-compete"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "\"Dead\"? \"Fully back\"?",
+              "Both oversimplify."
+            ]
+          },
+          "cues": [
+            {
+              "text": "Two points about this history are easy to miss.",
+              "refs": [
+                "R-ftc-2024-non-compete"
+              ]
+            },
+            {
+              "text": "First, the court's decision turned on the agency's authority and its rulemaking. It did not find that non-competes are good for workers or the economy.",
+              "refs": [
+                "R-ftc-2024-non-compete"
+              ]
+            },
+            {
+              "text": "Second, federal attention did not end. The agency has said it will bring individual enforcement actions against non-competes it sees as unfair competition, and state law still governs enforceability.",
+              "reveal": 1,
+              "refs": [
+                "R-ftc-2024-non-compete"
+              ]
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-ftc",
+            "type": "choice",
+            "prompt": "A manager says in November 2026: \"The court killed the FTC ban, so non-competes are fully back and legally safe everywhere.\" What is the most accurate response?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Correct — the court found non-competes benefit workers, so they are enforceable nationwide."
+              },
+              {
+                "id": "b",
+                "text": "Wrong — the FTC ban is in force, so non-competes are void nationwide."
+              },
+              {
+                "id": "c",
+                "text": "Oversimplified — the rule was set aside on authority grounds and never took effect, state law still governs enforceability, and the FTC says it will pursue individual cases."
+              },
+              {
+                "id": "d",
+                "text": "Correct — once the rule left the Code of Federal Regulations, no federal agency can act on non-competes."
+              }
+            ],
+            "answer": "c",
+            "concept": "c-restrictive-covenants",
+            "feedback": {
+              "a": "The court ruled on the agency's authority and rulemaking, not on whether non-competes help workers. And enforceability still depends on state law.",
+              "b": "The rule was set aside in August 2024 before its effective date, and the FTC dropped its appeals in September 2025. It is not in force.",
+              "c": "Right. Neither \"dead\" nor \"fully back\": state law governs, it moved in both directions in 2025, and federal case-by-case enforcement remains possible.",
+              "d": "The FTC has said it will bring individual actions against non-competes it considers unfair methods of competition. Removal of the rule did not end that."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "What the evidence says",
+      "scenes": [
+        {
+          "visual": {
+            "type": "bars",
+            "title": "Michigan, 1985: fall in inventor mobility",
+            "unit": "%",
+            "items": [
+              {
+                "label": "All inventors",
+                "value": 8.1
+              },
+              {
+                "label": "Firm-specific skills, +1 SD",
+                "value": 15.4
+              },
+              {
+                "label": "Narrow specialists, +1 SD",
+                "value": 16.2
+              }
+            ],
+            "note": "Marx, Strumsky and Fleming (2009); relative to non-enforcing states.",
+            "refs": [
+              "R-marx-2009-mobility"
+            ]
+          },
+          "cues": [
+            {
+              "text": "So do non-competes help or harm? The strongest causal evidence comes from a natural experiment."
+            },
+            {
+              "text": "In nineteen eighty-five, Michigan reversed its policy of not enforcing non-competes. Matt Marx, Deborah Strumsky and Lee Fleming compared Michigan inventors with inventors in states that kept refusing to enforce them, a difference-in-differences design.",
+              "refs": [
+                "R-marx-2009-mobility"
+              ]
+            },
+            {
+              "text": "After the reversal, inventor mobility fell about eight percent.",
+              "reveal": 1,
+              "refs": [
+                "R-marx-2009-mobility"
+              ]
+            },
+            {
+              "text": "For inventors with firm-specific skills, about fifteen percent, measured one standard deviation above the mean.",
+              "reveal": 2,
+              "refs": [
+                "R-marx-2009-mobility"
+              ]
+            },
+            {
+              "text": "And for specialists in narrow technical fields, about sixteen percent.",
+              "reveal": 3,
+              "refs": [
+                "R-marx-2009-mobility"
+              ]
+            },
+            {
+              "text": "That design is stronger than comparing enforcing and non-enforcing states at one moment, because those states differ in industry mix and labor markets in many ways.",
+              "refs": [
+                "R-starr-2021-noncompete"
+              ]
+            },
+            {
+              "text": "But notice the scope. One state, one period, one occupation, and an outcome, moving between employers, that is not the same as wages, innovation or welfare.",
+              "refs": [
+                "R-marx-2009-mobility"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "A contested question",
+            "left": {
+              "title": "The case for",
+              "points": [
+                "Protects training investment",
+                "Protects shared secrets",
+                "Early disclosure allows bargaining"
+              ]
+            },
+            "right": {
+              "title": "The case against",
+              "points": [
+                "Suppresses mobility",
+                "Lower wages where enforcement is easier",
+                "Slows the spread of knowledge"
+              ]
+            },
+            "refs": [
+              "R-starr-2021-noncompete",
+              "R-marx-2009-mobility",
+              "R-ftc-2024-non-compete"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now, the other side. The case for non-competes is that they protect investments that would otherwise be underprovided. An employer may hesitate to train people or share secrets if a competitor can hire them tomorrow.",
+              "reveal": 1
+            },
+            {
+              "text": "The case against is that they suppress mobility, wages and the spread of knowledge.",
+              "reveal": 2
+            },
+            {
+              "text": "The evidence leans toward harm to mobility, but it is not one-sided. Starr and colleagues found relatively lower wages where enforcement is easier.",
+              "refs": [
+                "R-marx-2009-mobility",
+                "R-starr-2021-noncompete"
+              ]
+            },
+            {
+              "text": "Yet they also found that workers told about a non-compete before accepting an offer fared better than those told afterward. That pattern is consistent with some genuine bargaining when the term is disclosed early.",
+              "refs": [
+                "R-starr-2021-noncompete"
+              ]
+            },
+            {
+              "text": "The Commission's rulemaking argued for broad harm. The court that set the rule aside did not decide that question.",
+              "refs": [
+                "R-ftc-2024-non-compete"
+              ]
+            },
+            {
+              "text": "And there is a gap between enforceability and effect. A clause no court would enforce can still deter a person from taking a job, deter a new employer from hiring, or trigger a costly lawyer's letter."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Narrower tools",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "An offer with strings",
+            "steps": [
+              "24-month non-compete: all fintech, worldwide",
+              "12-month non-solicit of clients and staff",
+              "Confidentiality forever, no exclusions",
+              "All inventions, on or off company time"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let's apply this. A hypothetical senior data engineer receives an offer from a payments company, with salary above market."
+            },
+            {
+              "text": "The agreement includes a twenty-four-month non-compete covering any financial technology business, worldwide. That is broad, and even if unenforceable where she works, it may deter future employers.",
+              "reveal": 1
+            },
+            {
+              "text": "A twelve-month non-solicit. Limited to clients she actually served, that is a common, narrower protection. \"Any client of the Company\" reaches much further.",
+              "reveal": 2
+            },
+            {
+              "text": "Confidentiality in perpetuity, with no exclusions. Perpetual protection is defensible for trade secrets, but overbroad for ordinary information, and the standard exclusions are missing: public information, prior knowledge, independent development, disclosure the law requires.",
+              "reveal": 3
+            },
+            {
+              "text": "And invention assignment covering everything conceived during employment, on or off company time. She maintains an open-source library unrelated to payments.",
+              "reveal": 4
+            },
+            {
+              "text": "Unless that library is listed as an excluded prior project, its ownership becomes contestable the moment she improves it during employment."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-tool",
+            "type": "choice",
+            "prompt": "The company's real concern is that the engineer might take the accounts she manages to a rival. Which tool protects that interest most narrowly?",
+            "options": [
+              {
+                "id": "a",
+                "text": "A worldwide, 24-month non-compete covering all of financial technology."
+              },
+              {
+                "id": "b",
+                "text": "A client non-solicitation limited to accounts she actually served."
+              },
+              {
+                "id": "c",
+                "text": "A perpetual confidentiality clause with no exclusions."
+              },
+              {
+                "id": "d",
+                "text": "An invention-assignment clause covering all ideas conceived during employment."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-restrictive-covenants",
+            "feedback": {
+              "a": "It covers the interest, but far more besides: it bars all competing work. That breadth adds enforceability risk and deters candidates while protecting little extra.",
+              "b": "Right. Match the tool to the interest. A client non-solicit tied to her own accounts protects the relationships without barring her from the industry.",
+              "c": "Confidentiality protects information, not client relationships, and without standard exclusions it is overbroad for ordinary business information.",
+              "d": "Invention assignment concerns ownership of work product. It does nothing to protect client relationships."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Before blanket non-competes",
+            "cards": [
+              {
+                "title": "Which roles?",
+                "q": "Who holds information that would cause real harm?",
+                "fail": "For most roles, risk and slower hiring for little gain"
+              },
+              {
+                "title": "Narrower tools",
+                "q": "Confidentiality, client non-solicits, garden leave",
+                "fail": "Plus deferred pay that vests over time"
+              },
+              {
+                "title": "Where?",
+                "q": "Each state and country where staff work",
+                "fail": "Counsel confirms what is permissible"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Match the tool to the interest. That principle also answers a common leadership request: require non-competes for every new hire.",
+              "reveal": 1
+            },
+            {
+              "text": "Before agreeing, ask which roles hold information or relationships that would cause real harm at a competitor, and how often that has happened. For other roles, a non-compete may add legal risk, slow hiring and deter strong candidates."
+            },
+            {
+              "text": "Narrower tools may protect the same interests at lower cost: confidentiality backed by sound information security, client non-solicits for client-facing roles, garden leave for a few senior posts, deferred compensation that vests over time.",
+              "reveal": 2
+            },
+            {
+              "text": "And counsel should confirm what is permissible in each state and country where staff work.",
+              "reveal": 3
+            },
+            {
+              "text": "In a sports organization, where coaches, analysts and medical staff move often and build their own tools, the same rule holds. Set expectations at hiring about what belongs to whom, rather than discovering them in an exit interview."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Bringing it together",
+      "scenes": [
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Contract Lab",
+                "detail": "Flag the issues in a fictional consulting agreement",
+                "href": "#/exercise/w11-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Starr, Prescott & Bishara (2021), Noncompete Agreements in the US Labor Force",
+                "href": "#/library/R-starr-2021-noncompete"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let's bring it together."
+            },
+            {
+              "text": "At will is the United States default, limited by statutes, public policy, contracts and collective agreements. So the clauses that operate after departure carry much of the weight."
+            },
+            {
+              "text": "Non-competes, non-solicits, confidentiality and invention assignment protect different interests. Match each to its interest."
+            },
+            {
+              "text": "Non-compete law is mainly state law, and it changed in several states in twenty twenty-five. The federal rule was set aside in August twenty twenty-four, the appeals were dropped in September twenty twenty-five, and it left the federal code in February twenty twenty-six.",
+              "refs": [
+                "R-ftc-2024-non-compete"
+              ]
+            },
+            {
+              "text": "The best causal evidence, from Michigan, shows reduced mobility, especially for specialists. The survey evidence shows these clauses are common and rarely negotiated.",
+              "refs": [
+                "R-marx-2009-mobility",
+                "R-starr-2021-noncompete"
+              ]
+            },
+            {
+              "text": "Next, take the comprehension check below. It is the same check as the written lesson. Then open the Contract Lab, and read Starr, Prescott and Bishara on prevalence, timing and negotiation.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson stays here, with the full clause table and the methodological notes. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

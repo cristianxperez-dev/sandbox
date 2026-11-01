@@ -1,0 +1,743 @@
+{
+  "id": "w09-l3-lecture",
+  "lesson": "w09-l3",
+  "title": "What Your Rival Cannot Buy",
+  "subtitle": "Resources, capabilities and the build-versus-buy decision",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 3. It covers the same objectives — the VRIN criteria, dynamic capabilities, the tautology critique of the resource-based view and a defended build, buy or partner recommendation — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Same software, different results",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 9 · Lesson 3 · Lecture",
+            "title": "What your rival cannot buy",
+            "sub": "Resources, capabilities and the build-versus-buy decision"
+          },
+          "cues": [
+            {
+              "text": "Two hospital systems of similar size buy the same clinical-decision software, from the same vendor, in the same year. The example is fictional."
+            },
+            {
+              "text": "Three years later, one has cut avoidable readmissions substantially. The other reports no measurable change."
+            },
+            {
+              "text": "Same software. Same license fee. So whatever explains the gap, it cannot be the software."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Not on any invoice:",
+              "routines, trust, authority, speed, clean data.",
+              "Anything you can buy, your rival can buy too."
+            ]
+          },
+          "cues": [
+            {
+              "text": "Before I go on, list what might explain the difference. Then ask which of those things the lagging system could buy, and which it would have to build.",
+              "reveal": 0
+            },
+            {
+              "text": "The likely explanations appear on no invoice. How the tool is woven into nurses’ and physicians’ routines. Whether clinicians trust it. Whether someone has authority to act on an alert. How fast problems are fixed. Whether the data feeding it is clean.",
+              "reveal": 1
+            },
+            {
+              "text": "Each took time to develop, depends on many people working together, and is hard for an outsider to see, let alone copy."
+            },
+            {
+              "text": "That is the intuition behind the resource-based view of the firm. An advantage that lasts is rarely something you can buy, because anything you can buy, your rival can buy too.",
+              "reveal": 2
+            },
+            {
+              "text": "Banks license the same trading platforms. Armies buy similar equipment. Sports organizations purchase the same tracking hardware. What they learn and how they adapt does not come in the box."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "The VRIN test",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Barney’s criteria for sustained advantage",
+            "steps": [
+              "Valuable — exploits opportunities or neutralizes threats",
+              "Rare — among current and potential rivals",
+              "Imperfectly imitable",
+              "Non-substitutable — no strategic equivalent"
+            ],
+            "refs": [
+              "R-barney-1991-firm"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Jay Barney’s nineteen ninety-one article set out the resource-based view in the form most often taught.",
+              "refs": [
+                "R-barney-1991-firm"
+              ]
+            },
+            {
+              "text": "It starts from two assumptions. Resources are heterogeneous: firms differ in what they control. And they are imperfectly mobile, so those differences can persist.",
+              "refs": [
+                "R-barney-1991-firm"
+              ]
+            },
+            {
+              "text": "Resources are defined broadly. Physical assets, yes, but also processes, information, knowledge, relationships and reputation.",
+              "refs": [
+                "R-barney-1991-firm"
+              ]
+            },
+            {
+              "text": "Barney proposed that a resource can sustain an advantage when it meets four tests. It is valuable: it helps the firm exploit opportunities or neutralize threats.",
+              "reveal": 1,
+              "refs": [
+                "R-barney-1991-firm"
+              ]
+            },
+            {
+              "text": "It is rare among current and potential competitors.",
+              "reveal": 2,
+              "refs": [
+                "R-barney-1991-firm"
+              ]
+            },
+            {
+              "text": "It is imperfectly imitable.",
+              "reveal": 3,
+              "refs": [
+                "R-barney-1991-firm"
+              ]
+            },
+            {
+              "text": "And it has no strategically equivalent substitute. Teaching shorthand calls these the VRIN criteria.",
+              "reveal": 4,
+              "refs": [
+                "R-barney-1991-firm"
+              ],
+              "say": "And it has no strategically equivalent substitute. Teaching shorthand calls these the vrin criteria."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Why a resource resists imitation",
+            "cards": [
+              {
+                "title": "Unique history",
+                "q": "Built along a path that cannot be repeated",
+                "fail": "A reputation earned over decades"
+              },
+              {
+                "title": "Causal ambiguity",
+                "q": "Nobody knows exactly what produces the result",
+                "fail": "Rivals do not know what to copy"
+              },
+              {
+                "title": "Social complexity",
+                "q": "Relationships, culture and trust among many people",
+                "fail": "Cannot be engineered on demand"
+              }
+            ],
+            "refs": [
+              "R-barney-1991-firm"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The most interesting part concerns imitation. Barney gave three reasons a resource can resist it.",
+              "refs": [
+                "R-barney-1991-firm"
+              ]
+            },
+            {
+              "text": "Unique historical conditions. The resource was built along a path that cannot be repeated, like a reputation earned over decades.",
+              "reveal": 1,
+              "refs": [
+                "R-barney-1991-firm"
+              ]
+            },
+            {
+              "text": "Causal ambiguity. Neither the firm nor its rivals fully understand which resources produce the advantage, so rivals don’t know what to copy.",
+              "reveal": 2,
+              "refs": [
+                "R-barney-1991-firm"
+              ]
+            },
+            {
+              "text": "Social complexity. The resource depends on relationships, culture and trust among many people.",
+              "reveal": 3,
+              "refs": [
+                "R-barney-1991-firm"
+              ]
+            },
+            {
+              "text": "Notice that all three are the opposite of what can be purchased. Now apply the test to a tricky case."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-vrin",
+            "type": "choice",
+            "prompt": "A firm hires a star analyst last year at a market salary. The analyst is genuinely valuable and few people have the skill. Under the resource-based view, what is the most likely implication?",
+            "concept": "c-resource-based-view",
+            "options": [
+              {
+                "id": "a",
+                "text": "A sustained competitive advantage: the resource is valuable and rare."
+              },
+              {
+                "id": "b",
+                "text": "Little profit for the firm: rivals can bid, so the analyst is likely to capture the value through pay."
+              },
+              {
+                "id": "c",
+                "text": "Competitive parity: the skill is common."
+              },
+              {
+                "id": "d",
+                "text": "Causal ambiguity protects the firm."
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "Valuable and rare is not enough. The analyst is not hard to imitate in Barney’s sense — a rival can simply hire someone similar, or hire the analyst away.",
+              "b": "Right. Mobile talent can bargain for its own value. The resource may be valuable and rare, yet the value is captured by the employee, which links back to Lesson 2’s logic of value capture.",
+              "c": "The scenario says few people have the skill, so it is rare. The problem is mobility, not commonness.",
+              "d": "Nothing here is ambiguous: everyone can see who the analyst is and what they do. That visibility makes rivals’ bids easy."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Valuable and rare is not enough.",
+              "Is the firm organized to use it?"
+            ],
+            "sub": "Mobile resources bargain for their own value"
+          },
+          "cues": [
+            {
+              "text": "That case matters. A resource can be valuable and rare and still produce no profit for the organization holding it, if the resource can bargain for its own value. Highly mobile talent is the classic example.",
+              "reveal": 0
+            },
+            {
+              "text": "A later teaching version, often called VRIO, adds one more question: is the firm organized to exploit the resource? A valuable asset inside a dysfunctional organization produces nothing.",
+              "reveal": 1,
+              "say": "A later teaching version, often called vree-oh, adds one more question: is the firm organized to exploit the resource? A valuable asset inside a dysfunctional organization produces nothing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Capabilities that renew",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "term": "Capability",
+            "definition": "A repeatable pattern of coordinated activity, built from resources combined through routines.",
+            "example": "Launching on schedule · recognizing sepsis early · developing junior lawyers into partners"
+          },
+          "cues": [
+            {
+              "text": "Let’s get three terms straight. A resource is something you control or can reliably access: equipment, data, a brand, a contract, a skilled person."
+            },
+            {
+              "text": "A routine is a recurring pattern of interdependent actions by several people, like a shift-change handoff."
+            },
+            {
+              "text": "And a capability is the reliable ability to perform an activity well, built from resources combined through routines.",
+              "reveal": 1
+            },
+            {
+              "text": "Launching a product on schedule. Recognizing and treating sepsis early. Developing junior lawyers into partners.",
+              "reveal": 2
+            },
+            {
+              "text": "Capabilities live in routines, tacit knowledge and relationships. They are built by doing, and they decay when unused. Resources can often be bought; capabilities usually have to be built."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Dynamic capabilities",
+            "cards": [
+              {
+                "title": "Processes",
+                "q": "How the firm coordinates, learns and reconfigures",
+                "fail": "Where change actually happens"
+              },
+              {
+                "title": "Positions",
+                "q": "Current technology, assets, customers, relationships",
+                "fail": "The endowment you start from"
+              },
+              {
+                "title": "Paths",
+                "q": "Alternatives open to it, shaped by history",
+                "fail": "What you can learn next depends on what you learned"
+              }
+            ],
+            "refs": [
+              "R-teece-1997-dynamic"
+            ]
+          },
+          "cues": [
+            {
+              "text": "But what happens when markets change quickly? David Teece, Gary Pisano and Amy Shuen took up that question.",
+              "refs": [
+                "R-teece-1997-dynamic"
+              ]
+            },
+            {
+              "text": "They defined dynamic capabilities as a firm’s ability to integrate, build and reconfigure internal and external competences to address rapidly changing environments.",
+              "refs": [
+                "R-teece-1997-dynamic"
+              ]
+            },
+            {
+              "text": "In their account, advantage depends on processes: how the firm coordinates, learns and reconfigures.",
+              "reveal": 1,
+              "refs": [
+                "R-teece-1997-dynamic"
+              ]
+            },
+            {
+              "text": "On positions: its current endowment of technology, assets, customers and relationships.",
+              "reveal": 2,
+              "refs": [
+                "R-teece-1997-dynamic"
+              ]
+            },
+            {
+              "text": "And on paths: the strategic alternatives open to it, shaped by its history. Capabilities are cumulative. What a firm can learn next depends on what it has already learned.",
+              "reveal": 3,
+              "refs": [
+                "R-teece-1997-dynamic"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "A capability that renews itself",
+            "steps": [
+              {
+                "label": "Resources",
+                "text": "Assets, data, people"
+              },
+              {
+                "label": "Routines",
+                "text": "Repeatable combinations"
+              },
+              {
+                "label": "Capability",
+                "text": "Reliable performance"
+              },
+              {
+                "label": "Reconfiguration",
+                "text": "Sense change, rebuild"
+              },
+              {
+                "label": "Renewed advantage",
+                "text": "Rivals keep chasing"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Put it together as a chain. Resources,",
+              "reveal": 1
+            },
+            {
+              "text": "combined through routines,",
+              "reveal": 2
+            },
+            {
+              "text": "become a capability.",
+              "reveal": 3
+            },
+            {
+              "text": "Reconfiguration, sensing change and rebuilding routines, is the dynamic part.",
+              "reveal": 4
+            },
+            {
+              "text": "And the result is an advantage that renews itself, a position rivals have to keep chasing.",
+              "reveal": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Is the theory circular?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "A live disagreement",
+            "left": {
+              "title": "Priem and Butler, two thousand one",
+              "points": [
+                "Risks tautology: valuable defined by advantage",
+                "Value is set outside the firm, by demand",
+                "Assumed stable product markets"
+              ]
+            },
+            "right": {
+              "title": "Barney’s reply, same issue",
+              "points": [
+                "Direct criticisms unfounded",
+                "Accepted requirements for future research",
+                "Both agree resources matter"
+              ]
+            },
+            "refs": [
+              "R-priem-2001-is",
+              "R-barney-1991-firm"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the challenge. In two thousand one, Richard Priem and John Butler argued that the resource-based view, as then formulated, was not yet a theoretical structure.",
+              "refs": [
+                "R-priem-2001-is"
+              ]
+            },
+            {
+              "text": "Their central concern was circularity. If a valuable resource is defined as one that generates competitive advantage, then the claim that valuable resources generate advantage is true by definition.",
+              "reveal": 1,
+              "refs": [
+                "R-priem-2001-is"
+              ]
+            },
+            {
+              "text": "They also argued that the view assumed stable product markets, and never explained how a resource’s value is determined. That value, they said, is set outside the firm, by demand.",
+              "refs": [
+                "R-priem-2001-is"
+              ]
+            },
+            {
+              "text": "Barney replied in the same issue that the direct criticisms were unfounded, while accepting that they highlighted requirements for future research.",
+              "reveal": 2,
+              "refs": [
+                "R-priem-2001-is"
+              ]
+            },
+            {
+              "text": "This is a contested question of theory construction, not a failed replication. Both sides agree resources matter. They disagree on whether the framework as stated can be falsified."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Using VRIN before the fact",
+            "steps": [
+              "Define value from outside: who pays more, which costs fall",
+              "Say why that will remain true",
+              "Name the mechanism that blocks imitation",
+              "Estimate how long a rival needs to close the gap"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The practical lesson doesn’t depend on who won. VRIN is easy to apply after the fact. Once a firm has succeeded, it is tempting to call whatever it had valuable, rare and inimitable.",
+              "say": "The practical lesson doesn’t depend on who won. The vrin test is easy to apply after the fact. Once a firm has succeeded, it is tempting to call whatever it had valuable, rare and inimitable."
+            },
+            {
+              "text": "To use it before the fact, define value from the outside. Which customers will pay more, or which costs will fall, because of this resource?",
+              "reveal": 1
+            },
+            {
+              "text": "And why will that remain true?",
+              "reveal": 2
+            },
+            {
+              "text": "Then name the mechanism that blocks imitation.",
+              "reveal": 3
+            },
+            {
+              "text": "And estimate how long a determined rival would take to close the gap. If you can’t state those, you are describing a hope, not an advantage.",
+              "reveal": 4
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "More limits",
+            "cards": [
+              {
+                "title": "Dynamic, by hindsight",
+                "q": "Inferred from successful adaptation",
+                "fail": "Then it explains nothing"
+              },
+              {
+                "title": "Hard to measure",
+                "q": "Proxies: R&D, patents, tenure",
+                "fail": "Reverse causality, survivorship"
+              },
+              {
+                "title": "Capability traps",
+                "q": "Strengths fit to an old world",
+                "fail": "Become rigidities"
+              },
+              {
+                "title": "Romantic building",
+                "q": "Builders like to build",
+                "fail": "Who maintains it in three years?"
+              }
+            ],
+            "refs": [
+              "R-teece-1997-dynamic",
+              "R-priem-2001-is"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Dynamic capabilities attract a parallel concern. If you identify one by the fact that a firm adapted successfully, the concept explains nothing.",
+              "reveal": 1,
+              "refs": [
+                "R-teece-1997-dynamic",
+                "R-priem-2001-is"
+              ]
+            },
+            {
+              "text": "APERTURE’s working view, and it is a working view, is that the idea is most useful when it points to observable processes: how often you run experiments, how quickly you retire old programs, how you move people to new priorities.",
+              "say": "Aperture’s working view, and it is a working view, is that the idea is most useful when it points to observable processes: how often you run experiments, how quickly you retire old programs, how you move people to new priorities."
+            },
+            {
+              "text": "Measurement is hard too. The resources that matter most are the hardest to observe, so studies rely on proxies like R and D spending, patents or tenure. Profitable firms can afford more resources, which is reverse causality, and firms whose resources failed drop out of samples.",
+              "reveal": 2
+            },
+            {
+              "text": "Capabilities can become traps. A newspaper superb at print, a hospital built around inpatient care: strengths that once fit can become rigidities.",
+              "reveal": 3
+            },
+            {
+              "text": "And building is often romanticized. Internal teams underestimate maintenance, security and documentation, and a capability built by two talented people can vanish when they leave. A credible build case says who maintains it in three years, and at what cost.",
+              "reveal": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Build, buy or partner",
+      "scenes": [
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "Build-versus-buy heuristic",
+            "x": [
+              "Low contribution to differentiation",
+              "High contribution to differentiation"
+            ],
+            "y": [
+              "Scarce or immature in the market",
+              "Widely available in the market"
+            ],
+            "cells": [
+              [
+                "Buy: treat as a commodity",
+                "Buy the layer; build integration on top"
+              ],
+              [
+                "Partner or stage the investment",
+                "Build and protect"
+              ]
+            ]
+          },
+          "cues": [
+            {
+              "text": "So where does this become practical? In the everyday decision to build, buy or partner. Buying is fast and draws on specialists’ scale. Building is slow and costly but can create what rivals cannot purchase. Partnering sits between."
+            },
+            {
+              "text": "Here is a practitioner heuristic, not a validated model. Something widely available that doesn’t differentiate: buy it, and negotiate on price and service.",
+              "reveal": 1
+            },
+            {
+              "text": "Widely available but central to differentiation: buy the commodity layer, and build the integration, data and routines on top.",
+              "reveal": 2
+            },
+            {
+              "text": "Scarce or immature, and not differentiating: partner, or stage the investment. Don’t build what doesn’t differentiate.",
+              "reveal": 3
+            },
+            {
+              "text": "Scarce and differentiating: build and protect. That is where advantage can be created.",
+              "reveal": 4
+            },
+            {
+              "text": "Three questions refine it. Hold-up risk: one critical vendor gains power at renewal. Learning: building teaches what a customer never learns. And opportunity cost: the people who build this are not building something else."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "A sepsis early-warning model",
+            "left": {
+              "title": "Buy from a vendor",
+              "points": [
+                "First use in 4 months",
+                "$1.1M over three years",
+                "Low differentiation",
+                "Moderate hold-up risk"
+              ]
+            },
+            "right": {
+              "title": "Build internally",
+              "points": [
+                "First use in 14–18 months",
+                "$1.6M over three years",
+                "Potentially high differentiation",
+                "Key people may leave"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "A worked decision. A mid-sized hospital system needs an early-warning model for sepsis. The figures are synthetic."
+            },
+            {
+              "text": "A vendor offers a validated, integrated model. First use in four months, about one point one million dollars over three years. Low differentiation, since rivals can license it, and moderate hold-up risk at renewal.",
+              "reveal": 1
+            },
+            {
+              "text": "The internal team could build one tuned to local patients. Fourteen to eighteen months, about one point six million. Potentially high differentiation, if embedded in routines, with the risk that the project slips or key people leave.",
+              "reveal": 2
+            },
+            {
+              "text": "A university group offers a third path: co-develop and publish, in ten to twelve months, for about nine hundred thousand plus staff time. Its risk is that academic incentives diverge from operational needs."
+            },
+            {
+              "text": "What would you recommend?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-sepsis",
+            "type": "choice",
+            "prompt": "Given the opening example — the advantage lay in how alerts were acted on — which recommendation best fits the build-versus-buy heuristic?",
+            "concept": "c-build-versus-buy",
+            "options": [
+              {
+                "id": "a",
+                "text": "Build the whole model internally; it is the only way to differentiate."
+              },
+              {
+                "id": "b",
+                "text": "Buy the model on terms guaranteeing data access and local performance reporting, and invest the internal team in clinical workflow and monitoring."
+              },
+              {
+                "id": "c",
+                "text": "Buy the model and redeploy the data team elsewhere; the vendor handles everything."
+              },
+              {
+                "id": "d",
+                "text": "Wait until the market matures before doing anything."
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "The prediction model is increasingly available in the market, so building it spends scarce people on the commodity layer. The differentiating part is the workflow around it.",
+              "b": "Right. Buy the commodity layer and build what is not for sale: escalation routines, nurses’ authority to act, response times and local monitoring. The team learns the data, preserving the option to build later. Partnering is a defensible alternative if publication and learning matter more than speed.",
+              "c": "This buys parity. Rivals can license the same model; the advantage in the opening example came from routines no vendor delivers.",
+              "d": "Waiting forgoes both the clinical benefit and the learning. The heuristic says buy what is available and build around it."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Buy the equipment.",
+              "Build the routine that turns it into results."
+            ],
+            "sub": "And read the data-rights terms"
+          },
+          "cues": [
+            {
+              "text": "Buy the model on terms that guarantee data access and local performance reporting. Put your own people into the clinical workflow. The option to build later stays open, because the team learns the data in the meantime.",
+              "reveal": 0
+            },
+            {
+              "text": "Player development faces the same choice with tracking systems and analytics platforms. Any rival can buy the hardware. What it cannot buy is the routine that turns measurement into better coaching, and the organization’s own record of what worked for whom.",
+              "reveal": 1
+            },
+            {
+              "text": "That is also why data-rights terms in vendor contracts matter. They decide whether you can build on your own data later."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-buy",
+            "type": "reflect",
+            "prompt": "Think of a capability your organization currently buys. Is it truly a commodity, or should the integration layer around it be built? State the value from the outside and the mechanism that would block imitation.",
+            "concept": "c-build-versus-buy"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Strategy Table",
+                "detail": "Choose a posture and allocate a budget to match it",
+                "href": "#/exercise/w09-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Porter (1996), What Is Strategy?",
+                "href": "#/library/R-porter-1996-what"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Anything you can buy, a rival can buy. Sustained advantage usually rests on resources that are valuable, rare, hard to imitate and hard to substitute, often because of history, causal ambiguity or social complexity."
+            },
+            {
+              "text": "Dynamic capabilities are the ability to rebuild as markets change. The framework turns circular if value means success, so define value from customers and costs before the fact. Then buy the commodity layer, and build what differentiates."
+            },
+            {
+              "text": "Next, take the comprehension check below, the same check as the written lesson. Then open the Strategy Table, and read Porter’s What Is Strategy, this week’s required reading.",
+              "reveal": 1
+            },
+            {
+              "text": "Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

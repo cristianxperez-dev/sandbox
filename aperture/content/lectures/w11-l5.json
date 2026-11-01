@@ -1,0 +1,686 @@
+{
+  "id": "w11-l5-lecture",
+  "lesson": "w11-l5",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "title": "Call Early, Share Narrowly, Decide Yourself",
+  "subtitle": "Working with counsel: timing, privilege and legal risk",
+  "summary": "A narrated, interactive version of Lesson 5 of the law week. It covers the same objectives — when to involve counsel, the basics of attorney-client privilege and work product and how protection is lost, framing questions that produce probabilistic advice, and keeping the business decision yours — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Transparency with a price",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 11 · Lesson 5 · Lecture",
+            "title": "Call early, share narrowly, decide yourself",
+            "sub": "Timing, privilege and legal risk"
+          },
+          "cues": [
+            {
+              "text": "First, an important note. This is general educational material about legal concepts, not legal advice. For any specific matter, consult a qualified attorney."
+            },
+            {
+              "text": "Privilege and professional-responsibility rules vary across United States jurisdictions, and differ substantially in other countries. Everything here describes general United States concepts only."
+            },
+            {
+              "text": "Let's open with a manager who did everything with good intentions."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "One complaint, four messages",
+            "steps": [
+              {
+                "label": "Complaint",
+                "text": "An employee reports discriminatory comments"
+              },
+              {
+                "label": "Email to counsel",
+                "text": "Facts, and a request for advice"
+              },
+              {
+                "label": "Counsel replies",
+                "text": "Legal advice"
+              },
+              {
+                "label": "Shared widely",
+                "text": "Forwarded to a recruiter; summarized in team chat"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "A hypothetical. A manager at a software company receives a complaint alleging that a team lead made discriminatory comments.",
+              "reveal": 1
+            },
+            {
+              "text": "The manager emails the company's employment lawyer, describes the facts and asks how to proceed.",
+              "reveal": 2
+            },
+            {
+              "text": "The lawyer replies with advice.",
+              "reveal": 3
+            },
+            {
+              "text": "Wanting to be transparent, the manager forwards the reply to the outside recruiting firm that placed the team lead, and later summarizes it in a team chat channel.",
+              "reveal": 4
+            },
+            {
+              "text": "If the complaint becomes a lawsuit, which of these is most likely to stay protected?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-protected",
+            "type": "choice",
+            "prompt": "If the complaint becomes a lawsuit, which communication is most likely to remain protected by attorney-client privilege?",
+            "options": [
+              {
+                "id": "a",
+                "text": "The manager's original confidential email asking counsel for legal advice."
+              },
+              {
+                "id": "b",
+                "text": "The copy of counsel's advice forwarded to the outside recruiting firm."
+              },
+              {
+                "id": "c",
+                "text": "The summary of the advice posted in the team chat channel."
+              },
+              {
+                "id": "d",
+                "text": "The underlying facts of what the team lead said."
+              }
+            ],
+            "answer": "a",
+            "concept": "c-attorney-client-privilege",
+            "feedback": {
+              "a": "Right. A confidential request for legal advice to counsel is the core of privilege. The sharing that followed is what put the advice at risk.",
+              "b": "Sending the advice to an outside vendor outside the circle of people who need it is a classic way to lose its confidentiality.",
+              "c": "Posting a summary in a team channel spreads the advice beyond the people who need it, which can waive protection.",
+              "d": "Privilege protects communications, not facts. What happened can still be asked about, even if it was reported to counsel."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Good faith is not enough.",
+              "Learn the rules before the crisis."
+            ]
+          },
+          "cues": [
+            {
+              "text": "The manager acted in good faith, and may still have weakened the company's ability to keep its legal advice confidential."
+            },
+            {
+              "text": "Privilege rules are not intuitive. The moment to learn them is before a crisis, not during one.",
+              "reveal": 1
+            },
+            {
+              "text": "So, four questions: when to call a lawyer, what privilege protects, how to brief counsel, and how to turn a forecast into a decision."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "What privilege protects",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "The client is the organization",
+            "term": "Attorney-client privilege",
+            "definition": "Protects confidential communications between a client and its lawyer made to obtain or give legal advice.",
+            "example": "Not the facts themselves, and not business advice that happens to come from a lawyer.",
+            "refs": [
+              "R-scotus-1981-upjohn"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Start with a question people rarely ask: who is the client? When a lawyer works for an organization, in-house or outside, the client is normally the organization itself."
+            },
+            {
+              "text": "The lawyer does not represent you personally, even if you made the call. If your interests diverge from the organization's, you may need your own counsel."
+            },
+            {
+              "text": "The attorney-client privilege protects confidential communications between a client and its lawyer, made for the purpose of obtaining or giving legal advice.",
+              "reveal": 1,
+              "refs": [
+                "R-scotus-1981-upjohn"
+              ]
+            },
+            {
+              "text": "Notice what is missing. It does not protect facts, and it does not protect business advice that happens to come from a lawyer.",
+              "reveal": 2,
+              "refs": [
+                "R-scotus-1981-upjohn"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "timeline",
+            "title": "Upjohn versus United States, 1981",
+            "events": [
+              {
+                "when": "Investigation",
+                "text": "Questionnaires and interviews about questionable payments abroad"
+              },
+              {
+                "when": "Question",
+                "text": "Only the senior \"control group\" protected?"
+              },
+              {
+                "when": "Holding",
+                "text": "No: employees' communications to counsel can be privileged"
+              },
+              {
+                "when": "Also",
+                "text": "Communications, not facts; work product applies"
+              }
+            ],
+            "refs": [
+              "R-scotus-1981-upjohn"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The leading case for organizations is Upjohn, decided by the Supreme Court in nineteen eighty-one.",
+              "refs": [
+                "R-scotus-1981-upjohn"
+              ]
+            },
+            {
+              "text": "A company's general counsel investigated questionable payments abroad, sending questionnaires to managers and interviewing employees.",
+              "reveal": 1,
+              "refs": [
+                "R-scotus-1981-upjohn"
+              ]
+            },
+            {
+              "text": "The question was whether privilege covered only a small control group of senior executives.",
+              "reveal": 2,
+              "refs": [
+                "R-scotus-1981-upjohn"
+              ]
+            },
+            {
+              "text": "The Court rejected that narrow test. Lawyers need information from employees throughout an organization to give sound advice. So employees' communications to corporate counsel, made at the direction of superiors to secure legal advice for the company, can be privileged.",
+              "reveal": 3,
+              "refs": [
+                "R-scotus-1981-upjohn"
+              ]
+            },
+            {
+              "text": "The Court also stressed that privilege protects communications, not facts. A witness can still be asked what happened.",
+              "reveal": 4,
+              "refs": [
+                "R-scotus-1981-upjohn"
+              ]
+            },
+            {
+              "text": "And it applied the work-product doctrine, which protects materials prepared in anticipation of litigation, such as a lawyer's interview notes, with especially strong protection for the lawyer's mental impressions and opinions.",
+              "refs": [
+                "R-scotus-1981-upjohn"
+              ]
+            },
+            {
+              "text": "That is why lawyers in internal interviews commonly give what practitioners call an Upjohn warning: I represent the company, not you. This conversation is privileged, but the privilege belongs to the company, which may choose to waive it."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Three habits that protect privilege",
+            "steps": [
+              "Keep legal advice to the people who need it",
+              "Separate legal questions from business threads",
+              "Ask before forwarding or summarizing advice"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Three habits protect privilege better than any label."
+            },
+            {
+              "text": "Keep legal-advice communications to the people who need them.",
+              "reveal": 1
+            },
+            {
+              "text": "Separate legal questions from business discussion, rather than mixing them in one thread.",
+              "reveal": 2
+            },
+            {
+              "text": "And do not forward or summarize counsel's advice outside that circle without asking first.",
+              "reveal": 3
+            },
+            {
+              "text": "One myth to drop. Writing \"privileged and confidential\" at the top of a document does not make it privileged if it is not, in substance, a confidential request for or provision of legal advice. A routine meeting does not become privileged because a lawyer happens to attend."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "When to call",
+      "scenes": [
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "When to involve counsel",
+            "x": [
+              "Reversible or routine",
+              "Irreversible or novel"
+            ],
+            "y": [
+              "Lower stakes",
+              "Higher stakes"
+            ],
+            "cells": [
+              [
+                "Counsel reviews: standard terms can hide exposure",
+                "Call early, before anything hardens"
+              ],
+              [
+                "Templates and policies; escalate if facts change",
+                "A brief consultation: one short question"
+              ]
+            ]
+          },
+          "cues": [
+            {
+              "text": "So when should you call? Here is a practitioner heuristic, not a legal rule, built on two questions. How high are the stakes? And can the action be undone?"
+            },
+            {
+              "text": "Higher stakes but routine: involve counsel in review, because standard terms can hide large exposures.",
+              "reveal": 1
+            },
+            {
+              "text": "Higher stakes and irreversible or novel: involve counsel early, before documents, commitments or public statements harden.",
+              "reveal": 2
+            },
+            {
+              "text": "Lower stakes and routine: use templates and policies, and escalate if the facts change.",
+              "reveal": 3
+            },
+            {
+              "text": "Lower stakes but novel: a brief consultation. One short question can prevent a costly precedent.",
+              "reveal": 4
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "A sequence for legal surprises",
+            "steps": [
+              {
+                "label": "Pause"
+              },
+              {
+                "label": "Preserve"
+              },
+              {
+                "label": "Call"
+              },
+              {
+                "label": "Brief"
+              },
+              {
+                "label": "Decide"
+              },
+              {
+                "label": "Record"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "When a surprise does land, follow a sequence."
+            },
+            {
+              "text": "Pause. Avoid statements, admissions and hasty new documents.",
+              "reveal": 1
+            },
+            {
+              "text": "Preserve. Once a dispute or investigation is reasonably anticipated, organizations are generally expected to keep relevant documents and data, including messages on phones and collaboration tools.",
+              "reveal": 2
+            },
+            {
+              "text": "Routine deletion that is harmless on an ordinary day can look like destruction of evidence on the wrong day. Counsel usually issues a formal litigation hold, but you should stop deleting relevant material without waiting for one."
+            },
+            {
+              "text": "Call counsel through the organization's channel.",
+              "reveal": 3
+            },
+            {
+              "text": "Brief them: facts known and unknown, documents, deadlines, the business objective.",
+              "reveal": 4
+            },
+            {
+              "text": "Decide, combining counsel's forecast with your business judgment.",
+              "reveal": 5
+            },
+            {
+              "text": "And record the decision and its basis appropriately.",
+              "reveal": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Questions that produce forecasts",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Questions for counsel",
+            "steps": [
+              "Which question, which law, which assumed facts?",
+              "Best estimate, and what range wouldn't surprise you?",
+              "Which fact would change your view most?",
+              "What would more certainty cost?",
+              "Our options, including doing nothing?",
+              "What should we not do or say meanwhile?",
+              "Legal advice, business advice, or both?"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the briefing itself. Recall the prediction view from Lesson One: you are asking for a forecast. These questions produce one.",
+              "refs": [
+                "R-holmes-1897-path"
+              ]
+            },
+            {
+              "text": "What question are you answering, under which jurisdiction's law, on what assumed facts?",
+              "reveal": 1
+            },
+            {
+              "text": "What is your best estimate of the outcome, and what range would not surprise you?",
+              "reveal": 2
+            },
+            {
+              "text": "Which fact, if it turned out differently, would change your view most?",
+              "reveal": 3
+            },
+            {
+              "text": "What would it cost, in money and time, to get a more certain answer?",
+              "reveal": 4
+            },
+            {
+              "text": "What are our options, including doing nothing, and what is the legal risk of each?",
+              "reveal": 5
+            },
+            {
+              "text": "What should we not do or say while this is pending?",
+              "reveal": 6
+            },
+            {
+              "text": "And is this legal advice, business advice or both? If both, should we keep them in separate communications?",
+              "reveal": 7
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "A one-page briefing note",
+            "cards": [
+              {
+                "title": "Facts",
+                "q": "Known and unknown",
+                "fail": "Makes counsel's assumptions visible"
+              },
+              {
+                "title": "Documents and deadlines",
+                "q": "Agreement, notice, reports of contacts",
+                "fail": "Saves billable time"
+              },
+              {
+                "title": "Business objective",
+                "q": "Continuity of care, not punishment",
+                "fail": "The strongest legal move may not be the best"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Here is that in action, in a hypothetical. A regional hospital's chief operating officer learns that a departing physician group plans a competing clinic nearby and has begun contacting patients. Their agreement has a non-compete and a patient non-solicitation clause."
+            },
+            {
+              "text": "Before calling outside counsel, she writes a one-page note: the facts known and unknown.",
+              "reveal": 1
+            },
+            {
+              "text": "The documents, the deadlines.",
+              "reveal": 2
+            },
+            {
+              "text": "The business objective: continuity of patient care and referral relationships, not punishing the physicians. And three questions: are the covenants likely enforceable under the state's law for physicians, what may the hospital say to patients, and what should it preserve now?",
+              "reveal": 3
+            },
+            {
+              "text": "The note saves billable time and makes counsel's assumptions visible. And because it states the objective, counsel can say that the legally strongest move, such as seeking an injunction, may not be the commercially best one."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-question",
+            "type": "choice",
+            "prompt": "Counsel tells you a dispute is \"probably fine.\" Which follow-up does most to turn that into usable, probabilistic advice?",
+            "options": [
+              {
+                "id": "a",
+                "text": "\"So we're safe to go ahead?\""
+              },
+              {
+                "id": "b",
+                "text": "\"What's your best estimate and range, on what assumed facts, and which fact would change your view most?\""
+              },
+              {
+                "id": "c",
+                "text": "\"Can you put that in writing marked privileged and confidential?\""
+              },
+              {
+                "id": "d",
+                "text": "\"Could you decide for us whether to proceed?\""
+              }
+            ],
+            "answer": "b",
+            "concept": "c-legal-risk-management",
+            "feedback": {
+              "a": "This asks for a verdict, not a forecast. It hides the conditions and the confidence you need to weigh the decision.",
+              "b": "Right. Estimate, range, assumptions and the key fact make the advice a forecast you can combine with your business valuation.",
+              "c": "A label does not make a document privileged, and it adds nothing to the quality of the forecast.",
+              "d": "Deciding which risks to take is a business and ethical judgment informed by counsel, not one counsel can make alone."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "A reasonable hypothesis, not a finding:",
+              "legal forecasts may be poorly calibrated."
+            ]
+          },
+          "cues": [
+            {
+              "text": "One caution about those forecasts, and I want to label it carefully. Week One showed that confidence and accuracy can come apart when feedback is slow and outcomes are noisy."
+            },
+            {
+              "text": "Litigation fits that description. Cases take years, most settle, and lawyers rarely learn how their early estimates compared with outcomes.",
+              "reveal": 1
+            },
+            {
+              "text": "So it is a reasonable hypothesis, not a finding established in this course, that legal predictions share the calibration problems of other expert forecasts."
+            },
+            {
+              "text": "The remedies are cheap. Ask for ranges and reasons. Compare two independent views when stakes are high. And keep a simple record of predictions and outcomes, for instance in your Strategic Decision Journal."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Too cautious, too often, too far",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "The limits of leaning on counsel",
+            "cards": [
+              {
+                "title": "Incentives",
+                "q": "Billing hours; blamed for problems, not missed chances",
+                "fail": "Advice drifts toward caution"
+              },
+              {
+                "title": "Over-lawyering",
+                "q": "Every decision through counsel?",
+                "fail": "Slow, judgment-averse, a \"department of no\""
+              },
+              {
+                "title": "Borders",
+                "q": "Does the United States model travel?",
+                "fail": "In-house advice may be protected less"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now let me argue against leaning too hard on everything I have said."
+            },
+            {
+              "text": "Lawyers' incentives are not identical to yours. Outside counsel bills for time. In-house counsel is more often blamed for legal problems than for missed opportunities. Both push toward caution.",
+              "reveal": 1
+            },
+            {
+              "text": "That is not a reason to discount legal advice. It is a reason to ask what a risk-neutral view would be, what the realistic worst case is, and what excessive caution would cost."
+            },
+            {
+              "text": "Over-lawyering has costs too. Routing every decision through counsel slows organizations and teaches managers to avoid judgment. And copying lawyers on routine emails to create privilege usually fails, and can damage credibility with a court.",
+              "reveal": 2
+            },
+            {
+              "text": "Across borders, many countries treat in-house lawyers differently from outside lawyers, and some protect them less. Ask local counsel how privilege works before anyone writes anything down.",
+              "reveal": 3
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Legal risk is a distribution.",
+              "Some risks are worth taking.",
+              "The decision stays yours."
+            ],
+            "refs": [
+              "R-holmes-1897-path"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Holmes's prediction view cuts both ways.",
+              "refs": [
+                "R-holmes-1897-path"
+              ]
+            },
+            {
+              "text": "If law is what courts will do, legal risk is a probability distribution.",
+              "reveal": 1,
+              "refs": [
+                "R-holmes-1897-path"
+              ]
+            },
+            {
+              "text": "And some legal risks are worth taking: a contract term that might not be enforced, a novel product that might attract scrutiny.",
+              "refs": [
+                "R-holmes-1897-path"
+              ]
+            },
+            {
+              "text": "Deciding which risks to take is a business and ethical judgment informed by counsel, not one counsel can make alone. Week Thirteen returns to the ethical side.",
+              "reveal": 2
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-reflect",
+            "type": "reflect",
+            "prompt": "Recall the last time you involved a lawyer, or decided not to. Where did it sit on the stakes-and-reversibility map? Did you ask for a forecast with a range and assumptions, and whose decision did it finally become?",
+            "concept": "c-legal-risk-management"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Bringing it together",
+      "scenes": [
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Contract Lab",
+                "detail": "Flag the issues in a fictional consulting agreement",
+                "href": "#/exercise/w11-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Holmes (1897), The Path of the Law",
+                "href": "#/library/R-holmes-1897-path"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let's bring it together, and close the week."
+            },
+            {
+              "text": "Organizational counsel represents the entity, not you. Privilege protects confidential communications made to obtain legal advice, including, after Upjohn, employees' communications to counsel. It never covers facts or business advice, and sharing outside the circle can waive it.",
+              "refs": [
+                "R-scotus-1981-upjohn"
+              ]
+            },
+            {
+              "text": "Call early when stakes are high or actions irreversible. Preserve records once a dispute is anticipated. Brief concisely, and ask for forecasts with ranges and assumptions."
+            },
+            {
+              "text": "Then make the decision. It remains yours."
+            },
+            {
+              "text": "Next, take the comprehension check below. It is the same check as the written lesson. Then finish the week in the Contract Lab, and read the first half of Holmes's essay.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson stays here, with the full privilege table and the notes on international settings. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

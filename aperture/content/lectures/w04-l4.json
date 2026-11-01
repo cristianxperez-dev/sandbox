@@ -1,0 +1,645 @@
+{
+  "id": "w04-l4-lecture",
+  "lesson": "w04-l4",
+  "title": "Real, Causal — and Still Not Worth It",
+  "subtitle": "Reading a study like a skeptic",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 4. It covers the same objectives — translating effect sizes into practical terms, diagnosing reliability, validity and metric gaming, and judging external validity and survivorship — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Point four of a second",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 4 · Lesson 4 · Lecture",
+            "title": "Real, causal, and still not worth it",
+            "sub": "Reading a study like a skeptic"
+          },
+          "cues": [
+            {
+              "text": "Let's start with a result that is real, causal, and almost certainly not worth acting on."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "A redesigned product page",
+            "items": [
+              {
+                "value": "2,000,000",
+                "label": "visitors in the test"
+              },
+              {
+                "value": "p < .001",
+                "label": "time on page increased"
+              },
+              {
+                "value": "0.4 s",
+                "label": "the estimated increase"
+              },
+              {
+                "value": "No change",
+                "label": "in revenue per visitor"
+              }
+            ],
+            "note": "Hypothetical scenario, from the lesson."
+          },
+          "cues": [
+            {
+              "text": "A large online retailer tests a redesigned product page on two million visitors. The scenario is hypothetical.",
+              "reveal": 1
+            },
+            {
+              "text": "Average time on page goes up, and the result is highly significant, p below point oh oh one.",
+              "reveal": 2
+            },
+            {
+              "text": "The vice president of product wants to roll it out globally."
+            },
+            {
+              "text": "Then a data scientist points out that the increase is four tenths of a second,",
+              "reveal": 3
+            },
+            {
+              "text": "and that revenue per visitor did not change.",
+              "reveal": 4
+            },
+            {
+              "text": "The confusion between significance and importance is not hypothetical at all. The first three lessons asked whether an effect is real and causal. This one asks what remains when the answer is yes. Is it big enough to matter? Is it measured properly? Will it travel to your setting?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "How big, in units that matter",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Magnitude",
+            "term": "Effect size",
+            "definition": "How big a difference is: standardized, in standard-deviation units, or raw, in minutes, dollars or points.",
+            "example": "A d of 0.2 puts the average treated unit at about the 58th percentile of the comparison group."
+          },
+          "cues": [
+            {
+              "text": "An effect size expresses magnitude. You want it two ways."
+            },
+            {
+              "text": "Standardized measures, like Cohen's d, the difference in standard-deviation units, let you compare across studies. Raw measures, minutes or dollars, let you judge consequences. Ask for both, with their confidence intervals.",
+              "reveal": 1
+            },
+            {
+              "text": "To make d tangible: a d of point two means the average treated unit sits at roughly the fifty-eighth percentile of the comparison group. Noticeable in aggregate. Invisible in most individuals.",
+              "reveal": 2
+            },
+            {
+              "text": "Standardizing also hides meaning. Half a standard deviation of patient satisfaction and half a standard deviation of mortality are not equally important. Convert back to natural units before you decide."
+            },
+            {
+              "text": "David Funder and Daniel Ozer argue that the usual labels, small, medium, large, are close to meaningless without context.",
+              "refs": [
+                "R-funder-2019-evaluating"
+              ]
+            },
+            {
+              "text": "Small effects can be highly consequential when they accumulate over many occasions or people. And very large effects from small studies are more likely to be overestimates than discoveries. Judge effects against well-understood benchmarks and their practical consequences.",
+              "refs": [
+                "R-funder-2019-evaluating"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "Significance versus importance",
+            "x": [
+              "Not significant",
+              "Significant"
+            ],
+            "y": [
+              "Practically small",
+              "Practically large"
+            ],
+            "cells": [
+              [
+                "Possibly important, uncertain: buy information",
+                "Worth acting on, if design and measures hold"
+              ],
+              [
+                "Nothing worth pursuing, or too small to tell",
+                "Real but trivial: precision is not value"
+              ]
+            ]
+          },
+          "cues": [
+            {
+              "text": "Sample size and effect size are independent questions. Put them on two axes."
+            },
+            {
+              "text": "Top left: large in practice, not significant. Possibly important but uncertain. Buy more information if the decision allows.",
+              "reveal": 1
+            },
+            {
+              "text": "Top right: large and significant. Worth acting on, if the design and measures hold up.",
+              "reveal": 2
+            },
+            {
+              "text": "Bottom left: small and not significant. Probably nothing, or a study too small to tell. Check the interval.",
+              "reveal": 3
+            },
+            {
+              "text": "Bottom right: small but significant. Real but trivial, which is common with huge samples. That's our product page.",
+              "reveal": 4
+            },
+            {
+              "text": "The executive translation: significance is about detectability. Importance is about magnitude, cost and consequence."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-quadrant",
+            "type": "choice",
+            "prompt": "A pilot with forty participants shows an improvement large enough to matter commercially, but the confidence interval is wide and includes zero. What is the best reading?",
+            "options": [
+              {
+                "id": "a",
+                "text": "The program failed, because the result is not significant."
+              },
+              {
+                "id": "b",
+                "text": "Possibly important but uncertain: buy more information if the decision allows."
+              },
+              {
+                "id": "c",
+                "text": "Real but trivial: precision without value."
+              },
+              {
+                "id": "d",
+                "text": "Proven: a large effect is what matters."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-effect-size",
+            "feedback": {
+              "a": "Not significant is not evidence of no effect. A small pilot can miss an effect that matters because the interval is wide.",
+              "b": "Right. Large in practice, not significant: the study cannot yet distinguish a valuable effect from none. A bigger or longer test is the natural next step if it is affordable.",
+              "c": "That quadrant is for small effects estimated precisely, usually in very large samples — the opposite of this pilot.",
+              "d": "Large effects from small samples are often overestimates. The wide interval says the evidence is not yet strong."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "What the measure really measures",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two different failures",
+            "left": {
+              "title": "Reliability",
+              "points": [
+                "Consistency on repetition",
+                "Random error",
+                "Shrinks effects toward zero"
+              ]
+            },
+            "right": {
+              "title": "Validity",
+              "points": [
+                "Measures what you claim?",
+                "Systematic error",
+                "Can fail when conditions change"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "That pilot's wide interval may come partly from its measure. So let's talk measurement."
+            },
+            {
+              "text": "Reliability is consistency: would the measure give the same answer if repeated?",
+              "reveal": 1
+            },
+            {
+              "text": "Validity is meaning: does it measure what you claim? A bathroom scale that is always five pounds light is reliable but not valid. A supervisor rating that moves with the supervisor's mood is neither.",
+              "reveal": 2
+            },
+            {
+              "text": "Low reliability has a specific, predictable consequence called attenuation. Random error shrinks observed effects and correlations toward zero."
+            },
+            {
+              "text": "Roughly, the observed effect is the true effect times the square root of the outcome's reliability. With reliability point four, a true effect of point four shows up as about point two five. A study powered for the true effect will often miss it."
+            },
+            {
+              "text": "Your turn."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-attenuation",
+            "type": "estimate",
+            "prompt": "An outcome measure has reliability 0.5. A program’s true effect is d = 0.4. Roughly what standardized effect will a study observe on average?",
+            "min": 0,
+            "max": 0.5,
+            "step": 0.01,
+            "unit": "",
+            "initial": 0.4,
+            "answer": 0.28,
+            "tolerance": 0.03,
+            "concept": "c-measurement-validity",
+            "feedback": {
+              "correct": "Right: about 0.4 × √0.5 ≈ 0.28. A study sized to detect 0.4 will be under-powered for what it can actually see.",
+              "incorrect": "About 0.28: the true 0.4 times the square root of 0.5. Random error attenuates the effect, so a study sized for 0.4 will often miss it."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "A famous \"illusion\"",
+              "rested partly on a measurement artifact."
+            ],
+            "sub": "Miller and Sanjurjo on the hot hand.",
+            "refs": [
+              "R-miller-2018-surprised"
+            ]
+          },
+          "cues": [
+            {
+              "text": "About point two eight. Unreliable measures produce false negatives, and with a significance filter, erratic estimates. Validity failures are worse, because they aren't random. And measurement can even manufacture a famous finding."
+            },
+            {
+              "text": "For three decades, the hot hand in basketball was a textbook example of a cognitive illusion.",
+              "reveal": 0,
+              "refs": [
+                "R-miller-2018-surprised"
+              ]
+            },
+            {
+              "text": "Joshua Miller and Adam Sanjurjo proved that the standard way of measuring streaks, the share of hits right after a run of hits within finite sequences, is biased downward. A shooter with no streakiness would look anti-streaky.",
+              "reveal": 1,
+              "refs": [
+                "R-miller-2018-surprised"
+              ]
+            },
+            {
+              "text": "Correcting the bias reversed the conclusion of the original controlled-shooting analysis. How large the hot hand is in game conditions is still debated.",
+              "refs": [
+                "R-miller-2018-surprised"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "When the measure becomes the target",
+            "cards": [
+              {
+                "title": "Hospitals",
+                "q": "Rewarded for short waits",
+                "fail": "Reclassify when the clock starts"
+              },
+              {
+                "title": "Schools",
+                "q": "Rewarded on pass rates",
+                "fail": "Focus on students near the threshold"
+              },
+              {
+                "title": "Sales teams",
+                "q": "Rewarded on bookings",
+                "fail": "Pull revenue forward"
+              }
+            ],
+            "refs": [
+              "R-campbell-1979-assessing"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Donald Campbell stated what's now called Campbell's law: the more a quantitative indicator is used for social decision-making, the more it is subject to corruption pressures, and the more it distorts the processes it was meant to monitor.",
+              "reveal": 0,
+              "refs": [
+                "R-campbell-1979-assessing"
+              ]
+            },
+            {
+              "text": "The economist Charles Goodhart made a parallel point about monetary targets, usually paraphrased as: when a measure becomes a target, it ceases to be a good measure."
+            },
+            {
+              "text": "Be clear about their status. Both are principles distilled from experience, practitioner wisdom, not laws demonstrated by systematic studies. But they predict a recurring pattern."
+            },
+            {
+              "text": "Hospitals rewarded for short waits reclassify when the clock starts.",
+              "reveal": 1
+            },
+            {
+              "text": "Schools rewarded on pass rates focus on students near the threshold.",
+              "reveal": 2
+            },
+            {
+              "text": "Sales teams rewarded on bookings pull revenue forward.",
+              "reveal": 3
+            },
+            {
+              "text": "In player development, evaluate coaches on bat-speed gains, and practice may drift toward the drills that move bat speed rather than toward game performance."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Will it travel?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two questions about the sample",
+            "left": {
+              "title": "External validity",
+              "points": [
+                "It worked there",
+                "Why did it work?",
+                "Are those conditions here?"
+              ]
+            },
+            "right": {
+              "title": "Survivorship",
+              "points": [
+                "Only units that passed a filter",
+                "Where are the failures?",
+                "Is their absence related to the outcome?"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Even a well-measured, meaningful effect has to travel."
+            },
+            {
+              "text": "External validity is whether a result holds for other people, places and times. Deaton and Cartwright argue that a well-run trial shows a program worked there. Using it here requires knowing why it worked, and whether the supporting conditions are present.",
+              "reveal": 1,
+              "refs": [
+                "R-deaton-2018-understanding"
+              ]
+            },
+            {
+              "text": "Results from volunteers, single firms, lab tasks or another country aren't wrong. They are local until shown otherwise."
+            },
+            {
+              "text": "Survivorship bias arises when the sample includes only units that passed a filter. Mutual-fund databases that drop closed funds overstate returns. Studies of the habits of successful companies sample only survivors.",
+              "reveal": 2
+            },
+            {
+              "text": "Ask what happened to the cases not in the data, and whether their absence is related to the outcome. Studying established major leaguers tells you little about which development paths fail."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "The skeptic's reading sequence",
+            "steps": [
+              {
+                "label": "Question",
+                "text": "What claim, for whom?"
+              },
+              {
+                "label": "Design",
+                "text": "What comparison, why credible?"
+              },
+              {
+                "label": "Measures",
+                "text": "Reliable, valid, ungamed?"
+              },
+              {
+                "label": "Size",
+                "text": "Practical units, with interval"
+              },
+              {
+                "label": "Sample",
+                "text": "Who dropped out, never entered?"
+              },
+              {
+                "label": "Transport",
+                "text": "Does the mechanism operate here?"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Put it together as a reading sequence."
+            },
+            {
+              "text": "What claim is made, and for whom?",
+              "reveal": 1
+            },
+            {
+              "text": "What is the comparison, and why is it credible?",
+              "reveal": 2
+            },
+            {
+              "text": "Are the measures reliable, valid, and immune to gaming in this setting?",
+              "reveal": 3
+            },
+            {
+              "text": "How big is the effect in practical units, with what interval?",
+              "reveal": 4
+            },
+            {
+              "text": "Who was studied, who dropped out, who never entered?",
+              "reveal": 5
+            },
+            {
+              "text": "And does the mechanism operate in your setting?",
+              "reveal": 6
+            },
+            {
+              "text": "Try it on a vendor white paper. Firms using a platform grew revenue eighteen percent faster than non-users. The figure is invented. The sample is customers who renewed, the comparison is the industry average, and the outcome period starts after adoption."
+            },
+            {
+              "text": "You need not prove it false. Name the threats: growing firms select into adoption, survivorship among renewals, no pre-adoption comparison. Then ask for firms that trialed and didn't adopt, with pre-adoption trends. A confident vendor should welcome that."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "A fictional study, five notes",
+            "steps": [
+              "Claim: an app reduces nurse burnout",
+              "Design: volunteers versus colleagues",
+              "Measure: self-report, reliability unknown",
+              "Size: d of 0.6, thirty per group",
+              "Transport: one hospital, staffing rising"
+            ]
+          },
+          "cues": [
+            {
+              "text": "One more rehearsal, on a fictional study invented for teaching."
+            },
+            {
+              "text": "The claim: a mindfulness app reduces burnout among nurses. A causal claim about one occupation.",
+              "reveal": 1
+            },
+            {
+              "text": "The design: volunteers who used the app, against colleagues who didn't. Volunteers may already be lower-risk or more motivated.",
+              "reveal": 2
+            },
+            {
+              "text": "The measure: a self-reported burnout scale, reliability not reported. Expectations can move self-reports.",
+              "reveal": 3
+            },
+            {
+              "text": "The size: a d of point six, p of point oh three, thirty per group. A large effect from a small sample is likely exaggerated.",
+              "reveal": 4
+            },
+            {
+              "text": "Transport: one hospital, during a staffing increase. That concurrent change could explain the result, and other hospitals may differ.",
+              "reveal": 5
+            },
+            {
+              "text": "Five lines, and each names a specific threat. That's what good skepticism looks like."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "When skepticism goes wrong",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Skepticism's own failure modes",
+            "cards": [
+              {
+                "title": "Universal doubt",
+                "q": "Every study has a flaw",
+                "fail": "Motivated reasoning dressed as rigor"
+              },
+              {
+                "title": "Small effects",
+                "q": "Scale makes small matter",
+                "fail": "Also used to rescue uncertain effects"
+              },
+              {
+                "title": "We're different",
+                "q": "Local results never travel",
+                "fail": "True, and by itself uninformative"
+              }
+            ],
+            "refs": [
+              "R-funder-2019-evaluating"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the challenge, and this time it's aimed at the skeptic."
+            },
+            {
+              "text": "An executive who can find a threat to validity in every study can justify ignoring any inconvenient evidence. That's motivated reasoning dressed as rigor. Every study has limitations. The question is whether a specific one is plausible and large enough to change the decision.",
+              "reveal": 1
+            },
+            {
+              "text": "So for each criticism, state which direction it would bias the result, and roughly how much."
+            },
+            {
+              "text": "Second, the small-effects argument cuts both ways. Funder and Ozer show why small effects can matter at scale, but advocates also invoke scale to rescue effects that are uncertain as well as small.",
+              "reveal": 2,
+              "refs": [
+                "R-funder-2019-evaluating"
+              ]
+            },
+            {
+              "text": "A small effect is worth acting on when it's well established, cheap and applied many times. A small, uncertain, expensive effect is not."
+            },
+            {
+              "text": "Third, external validity is sometimes better than critics suggest. Mechanisms grounded in physiology, economics or cognition often travel well. Argue from mechanism. \"Our organization is different\" is true, and by itself uninformative.",
+              "reveal": 3
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-skeptic",
+            "type": "choice",
+            "prompt": "A colleague rejects a well-designed study that contradicts her plan, noting that it was run in another country. What is the most useful response?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Agree: results from another country never apply here."
+              },
+              {
+                "id": "b",
+                "text": "Ignore the objection: a good design settles the question."
+              },
+              {
+                "id": "c",
+                "text": "Ask which mechanism would differ here, in which direction it would bias the result, and roughly how much."
+              }
+            ],
+            "answer": "c",
+            "concept": "c-external-validity",
+            "feedback": {
+              "a": "Assuming uniqueness is as unjustified as assuming universality. Results are local until shown otherwise — but they can be shown to travel.",
+              "b": "A strong design establishes the effect there; transport still depends on mechanism and conditions.",
+              "c": "Right. Specific skepticism names the direction and plausible size of each bias, and argues from mechanism rather than dismissing evidence wholesale."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Evidence Lab",
+                "detail": "Explore attenuation and effect sizes",
+                "href": "#/exercise/w04-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Wasserstein & Lazar (2016), The ASA’s Statement on p-Values",
+                "href": "#/library/R-wasserstein-2016-asa"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let's bring it together."
+            },
+            {
+              "text": "Significance tells you whether an effect is detectable, not whether it matters. Judge effects in practical units with their intervals."
+            },
+            {
+              "text": "Check that measures are reliable, valid and resistant to gaming. Ask who was studied, who is missing, and whether the mechanism travels. And keep your skepticism specific."
+            },
+            {
+              "text": "Next, take the comprehension check below, the same check as the written lesson. Then open the Evidence Lab, and read the statistical association's statement on p-values, with this lesson's point about size and importance in mind.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson has the worked critique and the full notes. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

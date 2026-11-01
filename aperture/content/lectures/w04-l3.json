@@ -1,0 +1,666 @@
+{
+  "id": "w04-l3-lecture",
+  "lesson": "w04-l3",
+  "title": "Compared With What?",
+  "subtitle": "Causal inference for executives",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 3. It covers the same objectives — causal effects as counterfactual comparisons, confounding, selection and collider bias, the logic and key assumption of four research designs, and choosing a design under real constraints — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Decades of the wrong answer",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 4 · Lesson 3 · Lecture",
+            "title": "Compared with what?",
+            "sub": "Causal inference for executives"
+          },
+          "cues": [
+            {
+              "text": "Here is a story about a medical consensus that lasted for decades, and then collapsed in a single trial."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "timeline",
+            "title": "Hormone therapy and the heart",
+            "events": [
+              {
+                "when": "For decades",
+                "text": "Observational studies: users have less heart disease"
+              },
+              {
+                "when": "In practice",
+                "text": "Prescribed partly for heart protection"
+              },
+              {
+                "when": "Randomized trial",
+                "text": "Stopped early: risks exceeded benefits"
+              }
+            ],
+            "refs": [
+              "R-rossouw-2002-risks"
+            ]
+          },
+          "cues": [
+            {
+              "text": "For decades, observational studies found that women who took hormone therapy after menopause had lower rates of heart disease.",
+              "reveal": 1,
+              "refs": [
+                "R-rossouw-2002-risks"
+              ]
+            },
+            {
+              "text": "Many physicians prescribed it partly for that reason.",
+              "reveal": 2,
+              "refs": [
+                "R-rossouw-2002-risks"
+              ]
+            },
+            {
+              "text": "Then the Women's Health Initiative randomly assigned healthy postmenopausal women to combined hormone therapy or placebo. The trial was stopped early. Overall risks, including coronary heart disease and breast cancer, exceeded benefits.",
+              "reveal": 3,
+              "refs": [
+                "R-rossouw-2002-risks"
+              ]
+            },
+            {
+              "text": "So how could decades of data point the wrong way? Before I answer, try it yourself."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-hrt",
+            "type": "choice",
+            "prompt": "Which explanation best accounts for the earlier observational finding that hormone-therapy users had less heart disease?",
+            "options": [
+              {
+                "id": "a",
+                "text": "The therapy protected the heart, and the trial was wrong."
+              },
+              {
+                "id": "b",
+                "text": "Women who chose the therapy tended to be healthier and wealthier in ways that also protected their hearts."
+              },
+              {
+                "id": "c",
+                "text": "Heart disease caused women to stop taking hormone therapy."
+              },
+              {
+                "id": "d",
+                "text": "Observational studies are always wrong."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-confounding",
+            "feedback": {
+              "a": "Randomization made the groups comparable on everything, measured or not. The trial is the stronger evidence here.",
+              "b": "Right. This is the leading explanation: health and wealth drove both the choice of therapy and heart health. That is confounding.",
+              "c": "Reverse causation is worth checking, but the leading explanation is that healthier women chose the therapy in the first place.",
+              "d": "Too strong. Observational evidence can be right; it is vulnerable when something else drives both the treatment and the outcome."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Every causal claim is a comparison.",
+              "Ask: compared with what?"
+            ],
+            "sub": "And is that comparison credible?"
+          },
+          "cues": [
+            {
+              "text": "The leading explanation is that women who chose the therapy were healthier and wealthier in ways that also protected their hearts.",
+              "reveal": 0,
+              "refs": [
+                "R-rossouw-2002-risks"
+              ]
+            },
+            {
+              "text": "This lecture gives you a vocabulary for that kind of error, and a toolkit for avoiding it."
+            },
+            {
+              "text": "The goal is not to make you an econometrician. It's to let you ask one question of any causal claim, compared with what, and to judge whether the answer is credible.",
+              "reveal": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "The missing counterfactual",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "The foundation",
+            "term": "Causal effect",
+            "definition": "The difference between an outcome with the treatment and the same outcome, at the same time, without it.",
+            "example": "One of the two is always missing. Every method fills it with a comparison group."
+          },
+          "cues": [
+            {
+              "text": "Take a training program. Its effect on one employee is the difference between her performance with the program and her performance, at the same time, without it."
+            },
+            {
+              "text": "One of those two outcomes is always missing. This is sometimes called the fundamental problem of causal inference.",
+              "reveal": 1
+            },
+            {
+              "text": "So every causal method is a strategy for filling in the missing counterfactual with a comparison group. The estimate is only as good as that substitute.",
+              "reveal": 2
+            },
+            {
+              "text": "A naive comparison of participants with non-participants gives you the true effect plus selection bias: the difference the groups would have shown even without the program. If motivated employees volunteer, the program gets credit for their motivation."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Four ways a correlation misleads",
+            "cards": [
+              {
+                "title": "Confounder",
+                "q": "Z causes both X and Y",
+                "fail": "Adjust for Z, or break the link by design"
+              },
+              {
+                "title": "Mediator",
+                "q": "X causes M, which causes Y",
+                "fail": "Controlling for M hides the effect"
+              },
+              {
+                "title": "Collider",
+                "q": "X and Y both cause C",
+                "fail": "Selecting on C creates a false link"
+              },
+              {
+                "title": "Reverse causation",
+                "q": "Y causes X",
+                "fail": "Establish the timing"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "There are four structures to recognize. The examples are hypothetical."
+            },
+            {
+              "text": "A confounder causes both the treatment and the outcome. Health consciousness drives both hormone-therapy use and heart health. Adjust for it, or use a design that breaks its link to treatment.",
+              "reveal": 1
+            },
+            {
+              "text": "A mediator sits on the causal path. Coaching builds confidence, confidence builds sales. Control for confidence, and you hide the program's effect.",
+              "reveal": 2
+            },
+            {
+              "text": "A collider is caused by both variables. Among start-ups that got venture funding, technical skill and charisma look negatively related, because either one could get a firm funded. Select on funding and you create a spurious link.",
+              "reveal": 3
+            },
+            {
+              "text": "And reverse causation. Struggling hospitals hire more consultants. The consultants are not making them struggle.",
+              "reveal": 4
+            },
+            {
+              "text": "Causal diagrams make these structures explicit. Draw arrows for what causes what, then find the back doors through common causes. Adjusting for the right variables closes back doors; adjusting for mediators or colliders creates bias. The diagram doesn't prove your assumptions. It forces you to state them."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Spot the structure."
+            ],
+            "sub": "A short case decision."
+          },
+          "cues": [
+            {
+              "text": "Let's see if you can spot one in the wild."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-collider",
+            "type": "choice",
+            "prompt": "Analysts study only players who reached the major leagues and find that a physical tool and a particular skill are negatively related. Why should you be cautious?",
+            "options": [
+              {
+                "id": "a",
+                "text": "The tool is a confounder that should be adjusted for."
+              },
+              {
+                "id": "b",
+                "text": "Reaching the majors is a filter that either attribute can help a player pass, so selecting on it can create a spurious negative link."
+              },
+              {
+                "id": "c",
+                "text": "The skill mediates the effect of the tool."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-selection-bias",
+            "feedback": {
+              "a": "A confounder causes both variables. Here both variables feed into who reaches the majors — the filter is the problem.",
+              "b": "Right. That is collider bias. Players who lack one attribute usually need the other to get through, so among survivors the two look negatively related.",
+              "c": "A mediator lies on a causal path from one to the other. The issue here is that the sample was filtered on an outcome both attributes affect."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Designs that build the comparison",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "The benchmark",
+            "term": "Random assignment",
+            "definition": "A coin decides who is treated, so treatment is independent of everything else, observed or not.",
+            "example": "Why one trial could overturn decades of observational evidence."
+          },
+          "cues": [
+            {
+              "text": "That's collider bias. Now, what about simply controlling for things in a regression? That removes bias only if the variable is a confounder, is measured well, and every important confounder is on the list.",
+              "reveal": 0
+            },
+            {
+              "text": "Unmeasured confounders, like motivation or health consciousness, are untouched by any regression. So \"we controlled for forty variables\" is not, by itself, reassuring."
+            },
+            {
+              "text": "Random assignment solves this by design. Treatment becomes independent of everything else about the units, observed or not, so the comparison group is a valid counterfactual on average.",
+              "reveal": 1,
+              "refs": [
+                "R-angrist-2010-credibility"
+              ]
+            },
+            {
+              "text": "Joshua Angrist and Jörn-Steffen Pischke describe randomized trials as the benchmark for every other design, and the credibility revolution in economics as a shift toward designs that mimic randomization.",
+              "reveal": 2,
+              "refs": [
+                "R-angrist-2010-credibility",
+                "R-angrist-2014-mastering"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Three designs, one assumption each",
+            "cards": [
+              {
+                "title": "Difference-in-differences",
+                "q": "Compare changes, treated versus untreated",
+                "fail": "Assumes parallel trends"
+              },
+              {
+                "title": "Regression discontinuity",
+                "q": "Compare just above and below a cutoff",
+                "fail": "Assumes nothing else jumps; no sorting"
+              },
+              {
+                "title": "Instrumental variables",
+                "q": "A factor that shifts treatment only",
+                "fail": "Assumes no other path to the outcome"
+              }
+            ],
+            "refs": [
+              "R-angrist-2014-mastering"
+            ]
+          },
+          "cues": [
+            {
+              "text": "When randomization is impossible, unethical or too slow, look for situations where something other than people's own choices decided who was treated. Three designs cover most of what you'll read."
+            },
+            {
+              "text": "Difference-in-differences compares the change in a treated group with the change in an untreated group. The key assumption is parallel trends: without treatment, both would have changed by the same amount.",
+              "reveal": 1
+            },
+            {
+              "text": "Regression discontinuity compares units just above and just below a cutoff. The assumption: nothing else jumps at the cutoff, and units can't sort precisely around it. Angrist and Pischke's example is the drinking age. Death rates of young adults jump at the twenty-first birthday, and people just either side of it are otherwise nearly identical.",
+              "reveal": 2,
+              "refs": [
+                "R-angrist-2014-mastering"
+              ]
+            },
+            {
+              "text": "Instrumental variables use a factor that shifts treatment but affects the outcome only through treatment. That's the exclusion restriction. Their example is lotteries for oversubscribed charter schools: winning changes the chance of attending, but shouldn't otherwise affect test scores.",
+              "reveal": 3,
+              "refs": [
+                "R-angrist-2014-mastering"
+              ]
+            },
+            {
+              "text": "For difference-in-differences they use two Federal Reserve districts that split Mississippi during the bank failures of nineteen thirty, with different policies.",
+              "refs": [
+                "R-angrist-2014-mastering"
+              ]
+            },
+            {
+              "text": "And the most famous example in economics: Card and Krueger compared fast-food employment in New Jersey, which raised its minimum wage in nineteen ninety-two, with neighboring eastern Pennsylvania, which did not. They found no relative decline in New Jersey employment.",
+              "refs": [
+                "R-card-1994-minimum"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "Clinics and a triage protocol",
+            "items": [
+              {
+                "value": "52 → 44",
+                "label": "adopting clinics, minutes of wait"
+              },
+              {
+                "value": "50 → 47",
+                "label": "similar clinics without the protocol"
+              }
+            ],
+            "note": "Synthetic numbers, from the lesson."
+          },
+          "cues": [
+            {
+              "text": "Let's compute one. The numbers here are invented."
+            },
+            {
+              "text": "Clinics that adopt a new triage protocol go from a fifty-two minute average wait to forty-four.",
+              "reveal": 1
+            },
+            {
+              "text": "Similar clinics without the protocol go from fifty to forty-seven over the same period.",
+              "reveal": 2
+            },
+            {
+              "text": "What is the difference-in-differences estimate of the protocol's effect?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-did",
+            "type": "estimate",
+            "prompt": "Adopting clinics: 52 → 44 minutes. Comparison clinics: 50 → 47 minutes. What is the difference-in-differences estimate of the protocol’s effect on waiting time?",
+            "min": -10,
+            "max": 0,
+            "step": 1,
+            "unit": " minutes",
+            "initial": -8,
+            "answer": -5,
+            "tolerance": 0,
+            "concept": "c-quasi-experimental-design",
+            "feedback": {
+              "correct": "Right: minus five minutes. The treated change of minus eight, minus the comparison change of minus three — if trends would otherwise have been parallel.",
+              "incorrect": "The estimate is minus five minutes: the treated change of minus eight, less the comparison change of minus three. Minus eight would credit the protocol with the improvement that happened everywhere."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Difference-in-differences",
+            "lines": [
+              {
+                "label": "Change, adopting clinics",
+                "value": "44 − 52 = −8"
+              },
+              {
+                "label": "Change, comparison clinics",
+                "value": "47 − 50 = −3"
+              }
+            ],
+            "result": {
+              "label": "Estimated effect",
+              "value": "−8 − (−3) = −5 minutes"
+            },
+            "note": "Synthetic. Valid only if trends would otherwise have been parallel."
+          },
+          "cues": [
+            {
+              "text": "The adopting clinics improved by eight minutes.",
+              "reveal": 1
+            },
+            {
+              "text": "But the comparison clinics improved by three, without the protocol.",
+              "reveal": 2
+            },
+            {
+              "text": "So the estimate is five minutes, not eight. And only if both groups would otherwise have moved in parallel. That's why you ask to see the pre-trends.",
+              "reveal": 3
+            },
+            {
+              "text": "One more subtlety: designs estimate different people's effects. A trial, the kind of people enrolled. A discontinuity, units near the cutoff. An instrument, the compliers it moves, like families who attend only because they won the lottery. Difference-in-differences, the treated group in its circumstances. Credible is not the same as general."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Credible is not settled",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "New Jersey, measured twice",
+            "left": {
+              "title": "Card & Krueger",
+              "points": [
+                "Telephone surveys",
+                "No relative employment decline",
+                "Reply: other data, small or no effects"
+              ]
+            },
+            "right": {
+              "title": "Neumark & Wascher",
+              "points": [
+                "Restaurant payroll records",
+                "Employment declines"
+              ]
+            },
+            "refs": [
+              "R-card-1994-minimum",
+              "R-neumark-2000-minimum"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now let me argue against the confidence I've been building."
+            },
+            {
+              "text": "Card and Krueger's estimate came from telephone surveys and showed no relative decline.",
+              "reveal": 1,
+              "refs": [
+                "R-card-1994-minimum"
+              ]
+            },
+            {
+              "text": "David Neumark and William Wascher re-estimated it using payroll records from restaurants, and found employment declines.",
+              "reveal": 2,
+              "refs": [
+                "R-neumark-2000-minimum"
+              ]
+            },
+            {
+              "text": "Card and Krueger replied in the same journal issue with other administrative data, and again found small or no effects. The wider minimum-wage literature remains contested.",
+              "refs": [
+                "R-card-1994-minimum"
+              ]
+            },
+            {
+              "text": "The lesson isn't who won. A credible design is necessary, not sufficient. Measurement, sample construction and the comparison group all remain open to challenge."
+            },
+            {
+              "text": "Even trials have critics. Angus Deaton and Nancy Cartwright argue that randomization balances confounders only in expectation, that averages can hide who is helped and who is harmed, and that a result says little about other settings without understanding why it worked.",
+              "refs": [
+                "R-deaton-2018-understanding"
+              ]
+            },
+            {
+              "text": "Defenders reply that these are reasons to run better and more varied trials, not to prefer weaker designs.",
+              "refs": [
+                "R-angrist-2010-credibility"
+              ]
+            },
+            {
+              "text": "And some questions have no comparison group at all. Should we enter this market? Should we reorganize? State the counterfactual and the mechanism anyway, but distrust anyone claiming experimental precision for a decision that could never have an experiment."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Two competent analyses.",
+              "Opposite answers.",
+              "Ask: whose effect?"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Here's how that plays out. A state education agency evaluates a tutoring program."
+            },
+            {
+              "text": "One analyst uses difference-in-differences against schools that adopted later, and finds a meaningful gain. Another uses a discontinuity at the poverty threshold for eligibility, and finds nothing.",
+              "reveal": 1
+            },
+            {
+              "text": "They may both be right. The discontinuity estimates the effect near the threshold, where needs are moderate. The difference-in-differences estimate is dominated by the poorest schools.",
+              "reveal": 2
+            },
+            {
+              "text": "So check whether pre-trends were parallel, and decide which population your funding decision is actually about."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Choosing a design",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "A design ladder",
+            "steps": [
+              "Randomize repeated, reversible, rationed decisions",
+              "Stagger rollouts in random order",
+              "Exploit an existing cutoff",
+              "Difference-in-differences, with pre-trends shown",
+              "Adjust for confounders, as a last resort"
+            ]
+          },
+          "cues": [
+            {
+              "text": "So how do you choose? Here's a ladder, strongest first."
+            },
+            {
+              "text": "Randomize when the decision is repeated, reversible, and the treatment can be rationed: training slots, software rollouts, outreach scripts. If not everyone can be served at once, random order is fair and informative.",
+              "reveal": 1
+            },
+            {
+              "text": "Stagger rollouts and choose the order at random. That turns a normal launch into a set of comparisons.",
+              "reveal": 2
+            },
+            {
+              "text": "Exploit a cutoff that already determines treatment: a score threshold, an age rule, a budget formula.",
+              "reveal": 3
+            },
+            {
+              "text": "Use difference-in-differences when one unit adopts and comparable units don't, and show the pre-trends.",
+              "reveal": 4
+            },
+            {
+              "text": "Only as a last resort, adjust for observed confounders, and say which unmeasured ones could remain and how strong they'd need to be.",
+              "reveal": 5
+            },
+            {
+              "text": "In player development: randomize the order in which affiliates adopt a program, use age or service rules as discontinuities, and pre-register comparisons with players who were similar before it began."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-design",
+            "type": "choice",
+            "prompt": "A company has budget to train 200 of its 800 eligible managers this year and wants to know whether the program works. What is the best design?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Let managers volunteer and compare volunteers with the rest."
+              },
+              {
+                "id": "b",
+                "text": "Choose the 200 at random, and train the others later."
+              },
+              {
+                "id": "c",
+                "text": "Train the 200 lowest-rated managers and compare their next ratings with their current ones."
+              },
+              {
+                "id": "d",
+                "text": "Train everyone at once and compare with last year."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-counterfactual",
+            "feedback": {
+              "a": "Volunteers differ in motivation; the comparison credits the program with selection bias.",
+              "b": "Right. The treatment is rationed anyway, so random order is fair and gives a valid counterfactual on average — the top rung of the ladder.",
+              "c": "Selecting the lowest-rated invites regression to the mean, and a before-after comparison has no counterfactual.",
+              "d": "Not possible within budget, and a year-on-year comparison confounds the program with everything else that changed."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Evidence Lab",
+                "detail": "Test designs against confounding yourself",
+                "href": "#/exercise/w04-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Angrist & Pischke (2010), The Credibility Revolution in Empirical Economics",
+                "href": "#/library/R-angrist-2010-credibility"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Random order wins whenever the treatment is rationed anyway. Let's bring it together."
+            },
+            {
+              "text": "A causal effect is a comparison with a counterfactual you never observe, so every estimate is only as good as its comparison group."
+            },
+            {
+              "text": "Confounding, selection and colliders make naive correlations mislead. Randomization solves them by design. Difference-in-differences, regression discontinuity and instrumental variables can work when randomization can't, each resting on one assumption you should ask to see defended: parallel trends, no other jump at the cutoff, and exclusion."
+            },
+            {
+              "text": "Next, take the comprehension check below, the same check as the written lesson. Then open the Evidence Lab, and read Angrist and Pischke on the credibility revolution.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson is here whenever you want the full tables and notes. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

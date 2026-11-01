@@ -1,0 +1,778 @@
+{
+  "id": "w04-l2-lecture",
+  "lesson": "w04-l2",
+  "title": "Where Did All the Wins Go?",
+  "subtitle": "The replication crisis and the garden of forking paths",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 2. It covers the same objectives — how researcher degrees of freedom and publication bias inflate findings, type S and type M errors, and preregistration and Registered Reports with their limits — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "A string of successes",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 4 · Lesson 2 · Lecture",
+            "title": "Where did all the wins go?",
+            "sub": "The replication crisis and the garden of forking paths"
+          },
+          "cues": [
+            {
+              "text": "Here is a puzzle from a company that, on paper, never loses."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "The growth team's record",
+            "items": [
+              {
+                "value": "+9%",
+                "label": "conversion, new checkout button"
+              },
+              {
+                "value": "+12%",
+                "label": "retention, revised onboarding email"
+              },
+              {
+                "value": "+15%",
+                "label": "engagement, loyalty badge"
+              }
+            ],
+            "note": "Hypothetical scenario and synthetic numbers, from the lesson."
+          },
+          "cues": [
+            {
+              "text": "A technology company's growth team reports a string of experiments, every one significant. The scenario is hypothetical and the numbers invented.",
+              "reveal": 0
+            },
+            {
+              "text": "A new checkout button lifted conversion nine percent.",
+              "reveal": 1
+            },
+            {
+              "text": "A revised onboarding email lifted retention twelve percent.",
+              "reveal": 2
+            },
+            {
+              "text": "A loyalty badge lifted engagement fifteen percent.",
+              "reveal": 3
+            },
+            {
+              "text": "Then finance notices that overall conversion, retention and engagement have barely moved in two years."
+            },
+            {
+              "text": "So where did the gains go? Hold that question. Its arithmetic is exactly the arithmetic of the replication crisis."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "One hundred studies, repeated",
+            "items": [
+              {
+                "value": "~97%",
+                "label": "of originals reported significant results"
+              },
+              {
+                "value": "~36%",
+                "label": "of replications did"
+              },
+              {
+                "value": "~½",
+                "label": "average replication effect versus original"
+              }
+            ],
+            "note": "Open Science Collaboration (2015).",
+            "refs": [
+              "R-osc-2015-estimating"
+            ]
+          },
+          "cues": [
+            {
+              "text": "In two thousand fifteen, a large collaboration repeated one hundred studies published in three leading psychology journals.",
+              "reveal": 0,
+              "refs": [
+                "R-osc-2015-estimating"
+              ]
+            },
+            {
+              "text": "About ninety-seven percent of the originals had reported significant results.",
+              "reveal": 1,
+              "refs": [
+                "R-osc-2015-estimating"
+              ]
+            },
+            {
+              "text": "About thirty-six percent of the replications did.",
+              "reveal": 2,
+              "refs": [
+                "R-osc-2015-estimating"
+              ]
+            },
+            {
+              "text": "And the average replication effect was roughly half the original.",
+              "reveal": 3,
+              "refs": [
+                "R-osc-2015-estimating"
+              ]
+            },
+            {
+              "text": "The question for you is not whether psychology is broken. It's which mechanisms produce this pattern, because the same mechanisms run inside your own organization's analytics. There are three."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Forking paths",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Defensible choices, inflated errors",
+            "cards": [
+              {
+                "title": "Which outcome?",
+                "q": "Pick among several measures",
+                "fail": "Report the one that moved"
+              },
+              {
+                "title": "More data?",
+                "q": "Collect more after peeking",
+                "fail": "Stop when p dips below .05"
+              },
+              {
+                "title": "Which controls?",
+                "q": "Add or drop covariates",
+                "fail": "Keep the version that works"
+              },
+              {
+                "title": "Which conditions?",
+                "q": "Drop an experimental arm",
+                "fail": "Inconvenient groups disappear"
+              }
+            ],
+            "refs": [
+              "R-simmons-2011-false-positive"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Mechanism one: researcher degrees of freedom.",
+              "reveal": 0
+            },
+            {
+              "text": "Joseph Simmons, Leif Nelson and Uri Simonsohn showed that ordinary analytic decisions, each defensible on its own, can push the false-positive rate far above the nominal five percent.",
+              "refs": [
+                "R-simmons-2011-false-positive"
+              ]
+            },
+            {
+              "text": "Choosing among several outcome measures.",
+              "reveal": 1,
+              "refs": [
+                "R-simmons-2011-false-positive"
+              ]
+            },
+            {
+              "text": "Deciding whether to collect more data after checking significance.",
+              "reveal": 2,
+              "refs": [
+                "R-simmons-2011-false-positive"
+              ]
+            },
+            {
+              "text": "Adding or dropping covariates.",
+              "reveal": 3,
+              "refs": [
+                "R-simmons-2011-false-positive"
+              ]
+            },
+            {
+              "text": "Dropping experimental conditions.",
+              "reveal": 4,
+              "refs": [
+                "R-simmons-2011-false-positive"
+              ]
+            },
+            {
+              "text": "Combined in a simulation, that flexibility produced false-positive rates above sixty percent.",
+              "refs": [
+                "R-simmons-2011-false-positive"
+              ]
+            },
+            {
+              "text": "And in a deliberately absurd demonstration, they \"showed\" that listening to a particular song made participants younger.",
+              "refs": [
+                "R-simmons-2011-false-positive"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "You don't have to run many analyses.",
+              "You only have to let the data choose one."
+            ],
+            "sub": "A p-value is valid only for an analysis that would have been run regardless of the data."
+          },
+          "cues": [
+            {
+              "text": "Here's the deeper point, often called the garden of forking paths."
+            },
+            {
+              "text": "The analyst need not consciously try many analyses.",
+              "reveal": 0
+            },
+            {
+              "text": "If the choice depends on the data, which outcome looks cleanest, which outliers seem odd, which subgroup looks interesting, the effective number of comparisons is large, even when only one analysis is run.",
+              "reveal": 1
+            },
+            {
+              "text": "A p-value is only valid for an analysis you would have run whatever the data looked like."
+            },
+            {
+              "text": "The five percent convention caps false positives for one pre-specified test when there is truly no effect. It says nothing about twenty tests where you report the best. Test ten independent outcomes on a program that does nothing, report any that is significant, and you will find something about forty percent of the time."
+            },
+            {
+              "text": "Let's make that concrete."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-twenty-tests",
+            "type": "estimate",
+            "prompt": "Your team ran 20 independent A/B tests of minor interface changes. Unknown to you, none had any effect. How many “significant” results at p < .05 should you expect?",
+            "min": 0,
+            "max": 10,
+            "step": 1,
+            "unit": " wins",
+            "initial": 3,
+            "answer": 1,
+            "tolerance": 0,
+            "concept": "c-researcher-degrees-of-freedom",
+            "feedback": {
+              "correct": "Right: about one. Five percent of twenty. If the team presents that one win and does not mention the other nineteen tests, the win is almost certainly noise.",
+              "incorrect": "Expect about one: five percent of twenty. If the team presents one win and never mentions the other nineteen tests, that win is almost certainly noise."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "The significance filter",
+      "scenes": [
+        {
+          "visual": {
+            "type": "bars",
+            "title": "Average significant estimate, true effect 0.3",
+            "items": [
+              {
+                "label": "True effect",
+                "value": 0.3
+              },
+              {
+                "label": "250 per group, power about 92%",
+                "value": 0.32
+              },
+              {
+                "label": "100 per group, power about 56%",
+                "value": 0.4
+              },
+              {
+                "label": "20 per group, power about 15%",
+                "value": 0.78
+              }
+            ],
+            "note": "Synthetic: a simple simulation of two-group studies from the lesson; rounded."
+          },
+          "cues": [
+            {
+              "text": "About one. And if that's the only one you hear about, you've met mechanism two: low power plus a significance filter."
+            },
+            {
+              "text": "Andrew Gelman and John Carlin argued that the main danger of underpowered studies is not missed effects. It's misleading discoveries.",
+              "reveal": 0,
+              "refs": [
+                "R-gelman-2014-beyond"
+              ]
+            },
+            {
+              "text": "Suppose the true effect is point three standard deviations.",
+              "reveal": 1
+            },
+            {
+              "text": "With two hundred and fifty per group, the significant estimates average about point three two. Close to the truth.",
+              "reveal": 2
+            },
+            {
+              "text": "With a hundred per group, about point four.",
+              "reveal": 3
+            },
+            {
+              "text": "With twenty per group, the significant estimates average about point seven eight. More than two and a half times the truth. The numbers come from a simple simulation, not real studies.",
+              "reveal": 4
+            },
+            {
+              "text": "Why? When power is low, only estimates that happen to be much larger than the truth can clear the significance bar. Conditional on being significant, they are systematically exaggerated.",
+              "refs": [
+                "R-gelman-2014-beyond"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two errors that survive significance",
+            "left": {
+              "title": "Type M: magnitude",
+              "points": [
+                "Significant estimate too large",
+                "Grows as power falls",
+                "Can exceed two or three times"
+              ]
+            },
+            "right": {
+              "title": "Type S: sign",
+              "points": [
+                "Significant estimate has the wrong sign",
+                "A real risk at very low power"
+              ]
+            },
+            "refs": [
+              "R-gelman-2014-beyond"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Gelman and Carlin named the two failures.",
+              "reveal": 0,
+              "refs": [
+                "R-gelman-2014-beyond"
+              ]
+            },
+            {
+              "text": "A type M, or magnitude, error: the significant estimate exaggerates the true effect. When power is below about twenty percent, the exaggeration ratio can exceed two or three.",
+              "reveal": 1,
+              "refs": [
+                "R-gelman-2014-beyond"
+              ]
+            },
+            {
+              "text": "A type S, or sign, error: with very low power, a non-trivial share of significant estimates point the wrong way.",
+              "reveal": 2,
+              "refs": [
+                "R-gelman-2014-beyond"
+              ]
+            },
+            {
+              "text": "This reverses a common intuition. People think: it was significant in a small sample, so the effect must be big, it overcame all that noise. The safer inference is the opposite. In a small sample, significance requires a big estimate, so it is probably mostly noise in a favorable direction."
+            },
+            {
+              "text": "Their remedy is a design analysis. Take a plausible effect size from outside the study, from prior literature or domain knowledge, not from the study's own estimate, which is the number in doubt. Compute the power the study had for that effect, and infer the likely exaggeration.",
+              "refs": [
+                "R-gelman-2014-beyond"
+              ]
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-small-sig",
+            "type": "choice",
+            "prompt": "A pilot with 20 participants per group finds a large, significant improvement — about three times what comparable programs have shown. What is the safest interpretation?",
+            "options": [
+              {
+                "id": "a",
+                "text": "The effect must be large, because it was significant despite the small sample."
+              },
+              {
+                "id": "b",
+                "text": "The estimate is probably exaggerated; plan a design analysis and a larger confirmation."
+              },
+              {
+                "id": "c",
+                "text": "The result is worthless and should be ignored."
+              },
+              {
+                "id": "d",
+                "text": "The program works three times better here than elsewhere."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-type-m-error",
+            "feedback": {
+              "a": "This is the intuition Gelman and Carlin overturn. In a small sample, only large estimates clear the threshold, so significance selects for exaggeration.",
+              "b": "Right. Low power plus a significance filter produces type M errors. Use an external plausible effect to compute power and expected exaggeration, then confirm on fresh, larger data.",
+              "c": "Too strong. The result is weak evidence of a positive effect, not no evidence. Treat it as a hypothesis worth confirming.",
+              "d": "Possible, but a result several times larger than anything seen before is a classic warning sign, not a discovery to bank."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "The file drawer and its remedies",
+      "scenes": [
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "Supported first hypotheses",
+            "items": [
+              {
+                "value": "~96%",
+                "label": "standard psychology papers"
+              },
+              {
+                "value": "~44%",
+                "label": "Registered Reports"
+              }
+            ],
+            "note": "Scheel, Schijen & Lakens (2021).",
+            "refs": [
+              "R-scheel-2021-excess"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Mechanism three is publication bias."
+            },
+            {
+              "text": "If significant results get published, promoted or presented, and the rest are filed away, the visible record is a filtered sample. Even with honest analysis, the filter alone exaggerates average effects, and can manufacture an effect from nothing."
+            },
+            {
+              "text": "Inside an organization, the file drawer is the pilot that didn't pan out and was never written up."
+            },
+            {
+              "text": "A useful benchmark: Registered Reports, where a journal reviews and accepts the design before the results exist.",
+              "reveal": 0,
+              "refs": [
+                "R-scheel-2021-excess"
+              ]
+            },
+            {
+              "text": "Anne Scheel and colleagues found that about ninety-six percent of standard psychology papers supported their first hypothesis,",
+              "reveal": 1,
+              "refs": [
+                "R-scheel-2021-excess"
+              ]
+            },
+            {
+              "text": "against about forty-four percent of Registered Reports.",
+              "reveal": 2,
+              "refs": [
+                "R-scheel-2021-excess"
+              ]
+            },
+            {
+              "text": "The comparison isn't randomized. Registered Reports may test riskier ideas. But a gap that size is hard to explain without selective reporting.",
+              "refs": [
+                "R-scheel-2021-excess"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "How a noisy idea becomes accepted",
+            "steps": [
+              {
+                "label": "Small study",
+                "text": "Low power, modest effect"
+              },
+              {
+                "label": "Forking paths",
+                "text": "Choices made after the data"
+              },
+              {
+                "label": "Filter",
+                "text": "Only big, significant results shown"
+              },
+              {
+                "label": "Attention",
+                "text": "Surprise earns citations"
+              },
+              {
+                "label": "Adoption",
+                "text": "Exaggerated effect becomes practice"
+              },
+              {
+                "label": "Replication",
+                "text": "Much smaller, or nothing"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Put the three together and you get a pipeline."
+            },
+            {
+              "text": "A small study of a modest or zero effect.",
+              "reveal": 1
+            },
+            {
+              "text": "Analysis choices made after seeing the data.",
+              "reveal": 2
+            },
+            {
+              "text": "Only the large, significant estimates written up.",
+              "reveal": 3
+            },
+            {
+              "text": "Surprising results attract attention.",
+              "reveal": 4
+            },
+            {
+              "text": "Organizations adopt the exaggerated effect.",
+              "reveal": 5
+            },
+            {
+              "text": "And a larger, preregistered test finds something much smaller, or nothing. That is where the growth team's wins went. Most of this is not fraud. It's a system of incentives and flexibility.",
+              "reveal": 6
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Remedies and their limits",
+            "left": {
+              "title": "Preregistration",
+              "points": [
+                "Plan fixed before the data",
+                "Constrains forking paths",
+                "Only if specific, deviations reported"
+              ]
+            },
+            "right": {
+              "title": "Registered Reports",
+              "points": [
+                "Accepted before results exist",
+                "Removes the publication filter",
+                "Not poor measurement or weak theory"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "So what helps?"
+            },
+            {
+              "text": "Preregistration fixes the outcome, sample and model in advance. But it constrains forking paths only if the plan is specific and deviations are reported. Vague plans and undisclosed deviations are common.",
+              "reveal": 1
+            },
+            {
+              "text": "Registered Reports go further. Publication no longer depends on the result, so they address the filter. They don't fix poor measurement or weak theory.",
+              "reveal": 2,
+              "refs": [
+                "R-scheel-2021-excess"
+              ]
+            },
+            {
+              "text": "Large replications can estimate an average precisely while missing that it varies across contexts. And some exploratory flexibility is valuable. The aim is not to forbid exploration. It's to label it honestly and confirm it on fresh data."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "How bad is it, really?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "A contested headline",
+            "left": {
+              "title": "The critique",
+              "points": [
+                "Single replications have limited power",
+                "Some differed in population or procedure",
+                "Data fit a more optimistic reading"
+              ]
+            },
+            "right": {
+              "title": "The reply",
+              "points": [
+                "The critique misread the design",
+                "Most methodologists: rates were low",
+                "Exact number uncertain"
+              ]
+            },
+            "refs": [
+              "R-gilbert-2016-comment",
+              "R-osc-2015-estimating"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the challenge. The size of the problem is genuinely debated."
+            },
+            {
+              "text": "Daniel Gilbert, Gary King and colleagues argued that the replication project's design couldn't support its pessimistic conclusion. Single replications have limited power, some differed from the originals, and accounting for that, the results look less alarming.",
+              "reveal": 1,
+              "refs": [
+                "R-gilbert-2016-comment"
+              ]
+            },
+            {
+              "text": "The original authors replied that the critique misread their design, and most methodologists accept that replication rates in that literature were low, even if the exact number is uncertain.",
+              "reveal": 2,
+              "refs": [
+                "R-osc-2015-estimating"
+              ]
+            },
+            {
+              "text": "Two lessons survive the debate. A single failed replication is itself weak evidence. And interpreting replications needs the same attention to power and fidelity as interpreting originals."
+            },
+            {
+              "text": "There's a second objection: this is too pessimistic. Ioannidis's own model shows the share of true findings depends on priors, power and bias. In fields with strong theory, large samples and pre-specified analyses, most findings can be true.",
+              "refs": [
+                "R-ioannidis-2005-most"
+              ]
+            },
+            {
+              "text": "So the crisis isn't evidence that research is useless. It's evidence that a literature's reliability can be predicted from its design."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Eleven wins in a row."
+            ],
+            "sub": "A short case decision."
+          },
+          "cues": [
+            {
+              "text": "Now bring it home. A gifted analyst on your staff has produced eleven wins in a row from internal pilots. Colleagues admire the record. You are uneasy. You can't see the analysis decisions, the pilots that were dropped, or what was planned in advance."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-analyst",
+            "type": "choice",
+            "prompt": "A gifted analyst has produced eleven “wins” in a row from internal pilots. You cannot see the analysis decisions, the dropped pilots or what was planned. What is the best response?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Celebrate the record and scale every win."
+              },
+              {
+                "id": "b",
+                "text": "Confront the analyst about possible p-hacking."
+              },
+              {
+                "id": "c",
+                "text": "Change the system: short pre-analysis plans, a register of every pilot, hold-out confirmation before scaling."
+              }
+            ],
+            "answer": "c",
+            "concept": "c-publication-bias",
+            "feedback": {
+              "a": "An unbroken run of significant results is itself a warning sign when analysis choices, dropped pilots and plans are invisible.",
+              "b": "Accusing the analyst would be unfair and damaging; the problem is usually a system of flexibility, not misconduct.",
+              "c": "Right. Pre-commitment, a full register and confirmation on fresh data address forking paths and the file drawer, and they protect the analyst's credibility too."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Replication-risk questions",
+            "steps": [
+              "Specified before the data?",
+              "How many outcomes and segments examined?",
+              "Sample size and power for a plausible effect?",
+              "Size versus prior evidence?",
+              "Confirmed on fresh data?",
+              "What happened to the failures?"
+            ]
+          },
+          "cues": [
+            {
+              "text": "That's the executive move: you don't re-run the analysis, you ask six questions."
+            },
+            {
+              "text": "Was the analysis specified before the data were seen? Look for a dated plan.",
+              "reveal": 1
+            },
+            {
+              "text": "How many outcomes, segments and time windows were examined? All should be reported.",
+              "reveal": 2
+            },
+            {
+              "text": "What was the power for a plausible effect?",
+              "reveal": 3
+            },
+            {
+              "text": "How big is the effect relative to prior evidence? Several times larger than anything seen before is a warning.",
+              "reveal": 4
+            },
+            {
+              "text": "Has it been confirmed on fresh data?",
+              "reveal": 5
+            },
+            {
+              "text": "And what happened to the pilots that didn't work?",
+              "reveal": 6
+            },
+            {
+              "text": "In player development the data are rich, so the paths fork fast: exit velocity, launch angle, whiff rate, windows, levels, handedness splits. Pre-commit to one primary outcome and window, report everything examined, and use randomly ordered rollouts across affiliates as built-in replications."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Evidence Lab",
+                "detail": "Watch the significance filter inflate effects",
+                "href": "#/exercise/w04-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Simmons, Nelson & Simonsohn (2011), False-Positive Psychology",
+                "href": "#/library/R-simmons-2011-false-positive"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let's bring it together."
+            },
+            {
+              "text": "Exaggerated and false findings come from three interacting mechanisms: flexible analysis decided after seeing the data, low power plus a significance filter, and selective publication."
+            },
+            {
+              "text": "Significant results from small studies are usually overestimates. Pre-commitment and full reporting reduce the problem. They don't replace good measurement or theory. Expect real effects to be smaller than the first study suggested."
+            },
+            {
+              "text": "Next, take the comprehension check below, the same check as the written lesson. Then open the Evidence Lab, which reproduces the simulation you just saw, and read Simmons, Nelson and Simonsohn.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson remains here for the full detail. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

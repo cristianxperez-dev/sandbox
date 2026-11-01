@@ -1,0 +1,770 @@
+{
+  "id": "w13-l1-lecture",
+  "lesson": "w13-l1",
+  "title": "Four Questions and a Mirror",
+  "subtitle": "Ethical frameworks, conflicts of interest and the purpose of the organization",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 1. It covers the same objectives — four ethical questions applied to one decision, the shareholder and stakeholder positions with the accountability critique, and the remedies for conflicts of interest — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "One table, two names",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 13 · Lesson 1 · Lecture",
+            "title": "Four questions and a mirror",
+            "sub": "What executives owe, and to whom"
+          },
+          "cues": [
+            {
+              "text": "Let me start with a scene. It is hypothetical, but you will recognise its shape."
+            },
+            {
+              "text": "A consumer-lending startup has a good credit model. It approves more applicants than its competitors at the same default rate."
+            },
+            {
+              "text": "Then the growth team finds something else in the data."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Late-night applicants accept higher-priced offers far more often.",
+              "It is legal.",
+              "It would lift revenue before a funding round."
+            ],
+            "sub": "Show the higher-priced offer first, after dark?"
+          },
+          "cues": [
+            {
+              "text": "Applicants who reach the final screen late at night accept higher-priced offers at much higher rates than daytime applicants."
+            },
+            {
+              "text": "Nothing about this is illegal where the startup operates.",
+              "reveal": 1
+            },
+            {
+              "text": "And showing the higher-priced offer first at night would lift revenue materially next quarter, just before a funding round.",
+              "reveal": 2
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Same table, two names",
+            "left": {
+              "title": "The product lead",
+              "points": [
+                "“Time-of-day optimization”"
+              ]
+            },
+            "right": {
+              "title": "The data scientist",
+              "points": [
+                "“Charging tired people more”"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Now listen to how two people describe it."
+            },
+            {
+              "text": "The product lead calls it time-of-day optimization.",
+              "reveal": 1
+            },
+            {
+              "text": "The data scientist who built the analysis calls it charging tired people more.",
+              "reveal": 2
+            },
+            {
+              "text": "Both are describing the same table. Which description you heard first probably shaped what you think should happen."
+            },
+            {
+              "text": "This lecture will not tell you what to decide. It gives you four ways to examine the decision, a way to notice when your own interests are bending your view, and a map of the bigger argument about whom organizations are for."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Four questions, not one theory",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Four questions to ask",
+            "cards": [
+              {
+                "title": "Consequences",
+                "q": "What are the outcomes, for whom, how likely?",
+                "fail": "Can justify serious harm to a few if the total gain is large"
+              },
+              {
+                "title": "Duties and rights",
+                "q": "What do we owe, regardless of payoff?",
+                "fail": "Rigid when duties conflict"
+              },
+              {
+                "title": "Character",
+                "q": "What would a person of practical wisdom do?",
+                "fail": "Vague: both sides can claim integrity"
+              },
+              {
+                "title": "Fairness",
+                "q": "Could we justify the rule to everyone it affects?",
+                "fail": "Little guidance on big benefits versus small unfairness"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Moral philosophy offers several families of theory. You do not have to pick one to be a competent executive. You do need to know what each notices and what each misses."
+            },
+            {
+              "text": "So treat them as four independent questions."
+            },
+            {
+              "text": "First, consequences. Who gains, who loses, by how much, and how likely? This is the native language of management: cost–benefit analysis, net present value, expected value.",
+              "reveal": 1
+            },
+            {
+              "text": "Its strength is discipline about effects. Its weakness is that it can justify serious harm to a few people if the total is big enough, and it leans on predictions that drift toward the answer the analyst wants."
+            },
+            {
+              "text": "Second, duties and rights. Some things are required or forbidden whatever the payoff: keep promises, tell the truth, respect consent, do not use people merely as means.",
+              "reveal": 2
+            },
+            {
+              "text": "In organizations these show up as fiduciary duties, confidentiality and contractual promises. They protect individuals from being traded away, but they stall when two duties collide."
+            },
+            {
+              "text": "Third, character. What would a person of practical wisdom, honesty and courage do, and what will this decision make of the people who make it? Organizations become what they repeatedly do. The weakness is vagueness.",
+              "reveal": 3
+            },
+            {
+              "text": "Fourth, fairness. Could the rule behind the decision be justified to everyone it affects, especially those with the least power? A handy version is the publicity test: could you defend the rule if every affected party knew it?",
+              "reveal": 4
+            },
+            {
+              "text": "Fairness is good at surfacing people who are absent from the meeting. It says little about how to weigh a large benefit against a small unfairness."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "The night-time pricing, four ways",
+            "steps": [
+              "Consequences: revenue now; borrowers overpay; regulatory and reputational tail",
+              "Duties: honest dealing; not exploiting impaired judgment",
+              "Character: the team learns that targeting fatigue is normal",
+              "Fairness: would we publish the rule?"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now run all four on the night-time pricing."
+            },
+            {
+              "text": "Consequences: a revenue gain this quarter, a probable loss to borrowers who pay more than daytime applicants for the same risk, and a tail risk of regulatory and reputational damage if it becomes public.",
+              "reveal": 1
+            },
+            {
+              "text": "Duties: the company is not a fiduciary to its borrowers, but it owes honest dealing, and deliberately exploiting a known impairment of judgment sits uneasily with that.",
+              "reveal": 2
+            },
+            {
+              "text": "Character: the growth team will learn that targeting fatigue is acceptable practice.",
+              "reveal": 3
+            },
+            {
+              "text": "Fairness: would the company publish the sentence, we charge more after midnight because acceptance is higher? It would not.",
+              "reveal": 4
+            },
+            {
+              "text": "Three of four questions point the same way. The financial case does not vanish. It is outweighed, and the memo should say so plainly."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-frameworks",
+            "type": "choice",
+            "concept": "c-ethical-frameworks",
+            "prompt": "Hypothetical. A plant’s expected-value analysis favours moving a night shift to a cheaper site next month, even though management promised the workers in writing that schedules would not change this year. Which question most directly flags what the analysis misses?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Consequences: re-run the numbers with better estimates"
+              },
+              {
+                "id": "b",
+                "text": "Duties and rights: a promise was made"
+              },
+              {
+                "id": "c",
+                "text": "Character: what this makes of the managers"
+              },
+              {
+                "id": "d",
+                "text": "None: if the expected value is positive, the analysis is complete"
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "Better estimates still leave the core problem untouched. A consequentialist tally can absorb a broken promise as a small cost; the duty question treats it as something owed regardless of payoff.",
+              "b": "Right. Keeping promises is the classic duty-based concern, and it is exactly what a total-payoff calculation tends to trade away. The other questions still matter, but this one names the gap most directly.",
+              "c": "Character is relevant — breaking written promises shapes a culture — but the most direct flag here is the specific obligation that was created in writing.",
+              "d": "That is the consequentialist blind spot in its purest form. A positive expected value tells you the decision pays; it does not tell you whether you owe the workers something regardless."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "Legal and ethical are different axes",
+            "x": [
+              "Unlawful",
+              "Lawful"
+            ],
+            "y": [
+              "Hard to justify ethically",
+              "Ethically defensible"
+            ],
+            "cells": [
+              [
+                "Unlawful but arguably defensible: rare in business",
+                "Lawful and defensible: most decisions"
+              ],
+              [
+                "Unlawful and indefensible: fraud, concealment",
+                "Lawful but hard to defend: where executive ethics lives"
+              ]
+            ]
+          },
+          "cues": [
+            {
+              "text": "That checkpoint points at something larger. Notice that legality never settled the night-time question. Law and ethics are different axes."
+            },
+            {
+              "text": "Top left: unlawful but arguably defensible. Refusing an order you believe is unlawful, for example. It needs counsel and courage, and it is rare in business.",
+              "reveal": 1
+            },
+            {
+              "text": "Top right: lawful and defensible. Most decisions live here. The goal is to stay here deliberately, not by accident.",
+              "reveal": 2
+            },
+            {
+              "text": "Bottom left: unlawful and indefensible. Fraud, deliberate concealment. Rare in honest organizations, and not where most executive dilemmas live.",
+              "reveal": 3
+            },
+            {
+              "text": "Bottom right: lawful but hard to defend. The night-time pricing, exploiting a regulatory gap, burying a known defect within the disclosure rules. That is where most executive ethics actually happens.",
+              "reveal": 4
+            },
+            {
+              "text": "Law is a floor, not a guide."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Whom is the organization for?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "timeline",
+            "title": "A fifty-year argument",
+            "events": [
+              {
+                "when": "1970",
+                "text": "Friedman: the executive is the owners’ employee"
+              },
+              {
+                "when": "1984",
+                "text": "Freeman: strategy must attend to stakeholders"
+              },
+              {
+                "when": "2019",
+                "text": "Business Roundtable: 181 CEOs sign a purpose statement"
+              },
+              {
+                "when": "2020",
+                "text": "Bebchuk and Tallarita: the promise is illusory"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Behind any single decision sits a bigger question. Whom is the organization for?"
+            },
+            {
+              "text": "Some vocabulary first. A shareholder owns equity and holds the residual claim, paid after creditors, employees and suppliers. A fiduciary is legally bound to act in another’s interest; directors owe duties of care and loyalty."
+            },
+            {
+              "text": "In nineteen seventy, Milton Friedman argued that business as such cannot have responsibilities; only people can. A corporate executive is an employee of the owners.",
+              "reveal": 1,
+              "refs": [
+                "R-friedman-1970-social"
+              ]
+            },
+            {
+              "text": "The executive’s job, generally, is to make as much money for them as possible while conforming to the basic rules of society, both law and ethical custom.",
+              "refs": [
+                "R-friedman-1970-social"
+              ]
+            },
+            {
+              "text": "In nineteen eighty-four, R. Edward Freeman argued that strategy cannot be formulated well while attending only to owners. He defined a stakeholder as any group or individual who can affect or is affected by the achievement of the organization’s objectives.",
+              "reveal": 2,
+              "refs": [
+                "R-freeman-1984-strategic"
+              ]
+            },
+            {
+              "text": "That began as a claim about good management, and only later became a family of claims about what managers owe.",
+              "refs": [
+                "R-freeman-1984-strategic"
+              ]
+            },
+            {
+              "text": "In August twenty nineteen, the Business Roundtable published a Statement on the Purpose of a Corporation, signed by one hundred eighty-one chief executives of large U.S. companies.",
+              "reveal": 3,
+              "refs": [
+                "R-brt-2019-statement"
+              ]
+            },
+            {
+              "text": "It committed to customers, employees, suppliers, communities and long-term shareholder value, replacing the group’s earlier position that corporations exist principally to serve shareholders.",
+              "refs": [
+                "R-brt-2019-statement"
+              ]
+            },
+            {
+              "text": "And then came the sharpest reply, from Lucian Bebchuk and Roberto Tallarita.",
+              "reveal": 4,
+              "refs": [
+                "R-bebchuk-2020-illusory"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Each position at its strongest",
+            "left": {
+              "title": "Shareholder primacy",
+              "points": [
+                "Property rights",
+                "One objective, clear accountability",
+                "Markets constrained by law",
+                "Unelected executives should not tax owners for social goals"
+              ]
+            },
+            "right": {
+              "title": "Stakeholder view",
+              "points": [
+                "Law and prices miss many harms",
+                "Firms depend on relationships",
+                "A narrow objective can damage them"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Let’s put each position in its strongest form, because a weak version of the other side teaches you nothing."
+            },
+            {
+              "text": "Shareholder primacy rests on property rights, clear accountability and the efficiency of markets constrained by law.",
+              "reveal": 1,
+              "refs": [
+                "R-moriarty-2021-business"
+              ]
+            },
+            {
+              "text": "And Friedman added the point most often forgotten. An executive who spends the owners’ money on social goals they did not choose is imposing a tax and deciding how to spend it, without the accountability governments face.",
+              "refs": [
+                "R-friedman-1970-social"
+              ]
+            },
+            {
+              "text": "The stakeholder view rests on two observations: law and prices fail to capture many harms, and firms depend on relationships that a narrow objective can damage.",
+              "reveal": 2,
+              "refs": [
+                "R-moriarty-2021-business"
+              ]
+            },
+            {
+              "text": "Notice that each side mixes two kinds of claim. Empirical ones, about what produces good outcomes, and normative ones, about what is owed. Much of the confusion comes from not separating them.",
+              "refs": [
+                "R-moriarty-2021-business"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "The accountability critique",
+            "steps": [
+              {
+                "label": "Pay and careers",
+                "text": "Do not reward sacrificing shareholder value"
+              },
+              {
+                "label": "Wider discretion",
+                "text": "Unlikely to help stakeholders"
+              },
+              {
+                "label": "Many constituencies",
+                "text": "No rule for trade-offs"
+              },
+              {
+                "label": "Weaker accountability",
+                "text": "Answerable to everyone, so to no one"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Here is Bebchuk and Tallarita’s argument. Notice it is not about values. It is about incentives and accountability.",
+              "refs": [
+                "R-bebchuk-2020-illusory"
+              ]
+            },
+            {
+              "text": "Corporate leaders’ pay and careers do not reward sacrificing shareholder value for stakeholders.",
+              "reveal": 1,
+              "refs": [
+                "R-bebchuk-2020-illusory"
+              ]
+            },
+            {
+              "text": "So giving them wider discretion is unlikely to help stakeholders much.",
+              "reveal": 2
+            },
+            {
+              "text": "Meanwhile, a leader told to balance five constituencies with no rule for trade-offs can justify almost any decision by pointing to whichever group it helped.",
+              "reveal": 3,
+              "refs": [
+                "R-jensen-1976-theory",
+                "R-bebchuk-2020-illusory"
+              ]
+            },
+            {
+              "text": "The result is a leader who becomes harder to hold accountable to any of them.",
+              "reveal": 4
+            },
+            {
+              "text": "Their review of companies whose chief executives signed the statement found little sign that governance documents changed. They concluded the commitments were mostly for show, and that stakeholders are better protected through law, regulation and contracts.",
+              "refs": [
+                "R-bebchuk-2020-illusory"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "The debate is unresolved.",
+              "Holding either view is reasonable.",
+              "Holding both, as convenient, is not."
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the challenge, because this is a contested question and I don’t want to hand you a verdict."
+            },
+            {
+              "text": "The accountability critique is strongest where stakeholder language is added with no mechanism for measurement or enforcement.",
+              "refs": [
+                "R-bebchuk-2020-illusory"
+              ]
+            },
+            {
+              "text": "Critics such as Colin Mayer reply that purpose can be written into governance with real accountability.",
+              "refs": [
+                "R-bebchuk-2020-illusory"
+              ]
+            },
+            {
+              "text": "The philosophical literature adds that shareholder primacy depends on law and markets capturing harms they often miss. And Friedman himself bounded profit-seeking by law and ethical custom, which leaves open how much that boundary demands.",
+              "reveal": 1,
+              "refs": [
+                "R-moriarty-2021-business",
+                "R-friedman-1970-social"
+              ]
+            },
+            {
+              "text": "So a reasonable executive can hold either view. What is not reasonable is to hold both at once, depending on which is convenient this quarter.",
+              "reveal": 2
+            },
+            {
+              "text": "Inside your own organization the lesson is practical. If a department is told to balance development, performance, wellness and cost, state the trade-off rule in advance, measure each objective and say who reviews the trade-offs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "When your interest is in the room",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Agency theory",
+            "term": "Conflict of interest",
+            "definition": "A person with a duty to act for others also has a personal interest that could influence how that duty is performed.",
+            "example": "A structural condition, not an accusation: it exists before anyone behaves badly."
+          },
+          "cues": [
+            {
+              "text": "Now the mirror. Everything so far assumed the decision-maker sees clearly. Conflicts of interest are where that assumption fails."
+            },
+            {
+              "text": "A conflict of interest exists when someone with a duty to act for others also has a personal interest that could influence how they perform that duty.",
+              "reveal": 1
+            },
+            {
+              "text": "Here is the crucial point. It is a structural condition, not an accusation. The conflict exists before anyone behaves badly.",
+              "reveal": 2
+            },
+            {
+              "text": "Agency theory explains why it matters. When an agent captures only part of the gain from serving the principal and all of the gain from serving themselves, interests diverge.",
+              "refs": [
+                "R-jensen-1976-theory"
+              ]
+            },
+            {
+              "text": "The principal then bears costs: monitoring, bonding, and a residual loss that never fully disappears.",
+              "refs": [
+                "R-jensen-1976-theory"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Four remedies, weakest to strongest",
+            "cards": [
+              {
+                "title": "Disclosure",
+                "q": "Tell the principal about the conflict",
+                "fail": "Cheap, but rarely removes the bias"
+              },
+              {
+                "title": "Recusal",
+                "q": "Remove the conflicted person",
+                "fail": "Works only if someone else can decide competently"
+              },
+              {
+                "title": "Restructuring",
+                "q": "Change the incentive itself",
+                "fail": "Takes design effort"
+              },
+              {
+                "title": "Prohibition",
+                "q": "Forbid the conflicting interest",
+                "fail": "Reserved for high stakes and weak monitoring"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "There are four remedies."
+            },
+            {
+              "text": "Disclosure tells the principal about the conflict. It is cheap and sometimes enough. But people underestimate how much their interests bend their own judgment, a theme of the next lesson, so disclosure alone rarely removes the bias.",
+              "reveal": 1
+            },
+            {
+              "text": "Recusal removes the conflicted person from the decision. It works when someone else can decide competently.",
+              "reveal": 2
+            },
+            {
+              "text": "Restructuring changes the incentive: a flat fee instead of a commission, or separating the person who builds a model from the person who validates it.",
+              "reveal": 3
+            },
+            {
+              "text": "Prohibition forbids the conflicting interest altogether. It is used where the stakes are high and monitoring is weak.",
+              "reveal": 4
+            },
+            {
+              "text": "Let’s test that on a case."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-remedy",
+            "type": "choice",
+            "concept": "c-conflict-of-interest",
+            "prompt": "Hypothetical. An independent investment adviser is paid more for recommending an in-house fund than an index fund with similar exposure. She is the only adviser her clients deal with. Which remedy is strongest?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Disclosure: tell clients about the higher pay"
+              },
+              {
+                "id": "b",
+                "text": "Recusal: she steps out of fund recommendations"
+              },
+              {
+                "id": "c",
+                "text": "Restructuring: move her to a flat advisory fee"
+              },
+              {
+                "id": "d",
+                "text": "Nothing, unless she actually recommends the in-house fund"
+              }
+            ],
+            "answer": "c",
+            "feedback": {
+              "a": "Disclosure is necessary but weak. It asks the client to discount the advice correctly, and the adviser to see her own bias — neither is reliable.",
+              "b": "Recusal is impossible here: she is the adviser. Recusal works only when someone else can decide competently.",
+              "c": "Right. A flat fee changes the interest itself, rather than relying on clients to correct for it. That is why restructuring usually beats disclosure.",
+              "d": "The conflict exists whether or not she ever recommends the in-house fund. It is a structural condition, not an accusation."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Could you explain the rule to the person it affects?",
+              "If not, restructure the decision."
+            ]
+          },
+          "cues": [
+            {
+              "text": "The adviser case generalises. Where recusal is possible, as with a hospital department chair who holds equity in a device startup and sits on the purchasing committee, recusal from the vote is the usual remedy."
+            },
+            {
+              "text": "And the committee should also check whether the chair shaped the evaluation criteria before stepping aside."
+            },
+            {
+              "text": "One application from player development. The clearest conflicts arise where the organization’s interest and a player’s diverge and the player depends on the organization’s advice: workload near a promotion deadline, medical information that affects trade value."
+            },
+            {
+              "text": "The fairness test is a practical tool there. Could you explain the rule you are applying to the player and his family, in his language, without embarrassment?",
+              "reveal": 1
+            },
+            {
+              "text": "Where you could not, restructure the decision: a second opinion that does not report to the same incentive, or a documented rule set before the case arises."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Frameworks can launder decisions",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two ways to use the frameworks",
+            "left": {
+              "title": "Laundering",
+              "points": [
+                "Decide first",
+                "Find the framework that agrees",
+                "Call it “the ethical analysis”"
+              ]
+            },
+            "right": {
+              "title": "Testing",
+              "points": [
+                "Run all four before you lean",
+                "Write down where they disagree",
+                "Choose openly"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Now let me argue against the tool I just gave you."
+            },
+            {
+              "text": "Because four frameworks exist, a motivated decision-maker can usually find one that supports the preferred option and present it as the ethical analysis.",
+              "reveal": 1
+            },
+            {
+              "text": "The discipline is to run all four before you know which way you lean, and to write down where they disagree. A decision on which they split is a genuine dilemma. Pretending otherwise is the error.",
+              "reveal": 2
+            },
+            {
+              "text": "A second limit. Treating ethics as a list of things you may not do misses failures of omission: the safety concern no one raised, the analysis never commissioned because its answer might be inconvenient. Duties of care require effort, not only restraint."
+            },
+            {
+              "text": "And remember the purpose statement that promises to put people first, next to a bonus plan that pays only on revenue and cost. Incentives usually win. Name the conflict, decide which objective governs this case and why, and write it down."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-own-decision",
+            "type": "reflect",
+            "concept": "c-conflict-of-interest",
+            "prompt": "Pick one recurring decision in your work where your interest, your department’s interest and the interest of the person affected can diverge. Which remedy — disclosure, recusal, restructuring or prohibition — does your organization actually use, and is it the right one?"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Executive Dilemma",
+                "detail": "The week’s exercise: work a hard decision end to end",
+                "href": "#/exercise/w13-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Tenbrunsel & Messick (2004), Ethical Fading — sets up Lesson 2",
+                "href": "#/library/R-tenbrunsel-2004-ethical"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Ask four questions of every consequential decision: consequences, duties, character and fairness. Ask them before you know which way you lean."
+            },
+            {
+              "text": "When they agree, decide. When they split, you have found the real dilemma, and your job is to choose openly and say what you are trading."
+            },
+            {
+              "text": "Whom the organization is for is a genuine debate, and its sharpest edge is accountability. An objective nobody can measure is an objective nobody can enforce."
+            },
+            {
+              "text": "And a conflict of interest is a structure, not an accusation. Disclosure is the weakest remedy; restructuring and prohibition are the strongest."
+            },
+            {
+              "text": "From here, take the comprehension check below. It is the same check as the written lesson. Then open the week’s exercise, Executive Dilemma, and read Tenbrunsel and Messick on ethical fading, which is where the next lecture begins.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson stays here whenever you want the full table, the healthcare and finance examples, and the methodological note. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

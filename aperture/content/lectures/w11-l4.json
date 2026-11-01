@@ -1,0 +1,693 @@
+{
+  "id": "w11-l4-lecture",
+  "lesson": "w11-l4",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "title": "Outcome Is Not the Test",
+  "subtitle": "Agency, fiduciary duty and institutional constraints",
+  "summary": "A narrated, interactive version of Lesson 4 of the law week. It covers the same objectives — actual and apparent authority, the duties of care and loyalty under the business judgment rule, a sound conflict-of-interest process, and the regulatory, labor and league constraints above any contract — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "A premium price and a breach",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 11 · Lesson 4 · Lecture",
+            "title": "Outcome is not the test",
+            "sub": "Agency, fiduciary duty and institutional constraints"
+          },
+          "cues": [
+            {
+              "text": "One note before we start. This is general educational material about legal concepts, not legal advice. For any specific agreement or decision, consult a qualified attorney."
+            },
+            {
+              "text": "Corporate and agency law is largely state law. The corporate examples here draw on Delaware, where many United States corporations are organized. Other states and countries differ."
+            },
+            {
+              "text": "Let's begin with a case that still surprises people."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "A board approves a sale",
+            "items": [
+              {
+                "value": "Premium",
+                "label": "price well above the market price"
+              },
+              {
+                "value": "None",
+                "label": "accusations of self-dealing"
+              },
+              {
+                "value": "Thin",
+                "label": "information gathered before agreeing"
+              }
+            ],
+            "note": "Smith v. Van Gorkom, Delaware Supreme Court, 1985.",
+            "refs": [
+              "R-delaware-1985-smith"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The directors of a public company approve a cash-out merger. Shareholders will be bought out for cash.",
+              "refs": [
+                "R-delaware-1985-smith"
+              ]
+            },
+            {
+              "text": "The price is a substantial premium over the market price of the stock.",
+              "reveal": 1,
+              "refs": [
+                "R-delaware-1985-smith"
+              ]
+            },
+            {
+              "text": "Nobody accuses the directors of self-dealing.",
+              "reveal": 2,
+              "refs": [
+                "R-delaware-1985-smith"
+              ]
+            },
+            {
+              "text": "But before agreeing to sell, the board did not inform itself of the information reasonably available to it.",
+              "reveal": 3,
+              "refs": [
+                "R-delaware-1985-smith"
+              ]
+            },
+            {
+              "text": "Shareholders sue. What do you think the court said?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-vangorkom",
+            "type": "choice",
+            "prompt": "The directors approved a sale at a substantial premium, with no self-dealing, but without informing themselves of reasonably available information. What did the Delaware Supreme Court hold in 1985?",
+            "options": [
+              {
+                "id": "a",
+                "text": "No breach — a premium price shows the shareholders were well served."
+              },
+              {
+                "id": "b",
+                "text": "A breach of the duty of loyalty, because the directors must have benefited somehow."
+              },
+              {
+                "id": "c",
+                "text": "A breach of the duty of care, because the uninformed process forfeited the business judgment rule's protection."
+              },
+              {
+                "id": "d",
+                "text": "No breach — courts never review business decisions."
+              }
+            ],
+            "answer": "c",
+            "concept": "c-business-judgment-rule",
+            "feedback": {
+              "a": "That is the intuitive answer, and the court rejected it. A favorable price did not cure an uninformed decision process.",
+              "b": "No one accused the directors of self-dealing. The problem was care, not loyalty: they had not done the work.",
+              "c": "Right. Acting on an uninformed basis, the directors lost the business judgment rule's protection, and the case was sent back for a determination of damages.",
+              "d": "Courts rarely second-guess the substance of business decisions, but they do examine whether decision-makers were informed and disinterested."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Outcome is not the test.",
+              "Process is."
+            ],
+            "refs": [
+              "R-delaware-1985-smith"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The court found a breach of the duty of care. The case is Smith versus Van Gorkom.",
+              "refs": [
+                "R-delaware-1985-smith"
+              ]
+            },
+            {
+              "text": "Having acted on an uninformed basis, the directors lost the protection of the business judgment rule, and the case went back for a determination of damages.",
+              "refs": [
+                "R-delaware-1985-smith"
+              ]
+            },
+            {
+              "text": "It is a fixture of corporate law courses because it teaches a counterintuitive point. Courts rarely second-guess the substance of business decisions. But they do examine whether the people making them did the work.",
+              "reveal": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "When someone else's signature binds you",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two kinds of authority",
+            "left": {
+              "title": "Actual authority",
+              "points": [
+                "Express: granted in words",
+                "Implied: reasonably necessary to carry out a grant",
+                "Comes from the principal to the agent"
+              ]
+            },
+            "right": {
+              "title": "Apparent authority",
+              "points": [
+                "Principal's conduct creates a reasonable belief",
+                "Titles, negotiating, honoring past deals",
+                "Can bind despite internal limits"
+              ]
+            },
+            "refs": [
+              "R-valbrune-2019-business"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Before we get to directors, start with everyone who acts for an organization. That includes you."
+            },
+            {
+              "text": "Agency law governs relationships in which one person, the agent, acts on behalf of another, the principal, and subject to its control.",
+              "refs": [
+                "R-valbrune-2019-business"
+              ]
+            },
+            {
+              "text": "Actual authority can be express, granted in words, as in a delegation-of-authority policy. Or implied: whatever is reasonably necessary to carry out an express grant.",
+              "reveal": 1,
+              "refs": [
+                "R-valbrune-2019-business"
+              ]
+            },
+            {
+              "text": "Apparent authority is different. It arises when the principal's own conduct leads a third party reasonably to believe the agent has authority: a title, permission to negotiate, past deals honored.",
+              "reveal": 2,
+              "refs": [
+                "R-valbrune-2019-business"
+              ]
+            },
+            {
+              "text": "And here is the sting. A principal can be bound by a contract its agent made within apparent authority, even if the agent exceeded internal limits.",
+              "refs": [
+                "R-valbrune-2019-business"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "A regional director signs an exclusive deal.",
+              "Policy required the finance chief's approval."
+            ],
+            "sub": "A hypothetical technology company."
+          },
+          "cues": [
+            {
+              "text": "A hypothetical. A regional sales director signs a three-year reseller agreement with exclusive territory terms.",
+              "reveal": 0
+            },
+            {
+              "text": "The company's delegation policy requires the chief financial officer to approve any exclusive arrangement.",
+              "reveal": 1
+            },
+            {
+              "text": "The reseller never saw the policy, dealt only with the director, and the director's title and past deals suggested authority. Is the company bound?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-authority",
+            "type": "choice",
+            "prompt": "Is the company likely bound by the exclusive reseller agreement the director signed?",
+            "options": [
+              {
+                "id": "a",
+                "text": "No — the director lacked actual authority under the internal policy, so the deal is void."
+              },
+              {
+                "id": "b",
+                "text": "Possibly yes — the company's own conduct created apparent authority; its remedies against the director are internal."
+              },
+              {
+                "id": "c",
+                "text": "Yes, but only because the reseller signed first."
+              },
+              {
+                "id": "d",
+                "text": "No — exclusive agreements are never binding without board approval."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-agency-law",
+            "feedback": {
+              "a": "Internal limits the counterparty never saw do not necessarily protect the company. Apparent authority looks at what the principal led the third party to believe.",
+              "b": "Right. The title and past deals the company allowed created a reasonable belief. The company may be bound; it deals with the director internally.",
+              "c": "Who signed first is not the issue. The question is whether the company's conduct led the reseller reasonably to believe the director could sign.",
+              "d": "There is no such general rule. Whether board or officer approval is required depends on the organization's own delegations, and apparent authority can still bind it."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "What agents owe, and what follows",
+            "steps": [
+              "Loyalty",
+              "Obedience to lawful instructions",
+              "Reasonable care",
+              "Disclosure of relevant information"
+            ],
+            "refs": [
+              "R-valbrune-2019-business"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The company may well be bound. The lesson for leaders: align titles, delegations and counterparties' reasonable expectations, and tell key counterparties who can sign what."
+            },
+            {
+              "text": "Agents, in turn, owe their principals duties of loyalty,",
+              "reveal": 1,
+              "refs": [
+                "R-valbrune-2019-business"
+              ]
+            },
+            {
+              "text": "obedience to lawful instructions,",
+              "reveal": 2
+            },
+            {
+              "text": "reasonable care,",
+              "reveal": 3
+            },
+            {
+              "text": "and disclosure of relevant information.",
+              "reveal": 4
+            },
+            {
+              "text": "Employers are also generally liable for wrongs employees commit within the scope of employment, a doctrine called respondeat superior.",
+              "refs": [
+                "R-valbrune-2019-business"
+              ],
+              "say": "Employers are also generally liable for wrongs employees commit within the scope of employment, a doctrine called ree-spon-dee-at soo-peer-ee-or."
+            },
+            {
+              "text": "One exception worth knowing. In United States federal contracting, only officials with delegated contracting authority can commit public funds, and apparent authority generally does not bind the government. Ask who the authorized contracting officer is."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Care, loyalty and deference",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Directors and officers",
+            "term": "Two fiduciary duties",
+            "definition": "Care: act on an informed basis. Loyalty: act in good faith in the organization's interest, not your own.",
+            "example": "Loyalty problems: standing on both sides of a deal, taking the organization's opportunity, favoring a related party.",
+            "refs": [
+              "R-delaware-1985-smith",
+              "R-valbrune-2019-business"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Directors and officers owe fiduciary duties to the corporation, and usually to its shareholders as a group. There are two core duties.",
+              "refs": [
+                "R-valbrune-2019-business"
+              ]
+            },
+            {
+              "text": "The duty of care requires them to act on an informed basis, considering the information reasonably available. In Van Gorkom, it was breached by gross negligence in the process, not by a bad outcome.",
+              "reveal": 1,
+              "refs": [
+                "R-delaware-1985-smith"
+              ]
+            },
+            {
+              "text": "The duty of loyalty requires them to act in good faith in the organization's interest rather than their own.",
+              "refs": [
+                "R-valbrune-2019-business"
+              ]
+            },
+            {
+              "text": "Self-dealing is the classic loyalty problem: standing on both sides of a transaction, taking an opportunity that belongs to the organization, or favoring a related party.",
+              "reveal": 2
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "How courts tend to see a board decision",
+            "x": [
+              "No conflict",
+              "A decision-maker has a conflict"
+            ],
+            "y": [
+              "Uninformed process",
+              "Informed process"
+            ],
+            "cells": [
+              [
+                "Business judgment rule: strong deference",
+                "Loyalty problem: closer review unless cleanly handled"
+              ],
+              [
+                "Care problem: deference can be lost",
+                "Highest exposure: care and loyalty together"
+              ]
+            ],
+            "refs": [
+              "R-delaware-1985-smith"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The business judgment rule ties these together. It presumes directors made an informed decision, in good faith, honestly believing it served the company.",
+              "refs": [
+                "R-delaware-1985-smith"
+              ]
+            },
+            {
+              "text": "A plaintiff must rebut the presumption, typically by showing the directors were interested, acted in bad faith, or failed to inform themselves.",
+              "refs": [
+                "R-delaware-1985-smith"
+              ]
+            },
+            {
+              "text": "Here is a simplified map. Informed and no conflict: strong deference. Courts will not substitute their judgment, however the decision turned out.",
+              "reveal": 1
+            },
+            {
+              "text": "Informed, but a decision-maker has a conflict: a loyalty problem, with more searching review unless the conflict was disclosed and disinterested people decided.",
+              "reveal": 2
+            },
+            {
+              "text": "Uninformed, no conflict: a care problem. Deference can be lost, as in Van Gorkom.",
+              "reveal": 3,
+              "refs": [
+                "R-delaware-1985-smith"
+              ]
+            },
+            {
+              "text": "Uninformed and conflicted: the highest exposure of all.",
+              "reveal": 4
+            },
+            {
+              "text": "Why defer at all? Judges are not business experts. Hindsight makes failed risks look reckless. And owners benefit when directors take sensible risks. Process review is the compromise: a court cannot easily judge whether a decision was right, but it can judge whether it was informed and disinterested."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Handling a conflict",
+      "scenes": [
+        {
+          "visual": {
+            "type": "flow",
+            "title": "A sound conflict process",
+            "steps": [
+              {
+                "label": "Disclose",
+                "text": "Fully and early"
+              },
+              {
+                "label": "Step away",
+                "text": "Leave the decision"
+              },
+              {
+                "label": "Disinterested decide",
+                "text": "On the merits"
+              },
+              {
+                "label": "Document",
+                "text": "Record what happened"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Conflicts of interest are where most executives meet the duty of loyalty in practice. The standard process is simple to state and often skipped."
+            },
+            {
+              "text": "Disclose the interest fully and early.",
+              "reveal": 1
+            },
+            {
+              "text": "Step away from the decision.",
+              "reveal": 2
+            },
+            {
+              "text": "Let disinterested decision-makers evaluate it on the merits.",
+              "reveal": 3
+            },
+            {
+              "text": "And document what happened.",
+              "reveal": 4
+            },
+            {
+              "text": "Take a hypothetical hospital board considering an imaging contract in which one trustee's family holds a stake. The trustee discloses in writing and leaves the room. The others compare competing bids and an independent review. The minutes record the analysis."
+            },
+            {
+              "text": "The same contract approved without disclosure would be vulnerable even if its terms were fair. A concealed conflict, later discovered, turns a question about one transaction into a question about a person's integrity."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "A conflict nobody asked about",
+            "cards": [
+              {
+                "title": "Who decides?",
+                "q": "Is it material — says who?",
+                "fail": "Not the person with the interest"
+              },
+              {
+                "title": "What does policy say?",
+                "q": "Who administers it?",
+                "fail": "Skipping it makes the process indefensible"
+              },
+              {
+                "title": "Disclose now or later?",
+                "q": "Cost now versus after signing",
+                "fail": "Discovery later costs far more"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now a harder version. You learn that a senior colleague on your vendor-selection committee holds a small personal investment in one of the bidders. The colleague says it is immaterial, and that raising it would embarrass everyone."
+            },
+            {
+              "text": "Who has the authority to decide whether it is material? The colleague, you, or someone independent?",
+              "reveal": 1
+            },
+            {
+              "text": "What does the conflict policy require, and who administers it?",
+              "reveal": 2
+            },
+            {
+              "text": "And what is the cost of disclosure now, compared with discovery after the contract is signed?",
+              "reveal": 3
+            },
+            {
+              "text": "Handling it well is rarely about the size of the investment. It is about whether the process will remain defensible to people who were not in the room."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-reflect",
+            "type": "reflect",
+            "prompt": "Think of a decision process you are part of — hiring, vendors, budgets. If someone involved had a personal interest, would your current process surface it before the decision? Who would decide whether it mattered, and what record would exist afterward?",
+            "concept": "c-fiduciary-duty"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Above the contract, and the limits",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Institutions above the contract",
+            "cards": [
+              {
+                "title": "Regulation",
+                "q": "Wage-and-hour, discrimination, privacy, securities",
+                "fail": "Private agreements cannot waive them"
+              },
+              {
+                "title": "Agency authority",
+                "q": "Regulators are constrained too",
+                "fail": "The non-compete rule fell on authority"
+              },
+              {
+                "title": "Labor law",
+                "q": "Duty to bargain with a union",
+                "fail": "Individual deals cannot undercut the agreement"
+              },
+              {
+                "title": "League rules",
+                "q": "Constitutions and collective agreements",
+                "fail": "Many \"individual\" choices already decided"
+              }
+            ],
+            "refs": [
+              "R-ftc-2024-non-compete"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Contracts and fiduciary duties both operate inside a larger set of constraints."
+            },
+            {
+              "text": "Regulators set rules private agreements cannot waive: wage-and-hour, anti-discrimination, privacy and securities rules.",
+              "reveal": 1
+            },
+            {
+              "text": "Agencies are constrained too. The Federal Trade Commission's non-compete rule was set aside because a court found the agency lacked the authority to issue it.",
+              "reveal": 2,
+              "refs": [
+                "R-ftc-2024-non-compete"
+              ]
+            },
+            {
+              "text": "Labor law adds a layer. Where employees are represented by a union, federal labor law generally requires the employer to bargain collectively over wages, hours and working conditions, and the agreement sets terms individual arrangements generally cannot undercut.",
+              "reveal": 3
+            },
+            {
+              "text": "Professional sports leagues are a vivid case. Clubs are bound by the league's constitution and rules, and player terms are set within collective agreements with the players' union, typically covering minimum salaries, standard contracts, discipline and grievance arbitration.",
+              "reveal": 4
+            },
+            {
+              "text": "Baseball even has its own antitrust history, which the written lesson traces. The practical point: many questions that look like individual decisions are already partly answered by rules negotiated elsewhere."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Is process review working?",
+            "left": {
+              "title": "Too much",
+              "points": [
+                "Defensive documentation",
+                "The record becomes the target"
+              ]
+            },
+            "right": {
+              "title": "Too little",
+              "points": [
+                "Shields thin oversight",
+                "Directors rarely pay personally"
+              ]
+            },
+            "refs": [
+              "R-delaware-1985-smith"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now let me challenge the process story I have been telling."
+            },
+            {
+              "text": "From one side: after Van Gorkom, boards learned to build records. Longer meetings, outside advisers, written valuation opinions. Critics argue some of this protects directors more than it improves decisions. The record of diligence becomes the target.",
+              "reveal": 1,
+              "refs": [
+                "R-delaware-1985-smith"
+              ]
+            },
+            {
+              "text": "Defenders reply that gathering information and hearing advisers does change decisions at the margin. Both can be true."
+            },
+            {
+              "text": "From the other side: the business judgment rule can be too deferential. It can shield boards that approve risky strategies with thin oversight.",
+              "reveal": 2
+            },
+            {
+              "text": "And personal liability is uncommon, because organizations commonly indemnify and insure their directors, and some jurisdictions let them limit personal liability for certain breaches. Deference that is right for honest mistakes can be wrong for persistent inattention."
+            },
+            {
+              "text": "Finally, these concepts travel imperfectly. Nonprofit directors owe duties to a mission. Public officials work under ethics and procurement rules. Civil-law countries, including most of Latin America, organize this differently. Treat this lesson as a starting vocabulary, not the governing law."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Bringing it together",
+      "scenes": [
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Contract Lab",
+                "detail": "Flag the issues in a fictional consulting agreement",
+                "href": "#/exercise/w11-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Valbrune & De Assis (2019), Business Law I Essentials — agency and employment",
+                "href": "#/library/R-valbrune-2019-business"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let's bring it together."
+            },
+            {
+              "text": "Organizations can be bound by agents acting within actual or apparent authority. Know your own authority, and remember that others may rely on what you appear able to do."
+            },
+            {
+              "text": "Care is judged mainly by process. Loyalty forbids self-dealing and requires conflicts to be handled openly: disclose, step away, let the disinterested decide, document."
+            },
+            {
+              "text": "The business judgment rule protects informed, disinterested, good-faith decisions, not uninformed ones. And regulation, labor law, collective agreements and league rules set boundaries no single contract can cross."
+            },
+            {
+              "text": "Next, take the comprehension check below. It is the same check as the written lesson. Then open the Contract Lab, and read the agency and employment sections of the OpenStax business law text.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson stays here, with the full checklist of questions to ask before you commit an organization. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

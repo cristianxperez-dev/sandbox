@@ -1,0 +1,678 @@
+{
+  "id": "w10-l2-lecture",
+  "lesson": "w10-l2",
+  "title": "The Number Nobody Wrote on the Offer",
+  "subtitle": "The price of time: NPV, IRR, payback and the cost of capital",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 2. It covers the same objectives — computing present value, NPV, IRR and payback; the discount rate as an opportunity cost and how WACC is built; when IRR and payback mislead; and the problem with one firm-wide rate — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "A million now or more later?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 10 · Lesson 2 · Lecture",
+            "title": "The number nobody wrote on the offer",
+            "sub": "NPV, IRR, payback and the cost of capital"
+          },
+          "cues": [
+            {
+              "text": "A city offers a contractor a choice in settling a claim. One million dollars today. Or one point three million dollars in four years, guaranteed."
+            },
+            {
+              "text": "Most people’s instinct is to compare the two numbers. One point three is bigger. Done."
+            },
+            {
+              "text": "But that comparison is wrong, and by the end of this lecture you will see that the decision turns on a single number that appears nowhere on the offer."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "The settlement offer",
+            "items": [
+              {
+                "value": "$1.0M",
+                "label": "paid today"
+              },
+              {
+                "value": "$1.3M",
+                "label": "paid in four years, guaranteed"
+              }
+            ],
+            "note": "Synthetic numbers, from the lesson’s example."
+          },
+          "cues": [
+            {
+              "text": "So let me ask you to commit before I explain.",
+              "reveal": 0
+            },
+            {
+              "text": "Option one: a million dollars now.",
+              "reveal": 1
+            },
+            {
+              "text": "Option two: one point three million in four years.",
+              "reveal": 2
+            },
+            {
+              "text": "At what annual return, earned on money at similar risk, would you be exactly indifferent between the two? Make your guess."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-indifference",
+            "type": "estimate",
+            "prompt": "At what annual return would you be indifferent between $1.0 million today and $1.3 million in four years?",
+            "min": 0,
+            "max": 20,
+            "step": 0.1,
+            "unit": "%",
+            "initial": 10,
+            "answer": 6.8,
+            "tolerance": 0.6,
+            "concept": "c-time-value-of-money",
+            "feedback": {
+              "correct": "Right — about 6.78% a year. Below that return, waiting is better; above it, take the money now.",
+              "incorrect": "The indifference rate is about 6.78% a year: the return at which $1.0 million grows to exactly $1.3 million in four years. Many people guess higher, because 30% sounds large — but it is spread over four compounding years."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Discounting and NPV",
+      "scenes": [
+        {
+          "visual": {
+            "type": "calc",
+            "title": "What $1.3M in four years is worth today",
+            "lines": [
+              {
+                "label": "At 6%: $1.3M ÷ 1.06⁴ (1.262477)",
+                "value": "$1,029,722"
+              },
+              {
+                "label": "At 8%: $1.3M ÷ 1.08⁴ (1.360489)",
+                "value": "$955,539"
+              },
+              {
+                "label": "Indifference: 1.3^(1/4) − 1",
+                "value": "6.78%"
+              }
+            ],
+            "result": {
+              "label": "Decision depends on the rate",
+              "value": "Wait below 6.78%; take cash above"
+            },
+            "note": "Synthetic example from the lesson."
+          },
+          "cues": [
+            {
+              "text": "Here is the calculation. Discounting moves money backward in time. You divide a future amount by one plus the rate, once for every year you wait.",
+              "refs": [
+                "R-dahlquist-2022-principles"
+              ]
+            },
+            {
+              "text": "If the contractor can earn six percent a year at similar risk, one point three million in four years is worth about one million, twenty-nine thousand, seven hundred and twenty-two dollars today. Waiting wins.",
+              "reveal": 1
+            },
+            {
+              "text": "At eight percent, it is worth about nine hundred and fifty-five thousand, five hundred and thirty-nine dollars. Taking the money now wins.",
+              "reveal": 2
+            },
+            {
+              "text": "And the break-even, the rate at which a million grows to exactly one point three million in four years, is about six point seven eight percent.",
+              "reveal": 3
+            },
+            {
+              "text": "Same cash, opposite decisions. The hidden number is the opportunity cost of waiting: what the money could earn in the meantime.",
+              "reveal": 4
+            },
+            {
+              "text": "This matters most for long horizons. Raising the rate from six to ten percent cuts the present value of a dollar received in year fifteen from about forty-two cents to about twenty-four cents. Many arguments about long-term thinking are really arguments about the discount rate."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Four ways to summarize a project",
+            "cards": [
+              {
+                "title": "Net present value",
+                "q": "Sum of all discounted cash flows, including the outlay",
+                "fail": "Positive: beats the alternative"
+              },
+              {
+                "title": "Internal rate of return",
+                "q": "The rate at which NPV equals zero",
+                "fail": "A break-even return, not a value"
+              },
+              {
+                "title": "Payback, simple and discounted",
+                "q": "Time until inflows recover the outlay",
+                "fail": "Ignores what comes after"
+              },
+              {
+                "title": "Profitability index",
+                "q": "PV of future flows ÷ initial outlay",
+                "fail": "Most useful when capital is scarce"
+              }
+            ],
+            "refs": [
+              "R-dahlquist-2022-principles"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the toolkit. Every one of these is just discounting, repeated and summarized.",
+              "refs": [
+                "R-dahlquist-2022-principles"
+              ]
+            },
+            {
+              "text": "Net present value sums the present values of all of a project’s cash flows, including the negative outlay at the start. Positive means the project returns more than the rate used to discount it, so accepting it adds value relative to the alternative. That is why introductory texts treat it as the primary rule.",
+              "reveal": 1,
+              "refs": [
+                "R-dahlquist-2022-principles"
+              ]
+            },
+            {
+              "text": "The internal rate of return is the discount rate at which NPV equals zero. Think of it as the project’s own break-even return.",
+              "reveal": 2,
+              "refs": [
+                "R-dahlquist-2022-principles"
+              ],
+              "say": "The internal rate of return is the discount rate at which N P V equals zero. Think of it as the project’s own break-even return."
+            },
+            {
+              "text": "Payback is the time until cumulative inflows recover the outlay. Discounted payback does the same with discounted cash flows.",
+              "reveal": 3,
+              "refs": [
+                "R-dahlquist-2022-principles"
+              ]
+            },
+            {
+              "text": "And the profitability index divides the present value of future cash flows by the initial outlay. It earns its keep when capital is rationed.",
+              "reveal": 4,
+              "refs": [
+                "R-dahlquist-2022-principles"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "When the rules disagree",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two projects, each costing $1,000k, at 8%",
+            "left": {
+              "title": "Project Quick",
+              "points": [
+                "Inflows: 800, 400, 100, 0",
+                "NPV $163k · IRR 20.2%",
+                "Payback 1.50 years (discounted 1.76)",
+                "PI 1.16"
+              ]
+            },
+            "right": {
+              "title": "Project Long",
+              "points": [
+                "Inflows: 100, 300, 500, 700",
+                "NPV $261k · IRR 16.6%",
+                "Payback 3.14 years (discounted 3.49)",
+                "PI 1.26"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Let me show you two projects, invented for the lesson, each costing a million dollars, discounted at eight percent."
+            },
+            {
+              "text": "Project Quick pays back fast: eight hundred thousand in year one, then four hundred, then one hundred. Its NPV is about one hundred and sixty-three thousand. Its IRR is about twenty point two percent, and it recovers its cost in a year and a half.",
+              "reveal": 1,
+              "say": "Project Quick pays back fast: eight hundred thousand in year one, then four hundred, then one hundred. Its N P V is about one hundred and sixty-three thousand. Its I R R is about twenty point two percent, and it recovers its cost in a year and a half."
+            },
+            {
+              "text": "Project Long builds slowly: one hundred, three hundred, five hundred, seven hundred. Its NPV is about two hundred and sixty-one thousand, its IRR about sixteen point six percent, and payback takes more than three years.",
+              "reveal": 2,
+              "say": "Project Long builds slowly: one hundred, three hundred, five hundred, seven hundred. Its N P V is about two hundred and sixty-one thousand, its I R R about sixteen point six percent, and payback takes more than three years."
+            },
+            {
+              "text": "Suppose they are mutually exclusive, two designs for the same system. You can only build one. Which do you choose?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-quick-long",
+            "type": "choice",
+            "prompt": "Quick and Long are mutually exclusive and the cost of capital is 8%. Which should you choose?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Quick — it has the higher IRR."
+              },
+              {
+                "id": "b",
+                "text": "Quick — it pays back in half the time."
+              },
+              {
+                "id": "c",
+                "text": "Long — it has the higher NPV at the 8% cost of capital."
+              },
+              {
+                "id": "d",
+                "text": "Either — both have positive NPV, so they are equivalent."
+              }
+            ],
+            "answer": "c",
+            "concept": "c-npv",
+            "feedback": {
+              "a": "IRR favors early cash and ignores scale. Between mutually exclusive projects, ranking by IRR can choose the one that adds less value.",
+              "b": "Payback ignores the time value of money and everything after the cutoff — here, Long’s large later inflows.",
+              "c": "Right. At 8%, Long adds about $98 thousand more value. NPV is the rule for choosing between mutually exclusive projects.",
+              "d": "Both are acceptable on their own, but you can build only one. The right one is the one that adds more value at your cost of capital."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "The NPV profiles cross at about 13.6%.",
+              "Below it, Long wins. Above it, Quick wins."
+            ],
+            "sub": "The disagreement points straight at the discount rate."
+          },
+          "cues": [
+            {
+              "text": "NPV says choose Long. At eight percent it adds about ninety-eight thousand dollars more value than Quick.",
+              "say": "N P V says choose Long. At eight percent it adds about ninety-eight thousand dollars more value than Quick."
+            },
+            {
+              "text": "So why does IRR prefer Quick? Because Quick returns cash early, and early cash is worth more when rates are high.",
+              "say": "So why does I R R prefer Quick? Because Quick returns cash early, and early cash is worth more when rates are high."
+            },
+            {
+              "text": "Plot each project’s NPV against the discount rate and the two lines cross at about thirteen point six percent.",
+              "reveal": 1,
+              "say": "Plot each project’s N P V against the discount rate and the two lines cross at about thirteen point six percent."
+            },
+            {
+              "text": "Below that rate, Long is better. Above it, at fifteen percent say, Quick is better. That crossing point is also the IRR of the difference between the two projects, Long minus Quick, which you can compare directly with your cost of capital.",
+              "say": "Below that rate, Long is better. Above it, at fifteen percent say, Quick is better. That crossing point is also the I R R of the difference between the two projects, Long minus Quick, which you can compare directly with your cost of capital."
+            },
+            {
+              "text": "So the disagreement is not a paradox. It tells you the choice depends on the discount rate, which is exactly the number you should be debating."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "The rate is an opportunity cost",
+      "scenes": [
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Building a weighted average cost of capital",
+            "lines": [
+              {
+                "label": "Equity: 60% × 11%",
+                "value": "6.6%"
+              },
+              {
+                "label": "Debt after tax: 40% × 6% × (1 − 0.25)",
+                "value": "1.8%"
+              }
+            ],
+            "result": {
+              "label": "WACC",
+              "value": "8.4%"
+            },
+            "note": "Synthetic inputs from the lesson."
+          },
+          "cues": [
+            {
+              "text": "Which brings us to where the rate comes from. The discount rate is not an accounting entry. It is the return investors could earn elsewhere on investments of similar risk.",
+              "refs": [
+                "R-dahlquist-2022-principles"
+              ]
+            },
+            {
+              "text": "For a whole firm, that is often approximated by the weighted average cost of capital: the cost of equity and the after-tax cost of debt, each weighted by its share of financing.",
+              "refs": [
+                "R-dahlquist-2022-principles"
+              ]
+            },
+            {
+              "text": "Say sixty percent of financing is equity costing eleven percent. That contributes six point six percent.",
+              "reveal": 1
+            },
+            {
+              "text": "Forty percent is debt costing six percent, but interest is tax-deductible, so at a twenty-five percent tax rate it costs four and a half percent after tax. That contributes one point eight.",
+              "reveal": 2
+            },
+            {
+              "text": "Weighted average: eight point four percent.",
+              "reveal": 3
+            },
+            {
+              "text": "The cost of equity is never observed directly. It is usually estimated with a model such as the capital asset pricing model, and since every input is an estimate, a plausible range for the result is often a point or two wide.",
+              "refs": [
+                "R-dahlquist-2022-principles",
+                "R-graham-2001-theory"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "One company rate",
+              "overvalues risky projects",
+              "and undervalues safe ones."
+            ],
+            "sub": "Over time, it steers capital toward risk.",
+            "refs": [
+              "R-graham-2001-theory"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Practice departs from this theory in instructive ways. In Graham and Harvey’s survey of three hundred and ninety-two chief financial officers, large firms relied heavily on present-value techniques and the capital asset pricing model.",
+              "refs": [
+                "R-graham-2001-theory"
+              ]
+            },
+            {
+              "text": "Smaller firms were relatively more likely to use payback. And a surprising number of firms used a firm-wide discount rate rather than one matched to each project’s risk.",
+              "reveal": 1,
+              "refs": [
+                "R-graham-2001-theory"
+              ]
+            },
+            {
+              "text": "Here is why that matters. A single company rate is too high for a safe project, so it undervalues it, and too low for a risky one, so it overvalues it.",
+              "reveal": 2
+            },
+            {
+              "text": "Year after year, the portfolio drifts toward risk, and nobody ever decided that it should."
+            },
+            {
+              "text": "Let me make it concrete."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-hurdle",
+            "type": "choice",
+            "prompt": "Your organization evaluates every proposal at a 10% hurdle rate. A low-risk energy retrofit with dependable savings is rejected at 10% but would pass at the 6% that matches its risk; a speculative venture clears 10% on optimistic numbers. What is the most useful thing to ask in the review?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Raise the hurdle to 12% so both projects face a tougher test."
+              },
+              {
+                "id": "b",
+                "text": "Ask whether each project is riskier or safer than average, and whether its rate reflects that."
+              },
+              {
+                "id": "c",
+                "text": "Switch to payback, which avoids choosing a rate at all."
+              },
+              {
+                "id": "d",
+                "text": "Accept the 10% result; one consistent rate is the fairest rule."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-cost-of-capital",
+            "feedback": {
+              "a": "A higher single rate penalizes the safe retrofit even more. The problem is not the level but that one rate ignores differences in risk.",
+              "b": "Right. Matching the rate to the project’s risk is the fix — and proposing two or three risk tiers is usually an easier sell than a full project-by-project rate.",
+              "c": "Payback ignores time value and everything after the cutoff. It hides the rate rather than getting it right.",
+              "d": "Consistency is not fairness here: one rate systematically favors risky projects and rejects safe ones that create value."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Where IRR and payback mislead",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Four traps",
+            "cards": [
+              {
+                "title": "Scale",
+                "q": "$50k at 40% vs $5M at 15%",
+                "fail": "NPV about $14k vs about $275k"
+              },
+              {
+                "title": "Timing",
+                "q": "IRR favors early cash",
+                "fail": "Compare NPVs or the incremental IRR"
+              },
+              {
+                "title": "Sign changes",
+                "q": "−100, +230, −132",
+                "fail": "Two IRRs: 10% and 20%"
+              },
+              {
+                "title": "Payback",
+                "q": "Stops counting at the cutoff",
+                "fail": "Ignores time value and later cash"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Picking the right rate is only half the job. The summaries themselves can mislead you, in four predictable ways."
+            },
+            {
+              "text": "First, scale. IRR is a percentage, so it ignores size. At a nine percent cost of capital, fifty thousand dollars returning forty percent in one year adds about fourteen thousand of NPV. Five million returning fifteen percent adds about two hundred and seventy-five thousand. When projects compete for the same slot, compare NPVs.",
+              "reveal": 1,
+              "say": "First, scale. I R R is a percentage, so it ignores size. At a nine percent cost of capital, fifty thousand dollars returning forty percent in one year adds about fourteen thousand of N P V. Five million returning fifteen percent adds about two hundred and seventy-five thousand. When projects compete for the same slot, compare N P Vs."
+            },
+            {
+              "text": "Second, timing, as Quick and Long showed. Textbooks often describe this as an implicit assumption that interim cash is reinvested at the IRR. Whatever the framing, the practical rule is the same: compare NPVs, or compute the IRR of the incremental cash flows.",
+              "reveal": 2,
+              "say": "Second, timing, as Quick and Long showed. Textbooks often describe this as an implicit assumption that interim cash is reinvested at the I R R. Whatever the framing, the practical rule is the same: compare N P Vs, or compute the I R R of the incremental cash flows."
+            },
+            {
+              "text": "Third, cash flows that change sign more than once. A project that costs one hundred, returns two hundred and thirty, and then needs one hundred and thirty-two for a cleanup at the end has two IRRs, ten percent and twenty percent. Its NPV is positive only between them. Reporting the IRR of that project is meaningless.",
+              "reveal": 3,
+              "say": "Third, cash flows that change sign more than once. A project that costs one hundred, returns two hundred and thirty, and then needs one hundred and thirty-two for a cleanup at the end has two I R Rs, ten percent and twenty percent. Its N P V is positive only between them. Reporting the I R R of that project is meaningless."
+            },
+            {
+              "text": "Fourth, payback ignores the time value of money and everything after the cutoff. A project that breaks even in two years and then stops ranks above one that breaks even in three years and pays for ten.",
+              "reveal": 4
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "If you doubt year seven,",
+              "say so — don’t set it to zero."
+            ],
+            "sub": "Lower it, widen the range or test the break-even."
+          },
+          "cues": [
+            {
+              "text": "Now, in fairness to payback, it survives in practice for reasons worth respecting. It is easy to explain. It is a rough guard against liquidity strain. And distant cash flows are usually the least reliable part of any forecast."
+            },
+            {
+              "text": "But truncating the forecast is a crude way to express distrust. If you doubt year-seven benefits, say so explicitly. Lower them, widen the scenario range, or test the break-even, rather than pretending they are zero.",
+              "reveal": 1
+            },
+            {
+              "text": "Two more cautions. Don’t double-count risk: shading the cash flows down and also raising the rate for the same risk penalizes the project twice. Choose one place to adjust, and write it down."
+            },
+            {
+              "text": "And handle inflation consistently. Nominal cash flows, which include expected price increases, go with a nominal rate. Real cash flows go with a real rate. Mixing them is an easy and consequential error in departmental business cases."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Headline totals and present values",
+      "scenes": [
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Two $50M contracts at 6%",
+            "lines": [
+              {
+                "label": "A: $10M a year for 5 years",
+                "value": "PV $42.12M"
+              },
+              {
+                "label": "B: $6M a year for 5 years",
+                "value": "PV $25.27M"
+              },
+              {
+                "label": "B: plus $20M deferred to year 10",
+                "value": "PV $11.17M"
+              },
+              {
+                "label": "B total",
+                "value": "PV $36.44M"
+              }
+            ],
+            "result": {
+              "label": "B costs the payer less in present value",
+              "value": "≈ $5.7M"
+            },
+            "note": "Synthetic, fictional contract structures from the lesson."
+          },
+          "cues": [
+            {
+              "text": "Let’s finish with an application from baseball operations, where compensation terms are a time-value problem. These two contract structures are fictional."
+            },
+            {
+              "text": "Both total fifty million dollars. Structure A pays ten million a year for five years. At six percent, that is worth about forty-two point one two million today.",
+              "reveal": 1
+            },
+            {
+              "text": "Structure B pays six million a year for five years, worth about twenty-five point two seven million,",
+              "reveal": 2
+            },
+            {
+              "text": "plus twenty million deferred to year ten, worth about eleven point one seven million today.",
+              "reveal": 3
+            },
+            {
+              "text": "So B is worth about thirty-six point four four million in present value.",
+              "reveal": 4
+            },
+            {
+              "text": "Roughly five point seven million less for the payer, despite identical headline totals. The same arithmetic applies to multi-year staff contracts, facility leases and vendor agreements. When anyone reports a total, ask for the present value and the rate used.",
+              "reveal": 5
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "A routine for any investment memo",
+            "steps": [
+              "Cash flows year by year, not accounting profit",
+              "The rate, and why it fits the risk",
+              "NPV first; IRR and payback as context",
+              "NPV if the rate moves two points either way"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Here is a routine you can demand of any investment memo."
+            },
+            {
+              "text": "Lay out the cash flows year by year, not accounting profit.",
+              "reveal": 1
+            },
+            {
+              "text": "State the discount rate and why it fits this project’s risk.",
+              "reveal": 2
+            },
+            {
+              "text": "Report NPV first, then IRR and payback as context.",
+              "reveal": 3,
+              "say": "Report N P V first, then I R R and payback as context."
+            },
+            {
+              "text": "And show how NPV changes if the rate moves two points in either direction. If the decision flips within that range, the rate is the issue to discuss.",
+              "reveal": 4,
+              "say": "And show how N P V changes if the rate moves two points in either direction. If the decision flips within that range, the rate is the issue to discuss."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Three questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Capital Allocation Lab",
+                "detail": "Apply NPV, IRR and payback to competing proposals",
+                "href": "#/exercise/w10-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Dahlquist & Knight (2022) Principles of Finance, Chapter 16",
+                "href": "#/library/R-dahlquist-2022-principles"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Money has a time value because it has alternative uses. NPV discounts cash flows at the return available on comparable-risk alternatives, and it is the rule to decide by.",
+              "say": "Money has a time value because it has alternative uses. N P V discounts cash flows at the return available on comparable-risk alternatives, and it is the rule to decide by."
+            },
+            {
+              "text": "IRR and payback are summaries that mislead on scale, timing and unusual cash-flow patterns. And the discount rate is an opportunity cost that should rise with risk. A single company-wide rate distorts choices.",
+              "say": "I R R and payback are summaries that mislead on scale, timing and unusual cash-flow patterns. And the discount rate is an opportunity cost that should rise with risk. A single company-wide rate distorts choices."
+            },
+            {
+              "text": "Next, take the comprehension check below, the same check as the written lesson. Then try the Capital Allocation Lab, and read the chapter on how companies think about investing in the Dahlquist and Knight textbook.",
+              "reveal": 1,
+              "refs": [
+                "R-dahlquist-2022-principles"
+              ]
+            },
+            {
+              "text": "The written lesson keeps the full tables, the annuity and perpetuity shortcuts, and the notes on hurdle rates. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

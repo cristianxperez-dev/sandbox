@@ -1,0 +1,771 @@
+{
+  "id": "w06-l1-lecture",
+  "lesson": "w06-l1",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "title": "The Chart That Lies",
+  "subtitle": "Where power comes from: bases, dependence and formal authority",
+  "summary": "A narrated, interactive version of Lesson 1. It covers the same objectives — authority, power and influence; the bases of power; the power-dependence formula; why formal authority and practical power diverge; and the practitioner status of “managing with power” advice — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Two units out of eleven",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 6 · Lesson 1 · Lecture",
+            "title": "The chart that lies",
+            "sub": "Where power comes from: bases, dependence and formal authority"
+          },
+          "cues": [
+            {
+              "text": "Here is a story every executive has lived through, in one form or another."
+            },
+            {
+              "text": "A decision is made at the top of the chart. Everyone with a title agrees. And then, somewhere below, it quietly dissolves."
+            },
+            {
+              "text": "By the end of this lecture you should be able to say exactly why, and predict where it will happen next time."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Signed by the chief medical officer.",
+              "Endorsed by the chief nursing officer.",
+              "Used in two units out of eleven."
+            ],
+            "sub": "A hypothetical hospital system, six months after launch."
+          },
+          "cues": [
+            {
+              "text": "A regional hospital system rolls out an electronic early-warning score for patients whose condition is getting worse. This is a hypothetical case."
+            },
+            {
+              "text": "The chief medical officer signs the policy. The chief nursing officer endorses it. The vendor trains every unit.",
+              "reveal": 1
+            },
+            {
+              "text": "Six months later, the score is computed for every patient. It is acted on in two units out of eleven.",
+              "reveal": 2
+            },
+            {
+              "text": "There was no technical failure. So who actually controlled whether this change would happen?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-who-controlled",
+            "type": "choice",
+            "prompt": "In the hospital case, who held the most practical power over whether the early-warning score was actually used?",
+            "options": [
+              {
+                "id": "a",
+                "text": "The chief medical officer, who signed the policy"
+              },
+              {
+                "id": "b",
+                "text": "The vendor, who trained every unit"
+              },
+              {
+                "id": "c",
+                "text": "The respected night-shift charge nurses on each ward"
+              },
+              {
+                "id": "d",
+                "text": "The quality team, who measured adoption"
+              }
+            ],
+            "answer": "c",
+            "concept": "c-formal-informal-authority",
+            "feedback": {
+              "a": "The policy carried legitimate power, but signing a policy could not make experienced nurses trust the score. Authority and practical power came apart here.",
+              "b": "The trainers had no standing on the wards. Training was delivered everywhere, yet use followed something else.",
+              "c": "Right. Where a respected charge nurse judged the score credible and said so, it was used. Where no one did, nurses relied on their own judgment.",
+              "d": "The quality team found the problem after the fact. Measuring adoption is not the same as controlling it."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "The usual diagnosis names the symptom.",
+              "Who controlled the outcome?"
+            ],
+            "sub": "“Poor communication”, “resistance”, “culture”."
+          },
+          "cues": [
+            {
+              "text": "In the units where the score worked, a respected night-shift charge nurse decided it was worth using and told her colleagues so."
+            },
+            {
+              "text": "In the others, experienced nurses kept relying on their own judgment, and nobody with a title noticed until the data came in."
+            },
+            {
+              "text": "We usually call this poor communication, or resistance, or culture. Those words name the symptom.",
+              "reveal": 1
+            },
+            {
+              "text": "This lecture gives you two tools for naming the cause: a vocabulary for the bases of power, and a structural theory of where power accumulates."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Why people comply",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Three words managers blur",
+            "cards": [
+              {
+                "title": "Power",
+                "q": "The capacity to affect what others do",
+                "fail": "Relational and potential, not a possession"
+              },
+              {
+                "title": "Influence",
+                "q": "Power in use: an actual change",
+                "fail": "What you are really trying to produce"
+              },
+              {
+                "title": "Authority",
+                "q": "Power accepted as legitimate",
+                "fail": "Granted by the structure, and only one source"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "First, three words that managers use as if they meant the same thing."
+            },
+            {
+              "text": "Power is the capacity to affect what others do, including when they would prefer otherwise.",
+              "reveal": 1
+            },
+            {
+              "text": "It is relational. It exists between particular people over particular matters. And it is potential: others may anticipate what you would do, even if you never act."
+            },
+            {
+              "text": "Influence is power in use. It is the actual change in someone’s behavior, beliefs or decisions, and it is what you are trying to produce.",
+              "reveal": 2
+            },
+            {
+              "text": "Authority is power people accept as legitimate because of a position or a rule. Sociologists since Max Weber have treated legitimacy as what turns raw power into authority.",
+              "reveal": 3
+            },
+            {
+              "text": "Here is why it matters. Authority comes from the formal structure. Power can come from anywhere."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "French and Raven’s bases of power",
+            "steps": [
+              "Reward: can give what I value",
+              "Coercive: can punish",
+              "Legitimate: has the right to direct",
+              "Referent: someone I identify with",
+              "Expert: knows more about this",
+              "Informational: the argument itself, added later by Raven"
+            ],
+            "refs": [
+              "R-french-1959-bases"
+            ]
+          },
+          "cues": [
+            {
+              "text": "In a short chapter published in nineteen fifty-nine, John French and Bertram Raven asked: why does one person comply with another?",
+              "refs": [
+                "R-french-1959-bases"
+              ]
+            },
+            {
+              "text": "Their crucial move was to define every base from the point of view of the person being influenced. Power lives in the target’s beliefs.",
+              "refs": [
+                "R-french-1959-bases"
+              ]
+            },
+            {
+              "text": "Reward power: the target believes you can provide things they value.",
+              "reveal": 1
+            },
+            {
+              "text": "Coercive power: the target believes you can punish.",
+              "reveal": 2
+            },
+            {
+              "text": "Legitimate power: the target accepts that you have a right to direct. This is the base formal authority provides.",
+              "reveal": 3
+            },
+            {
+              "text": "Referent power rests on identification. The target wants to be like you, or be liked by you.",
+              "reveal": 4
+            },
+            {
+              "text": "Expert power rests on the belief that you know more about the matter at hand.",
+              "reveal": 5
+            },
+            {
+              "text": "Raven later added a sixth, informational power: influence through the content of a persuasive argument, rather than the standing of the person making it.",
+              "reveal": 6,
+              "refs": [
+                "R-french-1959-bases"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "The bases behave differently",
+            "left": {
+              "title": "Coercive",
+              "points": [
+                "Needs surveillance",
+                "Compliance lasts while you watch",
+                "Reduces attraction to you"
+              ]
+            },
+            "right": {
+              "title": "Expert and referent",
+              "points": [
+                "Expert: limited to its domain",
+                "Referent: works when you are absent",
+                "The target carries the model around"
+              ]
+            },
+            "refs": [
+              "R-french-1959-bases"
+            ]
+          },
+          "cues": [
+            {
+              "text": "French and Raven also noticed that the bases behave differently, and this is where the vocabulary earns its keep.",
+              "refs": [
+                "R-french-1959-bases"
+              ]
+            },
+            {
+              "text": "Coercive power requires surveillance. Compliance lasts only while the agent can observe and punish, and it tends to reduce the target’s attraction to the agent.",
+              "reveal": 1,
+              "refs": [
+                "R-french-1959-bases"
+              ]
+            },
+            {
+              "text": "Expert power has a limited range. A surgeon’s expertise gives her influence in the operating room, not over the hospital’s parking policy.",
+              "reveal": 2,
+              "refs": [
+                "R-french-1959-bases"
+              ]
+            },
+            {
+              "text": "And referent power works even when the agent is absent, because the target carries the model around. That is exactly what the charge nurse had on her ward."
+            },
+            {
+              "text": "Let’s see if you can classify a claim to power by its base."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-base",
+            "type": "choice",
+            "prompt": "A division head moves to another site. Months later her former team still runs meetings her way and asks “what would she do?” before deciding. No rule requires it and she controls none of their rewards. Which base best explains her continuing influence?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Legitimate power"
+              },
+              {
+                "id": "b",
+                "text": "Reward power"
+              },
+              {
+                "id": "c",
+                "text": "Referent power"
+              },
+              {
+                "id": "d",
+                "text": "Coercive power"
+              }
+            ],
+            "answer": "c",
+            "concept": "c-bases-of-power",
+            "feedback": {
+              "a": "She no longer holds a position over the team, so the right to direct has gone. Something else persists.",
+              "b": "She controls none of their rewards. Reward power depends on the target believing you can provide what they value.",
+              "c": "Right. The team identifies with her and carries her model around, which is why her influence survives her absence.",
+              "d": "Coercion needs surveillance and the ability to punish. She can do neither from another site."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Power as dependence",
+      "scenes": [
+        {
+          "visual": {
+            "type": "flow",
+            "title": "From a resource to power",
+            "steps": [
+              {
+                "label": "Resource",
+                "text": "Something the work requires"
+              },
+              {
+                "label": "Importance",
+                "text": "Would the work stop without it?"
+              },
+              {
+                "label": "Discretion",
+                "text": "Does one actor decide?"
+              },
+              {
+                "label": "Alternatives",
+                "text": "Can it be had elsewhere?"
+              },
+              {
+                "label": "Power",
+                "text": "With or without a title"
+              }
+            ],
+            "refs": [
+              "R-pfeffer-1978-external"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Referent power, if you chose it: her model travels with the team, no surveillance required."
+            },
+            {
+              "text": "French and Raven describe how power feels to the target. They say less about why some people end up with more of it. For that we turn to sociology."
+            },
+            {
+              "text": "Power-dependence theory makes a simple claim: the power of A over B equals B’s dependence on A.",
+              "refs": [
+                "R-pfeffer-1978-external"
+              ]
+            },
+            {
+              "text": "Jeffrey Pfeffer and Gerald Salancik built this into resource dependence theory. Start with a resource the work requires: money, data, skill, access, legitimacy, time.",
+              "reveal": 1,
+              "refs": [
+                "R-pfeffer-1978-external"
+              ]
+            },
+            {
+              "text": "First question: how important is it? Would the work stop or degrade without it?",
+              "reveal": 2
+            },
+            {
+              "text": "Second: does one actor have discretion over whether and how it is provided?",
+              "reveal": 3
+            },
+            {
+              "text": "Third: are there alternatives? Can you get it elsewhere, quickly, at reasonable cost?",
+              "reveal": 4
+            },
+            {
+              "text": "Where importance and discretion are high and alternatives are few, dependence is high, and the controlling actor can shape decisions whether or not it holds formal authority.",
+              "reveal": 5,
+              "refs": [
+                "R-pfeffer-1978-external"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "The hospital, through the formula",
+            "cards": [
+              {
+                "title": "Importance",
+                "q": "Clinical credibility of the score",
+                "fail": "No one acts on a score they do not trust"
+              },
+              {
+                "title": "Discretion",
+                "q": "Charge nurses decide what to endorse",
+                "fail": "No policy can mandate trust"
+              },
+              {
+                "title": "Alternatives",
+                "q": "None on the ward",
+                "fail": "Vendor trainers had no standing there"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now run the hospital through the formula."
+            },
+            {
+              "text": "Adoption depended on a judgment: is this score clinically credible on a busy ward? That was important, because no one acts on a score they do not trust.",
+              "reveal": 1
+            },
+            {
+              "text": "The charge nurses had discretion over that judgment. No policy can mandate trust.",
+              "reveal": 2
+            },
+            {
+              "text": "And there was no alternative source. The vendor’s trainers had no standing on the ward.",
+              "reveal": 3
+            },
+            {
+              "text": "So by the dependence formula, the charge nurses held more practical power over adoption than the chief medical officer. The chart did not lie about authority. It lied about power."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "A platform team runs every release."
+            ],
+            "sub": "Hypothetical: no authority over product teams, but no alternative pipeline for a year."
+          },
+          "cues": [
+            {
+              "text": "Try it on a different setting. In a hypothetical software company, the platform team runs the deployment pipeline. It has no authority over product teams."
+            },
+            {
+              "text": "But every release depends on it, and building an alternative would take a year. Its views on engineering standards carry weight far beyond its headcount."
+            },
+            {
+              "text": "Suppose you lead a product group and want less dependence on that team."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-dependence",
+            "type": "choice",
+            "prompt": "Which move most directly reduces the platform team’s leverage over your product group, by the logic of importance, discretion and alternatives?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Ask the CTO to remind the platform team who it serves"
+              },
+              {
+                "id": "b",
+                "text": "Fund a second, smaller deployment path your teams can use"
+              },
+              {
+                "id": "c",
+                "text": "Praise the platform team publicly to build goodwill"
+              },
+              {
+                "id": "d",
+                "text": "Escalate every delayed release to senior leadership"
+              }
+            ],
+            "answer": "b",
+            "concept": "c-power-dependence",
+            "feedback": {
+              "a": "That borrows legitimate power, but it leaves the dependence untouched: releases still need the pipeline and there is still no alternative.",
+              "b": "Right. Creating an alternative source attacks the third condition directly. Sharing the resource or making the dependence mutual would work on the same logic.",
+              "c": "Goodwill may ease the relationship, but it does not change importance, discretion or alternatives.",
+              "d": "Escalation applies pressure without changing the structure. The team still controls something important with no substitute."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Predicting where the chart lies",
+      "scenes": [
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "Authority versus critical dependency",
+            "x": [
+              "No critical dependency",
+              "Controls a critical dependency"
+            ],
+            "y": [
+              "Low formal authority",
+              "High formal authority"
+            ],
+            "cells": [
+              [
+                "Nominal authority: can sign, cannot deliver",
+                "Concentrated power: decisive, often overconfident"
+              ],
+              [
+                "Peripheral: a useful informant",
+                "Hidden power holder: engage early and personally"
+              ]
+            ]
+          },
+          "cues": [
+            {
+              "text": "Picking up from that choice: the general lesson is that authority and dependence are two separate axes, and you can map anyone on both."
+            },
+            {
+              "text": "High authority, no critical dependency: nominal authority. You can sign the decision but cannot make it happen, and you risk overestimating your reach.",
+              "reveal": 1
+            },
+            {
+              "text": "High authority that also controls the dependency: concentrated power. The decisive actor, but also the one most likely to be overconfident about compliance below.",
+              "reveal": 2
+            },
+            {
+              "text": "Low authority, no dependency: peripheral on this decision, and often a useful informant precisely because others overlook them.",
+              "reveal": 3
+            },
+            {
+              "text": "And low authority with a critical dependency: the hidden power holder. The charge nurse, the database administrator, the veteran scout. Change succeeds or fails here.",
+              "reveal": 4
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Managing dependence",
+            "steps": [
+              "Bring powerful outsiders onto the board",
+              "Form alliances and joint ventures",
+              "Merge with suppliers or buyers",
+              "Diversify sources"
+            ],
+            "refs": [
+              "R-pfeffer-1978-external"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Pfeffer and Salancik’s central claim is that much of what organizations do can be read as the management of dependence.",
+              "refs": [
+                "R-pfeffer-1978-external"
+              ]
+            },
+            {
+              "text": "They bring powerful outsiders onto their boards.",
+              "reveal": 1
+            },
+            {
+              "text": "They form alliances and joint ventures.",
+              "reveal": 2
+            },
+            {
+              "text": "They merge with suppliers or buyers.",
+              "reveal": 3
+            },
+            {
+              "text": "And they diversify their sources. Each move reduces someone else’s leverage, or absorbs it.",
+              "reveal": 4,
+              "refs": [
+                "R-pfeffer-1978-external"
+              ]
+            },
+            {
+              "text": "Inside the organization the logic is the same. Units that supply what others critically need, and cannot easily be replaced, gain influence over budgets out of proportion to their place on the chart.",
+              "refs": [
+                "R-pfeffer-1978-external"
+              ]
+            },
+            {
+              "text": "So here is the prediction. Expect power to concentrate wherever critical uncertainty is handled, which is often well below the formal top."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Dependence runs both ways",
+            "left": {
+              "title": "You depend on your manager",
+              "points": [
+                "Approval",
+                "Resources",
+                "Sponsorship"
+              ]
+            },
+            "right": {
+              "title": "Your manager depends on you",
+              "points": [
+                "Information",
+                "Execution",
+                "Judgment and reputation"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "One more prediction, and it is about you. Dependence runs in both directions.",
+              "reveal": 1
+            },
+            {
+              "text": "Your manager depends on you for information, execution, judgment and reputation with others. That mutual dependence is what gives you standing to influence upward.",
+              "reveal": 2
+            },
+            {
+              "text": "Effective upward influence starts by knowing what your manager is accountable for, what pressures they face, and which of their goals your work advances."
+            },
+            {
+              "text": "The aim is not leverage for its own sake. It is a relationship where disagreement can be voiced without being read as disloyalty."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Advice is not evidence",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "The limits of both frameworks",
+            "cards": [
+              {
+                "title": "The typology",
+                "q": "Proposed on theory, not derived from data",
+                "fail": "Bases overlap and are hard to measure"
+              },
+              {
+                "title": "Resource dependence",
+                "q": "Who could exercise power",
+                "fail": "Says less about who will"
+              },
+              {
+                "title": "Managing with Power",
+                "q": "A practitioner synthesis",
+                "fail": "Not a test of its own prescriptions"
+              }
+            ],
+            "refs": [
+              "R-french-1959-bases",
+              "R-pfeffer-1978-external",
+              "R-pfeffer-1992-managing"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now let me argue against what I have just told you."
+            },
+            {
+              "text": "French and Raven’s typology was proposed on theoretical grounds, not derived from data. In practice the bases overlap.",
+              "reveal": 1,
+              "refs": [
+                "R-french-1959-bases"
+              ]
+            },
+            {
+              "text": "A manager’s legitimate power usually arrives bundled with reward and coercive power. Expert power often turns into referent power over time."
+            },
+            {
+              "text": "And because each base is a belief held by the target, you can only measure it by asking targets, whose answers mix perception, liking and memory. Treat it as a diagnostic vocabulary, not a set of separate levers."
+            },
+            {
+              "text": "Resource dependence explains who could exercise power better than who will. A unit may not use its leverage, may not know it has any, or may be held back by norms.",
+              "reveal": 2,
+              "refs": [
+                "R-pfeffer-1978-external"
+              ]
+            },
+            {
+              "text": "Then there is Pfeffer’s Managing with Power, written for managers. It argues that capable people often fail at implementation because they are uncomfortable acquiring and using power.",
+              "reveal": 3,
+              "refs": [
+                "R-pfeffer-1992-managing"
+              ]
+            },
+            {
+              "text": "It is research-informed and built on organizational cases. But it is a practitioner synthesis, not a test of its own prescriptions. Read its advice as advice. The structural theory beneath it is better supported than its prescriptions.",
+              "refs": [
+                "R-pfeffer-1992-managing"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "The structure describes.",
+              "It does not tell you what is right."
+            ],
+            "sub": "Lesson 4 returns to tactics and ethical lines."
+          },
+          "cues": [
+            {
+              "text": "There is also a normative objection. If power is the ability to prevail over others’ preferences, advising managers to accumulate it can reward political skill over substance and erode trust."
+            },
+            {
+              "text": "The structural view does not settle that. It only describes.",
+              "reveal": 1
+            },
+            {
+              "text": "In Lesson 4 you will see evidence that how power is used matters a great deal for whether people commit or merely comply."
+            },
+            {
+              "text": "Before then, apply the dependence logic to your own position."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-borrowed",
+            "type": "reflect",
+            "prompt": "Suppose your influence over a cross-departmental project rests mainly on one senior sponsor’s visible backing — legitimate power on loan. How would you convert it into power you own: expertise others rely on, dependencies that run through your work, or referent standing with peers? Which would you invest in first, and what evidence would tell you it is working?",
+            "concept": "c-resource-dependence"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Influence Map",
+                "detail": "Rate power, interest and stance of ten people in a fictional hospital system",
+                "href": "#/exercise/w06-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "French & Raven (1959), The Bases of Social Power",
+                "href": "#/library/R-french-1959-bases"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Authority is legitimate power granted by position. Practical power comes from what others depend on you for."
+            },
+            {
+              "text": "Dependence rises with a resource’s importance, the holder’s discretion and the scarcity of alternatives. So power concentrates where critical uncertainty is handled, often below the top."
+            },
+            {
+              "text": "The bases describe how targets perceive an agent. Use them to diagnose, not to calculate. And treat managing-with-power advice as a practitioner synthesis."
+            },
+            {
+              "text": "Next, take the comprehension check below, the same check as the written lesson. Then open the Influence Map, and read French and Raven’s original chapter.",
+              "reveal": 1
+            },
+            {
+              "text": "Before you propose your next change, map who depends on whom. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

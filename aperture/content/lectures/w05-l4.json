@@ -1,0 +1,627 @@
+{
+  "id": "w05-l4-lecture",
+  "lesson": "w05-l4",
+  "title": "What Do You Want Me to Do?",
+  "subtitle": "Executive communication and the question of presence",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 4 of Week 5. It covers the same objectives — answer-first structure, audience analysis, adapting one recommendation into memo, brief and verbal forms, and separating research from practitioner claims about executive presence — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Slide thirty-one",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 5 · Lesson 4 · Lecture",
+            "title": "What do you want me to do?",
+            "sub": "Executive communication and the question of presence"
+          },
+          "cues": [
+            {
+              "text": "This lecture begins with a question an executive asks every day, and that analysts often hear as an insult."
+            },
+            {
+              "text": "By the end, you should be able to answer it in your first sentence, and to think more clearly about the vague quality people call presence."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "A forty-two-slide deck",
+            "items": [
+              {
+                "value": "Slide 1",
+                "label": "the agenda"
+              },
+              {
+                "value": "Slides 2–9",
+                "label": "the data sources"
+              },
+              {
+                "value": "Slide 31",
+                "label": "the recommendation"
+              }
+            ],
+            "note": "A hypothetical regional bank; the details are invented."
+          },
+          "cues": [
+            {
+              "text": "A hypothetical chief operating officer of a regional bank opens a forty-two-slide deck from her analytics team."
+            },
+            {
+              "text": "Slide one is the agenda.",
+              "reveal": 1
+            },
+            {
+              "text": "Slides two to nine describe the data sources.",
+              "reveal": 2
+            },
+            {
+              "text": "The recommendation, close eleven branches and redeploy staff to a lending center, appears on slide thirty-one.",
+              "reveal": 3
+            },
+            {
+              "text": "She stops at slide four and asks: what do you want me to do? The analyst, after six weeks of work, hears a dismissal. The executive meant it literally."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two natural orders",
+            "left": {
+              "title": "Order of discovery",
+              "points": [
+                "Question",
+                "Data",
+                "Method",
+                "Findings",
+                "Recommendation"
+              ]
+            },
+            "right": {
+              "title": "Order of decision",
+              "points": [
+                "What am I deciding?",
+                "Why should I agree?",
+                "What could go wrong?",
+                "What happens next?"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "The mismatch is structural. The analyst’s natural order is the order of discovery: question, data, method, findings, and finally the recommendation.",
+              "reveal": 1
+            },
+            {
+              "text": "The executive’s natural order is the order of decision: what am I being asked to decide, why should I agree, what could go wrong, and what do I do next?",
+              "reveal": 2
+            },
+            {
+              "text": "Neither order is wrong. But using the discovery order with a decision audience makes the audience do the synthesis, and most will not."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Answer first",
+      "scenes": [
+        {
+          "visual": {
+            "type": "flow",
+            "title": "Answer-first recommendation",
+            "steps": [
+              {
+                "label": "Recommendation",
+                "text": "decision needed and deadline"
+              },
+              {
+                "label": "Core reasons",
+                "text": "two to four, not overlapping"
+              },
+              {
+                "label": "Evidence",
+                "text": "strongest, and its quality"
+              },
+              {
+                "label": "Risks and alternatives",
+                "text": "what would make you wrong"
+              },
+              {
+                "label": "Next step",
+                "text": "who does what by when"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Two practitioner frameworks formalize the decision order. BLUF, bottom line up front, is a convention from United States military writing: the first sentences state the conclusion or request.",
+              "say": "Two practitioner frameworks formalize the decision order. Bluff, bottom line up front, is a convention from United States military writing: the first sentences state the conclusion or request."
+            },
+            {
+              "text": "The pyramid principle, associated with Barbara Minto’s consulting writing, puts one governing idea at the top, supported by a few grouped arguments, each with evidence beneath it."
+            },
+            {
+              "text": "Let me be precise about their status. Both are practitioner heuristics: widely used and logically defensible, not experimentally validated rules."
+            },
+            {
+              "text": "Here is the structure they share. First, the recommendation, in one or two sentences, with the decision you need and the deadline.",
+              "reveal": 1
+            },
+            {
+              "text": "Then two to four core reasons, grouped so they don’t overlap.",
+              "reveal": 2
+            },
+            {
+              "text": "For each reason, the strongest evidence and an honest word on its quality.",
+              "reveal": 3
+            },
+            {
+              "text": "Then the risks and alternatives: what would make you wrong, what you considered, and why you rejected it.",
+              "reveal": 4
+            },
+            {
+              "text": "And the next step: who does what, by when, if the answer is yes.",
+              "reveal": 5
+            },
+            {
+              "text": "Why does order matter? Readers hold only a few ideas in mind at once. If they know your conclusion, they can check each paragraph against it, keep it or discard it. If they don’t, they must store everything until the end."
+            },
+            {
+              "text": "Test it on yourself: notice how differently you read a report once someone has told you its conclusion. Now, a quick decision."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-opening",
+            "type": "choice",
+            "concept": "c-bluf-pyramid",
+            "prompt": "You are writing to a head of clinical operations about extending weekend pharmacy hours. Which opening sentence best follows answer-first structure?",
+            "options": [
+              {
+                "id": "a",
+                "text": "“This memo reviews six months of weekend discharge data from three sources.”"
+              },
+              {
+                "id": "b",
+                "text": "“I recommend extending weekend pharmacy hours for a three-month trial; I need your approval by the fifteenth so we can schedule staff.”"
+              },
+              {
+                "id": "c",
+                "text": "“Weekend discharges are a complex, multi-factor issue that deserves careful attention.”"
+              },
+              {
+                "id": "d",
+                "text": "“Our team was asked to investigate whether weekend operations could be improved.”"
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "That is the order of discovery. The reader still does not know what you want or what to decide.",
+              "b": "Right. The recommendation, the decision needed and the deadline come first; reasons and evidence follow.",
+              "c": "A scene-setting sentence with no recommendation. It makes the reader hunt for your point.",
+              "d": "Background on how the work started — useful later, if at all. It answers a question the reader did not ask."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Know the room",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Four questions about an audience",
+            "steps": [
+              "What can they decide — and not?",
+              "What do they already believe?",
+              "What will they answer for?",
+              "What vocabulary do they use?"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The pharmacy example is invented, and notice that I gave you a specific reader. That was deliberate. Before choosing content or format, ask four questions about the audience."
+            },
+            {
+              "text": "What decision can they make, and what is outside their authority?",
+              "reveal": 1
+            },
+            {
+              "text": "What do they already believe, and how strongly?",
+              "reveal": 2
+            },
+            {
+              "text": "What will they be held accountable for if this goes wrong?",
+              "reveal": 3
+            },
+            {
+              "text": "And what vocabulary do they use?",
+              "reveal": 4
+            },
+            {
+              "text": "A chief financial officer, a head of clinical operations and a board each want a different first paragraph about the same proposal. Not because the facts change, but because their exposure does."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "Prior view versus decision power",
+            "x": [
+              "Low decision power",
+              "High decision power"
+            ],
+            "y": [
+              "Skeptical or opposed",
+              "Supportive"
+            ],
+            "cells": [
+              [
+                "Allies: a short version they can repeat",
+                "Sponsors: the decision, trade-off, language to defend it"
+              ],
+              [
+                "Doubting implementers: listen, show their influence",
+                "Doubting deciders: lead with the feared risk"
+              ]
+            ]
+          },
+          "cues": [
+            {
+              "text": "Two of those questions make a useful map: their prior view, and their decision power."
+            },
+            {
+              "text": "Supportive people without authority are allies. Equip them with a short, accurate version they can repeat.",
+              "reveal": 1
+            },
+            {
+              "text": "Supportive decision-makers are sponsors. Give them the decision, the trade-off, and the language to defend it to others.",
+              "reveal": 2
+            },
+            {
+              "text": "Skeptical implementers: listen first, show how their concerns shaped the plan, and ask what would make it workable.",
+              "reveal": 3
+            },
+            {
+              "text": "And skeptical decision-makers: lead with the risk they fear most and how it is contained, and offer a reversible first step.",
+              "reveal": 4
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-audience",
+            "type": "choice",
+            "concept": "c-audience-analysis",
+            "prompt": "You need approval from a budget director who controls the decision and has said publicly that the program you propose is too risky. What should lead your brief?",
+            "options": [
+              {
+                "id": "a",
+                "text": "The full methodology, so she can see how rigorous the work was."
+              },
+              {
+                "id": "b",
+                "text": "The risk she fears most, how it is contained, and a reversible first step."
+              },
+              {
+                "id": "c",
+                "text": "Enthusiastic quotes from staff who support the program."
+              },
+              {
+                "id": "d",
+                "text": "A short version she can repeat to others, with no mention of risk."
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "Rigor matters, but leading with method uses the order of discovery and leaves her concern unanswered.",
+              "b": "Right. A skeptical decision-maker needs her main objection addressed first and a way to say yes with limited exposure.",
+              "c": "Support from people without decision rights does not answer a decision-maker’s risk concern, and may read as pressure.",
+              "d": "That is the approach for supportive allies. Ignoring a skeptic’s stated concern will likely close the room."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "One recommendation, three forms",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Same substance, three jobs",
+            "cards": [
+              {
+                "title": "Analytical memo",
+                "q": "600–900 words: let a careful reader verify",
+                "fail": "Cut the story of how you did the work"
+              },
+              {
+                "title": "One-page brief",
+                "q": "250–400 words: decide in five minutes",
+                "fail": "Cut method and secondary reasons"
+              },
+              {
+                "title": "60-second verbal",
+                "q": "130–165 words: remember one reason",
+                "fail": "Cut tables and nested qualifications"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Leading with her risk is not spin; the substance stays the same. That principle also governs format. One recommendation often needs three forms, and the substance must not change between them."
+            },
+            {
+              "text": "The analytical memo, about six hundred to nine hundred words plus exhibits, lets a careful reader verify the reasoning and find the weaknesses. Cut the narrative of how you did the work.",
+              "reveal": 1
+            },
+            {
+              "text": "The one-page brief, two hundred fifty to four hundred words, lets a decision-maker decide or ask the right question in five minutes. Cut method detail and most numbers except the decisive ones.",
+              "reveal": 2
+            },
+            {
+              "text": "The sixty-second verbal version, one hundred thirty to one hundred sixty-five words at about a hundred fifty words a minute, lets a listener remember the recommendation, one reason, and what you need. Nothing that requires seeing a table.",
+              "reveal": 3
+            },
+            {
+              "text": "Those lengths are this course’s own synthesis, matched to this week’s assignment."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "A health agency, three audiences",
+            "left": {
+              "title": "Memo and brief",
+              "points": [
+                "Memo: data, three counties, uncertainty",
+                "Brief: missed target, why, the request"
+              ]
+            },
+            "right": {
+              "title": "Sixty seconds",
+              "points": [
+                "Opens with the request",
+                "One fact",
+                "Then offers the brief"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Picture a hypothetical state health agency explaining to a legislative committee why a vaccination outreach program missed its target."
+            },
+            {
+              "text": "The memo explains the data, the three counties driving the gap, and the uncertainty. The chair’s one-page brief says the program missed, mostly in three counties because of clinic access, and requests authority to move mobile clinics there by a date.",
+              "reveal": 1
+            },
+            {
+              "text": "And when a hostile question comes, the agency head’s sixty-second answer opens with the request and one fact, then offers the brief.",
+              "reveal": 2
+            },
+            {
+              "text": "Plain language helps every form. Compare may potentially contribute to improved outcomes with expected to reduce soft-tissue injuries by roughly a quarter, with wide uncertainty because only two seasons of data exist. The second is more honest and easier to act on."
+            },
+            {
+              "text": "A workload recommendation for minor-league pitchers faces the same test. If it is legible only in the memo, it will not survive the trip from the meeting room to the bullpen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "The question of presence",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "What “presence” research shows",
+            "left": {
+              "title": "Practitioner claims",
+              "points": [
+                "Gravitas, composure, commanding a room",
+                "How to stand, speak, dress",
+                "Thin peer-reviewed support",
+                "Can encode bias"
+              ]
+            },
+            "right": {
+              "title": "Better-supported reading",
+              "points": [
+                "Observers infer leadership from outcomes",
+                "Trust: ability, benevolence, integrity",
+                "Presence as an inference about judgment"
+              ]
+            },
+            "refs": [
+              "R-meindl-1985-romance",
+              "R-mayer-1995-integrative"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now to presence, and here I want to argue against some of what you may have been told."
+            },
+            {
+              "text": "Executive presence is used in promotion discussions as if it were a measured trait. Most writing on it is practitioner work from interviews and surveys, and peer-reviewed research on it as a distinct, validated construct is thin.",
+              "reveal": 1
+            },
+            {
+              "text": "So treat advice on how to stand, how fast to speak or what to wear as practitioner advice of uncertain validity. And watch for how presence can encode bias about accent, gender, age or cultural style."
+            },
+            {
+              "text": "Two well-supported lines of research help. The romance-of-leadership work shows observers infer leadership from outcomes and salient impressions, especially after extreme results.",
+              "reveal": 2,
+              "refs": [
+                "R-meindl-1985-romance"
+              ]
+            },
+            {
+              "text": "And the trust literature shows people judge others on ability, benevolence and integrity.",
+              "refs": [
+                "R-mayer-1995-integrative"
+              ]
+            },
+            {
+              "text": "On that reading, presence is an observer’s inference that someone has sound judgment and can be trusted with consequences. Clarity, composure under challenge and consistency can support it. Outcomes outside your control can inflate or deflate it."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Why presence is hard to study",
+            "cards": [
+              {
+                "title": "Charisma ratings",
+                "q": "Nearest research construct",
+                "fail": "May partly record team success"
+              },
+              {
+                "title": "Status",
+                "q": "Same sentence, CEO or intern",
+                "fail": "Seniority may produce the ratings"
+              },
+              {
+                "title": "Answer-first limits",
+                "q": "Strongly opposed audiences",
+                "fail": "Open with common ground, then the point"
+              }
+            ],
+            "refs": [
+              "R-vanknippenberg-2013-critical"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Charisma is the nearest research construct, and it carries large meta-analytic associations with follower outcomes.",
+              "reveal": 1
+            },
+            {
+              "text": "But van Knippenberg and Sitkin argue those measures confound the construct with its effects, so rating a leader as inspiring may partly record that the team succeeded.",
+              "refs": [
+                "R-vanknippenberg-2013-critical"
+              ]
+            },
+            {
+              "text": "The safest conclusion: perceived charisma is associated with favorable outcomes, while whether a learnable presence causes them remains unsettled.",
+              "refs": [
+                "R-vanknippenberg-2013-critical",
+                "R-meindl-1985-romance"
+              ]
+            },
+            {
+              "text": "Status makes it harder still. The same sentence from a chief executive and an intern is heard differently. A study showing senior leaders score higher on presence cannot tell whether presence led to seniority or seniority produced the ratings.",
+              "reveal": 2
+            },
+            {
+              "text": "And answer-first has limits of its own. With a strongly opposed audience, or in cultures where directness reads as presumptuous, open with the shared problem and the criteria, then reach the recommendation quickly. Never make the audience hunt for your point.",
+              "reveal": 3
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-sentence",
+            "type": "reflect",
+            "concept": "c-executive-presence-attribution",
+            "prompt": "For a recommendation you are working on, write the one sentence you would want the reader to repeat to someone else. Then ask: is anyone’s judgment of your “presence” likely to rest on that sentence — or on outcomes you only partly control?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Clear about uncertainty",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "An unpopular recommendation",
+            "steps": [
+              "Recommendation and confidence, in one sentence",
+              "What the champion has done well",
+              "Strongest evidence and its weakness",
+              "A reversible step, and what would change your mind"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s finish with the hardest case. You must recommend pausing a respected program, on two seasons of data that suggest, but don’t prove, it isn’t working. Its champion is in the room."
+            },
+            {
+              "text": "Leading with pause the program is honest but may close the room. Burying it is evasive. One defensible structure:"
+            },
+            {
+              "text": "State the recommendation and how confident you are, in one sentence.",
+              "reveal": 1
+            },
+            {
+              "text": "Name what the champion has done well.",
+              "reveal": 2
+            },
+            {
+              "text": "Give the single strongest piece of evidence, and its weakness.",
+              "reveal": 3
+            },
+            {
+              "text": "Propose a reversible step, and the evidence that would change your mind. Clarity about uncertainty is not weakness. Vagueness about the recommendation is.",
+              "reveal": 4
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Leadership Conversation Simulator",
+                "detail": "Practise delivering a recommendation under challenge",
+                "href": "#/exercise/w05-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Meindl, Ehrlich & Dukerich (1985), The Romance of Leadership",
+                "href": "#/library/R-meindl-1985-romance"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Write in the order of decision, not discovery: recommendation, reasons, evidence, risks, next step. Analyze the audience’s decision power and prior view first, and keep the substance identical across memo, brief and voice."
+            },
+            {
+              "text": "BLUF and the pyramid are practitioner heuristics with a sound rationale. Executive presence is better treated as other people’s inference about your judgment and trustworthiness than as a trait.",
+              "refs": [
+                "R-meindl-1985-romance",
+                "R-mayer-1995-integrative"
+              ],
+              "say": "Bluff and the pyramid are practitioner heuristics with a sound rationale. Executive presence is better treated as other people’s inference about your judgment and trustworthiness than as a trait."
+            },
+            {
+              "text": "Take the comprehension check below, the same as the written lesson. Then use the Leadership Conversation Simulator, and reread Meindl and colleagues with presence in mind.",
+              "reveal": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

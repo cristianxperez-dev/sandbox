@@ -1,0 +1,788 @@
+{
+  "id": "w09-l4-lecture",
+  "lesson": "w09-l4",
+  "title": "Every Edge Has a Half-Life",
+  "subtitle": "Advantage under competition and uncertainty",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 4. It covers the same objectives — how a mispriced skill was priced away, real options and scenarios for committing under uncertainty, and intended versus realized strategy in a budget — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "The parable and the prediction",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 9 · Lesson 4 · Lecture",
+            "title": "Every edge has a half-life",
+            "sub": "Advantage under competition and uncertainty"
+          },
+          "cues": [
+            {
+              "text": "In two thousand three, a best-selling book by Michael Lewis told the story of a low-payroll professional baseball club that competed with far richer rivals.",
+              "refs": [
+                "R-hakes-2006-economic"
+              ]
+            },
+            {
+              "text": "Its method was to buy skills the market underpriced. Most famously, the ability of hitters to get on base.",
+              "refs": [
+                "R-hakes-2006-economic"
+              ]
+            },
+            {
+              "text": "The story became a parable far beyond sport. Find the measure others ignore, buy it cheaply, win."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "The idea is now public.",
+              "What happens to the price of the skill?"
+            ],
+            "sub": "A testable prediction"
+          },
+          "cues": [
+            {
+              "text": "But the story also raised a question economists could test.",
+              "reveal": 0
+            },
+            {
+              "text": "If the market really was underpricing a skill, what should happen once the idea was published?",
+              "reveal": 1
+            },
+            {
+              "text": "Make a prediction before I show you the evidence."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-predict",
+            "type": "choice",
+            "prompt": "If a labor market underpriced on-base skill, what should happen to that skill’s salary premium after the idea became widely public?",
+            "concept": "c-advantage-erosion",
+            "options": [
+              {
+                "id": "a",
+                "text": "Nothing: markets are slow, so the early adopters keep the edge indefinitely."
+              },
+              {
+                "id": "b",
+                "text": "The undervaluation should shrink as rivals bid for the skill and its price rises toward its value."
+              },
+              {
+                "id": "c",
+                "text": "The skill should become overpriced immediately and permanently."
+              },
+              {
+                "id": "d",
+                "text": "The premium should fall, because publicity makes the skill less useful."
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "A visible mispricing invites competition. Early adopters may keep an edge for a while, but not indefinitely.",
+              "b": "Right. That is the arbitrage logic, and it is what Hakes and Sauer tested. Visibility invites imitation, and imitation pushes the price toward the value.",
+              "c": "Overshooting is possible in principle, but nothing in the logic predicts a permanent overprice. The core prediction is that the gap narrows.",
+              "d": "Publicity does not change how much the skill contributes to winning. It changes how many buyers are bidding for it."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Pricing away an edge",
+      "scenes": [
+        {
+          "visual": {
+            "type": "timeline",
+            "title": "Testing the claim",
+            "events": [
+              {
+                "when": "1999–2004",
+                "text": "Major-league data on productivity and pay"
+              },
+              {
+                "when": "Before the book",
+                "text": "On-base skill undervalued relative to its contribution to winning"
+              },
+              {
+                "when": "After the book",
+                "text": "Undervaluation diminished as salaries caught up"
+              }
+            ],
+            "refs": [
+              "R-hakes-2006-economic"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Jahn Hakes and Raymond Sauer tested the claim with standard econometric methods on major-league data from nineteen ninety-nine to two thousand four.",
+              "reveal": 1,
+              "refs": [
+                "R-hakes-2006-economic"
+              ]
+            },
+            {
+              "text": "They estimated how much on-base percentage and slugging percentage each contributed to winning, and how much the salary market paid for each.",
+              "refs": [
+                "R-hakes-2006-economic"
+              ]
+            },
+            {
+              "text": "Their results supported the central claim. Before the book, on-base skill was undervalued relative to its contribution to winning.",
+              "reveal": 2,
+              "refs": [
+                "R-hakes-2006-economic"
+              ]
+            },
+            {
+              "text": "And after publication, the undervaluation diminished, as salaries came to reflect the skill more fully.",
+              "reveal": 3,
+              "refs": [
+                "R-hakes-2006-economic"
+              ]
+            },
+            {
+              "text": "The finding matters less for baseball history than for strategy. The edge was real, measurable and valuable. And it was temporary."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "Life cycle of an information edge",
+            "steps": [
+              {
+                "label": "Mispricing",
+                "text": "Valued below its contribution"
+              },
+              {
+                "label": "Early exploitation",
+                "text": "A few buy it cheaply"
+              },
+              {
+                "label": "Visibility",
+                "text": "Results, hires, publications"
+              },
+              {
+                "label": "Imitation",
+                "text": "Rivals bid"
+              },
+              {
+                "label": "Price correction",
+                "text": "Price rises toward value"
+              },
+              {
+                "label": "Edge moves",
+                "text": "To the next insight, or to execution"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Here is the mechanism in general form. An input is valued below its contribution.",
+              "reveal": 1
+            },
+            {
+              "text": "A few organizations buy it cheaply.",
+              "reveal": 2
+            },
+            {
+              "text": "Then results, hires or publications reveal the idea.",
+              "reveal": 3
+            },
+            {
+              "text": "Rivals bid for the same input.",
+              "reveal": 4
+            },
+            {
+              "text": "Its price rises toward its value.",
+              "reveal": 5
+            },
+            {
+              "text": "And the advantage passes to whoever finds the next mispricing, or to whoever executes best. Finance knows the pattern: a publicized pricing anomaly attracts capital until it shrinks. In Lesson 3’s language, an insight that becomes public stops being rare.",
+              "reveal": 6,
+              "refs": [
+                "R-barney-1991-firm"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "How strong is the evidence?",
+            "cards": [
+              {
+                "title": "Observational",
+                "q": "Salary returns compared across seasons",
+                "fail": "Persuasive, not proof"
+              },
+              {
+                "title": "Short window",
+                "q": "Few seasons after publication",
+                "fail": "Other things changed too"
+              },
+              {
+                "title": "Debated",
+                "q": "Was it pitching, not on-base skill?",
+                "fail": "Popular retellings overstate certainty"
+              }
+            ],
+            "refs": [
+              "R-hakes-2006-economic"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now, how much should we trust this? The design is observational. It compares estimated salary returns across seasons and reads the change as a market response. That is persuasive, not proof.",
+              "reveal": 1,
+              "refs": [
+                "R-hakes-2006-economic"
+              ]
+            },
+            {
+              "text": "Other things changed in the same years. The window after publication is short. Salary regressions depend on which player characteristics are controlled. And the ideas were already circulating inside the industry before the book.",
+              "reveal": 2
+            },
+            {
+              "text": "The paper also drew public debate, including the argument that the featured club’s success owed more to its pitching than to on-base skill. On the other side, a later undergraduate honors thesis reported reproducing the main regressions.",
+              "reveal": 3,
+              "refs": [
+                "R-hakes-2006-economic"
+              ]
+            },
+            {
+              "text": "A fair summary: the evidence consistently points to an initial mispricing that narrowed. The precise timing and cause of the correction are less certain than popular retellings suggest."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "When everyone has analytics",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Where advantage may migrate",
+            "steps": [
+              "Speed from insight to action",
+              "Integration into practitioners’ decisions",
+              "Trust between analysts and practitioners",
+              "Proprietary data from your own experiments",
+              "Keeping the people who hold the knowledge"
+            ],
+            "refs": [
+              "R-barney-1991-firm"
+            ]
+          },
+          "cues": [
+            {
+              "text": "So if information edges erode, what is left when every competitor has similar data, models and analysts?"
+            },
+            {
+              "text": "What follows is APERTURE’s working hypothesis, drawn from Lesson 3’s resource-based logic rather than from a specific study. Advantage migrates to things that are slow to copy.",
+              "refs": [
+                "R-barney-1991-firm"
+              ],
+              "say": "What follows is Aperture’s working hypothesis, drawn from Lesson 3’s resource-based logic rather than from a specific study. Advantage migrates to things that are slow to copy."
+            },
+            {
+              "text": "The speed with which insight becomes action.",
+              "reveal": 1
+            },
+            {
+              "text": "How well analysis is integrated into the decisions of the people who do the work.",
+              "reveal": 2
+            },
+            {
+              "text": "Trust between analysts and practitioners.",
+              "reveal": 3
+            },
+            {
+              "text": "The ability to generate proprietary data through your own experiments.",
+              "reveal": 4
+            },
+            {
+              "text": "And the capacity to keep the people who hold this knowledge. These are socially complex and causally ambiguous, the attributes Barney identified.",
+              "reveal": 5,
+              "refs": [
+                "R-barney-1991-firm"
+              ]
+            },
+            {
+              "text": "The implication is counterintuitive. The more widely a tool is available, the less buying it differentiates, and the more the investments around it matter. So the durable question is not what do we know, but what will we still know, or be able to do, after they have copied it?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Committing under uncertainty",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Borrowed from finance",
+            "term": "Real option",
+            "definition": "An investment that gives the right, but not the obligation, to act later: expand, abandon or wait.",
+            "example": "A pilot buys information before the large commitment."
+          },
+          "cues": [
+            {
+              "text": "Strategic commitments are often irreversible: a facility, an acquisition, a long contract. Under uncertainty, irreversibility gives flexibility a value."
+            },
+            {
+              "text": "Real-options reasoning treats some investments as the right, but not the obligation, to act later. To expand if a pilot succeeds, abandon if it fails, or wait until uncertainty resolves.",
+              "reveal": 1
+            },
+            {
+              "text": "When you can cut off the downside, uncertainty raises the value of the opportunity. A pilot is valuable not for its own returns but because it buys information before the big commitment.",
+              "reveal": 2
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Option one: commit now",
+            "lines": [
+              {
+                "label": "Strong market, probability 0.5",
+                "value": "returns $18M"
+              },
+              {
+                "label": "Weak market, probability 0.5",
+                "value": "returns $4M"
+              },
+              {
+                "label": "Investment",
+                "value": "$10M"
+              }
+            ],
+            "result": {
+              "label": "Expected value: 0.5 × 18 + 0.5 × 4 − 10",
+              "value": "$1M"
+            },
+            "note": "Synthetic numbers from the Lesson 4 example."
+          },
+          "cues": [
+            {
+              "text": "Let’s do the arithmetic, with invented numbers. A company can commit ten million dollars now to a new service."
+            },
+            {
+              "text": "With probability one half, the market is strong and the investment returns eighteen million.",
+              "reveal": 1
+            },
+            {
+              "text": "With probability one half, it is weak and returns four million.",
+              "reveal": 2
+            },
+            {
+              "text": "The investment is ten million.",
+              "reveal": 3
+            },
+            {
+              "text": "Half of eighteen is nine, half of four is two, eleven in total, minus ten. The expected value of committing now is one million dollars.",
+              "reveal": 4
+            },
+            {
+              "text": "Alternatively, spend one million on a pilot that reveals the market, then invest the ten million only if the market is strong. What is the expected value of staging, in millions?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-stage",
+            "type": "estimate",
+            "prompt": "Pilot costs $1M and reveals the market. Invest $10M only if strong (probability 0.5, returns $18M). Assuming the pilot delays nothing that matters, what is the expected value of staging, in $M?",
+            "min": -5,
+            "max": 10,
+            "step": 0.5,
+            "unit": "$M",
+            "initial": 1,
+            "answer": 3,
+            "tolerance": 0.5,
+            "concept": "c-real-options",
+            "feedback": {
+              "correct": "Right: half the time you net 18 − 10 = 8, so 4 in expectation, minus the 1 for the pilot — 3.",
+              "incorrect": "It is $3M. Half the time you invest and net 8; the other half you walk away. 0.5 × 8 = 4, minus the $1M pilot."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Option two: pilot, then decide",
+            "lines": [
+              {
+                "label": "Strong market, probability 0.5",
+                "value": "invest: 18 − 10 = $8M"
+              },
+              {
+                "label": "Weak market, probability 0.5",
+                "value": "walk away: $0"
+              },
+              {
+                "label": "Pilot cost",
+                "value": "$1M"
+              }
+            ],
+            "result": {
+              "label": "Expected value: 0.5 × 8 − 1",
+              "value": "$3M"
+            },
+            "note": "Synthetic. Assumes the pilot delays nothing that matters."
+          },
+          "cues": [
+            {
+              "text": "In the strong market you invest and net eight million.",
+              "reveal": 1
+            },
+            {
+              "text": "In the weak market you walk away.",
+              "reveal": 2
+            },
+            {
+              "text": "You paid one million for the pilot.",
+              "reveal": 3
+            },
+            {
+              "text": "So staging is worth three million, against one million for committing now. The difference comes from avoiding the six-million-dollar loss in the weak state.",
+              "reveal": 4
+            },
+            {
+              "text": "But notice the assumption. The comparison reverses if waiting lets a rival take the market first. Options thinking never removes the need for judgment."
+            },
+            {
+              "text": "Underneath this is the value of information: information is worth paying for only if it could change the decision. A study whose result wouldn’t alter what you do is worth nothing, however interesting."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "Commit, stage, experiment or avoid",
+            "x": [
+              "Pays off in few scenarios",
+              "Pays off in most scenarios"
+            ],
+            "y": [
+              "Costly to reverse",
+              "Easy to reverse"
+            ],
+            "cells": [
+              [
+                "Experiment cheaply; stop fast",
+                "No-regret move: do it now"
+              ],
+              [
+                "Avoid, or hold a small staged option",
+                "Commit deliberately: a core bet"
+              ]
+            ]
+          },
+          "cues": [
+            {
+              "text": "Scenario planning extends this to deep uncertainty. It is a practitioner method, a heuristic rather than a validated technique."
+            },
+            {
+              "text": "Instead of one forecast, a team picks the two or three uncertainties that matter most and builds a few plausible, internally consistent futures. Then each commitment is tested against them."
+            },
+            {
+              "text": "Easy to reverse and pays off in only a few scenarios: experiment cheaply, and stop quickly if the signal is weak.",
+              "reveal": 1
+            },
+            {
+              "text": "Easy to reverse and pays off in most: a no-regret move. Do it now.",
+              "reveal": 2
+            },
+            {
+              "text": "Costly to reverse and pays off in few: avoid it, or hold it as a small staged option.",
+              "reveal": 3
+            },
+            {
+              "text": "Costly to reverse and pays off in most: commit deliberately. That is a core strategic bet.",
+              "reveal": 4
+            },
+            {
+              "text": "Rigorous evidence that scenario planning improves performance is thin. Its plausible benefit is that it counters overconfidence in a single forecast."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Realized strategy is what you fund",
+      "scenes": [
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "The stated strategy says “focus”.",
+              "The budget gives everyone a little more.",
+              "The realized strategy is the budget."
+            ],
+            "refs": [
+              "R-mintzberg-1985-strategies"
+            ]
+          },
+          "cues": [
+            {
+              "text": "That brings the week back to its starting point. Mintzberg and Waters separated intended strategy from realized strategy, the pattern visible in an organization’s stream of actions.",
+              "reveal": 0,
+              "refs": [
+                "R-mintzberg-1985-strategies"
+              ]
+            },
+            {
+              "text": "Few actions reveal that pattern more clearly than resource commitments: which projects are funded, which people are moved, which requests are refused.",
+              "reveal": 1,
+              "refs": [
+                "R-mintzberg-1985-strategies"
+              ]
+            },
+            {
+              "text": "When the strategy says focus and the budget gives every unit a small increase, the realized strategy is the budget.",
+              "reveal": 2,
+              "refs": [
+                "R-mintzberg-1985-strategies"
+              ]
+            },
+            {
+              "text": "Executives call this peanut-butter allocation: spreading resources thinly and evenly to avoid conflict. It feels fair. It is usually incoherent, because a strategy makes initiatives unequal by design, and many have a minimum scale. An emergency department funded at sixty percent is not sixty percent of an emergency department."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "bars",
+            "title": "Proposed budget, $M",
+            "unit": "$M",
+            "items": [
+              {
+                "label": "Naloxone at release and discharge",
+                "value": 2
+              },
+              {
+                "label": "Treatment started before release",
+                "value": 2.5
+              },
+              {
+                "label": "Peer navigators, first 30 days",
+                "value": 2
+              },
+              {
+                "label": "Awareness media campaign",
+                "value": 4
+              },
+              {
+                "label": "School curriculum",
+                "value": 3.5
+              },
+              {
+                "label": "Grants to every county",
+                "value": 6
+              }
+            ],
+            "note": "Synthetic data from the Lesson 4 example. Total $20M."
+          },
+          "cues": [
+            {
+              "text": "A worked example, with synthetic numbers. A state public-health department adopts a strategy to reduce opioid overdose deaths. Its guiding policy: concentrate on the highest-risk moment, the weeks after release from jail or discharge from hospital."
+            },
+            {
+              "text": "Its twenty-million-dollar budget is assembled the usual way, each program defending its share. Two million for naloxone at release and discharge.",
+              "reveal": 1
+            },
+            {
+              "text": "Two and a half million for medication treatment started before release.",
+              "reveal": 2
+            },
+            {
+              "text": "Two million for peer navigators in the first thirty days.",
+              "reveal": 3
+            },
+            {
+              "text": "Four million for a general awareness campaign.",
+              "reveal": 4
+            },
+            {
+              "text": "Three and a half million for a school curriculum.",
+              "reveal": 5
+            },
+            {
+              "text": "And six million in grants to every county health office.",
+              "reveal": 6
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-budget",
+            "type": "choice",
+            "prompt": "The guiding policy targets the weeks after release or discharge. What is the best diagnosis of the proposed budget?",
+            "concept": "c-strategic-resource-allocation",
+            "options": [
+              {
+                "id": "a",
+                "text": "Coherent: every program has supporters and a rationale."
+              },
+              {
+                "id": "b",
+                "text": "Incoherent as a whole: only about a third goes to the three activities the policy says matter most."
+              },
+              {
+                "id": "c",
+                "text": "Coherent: spreading money evenly reduces risk."
+              },
+              {
+                "id": "d",
+                "text": "Incoherent because the county grants should be cut to zero."
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "True line by line, but a strategy is judged as a whole. Supporters and rationales exist for almost any program.",
+              "b": "Right. Two plus two and a half plus two is six and a half of twenty — about a third. The realized strategy is general prevention, not the stated policy.",
+              "c": "Even spreading is peanut-butter allocation. It avoids conflict but ignores that the policy makes initiatives unequal.",
+              "d": "Realignment does not have to abolish programs. The point is concentration that follows from the diagnosis, not zeroing a line."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two budgets, one strategy",
+            "left": {
+              "title": "As proposed",
+              "points": [
+                "High-fit programs: $6.5M",
+                "Media and schools: $7.5M",
+                "County grants: $6M"
+              ]
+            },
+            "right": {
+              "title": "Aligned to policy",
+              "points": [
+                "High-fit programs: $15M",
+                "Media and schools: $2.5M",
+                "County grants: $2.5M"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Six and a half million of twenty, about a third, reaches the activities the policy says matter most.",
+              "reveal": 1
+            },
+            {
+              "text": "The aligned budget puts fifteen million there. The media campaign and school curriculum drop to two and a half million together, and the county grants to two and a half million.",
+              "reveal": 2
+            },
+            {
+              "text": "It does not abolish the other programs. It admits that the strategy is a choice, and it tells everyone what will be done less. That is where the political work lies, and where a leader’s credibility is spent."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Limits of this lecture’s argument",
+            "cards": [
+              {
+                "title": "Endless piloting",
+                "q": "Options can rationalize never committing",
+                "fail": "Rivals take the best customers first"
+              },
+              {
+                "title": "Decorative scenarios",
+                "q": "No allocation attached",
+                "fail": "If nothing changed, it was decoration"
+              },
+              {
+                "title": "Edges that last",
+                "q": "Location, license, network",
+                "fail": "Not every edge is competed away"
+              },
+              {
+                "title": "Loud concentration",
+                "q": "A concentrated budget may reflect lobbying",
+                "fail": "Only a diagnosis makes it strategic"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now let me argue against my own thesis."
+            },
+            {
+              "text": "Real options can rationalize never committing. An organization that pilots everything may never build at the scale needed, and commitment itself signals to rivals and partners that you won’t retreat.",
+              "reveal": 1
+            },
+            {
+              "text": "Scenario planning can become an elaborate exercise attached to no decision. If the scenarios didn’t change at least one allocation, they were decoration.",
+              "reveal": 2
+            },
+            {
+              "text": "And not every edge erodes quickly. A location, a regulatory license, a network that grows more valuable with size, or a real capability for the search itself, can last. The claim is narrower: edges built on information alone should be expected to decay.",
+              "reveal": 3
+            },
+            {
+              "text": "Finally, concentration is not automatically strategic. It may reflect who argued loudest. It is a virtue only when it follows from a diagnosis and a guiding policy.",
+              "reveal": 4
+            },
+            {
+              "text": "In player development, analytical methods once rare are now widely shared. A department that answers by giving every program a small increase has chosen a strategy, whether or not it meant to."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Strategy Table",
+                "detail": "Choose a posture and allocate a budget to match it",
+                "href": "#/exercise/w09-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Hakes & Sauer (2006), An Economic Evaluation of the Moneyball Hypothesis",
+                "href": "#/library/R-hakes-2006-economic"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Information-based edges are temporary. Once visible, they are imitated and priced away, as the evidence on on-base skill suggests. When tools are widely available, advantage migrates to integration, adoption, speed and proprietary learning."
+            },
+            {
+              "text": "Under uncertainty, commit deliberately to the few hard-to-reverse choices, stage the rest as options, and test robustness across scenarios. Then check the budget, because realized strategy is what you fund."
+            },
+            {
+              "text": "Next, take the comprehension check below, the same check as the written lesson. Then open the Strategy Table, where you will allocate a budget under three scenarios, and read Hakes and Sauer’s paper.",
+              "reveal": 1
+            },
+            {
+              "text": "Thank you for working through this week with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

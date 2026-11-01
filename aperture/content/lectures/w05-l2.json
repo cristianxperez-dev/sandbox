@@ -1,0 +1,613 @@
+{
+  "id": "w05-l2-lecture",
+  "lesson": "w05-l2",
+  "title": "The Price of Telling the Boss",
+  "subtitle": "Trust and psychological safety: the conditions for hearing the truth",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 2 of Week 5. It covers the same objectives — diagnosing trust with the ability–benevolence–integrity model, distinguishing psychological safety from niceness and low standards, and weighing the evidence linking safety to learning and performance — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Two in the morning",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 5 · Lesson 2 · Lecture",
+            "title": "The price of telling the boss",
+            "sub": "Trust and psychological safety"
+          },
+          "cues": [
+            {
+              "text": "Leaders rarely fail because information does not exist. They fail because it never reaches them."
+            },
+            {
+              "text": "This lecture is about why it gets stuck, and what a leader can do about it."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "A dose looks too high.",
+              "Calling risks being wrong.",
+              "Not calling risks a patient."
+            ],
+            "sub": "A hypothetical night shift."
+          },
+          "cues": [
+            {
+              "text": "Picture a hypothetical night shift on a hospital ward. A newly hired nurse notices that a medication dose looks high for the patient’s weight."
+            },
+            {
+              "text": "The physician who wrote it is known to be brilliant and impatient. Calling him at two in the morning risks being wrong, dismissed, and remembered as the nurse who questioned him.",
+              "reveal": 1
+            },
+            {
+              "text": "Not calling risks harm to a patient.",
+              "reveal": 2
+            },
+            {
+              "text": "Here is the point. Most of what decides her choice was settled long before that night: by how he reacted the last time someone questioned him, and by what the ward has learned about the cost of speaking up."
+            },
+            {
+              "text": "The associate who spots an error in a partner’s draft, the engineer who sees a skipped test, the coach who notices a player hiding discomfort. Same experiment. The answer depends less on courage than on what the system has taught them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Trust, taken apart",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Mayer, Davis and Schoorman, 1995",
+            "term": "Trust",
+            "definition": "A willingness to be vulnerable to another party, expecting them to do something important to you, whether or not you can monitor or control them.",
+            "example": "Trust is the willingness. Trustworthiness is the reasons for it."
+          },
+          "cues": [
+            {
+              "text": "Start with trust. Roger Mayer, James Davis and David Schoorman defined it with unusual precision.",
+              "refs": [
+                "R-mayer-1995-integrative"
+              ]
+            },
+            {
+              "text": "Trust is a willingness to be vulnerable to another party, based on the expectation that they will do something important to you, regardless of your ability to monitor or control them.",
+              "reveal": 1,
+              "refs": [
+                "R-mayer-1995-integrative"
+              ]
+            },
+            {
+              "text": "The clever move is separating trust itself from the reasons for it. Those reasons are the other person’s perceived trustworthiness.",
+              "reveal": 2
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Three parts of trustworthiness",
+            "cards": [
+              {
+                "title": "Ability",
+                "q": "Are they competent at this?",
+                "fail": "Fix: demonstrated competence or a change of role"
+              },
+              {
+                "title": "Benevolence",
+                "q": "Do they care about my interests?",
+                "fail": "Fix: visible behavior that costs them something"
+              },
+              {
+                "title": "Integrity",
+                "q": "Do they keep principles I accept?",
+                "fail": "Fix: consistency of words and actions over time"
+              }
+            ],
+            "refs": [
+              "R-mayer-1995-integrative"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Trustworthiness has three factors, and they are judged separately.",
+              "refs": [
+                "R-mayer-1995-integrative"
+              ]
+            },
+            {
+              "text": "Ability: competence in the relevant domain. A deficit here is addressed by demonstrated competence, or a change of role.",
+              "reveal": 1
+            },
+            {
+              "text": "Benevolence: the belief that the other person cares about your interests beyond their own gain. That is repaired by visible behavior that costs the leader something on your behalf.",
+              "reveal": 2
+            },
+            {
+              "text": "Integrity: the belief that they keep principles you find acceptable, and apply them consistently. That is built by consistency between words and actions, over time.",
+              "reveal": 3
+            },
+            {
+              "text": "So I don’t trust him stops being a feeling and becomes a diagnosis. You can trust a colleague’s integrity and doubt their ability in a new domain. Let’s try one."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-abi",
+            "type": "choice",
+            "concept": "c-trustworthiness-abi",
+            "prompt": "In a law firm, associates almost never flag drafting errors in partners’ work, even though they rate the partners as highly skilled and principled. Which trustworthiness factor is most likely in doubt?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Ability — they doubt the partners’ drafting skill."
+              },
+              {
+                "id": "b",
+                "text": "Benevolence — they doubt the partners will protect their interests when the partner’s status is threatened."
+              },
+              {
+                "id": "c",
+                "text": "Integrity — they doubt the partners keep consistent principles."
+              },
+              {
+                "id": "d",
+                "text": "Propensity — the associates are simply low-trust people."
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "The associates already believe the partners are able. If anything, high ability makes questioning them feel riskier.",
+              "b": "Right. What associates doubt is benevolence when status is threatened: will the partner still look after my interests after I embarrass them?",
+              "c": "The scenario says they see the partners as principled. The doubt is about whose interests the partner protects under threat.",
+              "d": "Propensity matters most when you know little about someone. These associates know the partners well; their doubt is specific, not dispositional."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "How trust forms and updates",
+            "steps": [
+              {
+                "label": "Propensity",
+                "text": "matters most with little information"
+              },
+              {
+                "label": "Perceived trustworthiness",
+                "text": "ability, benevolence, integrity"
+              },
+              {
+                "label": "Trust",
+                "text": "willingness to be vulnerable"
+              },
+              {
+                "label": "Risk-taking",
+                "text": "delegate, disclose, depend"
+              },
+              {
+                "label": "Outcomes",
+                "text": "update the perceptions"
+              }
+            ],
+            "refs": [
+              "R-mayer-1995-integrative"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Benevolence it is. And the model explains the fix. An open-door announcement changes little. A partner publicly thanking an associate for catching an error in the partner’s own draft, with no cost at the next assignment, changes a lot."
+            },
+            {
+              "text": "Here is the full model. Each of us has a general propensity to trust, which matters most when we know little about the other person.",
+              "reveal": 1,
+              "refs": [
+                "R-mayer-1995-integrative"
+              ]
+            },
+            {
+              "text": "Then come the judgments of ability, benevolence and integrity.",
+              "reveal": 2
+            },
+            {
+              "text": "They produce trust, the willingness to be vulnerable.",
+              "reveal": 3
+            },
+            {
+              "text": "Trust shows up as risk-taking: you delegate, disclose or depend.",
+              "reveal": 4
+            },
+            {
+              "text": "And what happens updates your perceptions. So trust grows only when someone takes a risk and the outcome confirms it. You cannot build trust without exposure.",
+              "reveal": 5,
+              "refs": [
+                "R-mayer-1995-integrative"
+              ]
+            },
+            {
+              "text": "One more nuance. Trust is specific: trust in this person, for this kind of action. A new executive trusted on technical calls may not yet be trusted on personnel decisions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Safety is a team property",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Edmondson, 1999",
+            "term": "Team psychological safety",
+            "definition": "A shared belief that the team is safe for interpersonal risk-taking: asking questions, admitting mistakes, raising concerns.",
+            "example": "51 manufacturing teams: safety → learning behavior → performance."
+          },
+          "cues": [
+            {
+              "text": "Now the second idea. Amy Edmondson introduced team psychological safety: a shared belief among members that the team is safe for interpersonal risk-taking.",
+              "refs": [
+                "R-edmondson-1999-psychological"
+              ]
+            },
+            {
+              "text": "That means asking questions, admitting mistakes, raising concerns, proposing unpopular ideas.",
+              "reveal": 1
+            },
+            {
+              "text": "In a study of fifty-one work teams in a manufacturing company, safety was associated with team learning behavior, and learning behavior mediated the link between safety and performance.",
+              "reveal": 2,
+              "refs": [
+                "R-edmondson-1999-psychological"
+              ]
+            },
+            {
+              "text": "Team efficacy, confidence in the team’s ability, was not associated with learning once safety was taken into account. And the study pointed to structures that shape safety, including context support and coaching by the team leader.",
+              "refs": [
+                "R-edmondson-1999-psychological"
+              ]
+            },
+            {
+              "text": "How is this different from trust? Two ways. It belongs to a group, not a pair. And it is about the consequences of speaking up, not about whether someone will act in your interest."
+            },
+            {
+              "text": "A team can be full of pairs who trust each other and still have a climate where nobody challenges the leader in meetings."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "Safety is not low standards",
+            "x": [
+              "Low safety",
+              "High safety"
+            ],
+            "y": [
+              "Low demands",
+              "High demands"
+            ],
+            "cells": [
+              [
+                "Anxiety: errors hidden, bad news slow",
+                "Learning: candor, errors surface early"
+              ],
+              [
+                "Disengagement: little said or expected",
+                "Comfort: free talk, little at stake"
+              ]
+            ]
+          },
+          "cues": [
+            {
+              "text": "The most common misreading is that safety means niceness. Put safety on one axis and performance demands on the other."
+            },
+            {
+              "text": "High demands with low safety is anxiety. Errors are hidden and bad news travels slowly.",
+              "reveal": 1
+            },
+            {
+              "text": "High demands with high safety is the learning zone. Errors surface early and get worked on.",
+              "reveal": 2
+            },
+            {
+              "text": "Low demands and low safety is disengagement. Little is expected, little is said.",
+              "reveal": 3
+            },
+            {
+              "text": "And low demands with high safety is mere comfort. People speak freely, but nothing much is at stake. That is not the goal. Safety exists so that uncomfortable information can be said.",
+              "reveal": 4
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "The meta-analytic base",
+            "items": [
+              {
+                "value": "136",
+                "label": "independent samples"
+              },
+              {
+                "value": "22,000+",
+                "label": "individuals"
+              },
+              {
+                "value": "~5,000",
+                "label": "groups"
+              }
+            ],
+            "note": "Frazier, Fainshmidt & Klinger (2017).",
+            "refs": [
+              "R-frazier-2017-psychological"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The evidence has grown well beyond one study. Lance Frazier and colleagues meta-analyzed a large literature.",
+              "refs": [
+                "R-frazier-2017-psychological"
+              ]
+            },
+            {
+              "text": "One hundred thirty-six independent samples,",
+              "reveal": 1
+            },
+            {
+              "text": "more than twenty-two thousand individuals,",
+              "reveal": 2
+            },
+            {
+              "text": "and nearly five thousand groups.",
+              "reveal": 3
+            },
+            {
+              "text": "They tested whether safety predicts task performance and citizenship beyond good leader relations and engagement, and whether design and national culture changed results. The synthesis supports safety as a robust correlate of learning and performance-related outcomes.",
+              "refs": [
+                "R-frazier-2017-psychological"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Three cautions",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Keeping the evidence honest",
+            "cards": [
+              {
+                "title": "Direction",
+                "q": "Does safety cause performance?",
+                "fail": "Success may make teams feel safe"
+              },
+              {
+                "title": "Drift",
+                "q": "Safety as “being nice”",
+                "fail": "Close to the opposite of the construct"
+              },
+              {
+                "title": "Averages",
+                "q": "Safe for the majority",
+                "fail": "Unsafe for the lowest-status members"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now let me push back on what I’ve just told you. Robust correlate is carefully chosen language."
+            },
+            {
+              "text": "First, most of the evidence is correlational. Teams that perform well may feel safer because success makes admitting errors cheaper. Meta-analysis aggregates correlations; it does not turn them into causal estimates.",
+              "reveal": 1,
+              "refs": [
+                "R-frazier-2017-psychological"
+              ]
+            },
+            {
+              "text": "And the measures are mostly self-reports from the same people who report the outcomes. The chain from leader behavior to safety to performance is asserted in practitioner writing far more often than it is shown.",
+              "refs": [
+                "R-frazier-2017-psychological",
+                "R-edmondson-1999-psychological"
+              ]
+            },
+            {
+              "text": "Second, the popular version has drifted toward avoiding discomfort, which is nearly the opposite of the idea.",
+              "reveal": 2
+            },
+            {
+              "text": "Third, a climate can be safe for most people and unsafe for those with the least status. A team-average score hides that.",
+              "reveal": 3
+            },
+            {
+              "text": "Safety is measured from individuals and averaged to the team, which is justified only if members agree. For a leader, the spread on a survey says more than the average. Two people who feel unsafe often hold exactly the information you need."
+            },
+            {
+              "text": "Trust has a failure mode too. Because it means accepting vulnerability without monitoring, high trust can switch off oversight. Good systems verify everyone’s work routinely, so a check signals process, not suspicion."
+            },
+            {
+              "text": "Let me test that idea about averages."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-survey",
+            "type": "choice",
+            "concept": "c-psychological-safety",
+            "prompt": "Your climate survey shows high average agreement that “it is safe to take a risk on this team.” Two weeks later you learn a serious data error persisted for months because the person who found it did not want to embarrass a colleague. What is the best reading?",
+            "options": [
+              {
+                "id": "a",
+                "text": "The team is psychologically safe; the incident is an individual lapse."
+              },
+              {
+                "id": "b",
+                "text": "The survey captured the majority’s comfort; the incident is better evidence about the climate for the person holding inconvenient information."
+              },
+              {
+                "id": "c",
+                "text": "The team needs to be nicer to one another so errors can be raised."
+              },
+              {
+                "id": "d",
+                "text": "Survey data on safety are meaningless and should be dropped."
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "The average can hide exactly this: a climate that is safe for most and unsafe for the person with the bad news.",
+              "b": "Right. Treat the incident as stronger evidence than the average, and start by asking how disagreement is handled in your own meetings.",
+              "c": "Niceness is not safety. The colleague’s comfort was protected at the cost of the truth — the opposite of what the construct is for.",
+              "d": "Too far. The survey is informative, but the spread and real incidents matter more than the average."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Setting the price of disclosure",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Listening and questioning as trust",
+            "steps": [
+              "Ask before you assert",
+              "Respond well to the first bad news",
+              "Close the loop",
+              "Make your own errors visible"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The survey case is invented, but its lesson is general: a leader sets the price of disclosure. Four behaviors move that price."
+            },
+            {
+              "text": "Ask before you assert. Open with a real question, such as, what are you seeing that I might be missing? It only works if you can tolerate the answer.",
+              "reveal": 1
+            },
+            {
+              "text": "Respond well to the first bad news. People test safety with a small disclosure, and your reaction sets the price of the next one.",
+              "reveal": 2
+            },
+            {
+              "text": "Close the loop. Tell people what you did with what they raised, including when you chose not to act and why. That is integrity, judged on consistency.",
+              "reveal": 3
+            },
+            {
+              "text": "Make your own errors visible. Describing a mistake you made, and what you changed, lowers the status cost for everyone else.",
+              "reveal": 4
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "High standards, lower cost of honesty",
+            "left": {
+              "title": "Blameless review",
+              "points": [
+                "What did each person know?",
+                "Why did it make sense then?",
+                "What in the system allowed it?"
+              ]
+            },
+            "right": {
+              "title": "After-action review",
+              "points": [
+                "What was supposed to happen?",
+                "What happened, and why?",
+                "What to sustain or change?"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Some organizations build this into structure. Software teams running blameless post-incident reviews reconstruct what each person knew and why their actions made sense, and ask what in the system allowed the error.",
+              "reveal": 1
+            },
+            {
+              "text": "Military after-action reviews ask what was supposed to happen, what happened, why, and what to sustain or change.",
+              "reveal": 2
+            },
+            {
+              "text": "In both, the standard stays high. The outage is serious. What falls is the cost of honest reporting."
+            },
+            {
+              "text": "In player development, the information that most needs to travel up is often the riskiest to share: a pitcher’s discomfort that might cost a promotion, or a coach’s disagreement with a directive. Separate injury reporting from evaluation where possible, and answer bad news with questions before judgments."
+            },
+            {
+              "text": "And on cross-cultural staffs, remember that silence can mean agreement in one context and deference in another."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-last-news",
+            "type": "reflect",
+            "concept": "c-listening-questioning",
+            "prompt": "What did you do the last time someone brought you bad news? What did your reaction teach them about the price of the next disclosure — and which of the three trustworthiness factors did it speak to?"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Leadership Conversation Simulator",
+                "detail": "Practise responding to bad news and disagreement",
+                "href": "#/exercise/w05-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Edmondson (1999), Psychological Safety and Learning Behavior in Work Teams",
+                "href": "#/library/R-edmondson-1999-psychological"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Trust is a willingness to be vulnerable, built from separate judgments of ability, benevolence and integrity, and updated when someone takes a risk.",
+              "refs": [
+                "R-mayer-1995-integrative"
+              ]
+            },
+            {
+              "text": "Psychological safety is a team’s shared belief that interpersonal risk is safe. It is a robust correlate of learning and performance, though causal evidence is thinner than its popularity.",
+              "refs": [
+                "R-edmondson-1999-psychological",
+                "R-frazier-2017-psychological"
+              ]
+            },
+            {
+              "text": "Neither is comfort. The target is candor under high standards."
+            },
+            {
+              "text": "Take the comprehension check below, the same as the written lesson. Then open the Leadership Conversation Simulator, and read Edmondson’s paper, along with Mayer and colleagues on trust.",
+              "reveal": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,839 @@
+{
+  "id": "w11-l2-lecture",
+  "lesson": "w11-l2",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "title": "The Contract Is a Map of What Goes Wrong",
+  "subtitle": "Contracts: formation, meaning, risk and remedies",
+  "summary": "A narrated, interactive version of Lesson 2 of the law week. It covers the same objectives — formation and consideration, promises, conditions, representations and warranties, interpreting an ambiguous clause, and expectation damages with foreseeability and mitigation — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Why draft if nobody sues?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 11 · Lesson 2 · Lecture",
+            "title": "The contract is a map of what goes wrong",
+            "sub": "Formation, meaning, risk and remedies"
+          },
+          "cues": [
+            {
+              "text": "A quick but important note first. This is general educational material about legal concepts, not legal advice. Consult a qualified attorney about any specific agreement."
+            },
+            {
+              "text": "Contract law in the United States is mainly state law. What follows are general principles, and a contract's own terms and its governing jurisdiction can change any of them."
+            },
+            {
+              "text": "Now, a puzzle."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Businesspeople seldom sue.",
+              "So why draft so carefully?"
+            ],
+            "sub": "Macaulay's interviews, early 1960s.",
+            "refs": [
+              "R-macaulay-1963-non-contractual"
+            ]
+          },
+          "cues": [
+            {
+              "text": "In the early nineteen sixties, the law professor Stewart Macaulay asked businesspeople how they actually managed their deals, and published what they told him in a leading sociology journal.",
+              "refs": [
+                "R-macaulay-1963-non-contractual"
+              ]
+            },
+            {
+              "text": "His finding unsettled contract scholars. Businesspeople often did not plan their exchanges completely, and they seldom used legal sanctions to adjust relationships or settle disputes.",
+              "refs": [
+                "R-macaulay-1963-non-contractual"
+              ]
+            },
+            {
+              "text": "They relied instead on reputation, repeat dealing and a shared sense of fair practice.",
+              "refs": [
+                "R-macaulay-1963-non-contractual"
+              ]
+            },
+            {
+              "text": "So here is the question. If people rarely sue, why do organizations spend so much on drafting contracts?",
+              "reveal": 1
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "What a contract does besides litigation",
+            "cards": [
+              {
+                "title": "Insurance for the end",
+                "q": "People leave, budgets are cut, a deal is acquired",
+                "fail": "The handshake does not survive the handshakers"
+              },
+              {
+                "title": "Early discovery",
+                "q": "Drafting surfaces disagreements",
+                "fail": "Skip it, and you find them when they are expensive"
+              },
+              {
+                "title": "Coordination",
+                "q": "Finance, engineers, a successor executive",
+                "fail": "People not in the room have only the document"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Three answers."
+            },
+            {
+              "text": "First, a contract matters most when the relationship fails: key people leave, a company is acquired, budgets are cut, or a product causes harm.",
+              "reveal": 1
+            },
+            {
+              "text": "Second, drafting forces the parties to discover their disagreements while those disagreements are still cheap to resolve.",
+              "reveal": 2
+            },
+            {
+              "text": "Third, a contract coordinates people who were never in the room: the finance team that pays invoices, the engineers who deliver, the successor who inherits the deal.",
+              "reveal": 3
+            },
+            {
+              "text": "So read every contract as a map of what each side expects when things go wrong. Let's learn to read the map."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "How a contract is born",
+      "scenes": [
+        {
+          "visual": {
+            "type": "flow",
+            "title": "Formation",
+            "steps": [
+              {
+                "label": "Offer",
+                "text": "A willingness to bargain that invites acceptance"
+              },
+              {
+                "label": "Acceptance",
+                "text": "Judged by words and conduct"
+              },
+              {
+                "label": "Consideration",
+                "text": "Each side's promise bargained for the other's"
+              }
+            ],
+            "refs": [
+              "R-ali-1981-restatement",
+              "R-valbrune-2019-business"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The United States common law of contracts is synthesized in the American Law Institute's Restatement Second of Contracts. Its core is compact.",
+              "refs": [
+                "R-ali-1981-restatement"
+              ]
+            },
+            {
+              "text": "One party makes an offer: a manifestation of willingness to enter a bargain that invites acceptance.",
+              "reveal": 1,
+              "refs": [
+                "R-ali-1981-restatement"
+              ]
+            },
+            {
+              "text": "The other party accepts. Courts look at objective manifestations, what the parties said and did, not their private intentions.",
+              "reveal": 2,
+              "refs": [
+                "R-ali-1981-restatement"
+              ]
+            },
+            {
+              "text": "And the exchange is supported by consideration. Each side's promise or performance is bargained for in exchange for the other's.",
+              "reveal": 3,
+              "refs": [
+                "R-ali-1981-restatement",
+                "R-valbrune-2019-business"
+              ]
+            },
+            {
+              "text": "That is why a promise to make a gift is generally not enforceable as a contract. Nothing was bargained for in return.",
+              "refs": [
+                "R-ali-1981-restatement"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "A substitute for consideration",
+            "term": "Promissory estoppel",
+            "definition": "A promise the promisor should expect to induce action, that does induce reliance, enforced where only enforcement avoids injustice.",
+            "example": "Someone relocates, resigns or turns down work, relying on a promise that never became a formal contract.",
+            "refs": [
+              "R-ali-1981-restatement"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Sometimes courts enforce a promise even without consideration.",
+              "refs": [
+                "R-ali-1981-restatement"
+              ]
+            },
+            {
+              "text": "The doctrine is promissory estoppel. The promisor should reasonably have expected the promise to induce action. The promisee did rely on it. And injustice can be avoided only by enforcing it.",
+              "reveal": 1,
+              "refs": [
+                "R-ali-1981-restatement"
+              ]
+            },
+            {
+              "text": "It shows up in employment and business when someone relocates, resigns or turns down other work, relying on a promise that never became a formal contract.",
+              "reveal": 2,
+              "refs": [
+                "R-ali-1981-restatement"
+              ]
+            },
+            {
+              "text": "Courts apply it cautiously, and recovery is sometimes limited to the losses the reliance caused.",
+              "refs": [
+                "R-ali-1981-restatement"
+              ]
+            },
+            {
+              "text": "A few more formation requirements: capacity, a lawful purpose, and for certain kinds of agreement a signed writing under statutes of frauds.",
+              "refs": [
+                "R-valbrune-2019-business"
+              ]
+            },
+            {
+              "text": "And one fork in the road. Sales of goods are governed in most states by Article Two of the Uniform Commercial Code, which relaxes some formation rules. Services, including consulting and employment, generally fall under the common law.",
+              "refs": [
+                "R-valbrune-2019-business"
+              ]
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-formation",
+            "type": "choice",
+            "prompt": "A founder tells a long-time mentor, \"Because you have helped me so much, I will give you ten thousand dollars next year.\" The mentor does nothing differently in response. The next year the founder changes her mind. In general, is the promise enforceable as a contract?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Yes — it was a clear, specific promise."
+              },
+              {
+                "id": "b",
+                "text": "No — it is a gift promise with no bargained-for exchange, and there was no reliance to support promissory estoppel."
+              },
+              {
+                "id": "c",
+                "text": "Yes — past help counts as consideration."
+              },
+              {
+                "id": "d",
+                "text": "Only if it was in writing."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-contract-formation",
+            "feedback": {
+              "a": "Clarity is not enough. Formation needs bargained-for consideration, and a promise to make a gift lacks it.",
+              "b": "Right. Nothing was given in exchange for the promise, and the mentor did not rely on it, so promissory estoppel offers no route either.",
+              "c": "Help given in the past was not bargained for in exchange for this promise. It reads as the motive for a gift, not the price of a bargain.",
+              "d": "A writing can matter under statutes of frauds, but writing alone does not supply the missing consideration."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "What the words mean, and what they do",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Reading a clause",
+            "steps": [
+              "Start with the words, in context",
+              "Give effect to every term",
+              "Specific beats general",
+              "Course of dealing and trade usage",
+              "Last resort: read against the drafter"
+            ],
+            "refs": [
+              "R-ali-1981-restatement"
+            ]
+          },
+          "cues": [
+            {
+              "text": "A contract formed. Now, what does it mean?"
+            },
+            {
+              "text": "Interpretation begins with the words, read in the context of the whole agreement and its commercial purpose.",
+              "reveal": 1,
+              "refs": [
+                "R-ali-1981-restatement"
+              ]
+            },
+            {
+              "text": "Courts generally prefer readings that give effect to every term,",
+              "reveal": 2,
+              "refs": [
+                "R-ali-1981-restatement"
+              ]
+            },
+            {
+              "text": "treat specific terms as weightier than general ones,",
+              "reveal": 3,
+              "refs": [
+                "R-ali-1981-restatement"
+              ]
+            },
+            {
+              "text": "and weigh the parties' prior course of dealing and the usage of the trade.",
+              "reveal": 4,
+              "refs": [
+                "R-ali-1981-restatement"
+              ]
+            },
+            {
+              "text": "Only when a term remains genuinely ambiguous do many courts construe it against the party that drafted it. The Latin name is contra proferentem, and it is usually a tie-breaker of last resort, not a first move.",
+              "reveal": 5,
+              "refs": [
+                "R-ali-1981-restatement"
+              ],
+              "say": "Only when a term remains genuinely ambiguous do many courts construe it against the party that drafted it. The Latin name is contra pro-feh-rent-em, and it is usually a tie-breaker of last resort, not a first move."
+            },
+            {
+              "text": "Contracts also carry an implied duty of good faith and fair dealing, which limits how a party may use the discretion the contract gives it.",
+              "refs": [
+                "R-ali-1981-restatement"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two sources of ambiguity",
+            "left": {
+              "title": "Lexical",
+              "points": [
+                "One word, two meanings",
+                "\"Net revenue\": before or after refunds?"
+              ]
+            },
+            "right": {
+              "title": "Structural",
+              "points": [
+                "Syntax allows two readings",
+                "\"Within 30 days of delivery and acceptance\""
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Where does ambiguity come from? Two common places."
+            },
+            {
+              "text": "Lexical ambiguity: a word with more than one meaning. Does net revenue mean before refunds, or after?",
+              "reveal": 1
+            },
+            {
+              "text": "Structural ambiguity: the syntax allows two readings. \"Within thirty days of delivery and acceptance.\" Does the clock run from delivery, from acceptance, or from whichever is later?",
+              "reveal": 2
+            },
+            {
+              "text": "Both are fixed the same way: a definition, or a worked example in the document. One sentence now can save a dispute later."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Four statements, four failures",
+            "cards": [
+              {
+                "title": "Promise",
+                "q": "\"Vendor will deliver monthly reports.\"",
+                "fail": "Breach: a damages claim"
+              },
+              {
+                "title": "Condition",
+                "q": "\"Payment due only if the regulator approves.\"",
+                "fail": "No breach: the duty never falls due"
+              },
+              {
+                "title": "Representation",
+                "q": "\"Seller has no pending litigation.\"",
+                "fail": "Misrepresentation; sometimes unwind the deal"
+              },
+              {
+                "title": "Warranty",
+                "q": "\"Software performs as documented for 12 months.\"",
+                "fail": "Remedy, often without proof of fault"
+              }
+            ],
+            "refs": [
+              "R-ali-1981-restatement",
+              "R-valbrune-2019-business"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the distinction that matters most when something goes wrong. Contracts contain four kinds of statement, and each fails differently.",
+              "refs": [
+                "R-ali-1981-restatement",
+                "R-valbrune-2019-business"
+              ]
+            },
+            {
+              "text": "A promise, or covenant, obliges a party to do or not do something. If it is not performed, that is breach, and the other side may claim damages.",
+              "reveal": 1
+            },
+            {
+              "text": "A condition is an event that must occur before a duty arises. If it never occurs, nobody is in breach. The dependent duty simply never becomes due.",
+              "reveal": 2,
+              "refs": [
+                "R-ali-1981-restatement"
+              ]
+            },
+            {
+              "text": "A representation is a statement of fact at a moment in time, made to induce the deal. If it was false when made, there may be a misrepresentation claim, sometimes with the right to rescind.",
+              "reveal": 3,
+              "refs": [
+                "R-ali-1981-restatement"
+              ]
+            },
+            {
+              "text": "A warranty turns a stated fact into a promise backed by a remedy. The injured party usually need not prove the speaker was careless.",
+              "reveal": 4,
+              "refs": [
+                "R-ali-1981-restatement"
+              ]
+            },
+            {
+              "text": "That is why sophisticated parties fight over knowledge qualifiers like \"to Seller's knowledge,\" over materiality, and over survival periods. Each one shifts who pays for facts nobody knew."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "\"Payment due within 30 days of invoice, subject to verification of hours.\""
+            ],
+            "sub": "A hypothetical staffing contract."
+          },
+          "cues": [
+            {
+              "text": "Watch a condition do damage. A hospital signs with a staffing agency. Payment is due within thirty days of invoice, subject to the hospital's verification of hours. The case is hypothetical."
+            },
+            {
+              "text": "Verification is a condition with no deadline and no procedure. The hospital can delay payment almost indefinitely, and the agency's remedy is uncertain."
+            },
+            {
+              "text": "One sentence fixes it: hours are deemed verified unless disputed in writing within ten business days. An open condition becomes a rule, the trade-off from Lesson One."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-rep-warranty",
+            "type": "choice",
+            "prompt": "A buyer of a small company is negotiating one fact: that the company's customer data has never been breached. Why might the buyer prefer this as a warranty, backed by an indemnity, rather than only as a representation?",
+            "options": [
+              {
+                "id": "a",
+                "text": "A warranty makes the statement a promise with a remedy, so the buyer need not prove the seller was careless or meant to mislead."
+              },
+              {
+                "id": "b",
+                "text": "A representation can never be the basis of any claim."
+              },
+              {
+                "id": "c",
+                "text": "A warranty turns the fact into a condition, so the buyer could refuse to pay with no further consequences."
+              },
+              {
+                "id": "d",
+                "text": "There is no practical difference; the labels are interchangeable."
+              }
+            ],
+            "answer": "a",
+            "concept": "c-representations-warranties",
+            "feedback": {
+              "a": "Right. A false representation may support a misrepresentation claim, but a warranty attaches a remedy to the fact itself, often without proof of fault.",
+              "b": "Too strong. A false representation can support a misrepresentation claim and sometimes rescission. The warranty is simply a more direct route to a remedy.",
+              "c": "A condition is a different device: it determines whether a duty arises at all. A warranty is a promise that a fact is true, with a remedy if it is not.",
+              "d": "The categories matter precisely because they fail differently. That is why parties negotiate them, along with qualifiers and survival periods."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "What a court can give",
+      "scenes": [
+        {
+          "visual": {
+            "type": "flow",
+            "title": "From formation to remedy",
+            "steps": [
+              {
+                "label": "Formation"
+              },
+              {
+                "label": "Interpretation"
+              },
+              {
+                "label": "Performance"
+              },
+              {
+                "label": "Breach"
+              },
+              {
+                "label": "Remedy",
+                "text": "Limited by foreseeability, certainty, mitigation, caps"
+              }
+            ],
+            "refs": [
+              "R-ali-1981-restatement"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Follow the chain to its end. A contract forms, it is interpreted, conditions occur, duties fall due. Then one is not performed.",
+              "reveal": 4
+            },
+            {
+              "text": "The usual remedy is money damages measured by the expectation interest: the amount that puts the injured party where it would have been had the contract been performed.",
+              "reveal": 5,
+              "refs": [
+                "R-ali-1981-restatement"
+              ]
+            },
+            {
+              "text": "Courts can instead protect the reliance interest, the costs spent relying on the deal, or the restitution interest, the benefits handed to the other side.",
+              "refs": [
+                "R-ali-1981-restatement"
+              ]
+            },
+            {
+              "text": "Three limits apply. Foreseeability: losses that were not a probable result of breach when the contract was made are generally not recoverable. Reasonable certainty. And mitigation: the injured party must take reasonable steps to reduce its loss.",
+              "refs": [
+                "R-ali-1981-restatement"
+              ]
+            },
+            {
+              "text": "An order to perform, called specific performance, is exceptional, and rarely available for personal services.",
+              "refs": [
+                "R-ali-1981-restatement"
+              ]
+            },
+            {
+              "text": "Let's estimate an exposure. The numbers are invented."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "A consultant dismissed early",
+            "items": [
+              {
+                "value": "12 months",
+                "label": "engagement, no termination for convenience"
+              },
+              {
+                "value": "15,000",
+                "label": "fee per month"
+              },
+              {
+                "value": "Month 4",
+                "label": "client ends it without justification"
+              },
+              {
+                "value": "10,000 a month",
+                "label": "replacement work from month 7"
+              }
+            ],
+            "note": "Synthetic numbers, from the lesson's worked example."
+          },
+          "cues": [
+            {
+              "text": "A consultant has a twelve-month engagement, and the client has no right to terminate for convenience.",
+              "reveal": 1
+            },
+            {
+              "text": "The fee is fifteen thousand dollars a month.",
+              "reveal": 2
+            },
+            {
+              "text": "After month four, the client ends it without justification and stops paying.",
+              "reveal": 3
+            },
+            {
+              "text": "Doing her duty to mitigate, she finds comparable replacement work starting in month seven, at ten thousand a month.",
+              "reveal": 4
+            },
+            {
+              "text": "Ignoring costs saved, interest and legal fees, what is a simple expectation measure of her damages?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-damages",
+            "type": "estimate",
+            "prompt": "Using a simplified expectation measure, ignoring costs saved, interest and fees, what are the consultant's damages in dollars?",
+            "min": 0,
+            "max": 180000,
+            "step": 5000,
+            "unit": "$",
+            "initial": 120000,
+            "answer": 60000,
+            "tolerance": 5000,
+            "concept": "c-contract-remedies",
+            "feedback": {
+              "correct": "Right: eight unpaid months at 15,000 is 120,000, less 60,000 earned in mitigation from months 7 to 12.",
+              "incorrect": "The answer is 60,000. The unpaid fees are 120,000, but mitigation subtracts the 60,000 she earns from replacement work in months 7 to 12."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "The expectation measure",
+            "lines": [
+              {
+                "label": "Unpaid fees, months 5–12: 8 × 15,000",
+                "value": "120,000"
+              },
+              {
+                "label": "Mitigation, months 7–12: 6 × 10,000",
+                "value": "− 60,000"
+              }
+            ],
+            "result": {
+              "label": "Simplified damages",
+              "value": "60,000"
+            },
+            "note": "Synthetic numbers. Ignores costs saved, interest and legal fees."
+          },
+          "cues": [
+            {
+              "text": "Eight unpaid months at fifteen thousand: one hundred twenty thousand.",
+              "reveal": 1
+            },
+            {
+              "text": "Six months of replacement work at ten thousand: sixty thousand, which mitigation subtracts.",
+              "reveal": 2
+            },
+            {
+              "text": "Simplified damages: sixty thousand dollars.",
+              "reveal": 3
+            },
+            {
+              "text": "Now change one clause. Suppose either party could terminate for convenience on thirty days' notice. Expected damages fall to roughly one month's fee."
+            },
+            {
+              "text": "The termination clause, not the damages doctrine, set most of the exposure. That is the executive lesson."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "\"Commercially reasonable efforts\" to reach 99.9%.",
+              "Service credits: the \"sole and exclusive remedy.\""
+            ],
+            "sub": "A hypothetical cloud-software agreement."
+          },
+          "cues": [
+            {
+              "text": "The same thing happens in technology. Take a hypothetical cloud agreement promising commercially reasonable efforts to maintain ninety-nine point nine percent monthly availability.",
+              "reveal": 0
+            },
+            {
+              "text": "The number looks like a rule, but the efforts language makes it a standard. And if service credits are the sole and exclusive remedy, a long outage may yield only a modest credit.",
+              "reveal": 1
+            },
+            {
+              "text": "The questions to ask: does the remedy match the business harm? Is there a right to terminate after repeated failures?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "How much does contract law matter?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "A contested question",
+            "left": {
+              "title": "Relational view",
+              "points": [
+                "Legal sanctions seldom used",
+                "Planning often incomplete",
+                "Reputation does the work"
+              ]
+            },
+            "right": {
+              "title": "Doctrinal view",
+              "points": [
+                "Enforceable promises anchor expectations",
+                "Court remedies back them"
+              ]
+            },
+            "refs": [
+              "R-macaulay-1963-non-contractual",
+              "R-ali-1981-restatement"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now let me push back on this whole lesson. How much does formal contract law really matter?"
+            },
+            {
+              "text": "Macaulay's interviews suggest that in ongoing relationships, legal sanctions are rarely used, planning is often incomplete, and reputation does much of the work.",
+              "reveal": 1,
+              "refs": [
+                "R-macaulay-1963-non-contractual"
+              ]
+            },
+            {
+              "text": "The doctrinal tradition summarized in the Restatement assumes the opposite: enforceable promises and court remedies anchor commercial expectations.",
+              "reveal": 2,
+              "refs": [
+                "R-ali-1981-restatement"
+              ]
+            },
+            {
+              "text": "Later commentators argue that Macaulay's headline finding needs specification. Formal contracts may matter little in a healthy relationship, and a great deal at its end, in one-off deals, or when interests diverge.",
+              "refs": [
+                "R-macaulay-1963-non-contractual"
+              ]
+            },
+            {
+              "text": "And note the limits of his evidence: interviews rather than measured outcomes, from a particular period and industry mix. Both views can be true at different points in the same relationship.",
+              "refs": [
+                "R-macaulay-1963-non-contractual"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Two more limits",
+            "cards": [
+              {
+                "title": "Remedies are slow",
+                "q": "Fees usually not awarded to the winner",
+                "fail": "Caps, credits and exit rights are the real remedy"
+              },
+              {
+                "title": "Completeness costs",
+                "q": "Anticipate every contingency?",
+                "fail": "Expensive, and it can signal distrust"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Two more limits."
+            },
+            {
+              "text": "Litigation is slow and expensive. United States courts generally do not award attorneys' fees to the winner unless a contract or statute provides for them, and losses that are hard to prove may not be recovered at all.",
+              "reveal": 1
+            },
+            {
+              "text": "So read the contract's own mechanisms, payment milestones, service credits, termination rights, escrows and caps, as the real remedy."
+            },
+            {
+              "text": "And completeness has a cost. A contract that anticipates every contingency is expensive to negotiate and can signal distrust. Economists call contracts that leave contingencies open incomplete, and the right degree depends on the stakes and on how far both sides can rely on relationship and reputation.",
+              "reveal": 2
+            },
+            {
+              "text": "One caution on sources, too. The Restatement is a secondary authority. Courts often cite it, but a section binds no court until that jurisdiction adopts it. Always ask whether your jurisdiction follows it.",
+              "refs": [
+                "R-ali-1981-restatement"
+              ]
+            },
+            {
+              "text": "Even a \"non-binding\" letter of intent deserves a read. Confidentiality, exclusivity and expense sections are commonly binding, and exclusivity can cost you your best alternative for, say, sixty days."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Bringing it together",
+      "scenes": [
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Contract Lab",
+                "detail": "Flag the issues in a fictional consulting agreement",
+                "href": "#/exercise/w11-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Valbrune & De Assis (2019), Business Law I Essentials — contracts",
+                "href": "#/library/R-valbrune-2019-business"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let's bring it together."
+            },
+            {
+              "text": "A contract forms through offer, acceptance and bargained-for consideration, with promissory estoppel as a narrow substitute."
+            },
+            {
+              "text": "Words are read in context, and genuine ambiguity may be resolved against the drafter, as a last resort. Promises, conditions, representations and warranties fail in different ways."
+            },
+            {
+              "text": "Remedies aim at the benefit of the bargain, limited by foreseeability, certainty and mitigation, and in practice by the contract's own caps, exclusive remedies and termination rights."
+            },
+            {
+              "text": "Next, take the comprehension check below. It is the same check as the written lesson. Then open the Contract Lab, and read the contracts sections of the OpenStax business law text.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson stays here, with the contract anatomy, the acquisition example and the notes on the Restatement. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

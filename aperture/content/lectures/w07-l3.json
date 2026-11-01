@@ -1,0 +1,742 @@
+{
+  "id": "w07-l3-lecture",
+  "lesson": "w07-l3",
+  "title": "The Mind at the Table",
+  "subtitle": "Anchors, fairness, emotion and context in bargaining",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 3. It covers the same objectives — when to make the first offer and how to defend against an anchor, why fairness norms constrain agreements, and how to read the meta-analytic evidence on gender and negotiation — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Who names the number?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 7 · Lesson 3 · Lecture",
+            "title": "The mind at the table",
+            "sub": "Anchors, fairness, emotion and context in bargaining"
+          },
+          "cues": [
+            {
+              "text": "In the last two lectures, negotiators were calculators. They priced alternatives, found zones, traded across issues."
+            },
+            {
+              "text": "Real negotiators are not calculators. They get pulled by numbers, misread each other, and turn down money out of principle. This lecture is about those patterns, and how to design around them."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "“What are your salary expectations?”"
+            ],
+            "sub": "A hypothetical hiring conversation."
+          },
+          "cues": [
+            {
+              "text": "A hiring manager at a consulting firm asks a candidate for a senior data-science role: what are your salary expectations? This is a hypothetical example."
+            },
+            {
+              "text": "She has researched the market, but the range she found is wide."
+            },
+            {
+              "text": "If she names a number first, she may set the anchor the conversation revolves around. Or she may name a figure below what the firm budgeted, and never find out."
+            },
+            {
+              "text": "If she declines, the firm's number becomes the anchor. So, before we look at the evidence, commit to a view."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-first",
+            "type": "choice",
+            "prompt": "In a negotiation, does making the first offer help or hurt the person who makes it?",
+            "options": [
+              {
+                "id": "a",
+                "text": "It always helps: the first number anchors the outcome."
+              },
+              {
+                "id": "b",
+                "text": "It always hurts: you reveal information and lose flexibility."
+              },
+              {
+                "id": "c",
+                "text": "It tends to help when the offerer is well informed about the zone, and can hurt when the offerer is not."
+              },
+              {
+                "id": "d",
+                "text": "It makes no measurable difference."
+              }
+            ],
+            "answer": "c",
+            "concept": "c-first-offer-anchoring",
+            "feedback": {
+              "a": "First offers do anchor, but an uninformed opening can be too generous, and then the anchor works against you.",
+              "b": "The lab evidence points the other way: first offerers obtained better outcomes. The risk is specific to uninformed openings.",
+              "c": "That is where the evidence and its limits lead. Informed first offers tend to anchor settlements in your favor; uninformed ones can give away surplus.",
+              "d": "In Galinsky and Mussweiler’s experiments, first offers strongly predicted final prices. The effect is real; its size in the field is less certain."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "First offers as anchors",
+      "scenes": [
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "Galinsky and Mussweiler, 2001",
+            "items": [
+              {
+                "value": "3",
+                "label": "experiments on simulated price negotiations"
+              },
+              {
+                "value": "Either role",
+                "label": "buyer or seller: first offerer did better"
+              },
+              {
+                "value": "Two channels",
+                "label": "face-to-face and e-mail"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Adam Galinsky and Thomas Mussweiler ran three experiments on simulated price negotiations.",
+              "reveal": 1,
+              "refs": [
+                "R-galinsky-2001-first"
+              ]
+            },
+            {
+              "text": "Whoever made the first offer, buyer or seller, obtained the better outcome.",
+              "reveal": 2,
+              "refs": [
+                "R-galinsky-2001-first"
+              ]
+            },
+            {
+              "text": "First offers strongly predicted final settlement prices.",
+              "refs": [
+                "R-galinsky-2001-first"
+              ]
+            },
+            {
+              "text": "And this held both face to face and over e-mail.",
+              "reveal": 3,
+              "refs": [
+                "R-galinsky-2001-first"
+              ]
+            },
+            {
+              "text": "The mechanism is anchoring. An anchor is a number present when you make an estimate that pulls the estimate toward itself. People start from it and adjust, but the adjustment usually stops too early."
+            },
+            {
+              "text": "In negotiation the anchor is rarely arbitrary. It is a deliberate claim, by someone who benefits from your adjusting too little."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "What erased the first-offer advantage",
+            "cards": [
+              {
+                "title": "Their alternatives",
+                "q": "What will the offerer do without you?",
+                "fail": "Ignored, their number becomes your frame"
+              },
+              {
+                "title": "Their reservation price",
+                "q": "What is the least they would take?",
+                "fail": "Reasoning from their opening instead"
+              },
+              {
+                "title": "Your own target",
+                "q": "What did you come here to achieve?",
+                "fail": "Forgetting your aspiration under pressure"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "The same experiments tested defenses. The advantage disappeared when the recipient focused on information inconsistent with the offer.",
+              "refs": [
+                "R-galinsky-2001-first"
+              ]
+            },
+            {
+              "text": "The offerer's alternatives.",
+              "reveal": 1,
+              "refs": [
+                "R-galinsky-2001-first"
+              ]
+            },
+            {
+              "text": "The offerer's reservation price.",
+              "reveal": 2,
+              "refs": [
+                "R-galinsky-2001-first"
+              ]
+            },
+            {
+              "text": "Or the recipient's own target.",
+              "reveal": 3,
+              "refs": [
+                "R-galinsky-2001-first"
+              ]
+            },
+            {
+              "text": "Notice what is not on that list: ignoring the number. That rarely works. The defense is to bring a competing reference point of your own."
+            },
+            {
+              "text": "So when the other side opens, do not reason from their number. Reason from your preparation, say so, and put your own number and its justification on the table."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "A first-offer rule (practitioner heuristic)",
+            "steps": [
+              {
+                "label": "Assess information",
+                "text": "Comparables, rates, their BATNA?"
+              },
+              {
+                "label": "Informed: open",
+                "text": "Ambitious, defensible, with criteria"
+              },
+              {
+                "label": "Uninformed: listen",
+                "text": "Ask questions first"
+              },
+              {
+                "label": "Re-anchor",
+                "text": "Restate analysis, counter promptly"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Put together, the evidence supports a decision rule. Be clear: the rule is a practitioner heuristic built on the evidence, not something the experiments tested directly."
+            },
+            {
+              "text": "First, assess your information. Do you have reliable data on the zone: comparables, market rates, the other side's alternatives?",
+              "reveal": 1
+            },
+            {
+              "text": "If you are informed, open first, ambitiously but defensibly, near or beyond your aspiration, with criteria attached.",
+              "reveal": 2
+            },
+            {
+              "text": "If you are not, invite their offer or ask questions first. An uninformed opening can give away surplus.",
+              "reveal": 3
+            },
+            {
+              "text": "And whoever opened, re-anchor: restate your analysis and counter promptly with your own justified number.",
+              "reveal": 4
+            },
+            {
+              "text": "Back to our candidate. If her research really is weak, the honest answer to her dilemma is to learn more before she names a figure."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "If they offered it,",
+              "it can't be worth much."
+            ],
+            "sub": "The fixed pie, and what it does to concessions."
+          },
+          "cues": [
+            {
+              "text": "One more distortion, recalled from Lesson Two. Most negotiators enter talks expecting the other side's interests to be completely opposed to their own.",
+              "refs": [
+                "R-thompson-1990-social"
+              ]
+            },
+            {
+              "text": "Thompson and Hastie argued that this misperception is a primary cause of inefficient agreements. The psychology reaches further: a negotiator who assumes opposition tends to discount the other side's concessions, and to read requests on compatible issues as hostile.",
+              "reveal": 1,
+              "refs": [
+                "R-thompson-1990-social"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Fairness as a second floor",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "The ultimatum game",
+            "steps": [
+              "Proposer divides a sum of money",
+              "Responder accepts: both paid as proposed",
+              "Responder rejects: both get nothing"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now a game economists love, because it exposes a gap between theory and people."
+            },
+            {
+              "text": "In the ultimatum game, one player, the proposer, divides a sum of money.",
+              "reveal": 1
+            },
+            {
+              "text": "The other, the responder, can accept, and both are paid as proposed.",
+              "reveal": 2
+            },
+            {
+              "text": "Or reject, and both get nothing.",
+              "reveal": 3
+            },
+            {
+              "text": "A purely self-interested responder should accept any positive amount. So a purely self-interested proposer should offer the smallest amount possible."
+            },
+            {
+              "text": "Across many published experiments, what share of the pie do you think proposers actually offer, on average?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-ultimatum",
+            "type": "estimate",
+            "prompt": "Across published ultimatum-game experiments, what share of the pie did proposers offer on average?",
+            "min": 0,
+            "max": 60,
+            "step": 1,
+            "unit": "%",
+            "initial": 10,
+            "answer": 40,
+            "tolerance": 6,
+            "concept": "c-fairness-ultimatum",
+            "feedback": {
+              "correct": "Right — about 40 percent, far above the “rational” minimum.",
+              "incorrect": "The pooled average was about 40 percent of the pie — far above the minimum that pure self-interest predicts."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "Oosterbeek and colleagues, 2004",
+            "items": [
+              {
+                "value": "75",
+                "label": "ultimatum-game results pooled"
+              },
+              {
+                "value": "37",
+                "label": "published papers"
+              },
+              {
+                "value": "≈40%",
+                "label": "average share offered by proposers"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Hessel Oosterbeek, Randolph Sloof and Gijs van de Kuilen pooled the evidence in a meta-analysis.",
+              "refs": [
+                "R-oosterbeek-2004-cultural"
+              ]
+            },
+            {
+              "text": "Seventy-five results.",
+              "reveal": 1,
+              "refs": [
+                "R-oosterbeek-2004-cultural"
+              ]
+            },
+            {
+              "text": "From thirty-seven published papers.",
+              "reveal": 2,
+              "refs": [
+                "R-oosterbeek-2004-cultural"
+              ]
+            },
+            {
+              "text": "Proposers offered, on average, about forty percent of the pie.",
+              "reveal": 3,
+              "refs": [
+                "R-oosterbeek-2004-cultural"
+              ]
+            },
+            {
+              "text": "Responders' behavior varied across regions, and rejection rates fell when the pie was larger and when the share offered was larger.",
+              "refs": [
+                "R-oosterbeek-2004-cultural"
+              ]
+            },
+            {
+              "text": "The core finding: responders reject offers they regard as unfair, even though rejecting costs them money.",
+              "refs": [
+                "R-oosterbeek-2004-cultural"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Their BATNA is one floor.",
+              "Fairness is a second."
+            ],
+            "sub": "Objective criteria let the other side accept without appearing to lose."
+          },
+          "cues": [
+            {
+              "text": "For negotiators, this means the other side's reservation value is not the only floor.",
+              "reveal": 0
+            },
+            {
+              "text": "A counterpart who sees your offer as insulting may reject a deal that beats its alternative, especially when it can punish you at modest cost to itself."
+            },
+            {
+              "text": "Fairness norms, built from precedent, comparable deals and the history of the relationship, act as a second constraint beneath every agreement.",
+              "reveal": 1
+            },
+            {
+              "text": "That is why objective criteria help. They turn a claim into a standard the other side can accept without appearing to lose."
+            },
+            {
+              "text": "A note on emotion, and a label: the lesson presents no specific study here, so treat this as practitioner heuristics. Visible frustration signals you are near your limit. Visible relief after a concession signals you would have paid more."
+            },
+            {
+              "text": "So name your own state before an important session, decide which reactions you are willing to show, and treat the other side's displays as data to interpret, not instructions to follow."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Who negotiates, and in what situation",
+      "scenes": [
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "Mazei and colleagues, 2015",
+            "items": [
+              {
+                "value": "51",
+                "label": "studies pooled"
+              },
+              {
+                "value": "10,888",
+                "label": "participants, several countries"
+              },
+              {
+                "value": "3",
+                "label": "conditions where women did better"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "The third objective asks for discipline in reading evidence on a sensitive question: gender and negotiated outcomes."
+            },
+            {
+              "text": "A meta-analysis by Jens Mazei and colleagues pooled fifty-one studies.",
+              "reveal": 1,
+              "refs": [
+                "R-mazei-2015-meta"
+              ]
+            },
+            {
+              "text": "Ten thousand eight hundred eighty-eight participants, from several countries, comparing the economic outcomes women and men obtain.",
+              "reveal": 2,
+              "refs": [
+                "R-mazei-2015-meta"
+              ]
+            },
+            {
+              "text": "The difference favoring men was not fixed. Women did better when negotiating on behalf of another person, when they had information about the bargaining range, and when they had negotiation experience.",
+              "reveal": 3,
+              "refs": [
+                "R-mazei-2015-meta"
+              ]
+            },
+            {
+              "text": "The pattern points to situations, more than stable traits, as the source of much of the gap. The authors emphasize that the difference can be lessened or even reversed.",
+              "refs": [
+                "R-mazei-2015-meta"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Which claim does the evidence support?"
+            ],
+            "sub": "A short reading exercise."
+          },
+          "cues": [
+            {
+              "text": "Let's test how well you can read it."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-gender",
+            "type": "choice",
+            "prompt": "Which claim is best supported by the Mazei meta-analysis?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Women are inherently worse negotiators."
+              },
+              {
+                "id": "b",
+                "text": "The gap in negotiated outcomes depends on the situation, and clearer information about the range is associated with a smaller gap."
+              },
+              {
+                "id": "c",
+                "text": "The lab effect size predicts the pay gap in a particular organization."
+              },
+              {
+                "id": "d",
+                "text": "Because effects vary across studies, the evidence tells us nothing useful."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-gender-negotiation-context",
+            "feedback": {
+              "a": "Not supported. The difference depended strongly on context and shrank or reversed in some conditions.",
+              "b": "Right. Information about the bargaining range was one of the moderators; the pattern is context-dependent, which points to process levers.",
+              "c": "Not supported. The studies were mostly simulations; effects do not transfer one-for-one to field settings.",
+              "d": "Variation is the finding, not a reason to dismiss it: it identifies conditions under which the gap shrinks."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two tempting simplifications",
+            "left": {
+              "title": "Over-claiming",
+              "points": [
+                "An average difference is a fixed trait",
+                "Predicts how a given person negotiates"
+              ]
+            },
+            "right": {
+              "title": "Under-claiming",
+              "points": [
+                "Effects vary, so dismiss it",
+                "Ignores the levers it points to"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "The evidence demands that you resist two simplifications.",
+              "refs": [
+                "R-mazei-2015-meta"
+              ]
+            },
+            {
+              "text": "One reads an average difference as a fixed trait of individuals.",
+              "reveal": 1
+            },
+            {
+              "text": "The other dismisses the evidence because effects vary. The meta-analysis supports neither.",
+              "reveal": 2,
+              "refs": [
+                "R-mazei-2015-meta"
+              ]
+            },
+            {
+              "text": "And a methodological caution. A moderator analysis compares average effects across groups of studies. It pools thousands of participants, but it is correlational at the level of studies. The studies that used advocacy roles may differ in samples, tasks, years or countries.",
+              "refs": [
+                "R-mazei-2015-meta"
+              ]
+            },
+            {
+              "text": "Add that the evidence is mostly simulations, records gender as a binary category, and measures only economic outcomes. Enough to justify changing processes you control. Not enough to predict how any particular person will negotiate.",
+              "refs": [
+                "R-mazei-2015-meta"
+              ]
+            },
+            {
+              "text": "The practical response is to reduce ambiguity. Share ranges where policy allows, tell every candidate explicitly what is negotiable, and use the same structured conversation with each person. Those moves fit the moderators and ordinary fairness, and they assume nothing about any individual."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Limits, and a worked defense",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Where the first-offer advice breaks",
+            "cards": [
+              {
+                "title": "Uninformed offer",
+                "q": "Do you know the zone?",
+                "fail": "Quick acceptance: you never learn their limit"
+              },
+              {
+                "title": "Extreme anchor",
+                "q": "Will they see it as absurd?",
+                "fail": "Fairness predicts walkouts"
+              },
+              {
+                "title": "Single-issue labs",
+                "q": "Multi-issue, repeated, transparent markets?",
+                "fail": "One number has less room to work"
+              },
+              {
+                "title": "Magnitude",
+                "q": "How big in high-stakes field deals?",
+                "fail": "Robust direction, uncertain size"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the challenge. The first-offer advantage is real in the laboratory, but applied mechanically it produces four predictable mistakes."
+            },
+            {
+              "text": "It assumes the offer is informed. An uninformed opening can be too generous: they accept quickly and you never learn what they would have paid.",
+              "reveal": 1
+            },
+            {
+              "text": "Extreme anchors carry costs the studies did not test. An absurd offer can end the conversation, exactly as the fairness evidence predicts.",
+              "reveal": 2
+            },
+            {
+              "text": "Most evidence comes from single-issue price simulations. In multi-issue deals and repeated relationships, a single number has less room.",
+              "reveal": 3
+            },
+            {
+              "text": "And anchoring in general holds up well, but the size of first-offer effects in high-stakes field negotiations is less well established.",
+              "reveal": 4,
+              "refs": [
+                "R-galinsky-2001-first"
+              ]
+            },
+            {
+              "text": "The fairness evidence has limits too. Ultimatum responders cannot counteroffer, cannot walk to an alternative, and usually face a stranger once. The constraint survives the translation to real deals; the specific percentages do not.",
+              "refs": [
+                "R-oosterbeek-2004-cultural"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "A procurement re-anchor",
+            "left": {
+              "title": "Vendor",
+              "points": [
+                "First proposal: $14M"
+              ]
+            },
+            "right": {
+              "title": "State agency",
+              "points": [
+                "Estimate: $9–10M",
+                "Three comparable implementations",
+                "Named alternative"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Here is what the defense looks like in practice. A state agency is buying a case-management system. This is a hypothetical example."
+            },
+            {
+              "text": "The vendor proposes fourteen million dollars.",
+              "reveal": 1
+            },
+            {
+              "text": "The agency's own estimate, built from three comparable implementations, is nine to ten million.",
+              "reveal": 2
+            },
+            {
+              "text": "The weak response is to meet the vendor partway, at twelve million. That bargains from their number."
+            },
+            {
+              "text": "Instead the agency presents its estimate and the comparables, names its alternative, extending the current system with a smaller contractor, and asks the vendor to explain the difference line by line."
+            },
+            {
+              "text": "The conversation now revolves around two reference points, and one of them belongs to the agency. Then concede in decreasing steps, and explain each one, because unexplained concessions invite more pressure."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Designing around the mind",
+      "scenes": [
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Negotiation Chamber",
+                "detail": "Decide whether to open, and defend against anchors",
+                "href": "#/exercise/w07-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Galinsky & Mussweiler (2001), First offers as anchors",
+                "href": "#/library/R-galinsky-2001-first"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let's bring it together."
+            },
+            {
+              "text": "Informed first offers tend to anchor settlements; uninformed ones can give away surplus. Defend against an anchor by focusing on their alternatives, their reservation price, or your own target."
+            },
+            {
+              "text": "Offers perceived as unfair get rejected even at a cost, so justify claims with criteria. And outcomes depend on the situation as well as the person, which gives you process levers rather than stereotypes."
+            },
+            {
+              "text": "Most of this evidence comes from simulations: robust in direction, uncertain in field magnitude. Use it to design your preparation, not to predict a person."
+            },
+            {
+              "text": "Take the comprehension check below; it is the same as the written lesson's. Then use the Negotiation Chamber to practice opening and re-anchoring, and read Galinsky and Mussweiler's article itself.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson keeps the full tables and methodological notes. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

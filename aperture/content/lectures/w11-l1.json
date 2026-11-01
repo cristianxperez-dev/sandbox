@@ -1,0 +1,882 @@
+{
+  "id": "w11-l1-lecture",
+  "lesson": "w11-l1",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "title": "What Your Lawyer Means by \"It Depends\"",
+  "subtitle": "Legal reasoning for non-lawyers: prediction, rules and proof",
+  "summary": "A narrated, interactive version of Lesson 1 of the law week. It covers the same objectives — the prediction view of law, rules versus standards, issue–rule–application–conclusion with the burden of proof, and when precedent and jurisdiction make a confident conclusion premature — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Two words that sound like evasion",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 11 · Lesson 1 · Lecture",
+            "title": "What your lawyer means by \"it depends\"",
+            "sub": "Prediction, rules and proof"
+          },
+          "cues": [
+            {
+              "text": "Before we begin, one important note. This is general educational material about legal concepts. It is not legal advice."
+            },
+            {
+              "text": "It is mostly about United States law, and law differs across states and countries, changes over time, and turns on facts no course can see. For any specific agreement, talk to a qualified attorney."
+            },
+            {
+              "text": "With that said, let me start with a scene you have probably lived through."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "\"Are we allowed to do this?\"",
+              "\"It depends.\""
+            ],
+            "sub": "A hypothetical product launch."
+          },
+          "cues": [
+            {
+              "text": "A product director at a mid-sized software company plans to launch a feature next month. She asks the company lawyer a simple question. Are we allowed to do this?",
+              "reveal": 0
+            },
+            {
+              "text": "The lawyer says: it depends.",
+              "reveal": 1
+            },
+            {
+              "text": "She hears evasion. Here is the thing. The lawyer meant something precise."
+            },
+            {
+              "text": "It depends on which facts are true, which jurisdiction's law applies, how a regulator or a judge would characterize the feature, and how much risk the company will carry while it finds out."
+            },
+            {
+              "text": "Notice that at least one of those, the facts, is something the director could start pinning down herself this week. By the end of this lecture, \"it depends\" should sound less like a dodge and more like the start of a useful conversation."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "quote",
+            "text": "The prophecies of what the courts will do in fact, and nothing more pretentious, are what I mean by the law.",
+            "who": "Oliver Wendell Holmes Jr., 1897",
+            "refs": [
+              "R-holmes-1897-path"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The best explanation of that answer is more than a century old.",
+              "refs": [
+                "R-holmes-1897-path"
+              ]
+            },
+            {
+              "text": "In an eighteen ninety-seven address, later published in the Harvard Law Review, Oliver Wendell Holmes Junior defined law this way.",
+              "refs": [
+                "R-holmes-1897-path"
+              ],
+              "reveal": 1
+            },
+            {
+              "text": "For practical purposes, he argued, law is a forecast of how public force will be applied.",
+              "refs": [
+                "R-holmes-1897-path"
+              ]
+            },
+            {
+              "text": "He asked readers to look at law the way a \"bad man\" would: someone indifferent to morality, who cares only about material consequences.",
+              "refs": [
+                "R-holmes-1897-path"
+              ]
+            },
+            {
+              "text": "The point was not to behave badly. It was to separate what the law actually requires from what we wish it required, and from what we think is right.",
+              "refs": [
+                "R-holmes-1897-path"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Verdict versus forecast",
+            "left": {
+              "title": "A poor answer",
+              "points": [
+                "Arrives as a verdict",
+                "Yes or no",
+                "No stated confidence"
+              ]
+            },
+            "right": {
+              "title": "A good answer",
+              "points": [
+                "Arrives as a forecast",
+                "States its conditions",
+                "Gives a range and a confidence"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "We will treat Holmes's idea as a working tool, not a philosophy."
+            },
+            {
+              "text": "When you ask counsel a question, you are asking for a forecast. A poor forecast arrives as a verdict.",
+              "reveal": 1
+            },
+            {
+              "text": "A good one comes with conditions, ranges and a stated confidence. That converts a legal question into the language you already use: probability, consequence, cost and time.",
+              "reveal": 2
+            },
+            {
+              "text": "Your job is to supply the facts that sharpen the forecast, and to combine it with the business judgment that remains yours."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Where the rules come from",
+      "scenes": [
+        {
+          "visual": {
+            "type": "flow",
+            "title": "Layers of United States law",
+            "steps": [
+              {
+                "label": "Constitutions",
+                "text": "Set the outer limits"
+              },
+              {
+                "label": "Statutes",
+                "text": "Enacted by legislatures"
+              },
+              {
+                "label": "Regulations",
+                "text": "Issued by agencies under statutes"
+              },
+              {
+                "label": "Courts",
+                "text": "Interpret, and build common law"
+              },
+              {
+                "label": "Contracts",
+                "text": "Private rules, within public law"
+              }
+            ],
+            "refs": [
+              "R-valbrune-2019-business"
+            ]
+          },
+          "cues": [
+            {
+              "text": "To forecast an outcome, you need to know where the governing rule lives. In the United States, law comes in layers.",
+              "refs": [
+                "R-valbrune-2019-business"
+              ]
+            },
+            {
+              "text": "Constitutions set the outer limits.",
+              "reveal": 1
+            },
+            {
+              "text": "Legislatures enact statutes.",
+              "reveal": 2
+            },
+            {
+              "text": "Agencies issue regulations, under authority that statutes delegate to them.",
+              "reveal": 3
+            },
+            {
+              "text": "Courts decide disputes and interpret all of the above. In fields such as contracts and torts, they also develop the common law through their decisions.",
+              "reveal": 4,
+              "refs": [
+                "R-valbrune-2019-business"
+              ]
+            },
+            {
+              "text": "And contracts add one more layer: private rules the parties write for themselves, enforceable to the extent public law allows.",
+              "reveal": 5
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "One federal system.",
+              "Fifty state systems.",
+              "Precedent binds within a jurisdiction."
+            ],
+            "sub": "Most contract, employment, agency and corporate law is state law."
+          },
+          "cues": [
+            {
+              "text": "Now the complication that makes confident answers dangerous."
+            },
+            {
+              "text": "There is a federal system and there are fifty state systems. Most contract, employment, agency and corporate law is state law.",
+              "reveal": 1,
+              "refs": [
+                "R-valbrune-2019-business"
+              ]
+            },
+            {
+              "text": "That is why the same clause can be enforceable in one state and void in another."
+            },
+            {
+              "text": "Courts in common-law systems also follow precedent, the doctrine called stare decisis. A court is bound by earlier decisions of higher courts in its own jurisdiction on materially similar questions. Decisions from elsewhere are persuasive at most.",
+              "reveal": 2,
+              "refs": [
+                "R-valbrune-2019-business"
+              ],
+              "say": "Courts in common-law systems also follow precedent, the doctrine called starry decisis. A court is bound by earlier decisions of higher courts in its own jurisdiction on materially similar questions. Decisions from elsewhere are persuasive at most."
+            },
+            {
+              "text": "So legal argument is largely argument by analogy. One side says this case is like an earlier one. The other distinguishes it, by pointing to a fact that should change the outcome."
+            },
+            {
+              "text": "When a lawyer says a case is distinguishable, ask the obvious question: which fact?"
+            },
+            {
+              "text": "And outside the United States, the structure can differ sharply. Most of Latin America and continental Europe follow civil-law traditions, built around comprehensive codes rather than judge-made law.",
+              "refs": [
+                "R-valbrune-2019-business"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Is a confident answer ready?"
+            ],
+            "sub": "A short case decision."
+          },
+          "cues": [
+            {
+              "text": "Let's test whether you can hear when a confident conclusion is premature."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-precedent",
+            "type": "choice",
+            "prompt": "A colleague forwards a news story: a court in another state refused to enforce a clause almost identical to one in your company's standard agreement. Your company and its counterparties are in a different state. What is the soundest conclusion?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Our clause is unenforceable too; the wording is the same."
+              },
+              {
+                "id": "b",
+                "text": "The decision is relevant but not binding here; the answer depends on our jurisdiction's law and facts, so the question goes to counsel."
+              },
+              {
+                "id": "c",
+                "text": "The decision is irrelevant because it comes from another state."
+              },
+              {
+                "id": "d",
+                "text": "Our clause is safe, because no court in our state has ruled against it."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-precedent",
+            "feedback": {
+              "a": "Precedent binds only within a jurisdiction, and most contract law is state law. The same wording can be enforceable in one state and void in another.",
+              "b": "Right. An out-of-state decision is persuasive at most. It is a signal worth a narrow question to counsel, not a conclusion.",
+              "c": "Too far the other way. Decisions from elsewhere can be persuasive, especially where your own courts have not ruled. It is a reason to ask, not to ignore.",
+              "d": "Silence is not approval. With no binding decision, the outcome is genuinely uncertain, which makes a confident answer premature in either direction."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Rules and standards",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two ways to write a command",
+            "left": {
+              "title": "Rule",
+              "points": [
+                "\"Payable within 30 days\"",
+                "Content fixed before acting",
+                "Costly to write well",
+                "Can misfire at the edges"
+              ]
+            },
+            "right": {
+              "title": "Standard",
+              "points": [
+                "\"Payable within a reasonable time\"",
+                "Content supplied afterward",
+                "Cheap to write",
+                "Costly to apply, invites disputes"
+              ]
+            },
+            "refs": [
+              "R-kaplow-1992-rules"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Once you have found the governing provision, notice what kind of command it is. Legal commands come in two broad forms."
+            },
+            {
+              "text": "A rule fixes the content of the law before anyone acts. Invoices are payable within thirty days.",
+              "reveal": 1,
+              "refs": [
+                "R-kaplow-1992-rules"
+              ]
+            },
+            {
+              "text": "A standard leaves the content to be worked out after the fact. Invoices are payable within a reasonable time.",
+              "reveal": 2,
+              "refs": [
+                "R-kaplow-1992-rules"
+              ]
+            },
+            {
+              "text": "Louis Kaplow's economic analysis frames the choice as a question of timing: when is the work of giving content to the law done?",
+              "refs": [
+                "R-kaplow-1992-rules"
+              ]
+            },
+            {
+              "text": "Rules cost more to write well, because someone must anticipate the situations in advance. Standards cost more to apply, because every party, adviser and judge must work out what \"reasonable\" means, dispute by dispute.",
+              "refs": [
+                "R-kaplow-1992-rules"
+              ]
+            },
+            {
+              "text": "So rules buy certainty at the price of fit. Standards buy fit at the price of certainty."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "Kaplow's frequency heuristic",
+            "x": [
+              "Similar each time",
+              "Varied each time"
+            ],
+            "y": [
+              "Rare",
+              "Frequent"
+            ],
+            "cells": [
+              [
+                "Rules tend to win",
+                "Less clear-cut"
+              ],
+              [
+                "Less clear-cut",
+                "Standards tend to win"
+              ]
+            ],
+            "refs": [
+              "R-kaplow-1992-rules"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Kaplow's analysis gives you a practical heuristic.",
+              "refs": [
+                "R-kaplow-1992-rules"
+              ]
+            },
+            {
+              "text": "When the same kind of conduct happens often and looks similar each time, the up-front cost of a rule is spread over many cases. Rules tend to win.",
+              "reveal": 1,
+              "refs": [
+                "R-kaplow-1992-rules"
+              ]
+            },
+            {
+              "text": "In between, the answer is less clear. Frequent but varied situations, or rare but similar ones, call for judgment about how costly the mistakes of each form would be.",
+              "reveal": 3
+            },
+            {
+              "text": "When situations are rare and varied, writing an accurate rule for each would cost more than it saves. Standards tend to win.",
+              "reveal": 4,
+              "refs": [
+                "R-kaplow-1992-rules"
+              ]
+            },
+            {
+              "text": "Kaplow adds one more point. People can learn a rule before they act, so behavior tracks rules more closely than standards whose content appears only later.",
+              "refs": [
+                "R-kaplow-1992-rules"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "The same choice, inside the company",
+            "cards": [
+              {
+                "title": "Travel",
+                "q": "Fixed daily amounts, or \"spend responsibly\"?",
+                "fail": "Rules invite gaming; standards invite uneven enforcement"
+              },
+              {
+                "title": "Gifts",
+                "q": "A named dollar limit, or \"avoid conflicts\"?",
+                "fail": "A limit misses odd cases; a principle depends on who decides"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "This is not only a legal matter. Your internal policies face exactly the same choice."
+            },
+            {
+              "text": "A travel policy with fixed daily amounts is a rule. \"Spend responsibly\" is a standard.",
+              "reveal": 1
+            },
+            {
+              "text": "A gift policy that names a dollar limit is a rule. \"Avoid conflicts of interest\" is a standard.",
+              "reveal": 2
+            },
+            {
+              "text": "Rely only on standards, and people learn that outcomes depend on who decides. Rely only on rules, and you invite gaming at the edges and frustrate everyone whose situation the rule did not foresee."
+            },
+            {
+              "text": "One more wrinkle. A standard read by a neutral court is very different from a standard read \"in the Company's sole discretion.\" Always ask who supplies the content later, and with what incentives."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-rules",
+            "type": "choice",
+            "prompt": "A company handles hundreds of nearly identical software-licence renewals a year, and once or twice a year faces a one-off crisis such as a data breach at a supplier. Following Kaplow's heuristic, how should it govern the two?",
+            "options": [
+              {
+                "id": "a",
+                "text": "A rule for renewals, a standard for the one-off crises."
+              },
+              {
+                "id": "b",
+                "text": "A standard for renewals, a rule for the crises."
+              },
+              {
+                "id": "c",
+                "text": "Detailed rules for both, to maximize certainty."
+              },
+              {
+                "id": "d",
+                "text": "Standards for both, to keep flexibility."
+              }
+            ],
+            "answer": "a",
+            "concept": "c-rules-vs-standards",
+            "feedback": {
+              "a": "Right. Frequent, similar conduct spreads the up-front cost of a rule over many cases; rare, varied situations favor a standard applied with judgment.",
+              "b": "This reverses the heuristic. Renewals are frequent and similar, which is exactly where a rule repays its drafting cost.",
+              "c": "Writing an accurate rule for rare and varied crises would cost more than it saves, and the rule would likely misfire on the next crisis nobody foresaw.",
+              "d": "For hundreds of similar renewals, a standard means re-arguing \"reasonable\" every time and uneven outcomes depending on who decides."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Who must prove what",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Three standards of proof",
+            "steps": [
+              "Preponderance: more likely than not — most civil cases",
+              "Clear and convincing — e.g. fraud claims in many jurisdictions",
+              "Beyond a reasonable doubt — criminal prosecutions"
+            ],
+            "refs": [
+              "R-valbrune-2019-business"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Every legal dispute also has a burden of proof: which party must persuade the decision-maker, and how convincingly.",
+              "refs": [
+                "R-valbrune-2019-business"
+              ]
+            },
+            {
+              "text": "In most United States civil cases, including contract disputes, the party bringing the claim must prove it by a preponderance of the evidence. That means more likely than not.",
+              "reveal": 1,
+              "refs": [
+                "R-valbrune-2019-business"
+              ]
+            },
+            {
+              "text": "Some civil matters, such as fraud claims in many jurisdictions, require clear and convincing evidence, a level in between.",
+              "reveal": 2,
+              "refs": [
+                "R-valbrune-2019-business"
+              ]
+            },
+            {
+              "text": "And criminal prosecutions require proof beyond a reasonable doubt.",
+              "reveal": 3,
+              "refs": [
+                "R-valbrune-2019-business"
+              ]
+            },
+            {
+              "text": "For an executive, the burden matters in two ways. First, it tells you who loses when the evidence is evenly balanced. That is the side carrying the burden."
+            },
+            {
+              "text": "Second, it tells you which records you need now. If you might one day have to show that a contractor's work was defective, or that a personnel decision had legitimate reasons, the time to create that evidence is when you act."
+            },
+            {
+              "text": "Contemporaneous notes, emails that state reasons, documented processes. They are often worth more than any argument made later."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "IRAC, extended for executives",
+            "steps": [
+              {
+                "label": "Issue",
+                "text": "The precise legal question"
+              },
+              {
+                "label": "Rule",
+                "text": "Source and jurisdiction"
+              },
+              {
+                "label": "Application",
+                "text": "Material facts, both ways"
+              },
+              {
+                "label": "Conclusion",
+                "text": "Likely outcome; what changes it"
+              },
+              {
+                "label": "Consequence",
+                "text": "Stakes, confidence, counsel?"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now a structure that puts all of this together. Law students learn to organize analysis as IRAC: issue, rule, application, conclusion.",
+              "say": "Now a structure that puts all of this together. Law students learn to organize analysis as I, R, A, C: issue, rule, application, conclusion."
+            },
+            {
+              "text": "Be clear about its status. It is a teaching and writing heuristic, not a theory of how judges decide. Its value for you is discipline."
+            },
+            {
+              "text": "Name the precise question.",
+              "reveal": 1
+            },
+            {
+              "text": "Separate the governing rule, with its source and jurisdiction, from your opinion of it.",
+              "reveal": 2
+            },
+            {
+              "text": "Apply it to the facts that matter, including the ones that cut against you.",
+              "reveal": 3
+            },
+            {
+              "text": "Reach a conclusion you could defend, and say what would change it.",
+              "reveal": 4
+            },
+            {
+              "text": "This course adds a fifth step for executive use: the consequence, and your confidence in the conclusion. Is this worth counsel's time?",
+              "reveal": 5
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "\"Delivered by March 1 — guaranteed.\"",
+              "Signed letter: reasonable efforts toward target dates."
+            ],
+            "sub": "A hypothetical consulting engagement."
+          },
+          "cues": [
+            {
+              "text": "Let's run it on a case. This one is hypothetical."
+            },
+            {
+              "text": "A consulting partner emails a hospital client: we will deliver the staffing model by March first. Guaranteed.",
+              "reveal": 0
+            },
+            {
+              "text": "But the signed engagement letter promises only commercially reasonable efforts to meet target dates, and says the letter is the parties' entire agreement.",
+              "reveal": 1
+            },
+            {
+              "text": "The model arrives on March twentieth. The hospital's chief operating officer asks: did the firm breach?"
+            },
+            {
+              "text": "The issue: did the firm promise delivery by March first, or only reasonable efforts toward a target?"
+            },
+            {
+              "text": "The rule: contract terms are generally read as written. An entire-agreement clause can limit the weight of statements outside the signed document. And \"commercially reasonable efforts\" is a standard, not a deadline."
+            },
+            {
+              "text": "Now the application. Which single fact would you most want to know about that email?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-irac",
+            "type": "choice",
+            "prompt": "In the consulting case, which fact about the \"guaranteed\" email matters most to the breach question?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Whether it was sent before or after the engagement letter was signed."
+              },
+              {
+                "id": "b",
+                "text": "How senior the partner who sent it was."
+              },
+              {
+                "id": "c",
+                "text": "Whether the word \"guaranteed\" was in capital letters."
+              },
+              {
+                "id": "d",
+                "text": "How many people at the hospital read it."
+              }
+            ],
+            "answer": "a",
+            "concept": "c-issue-spotting",
+            "feedback": {
+              "a": "Right. Sent before signing, the entire-agreement clause probably weakens it. Sent afterward, the hospital can argue it modified the agreement, and the firm will call it reassurance.",
+              "b": "Seniority can matter to authority questions, but the integration clause makes timing the first fact to pin down.",
+              "c": "Emphasis does not decide whether a statement outside the signed document became part of the deal. Timing relative to the signed letter does.",
+              "d": "Readership is not the question. What matters is whether the email was superseded by, or later modified, the signed agreement."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "What was promised?",
+              "In which document?",
+              "Who can prove what?"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Timing is the key fact. Sent before signing, the guarantee is probably weakened by the entire-agreement clause. Sent after, the hospital argues it modified the deal, and the firm calls it reassurance."
+            },
+            {
+              "text": "On the efforts standard, the firm will say its efforts were reasonable. The hospital, as the claimant, carries the burden of showing they were not.",
+              "reveal": 1
+            },
+            {
+              "text": "Conclusion: a breach claim is uncertain. Consequence: twenty days of delay may matter less than the relationship. Document the costs, ask counsel one narrow question about the email, and use the uncertainty in a commercial conversation.",
+              "reveal": 2
+            },
+            {
+              "text": "See what the structure did. It turned an emotional question, \"they promised!\", into three answerable ones."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "When counsel gives you a number",
+      "scenes": [
+        {
+          "visual": {
+            "type": "calc",
+            "title": "A sixty percent chance, priced",
+            "lines": [
+              {
+                "label": "Award if we win",
+                "value": "200,000"
+              },
+              {
+                "label": "Probability of winning",
+                "value": "60%"
+              },
+              {
+                "label": "Expected award",
+                "value": "120,000"
+              },
+              {
+                "label": "Fees, time and attention",
+                "value": "150,000"
+              }
+            ],
+            "result": {
+              "label": "Expected value of suing",
+              "value": "−30,000"
+            },
+            "note": "Synthetic numbers for illustration; settlement ignored."
+          },
+          "cues": [
+            {
+              "text": "Suppose your general counsel says a lawsuit against a former vendor has about a sixty percent chance of success. The numbers that follow are invented."
+            },
+            {
+              "text": "Say winning would bring two hundred thousand.",
+              "reveal": 1
+            },
+            {
+              "text": "Sixty percent of that is an expected award of one hundred twenty thousand.",
+              "reveal": 3
+            },
+            {
+              "text": "Now add fees, time and management attention. Say they come to one hundred fifty thousand.",
+              "reveal": 4
+            },
+            {
+              "text": "The expected value of suing is minus thirty thousand. A sixty percent chance of winning less than the cost of litigating is a losing proposition.",
+              "reveal": 5
+            },
+            {
+              "text": "So treat the number as a forecast, not a fact. Ask what it rests on: comparable cases, the particular judge, or professional intuition."
+            },
+            {
+              "text": "Ask what range would not surprise counsel, which new fact would move the estimate most, and how likely settlement is before trial."
+            },
+            {
+              "text": "The legal forecast is counsel's job. The business valuation is yours."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "The limits of this toolkit",
+            "cards": [
+              {
+                "title": "Prediction is a lens",
+                "q": "Law as a price to be paid?",
+                "fail": "Misses why people treat rules as reasons; erodes trust"
+              },
+              {
+                "title": "Structure breeds confidence",
+                "q": "I can spot the issue — can I answer it?",
+                "fail": "Confidence arrives faster than accuracy"
+              },
+              {
+                "title": "Legal is not ethical",
+                "q": "It is lawful — is it right?",
+                "fail": "Lawful acts can still corrode trust"
+              }
+            ],
+            "refs": [
+              "R-holmes-1897-path"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now let me argue against what I have just taught you."
+            },
+            {
+              "text": "The prediction view has critics. Legal philosophers object that it describes law from the outside, from someone trying to avoid sanctions. It misses why officials and citizens treat rules as reasons for action, not prices.",
+              "reveal": 1,
+              "refs": [
+                "R-holmes-1897-path"
+              ]
+            },
+            {
+              "text": "For you, the practical danger is that pricing every obligation erodes the trust that makes contracts and organizations work. Holmes's \"bad man\" is a diagnostic lens, not a model for conduct.",
+              "refs": [
+                "R-holmes-1897-path"
+              ]
+            },
+            {
+              "text": "Second, a little structure produces confidence faster than it produces accuracy.",
+              "reveal": 2
+            },
+            {
+              "text": "You can recognize that a non-compete raises an enforceability question without being able to answer it. The answer turns on state statutes, recent decisions, the facts, and a court's discretion to narrow or refuse the clause. Your goal is to spot issues and frame questions, not to resolve them."
+            },
+            {
+              "text": "Third, legal and ethical are different tests. Holmes separated them so lawyers would not confuse what a rule says with what it ought to say. Executives need the separation the other way too: an action can be lawful and still be wrong.",
+              "reveal": 3,
+              "refs": [
+                "R-holmes-1897-path"
+              ]
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-reflect",
+            "type": "reflect",
+            "prompt": "Think of a policy or agreement you own. Is its most important term a rule or a standard? Who supplies its content when a hard case arrives, and with what incentives? Would you change its form after this lesson?",
+            "concept": "c-rules-vs-standards"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Bringing it together",
+      "scenes": [
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Contract Lab",
+                "detail": "Flag the issues in a fictional consulting agreement",
+                "href": "#/exercise/w11-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Holmes (1897), The Path of the Law",
+                "href": "#/library/R-holmes-1897-path"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let's bring it together."
+            },
+            {
+              "text": "Legal reasoning is structured prediction. Treat advice as a forecast and ask for its conditions, range and confidence."
+            },
+            {
+              "text": "Rules give certainty and misfire at the edges. Standards give fit and invite disputes. Precedent binds within a jurisdiction, and most business law is state law. The burden of proof decides ties, so create your evidence when you act."
+            },
+            {
+              "text": "Next, take the comprehension check below. It is the same check as the written lesson. Then open the Contract Lab, and read the first half of Holmes's essay, through the \"bad man\" passage.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson stays here, with the full issue-spotting checklist and the methodological notes. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

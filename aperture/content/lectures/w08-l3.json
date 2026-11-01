@@ -1,0 +1,715 @@
+{
+  "id": "w08-l3-lecture",
+  "lesson": "w08-l3",
+  "title": "Does Management Matter?",
+  "subtitle": "Practices, measures and their limits",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 3. It covers the same objectives — how the World Management Survey measures practices, what the randomized textile experiment and its follow-up show and do not show, and how Goodhart’s law and the multitask problem shape an operating rhythm — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "The productivity puzzle",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 8 · Lesson 3 · Lecture",
+            "title": "Does management matter?",
+            "sub": "Practices, measures and their limits"
+          },
+          "cues": [
+            {
+              "text": "Take two factories in the same narrow industry, in the same country, buying the same machines and hiring from the same labor market."
+            },
+            {
+              "text": "One produces far more than the other from the same inputs. Why?"
+            },
+            {
+              "text": "For a long time, economists filed much of that gap under a residual they called productivity. Which is a polite way of saying: we do not know."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "Measuring management at scale",
+            "items": [
+              {
+                "value": "732",
+                "label": "medium-sized manufacturing firms"
+              },
+              {
+                "value": "4",
+                "label": "countries: United States, France, Germany, United Kingdom"
+              },
+              {
+                "value": "18",
+                "label": "practices scored on a one-to-five grid"
+              }
+            ],
+            "note": "Source: Bloom and Van Reenen, 2007.",
+            "refs": [
+              "R-bloom-2007-measuring"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Nicholas Bloom and John Van Reenen asked whether ordinary management practices could explain part of the gap, and built a way to measure them.",
+              "reveal": 0,
+              "refs": [
+                "R-bloom-2007-measuring"
+              ]
+            },
+            {
+              "text": "Their first large survey covered seven hundred and thirty-two medium-sized manufacturing firms,",
+              "reveal": 1,
+              "refs": [
+                "R-bloom-2007-measuring"
+              ]
+            },
+            {
+              "text": "in the United States, France, Germany and the United Kingdom.",
+              "reveal": 2
+            },
+            {
+              "text": "Interviewers scored eighteen practices, each on a defined one-to-five grid.",
+              "reveal": 3,
+              "refs": [
+                "R-bloom-2007-measuring"
+              ]
+            },
+            {
+              "text": "Management quality varied widely within every country, with a long tail of very badly managed firms. And better scores went with higher productivity, profitability, market valuation and survival.",
+              "refs": [
+                "R-bloom-2007-measuring"
+              ]
+            },
+            {
+              "text": "Poor practices were more common where competition was weak, and where family firms handed control to the eldest son.",
+              "refs": [
+                "R-bloom-2007-measuring"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "If basic practices pay,",
+              "why don’t more firms adopt them?"
+            ],
+            "sub": "Either they don’t cause performance, or something blocks adoption."
+          },
+          "cues": [
+            {
+              "text": "That leaves a puzzle. If tracking performance, setting sensible targets and promoting on merit are so strongly associated with performance,",
+              "reveal": 0
+            },
+            {
+              "text": "why do so many firms not adopt them?",
+              "reveal": 1
+            },
+            {
+              "text": "There are only two possibilities. Either the practices do not really cause the performance, or something stops firms from adopting them. Hold that fork in mind."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "How do you measure management?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Three families of practice",
+            "cards": [
+              {
+                "title": "Monitoring",
+                "q": "Tracked continuously, reviewed on a cadence",
+                "fail": "Low score: problems fixed after they recur"
+              },
+              {
+                "title": "Targets",
+                "q": "Clear, balanced, stretching, linked across levels",
+                "fail": "Low score: vague, short-term, uncontrollable"
+              },
+              {
+                "title": "People management",
+                "q": "Reward and promote on performance",
+                "fail": "Low score: tenure rules; poor performers stay"
+              }
+            ],
+            "refs": [
+              "R-bloom-2007-measuring"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Management is easy to talk about and hard to measure, so the method matters. The eighteen practices fall into three families. What follows is a teaching paraphrase, not the survey’s scoring grid.",
+              "reveal": 0,
+              "refs": [
+                "R-bloom-2007-measuring"
+              ]
+            },
+            {
+              "text": "Monitoring. A well-run plant tracks performance continuously, reviews it on a regular cadence and treats a problem as a trigger for a structured fix. A poorly run one fixes problems after they recur.",
+              "reveal": 1
+            },
+            {
+              "text": "Targets. Good targets are clear, balanced across financial and non-financial outcomes, stretching but achievable, and linked across levels.",
+              "reveal": 2
+            },
+            {
+              "text": "People management. Rewards and promotion follow performance, poor performance is addressed, and talent is developed. In low-scoring firms, tenure decides and poor performers stay.",
+              "reveal": 3
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Double-blind in two senses",
+            "steps": [
+              "Open-ended conversation with the plant manager",
+              "Managers not told they are being scored",
+              "Interviewers blind to the firm’s performance"
+            ],
+            "refs": [
+              "R-bloom-2007-measuring"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The design trick is what makes the numbers credible.",
+              "reveal": 0
+            },
+            {
+              "text": "Interviewers held conversational, open-ended telephone interviews with plant managers, rather than asking them to rate themselves.",
+              "reveal": 1,
+              "refs": [
+                "R-bloom-2007-measuring"
+              ]
+            },
+            {
+              "text": "Managers were not told they were being scored, which limits flattering answers.",
+              "reveal": 2
+            },
+            {
+              "text": "And interviewers did not know the firm’s performance in advance, which limits scores colored by what they already believed.",
+              "reveal": 3
+            },
+            {
+              "text": "Still, this is a correlation. Perhaps successful firms can afford good management, or good managers choose good firms. To get at cause, you need an experiment."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "From correlation to cause",
+      "scenes": [
+        {
+          "visual": {
+            "type": "flow",
+            "title": "The evidence ladder",
+            "steps": [
+              {
+                "label": "Measure",
+                "text": "Scores vary and predict performance"
+              },
+              {
+                "label": "Test",
+                "text": "Randomly chosen plants get help"
+              },
+              {
+                "label": "Revisit",
+                "text": "About nine years later"
+              },
+              {
+                "label": "Generalize?",
+                "text": "An open question"
+              }
+            ],
+            "refs": [
+              "R-bloom-2007-measuring",
+              "R-bloom-2013-does",
+              "R-bloom-2020-do"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Here is the ladder of evidence this research climbed.",
+              "reveal": 0
+            },
+            {
+              "text": "The first rung was measurement: the survey you have just seen.",
+              "reveal": 1,
+              "refs": [
+                "R-bloom-2007-measuring"
+              ]
+            },
+            {
+              "text": "The second was a test. Bloom and colleagues ran a field experiment in large Indian textile firms. Plants chosen at random received several months of free, intensive consulting to adopt a defined set of operational practices. Control plants received only the initial diagnostic.",
+              "reveal": 2,
+              "refs": [
+                "R-bloom-2013-does"
+              ]
+            },
+            {
+              "text": "The third rung was a revisit, years later.",
+              "reveal": 3
+            },
+            {
+              "text": "And the fourth is still an open question: how far any of it travels. We will climb each rung in turn.",
+              "reveal": 4
+            },
+            {
+              "text": "Before I tell you the result, make a prediction."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-effect",
+            "type": "estimate",
+            "concept": "c-structured-management-practices",
+            "prompt": "In the published article, by how much did adopting the management practices raise productivity in the treated plants in the first year?",
+            "min": 0,
+            "max": 60,
+            "step": 1,
+            "unit": "%",
+            "initial": 30,
+            "answer": 17,
+            "tolerance": 5,
+            "feedback": {
+              "correct": "Close. The published article reports 17 percent in the first year — a substantial gain from a few months of help with basic practices.",
+              "incorrect": "The published article reports 17 percent in the first year. Earlier working-paper versions reported a smaller figure, so cite the version you actually read."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "What the experiment found",
+            "items": [
+              {
+                "value": "17%",
+                "label": "first-year productivity gain, published article"
+              },
+              {
+                "value": "28",
+                "label": "plants, across 17 firms"
+              },
+              {
+                "value": "Information",
+                "label": "the main barrier to adoption"
+              }
+            ],
+            "note": "Source: Bloom, Eifert and Mahajan, 2013.",
+            "refs": [
+              "R-bloom-2013-does"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The published article reports that adopting the practices raised productivity by seventeen percent in the first year, through better quality, higher efficiency and lower inventory.",
+              "reveal": 1,
+              "refs": [
+                "R-bloom-2013-does"
+              ]
+            },
+            {
+              "text": "Within three years, treated firms had opened more production plants. And earlier working-paper versions reported a smaller first-year figure, a reminder to cite the version you actually read.",
+              "refs": [
+                "R-bloom-2013-does"
+              ]
+            },
+            {
+              "text": "Now the caution. The sample was small: twenty-eight plants across seventeen firms. Randomization makes the estimate unbiased, but not precise.",
+              "reveal": 2
+            },
+            {
+              "text": "And back to our fork. The authors concluded that the main barrier had been informational. Owners did not know the practices, or doubted they would pay.",
+              "reveal": 3,
+              "refs": [
+                "R-bloom-2013-does"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "About half the practices were dropped.",
+              "The gap with control plants remained.",
+              "Practices live in people."
+            ],
+            "sub": "The follow-up, about nine years later.",
+            "refs": [
+              "R-bloom-2020-do"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the revisit. A follow-up returned to the same firms about nine years after the experiment.",
+              "reveal": 0,
+              "refs": [
+                "R-bloom-2020-do"
+              ]
+            },
+            {
+              "text": "Roughly half of the adopted practices had been dropped.",
+              "reveal": 0
+            },
+            {
+              "text": "Yet a large and significant gap with the control plants remained.",
+              "reveal": 1,
+              "refs": [
+                "R-bloom-2020-do"
+              ]
+            },
+            {
+              "text": "Practices had spread within firms, from experimental plants to the firms’ other plants, but few had spread across firms. And among the reasons most often given for dropping them were turnover among managers and a lack of directors’ time.",
+              "reveal": 2,
+              "refs": [
+                "R-bloom-2020-do"
+              ]
+            },
+            {
+              "text": "The fourth rung is still open: how far results from large textile plants travel. Those plants started from low levels of structured management, exactly where basic practices should pay most. And the treatment bundled many practices with months of expert attention, so it cannot say which practice mattered."
+            },
+            {
+              "text": "So the survey shows the association is broad. The experiment shows that in at least one setting the arrow runs from practices to productivity. Neither tells you the size of the effect in a professional services firm, a hospital department or a sports organization."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "When measures become targets",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "An observation, not a theorem",
+            "term": "Goodhart’s law",
+            "definition": "When a measure becomes a target, it ceases to be a good measure.",
+            "example": "Rewarded on handle time, agents end hard calls early."
+          },
+          "cues": [
+            {
+              "text": "Every management system runs on measures, and every measure invites a response.",
+              "reveal": 0
+            },
+            {
+              "text": "Goodhart’s law, named for the economist Charles Goodhart, is usually quoted in a paraphrase: when a measure becomes a target, it ceases to be a good measure. It is an observation, not a theorem.",
+              "reveal": 1
+            },
+            {
+              "text": "The mechanism is simple. Once rewards or reputations depend on a number, people look for the cheapest ways to move it. And the cheapest ways are often not the ones that improve the outcome the number was meant to track."
+            },
+            {
+              "text": "A hypothetical call center rewards average handle time. Agents end difficult calls early, customers call back, and total workload rises.",
+              "reveal": 2
+            },
+            {
+              "text": "A software team judged on story points finds its estimates inflating. A law firm that promotes on billable hours sees associates bill more and train juniors less. All hypothetical, all familiar."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "Where gaming risk concentrates",
+            "x": [
+              "Easy to measure",
+              "Hard to measure"
+            ],
+            "y": [
+              "Matters little",
+              "Matters a lot"
+            ],
+            "cells": [
+              [
+                "Measure and reward, but audit for gaming",
+                "Highest risk: protect with judgment, weaker incentives or a role"
+              ],
+              [
+                "Low stakes: measure lightly or not at all",
+                "Ignore unless it signals something larger"
+              ]
+            ],
+            "refs": [
+              "R-holmstrom-1991-multitask"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Bengt Holmström and Paul Milgrom gave the observation a precise economic form: the multitask problem.",
+              "reveal": 0,
+              "refs": [
+                "R-holmstrom-1991-multitask"
+              ]
+            },
+            {
+              "text": "When an employee divides effort across several tasks and only some are measurable, strong incentives on the measurable tasks pull effort away from the rest.",
+              "refs": [
+                "R-holmstrom-1991-multitask"
+              ]
+            },
+            {
+              "text": "So map your tasks. Important and easy to measure: measure and reward, but audit for gaming.",
+              "reveal": 1
+            },
+            {
+              "text": "Important and hard to measure: the danger zone. Incentives elsewhere will starve this task. Protect it with judgment-based review, weaker incentives, or a dedicated role.",
+              "reveal": 2
+            },
+            {
+              "text": "The two bottom cells matter less. Measure lightly, or ignore unless something larger is signalled.",
+              "reveal": 4
+            },
+            {
+              "text": "Their model implies the best incentive may be weaker than intuition suggests, sometimes a fixed salary, when important tasks are hard to measure. And jobs should group tasks of similar measurability. Incentive strength, measurability and job design have to be chosen together.",
+              "refs": [
+                "R-holmstrom-1991-multitask"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "A layered operating rhythm",
+            "steps": [
+              "Daily huddle: what is blocked today?",
+              "Weekly review: are we on track?",
+              "Monthly review: are outcomes moving, measures honest?",
+              "Quarterly review: right work at all?"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Practices become real through an operating rhythm: the recurring cadence of meetings, reviews and decisions through which an organization looks at its measures, acts and follows up.",
+              "reveal": 0
+            },
+            {
+              "text": "A common practitioner design, not a research finding, layers that rhythm by time horizon. A ten-to-fifteen-minute daily huddle asks what is blocked today, and frontline leads reassign work.",
+              "reveal": 1
+            },
+            {
+              "text": "A weekly review reads leading indicators and decides what to escalate.",
+              "reveal": 2
+            },
+            {
+              "text": "A monthly review asks whether outcomes are moving and whether the measures are still honest, using audit samples and qualitative review.",
+              "reveal": 3
+            },
+            {
+              "text": "And a quarterly review asks whether you are doing the right work at all. Each layer answers one kind of question and exercises a defined set of decision rights. Match the cadences to the work’s own clock.",
+              "reveal": 4
+            },
+            {
+              "text": "Now use the logic on a case."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-counter",
+            "type": "choice",
+            "concept": "c-goodharts-law",
+            "prompt": "A hypothetical school district rewards principals on test pass rates. Attention is drifting toward students just below the pass mark. Which countermeasure best fits the lesson’s logic?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Raise the reward for pass rates so principals take the measure more seriously."
+              },
+              {
+                "id": "b",
+                "text": "Pair the pass rate with growth across all students and a sample of classroom observations."
+              },
+              {
+                "id": "c",
+                "text": "Stop measuring outcomes and rely on principals’ professional judgment."
+              },
+              {
+                "id": "d",
+                "text": "Replace pass rates with average scores, and reward those just as strongly."
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "A stronger incentive on one measurable task pulls even more effort away from everything else — the multitask problem in its purest form.",
+              "b": "Right. A paired measure covers the students the pass rate ignores, and a qualitative sample feeds the underlying reality back into the decision.",
+              "c": "Unmeasured organizations are not ungamed; they are gamed invisibly. Goodhart’s law argues for protecting measures, not abandoning them.",
+              "d": "Better than a cutoff, but a single strongly rewarded number will still be gamed. Without a pairing or an audit, nothing checks the measure against reality."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Loops, limits and what to keep",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Universal or contingent?",
+            "refs": [
+              "R-bloom-2007-measuring",
+              "R-lawrence-1967-differentiation"
+            ],
+            "left": {
+              "title": "Management as a technology",
+              "points": [
+                "Some practices are better almost everywhere",
+                "Support across many firms and countries"
+              ]
+            },
+            "right": {
+              "title": "Contingency theory",
+              "points": [
+                "The right practice depends on task and environment",
+                "The grid was built around manufacturing"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Paired measures beat stronger incentives. Now let me challenge the whole story, starting with a debate that reopens Lesson One. This one is genuinely contested.",
+              "reveal": 0
+            },
+            {
+              "text": "Bloom and Van Reenen’s grid treats some practices as better almost everywhere, a view sometimes called management as a technology. Structured practices are associated with performance across many firms and countries.",
+              "reveal": 1,
+              "refs": [
+                "R-bloom-2007-measuring"
+              ]
+            },
+            {
+              "text": "Contingency theory says the right practice depends on the task and environment. And the grid was built around work, like manufacturing, where standardization pays well.",
+              "reveal": 2,
+              "refs": [
+                "R-lawrence-1967-differentiation"
+              ]
+            },
+            {
+              "text": "In uncertain knowledge work, tight monitoring of individual output may be less valuable, or harmful, if it pushes effort toward what is measurable. Treat the practices as strong defaults whose fit you check, not as universal laws."
+            },
+            {
+              "text": "Two more limits. Many organizations already know what good practice looks like; their constraint is attention and incentives, not information. And every measurement system has a cost: time spent reporting is time not spent working."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "The loop that runs away",
+            "steps": [
+              {
+                "label": "Reward the number"
+              },
+              {
+                "label": "Gaming moves it"
+              },
+              {
+                "label": "Leaders see improvement"
+              },
+              {
+                "label": "Incentive strengthened"
+              },
+              {
+                "label": "Balancing loop",
+                "text": "Audit, paired measure, qualitative review"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "A systems view sharpens this. A measure tied to rewards sits inside a feedback loop.",
+              "reveal": 0
+            },
+            {
+              "text": "You reward the number.",
+              "reveal": 1
+            },
+            {
+              "text": "Gaming moves it.",
+              "reveal": 2
+            },
+            {
+              "text": "Leaders see improvement,",
+              "reveal": 3
+            },
+            {
+              "text": "and strengthen the incentive, inviting more gaming, while the outcome the number once tracked drifts out of view.",
+              "reveal": 4
+            },
+            {
+              "text": "The fix is a balancing loop, designed in deliberately: an audit, a paired measure, or a qualitative review that feeds reality back into the decision. Most metric failures are loop failures, not arithmetic failures.",
+              "reveal": 5
+            },
+            {
+              "text": "In player development, velocity and strength gains are measurable. A coach’s relationship with a player, long-term health effects and transfer to competition are not. Reward coaches strongly on the first, and the multitask logic predicts effort drifts from the second.",
+              "refs": [
+                "R-holmstrom-1991-multitask"
+              ]
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-reflect",
+            "type": "reflect",
+            "concept": "c-multitask-problem",
+            "prompt": "Name one measure in your organization that has become a target. What is the cheapest way to move it without improving the outcome it was meant to track — and which important, hard-to-measure task does it starve? Who protects that task today?"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Organization Builder",
+                "detail": "Build a chart under a budget; it checks spans, layers and cost",
+                "href": "#/exercise/w08-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Bloom, Eifert & Mahajan (2013), Does Management Matter? Evidence from India",
+                "href": "#/library/R-bloom-2013-does"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let us bring it together."
+            },
+            {
+              "text": "Structured monitoring, targets and people management are strongly associated with productivity, and in one randomized experiment they caused it. The effect can persist while practices decay, especially when the managers who carried them leave."
+            },
+            {
+              "text": "Measures drive behavior. Turn a measure into a target and expect gaming, most of all when important work is hard to measure. So build a rhythm that uses measures, audits them and protects the work they miss."
+            },
+            {
+              "text": "From here, take the comprehension check below, the same check as the written lesson. Then open the Organization Builder, and read the introduction and conclusion of the textile experiment.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson is here for the full tables, the methodological note and the dashboard scenario. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

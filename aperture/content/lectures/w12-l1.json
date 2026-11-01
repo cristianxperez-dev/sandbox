@@ -1,0 +1,641 @@
+{
+  "id": "w12-l1-lecture",
+  "lesson": "w12-l1",
+  "title": "Strategies Fade in the Calendar",
+  "subtitle": "Why execution fails: the gap between choosing and doing",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 1 of Week 12. It covers the same objectives — the execution gap as coordination, reallocation and attention rather than compliance; diagnosing a stall from allocation evidence; and the capability trap — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Nobody refused",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 12 · Lesson 1 · Lecture",
+            "title": "Strategies fade in the calendar",
+            "sub": "Why execution fails: the gap between choosing and doing"
+          },
+          "cues": [
+            {
+              "text": "Here is a strategy that failed without a single person saying no."
+            },
+            {
+              "text": "No sabotage, no rebellion, no memo leaked to the press. It simply faded, and the people at the top were genuinely puzzled."
+            },
+            {
+              "text": "By the end of this lecture, I want you to be able to explain that puzzle, and to diagnose it in your own organization."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "A “digital-first” bank, three years on",
+            "items": [
+              {
+                "value": "Every town hall",
+                "label": "the chief executive repeats the strategy"
+              },
+              {
+                "value": "Unchanged",
+                "label": "branch staffing"
+              },
+              {
+                "value": "Borrowed",
+                "label": "app engineers, every quarter-end"
+              },
+              {
+                "value": "Loan volume",
+                "label": "what relationship managers are still paid on"
+              }
+            ],
+            "note": "Hypothetical bank from the lesson; no real organization."
+          },
+          "cues": [
+            {
+              "text": "Picture a regional bank. It is invented for this lesson. It announces a digital-first strategy."
+            },
+            {
+              "text": "The strategy is in the annual report. The chief executive repeats it at every town hall. Every division adds a digital objective to its scorecard.",
+              "reveal": 1
+            },
+            {
+              "text": "Three years later, branch staffing is almost exactly where it was.",
+              "reveal": 2
+            },
+            {
+              "text": "The mobile-app team still borrows engineers from the core-systems group every quarter-end, when those engineers are needed elsewhere.",
+              "reveal": 3
+            },
+            {
+              "text": "And the most experienced relationship managers have been told the strategy matters, but they are still paid on loan volume in the branch.",
+              "reveal": 4
+            },
+            {
+              "text": "Nobody refused it. It just never received the people, money and attention its words implied."
+            },
+            {
+              "text": "So, if you were brought in to diagnose this, where would you look first?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-first-look",
+            "type": "choice",
+            "prompt": "You are asked to diagnose why the bank’s digital-first strategy stalled. Which evidence would you collect first?",
+            "options": [
+              {
+                "id": "a",
+                "text": "An employee survey on commitment to the digital strategy."
+              },
+              {
+                "id": "b",
+                "text": "A count of how often the strategy was communicated, and through which channels."
+              },
+              {
+                "id": "c",
+                "text": "The record of headcount, budget, incentive and agenda changes since launch."
+              },
+              {
+                "id": "d",
+                "text": "Interviews to identify which managers are resisting."
+              }
+            ],
+            "answer": "c",
+            "concept": "c-resource-allocation-as-strategy",
+            "feedback": {
+              "a": "Commitment surveys measure what people say they believe. The bank’s problem is visible without them: staffing, engineers and pay never moved.",
+              "b": "Message counts tell you about volume, not about whether anything was reallocated. This strategy was communicated constantly and still stalled.",
+              "c": "Right. The allocation record shows the realized strategy — what was actually funded, staffed, rewarded and discussed.",
+              "d": "Starting from resistance assumes the answer. Nobody here refused the strategy; the system never gave it resources."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Strategy is what you fund",
+      "scenes": [
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Resistance? Poor communication?",
+              "Or nothing was reallocated?"
+            ],
+            "sub": "The flattering explanations put the problem in the frontline. The common ones put it in the system."
+          },
+          "cues": [
+            {
+              "text": "Most executives, faced with a stall like this, reach for two explanations. People resisted, or the strategy was poorly communicated.",
+              "reveal": 0
+            },
+            {
+              "text": "Notice how convenient those are. If people did not listen, the remedy is more messaging, and the strategy itself is never questioned."
+            },
+            {
+              "text": "The lesson argues that the more common culprits are less visible: coordination across units, reallocation of scarce resources, and the slow erosion of capability when everyone is too busy to improve.",
+              "reveal": 1
+            },
+            {
+              "text": "Those are properties of the system. That makes them the executive’s responsibility, not the frontline’s."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Working definition for this week",
+            "term": "Realized strategy",
+            "definition": "The pattern of resource allocation that actually occurs: where people, money and attention go.",
+            "example": "Test: name the three largest reallocations of the past year. Do they follow from the strategy?"
+          },
+          "cues": [
+            {
+              "text": "Here is the working definition for this week. A strategy is a set of choices about where to compete and how."
+            },
+            {
+              "text": "But its realized form is the pattern of resource allocation that actually happens.",
+              "reveal": 1
+            },
+            {
+              "text": "A plan describes intended activities. A budget assigns money. A calendar assigns attention. And an operating rhythm, the recurring meetings and reviews, is where problems get noticed and decided."
+            },
+            {
+              "text": "When the strategy changes but the budget, the plan and the rhythm stay the same, the gap opens. And when they disagree, the calendar and the budget usually win."
+            },
+            {
+              "text": "So here is a quick test. Name the three largest reallocations of people or money your organization made in the past year.",
+              "reveal": 2
+            },
+            {
+              "text": "If none of them follows from the stated strategy, that strategy is aspirational, not operational."
+            },
+            {
+              "text": "That is why an execution diagnosis starts with the allocation record: headcount moves, capital approvals, meeting agendas, promotion decisions. Not the strategy document."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Five beliefs under pressure",
+      "scenes": [
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Communication equals understanding?"
+            ],
+            "sub": "A prediction before the evidence."
+          },
+          "cues": [
+            {
+              "text": "Let me test one belief that almost every leader holds: if we communicate a priority often enough, people will know it."
+            },
+            {
+              "text": "Donald Sull, Rebecca Homkes and Charles Sull ran a multi-year survey program of managers across several hundred companies.",
+              "refs": [
+                "R-sull-2015-strategy"
+              ]
+            },
+            {
+              "text": "Despite frequent communication, what share of the middle managers they surveyed could name even one of their company’s top five priorities? Make your estimate.",
+              "refs": [
+                "R-sull-2015-strategy"
+              ]
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-priorities",
+            "type": "estimate",
+            "prompt": "In the Sull, Homkes and Sull surveys, what share of middle managers could name even one of their company’s top five priorities?",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "%",
+            "initial": 80,
+            "answer": 55,
+            "tolerance": 10,
+            "concept": "c-strategy-execution-gap",
+            "feedback": {
+              "correct": "Close. The authors report only about 55 per cent — despite frequent communication.",
+              "incorrect": "The authors report only about 55 per cent, despite frequent communication. Message volume is not the same as understanding."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "Two survey findings",
+            "items": [
+              {
+                "value": "About 55%",
+                "label": "of middle managers could name one top-five priority"
+              },
+              {
+                "value": "About 1 in 10",
+                "label": "could always rely on colleagues in other units"
+              }
+            ],
+            "note": "Sull, Homkes and Sull (2015). Descriptive results from one survey population, not universal base rates."
+          },
+          "cues": [
+            {
+              "text": "The answer they report is only about fifty-five percent, despite frequent communication.",
+              "refs": [
+                "R-sull-2015-strategy"
+              ],
+              "reveal": 1
+            },
+            {
+              "text": "And a second finding matters even more. Only about one manager in ten said they could always rely on colleagues in other functions and units.",
+              "refs": [
+                "R-sull-2015-strategy"
+              ],
+              "reveal": 2
+            },
+            {
+              "text": "Their reading is that alignment up and down the reporting line was usually reasonable. The weak link was coordination across units.",
+              "refs": [
+                "R-sull-2015-strategy"
+              ]
+            },
+            {
+              "text": "One caution I will repeat later. These are descriptive results from one survey population. Treat them as a picture of that landscape, not as a universal base rate."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Five beliefs, and what to do instead",
+            "steps": [
+              "Alignment → map the hand-offs between units",
+              "Stick to the plan → build in reallocation points",
+              "Communication → test comprehension, don’t count messages",
+              "Performance culture → reward cross-unit help",
+              "Drive from the top → give middle managers decision rules"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Sull and colleagues challenge five beliefs in all. Let’s take them one at a time, with the practical move that follows.",
+              "refs": [
+                "R-sull-2015-strategy"
+              ]
+            },
+            {
+              "text": "Execution equals alignment? Vertical alignment is usually adequate, so map the hand-offs between units, not just the cascade of goals.",
+              "reveal": 1
+            },
+            {
+              "text": "Execution means sticking to the plan? Organizations need the agility to reallocate as conditions change, so build explicit reallocation points into the plan.",
+              "reveal": 2
+            },
+            {
+              "text": "Communication equals understanding? We have just seen otherwise. Test comprehension; do not count messages.",
+              "reveal": 3
+            },
+            {
+              "text": "A performance culture drives execution? Rewards often favor hitting your own numbers over helping other units. Make cross-unit help visible, and reward it.",
+              "reveal": 4
+            },
+            {
+              "text": "And execution should be driven from the top? In practice, distributed middle managers make most execution decisions. Give them decision rules, not just targets.",
+              "refs": [
+                "R-sull-2015-strategy"
+              ],
+              "reveal": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "The capability trap",
+      "scenes": [
+        {
+          "visual": {
+            "type": "flow",
+            "title": "The capability trap",
+            "steps": [
+              {
+                "label": "Performance gap",
+                "text": "Results fall short of target"
+              },
+              {
+                "label": "Pressure",
+                "text": "Push for immediate output"
+              },
+              {
+                "label": "Work harder",
+                "text": "Firefighting replaces improvement"
+              },
+              {
+                "label": "Capability erodes",
+                "text": "Maintenance and fixes deferred"
+              },
+              {
+                "label": "Gap widens",
+                "text": "Defects and rework rise"
+              },
+              {
+                "label": "Blame people",
+                "text": "Tighter control restarts the loop"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the third culprit, and the most insidious. It explains why stalled initiatives so often end with leaders blaming their people."
+            },
+            {
+              "text": "Nelson Repenning and John Sterman studied organizations that adopted well-proven improvement methods and then failed to sustain them. They used field studies and system-dynamics models.",
+              "refs": [
+                "R-repenning-2001-nobody"
+              ]
+            },
+            {
+              "text": "It starts with a performance gap. Results fall short of the target.",
+              "reveal": 1
+            },
+            {
+              "text": "Managers push for immediate output. And people have two ways to close a gap: work harder, or work smarter by investing time in improving the process.",
+              "refs": [
+                "R-repenning-2001-nobody"
+              ],
+              "reveal": 2
+            },
+            {
+              "text": "Working harder pays off now. Working smarter pays off later, and costs output at first. So under pressure, people work harder.",
+              "refs": [
+                "R-repenning-2001-nobody"
+              ],
+              "reveal": 3
+            },
+            {
+              "text": "Improvement time shrinks. Maintenance, training and process fixes get deferred, and the underlying capability quietly decays.",
+              "reveal": 4
+            },
+            {
+              "text": "Defects and rework rise, performance slips again, and the pressure goes up.",
+              "reveal": 5
+            },
+            {
+              "text": "Then comes the link that seals the trap. Repenning and Sterman argue that managers tend to blame the people doing the work, rather than the system they work within.",
+              "refs": [
+                "R-repenning-2001-nobody"
+              ],
+              "reveal": 6
+            },
+            {
+              "text": "Believing the problem is effort, leaders tighten monitoring and pressure. That crowds out improvement even further, and seems to confirm the belief.",
+              "refs": [
+                "R-repenning-2001-nobody"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Which link would you break?"
+            ],
+            "sub": "A short case decision."
+          },
+          "cues": [
+            {
+              "text": "Let’s see whether you can spot the trap in a live situation."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-trap",
+            "type": "choice",
+            "prompt": "A plant manager sees output fall short for two quarters. Weekly improvement meetings have been cancelled to meet shipments, and defects are rising. The manager proposes tighter supervision and an incentive for extra shifts. What is the strongest reading?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Sensible: the shortfall is an effort problem, and incentives address effort."
+              },
+              {
+                "id": "b",
+                "text": "A capability trap: protect improvement time and accept a temporary dip in output."
+              },
+              {
+                "id": "c",
+                "text": "A communication problem: explain the targets more clearly."
+              },
+              {
+                "id": "d",
+                "text": "A hiring problem: replace the lowest performers."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-capability-trap",
+            "feedback": {
+              "a": "This is the trap’s self-sealing link: attributing a system problem to effort. More pressure further crowds out the improvement time that was cancelled.",
+              "b": "Right. Cancelled improvement meetings and rising defects are the trap’s signature. Escaping it means protecting improvement time and accepting a short-term cost.",
+              "c": "Nothing in the case suggests confusion about targets. Everyone knows the target; the time to improve the process has disappeared.",
+              "d": "Sometimes skill really is the problem, but this case shows the system pattern first: improvement crowded out, defects rising. Blaming people first is the trap."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "A practitioner heuristic, not a finding",
+            "term": "Allocated attention",
+            "definition": "A recurring agenda slot, a named owner, and a metric reviewed at a fixed interval.",
+            "example": "Without all three, the initiative has been allocated no attention, whatever the strategy says."
+          },
+          "cues": [
+            {
+              "text": "There is a resource that sits underneath all of this, and it never appears in the budget: senior attention."
+            },
+            {
+              "text": "An initiative competes for the weekly leadership agenda, the first hour of a manager’s day, and the questions the chief executive asks."
+            },
+            {
+              "text": "So here is a rule of thumb. It is an APERTURE heuristic, not a research finding. An initiative without a recurring agenda slot, a named owner and a metric reviewed at a fixed interval has been allocated no attention.",
+              "say": "So here is a rule of thumb. It is an Aperture heuristic, not a research finding. An initiative without a recurring agenda slot, a named owner and a metric reviewed at a fixed interval has been allocated no attention.",
+              "reveal": 1
+            },
+            {
+              "text": "Whatever the strategy document says. And it is easy to test in your own organization.",
+              "reveal": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Where this story is weak",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Limits of the execution literature",
+            "cards": [
+              {
+                "title": "Blurry line",
+                "q": "Is an unexecutable strategy a good strategy?",
+                "fail": "“Execution problem” can protect the strategists"
+              },
+              {
+                "title": "Perceptions",
+                "q": "Surveys show what managers believe",
+                "fail": "Not what causes success"
+              },
+              {
+                "title": "Over-applied",
+                "q": "The trap explains many stalls",
+                "fail": "Not all: skill and limits are real"
+              },
+              {
+                "title": "Agility as excuse",
+                "q": "Reallocate whenever things change?",
+                "fail": "Becomes drift; decide the signals in advance"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now I want to push back on everything I have just argued."
+            },
+            {
+              "text": "First, the line between strategy and execution is blurry. A strategy that cannot be carried out with the organization’s real capabilities is arguably a bad strategy. Calling every disappointment an execution problem protects the strategists.",
+              "reveal": 1
+            },
+            {
+              "text": "Second, survey evidence describes perceptions. Managers who report poor coordination may be describing real problems, or explaining away their own disappointing results.",
+              "reveal": 2
+            },
+            {
+              "text": "Large manager surveys share a few weaknesses. The same person rates both the cause and the outcome, the firms that agree to take part may differ from those that do not, and a failing initiative can make coordination look worse than it was."
+            },
+            {
+              "text": "Third, the capability trap is a compelling story from field studies and simulation models. It explains many stalls, but not all. Sometimes people genuinely lack skill or motivation, and sometimes a process truly cannot be improved further.",
+              "refs": [
+                "R-repenning-2001-nobody"
+              ],
+              "reveal": 3
+            },
+            {
+              "text": "And fourth, agility can become an excuse. Reallocating whenever conditions change turns into strategy drift. The useful question is which signals justify a reallocation, decided in advance.",
+              "reveal": 4
+            },
+            {
+              "text": "So treat these practitioner findings as well-informed hypotheses to test in your own setting, not as causal proof."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "An execution audit",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Four-question execution audit",
+            "steps": [
+              "What was reallocated?",
+              "Where are the cross-unit hand-offs?",
+              "Who has attention?",
+              "Is improvement time protected?"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let me make this practical. A hypothetical health system adopts a strategy to reduce avoidable readmissions. A year later, the rate has not moved."
+            },
+            {
+              "text": "Rather than surveying staff about commitment, you run a four-part audit."
+            },
+            {
+              "text": "What was reallocated? Perhaps care coordinators were added on paper, but they keep being borrowed for ward coverage.",
+              "reveal": 1
+            },
+            {
+              "text": "Where are the cross-unit hand-offs? Map discharge to the first follow-up visit, and you may find pharmacy, clinics and social work each optimizing their own queue.",
+              "reveal": 2
+            },
+            {
+              "text": "Who has attention? Read the last eight leadership agendas. Perhaps readmissions came up twice, both times as a number with no decision.",
+              "reveal": 3
+            },
+            {
+              "text": "And is improvement time protected? Perhaps redesign meetings are cancelled during every census surge.",
+              "reveal": 4
+            },
+            {
+              "text": "Now the remedy is not another campaign. It is three decisions: dedicate the coordinators, create a weekly cross-unit huddle with authority to fix hand-offs, and protect improvement time even during surges."
+            },
+            {
+              "text": "The same audit works for a player development department whose individual plans exist only as documents. The likely finding is a coordination and attention gap, not coach resistance."
+            },
+            {
+              "text": "One wrinkle. If a board demands a firm date, protecting improvement time may first make results look worse. Commit to leading indicators on a short horizon and the outcome on a longer one, and explain the expected dip in advance."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-audit",
+            "type": "reflect",
+            "prompt": "Pick one priority your organization announced in the last year. What three pieces of allocation evidence — headcount, budget, agendas, incentives, protected time — would show whether it is real? What would you expect to find?",
+            "concept": "c-resource-allocation-as-strategy"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Change Simulator",
+                "detail": "This week’s exercise: lead a change and see what stalls",
+                "href": "#/exercise/w12-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Sull, Homkes & Sull (2015), Why Strategy Execution Unravels",
+                "href": "#/library/R-sull-2015-strategy"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Strategies rarely fail through defiance. They fade in the spaces between units, in budgets that never moved, and in improvement time that pressure quietly consumed."
+            },
+            {
+              "text": "Read the budget, the calendar and the hand-offs before the strategy document. And be suspicious of any diagnosis that blames people first."
+            },
+            {
+              "text": "Next, take the comprehension check below. It is the same check as the written lesson. Then try the Change Simulator, and read Sull, Homkes and Sull’s article.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson stays here for the full tables, the methodological note and the worked examples. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

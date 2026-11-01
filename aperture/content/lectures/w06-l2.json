@@ -1,0 +1,643 @@
+{
+  "id": "w06-l2-lecture",
+  "lesson": "w06-l2",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "title": "Who Hears It First",
+  "subtitle": "Networks, brokerage and social capital behind the organization chart",
+  "summary": "A narrated, interactive version of Lesson 2. It covers the same objectives — Granovetter’s weak ties and the randomized test that refined them; Burt’s structural holes and brokerage; advice, trust and communication networks; and the causal and cultural limits of network claims — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Two analysts",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 6 · Lesson 2 · Lecture",
+            "title": "Who hears it first",
+            "sub": "Networks, brokerage and social capital behind the chart"
+          },
+          "cues": [
+            {
+              "text": "Think of the last genuinely new idea that changed how you work. Where did it come from?"
+            },
+            {
+              "text": "Most people expect the answer to be a close colleague. For new information, a substantial body of research says the opposite is often true."
+            },
+            {
+              "text": "Let’s start with two people who began on the same day."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Same start, different networks",
+            "left": {
+              "title": "Analyst one",
+              "points": [
+                "Cross-practice project with data science",
+                "Loose contact kept afterwards",
+                "Monthly lunch with a former colleague at a client"
+              ]
+            },
+            "right": {
+              "title": "Analyst two",
+              "points": [
+                "Rated technically stronger",
+                "Worked almost entirely in his own team",
+                "Close-knit, supportive, same news at the same time"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Two analysts join a consulting firm’s healthcare practice in the same month with similar credentials. The case is hypothetical."
+            },
+            {
+              "text": "The first spends part of her first year on a project with the firm’s data science group, and keeps in loose contact afterwards. She also lunches roughly monthly with a former colleague now at a hospital client.",
+              "reveal": 1
+            },
+            {
+              "text": "The second, whose work reviewers rate as technically stronger, works almost entirely inside his own close-knit, supportive team.",
+              "reveal": 2
+            },
+            {
+              "text": "Two years later, which of them has had proposals adopted by clients and partners?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-analysts",
+            "type": "choice",
+            "prompt": "After two years, one analyst has had three proposals adopted; the other has had none. What best explains the difference, given what you know?",
+            "options": [
+              {
+                "id": "a",
+                "text": "The second analyst’s proposals were weaker"
+              },
+              {
+                "id": "b",
+                "text": "The first analyst’s network reached groups that knew different things"
+              },
+              {
+                "id": "c",
+                "text": "The first analyst simply had more contacts overall"
+              },
+              {
+                "id": "d",
+                "text": "The second analyst’s team was unsupportive"
+              }
+            ],
+            "answer": "b",
+            "concept": "c-weak-ties",
+            "feedback": {
+              "a": "Reviewers actually rated his work as technically stronger. The difference was not in the proposals.",
+              "b": "Right. Her loose ties ran into other groups, while his close team heard about the same things at the same time he did. Structure, not size or warmth, made the difference.",
+              "c": "Nothing suggests she knew more people. What differed was where her ties led.",
+              "d": "His team was close-knit and supportive. That was part of the problem: its information was redundant."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "The strength of weak ties",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Vocabulary",
+            "term": "A bridge",
+            "definition": "A tie that is the only path between two parts of a network.",
+            "example": "Strong ties cluster; bridges are almost always weak ties."
+          },
+          "cues": [
+            {
+              "text": "Picking up from that choice, a little vocabulary. A network is people, or teams, and the ties between them. Ties can be strong, frequent and close, or weak, like acquaintances."
+            },
+            {
+              "text": "A bridge is a tie that provides the only path between two parts of the network.",
+              "reveal": 1
+            },
+            {
+              "text": "Mark Granovetter’s nineteen seventy-three paper starts from a simple observation. If you are close to two people, those two are likely to know each other too, because people spend time with their close friends’ close friends.",
+              "refs": [
+                "R-granovetter-1973-strength"
+              ]
+            },
+            {
+              "text": "So strong ties cluster into dense groups where information circulates quickly and becomes redundant.",
+              "refs": [
+                "R-granovetter-1973-strength"
+              ]
+            },
+            {
+              "text": "And the ties that connect one cluster to another are almost always weak, because a strong tie would have pulled the two clusters together.",
+              "reveal": 2,
+              "refs": [
+                "R-granovetter-1973-strength"
+              ]
+            },
+            {
+              "text": "It follows that weak ties carry information that is new to the group receiving it."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Jobs came more often through people seen occasionally or rarely."
+            ],
+            "sub": "Granovetter’s data on professional, technical and managerial workers.",
+            "refs": [
+              "R-granovetter-1973-strength"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Granovetter supported the argument with data on how professional, technical and managerial workers had found their jobs.",
+              "refs": [
+                "R-granovetter-1973-strength"
+              ]
+            },
+            {
+              "text": "Among those who found jobs through personal contacts, the contacts were more often people they saw occasionally or rarely than people they saw often.",
+              "refs": [
+                "R-granovetter-1973-strength"
+              ]
+            },
+            {
+              "text": "It is an elegant argument. But hold a question in mind: that evidence was observational. We will come back to it."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Burt",
+            "term": "Structural hole",
+            "definition": "The absence of a tie between two groups that hold different information.",
+            "example": "A broker spans the hole, sees both sides early and can combine them.",
+            "refs": [
+              "R-burt-2004-structural"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Ronald Burt shifted attention from the strength of ties to the gaps between groups.",
+              "refs": [
+                "R-burt-2004-structural"
+              ]
+            },
+            {
+              "text": "A structural hole is the absence of a tie between two groups that each hold different information.",
+              "reveal": 1,
+              "refs": [
+                "R-burt-2004-structural"
+              ]
+            },
+            {
+              "text": "A person whose network spans the hole, a broker, sees opinions and practices from both sides earlier than people inside either group, and can combine them.",
+              "reveal": 2,
+              "refs": [
+                "R-burt-2004-structural"
+              ]
+            },
+            {
+              "text": "In a study of supply-chain managers at a large American electronics company, managers whose networks spanned holes were more likely to express ideas, less likely to have them dismissed, and more likely to have them judged valuable by senior managers.",
+              "refs": [
+                "R-burt-2004-structural"
+              ]
+            },
+            {
+              "text": "Brokerage was also associated with compensation, positive evaluations and promotion. Burt contrasts this with closure: dense networks where everyone knows everyone, which make trust and norms easier to enforce.",
+              "refs": [
+                "R-burt-2004-structural"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Brokerage has two sides",
+            "cards": [
+              {
+                "title": "Broker",
+                "q": "Early, diverse information; new combinations",
+                "fail": "Distrust from both sides; overload"
+              },
+              {
+                "title": "Single bridge",
+                "q": "Indispensable to coordination",
+                "fail": "Bottleneck; memory leaves with the person"
+              },
+              {
+                "title": "Dense cluster",
+                "q": "Trust, fast coordination, support",
+                "fail": "Redundant information; slow to notice change"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Every position has a price. These are tendencies, not guarantees."
+            },
+            {
+              "text": "The broker gets early, diverse information and can control what crosses. But both sides may distrust her, and she may be seen as self-interested.",
+              "reveal": 1
+            },
+            {
+              "text": "Worse is the single bridge, a bow tie between two groups. Indispensable, and therefore a bottleneck and a single point of failure.",
+              "reveal": 2
+            },
+            {
+              "text": "Picture a hypothetical public-health epidemiologist who used to work in the emergency medical services agency. Every interagency question passes through her. When she takes leave, joint work stops."
+            },
+            {
+              "text": "The fix is to add redundant ties and record what she knows. And the dense cluster gives trust and fast coordination, but it is slow to notice outside change.",
+              "reveal": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Three networks, not one",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Krackhardt and Hanson’s three networks",
+            "steps": [
+              "Advice: who solves problems for whom",
+              "Trust: who shares sensitive information",
+              "Communication: who talks about work regularly"
+            ],
+            "refs": [
+              "R-krackhardt-1993-informal"
+            ]
+          },
+          "cues": [
+            {
+              "text": "David Krackhardt and Jeffrey Hanson, writing for managers, argued that the formal chart is a poor guide to how work gets done, and that informal networks can be mapped with a few survey questions.",
+              "refs": [
+                "R-krackhardt-1993-informal"
+              ]
+            },
+            {
+              "text": "They distinguished three networks that rarely coincide. The advice network shows who people depend on to solve problems.",
+              "reveal": 1,
+              "refs": [
+                "R-krackhardt-1993-informal"
+              ]
+            },
+            {
+              "text": "The trust network shows who shares sensitive political information, and who backs whom in a crisis.",
+              "reveal": 2
+            },
+            {
+              "text": "The communication network shows who talks about work-related matters on a regular basis.",
+              "reveal": 3
+            },
+            {
+              "text": "The point is that one person can be central in one network and peripheral in another."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Everyone asks her for help.",
+              "No one adopts her proposals."
+            ],
+            "sub": "A hypothetical engineer."
+          },
+          "cues": [
+            {
+              "text": "Here is a hypothetical engineer. She is the person colleagues most often ask for technical help."
+            },
+            {
+              "text": "Yet her proposals for changing how the team works are rarely adopted.",
+              "reveal": 1
+            },
+            {
+              "text": "How would you read her position?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-networks",
+            "type": "choice",
+            "prompt": "Using the advice and trust networks, which profile best fits the engineer whom everyone asks for help but whose change proposals are rarely adopted?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Linchpin: central in both advice and trust"
+              },
+              {
+                "id": "b",
+                "text": "Respected technician: central in advice, peripheral in trust"
+              },
+              {
+                "id": "c",
+                "text": "Confidant: central in trust, peripheral in advice"
+              },
+              {
+                "id": "d",
+                "text": "Outsider: peripheral in both"
+              }
+            ],
+            "answer": "b",
+            "concept": "c-informal-networks",
+            "feedback": {
+              "a": "A linchpin is both consulted and trusted; win her and many follow. Her stalled proposals suggest the trust side is missing.",
+              "b": "Right. She is asked how, not whether. Strong on the content of a change, weak at making it credible.",
+              "c": "A confidant is trusted with bad news but not consulted technically. She is the reverse.",
+              "d": "She is plainly central in the advice network, since everyone asks her for help."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "Advice versus trust",
+            "x": [
+              "Peripheral in trust",
+              "Central in trust"
+            ],
+            "y": [
+              "Peripheral in advice",
+              "Central in advice"
+            ],
+            "cells": [
+              [
+                "Respected technician: asked how, not whether",
+                "Linchpin: win this person and many follow"
+              ],
+              [
+                "Outsider: sometimes a fresh view",
+                "Confidant: crucial for reading resistance"
+              ]
+            ]
+          },
+          "cues": [
+            {
+              "text": "That engineer is the respected technician, and the full map has four profiles."
+            },
+            {
+              "text": "Central in advice but not trust: the respected technician. Strong on content, weak at credibility.",
+              "reveal": 1
+            },
+            {
+              "text": "Central in both: the linchpin. Win this person and many follow; lose them and the change stalls.",
+              "reveal": 2
+            },
+            {
+              "text": "Peripheral in both: the outsider, rarely decisive but sometimes a fresh view.",
+              "reveal": 3
+            },
+            {
+              "text": "Trusted but not consulted: the confidant, crucial for reading resistance and legitimacy. A change needs the trusted, not only the expert.",
+              "reveal": 4
+            },
+            {
+              "text": "Networks also hold institutional memory: why a policy exists, which experiment failed, who promised what. When a long-tenured broker leaves, the paths along which that knowledge travelled leave too."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "How much is causal?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Observation versus experiment",
+            "left": {
+              "title": "Classic evidence",
+              "points": [
+                "Granovetter’s job data",
+                "Burt’s firm data",
+                "Talent may drive both network and success"
+              ]
+            },
+            "right": {
+              "title": "Randomized test",
+              "points": [
+                "Varied LinkedIn connection suggestions",
+                "More than twenty million members",
+                "Causal effect, inverted U"
+              ]
+            },
+            "refs": [
+              "R-granovetter-1973-strength",
+              "R-burt-2004-structural",
+              "R-rajkumar-2022-causal"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the challenge. How much of the network advantage is actually caused by the network?"
+            },
+            {
+              "text": "Granovetter’s evidence and Burt’s firm data are observational. Talented, outgoing or ambitious people may build bridging networks and do well for the same underlying reasons. Good ideas may attract contacts, not the reverse.",
+              "reveal": 1,
+              "refs": [
+                "R-granovetter-1973-strength",
+                "R-burt-2004-structural"
+              ]
+            },
+            {
+              "text": "A large test addressed this for weak ties. Karthik Rajkumar and colleagues used randomized variation in LinkedIn’s People You May Know recommendations across more than twenty million members.",
+              "reveal": 2,
+              "refs": [
+                "R-rajkumar-2022-causal"
+              ]
+            },
+            {
+              "text": "They found causal evidence that weak ties matter for job mobility, but with an inverted-U shape.",
+              "refs": [
+                "R-rajkumar-2022-causal"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Not “the weaker the better”.",
+              "Moderately weak ties helped most."
+            ],
+            "sub": "Weak ties also mattered more in more digital industries.",
+            "refs": [
+              "R-rajkumar-2022-causal"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Moderately weak ties were most helpful. The weakest ties were not.",
+              "reveal": 1,
+              "refs": [
+                "R-rajkumar-2022-causal"
+              ]
+            },
+            {
+              "text": "Weak ties also mattered more in more digital industries.",
+              "refs": [
+                "R-rajkumar-2022-causal"
+              ]
+            },
+            {
+              "text": "So the classic claim survived a causal test, in a more precise and less sloganlike form."
+            },
+            {
+              "text": "But notice what was not tested. No comparable randomized test exists for Burt’s brokerage claims inside organizations. That evidence remains observational."
+            },
+            {
+              "text": "Network data has other traps too. People with similar traits tend to connect, so similarity among connected people may reflect selection rather than influence. Treat any network map as a hypothesis, not a photograph."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Two further limits",
+            "cards": [
+              {
+                "title": "Culture",
+                "q": "Connector for a shared purpose?",
+                "fail": "Or seen as playing groups against each other"
+              },
+              {
+                "title": "Privacy",
+                "q": "Mapping who confides in whom",
+                "fail": "Used to target “blockers”, it poisons trust"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Two more limits. First, brokerage may not travel equally well across cultures or settings. This part is a hypothesis, not a finding.",
+              "reveal": 1
+            },
+            {
+              "text": "Where loyalty to a close group is prized, someone seen moving information for personal advantage may lose more in trust than they gain in information."
+            },
+            {
+              "text": "A leader working between United States and Latin American operations may occupy exactly that position. How she is read may depend on whether she seems a translator for both sides or a gatekeeper for one. Test that against your own experience."
+            },
+            {
+              "text": "Second, network maps are intrusive. A survey that people later learn was used to identify blockers will poison the next survey, and trust in whoever commissioned it.",
+              "reveal": 2
+            },
+            {
+              "text": "Use network diagnostics transparently, with a clear purpose, aggregated where possible, and never to target people for having the wrong friends."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Mapping a change",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "A routine for any change",
+            "steps": [
+              "List the groups the change touches",
+              "For each pair, name who connects them",
+              "Mark pairs joined by only one person",
+              "In each group, name the most consulted",
+              "In each group, name the most trusted"
+            ]
+          },
+          "cues": [
+            {
+              "text": "So what do you actually do with this? Here is a practical routine for any change."
+            },
+            {
+              "text": "List the groups the change touches.",
+              "reveal": 1
+            },
+            {
+              "text": "For each pair of groups, name who connects them.",
+              "reveal": 2
+            },
+            {
+              "text": "Mark any pair connected by only one person. That is your bow tie, and your fragility.",
+              "reveal": 3
+            },
+            {
+              "text": "For each group, name who is most consulted, and who is most trusted.",
+              "reveal": 4
+            },
+            {
+              "text": "Those two names are often different people.",
+              "reveal": 5
+            },
+            {
+              "text": "In player development, for example, a bilingual coordinator moving between an international academy and domestic affiliates bridges a hole that language and geography create: valuable, and fragile if there is only one."
+            },
+            {
+              "text": "Ask whether a new process will travel through the trusted brokers or around them. Processes routed around trusted brokers tend to arrive without credibility."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Influence Map",
+                "detail": "Rate power, interest and stance of ten people in a fictional hospital system",
+                "href": "#/exercise/w06-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Granovetter (1973), The Strength of Weak Ties",
+                "href": "#/library/R-granovetter-1973-strength"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Weak ties bridge groups and carry new information. A randomized test confirmed a causal effect, with moderately weak ties helping most."
+            },
+            {
+              "text": "Brokers across structural holes see and combine ideas earlier, but that evidence is observational, and brokerage can cost trust."
+            },
+            {
+              "text": "Advice, trust and communication networks differ. Single bridges are fragile. And institutional memory lives in relationships."
+            },
+            {
+              "text": "Next, take the comprehension check below, the same check as the written lesson. The routine you just heard is the core of this week’s Influence Map. And read Granovetter’s original paper.",
+              "reveal": 1
+            },
+            {
+              "text": "Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
