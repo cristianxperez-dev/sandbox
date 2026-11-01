@@ -32,7 +32,7 @@
     art.appendChild(h('div', { class: 'take' }, h('span', { class: 'label', text: 'Key takeaways' }), h('ol', null, l.takeaways.map((t) => h('li', { html: AP.inline(t) })))));
 
     // Comprehension check (server-graded)
-    const checkBox = h('section', { class: 'rule' }, h('h2', { text: 'Comprehension check' }), h('p', { class: 'small muted', text: `${l.check.length} questions, graded on the server. Results feed your concept mastery and review schedule.` }));
+    const checkBox = h('section', { class: 'rule' }, h('h2', { text: 'Comprehension check' }), h('p', { class: 'small muted', text: `${l.check.length} questions${AP.local() ? ', scored in your browser' : ', graded on the server'}. Results feed your concept mastery and review schedule.` }));
     const quiz = quizForm({ id: `${l.id}-check`, kind: 'check', items: l.check, set: 'main' }, { compact: true, onDone: () => markDone(true) });
     checkBox.appendChild(quiz.el);
     art.appendChild(checkBox);
@@ -324,7 +324,7 @@
     if (id === 'midterm') intro.push(h('p', null, 'Read the cumulative case first: ', h('a', { href: '#/midterm', text: 'midterm overview and case' })));
     const form = quizForm({ id, kind: a.kind, items: a.items, set }, {});
     const prev = await AP.api('attempts', { params: { id } });
-    return { el: h('div', null, AP.head(`${a.kind}${set === 'reassess' ? ' · reassessment' : ''}${a.minutes ? ` · about ${a.minutes} min` : ''}`, a.title, `${a.items.length} questions.${a.mastery ? ` Mastery at ${Math.round(a.mastery * 100)}%.` : ''} Answers are graded on the server; explanations appear after you submit.`),
+    return { el: h('div', null, AP.head(`${a.kind}${set === 'reassess' ? ' · reassessment' : ''}${a.minutes ? ` · about ${a.minutes} min` : ''}`, a.title, `${a.items.length} questions.${a.mastery ? ` Mastery at ${Math.round(a.mastery * 100)}%.` : ''} ${AP.local() ? 'Scored in your browser — a learning exercise, not a secure exam' : 'Graded on the server'}; explanations appear after you submit.`),
       w ? h('p', { class: 'small' }, h('a', { href: `#/week/${w.id}`, text: `Week ${w.number}: ${w.title}` })) : null, ...intro,
       prev.attempts.length ? h('p', { class: 'small muted', text: `Previous attempts: ${prev.attempts.map((x) => `${AP.date(x.submitted)} ${AP.pct(x.ratio)}`).join(' · ')}` }) : null,
       h('div', { class: 'notice notice--plain small', text: a.rules }), form.el), title: a.title };

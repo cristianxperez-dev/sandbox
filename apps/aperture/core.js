@@ -8,7 +8,19 @@
   /* ---------------- API ---------------- */
   class ApiError extends Error { constructor(status, body) { super((body && body.message) || `HTTP ${status}`); this.status = status; this.body = body || {}; } }
   AP.ApiError = ApiError;
-  AP.api = async function (path, { method = 'GET', body, params } = {}) {
+  AP.local = () => window.APERTURE_CONFIG && window.APERTURE_CONFIG.mode === 'local';
+  AP.api = async function (path, opts = {}) {
+    if (AP.local()) {
+      let L;
+      try { L = await window.__apertureLocal.promise; } catch (e) { throw new ApiError(0, { error: 'content', message: e.message || 'APERTURE could not load its course content.' }); }
+      let r;
+      try { r = await L.api(path, opts); } catch (e) { throw new ApiError(e.status || 500, { error: 'local', message: e.message }); }
+      if (r.status !== 200) throw new ApiError(r.status, r.data);
+      return r.data;
+    }
+    return serverApi(path, opts);
+  };
+  async function serverApi(path, { method = 'GET', body, params } = {}) {
     let url = `api/${path}`;
     if (params) url += '?' + new URLSearchParams(params).toString();
     const init = { method, credentials: 'same-origin', headers: { 'X-Aperture': '1', Accept: 'application/json' } };
@@ -21,7 +33,7 @@
     if (!res.ok) throw new ApiError(res.status, data || { error: res.status === 404 ? 'not_found' : 'http', message: res.status === 404 ? 'Not found.' : `The server answered ${res.status}.` });
     if (!data) throw new ApiError(res.status, { error: 'not_api', message: 'APERTURE’s server did not answer. This copy of the page has no server (for example the GitHub Pages mirror).' });
     return data;
-  };
+  }
   AP.get = async function (key, path, params) {
     const k = key || path + JSON.stringify(params || {});
     if (AP.cache[k]) return AP.cache[k];
@@ -192,7 +204,7 @@
         try {
           const r = await AP.api('state', { method: 'PUT', body: { kind, key, data } });
           AP.state[kind][key] = { data: r.data, updated: r.updated };
-          syncLabel('ok', 'Saved'); resolve(r);
+          syncLabel('ok', AP.local() ? 'Saved on this device' : 'Saved'); resolve(r);
         } catch (e) { syncLabel('error', 'Not saved'); AP.toast(e.message || 'Could not save.'); resolve(null); }
         finally { inflight--; }
       }, delay);

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-// Compiles aperture/content/** into aperture/build/content.json — the one file the protected API
-// bundles — plus the auditable source manifest (aperture/build/manifest.json and
+// Compiles aperture/content/** into aperture/build/content.json (bundled by the secure-mode API) and
+// apps/aperture/data/content.json (the same bundle, served publicly to the public-beta page), plus the auditable source manifest (aperture/build/manifest.json and
 // aperture/docs/source-manifest.md). Generated files: never hand-edit; rerun this script.
 //   node aperture/tools/compile.mjs           validate (non-strict) + compile
 //   node aperture/tools/compile.mjs --strict  every content file must exist and validate
@@ -16,6 +16,7 @@ const BASE = join(HERE, '..');
 const C = join(BASE, 'content');
 const OUT = join(BASE, 'build');
 const DOCS = join(BASE, 'docs');
+const PUBLIC = join(BASE, '..', 'apps', 'aperture', 'data'); // public-beta copy served with the page
 const args = process.argv.slice(2);
 const STRICT = args.includes('--strict');
 const CHECK = args.includes('--check');
@@ -159,11 +160,13 @@ const manifestJson = JSON.stringify(manifest, null, 2) + '\n';
 const md = renderManifest(manifest);
 if (CHECK) {
   const same = (p, s) => existsSync(p) && stripDate(readFileSync(p, 'utf8')) === stripDate(s);
-  if (!same(join(OUT, 'content.json'), json) || !same(join(OUT, 'manifest.json'), manifestJson)) { console.error('✖ aperture/build is out of date — run node aperture/tools/compile.mjs'); process.exit(1); }
+  if (!same(join(OUT, 'content.json'), json) || !same(join(OUT, 'manifest.json'), manifestJson) || !same(join(PUBLIC, 'content.json'), json)) { console.error('✖ aperture/build is out of date — run node aperture/tools/compile.mjs'); process.exit(1); }
   console.log('✓ aperture/build is up to date'); process.exit(0);
 }
 mkdirSync(OUT, { recursive: true }); mkdirSync(DOCS, { recursive: true });
 writeFileSync(join(OUT, 'content.json'), json);
+mkdirSync(PUBLIC, { recursive: true });
+writeFileSync(join(PUBLIC, 'content.json'), json); // public beta: the whole course, answer keys included, is public
 writeFileSync(join(OUT, 'manifest.json'), manifestJson);
 writeFileSync(join(DOCS, 'source-manifest.md'), md);
 console.log(`✓ compiled ${stats.weeks} weeks, ${stats.lessons} lessons, ${stats.lessonWords.toLocaleString('en-US')} lesson words, ${lib.length} resources → aperture/build/content.json (${(json.length / 1024).toFixed(0)} KB)`);

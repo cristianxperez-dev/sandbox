@@ -395,11 +395,24 @@
       h('section', { class: 'rule' }, h('h2', { text: 'AI assistance' }), check('chatgptLink', 'Show the “Open ChatGPT” link beside “Copy prompt”.'),
         h('p', { class: 'small muted', text: 'APERTURE has no AI provider and sends nothing to one. “Continue in ChatGPT” builds a prompt from public course material; your notes, drafts and results are included only if you add them yourself. Copying or opening ChatGPT is always your action.' })),
       h('section', { class: 'rule' }, h('h2', { text: 'Your data' }),
-        h('p', { class: 'small muted', text: 'Stored in APERTURE’s private Cloudflare D1 database under your signed-in address: reading progress, notes and highlights, bookmarks, reflections, drafts, journal entries, lab runs, assessment attempts, your review schedule and settings. No analytics, no third-party scripts, no advertising.' }),
-        h('div', { class: 'row' }, h('button', { class: 'btn', onclick: exportJSON, text: 'Export everything (JSON)' }), h('button', { class: 'btn', onclick: exportMarkdown, text: 'Export notebook (Markdown)' })),
-        h('details', { class: 'fold' }, h('summary', null, h('span', { class: 'label', text: 'Privacy' }), h('b', { text: 'Delete all my APERTURE data' })), h('div', { class: 'fold__body' }, h('p', { class: 'small', text: 'This permanently deletes every record listed above from APERTURE’s database. Export first if you want a copy. Type DELETE MY APERTURE DATA to confirm.' }), deleteForm()))));
+        h('p', { class: 'small muted', text: AP.local() ? 'Public beta: everything you do — reading progress, notes and highlights, bookmarks, reflections, drafts, journal entries, lab runs, assessment results, your review schedule, settings and profile — is stored only in this browser on this device. Nothing is sent to a server. Clearing site data, using private browsing, or switching browser or device starts you from scratch, so export a backup regularly. No account, analytics or third-party scripts.' : 'Stored in APERTURE’s private Cloudflare D1 database under your signed-in address: reading progress, notes and highlights, bookmarks, reflections, drafts, journal entries, lab runs, assessment attempts, your review schedule and settings. No analytics, no third-party scripts, no advertising.' }),
+        h('div', { class: 'row' }, h('button', { class: 'btn', onclick: exportJSON, text: 'Export everything (JSON)' }), h('button', { class: 'btn', onclick: exportMarkdown, text: 'Export notebook (Markdown)' }), AP.local() ? importButton() : null),
+        h('details', { class: 'fold' }, h('summary', null, h('span', { class: 'label', text: 'Privacy' }), h('b', { text: 'Delete all my APERTURE data' })), h('div', { class: 'fold__body' }, h('p', { class: 'small', text: (AP.local() ? 'This permanently deletes every APERTURE record stored in this browser.' : 'This permanently deletes every record listed above from APERTURE’s database.') + ' Export first if you want a copy. Type DELETE MY APERTURE DATA to confirm.' }), deleteForm()))));
     return { el, title: 'Settings' };
   };
+  function importButton() {
+    const inp = h('input', { type: 'file', accept: 'application/json,.json', class: 'sr', onchange: async (e) => {
+      const f = e.target.files && e.target.files[0]; if (!f) return;
+      try {
+        const data = JSON.parse(await f.text());
+        if (!data || data.app !== 'APERTURE') throw new Error('This is not an APERTURE export.');
+        const r = await AP.api('import', { method: 'POST', body: data });
+        AP.state = {}; AP.toast(`Imported ${r.added} records${r.skipped ? ` (${r.skipped} skipped as invalid)` : ''}.`); location.hash = '#/';
+      } catch (err) { AP.toast(err.message || 'Import failed.'); }
+      e.target.value = '';
+    } });
+    return h('label', { class: 'btn' }, 'Import a backup (JSON)', inp);
+  }
   function deleteForm() {
     const inp = h('input', { type: 'text', 'aria-label': 'Confirmation phrase' });
     return h('div', null, inp, h('p', null, h('button', { class: 'btn', onclick: async () => {

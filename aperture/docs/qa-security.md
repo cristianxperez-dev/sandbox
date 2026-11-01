@@ -64,3 +64,25 @@ RS256 token issuer standing in for Cloudflare Access; Chromium via Playwright at
 - The production Cloudflare deployment, D1 binding and Access application (owner setup not yet done).
 - `chatgpt.com/?q=` prefill behavior (labelled best-effort in the UI; copy works regardless).
 - Real-device testing on iOS/Android browsers (emulated widths only).
+
+## Addendum — public beta (local mode), 2026-11-01
+
+At the owner's request APERTURE launched as a public beta with no sign-in. The same handlers now run
+in the browser (`apps/aperture/shared/`, `local.js`); the secure server mode is kept, unchanged in
+behavior, for later activation.
+
+| Check | Result |
+| --- | --- |
+| Static preview (no Functions) — 30 routes, desktop and phone | Pass; no console errors, failed requests or overflow |
+| Learner flow in local mode (12 steps) | 12/12 pass |
+| All 16 exercise configurations, both widths | Pass |
+| Local-mode specifics: no sign-in screen; beta notice; diagnostic scored in browser; progress survives reload; storage keys all `aperture:v1:*`; no third-party requests; no calls to the server API; JSON export; import on a second browser profile; invalid imported records rejected; delete-all clears the browser; blocked storage announced | 15/15 pass |
+| Same page on the Workers runtime (`wrangler pages dev`) | Pass |
+| Secure server mode after the refactor: unconfigured → 503; configured API suite | 503 confirmed; 28/28 pass |
+| Recollect API unaffected (still refuses without configuration) | Confirmed |
+
+**What changes in the beta.** The course bundle (`data/content.json`, about 3.3 MB, served
+compressed) and its answer keys are public. Scoring runs in the browser, so results are
+self-reported learning data, not secure assessment. Learner data stays in the browser's
+`localStorage`; nothing is transmitted. The page's Content-Security-Policy still allows only
+same-origin scripts, styles, fonts and connections.

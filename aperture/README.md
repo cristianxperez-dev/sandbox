@@ -1,6 +1,7 @@
 # APERTURE — The Applied Intelligence Academy
 
-A private, graduate-level executive-education environment inside Sandbox.
+A graduate-level executive-education environment inside Sandbox, live at
+`https://cperez.app/apps/aperture/` as a **public beta** (no sign-in).
 Semester I: *Foundations of Human Behavior, Evidence & Executive Leadership* (14 weeks).
 Independent learning program: no academic credit, accreditation or university affiliation.
 
@@ -8,7 +9,7 @@ Independent learning program: no academic credit, accreditation or university af
 
 | Path | What | Published as a static file? |
 | --- | --- | --- |
-| `apps/aperture/` | The page shell: HTML, CSS, JavaScript, fonts, logo. **Contains no course content and no learner data.** | Yes (Cloudflare Pages and the GitHub Pages mirror) |
+| `apps/aperture/` | The page: HTML, CSS, JavaScript (`shared/` = scoring and progress logic used by both modes), fonts, logo, and `data/content.json` (public beta course bundle). | Yes (Cloudflare Pages and the GitHub Pages mirror) |
 | `functions/apps/aperture/api/[[path]].js` | The protected API (Cloudflare Pages Function). | No |
 | `aperture/server/` | API implementation: auth, content index, grading, D1 storage, spaced repetition, insights. | No |
 | `aperture/content/` | Course source: weeks, sources, diagnostic, midterm, capstone, audit, labs (`SCHEMA.md`, `ENGINES.md`). | No (but see *Repository visibility*) |
@@ -25,7 +26,36 @@ node scripts/build.mjs && node scripts/check.mjs
 
 `node aperture/tools/compile.mjs --check` fails if the committed build is stale (the deploy workflow runs it).
 
-## Security model
+## Deployment modes
+
+`apps/aperture/config.js` selects the mode.
+
+| | **Public beta — `local` (current)** | **Secure accounts — `server` (future)** |
+| --- | --- | --- |
+| Access | Anyone with the URL; no sign-in | Cloudflare Access sign-in, email allowlist |
+| Course content | `apps/aperture/data/content.json`, public (answer keys included) | Bundled into the Pages Function; keys released only after submission |
+| Scoring, review schedule, insights | In the browser (`apps/aperture/shared/` via `local.js`) | On the server (same `shared/` code via the Function) |
+| Learner data | This browser only (`localStorage`, keys `aperture:v1:*`) | Cloudflare D1, per signed-in email, cross-device |
+| Setup needed | None | D1 + Access + three variables (below) |
+
+The grading, scheduling, progress and validation logic is one shared implementation
+(`apps/aperture/shared/handlers.js`) used by both modes, so switching modes changes where it runs,
+not what it does.
+
+**Public beta limits (stated in the app).** Progress is device- and browser-specific and is lost if
+site data is cleared, in private browsing, or on another device; learners can export a JSON backup
+and import it elsewhere (imported records are re-validated). Scoring runs in the browser and the
+answer keys ship with the page, so assessments are learning exercises, not secure examinations.
+Nothing the learner writes leaves the browser; there are no accounts, cookies, analytics or
+third-party requests.
+
+**Switching to secure accounts later.** Complete the one-time setup below, set
+`window.APERTURE_CONFIG = { mode: 'server' }` in `config.js`, and (to keep the keys private again)
+stop publishing `apps/aperture/data/` by removing its write in `aperture/tools/compile.mjs`.
+Learners bring their beta progress across with Settings → Export, then Import (an import endpoint
+for server mode is on the roadmap).
+
+## Security model (secure-accounts mode)
 
 - **Every lesson, reading, question, case, lab configuration and every learner record is served
   only by the API**, which verifies a Cloudflare Access token on every request (RS256 signature
@@ -66,9 +96,9 @@ profile, progress, notes, journal and results exist only in D1. If the curriculu
 private, make the repository private (Cloudflare Pages keeps deploying; the GitHub Pages mirror
 needs a paid plan for private repositories) or move APERTURE to a private repository.
 
-## One-time setup (Cloudflare dashboard — owner action)
+## One-time setup for secure accounts (Cloudflare dashboard — owner action, not needed for the beta)
 
-Until this is done APERTURE shows "not configured" and serves nothing.
+Until this is done the server API answers 503 to everything (it is not used by the public beta).
 
 1. **D1:** Workers & Pages → D1 → *Create database*, name `aperture`.
 2. **Binding:** the Sandbox Pages project → Settings → Bindings → *Add* → D1 database, variable

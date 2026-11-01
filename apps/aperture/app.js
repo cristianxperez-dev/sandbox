@@ -76,6 +76,8 @@
       box.append(h('p', { class: 'lede', text: 'A private learning environment. Sign in to continue.' }), h('p', null, h('a', { class: 'btn btn--primary', href: 'api/login', text: 'Sign in' })), h('p', { class: 'small muted', text: 'Sign-in is handled by Cloudflare Access. Only approved addresses can open APERTURE.' }));
     } else if (e.status === 503) {
       box.append(h('p', { class: 'lede', text: 'APERTURE is installed but its secure sign-in and storage are not configured yet.' }), h('p', { class: 'small muted', text: 'Nothing is served until they are. The owner completes the one-time setup in the Cloudflare dashboard (see aperture/README.md in the repository).' }));
+    } else if (AP.local()) {
+      box.append(h('p', { class: 'lede', text: e.message || 'APERTURE could not load its course content.' }), h('p', null, h('button', { class: 'btn', onclick: () => location.reload(), text: 'Try again' })));
     } else {
       box.append(h('p', { class: 'lede', text: e.message || 'APERTURE could not reach its server.' }), h('p', { class: 'small muted', text: 'APERTURE runs only where its private server is available (cperez.app). Course material is never published with this page.' }));
     }
@@ -98,10 +100,25 @@
       AP.cache.libIndex = new Map(lib.resources.map((r) => [r.id, r]));
       document.getElementById('top').hidden = false;
       document.getElementById('foot').hidden = false;
+      if (AP.local()) betaNotice();
       window.addEventListener('hashchange', route);
       route();
     } catch (e) { gate(e); }
   }
+  // Public beta: say plainly where progress lives (dismissible; the choice is remembered here).
+  function betaNotice() {
+    const KEY = 'aperture:v1:beta-notice';
+    let seen = false; try { seen = localStorage.getItem(KEY) === '1'; } catch {}
+    const storageOk = (() => { try { localStorage.setItem('aperture:v1:probe', '1'); localStorage.removeItem('aperture:v1:probe'); return true; } catch { return false; } })();
+    if (seen && storageOk) return;
+    const bar = h('div', { class: 'beta', role: 'note' },
+      h('p', null, h('b', { text: storageOk ? 'Public beta. ' : 'This browser is not saving. ' }),
+        storageOk ? 'Your progress, notes and results are saved only in this browser on this device — not on a server and not in an account. Clearing site data or switching browser or device starts you from scratch. Export a backup from ' : 'Storage is blocked (private browsing or site data disabled), so nothing you do will be kept after you close this tab. Use a regular window, or export from ',
+        h('a', { href: '#/settings', text: 'Settings' }), '. Assessments are scored in your browser: they are learning exercises, not secure exams.'),
+      storageOk ? h('button', { class: 'btn btn--small', onclick: () => { try { localStorage.setItem(KEY, '1'); } catch {} bar.remove(); }, text: 'Understood' }) : null);
+    document.getElementById('top').after(bar);
+  }
+  window.addEventListener('aperture:storage-error', () => AP.toast('This browser refused to save. Export your data from Settings, then free up space or leave private browsing.'));
   AP.applySettings(null);
   boot();
 })();

@@ -2,7 +2,7 @@
    learner's actual responses; an insight appears only when its evidence threshold is met, and it
    carries the rule and the evidence that produced it. No personality or psychological claims. */
 
-import { CONTENT, index } from './content.js';
+import { CONTENT, index } from './content-core.js';
 import { INTERVAL_DAYS, RULES_TEXT } from './srs.js';
 
 const DOMAIN_LABEL = {
