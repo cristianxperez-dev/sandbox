@@ -3,13 +3,13 @@
   "method": "Metadata verified through web-search results on the date shown per record. The build environment could not open pages, so every link is flagged link-untested until checked in a browser.",
   "totals": {
     "resources": 166,
-    "metadataConfirmed": 100,
-    "partiallyConfirmed": 16,
-    "unverified": 50,
+    "metadataConfirmed": 145,
+    "partiallyConfirmed": 21,
+    "unverified": 0,
     "linkUntested": 166,
     "open": 58,
-    "restricted": 91,
-    "contested": 94,
+    "restricted": 93,
+    "contested": 90,
     "uncited": 0
   },
   "records": [
@@ -80,13 +80,12 @@
       "year": 2020,
       "url": "https://doi.org/10.1038/s41562-019-0787-z",
       "doi": "10.1038/s41562-019-0787-z",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (Nature Human Behaviour 2020 article); title, authors, year, venue and DOI must be re-checked before release.",
+      "evidence": "Title, authors, Nature Human Behaviour (vol. 4), year and DOI matched on research.hhs.se and econpapers.repec.org; page range not confirmed (removed). Published online Dec 2019; an author correction exists (4(6), 2020).",
       "access": "paywalled",
       "license": "Copyright holder’s terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access"
       ],
@@ -142,13 +141,12 @@
       "year": 1974,
       "url": "https://doi.org/10.1126/science.185.4157.1124",
       "doi": "10.1126/science.185.4157.1124",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (Science 1974 article); title, authors, year, venue and DOI must be re-checked before release.",
+      "evidence": "Title, authors, Science 185(4157) 1124–1131, year and DOI matched on pubmed.ncbi.nlm.nih.gov.",
       "access": "paywalled",
       "license": "© AAAS. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access",
         "contested"
@@ -166,11 +164,11 @@
       "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
       "evidence": "Title, sole author, journal, volume 44 issue 2, pages 350–383 and DOI matched on dash.harvard.edu, citedrive.com and a journal index (acnpsearch); sample of 51 work teams in a manufacturing company and findings matched in the abstract; a PDF is listed on web.mit.edu.",
-      "access": "open",
-      "license": "Copyright holder's terms. Linked, not reproduced. A copy is posted on an MIT course page.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
         "link-untested",
-        "contested"
+        "restricted-access"
       ],
       "citedIn": [
         "capstone",
@@ -186,13 +184,12 @@
       "year": 2014,
       "url": "https://doi.org/10.1177/1745691614551642",
       "doi": "10.1177/1745691614551642",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (Perspectives on Psychological Science, 9(6), 641–651) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
+      "evidence": "Title, authors, Perspectives on Psychological Science 9(6) 641–651, year and DOI matched on findanexpert.unimelb.edu.au and the author's Columbia page (sites.stat.columbia.edu).",
       "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access"
       ],
@@ -208,13 +205,12 @@
       "year": 2018,
       "url": "https://doi.org/10.1016/j.socscimed.2017.12.005",
       "doi": "10.1016/j.socscimed.2017.12.005",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (Social Science & Medicine 2018 article); title, authors, year, venue and DOI must be re-checked before release.",
+      "evidence": "Title, authors, Social Science & Medicine 210 2–21, year and DOI matched on pmc.ncbi.nlm.nih.gov (PMC6019115) and dro.dur.ac.uk.",
       "access": "open",
       "license": "Open access (Creative Commons license believed; not re-confirmed). Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "contested"
       ],
@@ -252,13 +248,12 @@
       "year": 2021,
       "url": "https://doi.org/10.1177/25152459211007467",
       "doi": "10.1177/25152459211007467",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (AMPPS 2021 article); title, authors, year, venue and DOI must be re-checked before release.",
+      "evidence": "Title, authors, AMPPS 4(2), year and DOI matched on psychologicalscience.org and research.tue.nl.",
       "access": "open",
       "license": "Open access (license not re-confirmed). Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested"
       ],
       "citedIn": [
@@ -290,16 +285,17 @@
       "id": "R-kluger-1996-effects",
       "title": "The Effects of Feedback Interventions on Performance: A Historical Review, a Meta-Analysis, and a Preliminary Feedback Intervention Theory",
       "year": 1996,
-      "url": "https://doi.org/10.1037/0033-2909.119.2.254",
-      "doi": "10.1037/0033-2909.119.2.254",
-      "status": "unverified",
+      "url": "https://cris.huji.ac.il/en/publications/the-effects-of-feedback-interventions-on-performance-a-historical/",
+      "doi": null,
+      "status": "partially-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed in this session: the shared web-search budget was exhausted before this record could be searched. Metadata entered from the standard citation; check title, venue, pages and DOI before relying on it.",
+      "evidence": "Title, authors, Psychological Bulletin 119(2) 254–284 and year matched on cris.huji.ac.il and scholars.huji.ac.il; the DOI did not appear in two searches and was removed.",
       "access": "paywalled",
       "license": "Copyright holder’s terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
+        "partially-confirmed",
         "link-untested",
+        "no-doi",
         "restricted-access"
       ],
       "citedIn": [
@@ -318,10 +314,11 @@
       "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
       "evidence": "Title, authors, journal, volume 7 special issue, pages 24–52 and the JSTOR stable record matched on the article front matter hosted at people.duke.edu; DOI matched on a scholarly index listing (synapsesocial.com). Search results note a later reprint with a different DOI.",
-      "access": "library",
+      "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "link-untested"
+        "link-untested",
+        "restricted-access"
       ],
       "citedIn": [
         "w02",
@@ -357,13 +354,12 @@
       "year": 2015,
       "url": "https://doi.org/10.1037/xge0000033",
       "doi": "10.1037/xge0000033",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (Journal of Experimental Psychology: General, 144(1), 114–126) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
+      "evidence": "Title, authors, JEP: General 144(1) 114–126, year and DOI matched on repository.upenn.edu and faculty.wharton.upenn.edu.",
       "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access",
         "contested"
@@ -378,13 +374,12 @@
       "year": 2018,
       "url": "https://doi.org/10.1287/mnsc.2016.2643",
       "doi": "10.1287/mnsc.2016.2643",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (Management Science, 64(3), 1155–1170) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
+      "evidence": "Title, authors, Management Science 64(3) 1155–1170, year and DOI matched on econpapers.repec.org and repository.upenn.edu.",
       "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access"
       ],
@@ -418,13 +413,12 @@
       "year": 2018,
       "url": "https://doi.org/10.1073/pnas.1708274114",
       "doi": "10.1073/pnas.1708274114",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (Proceedings of the National Academy of Sciences, 115(11), 2600–2606) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
+      "evidence": "Title, authors, PNAS 115(11) 2600–2606, year and DOI matched on pmc.ncbi.nlm.nih.gov (PMC5856500).",
       "access": "open",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested"
       ],
       "citedIn": [
@@ -540,13 +534,12 @@
       "year": 1990,
       "url": "https://doi.org/10.1016/0749-5978(90)90051-A",
       "doi": "10.1016/0749-5978(90)90051-A",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (Organizational Behavior and Human Decision Processes, 47(1), 161–176) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
+      "evidence": "Title, author, OBHDP 47(1) 161–176, year and DOI matched on ideas.repec.org and scilit.net.",
       "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access"
       ],
@@ -582,13 +575,12 @@
       "year": 2016,
       "url": "https://www.consumerfinance.gov/about-us/newsroom/consumer-financial-protection-bureau-fines-wells-fargo-100-million-widespread-illegal-practice-secretly-opening-unauthorized-accounts/",
       "doi": null,
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed by search in this session. Expected: CFPB newsroom release dated September 8, 2016, announcing a $100 million civil penalty and a consent order; the URL is the expected newsroom path and was not seen in search results. Recorded from the writer's prior knowledge of a widely cited work; title, authors, year, venue and DOI must be confirmed before publication.",
+      "evidence": "Headline and the official consumerfinance.gov newsroom URL matched in search results, with the CFPB enforcement action page (wells-fargo-bank-2016); September 8, 2016 date matched in contemporaneous coverage.",
       "access": "open",
       "license": "U.S. federal government publication. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested"
       ],
       "citedIn": [
@@ -627,7 +619,7 @@
       "verifiedOn": "2026-11-01",
       "evidence": "Title, authors, journal, volume, issue, pages and DOI matched on pubsonline.informs.org, econpapers.repec.org and ideas.repec.org; the abstract’s two-bias argument matched those records.",
       "access": "paywalled",
-      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
         "link-untested",
         "restricted-access"
@@ -644,13 +636,12 @@
       "year": 2016,
       "url": "https://doi.org/10.1126/science.aad7243",
       "doi": "10.1126/science.aad7243",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (Science 2016 technical comment); title, authors, year, venue and DOI must be re-checked before release.",
+      "evidence": "Title, authors, Science 351(6277) 1037, year and DOI matched on pubpeer.com and a Science PDF copy (errorstatistics.com).",
       "access": "paywalled",
       "license": "© AAAS. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access",
         "contested"
@@ -685,13 +676,12 @@
       "year": 2019,
       "url": "https://doi.org/10.1177/2515245919847202",
       "doi": "10.1177/2515245919847202",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (AMPPS 2019 article); title, authors, year, venue and DOI must be re-checked before release.",
+      "evidence": "Title, authors, AMPPS 2(2) 156–168, year and DOI matched on psychologicalscience.org; a 2020 corrigendum (10.1177/2515245920979282) also exists.",
       "access": "open",
       "license": "Open access (license not re-confirmed). Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested"
       ],
       "citedIn": [
@@ -704,13 +694,12 @@
       "year": 1994,
       "url": "https://www.nber.org/papers/w4509",
       "doi": null,
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (AER 1994 article; URL is the NBER working-paper version and its number must be re-checked); title, authors, year, venue and DOI must be re-checked before release.",
+      "evidence": "Title, authors, AER 84(4) 772–793, year matched on econpapers.repec.org; NBER w4509 page seen on nber.org. No journal DOI confirmed.",
       "access": "open",
       "license": "Copyright holder’s terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "no-doi",
         "contested"
@@ -725,13 +714,12 @@
       "year": 2004,
       "url": "https://doi.org/10.1111/j.1529-1006.2004.00018.x",
       "doi": "10.1111/j.1529-1006.2004.00018.x",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (Psychological Science in the Public Interest, 5(3), 69–106) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
+      "evidence": "Title, authors, Psychological Science in the Public Interest 5(3) 69–106, year and DOI matched on scilit.com and altmetric.com.",
       "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access"
       ],
@@ -786,13 +774,12 @@
       "year": 2000,
       "url": "https://doi.org/10.1257/aer.90.5.1362",
       "doi": "10.1257/aer.90.5.1362",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (AER 2000 comment); title, authors, year, venue and DOI must be re-checked before release.",
+      "evidence": "Title, authors, AER 90(5) 1362–1396, year and DOI matched on econpapers.repec.org (aea:aecrev).",
       "access": "paywalled",
       "license": "Copyright holder’s terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access",
         "contested"
@@ -846,13 +833,12 @@
       "year": 2019,
       "url": "https://doi.org/10.1038/s41586-019-1466-y",
       "doi": "10.1038/s41586-019-1466-y",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (Nature 2019 article; author list abbreviated); title, authors, year, venue and DOI must be re-checked before release.",
+      "evidence": "Title, authors, Nature 573 364–369, year and DOI matched on hks.harvard.edu and escholarship.org.",
       "access": "open",
       "license": "Open access (license not re-confirmed). Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "contested"
       ],
@@ -866,13 +852,12 @@
       "year": 2006,
       "url": "https://doi.org/10.5465/amr.2006.20208679",
       "doi": "10.5465/amr.2006.20208679",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (Academy of Management Review, 31(2), 256–269) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
+      "evidence": "Title, author, Academy of Management Review 31(2) 256–269, year and DOI matched on bibbase.org and academicnewsletter.sufe.edu.cn; it is the 2005 AOM Presidential Address.",
       "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access"
       ],
@@ -906,13 +891,12 @@
       "year": 1979,
       "url": "https://doi.org/10.1016/0149-7189(79)90048-X",
       "doi": "10.1016/0149-7189(79)90048-X",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (Evaluation and Program Planning, 2(1), 67–90) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
+      "evidence": "Title, author, Evaluation and Program Planning 2(1) 67–90, year and DOI matched on econpapers.repec.org (eee:epplan) and scilit.com.",
       "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access"
       ],
@@ -948,13 +932,12 @@
       "year": 2000,
       "url": "https://doi.org/10.1257/jep.14.3.159",
       "doi": "10.1257/jep.14.3.159",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed by search in this session. Expected: Journal of Economic Perspectives 14(3), 159–181 (Summer 2000), DOI 10.1257/jep.14.3.159. Recorded from the writer's prior knowledge of a widely cited work; title, authors, year, venue and DOI must be confirmed before publication.",
+      "evidence": "Title, authors, JEP 14(3) 159–181, year and DOI matched on econpapers.repec.org (aea:jecper) and econbiz.de.",
       "access": "open",
       "license": "Free to read from the American Economic Association. Copyright holder’s terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "contested"
       ],
@@ -969,13 +952,12 @@
       "year": 2016,
       "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
       "doi": null,
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (Official Journal of the European Union, L 119) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
+      "evidence": "Title, OJ L 119 (4.5.2016, p. 1), CELEX 32016R0679 and ELI matched on eur-lex.europa.eu.",
       "access": "open",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested"
       ],
       "citedIn": [
@@ -1027,15 +1009,16 @@
       "title": "The Validity and Utility of Selection Methods in Personnel Psychology: Practical and Theoretical Implications of 85 Years of Research Findings",
       "year": 1998,
       "url": "https://doi.org/10.1037/0033-2909.124.2.262",
-      "doi": "10.1037/0033-2909.124.2.262",
-      "status": "unverified",
+      "doi": null,
+      "status": "partially-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (Psychological Bulletin, 124(2), 262–274) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
+      "evidence": "Title, authors, Psychological Bulletin 124(2) 262–274 and year matched on course/university copies (is.muni.cz, web.pdx.edu); the DOI did not appear in two searches and was removed. URL is the DOI link from the original record and is unconfirmed.",
       "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
+        "partially-confirmed",
         "link-untested",
+        "no-doi",
         "restricted-access",
         "contested"
       ],
@@ -1049,13 +1032,12 @@
       "year": 1985,
       "url": "https://doi.org/10.1037/0022-3514.48.6.1467",
       "doi": "10.1037/0022-3514.48.6.1467",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (Journal of Personality and Social Psychology, 48(6), 1467–1478) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
+      "evidence": "Title, authors, JPSP 48(6) 1467–1478, year and DOI matched on a uni-muenster.de scan of the article and en.wikipedia.org references.",
       "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access"
       ],
@@ -1076,8 +1058,7 @@
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
         "link-untested",
-        "restricted-access",
-        "contested"
+        "restricted-access"
       ],
       "citedIn": [
         "capstone",
@@ -1110,15 +1091,13 @@
       "year": 2017,
       "url": "https://doi.org/10.1177/0963721417712760",
       "doi": "10.1177/0963721417712760",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed in this session: the shared web-search budget was exhausted before this record could be searched. Metadata entered from the standard citation; check title, venue, pages and DOI before relying on it.",
-      "access": "paywalled",
-      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "evidence": "Title, authors, Current Directions in Psychological Science 26(6) 515–520, year and DOI matched on pubmed.ncbi.nlm.nih.gov (PMID 29276344) and journals.sagepub.com; open-access copy in PMC (PMC5724589).",
+      "access": "open",
+      "license": "Creative Commons Attribution licence (per PMC and university repository listings). Linked, not reproduced.",
       "flags": [
-        "unverified",
-        "link-untested",
-        "restricted-access"
+        "link-untested"
       ],
       "citedIn": [
         "w03-l4"
@@ -1130,13 +1109,12 @@
       "year": 2003,
       "url": "https://doi.org/10.1136/bmj.327.7429.1459",
       "doi": "10.1136/bmj.327.7429.1459",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (BMJ 2003 Christmas article); title, authors, year, venue and DOI must be re-checked before release.",
+      "evidence": "Title, authors, BMJ 327(7429) 1459–1461, year and DOI matched on pubmed.ncbi.nlm.nih.gov (PMID 14684649).",
       "access": "open",
       "license": "Copyright holder’s terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested"
       ],
       "citedIn": [
@@ -1169,13 +1147,12 @@
       "year": 2008,
       "url": "https://doi.org/10.1111/j.1539-6053.2009.01038.x",
       "doi": "10.1111/j.1539-6053.2009.01038.x",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed in this session: the shared web-search budget was exhausted before this record could be searched. Metadata entered from the standard citation; check title, venue, pages and DOI before relying on it.",
+      "evidence": "Title, authors, PSPI 9(3) 105–119, year (December 2008 issue) and DOI matched on digitalcommons.usf.edu; some sources give 2009 (DOI registration year).",
       "access": "library",
       "license": "Copyright holder’s terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "contested"
       ],
@@ -1349,13 +1326,12 @@
       "year": 2002,
       "url": "https://doi.org/10.1001/jama.288.3.321",
       "doi": "10.1001/jama.288.3.321",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (JAMA 2002 article; author list abbreviated); title, authors, year, venue and DOI must be re-checked before release.",
+      "evidence": "Title, authors, JAMA 288(3) 321–333, year and DOI matched on pubmed.ncbi.nlm.nih.gov (PMID 12117397).",
       "access": "paywalled",
       "license": "Copyright holder’s terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access",
         "contested"
@@ -1438,11 +1414,10 @@
       "verifiedOn": "2026-11-01",
       "evidence": "Title, author, journal, volume 17, issue 1, pages 99–120, publisher (SAGE) and DOI matched on BibBase, Scilit and CiNii; abstract content (value, rareness, imitability, substitutability) confirmed in the same records.",
       "access": "paywalled",
-      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
         "link-untested",
-        "restricted-access",
-        "contested"
+        "restricted-access"
       ],
       "citedIn": [
         "capstone",
@@ -1522,13 +1497,12 @@
       "year": 2019,
       "url": "https://doi.org/10.1016/j.obhdp.2018.12.005",
       "doi": "10.1016/j.obhdp.2018.12.005",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (Organizational Behavior and Human Decision Processes, 151, 90–103) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
+      "evidence": "Title, authors, OBHDP 151 90–103, year and DOI matched on econpapers.repec.org and escholarship.org.",
       "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access",
         "contested"
@@ -1542,15 +1516,16 @@
       "title": "Accounting for the Effects of Accountability",
       "year": 1999,
       "url": "https://doi.org/10.1037/0033-2909.125.2.255",
-      "doi": "10.1037/0033-2909.125.2.255",
-      "status": "unverified",
+      "doi": null,
+      "status": "partially-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (Psychological Bulletin, 125(2), 255–275) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
+      "evidence": "Title, authors, Psychological Bulletin 125(2) 255–275 and year matched on journal indexes (acnpsearch, scienceopen.com); the DOI did not appear in two searches and was removed. URL is the DOI link from the original record and is unconfirmed.",
       "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
+        "partially-confirmed",
         "link-untested",
+        "no-doi",
         "restricted-access"
       ],
       "citedIn": [
@@ -1650,13 +1625,12 @@
       "year": 2005,
       "url": "https://doi.org/10.1371/journal.pmed.0020124",
       "doi": "10.1371/journal.pmed.0020124",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (PLoS Medicine 2005 essay); title, authors, year, venue and DOI must be re-checked before release.",
+      "evidence": "Title, author, PLoS Medicine 2(8) e124, year and DOI matched on doaj.org and econpapers.repec.org.",
       "access": "open",
       "license": "Open access under the journal’s Creative Commons license (license version not re-confirmed). Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "contested"
       ],
@@ -1676,7 +1650,7 @@
       "verifiedOn": "2026-11-01",
       "evidence": "Title, author, HBR volume 73(2), March–April 1995 and pages 59–67 matched on psnet.ahrq.gov and sebokwiki.org (reprint 95204). The hbr.org URL follows HBR’s article path but could not be checked; the date in that path may differ from the print issue.",
       "access": "paywalled",
-      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
         "partially-confirmed",
         "link-untested",
@@ -1735,13 +1709,12 @@
       "year": 2019,
       "url": "https://doi.org/10.1007/s10648-019-09465-5",
       "doi": "10.1007/s10648-019-09465-5",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed in this session: the shared web-search budget was exhausted before this record could be searched. Metadata entered from the standard citation; check title, venue, pages and DOI before relying on it.",
+      "evidence": "Title, authors, Educational Psychology Review 31(2) 261–292, year and DOI matched on cris.maastrichtuniversity.nl and deutsche-digitale-bibliothek.de.",
       "access": "open",
       "license": "Copyright holder’s terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested"
       ],
       "citedIn": [
@@ -1794,13 +1767,12 @@
       "year": 2011,
       "url": "https://doi.org/10.1177/0956797611417632",
       "doi": "10.1177/0956797611417632",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (Psychological Science 2011 article); title, authors, year, venue and DOI must be re-checked before release.",
+      "evidence": "Title, authors, Psychological Science 22(11) 1359–1366, year and DOI matched on scopus/x-mol records and papers.ssrn.com (preprint).",
       "access": "paywalled",
       "license": "Copyright holder’s terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access"
       ],
@@ -1815,13 +1787,12 @@
       "year": 2018,
       "url": "https://doi.org/10.3982/ECTA14943",
       "doi": "10.3982/ECTA14943",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (Econometrica 2018 article; working-paper versions are believed to circulate freely but were not confirmed); title, authors, year, venue and DOI must be re-checked before release.",
+      "evidence": "Title, authors, Econometrica 86(6) 2019–2047 (Nov 2018) and DOI matched on econometricsociety.org and econpapers.repec.org.",
       "access": "library",
       "license": "Copyright holder’s terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "contested"
       ],
@@ -1836,13 +1807,12 @@
       "year": 2010,
       "url": "https://doi.org/10.1257/jep.24.2.3",
       "doi": "10.1257/jep.24.2.3",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (JEP 2010 article); title, authors, year, venue and DOI must be re-checked before release.",
+      "evidence": "Title, authors, JEP 24(2) 3–30, year and DOI matched on nber.org (w15794) and eprints.lse.ac.uk.",
       "access": "open",
       "license": "Free to read from the American Economic Association (terms not re-confirmed). Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "contested"
       ],
@@ -1858,13 +1828,12 @@
       "year": 2014,
       "url": "https://press.princeton.edu/books/paperback/9780691152844/mastering-metrics",
       "doi": null,
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (Princeton University Press book; publication year printed as 2014/2015 in different listings and the URL slug must be re-checked); title, authors, year, venue and DOI must be re-checked before release.",
+      "evidence": "Title, authors, publisher (Princeton University Press), year and ISBN 9780691152844 matched on econpapers.repec.org (pup:pbooks) and booksellers; press.princeton.edu page not seen in results.",
       "access": "purchase",
       "license": "Copyright holder’s terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access"
       ],
@@ -1879,13 +1848,12 @@
       "year": 2012,
       "url": "https://doi.org/10.5465/amj.2009.0891",
       "doi": "10.5465/amj.2009.0891",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (Academy of Management Journal, 55(2), 381–398) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
+      "evidence": "Title, authors, Academy of Management Journal 55(2) 381–398, year and DOI matched on dash.harvard.edu and econbiz.de.",
       "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access"
       ],
@@ -1983,13 +1951,12 @@
       "year": 2013,
       "url": "https://doi.org/10.1056/NEJMsa1212321",
       "doi": "10.1056/NEJMsa1212321",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (NEJM 2013 article; author list abbreviated; free access believed, not confirmed); title, authors, year, venue and DOI must be re-checked before release.",
+      "evidence": "Title, authors, NEJM 368(18) 1713–1722, year and DOI matched on pubmed.ncbi.nlm.nih.gov (PMID 23635051) and dspace.mit.edu.",
       "access": "free-registration",
       "license": "Copyright holder’s terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "contested"
       ],
@@ -2171,13 +2138,12 @@
       "year": 2004,
       "url": "https://doi.org/10.1080/01972240490507974",
       "doi": "10.1080/01972240490507974",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (The Information Society, 20(5), 325–344) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
+      "evidence": "Title, authors, The Information Society 20(5) 325–344, year and DOI matched on tisj.sitehost.iu.edu (journal abstract page) and alexandria.unisg.ch.",
       "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access"
       ],
@@ -2191,13 +2157,12 @@
       "year": 2016,
       "url": "https://doi.org/10.1177/1745691616652873",
       "doi": "10.1177/1745691616652873",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed by search in this session. Expected: Perspectives on Psychological Science 11(4), 546–573, DOI 10.1177/1745691616652873; a registered replication report with many co-authors. Recorded from the writer's prior knowledge of a widely cited work; title, authors, year, venue and DOI must be confirmed before publication.",
+      "evidence": "Title, lead authors, Perspectives on Psychological Science 11(4) 546–573, year and DOI matched on cris.maastrichtuniversity.nl and mro.massey.ac.nz.",
       "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access",
         "contested"
@@ -2415,15 +2380,14 @@
       "id": "R-nist-2020-nist",
       "title": "NIST Privacy Framework: A Tool for Improving Privacy Through Enterprise Risk Management, Version 1.0",
       "year": 2020,
-      "url": "https://www.nist.gov/privacy-framework",
-      "doi": null,
-      "status": "unverified",
+      "url": "https://doi.org/10.6028/NIST.CSWP.01162020",
+      "doi": "10.6028/NIST.CSWP.01162020",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (National Institute of Standards and Technology, U.S. Department of Commerce) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
+      "evidence": "Title, author (NIST), date (January 16, 2020) and DOI 10.6028/NIST.CSWP.01162020 matched on nist.gov, nvlpubs.nist.gov and csrc.nist.gov.",
       "access": "open",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested"
       ],
       "citedIn": [
@@ -2495,13 +2459,12 @@
       "year": 2015,
       "url": "https://doi.org/10.1093/qje/qju032",
       "doi": "10.1093/qje/qju032",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed by search in this session: the shared web-search budget was exhausted after one query. Record written from well-established bibliographic knowledge (QJE 2015 article; an NBER working-paper version is believed to be freely available); title, authors, year, venue and DOI must be re-checked before release.",
+      "evidence": "Title, authors, QJE 130(1) 165–218 and year matched on econpapers.repec.org and nber.org (w18871); DOI 10.1093/qje/qju032 matched in a separate search (academicnewsletter.sufe.edu.cn).",
       "access": "open",
       "license": "Copyright holder’s terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested"
       ],
       "citedIn": [
@@ -2595,17 +2558,16 @@
     },
     {
       "id": "R-osc-2015-estimating",
-      "title": "Estimating the Reproducibility of Psychological Science",
+      "title": "Estimating the reproducibility of psychological science",
       "year": 2015,
       "url": "https://doi.org/10.1126/science.aac4716",
       "doi": "10.1126/science.aac4716",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed by search in this session. Expected: Science 349(6251), aac4716 (August 2015), DOI 10.1126/science.aac4716; the project materials are public on the Open Science Framework. Recorded from the writer's prior knowledge of a widely cited work; title, authors, year, venue and DOI must be confirmed before publication.",
+      "evidence": "Title, group author, Science 349(6251) aac4716, year and DOI matched on discovery.dundee.ac.uk and research-portal.uu.nl.",
       "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access",
         "contested"
@@ -2665,11 +2627,11 @@
       "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
       "evidence": "Title, authors, journal, volume, issue, pages (1–47), June 1967 date and DOI matched on scienceopen.com and scilit.net records. Search results also distinguish it from the authors’ separate 1967 book, Organization and Environment.",
-      "access": "library",
+      "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
         "link-untested",
-        "contested"
+        "restricted-access"
       ],
       "citedIn": [
         "capstone",
@@ -2683,13 +2645,12 @@
       "year": 2022,
       "url": "https://doi.org/10.1037/apl0000994",
       "doi": "10.1037/apl0000994",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (Journal of Applied Psychology, 107(11), 2040–2068) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
+      "evidence": "Title, authors, Journal of Applied Psychology 107(11) 2040–2068, year and DOI matched on ink.library.smu.edu.sg and siop.org (online Dec 2021).",
       "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access",
         "contested"
@@ -2704,13 +2665,12 @@
       "year": 2006,
       "url": "https://hbr.org/2006/01/who-has-the-d-how-clear-decision-roles-enhance-organizational-performance",
       "doi": null,
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (Harvard Business Review, 84(1)) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
+      "evidence": "Title, authors, Harvard Business Review January 2006 matched on store.hbr.org (product R0601D) and bain.com; volume/issue not confirmed (removed). The hbr.org article URL itself was not seen in results.",
       "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access"
       ],
@@ -2763,13 +2723,12 @@
       "year": 2016,
       "url": "https://doi.org/10.1111/joop.12119",
       "doi": "10.1111/joop.12119",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed in this session: the shared web-search budget was exhausted before this record could be searched. Metadata entered from the standard citation; check before relying on it.",
+      "evidence": "Title, authors, Journal of Occupational and Organizational Psychology 89(2) 249–277, year and DOI matched on research.aston.ac.uk and centaur.reading.ac.uk.",
       "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access"
       ],
@@ -2824,13 +2783,12 @@
       "year": 2000,
       "url": "https://doi.org/10.1037/0003-066X.55.1.68",
       "doi": "10.1037/0003-066X.55.1.68",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed by search in this session. Expected: American Psychologist, 55(1), 68–78, DOI 10.1037/0003-066X.55.1.68. Recorded from the writer's prior knowledge of a widely cited work; title, authors, year, venue and DOI must be confirmed before publication.",
+      "evidence": "Title, authors, American Psychologist 55(1) 68–78, year and DOI matched on scilit.com and bibbase.org.",
       "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access"
       ],
@@ -2884,13 +2842,13 @@
       "year": 1995,
       "url": "https://hbr.org/1995/07/discovery-driven-planning",
       "doi": null,
-      "status": "unverified",
+      "status": "partially-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (Harvard Business Review, 73(4), 44–54) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
+      "evidence": "Title, authors, Harvard Business Review and 1995 (July issue) matched on business.columbia.edu and ritamcgrath.com; volume/pages conflict between sources (44–52 vs 44–54) and were removed. The hbr.org URL was not seen in results.",
       "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
+        "partially-confirmed",
         "link-untested",
         "restricted-access"
       ],
@@ -2924,13 +2882,12 @@
       "year": 1996,
       "url": "https://doi.org/10.1037/0033-2909.119.1.111",
       "doi": "10.1037/0033-2909.119.1.111",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not confirmed by search in this session. Expected: Psychological Bulletin 119(1), 111–137, DOI 10.1037/0033-2909.119.1.111. Recorded from the writer's prior knowledge of a widely cited work; title, authors, year, venue and DOI must be confirmed before publication.",
+      "evidence": "Title, authors, Psychological Bulletin 119(1) 111–137, year and DOI matched on bibliographic indexes (data.zhenzhi.com, synapsesocial.com) and a scan of the article.",
       "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access"
       ],
@@ -3129,13 +3086,12 @@
       "year": 2011,
       "url": "https://doi.org/10.1177/0021886310396550",
       "doi": "10.1177/0021886310396550",
-      "status": "unverified",
+      "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (Journal of Applied Behavioral Science, 47(4), 461–524) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
+      "evidence": "Title, authors, Journal of Applied Behavioral Science 47(4) 461–524, year and DOI matched on journals.sagepub.com and cris.huji.ac.il.",
       "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
         "link-untested",
         "restricted-access"
       ],
@@ -3187,16 +3143,17 @@
       "id": "R-kerr-1975-folly",
       "title": "On the Folly of Rewarding A, While Hoping for B",
       "year": 1975,
-      "url": "https://doi.org/10.2307/255378",
-      "doi": "10.2307/255378",
-      "status": "unverified",
+      "url": "https://doi.org/10.5465/255378",
+      "doi": null,
+      "status": "partially-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Not checked by web search in this session. Title, authors, year and venue (Academy of Management Journal, 18(4), 769–783) entered from the writer's knowledge of this widely cited work; confirm against the DOI resolver or publisher before release.",
+      "evidence": "Title, author, Academy of Management Journal 18(4) 769–783 and year matched in reference lists (talkingaboutorganizations.com, typeset.io); the DOI could not be confirmed in two searches and was removed. URL is the AOM DOI link from the original record and is unconfirmed.",
       "access": "paywalled",
       "license": "Copyright holder's terms. Linked, not reproduced.",
       "flags": [
-        "unverified",
+        "partially-confirmed",
         "link-untested",
+        "no-doi",
         "restricted-access"
       ],
       "citedIn": [

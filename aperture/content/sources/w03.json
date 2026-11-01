@@ -521,8 +521,8 @@
     "verified": {
       "date": "2026-11-01",
       "method": "web-search",
-      "status": "unverified",
-      "evidence": "Not confirmed in this session: the shared web-search budget was exhausted before this record could be searched. Metadata entered from the standard citation; check title, venue, pages and DOI before relying on it.",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, PSPI 9(3) 105–119, year (December 2008 issue) and DOI matched on digitalcommons.usf.edu; some sources give 2009 (DOI registration year).",
       "link": "not-opened"
     },
     "summary": "A review of the claim that instruction should be matched to each learner’s preferred learning style. The authors specify the kind of experiment needed to support the matching claim — learners classified by style, randomly assigned to matched or mismatched instruction, with a crossover interaction on a common test — and conclude that well-designed tests of this kind were virtually absent and that those that existed did not support the claim.",
@@ -548,7 +548,7 @@
       "Jeroen J. G. van Merriënboer",
       "Fred Paas"
     ],
-    "publication": "Educational Psychology Review, 31, 261–292",
+    "publication": "Educational Psychology Review, 31(2), 261–292",
     "year": 2019,
     "url": "https://doi.org/10.1007/s10648-019-09465-5",
     "doi": "10.1007/s10648-019-09465-5",
@@ -559,8 +559,8 @@
     "verified": {
       "date": "2026-11-01",
       "method": "web-search",
-      "status": "unverified",
-      "evidence": "Not confirmed in this session: the shared web-search budget was exhausted before this record could be searched. Metadata entered from the standard citation; check title, venue, pages and DOI before relying on it.",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, Educational Psychology Review 31(2) 261–292, year and DOI matched on cris.maastrichtuniversity.nl and deutsche-digitale-bibliothek.de.",
       "link": "not-opened"
     },
     "summary": "A twenty-year update of cognitive load theory by its principal authors. Learning complex material is constrained by a limited working memory and enabled by a vast long-term memory that stores organized knowledge (schemas). Instruction should manage the load imposed by the material and avoid load created by poor presentation. The review discusses effects such as the benefit of worked examples for novices and the expertise reversal effect, in which methods that help novices become redundant or harmful for more expert learners.",
@@ -591,13 +591,13 @@
     "doi": "10.1177/0963721417712760",
     "discipline": "psychology",
     "type": "journal-article",
-    "access": "paywalled",
-    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "access": "open",
+    "license": "Creative Commons Attribution licence (per PMC and university repository listings). Linked, not reproduced.",
     "verified": {
       "date": "2026-11-01",
       "method": "web-search",
-      "status": "unverified",
-      "evidence": "Not confirmed in this session: the shared web-search budget was exhausted before this record could be searched. Metadata entered from the standard citation; check title, venue, pages and DOI before relying on it.",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, Current Directions in Psychological Science 26(6) 515–520, year and DOI matched on pubmed.ncbi.nlm.nih.gov (PMID 29276344) and journals.sagepub.com; open-access copy in PMC (PMC5724589).",
       "link": "not-opened"
     },
     "summary": "A short review of meta-analytic evidence on far transfer — whether training in one domain improves general cognitive or academic abilities in unrelated domains. Drawing on meta-analyses of chess instruction, music training and working-memory training, the authors conclude that far transfer is rare and that apparent benefits tend to shrink as study quality improves.",
@@ -624,8 +624,8 @@
     ],
     "publication": "Psychological Bulletin, 119(2), 254–284",
     "year": 1996,
-    "url": "https://doi.org/10.1037/0033-2909.119.2.254",
-    "doi": "10.1037/0033-2909.119.2.254",
+    "url": "https://cris.huji.ac.il/en/publications/the-effects-of-feedback-interventions-on-performance-a-historical/",
+    "doi": null,
     "discipline": "psychology",
     "type": "journal-article",
     "access": "paywalled",
@@ -633,8 +633,8 @@
     "verified": {
       "date": "2026-11-01",
       "method": "web-search",
-      "status": "unverified",
-      "evidence": "Not confirmed in this session: the shared web-search budget was exhausted before this record could be searched. Metadata entered from the standard citation; check title, venue, pages and DOI before relying on it.",
+      "status": "partially-confirmed",
+      "evidence": "Title, authors, Psychological Bulletin 119(2) 254–284 and year matched on cris.huji.ac.il and scholars.huji.ac.il; the DOI did not appear in two searches and was removed.",
       "link": "not-opened"
     },
     "summary": "A historical review and meta-analysis of feedback interventions. Feedback improved performance on average, but a large share of interventions reduced performance. The authors propose feedback intervention theory: feedback works by directing attention, and it helps less, or harms, when it draws attention away from the task toward the self.",

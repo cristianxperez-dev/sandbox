@@ -133,9 +133,9 @@
     "license": "Copyright holder's terms. Linked, not reproduced.",
     "verified": {
       "date": "2026-11-01",
-      "method": "prior-knowledge (web-search budget exhausted before this record could be searched)",
-      "status": "unverified",
-      "evidence": "Not confirmed by search in this session. Expected: American Psychologist, 55(1), 68–78, DOI 10.1037/0003-066X.55.1.68. Recorded from the writer's prior knowledge of a widely cited work; title, authors, year, venue and DOI must be confirmed before publication.",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, American Psychologist 55(1) 68–78, year and DOI matched on scilit.com and bibbase.org.",
       "link": "not-opened"
     },
     "summary": "The standard short statement of self-determination theory. It proposes three basic psychological needs — autonomy, competence and relatedness — and a continuum of motivation from amotivation through externally controlled forms to internalized and intrinsic forms. Social environments that support the three needs are argued to foster internalization, persistence and well-being.",
@@ -160,7 +160,7 @@
       "Bengt Holmström",
       "Paul Milgrom"
     ],
-    "publication": "Journal of Law, Economics, & Organization, 7 (special issue), 24–52",
+    "publication": "Journal of Law, Economics, & Organization, 7 (Special Issue), 24–52",
     "year": 1991,
     "url": "https://doi.org/10.1093/jleo/7.special_issue.24",
     "doi": "10.1093/jleo/7.special_issue.24",
@@ -170,9 +170,9 @@
     "license": "Copyright holder's terms. Linked, not reproduced.",
     "verified": {
       "date": "2026-11-01",
-      "method": "prior-knowledge (web-search budget exhausted before this record could be searched)",
-      "status": "unverified",
-      "evidence": "Not confirmed by search in this session. Expected: Journal of Law, Economics, & Organization 7 (special issue), 24–52, DOI 10.1093/jleo/7.special_issue.24. Recorded from the writer's prior knowledge of a widely cited work; title, authors, year, venue and DOI must be confirmed before publication.",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, journal, volume 7 special issue, pages 24–52 and the JSTOR stable record matched on the article front matter hosted at people.duke.edu; DOI matched on a scholarly index listing (synapsesocial.com). Search results note a later reprint with a different DOI.",
       "link": "not-opened"
     },
     "summary": "A foundational model of incentives when an agent divides effort among several tasks that differ in how well they can be measured. Strong incentives on the measurable task pull effort away from the hard-to-measure ones, so the optimal contract may use weak incentives, fixed pay, or a redesign of the job itself. The paper explains why many real jobs pay salaries rather than piece rates.",
@@ -199,16 +199,16 @@
     "publication": "Academy of Management Journal, 18(4), 769–783",
     "year": 1975,
     "url": "https://doi.org/10.5465/255378",
-    "doi": "10.5465/255378",
+    "doi": null,
     "discipline": "management",
     "type": "journal-article",
     "access": "paywalled",
     "license": "Copyright holder's terms. Linked, not reproduced.",
     "verified": {
       "date": "2026-11-01",
-      "method": "prior-knowledge (web-search budget exhausted before this record could be searched)",
-      "status": "unverified",
-      "evidence": "Not confirmed by search in this session. Expected: Academy of Management Journal 18(4), 769–783 (1975); DOI 10.5465/255378 (the JSTOR identifier is 10.2307/255378). Reprinted in Academy of Management Executive in 1995. Recorded from the writer's prior knowledge of a widely cited work; title, authors, year, venue and DOI must be confirmed before publication.",
+      "method": "web-search",
+      "status": "partially-confirmed",
+      "evidence": "Title, author, Academy of Management Journal 18(4) 769–783 and year matched in reference lists (talkingaboutorganizations.com, typeset.io); the DOI could not be confirmed in two searches and was removed. URL is the AOM DOI link from the original record and is unconfirmed.",
       "link": "not-opened"
     },
     "summary": "A classic essay collecting examples from politics, war, medicine, universities, sport and business in which organizations reward one behavior while hoping for another. Kerr argues the cause is usually an overreliance on objective, easily counted criteria and a reluctance to reward hard-to-observe behavior, and that fixing it begins by asking what the system actually pays for.",
@@ -242,9 +242,9 @@
     "license": "U.S. federal government publication. Linked, not reproduced.",
     "verified": {
       "date": "2026-11-01",
-      "method": "prior-knowledge (web-search budget exhausted before this record could be searched)",
-      "status": "unverified",
-      "evidence": "Not confirmed by search in this session. Expected: CFPB newsroom release dated September 8, 2016, announcing a $100 million civil penalty and a consent order; the URL is the expected newsroom path and was not seen in search results. Recorded from the writer's prior knowledge of a widely cited work; title, authors, year, venue and DOI must be confirmed before publication.",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Headline and the official consumerfinance.gov newsroom URL matched in search results, with the CFPB enforcement action page (wells-fargo-bank-2016); September 8, 2016 date matched in contemporaneous coverage.",
       "link": "not-opened"
     },
     "summary": "The federal regulator’s announcement of its enforcement action against Wells Fargo Bank. The bureau stated that bank employees, working under sales targets and incentive-compensation programs, had opened deposit and credit-card accounts without customers’ knowledge or consent, and it imposed a $100 million penalty alongside a consent order requiring remediation.",
@@ -264,7 +264,7 @@
   },
   {
     "id": "R-osc-2015-estimating",
-    "title": "Estimating the Reproducibility of Psychological Science",
+    "title": "Estimating the reproducibility of psychological science",
     "authors": [
       "Open Science Collaboration"
     ],
@@ -278,9 +278,9 @@
     "license": "Copyright holder's terms. Linked, not reproduced.",
     "verified": {
       "date": "2026-11-01",
-      "method": "prior-knowledge (web-search budget exhausted before this record could be searched)",
-      "status": "unverified",
-      "evidence": "Not confirmed by search in this session. Expected: Science 349(6251), aac4716 (August 2015), DOI 10.1126/science.aac4716; the project materials are public on the Open Science Framework. Recorded from the writer's prior knowledge of a widely cited work; title, authors, year, venue and DOI must be confirmed before publication.",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, group author, Science 349(6251) aac4716, year and DOI matched on discovery.dundee.ac.uk and research-portal.uu.nl.",
       "link": "not-opened"
     },
     "summary": "A large collaboration repeated 100 studies published in three prominent psychology journals, using high-powered designs and materials from the original authors where possible. Far fewer replications than originals produced statistically significant results, and replication effect sizes were on average about half the original estimates. Social psychology studies replicated less often than cognitive psychology studies.",
@@ -316,9 +316,9 @@
     "license": "Copyright holder's terms. Linked, not reproduced.",
     "verified": {
       "date": "2026-11-01",
-      "method": "prior-knowledge (web-search budget exhausted before this record could be searched)",
-      "status": "unverified",
-      "evidence": "Not confirmed by search in this session. Expected: Perspectives on Psychological Science 11(4), 546–573, DOI 10.1177/1745691616652873; a registered replication report with many co-authors. Recorded from the writer's prior knowledge of a widely cited work; title, authors, year, venue and DOI must be confirmed before publication.",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, lead authors, Perspectives on Psychological Science 11(4) 546–573, year and DOI matched on cris.maastrichtuniversity.nl and mro.massey.ac.nz.",
       "link": "not-opened"
     },
     "summary": "A registered replication report in which more than twenty laboratories ran the same preregistered protocol testing whether an initial act of self-control impairs performance on a later self-control task. The pooled effect was close to zero, in contrast to the sizable effects summarized in earlier meta-analyses of the ego-depletion literature.",
@@ -353,9 +353,9 @@
     "license": "Copyright holder's terms. Linked, not reproduced.",
     "verified": {
       "date": "2026-11-01",
-      "method": "prior-knowledge (web-search budget exhausted before this record could be searched)",
-      "status": "unverified",
-      "evidence": "Not confirmed by search in this session. Expected: Psychological Bulletin 119(1), 111–137, DOI 10.1037/0033-2909.119.1.111. Recorded from the writer's prior knowledge of a widely cited work; title, authors, year, venue and DOI must be confirmed before publication.",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, Psychological Bulletin 119(1) 111–137, year and DOI matched on bibliographic indexes (data.zhenzhi.com, synapsesocial.com) and a scan of the article.",
       "link": "not-opened"
     },
     "summary": "A meta-analysis of studies that used Asch’s line-judgment task, in which a participant faces a unanimous group giving a clearly wrong answer. Conformity was a robust phenomenon, but its size varied: it was larger with larger majorities and in more collectivist cultures, and in U.S. studies it declined over the decades after Asch’s original work.",
@@ -390,9 +390,9 @@
     "license": "Free to read from the American Economic Association. Copyright holder’s terms. Linked, not reproduced.",
     "verified": {
       "date": "2026-11-01",
-      "method": "prior-knowledge (web-search budget exhausted before this record could be searched)",
-      "status": "unverified",
-      "evidence": "Not confirmed by search in this session. Expected: Journal of Economic Perspectives 14(3), 159–181 (Summer 2000), DOI 10.1257/jep.14.3.159. Recorded from the writer's prior knowledge of a widely cited work; title, authors, year, venue and DOI must be confirmed before publication.",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, JEP 14(3) 159–181, year and DOI matched on econpapers.repec.org (aea:jecper) and econbiz.de.",
       "link": "not-opened"
     },
     "summary": "A review of experimental evidence that many people are conditionally cooperative: they reward kind actions and punish unkind ones even at a cost to themselves. The authors show how reciprocity can make incomplete contracts work (generous wages met with higher effort in gift-exchange experiments), how cooperation in public-goods games unravels without sanctions and is sustained when free riders can be punished, and how explicit incentives can interact with reciprocal motives.",

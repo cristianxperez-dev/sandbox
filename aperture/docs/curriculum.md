@@ -91,7 +91,7 @@ Generated from the course content by `aperture/tools/docs.mjs`. An independent l
 
 **Required reading:** Wasserstein et al. (2016), *The ASA’s Statement on p-Values: Context, Process, and Purpose* — Full statement (about five pages); Simmons et al. (2011), *False-Positive Psychology: Undisclosed Flexibility in Data Collection and Analysis Allows Presenting Anything as Significant* — Full article; Angrist et al. (2010), *The Credibility Revolution in Empirical Economics: How Better Research Design Is Taking the Con out of Econometrics* — Full article; skim the macroeconomics and industrial-organization sections
 
-**Optional reading:** Gelman et al. (2014), *Beyond Power Calculations: Assessing Type S (Sign) and Type M (Magnitude) Errors*; Collaboration (2015), *Estimating the Reproducibility of Psychological Science*; Deaton et al. (2018), *Understanding and misunderstanding randomized controlled trials*; Angrist et al. (2014), *Mastering ’Metrics: The Path from Cause to Effect*; Ioannidis (2005), *Why Most Published Research Findings Are False*
+**Optional reading:** Gelman et al. (2014), *Beyond Power Calculations: Assessing Type S (Sign) and Type M (Magnitude) Errors*; Collaboration (2015), *Estimating the reproducibility of psychological science*; Deaton et al. (2018), *Understanding and misunderstanding randomized controlled trials*; Angrist et al. (2014), *Mastering ’Metrics: The Path from Cause to Effect*; Ioannidis (2005), *Why Most Published Research Findings Are False*
 
 **Exercise:** Evidence Lab (simulation engine, 45 min) · **Case:** The Executive Disagreement (healthcare) · **Quiz:** 12 questions, 9 types · **Assignment:** Critique a Published Study · **Review cards:** 16 · **Glossary:** 20 terms
 
