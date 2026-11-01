@@ -46,6 +46,11 @@ jobs:
         env:
           APP_SOURCES_TOKEN: ${{ secrets.APP_SOURCES_TOKEN }}
 
+      # APERTURE's course content is compiled into its protected API, not published here.
+      # Fails if the content is invalid or aperture/build/ is stale.
+      - name: Check APERTURE content
+        run: node aperture/tools/compile.mjs --check
+
       - name: Build and check
         run: node scripts/build.mjs && node scripts/check.mjs
         env:
