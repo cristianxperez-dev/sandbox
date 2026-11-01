@@ -50,8 +50,8 @@
   },
   "concepts": [
     {
-      "id": "c-accrual-accounting",
-      "name": "Accrual versus cash accounting",
+      "id": "c-cash-vs-profit",
+      "name": "Cash versus accrual profit",
       "domain": "financial-literacy",
       "lessons": [
         "w10-l1"
@@ -74,7 +74,7 @@
       ]
     },
     {
-      "id": "c-net-present-value",
+      "id": "c-npv",
       "name": "Net present value",
       "domain": "financial-literacy",
       "lessons": [
@@ -99,7 +99,7 @@
       ]
     },
     {
-      "id": "c-cost-behavior",
+      "id": "c-contribution-margin",
       "name": "Cost behavior and contribution margin",
       "domain": "financial-literacy",
       "lessons": [
@@ -116,7 +116,7 @@
       ]
     },
     {
-      "id": "c-sunk-cost-fallacy",
+      "id": "c-sunk-cost",
       "name": "Sunk-cost fallacy",
       "domain": "behavioral-science",
       "lessons": [
@@ -150,7 +150,7 @@
     },
     {
       "id": "c-real-options",
-      "name": "Real options",
+      "name": "Real options and staged commitment",
       "domain": "business-strategy",
       "lessons": [
         "w10-l4"
@@ -186,7 +186,7 @@
         "Translate a departmental proposal into its effects on reported expense, cash and the balance sheet."
       ],
       "concepts": [
-        "c-accrual-accounting",
+        "c-cash-vs-profit",
         "c-three-statement-linkage"
       ],
       "executive": "Profit and cash answer different questions. The income statement measures performance on an accrual basis — revenue when earned, costs matched to the period — so a growing organization can report healthy profit while cash drains into unpaid customer invoices and new equipment. The balance sheet records what the organization owns and owes at a moment; the cash flow statement reconciles the two. For decisions, insist on seeing all three, ask what drives any gap between profit and operating cash flow, and know whether a proposal will be treated as an operating expense or a capital asset, because that choice changes how its cost appears without changing what it costs.",
@@ -523,7 +523,7 @@
           "explanation": "Operating cash flow equals net income plus non-cash expenses, minus increases in operating assets (receivables, inventory) and plus increases in operating liabilities (payables). Here that is 4.0 + 1.2 − 2.5 + 0.4 + 0.6 = $3.7 million. The signs follow cash logic: an asset that grew absorbed cash; a liability that grew is cash you have not yet paid out.",
           "concepts": [
             "c-three-statement-linkage",
-            "c-accrual-accounting"
+            "c-cash-vs-profit"
           ],
           "domain": "financial-literacy",
           "lesson": "w10-l1",
@@ -565,7 +565,7 @@
             "d": "confuses-financing-with-operating"
           },
           "concepts": [
-            "c-accrual-accounting"
+            "c-cash-vs-profit"
           ],
           "domain": "financial-literacy",
           "lesson": "w10-l1",
@@ -648,7 +648,7 @@
       ],
       "concepts": [
         "c-time-value-of-money",
-        "c-net-present-value",
+        "c-npv",
         "c-internal-rate-of-return",
         "c-cost-of-capital"
       ],
@@ -946,7 +946,7 @@
           "working": "Discount each inflow: 200 ÷ 1.10 = 181.82; 250 ÷ 1.10² = 250 ÷ 1.21 = 206.61; 200 ÷ 1.10³ = 200 ÷ 1.331 = 150.26. Sum of present values = 181.82 + 206.61 + 150.26 = 538.69. NPV = 538.69 − 500 = 38.69, about $39.",
           "explanation": "NPV is the sum of each cash flow divided by (1 + r) raised to its year, including the outlay at year 0. The inflows are worth $538.69 today at 10%, so the project adds about $38.69 of value relative to the 10% alternative.",
           "concepts": [
-            "c-net-present-value",
+            "c-npv",
             "c-time-value-of-money"
           ],
           "domain": "financial-literacy",
@@ -990,7 +990,7 @@
           },
           "concepts": [
             "c-internal-rate-of-return",
-            "c-net-present-value"
+            "c-npv"
           ],
           "domain": "financial-literacy",
           "lesson": "w10-l2",
@@ -1059,8 +1059,8 @@
           "why": "Scenarios and real options extend NPV to uncertain and flexible projects."
         },
         {
-          "to": "w09",
-          "why": "Opportunity cost and portfolio thinking from the strategy week are what the discount rate prices."
+          "to": "w09-l1",
+          "why": "Strategy as a set of trade-offs is what opportunity cost and the discount rate put a price on."
         }
       ]
     },
@@ -1076,9 +1076,9 @@
         "Choose a portfolio under a binding budget using NPV per dollar and enumeration of combinations."
       ],
       "concepts": [
-        "c-cost-behavior",
+        "c-contribution-margin",
         "c-marginal-analysis",
-        "c-sunk-cost-fallacy",
+        "c-sunk-cost",
         "c-opportunity-cost",
         "c-capital-rationing"
       ],
@@ -1421,7 +1421,7 @@
           "working": "Contribution margin per visit = 180 − 60 = $120. Break-even volume = fixed cost ÷ contribution margin = 14,400 ÷ 120 = 120 visits per month.",
           "explanation": "Each visit contributes $120 toward the $14,400 of fixed cost; 120 visits cover it exactly. Volume above 120 produces profit at $120 per visit; volume below produces a loss.",
           "concepts": [
-            "c-cost-behavior"
+            "c-contribution-margin"
           ],
           "domain": "financial-literacy",
           "lesson": "w10-l3",
@@ -1463,7 +1463,7 @@
             "d": "confuses-depreciation-with-economics"
           },
           "concepts": [
-            "c-sunk-cost-fallacy",
+            "c-sunk-cost",
             "c-opportunity-cost"
           ],
           "domain": "financial-literacy",
@@ -1537,8 +1537,8 @@
           "why": "Sunk-cost and opportunity-cost neglect are judgment errors of the kind introduced in Week 1."
         },
         {
-          "to": "w08",
-          "why": "Staff capacity and span decisions from organization design are opportunity-cost decisions."
+          "to": "w12-l3",
+          "why": "The cost of running people and systems at high utilization is the operations face of opportunity cost."
         }
       ]
     },
@@ -1557,7 +1557,7 @@
         "c-scenario-analysis",
         "c-real-options",
         "c-reference-class-forecasting",
-        "c-net-present-value"
+        "c-npv"
       ],
       "executive": "Every investment case contains a forecast, and forecasts built from the plan itself are systematically optimistic. Three disciplines protect you. Sensitivity and scenario analysis show which assumptions actually move the answer, so debate goes where it matters. Real-options thinking values the ability to stage, wait or stop, which a static NPV ignores and which often favors pilots over big launches. Reference-class forecasting replaces the inside view of the plan with the track record of comparable projects. Ask for the distribution of outcomes, not one number; ask what the reference class says; and design projects so that you learn before you commit the bulk of the money.",
       "sections": {
@@ -2012,8 +2012,8 @@
           "why": "Scenario NPVs are computed with the discounting tools from that lesson."
         },
         {
-          "to": "w04",
-          "why": "Base rates and the outside view apply the statistical reasoning from Week 4."
+          "to": "w09-l4",
+          "why": "Strategy under uncertainty pairs a few hard-to-reverse commitments with staged options — the real-options logic priced here."
         },
         {
           "to": "w13",
@@ -2449,16 +2449,16 @@
       ],
       "crosslinks": [
         {
-          "to": "w10-l3",
-          "why": "Marginal analysis and opportunity cost underpin marginal revenue product."
-        },
-        {
           "to": "w10-l4",
           "why": "Talent investments are uncertain, staged and best forecast from reference classes."
         },
         {
-          "to": "w07",
-          "why": "Negotiating compensation applies surplus logic from both sides of the table."
+          "to": "w04-l3",
+          "why": "Detecting a development program’s uplift requires a credible counterfactual, not a before-and-after comparison."
+        },
+        {
+          "to": "w07-l1",
+          "why": "Reservation values in compensation negotiations are set by the surplus logic of this lesson."
         }
       ]
     }
@@ -3446,7 +3446,7 @@
         },
         "concepts": [
           "c-three-statement-linkage",
-          "c-accrual-accounting"
+          "c-cash-vs-profit"
         ],
         "domain": "financial-literacy",
         "lesson": "w10-l1",
@@ -3513,7 +3513,7 @@
         "working": "The four-year annuity factor at 10% is [1 − 1.10⁻⁴] ÷ 0.10 = (1 − 0.683013) ÷ 0.10 = 3.169865. Present value of savings = 80,000 × 3.169865 = 253,589. NPV = 253,589 − 250,000 = 3,589. Check year by year: 72,727 + 66,116 + 60,105 + 54,641 = 253,589.",
         "explanation": "The savings are worth about $253,589 today at 10%, so the NPV is about $3,589 — positive but thin. Simple payback is 3.1 years (250,000 ÷ 80,000), which looks comfortable; the NPV shows how little margin there is once time value is counted, and a small shortfall in savings would turn it negative.",
         "concepts": [
-          "c-net-present-value",
+          "c-npv",
           "c-time-value-of-money"
         ],
         "domain": "financial-literacy",
@@ -3671,7 +3671,7 @@
           "c": "uses-allocated-cost"
         },
         "concepts": [
-          "c-cost-behavior",
+          "c-contribution-margin",
           "c-marginal-analysis"
         ],
         "domain": "financial-literacy",
@@ -3717,7 +3717,7 @@
         ],
         "explanation": "Relevant costs are future and differ between the options: the resale value forgone by keeping the old machine, its future maintenance, the new machine’s price and the training time it requires. The original purchase price is sunk, and the allocated administration cost is the same under both options.",
         "concepts": [
-          "c-sunk-cost-fallacy",
+          "c-sunk-cost",
           "c-opportunity-cost",
           "c-marginal-analysis"
         ],
@@ -4442,7 +4442,7 @@
       "id": "w10-sr01",
       "front": "Why can a fast-growing company report rising profit while its operating cash flow falls?",
       "back": "Accrual profit counts revenue when earned; growth ties up cash in receivables and inventory (working capital), so cash lags profit.",
-      "concept": "c-accrual-accounting",
+      "concept": "c-cash-vs-profit",
       "lesson": "w10-l1"
     },
     {
@@ -4491,14 +4491,14 @@
       "id": "w10-sr08",
       "front": "Break-even volume equals…?",
       "back": "Fixed costs ÷ contribution margin per unit (price − variable cost per unit).",
-      "concept": "c-cost-behavior",
+      "concept": "c-contribution-margin",
       "lesson": "w10-l3"
     },
     {
       "id": "w10-sr09",
       "front": "Which costs belong in a decision?",
       "back": "Only future costs that differ between the options (incremental, avoidable); sunk costs count only through salvage or reuse value.",
-      "concept": "c-sunk-cost-fallacy",
+      "concept": "c-sunk-cost",
       "lesson": "w10-l3"
     },
     {

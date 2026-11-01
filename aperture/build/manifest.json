@@ -2,14 +2,14 @@
   "generated": "2026-11-01",
   "method": "Metadata verified through web-search results on the date shown per record. The build environment could not open pages, so every link is flagged link-untested until checked in a browser.",
   "totals": {
-    "resources": 156,
-    "metadataConfirmed": 90,
+    "resources": 166,
+    "metadataConfirmed": 100,
     "partiallyConfirmed": 16,
     "unverified": 50,
-    "linkUntested": 156,
-    "open": 50,
+    "linkUntested": 166,
+    "open": 58,
     "restricted": 91,
-    "contested": 87,
+    "contested": 94,
     "uncited": 0
   },
   "records": [
@@ -92,6 +92,25 @@
       ],
       "citedIn": [
         "w04-l5"
+      ]
+    },
+    {
+      "id": "R-ali-1981-restatement",
+      "title": "Restatement of the Law Second, Contracts",
+      "year": 1981,
+      "url": "https://www.ali.org/publications/restatement-law-second/contracts",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, publisher (American Law Institute), 1981 edition and reporters (Robert Braucher until 1971; E. Allan Farnsworth from 1971) matched on ali.org; the 1981 imprint is corroborated by Berkeley Law and Villanova Law library catalog records.",
+      "access": "library",
+      "license": "© The American Law Institute. Linked, not reproduced. Available in law libraries and legal research services.",
+      "flags": [
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w11-l2"
       ]
     },
     {
@@ -961,6 +980,46 @@
       ],
       "citedIn": [
         "capstone"
+      ]
+    },
+    {
+      "id": "R-starr-2021-noncompete",
+      "title": "Noncompete Agreements in the US Labor Force",
+      "year": 2021,
+      "url": "https://doi.org/10.1086/712206",
+      "doi": "10.1086/712206",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, Journal of Law and Economics volume 64, issue 1, pages 53–84, year 2021 and DOI 10.1086/712206 matched on econpapers.repec.org, chicagounbound.uchicago.edu and repository.law.umich.edu. Survey size and headline findings matched the published abstract.",
+      "access": "open",
+      "license": "Copyright holder's terms. Linked, not reproduced. A free copy is posted in the University of Michigan Law School repository; an earlier version is on SSRN (abstract 2625714).",
+      "flags": [
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w11",
+        "w11-l3"
+      ]
+    },
+    {
+      "id": "R-ftc-2024-non-compete",
+      "title": "Non-Compete Clause Rule",
+      "year": 2024,
+      "url": "https://ftc.gov/news-events/news/press-releases/2025/09/federal-trade-commission-files-accede-vacatur-non-compete-clause-rule",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Rule title, Federal Register citation 89 FR 38342 (document 2024-09171, pages 38342–38506), May 7, 2024 publication and the scheduled September 4, 2024 effective date matched in gao.gov (B-336417) and Federal Register mirrors. Status: the August 20, 2024 set-aside in Ryan LLC v. FTC (N.D. Tex., Judge Ada Brown) matched in multiple law-firm reports; the FTC's 3–1 vote on September 5, 2025 to dismiss its appeals and accede to vacatur matched on ftc.gov (the linked press release). Removal of the rule from the Code of Federal Regulations by Federal Register document 2026-02866 (91 FR 6507, published February 12, 2026) appeared on an ftc.gov public-comments page and Federal Register mirrors, not on federalregister.gov itself, so that detail is partially confirmed. The URL points to the FTC's September 2025 announcement because the rule's own Federal Register page was not seen in search results.",
+      "access": "open",
+      "license": "Official U.S. government publication. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w11-l3",
+        "w11-l4"
       ]
     },
     {
@@ -2002,6 +2061,25 @@
       ]
     },
     {
+      "id": "R-kaplow-1992-rules",
+      "title": "Rules Versus Standards: An Economic Analysis",
+      "year": 1992,
+      "url": "https://doi.org/10.2307/1372840",
+      "doi": "10.2307/1372840",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, author, Duke Law Journal volume 42, issue 3, pages 557–629, year 1992 and DOI 10.2307/1372840 matched on scholarship.law.duke.edu, hls.harvard.edu and dash.harvard.edu.",
+      "access": "open",
+      "license": "Copyright holder's terms. Linked, not reproduced. A free copy is posted in the Duke Law Scholarship Repository and in Harvard's DASH repository.",
+      "flags": [
+        "link-untested"
+      ],
+      "citedIn": [
+        "w11",
+        "w11-l1"
+      ]
+    },
+    {
       "id": "R-colfer-2016-mirroring",
       "title": "The Mirroring Hypothesis: Theory, Evidence, and Exceptions",
       "year": 2016,
@@ -2129,6 +2207,26 @@
       ]
     },
     {
+      "id": "R-marx-2009-mobility",
+      "title": "Mobility, Skills, and the Michigan Non-Compete Experiment",
+      "year": 2009,
+      "url": "https://doi.org/10.1287/mnsc.1080.0985",
+      "doi": "10.1287/mnsc.1080.0985",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, authors, Management Science volume 55, issue 6 (June 2009), pages 875–889 and DOI 10.1287/mnsc.1080.0985 matched on pubsonline.informs.org and econpapers.repec.org; design and headline estimates matched the Berkeley-hosted paper.",
+      "access": "open",
+      "license": "Copyright holder's terms. Linked, not reproduced. An author/working-paper version is hosted by the Fung Institute at UC Berkeley.",
+      "flags": [
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w11",
+        "w11-l3"
+      ]
+    },
+    {
       "id": "R-mckay-2024-reporting",
       "title": "Reporting Bias, Not External Focus: A Robust Bayesian Meta-Analysis and Systematic Review of the External Focus of Attention Literature",
       "year": 2024,
@@ -2230,6 +2328,29 @@
       "citedIn": [
         "w09",
         "w09-l2"
+      ]
+    },
+    {
+      "id": "R-valbrune-2019-business",
+      "title": "Business Law I Essentials",
+      "year": 2019,
+      "url": "https://openstax.org/details/books/business-law-i-essentials",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, publisher (OpenStax, Rice University), 2019 first-edition publication date (details page: September 27, 2019) and the CC BY-NC-SA 4.0 license matched on openstax.org (preface, details page and web PDF). Mirande Valbrune and Renee De Assis are listed first among the contributors; Suzanne Cardell, Tess C. Taylor and Natalie Sappleton are also listed. A second edition (2e) is listed on openstax.org with a June 24, 2026 publication date. Individual chapter titles were not confirmed in search results, so readings refer to topics rather than chapter numbers.",
+      "access": "open",
+      "license": "CC BY-NC-SA 4.0 (OpenStax). Attribution, non-commercial use and share-alike required. Linked, not reproduced. OpenStax's 2e pages add a notice that the book may not be used to train large language models without permission.",
+      "flags": [
+        "link-untested"
+      ],
+      "citedIn": [
+        "w11",
+        "w11-l1",
+        "w11-l2",
+        "w11-l3",
+        "w11-l4",
+        "w11-l5"
       ]
     },
     {
@@ -2449,6 +2570,27 @@
       ],
       "citedIn": [
         "w06-l4"
+      ]
+    },
+    {
+      "id": "R-holmes-1897-path",
+      "title": "The Path of the Law",
+      "year": 1897,
+      "url": "https://doi.org/10.2307/1322028",
+      "doi": "10.2307/1322028",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, author, Harvard Law Review volume 10, issue 8, pages 457–478 and year 1897 matched on jstor.org (stable 1322028) and scilit.net (DOI 10.2307/1322028). Public-domain full text listed on gutenberg.org. Search results also note it was first delivered as an address at Boston University School of Law in January 1897 and printed in the Boston Law School Magazine shortly before the Harvard Law Review.",
+      "access": "open",
+      "license": "Public domain (published 1897; JSTOR lists the issue as public domain). Free full text is also available from Project Gutenberg.",
+      "flags": [
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w11",
+        "w11-l1",
+        "w11-l5"
       ]
     },
     {
@@ -3082,6 +3224,66 @@
       "citedIn": [
         "w12",
         "w12-l3"
+      ]
+    },
+    {
+      "id": "R-macaulay-1963-non-contractual",
+      "title": "Non-Contractual Relations in Business: A Preliminary Study",
+      "year": 1963,
+      "url": "https://www.jstor.org/stable/2090458",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, author, American Sociological Review volume 28, issue 1 (February 1963), pages 55–67 and JSTOR stable 2090458 matched in search results (JSTOR-derived PDF hosted at edisciplinas.usp.br; University of Wisconsin Law repository record; a Springer reprint in Stewart Macaulay: Selected Works). A journal DOI was not confirmed, so none is given.",
+      "access": "library",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "no-doi",
+        "contested"
+      ],
+      "citedIn": [
+        "w11",
+        "w11-l2"
+      ]
+    },
+    {
+      "id": "R-delaware-1985-smith",
+      "title": "Smith v. Van Gorkom, 488 A.2d 858",
+      "year": 1985,
+      "url": "https://law.justia.com/cases/delaware/supreme-court/1985/488-a-2d-858-4.html",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Case name, citation 488 A.2d 858, court (Supreme Court of Delaware) and 1985 decision matched on law.justia.com and opencasebook.org; the holding (directors who approved a merger without informing themselves were grossly negligent, breached the duty of care and lost business-judgment-rule protection) matched in several case summaries. Some summaries give a January 29, 1985 decision date.",
+      "access": "open",
+      "license": "Judicial opinion (public record). Linked via Justia, not reproduced.",
+      "flags": [
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "w11",
+        "w11-l4"
+      ]
+    },
+    {
+      "id": "R-scotus-1981-upjohn",
+      "title": "Upjohn Co. v. United States, 449 U.S. 383",
+      "year": 1981,
+      "url": "https://www.govinfo.gov/content/pkg/USREPORTS-449/pdf/USREPORTS-449-383.pdf",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Case name, citation 449 U.S. 383 (1981), decision date January 13, 1981 and majority opinion by Justice Rehnquist matched on govinfo.gov, law.cornell.edu and americanbar.org; holdings (rejection of the \"control group\" test; work-product doctrine applies to IRS summonses) matched in the official syllabus.",
+      "access": "open",
+      "license": "Official U.S. government publication (United States Reports). Linked, not reproduced.",
+      "flags": [
+        "link-untested"
+      ],
+      "citedIn": [
+        "w11",
+        "w11-l5"
       ]
     },
     {

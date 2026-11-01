@@ -504,31 +504,31 @@
           "options": [
             {
               "id": "a",
-              "text": "Finance is the binding constraint for closing that site now, so the discussion shifts to timing or to a different site."
-            },
-            {
-              "id": "b",
               "text": "Law is the binding constraint, because a lease is a contract."
             },
             {
-              "id": "c",
+              "id": "b",
               "text": "The constraint can be ignored, because strategy should decide and finance follows."
+            },
+            {
+              "id": "c",
+              "text": "Finance is the binding constraint for closing that site now, so the discussion shifts to timing or to a different site."
             },
             {
               "id": "d",
               "text": "Integrative thinking requires a compromise, such as closing half of the site."
             }
           ],
-          "answer": "a",
+          "answer": "c",
           "explanation": "The lease is a legal instrument, but what limits the choice here is its cost relative to the savings, so the finance lens binds for that site. Identifying it early reframes the question from “consolidate or not” to “when, and which site”. The constraint is a price the bank could pay, which is exactly what the executive must make explicit.",
           "optionFeedback": {
-            "b": "The lease is a contract, but nothing in it forbids closing; it makes closing expensive. That is a financial constraint expressed through a legal document.",
-            "c": "A binding constraint cannot be ignored without accepting its cost; strategy operates inside the feasible set, not above it.",
+            "a": "The lease is a contract, but nothing in it forbids closing; it makes closing expensive. That is a financial constraint expressed through a legal document.",
+            "b": "A binding constraint cannot be ignored without accepting its cost; strategy operates inside the feasible set, not above it.",
             "d": "Splitting the site in half is a compromise, not an integrative resolution, and it does not address the lease cost."
           },
           "errorTags": {
-            "b": "confuses-instrument-with-constraint",
-            "c": "ignores-binding-constraint",
+            "a": "confuses-instrument-with-constraint",
+            "b": "ignores-binding-constraint",
             "d": "compromise-not-integration"
           },
           "concepts": [
@@ -982,32 +982,32 @@
           "options": [
             {
               "id": "a",
-              "text": "No stable ties to those served: embed a liaison with two districts and solve a problem they name."
-            },
-            {
-              "id": "b",
               "text": "Roles must be learned: write more detailed job descriptions for the office’s analysts."
             },
             {
-              "id": "c",
+              "id": "b",
               "text": "Lack of authority: ask the commissioner to require districts to use the office."
             },
             {
-              "id": "d",
+              "id": "c",
               "text": "Cooperation among strangers: run a team-building retreat for the office’s staff."
+            },
+            {
+              "id": "d",
+              "text": "No stable ties to those served: embed a liaison with two districts and solve a problem they name."
             }
           ],
-          "answer": "a",
+          "answer": "d",
           "explanation": "The office has authority and talent; what it lacks is a relationship with its users, who stay with providers they know. Embedding with a few districts and solving a problem they name builds the results- and relationship-based legitimacy that a mandate cannot supply.",
           "optionFeedback": {
-            "b": "Role clarity matters, but nothing suggests the analysts are confused about their jobs; the problem is on the users’ side.",
-            "c": "The office already has the commissioner’s authority. A mandate may produce grudging compliance and deepen the perception that the office serves the commissioner rather than the districts.",
-            "d": "Internal cohesion is not the issue described; the strangers who need to cooperate are the office and the districts."
+            "a": "Role clarity matters, but nothing suggests the analysts are confused about their jobs; the problem is on the users’ side.",
+            "b": "The office already has the commissioner’s authority. A mandate may produce grudging compliance and deepen the perception that the office serves the commissioner rather than the districts.",
+            "c": "Internal cohesion is not the issue described; the strangers who need to cooperate are the office and the districts."
           },
           "errorTags": {
-            "b": "misdiagnoses-mechanism",
-            "c": "authority-over-legitimacy",
-            "d": "misdiagnoses-mechanism"
+            "a": "misdiagnoses-mechanism",
+            "b": "authority-over-legitimacy",
+            "c": "misdiagnoses-mechanism"
           },
           "concepts": [
             "c-liability-of-newness",
@@ -1025,11 +1025,11 @@
           "options": [
             {
               "id": "a",
-              "text": "New organizations face their highest failure risk in the first weeks after founding, and risk declines steadily afterward."
+              "text": "Failure risk is low at first because of an initial endowment of resources and goodwill, rises as that endowment is used up, and then declines."
             },
             {
               "id": "b",
-              "text": "Failure risk is low at first because of an initial endowment of resources and goodwill, rises as that endowment is used up, and then declines."
+              "text": "New organizations face their highest failure risk in the first weeks after founding, and risk declines steadily afterward."
             },
             {
               "id": "c",
@@ -1040,15 +1040,15 @@
               "text": "Risk is constant over an organization’s life, so age carries no information."
             }
           ],
-          "answer": "b",
+          "answer": "a",
           "explanation": "The adolescence pattern describes an early honeymoon protected by initial resources and commitments, followed by a period of higher risk when that endowment runs out. For a new function, it implies that the dangerous moment may be the first resource review, not the launch.",
           "optionFeedback": {
-            "a": "That is the simple liability-of-newness pattern, which the adolescence account was proposed to contrast with.",
+            "b": "That is the simple liability-of-newness pattern, which the adolescence account was proposed to contrast with.",
             "c": "Rising risk with age describes a different idea (sometimes called a liability of obsolescence or senescence), not adolescence.",
             "d": "A constant hazard is the null pattern both accounts reject."
           },
           "errorTags": {
-            "a": "confuses-newness-adolescence",
+            "b": "confuses-newness-adolescence",
             "c": "confuses-aging-patterns",
             "d": "null-pattern"
           },
@@ -1437,32 +1437,32 @@
           "options": [
             {
               "id": "a",
-              "text": "A fluent answer to a similar but different question."
-            },
-            {
-              "id": "b",
               "text": "A fluent answer to a clearly different question."
             },
             {
-              "id": "c",
+              "id": "b",
               "text": "A halting, stumbling answer to the question actually asked."
             },
             {
-              "id": "d",
+              "id": "c",
               "text": "Any answer at all, as long as the original question was displayed while the speaker answered."
+            },
+            {
+              "id": "d",
+              "text": "A fluent answer to a similar but different question."
             }
           ],
-          "answer": "a",
+          "answer": "d",
           "explanation": "Similar-question dodges often went unnoticed and were rated as favorably as direct answers. Clearly different answers were penalized, stumbling answers were judged harshly, and displaying the question made dodges much easier to detect.",
           "optionFeedback": {
-            "b": "Listeners noticed clearly different answers more often and judged them more harshly.",
-            "c": "This answer was not evasive, but it was rated poorly — the study found a smooth dodger could be preferred to a halting answerer.",
-            "d": "Displaying the question had the opposite effect: it made dodges far easier to detect."
+            "a": "Listeners noticed clearly different answers more often and judged them more harshly.",
+            "b": "This answer was not evasive, but it was rated poorly — the study found a smooth dodger could be preferred to a halting answerer.",
+            "c": "Displaying the question had the opposite effect: it made dodges far easier to detect."
           },
           "errorTags": {
+            "a": "misreads-finding",
             "b": "misreads-finding",
-            "c": "misreads-finding",
-            "d": "reverses-finding"
+            "c": "reverses-finding"
           },
           "concepts": [
             "c-question-dodging"
@@ -1814,11 +1814,11 @@
           "options": [
             {
               "id": "a",
-              "text": "A hospital committee praises a surgeon’s decision to operate after a good result, although it criticized an identical decision by a colleague last month that ended badly."
+              "text": "An investor becomes more cautious after losing money on a trade."
             },
             {
               "id": "b",
-              "text": "An investor becomes more cautious after losing money on a trade."
+              "text": "A hospital committee praises a surgeon’s decision to operate after a good result, although it criticized an identical decision by a colleague last month that ended badly."
             },
             {
               "id": "c",
@@ -1829,15 +1829,15 @@
               "text": "After an election, a commentator says he “knew all along” who would win."
             }
           ],
-          "answer": "a",
+          "answer": "b",
           "explanation": "Outcome bias is judging the quality of a decision by its result when the information at the time was the same. The committee evaluated identical decisions differently because of how they turned out — the pattern Baron and Hershey documented.",
           "optionFeedback": {
-            "b": "Changing behavior after a loss may reflect loss aversion or learning; it is not an evaluation of decision quality by outcome.",
+            "a": "Changing behavior after a loss may reflect loss aversion or learning; it is not an evaluation of decision quality by outcome.",
             "c": "Preferring the first proposal is an order or anchoring effect, not outcome bias.",
             "d": "This is hindsight bias — overestimating how predictable an outcome was. It is related to outcome bias but concerns perceived predictability, not the rated quality of a decision."
           },
           "errorTags": {
-            "b": "confuses-loss-aversion",
+            "a": "confuses-loss-aversion",
             "c": "confuses-order-effect",
             "d": "confuses-hindsight-bias"
           },
@@ -1944,7 +1944,7 @@
       },
       {
         "ref": "R-urbach-2014-introduction",
-        "what": "Abstract, methods and discussion — read beside the 2009 WHO checklist study (R-haynes-2009-surgical).",
+        "what": "Abstract, methods and discussion — read beside the 2009 WHO checklist study by Haynes and colleagues, which is in the library.",
         "why": "A model of how to read two credible, conflicting studies of the same intervention before scaling a pilot.",
         "minutes": 40
       },
@@ -2348,12 +2348,12 @@
       {
         "type": "p",
         "kind": "original",
-        "text": "Daniel Iturbe had been chief strategy officer of the Merriton County Health System for five months when the board chair asked him to stay behind after the finance committee meeting. “We need a recommendation on Hollis Creek obstetrics by the December board meeting,” Walter Brannigan said. He was a retired banker who chaired the board with the patience of someone who had seen several turnarounds and believed in few of them. “Not options. A recommendation. And I want it defended, because the room will be full.”"
+        "text": "Daniel Iturbe had been chief strategy officer of the Merriton County Health System for five months when the board chair asked him to stay behind after the finance committee meeting. “We need a recommendation on Hollis Creek obstetrics by the December board meeting,” Graham Whitlow said. He was a retired banker who chaired the board with the patience of someone who had seen several turnarounds and believed in few of them. “Not options. A recommendation. And I want it defended, because the room will be full.”"
       },
       {
         "type": "p",
         "kind": "original",
-        "text": "Merriton is a county-owned safety-net system: a 410-bed main hospital, Merriton General, in the county seat, and two smaller community hospitals — Hollis Creek, 46 miles to the northwest in a farming region, and Easton Ridge, 22 miles to the south. The system had lost money in each of the last three years. Daniel’s Office of Strategy and Transformation had been created at the start of the year by the chief executive, Elena Marsh. It consisted of Daniel, two analysts and a project manager on loan from finance. Its charter read: “to lead the system’s return to financial sustainability while protecting access to care.” Several department heads still referred to it, not always kindly, as “Elena’s office.”"
+        "text": "Merriton is a county-owned safety-net system: a 410-bed main hospital, Merriton General, in the county seat, and two smaller community hospitals — Hollis Creek, 46 miles to the northwest in a farming region, and Easton Ridge, 22 miles to the south. The system had lost money in each of the last three years. Daniel’s Office of Strategy and Transformation had been created in June by the chief executive, Elena Marsh, at the same time as his appointment. It consisted of Daniel, two analysts and a project manager on loan from finance. Its charter read: “to lead the system’s return to financial sustainability while protecting access to care.” Several department heads still referred to it, not always kindly, as “Elena’s office.”"
       },
       {
         "type": "h",
@@ -2432,12 +2432,12 @@
       {
         "type": "p",
         "kind": "original",
-        "text": "Daniel’s own position was part of the problem. A recommendation to close would make the Office of Strategy and Transformation the public face of the system’s most unpopular decision in a decade, five months after its creation. A recommendation to keep the unit open, if the partnership failed, would cost money the system might not have and leave him defending the choice at the next budget review. Elena had told him she would support whatever he recommended, “as long as I can explain it to the commissioners.” Brannigan had told him he wanted it defended. Neither had said what would happen if the board split."
+        "text": "Daniel’s own position was part of the problem. A recommendation to close would make the Office of Strategy and Transformation the public face of the system’s most unpopular decision in a decade, five months after its creation. A recommendation to keep the unit open, if the partnership failed, would cost money the system might not have and leave him defending the choice at the next budget review. Elena had told him she would support whatever he recommended, “as long as I can explain it to the commissioners.” Whitlow had told him he wanted it defended. Neither had said what would happen if the board split."
       },
       {
         "type": "p",
         "kind": "original",
-        "text": "There were things Daniel did not know and could not learn by December: whether an obstetrician would accept the Hollis Creek position, how many expectant mothers would choose Easton Ridge or a hospital in the next county rather than Merriton General, what the county would do with its contribution, and how many Hollis Creek nurses would stay through an eighteen-month wait. He did know what the board would ask first. He had heard Brannigan ask it at every meeting he had attended: “What happens if you’re wrong?”"
+        "text": "There were things Daniel did not know and could not learn by December: whether an obstetrician would accept the Hollis Creek position, how many expectant mothers would choose a hospital in the next county rather than Merriton General, what the county would do with its contribution, and how many Hollis Creek nurses would stay through an eighteen-month wait. He did know what the board would ask first. He had heard Whitlow ask it at every meeting he had attended: “What happens if you’re wrong?”"
       },
       {
         "type": "p",
@@ -2613,31 +2613,31 @@
         "options": [
           {
             "id": "a",
-            "text": "Depots chosen for extreme accident rates would be expected to move back toward the average the next year even without coaching, so part of the 22% fall is likely regression to the mean."
-          },
-          {
-            "id": "b",
             "text": "Four depots are too few to compute a percentage change."
           },
           {
-            "id": "c",
+            "id": "b",
             "text": "The comparison depots also improved, which shows the program spilled over to them, so the true effect is larger than 17 points."
+          },
+          {
+            "id": "c",
+            "text": "Depots chosen for extreme accident rates would be expected to move back toward the average the next year even without coaching, so part of the 22% fall is likely regression to the mean."
           },
           {
             "id": "d",
             "text": "The improvement must be a placebo effect, because drivers knew they were being coached."
           }
         ],
-        "answer": "a",
+        "answer": "c",
         "explanation": "The pilot depots were selected because they had the worst year, and extreme values tend to be followed by values closer to the average (Week 4). A fair estimate needs comparable high-accident depots that were not coached — ideally assigned at random. In the six-lens review, this is the evidence lens catching a problem before the finance lens prices a system-wide rollout.",
         "optionFeedback": {
-          "b": "Small numbers make estimates noisy, but a percentage can be computed; the larger problem is how the depots were selected.",
-          "c": "Improvement at the other depots more plausibly reflects a system-wide trend. It does not demonstrate spillover, and it does not enlarge the estimate.",
+          "a": "Small numbers make estimates noisy, but a percentage can be computed; the larger problem is how the depots were selected.",
+          "b": "Improvement at the other depots more plausibly reflects a system-wide trend. It does not demonstrate spillover, and it does not enlarge the estimate.",
           "d": "Being observed can change behavior, but nothing here points to it as strongly as selection on extreme values; “must be” overstates any single explanation."
         },
         "errorTags": {
-          "b": "sample-size-fixation",
-          "c": "spillover-rationalization",
+          "a": "sample-size-fixation",
+          "b": "spillover-rationalization",
           "d": "single-cause-certainty"
         },
         "concepts": [
@@ -2663,32 +2663,32 @@
         "options": [
           {
             "id": "a",
-            "text": "It infers that the decision process was sound from a single good outcome, ignoring what was knowable and the risk taken at the time."
-          },
-          {
-            "id": "b",
             "text": "It fails to calculate the position’s net present value."
           },
           {
-            "id": "c",
+            "id": "b",
             "text": "It ignores the possibility that Elena traded on inside information, which would make the trade illegal."
           },
           {
-            "id": "d",
+            "id": "c",
             "text": "It relies on the risk team, whose incentives are to be conservative."
+          },
+          {
+            "id": "d",
+            "text": "It infers that the decision process was sound from a single good outcome, ignoring what was knowable and the risk taken at the time."
           }
         ],
-        "answer": "a",
+        "answer": "d",
         "explanation": "One success says little about the process: a concentrated bet can be reckless and still pay off — the “dumb luck” cell of the process–outcome matrix. Baron and Hershey showed that people rate identical decisions more favorably when outcomes are good. Before changing firm-wide limits, the committee should review what Elena knew, what probability she assigned and how the position was sized — and it should look at concentrated bets that lost as well as this one.",
         "optionFeedback": {
-          "b": "Net present value is not the issue; the memo’s error is inferring the quality of a process from one outcome.",
-          "c": "Insider trading would be a serious legal issue, but nothing in the memo suggests it. The reasoning flaw stands even if the trade was entirely lawful.",
-          "d": "The memo actually dismisses the risk team rather than relying on it; its central move is generalizing from a single favorable outcome."
+          "a": "Net present value is not the issue; the memo’s error is inferring the quality of a process from one outcome.",
+          "b": "Insider trading would be a serious legal issue, but nothing in the memo suggests it. The reasoning flaw stands even if the trade was entirely lawful.",
+          "c": "The memo actually dismisses the risk team rather than relying on it; its central move is generalizing from a single favorable outcome."
         },
         "errorTags": {
-          "b": "wrong-lens",
-          "c": "speculative-issue",
-          "d": "misreads-argument"
+          "a": "wrong-lens",
+          "b": "speculative-issue",
+          "c": "misreads-argument"
         },
         "concepts": [
           "c-outcome-bias"
@@ -2820,31 +2820,31 @@
         "options": [
           {
             "id": "a",
-            "text": "Propose a phased structure: $900,000 for year one, with recurring funding beyond that tied to two pre-agreed results reviewed at mid-year, and an offer to return $150,000 if the first result is missed."
-          },
-          {
-            "id": "b",
             "text": "Accept $700,000 to preserve the relationship and do as much as possible."
           },
           {
-            "id": "c",
+            "id": "b",
             "text": "Split the difference at $950,000 to show flexibility."
+          },
+          {
+            "id": "c",
+            "text": "Propose a phased structure: $900,000 for year one, with recurring funding beyond that tied to two pre-agreed results reviewed at mid-year, and an offer to return $150,000 if the first result is missed."
           },
           {
             "id": "d",
             "text": "Escalate to the chief executive immediately, since the offer is below your reservation point."
           }
         ],
-        "answer": "a",
+        "answer": "c",
         "explanation": "Your reservation point is about $900,000; below it, accepting is worse than rescoping or walking away (Week 7). The CFO’s interest is limiting recurring risk, not the headline number, so a contingent, phased structure trades on the issue the two sides value differently — certainty for the CFO, viability for you. It also builds results-based legitimacy (Lesson 2) instead of relying on a sponsor to override the CFO.",
         "optionFeedback": {
-          "b": "Accepting below your reservation point guarantees a function that cannot do its core job — an outcome you would later have to defend.",
-          "c": "Splitting the difference anchors on the CFO’s number and ignores the interest behind it; it may still leave the CFO’s worry about recurring costs unaddressed.",
+          "a": "Accepting below your reservation point guarantees a function that cannot do its core job — an outcome you would later have to defend.",
+          "b": "Splitting the difference anchors on the CFO’s number and ignores the interest behind it; it may still leave the CFO’s worry about recurring costs unaddressed.",
           "d": "Escalation may eventually be necessary, but doing it before addressing the CFO’s stated interest spends relationship capital and signals that you negotiate through hierarchy."
         },
         "errorTags": {
-          "b": "accepts-below-reservation",
-          "c": "split-the-difference",
+          "a": "accepts-below-reservation",
+          "b": "split-the-difference",
           "d": "premature-escalation"
         },
         "concepts": [
@@ -2909,32 +2909,32 @@
         "options": [
           {
             "id": "a",
-            "text": "Include the third district’s result, say what you think explains it and how confident you are, and state what data would show whether the protocol or the road closure drove it."
-          },
-          {
-            "id": "b",
             "text": "Leave it out; the board needs clarity, and the road closure is a sufficient explanation."
           },
           {
-            "id": "c",
+            "id": "b",
             "text": "Mention it only if a board member asks about other districts."
           },
           {
-            "id": "d",
+            "id": "c",
             "text": "Postpone the presentation until the third district has six more months of data."
+          },
+          {
+            "id": "d",
+            "text": "Include the third district’s result, say what you think explains it and how confident you are, and state what data would show whether the protocol or the road closure drove it."
           }
         ],
-        "answer": "a",
+        "answer": "d",
         "explanation": "Boards carry responsibility for decisions made on the information management gives them (Week 13). Omitting disconfirming evidence because it is inconvenient corrupts that channel, and if it surfaces later it damages your credibility on everything else. Presenting it with your interpretation and its uncertainty is both the honest choice and the persuasive one: it shows the recommendation survived contact with the worst fact.",
         "optionFeedback": {
-          "b": "The road closure may well explain the result, but that is an interpretation the board is entitled to weigh. Selective omission is the problem.",
-          "c": "Holding back material evidence unless asked is a quieter form of the same omission — and Rogers and Norton’s work shows how easily a question can be steered around.",
-          "d": "Delay might be justified if the decision is not urgent, but the issue here is disclosure, not timing; you can present now with the uncertainty stated."
+          "a": "The road closure may well explain the result, but that is an interpretation the board is entitled to weigh. Selective omission is the problem.",
+          "b": "Holding back material evidence unless asked is a quieter form of the same omission — and Rogers and Norton’s work shows how easily a question can be steered around.",
+          "c": "Delay might be justified if the decision is not urgent, but the issue here is disclosure, not timing; you can present now with the uncertainty stated."
         },
         "errorTags": {
-          "b": "selective-disclosure",
-          "c": "passive-omission",
-          "d": "delay-as-avoidance"
+          "a": "selective-disclosure",
+          "b": "passive-omission",
+          "c": "delay-as-avoidance"
         },
         "concepts": [
           "c-question-dodging",
@@ -3167,32 +3167,32 @@
         "options": [
           {
             "id": "a",
-            "text": "Ownership of the office’s core models could belong to the vendor, limiting the organization’s ability to use them elsewhere or after the agreement ends — a question for counsel and for negotiation before signing."
-          },
-          {
-            "id": "b",
             "text": "The clause is unenforceable because it uses the term “derivative works”."
           },
           {
-            "id": "c",
+            "id": "b",
             "text": "There is no issue, because the office’s own staff will write the models."
           },
           {
-            "id": "d",
+            "id": "c",
             "text": "The only real issue is price, which should be renegotiated downward to compensate."
+          },
+          {
+            "id": "d",
+            "text": "Ownership of the office’s core models could belong to the vendor, limiting the organization’s ability to use them elsewhere or after the agreement ends — a question for counsel and for negotiation before signing."
           }
         ],
-        "answer": "a",
+        "answer": "d",
         "explanation": "An intellectual-property ownership clause can transfer the most valuable output of a new function to its vendor (Week 11). For a new unit, whose credibility will rest on the models it builds, this could become the binding constraint on its future options. The right move is to raise it with counsel and negotiate ownership or licensing terms before signing.",
         "optionFeedback": {
-          "b": "Nothing about the phrase makes a clause unenforceable; assuming so is a guess, not analysis.",
-          "c": "Who writes the code does not settle who owns it when a signed agreement assigns ownership; that is exactly what the clause addresses.",
-          "d": "Price cannot compensate for losing control of core assets; the issue is ownership, not cost."
+          "a": "Nothing about the phrase makes a clause unenforceable; assuming so is a guess, not analysis.",
+          "b": "Who writes the code does not settle who owns it when a signed agreement assigns ownership; that is exactly what the clause addresses.",
+          "c": "Price cannot compensate for losing control of core assets; the issue is ownership, not cost."
         },
         "errorTags": {
-          "b": "invented-legal-rule",
-          "c": "authorship-equals-ownership",
-          "d": "price-over-control"
+          "a": "invented-legal-rule",
+          "b": "authorship-equals-ownership",
+          "c": "price-over-control"
         },
         "concepts": [
           "c-binding-constraint",
@@ -3210,31 +3210,31 @@
         "options": [
           {
             "id": "a",
-            "text": "“Imagine it is a year from now and this plan has failed. Working alone, write down every reason it failed.”"
-          },
-          {
-            "id": "b",
             "text": "“Let’s discuss together what might go wrong and how likely each risk is.”"
           },
           {
-            "id": "c",
+            "id": "b",
             "text": "“I will present the plan; please raise any concerns at the end.”"
+          },
+          {
+            "id": "c",
+            "text": "“Imagine it is a year from now and this plan has failed. Working alone, write down every reason it failed.”"
           },
           {
             "id": "d",
             "text": "“Each of you rate the plan’s chance of success from 1 to 10.”"
           }
         ],
-        "answer": "a",
+        "answer": "c",
         "explanation": "A premortem treats failure as a fact and asks each person to explain it independently before discussion. The past tense makes reasons easier to generate, and writing alone prevents the most senior or confident voice from setting the list.",
         "optionFeedback": {
-          "b": "A group discussion of what might go wrong is an ordinary risk review; it lacks the assumed failure and the independent writing that define the method.",
-          "c": "Concerns raised at the end of a presentation tend to be few and filtered by status — the problem the premortem is designed to solve.",
+          "a": "A group discussion of what might go wrong is an ordinary risk review; it lacks the assumed failure and the independent writing that define the method.",
+          "b": "Concerns raised at the end of a presentation tend to be few and filtered by status — the problem the premortem is designed to solve.",
           "d": "A rating gives a number but no reasons, and the reasons are what change the plan."
         },
         "errorTags": {
-          "b": "ordinary-risk-review",
-          "c": "status-filtered-dissent",
+          "a": "ordinary-risk-review",
+          "b": "status-filtered-dissent",
           "d": "number-without-reasons"
         },
         "concepts": [
@@ -3284,7 +3284,7 @@
       {
         "type": "p",
         "kind": "original",
-        "text": "This is preparation, not the capstone’s written defense. The capstone asks you to defend your major decisions in full; this rehearsal finds the questions that defense must survive and tests whether you can answer each one in under a minute of speech. Use the six-lens review from Lesson 1, a premortem from Lesson 3 and the answer patterns in Lesson 3’s table of hard questions."
+        "text": "This is preparation, not the capstone’s written defense. The capstone asks you to defend several major decisions in full; this rehearsal finds the questions that defense must survive and tests whether you can answer each one in under a minute of speech. The capstone also lists questions a skeptical president will ask. Write your own ten before you look at that list, then compare: the questions you missed show you which lens you tend to neglect. Use the six-lens review from Lesson 1, a premortem from Lesson 3 and the answer patterns in Lesson 3’s table of hard questions."
       },
       {
         "type": "list",
