@@ -1,0 +1,413 @@
+[
+  {
+    "id": "R-lawrence-1967-differentiation",
+    "title": "Differentiation and Integration in Complex Organizations",
+    "authors": [
+      "Paul R. Lawrence",
+      "Jay W. Lorsch"
+    ],
+    "publication": "Administrative Science Quarterly, 12(1), 1–47",
+    "year": 1967,
+    "url": "https://doi.org/10.2307/2391211",
+    "doi": "10.2307/2391211",
+    "discipline": "organizational-behavior",
+    "type": "journal-article",
+    "access": "library",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, journal, volume, issue, pages (1–47), June 1967 date and DOI matched on scienceopen.com and scilit.net records. Search results also distinguish it from the authors’ separate 1967 book, Organization and Environment.",
+      "link": "not-opened"
+    },
+    "summary": "Lawrence and Lorsch compare organizations operating in the same industrial environment to ask how structure should respond to environmental demands. They define differentiation as the differences in goals, time horizons, interpersonal orientation and formality that subunits develop as each adapts to its own part of the environment, and integration as the collaboration needed to achieve unity of effort. The paper is a founding statement of contingency theory: effective organizations achieve the degree of both that their environment requires.",
+    "arguments": [
+      "Subunits facing different subenvironments legitimately develop different goals, time orientations, interpersonal styles and degrees of formality.",
+      "Differentiation and integration pull against each other: the more different the units, the harder and more deliberate integration must be.",
+      "Effective organizations achieve both the differentiation and the integration their environment demands, rather than minimizing either.",
+      "There is no single best structure; fit depends on the environment and task."
+    ],
+    "evidence": "observational",
+    "design": "Comparative field study of six organizations operating in the same industrial environment (per the published record).",
+    "strengths": "Clear constructs that remain useful for diagnosis; grounded in comparison of real organizations rather than armchair theory; launched a long research program.",
+    "limitations": "Small number of organizations observed at one point in time; cannot separate fit from general managerial quality; the definition of “fit” can become circular if applied after the fact.",
+    "contested": "Not a replication controversy. The broader contingency program has been criticized for vague and hard-to-falsify definitions of fit; later work, such as the management-practices research in this week (R-bloom-2007-measuring), argues that some practices pay off almost everywhere.",
+    "generalizability": "The constructs travel well to hospitals, banks, agencies and sports organizations; the specific findings about which structures performed best belong to their industrial setting and era.",
+    "readingMinutes": 60,
+    "relevance": "Gives you precise language for why specialist units (coaching, analytics, medical, international operations) differ and what it costs to make them work as one."
+  },
+  {
+    "id": "R-galbraith-1974-organization",
+    "title": "Organization Design: An Information Processing View",
+    "authors": [
+      "Jay R. Galbraith"
+    ],
+    "publication": "Interfaces, 4(3), 28–36",
+    "year": 1974,
+    "url": "https://doi.org/10.1287/inte.4.3.28",
+    "doi": "10.1287/inte.4.3.28",
+    "discipline": "management",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, author, journal (Interfaces, INFORMS), volume 4, issue 3, pages 28–36, May 1974 and DOI matched on RePEc (econpapers.repec.org, ideas.repec.org) and scilit.com.",
+      "link": "not-opened"
+    },
+    "summary": "Galbraith treats an organization as an information-processing system. The more uncertain a task, the more information must be processed while it is performed; rules, hierarchy and targets handle routine work, but rising uncertainty overloads the hierarchy. Organizations respond either by reducing the need for information processing or by increasing their capacity to process it, and every response carries a cost.",
+    "arguments": [
+      "Task uncertainty determines how much information must be processed during execution.",
+      "Rules and programs, hierarchical referral and goal setting coordinate routine work but break down as exceptions multiply.",
+      "Organizations can reduce information needs (slack resources, self-contained tasks) or raise capacity (vertical information systems, lateral relations).",
+      "Failing to choose a strategy means absorbing lower performance by default."
+    ],
+    "evidence": "theoretical",
+    "design": null,
+    "strengths": "Short, clear and practical; connects structural choices to a single mechanism; anticipates later work on information systems and cross-functional teams.",
+    "limitations": "Treats people mainly as information channels and says little about power, identity or incentives; the framework is conceptual rather than empirically tested in this article.",
+    "contested": null,
+    "generalizability": "High as a diagnostic framework for any organization coordinating uncertain work, from hospitals to software teams to sports departments; it does not predict effect sizes.",
+    "readingMinutes": 25,
+    "relevance": "The most practical single lens for deciding whether a coordination problem needs slack, a self-contained unit, better information or a lateral role."
+  },
+  {
+    "id": "R-mintzberg-1980-structure",
+    "title": "Structure in 5's: A Synthesis of the Research on Organization Design",
+    "authors": [
+      "Henry Mintzberg"
+    ],
+    "publication": "Management Science, 26(3), 322–341",
+    "year": 1980,
+    "url": "https://doi.org/10.1287/mnsc.26.3.322",
+    "doi": "10.1287/mnsc.26.3.322",
+    "discipline": "management",
+    "type": "journal-article",
+    "access": "library",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, author, journal, volume 26, issue 3 (March 1980), pages 322–341 and DOI matched on RePEc (econpapers.repec.org, ideas.repec.org), which also lists the JSTOR stable record.",
+      "link": "not-opened"
+    },
+    "summary": "Mintzberg synthesizes research on structure into a typology. Organizations have five basic parts, coordinate through five mechanisms, and tend to cluster into five configurations—simple structure, machine bureaucracy, professional bureaucracy, divisionalized form and adhocracy—each dominated by one mechanism and one part of the organization.",
+    "arguments": [
+      "Five coordinating mechanisms: direct supervision, standardization of work processes, of outputs and of skills, and mutual adjustment.",
+      "Structural elements cluster into internally consistent configurations rather than varying independently.",
+      "Each configuration is pulled by a different part of the organization and suits different conditions."
+    ],
+    "evidence": "review",
+    "design": "Conceptual synthesis of prior empirical and theoretical research on organization design.",
+    "strengths": "Memorable, comprehensive and still widely used in teaching; forces a diagnosis of which coordinating mechanism is actually doing the work.",
+    "limitations": "Configurations are ideal types; most real organizations are hybrids. The synthesis predates digital coordination tools, platform organizations and remote work.",
+    "contested": null,
+    "generalizability": "Useful across sectors as a diagnostic vocabulary; weaker as a prescription, because hybrids are the norm.",
+    "readingMinutes": 40,
+    "relevance": "Helps you see why a department of trained professionals resists process scripts, and when standardization is the right answer."
+  },
+  {
+    "id": "R-jensen-1992-specific",
+    "title": "Specific and General Knowledge, and Organizational Structure",
+    "authors": [
+      "Michael C. Jensen",
+      "William H. Meckling"
+    ],
+    "publication": "In L. Werin & H. Wijkander (Eds.), Contract Economics (pp. 251–274). Blackwell. Author version on SSRN (abstract 6658).",
+    "year": 1992,
+    "url": "https://papers.ssrn.com/abstract=6658",
+    "doi": "10.2139/ssrn.6658",
+    "discipline": "economics",
+    "type": "book-chapter",
+    "access": "open",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, editors (Werin and Wijkander), volume (Contract Economics, Blackwell, 1992) and pages 251–274 matched on econbiz.de and scilit.com; the SSRN version (abstract 6658, DOI 10.2139/ssrn.6658) matched on scilit.com and the author’s own listing. Search results note later reprints (Journal of Applied Corporate Finance, 1995).",
+      "link": "not-opened"
+    },
+    "summary": "Jensen and Meckling argue that organizational structure is shaped by the cost of moving knowledge. Specific knowledge is costly to transfer and general knowledge is cheap, so organizations must either move knowledge to decision-makers or move decision rights to those who hold the knowledge. Moving rights down reduces the costs of poor information but raises agency costs, so decision rights must be designed together with systems for measuring and rewarding performance.",
+    "arguments": [
+      "Specific knowledge (costly to transmit) and general knowledge (cheap to transmit) call for different locations of decision rights.",
+      "As decision rights move lower, costs from poor information fall and agency costs rise; the right level minimizes their sum.",
+      "Organizational structure combines the assignment of decision rights with performance-measurement and reward systems, which must be designed together."
+    ],
+    "evidence": "theoretical",
+    "design": null,
+    "strengths": "A parsimonious, general mechanism that explains many design choices; open author version; widely used in organizational economics teaching.",
+    "limitations": "Theory rather than evidence; assumes formal rights are the rights that matter and largely sets aside informal power, identity and fairness.",
+    "contested": null,
+    "generalizability": "Broad: applies to firms, hospitals, agencies and sports organizations deciding who decides. Empirical effect sizes depend on setting and are not supplied by the paper.",
+    "readingMinutes": 50,
+    "relevance": "The core logic for allocating decisions across coaches, analysts, medical staff and executives—and for pairing every delegation with measurement and accountability."
+  },
+  {
+    "id": "R-colfer-2016-mirroring",
+    "title": "The Mirroring Hypothesis: Theory, Evidence, and Exceptions",
+    "authors": [
+      "Lyra J. Colfer",
+      "Carliss Y. Baldwin"
+    ],
+    "publication": "Industrial and Corporate Change, 25(5), 709–738",
+    "year": 2016,
+    "url": "https://doi.org/10.1093/icc/dtw027",
+    "doi": "10.1093/icc/dtw027",
+    "discipline": "management",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, journal, volume 25, issue 5, pages 709–738 (2016) and DOI matched on the Harvard DASH repository record and RePEc (econpapers.repec.org, ideas.repec.org). An open author copy is listed on dash.harvard.edu; an earlier 2010 HBS working paper reviewed fewer studies.",
+      "link": "not-opened"
+    },
+    "summary": "Colfer and Baldwin restate Conway’s observation as the mirroring hypothesis—organizational ties in a project or firm will correspond to the technical dependencies in the work—and review 142 empirical studies. Mirroring is common but not universal in industries and firms, and studies of open collaborative projects, mostly in software, generally did not support it. They explain the exceptions by coordination that travels through shared tools, standards and transparent work rather than organizational ties.",
+    "arguments": [
+      "Organizations tend to produce work whose structure mirrors their communication ties, and vice versa.",
+      "Across 142 studies, mirroring is common but not universal in industries and firms.",
+      "Open collaborative projects are the main exception: shared code, documentation and tools let distributed contributors coordinate without organizational ties."
+    ],
+    "evidence": "review",
+    "design": "Literature review classifying 142 empirical studies (industry, firm and open-collaborative-project studies).",
+    "strengths": "Systematic look at a popular heuristic; explicitly catalogues exceptions rather than only confirming cases; open author copy.",
+    "limitations": "Studies vary widely in method and quality; much of the evidence is descriptive and cannot establish the direction of causation between organization and product structure.",
+    "contested": "The review itself documents the contest: supportive industry and firm studies versus non-supportive open-collaboration studies.",
+    "generalizability": "Most evidence comes from technology and product development; transfer to service organizations and sports departments is plausible as a heuristic but untested here.",
+    "readingMinutes": 45,
+    "relevance": "Turns “Conway’s law” from a slogan into a hypothesis with known exceptions—useful when you design teams around the products, reports or processes you want."
+  },
+  {
+    "id": "R-holmstrom-1991-multitask",
+    "title": "Multitask Principal–Agent Analyses: Incentive Contracts, Asset Ownership, and Job Design",
+    "authors": [
+      "Bengt Holmström",
+      "Paul Milgrom"
+    ],
+    "publication": "Journal of Law, Economics, & Organization, 7 (Special Issue), 24–52",
+    "year": 1991,
+    "url": "https://doi.org/10.1093/jleo/7.special_issue.24",
+    "doi": "10.1093/jleo/7.special_issue.24",
+    "discipline": "economics",
+    "type": "journal-article",
+    "access": "library",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, journal, volume 7 special issue, pages 24–52 and the JSTOR stable record matched on the article front matter hosted at people.duke.edu; DOI matched on a scholarly index listing (synapsesocial.com). Search results note a later reprint with a different DOI.",
+      "link": "not-opened"
+    },
+    "summary": "Holmström and Milgrom model an agent who divides effort across several tasks, some easier to measure than others. Strong incentives on measurable tasks pull effort away from unmeasured ones, so the best incentive may be weak—sometimes a fixed salary—when important tasks are hard to measure. Incentive strength, ownership of assets and the grouping of tasks into jobs should be designed together.",
+    "arguments": [
+      "When effort is split across tasks, incentives on one task affect effort on the others.",
+      "If some important tasks are hard to measure, strong incentives on measurable tasks can reduce overall value; low-powered incentives may be optimal.",
+      "Jobs should group tasks of similar measurability, and incentive design, asset ownership and job design are complements."
+    ],
+    "evidence": "theoretical",
+    "design": null,
+    "strengths": "Rigorous, general mechanism that explains metric gaming and why many organizations use weaker incentives than simple theory predicts.",
+    "limitations": "Formal theory; requires translation for practitioners; does not estimate magnitudes in any setting.",
+    "contested": null,
+    "generalizability": "Applies wherever employees juggle measurable and unmeasurable work—medicine, teaching, software, coaching. Magnitudes must come from field evidence.",
+    "readingMinutes": 50,
+    "relevance": "The theoretical backbone for Goodhart-style gaming: why rewarding the measurable parts of a coach’s or analyst’s job can starve the parts that matter most."
+  },
+  {
+    "id": "R-bloom-2007-measuring",
+    "title": "Measuring and Explaining Management Practices Across Firms and Countries",
+    "authors": [
+      "Nicholas Bloom",
+      "John Van Reenen"
+    ],
+    "publication": "Quarterly Journal of Economics, 122(4), 1351–1408",
+    "year": 2007,
+    "url": "https://doi.org/10.1162/qjec.2007.122.4.1351",
+    "doi": "10.1162/qjec.2007.122.4.1351",
+    "discipline": "economics",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, journal, volume 122, issue 4, pages 1351–1408 (November 2007) and DOI matched on RePEc (econpapers.repec.org) and econbiz.de; an earlier open version is NBER Working Paper 12216 (nber.org). Survey method details matched on the NBER Reporter and LSE Centre for Economic Performance pages.",
+      "link": "not-opened"
+    },
+    "summary": "Bloom and Van Reenen develop a double-blind interview method to score management practices in monitoring, targets and people management, and apply it to 732 medium-sized manufacturing firms in the United States, France, Germany and the United Kingdom. Management quality varies widely within every country, with a long tail of badly managed firms, and higher scores are associated with productivity, profitability, Tobin’s Q and survival. Poor practices are more common where product-market competition is weak and where family firms pass control to the eldest son.",
+    "arguments": [
+      "Management practices can be measured systematically with structured, double-blind interviews.",
+      "Practice scores vary widely within and across countries and are strongly associated with firm performance.",
+      "Weak competition and primogeniture in family succession are associated with worse practices."
+    ],
+    "evidence": "observational",
+    "design": "Double-blind telephone interviews with plant managers in 732 medium-sized manufacturing firms in four countries, scored on a 1–5 grid across monitoring, targets and people management and matched to firm performance data.",
+    "strengths": "Large sample, careful measurement designed to limit bias from both respondents and interviewers, transparent instrument, open working-paper version.",
+    "limitations": "Cross-sectional associations cannot establish causation; the sample is manufacturing; the scoring grid embodies a view of what good practice is.",
+    "contested": "Whether practices are universally good (“management as a technology”) or contingent on context remains debated; compare contingency theory (R-lawrence-1967-differentiation). The causal question was later tested experimentally (R-bloom-2013-does).",
+    "generalizability": "Strong for medium-sized manufacturing in rich countries; plausible but less certain for professional services, health care and sports organizations.",
+    "readingMinutes": 60,
+    "relevance": "Shows that “soft” management practices can be measured and matter for performance—and models the measurement discipline you should demand of any claim about management."
+  },
+  {
+    "id": "R-bloom-2013-does",
+    "title": "Does Management Matter? Evidence from India",
+    "authors": [
+      "Nicholas Bloom",
+      "Benn Eifert",
+      "Aprajit Mahajan",
+      "David McKenzie",
+      "John Roberts"
+    ],
+    "publication": "Quarterly Journal of Economics, 128(1), 1–51",
+    "year": 2013,
+    "url": "https://doi.org/10.1093/qje/qjs044",
+    "doi": "10.1093/qje/qjs044",
+    "discipline": "economics",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, journal, volume 128, issue 1, pages 1–51 and DOI matched on RePEc (econpapers.repec.org), LSE Research Online and the UK government research-outputs page. An open earlier version is NBER Working Paper 16658 (nber.org), which reports a smaller first-year productivity figure (11%) than the published article (17%).",
+      "link": "not-opened"
+    },
+    "summary": "A randomized field experiment in large Indian textile firms gave free, intensive management consulting to randomly chosen plants, while control plants received only the initial diagnostic. The published article reports that adopting the practices raised productivity by 17 percent in the first year through better quality, efficiency and lower inventory, and that within three years treated firms opened more production plants. The authors attribute earlier non-adoption mainly to informational barriers.",
+    "arguments": [
+      "Management practices causally affect productivity in this setting.",
+      "Firms had not adopted profitable practices mainly because of informational barriers—owners did not know them or doubted their value.",
+      "Limited managerial time constrained growth, which helps explain why badly managed firms were not driven out by competition."
+    ],
+    "evidence": "rct",
+    "design": "Randomized field experiment: plants chosen at random received about five months of consulting on a defined set of operational practices; control plants received only the one-month diagnostic. Published descriptions report 28 plants across 17 firms.",
+    "strengths": "Randomization addresses the main confound in the survey evidence; detailed measurement of operational outcomes; open working-paper version.",
+    "limitations": "Small number of firms; one industry and country with low baseline practices; the treatment bundles many practices and expert attention, so the active ingredient is unclear; working-paper and published estimates differ.",
+    "contested": "No failed replication is known to this course; durability was tested in a follow-up (R-bloom-2020-do), which found partial decay.",
+    "generalizability": "Strong internal validity; external validity to knowledge work, services and sports organizations is uncertain and likely smaller where baseline practices are already structured.",
+    "readingMinutes": 45,
+    "relevance": "The cleanest causal evidence that management practices matter, and a model of how to test an organizational intervention rather than assume it works."
+  },
+  {
+    "id": "R-bloom-2020-do",
+    "title": "Do Management Interventions Last? Evidence from India",
+    "authors": [
+      "Nicholas Bloom",
+      "Aprajit Mahajan",
+      "David McKenzie",
+      "John Roberts"
+    ],
+    "publication": "American Economic Journal: Applied Economics, 12(2), 198–219",
+    "year": 2020,
+    "url": "https://doi.org/10.1257/app.20180369",
+    "doi": "10.1257/app.20180369",
+    "discipline": "economics",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, journal, volume 12, issue 2, pages 198–219 and DOI matched on RePEc (econpapers.repec.org). Open working-paper versions matched on nber.org (Working Paper 24249), the Stanford King Center page and the World Bank Open Knowledge Repository (Policy Research Working Paper 8339).",
+      "link": "not-opened"
+    },
+    "summary": "The authors revisit the Indian textile firms from the 2013 management experiment about nine years later. Roughly half of the practices adopted in the experimental plants had been dropped, yet a large and significant gap with control plants remained. Practices spread within firms to non-experimental plants but rarely across firms, and managerial turnover and lack of directors’ time were among the most cited reasons for dropping practices.",
+    "arguments": [
+      "Management interventions can have lasting effects even as many adopted practices decay.",
+      "Practices diffused within firms but rarely across firms.",
+      "Practice decay was linked to people: managerial turnover and limited director time."
+    ],
+    "evidence": "longitudinal",
+    "design": "Long-run follow-up of the plants in the randomized management experiment, comparing treatment and control plants roughly nine years after the experiment.",
+    "strengths": "Rare long-run evidence on an organizational intervention with an experimental baseline.",
+    "limitations": "Same small sample and single industry as the original experiment; attrition and changes in firms over nine years complicate comparison.",
+    "contested": null,
+    "generalizability": "Suggestive for any organization where practices depend on a few people; magnitudes specific to the setting.",
+    "readingMinutes": 30,
+    "relevance": "Evidence that practices live in people and routines—directly relevant when key staff turn over in a department you lead."
+  },
+  {
+    "id": "R-nelson-1982-evolutionary",
+    "title": "An Evolutionary Theory of Economic Change",
+    "authors": [
+      "Richard R. Nelson",
+      "Sidney G. Winter"
+    ],
+    "publication": "Belknap Press of Harvard University Press",
+    "year": 1982,
+    "url": "https://ci.nii.ac.jp/ncid/BA01195747",
+    "doi": null,
+    "discipline": "economics",
+    "type": "book",
+    "access": "purchase",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, publisher (Belknap Press of Harvard University Press, Cambridge, Mass.) and year matched on the CiNii academic library record (ci.nii.ac.jp) and a Journal of Economic History book review on cambridge.org listing xi + 437 pages. The publisher’s own page was not seen; the link is a library catalog record.",
+      "link": "not-opened"
+    },
+    "summary": "Nelson and Winter build an evolutionary theory of the firm in which organizational routines—regular, predictable patterns of activity—play the role that skills play for individuals and genes play in biology. Routines store an organization’s operational knowledge, much of it tacit; they settle internal conflicts as a working truce; and markets select among firms partly on the basis of their routines. The result explains why capabilities persist, why they are hard to copy and why firms change slowly.",
+    "arguments": [
+      "Routines are the main form in which organizations store operational knowledge, much of it tacit.",
+      "Routines function as a truce that settles conflicts over who does what.",
+      "Firms change through search and selection among routines, so capabilities are persistent and hard to imitate."
+    ],
+    "evidence": "theoretical",
+    "design": null,
+    "strengths": "Foundational; supplies the mechanism behind organizational memory, inertia and capabilities; influential across economics, strategy and organization theory.",
+    "limitations": "Long, technical in places and partly devoted to formal economic modeling; “routine” can become a label for anything that persists; mechanisms are illustrated more than measured.",
+    "contested": null,
+    "generalizability": "High as a conceptual lens for any organization; it does not predict which routines will matter in a particular department.",
+    "readingMinutes": 90,
+    "relevance": "Explains why reorganizations and staff turnover can destroy capability that appears in no document—and why new practices count only once they become routine."
+  },
+  {
+    "id": "R-hackman-2002-leading",
+    "title": "Leading Teams: Setting the Stage for Great Performances",
+    "authors": [
+      "J. Richard Hackman"
+    ],
+    "publication": "Harvard Business School Press",
+    "year": 2002,
+    "url": "https://bemis.marmot.org/Record/.b21167618",
+    "doi": null,
+    "discipline": "organizational-behavior",
+    "type": "book",
+    "access": "purchase",
+    "license": "Copyright holder's terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "partially-confirmed",
+      "evidence": "Title, author, publisher (Harvard Business School Press) and 2002 date matched on library catalog records (bemis.marmot.org; openlibrary.telkomuniversity.ac.id) and bookseller listings with ISBN 9781578513338. The publisher’s own page was not seen.",
+      "link": "not-opened"
+    },
+    "summary": "Hackman argues that a leader’s main contribution to team performance is not personal style but the design of conditions that let a team manage itself. He identifies five conditions: a real team, a compelling direction, an enabling structure, a supportive organizational context and expert coaching. The book draws on decades of research on work teams and is written for practitioners.",
+    "arguments": [
+      "Team effectiveness depends more on conditions the leader designs than on the leader’s interpersonal style.",
+      "Five conditions: a real team, compelling direction, enabling structure, supportive organizational context and expert coaching.",
+      "The conditions are guiding principles to be applied to each situation, not a fixed formula."
+    ],
+    "evidence": "review",
+    "design": "Book-length synthesis of the author’s and others’ research on work teams, written for practitioners.",
+    "strengths": "Grounded in long-term field research; actionable diagnostic framework; shifts attention from charisma to design.",
+    "limitations": "Practitioner-oriented book rather than a peer-reviewed test; the conditions are not presented as separately estimated causal effects; some recommendations (such as stable membership) conflict with project-based organizations.",
+    "contested": null,
+    "generalizability": "Broad across work teams in business, health care, government and sport; how much each condition matters varies by setting.",
+    "readingMinutes": 120,
+    "relevance": "A practical checklist for designing the cross-disciplinary groups that surround players, projects or patients."
+  }
+]

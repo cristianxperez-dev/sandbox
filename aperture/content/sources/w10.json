@@ -1,0 +1,412 @@
+[
+  {
+    "id": "R-franklin-2019-principles",
+    "title": "Principles of Accounting, Volume 1: Financial Accounting",
+    "authors": [
+      "Mitchell Franklin",
+      "Patty Graybeal",
+      "Dixon Cooper"
+    ],
+    "publication": "OpenStax, Rice University",
+    "year": 2019,
+    "url": "https://openstax.org/books/principles-financial-accounting/pages/preface",
+    "doi": null,
+    "discipline": "accounting",
+    "type": "textbook",
+    "access": "open",
+    "license": "CC BY-NC-SA 4.0 (OpenStax, Rice University). Linked, not reproduced; APERTURE summarizes in its own words.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, the three authors and the CC BY-NC-SA 4.0 license matched on openstax.org (book preface); 2019 publication and Rice University as copyright holder matched on catalog and bookseller records (bookshare.org, abebooks.com, open.umn.edu). The chapter title “Introduction to Financial Statements” (Chapter 2) matched on the openstax.org preface listing.",
+      "link": "not-opened"
+    },
+    "summary": "A free, peer-reviewed introductory financial-accounting textbook. It builds the income statement, statement of owner’s equity, balance sheet and statement of cash flows from the accounting equation and the accrual concept, with worked transactions throughout. For a non-specialist executive it is the clearest open route into how the statements are built and why they connect.",
+    "arguments": [
+      "Financial statements are built from a small set of principles and assumptions — accrual (revenue when earned, expenses matched to the period), going concern and the accounting equation (assets = liabilities + equity).",
+      "Each statement answers a different question: performance over a period, position at a moment, and the sources and uses of cash.",
+      "The statements are linked: net income flows into equity, and the cash flow statement reconciles accrual profit to the change in cash."
+    ],
+    "evidence": "textbook",
+    "design": null,
+    "strengths": "Open license, worked examples, end-of-chapter exercises; written for learners without prior accounting training.",
+    "limitations": "Introductory and U.S.-GAAP oriented; it teaches mechanics more than the judgment involved in reading statements critically, and it does not cover analysis of intangible-heavy organizations in depth.",
+    "contested": null,
+    "generalizability": "The mechanics apply to any organization that keeps accrual accounts (companies, hospitals, clubs). Government and some partnerships budget on a cash or obligation basis, so translation is needed there.",
+    "readingMinutes": 25,
+    "relevance": "Gives you enough command of the statements to interrogate a CFO’s summary, read a department’s cost reports and translate a proposal into its effect on profit, cash and the balance sheet."
+  },
+  {
+    "id": "R-dahlquist-2022-principles",
+    "title": "Principles of Finance",
+    "authors": [
+      "Julie Dahlquist",
+      "Rainford Knight"
+    ],
+    "publication": "OpenStax, Rice University",
+    "year": 2022,
+    "url": "https://openstax.org/books/principles-finance/pages/preface",
+    "doi": null,
+    "discipline": "finance",
+    "type": "textbook",
+    "access": "open",
+    "license": "CC BY 4.0 (first edition, 2022, OpenStax, Rice University). The later second edition appears to carry CC BY-NC-SA 4.0; this record cites the 2022 first edition. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, publisher and the 2022 first edition matched on openstax.org (preface) and library catalogs (is.muni.cz, find.library.upenn.edu); the first edition’s CC BY 4.0 license matched on the openstax.org preface. Chapter topics matched on catalog table-of-contents listings and a LibreTexts mirror: accrual accounting (Ch. 4), financial statements (Ch. 5), time value of money (Chs. 7–9), “How Companies Think about Investing” with payback, NPV, IRR and alternative methods (Ch. 16), cost of capital and WACC (Ch. 17), financial forecasting (Ch. 18).",
+      "link": "not-opened"
+    },
+    "summary": "An open introductory corporate-finance textbook that moves from accounting foundations and the time value of money to valuation, capital budgeting, the cost of capital and forecasting. Its capital-budgeting chapter treats payback, NPV and IRR side by side and shows spreadsheet calculation.",
+    "arguments": [
+      "Money has a time value: cash flows at different dates must be converted to a common date by compounding or discounting before they can be compared.",
+      "Net present value measures the value a project adds at the investor’s required return; IRR and payback are useful summaries but can mislead when used alone.",
+      "The discount rate should reflect the cost of capital — a weighted blend of the returns required by lenders and owners — adjusted to the risk of the investment."
+    ],
+    "evidence": "textbook",
+    "design": null,
+    "strengths": "Open license; integrates accounting, time value and capital budgeting; numerical examples and spreadsheet guidance.",
+    "limitations": "Introductory; real options, behavioral biases in forecasting and capital rationing receive limited treatment, so this week supplements them.",
+    "contested": null,
+    "generalizability": "Core finance methods transfer directly to any organization that spends money now for benefits later, including public and nonprofit bodies (with care over the discount rate).",
+    "readingMinutes": 30,
+    "relevance": "The standard toolkit an executive needs to read, challenge and build an investment case: discounting, NPV, IRR, payback and the logic of the discount rate."
+  },
+  {
+    "id": "R-graham-2001-theory",
+    "title": "The Theory and Practice of Corporate Finance: Evidence from the Field",
+    "authors": [
+      "John R. Graham",
+      "Campbell R. Harvey"
+    ],
+    "publication": "Journal of Financial Economics, 60(2–3), 187–243",
+    "year": 2001,
+    "url": "https://doi.org/10.1016/S0304-405X(01)00044-7",
+    "doi": "10.1016/S0304-405X(01)00044-7",
+    "discipline": "finance",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, journal, volume, issue, pages and DOI matched on ideas.repec.org, econpapers.repec.org and scholars.duke.edu; the 392-CFO sample and the main findings matched the abstract shown there.",
+      "link": "not-opened"
+    },
+    "summary": "A survey of 392 chief financial officers about how their firms set the cost of capital, choose investments and decide on financing. Large firms relied heavily on present-value techniques and the capital asset pricing model; smaller firms were relatively more likely to use the payback criterion; and a surprising number of firms evaluated new projects with a company-wide rather than a project-specific risk adjustment.",
+    "arguments": [
+      "Present-value methods dominate capital budgeting in large firms, while payback remains common, especially in smaller firms.",
+      "Many firms apply a single firm-wide discount rate rather than one matched to each project’s risk.",
+      "Financing decisions are shaped by practical concerns such as financial flexibility, credit ratings and dilution more than by several textbook theories."
+    ],
+    "evidence": "observational",
+    "design": "Survey of 392 CFOs on cost of capital, capital budgeting and capital structure (U.S. and Canadian firms per the abstract record).",
+    "strengths": "Large practitioner sample; links textbook theory to reported practice; widely cited benchmark.",
+    "limitations": "Self-reported methods, not observed decisions; respondents may report what they believe they should do; data are now more than two decades old.",
+    "contested": null,
+    "generalizability": "Describes for-profit corporate practice; departments inside sports clubs, hospitals or agencies often use simpler rules, which makes the gap between theory and practice even more relevant.",
+    "readingMinutes": 40,
+    "relevance": "Shows how real executives use NPV, IRR and payback — and the common error of using one discount rate for every project — so you can anticipate how a finance office will read your proposal."
+  },
+  {
+    "id": "R-arkes-1985-psychology",
+    "title": "The Psychology of Sunk Cost",
+    "authors": [
+      "Hal R. Arkes",
+      "Catherine Blumer"
+    ],
+    "publication": "Organizational Behavior and Human Decision Processes, 35, 124–140",
+    "year": 1985,
+    "url": "https://doi.org/10.1016/0749-5978(85)90049-4",
+    "doi": "10.1016/0749-5978(85)90049-4",
+    "discipline": "psychology",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors (surnames and initials), journal, volume, pages and DOI matched on bibliographic records found by search (decisionsciencenews.com, bohrium/arXiv-indexed record, a university-hosted copy listing); the abstract’s findings matched those summaries.",
+      "link": "not-opened"
+    },
+    "summary": "The classic experimental demonstration of the sunk-cost effect: people continue an endeavor once money, effort or time has been invested, even when the past investment should not affect the choice. Participants with a sunk cost also rated a project’s chance of success as higher, prior coursework in economics did not reduce the effect, and the authors connect it to a wish not to appear wasteful and to prospect theory.",
+    "arguments": [
+      "Past, unrecoverable investment increases willingness to continue an endeavor (“throwing good money after bad”).",
+      "Sunk costs inflate estimates of the probability that the project will succeed.",
+      "Formal economics training did not lessen the effect in these studies; a desire not to appear wasteful is a proposed motive."
+    ],
+    "evidence": "lab-experiment",
+    "design": "A series of questionnaire experiments, including the widely reused scenario of an airline president deciding whether to finish a nearly complete research project.",
+    "strengths": "Simple, transparent designs that have been reused many times; clear normative benchmark.",
+    "limitations": "Hypothetical scenarios with student and general samples; real organizational settings add reputational, informational and career considerations that can make continuation partly rational.",
+    "contested": "Not contested as a scenario finding. How strongly it operates in high-stakes organizational decisions is a separate empirical question, and some continuation after sunk investment can be rational (reputation, new information). No competing record is cited this week.",
+    "generalizability": "Likely to generalize to organizational project continuation and talent decisions, where people defend prior commitments; magnitude in a given setting is an empirical question.",
+    "readingMinutes": 30,
+    "relevance": "Budget decisions in any department are haunted by past purchases and prior hires; recognizing sunk costs is a precondition for honest capital allocation."
+  },
+  {
+    "id": "R-frederick-2009-opportunity",
+    "title": "Opportunity Cost Neglect",
+    "authors": [
+      "Shane Frederick",
+      "Nathan Novemsky",
+      "Jing Wang",
+      "Ravi Dhar",
+      "Stephen Nowlis"
+    ],
+    "publication": "Journal of Consumer Research, 36(4), 553–561",
+    "year": 2009,
+    "url": "https://doi.org/10.1086/599764",
+    "doi": "10.1086/599764",
+    "discipline": "behavioral-economics",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, all five authors, journal, volume, issue, pages, December 2009 issue and DOI matched on econpapers.repec.org, ideas.repec.org and profiles.wustl.edu; main findings matched the abstract and Yale School of Management news summaries.",
+      "link": "not-opened"
+    },
+    "summary": "A set of experiments showing that people often fail to consider what else they could do with their money. Simple cues that remind decision-makers of the alternative uses of funds reduced purchase rates and shifted choices toward cheaper options, sensitivity varied with people’s chronic spending attitudes, and the authors argue that effort alone typically does not overcome the neglect.",
+    "arguments": [
+      "Opportunity costs are frequently neglected unless they are made explicit.",
+      "Making the alternative use of resources salient changes choices, even under conditions that promote careful thought.",
+      "Individual differences in spending attitudes moderate the effect."
+    ],
+    "evidence": "lab-experiment",
+    "design": "Several consumer-choice experiments manipulating whether the option of not buying was framed as keeping money for other purchases.",
+    "strengths": "Clean manipulations of a single framing cue; directly relevant to how alternatives are presented.",
+    "limitations": "Consumer purchases with modest stakes; organizational budget decisions involve committees, other people’s money and longer horizons, so the effect size will not transfer directly.",
+    "contested": null,
+    "generalizability": "The mechanism — alternatives that are not presented are not weighed — plausibly applies to organizational budgets, where proposals are often evaluated one at a time; treat magnitude as unknown.",
+    "readingMinutes": 25,
+    "relevance": "Supports a practical rule for your budget process: every proposal must name the next-best use of the same money and staff time."
+  },
+  {
+    "id": "R-kahneman-1993-timid",
+    "title": "Timid Choices and Bold Forecasts: A Cognitive Perspective on Risk Taking",
+    "authors": [
+      "Daniel Kahneman",
+      "Dan Lovallo"
+    ],
+    "publication": "Management Science, 39(1), 17–31",
+    "year": 1993,
+    "url": "https://doi.org/10.1287/mnsc.39.1.17",
+    "doi": "10.1287/mnsc.39.1.17",
+    "discipline": "behavioral-economics",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, journal, volume, issue, pages and DOI matched on pubsonline.informs.org, econpapers.repec.org and ideas.repec.org; the abstract’s two-bias argument matched those records.",
+      "link": "not-opened"
+    },
+    "summary": "Argues that managerial decisions combine two opposing errors. Choices are too timid because decision-makers treat each risky option in isolation and miss how aggregation across many decisions reduces relative risk; forecasts are too bold because people adopt an “inside view” anchored on the plan at hand and neglect statistics from comparable past cases (the “outside view”).",
+    "arguments": [
+      "Narrow framing — evaluating each risky choice in isolation — produces excessive risk aversion relative to a portfolio perspective.",
+      "The inside view anchors forecasts on plans and scenarios and produces optimism.",
+      "Base rates from a class of similar past cases (the outside view) correct forecast optimism; organizations can institutionalize both corrections."
+    ],
+    "evidence": "theoretical",
+    "design": "Conceptual paper drawing on prior experimental research in judgment and decision-making and examining organizational implications.",
+    "strengths": "Seminal and parsimonious; the origin of the inside/outside view distinction used in reference-class forecasting.",
+    "limitations": "Theoretical integration rather than new data; the relative strength of the two biases in a given organization is not quantified.",
+    "contested": null,
+    "generalizability": "Directly applicable to capital allocation in firms, public agencies and sports organizations, which repeatedly make similar risky investments.",
+    "readingMinutes": 45,
+    "relevance": "Explains why a department can simultaneously reject good small bets and approve over-optimistic large ones — the two failure modes this week’s tools are designed to catch."
+  },
+  {
+    "id": "R-flyvbjerg-2008-curbing",
+    "title": "Curbing Optimism Bias and Strategic Misrepresentation in Planning: Reference Class Forecasting in Practice",
+    "authors": [
+      "Bent Flyvbjerg"
+    ],
+    "publication": "European Planning Studies, 16(1), 3–21",
+    "year": 2008,
+    "url": "https://doi.org/10.1080/09654310701747936",
+    "doi": "10.1080/09654310701747936",
+    "discipline": "public-policy",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, author, journal, volume, issue, pages and DOI matched on econpapers.repec.org, ideas.repec.org and ora.ox.ac.uk (Oxford repository record). One IDEAS listing shows a 2006 date (earlier online publication); citation databases use 2008 for the print issue.",
+      "link": "not-opened"
+    },
+    "summary": "Describes reference-class forecasting — basing a project’s cost or demand forecast on the actual outcomes of a class of comparable past projects — and reports its first use in planning practice, for cost estimates of large UK transport investments (including the Edinburgh Tram and London’s Crossrail). Inaccurate forecasts are attributed to optimism bias and strategic misrepresentation, which the method is designed to sidestep.",
+    "arguments": [
+      "Forecast errors in planning are large and systematic, not random, and stem from optimism bias and strategic misrepresentation.",
+      "Reference-class forecasting takes the outside view: identify a class of similar past projects, establish the distribution of outcomes, and position the new project within it.",
+      "The method can be institutionalized, but adoption faces political and organizational barriers."
+    ],
+    "evidence": "qualitative",
+    "design": "Method description plus a practice case (UK transport cost forecasting); builds on the author’s earlier quantitative studies of cost overruns.",
+    "strengths": "Concrete, implementable method grounded in Kahneman and Tversky’s outside view; documented use by a government.",
+    "limitations": "Practice account rather than a controlled test of forecast accuracy; the choice of reference class is a judgment; the “strategic misrepresentation” explanation is disputed by other researchers.",
+    "contested": "Love and Ahiaga-Dagbui (R-love-2018-debunking) dispute the deception-based explanation of cost underestimation and the methods behind it; Flyvbjerg and colleagues have published rebuttals.",
+    "generalizability": "Most transferable where an organization has many comparable past projects (IT systems, facilities, hires); weaker for genuinely novel initiatives with no meaningful reference class.",
+    "readingMinutes": 45,
+    "relevance": "Gives you a disciplined way to challenge a vendor’s or a colleague’s base case — and your own."
+  },
+  {
+    "id": "R-love-2018-debunking",
+    "title": "Debunking Fake News in a Post-Truth Era: The Plausible Untruths of Cost Underestimation in Transport Infrastructure Projects",
+    "authors": [
+      "Peter E. D. Love",
+      "Dominic Ahiaga-Dagbui"
+    ],
+    "publication": "Transportation Research Part A: Policy and Practice, 113, 357–368",
+    "year": 2018,
+    "url": "https://doi.org/10.1016/j.tra.2018.04.019",
+    "doi": "10.1016/j.tra.2018.04.019",
+    "discipline": "public-policy",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder’s terms. An accepted manuscript is listed as open access in Curtin University’s espace repository (handle 20.500.11937/68682), seen in search results but not opened. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, journal, volume, pages and DOI matched on econpapers.repec.org and espace.curtin.edu.au; the critique of Flyvbjerg, Holm and Buhl (2002) and the existence of a Flyvbjerg rebuttal matched trade-press coverage (transportxtra.com).",
+      "link": "not-opened"
+    },
+    "summary": "A critique of the influential claim that cost underestimation in transport projects is best explained by optimism or deliberate deception. The authors argue that the “error or lie” framing is a false dichotomy, question the methodology and conclusions of the earlier work, and call for evidence-based approaches to setting capital cost estimates. Flyvbjerg replied that this view would keep planners getting costs wrong.",
+    "arguments": [
+      "Framing cost underestimation as either honest error or deliberate lie is a false dichotomy given how large projects are actually procured.",
+      "Methodological choices — including when the baseline estimate is measured and how scope changes are treated — affect how large “overruns” appear.",
+      "Policy should rest on evidence about the causes of cost growth (such as scope change and rework), not only on behavioral explanations."
+    ],
+    "evidence": "review",
+    "design": "Critical methodological review and argument; no new controlled study.",
+    "strengths": "Forces precision about baselines and causal explanations; represents a live scholarly dispute.",
+    "limitations": "Polemical in tone; offers critique more than an alternative validated forecasting method; it disputes the explanation more than the existence of frequent overruns.",
+    "contested": "Directly contests the explanation advanced by Flyvbjerg and colleagues (see R-flyvbjerg-2008-curbing); the dispute remains unresolved.",
+    "generalizability": "Reminds any organization that the measured size of a forecast error depends on definitions, and that behavioral and technical causes can co-exist.",
+    "readingMinutes": 40,
+    "relevance": "Models the kind of skepticism you should apply even to a celebrated method: ask how the baseline was defined before accepting a claim about bias."
+  },
+  {
+    "id": "R-hakes-2006-economic",
+    "title": "An Economic Evaluation of the Moneyball Hypothesis",
+    "authors": [
+      "Jahn K. Hakes",
+      "Raymond D. Sauer"
+    ],
+    "publication": "Journal of Economic Perspectives, 20(3), 173–186",
+    "year": 2006,
+    "url": "https://doi.org/10.1257/jep.20.3.173",
+    "doi": "10.1257/jep.20.3.173",
+    "discipline": "economics",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright American Economic Association; the Journal of Economic Perspectives is made freely available online by the AEA. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, journal, volume, issue, pages (173–186) and DOI matched on econpapers.repec.org and econbiz.de; findings matched those records’ abstracts. AEA policy making JEP freely available matched an AEA report and JSTOR listings in search results.",
+      "link": "not-opened"
+    },
+    "summary": "Tests the claim popularized by the book Moneyball that baseball’s labor market mispriced certain skills. Using player productivity and salary data from 1999 to 2004, the authors estimate how batting skills contribute to winning and how they were paid. On-base percentage contributed more to winning than salaries reflected before the book appeared, and that pricing gap largely disappeared once the idea spread.",
+    "arguments": [
+      "A skill’s contribution to winning and its price in the labor market can diverge — an exploitable inefficiency.",
+      "On-base ability was undervalued relative to its contribution to wins in the late 1990s and early 2000s.",
+      "Once the insight diffused, salaries adjusted and the arbitrage opportunity largely closed."
+    ],
+    "evidence": "observational",
+    "design": "Econometric analysis of MLB team win production and player salary data, 1999–2004; regressions of winning on batting components and of salaries on the same components by year.",
+    "strengths": "Clear economic logic, public data, transparent models; a student replication has reportedly reproduced the results.",
+    "limitations": "Observational; short window after publication; salary regressions omit unmeasured factors (defense, reputation, negotiation); the causal role of the book in the correction is inferred from timing.",
+    "contested": null,
+    "generalizability": "The general lesson — mispriced attributes create advantage only until competitors learn — transfers to any talent market; the specific coefficients do not.",
+    "readingMinutes": 30,
+    "relevance": "A rigorous, readable model for asking whether your organization pays for what actually produces results, and how long any edge is likely to last."
+  },
+  {
+    "id": "R-massey-2013-losers",
+    "title": "The Loser’s Curse: Decision Making and Market Efficiency in the National Football League Draft",
+    "authors": [
+      "Cade Massey",
+      "Richard H. Thaler"
+    ],
+    "publication": "Management Science, 59(7), 1479–1495",
+    "year": 2013,
+    "url": "https://doi.org/10.1287/mnsc.1120.1657",
+    "doi": "10.1287/mnsc.1120.1657",
+    "discipline": "behavioral-economics",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder’s terms. A copy is listed in the University of Pennsylvania ScholarlyCommons repository (seen in search results, not opened). Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, journal, volume, issue, pages, July 2013 date and DOI matched on econpapers.repec.org and repository.upenn.edu; the method and main finding matched those records and a 2026 critique’s summary.",
+      "link": "not-opened"
+    },
+    "summary": "Compares the market price of NFL draft picks — what teams give up in draft-day trades — with the surplus value the drafted players actually deliver (performance value minus compensation). Early picks are significantly overvalued: the very top picks yield less surplus on average than later first-round picks, a pattern the authors attribute to overconfidence and related judgment errors rather than efficient markets.",
+    "arguments": [
+      "Draft-pick trade prices imply that early picks are worth far more than later ones.",
+      "Measured surplus value (performance value net of pay) does not decline nearly as steeply, so top picks are overpriced.",
+      "Persistent mispricing in a high-stakes, repeated market is consistent with behavioral explanations such as overconfidence rather than with efficient markets."
+    ],
+    "evidence": "observational",
+    "design": "Archival analysis of draft-day trades, player performance and compensation data.",
+    "strengths": "Large, repeated, high-stakes market; clear economic benchmark (surplus value).",
+    "limitations": "Performance value must be estimated; conclusions depend on assuming teams should maximize expected surplus.",
+    "contested": "Brill and Wyner (R-brill-2026-losers) argue the overvaluation conclusion depends on the assumed objective; if a team prioritizes landing an elite player, high picks may be rational.",
+    "generalizability": "Transfers to any market where organizations bid for scarce talent with noisy evaluations (hiring, acquisitions, drafts); the precise pricing pattern is sport-specific.",
+    "readingMinutes": 50,
+    "relevance": "Shows how to value talent as surplus over cost — the right unit for budget decisions in player development and beyond."
+  },
+  {
+    "id": "R-brill-2026-losers",
+    "title": "The Loser’s Curse and the Critical Role of the Utility Function",
+    "authors": [
+      "Ryan Brill",
+      "Abraham Wyner"
+    ],
+    "publication": "The American Statistician, 80(1), 15–30",
+    "year": 2026,
+    "url": "https://doi.org/10.1080/00031305.2025.2505512",
+    "doi": "10.1080/00031305.2025.2505512",
+    "discipline": "statistics",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder’s terms. An open preprint is on arXiv (2411.10400, first posted November 2024 as “The Loser’s Curse Revisited”); the published version may differ. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "partially-confirmed",
+      "evidence": "Title, author surnames, journal, volume, issue, pages, 2026 date and DOI matched on econpapers.repec.org; the preprint and its earlier title matched on arxiv.org. Given names are recorded from the preprint listing as best known but were not displayed in the search snippets, so authorship is marked partially confirmed.",
+      "link": "not-opened"
+    },
+    "summary": "A statistical re-examination of the loser’s curse. The authors argue that the conclusion that top NFL draft picks are overvalued hinges on assuming teams should maximize expected surplus value; under alternative objectives — for example, valuing the chance of landing a transformational player — paying a premium for high picks can be rational. The broader point is that judging decision quality requires specifying the objective.",
+    "arguments": [
+      "Whether a choice is “overpaying” depends on the utility function used to evaluate it.",
+      "If outcomes are highly skewed and elite talent is disproportionately valuable, maximizing expected surplus is not the only defensible objective.",
+      "Evaluations of decision quality should make the assumed objective explicit."
+    ],
+    "evidence": "observational",
+    "design": "Reanalysis of NFL draft outcome data under alternative utility functions (details from the preprint; the published version was not read in full).",
+    "strengths": "Highlights a hidden assumption in a famous finding; statistically careful.",
+    "limitations": "Recent; the published version was not inspected here; which objective teams ought to hold remains a value judgment.",
+    "contested": "A critique of R-massey-2013-losers; the two papers should be read together.",
+    "generalizability": "Applies to any evaluation of resource allocation under skewed payoffs (venture investing, research portfolios, elite hiring).",
+    "readingMinutes": 45,
+    "relevance": "Reminds you that “efficient” spending depends on the organization’s objective — wins, championships, profit or development — which must be stated before any budget is judged."
+  }
+]
