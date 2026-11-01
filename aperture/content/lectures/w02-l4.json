@@ -1,0 +1,690 @@
+{
+  "id": "w02-l4-lecture",
+  "lesson": "w02-l4",
+  "title": "The Social Economy of Work",
+  "subtitle": "Norms, reciprocity, status and safety",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "summary": "A narrated, interactive version of Lesson 4. It covers the same objectives — conditional cooperation and reciprocity, fairness judged against reference points and intentions, what is correlational and what is causal in the psychological-safety evidence, and how formal incentives interact with norms, identity and status — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Same raise, different reaction",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 2 · Lesson 4 · Lecture",
+            "title": "The social economy of work",
+            "sub": "Norms, reciprocity, status and safety"
+          },
+          "cues": [
+            {
+              "text": "Contracts and bonuses cover a small part of what organizations need from people."
+            },
+            {
+              "text": "Helping a colleague, raising a problem early, going beyond the job description: none of that is in the contract. This lecture is about what governs it."
+            },
+            {
+              "text": "Let's begin with two offices."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two offices, one raise",
+            "left": {
+              "title": "Office one",
+              "points": [
+                "Four percent raise",
+                "No raise the year before",
+                "Partners explained the constraints"
+              ]
+            },
+            "right": {
+              "title": "Office two",
+              "points": [
+                "Four percent raise",
+                "New hires got nine percent",
+                "Learned from a leaked spreadsheet"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Two regional offices of a hypothetical consulting firm receive identical raises in the same year: four percent. The numbers are invented."
+            },
+            {
+              "text": "In the first office, people are pleased. The previous year brought no raise, and partners explained the constraints openly.",
+              "reveal": 1
+            },
+            {
+              "text": "In the second, morale collapses. Staff learned through a leaked spreadsheet that a newly hired peer group got nine percent, and no partner had mentioned it.",
+              "reveal": 2
+            },
+            {
+              "text": "Same money. Opposite reaction. What did the damage in the second office?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-raise",
+            "type": "choice",
+            "concept": "c-fairness-reference-points",
+            "prompt": "Both offices received the same four percent raise. What best explains the collapse in morale in the second office?",
+            "options": [
+              {
+                "id": "a",
+                "text": "The raise was too small."
+              },
+              {
+                "id": "b",
+                "text": "Only the comparison with the new hires’ nine percent."
+              },
+              {
+                "id": "c",
+                "text": "Only the way the news came out."
+              },
+              {
+                "id": "d",
+                "text": "A different reference point, and the intention people inferred from the silence."
+              }
+            ],
+            "answer": "d",
+            "feedback": {
+              "a": "The first office got exactly the same raise and was pleased. The amount cannot explain the difference.",
+              "b": "The comparison matters — it shifted the reference point — but the lesson stresses a second force: what people inferred about intentions.",
+              "c": "The leak matters because of what it implied about intentions, but the new hires’ raise also changed what the four percent was judged against.",
+              "d": "Right. People judged the raise against different reference points, and in the second office they inferred an unflattering intention from the hidden difference."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Reciprocity and conditional cooperation",
+      "scenes": [
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "The money is the same.",
+              "The reference point is not.",
+              "Nor is the intention people infer."
+            ]
+          },
+          "cues": [
+            {
+              "text": "The money was identical. What differed was what people compared it with,",
+              "reveal": 0
+            },
+            {
+              "text": "the reference point,",
+              "reveal": 1
+            },
+            {
+              "text": "and the intention they inferred behind it. We'll come back to both. First, the foundation underneath them.",
+              "reveal": 2
+            },
+            {
+              "text": "That foundation is a social economy: the unwritten exchanges, expectations and status orders that decide whether people cooperate, share information and admit mistakes. Formal incentives sit on top of it."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "definition",
+            "term": "Reciprocity",
+            "definition": "Responding to kindness with kindness and to unkindness with retaliation, even at a cost.",
+            "example": "Gift exchange: more generous wages met with higher, unenforceable effort.",
+            "refs": [
+              "R-fehr-2000-fairness"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Ernst Fehr and Simon Gächter review experimental evidence that a substantial share of people are reciprocal.",
+              "reveal": 0,
+              "refs": [
+                "R-fehr-2000-fairness"
+              ]
+            },
+            {
+              "text": "They respond to kindness with kindness and to unkindness with retaliation, even when it's costly and brings no future benefit.",
+              "reveal": 1,
+              "refs": [
+                "R-fehr-2000-fairness"
+              ]
+            },
+            {
+              "text": "In gift-exchange experiments, employers who offered more generous wages were met, on average, with higher effort, although that effort couldn't be enforced.",
+              "reveal": 2,
+              "refs": [
+                "R-fehr-2000-fairness"
+              ]
+            },
+            {
+              "text": "Why it matters: no contract can specify everything. Reciprocity helps make incomplete contracts work. Goodwill fills the gaps."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "bars",
+            "title": "Cooperation over repeated rounds",
+            "unit": "% contributed",
+            "items": [
+              {
+                "label": "Round 1, no sanctions",
+                "value": 50
+              },
+              {
+                "label": "Round 10, no sanctions",
+                "value": 15
+              },
+              {
+                "label": "Round 1, sanctions available",
+                "value": 55
+              },
+              {
+                "label": "Round 10, sanctions available",
+                "value": 80
+              }
+            ],
+            "note": "Synthetic, stylized values illustrating the qualitative pattern in Fehr and Gächter (2000). Not data from any study.",
+            "refs": [
+              "R-fehr-2000-fairness"
+            ]
+          },
+          "cues": [
+            {
+              "text": "But reciprocal people coexist with selfish ones, and the mix decides what happens in groups."
+            },
+            {
+              "text": "In a public-goods game, each member gets an endowment and decides how much to put into a shared pool. The pool is multiplied and divided equally, whatever each person put in."
+            },
+            {
+              "text": "The group does best if everyone contributes everything. Each individual does best by keeping their own while others contribute. That gap is the free-rider problem."
+            },
+            {
+              "text": "These bars are invented to show the shape of the pattern. They are not data from any study."
+            },
+            {
+              "text": "Without sanctions, cooperation typically starts at moderate levels,",
+              "reveal": 1,
+              "refs": [
+                "R-fehr-2000-fairness"
+              ]
+            },
+            {
+              "text": "and declines over repeated rounds, as conditional cooperators watch others free ride and withdraw.",
+              "reveal": 2,
+              "refs": [
+                "R-fehr-2000-fairness"
+              ]
+            },
+            {
+              "text": "When participants can pay to punish free riders, many do,",
+              "reveal": 3,
+              "refs": [
+                "R-fehr-2000-fairness"
+              ]
+            },
+            {
+              "text": "and cooperation can be sustained at much higher levels.",
+              "reveal": 4,
+              "refs": [
+                "R-fehr-2000-fairness"
+              ]
+            },
+            {
+              "text": "Now think of knowledge sharing, covering for a colleague, mentoring, keeping shared systems tidy. A few visible free riders, left unaddressed, can unravel cooperation among people who were willing to contribute."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Norms, fairness and status",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "term": "Social norm",
+            "definition": "A shared expectation about what people do and ought to do, enforced by approval and disapproval.",
+            "example": "Powerful because informal, and fragile for the same reason."
+          },
+          "cues": [
+            {
+              "text": "Next, norms."
+            },
+            {
+              "text": "A social norm is a shared expectation about what people do and what they ought to do, enforced by approval and disapproval rather than by law.",
+              "reveal": 1
+            },
+            {
+              "text": "Norms are powerful precisely because they're informal. That's also what makes them fragile.",
+              "reveal": 2
+            },
+            {
+              "text": "Remember the day-care fine. Gneezy and colleagues' discussion shows that a price can convert a moral obligation into a market transaction, and the obligation may not return when the price is removed.",
+              "refs": [
+                "R-gneezy-2011-when"
+              ]
+            },
+            {
+              "text": "The same can happen when an organization starts paying for what people used to do as a matter of professional identity."
+            },
+            {
+              "text": "Norms also spread through the conformity mechanisms from Lesson 1. People infer what's appropriate from what others visibly do, and conformity is larger with larger unanimous majorities. That helps explain why a widespread norm is hard for any one person to break.",
+              "refs": [
+                "R-bond-1996-culture"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "What fairness is judged against",
+            "cards": [
+              {
+                "title": "Reference points",
+                "q": "Past pay, peers, what was expected",
+                "fail": "A raise below a peer’s can feel like a loss"
+              },
+              {
+                "title": "Intentions",
+                "q": "The kindness or hostility behind the act",
+                "fail": "An act read as distrust lowers goodwill"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now back to the two offices."
+            },
+            {
+              "text": "People judge outcomes against reference points: what they received before, what peers receive, what they were led to expect. A raise below a peer's can feel like a loss, even though it's a gain in absolute terms.",
+              "reveal": 1
+            },
+            {
+              "text": "And fairness depends on intentions. Fehr and Gächter emphasize that people respond to the perceived kindness or hostility behind an action, not only to its consequences.",
+              "reveal": 2,
+              "refs": [
+                "R-fehr-2000-fairness"
+              ]
+            },
+            {
+              "text": "Two corollaries follow. Transparency about the reasons for differences matters as much as the differences themselves."
+            },
+            {
+              "text": "And an action read as distrust, heavy monitoring or a clawback threat, can lower the very goodwill it was meant to protect."
+            },
+            {
+              "text": "Suppose a respected employee tells you privately that a peer is paid more for the same role, and you can't share individual pay. A defensible path: explain the principles behind pay differences in general, commit to a review of the role's range on a set date, and give the employee a voice in it."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Status and identity",
+            "left": {
+              "title": "Status",
+              "points": [
+                "Relative standing in others’ eyes",
+                "Titles, seating, who is consulted"
+              ]
+            },
+            "right": {
+              "title": "Social identity",
+              "points": [
+                "Self-concept from group membership",
+                "Caring about the group’s standing and norms"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Status is relative standing in the eyes of others. Organizations hand it out constantly: titles, seating, who is consulted, whose name is on the report.",
+              "reveal": 1
+            },
+            {
+              "text": "Social identity is the part of your self-concept that comes from group membership. It makes people care about their group's standing, and its norms.",
+              "reveal": 2
+            },
+            {
+              "text": "Both are incentives that cost no cash. Both can backfire, through in-group favoritism and rivalry between departments, or when status goes to visible rather than valuable work."
+            },
+            {
+              "text": "A caution. The lesson treats status and identity as working lenses, not as findings with precise effect sizes, and it cites no primary studies on them. Hold claims about their size loosely."
+            },
+            {
+              "text": "Here's a case where these forces collide with a formal incentive."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-tackles",
+            "type": "choice",
+            "concept": "c-social-norms",
+            "prompt": "A hypothetical professional rugby club introduces individual bonuses for tackles made. Tackle counts rise. What else does this lesson predict?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Nothing else — more tackles means a better defense."
+              },
+              {
+                "id": "b",
+                "text": "Some players chase tackles out of position, and team-mates who hold their positions grow less willing to do unglamorous work."
+              },
+              {
+                "id": "c",
+                "text": "Players refuse the bonus on principle."
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "Tackle counts are a proxy. Chasing tackles out of position can raise the count while weakening the defensive system.",
+              "b": "Right. Effort moves to the measure, and the norm lens adds a second cost: team-mates see others rewarded for undermining the structure, and reciprocity erodes.",
+              "c": "Nothing in the evidence suggests mass refusal. The predicted problem is quieter: distorted effort and eroding goodwill."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Psychological safety — and what we know",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "term": "Psychological safety",
+            "definition": "A shared belief that it is safe to take interpersonal risks: ask a question, admit an error, challenge a plan.",
+            "example": "About whether candor is punished, not whether standards are low.",
+            "refs": [
+              "R-frazier-2017-psychological"
+            ]
+          },
+          "cues": [
+            {
+              "text": "The structural fix there is to reward defensive outcomes at team level and let coaches recognize positional discipline. Now, the most fashionable idea in this lesson."
+            },
+            {
+              "text": "Psychological safety is a shared belief that it's safe to take interpersonal risks, to ask a question, admit an error or challenge a plan, without being punished or humiliated.",
+              "reveal": 1,
+              "refs": [
+                "R-frazier-2017-psychological"
+              ]
+            },
+            {
+              "text": "It's often confused with comfort or low standards. It concerns whether candor is punished, not whether expectations are demanding. Arguably, high standards make it more necessary that people can safely report a mistake.",
+              "reveal": 2
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "What the meta-analysis found",
+            "refs": [
+              "R-frazier-2017-psychological"
+            ],
+            "cards": [
+              {
+                "title": "Outcomes",
+                "q": "Information sharing, learning, engagement, performance",
+                "fail": "Associated with — not shown to cause"
+              },
+              {
+                "title": "Antecedents",
+                "q": "Supportive leadership, peer support, work design",
+                "fail": "Also associations"
+              },
+              {
+                "title": "Levels",
+                "q": "Individual, team, organization",
+                "fail": "A group construct measured by asking individuals"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Frazier and colleagues' meta-analysis found psychological safety associated with information sharing, learning behavior, engagement and task performance.",
+              "reveal": 1,
+              "refs": [
+                "R-frazier-2017-psychological"
+              ]
+            },
+            {
+              "text": "It was also associated with supportive leadership, peer support and work design.",
+              "reveal": 2,
+              "refs": [
+                "R-frazier-2017-psychological"
+              ]
+            },
+            {
+              "text": "And the construct has been studied at individual, team and organizational levels.",
+              "reveal": 3,
+              "refs": [
+                "R-frazier-2017-psychological"
+              ]
+            },
+            {
+              "text": "Now listen to the verb. Associated. Not caused."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Correlational versus causal",
+            "left": {
+              "title": "What the evidence supports",
+              "points": [
+                "Safety and good outcomes go together",
+                "A direction: candor and goodwill help"
+              ]
+            },
+            "right": {
+              "title": "What it does not yet support",
+              "points": [
+                "Safety causes performance",
+                "Confident gains from a program"
+              ]
+            },
+            "refs": [
+              "R-frazier-2017-psychological",
+              "R-fehr-2000-fairness"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Here's where I argue against the popular version. The claim that psychological safety drives team performance outruns the evidence.",
+              "reveal": 0,
+              "refs": [
+                "R-frazier-2017-psychological"
+              ]
+            },
+            {
+              "text": "Most primary studies in the meta-analysis are cross-sectional, and many have the same people report both safety and outcomes, which inflates correlations.",
+              "refs": [
+                "R-frazier-2017-psychological"
+              ]
+            },
+            {
+              "text": "Causal direction stays open. Successful teams may feel safer because they're succeeding. Experimental and longitudinal tests are fewer."
+            },
+            {
+              "text": "The reciprocity evidence has a parallel limit. Gift-exchange effects found in the laboratory are often smaller in the field, or fade over time.",
+              "refs": [
+                "R-fehr-2000-fairness"
+              ]
+            },
+            {
+              "text": "So both literatures support a direction: candor and goodwill help.",
+              "reveal": 1
+            },
+            {
+              "text": "Neither supports confident promises about how much a program will raise performance.",
+              "reveal": 2
+            },
+            {
+              "text": "When you read a safety claim, ask three questions. Who rated the outcome? Was it measured later than safety? And was anything manipulated?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-safety",
+            "type": "choice",
+            "concept": "c-psychological-safety",
+            "prompt": "A vendor claims its program raises team performance by building psychological safety. Which evidence would most strengthen that causal claim?",
+            "options": [
+              {
+                "id": "a",
+                "text": "A larger one-time survey in which team members rate both safety and their own performance."
+              },
+              {
+                "id": "b",
+                "text": "Safety measured first, performance rated independently later, and ideally some teams randomly assigned to the program."
+              },
+              {
+                "id": "c",
+                "text": "Managers rating both their teams’ safety and performance."
+              },
+              {
+                "id": "d",
+                "text": "Enthusiastic testimonials from participating teams."
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "A bigger sample does not fix the design: same-source, cross-sectional ratings leave both inflation and causal direction open.",
+              "b": "Right. A later, independently rated outcome addresses same-source inflation and timing, and random assignment addresses the possibility that successful teams simply feel safer.",
+              "c": "One rater for both variables is still same-source data, and it is still measured at one point in time.",
+              "d": "Testimonials say nothing about whether the program caused any change in performance."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Designing on top of the social economy",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Getting near-misses reported",
+            "steps": [
+              "Separate reporting from appraisal",
+              "Make honest-error responses visibly non-punitive",
+              "Senior captains report first",
+              "Close the loop: show what changed"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Independent, later outcome ratings and some manipulation are what move a correlation toward a causal claim. Now let's put the lesson to work."
+            },
+            {
+              "text": "A hypothetical air ambulance operator wants crews to report near-misses. Reports are rare."
+            },
+            {
+              "text": "The diagnosis: the last pilot who reported one was grounded pending review, and reports go to the same manager who writes performance appraisals."
+            },
+            {
+              "text": "So separate reporting from appraisal.",
+              "reveal": 1
+            },
+            {
+              "text": "Make the response to a report visibly non-punitive for honest errors.",
+              "reveal": 2
+            },
+            {
+              "text": "Have senior captains report their own near-misses first. High-status examples carry norms.",
+              "reveal": 3
+            },
+            {
+              "text": "And close the loop by showing what changed.",
+              "reveal": 4
+            },
+            {
+              "text": "What about a bonus per report? That would risk pricing a professional norm, and inviting trivial reports."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Norms cut both ways."
+            ],
+            "sub": "Changing a harmful norm takes visible high-status behavior, a credible signal, and patience."
+          },
+          "cues": [
+            {
+              "text": "One more limit. Strong norms sustain cooperation, but they also sustain bad practice: concealment, hazing, refusing better methods.",
+              "reveal": 0
+            },
+            {
+              "text": "Conformity and identity make it costly for any one person to break a harmful norm. Changing one usually takes visible behavior by high-status members, a credible signal that the old norm won't be rewarded, and patience."
+            },
+            {
+              "text": "In player development, a young player hiding a minor injury, or a coach hiding that a drill isn't working, is responding to exactly these signals. Asking questions first, and publicly crediting people who surface problems early, are cheap ways to change them."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-reflect",
+            "type": "reflect",
+            "concept": "c-social-identity",
+            "prompt": "Pick one formal incentive in your organization. Which norm, reciprocal relationship, identity or status order does it sit on top of — and does it reinforce that force, or risk replacing it with a price?"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "The same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "Incentive Designer",
+                "detail": "This week's exercise",
+                "href": "#/exercise/w02-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Gneezy, Meier & Rey-Biel (2011), When and Why Incentives (Don’t) Work to Modify Behavior",
+                "href": "#/library/R-gneezy-2011-when"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let's bring it together."
+            },
+            {
+              "text": "Many people are conditional cooperators. They reciprocate generosity, and visible free riding unravels cooperation unless it's addressed."
+            },
+            {
+              "text": "Fairness is judged against reference points and inferred intentions, not only amounts. That's the two offices."
+            },
+            {
+              "text": "Psychological safety is associated with learning and performance, but most of the evidence is correlational. And formal incentives should be designed to reinforce the social economy, not replace it."
+            },
+            {
+              "text": "Next, take the comprehension check below. It's the same check as the written lesson. Then open the Incentive Designer, and read the review by Gneezy, Meier and Rey-Biel on how pricing a behavior can displace a norm.",
+              "reveal": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
