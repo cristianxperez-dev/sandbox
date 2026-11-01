@@ -8,8 +8,7 @@ Engine: Kokoro-82M (Apache-2.0), run offline with kokoro-onnx (MIT) and ONNX Run
 key, no recurring cost. Each narration cue is synthesized on its own, so caption, transcript and
 slide timings are exact to the sample. Outputs (all generated — never hand-edit):
 
-  apps/aperture/media/lectures/<id>/narration.m4a   AAC, mono, 24 kHz, 56 kbps (Apple and most browsers)
-  apps/aperture/media/lectures/<id>/narration.webm  Opus, mono, 40 kbps (fallback)
+  apps/aperture/media/lectures/<id>/narration.mp3   MP3, mono, 24 kHz, 48 kbps (plays in every current browser)
   apps/aperture/media/lectures/<id>/captions.vtt    WebVTT captions
   apps/aperture/media/lectures/<id>/transcript.txt  plain-text transcript
   aperture/build/narration/<id>.json                cue / scene / chapter timings + narration hash
@@ -101,14 +100,15 @@ def render(lecture_file):
     with tempfile.TemporaryDirectory() as tmp:
         wav = os.path.join(tmp, 'n.wav')
         sf.write(wav, audio, SR)
-        m4a = os.path.join(media_dir, 'narration.m4a')
-        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', wav, '-ac', '1', '-ar', str(SR), '-c:a', 'aac', '-b:a', '56k', '-movflags', '+faststart', m4a], check=True)
-        # Opus/WebM copy for browsers without AAC (e.g. Chromium builds without proprietary codecs).
-        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', wav, '-ac', '1', '-c:a', 'libopus', '-b:a', '40k', '-application', 'voip', os.path.join(media_dir, 'narration.webm')], check=True)
+        mp3 = os.path.join(media_dir, 'narration.mp3')
+        # One universal file: MP3 plays in every current browser, including Safari and Chromium builds without AAC.
+        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', wav, '-ac', '1', '-ar', str(SR), '-c:a', 'libmp3lame', '-b:a', '48k', mp3], check=True)
+        for old in ('narration.m4a', 'narration.webm'):
+            if os.path.exists(os.path.join(media_dir, old)): os.remove(os.path.join(media_dir, old))
 
     duration = round(len(audio) / SR, 3)
     timing = {
-        'id': lid, 'duration': duration,
+        'id': lid, 'duration': duration, 'audio': f'media/lectures/{lid}/narration.mp3',
         'narration': {'engine': ENGINE, 'voice': s['voice'], 'speed': speed, 'hash': script_hash(s), 'license': 'Kokoro-82M model and voices: Apache-2.0'},
         'chapters': [{'start': ch['start'], 'end': ch['end'], 'scenes': [{'start': sc['start'], 'end': sc['end'], 'checkpointAt': sc.get('checkpoint', {}).get('at'), 'cues': [[c['start'], c['end']] for c in sc['cues']]} for sc in ch['scenes']]} for ch in out['chapters']],
     }
@@ -132,7 +132,7 @@ def stale(lecture_file):
     with open(lecture_file, encoding='utf-8') as f:
         s = json.load(f)
     data = os.path.join(DATA, f'{s["id"]}.json')
-    if not os.path.exists(data) or not os.path.exists(os.path.join(MEDIA, s['id'], 'narration.m4a')):
+    if not os.path.exists(data) or not os.path.exists(os.path.join(MEDIA, s['id'], 'narration.mp3')):
         return True
     with open(data, encoding='utf-8') as f:
         return json.load(f).get('narration', {}).get('hash') != script_hash(s)

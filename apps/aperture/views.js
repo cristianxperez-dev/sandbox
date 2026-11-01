@@ -27,7 +27,7 @@
   /* ---------- Home ---------- */
   V.home = async function () {
     const [cat, prog] = await Promise.all([AP.catalog(), AP.api('progress')]);
-    await AP.loadState(['note']);
+    await AP.loadState(['note', 'lecture']);
     const cur = AP.currentWeek(cat, prog);
     const totalLessons = cat.weeks.reduce((a, w) => a + w.lessons.length, 0);
     const doneLessons = prog.weeks.reduce((a, w) => a + w.lessonsDone, 0);
@@ -36,16 +36,23 @@
     const nextLesson = cur.lessons.find((l) => !lessonDone(l.id));
     const cw = prog.weeks.find((x) => x.id === cur.id);
 
+    const lecFor = (lid) => (AP.lecturesOn() && cat.lectures && cat.lectures[lid]) || null;
+    const fmtT = (t) => `${Math.floor((t || 0) / 60)}:${String(Math.floor((t || 0) % 60)).padStart(2, '0')}`;
+    const lecRecs = Object.entries(AP.state.lecture || {}).filter(([, v]) => !v.data.completed && v.data.position > 5).sort((a, b) => b[1].updated - a[1].updated);
+    const resumeLec = (() => { if (!lecRecs.length) return null; const [lid, v] = lecRecs[0]; const lessonId = lid.replace(/-lecture$/, ''); const fl = findLesson(cat, lessonId); const meta = lecFor(lessonId); return fl && meta ? { lesson: lessonId, title: meta.title, w: fl.w, position: v.data.position, duration: v.data.duration || meta.duration } : null; })();
+    const nextLec = nextLesson && lecFor(nextLesson.id);
     // Today's suggested activity — transparent priority order.
     let suggest;
     if (!prog.diagnostic && cat.diagnostic) suggest = { t: 'Take the baseline diagnostic', d: `${cat.diagnostic.count} questions, about ${cat.diagnostic.minutes} minutes. It calibrates explanations; it never skips material.`, href: '#/diagnostic' };
     else if (prog.retention.due >= 5) suggest = { t: `Review ${prog.retention.due} concepts due today`, d: 'Spaced retrieval now is worth more than a new lesson.', href: '#/review' };
+    else if (resumeLec) suggest = { t: `Resume the lecture “${resumeLec.title}”`, d: `Week ${resumeLec.w.number} · at ${fmtT(resumeLec.position)} of ${fmtT(resumeLec.duration)}`, href: `#/lesson/${resumeLec.lesson}/watch` };
     else if (resume) suggest = { t: `Continue “${resume.l.title}”`, d: `Week ${resume.w.number} · ${resume.l.minutes} min`, href: `#/lesson/${resume.l.id}` };
+    else if (nextLesson && lecFor(nextLesson.id)) suggest = { t: `Watch the lecture “${lecFor(nextLesson.id).title}”`, d: `Week ${cur.number} · ${lecFor(nextLesson.id).minutes}-minute narrated lecture for “${nextLesson.title}” — or read the lesson instead`, href: `#/lesson/${nextLesson.id}/watch` };
     else if (nextLesson) suggest = { t: `Begin “${nextLesson.title}”`, d: `Week ${cur.number} · ${nextLesson.minutes} min`, href: `#/lesson/${nextLesson.id}` };
     else if (!(cw && cw.quiz && cw.quiz.mastered)) suggest = { t: `Take the Week ${cur.number} quiz`, d: `${cur.quiz.count} questions · mastery at 80%`, href: `#/assess/${cur.quiz.id}` };
     else if (!(cw && cw.assignment)) suggest = { t: cur.assignment.title, d: `Week ${cur.number} applied assignment`, href: `#/assignment/${cur.assignment.id}` };
     else suggest = { t: 'Open the next week', d: '', href: `#/week/${cur.id}` };
-    const why = 'Order: diagnostic first; then five or more reviews due; then the lesson you left open; then the next lesson, quiz and assignment of the current week.';
+    const why = 'Order: diagnostic first; then five or more reviews due; then the lecture or lesson you left open; then the next lesson (lecture first), quiz and assignment of the current week.';
 
     const upcoming = [];
     if (cw && !(cw.quiz && cw.quiz.mastered)) upcoming.push({ t: `Week ${cur.number} quiz`, d: cw.quiz ? `Best ${AP.pct(cw.quiz.auto)} auto-graded · reassess below 80%` : `${cur.quiz.count} questions`, href: `#/assess/${cur.quiz.id}` });
@@ -65,12 +72,16 @@
         h('section', { class: 'panel' }, h('span', { class: 'label', text: 'Overall progress' }),
           h('dl', { class: 'kv' },
             h('dt', { text: 'Lessons' }), h('dd', { class: 'num', text: `${doneLessons} of ${totalLessons}` }),
+            prog.lectures && prog.lectures.available ? [h('dt', { text: 'Lectures watched' }), h('dd', { class: 'num', text: `${prog.lectures.completed} of ${prog.lectures.available}` })] : null,
             h('dt', { text: 'Quizzes at mastery' }), h('dd', { class: 'num', text: `${prog.weeks.filter((w) => w.quiz && w.quiz.mastered).length} of ${cat.weeks.length}` }),
             h('dt', { text: 'Concepts mastered' }), h('dd', { class: 'num', text: `${prog.concepts.mastered} of ${prog.concepts.introduced} introduced` }),
             h('dt', { text: 'Due for review' }), h('dd', null, prog.retention.due ? h('a', { href: '#/review', text: `${prog.retention.due} cards` }) : '0 cards')),
           h('div', { class: 'meter', 'aria-hidden': 'true' }, meterFill(doneLessons / Math.max(1, totalLessons))))),
       h('div', { class: 'grid grid--3 rule' },
-        h('section', null, h('span', { class: 'label', text: 'Resume learning' }),
+        h('section', null, h('span', { class: 'label', text: 'Resume lecture' }),
+          resumeLec ? h('div', null, h('a', { class: 'btn btn--primary', href: `#/lesson/${resumeLec.lesson}/watch` }, `▶ Resume “${resumeLec.title}”`), h('p', { class: 'small muted', text: `Week ${resumeLec.w.number} · ${fmtT(resumeLec.position)} of ${fmtT(resumeLec.duration)}` }))
+            : nextLec ? h('div', null, h('a', { class: 'btn btn--primary', href: `#/lesson/${nextLesson.id}/watch` }, `▶ Watch “${nextLec.title}”`), h('p', { class: 'small muted', text: `Next lecture · Week ${cur.number} · ${nextLec.minutes} min` })) : h('p', { class: 'empty', text: 'No lecture in progress.' }),
+          h('span', { class: 'label rule', text: 'Resume reading' }),
           resume ? h('p', null, h('a', { href: `#/lesson/${resume.l.id}`, text: resume.l.title }), h('br'), h('span', { class: 'small muted', text: `Week ${resume.w.number} · saved at ${AP.getRec('progress', resume.l.id).section}` })) : h('p', { class: 'empty', text: 'Nothing open. Begin with the suggested activity.' })),
         h('section', null, h('span', { class: 'label', text: 'Upcoming assessment' }), upcoming.length ? h('ul', { class: 'list' }, upcoming.map((u) => h('li', null, h('a', { href: u.href, text: u.t }), h('div', { class: 'small muted', text: u.d })))) : h('p', { class: 'empty', text: 'Nothing pending this week.' })),
         h('section', null, h('span', { class: 'label', text: 'Reading queue' }), h('ul', { class: 'list' }, (wk.readings.required || []).map((r) => {
@@ -116,7 +127,7 @@
       list.appendChild(h('li', null, h('a', { class: 'week-row', href: `#/week/${w.id}` },
         h('span', { class: 'week-row__n', text: String(w.number) }),
         h('span', null, h('span', { class: 'label', text: w.schools.map((x) => SCHOOL[x]).join(' · ') }), h('h3', { text: w.title }), h('p', { class: 'week-row__q', text: w.question })),
-        h('span', { class: 'week-row__meta' }, h('span', { class: `tag ${s.cls}`, text: s.label }), h('span', { class: 'small muted num', text: `${s.p ? s.p.lessonsDone : 0}/${w.lessons.length} lessons · ${hours(w.hours)} h` })))));
+        h('span', { class: 'week-row__meta' }, h('span', { class: `tag ${s.cls}`, text: s.label }), h('span', { class: 'small muted num', text: `${s.p ? s.p.lessonsDone : 0}/${w.lessons.length} lessons · ${hours(w.hours)} h` }), (() => { const n = w.lessons.filter((l) => cat.lectures && cat.lectures[l.id]).length; return n && AP.lecturesOn() ? h('span', { class: 'tag tag--accent', text: `▶ ${n} lecture${n > 1 ? 's' : ''}` }) : null; })()))));
       if (w.number === 7 && cat.midterm) list.appendChild(extra('#/midterm', 'M', cat.midterm.title, 'Cumulative case and questions on Weeks 1–7.', h('span', { class: 'tag', text: `${cat.midterm.minutes} min` })));
     }
     if (cat.capstone) list.appendChild(extra('#/capstone', 'C', cat.capstone.title, `${cat.capstone.components} components, built incrementally from Week 8.`, h('span', { class: 'tag', text: 'Capstone' })));
@@ -133,7 +144,17 @@
     const p = prog.weeks.find((x) => x.id === id);
     const item = (label, href, title, desc, status) => h('li', null, h('a', { href }, h('span', { class: 'label', text: label }), h('span', null, h('span', { class: 'items__t', html: AP.inline(title) }), desc ? h('span', { class: 'items__d', html: AP.inline(desc) }) : null), status ? h('span', { class: `tag ${status[1] || ''}`, text: status[0] }) : h('span')));
     const lecOf = (l) => AP.lecturesOn && AP.lecturesOn() && cat.lectures && cat.lectures[l.id];
-    const lessons = h('ol', { class: 'items' }, w.lessons.map((l, i) => item(`Lesson ${i + 1} · ${l.minutes} min`, `#/lesson/${l.id}`, l.title, lecOf(l) ? `${l.summary} **Watch & Learn:** a ${lecOf(l).minutes}-minute narrated lecture covers this lesson.` : l.summary, lessonDone(l.id) ? ['Done', 'tag--done'] : AP.getRec('progress', l.id) ? ['In progress', 'tag--accent'] : lecOf(l) ? ['Lecture', ''] : null)));
+    await AP.loadState(['lecture']);
+    const lessons = h('ol', { class: 'items items--lessons' }, w.lessons.map((l, i) => {
+      const lec = lecOf(l);
+      const st = lessonDone(l.id) ? ['Done', 'tag--done'] : AP.getRec('progress', l.id) || (lec && AP.getRec('lecture', lec.id)) ? ['In progress', 'tag--accent'] : null;
+      return h('li', { class: 'lesson-item' },
+        h('a', { href: `#/lesson/${l.id}${lec ? '/watch' : ''}` }, h('span', { class: 'label', text: `Lesson ${i + 1}` }), h('span', null, h('span', { class: 'items__t', html: AP.inline(l.title) }), h('span', { class: 'items__d', html: AP.inline(l.summary) })), st ? h('span', { class: `tag ${st[1]}`, text: st[0] }) : h('span')),
+        h('div', { class: 'lesson-actions' },
+          lec ? h('a', { class: 'btn btn--primary btn--small lesson-play', href: `#/lesson/${l.id}/watch`, 'aria-label': `Watch the lecture for ${l.title}` }, `▶ Watch lecture · ${lec.minutes} min`) : null,
+          h('a', { class: 'btn btn--small', href: `#/lesson/${l.id}/read`, 'aria-label': `Read the lesson ${l.title}` }, `Read lesson · ${l.minutes} min`)));
+    }));
+    const lecs = w.lessons.map(lecOf).filter(Boolean);
     const labRec = AP.getRec('lab', w.exercise.id);
     const work = h('ul', { class: 'items' },
       item(`Exercise · ${w.exercise.minutes} min`, `#/exercise/${w.exercise.id}`, w.exercise.title, labName(cat, w.exercise.lab), labRec && labRec.finished ? ['Done', 'tag--done'] : labRec ? ['In progress', 'tag--accent'] : null),
@@ -147,7 +168,7 @@
       h('div', { class: 'weekhead' },
         h('div', null, h('span', { class: 'label', text: `Week ${w.number} · ${w.schools.map((x) => SCHOOL[x]).join(' · ')}` }), h('h1', { text: w.title }), h('p', { class: 'lede', text: w.theme }), h('p', { class: 'question', text: w.question }), AP.blocks(h('div', { class: 'prose' }), w.overview)),
         h('aside', { class: 'panel' }, h('span', { class: 'label', text: 'This week' }), h('dl', { class: 'kv small' }, ...Object.entries(w.hours).flatMap(([k, v]) => [h('dt', { text: k }), h('dd', { class: 'num', text: `${v} h` })])), h('hr'), h('span', { class: 'label', text: 'Objectives' }), h('ul', { class: 'small' }, w.objectives.map((o) => h('li', { html: AP.inline(o) }))))),
-      h('section', { class: 'rule' }, h('h2', { text: 'Lessons' }), lessons),
+      h('section', { class: 'rule' }, h('div', { class: 'row row--between' }, h('h2', { text: 'Lessons' }), lecs.length ? h('span', { class: 'tag tag--accent', text: `${lecs.length} narrated lectures · ${lecs.reduce((a, x) => a + x.minutes, 0)} min` }) : null), h('p', { class: 'small muted', text: lecs.length ? 'Each lesson can be watched as a narrated lecture or read in full. Either one completes the lesson — you do not need both.' : '' }), lessons),
       h('section', { class: 'rule' }, h('h2', { text: 'Apply and assess' }), work),
       h('section', { class: 'rule' }, h('h2', { text: 'Readings' }), readings('required'), h('h3', { class: 'rule', text: 'Optional' }), readings('optional')),
       h('section', { class: 'rule' }, h('h2', { text: 'Reflection' }), h('p', { class: 'muted small', text: `${w.reflection.minutes} minutes. Private to you; saved to your notebook.` }), refl),
@@ -350,7 +371,7 @@
       h('div', { class: 'grid grid--2 rule' },
         h('section', null, h('h3', { text: 'Common errors' }), p.errors.length ? h('ul', { class: 'list small' }, p.errors.map((e) => h('li', { text: `${e.tag.replace(/-/g, ' ')} — ${e.count} time${e.count > 1 ? 's' : ''}` }))) : h('p', { class: 'empty', text: 'None recorded yet.' })),
         h('section', null, h('h3', { text: 'Cross-disciplinary connections' }), p.connections.length ? h('ul', { class: 'list small' }, p.connections.map((c) => h('li', { text: `${c.name} — ${c.weeks.join(', ')}` }))) : h('p', { class: 'empty', text: 'Concepts you meet in more than one week will appear here.' }))),
-      h('p', { class: 'small muted rule', text: `Time on lessons: ${Math.round(p.time.seconds / 60)} minutes.` }));
+      h('p', { class: 'small muted rule', text: `Time on lessons and lectures: ${Math.round(p.time.seconds / 60)} minutes.${p.lectures && p.lectures.available ? ` Lectures: ${p.lectures.completed} watched to the end, ${p.lectures.started} started, of ${p.lectures.available}.` : ''}` }));
     return { el, title: 'Progress' };
   };
   function boxChart(boxes) {

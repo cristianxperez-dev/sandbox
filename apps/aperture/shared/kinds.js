@@ -90,7 +90,7 @@ export function makeKinds(ix) {
         theme: ['light', 'dark', 'system'].includes(d.theme) ? d.theme : 'system', reducedMotion: bool(d.reducedMotion), serifBody: d.serifBody !== false,
         weeklyHours: num(d.weeklyHours, 1, 20) ?? 6, studyDays: strs(d.studyDays, 7, 3), adaptFromDiagnostic: d.adaptFromDiagnostic !== false,
         reminders: ['in-app', 'off'].includes(d.reminders) ? d.reminders : 'in-app', chatgptLink: d.chatgptLink !== false,
-        lessonView: d.lessonView === 'watch' ? 'watch' : 'read', captions: d.captions !== false,
+        lessonPath: d.lessonPath === 'read' ? 'read' : 'watch', captions: d.captions !== false,
       }),
     },
     profile: {

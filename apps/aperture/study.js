@@ -10,17 +10,17 @@
   /* ======================= Lesson reader ======================= */
   AP.lecturesOn = () => !(window.APERTURE_CONFIG && window.APERTURE_CONFIG.lectures === false);
   function pathSwitch(id, lec, lessonMinutes, current) {
-    const go = (view) => () => { AP.settings.lessonView = view; AP.save('settings', 'main', { ...AP.settings }); };
+    const go = (view) => () => { AP.settings.lessonPath = view; AP.save('settings', 'main', { ...AP.settings }); };
     return h('nav', { class: 'pathswitch', 'aria-label': 'Choose how to learn this lesson' },
-      h('a', { href: `#/lesson/${id}/watch`, 'aria-current': current === 'watch' ? 'page' : null, onclick: go('watch') }, h('span', { class: 'label', text: 'Watch & Learn' }), h('b', { text: `Narrated lecture · ${lec.minutes} min` }), h('span', { text: `${lec.checkpoints} interactive checkpoints, captions, transcript` })),
-      h('a', { href: `#/lesson/${id}/read`, 'aria-current': current === 'read' ? 'page' : null, onclick: go('read') }, h('span', { class: 'label', text: 'Read & Explore' }), h('b', { text: `Written lesson · ${lessonMinutes} min` }), h('span', { text: 'Full text, diagrams, examples and methodological notes' })));
+      h('a', { href: `#/lesson/${id}/watch`, 'aria-current': current === 'watch' ? 'page' : null, onclick: go('watch') }, h('span', { class: 'label', text: '▶ Watch Lecture' }), h('b', { text: `Narrated lecture · ${lec.minutes} min` }), h('span', { text: `${lec.checkpoints} interactive checkpoints, captions, transcript` })),
+      h('a', { href: `#/lesson/${id}/read`, 'aria-current': current === 'read' ? 'page' : null, onclick: go('read') }, h('span', { class: 'label', text: 'Read Lesson' }), h('b', { text: `Written lesson · ${lessonMinutes} min` }), h('span', { text: 'Full text, diagrams, examples and methodological notes' })));
   }
 
   S.lesson = async function (id, sectionHint) {
     const weekId = id.slice(0, 3);
     const [cat, w] = await Promise.all([AP.catalog(), AP.week(weekId)]);
     const lec = AP.lecturesOn() && cat.lectures && cat.lectures[id];
-    if (lec && (sectionHint === 'watch' || (!sectionHint && AP.settings.lessonView === 'watch'))) return S.watch(id, lec, cat, w);
+    if (lec && (sectionHint === 'watch' || (!sectionHint && AP.settings.lessonPath !== 'read'))) return S.watch(id, lec, cat, w);
     if (sectionHint === 'read') sectionHint = null;
     await AP.loadState(['note', 'bookmark']);
     const idx = w.lessons.findIndex((l) => l.id === id);
@@ -191,13 +191,13 @@
     check.appendChild(quiz.el);
     const nextL = w.lessons[idx + 1];
     const el = h('div', null,
-      h('header', { class: 'pagehead' }, h('span', { class: 'label', text: `Week ${w.number} · Lesson ${idx + 1} of ${w.lessons.length} · Watch & Learn` }), h('h1', { text: L.title }), h('p', { class: 'lede', text: `${l.title}. ${L.summary}` }),
+      h('header', { class: 'pagehead' }, h('span', { class: 'label', text: `Week ${w.number} · Lesson ${idx + 1} of ${w.lessons.length} · Watch Lecture` }), h('h1', { text: L.title }), h('p', { class: 'lede', text: `${l.title}. ${L.summary}` }),
         h('details', { class: 'fold' }, h('summary', null, h('span', { class: 'label', text: 'Objectives' }), h('b', { text: `The lesson's ${l.objectives.length} learning objectives` })), h('div', { class: 'fold__body' }, h('ul', null, l.objectives.map((o) => h('li', { html: AP.inline(o) })))))),
       pathSwitch(id, lec, l.minutes, 'watch'),
       host,
       h('p', { class: 'small muted', text: 'Optional and interchangeable with the written lesson: watching to the end, passing the comprehension check, or marking the lesson complete all count the same. Checkpoint answers are saved for your own review and are never graded. Shortcuts: Space play/pause · ← → 5 s · J/L 10 s · C captions.' }),
       check,
-      h('div', { class: 'row rule' }, doneBtn, h('a', { class: 'btn', href: `#/lesson/${id}/read`, text: 'Open the written lesson' }), nextL ? h('a', { class: 'btn', href: `#/lesson/${nextL.id}`, text: `Next: ${nextL.title}` }) : h('a', { class: 'btn', href: `#/week/${w.id}`, text: 'Back to the week' })));
+      h('div', { class: 'row rule' }, doneBtn, h('a', { class: 'btn', href: `#/lesson/${id}/read`, text: 'Read Lesson' }), nextL ? h('a', { class: 'btn', href: `#/lesson/${nextL.id}`, text: `Next: ${nextL.title}` }) : h('a', { class: 'btn', href: `#/week/${w.id}`, text: 'Back to the week' })));
     return { el, title: L.title, destroy() { player.destroy(); } };
   };
 

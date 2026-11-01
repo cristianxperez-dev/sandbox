@@ -229,7 +229,7 @@
   AP.newId = () => (crypto.randomUUID ? crypto.randomUUID().replace(/-/g, '') : String(Date.now()) + Math.random().toString(16).slice(2)).slice(0, 24);
 
   /* ---------------- settings ---------------- */
-  AP.DEFAULT_SETTINGS = { mode: 'graduate', textSize: 1, lineHeight: 1.7, theme: 'system', reducedMotion: false, serifBody: true, weeklyHours: 6, studyDays: ['mon', 'tue', 'wed', 'thu', 'sat'], adaptFromDiagnostic: true, reminders: 'in-app', chatgptLink: true };
+  AP.DEFAULT_SETTINGS = { mode: 'graduate', textSize: 1, lineHeight: 1.7, theme: 'system', reducedMotion: false, serifBody: true, weeklyHours: 6, studyDays: ['mon', 'tue', 'wed', 'thu', 'sat'], adaptFromDiagnostic: true, reminders: 'in-app', chatgptLink: true, lessonPath: 'watch' };
   AP.applySettings = function (s) {
     AP.settings = { ...AP.DEFAULT_SETTINGS, ...(s || {}) };
     const r = document.documentElement;

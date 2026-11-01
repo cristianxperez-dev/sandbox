@@ -56,6 +56,19 @@
       h('p', { class: 'lv-note', text: 'Many Labs replication project — Klein et al. (2014).' })) };
   };
   R.steps = (v) => ({ el: h('div', { class: 'lv lv-steps' }, h('h3', { class: 'lv-t', text: v.title }), h('ol', null, v.steps.map((s, i) => step(i + 1, h('li', { text: s }))))) });
+  R.flow = (v) => ({ el: h('div', { class: 'lv lv-flow' }, h('h3', { class: 'lv-t', text: v.title }), h('div', { class: 'lv-flow-row' }, v.steps.map((x, i) => step(i + 1, h('div', { class: 'lv-flow-step' }, h('span', { class: 'lv-flow-n', text: String(i + 1).padStart(2, '0') }), h('b', { text: x.label }), x.text ? h('span', { text: x.text }) : null))))) });
+  R.bars = (v) => {
+    const max = Math.max(...v.items.map((i) => Math.abs(i.value)), 1e-9);
+    return { el: h('div', { class: 'lv lv-bars' }, h('h3', { class: 'lv-t', text: v.title }), h('div', { class: 'lv-bars-g' }, v.items.map((it, i) => step(i + 1, h('div', { class: 'lv-bar' }, h('span', { class: 'lv-bar-l', text: it.label }), h('div', { class: 'lv-bar-t' }, (() => { const f = h('i'); f.style.width = `${(Math.abs(it.value) / max) * 100}%`; return f; })()), h('b', { class: 'lv-bar-v', text: `${it.value.toLocaleString('en-US')}${v.unit || ''}` }))))), v.note ? h('p', { class: 'lv-note', text: v.note }) : null) };
+  };
+  R.calc = (v) => ({ el: h('div', { class: 'lv lv-calc' }, h('h3', { class: 'lv-t', text: v.title }), h('div', { class: 'lv-calc-g' }, v.lines.map((ln, i) => step(i + 1, h('div', { class: 'lv-calc-line' }, h('span', { text: ln.label }), h('b', { class: 'num', text: ln.value })))), step(v.lines.length + 1, h('div', { class: 'lv-calc-line lv-calc-res' }, h('span', { text: v.result.label }), h('b', { class: 'num', text: v.result.value })))), v.note ? h('p', { class: 'lv-note', text: v.note }) : null) });
+  R.matrix = (v) => ({ el: h('div', { class: 'lv lv-matrix' }, h('h3', { class: 'lv-t', text: v.title }),
+    h('div', { class: 'lv-mx' }, h('span', { class: 'lv-mx-y', text: `${v.y[1]} ↑` }), step(1, h('div', { class: 'lv-cell', text: v.cells[0][0] })), step(2, h('div', { class: 'lv-cell', text: v.cells[0][1] })),
+      h('span', { class: 'lv-mx-y', text: `${v.y[0]}` }), step(3, h('div', { class: 'lv-cell', text: v.cells[1][0] })), step(4, h('div', { class: 'lv-cell', text: v.cells[1][1] })),
+      h('span'), h('span', { class: 'lv-mx-x', text: v.x[0] }), h('span', { class: 'lv-mx-x', text: `${v.x[1]} →` }))) });
+  R.timeline = (v) => ({ el: h('div', { class: 'lv lv-timeline' }, h('h3', { class: 'lv-t', text: v.title }), h('ol', { class: 'lv-tl' }, v.events.map((e, i) => step(i + 1, h('li', null, h('b', { text: e.when }), h('span', { text: e.text })))))) });
+  R.quote = (v) => ({ el: h('div', { class: 'lv lv-quote' }, h('p', { class: 'lv-quote-t', text: `“${v.text}”` }), step(1, h('p', { class: 'lv-quote-c', text: `— ${v.who}` }))) });
+  R.definition = (v) => ({ el: h('div', { class: 'lv lv-def' }, h('span', { class: 'lv-kicker', text: v.kicker || 'Key concept' }), h('h2', { class: 'lv-h', text: v.term }), step(1, h('p', { class: 'lv-def-d', text: v.definition })), v.example ? step(2, h('p', { class: 'lv-sub', text: v.example })) : null) });
   R.next = (v) => ({ el: h('div', { class: 'lv lv-next' }, h('h3', { class: 'lv-t', text: v.title }), step(1, h('div', { class: 'lv-next-row' }, v.items.map((it) => h('a', { class: 'lv-next-item', href: it.href || '#', dataset: { href: it.href || '' } }, h('b', { text: it.label }), h('span', { text: it.detail })))))) });
 
   /* ---------------- player ---------------- */
@@ -70,8 +83,8 @@
       if (sc.checkpoint) checkpoints.push({ ...sc.checkpoint, scene: s.index });
     }));
     const probe = document.createElement('audio');
-    const aac = probe.canPlayType('audio/mp4; codecs="mp4a.40.2"');
-    const src = !aac && L.audioAlt && probe.canPlayType('audio/webm; codecs="opus"') ? L.audioAlt : L.audio;
+    const primaryOk = L.audio.endsWith('.mp3') ? probe.canPlayType('audio/mpeg') : probe.canPlayType('audio/mp4; codecs="mp4a.40.2"');
+    const src = !primaryOk && L.audioAlt ? L.audioAlt : L.audio;
     // The narration is fetched whole and played from an in-memory blob: that makes seeking,
     // checkpoints and resume work on every host (some static hosts ignore HTTP Range requests,
     // which Safari needs for seeking). If the fetch fails, fall back to streaming the file.
@@ -95,7 +108,7 @@
         const total = Number(res.headers.get('Content-Length')) || L.audioBytes || 0;
         const reader = res.body.getReader(); const chunks = []; let got = 0;
         for (;;) { const { done, value } = await reader.read(); if (done) break; chunks.push(value); got += value.length; if (total) bigLabel.textContent = `Loading narration… ${Math.min(99, Math.round((got / total) * 100))}%`; if (destroyed) return; }
-        blobUrl = URL.createObjectURL(new Blob(chunks, { type: src.endsWith('.webm') ? 'audio/webm' : 'audio/mp4' }));
+        blobUrl = URL.createObjectURL(new Blob(chunks, { type: src.endsWith('.webm') ? 'audio/webm' : src.endsWith('.mp3') ? 'audio/mpeg' : 'audio/mp4' }));
         audio.src = blobUrl;
       } catch { audio.src = src; }
       audio.preload = 'auto'; audio.load();
