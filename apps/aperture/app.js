@@ -103,7 +103,10 @@
       if (AP.local()) betaNotice();
       window.addEventListener('hashchange', route);
       route();
-    } catch (e) { gate(e); }
+    } catch (e) {
+      if (e && e.status === 503 && !AP.local()) { AP.fallbackToLocal(); AP.cache = {}; return boot(); }
+      gate(e);
+    }
   }
   // Public beta: say plainly where progress lives (dismissible; the choice is remembered here).
   function betaNotice() {

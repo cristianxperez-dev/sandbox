@@ -9,9 +9,9 @@ window.APERTURE_CONFIG = { mode: 'local' };
   const promise = new Promise((res, rej) => { resolve = res; reject = rej; });
   promise.catch(() => {});
   window.__apertureLocal = { promise, resolve, reject };
-  if (window.APERTURE_CONFIG.mode === 'local') {
+  if (window.APERTURE_CONFIG.mode !== 'server') {
     const s = document.createElement('script');
-    s.type = 'module'; s.src = 'local.js';
+    s.type = 'module'; s.src = 'local.js?v=20261101b';
     document.head.appendChild(s);
   }
 })();

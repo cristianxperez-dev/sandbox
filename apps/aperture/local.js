@@ -112,7 +112,7 @@ const store = {
 const num = (v) => (v == null || !Number.isFinite(Number(v)) ? null : Number(v));
 
 async function boot() {
-  const res = await fetch('data/content.json', { credentials: 'same-origin' });
+  const res = await fetch('data/content.json?v=20261101b', { credentials: 'same-origin' });
   if (!res.ok) throw new Error(`Course content could not be loaded (HTTP ${res.status}).`);
   setContent(await res.json());
   index();

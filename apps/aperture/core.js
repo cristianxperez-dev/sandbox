@@ -8,9 +8,18 @@
   /* ---------------- API ---------------- */
   class ApiError extends Error { constructor(status, body) { super((body && body.message) || `HTTP ${status}`); this.status = status; this.body = body || {}; } }
   AP.ApiError = ApiError;
-  AP.local = () => window.APERTURE_CONFIG && window.APERTURE_CONFIG.mode === 'local';
+  // Public beta is the default: only an explicit "server" mode uses the protected API.
+  AP.local = () => !(window.APERTURE_CONFIG && window.APERTURE_CONFIG.mode === 'server');
+  // If server mode is selected but the secure backend is not configured, fall back to the
+  // public beta instead of stranding the learner on a "not configured" screen.
+  AP.fallbackToLocal = function () {
+    window.APERTURE_CONFIG = { mode: 'local' };
+    if (!window.__apertureLocal) { let res, rej; const pr = new Promise((a, b) => { res = a; rej = b; }); pr.catch(() => {}); window.__apertureLocal = { promise: pr, resolve: res, reject: rej }; }
+    if (!document.querySelector('script[src^="local.js"]')) { const sc = document.createElement('script'); sc.type = 'module'; sc.src = 'local.js'; document.head.appendChild(sc); }
+  };
   AP.api = async function (path, opts = {}) {
     if (AP.local()) {
+      if (!window.__apertureLocal) AP.fallbackToLocal();
       let L;
       try { L = await window.__apertureLocal.promise; } catch (e) { throw new ApiError(0, { error: 'content', message: e.message || 'APERTURE could not load its course content.' }); }
       let r;
