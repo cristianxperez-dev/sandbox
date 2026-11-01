@@ -1,0 +1,505 @@
+[
+  {
+    "id": "R-kahneman-2009-conditions",
+    "title": "Conditions for Intuitive Expertise: A Failure to Disagree",
+    "authors": [
+      "Daniel Kahneman",
+      "Gary Klein"
+    ],
+    "publication": "American Psychologist, 64(6), 515–526",
+    "year": 2009,
+    "url": "https://doi.org/10.1037/a0016755",
+    "doi": "10.1037/a0016755",
+    "discipline": "psychology",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, both authors, journal, volume 64(6), pages 515–526 and DOI 10.1037/a0016755 matched on pubmed.ncbi.nlm.nih.gov (PMID 19739881) and bibbase.org.",
+      "link": "not-opened"
+    },
+    "summary": "A joint paper by the leading figure of the heuristics-and-biases program and the leading figure of naturalistic decision making. They set out where they agree: intuitive judgment can be trusted only when the environment is regular enough to be predictable and the person has had an adequate opportunity to learn its regularities through practice and feedback.",
+    "arguments": [
+      "Skilled intuition is recognition: patterns stored through long experience in a valid environment.",
+      "Two conditions are necessary for genuine intuitive expertise: a high-validity environment and an adequate opportunity to learn it (practice with timely, clear feedback).",
+      "Subjective confidence is not a reliable indicator of the accuracy of an intuitive judgment.",
+      "Where these conditions fail, experts can be fluent, confident and wrong; where they hold, intuition can outperform deliberate analysis."
+    ],
+    "evidence": "review",
+    "design": "Integrative theoretical review written by two researchers from opposing traditions.",
+    "strengths": "Rare adversarial collaboration; gives executives a usable test for when to trust expert intuition.",
+    "limitations": "Conceptual rather than empirical; ‘validity of the environment’ is easier to name than to measure in practice.",
+    "contested": "Klein has written that the authors disagreed often and the subtitle understates that; the shared criteria themselves are widely accepted.",
+    "generalizability": "High. The criteria apply to any field in which people make repeated judgments — medicine, finance, scouting, hiring.",
+    "readingMinutes": 45,
+    "relevance": "The single most useful test for deciding when to defer to an experienced evaluator’s intuition and when to demand structure."
+  },
+  {
+    "id": "R-evans-2013-dual-process",
+    "title": "Dual-Process Theories of Higher Cognition: Advancing the Debate",
+    "authors": [
+      "Jonathan St. B. T. Evans",
+      "Keith E. Stanovich"
+    ],
+    "publication": "Perspectives on Psychological Science, 8(3), 223–241",
+    "year": 2013,
+    "url": "https://doi.org/10.1177/1745691612460685",
+    "doi": "10.1177/1745691612460685",
+    "discipline": "psychology",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, both authors, journal, volume 8(3), pages 223–241 and DOI 10.1177/1745691612460685 matched on researchportal.plymouth.ac.uk and library catalog records.",
+      "link": "not-opened"
+    },
+    "summary": "A defense and refinement of dual-process theory in response to its critics. The authors distinguish Type 1 processing, which is autonomous, from Type 2 processing, which engages working memory and supports hypothetical thinking, and separate these defining features from features that are only typical correlates.",
+    "arguments": [
+      "Type 2 processing is defined by its reliance on working memory and its role in hypothetical thinking (cognitive decoupling); Type 1 processing is defined by autonomy.",
+      "Many popular contrasts (fast/slow, unconscious/conscious, biased/normative) are typical correlates, not defining features, and treating them as defining invites valid criticism.",
+      "The authors respond to five lines of criticism, accepting that some have force against particular theories while arguing that the core distinction is well supported."
+    ],
+    "evidence": "review",
+    "design": "Theoretical review responding to published criticisms.",
+    "strengths": "The clearest statement of what dual-process theory does and does not claim, by two of its principal theorists.",
+    "limitations": "Written by advocates; much supporting evidence comes from laboratory reasoning tasks.",
+    "contested": "Directly opposed by Melnikoff & Bargh (2018, R-melnikoff-2018-mythical), who argue the two-type framework is not supported.",
+    "generalizability": "Moderate. The framework is a useful description of effortful versus automatic thinking; claims about two separate ‘systems’ should not be applied literally to organizations.",
+    "readingMinutes": 60,
+    "relevance": "Prevents the most common executive misuse of ‘System 1 / System 2’: treating intuition as always biased and deliberation as always correct."
+  },
+  {
+    "id": "R-melnikoff-2018-mythical",
+    "title": "The Mythical Number Two",
+    "authors": [
+      "David E. Melnikoff",
+      "John A. Bargh"
+    ],
+    "publication": "Trends in Cognitive Sciences, 22(4), 280–293",
+    "year": 2018,
+    "url": "https://doi.org/10.1016/j.tics.2018.02.001",
+    "doi": "10.1016/j.tics.2018.02.001",
+    "discipline": "psychology",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, both authors, journal, volume 22(4), pages 280–293 and DOI 10.1016/j.tics.2018.02.001 matched on the Yale ACME lab publications page and library catalog records (katalog.lib.cas.cz).",
+      "link": "not-opened"
+    },
+    "summary": "A critique of the idea that mental processes divide into two types. The authors argue that the attributes said to define each type — such as unintentional, uncontrollable, efficient and unconscious versus their opposites — do not reliably travel together, and that the two-type framing has slowed scientific progress.",
+    "arguments": [
+      "The features attributed to ‘Type 1’ and ‘Type 2’ processes are frequently misaligned in actual mental processes.",
+      "If the features do not cluster, the two-type taxonomy lacks empirical support and can be internally incoherent.",
+      "Researchers should study the specific features of processes rather than sorting processes into two bins."
+    ],
+    "evidence": "review",
+    "design": "Critical theoretical review.",
+    "strengths": "Forces precision; shows how a popular metaphor can outrun its evidence.",
+    "limitations": "Critics replied in the same journal that showing misaligned features does not refute versions of the theory that never claimed alignment.",
+    "contested": "Opposes Evans & Stanovich (2013, R-evans-2013-dual-process); the debate is live.",
+    "generalizability": "Applies to how leaders use psychological frameworks: a vivid metaphor is not a mechanism.",
+    "readingMinutes": 40,
+    "relevance": "A model of intellectual humility about a framework that has become management common sense."
+  },
+  {
+    "id": "R-tversky-1974-judgment",
+    "title": "Judgment under Uncertainty: Heuristics and Biases",
+    "authors": [
+      "Amos Tversky",
+      "Daniel Kahneman"
+    ],
+    "publication": "Science, 185(4157), 1124–1131",
+    "year": 1974,
+    "url": "https://doi.org/10.1126/science.185.4157.1124",
+    "doi": "10.1126/science.185.4157.1124",
+    "discipline": "psychology",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "© AAAS. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, authors, journal, volume 185(4157), pages 1124–1131, date (27 September 1974) and DOI matched on pubmed.ncbi.nlm.nih.gov (PMID 17835457).",
+      "link": "not-opened"
+    },
+    "summary": "The classic statement of the representativeness, availability and anchoring heuristics. In the section on representativeness it discusses misconceptions of regression, including flight instructors who concluded that criticism works better than praise.",
+    "arguments": [
+      "People judge probability by resemblance and neglect base rates and sample size.",
+      "People fail to expect regression toward the mean and invent causal explanations for it.",
+      "Estimates are pulled toward starting values, even arbitrary ones (anchoring).",
+      "Heuristics are economical and usually effective, but they produce systematic, predictable errors."
+    ],
+    "evidence": "review",
+    "design": "Synthesis of the authors’ earlier experiments and illustrative problems.",
+    "strengths": "Seminal, highly cited, clearly argued; the vocabulary of the field comes from it.",
+    "limitations": "Many illustrations are vignette studies with student samples; later work debates how often these errors matter in natural environments.",
+    "contested": "The ecological-rationality school (R-gigerenzer-2011-heuristic, R-gigerenzer-1995-improve) argues that some biases shrink with natural frequencies and that heuristics can be adaptive; the regression point itself is a statistical fact, not contested. Anchoring replicated robustly in Many Labs (R-klein-2014-investigating).",
+    "generalizability": "High for the logic (base rates, regression, anchoring); effect sizes in organizations vary with incentives, expertise and feedback.",
+    "readingMinutes": 35,
+    "relevance": "The foundation of Week 1, Lesson 2, and the source of the flight-instructor example used in Week 4."
+  },
+  {
+    "id": "R-gigerenzer-2011-heuristic",
+    "title": "Heuristic Decision Making",
+    "authors": [
+      "Gerd Gigerenzer",
+      "Wolfgang Gaissmaier"
+    ],
+    "publication": "Annual Review of Psychology, 62, 451–482",
+    "year": 2011,
+    "url": "https://doi.org/10.1146/annurev-psych-120709-145346",
+    "doi": "10.1146/annurev-psych-120709-145346",
+    "discipline": "psychology",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, both authors, journal, volume 62, pages 451–482 and DOI matched on the Max Planck Institute for Human Development publications page (mpib-berlin.mpg.de) and kops.uni-konstanz.de.",
+      "link": "not-opened"
+    },
+    "summary": "A review of the ecological-rationality program. Heuristics are treated not as errors but as strategies that ignore part of the information, and the central question becomes in which environments a given heuristic does well. Under uncertainty, simple rules can match or beat complex models.",
+    "arguments": [
+      "Heuristics are strategies that deliberately ignore information; they can be described precisely and tested.",
+      "A heuristic is ecologically rational to the degree that it is adapted to the structure of an environment.",
+      "Less information and computation can produce more accurate predictions when uncertainty is high and samples are small (a less-is-more effect, explained by the bias–variance trade-off)."
+    ],
+    "evidence": "review",
+    "design": "Narrative review of experimental and modeling studies.",
+    "strengths": "Gives heuristics a constructive role and testable models; strong on prediction out of sample.",
+    "limitations": "Written by the program’s founder; the boundary conditions for when simple rules win are still debated.",
+    "contested": "Presents a counterpoint to the heuristics-and-biases framing (R-tversky-1974-judgment); the two programs disagree more about emphasis and norms than about the data.",
+    "generalizability": "High for decisions with small samples and unstable environments — common in talent evaluation and strategy.",
+    "readingMinutes": 60,
+    "relevance": "Balances the bias literature: some simple rules are good management, not lazy thinking."
+  },
+  {
+    "id": "R-gigerenzer-1995-improve",
+    "title": "How to Improve Bayesian Reasoning without Instruction: Frequency Formats",
+    "authors": [
+      "Gerd Gigerenzer",
+      "Ulrich Hoffrage"
+    ],
+    "publication": "Psychological Review, 102(4), 684–704",
+    "year": 1995,
+    "url": "https://doi.org/10.1037/0033-295X.102.4.684",
+    "doi": "10.1037/0033-295X.102.4.684",
+    "discipline": "psychology",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, both authors, journal, volume 102(4), pages 684–704 and DOI matched on serval.unil.ch, a pages.ucsd.edu course copy and causeweb.org.",
+      "link": "not-opened"
+    },
+    "summary": "Shows that people solve Bayesian problems far more often when information is presented as natural frequencies (counts of cases) than as probabilities and percentages. The authors argue that whether people ‘can’ reason in a Bayesian way depends on the format of the information.",
+    "arguments": [
+      "Bayesian computation is simpler with natural frequencies than with probabilities.",
+      "With frequency formats, statistically naive participants reached Bayesian answers in up to about half of inferences, far more than with probability formats.",
+      "Claims about cognitive limits must specify the information format."
+    ],
+    "evidence": "lab-experiment",
+    "design": "Two experiments with university students solving Bayesian word problems in different formats.",
+    "strengths": "Practical, replicated in medical and legal communication research; directly usable in reports and dashboards.",
+    "limitations": "Laboratory problems; later researchers debated which feature of the format produces the benefit.",
+    "contested": "Interpretation (an evolved frequency mechanism versus clearer set relations) is debated; the practical benefit of frequency presentation is not seriously contested.",
+    "generalizability": "High: any report that states a test’s accuracy or a model’s hit rate can use natural frequencies.",
+    "readingMinutes": 50,
+    "relevance": "The practical fix for base-rate neglect in your own reports: count people, not percentages."
+  },
+  {
+    "id": "R-nickerson-1998-confirmation",
+    "title": "Confirmation Bias: A Ubiquitous Phenomenon in Many Guises",
+    "authors": [
+      "Raymond S. Nickerson"
+    ],
+    "publication": "Review of General Psychology, 2(2), 175–220",
+    "year": 1998,
+    "url": "https://doi.org/10.1037/1089-2680.2.2.175",
+    "doi": "10.1037/1089-2680.2.2.175",
+    "discipline": "psychology",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, author, journal, volume 2(2), pages 175–220 matched on a pages.ucsd.edu copy of the article’s first page and cir.nii.ac.jp; DOI prefix 10.1037 (APA) consistent with the APA copyright line.",
+      "link": "not-opened"
+    },
+    "summary": "The standard review of confirmation bias: the seeking or interpreting of evidence in ways that are partial to existing beliefs, expectations or hypotheses. It catalogs many forms of the bias across laboratory tasks and real domains such as medicine, law, science and policy.",
+    "arguments": [
+      "People tend to consider only the favored hypothesis, look for evidence that would be expected if it were true, and treat ambiguous evidence as support.",
+      "Confirmation bias appears in hypothesis testing tasks (for example the 2-4-6 rule-discovery task) and in professional settings.",
+      "The bias need not be deliberate; it operates even when people sincerely try to be objective."
+    ],
+    "evidence": "review",
+    "design": "Narrative review of experimental and historical evidence.",
+    "strengths": "Comprehensive and readable; distinguishes many mechanisms that share a name.",
+    "limitations": "Narrative rather than quantitative synthesis; some cited studies are older laboratory tasks.",
+    "contested": null,
+    "generalizability": "High. Any evaluation process that begins with a hypothesis — hiring, scouting, diagnosis, investment — is exposed.",
+    "readingMinutes": 75,
+    "relevance": "Names the mechanism behind ‘we saw what we expected to see’ in evaluations and reviews."
+  },
+  {
+    "id": "R-kunda-1990-case",
+    "title": "The Case for Motivated Reasoning",
+    "authors": [
+      "Ziva Kunda"
+    ],
+    "publication": "Psychological Bulletin, 108(3), 480–498",
+    "year": 1990,
+    "url": "https://doi.org/10.1037/0033-2909.108.3.480",
+    "doi": "10.1037/0033-2909.108.3.480",
+    "discipline": "psychology",
+    "type": "journal-article",
+    "access": "paywalled",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, author, journal, volume 108(3), pages 480–498 and DOI matched on pubmed.ncbi.nlm.nih.gov (PMID 2270237) and a fbaum.unc.edu course copy.",
+      "link": "not-opened"
+    },
+    "summary": "Argues that motivation affects reasoning through the cognitive processes people use to search for and evaluate evidence. Accuracy goals lead to more careful processing; directional goals lead people to reach the conclusions they prefer — but only as far as they can construct a seemingly reasonable justification.",
+    "arguments": [
+      "Two kinds of goals shape reasoning: accuracy goals and directional goals.",
+      "Directional goals bias which memories, rules and beliefs are accessed and how evidence is weighed.",
+      "People are constrained by an ‘illusion of objectivity’: they reach desired conclusions only when they can justify them to a dispassionate observer."
+    ],
+    "evidence": "review",
+    "design": "Theoretical review of experimental studies.",
+    "strengths": "Explains why intelligent, honest people reach self-serving conclusions; widely confirmed in later work.",
+    "limitations": "Older evidence base, largely laboratory studies with students.",
+    "contested": null,
+    "generalizability": "High. Wherever a person has a stake in a conclusion — their own draft pick, hire or project — directional goals apply.",
+    "readingMinutes": 60,
+    "relevance": "Explains why the person who championed a decision is the worst-placed to review it alone."
+  },
+  {
+    "id": "R-klein-2014-investigating",
+    "title": "Investigating Variation in Replicability: A “Many Labs” Replication Project",
+    "authors": [
+      "Richard A. Klein",
+      "Kate A. Ratliff",
+      "Michelangelo Vianello",
+      "Reginald B. Adams Jr.",
+      "Štěpán Bahník",
+      "Michael J. Bernstein"
+    ],
+    "publication": "Social Psychology, 45(3), 142–152 (with many additional co-authors)",
+    "year": 2014,
+    "url": "https://doi.org/10.1027/1864-9335/a000178",
+    "doi": "10.1027/1864-9335/a000178",
+    "discipline": "psychology",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "partially-confirmed",
+      "evidence": "Title, first author, journal, volume 45(3), pages 142–152 and DOI matched on research.tilburguniversity.edu, pure.psu.edu and a core.ac.uk copy; the very long author list differs slightly across records, so only the first authors are listed here and the order should be checked against the journal.",
+      "link": "not-opened"
+    },
+    "summary": "Thirty-six samples in several countries ran the same 13 classic and contemporary effects. Ten replicated consistently, one received weak support and two priming effects did not replicate; variation across samples and settings was small relative to variation across effects.",
+    "arguments": [
+      "Replicability depended mostly on the effect, not on the lab, country or online versus in-person setting.",
+      "Several judgment effects central to this week, including anchoring, replicated strongly.",
+      "Two flag and currency priming effects did not replicate."
+    ],
+    "evidence": "field-experiment",
+    "design": "Coordinated multi-site replication: 13 effects, 36 samples, 6,344 participants.",
+    "strengths": "Large, pre-specified, multi-site design with open data and materials (OSF).",
+    "limitations": "Tests the selected effects only; short online or lab versions of each paradigm.",
+    "contested": null,
+    "generalizability": "Tells you which classic judgment effects are robust in the laboratory; it does not show their size in organizations.",
+    "readingMinutes": 40,
+    "relevance": "Lets you separate robust judgment findings from fragile ones before you build a practice on them."
+  },
+  {
+    "id": "R-moore-2008-trouble",
+    "title": "The Trouble with Overconfidence",
+    "authors": [
+      "Don A. Moore",
+      "Paul J. Healy"
+    ],
+    "publication": "Psychological Review, 115(2), 502–517",
+    "year": 2008,
+    "url": "https://doi.org/10.1037/0033-295X.115.2.502",
+    "doi": "10.1037/0033-295X.115.2.502",
+    "discipline": "psychology",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, both authors, journal, volume 115(2), pages 502–517 and DOI matched on pubmed.ncbi.nlm.nih.gov (PMID 18426301); an author copy is hosted on asc.ohio-state.edu.",
+      "link": "not-opened"
+    },
+    "summary": "Distinguishes three meanings of overconfidence — overestimation of one’s performance, overplacement relative to others, and overprecision in one’s beliefs — and offers a Bayesian account of when each appears. Overprecision is the most persistent.",
+    "arguments": [
+      "Overestimation, overplacement and overprecision are different phenomena and should not be lumped together.",
+      "On hard tasks people tend to overestimate their own performance but believe they are worse than others; on easy tasks the pattern reverses.",
+      "Overprecision — intervals that are too narrow — is the most durable form."
+    ],
+    "evidence": "lab-experiment",
+    "design": "Theory plus a laboratory experiment varying task difficulty.",
+    "strengths": "Resolves apparent contradictions in the literature with a clear model; widely used taxonomy.",
+    "limitations": "Laboratory trivia-style tasks; field magnitudes vary.",
+    "contested": null,
+    "generalizability": "High for overprecision: budgets, timelines and projections routinely carry intervals that are too narrow.",
+    "readingMinutes": 50,
+    "relevance": "Gives you precise language for the confidence problems you will diagnose in yourself and your staff."
+  },
+  {
+    "id": "R-mellers-2014-psychological",
+    "title": "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+    "authors": [
+      "Barbara Mellers",
+      "Lyle Ungar",
+      "Jonathan Baron",
+      "Jaime Ramos",
+      "Burcu Gurcay",
+      "Katrina Fincher",
+      "Sydney E. Scott",
+      "Don Moore",
+      "Pavel Atanasov",
+      "Samuel A. Swift",
+      "Terry Murray",
+      "Eric Stone",
+      "Philip E. Tetlock"
+    ],
+    "publication": "Psychological Science, 25(5), 1106–1115",
+    "year": 2014,
+    "url": "https://doi.org/10.1177/0956797614524255",
+    "doi": "10.1177/0956797614524255",
+    "discipline": "psychology",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "partially-confirmed",
+      "evidence": "Title, first author, journal, volume 25(5), pages 1106–1115 and DOI matched on psychologicalscience.org and escholarship.org (which hosts an open copy). The full co-author list was not displayed in the results and is given from the published byline as known; check the order against the journal.",
+      "link": "not-opened"
+    },
+    "summary": "Reports the Good Judgment Project’s results in a government-sponsored (IARPA) geopolitical forecasting tournament. Training in probabilistic reasoning, working in teams, and tracking (placing top performers together) each improved accuracy, measured with Brier scores; combining them with statistical aggregation produced the best forecasts in both years reported.",
+    "arguments": [
+      "Forecasting accuracy is measurable with proper scoring rules such as the Brier score, which reward calibration and discrimination.",
+      "Brief training in probabilistic reasoning improved accuracy.",
+      "Teams outperformed individuals, and top performers grouped together improved further.",
+      "Statistical aggregation of many forecasts added further accuracy."
+    ],
+    "evidence": "field-experiment",
+    "design": "Randomized assignment of volunteer forecasters to training and teaming conditions within a multi-year tournament.",
+    "strengths": "Large, real questions with real resolution, randomized conditions, proper scoring.",
+    "limitations": "Volunteer forecasters on geopolitical questions with months-long horizons; transfer to organizational decisions is plausible but not directly tested.",
+    "contested": null,
+    "generalizability": "Moderate to high for any repeated forecasting (injuries, development timelines, budgets), especially where outcomes resolve and can be scored.",
+    "readingMinutes": 40,
+    "relevance": "The best evidence that judgment can be trained and measured, and the model for the forecasting fields in your decision journal."
+  },
+  {
+    "id": "R-kahneman-2021-noise",
+    "title": "Noise: A Flaw in Human Judgment",
+    "authors": [
+      "Daniel Kahneman",
+      "Olivier Sibony",
+      "Cass R. Sunstein"
+    ],
+    "publication": "Little, Brown Spark",
+    "year": 2021,
+    "url": "https://www.hachettebookgroup.com/titles/daniel-kahneman/noise/9780316451383/",
+    "doi": null,
+    "discipline": "psychology",
+    "type": "book",
+    "access": "purchase",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, three authors, publisher (Little, Brown Spark) and May 2021 publication matched on hachettebookgroup.com and multiple library catalogs.",
+      "link": "not-opened"
+    },
+    "summary": "Argues that unwanted variability in judgments that should be identical — noise — is as damaging as bias and far less noticed. The authors describe noise audits, distinguish types of noise, and propose ‘decision hygiene’: procedures that reduce error without needing to know its direction.",
+    "arguments": [
+      "Error has two components, bias and noise; noise can be measured without knowing the right answer.",
+      "System noise divides into level noise (some judges are harsher), pattern noise (judges react differently to particular cases) and occasion noise (the same judge varies over time).",
+      "Decision hygiene — independent judgments, aggregation, structuring complex judgments into separate assessments, sequencing information, relative scales and the outside view — reduces noise.",
+      "Simple rules and models are often less noisy than human judges, though they can embed bias."
+    ],
+    "evidence": "review",
+    "design": "Book-length synthesis of research and organizational case material.",
+    "strengths": "Brings a neglected problem to executives with practical procedures.",
+    "limitations": "Popular book; some reviewers argue it understates the value of variability (innovation, diversity of view) and the costs of standardization.",
+    "contested": "Whether reducing judgment variability is always desirable is debated; the existence of large noise in professional judgment is well documented.",
+    "generalizability": "High for repeated professional judgments: evaluations, grading, underwriting, triage, scouting reports.",
+    "readingMinutes": 120,
+    "relevance": "The source of the noise audit and decision-hygiene practices you will apply to evaluation systems."
+  },
+  {
+    "id": "R-porter-2022-predictors",
+    "title": "Predictors and Consequences of Intellectual Humility",
+    "authors": [
+      "Tenelle Porter",
+      "Abdo Elnakouri",
+      "Ethan A. Meyers",
+      "Takuya Shibayama",
+      "Eranda Jayawickreme",
+      "Igor Grossmann"
+    ],
+    "publication": "Nature Reviews Psychology, 1(9), 524–536",
+    "year": 2022,
+    "url": "https://doi.org/10.1038/s44159-022-00081-9",
+    "doi": "10.1038/s44159-022-00081-9",
+    "discipline": "psychology",
+    "type": "journal-article",
+    "access": "open",
+    "license": "Copyright holder’s terms. Linked, not reproduced.",
+    "verified": {
+      "date": "2026-11-01",
+      "method": "web-search",
+      "status": "metadata-confirmed",
+      "evidence": "Title, all six authors, journal, volume 1(9), pages 524–536 and DOI matched on pubmed.gov (PMID 35789951) and pmc.ncbi.nlm.nih.gov (PMC9244574, open copy).",
+      "link": "not-opened"
+    },
+    "summary": "Reviews research on intellectual humility, whose common core across definitions is a metacognitive ability to recognize the limits of one’s beliefs and knowledge. It covers what predicts it, its benefits and drawbacks for decisions, relationships, science and society, and the limits of the evidence.",
+    "arguments": [
+      "Intellectual humility is best understood as metacognitive: recognizing that one’s beliefs may be wrong.",
+      "It varies with situations and can be encouraged, not only a fixed trait.",
+      "It is associated with more careful evaluation of evidence, but much of the evidence is correlational and drawn from Western samples."
+    ],
+    "evidence": "review",
+    "design": "Narrative review.",
+    "strengths": "Recent, careful about definitions, explicit about the weakness of the evidence.",
+    "limitations": "Mostly correlational and self-report evidence; generalizability beyond WEIRD societies is weakly supported.",
+    "contested": null,
+    "generalizability": "Moderate: plausible in leadership settings, but causal effects of humility on organizational outcomes are not established.",
+    "readingMinutes": 50,
+    "relevance": "Grounds the week’s theme in evidence and keeps it from becoming a slogan."
+  }
+]

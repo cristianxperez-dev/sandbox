@@ -1,0 +1,3735 @@
+{
+  "id": "w01",
+  "number": 1,
+  "title": "How to Think",
+  "theme": "Cognitive Architecture, Judgment & Intellectual Humility",
+  "school": "behavioral",
+  "schools": [
+    "behavioral",
+    "business"
+  ],
+  "question": "When should you trust your own judgment — and how would you know if it was wrong?",
+  "overview": [
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "Every later week of this semester asks you to judge something: a study, a leader, a strategy, a contract, a negotiation, a budget. This week examines the instrument you will use for all of them — your own mind — and the ways organizations can make that instrument more reliable. The aim is not to make you distrust your judgment but to make you know when it has earned trust."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "The week moves in four steps. Lesson 1 examines dual-process theories of thinking, the live debate about them, and the most useful test available for deciding when an intuition can be trusted. Lesson 2 covers the classic heuristics, base-rate neglect and how natural frequencies fix it, confirmation bias and motivated reasoning, the ecological-rationality counterpoint, and what has replicated. Lesson 3 separates three kinds of overconfidence and shows how to measure calibration with proper scores and build better forecasts with decomposition and the outside view. Lesson 4 adds noise, decision hygiene and intellectual humility, and the distinction between the quality of a decision and the quality of its outcome."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "You will also take the baseline diagnostic this week. It covers all nine domains of the semester, is never graded, and is used to calibrate explanations and suggest supplementary practice; it never skips foundations. In the Judgment Lab you will see your own calibration on factual questions. The case puts you in a health system deciding whether to standardize a high-stakes clinical judgment after a vivid adverse event. The assignment asks you to build the decision journal you will use, and score yourself with, for the rest of the semester."
+    }
+  ],
+  "objectives": [
+    "Evaluate when an intuitive judgment deserves trust, using the conditions of environmental validity and opportunity to learn.",
+    "Identify heuristics, base-rate neglect, confirmation bias and motivated reasoning in professional judgments and design procedural remedies.",
+    "Compute and interpret Brier scores and calibration tables, and distinguish overestimation, overplacement and overprecision.",
+    "Build forecasts from reference classes and first-principles decomposition.",
+    "Diagnose noise in an evaluation system and design decision-hygiene procedures, including a personal decision journal."
+  ],
+  "hours": {
+    "lessons": 3,
+    "reading": 1.1,
+    "exercise": 0.6,
+    "case": 0.6,
+    "quiz": 0.4,
+    "assignment": 1.05,
+    "reflection": 0.25
+  },
+  "concepts": [
+    {
+      "id": "c-dual-process",
+      "name": "Dual-process theories",
+      "domain": "behavioral-science",
+      "lessons": [
+        "w01-l1"
+      ]
+    },
+    {
+      "id": "c-intuitive-expertise",
+      "name": "Conditions for intuitive expertise",
+      "domain": "behavioral-science",
+      "lessons": [
+        "w01-l1"
+      ]
+    },
+    {
+      "id": "c-metacognition",
+      "name": "Metacognition",
+      "domain": "behavioral-science",
+      "lessons": [
+        "w01-l1",
+        "w01-l4"
+      ]
+    },
+    {
+      "id": "c-heuristics-biases",
+      "name": "Heuristics and biases",
+      "domain": "behavioral-science",
+      "lessons": [
+        "w01-l2"
+      ]
+    },
+    {
+      "id": "c-ecological-rationality",
+      "name": "Ecological rationality",
+      "domain": "behavioral-science",
+      "lessons": [
+        "w01-l2"
+      ]
+    },
+    {
+      "id": "c-base-rate-neglect",
+      "name": "Base-rate neglect",
+      "domain": "statistical-reasoning",
+      "lessons": [
+        "w01-l2"
+      ]
+    },
+    {
+      "id": "c-bayes-rule",
+      "name": "Bayes’ rule and natural frequencies",
+      "domain": "statistical-reasoning",
+      "lessons": [
+        "w01-l2"
+      ]
+    },
+    {
+      "id": "c-confirmation-bias",
+      "name": "Confirmation bias",
+      "domain": "behavioral-science",
+      "lessons": [
+        "w01-l2"
+      ]
+    },
+    {
+      "id": "c-motivated-reasoning",
+      "name": "Motivated reasoning",
+      "domain": "behavioral-science",
+      "lessons": [
+        "w01-l2"
+      ]
+    },
+    {
+      "id": "c-overconfidence",
+      "name": "Overconfidence: overestimation, overplacement, overprecision",
+      "domain": "behavioral-science",
+      "lessons": [
+        "w01-l3"
+      ]
+    },
+    {
+      "id": "c-calibration",
+      "name": "Calibration",
+      "domain": "statistical-reasoning",
+      "lessons": [
+        "w01-l3"
+      ]
+    },
+    {
+      "id": "c-brier-score",
+      "name": "Brier score",
+      "domain": "statistical-reasoning",
+      "lessons": [
+        "w01-l3"
+      ]
+    },
+    {
+      "id": "c-first-principles",
+      "name": "First-principles decomposition",
+      "domain": "leadership-judgment",
+      "lessons": [
+        "w01-l3"
+      ]
+    },
+    {
+      "id": "c-reference-class-forecasting",
+      "name": "Reference-class forecasting",
+      "domain": "statistical-reasoning",
+      "lessons": [
+        "w01-l3"
+      ]
+    },
+    {
+      "id": "c-noise",
+      "name": "Noise in judgment",
+      "domain": "behavioral-science",
+      "lessons": [
+        "w01-l4"
+      ]
+    },
+    {
+      "id": "c-decision-hygiene",
+      "name": "Decision hygiene",
+      "domain": "behavioral-science",
+      "lessons": [
+        "w01-l4"
+      ]
+    },
+    {
+      "id": "c-intellectual-humility",
+      "name": "Intellectual humility",
+      "domain": "leadership-judgment",
+      "lessons": [
+        "w01-l4"
+      ]
+    },
+    {
+      "id": "c-outcome-bias",
+      "name": "Outcome bias",
+      "domain": "behavioral-science",
+      "lessons": [
+        "w01-l4"
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "w01-l1",
+      "title": "Two Kinds of Thinking? Intuition, Deliberation and When to Trust Your Gut",
+      "minutes": 45,
+      "summary": "Dual-process theories describe effortful and automatic thinking; the useful executive question is not which system is better but when an intuition has earned trust.",
+      "objectives": [
+        "Explain what dual-process theories claim, distinguishing defining features from popular correlates.",
+        "Summarize the main criticism of the two-type framework and state where the debate stands.",
+        "Apply the two conditions for intuitive expertise to decide when an experienced judgment should be trusted, checked or replaced by structure."
+      ],
+      "concepts": [
+        "c-dual-process",
+        "c-intuitive-expertise",
+        "c-metacognition"
+      ],
+      "executive": "You will hear “System 1 is biased, System 2 is rational” in boardrooms. It is a slogan, not a finding. Researchers distinguish automatic thinking from effortful thinking that uses working memory, but neither is reliably right; critics even question whether there are two kinds at all. The question that matters is narrower and practical: has this person’s intuition been trained in an environment that is regular enough to learn, with timely and clear feedback? If yes, intuition can beat analysis. If not, confidence tells you nothing, and you need structure, base rates and independent checks.",
+      "sections": {
+        "explore": [
+          {
+            "type": "p",
+            "kind": "example",
+            "text": "Consider three experienced professionals, each facing a judgment in a few seconds. A fireground commander orders her crew out of a burning house moments before the floor gives way, and later cannot fully explain why. A senior radiologist glances at a chest film and says “that is a tumor” before the formal read. A veteran portfolio manager feels strongly that a stock is about to recover and doubles the position. All three are fast, fluent and confident. All three would describe the experience the same way: “I just knew.” The examples are hypothetical composites, but they are the kinds of cases the research on intuition was built on."
+          },
+          {
+            "type": "prompt",
+            "text": "Before reading on: rank the three judgments from most to least trustworthy, and write one sentence explaining what distinguishes them. Do not use the words “experience” or “confidence” in your answer."
+          },
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "If your ranking put the portfolio manager last, you probably already sense the answer this lesson develops: what matters is not the feeling of knowing, which is identical in all three, but the structure of the environment in which each person learned. Fire behavior and radiological images have regularities that can be learned through thousands of repetitions with feedback. Short-term stock price movements, in liquid markets, have very few exploitable regularities, and feedback on any single call is noisy. The confidence is the same; the warrant behind it is not."
+          },
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "This week is about how you think, and this lesson starts with the most popular map of the mind in management writing: the idea that we have two systems, one fast and intuitive, one slow and deliberate. You will see what that map gets right, where it misleads, and how to replace a slogan with a test you can use."
+          }
+        ],
+        "understand": [
+          {
+            "type": "h",
+            "text": "What dual-process theories claim"
+          },
+          {
+            "type": "p",
+            "kind": "established",
+            "text": "Dual-process theories propose that human reasoning draws on two different kinds of processing. In the formulation defended by Evans and Stanovich, **Type 1** processing is autonomous: it runs whenever its triggering conditions are present and does not require working memory. **Type 2** processing requires working memory and supports hypothetical thinking — the ability to hold a representation of “what if” separate from what you currently believe, and reason about it. They call this separation *cognitive decoupling* ([Evans & Stanovich, 2013](R-evans-2013-dual-process)).",
+            "refs": [
+              "R-evans-2013-dual-process"
+            ]
+          },
+          {
+            "type": "p",
+            "kind": "established",
+            "text": "Evans and Stanovich draw a distinction that most popular accounts skip. Many features are typically associated with each type: fast versus slow, unconscious versus conscious, associative versus rule-based, high capacity versus limited, biased versus normatively correct. They argue these are *correlates*, not *defining features*. Type 1 processing is often fast and often unconscious, but it is not defined by being biased, and Type 2 processing is not defined by being correct. Deliberate reasoning can be slow, careful and wrong, for example when it constructs a sophisticated rationalization for a conclusion you already wanted ([Evans & Stanovich, 2013](R-evans-2013-dual-process)).",
+            "refs": [
+              "R-evans-2013-dual-process"
+            ]
+          },
+          {
+            "type": "table",
+            "kind": "original",
+            "caption": "Defining features versus popular correlates",
+            "headers": [
+              "",
+              "Type 1 (autonomous)",
+              "Type 2 (working-memory dependent)"
+            ],
+            "rows": [
+              [
+                "Defining feature (Evans & Stanovich)",
+                "Does not require working memory; runs when triggered",
+                "Requires working memory; supports hypothetical thinking"
+              ],
+              [
+                "Typical correlates",
+                "Fast, high capacity, often unconscious, associative",
+                "Slow, limited capacity, often conscious, rule-based"
+              ],
+              [
+                "Common misreading",
+                "“Intuition is biased”",
+                "“Deliberation is rational”"
+              ],
+              [
+                "Better reading",
+                "Accurate where trained on valid cues; error-prone where not",
+                "Necessary for novel problems; can rationalize as easily as correct"
+              ]
+            ],
+            "note": "Summary in APERTURE’s words of the distinction in Evans & Stanovich (2013).",
+            "refs": [
+              "R-evans-2013-dual-process"
+            ]
+          },
+          {
+            "type": "mode",
+            "mode": "foundation",
+            "title": "Prerequisite: working memory",
+            "blocks": [
+              {
+                "type": "p",
+                "kind": "original",
+                "text": "Working memory is the small mental workspace in which you hold and manipulate information right now — keeping a phone number in mind while you dial it, or comparing two job offers on three dimensions at once. Its capacity is limited, which is why effortful reasoning is slow and why it degrades when you are distracted, rushed or juggling several tasks. When this lesson says Type 2 processing “requires working memory”, it means it competes for that scarce workspace. Anything that loads the workspace — interruptions, multitasking, a meeting that runs over — reduces your capacity for it."
+              }
+            ]
+          },
+          {
+            "type": "h",
+            "text": "When intuition is skilled"
+          },
+          {
+            "type": "p",
+            "kind": "established",
+            "text": "The most useful result for executives came from an unusual collaboration. Daniel Kahneman, whose work documented errors of intuition, and Gary Klein, whose work documented the skilled intuition of firefighters, nurses and military commanders, wrote a joint paper to find where they agreed. Their answer: intuition is a form of recognition. A skilled intuition is trustworthy only when two conditions hold. First, the environment must have **high validity** — stable relationships between observable cues and outcomes. Second, the person must have had an **adequate opportunity to learn** those cues, through prolonged practice with feedback that is timely and clear ([Kahneman & Klein, 2009](R-kahneman-2009-conditions)).",
+            "refs": [
+              "R-kahneman-2009-conditions"
+            ]
+          },
+          {
+            "type": "p",
+            "kind": "established",
+            "text": "They add a warning that runs against ordinary experience: **subjective confidence is not a reliable indicator of accuracy**. People feel just as sure in low-validity environments as in high-validity ones, because the feeling comes from the fluency of a coherent story, not from a track record. An intuition can therefore be fluent, confident and worthless ([Kahneman & Klein, 2009](R-kahneman-2009-conditions)).",
+            "refs": [
+              "R-kahneman-2009-conditions"
+            ]
+          },
+          {
+            "type": "matrix",
+            "kind": "original",
+            "caption": "Where intuition earns trust (after Kahneman & Klein, 2009)",
+            "x": [
+              "Little opportunity to learn (rare, delayed or ambiguous feedback)",
+              "Ample opportunity to learn (many repetitions, fast clear feedback)"
+            ],
+            "y": [
+              "Low-validity environment (weak, unstable cues)",
+              "High-validity environment (stable cues)"
+            ],
+            "cells": [
+              [
+                "Confident noise. Examples: picking individual stocks, long-range political forecasts, predicting which 16-year-old becomes a star. Use base rates, models and independent judgments.",
+                "Feedback teaches the wrong lesson. Lots of practice on unpredictable outcomes builds confidence, not skill. Watch for “illusion of validity”."
+              ],
+              [
+                "Untapped regularity. The cues exist but the person has not seen enough cases. Pair the novice with a checklist or a model; build feedback loops.",
+                "Skilled intuition. Examples: chess masters, experienced fireground commanders, anesthesiologists, an infield coach reading a swing. Trust, but spot-check edge cases."
+              ]
+            ],
+            "note": "APERTURE’s teaching matrix. Example placements are illustrative judgments, not research findings."
+          },
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "The matrix explains the opening examples. Fire behavior and radiological images sit toward the upper right: many cases, cues that genuinely predict outcomes, and feedback that arrives (the floor collapses or does not; the biopsy confirms or does not). The portfolio manager’s single bet sits toward the lower left. The commander’s intuition deserves deference within her domain; the manager’s deserves a base rate."
+          },
+          {
+            "type": "h",
+            "text": "Metacognition: thinking about your own thinking"
+          },
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "The practical skill underneath this lesson is **metacognition**: monitoring and regulating your own cognition. It includes knowing when you are in a familiar environment versus an unfamiliar one, noticing when a judgment arrived suspiciously easily, and deciding when to slow down. Metacognition does not mean distrusting every intuition. It means asking, before you act on one, where it came from. The flow below is a compact version you can run in about thirty seconds."
+          },
+          {
+            "type": "flow",
+            "kind": "original",
+            "caption": "A thirty-second intuition check",
+            "steps": [
+              {
+                "label": "Notice",
+                "text": "Name the judgment and how sure you feel. Write it down before discussing it."
+              },
+              {
+                "label": "Source",
+                "text": "Ask whether this is a domain where you have seen many cases with clear, timely feedback."
+              },
+              {
+                "label": "Validity",
+                "text": "Ask whether the outcome is predictable from available cues at all, by anyone."
+              },
+              {
+                "label": "Route",
+                "text": "If both answers are yes, act and log it. If either is no, look for a base rate, a model or an independent second judgment."
+              },
+              {
+                "label": "Review",
+                "text": "Record the outcome later and compare it with what you predicted."
+              }
+            ]
+          }
+        ],
+        "challenge": [
+          {
+            "type": "p",
+            "kind": "contested",
+            "text": "Dual-process theory is not settled science. Melnikoff and Bargh argue that the “two types” framework is a myth: the features said to define each type — unintentional versus intentional, uncontrollable versus controllable, efficient versus effortful, unconscious versus conscious — frequently come apart in real mental processes, so sorting processes into two bins misdescribes them and slows progress ([Melnikoff & Bargh, 2018](R-melnikoff-2018-mythical)). Evans and Stanovich anticipated part of this attack and respond that their theory defines the types by working memory and autonomy only, not by a bundle of aligned features; critics who show misaligned features are, in their view, attacking a version of the theory they do not hold ([Evans & Stanovich, 2013](R-evans-2013-dual-process)).",
+            "refs": [
+              "R-melnikoff-2018-mythical",
+              "R-evans-2013-dual-process"
+            ]
+          },
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "For a decision-maker, the right conclusion is modest. There is good evidence that some thinking is effortful and capacity-limited and some is not, and that the two can conflict. There is much weaker support for the strong popular claims: that the mind contains two separate systems, that intuition is the source of error and deliberation the cure, or that “engaging System 2” is a reliable debiasing technique. Deliberation can amplify error when it is used to defend a conclusion, as Lesson 2 shows with motivated reasoning."
+          },
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "A second limit concerns the conditions for expertise. “High validity” and “adequate opportunity to learn” are easy to state and hard to measure. Few organizations know the predictive validity of their evaluators’ judgments, because they rarely record predictions and compare them with outcomes. Kahneman and Klein describe the conditions; they do not give you a dial to read. You build the dial yourself by keeping score — the subject of Lesson 3 and of this week’s decision journal."
+          },
+          {
+            "type": "depth",
+            "title": "Methodological note: how would you show that an intuition is skilled?",
+            "blocks": [
+              {
+                "type": "p",
+                "kind": "original",
+                "text": "Showing skilled intuition requires three things that anecdotes never supply. First, recorded predictions made before outcomes are known; recollections are contaminated by hindsight. Second, a comparison: the expert’s accuracy against a base rate, a simple model or less experienced judges on the same cases. Third, enough cases to distinguish skill from luck; a handful of memorable successes is exactly what a large number of guesses would also produce. Firefighting and chess anecdotes motivated the naturalistic research program, but the strongest claims for expertise rest on settings in which predictions can be scored, such as chess ratings or diagnostic accuracy studies."
+              },
+              {
+                "type": "p",
+                "kind": "original",
+                "text": "Notice the asymmetry. It is cheap to collect stories of intuitive success and expensive to collect the denominators. Organizations that celebrate “great calls” without counting all calls are measuring confidence, not skill."
+              }
+            ]
+          }
+        ],
+        "apply": [
+          {
+            "type": "p",
+            "kind": "example",
+            "text": "Healthcare. An emergency department relies on senior nurses’ triage instincts, which are highly regarded. A metacognitive manager does not abolish them. She asks which triage decisions are high-validity and well practiced (recognizing a patient who is “sick” on sight) and which are rare and poorly fed back (the atypical presentation of a heart attack in a younger woman). The second category is where a structured score or a second look adds most. The example is hypothetical."
+          },
+          {
+            "type": "p",
+            "kind": "example",
+            "text": "Finance and technology. A venture partner with twenty years of pitch meetings has seen thousands of founders but receives feedback on each investment only after many years, confounded by markets and luck. That is a low-feedback environment despite heavy practice. A sensible partnership records each partner’s probability that a company reaches its next milestone and scores those probabilities over time, instead of treating seniority as calibration. The example is hypothetical."
+          },
+          {
+            "type": "p",
+            "kind": "example",
+            "text": "Military and law. Military after-action reviews and legal case-outcome prediction both illustrate the same move: convert a tacit judgment into an explicit prediction that can later be checked. The move costs little and reveals which experts’ intuitions are well calibrated and in what domains."
+          },
+          {
+            "type": "p",
+            "kind": "application",
+            "text": "Player development. Evaluators read swing mechanics, body language and pitch shape in seconds. Some of these reads sit in a high-validity, high-feedback environment: an experienced hitting coach watching hundreds of swings a week and seeing the batted-ball result immediately. Others do not: projecting how a teenager’s body and makeup will translate five years later, with feedback that arrives slowly and is confounded by everything else in his development. The same evaluator can be skilled in the first and merely confident in the second. A useful departmental practice is to label every evaluation by its horizon and feedback quality and to treat long-horizon intuitions as one input to be combined with base rates and other independent reads, not as the verdict."
+          },
+          {
+            "type": "mode",
+            "mode": "executive",
+            "title": "Executive twist: the expert you cannot overrule",
+            "blocks": [
+              {
+                "type": "p",
+                "kind": "original",
+                "text": "Suppose your most respected senior evaluator is confident about a call in a low-validity domain, and you have no data on his track record. Overruling him publicly costs trust; deferring may cost a costly mistake. A defensible route is procedural rather than personal: introduce, for everyone including yourself, a rule that long-horizon calls are written down with a probability before discussion and reviewed a year later. You are not questioning one person’s judgment; you are building the scorecard that will eventually tell the organization whose intuitions to weight most. Ask yourself what you lose if his intuition turns out to be excellent. Very little: the record will show it."
+              }
+            ]
+          }
+        ],
+        "retain": [
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "Dual-process language describes a real contrast between autonomous and effortful thinking, but the strong popular version — intuition errs, deliberation corrects — is not supported, and whether there are two types at all is debated. The test for trusting an intuition is environmental: a regular, predictable domain and an adequate opportunity to learn it with clear feedback. Confidence is not evidence. Metacognition is the habit of checking where a judgment came from before acting on it."
+          },
+          {
+            "type": "prompt",
+            "text": "Without looking back: what are the two conditions Kahneman and Klein require for intuitive expertise, and why is confidence not on the list?"
+          },
+          {
+            "type": "prompt",
+            "text": "Name one judgment you make regularly that sits in a high-validity, high-feedback environment and one that does not. How should you treat each differently?"
+          },
+          {
+            "type": "prompt",
+            "text": "What does the critique by Melnikoff and Bargh imply about how you should use “System 1 / System 2” language in your organization?"
+          }
+        ]
+      },
+      "takeaways": [
+        "Type 2 thinking is defined by its use of working memory, not by being correct; deliberation can rationalize.",
+        "Whether there are two distinct types of processing is an open scientific debate; use the framework as a description, not a mechanism.",
+        "Trust an intuition only when the environment is regular and the person has had ample practice with timely, clear feedback.",
+        "Subjective confidence is not evidence of accuracy; recorded predictions scored against outcomes are.",
+        "Metacognition is a practical routine: notice, source, validity, route, review."
+      ],
+      "check": [
+        {
+          "id": "w01-l1-c1",
+          "type": "mc",
+          "prompt": "Which situation best meets the conditions Kahneman and Klein set for trusting an expert’s intuition?",
+          "options": [
+            {
+              "id": "a",
+              "text": "A strategy consultant with 25 years of experience predicting which mergers will create value over a decade."
+            },
+            {
+              "id": "b",
+              "text": "An anesthesiologist judging, from monitor readings and the patient’s appearance, that a patient is deteriorating during surgery."
+            },
+            {
+              "id": "c",
+              "text": "A political analyst with a famous track record of memorable correct calls forecasting an election two years out."
+            },
+            {
+              "id": "d",
+              "text": "A venture capitalist who has heard 5,000 pitches judging whether a founder will build a successful company."
+            }
+          ],
+          "answer": "b",
+          "explanation": "Intraoperative monitoring is a high-validity environment with many repetitions and fast, clear feedback, so skilled intuition can develop. The other cases involve long horizons, few comparable cases and noisy, delayed feedback, so experience builds confidence more reliably than accuracy.",
+          "optionFeedback": {
+            "a": "Long experience is not enough: merger outcomes take years to resolve and depend on many factors, so feedback is slow and noisy.",
+            "c": "Memorable correct calls are not a track record; without a count of all calls you cannot separate skill from luck, and the domain has low validity.",
+            "d": "Heavy practice, but feedback on each judgment takes many years and is confounded by markets and luck."
+          },
+          "errorTags": {
+            "a": "experience-as-expertise",
+            "c": "anecdotal-track-record",
+            "d": "experience-as-expertise"
+          },
+          "concepts": [
+            "c-intuitive-expertise"
+          ],
+          "domain": "behavioral-science",
+          "lesson": "w01-l1",
+          "difficulty": "core",
+          "points": 1
+        },
+        {
+          "id": "w01-l1-c2",
+          "type": "multi",
+          "prompt": "According to Evans and Stanovich’s version of dual-process theory, which statements are accurate? Select all that apply.",
+          "options": [
+            {
+              "id": "a",
+              "text": "Type 2 processing is defined by its reliance on working memory."
+            },
+            {
+              "id": "b",
+              "text": "Type 1 processing is defined by being biased."
+            },
+            {
+              "id": "c",
+              "text": "Speed is a typical correlate of Type 1 processing rather than its definition."
+            },
+            {
+              "id": "d",
+              "text": "Type 2 processing reliably produces normatively correct answers."
+            },
+            {
+              "id": "e",
+              "text": "Type 2 processing supports hypothetical thinking by decoupling a representation from current beliefs."
+            }
+          ],
+          "answer": [
+            "a",
+            "c",
+            "e"
+          ],
+          "explanation": "Evans and Stanovich define the types by working-memory use and autonomy, and treat speed, consciousness and accuracy as correlates. Deliberate thinking supports hypothetical reasoning through cognitive decoupling but can still reach wrong conclusions.",
+          "concepts": [
+            "c-dual-process"
+          ],
+          "domain": "behavioral-science",
+          "lesson": "w01-l1",
+          "difficulty": "core",
+          "points": 1
+        },
+        {
+          "id": "w01-l1-c3",
+          "type": "mc",
+          "prompt": "A colleague says: “I have never been more certain about anything — I can just feel it.” What does the research on intuition imply about that statement as evidence?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Strong certainty is good evidence, because confidence tracks accuracy for experienced professionals."
+            },
+            {
+              "id": "b",
+              "text": "Certainty is evidence only if the colleague can explain the reasoning in words."
+            },
+            {
+              "id": "c",
+              "text": "Certainty by itself carries little information; what matters is whether the domain is predictable and the colleague has a scored record in it."
+            },
+            {
+              "id": "d",
+              "text": "Certainty is evidence against the judgment, because confident people are usually wrong."
+            }
+          ],
+          "answer": "c",
+          "explanation": "Kahneman and Klein argue that subjective confidence is not a reliable indicator of accuracy, because it comes from the coherence of a story. The informative questions are about environmental validity and a scored track record.",
+          "optionFeedback": {
+            "a": "Confidence is felt just as strongly in low-validity environments; it does not track accuracy reliably.",
+            "b": "Skilled intuitions are often hard to articulate; inability to explain is not the test.",
+            "d": "Overcorrection: confidence is uninformative, not inversely related to accuracy."
+          },
+          "errorTags": {
+            "a": "confidence-as-evidence",
+            "d": "overcorrection"
+          },
+          "concepts": [
+            "c-intuitive-expertise",
+            "c-metacognition"
+          ],
+          "domain": "leadership-judgment",
+          "lesson": "w01-l1",
+          "difficulty": "core",
+          "points": 1
+        }
+      ],
+      "sources": [
+        {
+          "ref": "R-kahneman-2009-conditions",
+          "use": "The two conditions for intuitive expertise and the warning about confidence."
+        },
+        {
+          "ref": "R-evans-2013-dual-process",
+          "use": "Defining features versus correlates of Type 1 and Type 2 processing; reply to critics."
+        },
+        {
+          "ref": "R-melnikoff-2018-mythical",
+          "use": "The critique of the two-type framework."
+        }
+      ],
+      "crosslinks": [
+        {
+          "to": "w03-l2",
+          "why": "Deliberate practice and its critics: how expertise is built and how much practice explains."
+        },
+        {
+          "to": "w14-l4",
+          "why": "After-action reviews turn tacit judgments into recorded, reviewable predictions."
+        }
+      ]
+    },
+    {
+      "id": "w01-l2",
+      "title": "Heuristics, Base Rates and the Search for Confirmation",
+      "minutes": 50,
+      "summary": "Mental shortcuts are efficient and predictably wrong in specific environments; base-rate neglect, confirmation bias and motivated reasoning are the errors that matter most for evaluation, and they can be reduced by changing formats and procedures.",
+      "objectives": [
+        "Describe representativeness, availability and anchoring and identify each in a professional judgment.",
+        "Solve a base-rate problem using natural frequencies and explain why the format helps.",
+        "Distinguish confirmation bias from motivated reasoning and design a procedure that counters each.",
+        "Contrast the heuristics-and-biases and ecological-rationality views and state which judgment effects have replicated."
+      ],
+      "concepts": [
+        "c-heuristics-biases",
+        "c-ecological-rationality",
+        "c-base-rate-neglect",
+        "c-bayes-rule",
+        "c-confirmation-bias",
+        "c-motivated-reasoning"
+      ],
+      "executive": "People judge likelihood by resemblance, by what comes easily to mind, and by adjusting from whatever number they heard first. These shortcuts work often enough to survive and fail predictably: they ignore base rates and sample size and they anchor on irrelevant numbers. Two further habits do the most damage in evaluation. Confirmation bias makes you look for evidence that fits the hypothesis you started with; motivated reasoning lets you reach the conclusion you want while feeling objective. The best defenses are procedural: present data as counts of cases, ask for the base rate before the story, and assign someone to build the strongest case against the favored option.",
+      "sections": {
+        "explore": [
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "A hospital network is evaluating a new screening test for a serious condition. In the population screened, about 1 in 100 people has the condition. The test detects 90% of true cases. Among people without the condition, it wrongly flags 9%. A patient tests positive."
+          },
+          {
+            "type": "prompt",
+            "text": "Before reading on: what is the probability this patient actually has the condition? Write down a number between 0% and 100% before you continue."
+          },
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "Many people, including many professionals, answer somewhere around 80–90%, reasoning from the test’s detection rate. The correct answer is about 9%. The numbers in this example are synthetic, but the structure is the classic base-rate problem: when a condition is rare, even an accurate test produces more false alarms than true detections. You will work it out below in a format that makes the answer almost obvious."
+          },
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "This lesson examines the mental shortcuts behind errors like this one, the debate about whether “bias” is the right word for them, and the two habits most dangerous to anyone who evaluates people, projects or evidence: looking for confirmation and reasoning toward the conclusion you prefer."
+          }
+        ],
+        "understand": [
+          {
+            "type": "h",
+            "text": "Three heuristics"
+          },
+          {
+            "type": "p",
+            "kind": "established",
+            "text": "Tversky and Kahneman described three heuristics people use when judging probabilities and predicting values. **Representativeness**: judging how likely something is by how much it resembles a category or stereotype, which leads people to neglect base rates and sample size. **Availability**: judging frequency by how easily examples come to mind, which inflates vivid, recent and widely reported events. **Anchoring and adjustment**: starting from an initial value and adjusting insufficiently — even when the anchor is obviously arbitrary, as in their demonstration in which a number from a spun wheel influenced estimates of the percentage of African countries in the United Nations. Their summary was balanced: the heuristics are economical and usually effective, but they produce systematic and predictable errors ([Tversky & Kahneman, 1974](R-tversky-1974-judgment)).",
+            "refs": [
+              "R-tversky-1974-judgment"
+            ]
+          },
+          {
+            "type": "table",
+            "kind": "original",
+            "caption": "Three heuristics, where they help and where they fail",
+            "headers": [
+              "Heuristic",
+              "Question it substitutes",
+              "Typical failure",
+              "Example in professional life"
+            ],
+            "rows": [
+              [
+                "Representativeness",
+                "“How much does this look like a success?”",
+                "Ignores base rates and sample size",
+                "A candidate who “looks like” past stars is rated far above the base rate of success for that profile."
+              ],
+              [
+                "Availability",
+                "“How easily can I recall cases?”",
+                "Overweights vivid, recent, publicized events",
+                "After one dramatic fraud case, an audit committee overweights that fraud type relative to more frequent quiet risks."
+              ],
+              [
+                "Anchoring",
+                "“Start here, adjust”",
+                "Insufficient adjustment from irrelevant or self-serving anchors",
+                "A negotiation opens with an aggressive salary figure and the settlement stays close to it."
+              ]
+            ],
+            "note": "APERTURE’s summary of Tversky & Kahneman (1974); examples are illustrative.",
+            "refs": [
+              "R-tversky-1974-judgment"
+            ]
+          },
+          {
+            "type": "h",
+            "text": "Base rates and natural frequencies"
+          },
+          {
+            "type": "p",
+            "kind": "established",
+            "text": "Base-rate neglect is the tendency to judge a case by how well it fits a description while ignoring how common the category is in the first place ([Tversky & Kahneman, 1974](R-tversky-1974-judgment)). Gigerenzer and Hoffrage showed that the same Bayesian problems become much easier when the information is presented as **natural frequencies** — counts of cases from a single reference population — rather than as probabilities. In their experiments, statistically naive participants reached Bayesian answers far more often with frequency formats, in up to about half of inferences ([Gigerenzer & Hoffrage, 1995](R-gigerenzer-1995-improve)).",
+            "refs": [
+              "R-tversky-1974-judgment",
+              "R-gigerenzer-1995-improve"
+            ]
+          },
+          {
+            "type": "flow",
+            "kind": "original",
+            "caption": "The screening problem as natural frequencies (synthetic numbers)",
+            "steps": [
+              {
+                "label": "Start",
+                "text": "Imagine 1,000 people screened."
+              },
+              {
+                "label": "Base rate",
+                "text": "10 have the condition; 990 do not."
+              },
+              {
+                "label": "True positives",
+                "text": "The test flags 9 of the 10 who have it (90%)."
+              },
+              {
+                "label": "False positives",
+                "text": "It also flags about 89 of the 990 who do not (9%)."
+              },
+              {
+                "label": "Answer",
+                "text": "Of about 98 positives, 9 have the condition: roughly 9%."
+              }
+            ]
+          },
+          {
+            "type": "mode",
+            "mode": "foundation",
+            "title": "Prerequisite: Bayes’ rule in one line",
+            "blocks": [
+              {
+                "type": "p",
+                "kind": "original",
+                "text": "Bayes’ rule says how to update a probability when you see evidence: the probability of the hypothesis given the evidence equals the probability of the evidence if the hypothesis is true, times the prior probability of the hypothesis, divided by the overall probability of the evidence. In counts, it is simply: of all the cases that show this evidence, what share actually have the condition? The natural-frequency tree above is Bayes’ rule done with whole numbers. Week 4 returns to the same logic when it asks how likely a statistically significant result is to be true."
+              }
+            ]
+          },
+          {
+            "type": "h",
+            "text": "Confirmation bias and motivated reasoning"
+          },
+          {
+            "type": "p",
+            "kind": "established",
+            "text": "Nickerson defines confirmation bias as seeking or interpreting evidence in ways that are partial to existing beliefs, expectations or hypotheses. It takes many forms: considering only the favored hypothesis, looking for evidence that would be expected if it were true rather than evidence that could refute it, treating ambiguous information as support, and remembering hits better than misses. In rule-discovery tasks such as Wason’s 2-4-6 problem, people test cases that fit their hypothesis and rarely test cases that would expose it as wrong. Nickerson stresses that none of this requires bad faith ([Nickerson, 1998](R-nickerson-1998-confirmation)).",
+            "refs": [
+              "R-nickerson-1998-confirmation"
+            ]
+          },
+          {
+            "type": "p",
+            "kind": "established",
+            "text": "Motivated reasoning adds a motive. Kunda distinguished **accuracy goals**, which lead people to process information more carefully, from **directional goals**, which lead them toward a preferred conclusion by biasing which memories, rules and evidence they access and how they weigh them. The bias is constrained: people reach the conclusion they want only when they can construct a justification that would convince a dispassionate observer, which preserves an “illusion of objectivity” ([Kunda, 1990](R-kunda-1990-case)). That constraint is the lever for leaders: raise the bar for what counts as a justification and directional reasoning loses room.",
+            "refs": [
+              "R-kunda-1990-case"
+            ]
+          },
+          {
+            "type": "matrix",
+            "kind": "original",
+            "caption": "Two errors, two remedies",
+            "x": [
+              "No personal stake in the conclusion",
+              "Personal stake in the conclusion"
+            ],
+            "y": [
+              "Hypothesis-led search",
+              "Open search"
+            ],
+            "cells": [
+              [
+                "Baseline judgment. Biases come mostly from heuristics; fix with base rates and better formats.",
+                "Directional goals operate. Remedy: separate the champion from the reviewer; require pre-stated criteria."
+              ],
+              [
+                "Confirmation bias. Remedy: ask what evidence would show the hypothesis is wrong; test disconfirming cases.",
+                "Both together — the most dangerous cell. Remedy: independent reviewer, pre-registered criteria, explicit case against."
+              ]
+            ],
+            "note": "APERTURE teaching matrix synthesizing Nickerson (1998) and Kunda (1990)."
+          }
+        ],
+        "challenge": [
+          {
+            "type": "p",
+            "kind": "contested",
+            "text": "The heuristics-and-biases program is not the only reading of this evidence. The ecological-rationality program led by Gigerenzer argues that heuristics are strategies that deliberately ignore information, that they can be precisely specified, and that their success depends on the environment. Under high uncertainty and small samples, simple rules can predict as well as or better than complex models, because they are less sensitive to noise in the data ([Gigerenzer & Gaissmaier, 2011](R-gigerenzer-2011-heuristic)). On this view, calling a heuristic a “bias” assumes the laboratory problem is the right standard. Tversky and Kahneman, for their part, had described heuristics as usually effective; the disagreement is largely about emphasis and about which normative standard to apply ([Tversky & Kahneman, 1974](R-tversky-1974-judgment)).",
+            "refs": [
+              "R-gigerenzer-2011-heuristic",
+              "R-tversky-1974-judgment"
+            ]
+          },
+          {
+            "type": "p",
+            "kind": "established",
+            "text": "How robust are the classic effects? A coordinated replication across 36 samples tested 13 effects. Ten replicated consistently, including anchoring, while two priming effects did not; differences between labs, countries and online versus in-person settings were small compared with differences between effects ([Klein et al., 2014](R-klein-2014-investigating)). The lesson is selective trust: some judgment effects are among the most robust in psychology, while some social-priming findings that once circulated in management writing did not hold up (Week 2 examines that record).",
+            "refs": [
+              "R-klein-2014-investigating"
+            ]
+          },
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "There is also a practical limit. Knowing about a bias does not reliably protect you from it; people readily see bias in others and not in themselves. This is why the remedies in this lesson are procedures — changing formats, sequencing, roles and criteria — rather than exhortations to “be aware”. A procedure works whether or not the person following it feels biased."
+          },
+          {
+            "type": "depth",
+            "title": "Methodological note: why simple rules can beat complex models",
+            "blocks": [
+              {
+                "type": "p",
+                "kind": "established",
+                "text": "Gigerenzer and Gaissmaier explain the “less-is-more” result through the bias–variance trade-off. A complex model fitted to a small, noisy sample captures real patterns but also random quirks of that sample (variance), so it predicts new cases poorly. A simple rule has more systematic error (bias) but almost no variance. When samples are small and the environment unstable, the variance saved can exceed the bias added ([Gigerenzer & Gaissmaier, 2011](R-gigerenzer-2011-heuristic)).",
+                "refs": [
+                  "R-gigerenzer-2011-heuristic"
+                ]
+              },
+              {
+                "type": "p",
+                "kind": "original",
+                "text": "The implication is not “always use simple rules”. It is that the right amount of complexity depends on how much reliable data you have. A talent model built on a few hundred cases with dozens of predictors is a prime candidate for overfitting; a short checklist of a few strong, well-validated cues may generalize better."
+              }
+            ]
+          }
+        ],
+        "apply": [
+          {
+            "type": "p",
+            "kind": "example",
+            "text": "Law. A prosecutor who has formed a theory of a case will tend to read ambiguous evidence as consistent with it. A procedural answer would be a charging review by a colleague who has not seen the investigative narrative and is asked only whether the evidence supports the charge. The example is a hypothetical illustration, not a description of any specific office."
+          },
+          {
+            "type": "p",
+            "kind": "example",
+            "text": "Technology. A product team that launched a feature looks at engagement data and finds a segment in which the feature “clearly worked”. Motivated reasoning predicts exactly this search: the team has a directional goal and will stop looking once a justification appears. A pre-stated success metric written before launch removes the room to search."
+          },
+          {
+            "type": "p",
+            "kind": "example",
+            "text": "Healthcare. A clinical dashboard that reports “the model is 90% sensitive” invites base-rate neglect. A dashboard that says “of every 100 patients flagged, about 9 will have the condition” states the same facts in natural frequencies and changes how clinicians act on alerts. The numbers are illustrative, drawn from the synthetic example above."
+          },
+          {
+            "type": "bars",
+            "kind": "original",
+            "caption": "Of 98 positive screens in the synthetic example, how many are true cases?",
+            "unit": "people",
+            "items": [
+              {
+                "label": "True positives",
+                "value": 9
+              },
+              {
+                "label": "False positives",
+                "value": 89
+              }
+            ],
+            "note": "Synthetic data: 1,000 people, 1% prevalence, 90% detection, 9% false-positive rate."
+          },
+          {
+            "type": "p",
+            "kind": "application",
+            "text": "Player development. A scout files an early report describing a young player as “a future star” and then sees him play three more times. Confirmation bias predicts that the scout will notice and remember the plays that fit the report. The base rate matters even more: of all players with a given profile at that age, how many become established major leaguers? A department can require that every evaluation states the relevant base rate before the narrative, that follow-up reports are written by someone who has not read the first, and that disagreements are recorded as probabilities rather than adjectives."
+          },
+          {
+            "type": "mode",
+            "mode": "executive",
+            "title": "Executive twist: when you are the one who is motivated",
+            "blocks": [
+              {
+                "type": "p",
+                "kind": "original",
+                "text": "You championed a hire or a new program, and early results are mixed. Your directional goal is obvious to everyone except, perhaps, you. The defensible move is to hand the review to someone without a stake and to commit in advance to the criteria and the date. You lose some control over the narrative; you gain credibility for every future recommendation. Ask what evidence, if it arrived next month, would make you recommend ending the program. If you cannot name any, your reasoning has become directional."
+              }
+            ]
+          }
+        ],
+        "retain": [
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "Heuristics substitute an easier question for a hard one. They are often adequate and predictably wrong where base rates, sample sizes or arbitrary anchors matter. Natural frequencies make base rates visible. Confirmation bias narrows the search; motivated reasoning steers it; procedures — base rates first, independent reviewers, pre-stated criteria, a deliberate case against — counter both. Some classic effects, such as anchoring, have replicated robustly; the ecological-rationality view reminds you that simple rules can be good decisions in the right environment."
+          },
+          {
+            "type": "prompt",
+            "text": "Rework the opening screening problem with a prevalence of 10 in 100 instead of 1 in 100, keeping the other rates. Roughly what share of positives are true cases now, and why does it change so much?"
+          },
+          {
+            "type": "prompt",
+            "text": "What is the difference between confirmation bias and motivated reasoning, and which procedural remedy targets each?"
+          },
+          {
+            "type": "prompt",
+            "text": "Give one decision in your work where a simple rule might outperform a detailed model, and say why."
+          }
+        ]
+      },
+      "takeaways": [
+        "Representativeness, availability and anchoring are efficient shortcuts that fail predictably; anchoring is among the most robustly replicated effects.",
+        "Base-rate neglect is reduced by presenting information as natural frequencies — counts from one reference population.",
+        "Confirmation bias narrows what you look for; motivated reasoning steers where you want to land while preserving a feeling of objectivity.",
+        "Under small samples and high uncertainty, simple rules can outperform complex models; “heuristic” does not mean “error”.",
+        "Effective debiasing is procedural: base rates first, independent review, pre-stated criteria, an explicit case against."
+      ],
+      "check": [
+        {
+          "id": "w01-l2-c1",
+          "type": "numeric",
+          "prompt": "A fraud-detection rule flags transactions. Fraud occurs in 2 of every 1,000 transactions. The rule flags 95% of fraudulent transactions and 5% of legitimate ones. Of all flagged transactions, what percentage are actually fraudulent? Round to one decimal place.",
+          "answer": {
+            "value": 3.7,
+            "tolerance": 0.3,
+            "unit": "%"
+          },
+          "working": "Use 100,000 transactions. Fraud: 200; flagged: 190. Legitimate: 99,800; flagged: 4,990. Total flagged: 5,180. Share fraudulent: 190 / 5,180 ≈ 3.7%.",
+          "explanation": "With a base rate of 0.2%, false positives from the large legitimate population swamp the true positives, even with a 95% detection rate. About 3.7% of flags are fraud. Counting cases from a fixed population makes this visible.",
+          "concepts": [
+            "c-base-rate-neglect",
+            "c-bayes-rule"
+          ],
+          "domain": "statistical-reasoning",
+          "lesson": "w01-l2",
+          "difficulty": "core",
+          "points": 1
+        },
+        {
+          "id": "w01-l2-c2",
+          "type": "mc",
+          "prompt": "A division head who proposed an acquisition reviews its first-year results. She examines the numbers carefully, finds two markets where the deal performed well, and concludes the acquisition is succeeding; she sincerely believes she has been objective. Which concept best explains the pattern, and what does it predict about a remedy?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Availability; the remedy is to give her more recent data."
+            },
+            {
+              "id": "b",
+              "text": "Motivated reasoning; because she reaches the desired conclusion only when she can justify it, raising the bar for justification (pre-stated criteria, an independent reviewer) should help."
+            },
+            {
+              "id": "c",
+              "text": "Anchoring; the remedy is to remove the original price from her materials."
+            },
+            {
+              "id": "d",
+              "text": "Representativeness; the remedy is to compare the acquisition with similar deals."
+            }
+          ],
+          "answer": "b",
+          "explanation": "She has a directional goal and constructs a plausible justification while feeling objective — Kunda’s account of motivated reasoning. Because the bias is constrained by what can be justified, pre-stated criteria and an independent reviewer reduce its room to operate.",
+          "optionFeedback": {
+            "a": "Nothing suggests she is relying on ease of recall; more data gives a motivated reasoner more places to search.",
+            "c": "Anchoring concerns adjustment from a starting value; the pattern here is selective search toward a preferred conclusion.",
+            "d": "Comparison with similar deals is a useful base-rate step, but the pattern described is driven by her stake in the outcome."
+          },
+          "errorTags": {
+            "a": "misidentifies-bias",
+            "c": "misidentifies-bias",
+            "d": "misidentifies-bias"
+          },
+          "concepts": [
+            "c-motivated-reasoning"
+          ],
+          "domain": "behavioral-science",
+          "lesson": "w01-l2",
+          "difficulty": "core",
+          "points": 1
+        },
+        {
+          "id": "w01-l2-c3",
+          "type": "mc",
+          "prompt": "Which statement best reflects the ecological-rationality view of heuristics?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Heuristics are errors that well-trained people should replace with full analysis."
+            },
+            {
+              "id": "b",
+              "text": "Heuristics are always better than statistical models."
+            },
+            {
+              "id": "c",
+              "text": "Whether a heuristic is good depends on how well it fits the structure of the environment in which it is used."
+            },
+            {
+              "id": "d",
+              "text": "Heuristics only matter for people without expertise."
+            }
+          ],
+          "answer": "c",
+          "explanation": "Gigerenzer and Gaissmaier argue that a heuristic is ecologically rational to the degree that it is adapted to its environment; under uncertainty and small samples, simple rules can match or beat complex models.",
+          "optionFeedback": {
+            "a": "This is closer to a caricature of the heuristics-and-biases view, which itself called heuristics usually effective.",
+            "b": "The claim is conditional on the environment, not universal.",
+            "d": "Experts use heuristics extensively; skilled intuition often consists of well-adapted heuristics."
+          },
+          "concepts": [
+            "c-ecological-rationality",
+            "c-heuristics-biases"
+          ],
+          "domain": "behavioral-science",
+          "lesson": "w01-l2",
+          "difficulty": "core",
+          "points": 1
+        }
+      ],
+      "sources": [
+        {
+          "ref": "R-tversky-1974-judgment",
+          "use": "Representativeness, availability, anchoring and base-rate neglect."
+        },
+        {
+          "ref": "R-gigerenzer-1995-improve",
+          "use": "Natural frequencies improve Bayesian reasoning."
+        },
+        {
+          "ref": "R-nickerson-1998-confirmation",
+          "use": "Definition and forms of confirmation bias, including the 2-4-6 task."
+        },
+        {
+          "ref": "R-kunda-1990-case",
+          "use": "Accuracy versus directional goals; the illusion of objectivity."
+        },
+        {
+          "ref": "R-gigerenzer-2011-heuristic",
+          "use": "Ecological rationality and the less-is-more argument."
+        },
+        {
+          "ref": "R-klein-2014-investigating",
+          "use": "Replication of anchoring and other classic effects across 36 samples."
+        }
+      ],
+      "crosslinks": [
+        {
+          "to": "w04-l1",
+          "why": "The same base-rate logic decides how likely a significant result is to be true."
+        },
+        {
+          "to": "w02-l1",
+          "why": "Which famous social-psychology findings survived replication."
+        },
+        {
+          "to": "w07-l3",
+          "why": "Anchoring in negotiation: first offers and how to counter them."
+        }
+      ]
+    },
+    {
+      "id": "w01-l3",
+      "title": "Overconfidence, Calibration and Keeping Score",
+      "minutes": 50,
+      "summary": "Overconfidence comes in three forms; calibration — saying 70% and being right about 70% of the time — can be measured with proper scores, trained, and built from first principles and reference classes.",
+      "objectives": [
+        "Distinguish overestimation, overplacement and overprecision and identify each in a forecast or plan.",
+        "Compute and interpret a Brier score and read a calibration table.",
+        "Build a forecast by decomposing a question from first principles and anchoring it on a reference class."
+      ],
+      "concepts": [
+        "c-overconfidence",
+        "c-calibration",
+        "c-brier-score",
+        "c-first-principles",
+        "c-reference-class-forecasting"
+      ],
+      "executive": "Most leaders are not overconfident about everything; they are overprecise. Their ranges are too narrow, their timelines too tight and their “certain” too frequent. You cannot fix this by feeling humbler. You fix it by stating forecasts as probabilities, recording them, and scoring them when they resolve. A Brier score and a calibration table tell you whether your 80% means 80%. Better forecasts start from the outside view — how often things like this usually happen — and are then adjusted for the specifics, with the question decomposed into parts you can estimate. Teams that do this, train briefly and aggregate several independent forecasts measurably improve.",
+      "sections": {
+        "explore": [
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "Take ten seconds per item and write a range you are 90% sure contains the true value: the year the Berlin Wall fell; the height of Mount Everest in meters; the number of member states of the United Nations. If your ranges are well calibrated, you should expect to miss about one in ten such questions over many trials."
+          },
+          {
+            "type": "prompt",
+            "text": "Before reading on: write your three ranges, then predict how many of your next ten 90% ranges will contain the true value."
+          },
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "The answers are 1989, about 8,849 meters (a 2020 survey), and 193. If you missed one or more, you are in good company, and this week’s Judgment Lab will give you enough questions to see your own pattern. People asked for 90% ranges on questions like these routinely capture the truth far less often than 90% of the time. The fault is rarely ignorance; it is that the ranges are too narrow for the ignorance."
+          },
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "This lesson is about measuring that gap. It separates three different things that are all called overconfidence, shows how forecasts can be scored, and gives you two techniques — decomposition and the outside view — that make forecasts better before they are scored."
+          }
+        ],
+        "understand": [
+          {
+            "type": "h",
+            "text": "Three kinds of overconfidence"
+          },
+          {
+            "type": "p",
+            "kind": "established",
+            "text": "Moore and Healy argue that “overconfidence” has been used for three different phenomena. **Overestimation** is thinking you did better, or will do better, than you actually do. **Overplacement** is thinking you are better than others. **Overprecision** is excessive certainty that your beliefs are accurate — intervals that are too narrow. These do not always move together. On hard tasks, people tend to overestimate their own performance while believing they are worse than others; on easy tasks, the pattern reverses. Overprecision is the most persistent of the three ([Moore & Healy, 2008](R-moore-2008-trouble)).",
+            "refs": [
+              "R-moore-2008-trouble"
+            ]
+          },
+          {
+            "type": "table",
+            "kind": "original",
+            "caption": "Three forms of overconfidence",
+            "headers": [
+              "Form",
+              "The claim",
+              "What it looks like at work",
+              "How to detect it"
+            ],
+            "rows": [
+              [
+                "Overestimation",
+                "“I will do X well / quickly.”",
+                "A project plan that assumes everything goes right",
+                "Compare forecasts of your own performance with outcomes"
+              ],
+              [
+                "Overplacement",
+                "“We are better than our competitors.”",
+                "Entering a market because “we will execute better than the others”",
+                "Ask whether every competitor believes the same"
+              ],
+              [
+                "Overprecision",
+                "“The answer is between 10 and 12.”",
+                "Budgets, timelines and projections with narrow ranges",
+                "Count how often outcomes fall outside stated ranges"
+              ]
+            ],
+            "note": "Taxonomy from Moore & Healy (2008); examples are illustrative.",
+            "refs": [
+              "R-moore-2008-trouble"
+            ]
+          },
+          {
+            "type": "h",
+            "text": "Calibration and proper scoring"
+          },
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "**Calibration** is the match between stated confidence and actual frequency. A perfectly calibrated forecaster who says “70%” on many occasions is right on about 70% of them. Calibration is different from **discrimination** (sometimes called resolution): the ability to give higher probabilities to things that happen than to things that do not. A forecaster who says 50% on every question about a coin-flip-like world can be perfectly calibrated and useless. Good forecasters are both calibrated and discriminating."
+          },
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "The **Brier score** measures both at once. For each forecast, take the probability you gave to the event, subtract 1 if it happened or 0 if it did not, square the difference, and average across forecasts. Lower is better: 0 is perfect; always saying 50% scores 0.25; confidently wrong answers are punished heavily, because the error is squared. A forecast of 90% that fails costs 0.81, while a forecast of 60% that fails costs 0.36. The Brier score is a *proper* scoring rule: you cannot improve your expected score by reporting anything other than your honest belief."
+          },
+          {
+            "type": "table",
+            "kind": "original",
+            "caption": "Brier contributions for single forecasts",
+            "headers": [
+              "Stated probability the event happens",
+              "Brier if it happens",
+              "Brier if it does not"
+            ],
+            "rows": [
+              [
+                "50%",
+                "0.25",
+                "0.25"
+              ],
+              [
+                "70%",
+                "0.09",
+                "0.49"
+              ],
+              [
+                "90%",
+                "0.01",
+                "0.81"
+              ],
+              [
+                "100%",
+                "0.00",
+                "1.00"
+              ]
+            ],
+            "note": "Computed from the Brier formula (p − outcome)²; no data."
+          },
+          {
+            "type": "mode",
+            "mode": "foundation",
+            "title": "Prerequisite: why squaring matters",
+            "blocks": [
+              {
+                "type": "p",
+                "kind": "original",
+                "text": "Squaring makes the score sensitive to how wrong you were, not only whether you were wrong. Going from 90% to 100% on an event that fails raises the penalty from 0.81 to 1.00; going from 50% to 60% raises it only from 0.25 to 0.36. The rule therefore discourages the extreme probabilities that overprecision produces, unless you are genuinely that sure. It also means a few confident failures can outweigh many modest successes in your average."
+              }
+            ]
+          },
+          {
+            "type": "p",
+            "kind": "established",
+            "text": "Forecasting skill can be measured and trained. In the Good Judgment Project’s entry in a multi-year geopolitical forecasting tournament sponsored by IARPA, forecasters were randomly assigned to conditions. Brief training in probabilistic reasoning improved accuracy as measured by Brier scores, teams outperformed individuals working alone, placing the best performers together improved them further, and statistically aggregating many forecasts produced the most accurate results in both years reported ([Mellers et al., 2014](R-mellers-2014-psychological)).",
+            "refs": [
+              "R-mellers-2014-psychological"
+            ]
+          },
+          {
+            "type": "h",
+            "text": "Two techniques that improve forecasts"
+          },
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "**First-principles decomposition.** Break a question you cannot answer directly into parts you can estimate, and combine them. This is sometimes called Fermi estimation, after the physicist’s habit of estimating quantities from a chain of rough steps. Decomposition helps in two ways: errors in independent parts partly cancel, and the structure shows which assumption matters most. It is also what “first-principles reasoning” means when the phrase is used carefully: reasoning from the components and mechanisms of a problem rather than from analogy or authority alone."
+          },
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "**The outside view.** Before thinking about the specifics of a case (the inside view), ask how often outcomes of this kind occur in a reference class of similar cases, and start there. Then adjust for what is genuinely different about this case, usually less than you want to. Week 10 develops this as reference-class forecasting for budgets and projects; Kahneman, Sibony and Sunstein count it among the core decision-hygiene practices ([Kahneman, Sibony & Sunstein, 2021](R-kahneman-2021-noise)).",
+            "refs": [
+              "R-kahneman-2021-noise"
+            ]
+          },
+          {
+            "type": "flow",
+            "kind": "original",
+            "caption": "Building a forecast",
+            "steps": [
+              {
+                "label": "Question",
+                "text": "State a resolvable question with a date: “Will X happen by 30 June?”"
+              },
+              {
+                "label": "Outside view",
+                "text": "Find a reference class and its base rate."
+              },
+              {
+                "label": "Decompose",
+                "text": "Break the question into parts; estimate each."
+              },
+              {
+                "label": "Adjust",
+                "text": "Move from the base rate for specific, verified differences — modestly."
+              },
+              {
+                "label": "Record",
+                "text": "Write the probability and the date; resolve and score it later."
+              }
+            ]
+          }
+        ],
+        "challenge": [
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "Calibration training has limits. Being calibrated on general-knowledge questions does not guarantee calibration in your professional domain, and practice in one domain may transfer only partly to another. The tournament evidence comes from geopolitical questions with horizons of months, answered by motivated volunteers; it is strong evidence that forecasting can be trained, but weaker evidence about any particular organizational setting ([Mellers et al., 2014](R-mellers-2014-psychological)).",
+            "refs": [
+              "R-mellers-2014-psychological"
+            ]
+          },
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "Brier scores also have a practical weakness: they depend on the questions. A forecaster who answers easy questions will score better than one who tackles hard ones. Comparisons between people are fair only on the same questions. In an organization, the scorekeeper must stop people from gaming the record by forecasting only safe events, which is why decision journals should include the decisions that actually matter, not just convenient ones."
+          },
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "Some overconfidence may also be useful. Optimism can sustain effort and persuade investors or recruits, and a leader who presents every plan with wide uncertainty may lose followers. The answer is not to choose between confidence and calibration but to separate them: be decisive in commitment and calibrated in private forecasts, and do not let the public story overwrite the private record. Kahneman and Klein’s warning applies to leaders as much as to experts: the feeling of certainty is not evidence ([Kahneman & Klein, 2009](R-kahneman-2009-conditions)).",
+            "refs": [
+              "R-kahneman-2009-conditions"
+            ]
+          },
+          {
+            "type": "depth",
+            "title": "Methodological note: reading a calibration table",
+            "blocks": [
+              {
+                "type": "p",
+                "kind": "original",
+                "text": "A calibration table groups forecasts by stated probability (for example 50–59%, 60–69% and so on) and shows the actual hit rate in each group with the number of forecasts. Three cautions apply. First, small counts make bins noisy: with five forecasts at 90%, four hits (80%) is entirely consistent with good calibration. Second, a well-calibrated record can hide poor discrimination if most forecasts sit near 50%. Third, calibration should be read alongside the Brier score, which combines calibration and discrimination; the Brier score can be decomposed into reliability (calibration), resolution and uncertainty components. Treat any calibration diagnosis based on fewer than about twenty forecasts per bin as provisional."
+              }
+            ]
+          }
+        ],
+        "apply": [
+          {
+            "type": "bars",
+            "kind": "original",
+            "caption": "A synthetic calibration record: stated confidence vs. hit rate",
+            "unit": "%",
+            "items": [
+              {
+                "label": "Said 60% (n = 20)",
+                "value": 60
+              },
+              {
+                "label": "Said 70% (n = 25)",
+                "value": 64
+              },
+              {
+                "label": "Said 80% (n = 30)",
+                "value": 63
+              },
+              {
+                "label": "Said 90% (n = 25)",
+                "value": 72
+              },
+              {
+                "label": "Said 100% (n = 10)",
+                "value": 80
+              }
+            ],
+            "note": "Synthetic data for one hypothetical forecaster: hit rate in each confidence bin. The pattern — well calibrated at 60%, increasingly overconfident above 70% — is typical of overprecision."
+          },
+          {
+            "type": "p",
+            "kind": "example",
+            "text": "Government. A ministry estimating the completion date of a large infrastructure project receives the engineers’ inside-view schedule. The outside view asks how long projects of this type and size have actually taken relative to their schedules. Starting from that distribution and adjusting modestly usually produces later and wider estimates than the inside view, and a more honest public commitment. The example is hypothetical."
+          },
+          {
+            "type": "p",
+            "kind": "example",
+            "text": "Consulting. A partner asked “what share of our proposals will we win this quarter?” can decompose: number of live proposals, historical win rate by client type, and the specific strengths of each bid. Writing the forecast down as a probability for each proposal, then scoring at quarter-end, turns business-development optimism into a calibration record. The example is hypothetical."
+          },
+          {
+            "type": "p",
+            "kind": "example",
+            "text": "Other sports. A football club’s medical team predicting return-to-play dates for injured players can state each prediction as a probability of availability by a given match date, then score those predictions over a season. The exercise reveals whether the staff’s 80% dates are hit 80% of the time and in which injury types they are overprecise. The example is hypothetical."
+          },
+          {
+            "type": "p",
+            "kind": "application",
+            "text": "Player development. Every development plan contains implicit forecasts: that a pitcher will add velocity by spring, that a hitter will be ready for the next level by midseason. Make them explicit — “65% that he reaches the target by 1 June” — and record them. Over a season, the department learns which coaches are calibrated about which skills and where the organization is systematically overprecise. Use the outside view first: of players at this age and level with this profile, how often has this kind of improvement occurred in your own historical data?"
+          },
+          {
+            "type": "mode",
+            "mode": "executive",
+            "title": "Executive twist: forecasting in front of the board",
+            "blocks": [
+              {
+                "type": "p",
+                "kind": "original",
+                "text": "Your board wants a single number for next season’s key outcome. A point forecast invites overprecision; a wide range invites the charge that you do not know your business. One defensible route is to give a central estimate with an explicit 80% range and to name the two assumptions that move it most, then report back at the end of the season against that range. You trade a moment of apparent certainty for a record that, over time, makes your forecasts more credible than the confident ones they compete with."
+              }
+            ]
+          }
+        ],
+        "retain": [
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "Overconfidence takes three forms — overestimation, overplacement and overprecision — and overprecision is the most persistent. Calibration is measurable: state probabilities, record them, and score them with a proper rule such as the Brier score, reading calibration tables with attention to sample size. Forecasts improve when they start from a reference class, decompose the question, adjust modestly, and combine independent judgments; brief training and teaming improved accuracy in a large randomized tournament."
+          },
+          {
+            "type": "prompt",
+            "text": "Compute the average Brier score for three forecasts: 80% (happened), 60% (did not happen), 90% (happened)."
+          },
+          {
+            "type": "prompt",
+            "text": "What is the difference between calibration and discrimination, and why can a forecaster be calibrated but useless?"
+          },
+          {
+            "type": "prompt",
+            "text": "Name a forecast you made this year without writing it down. What reference class would you have used?"
+          }
+        ]
+      },
+      "takeaways": [
+        "Overestimation, overplacement and overprecision are different; overprecision — ranges too narrow — is the most persistent.",
+        "Calibration means your 70% is right about 70% of the time; discrimination means you give higher probabilities to things that happen.",
+        "The Brier score is a proper scoring rule: lower is better, 0.25 is what always saying 50% earns, and confident misses are punished heavily.",
+        "Start forecasts from the outside view, decompose them from first principles, adjust modestly, and aggregate independent forecasts.",
+        "Forecasting can be trained and measured, as a randomized tournament showed; the record, not the feeling, establishes skill."
+      ],
+      "check": [
+        {
+          "id": "w01-l3-c1",
+          "type": "numeric",
+          "prompt": "A forecaster makes four forecasts: 90% (the event happened), 70% (it did not), 60% (it happened), 80% (it happened). What is the average Brier score? Give three decimal places.",
+          "answer": {
+            "value": 0.175,
+            "tolerance": 0.002
+          },
+          "working": "(0.9 − 1)² = 0.01; (0.7 − 0)² = 0.49; (0.6 − 1)² = 0.16; (0.8 − 1)² = 0.04. Sum = 0.70; average = 0.70 / 4 = 0.175.",
+          "explanation": "Square the gap between each stated probability and the outcome (1 if it happened, 0 if not) and average. The single confident miss at 70% contributes most of the score.",
+          "concepts": [
+            "c-brier-score"
+          ],
+          "domain": "statistical-reasoning",
+          "lesson": "w01-l3",
+          "difficulty": "core",
+          "points": 1
+        },
+        {
+          "id": "w01-l3-c2",
+          "type": "mc",
+          "prompt": "A finance team’s quarterly revenue forecasts state an “80% range”. Over three years, actual revenue fell inside the range in 5 of 12 quarters, and the misses were evenly split above and below. Which form of overconfidence does this most clearly show?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Overestimation"
+            },
+            {
+              "id": "b",
+              "text": "Overplacement"
+            },
+            {
+              "id": "c",
+              "text": "Overprecision"
+            },
+            {
+              "id": "d",
+              "text": "No overconfidence; the misses are balanced"
+            }
+          ],
+          "answer": "c",
+          "explanation": "Outcomes fell within a stated 80% range only about 42% of the time, so the ranges were too narrow: overprecision. Balanced misses show the center was roughly right, which rules out systematic overestimation; overplacement concerns comparisons with others.",
+          "optionFeedback": {
+            "a": "Overestimation would show as misses mostly in one direction — the forecasts systematically too high.",
+            "b": "Overplacement is about believing you are better than others; nothing here compares the team with anyone.",
+            "d": "Balanced misses mean the center is unbiased, not that the ranges are wide enough."
+          },
+          "errorTags": {
+            "a": "confuses-overconfidence-types",
+            "d": "ignores-interval-width"
+          },
+          "concepts": [
+            "c-overconfidence",
+            "c-calibration"
+          ],
+          "domain": "statistical-reasoning",
+          "lesson": "w01-l3",
+          "difficulty": "core",
+          "points": 1
+        },
+        {
+          "id": "w01-l3-c3",
+          "type": "rank",
+          "prompt": "You must estimate the probability that a new regional clinic reaches break-even within two years. Rank these steps in the order a disciplined forecaster should take them (first step first).",
+          "options": [
+            {
+              "id": "a",
+              "text": "Adjust for verified features that make this clinic different from comparable ones."
+            },
+            {
+              "id": "b",
+              "text": "Find how often comparable new clinics reached break-even within two years."
+            },
+            {
+              "id": "c",
+              "text": "Record the final probability and a resolve-by date."
+            },
+            {
+              "id": "d",
+              "text": "Decompose the question into patient volume, reimbursement and cost assumptions and estimate each."
+            }
+          ],
+          "answer": [
+            "b",
+            "d",
+            "a",
+            "c"
+          ],
+          "explanation": "Start with the outside view (the reference-class base rate), then decompose the problem to see which specific assumptions differ, adjust modestly for verified differences, and record the forecast so it can be scored.",
+          "concepts": [
+            "c-reference-class-forecasting",
+            "c-first-principles"
+          ],
+          "domain": "leadership-judgment",
+          "lesson": "w01-l3",
+          "difficulty": "stretch",
+          "points": 1
+        }
+      ],
+      "sources": [
+        {
+          "ref": "R-moore-2008-trouble",
+          "use": "The three forms of overconfidence and the persistence of overprecision."
+        },
+        {
+          "ref": "R-mellers-2014-psychological",
+          "use": "Evidence that forecasting accuracy, scored with Brier scores, improves with training, teaming and aggregation."
+        },
+        {
+          "ref": "R-kahneman-2021-noise",
+          "use": "The outside view as a decision-hygiene practice."
+        },
+        {
+          "ref": "R-kahneman-2009-conditions",
+          "use": "Confidence is not evidence of accuracy."
+        }
+      ],
+      "crosslinks": [
+        {
+          "to": "w10-l4",
+          "why": "Reference-class forecasting and scenarios for budgets and investments."
+        },
+        {
+          "to": "w04-l1",
+          "why": "Confidence intervals and the difference between precision and accuracy."
+        }
+      ]
+    },
+    {
+      "id": "w01-l4",
+      "title": "Noise, Decision Hygiene and Intellectual Humility",
+      "minutes": 45,
+      "summary": "Judgment errors include random scatter (noise) as well as bias; decision hygiene reduces both, and intellectual humility — recognizing the limits of your knowledge and updating in proportion to evidence — is the habit that sustains it.",
+      "objectives": [
+        "Distinguish bias from noise and identify level, pattern and occasion noise in an evaluation system.",
+        "Design decision-hygiene procedures for a recurring organizational judgment.",
+        "Explain intellectual humility as a metacognitive skill and separate the quality of a decision from the quality of its outcome."
+      ],
+      "concepts": [
+        "c-noise",
+        "c-decision-hygiene",
+        "c-intellectual-humility",
+        "c-outcome-bias",
+        "c-metacognition"
+      ],
+      "executive": "Two equally qualified judges looking at the same case should reach similar judgments. In most organizations they do not, and nobody measures how far apart they are. That scatter is noise, and it is as costly as bias. A noise audit — several people judging the same cases independently — reveals it without knowing the right answers. Decision hygiene reduces it: independent judgments before discussion, structured assessments of separate dimensions, information in a deliberate order, relative scales, the outside view and aggregation. Intellectual humility is the habit underneath: treating your beliefs as estimates, updating them in proportion to evidence, and judging decisions by their process as well as their outcome.",
+      "sections": {
+        "explore": [
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "Imagine a fictional insurance company in which two experienced underwriters each price the same set of commercial policies independently. The company has always assumed that its professionals differ by a few percent at most. When it finally compares their quotes on identical cases, the gaps are often several times larger than anyone expected. Nobody was careless. Each underwriter applied years of experience. They simply weighted the facts of each case differently, and some were systematically stricter than others."
+          },
+          {
+            "type": "prompt",
+            "text": "Before reading on: in your own organization, which recurring judgment — performance ratings, hiring scores, budget approvals, player evaluations — would you expect to show the largest disagreement between equally qualified people looking at the same case? Estimate how large."
+          },
+          {
+            "type": "p",
+            "kind": "established",
+            "text": "The scenario is fictional, but Kahneman, Sibony and Sunstein describe noise audits of this kind in real organizations and report that the variability they found far exceeded what executives had expected. They argue that this unwanted variability in judgments that should be identical — which they call **noise** — is a neglected component of error ([Kahneman, Sibony & Sunstein, 2021](R-kahneman-2021-noise)).",
+            "refs": [
+              "R-kahneman-2021-noise"
+            ]
+          },
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "The first three lessons focused mainly on bias: errors in a predictable direction. This lesson adds scatter, the procedures that reduce both, and the personal disposition that makes those procedures stick."
+          }
+        ],
+        "understand": [
+          {
+            "type": "h",
+            "text": "Bias and noise"
+          },
+          {
+            "type": "p",
+            "kind": "established",
+            "text": "Think of judgment as shooting at a target. **Bias** is when the shots are clustered away from the center; **noise** is when they are scattered. In the authors’ framework, overall error combines the two, and noise can be measured without knowing where the center is: you only need several judgments of the same case. They divide **system noise** — variability across judges in a system that should be interchangeable — into **level noise** (some judges are generally harsher or more lenient), **pattern noise** (judges react differently to particular features of particular cases) and **occasion noise** (the same judge would judge the same case differently at another time, for example when tired or in a different mood) ([Kahneman, Sibony & Sunstein, 2021](R-kahneman-2021-noise)).",
+            "refs": [
+              "R-kahneman-2021-noise"
+            ]
+          },
+          {
+            "type": "table",
+            "kind": "original",
+            "caption": "Types of noise and where they show up",
+            "headers": [
+              "Type",
+              "What varies",
+              "Example",
+              "Typical remedy"
+            ],
+            "rows": [
+              [
+                "Level noise",
+                "Average severity of each judge",
+                "One manager rates everyone a point higher than peers",
+                "Calibration sessions; relative scales; normalization"
+              ],
+              [
+                "Pattern noise",
+                "How judges respond to specific features",
+                "One interviewer heavily rewards confidence, another penalizes it",
+                "Structured criteria scored separately; aggregation"
+              ],
+              [
+                "Occasion noise",
+                "The same judge across moments",
+                "Approval rates drift with time of day or workload",
+                "Independent second judgments; checklists; timing rules"
+              ]
+            ],
+            "note": "Categories from Kahneman, Sibony & Sunstein (2021); examples are illustrative.",
+            "refs": [
+              "R-kahneman-2021-noise"
+            ]
+          },
+          {
+            "type": "mode",
+            "mode": "foundation",
+            "title": "Prerequisite: why averaging reduces noise",
+            "blocks": [
+              {
+                "type": "p",
+                "kind": "original",
+                "text": "If several judges make independent errors, some too high and some too low, averaging their judgments cancels part of the scatter. The more independent the judges, the more cancellation. This is why independence matters so much: if judges discuss first, they converge on the most confident voice, and their errors become correlated, so averaging stops helping. Averaging does nothing for a bias that all judges share — if every judge is too optimistic, the average is too optimistic as well."
+              }
+            ]
+          },
+          {
+            "type": "h",
+            "text": "Decision hygiene"
+          },
+          {
+            "type": "p",
+            "kind": "established",
+            "text": "The authors call the remedies **decision hygiene**, by analogy with handwashing: procedures that prevent errors without knowing in advance which error they prevent. Their main practices are: aggregate several **independent** judgments; **structure** complex judgments by breaking them into separate assessments that are scored independently before an overall judgment is formed; **sequence information** so that judges are not exposed to irrelevant or biasing information too early; use **relative** rather than absolute scales where possible; take the **outside view**; and treat a final overall judgment as something to be delayed until the separate assessments are in ([Kahneman, Sibony & Sunstein, 2021](R-kahneman-2021-noise)). Aggregation also produced the most accurate forecasts in the tournament described in Lesson 3 ([Mellers et al., 2014](R-mellers-2014-psychological)).",
+            "refs": [
+              "R-kahneman-2021-noise",
+              "R-mellers-2014-psychological"
+            ]
+          },
+          {
+            "type": "flow",
+            "kind": "original",
+            "caption": "A hygienic evaluation process",
+            "steps": [
+              {
+                "label": "Define",
+                "text": "Agree on the separate dimensions to be assessed and how each is scored."
+              },
+              {
+                "label": "Sequence",
+                "text": "Give judges only the information each dimension needs, in a set order."
+              },
+              {
+                "label": "Judge alone",
+                "text": "Each judge scores each dimension independently and writes it down."
+              },
+              {
+                "label": "Aggregate",
+                "text": "Combine scores; show the spread, not just the average."
+              },
+              {
+                "label": "Discuss",
+                "text": "Discuss only large disagreements, then form the overall judgment."
+              }
+            ]
+          },
+          {
+            "type": "h",
+            "text": "Intellectual humility and updating"
+          },
+          {
+            "type": "p",
+            "kind": "established",
+            "text": "Porter and colleagues review a growing literature on **intellectual humility**. Across definitions, its common core is a metacognitive ability: recognizing the limits of one’s beliefs and knowledge, and that one’s beliefs might be wrong. Their review treats it as something that varies with situations and can be encouraged, not only a fixed trait, and reports associations with more careful handling of evidence — while noting that much of the evidence is correlational and drawn from Western samples ([Porter et al., 2022](R-porter-2022-predictors)).",
+            "refs": [
+              "R-porter-2022-predictors"
+            ]
+          },
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "In practice, intellectual humility shows up as **proportional updating**: moving your belief by an amount that matches the strength of new evidence. Under-updating (ignoring evidence that cuts against you) is the signature of confirmation bias and motivated reasoning from Lesson 2. Over-updating (swinging wildly on one vivid data point) is the signature of availability. A humble forecaster treats each belief as a probability, revises it when evidence arrives, and can say what evidence would move it and by how much."
+          },
+          {
+            "type": "h",
+            "text": "Process versus outcome"
+          },
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "Under uncertainty, good decisions sometimes produce bad outcomes and bad decisions sometimes produce good ones. Judging a decision only by its outcome — **outcome bias** — rewards luck, punishes sound risk-taking, and teaches the organization the wrong lessons. Week 14 returns to outcome bias and after-action reviews. The tool that makes the distinction possible is a contemporaneous record: what you knew, what you assumed, what you predicted and why. That is this week’s assignment."
+          },
+          {
+            "type": "matrix",
+            "kind": "original",
+            "caption": "Process and outcome",
+            "x": [
+              "Bad outcome",
+              "Good outcome"
+            ],
+            "y": [
+              "Poor process",
+              "Sound process"
+            ],
+            "cells": [
+              [
+                "Deserved failure. Learn from the process.",
+                "Dumb luck. The most dangerous cell: success reinforces a poor process."
+              ],
+              [
+                "Bad luck. Do not punish; check whether the risk was understood and sized.",
+                "Deserved success. Record why, so it can be repeated."
+              ]
+            ],
+            "note": "A widely used teaching device in decision education; APERTURE’s version."
+          }
+        ],
+        "challenge": [
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "Noise reduction has costs and critics. Some variability is valuable: diverse judgments can surface information a single standard would suppress, and in creative or novel decisions, disagreement may be exactly what you want before you decide. Rigid rules and scoring templates can also embed the biases of whoever designed them, and make those biases harder to see because they look objective. Reviewers of the noise argument have raised both points; the authors themselves accept that hygiene must be weighed against costs and that rules can be biased ([Kahneman, Sibony & Sunstein, 2021](R-kahneman-2021-noise)). A reasonable stance: reduce noise in repeated judgments that should be consistent, such as ratings, triage or pricing, and preserve deliberate diversity where you want options generated rather than cases judged.",
+            "refs": [
+              "R-kahneman-2021-noise"
+            ]
+          },
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "Intellectual humility has its own limits. Humility is not indecision, and it is not deferring to the loudest expert. A leader who constantly signals doubt may lose the confidence of a team that needs direction. The research base is also younger than it looks: Porter and colleagues stress that much of it is correlational and self-reported, so claims that humble leaders produce better organizational results are hypotheses rather than findings ([Porter et al., 2022](R-porter-2022-predictors)). The practical version is narrower and more defensible: be humble in your private estimates, explicit about uncertainty, and decisive in commitment once the decision is made.",
+            "refs": [
+              "R-porter-2022-predictors"
+            ]
+          },
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "Finally, procedures can be gamed by the same motives they are meant to restrain. A champion who knows the scoring dimensions can write to them; a committee can “discuss only large disagreements” until the most senior person’s view becomes the consensus. Kunda’s insight applies to procedures as well as to individuals: people reach the conclusions they prefer when they can construct a respectable justification, and a procedure can become that justification ([Kunda, 1990](R-kunda-1990-case)). Hygiene works when someone owns it and audits it.",
+            "refs": [
+              "R-kunda-1990-case"
+            ]
+          },
+          {
+            "type": "depth",
+            "title": "Methodological note: running a noise audit",
+            "blocks": [
+              {
+                "type": "p",
+                "kind": "original",
+                "text": "A noise audit asks several judges to evaluate the same set of cases independently — realistic cases drawn from actual work, ideally without the judges knowing which colleagues are evaluating the same files. The analysis is simple: for each case, compute the spread of judgments (for example the standard deviation, or the average absolute difference between pairs of judges), then average across cases. Comparing each judge’s mean with the overall mean estimates level noise; the remaining case-by-judge variation estimates pattern noise (with occasion noise mixed in unless the same judge sees the same case twice). Three design cautions: use enough cases to separate stable differences from chance; avoid cases with unusual information that only some judges see; and present the results as a property of the system, not as a ranking of individuals, or the audit will not be repeated."
+              }
+            ]
+          }
+        ],
+        "apply": [
+          {
+            "type": "p",
+            "kind": "example",
+            "text": "Government and law. Sentencing and asylum decisions are classic settings for noise: different judges, same kinds of cases, widely varying outcomes. Structured guidelines reduce level noise but are criticized for rigidity, which is the trade-off described above. The point for executives is the design choice, not any particular jurisdiction’s rules."
+          },
+          {
+            "type": "p",
+            "kind": "example",
+            "text": "Healthcare. Two radiologists reading the same scans, or two triage nurses classifying the same patients, can be compared directly. A department that measures agreement and adds a second independent read for ambiguous categories is practicing decision hygiene. This week’s case examines that choice in an emergency department."
+          },
+          {
+            "type": "p",
+            "kind": "example",
+            "text": "Technology. Engineering promotion committees often hear one strong advocate first, which anchors the discussion. A hygienic version has each committee member score the written packet on separate dimensions before the meeting, shows the spread, and discusses only cases with large disagreement. The example is hypothetical."
+          },
+          {
+            "type": "p",
+            "kind": "application",
+            "text": "Player development. Evaluation meetings are a natural noise audit waiting to happen. Several evaluators often see the same player; the department can collect their grades independently on separate dimensions before any discussion, display the spread, and spend meeting time on the players where evaluators disagree most. Over time, comparing each evaluator’s mean grade with the group reveals level noise, and comparing grades with later outcomes begins to show whose judgments carry the most information. The same discipline applies to you: write your own grade first."
+          },
+          {
+            "type": "mode",
+            "mode": "executive",
+            "title": "Executive twist: introducing hygiene without insulting experts",
+            "blocks": [
+              {
+                "type": "p",
+                "kind": "original",
+                "text": "Experienced evaluators may hear “noise audit” as an accusation. Frame it as a property of the system, not of individuals, and include yourself as a judge. Start with a low-stakes set of past cases whose outcomes are known, show the spread anonymously, and let the group propose the remedies. Ask what you are willing to give up: some speed in meetings, some autonomy for senior judges. In return the organization gets more consistent decisions and the first real evidence about whose judgment adds the most value."
+              }
+            ]
+          }
+        ],
+        "retain": [
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "Error has two components: bias and noise. Noise — level, pattern and occasion — can be measured with a noise audit and reduced by decision hygiene: independent judgments, structured assessments, sequenced information, relative scales, the outside view and aggregation. Hygiene has costs and can be gamed, so use it where consistency matters. Intellectual humility, at its core the metacognitive recognition that you might be wrong, shows up as proportional updating and as judging decisions by their process, not only their outcome."
+          },
+          {
+            "type": "prompt",
+            "text": "Without looking back: define level, pattern and occasion noise and give one remedy for each."
+          },
+          {
+            "type": "prompt",
+            "text": "Why does discussion before independent judgment make aggregation less useful?"
+          },
+          {
+            "type": "prompt",
+            "text": "Recall a decision that turned out well. Was the process sound, or was it lucky? How would you know?"
+          }
+        ]
+      },
+      "takeaways": [
+        "Noise is unwanted variability in judgments that should be identical; it can be measured without knowing the right answer.",
+        "System noise has three parts: level, pattern and occasion.",
+        "Decision hygiene — independent judgments, structure, sequencing, relative scales, the outside view and aggregation — reduces error without needing to know its direction.",
+        "Intellectual humility is a metacognitive skill: recognizing the limits of your knowledge and updating in proportion to evidence; its organizational benefits are plausible but not yet well established.",
+        "Judge decisions by their process as well as their outcome; a contemporaneous record makes that possible."
+      ],
+      "check": [
+        {
+          "id": "w01-l4-c1",
+          "type": "mc",
+          "prompt": "A hospital finds that one of its six triage nurses assigns the highest-urgency category about twice as often as colleagues across all kinds of patients. Which type of noise does this most directly illustrate?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Level noise"
+            },
+            {
+              "id": "b",
+              "text": "Pattern noise"
+            },
+            {
+              "id": "c",
+              "text": "Occasion noise"
+            },
+            {
+              "id": "d",
+              "text": "Bias shared by the whole system"
+            }
+          ],
+          "answer": "a",
+          "explanation": "A judge who is consistently more severe across all cases differs in level from colleagues. Pattern noise would show as different reactions to specific kinds of patients; occasion noise as variation by the same nurse over time.",
+          "optionFeedback": {
+            "b": "Pattern noise is case-specific: a nurse reacting differently to particular features, not uniformly harsher.",
+            "c": "Occasion noise is within-person variation across moments; the finding here is a stable difference between people.",
+            "d": "A shared bias would affect all six nurses alike; here one nurse differs from the others."
+          },
+          "errorTags": {
+            "b": "confuses-noise-types",
+            "c": "confuses-noise-types",
+            "d": "confuses-bias-and-noise"
+          },
+          "concepts": [
+            "c-noise"
+          ],
+          "domain": "behavioral-science",
+          "lesson": "w01-l4",
+          "difficulty": "core",
+          "points": 1
+        },
+        {
+          "id": "w01-l4-c2",
+          "type": "multi",
+          "prompt": "A firm wants to reduce noise in its annual promotion decisions. Which practices are decision hygiene in the sense described in this lesson? Select all that apply.",
+          "options": [
+            {
+              "id": "a",
+              "text": "Committee members score each candidate on separate dimensions independently before the meeting."
+            },
+            {
+              "id": "b",
+              "text": "The most senior member speaks first to set the frame for discussion."
+            },
+            {
+              "id": "c",
+              "text": "The spread of independent scores is shown, and discussion focuses on large disagreements."
+            },
+            {
+              "id": "d",
+              "text": "Each committee member reads the candidate’s manager’s overall recommendation before scoring the separate dimensions."
+            },
+            {
+              "id": "e",
+              "text": "Scores from several independent judges are averaged before the final decision."
+            }
+          ],
+          "answer": [
+            "a",
+            "c",
+            "e"
+          ],
+          "explanation": "Independent, structured scoring, attention to disagreement and aggregation are core hygiene practices. Letting a senior voice speak first or exposing judges to an overall recommendation before they score creates correlated errors and anchoring.",
+          "concepts": [
+            "c-decision-hygiene"
+          ],
+          "domain": "organizational-behavior",
+          "lesson": "w01-l4",
+          "difficulty": "core",
+          "points": 1
+        },
+        {
+          "id": "w01-l4-c3",
+          "type": "mc",
+          "prompt": "An executive approved a pilot after careful analysis that gave it a 60% chance of success. It failed. The board proposes treating the failure as evidence of poor judgment. What is the best response?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Accept the criticism; a failed outcome shows the decision was wrong."
+            },
+            {
+              "id": "b",
+              "text": "Review the contemporaneous record: whether the 60% estimate, its assumptions and the size of the bet were reasonable given what was known, and whether this was one of the expected 40%."
+            },
+            {
+              "id": "c",
+              "text": "Argue that no single outcome can ever say anything about a decision."
+            },
+            {
+              "id": "d",
+              "text": "Commission a new analysis that shows the failure was unforeseeable."
+            }
+          ],
+          "answer": "b",
+          "explanation": "A 60% decision is expected to fail four times in ten. The right test is the quality of the process and assumptions at the time, which requires a record made before the outcome. Judging only by outcome is outcome bias.",
+          "optionFeedback": {
+            "a": "That is outcome bias: a sound decision can fail by chance.",
+            "c": "Overcorrection: an outcome can reveal a flawed assumption; it simply is not decisive on its own.",
+            "d": "A post-hoc analysis built to exonerate is motivated reasoning; a contemporaneous record is the credible evidence."
+          },
+          "errorTags": {
+            "a": "outcome-bias",
+            "c": "overcorrection",
+            "d": "motivated-reasoning"
+          },
+          "concepts": [
+            "c-outcome-bias",
+            "c-intellectual-humility"
+          ],
+          "domain": "leadership-judgment",
+          "lesson": "w01-l4",
+          "difficulty": "core",
+          "points": 1
+        }
+      ],
+      "sources": [
+        {
+          "ref": "R-kahneman-2021-noise",
+          "use": "Noise, its types, noise audits and decision hygiene."
+        },
+        {
+          "ref": "R-porter-2022-predictors",
+          "use": "Intellectual humility as a metacognitive ability and the limits of its evidence base."
+        },
+        {
+          "ref": "R-mellers-2014-psychological",
+          "use": "Aggregation of independent forecasts improves accuracy."
+        },
+        {
+          "ref": "R-kunda-1990-case",
+          "use": "Motivated reasoning can capture procedures as well as individuals."
+        }
+      ],
+      "crosslinks": [
+        {
+          "to": "w14-l4",
+          "why": "Outcome bias, after-action reviews and the leader’s learning agenda."
+        },
+        {
+          "to": "w14-l1",
+          "why": "Decision hygiene applied to one integrative executive decision."
+        },
+        {
+          "to": "w05-l2",
+          "why": "Psychological safety: the conditions under which people report disagreement and error."
+        }
+      ]
+    }
+  ],
+  "readings": {
+    "required": [
+      {
+        "ref": "R-kahneman-2009-conditions",
+        "what": "Full article",
+        "why": "The clearest test for when expert intuition can be trusted, written jointly by two researchers from opposing traditions.",
+        "minutes": 45
+      },
+      {
+        "ref": "R-tversky-1974-judgment",
+        "what": "Full article",
+        "why": "The founding statement of the heuristics-and-biases program; short and still the best introduction.",
+        "minutes": 35
+      },
+      {
+        "ref": "R-moore-2008-trouble",
+        "what": "Sections defining the three forms of overconfidence and the general discussion (an author copy is freely available)",
+        "why": "Gives you precise language for overconfidence and explains why overprecision persists.",
+        "minutes": 35
+      }
+    ],
+    "optional": [
+      {
+        "ref": "R-mellers-2014-psychological",
+        "what": "Full article (open copy on eScholarship)",
+        "why": "Evidence that forecasting can be trained, teamed and scored.",
+        "minutes": 40
+      },
+      {
+        "ref": "R-kahneman-2021-noise",
+        "what": "Parts on measuring noise and on decision hygiene",
+        "why": "The source for noise audits and decision-hygiene practices.",
+        "minutes": 120
+      },
+      {
+        "ref": "R-gigerenzer-2011-heuristic",
+        "what": "Introduction and sections on ecological rationality and less-is-more effects",
+        "why": "The strongest counterpoint to treating heuristics as errors.",
+        "minutes": 45
+      },
+      {
+        "ref": "R-evans-2013-dual-process",
+        "what": "Full article; pair it with the abstract of Melnikoff & Bargh (2018)",
+        "why": "What dual-process theory claims — and what it does not — from its leading defenders.",
+        "minutes": 60
+      },
+      {
+        "ref": "R-porter-2022-predictors",
+        "what": "Full review (open copy on PubMed Central)",
+        "why": "A careful account of intellectual humility and the limits of the evidence.",
+        "minutes": 50
+      }
+    ]
+  },
+  "glossary": [
+    {
+      "id": "g-dual-process-theory",
+      "term": "Dual-process theory",
+      "definition": "A family of theories distinguishing autonomous (Type 1) processing from processing that requires working memory and supports hypothetical thinking (Type 2). Whether there are two distinct types is debated.",
+      "lesson": "w01-l1",
+      "related": [
+        "g-cognitive-decoupling"
+      ]
+    },
+    {
+      "id": "g-cognitive-decoupling",
+      "term": "Cognitive decoupling",
+      "definition": "Holding a representation of a possibility separate from what you currently believe so that you can reason about it hypothetically; a defining function of Type 2 processing in Evans and Stanovich’s account.",
+      "lesson": "w01-l1",
+      "related": [
+        "g-dual-process-theory"
+      ]
+    },
+    {
+      "id": "g-high-validity-environment",
+      "term": "High-validity environment",
+      "definition": "A setting in which observable cues are reliably related to outcomes, so that the regularities can in principle be learned.",
+      "lesson": "w01-l1",
+      "related": [
+        "g-intuitive-expertise"
+      ]
+    },
+    {
+      "id": "g-intuitive-expertise",
+      "term": "Intuitive expertise",
+      "definition": "Fast, recognition-based judgment that is accurate because it was learned in a high-validity environment with ample practice and timely, clear feedback.",
+      "lesson": "w01-l1",
+      "related": [
+        "g-high-validity-environment"
+      ]
+    },
+    {
+      "id": "g-metacognition",
+      "term": "Metacognition",
+      "definition": "Monitoring and regulating your own thinking: knowing where a judgment came from, how reliable it is likely to be, and when to slow down or seek a check.",
+      "lesson": "w01-l1",
+      "related": [
+        "g-intellectual-humility"
+      ]
+    },
+    {
+      "id": "g-heuristic",
+      "term": "Heuristic",
+      "definition": "A mental shortcut or strategy that ignores part of the available information; efficient and often adequate, but predictably wrong in some environments.",
+      "lesson": "w01-l2",
+      "related": [
+        "g-ecological-rationality"
+      ]
+    },
+    {
+      "id": "g-anchoring",
+      "term": "Anchoring",
+      "definition": "The tendency of numerical estimates to stay close to an initial value, even an arbitrary one, because adjustment from it is insufficient.",
+      "lesson": "w01-l2"
+    },
+    {
+      "id": "g-base-rate",
+      "term": "Base rate",
+      "definition": "How common an outcome or category is in the relevant population before considering the specifics of a case; the starting point for any probability judgment.",
+      "lesson": "w01-l2",
+      "related": [
+        "g-natural-frequencies"
+      ]
+    },
+    {
+      "id": "g-natural-frequencies",
+      "term": "Natural frequencies",
+      "definition": "Presenting probabilistic information as counts of cases from one reference population (for example, 9 of 98 positives), which makes Bayesian reasoning far easier.",
+      "lesson": "w01-l2",
+      "related": [
+        "g-base-rate"
+      ]
+    },
+    {
+      "id": "g-confirmation-bias",
+      "term": "Confirmation bias",
+      "definition": "Seeking or interpreting evidence in ways that are partial to existing beliefs, expectations or hypotheses.",
+      "lesson": "w01-l2",
+      "related": [
+        "g-motivated-reasoning"
+      ]
+    },
+    {
+      "id": "g-motivated-reasoning",
+      "term": "Motivated reasoning",
+      "definition": "Reasoning steered by a directional goal toward a preferred conclusion, constrained by the need to construct a seemingly reasonable justification.",
+      "lesson": "w01-l2",
+      "related": [
+        "g-confirmation-bias"
+      ]
+    },
+    {
+      "id": "g-ecological-rationality",
+      "term": "Ecological rationality",
+      "definition": "The degree to which a decision strategy is adapted to the structure of the environment in which it is used.",
+      "lesson": "w01-l2",
+      "related": [
+        "g-heuristic"
+      ]
+    },
+    {
+      "id": "g-overprecision",
+      "term": "Overprecision",
+      "definition": "Excessive certainty in the accuracy of one’s beliefs, visible as ranges and forecasts that are too narrow; the most persistent form of overconfidence.",
+      "lesson": "w01-l3",
+      "related": [
+        "g-calibration"
+      ]
+    },
+    {
+      "id": "g-calibration",
+      "term": "Calibration",
+      "definition": "The match between stated confidence and actual frequency: a calibrated forecaster’s 70% predictions come true about 70% of the time.",
+      "lesson": "w01-l3",
+      "related": [
+        "g-brier-score",
+        "g-overprecision"
+      ]
+    },
+    {
+      "id": "g-brier-score",
+      "term": "Brier score",
+      "definition": "The mean squared difference between stated probabilities and outcomes (1 or 0); a proper scoring rule in which lower is better and 0.25 is what constant 50% forecasts earn.",
+      "lesson": "w01-l3",
+      "related": [
+        "g-calibration"
+      ]
+    },
+    {
+      "id": "g-outside-view",
+      "term": "Outside view",
+      "definition": "Forecasting by first asking how often outcomes of this kind occur in a reference class of similar cases, before adjusting for the specifics of the case.",
+      "lesson": "w01-l3"
+    },
+    {
+      "id": "g-noise",
+      "term": "Noise",
+      "definition": "Unwanted variability in judgments that should be identical; divided into level, pattern and occasion noise.",
+      "lesson": "w01-l4",
+      "related": [
+        "g-decision-hygiene",
+        "g-noise-audit"
+      ]
+    },
+    {
+      "id": "g-noise-audit",
+      "term": "Noise audit",
+      "definition": "A study in which several judges evaluate the same cases independently, so that the variability of their judgments can be measured.",
+      "lesson": "w01-l4",
+      "related": [
+        "g-noise"
+      ]
+    },
+    {
+      "id": "g-decision-hygiene",
+      "term": "Decision hygiene",
+      "definition": "Procedures that reduce judgment error without knowing its direction: independent judgments, structured assessments, sequenced information, relative scales, the outside view and aggregation.",
+      "lesson": "w01-l4",
+      "related": [
+        "g-noise"
+      ]
+    },
+    {
+      "id": "g-intellectual-humility",
+      "term": "Intellectual humility",
+      "definition": "Recognizing the limits of one’s beliefs and knowledge and that one might be wrong; shown in proportional updating.",
+      "lesson": "w01-l4",
+      "related": [
+        "g-metacognition"
+      ]
+    }
+  ],
+  "exercise": {
+    "id": "w01-x",
+    "title": "Judgment Lab",
+    "lab": "behavioral-decision-lab",
+    "engine": "calibration",
+    "minutes": 35,
+    "intro": [
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "The Judgment Lab measures something most assessments ignore: not only whether you are right, but whether your confidence matches your accuracy. You will answer two kinds of items drawn from science, medicine, law, business, history and sport. For each true-or-false statement, choose an answer and state how confident you are, from 50% (a pure guess) to 100% (certain). For each numeric question, give a range you are 90% sure contains the true value."
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "Do not look anything up, and do not try to “win” by always saying 50% or by giving enormous ranges: the point is to see your honest pattern. Work at a steady pace, about thirty seconds per item. When you finish, the lab shows your proportion correct, your Brier score, a calibration table comparing stated confidence with actual hit rates, and how many of your 90% ranges contained the truth."
+      },
+      {
+        "type": "list",
+        "kind": "original",
+        "ordered": false,
+        "items": [
+          "Use the whole confidence scale. 100% means you would bet heavily at any odds.",
+          "Make the 90% ranges genuinely 90%: you should expect to miss about one in ten.",
+          "Before you see results, write down how many of your ranges you expect to contain the truth."
+        ]
+      }
+    ],
+    "config": {
+      "binary": [
+        {
+          "id": "b1",
+          "statement": "The Wright brothers made their first powered, controlled airplane flights in 1903, near Kitty Hawk, North Carolina.",
+          "key": {
+            "answer": true,
+            "explanation": "True. Orville and Wilbur Wright flew at Kill Devil Hills, near Kitty Hawk, on 17 December 1903.",
+            "ref": null
+          }
+        },
+        {
+          "id": "b2",
+          "statement": "Penicillin was discovered by Louis Pasteur.",
+          "key": {
+            "answer": false,
+            "explanation": "False. Alexander Fleming discovered penicillin in 1928. Pasteur, a nineteenth-century chemist and microbiologist, is known for germ theory, pasteurization and vaccines.",
+            "ref": null
+          }
+        },
+        {
+          "id": "b3",
+          "statement": "The U.S. Supreme Court decided Marbury v. Madison, the case associated with establishing judicial review, in 1803.",
+          "key": {
+            "answer": true,
+            "explanation": "True. Marbury v. Madison was decided in 1803; Chief Justice John Marshall’s opinion is the classic statement of judicial review.",
+            "ref": null
+          }
+        },
+        {
+          "id": "b4",
+          "statement": "Brown v. Board of Education, the U.S. Supreme Court decision holding state-mandated school segregation unconstitutional, was decided in 1964.",
+          "key": {
+            "answer": false,
+            "explanation": "False. Brown v. Board of Education was decided in 1954. The Civil Rights Act was passed in 1964, which is a common source of confusion.",
+            "ref": null
+          }
+        },
+        {
+          "id": "b5",
+          "statement": "Light from the Sun takes roughly eight minutes to reach Earth.",
+          "key": {
+            "answer": true,
+            "explanation": "True. At the average Earth–Sun distance (about 150 million km), light takes about 8 minutes and 20 seconds.",
+            "ref": null
+          }
+        },
+        {
+          "id": "b6",
+          "statement": "An adult human has more bones than a newborn baby.",
+          "key": {
+            "answer": false,
+            "explanation": "False. A newborn has roughly 270–300 bones or bony elements, many of which fuse during growth; a typical adult skeleton has 206.",
+            "ref": null
+          }
+        },
+        {
+          "id": "b7",
+          "statement": "The first modern Olympic Games, in 1896, were held in Paris.",
+          "key": {
+            "answer": false,
+            "explanation": "False. The first modern Olympic Games were held in Athens in 1896. Paris hosted the second, in 1900.",
+            "ref": null
+          }
+        },
+        {
+          "id": "b8",
+          "statement": "The Panama Canal opened before the Suez Canal.",
+          "key": {
+            "answer": false,
+            "explanation": "False. The Suez Canal opened in 1869; the Panama Canal opened in 1914.",
+            "ref": null
+          }
+        },
+        {
+          "id": "b9",
+          "statement": "The Sarbanes–Oxley Act, which tightened U.S. corporate financial reporting and audit rules after the Enron and WorldCom scandals, was enacted in 2002.",
+          "key": {
+            "answer": true,
+            "explanation": "True. The Sarbanes–Oxley Act was signed into law in July 2002.",
+            "ref": null
+          }
+        },
+        {
+          "id": "b10",
+          "statement": "Antibiotics are effective treatment for viral infections such as the common cold.",
+          "key": {
+            "answer": false,
+            "explanation": "False. Antibiotics act on bacteria, not viruses; they do not treat the common cold, and unnecessary use contributes to antibiotic resistance.",
+            "ref": null
+          }
+        },
+        {
+          "id": "b11",
+          "statement": "The International Astronomical Union reclassified Pluto as a dwarf planet in 2006.",
+          "key": {
+            "answer": true,
+            "explanation": "True. The IAU adopted its definition of a planet in August 2006, placing Pluto in the new category of dwarf planet.",
+            "ref": null
+          }
+        },
+        {
+          "id": "b12",
+          "statement": "James Watson and Francis Crick published their double-helix model of DNA in 1953.",
+          "key": {
+            "answer": true,
+            "explanation": "True. Their paper appeared in Nature in April 1953, drawing on X-ray diffraction work including Rosalind Franklin’s.",
+            "ref": null
+          }
+        },
+        {
+          "id": "b13",
+          "statement": "The largest one-day percentage fall in the history of the Dow Jones Industrial Average occurred on “Black Monday” in October 1987.",
+          "key": {
+            "answer": true,
+            "explanation": "True. On 19 October 1987 the Dow fell about 22.6%, still its largest one-day percentage decline.",
+            "ref": null
+          }
+        },
+        {
+          "id": "b14",
+          "statement": "Sound travels through air at sea level faster than 1,000 meters per second.",
+          "key": {
+            "answer": false,
+            "explanation": "False. The speed of sound in dry air at about 20 °C is roughly 343 meters per second.",
+            "ref": null
+          }
+        },
+        {
+          "id": "b15",
+          "statement": "The first FIFA World Cup was held in 1930 in Uruguay, which won the tournament.",
+          "key": {
+            "answer": true,
+            "explanation": "True. Uruguay hosted and won the first World Cup in 1930, beating Argentina in the final.",
+            "ref": null
+          }
+        },
+        {
+          "id": "b16",
+          "statement": "Thomas Bayes’s essay containing the result now called Bayes’ theorem was published after his death.",
+          "key": {
+            "answer": true,
+            "explanation": "True. Bayes died in 1761; Richard Price arranged publication of the essay in 1763.",
+            "ref": null
+          }
+        }
+      ],
+      "intervals": [
+        {
+          "id": "i1",
+          "question": "In what year did Charles Darwin publish On the Origin of Species?",
+          "unit": "year",
+          "key": {
+            "answer": 1859,
+            "explanation": "Darwin’s book was published in November 1859.",
+            "ref": null
+          }
+        },
+        {
+          "id": "i2",
+          "question": "In what year did the Berlin Wall fall?",
+          "unit": "year",
+          "key": {
+            "answer": 1989,
+            "explanation": "The border crossings opened on 9 November 1989.",
+            "ref": null
+          }
+        },
+        {
+          "id": "i3",
+          "question": "What is the height of Mount Everest, in meters?",
+          "unit": "meters",
+          "key": {
+            "answer": 8849,
+            "explanation": "A joint China–Nepal survey announced in 2020 gave 8,848.86 m; the long-standing earlier figure was 8,848 m. Either value lies inside a well-calibrated range.",
+            "ref": null
+          }
+        },
+        {
+          "id": "i4",
+          "question": "In what year was the first human-to-human heart transplant performed?",
+          "unit": "year",
+          "key": {
+            "answer": 1967,
+            "explanation": "Christiaan Barnard performed it in Cape Town, South Africa, in December 1967.",
+            "ref": null
+          }
+        },
+        {
+          "id": "i5",
+          "question": "In what year did the U.S. Supreme Court decide Miranda v. Arizona, the source of the “Miranda warnings”?",
+          "unit": "year",
+          "key": {
+            "answer": 1966,
+            "explanation": "Miranda v. Arizona was decided in 1966.",
+            "ref": null
+          }
+        },
+        {
+          "id": "i6",
+          "question": "How many member states does the United Nations have?",
+          "unit": "states",
+          "key": {
+            "answer": 193,
+            "explanation": "There are 193 member states; South Sudan, admitted in 2011, was the most recent.",
+            "ref": null
+          }
+        },
+        {
+          "id": "i7",
+          "question": "In what year did Roger Bannister become the first person recorded running a mile in under four minutes?",
+          "unit": "year",
+          "key": {
+            "answer": 1954,
+            "explanation": "Bannister ran 3:59.4 at Oxford on 6 May 1954.",
+            "ref": null
+          }
+        },
+        {
+          "id": "i8",
+          "question": "In what year was Alexander Graham Bell granted his U.S. patent for the telephone?",
+          "unit": "year",
+          "key": {
+            "answer": 1876,
+            "explanation": "Bell’s telephone patent was granted in March 1876.",
+            "ref": null
+          }
+        },
+        {
+          "id": "i9",
+          "question": "What is the speed of light in a vacuum, in kilometers per second?",
+          "unit": "km/s",
+          "key": {
+            "answer": 299792,
+            "explanation": "The speed of light is defined as exactly 299,792,458 meters per second, about 299,792 km/s.",
+            "ref": null
+          }
+        },
+        {
+          "id": "i10",
+          "question": "How many bones are in a typical adult human skeleton?",
+          "unit": "bones",
+          "key": {
+            "answer": 206,
+            "explanation": "A typical adult skeleton has 206 bones; individuals vary slightly (for example, extra small bones).",
+            "ref": null
+          }
+        }
+      ],
+      "confidenceLevels": [
+        50,
+        60,
+        70,
+        80,
+        90,
+        100
+      ]
+    },
+    "debrief": [
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "Look first at your interval hit rate. If fewer than nine of your ten 90% ranges contained the truth, your ranges were too narrow: overprecision, the most persistent form of overconfidence described in Lesson 3. Most people capture far fewer than nine, which is why the useful adjustment is usually to widen ranges deliberately, not to know more facts."
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "Then read your calibration table. Compare each confidence bin with its hit rate, but remember the counts: with three items at 90%, missing one tells you very little. The Brier score combines calibration and discrimination; always saying 50% would score 0.25, so a score below that shows you added information. Use the score to compare yourself with yourself over time, not with other people on different questions."
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "What this exercise does **not** show: it measures calibration on general-knowledge items, which may differ from your calibration on professional judgments, where you have expertise and stakes. Its value is to make your pattern visible and to give you a habit — stating probabilities and ranges — that you will apply to real forecasts in your decision journal, where resolved forecasts feed the same Brier score and calibration table."
+      }
+    ],
+    "assumptions": [
+      "All items are factual statements with well-documented answers; none is a trick question.",
+      "Brier score = mean of (p − outcome)², where p is the probability you gave that your chosen answer is correct and outcome is 1 if it was correct, 0 if not.",
+      "An interval counts as a hit if the true value lies within or on its endpoints; well-calibrated 90% intervals should capture about 9 in 10 over many items.",
+      "With 16 statements and 10 intervals, results are a rough indication, not a stable measurement of your calibration."
+    ]
+  },
+  "case": {
+    "id": "w01-case",
+    "title": "The Pathway and the Patient",
+    "setting": "healthcare",
+    "minutes": 40,
+    "fiction": "All people, organizations and data in this case are fictional. The risk pathway described is invented for teaching and is not a real clinical instrument; nothing here is medical advice.",
+    "body": [
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "On a Thursday morning in March, Dr. Elena Okafor, chief medical officer of Tamsin Valley Health, a fictional four-hospital system serving a mid-sized metropolitan region, opened two documents on her desk. The first was a twelve-page proposal from her quality department to adopt a structured chest-pain pathway across all four emergency departments. The second was a one-page incident summary about a patient named in the file only as Mr. D., a 46-year-old who had been discharged from the system’s largest emergency department eleven days earlier with a diagnosis of musculoskeletal chest pain and had returned three days later with a heart attack. He survived. The physician who discharged him was one of the most respected clinicians in the system."
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "The executive committee would decide in two weeks whether to adopt the pathway system-wide. Okafor had to make a recommendation."
+      },
+      {
+        "type": "h",
+        "text": "The problem the pathway was meant to solve"
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "Chest pain is one of the most common reasons adults come to an emergency department, and one of the most difficult to sort. Most patients with chest pain do not have an acute coronary problem; a small minority do, and missing one can be catastrophic. Physicians decide whether to discharge, observe for further testing, or admit. At Tamsin Valley, those decisions varied far more than anyone had assumed."
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "Priya Raman, the director of quality, had run what she called a “mirror review”. She took 120 anonymized chest-pain charts from the previous year and asked fourteen emergency physicians across the four hospitals to read each chart independently, as it looked at the moment of decision, and choose discharge, observation or admission. The results (Exhibit 1) startled the committee. On the same charts, the share of patients a physician would have sent home ranged from 31% to 68%. Two physicians agreed with each other on a chart’s disposition only about half the time. When Raman showed six of the physicians a subset of charts they had already reviewed, without telling them, roughly one decision in five changed."
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "“None of these doctors is careless,” Raman told Okafor. “Each of them has a reason for every decision. The reasons just are not the same reasons.”"
+      },
+      {
+        "type": "h",
+        "text": "The pathway"
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "The proposed Structured Chest Pain Pathway combined three elements: a short risk score built from the patient’s history, ECG, age, risk factors and two blood tests taken a few hours apart; a recommended disposition for each score band; and a requirement that physicians who departed from the recommendation record a reason. Raman’s team had piloted it for six months at Northgate, the system’s smallest hospital. Exhibit 2 shows the results the team reported. The share of chest-pain patients discharged from the emergency department rose, observation stays fell, and the rate of major adverse cardiac events within 30 days among discharged patients stayed low."
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "The finance team liked the pilot. Observation stays were expensive and frequently unreimbursed. The quality team liked it because it made decisions consistent and auditable. Several younger physicians liked it because it gave them a defensible structure for discharging low-risk patients they would otherwise have kept “just in case”."
+      },
+      {
+        "type": "h",
+        "text": "The objection"
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "Dr. Marcus Feld, chair of emergency medicine at the largest hospital, did not like it at all. He had practiced for twenty-four years and had trained half of the system’s emergency physicians. He was also, though nobody said so in meetings, the physician who had discharged Mr. D."
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "Feld’s objection, made in a long email to Okafor, was not defensive. He wrote that Mr. D.’s case had shaken him and that he had reviewed it many times. Mr. D. would have scored as low risk under the proposed pathway too; the pathway would have discharged him just as Feld had. “The lesson of this case,” Feld wrote, “is that some patients do not fit any score. Experienced clinicians catch some of those patients by noticing things a checklist cannot. I missed this one. But I have caught many others that a score would have sent home, and nobody counts those.” He argued that Northgate’s patients were younger and healthier than those at his hospital, that six months was too short to see rare events, and that a pathway would erode exactly the clinical judgment that protects atypical patients."
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "He added a second point that Okafor found harder to dismiss: “If you make the score the standard, every bad outcome after a physician overrides it becomes indefensible, and every bad outcome after following it becomes ‘the system’s fault’. Physicians will stop thinking.”"
+      },
+      {
+        "type": "h",
+        "text": "The numbers that were not in the room"
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "Okafor asked Raman’s analyst, Tomás Ibarra, for two things the proposal did not contain. First, the base rate: of all chest-pain patients discharged across the system last year, how many had a major adverse cardiac event within 30 days? Second, the denominator for Feld’s claim: how often had experienced physicians admitted a patient the score would have discharged, and how often had that patient turned out to have a cardiac event?"
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "Ibarra could answer the first question roughly (Exhibit 3). The event rate after discharge was low under both current practice and the pilot, which meant that any comparison based on a few hundred discharges would be dominated by chance. At Northgate’s volume, a difference between, say, 0.5% and 1.0% would amount to a handful of patients. He could not answer the second question at all. Physicians’ reasons for admission were not recorded in a structured way, and no one had ever tracked what happened to patients admitted “on instinct”."
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "He also flagged something the pilot team had not emphasized. Before the pilot, Northgate’s discharge rate had been the lowest in the system; it had risen under the pathway, but the hospital had also added a new rapid-access cardiology clinic during the same months, which may have made physicians more comfortable discharging patients with a follow-up appointment."
+      },
+      {
+        "type": "h",
+        "text": "The pressure"
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "Mr. D.’s case had reached the system’s board through a complaint from his family, and two board members had asked whether “standardized protocols” would have prevented it. The honest answer was no, but Okafor knew that the case would shape the discussion more than any table. The finance committee wanted a decision before the budget cycle. The physicians’ council had asked for a vote on any change to clinical practice. And Okafor herself had, two years earlier, publicly championed “evidence-based standard work” as a strategic priority. She was aware that this made her an interested party."
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "She wrote three possible recommendations on a notepad: adopt the pathway system-wide now; extend the pilot to a second, larger hospital with better measurement before deciding; or adopt the pathway as decision support only, with no documentation requirement for departures. Under each she began a list of what she believed, what she assumed, and what would change her mind. The lists were longer than she expected."
+      }
+    ],
+    "exhibits": [
+      {
+        "title": "Exhibit 1 — Mirror review: fourteen physicians, the same 120 charts",
+        "type": "table",
+        "headers": [
+          "Measure",
+          "Result"
+        ],
+        "rows": [
+          [
+            "Share of charts each physician would discharge — lowest",
+            "31%"
+          ],
+          [
+            "Share of charts each physician would discharge — median",
+            "47%"
+          ],
+          [
+            "Share of charts each physician would discharge — highest",
+            "68%"
+          ],
+          [
+            "Agreement between two randomly paired physicians on disposition",
+            "about 52%"
+          ],
+          [
+            "Decisions changed when six physicians re-read 30 of the same charts weeks later",
+            "about 1 in 5"
+          ]
+        ],
+        "note": "Synthetic data. Assumptions: charts presented as at the time of decision; physicians unaware of outcomes; disposition choices were discharge, observation or admission."
+      },
+      {
+        "title": "Exhibit 2 — Northgate pilot, six months before vs. six months during",
+        "type": "table",
+        "headers": [
+          "Measure",
+          "Before (n = 610 chest-pain visits)",
+          "During (n = 640)"
+        ],
+        "rows": [
+          [
+            "Discharged from the emergency department",
+            "38%",
+            "52%"
+          ],
+          [
+            "Observation stay",
+            "41%",
+            "29%"
+          ],
+          [
+            "Admitted",
+            "21%",
+            "19%"
+          ],
+          [
+            "30-day major adverse cardiac events among discharged patients",
+            "2 of 232 (0.9%)",
+            "3 of 333 (0.9%)"
+          ],
+          [
+            "Physician departures from pathway recommendation",
+            "n/a",
+            "11% of visits"
+          ]
+        ],
+        "note": "Synthetic data. Assumptions: same hospital, consecutive periods, no randomization; a rapid-access cardiology clinic opened during the pilot period."
+      },
+      {
+        "title": "Exhibit 3 — System-wide context (previous year)",
+        "type": "table",
+        "headers": [
+          "Measure",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Chest-pain visits across four hospitals",
+            "about 9,800"
+          ],
+          [
+            "Discharged from the emergency department",
+            "about 4,300"
+          ],
+          [
+            "30-day major adverse cardiac events among discharged patients",
+            "about 40 (roughly 0.9%)"
+          ],
+          [
+            "Patients admitted against what the proposed score would recommend, later found to have an acute cardiac event",
+            "not recorded"
+          ],
+          [
+            "Median age of chest-pain patients — Northgate vs. largest hospital",
+            "49 vs. 58"
+          ]
+        ],
+        "note": "Synthetic data. Assumptions: event definitions consistent across hospitals; counts rounded."
+      }
+    ],
+    "assumptions": [
+      "The pathway’s risk score is fictional; its accuracy in other settings is unknown to the committee.",
+      "Exhibit numbers are synthetic and rounded; the pilot was not randomized.",
+      "Physicians’ reasons for admitting patients against expectation were not recorded before the pilot.",
+      "No legal or regulatory requirement forces a decision either way in the next two weeks."
+    ],
+    "questions": [
+      "Separate the evidence about bias from the evidence about noise in this case. What does the mirror review tell you, and what does it not tell you about which physicians are right?",
+      "How much weight should Mr. D.’s case carry in the decision? Explain using availability, base rates and outcome bias.",
+      "Evaluate Feld’s claim that experienced clinicians catch patients a score would miss. What evidence would test it, and how would you collect it?",
+      "Okafor is an interested party. Which decision-hygiene steps should she take before making her recommendation?",
+      "Choose one of the three options and write the forecasts (with probabilities and resolve-by dates) that would tell the committee, a year from now, whether it was the right call."
+    ],
+    "perspectives": [
+      {
+        "title": "Adopt now: noise is the bigger, measurable harm",
+        "text": "The mirror review shows enormous variability in decisions about the same patients; whichever answer is right, many patients are getting a different decision depending on who is on shift. A structured pathway with documented departures reduces that noise immediately, frees observation capacity, and — crucially — creates the record that will finally test Feld’s claim. Mr. D.’s case is a vivid single event that the pathway would not have changed and should not drive the decision. Risk: the Northgate result may reflect a younger population and the new clinic, so monitoring must be tight."
+      },
+      {
+        "title": "Extend the pilot with better measurement",
+        "text": "The pilot is uncontrolled, short, confounded by the new clinic and run on a younger population; rare events cannot be compared at this volume. Extending to the largest hospital, with a staggered start and structured recording of departures and their outcomes, would answer the questions that matter within a year. This respects the physicians’ council and Okafor’s own conflict of interest. Risk: a year of continued noise at three hospitals, and the possibility that “more data” becomes a way to avoid a decision."
+      },
+      {
+        "title": "Decision support without the documentation requirement",
+        "text": "Offer the score to every physician as information, measure agreement and outcomes, and let practice converge voluntarily. This preserves clinical judgment for atypical patients and avoids a defensive-medicine dynamic in which overrides become indefensible. Risk: without recorded reasons for departures, the system learns little, and the physicians with the most extreme practice patterns are the least likely to change."
+      }
+    ],
+    "application": "Player-development departments face the same structure. Evaluators looking at the same player reach very different grades (noise); one memorable miss — a released player who succeeded elsewhere, or a highly graded one who failed — dominates the conversation (availability and outcome bias); and the most experienced evaluator argues that a structured model would erode the judgment that catches unusual cases. The case’s moves transfer directly: run a mirror review on past evaluations, state the base rate, record departures from any model with reasons, and agree in advance what evidence would settle the argument."
+  },
+  "quiz": {
+    "id": "w01-quiz",
+    "title": "Week 1 quiz",
+    "minutes": 25,
+    "mastery": 0.8,
+    "questions": [
+      {
+        "difficulty": "core",
+        "points": 1,
+        "id": "w01-q01",
+        "type": "scenario",
+        "prompt": "Which conclusion about the two evaluators is best supported?",
+        "stimulus": [
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "A fictional bank has two senior credit officers. Officer A has approved small-business loans for 15 years; the bank tracks every loan’s repayment and sends each officer a quarterly report showing defaults on the loans they approved. Officer B has spent 15 years approving loans for large, one-off infrastructure projects that take 8–12 years to show whether they will be repaid; the bank has never linked outcomes back to the approving officer. Both are highly confident in their instincts."
+          }
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "Both have equal claim to skilled intuition, since both have 15 years of experience."
+          },
+          {
+            "id": "b",
+            "text": "Officer A’s intuition has a stronger claim to trust, because the environment provides many repetitions and clear, timely feedback; Officer B’s confidence carries little information without a track record."
+          },
+          {
+            "id": "c",
+            "text": "Officer B’s intuition deserves more trust, because larger decisions develop deeper expertise."
+          },
+          {
+            "id": "d",
+            "text": "Neither intuition deserves any weight; credit decisions should always be made by models."
+          }
+        ],
+        "answer": "b",
+        "explanation": "Kahneman and Klein’s conditions are a valid environment and an adequate opportunity to learn it through practice with feedback. Officer A has frequent, scored feedback; Officer B has few, slow, untracked outcomes, so experience mostly builds confidence.",
+        "optionFeedback": {
+          "a": "Years of experience are not the test; the feedback environment is.",
+          "c": "Stakes do not create learning opportunities; feedback does.",
+          "d": "Overcorrection: in a valid, high-feedback environment intuition can be skilled and worth combining with models."
+        },
+        "errorTags": {
+          "a": "experience-as-expertise",
+          "c": "experience-as-expertise",
+          "d": "overcorrection"
+        },
+        "concepts": [
+          "c-intuitive-expertise"
+        ],
+        "domain": "leadership-judgment",
+        "lesson": "w01-l1"
+      },
+      {
+        "difficulty": "core",
+        "points": 1,
+        "id": "w01-q02",
+        "type": "flaw",
+        "prompt": "What is the main flaw in this argument?",
+        "stimulus": [
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "“Our training program teaches managers to switch from System 1 to System 2 when making decisions. Since biases come from System 1 and System 2 is the rational system, managers who complete the program will make unbiased decisions.”"
+          }
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "It assumes deliberate (Type 2) thinking is normatively correct, but deliberation can rationalize a preferred conclusion and is not defined by being right."
+          },
+          {
+            "id": "b",
+            "text": "It ignores that System 1 is located in a specific brain region."
+          },
+          {
+            "id": "c",
+            "text": "It wrongly assumes managers can think slowly."
+          },
+          {
+            "id": "d",
+            "text": "It confuses noise with bias."
+          }
+        ],
+        "answer": "a",
+        "explanation": "Evans and Stanovich treat accuracy as at most a correlate of Type 2 processing, not its definition, and motivated reasoning shows that deliberation can build sophisticated justifications for wrong conclusions. The two-system picture is itself debated.",
+        "optionFeedback": {
+          "b": "The argument’s problem is not anatomical; dual-process theories do not rest on that claim.",
+          "c": "Managers can think slowly; the issue is that slow thinking does not guarantee correct thinking.",
+          "d": "The argument is about bias; noise is not mentioned or relevant to its main error."
+        },
+        "errorTags": {
+          "b": "irrelevant-detail",
+          "c": "misreads-argument",
+          "d": "confuses-bias-and-noise"
+        },
+        "concepts": [
+          "c-dual-process"
+        ],
+        "domain": "behavioral-science",
+        "lesson": "w01-l1"
+      },
+      {
+        "difficulty": "core",
+        "points": 1,
+        "id": "w01-q03",
+        "type": "numeric",
+        "prompt": "A pre-employment integrity test is used on applicants. Suppose 5% of applicants would commit serious misconduct. The test flags 80% of those who would and 10% of those who would not. If an applicant is flagged, what is the probability (in %) that they would commit serious misconduct? Round to the nearest whole percent.",
+        "answer": {
+          "value": 30,
+          "tolerance": 1,
+          "unit": "%"
+        },
+        "working": "Take 1,000 applicants: 50 would commit misconduct, of whom 40 are flagged. 950 would not, of whom 95 are flagged. Flagged total: 135. Probability: 40 / 135 ≈ 29.6%, about 30%.",
+        "explanation": "Most flagged applicants are false positives because the base rate is low. Counting cases in a fixed population (natural frequencies) makes the calculation straightforward.",
+        "concepts": [
+          "c-base-rate-neglect",
+          "c-bayes-rule"
+        ],
+        "domain": "statistical-reasoning",
+        "lesson": "w01-l2"
+      },
+      {
+        "difficulty": "core",
+        "points": 1,
+        "id": "w01-q04",
+        "type": "multi",
+        "prompt": "A due-diligence team has concluded that an acquisition target is strong. Which procedures specifically counter confirmation bias? Select all that apply.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Ask the team to list the evidence that would show the target is weak, and then look for it."
+          },
+          {
+            "id": "b",
+            "text": "Ask the team to gather more evidence about the target’s strengths."
+          },
+          {
+            "id": "c",
+            "text": "Assign a separate reviewer who has not seen the team’s memo to assess the raw data."
+          },
+          {
+            "id": "d",
+            "text": "Give the team a larger bonus if the deal closes."
+          },
+          {
+            "id": "e",
+            "text": "Test the conclusion against cases that could disconfirm it, such as comparable targets that failed."
+          }
+        ],
+        "answer": [
+          "a",
+          "c",
+          "e"
+        ],
+        "explanation": "Confirmation bias narrows search to evidence that fits the hypothesis. Seeking disconfirming evidence, testing against cases that could falsify the conclusion and using an independent reviewer all widen the search. More confirming evidence and a stake in closing make the bias worse.",
+        "concepts": [
+          "c-confirmation-bias",
+          "c-motivated-reasoning"
+        ],
+        "domain": "behavioral-science",
+        "lesson": "w01-l2"
+      },
+      {
+        "difficulty": "core",
+        "points": 1,
+        "id": "w01-q05",
+        "type": "research",
+        "prompt": "What is the most defensible conclusion from this (fictional) summary?",
+        "stimulus": [
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "Fictional summary: “A multi-site replication project ran the same 12 judgment effects in 30 labs in nine countries, with a pre-registered analysis. Nine effects replicated in nearly every lab, with similar sizes across countries and between online and in-person samples. Three effects were close to zero everywhere. Variation between effects was far larger than variation between labs.”"
+          }
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "Psychology’s findings are unreliable, so none of the twelve effects should inform management practice."
+          },
+          {
+            "id": "b",
+            "text": "Whether an effect replicates depends mainly on the effect itself rather than on where it is tested; the nine robust effects are reasonable foundations, while the three should not be relied on."
+          },
+          {
+            "id": "c",
+            "text": "The three null effects probably exist but were masked by differences between countries."
+          },
+          {
+            "id": "d",
+            "text": "All twelve effects are now proven to work in organizations."
+          }
+        ],
+        "answer": "b",
+        "explanation": "The pattern mirrors the real Many Labs result: replicability varied by effect, not by setting. Robust laboratory effects are reasonable foundations; their size in organizations is a separate question, and null effects should not be rescued by appeals to hidden moderators the data do not show.",
+        "optionFeedback": {
+          "a": "Overcorrection: the study shows most effects were robust.",
+          "c": "The summary reports small variation between labs, which argues against masking by setting.",
+          "d": "Laboratory replication does not establish organizational effects or their size."
+        },
+        "errorTags": {
+          "a": "overcorrection",
+          "c": "hidden-moderator-rescue",
+          "d": "overgeneralizes-lab-to-field"
+        },
+        "concepts": [
+          "c-heuristics-biases"
+        ],
+        "domain": "statistical-reasoning",
+        "lesson": "w01-l2"
+      },
+      {
+        "difficulty": "core",
+        "points": 1,
+        "id": "w01-q06",
+        "type": "numeric",
+        "prompt": "A project manager forecasts five milestones: 90% (hit), 90% (missed), 80% (hit), 70% (missed), 60% (hit). What is the average Brier score? Give three decimal places.",
+        "answer": {
+          "value": 0.302,
+          "tolerance": 0.002
+        },
+        "working": "Hits: (0.9 − 1)² = 0.01; (0.8 − 1)² = 0.04; (0.6 − 1)² = 0.16. Misses: (0.9 − 0)² = 0.81; (0.7 − 0)² = 0.49. Sum = 1.51; average = 1.51 / 5 = 0.302.",
+        "explanation": "Square each gap between the stated probability and the outcome and average. Two confident misses dominate the score, which is worse than the 0.25 earned by always saying 50%.",
+        "concepts": [
+          "c-brier-score"
+        ],
+        "domain": "statistical-reasoning",
+        "lesson": "w01-l3"
+      },
+      {
+        "difficulty": "core",
+        "points": 1,
+        "id": "w01-q07",
+        "type": "decision",
+        "prompt": "Your leadership team gives point estimates for every forecast and is almost always surprised by outcomes. You want to improve calibration within a year without a large program. What is the best next move?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Send the team to a workshop on cognitive biases."
+          },
+          {
+            "id": "b",
+            "text": "Require every significant forecast to be stated as a probability or a range with a resolve-by date, recorded, and scored in a quarterly review against outcomes."
+          },
+          {
+            "id": "c",
+            "text": "Hire an external forecasting firm to replace internal forecasts."
+          },
+          {
+            "id": "d",
+            "text": "Ask everyone to be more humble in meetings."
+          }
+        ],
+        "answer": "b",
+        "explanation": "Calibration improves with explicit probabilities, records and feedback; scoring forecasts creates the feedback loop that the environment otherwise lacks. Brief probabilistic training helped in the forecasting tournament, but awareness alone rarely changes behavior.",
+        "optionFeedback": {
+          "a": "Awareness of biases does not reliably reduce them; without feedback, nothing tells the team how calibrated it is.",
+          "c": "Outsourcing may help some forecasts but does not build the team’s judgment or a record.",
+          "d": "Exhortation without measurement does not change calibration."
+        },
+        "errorTags": {
+          "a": "awareness-as-debiasing",
+          "d": "awareness-as-debiasing"
+        },
+        "concepts": [
+          "c-calibration",
+          "c-overconfidence"
+        ],
+        "domain": "leadership-judgment",
+        "lesson": "w01-l3"
+      },
+      {
+        "difficulty": "stretch",
+        "points": 1,
+        "id": "w01-q08",
+        "type": "rank",
+        "prompt": "A city must forecast how long a new light-rail line will take to build. Rank these approaches from most to least likely to produce a well-calibrated forecast.",
+        "options": [
+          {
+            "id": "a",
+            "text": "The project engineers’ detailed schedule, presented as a single completion date."
+          },
+          {
+            "id": "b",
+            "text": "The distribution of actual-versus-planned durations for comparable rail projects, adjusted modestly for verified features of this one, presented as a range."
+          },
+          {
+            "id": "c",
+            "text": "The mayor’s public commitment date."
+          },
+          {
+            "id": "d",
+            "text": "The engineers’ detailed schedule presented as a range they consider 80% likely."
+          }
+        ],
+        "answer": [
+          "b",
+          "d",
+          "a",
+          "c"
+        ],
+        "explanation": "The outside view anchored on a reference class, then adjusted, is best. An inside-view range at least acknowledges uncertainty; a single inside-view date is overprecise; a political commitment adds motivated optimism.",
+        "concepts": [
+          "c-reference-class-forecasting",
+          "c-overconfidence"
+        ],
+        "domain": "leadership-judgment",
+        "lesson": "w01-l3"
+      },
+      {
+        "difficulty": "core",
+        "points": 1,
+        "id": "w01-q09",
+        "type": "scenario",
+        "prompt": "What is the most useful first step for the firm?",
+        "stimulus": [
+          {
+            "type": "p",
+            "kind": "original",
+            "text": "A fictional consulting firm’s partners rate associates on a 1–5 scale each year. Associates complain that ratings depend on which partner they worked for. The managing partner believes the partners are excellent judges and that complaints reflect sour grapes."
+          }
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "Replace ratings with a fully automated productivity metric."
+          },
+          {
+            "id": "b",
+            "text": "Run a noise audit: have several partners independently rate the same set of anonymized associate files, then measure the spread and each partner’s average relative to the group."
+          },
+          {
+            "id": "c",
+            "text": "Tell associates that ratings are final and cannot be discussed."
+          },
+          {
+            "id": "d",
+            "text": "Ask each partner whether they think they are fair."
+          }
+        ],
+        "answer": "b",
+        "explanation": "Whether ratings depend on the rater is an empirical question a noise audit answers without needing to know the right ratings. It separates level noise (harsh versus lenient partners) from pattern noise and gives the firm evidence before it changes anything.",
+        "optionFeedback": {
+          "a": "A metric may be gamed and embed its own biases; the firm does not yet know how large the noise is.",
+          "c": "This ignores a measurable problem.",
+          "d": "Self-assessment of fairness is exactly what motivated reasoning and confidence make unreliable."
+        },
+        "errorTags": {
+          "a": "premature-solution",
+          "d": "confidence-as-evidence"
+        },
+        "concepts": [
+          "c-noise",
+          "c-decision-hygiene"
+        ],
+        "domain": "organizational-behavior",
+        "lesson": "w01-l4"
+      },
+      {
+        "difficulty": "core",
+        "points": 1,
+        "id": "w01-q10",
+        "type": "mc",
+        "prompt": "Which description best captures intellectual humility as defined in recent research reviews?",
+        "options": [
+          {
+            "id": "a",
+            "text": "A low opinion of one’s own abilities."
+          },
+          {
+            "id": "b",
+            "text": "Deferring to the most senior expert in the room."
+          },
+          {
+            "id": "c",
+            "text": "A metacognitive recognition that one’s beliefs and knowledge have limits and might be wrong, shown in proportional updating."
+          },
+          {
+            "id": "d",
+            "text": "Avoiding firm decisions until all uncertainty is resolved."
+          }
+        ],
+        "answer": "c",
+        "explanation": "Porter and colleagues identify the common core as recognizing the limits of one’s beliefs and knowledge. It is about how you hold beliefs, not low self-regard, deference or indecision.",
+        "optionFeedback": {
+          "a": "Humility about beliefs is distinct from low self-esteem.",
+          "b": "Deference substitutes someone else’s certainty for your own; it is not recognition of limits.",
+          "d": "Humble decision-makers still commit; they hold the underlying estimate open to revision."
+        },
+        "concepts": [
+          "c-intellectual-humility"
+        ],
+        "domain": "leadership-judgment",
+        "lesson": "w01-l4"
+      },
+      {
+        "difficulty": "stretch",
+        "points": 6,
+        "id": "w01-q11",
+        "type": "short",
+        "prompt": "Choose one recurring judgment in your professional life (for example rating people, approving budgets or evaluating players). In 150–250 words, (1) say whether it sits in a high- or low-validity environment and how much feedback you receive, (2) identify the bias or noise most likely to affect it, and (3) propose two specific decision-hygiene or calibration practices you could introduce, with one risk of each.",
+        "modelAnswer": "Example: annual budget requests from department heads. The environment is moderately valid — past spending predicts future needs — but feedback on my approvals is slow and confounded, since I rarely compare what a program delivered with what its budget assumed. The most likely problems are anchoring on last year’s figure and the request itself, and level noise between me and my co-approver, who is consistently more generous. Practice 1: each approver scores each request independently on separate dimensions (strategic fit, evidence of results, cost realism) before we meet, and we discuss only large disagreements. Risk: it adds time and may feel bureaucratic to department heads. Practice 2: every approved request includes two forecasts with probabilities and resolve-by dates (for example, “70% that the program reaches 500 participants by 30 June”), reviewed at the next cycle. Risk: department heads may forecast only safe outcomes, so the approvers must choose the forecasts that matter.",
+        "rubric": [
+          {
+            "criterion": "Environment and feedback correctly analyzed using the conditions for intuitive expertise",
+            "points": 2,
+            "levels": [
+              "0 — not addressed or confused",
+              "1 — partly addressed",
+              "2 — clear and accurate"
+            ]
+          },
+          {
+            "criterion": "A plausible, specific bias or noise type identified",
+            "points": 2,
+            "levels": [
+              "0 — none or generic",
+              "1 — named but not linked to the judgment",
+              "2 — specific and well argued"
+            ]
+          },
+          {
+            "criterion": "Two concrete practices, each with a realistic risk",
+            "points": 2,
+            "levels": [
+              "0 — vague exhortations",
+              "1 — one concrete practice or risks missing",
+              "2 — two concrete practices with risks"
+            ]
+          }
+        ],
+        "concepts": [
+          "c-decision-hygiene",
+          "c-intuitive-expertise",
+          "c-calibration"
+        ],
+        "domain": "leadership-judgment",
+        "lesson": "w01-l4"
+      }
+    ],
+    "reserve": [
+      {
+        "difficulty": "core",
+        "points": 1,
+        "id": "w01-rs1",
+        "type": "mc",
+        "prompt": "Which pair of conditions do Kahneman and Klein require before an intuitive judgment deserves trust?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Long experience and high confidence."
+          },
+          {
+            "id": "b",
+            "text": "A high-validity environment and an adequate opportunity to learn it through practice with timely, clear feedback."
+          },
+          {
+            "id": "c",
+            "text": "A clear explanation of the reasoning and agreement from peers."
+          },
+          {
+            "id": "d",
+            "text": "High stakes and personal responsibility for the outcome."
+          }
+        ],
+        "answer": "b",
+        "explanation": "The two conditions are environmental validity and the opportunity to learn it. Confidence is explicitly not a reliable indicator, and experience without feedback does not create skill.",
+        "optionFeedback": {
+          "a": "Confidence is not evidence of accuracy, and experience is insufficient without feedback.",
+          "c": "Skilled intuitions are often hard to explain, and peers can share the same errors.",
+          "d": "Stakes motivate effort but do not create learnable regularities or feedback."
+        },
+        "concepts": [
+          "c-intuitive-expertise"
+        ],
+        "domain": "behavioral-science",
+        "lesson": "w01-l1"
+      },
+      {
+        "difficulty": "core",
+        "points": 1,
+        "id": "w01-rs2",
+        "type": "numeric",
+        "prompt": "A security screening system flags 99% of genuine threats and 2% of harmless items. One item in 10,000 is a genuine threat. Of flagged items, what percentage are genuine threats? Round to one decimal place.",
+        "answer": {
+          "value": 0.5,
+          "tolerance": 0.1,
+          "unit": "%"
+        },
+        "working": "Use 1,000,000 items: 100 threats, 99 flagged. 999,900 harmless, about 19,998 flagged. Share genuine: 99 / (99 + 19,998) ≈ 0.49%, about 0.5%.",
+        "explanation": "With a very low base rate, almost all flags are false alarms even for a highly sensitive system. Natural frequencies make the denominator visible.",
+        "concepts": [
+          "c-base-rate-neglect"
+        ],
+        "domain": "statistical-reasoning",
+        "lesson": "w01-l2"
+      },
+      {
+        "difficulty": "core",
+        "points": 1,
+        "id": "w01-rs3",
+        "type": "mc",
+        "prompt": "A forecaster’s 90% intervals contain the true value 55% of the time, with misses evenly above and below. Which description fits best?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Overestimation"
+          },
+          {
+            "id": "b",
+            "text": "Overplacement"
+          },
+          {
+            "id": "c",
+            "text": "Overprecision"
+          },
+          {
+            "id": "d",
+            "text": "Good calibration with bad luck"
+          }
+        ],
+        "answer": "c",
+        "explanation": "Intervals that capture the truth far less often than stated are too narrow: overprecision, the most persistent form of overconfidence in Moore and Healy’s taxonomy.",
+        "optionFeedback": {
+          "a": "Overestimation would show as a directional error, not symmetric misses.",
+          "b": "Overplacement concerns comparison with others.",
+          "d": "Over many intervals, 55% versus 90% is far beyond what luck explains."
+        },
+        "concepts": [
+          "c-overconfidence"
+        ],
+        "domain": "statistical-reasoning",
+        "lesson": "w01-l3"
+      },
+      {
+        "difficulty": "core",
+        "points": 1,
+        "id": "w01-rs4",
+        "type": "multi",
+        "prompt": "Which practices are decision hygiene for a hiring panel? Select all that apply.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Each interviewer scores separate competencies independently before the debrief."
+          },
+          {
+            "id": "b",
+            "text": "Interviewers read the referral note from the CEO before interviewing."
+          },
+          {
+            "id": "c",
+            "text": "Scores are averaged and the spread is shown before discussion."
+          },
+          {
+            "id": "d",
+            "text": "The hiring manager states a preferred candidate at the start of the debrief."
+          },
+          {
+            "id": "e",
+            "text": "Interviews follow a common structure with the same questions for every candidate."
+          }
+        ],
+        "answer": [
+          "a",
+          "c",
+          "e"
+        ],
+        "explanation": "Independent, structured, aggregated judgments reduce noise and anchoring. Exposure to a powerful endorsement or a stated preference before judging correlates errors and anchors the panel.",
+        "concepts": [
+          "c-decision-hygiene",
+          "c-noise"
+        ],
+        "domain": "organizational-behavior",
+        "lesson": "w01-l4"
+      }
+    ]
+  },
+  "assignment": {
+    "id": "w01-as",
+    "title": "Decision Journal Template",
+    "minutes": 75,
+    "brief": [
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "This week you build the tool you will use for the rest of the semester: a personal decision journal for important professional decisions. A decision journal is a dated, contemporaneous record of what you decided, what you knew and assumed, what alternatives you considered, and what you predicted — written before the outcome is known, then reviewed after. It is the practical answer to three problems from this week: overconfidence (you cannot see your calibration without a record), outcome bias (you cannot judge process later without knowing what you knew then), and motivated reasoning (a record made in advance is harder to rewrite)."
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "Your template should use the same fields as APERTURE’s Strategic Decision Journal, so that your entries can be kept there and your resolved forecasts can feed its Brier score and calibration table. Adapt the guidance and prompts under each field to your own work; that adaptation is the substance of the assignment."
+      },
+      {
+        "type": "list",
+        "kind": "original",
+        "ordered": false,
+        "items": [
+          "Part 1 — the template: for each field below, write a one- or two-sentence instruction to yourself that makes the field hard to fill in carelessly (for example, under “What would change my mind”, require at least one observable signal and a date).",
+          "Part 2 — a first entry: use the template on one real, current decision that is **not confidential** — a personal professional choice, a public decision you are following, or a disguised version with every identifying detail removed. Include at least three forecasts with probabilities and resolve-by dates.",
+          "Part 3 — a short note (about 150 words) on how and when you will review entries: the review date rule, and how you will judge process separately from outcome."
+        ]
+      },
+      {
+        "type": "p",
+        "kind": "original",
+        "text": "Privacy and confidentiality: never record confidential employer information, non-public player or personnel information, or anything you would not be comfortable seeing outside your organization. When in doubt, choose a different decision or disguise it completely."
+      },
+      {
+        "type": "p",
+        "kind": "application",
+        "text": "Professional application: many recurring decisions in player development — promotion timing, assignment of development resources, changes to a player’s plan — are ideal for a decision journal because they resolve within months and can be scored. You may design field prompts with such decisions in mind, but your first entry must still meet the confidentiality rule above."
+      }
+    ],
+    "deliverable": "A decision-journal template with field-by-field guidance, one completed non-confidential entry with at least three dated probability forecasts, and a short review plan.",
+    "words": [
+      700,
+      1200
+    ],
+    "template": [
+      {
+        "heading": "Decision and context",
+        "guidance": "State the decision in one sentence as a choice, the date, and the essential context: what prompted it, the deadline, who else is involved, and what you know and do not know."
+      },
+      {
+        "heading": "Options considered",
+        "guidance": "List at least three genuine options, including doing nothing or delaying. For each, note the main argument for and against."
+      },
+      {
+        "heading": "Choice and rationale",
+        "guidance": "State the option chosen and why, in a few sentences. Note your confidence that it is the best option (as a probability) and the reference class or base rate you used, if any."
+      },
+      {
+        "heading": "Key assumptions",
+        "guidance": "List the three to five assumptions that would most change the decision if they were wrong. Mark which are verified and which are guesses."
+      },
+      {
+        "heading": "What would change my mind",
+        "guidance": "Name observable signals, with dates, that would lead you to reverse or revise the decision. Avoid signals that can only be interpreted in your favor."
+      },
+      {
+        "heading": "Forecasts",
+        "guidance": "Write at least three resolvable forecasts: the outcome, your probability, and a resolve-by date. Make them specific enough that a stranger could score them."
+      },
+      {
+        "heading": "Review date and later fields",
+        "guidance": "Set the review date. Leave space for what happened, how each forecast resolved, a process-versus-outcome assessment (sound or poor process; good or bad outcome) and lessons."
+      },
+      {
+        "heading": "Review plan",
+        "guidance": "Explain how often you will review entries, how you will compute your calibration, and how you will avoid rewriting entries after the fact."
+      }
+    ],
+    "rubric": [
+      {
+        "id": "r1",
+        "criterion": "Completeness and fit with the Strategic Decision Journal fields",
+        "weight": 15,
+        "levels": [
+          {
+            "score": 4,
+            "label": "Exemplary",
+            "descriptor": "Every field present, with guidance tailored to the learner’s actual decisions."
+          },
+          {
+            "score": 3,
+            "label": "Proficient",
+            "descriptor": "All fields present; guidance mostly specific."
+          },
+          {
+            "score": 2,
+            "label": "Developing",
+            "descriptor": "Some fields missing or guidance generic."
+          },
+          {
+            "score": 1,
+            "label": "Beginning",
+            "descriptor": "Template incomplete or a copy of the headings without guidance."
+          }
+        ]
+      },
+      {
+        "id": "r2",
+        "criterion": "Quality of forecasts (specific, resolvable, probabilistic, dated)",
+        "weight": 25,
+        "levels": [
+          {
+            "score": 4,
+            "label": "Exemplary",
+            "descriptor": "Three or more forecasts a stranger could score, with probabilities that show real discrimination and sensible dates."
+          },
+          {
+            "score": 3,
+            "label": "Proficient",
+            "descriptor": "Three scoreable forecasts with probabilities and dates; minor vagueness."
+          },
+          {
+            "score": 2,
+            "label": "Developing",
+            "descriptor": "Forecasts vague, missing probabilities or dates, or all near-certain."
+          },
+          {
+            "score": 1,
+            "label": "Beginning",
+            "descriptor": "No genuine forecasts."
+          }
+        ]
+      },
+      {
+        "id": "r3",
+        "criterion": "Assumptions and change-my-mind signals",
+        "weight": 20,
+        "levels": [
+          {
+            "score": 4,
+            "label": "Exemplary",
+            "descriptor": "The assumptions that matter most are identified and graded; signals are observable, dated and capable of cutting against the choice."
+          },
+          {
+            "score": 3,
+            "label": "Proficient",
+            "descriptor": "Relevant assumptions and at least one usable signal."
+          },
+          {
+            "score": 2,
+            "label": "Developing",
+            "descriptor": "Assumptions generic; signals unobservable or only confirmatory."
+          },
+          {
+            "score": 1,
+            "label": "Beginning",
+            "descriptor": "Not addressed."
+          }
+        ]
+      },
+      {
+        "id": "r4",
+        "criterion": "Use of the week’s concepts (base rates, overprecision, motivated reasoning, noise, outcome bias)",
+        "weight": 20,
+        "levels": [
+          {
+            "score": 4,
+            "label": "Exemplary",
+            "descriptor": "The template’s design visibly counters specific errors from the week, with a reference class used in the entry."
+          },
+          {
+            "score": 3,
+            "label": "Proficient",
+            "descriptor": "Several concepts applied correctly."
+          },
+          {
+            "score": 2,
+            "label": "Developing",
+            "descriptor": "Concepts mentioned but not built into the design."
+          },
+          {
+            "score": 1,
+            "label": "Beginning",
+            "descriptor": "No visible link to the week’s ideas."
+          }
+        ]
+      },
+      {
+        "id": "r5",
+        "criterion": "Review plan and process-versus-outcome discipline",
+        "weight": 10,
+        "levels": [
+          {
+            "score": 4,
+            "label": "Exemplary",
+            "descriptor": "Concrete review cadence, calibration method and safeguards against rewriting history."
+          },
+          {
+            "score": 3,
+            "label": "Proficient",
+            "descriptor": "Clear review plan with a process-versus-outcome step."
+          },
+          {
+            "score": 2,
+            "label": "Developing",
+            "descriptor": "Review plan vague."
+          },
+          {
+            "score": 1,
+            "label": "Beginning",
+            "descriptor": "No review plan."
+          }
+        ]
+      },
+      {
+        "id": "r6",
+        "criterion": "Confidentiality and clarity",
+        "weight": 10,
+        "levels": [
+          {
+            "score": 4,
+            "label": "Exemplary",
+            "descriptor": "Entry is clearly non-confidential or fully disguised; writing is concise and precise."
+          },
+          {
+            "score": 3,
+            "label": "Proficient",
+            "descriptor": "Non-confidential; clear."
+          },
+          {
+            "score": 2,
+            "label": "Developing",
+            "descriptor": "Some identifying or sensitive detail, or unclear writing."
+          },
+          {
+            "score": 1,
+            "label": "Beginning",
+            "descriptor": "Contains confidential information or is hard to follow."
+          }
+        ]
+      }
+    ],
+    "checks": [
+      "words",
+      "sections"
+    ]
+  },
+  "reflection": {
+    "minutes": 15,
+    "prompts": [
+      "Think of a judgment you make with great confidence at work. Does it sit in an environment where you have had many repetitions with clear, timely feedback? If not, what has your confidence been built on?",
+      "Recall a time you changed your mind about something important. What evidence did it take, and was the size of your update proportional to it?",
+      "Which decision do you most want to judge by its outcome rather than its process? What would a contemporaneous record of it have shown?",
+      "After the Judgment Lab: where were you overconfident, and what one habit will you change in how you state ranges and probabilities?"
+    ]
+  },
+  "review": [
+    {
+      "id": "w01-sr01",
+      "front": "How do Evans and Stanovich define Type 2 processing?",
+      "back": "By its reliance on working memory and its support for hypothetical thinking (cognitive decoupling) — not by being slow, conscious or correct.",
+      "concept": "c-dual-process",
+      "lesson": "w01-l1"
+    },
+    {
+      "id": "w01-sr02",
+      "front": "What is Melnikoff and Bargh’s main objection to dual-process theory?",
+      "back": "The features said to define each type (intentional, controllable, efficient, conscious and their opposites) often do not travel together, so two bins misdescribe mental processes.",
+      "concept": "c-dual-process",
+      "lesson": "w01-l1"
+    },
+    {
+      "id": "w01-sr03",
+      "front": "When can an intuition be trusted, according to Kahneman and Klein?",
+      "back": "When the environment has high validity and the person has had an adequate opportunity to learn it through practice with timely, clear feedback.",
+      "concept": "c-intuitive-expertise",
+      "lesson": "w01-l1"
+    },
+    {
+      "id": "w01-sr04",
+      "front": "Is subjective confidence evidence of accuracy?",
+      "back": "Not reliably. Confidence comes from the coherence of a story and is felt as strongly in low-validity environments.",
+      "concept": "c-intuitive-expertise",
+      "lesson": "w01-l1"
+    },
+    {
+      "id": "w01-sr05",
+      "front": "Name the three heuristics in Tversky and Kahneman (1974).",
+      "back": "Representativeness, availability, and anchoring and adjustment.",
+      "concept": "c-heuristics-biases",
+      "lesson": "w01-l2"
+    },
+    {
+      "id": "w01-sr06",
+      "front": "How do natural frequencies help with base-rate problems?",
+      "back": "Counting cases from one reference population (e.g., of 1,000 people) makes the denominator of positives visible, so Bayesian answers become much easier.",
+      "concept": "c-bayes-rule",
+      "lesson": "w01-l2"
+    },
+    {
+      "id": "w01-sr07",
+      "front": "Confirmation bias vs. motivated reasoning?",
+      "back": "Confirmation bias: searching and interpreting evidence partial to an existing hypothesis, even without a stake. Motivated reasoning: a directional goal steers reasoning toward a preferred conclusion, constrained by the need for a justification.",
+      "concept": "c-motivated-reasoning",
+      "lesson": "w01-l2"
+    },
+    {
+      "id": "w01-sr08",
+      "front": "What did Many Labs (Klein et al., 2014) find?",
+      "back": "Of 13 effects in 36 samples, ten replicated consistently (including anchoring), one weakly, two priming effects not at all; variation was mostly between effects, not labs.",
+      "concept": "c-heuristics-biases",
+      "lesson": "w01-l2"
+    },
+    {
+      "id": "w01-sr09",
+      "front": "What is ecological rationality?",
+      "back": "The degree to which a heuristic fits the structure of its environment; under small samples and high uncertainty, simple rules can beat complex models.",
+      "concept": "c-ecological-rationality",
+      "lesson": "w01-l2"
+    },
+    {
+      "id": "w01-sr10",
+      "front": "Three forms of overconfidence (Moore & Healy)?",
+      "back": "Overestimation (of your performance), overplacement (relative to others), overprecision (ranges too narrow). Overprecision is the most persistent.",
+      "concept": "c-overconfidence",
+      "lesson": "w01-l3"
+    },
+    {
+      "id": "w01-sr11",
+      "front": "How do you compute a Brier score, and what does 0.25 mean?",
+      "back": "Average (p − outcome)² across forecasts. 0.25 is what always saying 50% earns; lower is better.",
+      "concept": "c-brier-score",
+      "lesson": "w01-l3"
+    },
+    {
+      "id": "w01-sr12",
+      "front": "Calibration vs. discrimination?",
+      "back": "Calibration: your 70% happens about 70% of the time. Discrimination: higher probabilities for events that happen than for those that do not.",
+      "concept": "c-calibration",
+      "lesson": "w01-l3"
+    },
+    {
+      "id": "w01-sr13",
+      "front": "Order of steps in a disciplined forecast?",
+      "back": "Resolvable question → outside view (base rate) → decompose → adjust modestly for verified differences → record probability and date → score.",
+      "concept": "c-reference-class-forecasting",
+      "lesson": "w01-l3"
+    },
+    {
+      "id": "w01-sr14",
+      "front": "Level, pattern and occasion noise?",
+      "back": "Level: some judges are harsher overall. Pattern: judges react differently to particular cases. Occasion: the same judge varies over time.",
+      "concept": "c-noise",
+      "lesson": "w01-l4"
+    },
+    {
+      "id": "w01-sr15",
+      "front": "Name four decision-hygiene practices.",
+      "back": "Independent judgments then aggregation; structured, separately scored assessments; sequencing information; relative scales; the outside view.",
+      "concept": "c-decision-hygiene",
+      "lesson": "w01-l4"
+    },
+    {
+      "id": "w01-sr16",
+      "front": "What is the common core of intellectual humility?",
+      "back": "A metacognitive recognition of the limits of one’s beliefs and knowledge — shown in proportional updating — not low self-regard or indecision.",
+      "concept": "c-intellectual-humility",
+      "lesson": "w01-l4"
+    }
+  ],
+  "preview": {
+    "text": "This week’s tools recur throughout the semester. Week 2 moves from individual judgment to the situations, incentives and norms that shape behavior. Week 4 extends base rates and calibration into research literacy and causal inference. Week 7 returns to anchoring in negotiation, Week 10 to the outside view in valuation, and Week 14 to outcome bias, after-action reviews and the decision journal you start now.",
+    "links": [
+      {
+        "week": 2,
+        "why": "Situational and incentive explanations of behavior."
+      },
+      {
+        "week": 4,
+        "why": "Base rates, replication and causal inference in research."
+      },
+      {
+        "week": 10,
+        "why": "Reference-class forecasting and scenarios in valuation."
+      },
+      {
+        "week": 14,
+        "why": "Outcome bias, after-action reviews and reviewing your decision journal."
+      }
+    ]
+  }
+}

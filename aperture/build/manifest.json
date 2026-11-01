@@ -2,14 +2,14 @@
   "generated": "2026-11-01",
   "method": "Metadata verified through web-search results on the date shown per record. The build environment could not open pages, so every link is flagged link-untested until checked in a browser.",
   "totals": {
-    "resources": 166,
-    "metadataConfirmed": 145,
-    "partiallyConfirmed": 21,
+    "resources": 178,
+    "metadataConfirmed": 155,
+    "partiallyConfirmed": 23,
     "unverified": 0,
-    "linkUntested": 166,
-    "open": 58,
-    "restricted": 93,
-    "contested": 90,
+    "linkUntested": 178,
+    "open": 62,
+    "restricted": 101,
+    "contested": 96,
     "uncited": 0
   },
   "records": [
@@ -143,7 +143,7 @@
       "doi": "10.1126/science.185.4157.1124",
       "status": "metadata-confirmed",
       "verifiedOn": "2026-11-01",
-      "evidence": "Title, authors, Science 185(4157) 1124–1131, year and DOI matched on pubmed.ncbi.nlm.nih.gov.",
+      "evidence": "Title, authors, journal, volume 185(4157), pages 1124–1131, date (27 September 1974) and DOI matched on pubmed.ncbi.nlm.nih.gov (PMID 17835457).",
       "access": "paywalled",
       "license": "© AAAS. Linked, not reproduced.",
       "flags": [
@@ -152,6 +152,8 @@
         "contested"
       ],
       "citedIn": [
+        "w01",
+        "w01-l2",
         "w04-l1"
       ]
     },
@@ -303,6 +305,27 @@
         "w03-l3",
         "w05",
         "w05-l3"
+      ]
+    },
+    {
+      "id": "R-mellers-2014-psychological",
+      "title": "Psychological Strategies for Winning a Geopolitical Forecasting Tournament",
+      "year": 2014,
+      "url": "https://doi.org/10.1177/0956797614524255",
+      "doi": "10.1177/0956797614524255",
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, first author, journal, volume 25(5), pages 1106–1115 and DOI matched on psychologicalscience.org and escholarship.org (which hosts an open copy). The full co-author list was not displayed in the results and is given from the published byline as known; check the order against the journal.",
+      "access": "open",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested"
+      ],
+      "citedIn": [
+        "w01",
+        "w01-l3",
+        "w01-l4"
       ]
     },
     {
@@ -631,6 +654,50 @@
       ]
     },
     {
+      "id": "R-kahneman-2009-conditions",
+      "title": "Conditions for Intuitive Expertise: A Failure to Disagree",
+      "year": 2009,
+      "url": "https://doi.org/10.1037/a0016755",
+      "doi": "10.1037/a0016755",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, both authors, journal, volume 64(6), pages 515–526 and DOI 10.1037/a0016755 matched on pubmed.ncbi.nlm.nih.gov (PMID 19739881) and bibbase.org.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w01",
+        "w01-l1",
+        "w01-l3"
+      ]
+    },
+    {
+      "id": "R-kahneman-2021-noise",
+      "title": "Noise: A Flaw in Human Judgment",
+      "year": 2021,
+      "url": "https://www.hachettebookgroup.com/titles/daniel-kahneman/noise/9780316451383/",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, three authors, publisher (Little, Brown Spark) and May 2021 publication matched on hachettebookgroup.com and multiple library catalogs.",
+      "access": "purchase",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w01",
+        "w01-l3",
+        "w01-l4"
+      ]
+    },
+    {
       "id": "R-gilbert-2016-comment",
       "title": "Comment on “Estimating the reproducibility of psychological science”",
       "year": 2016,
@@ -725,6 +792,26 @@
       ],
       "citedIn": [
         "capstone"
+      ]
+    },
+    {
+      "id": "R-melnikoff-2018-mythical",
+      "title": "The Mythical Number Two",
+      "year": 2018,
+      "url": "https://doi.org/10.1016/j.tics.2018.02.001",
+      "doi": "10.1016/j.tics.2018.02.001",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, both authors, journal, volume 22(4), pages 280–293 and DOI 10.1016/j.tics.2018.02.001 matched on the Yale ACME lab publications page and library catalog records (katalog.lib.cas.cz).",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w01-l1"
       ]
     },
     {
@@ -863,6 +950,25 @@
       ],
       "citedIn": [
         "capstone"
+      ]
+    },
+    {
+      "id": "R-moore-2008-trouble",
+      "title": "The Trouble with Overconfidence",
+      "year": 2008,
+      "url": "https://doi.org/10.1037/0033-295X.115.2.502",
+      "doi": "10.1037/0033-295X.115.2.502",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, both authors, journal, volume 115(2), pages 502–517 and DOI matched on pubmed.ncbi.nlm.nih.gov (PMID 18426301); an author copy is hosted on asc.ohio-state.edu.",
+      "access": "open",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested"
+      ],
+      "citedIn": [
+        "w01",
+        "w01-l3"
       ]
     },
     {
@@ -1083,6 +1189,47 @@
       "citedIn": [
         "w06",
         "w06-l4"
+      ]
+    },
+    {
+      "id": "R-gigerenzer-1995-improve",
+      "title": "How to Improve Bayesian Reasoning without Instruction: Frequency Formats",
+      "year": 1995,
+      "url": "https://doi.org/10.1037/0033-295X.102.4.684",
+      "doi": "10.1037/0033-295X.102.4.684",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, both authors, journal, volume 102(4), pages 684–704 and DOI matched on serval.unil.ch, a pages.ucsd.edu course copy and causeweb.org.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w01-l2"
+      ]
+    },
+    {
+      "id": "R-gigerenzer-2011-heuristic",
+      "title": "Heuristic Decision Making",
+      "year": 2011,
+      "url": "https://doi.org/10.1146/annurev-psych-120709-145346",
+      "doi": "10.1146/annurev-psych-120709-145346",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, both authors, journal, volume 62, pages 451–482 and DOI matched on the Max Planck Institute for Human Development publications page (mpib-berlin.mpg.de) and kops.uni-konstanz.de.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w01",
+        "w01-l2"
       ]
     },
     {
@@ -1740,6 +1887,27 @@
       "citedIn": [
         "w14",
         "w14-l4"
+      ]
+    },
+    {
+      "id": "R-evans-2013-dual-process",
+      "title": "Dual-Process Theories of Higher Cognition: Advancing the Debate",
+      "year": 2013,
+      "url": "https://doi.org/10.1177/1745691612460685",
+      "doi": "10.1177/1745691612460685",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, both authors, journal, volume 8(3), pages 223–241 and DOI 10.1177/1745691612460685 matched on researchportal.plymouth.ac.uk and library catalog records.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "w01",
+        "w01-l1"
       ]
     },
     {
@@ -2718,6 +2886,25 @@
       ]
     },
     {
+      "id": "R-nickerson-1998-confirmation",
+      "title": "Confirmation Bias: A Ubiquitous Phenomenon in Many Guises",
+      "year": 1998,
+      "url": "https://doi.org/10.1037/1089-2680.2.2.175",
+      "doi": "10.1037/1089-2680.2.2.175",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, author, journal, volume 2(2), pages 175–220 matched on a pages.ucsd.edu copy of the article’s first page and cir.nii.ac.jp; DOI prefix 10.1037 (APA) consistent with the APA copyright line.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "w01-l2"
+      ]
+    },
+    {
       "id": "R-jones-2016-effectiveness",
       "title": "The Effectiveness of Workplace Coaching: A Meta-Analysis of Learning and Performance Outcomes from Coaching",
       "year": 2016,
@@ -2735,6 +2922,25 @@
       "citedIn": [
         "w05",
         "w05-l3"
+      ]
+    },
+    {
+      "id": "R-klein-2014-investigating",
+      "title": "Investigating Variation in Replicability: A “Many Labs” Replication Project",
+      "year": 2014,
+      "url": "https://doi.org/10.1027/1864-9335/a000178",
+      "doi": "10.1027/1864-9335/a000178",
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, first author, journal, volume 45(3), pages 142–152 and DOI matched on research.tilburguniversity.edu, pure.psu.edu and a core.ac.uk copy; the very long author list differs slightly across records, so only the first authors are listed here and the order should be checked against the journal.",
+      "access": "open",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested"
+      ],
+      "citedIn": [
+        "w01-l2"
       ]
     },
     {
@@ -3264,6 +3470,25 @@
       ]
     },
     {
+      "id": "R-porter-2022-predictors",
+      "title": "Predictors and Consequences of Intellectual Humility",
+      "year": 2022,
+      "url": "https://doi.org/10.1038/s44159-022-00081-9",
+      "doi": "10.1038/s44159-022-00081-9",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, all six authors, journal, volume 1(9), pages 524–536 and DOI matched on pubmed.gov (PMID 35789951) and pmc.ncbi.nlm.nih.gov (PMC9244574, open copy).",
+      "access": "open",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested"
+      ],
+      "citedIn": [
+        "w01",
+        "w01-l4"
+      ]
+    },
+    {
       "id": "R-judge-2004-transformational",
       "title": "Transformational and Transactional Leadership: A Meta-Analytic Test of Their Relative Validity",
       "year": 2004,
@@ -3387,6 +3612,26 @@
         "w07",
         "w07-l2",
         "w07-l4"
+      ]
+    },
+    {
+      "id": "R-kunda-1990-case",
+      "title": "The Case for Motivated Reasoning",
+      "year": 1990,
+      "url": "https://doi.org/10.1037/0033-2909.108.3.480",
+      "doi": "10.1037/0033-2909.108.3.480",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-01",
+      "evidence": "Title, author, journal, volume 108(3), pages 480–498 and DOI matched on pubmed.ncbi.nlm.nih.gov (PMID 2270237) and a fbaum.unc.edu course copy.",
+      "access": "paywalled",
+      "license": "Copyright holder’s terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "w01-l2",
+        "w01-l4"
       ]
     }
   ]

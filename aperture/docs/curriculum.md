@@ -4,9 +4,38 @@
 
 Generated from the course content by `aperture/tools/docs.mjs`. An independent learning program: no academic credit, accreditation or university affiliation.
 
-**Totals:** 12 weeks · 52 lessons · 95,808 words of lesson instruction · 140 quiz questions (+48 reassessment, 111 comprehension checks) · 32 diagnostic and 0 midterm questions · 188 review cards · 223 glossary terms · 12 original cases · 18 capstone components · 166 library resources · about 84 planned hours.
+**Totals:** 13 weeks · 56 lessons · 102,469 words of lesson instruction · 151 quiz questions (+52 reassessment, 123 comprehension checks) · 32 diagnostic and 0 midterm questions · 204 review cards · 243 glossary terms · 13 original cases · 18 capstone components · 178 library resources · about 91 planned hours.
 
 **Grading:** quizzes 30%, applied assignments 25%, midterm 20%, capstone 25%. Mastery threshold 80%. Open-ended work is self-assessed against published rubrics and labelled so.
+
+## Week 1 — How to Think
+
+*Cognitive Architecture, Judgment & Intellectual Humility* · School of Behavioral & Social Science · School of Business & Leadership · 7 hours
+
+> When should you trust your own judgment — and how would you know if it was wrong?
+
+**Objectives**
+
+- Evaluate when an intuitive judgment deserves trust, using the conditions of environmental validity and opportunity to learn.
+- Identify heuristics, base-rate neglect, confirmation bias and motivated reasoning in professional judgments and design procedural remedies.
+- Compute and interpret Brier scores and calibration tables, and distinguish overestimation, overplacement and overprecision.
+- Build forecasts from reference classes and first-principles decomposition.
+- Diagnose noise in an evaluation system and design decision-hygiene procedures, including a personal decision journal.
+
+**Lessons**
+
+1. **Two Kinds of Thinking? Intuition, Deliberation and When to Trust Your Gut** (45 min) — Dual-process theories describe effortful and automatic thinking; the useful executive question is not which system is better but when an intuition has earned trust.
+2. **Heuristics, Base Rates and the Search for Confirmation** (50 min) — Mental shortcuts are efficient and predictably wrong in specific environments; base-rate neglect, confirmation bias and motivated reasoning are the errors that matter most for evaluation, and they can be reduced by changing formats and procedures.
+3. **Overconfidence, Calibration and Keeping Score** (50 min) — Overconfidence comes in three forms; calibration — saying 70% and being right about 70% of the time — can be measured with proper scores, trained, and built from first principles and reference classes.
+4. **Noise, Decision Hygiene and Intellectual Humility** (45 min) — Judgment errors include random scatter (noise) as well as bias; decision hygiene reduces both, and intellectual humility — recognizing the limits of your knowledge and updating in proportion to evidence — is the habit that sustains it.
+
+**Required reading:** Kahneman et al. (2009), *Conditions for Intuitive Expertise: A Failure to Disagree* — Full article; Tversky et al. (1974), *Judgment under Uncertainty: Heuristics and Biases* — Full article; Moore et al. (2008), *The Trouble with Overconfidence* — Sections defining the three forms of overconfidence and the general discussion (an author copy is freely available)
+
+**Optional reading:** Mellers et al. (2014), *Psychological Strategies for Winning a Geopolitical Forecasting Tournament*; Kahneman et al. (2021), *Noise: A Flaw in Human Judgment*; Gigerenzer et al. (2011), *Heuristic Decision Making*; Evans et al. (2013), *Dual-Process Theories of Higher Cognition: Advancing the Debate*; Porter et al. (2022), *Predictors and Consequences of Intellectual Humility*
+
+**Exercise:** Judgment Lab (calibration engine, 35 min) · **Case:** The Pathway and the Patient (healthcare) · **Quiz:** 11 questions, 9 types · **Assignment:** Decision Journal Template · **Review cards:** 16 · **Glossary:** 20 terms
+
+**Looking ahead:** This week’s tools recur throughout the semester. Week 2 moves from individual judgment to the situations, incentives and norms that shape behavior. Week 4 extends base rates and calibration into research literacy and causal inference. Week 7 returns to anchoring in negotiation, Week 10 to the outside view in valuation, and Week 14 to outcome bias, after-action reviews and the decision journal you start now.
 
 ## Week 2 — Why People Behave the Way They Do
 
