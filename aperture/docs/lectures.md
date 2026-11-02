@@ -32,6 +32,8 @@ current is skipped, so an interrupted batch simply continues.
 3. `APERTURE_TTS_MODEL=… APERTURE_TTS_VOICES=… python3 aperture/tools/narrate.py --all` — renders only
    released lectures that are missing or stale.
 4. `node aperture/tools/compile.mjs` (fails if a released lecture has no current narration), then
+   `node aperture/tools/syllabus.mjs` — the syllabus lists lecture availability, so the PDF must be
+   regenerated (the deploy check fails until it is), then
    `node aperture/tools/lectures.mjs --audit` (exit 0 = every released lecture works and every other
    lesson has a ready script).
 5. Test `#/lesson/<id>/watch` on desktop and phone, commit, deploy.

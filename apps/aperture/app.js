@@ -7,6 +7,7 @@
   const ROUTES = [
     [/^$/, 'home', () => AP.views.home()],
     [/^curriculum$/, 'curriculum', () => AP.views.curriculum()],
+    [/^syllabus(?:\/(w\d{2}))?$/, 'curriculum', (m) => AP.views.syllabus(m[1])],
     [/^week\/(w\d{2})$/, 'curriculum', (m) => AP.views.week(m[1])],
     [/^lesson\/(w\d{2}-l\d)(?:\/(explore|understand|challenge|apply|retain|watch|read))?$/, 'curriculum', (m) => AP.study.lesson(m[1], m[2])],
     [/^case\/([a-z0-9-]+)$/, 'curriculum', (m) => AP.study.caseView(m[1])],

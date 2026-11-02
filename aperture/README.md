@@ -126,6 +126,14 @@ database to any minute in the last 30 days (7 on the Free plan).
 `--binding NAME=value` and a local test token issuer (an `http://127.0.0.1` issuer is accepted
 only for local testing). Keep `.wrangler/` out of git.
 
+## Syllabus
+
+`#/syllabus` (linked from the Curriculum page) and the PDF `apps/aperture/syllabus/APERTURE-Semester-I-Syllabus.pdf`
+are both generated from the curriculum: `compile.mjs` writes `apps/aperture/data/syllabus.json` (model in
+`aperture/tools/syllabus-model.mjs`), and `node aperture/tools/syllabus.mjs` renders the PDF from it (needs
+Playwright's Chromium; `pdftotext` adds page numbers to the contents). `compile.mjs --check` fails if either no
+longer matches the coursework. Details: `aperture/docs/syllabus.md`.
+
 ## Watch & Learn lectures
 
 Optional narrated, interactive lectures that teach an existing lesson (same objectives, sources and

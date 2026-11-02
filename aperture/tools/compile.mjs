@@ -10,7 +10,8 @@ import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync, rmSync
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
-import { buildLectures } from './lectures.mjs';
+import { buildLectures, narrationConfig } from './lectures.mjs';
+import { buildSyllabus, syllabusHash } from './syllabus-model.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const BASE = join(HERE, '..');
@@ -166,6 +167,11 @@ const content = {
 };
 
 const json = JSON.stringify(content);
+// Syllabus (interactive page + PDF) — generated from this bundle so it cannot drift from the coursework.
+const syllabus = buildSyllabus(content, { narration: narrationConfig(BASE) });
+const syllabusJson = JSON.stringify({ ...syllabus, hash: syllabusHash(syllabus) });
+const pdfStampFile = join(PUBLIC, '..', 'syllabus', 'stamp.json');
+const pdfCurrent = existsSync(pdfStampFile) && JSON.parse(readFileSync(pdfStampFile, 'utf8')).hash === syllabusHash(syllabus);
 const manifestJson = JSON.stringify(manifest, null, 2) + '\n';
 const md = renderManifest(manifest);
 if (CHECK) {
@@ -173,7 +179,9 @@ if (CHECK) {
   const extra = existsSync(join(PUBLIC, 'lectures')) && readdirSync(join(PUBLIC, 'lectures')).some((f) => !lectureJson[f.replace(/\.json$/, '')]);
   const lecturesStale = extra || Object.entries(lectureJson).some(([id, j]) => !same(join(PUBLIC, 'lectures', `${id}.json`), j));
   if (lecturesStale || !same(join(OUT, 'content.json'), json) || !same(join(OUT, 'manifest.json'), manifestJson) || !same(join(PUBLIC, 'content.json'), json)) { console.error('✖ aperture/build is out of date — run node aperture/tools/compile.mjs'); process.exit(1); }
-  console.log('✓ aperture/build is up to date'); process.exit(0);
+  if (!same(join(PUBLIC, 'syllabus.json'), syllabusJson)) { console.error('✖ apps/aperture/data/syllabus.json is out of date — run node aperture/tools/compile.mjs'); process.exit(1); }
+  if (!pdfCurrent) { console.error('✖ the syllabus PDF no longer matches the curriculum — run node aperture/tools/syllabus.mjs'); process.exit(1); }
+  console.log('✓ aperture/build is up to date (syllabus page and PDF included)'); process.exit(0);
 }
 mkdirSync(OUT, { recursive: true }); mkdirSync(DOCS, { recursive: true });
 writeFileSync(join(OUT, 'content.json'), json);
@@ -182,6 +190,8 @@ writeFileSync(join(PUBLIC, 'content.json'), json); // public beta: the whole cou
 mkdirSync(join(PUBLIC, 'lectures'), { recursive: true });
 for (const f of readdirSync(join(PUBLIC, 'lectures'))) if (!lectureJson[f.replace(/\.json$/, '')]) rmSync(join(PUBLIC, 'lectures', f)); // unpublished lectures
 for (const [id, j] of Object.entries(lectureJson)) writeFileSync(join(PUBLIC, 'lectures', `${id}.json`), j);
+writeFileSync(join(PUBLIC, 'syllabus.json'), syllabusJson);
+if (!pdfCurrent) console.warn('! the syllabus PDF is out of date — run node aperture/tools/syllabus.mjs before deploying');
 writeFileSync(join(OUT, 'manifest.json'), manifestJson);
 writeFileSync(join(DOCS, 'source-manifest.md'), md);
 console.log(`✓ compiled ${stats.weeks} weeks, ${stats.lessons} lessons, ${stats.lessonWords.toLocaleString('en-US')} lesson words, ${lib.length} resources → aperture/build/content.json (${(json.length / 1024).toFixed(0)} KB)`);

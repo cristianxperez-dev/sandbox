@@ -133,6 +133,7 @@
     if (cat.capstone) list.appendChild(extra('#/capstone', 'C', cat.capstone.title, `${cat.capstone.components} components, built incrementally from Week 8.`, h('span', { class: 'tag', text: 'Capstone' })));
     const s = cat.stats;
     return { el: h('div', null, head(`${cat.semester.title} · 14 weeks · ${cat.semester.hoursPerWeek} hours a week`, cat.semester.name, 'Broaden perspective. Deepen understanding. Strengthen judgment. Every lesson is open to you; the sequence is a recommendation, not a gate.'),
+      h('div', { class: 'row syl-cta' }, h('a', { class: 'btn btn--primary', href: '#/syllabus', text: 'Course syllabus' }), h('a', { class: 'btn', href: 'syllabus/APERTURE-Semester-I-Syllabus.pdf', download: '', text: 'Download syllabus (PDF)' })),
       h('p', { class: 'small muted', text: `${s.lessons} lessons · ${s.quizQuestions + s.checkQuestions} assessment questions · ${s.cases} original cases · ${s.resources} library resources · about ${Math.round(s.plannedHours)} planned hours` }), list), title: 'Curriculum' };
   };
   const hours = (hh) => Math.round(Object.values(hh).reduce((a, b) => a + b, 0) * 10) / 10;

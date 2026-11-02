@@ -321,3 +321,54 @@ main:focus { outline: none; }
 .lesson-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0 0 1rem 8.75rem; }
 @media (max-width: 640px) { .lesson-actions { padding-left: 0; } }
 .lesson-play { font-weight: 600; }
+
+/* Syllabus (#/syllabus) */
+.syl-cta { margin: 0 0 1rem; }
+.syl-glance { margin: 0 0 1rem; }
+.syl-toc { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 0.8rem 0; margin: 1.5rem 0 0; }
+.syl-toc ol { list-style: none; padding: 0; margin: 0.4rem 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); gap: 0.15rem 1.5rem; }
+.linklike { background: none; border: 0; padding: 0.2rem 0; font: inherit; color: var(--text); cursor: pointer; text-align: left; text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: 0.2em; }
+.linklike:hover { text-decoration-color: var(--accent); }
+.syl-n { font: 500 0.75rem/1 var(--mono); color: var(--accent); margin-right: 0.6rem; letter-spacing: 0.08em; }
+.syl-sec h2 { scroll-margin-top: 5rem; }
+.syl-sec { scroll-margin-top: 5rem; }
+.syl-sec h3 { font: 600 0.7rem/1.3 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin: 1.4rem 0 0.5rem; }
+.syl-pairs { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: 0.4rem 2rem; }
+.syl-pairs h3 { font: 500 1.05rem/1.3 var(--serif); letter-spacing: 0; text-transform: none; color: var(--text); margin: 0.6rem 0 0.2rem; }
+.syl-pairs p { margin: 0; font-size: 0.95rem; }
+.syl-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.syl-table th { font: 600 0.65rem/1.2 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); text-align: left; border-bottom: 1px solid var(--text); padding: 0.4rem 0.75rem 0.4rem 0; }
+.syl-table td { border-bottom: 1px solid var(--line); padding: 0.45rem 0.75rem 0.45rem 0; vertical-align: top; }
+.syl-big { font: 500 1.3rem/1 var(--serif); color: var(--accent); }
+.syl-week { border-top: 1px solid var(--line-strong); }
+.syl-week:last-of-type { border-bottom: 1px solid var(--line-strong); }
+.syl-week > summary { cursor: pointer; list-style: none; display: grid; grid-template-columns: 5.5rem 1fr auto; gap: 0.25rem 1rem; align-items: baseline; padding: 0.85rem 0; }
+.syl-week > summary::-webkit-details-marker { display: none; }
+.syl-week > summary::before { content: '+'; position: absolute; margin-left: -1.25rem; font: 500 0.9rem/1.6 var(--mono); color: var(--accent); }
+.syl-week[open] > summary::before { content: '−'; }
+.syl-wk { font: 600 0.7rem/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.syl-wt { font: 500 1.2rem/1.25 var(--serif); }
+.syl-wmeta { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; justify-content: flex-end; }
+.syl-wbody { padding: 0 0 1.5rem 6.5rem; }
+.syl-theme { font-size: 1.02rem; margin: 0 0 0.3rem; }
+.syl-lessons { padding-left: 1.2rem; margin: 0; }
+.syl-lessons li { padding: 0.45rem 0; border-bottom: 1px solid var(--line); }
+.syl-lt { font: 500 1.02rem/1.3 var(--serif); margin-right: 0.5rem; }
+.syl-lmeta { display: inline-flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; margin-left: 0.25rem; }
+.syl-lec { text-decoration: none; }
+.syl-soon { border-style: dashed; }
+.syl-reads, .syl-refs { padding-left: 1.2rem; }
+.syl-reads li, .syl-refs li { margin: 0 0 0.55rem; }
+.syl-ext { margin-left: 0.4rem; }
+.syl-au { font-weight: 600; }
+.syl-flag { background: var(--accent-wash); padding: 0.55rem 0.75rem; margin: 1rem 0 0; font-size: 0.95rem; }
+.syl-outcomes li { margin: 0 0 0.6rem; }
+.syl-gaps dt { font-weight: 600; margin-top: 0.7rem; }
+.syl-gaps dd { margin: 0.15rem 0 0; }
+@media (max-width: 720px) {
+  .syl-week > summary { grid-template-columns: 1fr; padding-left: 1.25rem; }
+  .syl-week > summary::before { margin-left: -1.25rem; }
+  .syl-wmeta { justify-content: flex-start; }
+  .syl-wbody { padding-left: 0; }
+}
+@media print { .syl-toc, .syl-cta, .syl .btn { display: none; } .syl-week { break-inside: avoid; } }
