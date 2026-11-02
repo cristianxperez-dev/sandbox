@@ -16,12 +16,21 @@
       h('a', { href: `#/lesson/${id}/read`, 'aria-current': current === 'read' ? 'page' : null, onclick: go('read') }, h('span', { class: 'label', text: 'Read Lesson' }), h('b', { text: `Written lesson · ${lessonMinutes} min` }), h('span', { text: 'Full text, diagrams, examples and methodological notes' })));
   }
 
+  // Lessons whose lecture script is ready but whose narration is not released: the written lesson is the
+  // whole lesson; only the narrated version is "coming soon". No player, no play button.
+  AP.lectureSoon = (cat, id) => AP.lecturesOn() && !(cat.lectures && cat.lectures[id]) && (cat.lecturesSoon || []).includes(id);
+  function soonSwitch(lessonMinutes) {
+    return h('nav', { class: 'pathswitch pathswitch--soon', 'aria-label': 'How to learn this lesson' },
+      h('div', { class: 'pathswitch__soon', role: 'note' }, h('span', { class: 'label', text: 'Watch Lecture' }), h('b', { text: 'Narrated Lecture — Coming Soon' }), h('span', { text: 'The narrated version of this lesson is in production. Nothing is missing from the lesson itself.' })),
+      h('a', { href: '#main', 'aria-current': 'page', onclick: (e) => e.preventDefault() }, h('span', { class: 'label', text: 'Read Lesson' }), h('b', { text: `Written lesson · ${lessonMinutes} min` }), h('span', { text: 'Available now — the full lesson, and it completes the lesson' })));
+  }
+
   S.lesson = async function (id, sectionHint) {
     const weekId = id.slice(0, 3);
     const [cat, w] = await Promise.all([AP.catalog(), AP.week(weekId)]);
     const lec = AP.lecturesOn() && cat.lectures && cat.lectures[id];
     if (lec && (sectionHint === 'watch' || (!sectionHint && AP.settings.lessonPath !== 'read'))) return S.watch(id, lec, cat, w);
-    if (sectionHint === 'read') sectionHint = null;
+    if (sectionHint === 'read' || sectionHint === 'watch') sectionHint = null; // no narration yet → the written lesson
     await AP.loadState(['note', 'bookmark']);
     const idx = w.lessons.findIndex((l) => l.id === id);
     const l = w.lessons[idx];
@@ -71,7 +80,7 @@
     const el = h('div', null,
       h('header', { class: 'pagehead' }, h('span', { class: 'label', text: `Week ${w.number} · Lesson ${idx + 1} of ${w.lessons.length} · ${l.minutes} min` }), h('h1', { text: l.title }), h('p', { class: 'lede', html: AP.inline(l.summary) }),
         h('details', { class: 'fold' }, h('summary', null, h('span', { class: 'label', text: 'Objectives' }), h('b', { text: `${l.objectives.length} learning objectives` })), h('div', { class: 'fold__body' }, h('ul', null, l.objectives.map((o) => h('li', { html: AP.inline(o) })))))),
-      lec ? pathSwitch(id, lec, l.minutes, 'read') : null,
+      lec ? pathSwitch(id, lec, l.minutes, 'read') : AP.lectureSoon(cat, id) ? soonSwitch(l.minutes) : null,
       steps, h('div', { class: 'reader' }, art, side));
 
     // Highlights & notes on selection

@@ -41,9 +41,21 @@ const VISUALS = {
 };
 const CHECKPOINTS = new Set(['estimate', 'choice', 'explore', 'reflect']);
 
-export function narrationHash(s) {
+// aperture/content/narration.json: { default: { label, voice, speed, cueGap }, release: [lesson ids] }.
+export function narrationConfig(base) {
+  return JSON.parse(readFileSync(join(base, 'content', 'narration.json'), 'utf8'));
+}
+
+// Effective narration settings — the approved default, overridden by any field the script sets. Must match narrate.py → voice_of().
+export function voiceOf(s, cfg) {
+  const d = cfg.default;
+  return { voice: s.voice ?? d.voice, speed: s.speed ?? d.speed, cueGap: s.cueGap ?? d.cueGap };
+}
+
+export function narrationHash(s, cfg) {
+  const v = voiceOf(s, cfg);
   const cues = s.chapters.flatMap((ch) => ch.scenes.flatMap((sc) => sc.cues.map((c) => c.say || c.text)));
-  const payload = JSON.stringify({ voice: s.voice, speed: s.speed ?? 1, cues });
+  const payload = JSON.stringify({ voice: v.voice, speed: v.speed, cueGap: v.cueGap, cues });
   return createHash('sha256').update(payload, 'utf8').digest('hex');
 }
 
@@ -53,7 +65,7 @@ export function lintScript(s, ctx, err, warn = () => {}) {
   if (!/^w\d{2}-l\d-lecture$/.test(s.id || '') || s.id !== `${s.lesson}-lecture`) err(where, 'id must be <lesson>-lecture');
   const lesson = ctx.lessons.get(s.lesson);
   if (!lesson) err(where, `unknown lesson ${s.lesson}`);
-  for (const k of ['title', 'subtitle', 'voice', 'summary']) if (!str(s[k])) err(where, `${k} missing`);
+  for (const k of ['title', 'subtitle', 'summary']) if (!str(s[k])) err(where, `${k} missing`);
   if (!arr(s.chapters, 3, 7)) { err(where, 'needs 3–7 chapters'); return null; }
   const cpIds = new Set(), refs = new Set();
   let cueCount = 0, wordCount = 0, cps = 0;
@@ -82,6 +94,7 @@ export function lintScript(s, ctx, err, warn = () => {}) {
       if (cp) {
         cps++;
         if (!CHECKPOINTS.has(cp.type)) err(w, `checkpoint type "${cp.type}" unknown`);
+        if (cp.type === 'explore' && sc.visual.type !== 'tree') err(w, 'explore checkpoints need a "tree" visual (the only interactive one the player supports)');
         if (!/^cp-[a-z0-9-]+$/.test(cp.id || '') || cpIds.has(cp.id)) err(w, 'checkpoint id cp-… missing or duplicate');
         cpIds.add(cp.id);
         if (!str(cp.prompt, 10)) err(w, 'checkpoint prompt missing');
@@ -117,7 +130,10 @@ export function buildLectures({ base, appDir, lessonIds, lessons, resources, con
   const dir = join(base, 'content', 'lectures');
   if (!existsSync(dir)) return { index: {}, files: {} };
   const ctx = { lessons: lessons || new Map([...lessonIds].map((id) => [id, null])), resources, concepts, exercises: exercises || new Set() };
-  const index = {}, files = {};
+  const cfg = narrationConfig(base);
+  const release = new Set(cfg.release || []);
+  for (const id of release) if (!lessonIds.has(id)) err('narration.json', `release lists unknown lesson ${id}`);
+  const index = {}, files = {}, soon = [];
   for (const f of readdirSync(dir).filter((x) => x.endsWith('.json')).sort()) {
     const where = `lectures/${f}`;
     let s;
@@ -125,12 +141,14 @@ export function buildLectures({ base, appDir, lessonIds, lessons, resources, con
     const before = err.count || 0;
     const lint = lintScript(s, ctx, (w, m) => { err(w, m); err.count = (err.count || 0) + 1; });
     if (!lint || (err.count || 0) > before) continue;
+    // Not released yet: the script is kept and validated, nothing is published, the course shows "Coming Soon".
+    if (!release.has(s.lesson)) { soon.push(s.lesson); continue; }
     const tf = join(base, 'build', 'narration', `${s.id}.json`);
     const t = existsSync(tf) ? JSON.parse(readFileSync(tf, 'utf8')) : null;
     const audioRel = t && t.audio ? t.audio : `media/lectures/${s.id}/narration.mp3`;
     const audio = join(appDir, audioRel);
     if (!t || !existsSync(audio)) { if (!partial) err(where, `narration missing — run python3 aperture/tools/narrate.py ${s.lesson}`); continue; }
-    if (t.narration?.hash !== narrationHash(s)) { if (!partial) err(where, `narration is stale (script text changed) — run python3 aperture/tools/narrate.py ${s.lesson}`); continue; }
+    if (t.narration?.hash !== narrationHash(s, cfg)) { if (!partial) err(where, `narration is stale (script text changed) — run python3 aperture/tools/narrate.py ${s.lesson}`); continue; }
     const out = { ...s, duration: t.duration, minutes: Math.round(t.duration / 60), narration: t.narration,
       audio: audioRel, audioAlt: null, captions: `media/lectures/${s.id}/captions.vtt`, transcriptFile: `media/lectures/${s.id}/transcript.txt`,
       audioBytes: statSync(audio).size, refs: [...lint.refs].sort(), chapters: [] };
@@ -146,9 +164,10 @@ export function buildLectures({ base, appDir, lessonIds, lessons, resources, con
     });
     if (!ok) { err(where, 'timings do not match the script structure — re-run narrate.py'); continue; }
     files[s.id] = out;
-    index[s.lesson] = { id: s.id, title: s.title, subtitle: s.subtitle, minutes: out.minutes, duration: out.duration, chapters: out.chapters.map((c) => c.title), checkpoints: lint.cps, cues: lint.cueCount, voice: s.voice };
+    index[s.lesson] = { id: s.id, title: s.title, subtitle: s.subtitle, minutes: out.minutes, duration: out.duration, chapters: out.chapters.map((c) => c.title), checkpoints: lint.cps, cues: lint.cueCount, voice: voiceOf(s, cfg).voice };
   }
-  return { index, files };
+  for (const id of release) if (!index[id] && !partial && !existsSync(join(dir, `${id}.json`))) err('narration.json', `released lesson ${id} has no lecture script`);
+  return { index, files, soon: soon.sort() };
 }
 
 /* ---------------- CLI ---------------- */
@@ -174,7 +193,8 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
     process.exit(bad ? 1 : 0);
   }
   if (args[0] === '--audit') {
-    let ok = 0; const rows = [];
+    const cfg = narrationConfig(BASE); const release = new Set(cfg.release || []);
+    let ok = 0, soon = 0; const rows = [];
     for (const [id] of lessons) {
       const f = join(dir, `${id}.json`); const lid = `${id}-lecture`;
       const data = join(BASE, '..', 'apps', 'aperture', 'data', 'lectures', `${lid}.json`);
@@ -182,10 +202,11 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
       let status = 'no script';
       if (existsSync(f)) {
         const s = JSON.parse(readFileSync(f, 'utf8'));
+        if (!release.has(id)) { rows.push(`${id.padEnd(7)} coming soon — script ready, not released`); soon++; continue; }
         const tim = existsSync(t) ? JSON.parse(readFileSync(t, 'utf8')) : null;
         const audio = tim && join(BASE, '..', 'apps', 'aperture', tim.audio || `media/lectures/${lid}/narration.mp3`);
         if (!tim || !existsSync(audio)) status = 'not narrated';
-        else if (tim.narration.hash !== narrationHash(s)) status = 'stale narration';
+        else if (tim.narration.hash !== narrationHash(s, cfg)) status = 'stale narration';
         else if (!existsSync(data)) status = 'not compiled';
         else if (!(C.lectures && C.lectures[id])) status = 'not indexed';
         else { status = `ok ${Math.round(tim.duration / 60)} min, ${(statSync(audio).size / 1048576).toFixed(1)} MB, ${C.lectures[id].checkpoints} checkpoints`; ok++; }
@@ -193,7 +214,7 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
       rows.push(`${id.padEnd(7)} ${status}`);
     }
     console.log(rows.join('\n'));
-    console.log(`\nLessons: ${lessons.size} · functioning lectures: ${ok} · coverage ${((ok / lessons.size) * 100).toFixed(1)}%`);
-    process.exit(ok === lessons.size ? 0 : 2);
+    console.log(`\nLessons: ${lessons.size} · released: ${release.size} · functioning lectures: ${ok} · coming soon (script ready): ${soon} · voice: ${cfg.default.label} (${cfg.default.voice}, ${cfg.default.speed}×)`);
+    process.exit(ok === release.size && ok + soon === lessons.size ? 0 : 2);
   }
 }

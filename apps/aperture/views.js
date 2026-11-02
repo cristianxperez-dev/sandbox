@@ -151,7 +151,8 @@
       return h('li', { class: 'lesson-item' },
         h('a', { href: `#/lesson/${l.id}${lec ? '/watch' : ''}` }, h('span', { class: 'label', text: `Lesson ${i + 1}` }), h('span', null, h('span', { class: 'items__t', html: AP.inline(l.title) }), h('span', { class: 'items__d', html: AP.inline(l.summary) })), st ? h('span', { class: `tag ${st[1]}`, text: st[0] }) : h('span')),
         h('div', { class: 'lesson-actions' },
-          lec ? h('a', { class: 'btn btn--primary btn--small lesson-play', href: `#/lesson/${l.id}/watch`, 'aria-label': `Watch the lecture for ${l.title}` }, `▶ Watch lecture · ${lec.minutes} min`) : null,
+          lec ? h('a', { class: 'btn btn--primary btn--small lesson-play', href: `#/lesson/${l.id}/watch`, 'aria-label': `Watch the lecture for ${l.title}` }, `▶ Watch lecture · ${lec.minutes} min`)
+            : AP.lectureSoon && AP.lectureSoon(cat, l.id) ? h('span', { class: 'tag lesson-soon', title: 'The written lesson is available now; only the narrated lecture is coming soon.' }, 'Narrated lecture — coming soon') : null,
           h('a', { class: 'btn btn--small', href: `#/lesson/${l.id}/read`, 'aria-label': `Read the lesson ${l.title}` }, `Read lesson · ${l.minutes} min`)));
     }));
     const lecs = w.lessons.map(lecOf).filter(Boolean);
@@ -168,7 +169,13 @@
       h('div', { class: 'weekhead' },
         h('div', null, h('span', { class: 'label', text: `Week ${w.number} · ${w.schools.map((x) => SCHOOL[x]).join(' · ')}` }), h('h1', { text: w.title }), h('p', { class: 'lede', text: w.theme }), h('p', { class: 'question', text: w.question }), AP.blocks(h('div', { class: 'prose' }), w.overview)),
         h('aside', { class: 'panel' }, h('span', { class: 'label', text: 'This week' }), h('dl', { class: 'kv small' }, ...Object.entries(w.hours).flatMap(([k, v]) => [h('dt', { text: k }), h('dd', { class: 'num', text: `${v} h` })])), h('hr'), h('span', { class: 'label', text: 'Objectives' }), h('ul', { class: 'small' }, w.objectives.map((o) => h('li', { html: AP.inline(o) }))))),
-      h('section', { class: 'rule' }, h('div', { class: 'row row--between' }, h('h2', { text: 'Lessons' }), lecs.length ? h('span', { class: 'tag tag--accent', text: `${lecs.length} narrated lectures · ${lecs.reduce((a, x) => a + x.minutes, 0)} min` }) : null), h('p', { class: 'small muted', text: lecs.length ? 'Each lesson can be watched as a narrated lecture or read in full. Either one completes the lesson — you do not need both.' : '' }), lessons),
+      h('section', { class: 'rule' }, h('div', { class: 'row row--between' }, h('h2', { text: 'Lessons' }), lecs.length ? h('span', { class: 'tag tag--accent', text: `${lecs.length} narrated lectures · ${lecs.reduce((a, x) => a + x.minutes, 0)} min` }) : null), h('p', { class: 'small muted', text: (() => {
+        const soon = w.lessons.filter((l) => AP.lectureSoon && AP.lectureSoon(cat, l.id)).length;
+        if (lecs.length && soon) return 'Lessons with a narrated lecture can be watched or read — either one completes the lesson. For the others the narrated lecture is coming soon; the written lesson is complete and available now.';
+        if (lecs.length) return 'Each lesson can be watched as a narrated lecture or read in full. Either one completes the lesson — you do not need both.';
+        if (soon) return 'Narrated lectures for this week are coming soon. Every lesson is complete and available now in its written form.';
+        return '';
+      })() }), lessons),
       h('section', { class: 'rule' }, h('h2', { text: 'Apply and assess' }), work),
       h('section', { class: 'rule' }, h('h2', { text: 'Readings' }), readings('required'), h('h3', { class: 'rule', text: 'Optional' }), readings('optional')),
       h('section', { class: 'rule' }, h('h2', { text: 'Reflection' }), h('p', { class: 'muted small', text: `${w.reflection.minutes} minutes. Private to you; saved to your notebook.` }), refl),

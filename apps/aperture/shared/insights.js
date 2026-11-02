@@ -179,7 +179,11 @@ export function computeProgress({ attempts, cards, state, events, now = Date.now
     domains, errors: errors.slice(0, 12), missedConcepts: missedConcepts.slice(0, 12),
     calibration: { quiz: calQuiz, lab: labCal.slice(-5), journal: calJournal },
     retention, connections, time: { seconds: seconds + Object.values(state.lecture || {}).reduce((a, r) => a + (r.data.seconds || 0), 0) },
-    lectures: { available: Object.keys(CONTENT.lectures || {}).length, started: Object.keys(state.lecture || {}).length, completed: Object.values(state.lecture || {}).filter((r) => r.data.completed).length },
+    lectures: (() => { // only released (narrated) lectures count; Coming Soon lessons never do
+      const ids = new Set(Object.values(CONTENT.lectures || {}).map((l) => l.id));
+      const recs = Object.entries(state.lecture || {}).filter(([id]) => ids.has(id)).map(([, r]) => r);
+      return { available: ids.size, started: recs.length, completed: recs.filter((r) => r.data.completed).length };
+    })(),
     insights, insightNote: 'Insights appear only when your responses meet the stated evidence threshold. They describe performance on APERTURE items, not personality or ability.',
     diagnostic: diag ? { submitted: diag.submitted, overall: autoRatio(diag) } : null,
   };

@@ -129,6 +129,9 @@ only for local testing). Keep `.wrangler/` out of git.
 ## Watch & Learn lectures
 
 Optional narrated, interactive lectures that teach an existing lesson (same objectives, sources and
-comprehension check; either path completes the lesson). Pilot: Week 1 · Lesson 2. Narration is
-rendered offline with the open Kokoro-82M voice model — no recurring cost. Production guide and costs:
+comprehension check; either path completes the lesson). Narrated now: the first five lessons
+(Week 1 · Lessons 1–4, Week 2 · Lesson 1), in the official Voice C. The other 55 scripts are ready and
+show "Narrated Lecture — Coming Soon" until the owner authorizes rendering. Voice and release list:
+`aperture/content/narration.json`. Narration is rendered offline with the open Kokoro-82M voice
+model — no recurring cost. Production guide and costs:
 `aperture/docs/lectures.md`. Feature flag: `lectures` in `apps/aperture/config.js`.

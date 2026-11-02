@@ -6,7 +6,7 @@
 //   node aperture/tools/compile.mjs --strict  every content file must exist and validate
 //   node aperture/tools/compile.mjs --check   fail if the committed build is out of date (CI)
 
-import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync, rmSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
@@ -145,7 +145,7 @@ const lectureErrors = [];
 const lessonIds = new Set(weeks.flatMap((w) => w.lessons.map((l) => l.id)));
 const lessonMap = new Map(weeks.flatMap((w) => w.lessons.map((l) => [l.id, l])));
 const exerciseIds = new Set(weeks.flatMap((w) => [w.exercise.id, `${w.assignment.id}-studio`]));
-const { index: lectures, files: lectureFiles } = buildLectures({ base: BASE, appDir: join(BASE, '..', 'apps', 'aperture'), lessonIds, lessons: lessonMap, resources: new Set(lib.map((r) => r.id)), concepts, exercises: exerciseIds, partial: args.includes('--partial-lectures'), err: (w, m) => lectureErrors.push(`${w}: ${m}`) });
+const { index: lectures, files: lectureFiles, soon: lecturesSoon } = buildLectures({ base: BASE, appDir: join(BASE, '..', 'apps', 'aperture'), lessonIds, lessons: lessonMap, resources: new Set(lib.map((r) => r.id)), concepts, exercises: exerciseIds, partial: args.includes('--partial-lectures'), err: (w, m) => lectureErrors.push(`${w}: ${m}`) });
 if (lectureErrors.length) { console.error(`✖ ${lectureErrors.length} lecture error(s):\n  ` + lectureErrors.join('\n  ')); process.exit(1); }
 const lectureJson = Object.fromEntries(Object.entries(lectureFiles).map(([id, l]) => [id, JSON.stringify(l)]));
 
@@ -161,7 +161,7 @@ const content = {
     ],
     grading: { quizzes: 30, assignments: 25, midterm: 20, capstone: 25, mastery: 0.8 },
   },
-  stats, weeks, diagnostic, midterm, capstone, audit, labs, library: lib, concepts, glossary, lectures,
+  stats, weeks, diagnostic, midterm, capstone, audit, labs, library: lib, concepts, glossary, lectures, lecturesSoon,
   manifest: { generated: manifest.generated, method: manifest.method, totals: manifest.totals },
 };
 
@@ -170,7 +170,8 @@ const manifestJson = JSON.stringify(manifest, null, 2) + '\n';
 const md = renderManifest(manifest);
 if (CHECK) {
   const same = (p, s) => existsSync(p) && stripDate(readFileSync(p, 'utf8')) === stripDate(s);
-  const lecturesStale = Object.entries(lectureJson).some(([id, j]) => !same(join(PUBLIC, 'lectures', `${id}.json`), j));
+  const extra = existsSync(join(PUBLIC, 'lectures')) && readdirSync(join(PUBLIC, 'lectures')).some((f) => !lectureJson[f.replace(/\.json$/, '')]);
+  const lecturesStale = extra || Object.entries(lectureJson).some(([id, j]) => !same(join(PUBLIC, 'lectures', `${id}.json`), j));
   if (lecturesStale || !same(join(OUT, 'content.json'), json) || !same(join(OUT, 'manifest.json'), manifestJson) || !same(join(PUBLIC, 'content.json'), json)) { console.error('✖ aperture/build is out of date — run node aperture/tools/compile.mjs'); process.exit(1); }
   console.log('✓ aperture/build is up to date'); process.exit(0);
 }
@@ -179,6 +180,7 @@ writeFileSync(join(OUT, 'content.json'), json);
 mkdirSync(PUBLIC, { recursive: true });
 writeFileSync(join(PUBLIC, 'content.json'), json); // public beta: the whole course, answer keys included, is public
 mkdirSync(join(PUBLIC, 'lectures'), { recursive: true });
+for (const f of readdirSync(join(PUBLIC, 'lectures'))) if (!lectureJson[f.replace(/\.json$/, '')]) rmSync(join(PUBLIC, 'lectures', f)); // unpublished lectures
 for (const [id, j] of Object.entries(lectureJson)) writeFileSync(join(PUBLIC, 'lectures', `${id}.json`), j);
 writeFileSync(join(OUT, 'manifest.json'), manifestJson);
 writeFileSync(join(DOCS, 'source-manifest.md'), md);

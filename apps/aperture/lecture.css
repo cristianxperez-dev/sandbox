@@ -160,7 +160,12 @@
 .pathswitch a span { font-size: 0.8rem; }
 .pathswitch a[aria-current="page"] { background: var(--text); color: var(--bg); }
 .pathswitch a[aria-current="page"] b { color: var(--bg); }
-@media (max-width: 520px) { .pathswitch { grid-template-columns: 1fr; } .pathswitch a + a { border-left: 0; border-top: 1px solid var(--line-strong); } }
+.pathswitch__soon { display: flex; flex-direction: column; gap: 0.2rem; padding: 0.85rem 1rem; color: var(--text-muted); border-right: 1px solid var(--line-strong); cursor: default; }
+.pathswitch__soon b { font: 500 1.05rem/1.2 var(--serif); color: var(--text-muted); }
+.pathswitch__soon span { font-size: 0.8rem; }
+.pathswitch--soon a[aria-current="page"] { cursor: default; }
+.lesson-soon { color: var(--text-muted); border-style: dashed; align-self: center; }
+@media (max-width: 520px) { .pathswitch { grid-template-columns: 1fr; } .pathswitch a + a { border-left: 0; border-top: 1px solid var(--line-strong); } .pathswitch__soon { border-right: 0; border-bottom: 1px solid var(--line-strong); } }
 @media (max-width: 1000px) {
   /* Audio-only on narrow screens: transcript directly under the controls. */
   .lec.is-audio { display: flex; flex-direction: column; }

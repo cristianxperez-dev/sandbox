@@ -1,8 +1,15 @@
 #!/usr/bin/env python3
 """APERTURE lecture narration — renders a lecture script to audio with synchronized timings.
 
-  python3 aperture/tools/narrate.py w01-l2            # one lecture (aperture/content/lectures/w01-l2.json)
-  python3 aperture/tools/narrate.py --all             # every lecture whose narration is missing or stale
+  python3 aperture/tools/narrate.py w01-l2            # one released lecture (aperture/content/lectures/w01-l2.json)
+  python3 aperture/tools/narrate.py --all             # every RELEASED lecture whose narration is missing or stale
+  python3 aperture/tools/narrate.py --status          # what is released, rendered, stale or coming soon (renders nothing)
+
+Voice and release list: aperture/content/narration.json. "default" is the approved narration voice
+(Voice C: Kokoro af_heart, speed 1.02, 0.30 s between sentences) — a script may override voice / speed /
+cueGap, but none does. Only lessons listed in "release" are rendered or published; every other script
+stays ready and the course shows "Narrated Lecture — Coming Soon". Rendering is incremental and
+resumable: each lecture is written on its own, and --all skips anything already current.
 
 Engine: Kokoro-82M (Apache-2.0), run offline with kokoro-onnx (MIT) and ONNX Runtime — no API, no
 key, no recurring cost. Each narration cue is synthesized on its own, so caption, transcript and
@@ -25,15 +32,29 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 SRC = os.path.join(ROOT, 'aperture', 'content', 'lectures')
 MEDIA = os.path.join(ROOT, 'apps', 'aperture', 'media', 'lectures')
 DATA = os.path.join(ROOT, 'aperture', 'build', 'narration')
+CONFIG = os.path.join(ROOT, 'aperture', 'content', 'narration.json')
 SR = 24000
-GAP_CUE, GAP_SCENE, GAP_CHAPTER, GAP_CHECKPOINT = 0.34, 0.85, 1.25, 0.6
+GAP_SCENE, GAP_CHAPTER, GAP_CHECKPOINT = 0.85, 1.25, 0.6
 ENGINE = 'Kokoro-82M v1.0 (q8 ONNX) via kokoro-onnx'
 
 
-def script_hash(s):
+def config():
+    with open(CONFIG, encoding='utf-8') as f:
+        return json.load(f)
+
+
+def voice_of(s, cfg=None):
+    """Effective narration settings: the approved default, overridden by any field the script sets.
+    Must match aperture/tools/lectures.mjs → voiceOf()."""
+    d = (cfg or config())['default']
+    return {k: s.get(k, d[k]) for k in ('voice', 'speed', 'cueGap')}
+
+
+def script_hash(s, cfg=None):
     """Must match aperture/tools/lectures.mjs → narrationHash()."""
+    v = voice_of(s, cfg)
     cues = [c.get('say') or c['text'] for ch in s['chapters'] for sc in ch['scenes'] for c in sc['cues']]
-    payload = json.dumps({'voice': s['voice'], 'speed': s.get('speed', 1), 'cues': cues}, separators=(',', ':'), ensure_ascii=False)
+    payload = json.dumps({'voice': v['voice'], 'speed': v['speed'], 'cueGap': v['cueGap'], 'cues': cues}, separators=(',', ':'), ensure_ascii=False)
     return hashlib.sha256(payload.encode('utf-8')).hexdigest()
 
 
@@ -56,8 +77,9 @@ def render(lecture_file):
     if not (model and voices and os.path.exists(model) and os.path.exists(voices)):
         sys.exit('Set APERTURE_TTS_MODEL and APERTURE_TTS_VOICES (see aperture/docs/lectures.md).')
     k = Kokoro(model, voices)
-    lang = 'en-gb' if s['voice'].startswith('b') else 'en-us'
-    speed = float(s.get('speed', 1))
+    v = voice_of(s)
+    voice, speed, gap_cue = v['voice'], float(v['speed']), float(v['cueGap'])
+    lang = 'en-gb' if voice.startswith('b') else 'en-us'
 
     parts, t = [], 0.0
     def silence(sec):
@@ -74,8 +96,8 @@ def render(lecture_file):
             if si: silence(GAP_SCENE)
             sc_out = dict(sc); sc_out['start'] = round(t, 3); sc_out['cues'] = []
             for qi, cue in enumerate(sc['cues']):
-                if qi: silence(GAP_CUE)
-                audio, rate = k.create(cue.get('say') or cue['text'], voice=s['voice'], speed=speed, lang=lang)
+                if qi: silence(gap_cue)
+                audio, rate = k.create(cue.get('say') or cue['text'], voice=voice, speed=speed, lang=lang)
                 assert rate == SR
                 audio = audio.astype(np.float32)
                 c_out = dict(cue); c_out['start'] = round(t, 3)
@@ -109,7 +131,7 @@ def render(lecture_file):
     duration = round(len(audio) / SR, 3)
     timing = {
         'id': lid, 'duration': duration, 'audio': f'media/lectures/{lid}/narration.mp3',
-        'narration': {'engine': ENGINE, 'voice': s['voice'], 'speed': speed, 'hash': script_hash(s), 'license': 'Kokoro-82M model and voices: Apache-2.0'},
+        'narration': {'engine': ENGINE, 'voice': voice, 'speed': v['speed'], 'cueGap': v['cueGap'], 'label': config()['default'].get('label') if voice_of({}) == v else None, 'hash': script_hash(s), 'license': 'Kokoro-82M model and voices: Apache-2.0'},
         'chapters': [{'start': ch['start'], 'end': ch['end'], 'scenes': [{'start': sc['start'], 'end': sc['end'], 'checkpointAt': sc.get('checkpoint', {}).get('at'), 'cues': [[c['start'], c['end']] for c in sc['cues']]} for sc in ch['scenes']]} for ch in out['chapters']],
     }
     with open(os.path.join(DATA, f'{lid}.json'), 'w', encoding='utf-8') as f:
@@ -140,12 +162,28 @@ def stale(lecture_file):
 
 if __name__ == '__main__':
     args = sys.argv[1:]
-    files = sorted(os.path.join(SRC, f) for f in os.listdir(SRC) if f.endswith('.json'))
-    if args and args[0] != '--all':
-        files = [os.path.join(SRC, f'{a}.json') for a in args]
-    elif args and args[0] == '--all':
-        files = [f for f in files if stale(f)]
-    if not files:
-        print('All lecture narration is up to date.')
-    for f in files:
-        render(f)
+    cfg = config()
+    release = cfg.get('release', [])
+    every = sorted(f[:-5] for f in os.listdir(SRC) if f.endswith('.json'))
+    path = lambda l: os.path.join(SRC, f'{l}.json')
+    if args == ['--status']:
+        for l in every:
+            state = ('current' if not stale(path(l)) else 'needs rendering') if l in release else 'coming soon (script ready)'
+            print(f'{l:7} {state}')
+        n = sum(1 for l in release if not stale(path(l)))
+        print(f'\nScripts: {len(every)} · released: {len(release)} · rendered and current: {n} · coming soon: {len(every) - len(release)}')
+        sys.exit(0)
+    if args == ['--all']:
+        todo = [l for l in release if stale(path(l))]
+    elif args and not any(a.startswith('-') for a in args):
+        held = [a for a in args if a not in release]
+        if held:
+            sys.exit(f'Not released: {", ".join(held)}. Add them to "release" in aperture/content/narration.json '
+                     'only once the owner authorizes rendering them.')
+        todo = args
+    else:
+        sys.exit(__doc__)
+    if not todo:
+        print('All released lecture narration is up to date.')
+    for l in todo:
+        render(path(l))

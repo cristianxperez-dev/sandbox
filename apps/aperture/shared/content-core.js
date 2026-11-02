@@ -102,6 +102,7 @@ export function catalog() {
     concepts: CONTENT.concepts,
     glossary: CONTENT.glossary,
     lectures: CONTENT.lectures || {},
+    lecturesSoon: CONTENT.lecturesSoon || [], // scripts ready, narration not released yet — shown as Coming Soon
     manifest: CONTENT.manifest,
   };
 }
