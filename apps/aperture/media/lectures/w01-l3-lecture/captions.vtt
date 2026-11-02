@@ -1,0 +1,326 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.099
+Let's start with a small test. No notes, no searching. About ten seconds per question.
+
+2
+00:00:05.399 --> 00:00:12.268
+For each one, give me a range, a low number and a high number, that you are ninety percent sure contains the true answer.
+
+3
+00:00:13.118 --> 00:00:15.081
+One. The year the Berlin Wall fell.
+
+4
+00:00:15.381 --> 00:00:17.813
+Two. The height of Mount Everest, in meters.
+
+5
+00:00:18.113 --> 00:00:21.185
+Three. The number of member states of the United Nations.
+
+6
+00:00:21.485 --> 00:00:26.562
+Write your three ranges down. Now one more prediction, about yourself rather than the world.
+
+7
+00:00:28.012 --> 00:00:29.207
+Here are the answers.
+
+8
+00:00:29.507 --> 00:00:30.765
+Nineteen eighty-nine.
+
+9
+00:00:31.065 --> 00:00:37.060
+About eight thousand, eight hundred and forty-nine meters, according to a survey in two thousand twenty.
+
+10
+00:00:37.360 --> 00:00:39.045
+One hundred and ninety-three.
+
+11
+00:00:39.345 --> 00:00:50.801
+If you missed one or more, you are in good company. People asked for ninety percent ranges on questions like these routinely capture the truth far less often than ninety percent of the time.
+
+12
+00:00:51.101 --> 00:01:01.469
+And here's the important part. The fault is rarely ignorance. Nobody expects you to know Everest to the meter. The fault is that the ranges are too narrow for the ignorance.
+
+13
+00:01:01.769 --> 00:01:05.076
+This lecture is about measuring that gap, and then closing it.
+
+14
+00:01:06.326 --> 00:01:13.601
+Overconfidence sounds like one thing. Don Moore and Paul Healy argue it is three different things that have been lumped under one word.
+
+15
+00:01:13.901 --> 00:01:27.085
+The first is overestimation: thinking you did better, or will do better, than you actually do. The project plan that assumes everything goes right. You detect it by comparing forecasts of your own performance with outcomes.
+
+16
+00:01:27.385 --> 00:01:39.929
+The second is overplacement: thinking you are better than others. We will enter this market because we will execute better than the rest. The test is simple. Ask whether every competitor believes the same about themselves.
+
+17
+00:01:40.229 --> 00:01:55.759
+The third is overprecision: excessive certainty that your beliefs are accurate. Intervals that are too narrow. Budgets, timelines and projections with tight ranges. You detect it by counting how often outcomes fall outside the ranges you stated.
+
+18
+00:01:56.059 --> 00:01:59.579
+Your three ranges a moment ago were a test of the third kind.
+
+19
+00:02:00.429 --> 00:02:04.077
+Why bother separating them? Because they do not always move together.
+
+20
+00:02:04.377 --> 00:02:13.444
+On hard tasks, people tend to overestimate their own performance, while believing they are worse than others. On easy tasks, the pattern reverses.
+
+21
+00:02:13.744 --> 00:02:20.827
+So the same person can look overconfident by one measure and underconfident by another. Lumping them together hides that.
+
+22
+00:02:21.127 --> 00:02:35.441
+And of the three, Moore and Healy find overprecision is the most persistent. Most leaders are not overconfident about everything. They are overprecise. Their ranges are too narrow, their timelines too tight, their certain too frequent.
+
+23
+00:02:35.741 --> 00:02:40.157
+You cannot fix that by deciding to feel humbler. You fix it by keeping score.
+
+24
+00:02:41.407 --> 00:02:46.954
+Two terms first. Calibration is the match between stated confidence and actual frequency.
+
+25
+00:02:47.254 --> 00:02:54.337
+A perfectly calibrated forecaster who says seventy percent on many occasions is right on about seventy percent of them.
+
+26
+00:02:54.637 --> 00:03:03.853
+Discrimination, sometimes called resolution, is different. It is the ability to give higher probabilities to things that happen than to things that do not.
+
+27
+00:03:04.153 --> 00:03:17.379
+Here's why you need both. Imagine a forecaster who says fifty percent on every question, in a world of coin flips. Perfectly calibrated. Completely useless. Good forecasters are calibrated and discriminating.
+
+28
+00:03:18.229 --> 00:03:23.349
+The Brier score measures both at once, and it is simple enough to do on the back of an envelope.
+
+29
+00:03:23.649 --> 00:03:34.359
+For each forecast, take the probability you gave the event. Subtract one if it happened, or zero if it did not. Square the difference. Then average across all your forecasts.
+
+30
+00:03:34.659 --> 00:03:36.941
+Lower is better. Zero is perfect.
+
+31
+00:03:37.241 --> 00:03:44.772
+Before I go further, a quick prediction. Suppose someone answered every question with fifty percent. What would their Brier score be?
+
+32
+00:03:46.222 --> 00:03:50.105
+A quarter. Half the difference either way, squared. Any skill should beat it.
+
+33
+00:03:50.405 --> 00:03:56.229
+Now watch what squaring does when you are wrong. A forecast of fifty percent that fails costs a quarter.
+
+34
+00:03:56.529 --> 00:03:59.750
+Sixty percent that fails costs point three six.
+
+35
+00:04:00.050 --> 00:04:02.503
+Seventy percent: point four nine.
+
+36
+00:04:02.803 --> 00:04:08.841
+Ninety percent that fails: point eight one. And a hundred percent that fails: the maximum, one.
+
+37
+00:04:09.141 --> 00:04:24.266
+Confident misses are punished heavily. That is deliberate. It discourages exactly the extreme probabilities that overprecision produces, unless you are genuinely that sure. A few confident failures can outweigh many modest successes.
+
+38
+00:04:24.566 --> 00:04:35.510
+And the Brier score is proper: you cannot improve your expected score by reporting anything other than your honest belief. Shading toward safety or toward boldness only costs you.
+
+39
+00:04:36.360 --> 00:04:39.240
+Let's score a small record together. Three forecasts.
+
+40
+00:04:39.540 --> 00:04:47.241
+Eighty percent, and it happened. Point eight minus one is minus point two; squared, point zero four.
+
+41
+00:04:47.541 --> 00:04:54.325
+Sixty percent, and it did not happen. Point six minus zero, squared, is point three six.
+
+42
+00:04:54.625 --> 00:05:00.172
+Ninety percent, and it happened. Minus point one, squared, point zero one.
+
+43
+00:05:00.472 --> 00:05:02.392
+Add them: point four one.
+
+44
+00:05:02.692 --> 00:05:14.255
+Divide by three, and the average Brier score is about point one four. Comfortably better than the quarter you get for always saying fifty, and notice where most of it came from: the one miss.
+
+45
+00:05:15.105 --> 00:05:24.214
+The second tool is the calibration table. The numbers here are invented: one hypothetical forecaster, forecasts grouped by the confidence stated.
+
+46
+00:05:24.514 --> 00:05:30.359
+When this forecaster said sixty percent, twenty times, sixty percent came true. Well calibrated.
+
+47
+00:05:30.659 --> 00:05:34.819
+At seventy percent, the hit rate is sixty-four. At eighty, sixty-three.
+
+48
+00:05:35.119 --> 00:05:41.391
+At ninety, seventy-two. And when the forecaster was certain, a hundred percent, only eight in ten came true.
+
+49
+00:05:41.691 --> 00:05:46.619
+That widening gap above seventy percent is the typical signature of overprecision.
+
+50
+00:05:46.919 --> 00:06:09.661
+Three cautions when you read a table like this. Small counts make bins noisy: five forecasts at ninety percent with four hits is entirely consistent with good calibration. A calibrated record can hide poor discrimination if everything sits near fifty. So read it alongside the Brier score, and treat any diagnosis on fewer than about twenty forecasts per bin as provisional.
+
+51
+00:06:10.911 --> 00:06:16.180
+Scoring tells you how good your forecasts were. Two techniques make them better before they are scored.
+
+52
+00:06:16.480 --> 00:06:24.437
+Start with a question that can be resolved, with a date. Not, will the launch go well, but, will we have signed three customers by thirty June?
+
+53
+00:06:24.737 --> 00:06:35.852
+Then take the outside view. Before thinking about the specifics of your case, the inside view, ask how often outcomes of this kind occur in a reference class of similar cases. Start there.
+
+54
+00:06:36.152 --> 00:06:46.264
+Kahneman, Sibony and Sunstein count the outside view among the core practices of what they call decision hygiene. Week ten develops it for budgets and projects.
+
+55
+00:06:46.564 --> 00:07:00.409
+Next, decompose. Break a question you cannot answer directly into parts you can estimate, and combine them. This is sometimes called Fermi estimation, after the physicist's habit of estimating from a chain of rough steps.
+
+56
+00:07:00.709 --> 00:07:18.075
+Decomposition helps twice. Errors in independent parts partly cancel. And the structure shows which assumption matters most. That is what first-principles reasoning means, used carefully: reasoning from components and mechanisms, not from analogy or authority alone.
+
+57
+00:07:18.375 --> 00:07:24.369
+Then adjust from the base rate for differences that are specific and verified. Usually less than you want to.
+
+58
+00:07:24.669 --> 00:07:28.829
+Finally, record the probability and the date, and score it when it resolves.
+
+59
+00:07:29.679 --> 00:07:37.167
+Here's how that looks for a consulting partner asked what share of this quarter's proposals the firm will win. The numbers are invented.
+
+60
+00:07:37.467 --> 00:07:45.617
+Four live bids are with large clients, where the firm's historical win rate is twenty-five percent. That is about one expected win.
+
+61
+00:07:45.917 --> 00:07:51.399
+Six are with smaller clients, where the historical rate is forty percent. About two point four.
+
+62
+00:07:51.699 --> 00:08:00.446
+So the starting estimate is about three or four wins out of ten. Only now does the partner adjust for the specific strengths of each bid, modestly.
+
+63
+00:08:00.746 --> 00:08:08.554
+Write each bid down as a probability, score them at quarter end, and business-development optimism turns into a calibration record.
+
+64
+00:08:08.854 --> 00:08:23.894
+The same move works in player development: of players at this age and level with this profile, how often has this kind of improvement happened in your own history? Then write it down: sixty-five percent that he reaches the target by the first of June.
+
+65
+00:08:24.194 --> 00:08:25.922
+Time to try the sequence yourself.
+
+66
+00:08:27.372 --> 00:08:31.617
+Can anyone actually get better at this? There is strong evidence that they can.
+
+67
+00:08:31.917 --> 00:08:44.461
+In a multi-year geopolitical forecasting tournament sponsored by the government agency IARPA, the Good Judgment Project randomly assigned forecasters to conditions and scored them with Brier scores.
+
+68
+00:08:44.761 --> 00:08:48.537
+Brief training in probabilistic reasoning improved accuracy.
+
+69
+00:08:48.837 --> 00:08:54.960
+Teams outperformed individuals working alone, and placing the best performers together improved them further.
+
+70
+00:08:55.260 --> 00:09:04.924
+And statistically aggregating many forecasts produced the most accurate results, in both years reported. Forecasting skill can be measured, and it can be trained.
+
+71
+00:09:06.174 --> 00:09:08.649
+Now, the case against taking all this too far.
+
+72
+00:09:08.949 --> 00:09:29.301
+First, transfer. Being calibrated on general-knowledge questions does not guarantee calibration in your own professional domain. The tournament involved geopolitical questions, horizons of months, and motivated volunteers. Strong evidence that forecasting can be trained; weaker evidence about your particular organization.
+
+73
+00:09:29.601 --> 00:09:45.729
+Second, Brier scores depend on the questions. Someone who forecasts only easy events will score better than someone who tackles hard ones. Compare people only on the same questions, and make sure the record includes the decisions that matter, not just the safe ones.
+
+74
+00:09:46.029 --> 00:09:58.317
+Third, some overconfidence may be useful. Optimism can sustain effort and persuade investors or recruits. A leader who presents every plan wrapped in wide uncertainty may lose followers.
+
+75
+00:09:58.617 --> 00:10:16.089
+The answer is not to choose between confidence and calibration, but to separate them. Be decisive in commitment and calibrated in your private forecasts, and never let the public story overwrite the private record. The feeling of certainty, as Kahneman and Klein warned, is not evidence.
+
+76
+00:10:16.939 --> 00:10:18.219
+Let's bring it together.
+
+77
+00:10:18.519 --> 00:10:27.991
+Overconfidence takes three forms: overestimation, overplacement and overprecision. Overprecision, ranges too narrow, is the most persistent.
+
+78
+00:10:28.291 --> 00:10:39.171
+Calibration is measurable. State probabilities, record them, and score them with a proper rule like the Brier score. Read calibration tables with an eye on sample size.
+
+79
+00:10:39.471 --> 00:10:47.769
+And forecasts improve when they start from a reference class, decompose the question, adjust modestly, and combine independent judgments.
+
+80
+00:10:48.069 --> 00:11:02.661
+From here, take the comprehension check below. It is the same check as the written lesson. Then open the Judgment Lab, which gives you enough questions to see your own calibration pattern, and read Moore and Healy on the three forms of overconfidence.
+
+81
+00:11:02.961 --> 00:11:10.044
+The written lesson stays here with the full detail, including forecasting in front of a board. Thank you for keeping score with me.
+
