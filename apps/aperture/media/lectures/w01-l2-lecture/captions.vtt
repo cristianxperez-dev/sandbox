@@ -1,314 +1,314 @@
 WEBVTT
 
 1
-00:00:00.000 --> 00:00:05.440
+00:00:00.000 --> 00:00:05.205
 This is a lecture about a puzzle that has embarrassed some of the most capable professionals in the world.
 
 2
-00:00:05.780 --> 00:00:12.052
+00:00:05.505 --> 00:00:11.521
 Not because they lack intelligence, but because the mind they bring to the problem was built for a different job.
 
 3
-00:00:12.392 --> 00:00:17.277
+00:00:11.821 --> 00:00:16.451
 We'll start with a number, and I'm going to ask you to commit to it before I explain anything.
 
 4
-00:00:18.127 --> 00:00:23.055
+00:00:17.301 --> 00:00:22.079
 A hospital network is evaluating a new screening test for a serious condition.
 
 5
-00:00:23.395 --> 00:00:28.281
+00:00:22.379 --> 00:00:27.051
 In the population being screened, about one person in a hundred has the condition.
 
 6
-00:00:28.621 --> 00:00:31.735
+00:00:27.351 --> 00:00:30.317
 The test catches ninety percent of the people who have it.
 
 7
-00:00:32.075 --> 00:00:36.385
+00:00:30.617 --> 00:00:34.713
 And among people who do not have it, the test wrongly flags nine percent.
 
 8
-00:00:36.725 --> 00:00:42.549
+00:00:35.013 --> 00:00:40.538
 A patient tests positive. What is the probability that this patient actually has the condition?
 
 9
-00:00:43.999 --> 00:00:48.884
+00:00:41.988 --> 00:00:46.724
 If you said something like eighty or ninety percent, you reasoned the way most people do.
 
 10
-00:00:49.224 --> 00:00:51.592
+00:00:47.024 --> 00:00:49.264
 The correct answer is about nine percent.
 
 11
-00:00:51.932 --> 00:01:03.153
+00:00:49.564 --> 00:01:00.145
 That is not a trick. The numbers are invented for the lesson, but the structure is the classic base-rate problem, and it appears every time a rare event meets an imperfect signal.
 
 12
-00:01:03.493 --> 00:01:12.539
+00:01:00.445 --> 00:01:09.085
 A fraud alert, a security screening, a drug test, a scouting report on a player who looks like a future star. Same structure, same trap.
 
 13
-00:01:12.879 --> 00:01:19.044
+00:01:09.385 --> 00:01:15.188
 To see why the trap works, we need to look at the shortcuts the mind uses when it estimates likelihood.
 
 14
-00:01:20.294 --> 00:01:29.254
+00:01:16.438 --> 00:01:25.014
 In 1974 Amos Tversky and Daniel Kahneman published a short paper in Science that changed how we think about judgment.
 
 15
-00:01:29.594 --> 00:01:36.613
+00:01:25.314 --> 00:01:32.098
 Their claim was that when people judge probabilities, they quietly substitute an easier question for the hard one.
 
 16
-00:01:36.953 --> 00:01:45.913
+00:01:32.398 --> 00:01:41.038
 The first substitute is representativeness. Instead of asking how likely something is, we ask how much it resembles the category we have in mind.
 
 17
-00:01:46.253 --> 00:01:57.197
+00:01:41.338 --> 00:01:51.877
 A positive test looks like disease. A candidate who looks like our past stars looks like success. Resemblance feels like probability, and it pushes the base rate out of view.
 
 18
-00:01:57.537 --> 00:02:04.235
+00:01:52.177 --> 00:01:58.385
 The second is availability. We judge how common something is by how easily examples come to mind.
 
 19
-00:02:04.575 --> 00:02:13.749
+00:01:58.685 --> 00:02:07.261
 After one dramatic fraud case, an audit committee will spend its attention on that fraud type, while quieter and more frequent risks go unexamined.
 
 20
-00:02:14.089 --> 00:02:21.513
+00:02:07.561 --> 00:02:14.729
 The third is anchoring and adjustment. We start from whatever number is in front of us and move away from it, but not far enough.
 
 21
-00:02:22.363 --> 00:02:26.224
+00:02:15.579 --> 00:02:19.205
 Their most famous demonstration used a rigged wheel of fortune.
 
 22
-00:02:26.564 --> 00:02:34.713
+00:02:19.505 --> 00:02:27.377
 Participants watched the wheel stop on a number, and were then asked what percentage of African countries were members of the United Nations.
 
 23
-00:02:35.053 --> 00:02:40.173
+00:02:27.677 --> 00:02:32.563
 People who saw the wheel stop at ten gave a median estimate of twenty-five percent.
 
 24
-00:02:40.513 --> 00:02:45.825
+00:02:32.863 --> 00:02:37.876
 People who saw it stop at sixty-five gave a median estimate of forty-five percent.
 
 25
-00:02:46.165 --> 00:02:50.731
+00:02:38.176 --> 00:02:42.528
 Everyone knew the wheel was random. The number still pulled the estimate toward it.
 
 26
-00:02:51.071 --> 00:03:04.383
+00:02:42.828 --> 00:02:55.607
 Tversky and Kahneman were careful to say these shortcuts are economical and usually effective. The problem is that their failures are systematic, so they are predictable, and that means we can design around them.
 
 27
-00:03:05.233 --> 00:03:07.814
+00:02:56.457 --> 00:02:58.889
 Let's test whether you can spot one in the wild.
 
 28
-00:03:09.664 --> 00:03:14.592
+00:03:00.739 --> 00:03:05.453
 Now let's solve the screening problem in a way that makes the answer almost obvious.
 
 29
-00:03:14.932 --> 00:03:18.111
+00:03:05.753 --> 00:03:08.783
 Imagine one thousand people walking through the screening.
 
 30
-00:03:18.451 --> 00:03:22.589
+00:03:09.083 --> 00:03:12.965
 About ten of them have the condition. Nine hundred and ninety do not.
 
 31
-00:03:22.929 --> 00:03:25.404
+00:03:13.265 --> 00:03:15.548
 The test catches nine of the ten who are ill.
 
 32
-00:03:25.744 --> 00:03:32.784
+00:03:15.848 --> 00:03:22.419
 But it also flags nine percent of the healthy people, and nine percent of nine hundred and ninety is about eighty-nine.
 
 33
-00:03:33.124 --> 00:03:41.615
+00:03:22.719 --> 00:03:30.847
 So roughly ninety-eight people test positive, and only nine of them are actually ill. Nine out of ninety-eight is about nine percent.
 
 34
-00:03:41.955 --> 00:03:45.389
+00:03:31.147 --> 00:03:34.368
 Nothing about the problem changed. Only the format did.
 
 35
-00:03:45.729 --> 00:04:06.465
+00:03:34.668 --> 00:03:54.209
 Gerd Gigerenzer and Ulrich Hoffrage showed this experimentally in 1995. When the same Bayesian problems were presented as natural frequencies, counts of cases from one reference population, people without statistical training reached the correct answer far more often, in up to about half of their inferences.
 
 36
-00:04:06.805 --> 00:04:10.923
+00:03:54.509 --> 00:03:58.392
 Counts keep the base rate in front of you. Percentages let it slip away.
 
 37
-00:04:12.373 --> 00:04:16.255
+00:03:59.842 --> 00:04:03.533
 The practical lesson is a habit of mind, and a habit of design.
 
 38
-00:04:16.595 --> 00:04:25.982
+00:04:03.833 --> 00:04:12.771
 When someone brings you a compelling case, a candidate, a deal, an alert, ask first: of all the cases that look like this, how many turn out to be real?
 
 39
-00:04:26.322 --> 00:04:44.029
+00:04:13.071 --> 00:04:29.946
 And when you build dashboards and reports, write them in counts. A clinical system that says the model is ninety percent sensitive invites base-rate neglect. One that says, of every hundred patients flagged, about nine will have the condition, changes what people do with the alert.
 
 40
-00:04:45.279 --> 00:04:57.567
+00:04:31.196 --> 00:04:42.865
 So far we have looked at errors that happen even when we have no stake in the answer. Now we turn to the two habits that do the most damage to anyone who evaluates people, projects or evidence.
 
 41
-00:04:57.907 --> 00:05:08.445
+00:04:43.165 --> 00:04:53.085
 The first is confirmation bias. Raymond Nickerson's review defines it as seeking or interpreting evidence in ways that are partial to beliefs we already hold.
 
 42
-00:05:08.785 --> 00:05:21.308
+00:04:53.385 --> 00:05:05.268
 A classic demonstration is Peter Wason's rule-discovery task. You are told that the sequence two, four, six follows a rule, and you may propose other sequences to find out what the rule is.
 
 43
-00:05:21.648 --> 00:05:25.275
+00:05:05.568 --> 00:05:09.003
 Suppose your hypothesis is: numbers that go up by two.
 
 44
-00:05:26.725 --> 00:05:36.346
+00:05:10.453 --> 00:05:19.775
 In the task, people overwhelmingly propose sequences that fit their own hypothesis, get a yes every time, and announce the wrong rule with confidence.
 
 45
-00:05:36.686 --> 00:05:44.921
+00:05:20.075 --> 00:05:27.734
 The actual rule is just: any three ascending numbers. You only discover it by testing a case your hypothesis says should fail.
 
 46
-00:05:45.261 --> 00:05:52.450
+00:05:28.034 --> 00:05:34.925
 Nickerson stresses that none of this requires bad faith. It is how attention works when it is guided by a hypothesis.
 
 47
-00:05:53.300 --> 00:05:57.012
+00:05:35.775 --> 00:05:39.316
 The second habit is motivated reasoning, and it adds a motive.
 
 48
-00:05:57.352 --> 00:06:07.528
+00:05:39.616 --> 00:05:49.237
 Ziva Kunda distinguished accuracy goals, which make us process information more carefully, from directional goals, which steer us toward a conclusion we already want.
 
 49
-00:06:07.868 --> 00:06:22.588
+00:05:49.537 --> 00:06:03.617
 Her crucial observation was that directional reasoning is constrained. We reach the conclusion we want only when we can build a justification that would persuade a neutral observer. That is how we keep the feeling of being objective.
 
 50
-00:06:22.928 --> 00:06:25.893
+00:06:03.917 --> 00:06:06.733
 Put the two ideas together and you get a simple map.
 
 51
-00:06:26.233 --> 00:06:32.121
+00:06:07.033 --> 00:06:12.623
 Without a stake and with an open search, our errors come mostly from the heuristics we have already met.
 
 52
-00:06:32.461 --> 00:06:39.544
+00:06:12.923 --> 00:06:19.707
 A hypothesis narrows the search: that is confirmation bias, and the remedy is to test what would prove you wrong.
 
 53
-00:06:39.884 --> 00:06:51.255
+00:06:20.007 --> 00:06:30.929
 A personal stake steers the search: the remedy is to separate the person who champions a decision from the person who reviews it, and to state the criteria before the evidence arrives.
 
 54
-00:06:51.595 --> 00:06:58.976
+00:06:31.229 --> 00:06:38.184
 And when both are present, when you designed the program and you are also judging it, you are in the most dangerous cell of all.
 
 55
-00:06:59.316 --> 00:07:08.383
+00:06:38.484 --> 00:06:47.209
 Kunda's constraint is the lever for a leader. Raise the bar for what counts as a justification, and directional reasoning loses room to move.
 
 56
-00:07:09.633 --> 00:07:12.790
+00:06:48.459 --> 00:06:51.446
 Now I want to challenge the story I have just told you.
 
 57
-00:07:13.130 --> 00:07:20.383
+00:06:51.746 --> 00:06:58.850
 There is a serious alternative reading of this evidence, the ecological-rationality program led by Gerd Gigerenzer.
 
 58
-00:07:20.723 --> 00:07:30.729
+00:06:59.150 --> 00:07:08.707
 On this view, heuristics are not glitches. They are strategies that deliberately ignore information, and whether they work depends on the environment they are used in.
 
 59
-00:07:31.069 --> 00:07:47.474
+00:07:09.007 --> 00:07:24.709
 Gigerenzer and Wolfgang Gaissmaier argue that under high uncertainty and small samples, simple rules can predict as well as, or better than, complex models, because a complex model fitted to a little noisy data learns the noise along with the signal.
 
 60
-00:07:47.814 --> 00:08:04.710
+00:07:25.009 --> 00:07:41.051
 So calling a heuristic a bias assumes the laboratory problem is the right yardstick. Tversky and Kahneman themselves described the shortcuts as usually effective. Much of the disagreement is about emphasis, and about which standard of good judgment to apply.
 
 61
-00:08:05.560 --> 00:08:11.661
+00:07:41.901 --> 00:07:47.619
 Which raises a fair question for a skeptical executive: how solid are these findings anyway?
 
 62
-00:08:12.001 --> 00:08:19.383
+00:07:47.919 --> 00:07:54.895
 A coordinated replication project tested thirteen classic effects across thirty-six samples in many countries.
 
 63
-00:08:19.723 --> 00:08:22.901
+00:07:55.195 --> 00:07:58.160
 Ten replicated consistently, anchoring among them.
 
 64
-00:08:23.241 --> 00:08:25.375
+00:07:58.460 --> 00:08:00.487
 Two social-priming effects did not.
 
 65
-00:08:25.715 --> 00:08:38.963
+00:08:00.787 --> 00:08:13.288
 And the differences between labs, countries and online versus in-person settings were small compared with the differences between effects. The lesson is selective trust, not blanket belief or blanket dismissal.
 
 66
-00:08:39.813 --> 00:08:43.119
+00:08:14.138 --> 00:08:17.317
 One last point, and it is the one I most want you to keep.
 
 67
-00:08:43.459 --> 00:08:50.990
+00:08:17.617 --> 00:08:24.827
 Knowing about a bias does not reliably protect you from it. People see bias easily in others and rarely in themselves.
 
 68
-00:08:51.330 --> 00:08:56.343
+00:08:25.127 --> 00:08:29.906
 That is why every remedy in this lesson is a procedure rather than an exhortation.
 
 69
-00:08:56.683 --> 00:09:00.651
+00:08:30.206 --> 00:08:34.003
 Ask for the base rate before the story. Present evidence as counts.
 
 70
-00:09:00.991 --> 00:09:03.231
+00:08:34.303 --> 00:08:36.458
 Give the review to someone without a stake.
 
 71
-00:09:03.571 --> 00:09:06.323
+00:08:36.758 --> 00:08:39.489
 State the criteria before the evidence arrives.
 
 72
-00:09:06.663 --> 00:09:11.506
+00:08:39.789 --> 00:08:44.397
 And assign someone to build the strongest case against the option everyone likes.
 
 73
-00:09:11.846 --> 00:09:15.750
+00:08:44.697 --> 00:08:48.473
 A procedure works whether or not the person following it feels biased.
 
 74
-00:09:17.200 --> 00:09:18.544
+00:08:49.923 --> 00:08:51.203
 Let's bring it together.
 
 75
-00:09:18.884 --> 00:09:29.273
+00:08:51.503 --> 00:09:01.465
 Heuristics substitute an easier question for a hard one. They are often good enough, and predictably wrong where base rates, sample sizes and arbitrary anchors matter.
 
 76
-00:09:29.613 --> 00:09:39.043
+00:09:01.765 --> 00:09:10.811
 Natural frequencies make base rates visible. Confirmation bias narrows the search, motivated reasoning steers it, and procedures counter both.
 
 77
-00:09:39.383 --> 00:09:56.108
+00:09:11.111 --> 00:09:27.004
 From here, take the comprehension check below. It is the same check as the written lesson. Then open the Judgment Lab to measure your own calibration, and read Tversky and Kahneman's original paper, which is shorter and more readable than its reputation suggests.
 
 78
-00:09:56.448 --> 00:10:08.203
+00:09:27.304 --> 00:09:38.717
 The written lesson remains here whenever you want the full detail, the examples from law, technology and player development, and the methodological notes. Thank you for working through this with me.
 
