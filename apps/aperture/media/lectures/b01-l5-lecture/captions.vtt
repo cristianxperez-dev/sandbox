@@ -1,0 +1,278 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.653
+Two right-handed pitchers. Both are hypothetical, and every number I give you is invented.
+
+2
+00:00:05.953 --> 00:00:11.137
+Your job is to decide which one is more consistent. It sounds easy. It is not.
+
+3
+00:00:11.987 --> 00:00:21.758
+The first pitcher’s elbow flexion at release varies by about eight degrees, his trunk tilt by six. Yet his release point varies by only about five centimetres.
+
+4
+00:00:22.058 --> 00:00:29.653
+The second pitcher is tighter at the joints: three degrees and three degrees. But his release point wanders by nine centimetres.
+
+5
+00:00:29.953 --> 00:00:31.467
+So which one is consistent?
+
+6
+00:00:33.317 --> 00:00:39.867
+Count the variables. A pitch’s goal is described by a few: release location, release velocity, spin.
+
+7
+00:00:40.167 --> 00:00:44.775
+The arm alone has seven rotational degrees of freedom from shoulder to wrist.
+
+8
+00:00:45.075 --> 00:00:47.336
+And hundreds of muscles act across them.
+
+9
+00:00:47.636 --> 00:01:00.137
+When many combinations of joint motion produce the same task outcome, the system is redundant. Some call it motor abundance. There is no single correct movement for a goal; there is a family of solutions.
+
+10
+00:01:00.987 --> 00:01:09.350
+Bernstein framed coordination as exactly this problem: converting a body with too many independent parts into a controllable system.
+
+11
+00:01:09.650 --> 00:01:14.685
+Mastery means organizing those redundant degrees of freedom, not eliminating them.
+
+12
+00:01:14.985 --> 00:01:27.614
+And he insisted that skilled repetition is not reproduction. The performer solves the movement problem anew on each attempt. The details differ; the outcome is preserved. Repetition without repetition.
+
+13
+00:01:27.914 --> 00:01:43.061
+Sport biomechanists long treated between-trial variability as noise to average away. Reviews of throwing and other skills argue that even elite performers do not reproduce identical patterns, and that some variability is functional.
+
+14
+00:01:43.361 --> 00:01:55.307
+So redundancy is a resource, not a nuisance. It is what lets a body absorb noise and still hit the target. The next question is how to tell useful variability from harmful variability.
+
+15
+00:01:56.557 --> 00:02:03.128
+Before the theory, a prediction. Treat the arm from shoulder to hand as a lever about six-tenths of a metre long.
+
+16
+00:02:03.428 --> 00:02:07.481
+Its orientation is off by two degrees. How far does the hand move?
+
+17
+00:02:08.931 --> 00:02:19.193
+Two degrees is about zero point zero three five radians. Displacement equals the lever length times the angle, so the hand moves about two point one centimetres.
+
+18
+00:02:19.493 --> 00:02:33.103
+Now add a second joint. Trunk tilt and shoulder angle each move the hand about two centimetres. If they are independent, their effects add in quadrature: the square root of two squared plus two squared, about three centimetres.
+
+19
+00:02:33.403 --> 00:02:42.406
+But if they are negatively correlated, so a larger tilt comes with a smaller shoulder angle, the hand moves much less than either variation alone would predict.
+
+20
+00:02:42.706 --> 00:02:50.834
+That is the core idea. You cannot read release-point variability off joint-angle variability without knowing how the joints co-vary.
+
+21
+00:02:51.684 --> 00:02:55.823
+Here is what that looks like across twenty pitches. Synthetic data again.
+
+22
+00:02:56.123 --> 00:03:03.184
+This line is how much trunk tilt alone would move release height on each pitch. Up to two or three centimetres either way.
+
+23
+00:03:03.484 --> 00:03:08.113
+This one is the shoulder. It moves in the opposite direction, pitch after pitch.
+
+24
+00:03:08.413 --> 00:03:19.272
+And this is release height, the sum. Nearly flat. The joint variation is real, but it lives in a task-irrelevant dimension. That is coordination, not inconsistency.
+
+25
+00:03:20.122 --> 00:03:27.695
+The uncontrolled manifold method makes this measurable. Pick a hypothesized task variable, say hand position at release.
+
+26
+00:03:27.995 --> 00:03:42.246
+The joint configurations that leave it unchanged form a manifold in joint space. Between-trial joint variance is split into the part along that manifold, which does not affect the task variable, and the part across it, which does.
+
+27
+00:03:42.546 --> 00:03:50.802
+Two synthetic pitchers, each with a release-point standard deviation of four centimetres. Pitcher A has eight units along the manifold,
+
+28
+00:03:51.102 --> 00:03:53.278
+and two across. A ratio of four.
+
+29
+00:03:53.578 --> 00:03:55.029
+Pitcher B has three along,
+
+30
+00:03:55.329 --> 00:04:08.662
+and three across. A ratio of one. More variance along than across means the joints co-vary to stabilize the variable. Pitcher A is compensating; Pitcher B’s joint variations simply add up at the hand.
+
+31
+00:04:08.962 --> 00:04:17.901
+A caution: real analyses need a kinematic model linking joint angles to the task variable, and variance normalized per degree of freedom.
+
+32
+00:04:18.751 --> 00:04:23.508
+Why would a nervous system work this way? Optimal feedback control offers a reason.
+
+33
+00:04:23.808 --> 00:04:36.800
+If motor commands are noisy, and the controller minimizes a cost that includes task error and effort, the best strategy is not to enforce a fixed trajectory. It corrects only deviations that threaten the goal.
+
+34
+00:04:37.100 --> 00:04:45.889
+Variability is allowed to accumulate in task-irrelevant dimensions. Skilled performers should therefore show exactly the structure Pitcher A shows.
+
+35
+00:04:47.139 --> 00:04:54.371
+Motor control combines feedforward commands, planned from a prediction, with feedback corrections from sensory information.
+
+36
+00:04:54.671 --> 00:05:01.861
+Computational accounts propose internal models. A forward model predicts the sensory consequences of a command,
+
+37
+00:05:02.161 --> 00:05:07.579
+which lets the system estimate the state of the limb despite delayed, noisy sensory signals.
+
+38
+00:05:07.879 --> 00:05:19.527
+Now the clock. A fastball takes roughly four-tenths of a second to reach the plate, and the swing lasts on the order of fifteen hundredths. Visual feedback loops take a tenth to two-tenths of a second.
+
+39
+00:05:19.827 --> 00:05:32.670
+So much of a swing is planned before it begins. And once a pitcher’s arm is accelerating, the throw is effectively feedforward. The quality of the plan, and of the state estimate behind it, carries most of the outcome.
+
+40
+00:05:32.970 --> 00:05:48.181
+Noise matters too. In many tasks command noise grows with command size, so maximal intent means large noise. Part of skill is channelling it into dimensions that do not move the ball, one reason velocity and command can trade off.
+
+41
+00:05:49.031 --> 00:05:57.180
+Where does an individual solution come from? Newell proposed that coordination emerges from the interaction of three families of constraints.
+
+42
+00:05:57.480 --> 00:06:03.283
+Organismic: body size, strength, mobility, tissue properties, perceptual and neural factors.
+
+43
+00:06:03.583 --> 00:06:06.889
+Environmental: gravity, surfaces, light, temperature.
+
+44
+00:06:07.189 --> 00:06:14.357
+Task: the goal, the rules, the implement. Change any of them and you change which patterns are available and which are preferred.
+
+45
+00:06:14.657 --> 00:06:24.364
+Two pitchers with different humeral torsion, hip mobility and strength face different organismic constraints. The same goal may be best achieved with different movements.
+
+46
+00:06:24.664 --> 00:06:35.267
+Dynamical-systems accounts add a vocabulary: collective variables such as relative phase, stable patterns, and switches when a control parameter crosses a threshold.
+
+47
+00:06:35.567 --> 00:06:46.233
+Be careful with it. The strongest support comes from rhythmic tasks such as bimanual finger coordination. Applying it to a discrete pitch or swing is more interpretive.
+
+48
+00:06:46.533 --> 00:06:52.357
+Try the framework. A pitcher’s stride is shorter than his peers’. Generate competing explanations.
+
+49
+00:06:54.207 --> 00:07:06.325
+Now the challenge, aimed at this lecture. The functional-variability view holds that skilled movement has an optimal amount and structure of variability, and too little can be as problematic as too much.
+
+50
+00:07:06.625 --> 00:07:21.387
+It is influential, and hard to falsify. Optimal is rarely specified in advance, much of the evidence comes from gait and clinical populations, and measured variability always includes measurement error that must be separated first.
+
+51
+00:07:21.687 --> 00:07:37.943
+In baseball, pitch-to-pitch variability of many kinematic and kinetic variables was smaller at higher levels, but timing variability was not. That fits reduced noise in skilled pitchers, and persistent timing variability. It does not decide between theories.
+
+52
+00:07:38.243 --> 00:07:53.774
+And the individual-solutions idea can be overstated. Many solutions exist; that does not make them equally good for velocity, command or tissue loading. The demand is narrower: show that a difference matters for this athlete before calling it a fault.
+
+53
+00:07:54.624 --> 00:08:07.040
+Seven questions, one claim: reducing this pitcher’s joint-angle variability will improve his command. Observed: between-pitch standard deviations of joint angles, release point and location.
+
+54
+00:08:07.340 --> 00:08:11.692
+Mechanism: steadier joints give a steadier release and more accurate pitches.
+
+55
+00:08:11.992 --> 00:08:21.656
+Evidence: indirect. Higher-level pitchers vary less in many variables, while theory predicts that compensated joint variability does not affect release.
+
+56
+00:08:21.956 --> 00:08:30.297
+Uncertain: how much variability is compensated, how much is measurement error, and whether release variability limits his command at all.
+
+57
+00:08:30.597 --> 00:08:34.608
+Has changing it improved performance? No intervention study shows it.
+
+58
+00:08:34.908 --> 00:08:37.169
+Transfer to game command? Unknown.
+
+59
+00:08:37.469 --> 00:08:48.371
+Loading? Also unknown. Constraining variability might concentrate repetitive load on the same tissues, but that is a hypothesis, offered as education, not a finding.
+
+60
+00:08:49.621 --> 00:09:02.335
+For a pitcher: which task variables matter, how variable is each, and is joint variability compensated? Trunk tilt that varies while arm angle co-varies to keep release height stable is coordination.
+
+61
+00:09:02.635 --> 00:09:09.249
+Release height that wanders with trunk tilt may be a command problem with a mechanical source worth investigating.
+
+62
+00:09:09.549 --> 00:09:21.815
+For a hitter, variability is partly the point: different pitches need different swings. Swing-to-swing variability off a tee says little about adaptability, and reducing it is not obviously desirable.
+
+63
+00:09:22.115 --> 00:09:39.097
+That is also why a single consistency score averaged over twenty joint angles fails. It mixes relevant and irrelevant variability, includes measurement error, and implies less is always better. Report task-outcome variability with its error, and use joints to explain it.
+
+64
+00:09:39.947 --> 00:09:43.531
+To close. Redundancy means many movements achieve one goal.
+
+65
+00:09:43.831 --> 00:09:51.447
+Variability that leaves the goal unchanged is not error, and optimal feedback control predicts skilled performers will allow it.
+
+66
+00:09:51.747 --> 00:09:56.376
+Body, environment and task constraints shape which solution an athlete uses.
+
+67
+00:09:56.676 --> 00:10:03.673
+So for any variability measure ask: in which dimension, how much is measurement error, and does it matter for the outcome?
+
+68
+00:10:03.973 --> 00:10:14.725
+Treat this as a primer. Week 9 returns to motor control in depth: theories compared, internal models, coordination dynamics, and how to measure variability properly.
+
+69
+00:10:15.575 --> 00:10:21.911
+Next, the comprehension check, then the week’s laboratory. And read Bartlett and colleagues closely on throwing.
+
