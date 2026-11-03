@@ -126,6 +126,13 @@ database to any minute in the last 30 days (7 on the Free plan).
 `--binding NAME=value` and a local test token issuer (an `http://127.0.0.1` issuer is accepted
 only for local testing). Keep `.wrangler/` out of git.
 
+## Course B — Applied Biomechanics & Human Performance
+
+A second, concurrent 14-week course (Weeks 1–2 open; Weeks 3–14 Coming Soon), with its own content bundle
+(`aperture/content-b/` → `apps/aperture/data/course-b.json`), its own learner records (`aperture:v1:b:*`) and the same
+lessons, lectures, labs, assessments and review framework. Course switch: header A/B, Home, Curriculum or
+`#/course/b`. Details and continuation steps: `aperture/docs/course-b.md`.
+
 ## Syllabus
 
 `#/syllabus` (linked from the Curriculum page) and the PDF `apps/aperture/syllabus/APERTURE-Semester-I-Syllabus.pdf`

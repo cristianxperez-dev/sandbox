@@ -175,7 +175,9 @@ if __name__ == '__main__':
         print(f'\nScripts: {len(every)} · released: {len(release)} · rendered and current: {n} · coming soon: {len(every) - len(release)}')
         sys.exit(0)
     if args == ['--all']:
-        todo = [l for l in release if stale(path(l))]
+        missing = [l for l in release if not os.path.exists(path(l))]
+        if missing: print(f'Released but no script yet (skipped): {", ".join(missing)}')
+        todo = [l for l in release if os.path.exists(path(l)) and stale(path(l))]
     elif args and not any(a.startswith('-') for a in args):
         held = [a for a in args if a not in release]
         if held:

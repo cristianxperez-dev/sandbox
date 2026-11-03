@@ -1,0 +1,992 @@
+{
+  "id": "b01-l3-lecture",
+  "lesson": "b01-l3",
+  "title": "Peak Force Is Not the Point",
+  "subtitle": "Kinetics: forces, moments, momentum and power",
+  "summary": "A narrated, interactive version of Lesson 3: impulse and momentum, moments as r × F, angular impulse, joint power and its sign, and what inverse dynamics assumes — including why a net joint moment is not a tissue load or an injury probability. It covers the same objectives and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Using the ground better?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Course B · Week 1 · Lesson 3 · Lecture",
+            "title": "Peak force is not the point",
+            "sub": "Forces, moments, momentum and power"
+          },
+          "cues": [
+            {
+              "text": "A force-plate report lands on your desk. One hitter’s lead leg shows a higher peak vertical force than another’s. The scenario is hypothetical."
+            },
+            {
+              "text": "A staff member concludes that the first hitter is using the ground better."
+            },
+            {
+              "text": "Hold that thought. Peak force alone cannot establish it, and this lecture is about why."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "A pitcher’s lead-leg braking force",
+            "items": [
+              {
+                "value": "1,200 N",
+                "label": "peak braking force"
+              },
+              {
+                "value": "0.05 s",
+                "label": "rise to the peak"
+              },
+              {
+                "value": "0.10 s",
+                "label": "fall back to zero"
+              }
+            ],
+            "note": "Synthetic numbers, from the lesson."
+          },
+          "cues": [
+            {
+              "text": "Here is a cleaner version of the question. A pitcher’s lead leg produces a braking force that rises to one thousand two hundred newtons in five hundredths of a second.",
+              "reveal": 1
+            },
+            {
+              "text": "It rises in a straight line to that peak.",
+              "reveal": 2
+            },
+            {
+              "text": "Then it falls back to zero over the next tenth of a second.",
+              "reveal": 3
+            },
+            {
+              "text": "How much braking did that deliver? Estimate the impulse, in newton-seconds, before I show you how."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-impulse",
+            "type": "estimate",
+            "prompt": "A braking force rises linearly to 1,200 N over 0.05 s and falls linearly to zero over the next 0.10 s. What is its impulse?",
+            "min": 0,
+            "max": 200,
+            "step": 5,
+            "unit": "N·s",
+            "initial": 100,
+            "answer": 90,
+            "tolerance": 5,
+            "concept": "c-impulse-momentum",
+            "feedback": {
+              "correct": "Yes: ninety newton-seconds, the area of a triangle with base fifteen hundredths of a second.",
+              "incorrect": "The impulse is the area under the curve: one half times one thousand two hundred newtons times fifteen hundredths of a second, ninety newton-seconds."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Impulse changes momentum",
+      "scenes": [
+        {
+          "visual": {
+            "type": "curves",
+            "title": "Same impulse, different peaks",
+            "xLabel": "Time from foot contact (ms)",
+            "yLabel": "Braking force (N)",
+            "series": [
+              {
+                "label": "Peak 1,200 N over 150 ms",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    5,
+                    120
+                  ],
+                  [
+                    10,
+                    240
+                  ],
+                  [
+                    15,
+                    360
+                  ],
+                  [
+                    20,
+                    480
+                  ],
+                  [
+                    25,
+                    600
+                  ],
+                  [
+                    30,
+                    720
+                  ],
+                  [
+                    35,
+                    840
+                  ],
+                  [
+                    40,
+                    960
+                  ],
+                  [
+                    45,
+                    1080
+                  ],
+                  [
+                    50,
+                    1200
+                  ],
+                  [
+                    55,
+                    1140
+                  ],
+                  [
+                    60,
+                    1080
+                  ],
+                  [
+                    65,
+                    1020
+                  ],
+                  [
+                    70,
+                    960
+                  ],
+                  [
+                    75,
+                    900
+                  ],
+                  [
+                    80,
+                    840
+                  ],
+                  [
+                    85,
+                    780
+                  ],
+                  [
+                    90,
+                    720
+                  ],
+                  [
+                    95,
+                    660
+                  ],
+                  [
+                    100,
+                    600
+                  ],
+                  [
+                    105,
+                    540
+                  ],
+                  [
+                    110,
+                    480
+                  ],
+                  [
+                    115,
+                    420
+                  ],
+                  [
+                    120,
+                    360
+                  ],
+                  [
+                    125,
+                    300
+                  ],
+                  [
+                    130,
+                    240
+                  ],
+                  [
+                    135,
+                    180
+                  ],
+                  [
+                    140,
+                    120
+                  ],
+                  [
+                    145,
+                    60
+                  ],
+                  [
+                    150,
+                    0
+                  ]
+                ]
+              },
+              {
+                "label": "Peak 2,400 N over 75 ms",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    5,
+                    480
+                  ],
+                  [
+                    10,
+                    960
+                  ],
+                  [
+                    15,
+                    1440
+                  ],
+                  [
+                    20,
+                    1920
+                  ],
+                  [
+                    25,
+                    2400
+                  ],
+                  [
+                    30,
+                    2160
+                  ],
+                  [
+                    35,
+                    1920
+                  ],
+                  [
+                    40,
+                    1680
+                  ],
+                  [
+                    45,
+                    1440
+                  ],
+                  [
+                    50,
+                    1200
+                  ],
+                  [
+                    55,
+                    960
+                  ],
+                  [
+                    60,
+                    720
+                  ],
+                  [
+                    65,
+                    480
+                  ],
+                  [
+                    70,
+                    240
+                  ],
+                  [
+                    75,
+                    0
+                  ],
+                  [
+                    80,
+                    0
+                  ],
+                  [
+                    85,
+                    0
+                  ],
+                  [
+                    90,
+                    0
+                  ],
+                  [
+                    95,
+                    0
+                  ],
+                  [
+                    100,
+                    0
+                  ],
+                  [
+                    105,
+                    0
+                  ],
+                  [
+                    110,
+                    0
+                  ],
+                  [
+                    115,
+                    0
+                  ],
+                  [
+                    120,
+                    0
+                  ],
+                  [
+                    125,
+                    0
+                  ],
+                  [
+                    130,
+                    0
+                  ],
+                  [
+                    135,
+                    0
+                  ],
+                  [
+                    140,
+                    0
+                  ],
+                  [
+                    145,
+                    0
+                  ],
+                  [
+                    150,
+                    0
+                  ]
+                ]
+              }
+            ],
+            "note": "Synthetic triangular force–time curves; each encloses 90 N·s."
+          },
+          "cues": [
+            {
+              "text": "Ninety newton-seconds. Integrate Newton’s second law over time and you get impulse–momentum: the area under the force–time curve equals the change in momentum.",
+              "refs": [
+                "R-winter-2009-biomechanics",
+                "R-robertson-2014-research"
+              ]
+            },
+            {
+              "text": "Our curve is a triangle. One half, times one thousand two hundred newtons, times fifteen hundredths of a second, is ninety newton-seconds.",
+              "reveal": 1
+            },
+            {
+              "text": "If that is the net horizontal force on a ninety-kilogram pitcher, his centre of mass slows by ninety divided by ninety: one metre per second."
+            },
+            {
+              "text": "Now the second curve. Double the peak to two thousand four hundred newtons and halve the duration.",
+              "reveal": 2
+            },
+            {
+              "text": "The area is identical. Same impulse, same change in velocity, and a peak twice as high."
+            },
+            {
+              "text": "So the force-plate staff member was looking at the wrong number. A brief, high peak can deliver less impulse than a lower, longer push."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Vertical impulse, net of gravity",
+            "lines": [
+              {
+                "label": "Body weight, 90 kg",
+                "value": "≈ 883 N"
+              },
+              {
+                "label": "Both legs, average over 0.12 s",
+                "value": "1,300 N"
+              },
+              {
+                "label": "Net vertical impulse",
+                "value": "(1,300 − 883) × 0.12 ≈ 50 N·s"
+              }
+            ],
+            "result": {
+              "label": "Upward velocity change",
+              "value": "50 ÷ 90 ≈ 0.56 m/s"
+            },
+            "note": "Synthetic numbers, from the lesson."
+          },
+          "cues": [
+            {
+              "text": "Vertical forces add one more step. Subtract body weight first. A ninety-kilogram athlete weighs about eight hundred eighty-three newtons, and only the force above that changes vertical momentum.",
+              "reveal": 1
+            },
+            {
+              "text": "Suppose a hitter’s lead leg averages one thousand five hundred newtons over twelve hundredths of a second. His rear leg is also on the ground, so the lead leg alone does not decide anything."
+            },
+            {
+              "text": "If both legs together average one thousand three hundred newtons over that window, the net vertical impulse is about fifty newton-seconds.",
+              "reveal": 3
+            },
+            {
+              "text": "That is an upward velocity change of about fifty-six hundredths of a metre per second. The rule for reading reports: sum every contact and net out gravity before saying anything about the centre of mass.",
+              "reveal": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Moments and their signs",
+      "scenes": [
+        {
+          "visual": {
+            "type": "torque",
+            "title": "A moment about a joint axis",
+            "force": 200,
+            "arm": 0.3,
+            "angle": 90,
+            "axisLabel": "Joint axis",
+            "note": "Synthetic: the lesson’s vector example, F perpendicular to r."
+          },
+          "cues": [
+            {
+              "text": "Forces change linear momentum. Moments change angular momentum."
+            },
+            {
+              "text": "A force that misses an axis produces a moment about it. Moment equals r cross F, where r runs from the axis to the point where the force acts.",
+              "refs": [
+                "R-winter-2009-biomechanics"
+              ]
+            },
+            {
+              "text": "Here, the lever is thirty centimetres long.",
+              "reveal": 1
+            },
+            {
+              "text": "A two-hundred-newton force acts at its end, perpendicular to it.",
+              "reveal": 2
+            },
+            {
+              "text": "The magnitude is the lever length times the force times the sine of the angle between them. Sine of ninety is one, so the moment is sixty newton-metres.",
+              "reveal": 3
+            },
+            {
+              "text": "In vector form, with r along X and F along Z, the cross product points along minus Y: sixty newton-metres about the negative Y axis, by the right-hand rule."
+            },
+            {
+              "text": "Swap the order, F cross r, and the sign flips. That alone is one reason reports disagree about whether a moment is positive. Always check the stated convention."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Same 200 N force, same 0.30 m lever.",
+              "Now 30° between them."
+            ],
+            "sub": "Synthetic numbers."
+          },
+          "cues": [
+            {
+              "text": "Now keep the same force and the same lever,"
+            },
+            {
+              "text": "but tilt the force so it makes thirty degrees with the lever instead of ninety.",
+              "reveal": 1
+            },
+            {
+              "text": "Before I draw it, estimate the moment."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-torque",
+            "type": "estimate",
+            "prompt": "A 200 N force acts at the end of a 0.30 m lever, at 30° to the lever. What is the moment about the axis?",
+            "min": 0,
+            "max": 80,
+            "step": 1,
+            "unit": "N·m",
+            "initial": 60,
+            "answer": 30,
+            "tolerance": 1,
+            "concept": "c-joint-moment",
+            "feedback": {
+              "correct": "Right: thirty newton-metres. Sine of thirty degrees is one half.",
+              "incorrect": "Moment equals lever times force times the sine of the angle: zero point three times two hundred times one half, thirty newton-metres."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "torque",
+            "title": "The moment arm",
+            "force": 200,
+            "arm": 0.3,
+            "angle": 30,
+            "axisLabel": "Joint axis",
+            "note": "Perpendicular distance from axis to line of action: 0.15 m."
+          },
+          "cues": [
+            {
+              "text": "Thirty newton-metres. Here is the lever, and the tilted force.",
+              "reveal": 2
+            },
+            {
+              "text": "Sine of thirty degrees is one half, so the moment halves."
+            },
+            {
+              "text": "Another way to see it: the perpendicular distance from the axis to the line of action, the moment arm, is now fifteen centimetres. Two hundred newtons times fifteen centimetres is thirty.",
+              "reveal": 3
+            },
+            {
+              "text": "The same arithmetic applies inside the body. A four-hundred-newton muscle force acting five centimetres from a joint centre produces twenty newton-metres."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Angular momentum and power",
+      "scenes": [
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Angular impulse on one segment",
+            "lines": [
+              {
+                "label": "Average net moment",
+                "value": "50 N·m"
+              },
+              {
+                "label": "Duration",
+                "value": "0.08 s"
+              },
+              {
+                "label": "Angular impulse",
+                "value": "50 × 0.08 = 4 N·m·s"
+              },
+              {
+                "label": "Moment of inertia",
+                "value": "0.2 kg·m²"
+              }
+            ],
+            "result": {
+              "label": "Change in angular velocity",
+              "value": "4 ÷ 0.2 = 20 rad/s ≈ 1,150°/s"
+            },
+            "note": "Synthetic numbers, from the lesson."
+          },
+          "cues": [
+            {
+              "text": "The rotational version of impulse works the same way. Angular impulse, moment integrated over time, equals the change in angular momentum.",
+              "refs": [
+                "R-winter-2009-biomechanics"
+              ]
+            },
+            {
+              "text": "An average net moment of fifty newton-metres",
+              "reveal": 1
+            },
+            {
+              "text": "acting for eight hundredths of a second",
+              "reveal": 2
+            },
+            {
+              "text": "delivers four newton-metre-seconds.",
+              "reveal": 3
+            },
+            {
+              "text": "Apply it to a segment with a moment of inertia of two tenths of a kilogram-metre squared,",
+              "reveal": 4
+            },
+            {
+              "text": "and its angular velocity changes by twenty radians per second, about one thousand one hundred fifty degrees per second. A segment ten times heavier in rotational terms would change by a tenth as much. Big segments are slow to start; small ones can be made very fast.",
+              "reveal": 5
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Gravity makes no moment about the centre of mass.",
+              "So total angular momentum comes from the feet."
+            ],
+            "sub": "Internal moments redistribute it among segments; they cannot change the total."
+          },
+          "cues": [
+            {
+              "text": "Now the whole body. During the stride and the swing, the only significant external forces are gravity and the ground reaction forces."
+            },
+            {
+              "text": "Gravity acts at the centre of mass, so it produces no moment about it. Every change in the body’s total angular momentum about its centre of mass comes from ground reaction forces whose lines of action miss the centre of mass.",
+              "reveal": 1,
+              "refs": [
+                "R-winter-2009-biomechanics"
+              ]
+            },
+            {
+              "text": "Muscles can pass angular momentum among trunk, arms and bat, but they cannot change the total. Where the trunk’s rotation comes from is partly a question about the feet."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Same moment, opposite power",
+            "left": {
+              "title": "Arm cocking",
+              "points": [
+                "Internal-rotation moment 60 N·m",
+                "Humerus externally rotating at 40 rad/s",
+                "Power −2,400 W: absorbing"
+              ]
+            },
+            "right": {
+              "title": "Arm acceleration",
+              "points": [
+                "Internal-rotation moment 60 N·m",
+                "Humerus internally rotating at 40 rad/s",
+                "Power +2,400 W: generating"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Last, power. Joint power is the net joint moment times the joint angular velocity.",
+              "refs": [
+                "R-winter-2009-biomechanics"
+              ]
+            },
+            {
+              "text": "During arm cocking, an internal-rotation moment of sixty newton-metres opposes a humerus still rotating externally at forty radians per second. Power is minus two thousand four hundred watts: the moment absorbs energy. The numbers are synthetic.",
+              "reveal": 1
+            },
+            {
+              "text": "During acceleration, the same moment acts with internal rotation at the same speed: plus two thousand four hundred watts, generating energy.",
+              "reveal": 2
+            },
+            {
+              "text": "That sign change is the mechanical signature of the decelerate-then-accelerate pattern from Lesson One. Power can also flow between neighbouring segments through joint forces, which move energy without doing net work on the pair."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "What inverse dynamics returns",
+      "scenes": [
+        {
+          "visual": {
+            "type": "flow",
+            "title": "How a net joint moment is made",
+            "steps": [
+              {
+                "label": "Motion data",
+                "text": "Filtered trajectories, segment accelerations"
+              },
+              {
+                "label": "Segment parameters",
+                "text": "Mass and inertia from tables or scaling"
+              },
+              {
+                "label": "External forces",
+                "text": "Force plates, or an assumption"
+              },
+              {
+                "label": "Equations of motion",
+                "text": "Newton–Euler, distal to proximal"
+              },
+              {
+                "label": "Net moments",
+                "text": "Expressed in a chosen frame, often normalized"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "So where do the elbow and shoulder moments in a pitching report come from? They are not measured. They are computed."
+            },
+            {
+              "text": "Motion data, filtered, give each segment’s linear and angular accelerations.",
+              "reveal": 1
+            },
+            {
+              "text": "Segment masses and inertias come from tables or scaling rules.",
+              "reveal": 2
+            },
+            {
+              "text": "External forces come from force plates, or from an assumption, such as zero force at a free hand.",
+              "reveal": 3
+            },
+            {
+              "text": "Newton–Euler equations are solved segment by segment, from the distal end inward, using the third law to pass forces from one segment to the next.",
+              "reveal": 4,
+              "refs": [
+                "R-winter-2009-biomechanics"
+              ]
+            },
+            {
+              "text": "Out come net joint forces and moments, expressed in a chosen frame and often normalized to body size.",
+              "reveal": 5
+            },
+            {
+              "text": "Net is the key word. The moment combines every structure crossing the joint. Co-contraction raises tissue loads without raising the net value, and ligament and joint contact can carry load the net value hides.",
+              "refs": [
+                "R-winter-2009-biomechanics",
+                "R-fleisig-1995-kinetics"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Methodological note",
+            "term": "Interaction torque",
+            "definition": "Moments on a segment produced by the motion of its neighbours, with no muscle acting at the joint between them.",
+            "example": "A fast trunk and upper arm whip the forearm; muscles accelerate joints they do not cross."
+          },
+          "cues": [
+            {
+              "text": "And one more reason a net moment is not a muscle story.",
+              "reveal": 1
+            },
+            {
+              "text": "In a chain of linked segments, a moving segment produces moments on its neighbours, with terms tied to the proximal segment’s angular acceleration and the square of its angular velocity.",
+              "refs": [
+                "R-zajac-1989-determining",
+                "R-putnam-1993-sequential"
+              ]
+            },
+            {
+              "text": "So muscles accelerate joints they do not cross, and can even oppose their anatomical action at joints they do cross.",
+              "reveal": 2,
+              "refs": [
+                "R-zajac-1989-determining"
+              ]
+            },
+            {
+              "text": "Induced-acceleration analysis of throwing credits much of elbow extension and wrist flexion speed near release to velocity-dependent effects arising from trunk rotation and shoulder internal rotation.",
+              "refs": [
+                "R-hirashima-2008-kinetic"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "What kinetics cannot tell you",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Why kinetic values travel badly",
+            "cards": [
+              {
+                "title": "Thin injury evidence",
+                "q": "Valgus torque has the most support",
+                "fail": "Low power; no prospective 3D studies"
+              },
+              {
+                "title": "Velocity confound",
+                "q": "Moments rise with ball speed",
+                "fail": "High torque and high velocity are not independent"
+              },
+              {
+                "title": "Filtering",
+                "q": "Moments depend on second derivatives",
+                "fail": "Mismatched cut-offs create false peaks"
+              },
+              {
+                "title": "Normalization",
+                "q": "Divide by weight times height",
+                "fail": "Assumes linear scaling; leaves velocity in"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now let me argue against the power of everything I just taught. Pitching kinetics grew up partly to explain injury, and the moments at maximal external rotation have been described as approaching tissue failure limits from cadaver testing.",
+              "refs": [
+                "R-fleisig-1995-kinetics"
+              ]
+            },
+            {
+              "text": "But a systematic review of eleven studies found elbow valgus torque among the few variables with support, with low power and no prospective three-dimensional studies.",
+              "reveal": 1,
+              "refs": [
+                "R-bullock-2021-baseball"
+              ]
+            },
+            {
+              "text": "Normalized moments also rise with ball velocity, across pitchers and within a pitcher, pitch to pitch. High torque and high velocity are not independent findings.",
+              "reveal": 2,
+              "refs": [
+                "R-stodden-2005-relationship"
+              ]
+            },
+            {
+              "text": "Filtering matters. Moments rest on accelerations, second derivatives of noisy positions. Filter markers and force data differently and you can create artificial peaks near foot contact or release.",
+              "reveal": 3
+            },
+            {
+              "text": "And normalization by body weight times height assumes loads scale linearly with size, and does nothing about velocity. A percentile chart of normalized moments mixes skill, size and load.",
+              "reveal": 4
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Claim: a 100 N·m varus moment means high UCL risk",
+            "steps": [
+              "Observed: a computed net moment, a measurement",
+              "Mechanism: medial structures resist valgus load",
+              "Evidence: cadaver data, few prospective studies",
+              "Uncertain: load sharing, tissue capacity, workload, model error",
+              "Reducing it reduces injury: not shown",
+              "Transfer: lower velocity has a competitive cost",
+              "A load indicator, not a probability"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Run the strongest version of the injury claim through the seven questions. This pitcher’s elbow varus moment is one hundred newton-metres, so his ulnar collateral ligament is at high risk. This is educational, not clinical."
+            },
+            {
+              "text": "Observed: a net moment computed by inverse dynamics, a biomechanical measurement. Mechanism: the ligament resists valgus load, along with every other medial structure.",
+              "reveal": 2
+            },
+            {
+              "text": "Evidence: cadaver failure data and a handful of studies; the review supports valgus torque only provisionally.",
+              "reveal": 3,
+              "refs": [
+                "R-bullock-2021-baseball"
+              ]
+            },
+            {
+              "text": "Uncertain: how load is shared among ligament, muscle and bone, this athlete’s tissue capacity, his workload, and the model and filtering error in the estimate itself.",
+              "reveal": 4
+            },
+            {
+              "text": "No controlled study shows that mechanically lowering the moment reduces injury, and if the change lowers velocity, there is a competitive cost.",
+              "reveal": 6
+            },
+            {
+              "text": "So the number is a load indicator, not a probability.",
+              "reveal": 7
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-varus",
+            "type": "choice",
+            "prompt": "A vendor dashboard colours a pitcher red because his elbow varus moment is above a league percentile. What is the defensible use of that number?",
+            "concept": "c-inverse-dynamics",
+            "options": [
+              {
+                "id": "a",
+                "text": "Label him high-risk and reduce his workload"
+              },
+              {
+                "id": "b",
+                "text": "Monitor him against his own history at similar velocity, with consistent methods and clinical review"
+              },
+              {
+                "id": "c",
+                "text": "Treat it as the load on his ulnar collateral ligament"
+              },
+              {
+                "id": "d",
+                "text": "Discard it; computed moments carry no information"
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "A between-pitcher percentile is not an injury probability, and it is confounded by velocity, size and the reference population’s methods.",
+              "b": "Correct. Within-pitcher monitoring with consistent methods, read alongside velocity and reviewed by clinicians, is the use the evidence supports.",
+              "c": "The net moment sums every structure crossing the elbow. It cannot be assigned to one ligament without a musculoskeletal model.",
+              "d": "Net moments are informative for comparing a pitcher with himself under consistent methods. The error is over-reading them, not using them."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Reading a kinetics table",
+            "left": {
+              "title": "Synthetic report",
+              "points": [
+                "Elbow varus 88 N·m, 4.6 %BW×H",
+                "Shoulder internal rotation 90 N·m",
+                "Lead-leg vertical force 1.9 × body weight"
+              ]
+            },
+            "right": {
+              "title": "Ask first",
+              "points": [
+                "One pitch or several fastballs?",
+                "Same filter and segment model as the norms?",
+                "Distal or proximal segment frame?",
+                "High relative to his own history?"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Here is a synthetic report. Elbow varus moment eighty-eight newton-metres, shoulder internal-rotation moment ninety, lead-leg vertical force one point nine times body weight.",
+              "reveal": 1
+            },
+            {
+              "text": "Before any interpretation: averaged over several fastballs, or one? Same filter cut-off and segment model as the comparison data? Distal or proximal segment frame?",
+              "reveal": 2
+            },
+            {
+              "text": "Only then ask whether eighty-eight is high for this pitcher, against his own history at similar velocity."
+            },
+            {
+              "text": "For a hitter, a bigger lead-leg braking impulse slows forward motion, and that momentum can be redirected into rotation. Whether a given hitter benefits depends on his timing and bat path, and the evidence for prescribing it is associational. Lesson Four takes that up."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Three questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "The Biomechanics Foundations Lab",
+                "detail": "Four hands-on stations, about ten minutes each",
+                "href": "#/exercise/b01-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Winter (2009), the kinetics chapters: work one inverse-dynamics example by hand",
+                "href": "#/library/R-winter-2009-biomechanics"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Impulse, the area under the force–time curve, changes momentum; peak force does not. Angular impulse changes angular momentum. Power is moment times angular velocity, and its sign says whether energy is generated or absorbed."
+            },
+            {
+              "text": "Inverse dynamics turns motion into net joint moments that are model-dependent and summed over every structure at the joint. They are not tissue loads, and not injury probabilities."
+            },
+            {
+              "text": "Take the comprehension check below, the same as the written lesson. Then open the Biomechanics Foundations Lab, and work one inverse-dynamics example by hand from Winter’s kinetics chapters.",
+              "reveal": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
