@@ -1,0 +1,334 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.152
+Every instrument in a pitching lab produces a number. Only some of those numbers are measurements. The rest are model outputs wearing a measurement's clothes.
+
+2
+00:00:09.452 --> 00:00:21.356
+In this lecture we'll take apart three instruments, force plates, inertial sensors and electromyography, and for each one ask the same question: what is measured directly, and what has to be modelled?
+
+3
+00:00:22.206 --> 00:00:25.790
+Here is a scene with an invented pitcher and invented values.
+
+4
+00:00:26.090 --> 00:00:34.922
+He wears an arm sensor for a bullpen. His elbow torque averages seventy-two newton-metres on fastballs this week, against sixty-six last week.
+
+5
+00:00:35.222 --> 00:00:42.625
+Force plates in the mound show his lead-leg peak vertical force rose from one point nine to two point one body weights.
+
+6
+00:00:42.925 --> 00:00:56.535
+And a staff member proposes cutting his throwing volume, because his ulnar collateral ligament load is up nine percent. This is an educational example, not clinical advice. Which of these numbers is actually measured?
+
+7
+00:00:57.985 --> 00:01:03.127
+Only the force plate measures its quantity directly. Now follow the sensor torque to the claim.
+
+8
+00:01:03.427 --> 00:01:07.288
+The sensor measures one segment's rotation rate and acceleration.
+
+9
+00:01:07.588 --> 00:01:17.743
+It combines those with assumed arm dimensions and mass properties to estimate a net moment at the elbow: the sum of everything that crosses the joint, not ligament tension.
+
+10
+00:01:18.043 --> 00:01:22.651
+The claim then assumes the ligament bears that net moment in a fixed proportion.
+
+11
+00:01:22.951 --> 00:01:27.857
+And that a nine percent change exceeds the sensor's measurement error. Neither has been shown.
+
+12
+00:01:29.107 --> 00:01:39.006
+A force plate measures three orthogonal force components and three moments about its own axes, from strain gauges or piezoelectric crystals at its supports.
+
+13
+00:01:39.306 --> 00:01:55.455
+From those it computes the centre of pressure, where the resultant force acts on the surface. In one common convention, the forward coordinate equals minus the moment about the side axis, minus plate depth times forward force, all divided by vertical force.
+
+14
+00:01:55.755 --> 00:02:01.921
+Sign conventions vary by manufacturer, so check them. And notice the division by vertical force.
+
+15
+00:02:02.221 --> 00:02:15.063
+At initial contact, or as the foot leaves the plate, vertical force is small. Tiny moment errors then produce large excursions, so laboratories compute the centre of pressure only above a force threshold.
+
+16
+00:02:15.363 --> 00:02:23.086
+Ground reaction force and centre of pressure, with segment kinematics and inertial properties, are the inputs to inverse dynamics.
+
+17
+00:02:23.936 --> 00:02:29.675
+Force–time curves carry more than peaks. Here are illustrative lead-leg curves from a synthetic pitch.
+
+18
+00:02:29.975 --> 00:02:40.961
+The vertical force rises steeply after foot contact. Its rate of force development, and the timing of the peak relative to contact and release, describe how force is produced.
+
+19
+00:02:41.261 --> 00:02:48.323
+The braking curve is the forward-backward force. The area under it, the impulse, is what changes the body's momentum.
+
+20
+00:02:48.623 --> 00:03:03.065
+In pitching you need plates under both legs in the mound. In hitting, two plates in the box let you analyze each leg. And mounting matters: plates must be rigid, level, with a natural frequency high enough that impacts do not set them vibrating.
+
+21
+00:03:03.365 --> 00:03:06.203
+Turf and clay over a mound plate change all three.
+
+22
+00:03:07.053 --> 00:03:10.402
+Let's compute one, for a synthetic ninety-kilogram pitcher.
+
+23
+00:03:10.702 --> 00:03:16.142
+Body weight first: ninety times nine point eight one, about eight hundred eighty-three newtons.
+
+24
+00:03:16.442 --> 00:03:22.202
+His lead leg brakes at an average of zero point eight body weights, about seven hundred six newtons.
+
+25
+00:03:22.502 --> 00:03:28.795
+For a tenth of a second. Impulse is force integrated over time: about seventy-one newton-seconds.
+
+26
+00:03:29.095 --> 00:03:39.207
+That changes his forward momentum by seventy-one kilogram-metres per second, or his centre-of-mass velocity by about zero point seven nine metres per second.
+
+27
+00:03:40.457 --> 00:03:47.689
+An inertial measurement unit combines a triaxial accelerometer, a triaxial gyroscope, and often a magnetometer.
+
+28
+00:03:47.989 --> 00:03:58.357
+The accelerometer measures specific force, linear acceleration minus gravity, in the sensor's own frame. The gyroscope measures angular velocity in that frame.
+
+29
+00:03:58.657 --> 00:04:17.495
+Orientation comes from integrating angular velocity, and position from double-integrating gravity-corrected acceleration. Both integrations accumulate error, so fusion algorithms, complementary or Kalman filters, correct orientation using gravity and sometimes the magnetic field.
+
+30
+00:04:17.795 --> 00:04:30.232
+Camomilla and colleagues' systematic review found most in-field studies were done in training rather than competition, and flagged reliability and sensor-to-segment calibration as continuing concerns.
+
+31
+00:04:30.532 --> 00:04:42.244
+How fast does error accumulate? Suppose a gyroscope has an uncorrected bias of zero point two degrees per second, and you record for ninety seconds. Predict the orientation error.
+
+32
+00:04:43.694 --> 00:04:48.814
+Eighteen degrees. The gyroscope bias integrates once, so its error grows linearly.
+
+33
+00:04:49.114 --> 00:04:52.570
+Half a degree per second of bias becomes thirty degrees per minute.
+
+34
+00:04:52.870 --> 00:04:55.473
+Accelerometer bias is integrated twice.
+
+35
+00:04:55.773 --> 00:05:05.159
+Zero point zero five metres per second squared over two seconds gives half times zero point zero five times two squared: ten centimetres.
+
+36
+00:05:05.459 --> 00:05:13.545
+That error grows with the square of time. A single throw is short, which is why throwing sensors reset or re-reference between throws.
+
+37
+00:05:14.395 --> 00:05:16.485
+Three more problems matter in baseball.
+
+38
+00:05:16.785 --> 00:05:31.015
+Saturation. Throwing-arm angular velocities are among the fastest in sport. A gyroscope whose range is below the peak clips the signal and corrupts everything integrated from it. Check the datasheet range against the task.
+
+39
+00:05:31.315 --> 00:05:43.112
+Sensor-to-segment alignment. The sensor measures its own axes, not the humerus's. A calibration posture or movement relates them, and a strap that rotates on the arm changes the answer.
+
+40
+00:05:43.412 --> 00:05:52.329
+Magnetic disturbance. Ferrous structures in stadiums and facilities distort the magnetometer, so indoor heading estimates can be unreliable.
+
+41
+00:05:53.579 --> 00:05:56.417
+Now apply all this to a wearable throwing sensor.
+
+42
+00:05:56.717 --> 00:06:09.666
+Boddy and colleagues compared a commercial arm sensor with marker-based capture during pitching. Arm slot and shoulder rotation correlated with motion capture, and arm slot averaged about eight degrees lower.
+
+43
+00:06:09.966 --> 00:06:17.411
+The sensor's stress metric correlated with motion-capture elbow varus torque, but read about forty-one newton-metres lower,
+
+44
+00:06:17.711 --> 00:06:22.725
+about thirty-nine percent. Several authors were affiliated with a private training company.
+
+45
+00:06:23.025 --> 00:06:38.193
+Camp and colleagues used the same type of sensor on eighty-one professional pitchers across about eighty-two thousand throws, and found within-pitcher relationships between estimated varus torque and arm slot, arm speed and shoulder rotation.
+
+46
+00:06:38.493 --> 00:06:44.978
+Read that correctly. It described associations among sensor outputs. It did not validate the sensor.
+
+47
+00:06:45.828 --> 00:06:48.772
+So what is an elbow moment, even in the laboratory?
+
+48
+00:06:49.072 --> 00:07:05.520
+Inverse dynamics computes the net moment needed to produce the observed motion of the forearm, hand and ball, given their mass, centre of mass and moments of inertia. It is the resultant of every muscle, ligament, capsule and bony contact force across the joint.
+
+49
+00:07:05.820 --> 00:07:14.545
+It cannot partition load among structures, and its accuracy depends on joint centres, inertial parameters and filtering, the issues from Lesson 1.
+
+50
+00:07:14.845 --> 00:07:24.296
+A single forearm sensor has a harder problem. It measures one segment and models the rest from height and mass. Its output is an estimate of an estimate.
+
+51
+00:07:24.596 --> 00:07:35.924
+That it tracks within-pitcher changes in the direction of a laboratory net moment is useful. That its absolute value is the ligament's load is not established, and by construction cannot be.
+
+52
+00:07:37.174 --> 00:07:41.654
+Electromyography records the electrical activity of muscle fibres.
+
+53
+00:07:41.954 --> 00:07:55.842
+Surface electrodes over a muscle belly pick up a summed signal from many motor units, with crosstalk from neighbours. Fine-wire electrodes reach deep muscles such as the subscapularis, but are invasive and sample a small volume.
+
+54
+00:07:56.142 --> 00:08:07.278
+The European SENIAM project, summarized by Hermens and colleagues from a review of one hundred forty-four papers, produced sensor and placement recommendations for twenty-seven muscles.
+
+55
+00:08:07.578 --> 00:08:13.381
+Processing starts with a band-pass filter to remove movement artifact and high-frequency noise,
+
+56
+00:08:13.681 --> 00:08:15.451
+then full-wave rectification,
+
+57
+00:08:15.751 --> 00:08:19.911
+then a low-pass filter for a linear envelope, or a moving root-mean-square.
+
+58
+00:08:20.211 --> 00:08:34.355
+Raw amplitude depends on placement, skin impedance and subcutaneous tissue, so amplitudes are normalized, commonly to a maximal voluntary isometric contraction or to the task's own peak, before comparison.
+
+59
+00:08:35.205 --> 00:08:42.011
+Now the challenge to the whole enterprise. The tempting reading is that a bigger signal means more force. It doesn't.
+
+60
+00:08:42.311 --> 00:09:03.537
+The relationship between this electrical signal and force is reasonably monotonic only in isometric conditions for a given muscle. In dynamic movement, muscle length and shortening velocity change force for the same activation, the electrode moves over the muscle, and electromechanical delay separates electrical onset from force.
+
+61
+00:09:03.837 --> 00:09:11.261
+So in throwing and swinging, read electromyography for timing and relative activity patterns, not as a dynamometer.
+
+62
+00:09:11.561 --> 00:09:27.625
+And normalization can reverse a conclusion. Normalizing to a maximal isometric contraction can give values above one hundred percent in ballistic tasks. Normalizing to the task's own peak removes information about overall intensity.
+
+63
+00:09:29.475 --> 00:09:33.486
+Before we return to the bullpen, two limits that cut against easy stories.
+
+64
+00:09:33.786 --> 00:09:55.845
+Force plates measure only the force at their surface. On a mound, clay, turf and slope alter the force and its point of application, and a foot landing partly off the plate gives a plausible but incomplete curve. And the plate reports whole-body force. "The lead leg transferred force into the trunk" needs inverse dynamics or energy analysis, with their assumptions.
+
+65
+00:09:56.145 --> 00:10:12.806
+Wearables generate large datasets cheaply. But a large number of throws does not fix a biased instrument. It estimates the bias precisely. What matters is the bias and limits of agreement for your variable, and the within-athlete typical error where you will use it.
+
+66
+00:10:13.656 --> 00:10:20.461
+Run the staff member's claim, that wearable torque tracks ligament load and can guide workload, through the seven questions.
+
+67
+00:10:20.761 --> 00:10:27.097
+Observed: sensor torque correlates with the laboratory net varus moment but reads substantially lower.
+
+68
+00:10:27.397 --> 00:10:32.944
+Mechanism: one segment's kinematics plus a body model produce an estimated net moment.
+
+69
+00:10:33.244 --> 00:10:39.025
+Evidence: one comparison with company-affiliated authors, and one large association study.
+
+70
+00:10:39.325 --> 00:10:47.432
+Uncertain: the share of the net moment the ligament bears, the within-pitcher error in games, and tissue capacity, which is not measured at all.
+
+71
+00:10:47.732 --> 00:10:54.537
+Performance and transfer: no evidence was reviewed that sensor-guided workload decisions improve performance.
+
+72
+00:10:54.837 --> 00:11:04.992
+And loading: a net joint moment is a mechanical load estimate. It is not ligament load, and not an injury probability. Injury decisions belong to medical staff.
+
+73
+00:11:06.442 --> 00:11:17.770
+So back to the bullpen. The torque rise coincided with more lead-leg force, which suggests he threw harder, and Camp and colleagues report higher arm speed with higher estimated torque.
+
+74
+00:11:18.070 --> 00:11:26.881
+If the medical staff asks for one daily arm-load number, any number you give will be treated as tissue stress. Offer a short panel instead: throws,
+
+75
+00:11:27.181 --> 00:11:28.098
+velocity,
+
+76
+00:11:28.398 --> 00:11:31.171
+the estimated net moment with its measurement error,
+
+77
+00:11:31.471 --> 00:11:39.258
+and a flag only when change exceeds that error. State in writing that the sensor does not measure ligament load or injury risk.
+
+78
+00:11:39.558 --> 00:11:56.219
+For hitters, force plates under each foot and sensors on the bat and lead forearm are the practical kit. A bat is a rigid body of known geometry, a friendlier problem. But sensor bat-speed definitions differ from tracking definitions, so do not compare them directly.
+
+79
+00:11:57.069 --> 00:11:58.349
+Let's bring it together.
+
+80
+00:11:58.649 --> 00:12:06.543
+Force plates measure external force well. Inertial sensors measure their own motion and infer the rest, with drift and model error.
+
+81
+00:12:06.843 --> 00:12:18.384
+Wearable elbow torque is a modelled net moment with a known bias. Electromyography measures electrical activity, not force. State what each number is before discussing what it means.
+
+82
+00:12:18.684 --> 00:12:31.697
+From here, take the comprehension check below, the same check as the written lesson. Then open the Measurement Science Laboratory, and read Bland and Altman on agreement between two methods, the tool you need for any wearable.
+
+83
+00:12:31.997 --> 00:12:39.123
+The written lesson stays here whenever you want the full tables and methodological notes. Thank you for working through this with me.
+

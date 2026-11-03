@@ -99,7 +99,8 @@ export async function handle(req, ctx) {
       }
       case 'POST import': {
         if (!store.importAll) return [404, { error: 'not_found' }];
-        return store.importAll(body, KINDS || (KINDS = kindsFor(ix)));
+        if (KINDS_IX !== ix) { KINDS = kindsFor(ix); KINDS_IX = ix; }
+        return store.importAll(body, KINDS);
       }
       case 'POST delete-all': {
         if (body.confirm !== 'DELETE MY APERTURE DATA') return [400, { error: 'confirm_required' }];
@@ -113,17 +114,18 @@ export async function handle(req, ctx) {
 }
 
 /* ---------------- learner records ---------------- */
-let KINDS = null;
+// Record validators are built from the active course's index and rebuilt when the index changes (course switch).
+let KINDS = null, KINDS_IX = null;
 const kindsFor = (ix) => makeKinds({ lessons: ix.lessons, targets: ix.targets, concepts: ix.concepts, weeks: ix.weeks, cases: ix.cases, exercises: ix.exercises, drafts: ix.drafts, lectures: ix.lectures });
 export function validateRecord(ix, kind, key, data) {
-  KINDS = KINDS || kindsFor(ix);
+  if (KINDS_IX !== ix) { KINDS = kindsFor(ix); KINDS_IX = ix; }
   const spec = KINDS[kind];
   if (!spec || typeof key !== 'string' || !spec.key(key) || !data || typeof data !== 'object' || Array.isArray(data)) return null;
   try { return spec.clean(data); } catch { return null; }
 }
 async function putState(ctx, ix, body) {
   const { store, db, owner } = ctx;
-  KINDS = KINDS || kindsFor(ix);
+  if (KINDS_IX !== ix) { KINDS = kindsFor(ix); KINDS_IX = ix; }
   const spec = KINDS[body.kind];
   const key = typeof body.key === 'string' ? body.key : '';
   if (!spec || !spec.key(key) || !body.data || typeof body.data !== 'object' || Array.isArray(body.data)) return [400, { error: 'bad_request', message: 'That record isn’t valid.' }];
