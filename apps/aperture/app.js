@@ -7,9 +7,10 @@
   const ROUTES = [
     [/^$/, 'home', () => AP.views.home()],
     [/^curriculum$/, 'curriculum', () => AP.views.curriculum()],
+    [/^course\/(a|b)$/, 'curriculum', () => AP.views.curriculum()],
     [/^syllabus(?:\/(w\d{2}))?$/, 'curriculum', (m) => AP.views.syllabus(m[1])],
-    [/^week\/(w\d{2})$/, 'curriculum', (m) => AP.views.week(m[1])],
-    [/^lesson\/(w\d{2}-l\d)(?:\/(explore|understand|challenge|apply|retain|watch|read))?$/, 'curriculum', (m) => AP.study.lesson(m[1], m[2])],
+    [/^week\/([wb]\d{2})$/, 'curriculum', (m) => AP.views.week(m[1])],
+    [/^lesson\/([wb]\d{2}-l\d)(?:\/(explore|understand|challenge|apply|retain|watch|read))?$/, 'curriculum', (m) => AP.study.lesson(m[1], m[2])],
     [/^case\/([a-z0-9-]+)$/, 'curriculum', (m) => AP.study.caseView(m[1])],
     [/^exercise\/([a-z0-9-]+)$/, 'labs', (m) => AP.study.exercise(m[1])],
     [/^assignment\/([a-z0-9-]+)$/, 'assessments', (m) => AP.study.assignment(m[1])],
@@ -43,6 +44,11 @@
     document.getElementById('readbar').hidden = true;
     document.getElementById('nav').classList.remove('open');
     document.getElementById('menuBtn').setAttribute('aria-expanded', 'false');
+    // Course context: links to a Course B item (b01…) switch to Course B, links to a Course A item (w01…) to Course A.
+    const want = (hash.match(/^course\/(a|b)$/) || [])[1] || AP.courseOf(hash);
+    if (want && want !== AP.course && AP.coursesOn()) {
+      try { await AP.setCourse(want); } catch (e) { return showError(e); }
+    }
     for (const [re, nav, fn] of ROUTES) {
       const m = hash.match(re);
       if (!m) continue;
@@ -67,6 +73,16 @@
     AP.clear(main).appendChild(h('div', { class: 'pagehead' }, h('span', { class: 'label', text: 'Something went wrong' }), h('h2', { text: (e && e.message) || 'This page could not be loaded.' }), h('p', null, h('button', { class: 'btn', onclick: () => route(), text: 'Try again' }))));
   }
   AP.rerender = route;
+
+  /* ---------------- course switch (header) ---------------- */
+  function renderCourseSwitch() {
+    const host = document.getElementById('courseSwitch');
+    if (!host) return;
+    host.hidden = !AP.coursesOn();
+    if (host.hidden) return;
+    AP.clear(host).append(...['a', 'b'].map((c) => h('a', { href: `#/course/${c}`, class: 'course-switch__opt', 'aria-current': AP.course === c ? 'true' : null, title: `${AP.COURSES[c].code} — ${AP.COURSES[c].title}` }, h('b', { text: c.toUpperCase() }), h('span', { text: c === 'a' ? 'Executive Leadership' : 'Applied Biomechanics' }))));
+  }
+  AP.renderCourseSwitch = renderCourseSwitch;
 
   /* ---------------- gate screens ---------------- */
   function gate(e) {
@@ -95,10 +111,12 @@
   async function boot() {
     try {
       AP.session = await AP.api('session');
+      if (AP.coursesOn()) { const L = await window.__apertureLocal.promise; AP.course = L.course(); document.documentElement.dataset.course = AP.course; }
       await AP.loadState(['settings', 'progress', 'bookmark']);
       AP.applySettings(AP.getRec('settings', 'main'));
       const lib = await AP.library();
       AP.cache.libIndex = new Map(lib.resources.map((r) => [r.id, r]));
+      renderCourseSwitch();
       document.getElementById('top').hidden = false;
       document.getElementById('foot').hidden = false;
       if (AP.local()) betaNotice();

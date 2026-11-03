@@ -464,3 +464,57 @@ h5.lab-h { font-size: 1.06rem; margin-top: 1.25rem; margin-bottom: 0.5rem; }
   .lab-btn, .lab-actions--again { display: none !important; }
   .lab-rules { break-inside: avoid; }
 }
+
+/* Course B — Biomechanics & Measurement Laboratory (labs-b.js) */
+.bl-host { display: grid; gap: 1rem; }
+.bl-lede { font: 400 1.02rem/1.55 var(--serif); margin: 0; max-width: 46rem; }
+.bl-tabs { display: flex; flex-wrap: wrap; gap: 0; border-bottom: 1px solid var(--line-strong); }
+.bl-tab { background: none; border: 0; border-bottom: 2px solid transparent; padding: 0.55rem 0.9rem; font: 500 0.82rem var(--sans); color: var(--text-muted); cursor: pointer; }
+.bl-tab[aria-selected="true"] { color: var(--text); border-bottom-color: var(--accent); }
+.bl-station { display: grid; gap: 1rem; }
+.bl-split { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 1.25rem; align-items: start; }
+@media (max-width: 760px) { .bl-split { grid-template-columns: 1fr; } }
+.bl-scene { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 0.5rem; }
+.bl-svg { width: 100%; height: auto; display: block; }
+.bl-controls { display: grid; gap: 0.6rem; }
+.bl-controls--wide { grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 0.6rem 1.5rem; }
+.bl-slider { display: grid; grid-template-columns: 1fr auto; gap: 0.15rem 0.75rem; align-items: center; font-size: 0.85rem; }
+.bl-slider__l { grid-column: 1 / -1; color: var(--text-muted); }
+.bl-slider input[type=range] { width: 100%; accent-color: var(--accent); }
+.bl-slider select { font: inherit; padding: 0.3rem; grid-column: 1 / -1; }
+.bl-val { font: 500 0.8rem var(--mono); min-width: 4.5rem; text-align: right; }
+.bl-readout .kv { margin: 0; }
+.bl-tablewrap { overflow-x: auto; }
+.bl-table { border-collapse: collapse; width: 100%; font-size: 0.88rem; }
+.bl-table caption { text-align: left; font: 600 0.68rem var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); padding-bottom: 0.4rem; }
+.bl-table th, .bl-table td { border-bottom: 1px solid var(--line); padding: 0.35rem 0.6rem 0.35rem 0; text-align: left; }
+.bl-table td.num { font-variant-numeric: tabular-nums; }
+.bl-table tr.is-set th, .bl-table tr.is-set td { color: var(--accent); font-weight: 600; }
+.bl-tag { display: inline-block; font: 600 0.62rem/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.45rem; border: 1px solid var(--line-strong); border-radius: var(--radius); color: var(--text-muted); justify-self: start; }
+.bl-tag--warn { border-color: var(--accent); color: var(--accent); }
+.bl-tag--illus { border-style: dashed; }
+.bl-tasks { display: grid; gap: 0.8rem; }
+.bl-task { border-left: 2px solid var(--accent); padding: 0.6rem 0.9rem; background: var(--accent-wash); }
+.bl-task p { margin: 0.3rem 0; }
+.bl-task.is-checked { border-left-color: var(--line-strong); background: transparent; }
+.bl-num { font: 500 1rem var(--mono); width: 9rem; padding: 0.35rem 0.5rem; }
+.bl-choices { display: grid; gap: 0.35rem; }
+.bl-choice { display: flex; gap: 0.5rem; align-items: baseline; }
+.bl-fb p { margin: 0.4rem 0 0; font-size: 0.92rem; }
+/* SVG vocabulary */
+.bl-gaxis { stroke: var(--text-subtle); fill: none; }
+.bl-glabel { fill: var(--text-subtle); font: 500 10px var(--mono); }
+.bl-seg { stroke: var(--text); fill: none; opacity: 0.75; }
+.bl-lx { stroke: var(--accent); fill: var(--accent); }
+.bl-ly { stroke: var(--text); fill: var(--text); }
+.bl-lz { stroke: #8A7C6E; fill: #8A7C6E; }
+.bl-llabel { font: 600 11px var(--mono); stroke: none; }
+.bl-axisdot { fill: var(--text); }
+.bl-arrowhead { fill: var(--accent); }
+.bl-curve { fill: none; stroke-width: 2.2; }
+.bl-c1 { stroke: var(--accent); fill: var(--accent); }
+.bl-c2 { stroke: #8A7C6E; fill: #8A7C6E; }
+.bl-c3 { stroke: var(--text-muted); fill: var(--text-muted); }
+.bl-c4 { stroke: var(--text); fill: var(--text); }
+path.bl-c1, path.bl-c2, path.bl-c3, path.bl-c4 { fill: none; }
+.bl-pt { fill: var(--accent); opacity: 0.8; }

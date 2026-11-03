@@ -51,6 +51,29 @@
     try { return await p; } catch (e) { delete AP.cache[k]; throw e; }
   };
   AP.catalog = () => AP.get('catalog', 'catalog');
+
+  /* ---------------- courses ---------------- */
+  // Course A (Executive Leadership) and Course B (Applied Biomechanics) run side by side. Each has its own content
+  // bundle and its own learner records; switching reloads the client's caches. Secure server mode serves Course A only.
+  AP.course = 'a';
+  AP.COURSES = { a: { code: 'Course A', title: 'Executive Leadership & Applied Management' }, b: { code: 'Course B', title: 'Applied Biomechanics & Human Performance' } };
+  AP.coursesOn = () => AP.local() && !(window.APERTURE_CONFIG && window.APERTURE_CONFIG.courses === false);
+  AP.courseOf = (hash) => { const m = String(hash).match(/(?:^|\/)([wb])\d{2}(?:-|$|\/)/); return m ? (m[1] === 'b' ? 'b' : 'a') : null; };
+  AP.setCourse = async function (c) {
+    if (!AP.coursesOn() || c === AP.course) return false;
+    await AP.flush();
+    const L = await window.__apertureLocal.promise;
+    await L.switchCourse(c);
+    AP.course = c;
+    const settings = AP.state.settings;
+    AP.cache = {}; AP.state = settings ? { settings } : {};
+    const lib = await AP.library();
+    AP.cache.libIndex = new Map(lib.resources.map((r) => [r.id, r]));
+    await AP.loadState(['progress', 'bookmark']);
+    document.documentElement.dataset.course = c;
+    if (AP.renderCourseSwitch) AP.renderCourseSwitch();
+    return true;
+  };
   AP.week = (id) => AP.get(`week:${id}`, 'week', { id });
   AP.library = () => AP.get('library', 'library');
 

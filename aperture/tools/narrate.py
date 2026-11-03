@@ -30,6 +30,7 @@ import hashlib, json, os, subprocess, sys, tempfile
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 SRC = os.path.join(ROOT, 'aperture', 'content', 'lectures')
+SRC_B = os.path.join(ROOT, 'aperture', 'content-b', 'lectures')  # Course B scripts (lesson ids b01-l1 …)
 MEDIA = os.path.join(ROOT, 'apps', 'aperture', 'media', 'lectures')
 DATA = os.path.join(ROOT, 'aperture', 'build', 'narration')
 CONFIG = os.path.join(ROOT, 'aperture', 'content', 'narration.json')
@@ -164,8 +165,8 @@ if __name__ == '__main__':
     args = sys.argv[1:]
     cfg = config()
     release = cfg.get('release', [])
-    every = sorted(f[:-5] for f in os.listdir(SRC) if f.endswith('.json'))
-    path = lambda l: os.path.join(SRC, f'{l}.json')
+    every = sorted(f[:-5] for d in (SRC, SRC_B) if os.path.isdir(d) for f in os.listdir(d) if f.endswith('.json'))
+    path = lambda l: os.path.join(SRC_B if l.startswith('b') else SRC, f'{l}.json')
     if args == ['--status']:
         for l in every:
             state = ('current' if not stale(path(l)) else 'needs rendering') if l in release else 'coming soon (script ready)'

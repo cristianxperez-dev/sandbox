@@ -6,6 +6,17 @@
   const V = (AP.views = {});
   const SCHOOL = { behavioral: 'Behavioral & Social Science', business: 'Business & Leadership', law: 'Law & Strategy' };
   AP.SCHOOL = SCHOOL;
+  // School names: Course A's three schools, or the active course's own (Course B).
+  const schoolName = (cat, x) => SCHOOL[x] || ((cat && cat.semester.schools || []).find((s) => s.id === x) || {}).name || x;
+  AP.schoolName = schoolName;
+  // Course selector (Home and Curriculum). Each course keeps its own curriculum, progress and grades.
+  function courseBar() {
+    if (!AP.coursesOn()) return null;
+    const blurb = { a: '14 weeks · 60 lessons · leadership, behavioral science, strategy, finance, law', b: '14 weeks · Weeks 1–2 open · biomechanics, motor control, measurement' };
+    return h('nav', { class: 'course-bar', 'aria-label': 'Choose a course' }, ['a', 'b'].map((c) => h('a', { href: `#/course/${c}`, class: 'course-card', 'aria-current': AP.course === c ? 'page' : null },
+      h('span', { class: 'label', text: `${AP.COURSES[c].code}${AP.course === c ? ' · current' : ''}` }), h('b', { text: AP.COURSES[c].title }), h('span', { class: 'small muted', text: blurb[c] }))));
+  }
+  AP.courseBar = courseBar;
   const head = (label, title, lede) => h('header', { class: 'pagehead' }, h('span', { class: 'label', text: label }), h('h1', { html: AP.inline(title) }), lede ? h('p', { class: 'lede', html: AP.inline(lede) }) : null);
   AP.head = head;
   const lessonDone = (id) => !!AP.getRec('progress', id)?.done;
@@ -63,6 +74,7 @@
     const notes = Object.entries(AP.state.note || {}).sort((a, b) => b[1].updated - a[1].updated).slice(0, 3);
 
     const el = h('div', null,
+      courseBar(),
       h('header', { class: 'pagehead' },
         h('span', { class: 'label', text: `${cat.semester.title} · ${cat.semester.name}` }),
         h('h1', { text: `Week ${cur.number}. ${cur.title}` }),
@@ -121,26 +133,52 @@
     const [cat, prog] = await Promise.all([AP.catalog(), AP.api('progress')]);
     const list = h('ol', { class: 'weeks' });
     const extra = (href, n, t, d, tag) => h('li', null, h('a', { class: 'week-row', href }, h('span', { class: 'week-row__n', text: n }), h('span', null, h('h3', { text: t }), h('p', { class: 'week-row__q', text: d })), h('span', { class: 'week-row__meta' }, tag)));
-    if (cat.diagnostic) list.appendChild(extra('#/diagnostic', '0', 'Baseline diagnostic', 'Where are you starting? Nine domains, never graded.', h('span', { class: `tag ${prog.diagnostic ? 'tag--done' : 'tag--accent'}`, text: prog.diagnostic ? 'Completed' : 'Start here' })));
+    const isB = cat.course === 'b';
+    if (cat.diagnostic) list.appendChild(extra('#/diagnostic', '0', isB ? 'Course B diagnostic' : 'Baseline diagnostic', isB ? `Prerequisite check across ${cat.semester.domains.length} areas — never graded, never a barrier; it suggests optional refreshers.` : 'Where are you starting? Nine domains, never graded.', h('span', { class: `tag ${prog.diagnostic ? 'tag--done' : 'tag--accent'}`, text: prog.diagnostic ? 'Completed' : 'Start here' })));
     for (const w of cat.weeks) {
       const s = weekStatus(w, prog);
       list.appendChild(h('li', null, h('a', { class: 'week-row', href: `#/week/${w.id}` },
         h('span', { class: 'week-row__n', text: String(w.number) }),
-        h('span', null, h('span', { class: 'label', text: w.schools.map((x) => SCHOOL[x]).join(' · ') }), h('h3', { text: w.title }), h('p', { class: 'week-row__q', text: w.question })),
+        h('span', null, h('span', { class: 'label', text: w.schools.map((x) => schoolName(cat, x)).join(' · ') }), h('h3', { text: w.title }), h('p', { class: 'week-row__q', text: w.question })),
         h('span', { class: 'week-row__meta' }, h('span', { class: `tag ${s.cls}`, text: s.label }), h('span', { class: 'small muted num', text: `${s.p ? s.p.lessonsDone : 0}/${w.lessons.length} lessons · ${hours(w.hours)} h` }), (() => { const n = w.lessons.filter((l) => cat.lectures && cat.lectures[l.id]).length; return n && AP.lecturesOn() ? h('span', { class: 'tag tag--accent', text: `▶ ${n} lecture${n > 1 ? 's' : ''}` }) : null; })()))));
       if (w.number === 7 && cat.midterm) list.appendChild(extra('#/midterm', 'M', cat.midterm.title, 'Cumulative case and questions on Weeks 1–7.', h('span', { class: 'tag', text: `${cat.midterm.minutes} min` })));
     }
+    // Course B: weeks not yet released show their plan only — no links, no controls, never counted.
+    for (const p of (cat.semester.plan || []).filter((x) => !x.available)) {
+      list.appendChild(h('li', null, h('details', { class: 'week-soon' },
+        h('summary', { class: 'week-row' }, h('span', { class: 'week-row__n', text: String(p.number) }),
+          h('span', null, h('span', { class: 'label', text: schoolName(cat, p.school) }), h('h3', { text: p.title }), h('p', { class: 'week-row__q', text: p.overview })),
+          h('span', { class: 'week-row__meta' }, h('span', { class: 'tag tag--soon', text: 'Coming soon' }))),
+        h('div', { class: 'week-soon__body' }, h('span', { class: 'label', text: 'Planned learning objectives' }), h('ul', null, p.objectives.map((o) => h('li', { html: AP.inline(o) }))),
+          h('p', { class: 'small muted', text: 'This week is planned but not yet released. Nothing here is required, overdue or counted toward progress.' })))));
+    }
     if (cat.capstone) list.appendChild(extra('#/capstone', 'C', cat.capstone.title, `${cat.capstone.components} components, built incrementally from Week 8.`, h('span', { class: 'tag', text: 'Capstone' })));
     const s = cat.stats;
-    return { el: h('div', null, head(`${cat.semester.title} · 14 weeks · ${cat.semester.hoursPerWeek} hours a week`, cat.semester.name, 'Broaden perspective. Deepen understanding. Strengthen judgment. Every lesson is open to you; the sequence is a recommendation, not a gate.'),
+    if (isB) {
+      const avail = (cat.semester.plan || []).filter((x) => x.available).length;
+      return { el: h('div', null, courseBar(), head(`${cat.semester.title} · 14 weeks · ${cat.semester.hoursPerWeek} hours a week`, cat.semester.name, cat.semester.subtitle),
+        h('p', { class: 'small muted', text: `Weeks 1–${avail} are open: ${s.lessons} lessons, each as a narrated lecture or a written lesson · ${s.quizQuestions + s.checkQuestions} assessment questions · ${s.resources} library resources · about ${cat.weeks[0] ? hours(cat.weeks[0].hours) : cat.semester.hoursPerWeek} hours a week. Weeks ${avail + 1}–14 are planned and shown as Coming Soon. Every major claim is read through the seven-question evidence standard.` }),
+        h('details', { class: 'fold' }, h('summary', null, h('span', { class: 'label', text: 'Evidence standard' }), h('b', { text: 'The seven questions asked of every consequential claim' })), h('div', { class: 'fold__body' }, h('ol', null, (cat.semester.standard || []).map((q) => h('li', { text: q }))))),
+        list), title: `Curriculum — ${cat.semester.title}` };
+    }
+    return { el: h('div', null, courseBar(), head(`${cat.semester.title} · 14 weeks · ${cat.semester.hoursPerWeek} hours a week`, cat.semester.name, 'Broaden perspective. Deepen understanding. Strengthen judgment. Every lesson is open to you; the sequence is a recommendation, not a gate.'),
       h('div', { class: 'row syl-cta' }, h('a', { class: 'btn btn--primary', href: '#/syllabus', text: 'Course syllabus' }), h('a', { class: 'btn', href: 'syllabus/APERTURE-Semester-I-Syllabus.pdf', download: '', text: 'Download syllabus (PDF)' })),
       h('p', { class: 'small muted', text: `${s.lessons} lessons · ${s.quizQuestions + s.checkQuestions} assessment questions · ${s.cases} original cases · ${s.resources} library resources · about ${Math.round(s.plannedHours)} planned hours` }), list), title: 'Curriculum' };
   };
+  function comingSoonWeek(cat, p) {
+    return { el: h('div', null, head(`${cat.semester.title} · Week ${p.number} · Coming soon`, p.title, p.overview),
+      h('section', { class: 'panel' }, h('span', { class: 'label', text: 'Planned learning objectives' }), h('ul', null, p.objectives.map((o) => h('li', { html: AP.inline(o) }))),
+        h('p', { class: 'small muted', text: 'This week is planned but not yet released. It has no lessons, lectures, labs or assessments yet, and nothing here is required, overdue or counted toward progress.' }),
+        h('p', null, h('a', { class: 'btn', href: '#/curriculum', text: 'Back to the curriculum' })))), title: `Week ${p.number} — coming soon` };
+  }
   const hours = (hh) => Math.round(Object.values(hh).reduce((a, b) => a + b, 0) * 10) / 10;
 
   /* ---------- Week ---------- */
   V.week = async function (id) {
-    const [cat, w, prog] = await Promise.all([AP.catalog(), AP.week(id), AP.api('progress')]);
+    const cat0 = await AP.catalog();
+    const planned = (cat0.semester.plan || []).find((x) => x.id === id && !x.available);
+    if (planned) return comingSoonWeek(cat0, planned);
+    const [cat, w, prog] = await Promise.all([cat0, AP.week(id), AP.api('progress')]);
     await AP.loadState(['reflection', 'lab', 'case', 'draft']);
     const p = prog.weeks.find((x) => x.id === id);
     const item = (label, href, title, desc, status) => h('li', null, h('a', { href }, h('span', { class: 'label', text: label }), h('span', null, h('span', { class: 'items__t', html: AP.inline(title) }), desc ? h('span', { class: 'items__d', html: AP.inline(desc) }) : null), status ? h('span', { class: `tag ${status[1] || ''}`, text: status[0] }) : h('span')));
@@ -168,7 +206,7 @@
     const refl = reflectionForm(w);
     const el = h('div', null,
       h('div', { class: 'weekhead' },
-        h('div', null, h('span', { class: 'label', text: `Week ${w.number} · ${w.schools.map((x) => SCHOOL[x]).join(' · ')}` }), h('h1', { text: w.title }), h('p', { class: 'lede', text: w.theme }), h('p', { class: 'question', text: w.question }), AP.blocks(h('div', { class: 'prose' }), w.overview)),
+        h('div', null, h('span', { class: 'label', text: `Week ${w.number} · ${w.schools.map((x) => schoolName(cat, x)).join(' · ')}` }), h('h1', { text: w.title }), h('p', { class: 'lede', text: w.theme }), h('p', { class: 'question', text: w.question }), AP.blocks(h('div', { class: 'prose' }), w.overview)),
         h('aside', { class: 'panel' }, h('span', { class: 'label', text: 'This week' }), h('dl', { class: 'kv small' }, ...Object.entries(w.hours).flatMap(([k, v]) => [h('dt', { text: k }), h('dd', { class: 'num', text: `${v} h` })])), h('hr'), h('span', { class: 'label', text: 'Objectives' }), h('ul', { class: 'small' }, w.objectives.map((o) => h('li', { html: AP.inline(o) }))))),
       h('section', { class: 'rule' }, h('div', { class: 'row row--between' }, h('h2', { text: 'Lessons' }), lecs.length ? h('span', { class: 'tag tag--accent', text: `${lecs.length} narrated lectures · ${lecs.reduce((a, x) => a + x.minutes, 0)} min` }) : null), h('p', { class: 'small muted', text: (() => {
         const soon = w.lessons.filter((l) => AP.lectureSoon && AP.lectureSoon(cat, l.id)).length;
@@ -302,7 +340,7 @@
     await AP.loadState(['lab']);
     const l = cat.labs.find((x) => x.id === id);
     if (!l) return h('p', { class: 'empty', text: 'Unknown lab.' });
-    return { el: h('div', null, head(`Labs · ${SCHOOL[l.school]}`, l.name, l.description),
+    return { el: h('div', null, head(`Labs · ${schoolName(null, l.school)}`, l.name, l.description),
       h('ul', { class: 'items' }, l.exercises.map((x) => { const r = AP.getRec('lab', x.id); const w = cat.weeks.find((k) => k.id === x.week); return h('li', null, h('a', { href: `#/exercise/${x.id}` }, h('span', { class: 'label', text: w ? `Week ${w.number}` : 'Capstone' }), h('span', null, h('span', { class: 'items__t', text: x.title }), h('span', { class: 'items__d', text: `${x.engine} engine${r && r.summary ? ' · ' + r.summary.label : ''}` })), r ? h('span', { class: `tag ${r.finished ? 'tag--done' : 'tag--accent'}`, text: r.finished ? 'Completed' : 'In progress' }) : h('span'))); }))), title: l.name };
   };
 
@@ -311,7 +349,7 @@
     const [cat, prog, att] = await Promise.all([AP.catalog(), AP.api('progress'), AP.api('attempts')]);
     const rows = cat.weeks.map((w) => { const p = prog.weeks.find((x) => x.id === w.id); return h('tr', null, h('td', null, h('a', { href: `#/week/${w.id}`, text: `${w.number}. ${w.title}` })), h('td', null, h('a', { href: `#/assess/${w.quiz.id}`, text: p.quiz ? `${AP.pct(p.quiz.auto)} auto${p.quiz.mastered ? ' · mastered' : ''}` : 'Not taken' })), h('td', null, h('a', { href: `#/assignment/${w.assignment.id}`, text: p.assignment ? (p.assignment.score != null ? `${AP.pct(p.assignment.score)} self-assessed` : 'Submitted') : 'Not submitted' }))); });
     const hist = h('tbody', null, att.attempts.slice().reverse().slice(0, 40).map((a) => h('tr', null, h('td', { text: AP.date(a.submitted) }), h('td', null, h('a', { href: `#/attempt/${a.id}`, text: a.assessment })), h('td', { text: a.kind }), h('td', { class: 'num', text: a.ratio != null ? AP.pct(a.ratio) : a.selfScore != null ? `${AP.pct(a.selfScore)} (self)` : '—' }), h('td', { class: 'small', text: a.pendingSelf ? 'Short responses await your self-assessment' : '' }))));
-    return { el: h('div', null, head('Assessments', 'Quizzes, assignments, midterm and capstone', `Grading model: quizzes ${cat.semester.grading.quizzes}%, assignments ${cat.semester.grading.assignments}%, midterm ${cat.semester.grading.midterm}%, capstone ${cat.semester.grading.capstone}%. Mastery threshold 80% — below it you get focused review and a reassessment.`),
+    return { el: h('div', null, head('Assessments', 'Quizzes, assignments, midterm and capstone', `Grading model${cat.semester.grading.provisional ? ' (provisional)' : ''}: ${Object.entries(cat.semester.grading).filter(([k, v]) => typeof v === 'number' && k !== 'mastery').map(([k, v]) => `${k} ${v}%`).join(', ')}${cat.course === 'b' ? ' — the capstone opens in Week 14' : ''}. Mastery threshold 80% — below it you get focused review and a reassessment.`),
       h('div', { class: 'grid grid--3' },
         cat.diagnostic ? h('a', { class: 'panel', href: '#/diagnostic' }, h('span', { class: 'label', text: 'Week 1 · not graded' }), h('h3', { text: 'Baseline diagnostic' }), h('p', { class: 'small muted', text: prog.diagnostic ? `Taken ${AP.date(prog.diagnostic.submitted)}` : `${cat.diagnostic.count} questions` })) : null,
         cat.midterm ? h('a', { class: 'panel', href: '#/midterm' }, h('span', { class: 'label', text: `${cat.semester.grading.midterm}% of the grade` }), h('h3', { text: cat.midterm.title }), h('p', { class: 'small muted', text: `${cat.midterm.count} questions and a cumulative case` })) : null,
@@ -427,6 +465,7 @@
       h('section', { class: 'rule' }, h('h2', { text: 'Your data' }),
         h('p', { class: 'small muted', text: AP.local() ? 'Public beta: everything you do — reading progress, notes and highlights, bookmarks, reflections, drafts, journal entries, lab runs, assessment results, your review schedule, settings and profile — is stored only in this browser on this device. Nothing is sent to a server. Clearing site data, using private browsing, or switching browser or device starts you from scratch, so export a backup regularly. No account, analytics or third-party scripts.' : 'Stored in APERTURE’s private Cloudflare D1 database under your signed-in address: reading progress, notes and highlights, bookmarks, reflections, drafts, journal entries, lab runs, assessment attempts, your review schedule and settings. No analytics, no third-party scripts, no advertising.' }),
         h('div', { class: 'row' }, h('button', { class: 'btn', onclick: exportJSON, text: 'Export everything (JSON)' }), h('button', { class: 'btn', onclick: exportMarkdown, text: 'Export notebook (Markdown)' }), AP.local() ? importButton() : null),
+        AP.coursesOn() ? h('p', { class: 'small muted', text: `Exports and imports cover the course you are in (${AP.COURSES[AP.course].code}). Switch course and export again to back up the other. “Delete all” clears both courses.` }) : null,
         h('details', { class: 'fold' }, h('summary', null, h('span', { class: 'label', text: 'Privacy' }), h('b', { text: 'Delete all my APERTURE data' })), h('div', { class: 'fold__body' }, h('p', { class: 'small', text: (AP.local() ? 'This permanently deletes every APERTURE record stored in this browser.' : 'This permanently deletes every record listed above from APERTURE’s database.') + ' Export first if you want a copy. Type DELETE MY APERTURE DATA to confirm.' }), deleteForm()))));
     return { el, title: 'Settings' };
   };

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "biomechanics-laboratory",
+    "name": "Biomechanics & Measurement Laboratory",
+    "school": "biomechanics",
+    "summary": "3D reference frames and rotation sequences, forces and moments, kinetic-chain timing, and measurement agreement and error.",
+    "description": "Interactive, mathematically exact tools for the physics and measurement science behind pitching and hitting biomechanics. Illustrative models are labelled as such; all athlete data are synthetic.",
+    "engines": ["frames", "measurement"]
+  }
+]

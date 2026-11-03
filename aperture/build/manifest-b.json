@@ -1,0 +1,1146 @@
+{
+  "generated": "2026-11-03",
+  "method": "Metadata verified through web-search results on the date shown per record. The build environment could not open pages, so every link is flagged link-untested until checked in a browser.",
+  "totals": {
+    "resources": 56,
+    "metadataConfirmed": 39,
+    "partiallyConfirmed": 17,
+    "unverified": 0,
+    "linkUntested": 56,
+    "open": 11,
+    "restricted": 41,
+    "contested": 11,
+    "uncited": 0
+  },
+  "records": [
+    {
+      "id": "R-hoechstetter-2026-relationship",
+      "title": "The relationship between hip-shoulder separation angle and bat speed in division I batters",
+      "year": 2026,
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0021929026004057",
+      "doi": null,
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, authors, journal, volume, article number and design (retrospective in-game markerless and ball-tracking data; 3,958 swings from 247 NCAA Division I batters; between- and within-batter analysis) matched on the ScienceDirect abstract listing in web search. The direction of the association (greater separation with higher bat speed) appeared in one search summary of the abstract but not in another; effect sizes were not confirmed. DOI not confirmed and omitted.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested",
+        "no-doi",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b02-l2",
+        "b02-l4"
+      ]
+    },
+    {
+      "id": "R-aguinaldo-2025-assessing",
+      "title": "Assessing the accuracy of in-stadium and portable multi-camera markerless motion capture for baseball pitching kinematics and kinetics",
+      "year": 2025,
+      "url": "https://doi.org/10.1080/02640414.2025.2595411",
+      "doi": "10.1080/02640414.2025.2595411",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, DOI and online date matched on PubMed (PMID 41294254); author list and issue details matched on the University of Kentucky Scholars profile; sample and per-joint errors from the abstract as returned by search.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "b02",
+        "b02-l2",
+        "b02-l4"
+      ]
+    },
+    {
+      "id": "R-leardini-2005-human",
+      "title": "Human movement analysis using stereophotogrammetry. Part 3. Soft tissue artifact assessment and compensation",
+      "year": 2005,
+      "url": "https://doi.org/10.1016/j.gaitpost.2004.05.002",
+      "doi": "10.1016/j.gaitpost.2004.05.002",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Authors, title, journal, volume, issue, pages and DOI matched across a university repository (unibo) and bibliographic records in web search.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b02",
+        "b02-l1"
+      ]
+    },
+    {
+      "id": "R-aguinaldo-2007-effects",
+      "title": "Effects of upper trunk rotation on shoulder joint torque among baseball pitchers of various levels",
+      "year": 2007,
+      "url": "https://doi.org/10.1123/jab.23.1.42",
+      "doi": "10.1123/jab.23.1.42",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "PubMed record 17585177 confirmed title, journal, volume, pages and DOI; 38 pitchers across professional, college, high school and youth levels and the later trunk-rotation timing in professionals matched the abstract excerpt.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b01-l4"
+      ]
+    },
+    {
+      "id": "R-lerch-2025-variability",
+      "title": "Variability of in-game markerless and laboratory marker-based baseball pitching biomechanics",
+      "year": 2025,
+      "url": "https://doi.org/10.1016/j.jbiomech.2025.112775",
+      "doi": "10.1016/j.jbiomech.2025.112775",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, authors, journal, volume, article number and DOI supplied in the brief and matched on PubMed (PMID 40418881) and an ASMI-hosted PDF listing in web search; design and main findings from the abstract as returned by search.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "b02",
+        "b02-l2",
+        "b02-l5"
+      ]
+    },
+    {
+      "id": "R-dowling-2016-kinematic",
+      "title": "Kinematic comparison of baseball batting off of a tee among various competition levels",
+      "year": 2016,
+      "url": "https://doi.org/10.1080/14763141.2016.1159320",
+      "doi": "10.1080/14763141.2016.1159320",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Citation and DOI supplied by the course brief as verified; title, authors, volume and pages also matched a 2024 International Journal of Sports Medicine reference list.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b01-l4"
+      ]
+    },
+    {
+      "id": "R-camp-2017-relationship",
+      "title": "The Relationship of Throwing Arm Mechanics and Elbow Varus Torque: Within-Subject Variation for Professional Baseball Pitchers Across 82,000 Throws",
+      "year": 2017,
+      "url": "https://doi.org/10.1177/0363546517719047",
+      "doi": "10.1177/0363546517719047",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, authors, journal, volume, issue, pages, DOI and PubMed ID (28806094) matched in web search; 81 professional pitchers wearing a sensor sleeve across about 82,000 throws from the abstract.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b02-l3"
+      ]
+    },
+    {
+      "id": "R-putnam-1993-sequential",
+      "title": "Sequential motions of body segments in striking and throwing skills: descriptions and explanations",
+      "year": 1993,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8505347/",
+      "doi": null,
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, author, journal, supplement and pages matched in the PubMed record 8505347 and several reference lists; abstract content seen in search snippets; DOI not displayed, so omitted.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested",
+        "no-doi",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b01",
+        "b01-l3",
+        "b01-l4"
+      ]
+    },
+    {
+      "id": "R-welch-1995-hitting",
+      "title": "Hitting a baseball: a biomechanical description",
+      "year": 1995,
+      "url": "https://doi.org/10.2519/jospt.1995.22.5.193",
+      "doi": "10.2519/jospt.1995.22.5.193",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Citation and DOI supplied by the course brief as verified in November 2026.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b01-l4"
+      ]
+    },
+    {
+      "id": "R-robertson-2014-research",
+      "title": "Research Methods in Biomechanics (2nd ed.)",
+      "year": 2014,
+      "url": "https://us.humankinetics.com/products/research-methods-in-biomechanics-2nd-edition",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, edition, the five editors, publisher and 2014 date matched on the Human Kinetics product page and a Journal of Sports Science and Medicine book review (14 chapters in four parts).",
+      "access": "purchase",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b01-l1",
+        "b01-l2",
+        "b01-l3",
+        "b02-l1",
+        "b02-l3",
+        "b02-l4"
+      ]
+    },
+    {
+      "id": "R-wolpert-1995-internal",
+      "title": "An internal model for sensorimotor integration",
+      "year": 1995,
+      "url": "https://doi.org/10.1126/science.7569931",
+      "doi": "10.1126/science.7569931",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Citation and DOI supplied by the course brief as verified in November 2026.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b01-l5"
+      ]
+    },
+    {
+      "id": "R-winter-2009-biomechanics",
+      "title": "Biomechanics and Motor Control of Human Movement (4th ed.)",
+      "year": 2009,
+      "url": "https://doi.org/10.1002/9780470549148",
+      "doi": "10.1002/9780470549148",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, author, edition, publisher, year and DOI supplied by the course brief as verified in November 2026; rechecked against the Wiley DOI record listed there.",
+      "access": "purchase",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b01",
+        "b01-l1",
+        "b01-l2",
+        "b01-l3",
+        "b02-l1",
+        "b02-l3",
+        "b02-l4"
+      ]
+    },
+    {
+      "id": "R-stodden-2005-relationship",
+      "title": "Relationship of biomechanical factors to baseball pitching velocity: within pitcher variation",
+      "year": 2005,
+      "url": "https://doi.org/10.1123/jab.21.1.44",
+      "doi": "10.1123/jab.21.1.44",
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, journal, volume, pages and DOI matched in a BISp record, a QxMD record (PubMed 16131704) and sciencegate; the design (19 pitchers, 6–10 fastballs each, velocity range at least 1.8 m/s) matched the BISp abstract; findings summarized only at the level reported there.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b01",
+        "b01-l3",
+        "b01-l4"
+      ]
+    },
+    {
+      "id": "R-grood-1983-joint",
+      "title": "A Joint Coordinate System for the Clinical Description of Three-Dimensional Motions: Application to the Knee",
+      "year": 1983,
+      "url": "https://doi.org/10.1115/1.3138397",
+      "doi": "10.1115/1.3138397",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, authors, journal, volume, pages and DOI matched in citedrive and scholarhub index records; its adoption by the ISB is stated in Wu et al. 2002 and 2005.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b01-l2"
+      ]
+    },
+    {
+      "id": "R-todorov-2002-optimal",
+      "title": "Optimal feedback control as a theory of motor coordination",
+      "year": 2002,
+      "url": "https://doi.org/10.1038/nn963",
+      "doi": "10.1038/nn963",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Citation and DOI supplied by the course brief as verified; PubMed record 12404008 and the abstract (task-irrelevant variability, minimal intervention) seen in search results.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b01",
+        "b01-l5"
+      ]
+    },
+    {
+      "id": "R-preatoni-2013-movement",
+      "title": "Movement variability and skills monitoring in sports",
+      "year": 2013,
+      "url": "https://doi.org/10.1080/14763141.2012.738700",
+      "doi": "10.1080/14763141.2012.738700",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Citation and DOI supplied by the course brief as verified; title and journal also matched the LIDA (sport-iat) record seen in search results.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b01-l5"
+      ]
+    },
+    {
+      "id": "R-zajac-1989-determining",
+      "title": "Determining muscle's force and action in multi-articular movement",
+      "year": 1989,
+      "url": "https://scilit.net/publications/51c922b970457241d3d61e5f15f9c5c8",
+      "doi": null,
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, first author, journal, volume and pages matched in a scilit record, a Biomch-L reference and a Thieme reference list; the co-author's first name differs between listings, so only initials are given; no abstract or DOI found.",
+      "access": "library",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested",
+        "no-doi"
+      ],
+      "citedIn": [
+        "b01-l1",
+        "b01-l3",
+        "b01-l4"
+      ]
+    },
+    {
+      "id": "R-atkinson-1998-statistical",
+      "title": "Statistical methods for assessing measurement error (reliability) in variables relevant to sports medicine",
+      "year": 1998,
+      "url": "https://doi.org/10.2165/00007256-199826040-00002",
+      "doi": "10.2165/00007256-199826040-00002",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, authors, journal, volume, issue, pages and DOI supplied as pre-verified in the course brief (Nov 2026).",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b02-l5"
+      ]
+    },
+    {
+      "id": "R-fleisig-2022-comparison",
+      "title": "Comparison of marker-less and marker-based motion capture for baseball pitching kinematics",
+      "year": 2022,
+      "url": "https://doi.org/10.1080/14763141.2022.2076608",
+      "doi": "10.1080/14763141.2022.2076608",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Authors, title, journal and DOI supplied as pre-verified in the course brief; sample (30 pitchers, age 17.1 ± 3.1 years, 275 fastballs), 240 Hz capture with a 9-camera marker-less and 12-camera marker system, CMC 0.88–0.97, and the recommendation of system-specific norms matched in web-search abstracts. An earlier ISBS proceedings version (9 pitchers) has different numbers and is not cited.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "b02",
+        "b02-l2"
+      ]
+    },
+    {
+      "id": "R-bullock-2021-baseball",
+      "title": "Baseball pitching biomechanics in relation to pain, injury, and surgery: A systematic review",
+      "year": 2021,
+      "url": "https://doi.org/10.1016/j.jsams.2020.06.015",
+      "doi": "10.1016/j.jsams.2020.06.015",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Citation and DOI supplied by the course brief as verified; 11 included studies (1,376 pitchers), the elbow valgus torque and early trunk rotation findings and the low-power conclusion matched the abstract in index records (Melbourne, Oxford, Wake Forest). Author list abbreviated.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b01",
+        "b01-l1",
+        "b01-l3",
+        "b01-l4"
+      ]
+    },
+    {
+      "id": "R-wu-2002-isb",
+      "title": "ISB recommendation on definitions of joint coordinate system of various joints for the reporting of human joint motion — part I: ankle, hip, and spine",
+      "year": 2002,
+      "url": "https://doi.org/10.1016/S0021-9290(01)00222-6",
+      "doi": "10.1016/S0021-9290(01)00222-6",
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Journal, volume, issue, pages and DOI matched in multiple index records (CiNii, Drexel research discovery, scilit); first author and committee authorship confirmed. Full co-author list taken from the paper's standard citation; not every name was individually displayed in the search snippets.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "b01-l2"
+      ]
+    },
+    {
+      "id": "R-wu-2005-isb",
+      "title": "ISB recommendation on definitions of joint coordinate systems of various joints for the reporting of human joint motion — Part II: shoulder, elbow, wrist and hand",
+      "year": 2005,
+      "url": "https://doi.org/10.1016/j.jbiomech.2004.05.042",
+      "doi": "10.1016/j.jbiomech.2004.05.042",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Journal, volume, issue, pages and DOI supplied by the course brief as verified; title and authorship matched on the University of Victoria hosted PDF listing (Wu et al. 2005) seen in search results.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "b01",
+        "b01-l2",
+        "b02-l1"
+      ]
+    },
+    {
+      "id": "R-fleisig-1995-kinetics",
+      "title": "Kinetics of baseball pitching with implications about injury mechanisms",
+      "year": 1995,
+      "url": "https://doi.org/10.1177/036354659502300218",
+      "doi": "10.1177/036354659502300218",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Citation and DOI supplied by the course brief as verified in November 2026 (n = 26).",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b01-l1",
+        "b01-l3"
+      ]
+    },
+    {
+      "id": "R-fleisig-2009-variability",
+      "title": "Variability in baseball pitching biomechanics among various levels of competition",
+      "year": 2009,
+      "url": "https://manuscript.isc.ac/Inventory/10/450955.htm",
+      "doi": null,
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, journal, volume, issue, pages and authors matched in reference lists and an index record with the abstract (93 pitchers, five levels, five fastballs each); DOI not confirmed and therefore omitted; URL is the index record seen in search results.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested",
+        "no-doi",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b01-l4",
+        "b01-l5"
+      ]
+    },
+    {
+      "id": "R-hermens-2000-development",
+      "title": "Development of recommendations for SEMG sensors and sensor placement procedures",
+      "year": 2000,
+      "url": "https://doi.org/10.1016/S1050-6411(00)00027-4",
+      "doi": "10.1016/S1050-6411(00)00027-4",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Authors, title, journal, volume, issue, pages and DOI matched on the DOI resolver listing and PubMed (PMID 11018445) in web search; scope (144 papers, 27 muscles, SENIAM project) from the abstract.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b02-l3"
+      ]
+    },
+    {
+      "id": "R-crockett-2002-osseous",
+      "title": "Osseous Adaptation and Range of Motion at the Glenohumeral Joint in Professional Baseball Pitchers",
+      "year": 2002,
+      "url": "https://doi.org/10.1177/03635465020300011701",
+      "doi": "10.1177/03635465020300011701",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, journal, volume, pages and DOI matched in library index records (bib-bvb, KB Digitale Bibliotheek, Weill Cornell VIVO); author list from one indexer; a secondary source reports 25 pitchers and 25 non-throwing controls, which was not confirmed in the abstract and is therefore not used in lessons.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "b01-l1"
+      ]
+    },
+    {
+      "id": "R-jump-2026-influence",
+      "title": "Influence of Hip-Shoulder separation on pitch velocity in college baseball pitchers",
+      "year": 2026,
+      "url": "https://doi.org/10.1016/j.jbiomech.2025.113117",
+      "doi": "10.1016/j.jbiomech.2025.113117",
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, journal, volume, DOI and PubMed record (PMID 41389727) matched in web search; author surnames from search summaries; sample of 335 pitchers and peak r ≈ 0.16 from the abstract as summarized by search. Full text not read.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b02-l2"
+      ]
+    },
+    {
+      "id": "R-kelso-1995-dynamic",
+      "title": "Dynamic Patterns: The Self-Organization of Brain and Behavior",
+      "year": 1995,
+      "url": "https://carta.anthropogeny.org/node/1892",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, author, publisher and 1995 date matched in the CARTA record, MIT Press ISBN listings and library catalogues.",
+      "access": "purchase",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b01-l5"
+      ]
+    },
+    {
+      "id": "R-bland-1986-statistical",
+      "title": "Statistical methods for assessing agreement between two methods of clinical measurement",
+      "year": 1986,
+      "url": "https://doi.org/10.1016/S0140-6736(86)90837-8",
+      "doi": "10.1016/S0140-6736(86)90837-8",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, authors, journal, volume, issue, pages and DOI matched in web search (DOI resolver, Cardiff and Oxford repository listings).",
+      "access": "free-registration",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested"
+      ],
+      "citedIn": [
+        "b02",
+        "b02-l5"
+      ]
+    },
+    {
+      "id": "R-weir-2005-quantifying",
+      "title": "Quantifying test-retest reliability using the intraclass correlation coefficient and the SEM",
+      "year": 2005,
+      "url": "https://doi.org/10.1519/15184.1",
+      "doi": "10.1519/15184.1",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, author, journal, volume, issue, pages and DOI matched in web search (bibliographic databases and sciencegate DOI listing).",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b02-l5"
+      ]
+    },
+    {
+      "id": "R-howenstein-2019-energy",
+      "title": "Energy Flow Analysis to Investigate Youth Pitching Velocity and Efficiency",
+      "year": 2019,
+      "url": "https://doi.org/10.1249/MSS.0000000000001813",
+      "doi": "10.1249/MSS.0000000000001813",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Citation and DOI supplied by the course brief as verified; 24 youth pitchers, the energy-flow method and the trunk-to-arm correlation with velocity (r = 0.900) matched abstract excerpts in the Marquette ePublications record.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b01-l4"
+      ]
+    },
+    {
+      "id": "R-scholz-1999-uncontrolled",
+      "title": "The uncontrolled manifold concept: identifying control variables for a functional task",
+      "year": 1999,
+      "url": "https://doi.org/10.1007/s002210050738",
+      "doi": "10.1007/s002210050738",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, authors, journal, volume, pages and DOI matched on doi.org and an author-institution PDF (Ruhr-Universität Bochum); method and sit-to-stand results matched abstract text.",
+      "access": "open",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested"
+      ],
+      "citedIn": [
+        "b01-l5"
+      ]
+    },
+    {
+      "id": "R-giordano-2024-normative",
+      "title": "Normative In-Game Data for Collegiate Baseball Pitchers Using Markerless Tracking Technology",
+      "year": 2024,
+      "url": "https://doi.org/10.1177/23259671241274137",
+      "doi": "10.1177/23259671241274137",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, authors, journal, volume, issue, DOI and PMCID (PMC11544755) matched in web search; methods (eight synchronized 300-Hz KinaTrax cameras at two SEC stadiums; 51 pitchers from five teams, 2023 season) from the abstract.",
+      "access": "open",
+      "license": "Open access; copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested"
+      ],
+      "citedIn": [
+        "b02-l2"
+      ]
+    },
+    {
+      "id": "R-boddy-2019-exploring",
+      "title": "Exploring wearable sensors as an alternative to marker-based motion capture in the pitching delivery",
+      "year": 2019,
+      "url": "https://doi.org/10.7717/peerj.6365",
+      "doi": "10.7717/peerj.6365",
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Journal, article number, DOI and first author supplied in the brief and matched on peerj.com and PubMed Central (PMC6348088) in web search; findings (arm slot ≈ 8° lower; stress ≈ 41 N·m, 38.7% lower than elbow torque; significant correlations) from search excerpts. Co-authors not listed because they were not confirmed in search results.",
+      "access": "open",
+      "license": "CC BY 4.0 (PeerJ)",
+      "flags": [
+        "partially-confirmed",
+        "link-untested",
+        "contested"
+      ],
+      "citedIn": [
+        "b02-l3"
+      ]
+    },
+    {
+      "id": "R-newell-1986-constraints",
+      "title": "Constraints on the development of coordination",
+      "year": 1986,
+      "url": "https://link.springer.com/book/9789024733897",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Chapter title, author, editors, book title, pages and publisher matched in the Springer book record and several reference lists; chapter content described from secondary sources only.",
+      "access": "library",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested"
+      ],
+      "citedIn": [
+        "b01-l5"
+      ]
+    },
+    {
+      "id": "R-wilk-2011-correlation",
+      "title": "Correlation of glenohumeral internal rotation deficit and total rotational motion to shoulder injuries in professional baseball pitchers",
+      "year": 2011,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21131681/",
+      "doi": null,
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, journal, volume, issue, pages and PubMed ID 21131681 matched; the 122 pitchers over three seasons, the non-significant GIRD association (P = .17) and the total-rotation finding matched abstract excerpts. Author list abbreviated; DOI not confirmed in results and therefore omitted.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested",
+        "no-doi",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "b01-l1"
+      ]
+    },
+    {
+      "id": "R-wade-2022-applications",
+      "title": "Applications and limitations of current markerless motion capture methods for clinical gait biomechanics",
+      "year": 2022,
+      "url": "https://doi.org/10.7717/peerj.12995",
+      "doi": "10.7717/peerj.12995",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Authors, title, journal, article number and DOI matched on peerj.com, DOAJ and PubMed Central (PMC8884063) in web search; open-access CC BY 4.0 status stated in those records.",
+      "access": "open",
+      "license": "CC BY 4.0",
+      "flags": [
+        "link-untested"
+      ],
+      "citedIn": [
+        "b02",
+        "b02-l1",
+        "b02-l2"
+      ]
+    },
+    {
+      "id": "R-urbin-2013-associations",
+      "title": "Associations between timing in the baseball pitch and shoulder kinetics, elbow kinetics, and ball speed",
+      "year": 2013,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23204507/",
+      "doi": null,
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, authors, journal, volume, issue, pages and MEDLINE ID 23204507 matched in a BVS/MEDLINE record and a KB index; the phase-timing design and direction of findings matched abstract excerpts; sample size and DOI not confirmed and therefore not stated.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested",
+        "no-doi",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b01-l4"
+      ]
+    },
+    {
+      "id": "R-petriello-2020-latest",
+      "title": "What the latest Statcast upgrade makes possible",
+      "year": 2020,
+      "url": "https://www.mlb.com/news/2020-statcast-update-includes-pose-tracking-capabilities",
+      "doi": null,
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, outlet, year and author matched in web search; content (twelve cameras for optical pitch, hit and player tracking; introduction of pose tracking) from the article's opening as returned by search. The 100 frames-per-second pitch-camera figure appeared in search excerpts attributed to MLB's 2020 description and should be treated as the 2020 configuration.",
+      "access": "open",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested"
+      ],
+      "citedIn": [
+        "b02-l4"
+      ]
+    },
+    {
+      "id": "R-mlb-2024-statcast",
+      "title": "Statcast Glossary: Bat Tracking — Bat Speed, Swing Length and Attack Angle",
+      "year": 2024,
+      "url": "https://www.mlb.com/glossary/statcast/swing-length",
+      "doi": null,
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Definitions matched in web search on MLB.com glossary pages for swing length and attack angle and in secondary quotations of the MLB bat-speed definition; the brief also supplied these URLs. Year reflects the 2024 introduction of bat tracking; individual pages may have been updated since.",
+      "access": "open",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested"
+      ],
+      "citedIn": [
+        "b02-l4"
+      ]
+    },
+    {
+      "id": "R-latash-2002-motor",
+      "title": "Motor control strategies revealed in the structure of motor variability",
+      "year": 2002,
+      "url": "https://doi.org/10.1097/00003677-200201000-00006",
+      "doi": "10.1097/00003677-200201000-00006",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, authors, journal, volume, issue, pages and DOI matched on the Penn State research portal record.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b01-l5"
+      ]
+    },
+    {
+      "id": "R-hirashima-2008-kinetic",
+      "title": "Kinetic chain of overarm throwing in terms of joint rotations revealed by induced acceleration analysis",
+      "year": 2008,
+      "url": "https://doi.org/10.1016/j.jbiomech.2008.06.014",
+      "doi": "10.1016/j.jbiomech.2008.06.014",
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Journal, volume, issue, pages and DOI matched in a reference listing; topic matched in a university-hosted PDF listing; findings described as reported by citing papers (abstract not displayed).",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b01",
+        "b01-l1",
+        "b01-l3",
+        "b01-l4"
+      ]
+    },
+    {
+      "id": "R-senk-2006-rotation",
+      "title": "Rotation sequence as an important factor in shoulder kinematics",
+      "year": 2006,
+      "url": "https://doi.org/10.1016/j.clinbiomech.2005.09.007",
+      "doi": "10.1016/j.clinbiomech.2005.09.007",
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, authors, journal, supplement pages and DOI matched in reference listings (arXiv paper on tilt-and-torsion; informahealthcare reference lists); abstract not displayed, so findings are described only as reported by citing papers.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "b01-l2"
+      ]
+    },
+    {
+      "id": "R-roach-2013-elastic",
+      "title": "Elastic energy storage in the shoulder and the evolution of high-speed throwing in Homo",
+      "year": 2013,
+      "url": "https://doi.org/10.1038/nature12267",
+      "doi": "10.1038/nature12267",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, authors, journal, volume, issue, pages and DOI matched in search results from the Yale lab-hosted PDF listing, the Harvard Human Evolutionary Biology press release and an Altmetric record; 20 experienced throwers and the bracing manipulation confirmed in summaries of the abstract.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "b01",
+        "b01-l1",
+        "b01-l4"
+      ]
+    },
+    {
+      "id": "R-stergiou-2011-human",
+      "title": "Human movement variability, nonlinear dynamics, and pathology: Is there a connection?",
+      "year": 2011,
+      "url": "https://doi.org/10.1016/j.humov.2011.06.002",
+      "doi": "10.1016/j.humov.2011.06.002",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Citation and DOI supplied by the course brief as verified in November 2026.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access",
+        "contested"
+      ],
+      "citedIn": [
+        "b01-l5"
+      ]
+    },
+    {
+      "id": "R-bernstein-1967-coordination",
+      "title": "The Co-ordination and Regulation of Movements",
+      "year": 1967,
+      "url": "https://libcat.library.tamu.edu/Record/in00000267953",
+      "doi": null,
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, author, publisher and 1967 English edition matched in the Texas A&M library catalogue record and Elsevier's description of the 1984 reassessment volume, which reprints the text.",
+      "access": "library",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested"
+      ],
+      "citedIn": [
+        "b01-l5"
+      ]
+    },
+    {
+      "id": "R-ehrig-2006-survey",
+      "title": "A survey of formal methods for determining the centre of rotation of ball joints",
+      "year": 2006,
+      "url": "https://eprints.soton.ac.uk/348510",
+      "doi": null,
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Authors, title, journal, volume, issue, pages and year matched in a University of Southampton repository record and PubMed listing (PMID 16293257). DOI not confirmed in search results and therefore omitted.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested",
+        "no-doi",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b02-l1"
+      ]
+    },
+    {
+      "id": "R-kanko-2021-concurrent",
+      "title": "Concurrent assessment of gait kinematics using marker-based and markerless motion capture",
+      "year": 2021,
+      "url": "https://doi.org/10.1016/j.jbiomech.2021.110665",
+      "doi": "10.1016/j.jbiomech.2021.110665",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Authors, title, journal, volume, article number and DOI matched in web search (Elsevier Pure record and bioRxiv preprint); findings and the disclosed author conflict from the preprint and abstract.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b02-l2"
+      ]
+    },
+    {
+      "id": "R-lieber-2000-functional",
+      "title": "Functional and clinical significance of skeletal muscle architecture",
+      "year": 2000,
+      "url": "https://www.deepdyve.com/lp/doc/HghGVBigDy",
+      "doi": null,
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, authors, journal, volume, issue and pages matched in several reference listings and index records (Thieme reference list, unibo index, typeset); DOI not displayed in results, so it is omitted; URL is the DeepDyve listing seen in search.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested",
+        "no-doi",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b01-l1"
+      ]
+    },
+    {
+      "id": "R-bartlett-2007-is",
+      "title": "Is movement variability important for sports biomechanists?",
+      "year": 2007,
+      "url": "https://doi.org/10.1080/14763140701322994",
+      "doi": "10.1080/14763140701322994",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, authors, journal, volume, issue, pages and DOI matched the Sheffield Hallam (SHURA) record and an open post-print at Nottingham Trent University (IRep).",
+      "access": "open",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested"
+      ],
+      "citedIn": [
+        "b01",
+        "b01-l5"
+      ]
+    },
+    {
+      "id": "R-oyama-2013-effect",
+      "title": "Effect of Excessive Contralateral Trunk Tilt on Pitching Biomechanics and Performance in High School Baseball Pitchers",
+      "year": 2013,
+      "url": "https://doi.org/10.1177/0363546513496547",
+      "doi": "10.1177/0363546513496547",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Citation and DOI supplied by the course brief as verified; 72 high school pitchers, higher ball speed (about 32.6 vs 31.1 m/s) and higher arm kinetics in the excessive-tilt group matched the Georgia Southern repository abstract.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b01-l2"
+      ]
+    },
+    {
+      "id": "R-sonnenfeld-2021-analysis",
+      "title": "An Analysis of In Vivo Hip Kinematics in Elite Baseball Batters Using a Markerless Motion-Capture System",
+      "year": 2021,
+      "url": "https://doi.org/10.1016/j.asmr.2021.03.006",
+      "doi": "10.1016/j.asmr.2021.03.006",
+      "status": "partially-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, journal, first author, year and DOI matched on the Wiley/ScienceDirect listing in web search; sample of 29 elite players and the markerless system (Dynamic Athletic Research Institute) from the abstract. Volume/issue and co-authors not confirmed.",
+      "access": "open",
+      "license": "Open access; copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "partially-confirmed",
+        "link-untested"
+      ],
+      "citedIn": [
+        "b02-l2"
+      ]
+    },
+    {
+      "id": "R-koo-2016-guideline",
+      "title": "A Guideline of Selecting and Reporting Intraclass Correlation Coefficients for Reliability Research",
+      "year": 2016,
+      "url": "https://doi.org/10.1016/j.jcm.2016.02.012",
+      "doi": "10.1016/j.jcm.2016.02.012",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, journal, volume, issue, pages, DOI and PMCID matched in web search (Scilit, GESIS and PMC records); interpretation thresholds from a secondary summary and consistent with the paper's widely cited guidance.",
+      "access": "open",
+      "license": "Open access via PubMed Central (PMC4913118); copyright holder's terms.",
+      "flags": [
+        "link-untested"
+      ],
+      "citedIn": [
+        "b02",
+        "b02-l5"
+      ]
+    },
+    {
+      "id": "R-matsuo-2001-comparison",
+      "title": "Comparison of kinematic and temporal parameters between different pitch velocity groups",
+      "year": 2001,
+      "url": "https://doi.org/10.1123/jab.17.1.1",
+      "doi": "10.1123/jab.17.1.1",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Citation and DOI supplied by the course brief as verified; design (12 kinematic and 9 temporal parameters, high- and low-velocity groups from 127 college and professional pitchers) and principal findings matched abstract excerpts in index records.",
+      "access": "paywalled",
+      "license": "Copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested",
+        "restricted-access"
+      ],
+      "citedIn": [
+        "b01-l1",
+        "b01-l4"
+      ]
+    },
+    {
+      "id": "R-camomilla-2018-trends",
+      "title": "Trends Supporting the In-Field Use of Wearable Inertial Sensors for Sport Performance Evaluation: A Systematic Review",
+      "year": 2018,
+      "url": "https://doi.org/10.3390/s18030873",
+      "doi": "10.3390/s18030873",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Authors, title, journal, volume, article number and DOI matched on PubMed Central (PMC5877384) and university repositories in web search; review scope from the abstract.",
+      "access": "open",
+      "license": "Open access (MDPI); copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested"
+      ],
+      "citedIn": [
+        "b02-l3"
+      ]
+    },
+    {
+      "id": "R-hopkins-2000-measures",
+      "title": "Measures of reliability in sports medicine and science",
+      "year": 2000,
+      "url": "https://doi.org/10.2165/00007256-200030010-00001",
+      "doi": "10.2165/00007256-200030010-00001",
+      "status": "metadata-confirmed",
+      "verifiedOn": "2026-11-03",
+      "evidence": "Title, author, journal, volume, issue, pages and DOI supplied in the brief and matched on the DOI resolver and Victoria University repository in web search; author-hosted PDF on sportsci.org.",
+      "access": "open",
+      "license": "Author-hosted copy at sportsci.org; copyright holder's terms. Linked, not reproduced.",
+      "flags": [
+        "link-untested"
+      ],
+      "citedIn": [
+        "b02",
+        "b02-l5"
+      ]
+    }
+  ]
+}

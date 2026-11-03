@@ -1,6 +1,6 @@
 # APERTURE source manifest
 
-Generated 2026-11-02 by `aperture/tools/compile.mjs` — do not edit by hand.
+Generated 2026-11-03 by `aperture/tools/compile.mjs` — do not edit by hand.
 
 Metadata verified through web-search results on the date shown per record. The build environment could not open pages, so every link is flagged link-untested until checked in a browser.
 

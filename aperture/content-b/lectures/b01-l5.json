@@ -1,0 +1,990 @@
+{
+  "id": "b01-l5-lecture",
+  "lesson": "b01-l5",
+  "title": "Repetition Without Repetition",
+  "subtitle": "Foundations of motor control: redundancy, variability and constraints",
+  "summary": "A narrated, interactive version of Lesson 5. It covers the same objectives — Bernstein’s degrees-of-freedom problem and redundancy, task-relevant versus task-irrelevant variability through the uncontrolled manifold and optimal feedback control, and Newell’s constraints — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Which pitcher is consistent?",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Course B · Week 1 · Lesson 5 · Lecture",
+            "title": "Repetition without repetition",
+            "sub": "Redundancy, variability and constraints"
+          },
+          "cues": [
+            {
+              "text": "Two right-handed pitchers. Both are hypothetical, and every number I give you is invented."
+            },
+            {
+              "text": "Your job is to decide which one is more consistent. It sounds easy. It is not."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Pitch-to-pitch variation",
+            "left": {
+              "title": "Pitcher one",
+              "points": [
+                "Elbow flexion at release: 8 degrees",
+                "Trunk tilt: 6 degrees",
+                "Release point: 5 centimetres"
+              ]
+            },
+            "right": {
+              "title": "Pitcher two",
+              "points": [
+                "Elbow flexion at release: 3 degrees",
+                "Trunk tilt: 3 degrees",
+                "Release point: 9 centimetres"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "The first pitcher’s elbow flexion at release varies by about eight degrees, his trunk tilt by six. Yet his release point varies by only about five centimetres.",
+              "reveal": 1
+            },
+            {
+              "text": "The second pitcher is tighter at the joints: three degrees and three degrees. But his release point wanders by nine centimetres.",
+              "reveal": 2
+            },
+            {
+              "text": "So which one is consistent?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-consistent",
+            "type": "choice",
+            "concept": "c-functional-variability",
+            "prompt": "Which pitcher is more consistent?",
+            "answer": "c",
+            "options": [
+              {
+                "id": "a",
+                "text": "Pitcher two: his joints vary less"
+              },
+              {
+                "id": "b",
+                "text": "Pitcher one: his release point varies less, so joints do not matter"
+              },
+              {
+                "id": "c",
+                "text": "It depends on which variable the task cares about, and whether joint variations cancel at the hand"
+              }
+            ],
+            "feedback": {
+              "a": "Only at the joints. If the task cares about where the ball leaves the hand, his tighter joints are not buying him a stable release.",
+              "b": "Closer, but joints still matter: they tell you how the release point is being stabilized, or not.",
+              "c": "Right. Consistency is defined by a task variable. Pitcher one’s joint variations may be co-varying so that they cancel out at the hand."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Too many ways to throw",
+      "scenes": [
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "Goal versus body",
+            "items": [
+              {
+                "value": "A few",
+                "label": "task variables: release location, velocity, spin"
+              },
+              {
+                "value": "7",
+                "label": "rotational degrees of freedom, shoulder to wrist"
+              },
+              {
+                "value": "Hundreds",
+                "label": "muscles acting across them"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Count the variables. A pitch’s goal is described by a few: release location, release velocity, spin.",
+              "reveal": 1
+            },
+            {
+              "text": "The arm alone has seven rotational degrees of freedom from shoulder to wrist.",
+              "reveal": 2
+            },
+            {
+              "text": "And hundreds of muscles act across them.",
+              "reveal": 3
+            },
+            {
+              "text": "When many combinations of joint motion produce the same task outcome, the system is redundant. Some call it motor abundance. There is no single correct movement for a goal; there is a family of solutions."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Too many independent parts.",
+              "Coordination masters them.",
+              "Each attempt solves the problem again."
+            ],
+            "sub": "Bernstein’s degrees-of-freedom problem"
+          },
+          "cues": [
+            {
+              "text": "Bernstein framed coordination as exactly this problem: converting a body with too many independent parts into a controllable system.",
+              "refs": [
+                "R-bernstein-1967-coordination"
+              ]
+            },
+            {
+              "text": "Mastery means organizing those redundant degrees of freedom, not eliminating them.",
+              "reveal": 1
+            },
+            {
+              "text": "And he insisted that skilled repetition is not reproduction. The performer solves the movement problem anew on each attempt. The details differ; the outcome is preserved. Repetition without repetition.",
+              "reveal": 2,
+              "refs": [
+                "R-bernstein-1967-coordination"
+              ]
+            },
+            {
+              "text": "Sport biomechanists long treated between-trial variability as noise to average away. Reviews of throwing and other skills argue that even elite performers do not reproduce identical patterns, and that some variability is functional.",
+              "refs": [
+                "R-bartlett-2007-is"
+              ]
+            },
+            {
+              "text": "So redundancy is a resource, not a nuisance. It is what lets a body absorb noise and still hit the target. The next question is how to tell useful variability from harmful variability."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Variability that matters, and variability that does not",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "A quick estimate",
+            "title": "Two degrees at the shoulder",
+            "sub": "A 0.6-metre arm, rotated by two degrees"
+          },
+          "cues": [
+            {
+              "text": "Before the theory, a prediction. Treat the arm from shoulder to hand as a lever about six-tenths of a metre long."
+            },
+            {
+              "text": "Its orientation is off by two degrees. How far does the hand move?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-lever",
+            "type": "estimate",
+            "concept": "c-functional-variability",
+            "prompt": "A 0.6 m arm rotates by 2 degrees. Roughly how far does the hand move, in centimetres?",
+            "min": 0,
+            "max": 10,
+            "step": 0.1,
+            "unit": "cm",
+            "initial": 5,
+            "answer": 2.1,
+            "tolerance": 0.3,
+            "feedback": {
+              "correct": "Right: two degrees is about 0.035 radians, and 0.6 × 0.035 ≈ 2.1 cm.",
+              "incorrect": "Convert to radians: two degrees ≈ 0.035 rad. Displacement ≈ lever × angle = 0.6 × 0.035 ≈ 2.1 cm."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Two joints, one hand",
+            "lines": [
+              {
+                "label": "Two degrees, in radians",
+                "value": "0.035 rad"
+              },
+              {
+                "label": "Hand displacement, 0.6 × 0.035",
+                "value": "≈ 2.1 cm"
+              },
+              {
+                "label": "Two independent 2 cm effects, √(2² + 2²)",
+                "value": "≈ 2.8 cm, about 3"
+              }
+            ],
+            "result": {
+              "label": "Negatively correlated effects",
+              "value": "Much less than either alone"
+            },
+            "note": "Synthetic working values from the lesson."
+          },
+          "cues": [
+            {
+              "text": "Two degrees is about zero point zero three five radians. Displacement equals the lever length times the angle, so the hand moves about two point one centimetres.",
+              "reveal": 2
+            },
+            {
+              "text": "Now add a second joint. Trunk tilt and shoulder angle each move the hand about two centimetres. If they are independent, their effects add in quadrature: the square root of two squared plus two squared, about three centimetres.",
+              "reveal": 3
+            },
+            {
+              "text": "But if they are negatively correlated, so a larger tilt comes with a smaller shoulder angle, the hand moves much less than either variation alone would predict.",
+              "reveal": 4
+            },
+            {
+              "text": "That is the core idea. You cannot read release-point variability off joint-angle variability without knowing how the joints co-vary."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "curves",
+            "title": "Joints vary; the hand barely does",
+            "xLabel": "Pitch number",
+            "yLabel": "Effect on release height (cm)",
+            "series": [
+              {
+                "label": "From trunk tilt",
+                "points": [
+                  [
+                    1,
+                    -2.5
+                  ],
+                  [
+                    2,
+                    -1.1
+                  ],
+                  [
+                    3,
+                    1.1
+                  ],
+                  [
+                    4,
+                    -0.9
+                  ],
+                  [
+                    5,
+                    1.3
+                  ],
+                  [
+                    6,
+                    0.9
+                  ],
+                  [
+                    7,
+                    1.6
+                  ],
+                  [
+                    8,
+                    -0.6
+                  ],
+                  [
+                    9,
+                    1
+                  ],
+                  [
+                    10,
+                    0.9
+                  ],
+                  [
+                    11,
+                    2.1
+                  ],
+                  [
+                    12,
+                    -1.9
+                  ],
+                  [
+                    13,
+                    2.1
+                  ],
+                  [
+                    14,
+                    0.7
+                  ],
+                  [
+                    15,
+                    2.1
+                  ],
+                  [
+                    16,
+                    -0.6
+                  ],
+                  [
+                    17,
+                    1.7
+                  ],
+                  [
+                    18,
+                    -1.7
+                  ],
+                  [
+                    19,
+                    -0.4
+                  ],
+                  [
+                    20,
+                    2.2
+                  ]
+                ]
+              },
+              {
+                "label": "From shoulder angle",
+                "points": [
+                  [
+                    1,
+                    2.5
+                  ],
+                  [
+                    2,
+                    0.6
+                  ],
+                  [
+                    3,
+                    -0.9
+                  ],
+                  [
+                    4,
+                    1
+                  ],
+                  [
+                    5,
+                    -1.1
+                  ],
+                  [
+                    6,
+                    -0.6
+                  ],
+                  [
+                    7,
+                    -1.6
+                  ],
+                  [
+                    8,
+                    0.7
+                  ],
+                  [
+                    9,
+                    -1.3
+                  ],
+                  [
+                    10,
+                    -0.8
+                  ],
+                  [
+                    11,
+                    -1.5
+                  ],
+                  [
+                    12,
+                    1.6
+                  ],
+                  [
+                    13,
+                    -1.6
+                  ],
+                  [
+                    14,
+                    -0.5
+                  ],
+                  [
+                    15,
+                    -1.4
+                  ],
+                  [
+                    16,
+                    0.3
+                  ],
+                  [
+                    17,
+                    -1.6
+                  ],
+                  [
+                    18,
+                    1.2
+                  ],
+                  [
+                    19,
+                    0.1
+                  ],
+                  [
+                    20,
+                    -1.8
+                  ]
+                ]
+              },
+              {
+                "label": "Release height",
+                "points": [
+                  [
+                    1,
+                    0
+                  ],
+                  [
+                    2,
+                    -0.5
+                  ],
+                  [
+                    3,
+                    0.2
+                  ],
+                  [
+                    4,
+                    0.1
+                  ],
+                  [
+                    5,
+                    0.2
+                  ],
+                  [
+                    6,
+                    0.3
+                  ],
+                  [
+                    7,
+                    0
+                  ],
+                  [
+                    8,
+                    0.1
+                  ],
+                  [
+                    9,
+                    -0.3
+                  ],
+                  [
+                    10,
+                    0.1
+                  ],
+                  [
+                    11,
+                    0.6
+                  ],
+                  [
+                    12,
+                    -0.3
+                  ],
+                  [
+                    13,
+                    0.5
+                  ],
+                  [
+                    14,
+                    0.2
+                  ],
+                  [
+                    15,
+                    0.7
+                  ],
+                  [
+                    16,
+                    -0.3
+                  ],
+                  [
+                    17,
+                    0.1
+                  ],
+                  [
+                    18,
+                    -0.5
+                  ],
+                  [
+                    19,
+                    -0.3
+                  ],
+                  [
+                    20,
+                    0.4
+                  ]
+                ]
+              }
+            ],
+            "note": "Synthetic data for illustration."
+          },
+          "cues": [
+            {
+              "text": "Here is what that looks like across twenty pitches. Synthetic data again."
+            },
+            {
+              "text": "This line is how much trunk tilt alone would move release height on each pitch. Up to two or three centimetres either way.",
+              "reveal": 1
+            },
+            {
+              "text": "This one is the shoulder. It moves in the opposite direction, pitch after pitch.",
+              "reveal": 2
+            },
+            {
+              "text": "And this is release height, the sum. Nearly flat. The joint variation is real, but it lives in a task-irrelevant dimension. That is coordination, not inconsistency.",
+              "reveal": 3
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "bars",
+            "title": "Same release SD, different structure",
+            "unit": "normalized variance",
+            "items": [
+              {
+                "label": "Pitcher A along manifold",
+                "value": 8
+              },
+              {
+                "label": "Pitcher A across manifold",
+                "value": 2
+              },
+              {
+                "label": "Pitcher B along manifold",
+                "value": 3
+              },
+              {
+                "label": "Pitcher B across manifold",
+                "value": 3
+              }
+            ],
+            "note": "Synthetic data from the lesson table."
+          },
+          "cues": [
+            {
+              "text": "The uncontrolled manifold method makes this measurable. Pick a hypothesized task variable, say hand position at release.",
+              "refs": [
+                "R-scholz-1999-uncontrolled"
+              ]
+            },
+            {
+              "text": "The joint configurations that leave it unchanged form a manifold in joint space. Between-trial joint variance is split into the part along that manifold, which does not affect the task variable, and the part across it, which does.",
+              "refs": [
+                "R-scholz-1999-uncontrolled",
+                "R-latash-2002-motor"
+              ]
+            },
+            {
+              "text": "Two synthetic pitchers, each with a release-point standard deviation of four centimetres. Pitcher A has eight units along the manifold,",
+              "reveal": 1
+            },
+            {
+              "text": "and two across. A ratio of four.",
+              "reveal": 2
+            },
+            {
+              "text": "Pitcher B has three along,",
+              "reveal": 3
+            },
+            {
+              "text": "and three across. A ratio of one. More variance along than across means the joints co-vary to stabilize the variable. Pitcher A is compensating; Pitcher B’s joint variations simply add up at the hand.",
+              "reveal": 4
+            },
+            {
+              "text": "A caution: real analyses need a kinematic model linking joint angles to the task variable, and variance normalized per degree of freedom."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Optimal feedback control",
+            "term": "Minimal intervention principle",
+            "definition": "Correct only the deviations that threaten the goal; let variability accumulate where it does not matter.",
+            "example": "Noisy commands, a cost on error and effort — so enforcing a fixed trajectory is not optimal."
+          },
+          "cues": [
+            {
+              "text": "Why would a nervous system work this way? Optimal feedback control offers a reason.",
+              "refs": [
+                "R-todorov-2002-optimal"
+              ]
+            },
+            {
+              "text": "If motor commands are noisy, and the controller minimizes a cost that includes task error and effort, the best strategy is not to enforce a fixed trajectory. It corrects only deviations that threaten the goal.",
+              "reveal": 1,
+              "refs": [
+                "R-todorov-2002-optimal"
+              ]
+            },
+            {
+              "text": "Variability is allowed to accumulate in task-irrelevant dimensions. Skilled performers should therefore show exactly the structure Pitcher A shows.",
+              "reveal": 2,
+              "refs": [
+                "R-todorov-2002-optimal"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Prediction, noise and constraints",
+      "scenes": [
+        {
+          "visual": {
+            "type": "flow",
+            "title": "Feedforward and feedback",
+            "steps": [
+              {
+                "label": "Plan",
+                "text": "Feedforward command from a prediction"
+              },
+              {
+                "label": "Forward model",
+                "text": "Predicts sensory consequences"
+              },
+              {
+                "label": "State estimate",
+                "text": "Prediction combined with delayed feedback"
+              },
+              {
+                "label": "Correction",
+                "text": "Limited by sensory delay"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Motor control combines feedforward commands, planned from a prediction, with feedback corrections from sensory information.",
+              "reveal": 1
+            },
+            {
+              "text": "Computational accounts propose internal models. A forward model predicts the sensory consequences of a command,",
+              "reveal": 2,
+              "refs": [
+                "R-wolpert-1995-internal"
+              ]
+            },
+            {
+              "text": "which lets the system estimate the state of the limb despite delayed, noisy sensory signals.",
+              "reveal": 3,
+              "refs": [
+                "R-wolpert-1995-internal",
+                "R-todorov-2002-optimal"
+              ]
+            },
+            {
+              "text": "Now the clock. A fastball takes roughly four-tenths of a second to reach the plate, and the swing lasts on the order of fifteen hundredths. Visual feedback loops take a tenth to two-tenths of a second.",
+              "reveal": 4
+            },
+            {
+              "text": "So much of a swing is planned before it begins. And once a pitcher’s arm is accelerating, the throw is effectively feedforward. The quality of the plan, and of the state estimate behind it, carries most of the outcome."
+            },
+            {
+              "text": "Noise matters too. In many tasks command noise grows with command size, so maximal intent means large noise. Part of skill is channelling it into dimensions that do not move the ball, one reason velocity and command can trade off."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Newell’s three constraints",
+            "cards": [
+              {
+                "title": "Organismic",
+                "q": "Size, strength, mobility, tissue, perception",
+                "fail": "Humeral torsion, hip mobility differ by athlete"
+              },
+              {
+                "title": "Environmental",
+                "q": "Gravity, surfaces, light, temperature",
+                "fail": "Mound slope and footing change options"
+              },
+              {
+                "title": "Task",
+                "q": "Goal, rules, implement",
+                "fail": "Pitch type, intent, the drill itself"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Where does an individual solution come from? Newell proposed that coordination emerges from the interaction of three families of constraints.",
+              "refs": [
+                "R-newell-1986-constraints"
+              ]
+            },
+            {
+              "text": "Organismic: body size, strength, mobility, tissue properties, perceptual and neural factors.",
+              "reveal": 1
+            },
+            {
+              "text": "Environmental: gravity, surfaces, light, temperature.",
+              "reveal": 2
+            },
+            {
+              "text": "Task: the goal, the rules, the implement. Change any of them and you change which patterns are available and which are preferred.",
+              "reveal": 3,
+              "refs": [
+                "R-newell-1986-constraints"
+              ]
+            },
+            {
+              "text": "Two pitchers with different humeral torsion, hip mobility and strength face different organismic constraints. The same goal may be best achieved with different movements."
+            },
+            {
+              "text": "Dynamical-systems accounts add a vocabulary: collective variables such as relative phase, stable patterns, and switches when a control parameter crosses a threshold.",
+              "refs": [
+                "R-kelso-1995-dynamic"
+              ]
+            },
+            {
+              "text": "Be careful with it. The strongest support comes from rhythmic tasks such as bimanual finger coordination. Applying it to a discrete pitch or swing is more interpretive.",
+              "refs": [
+                "R-kelso-1995-dynamic"
+              ]
+            },
+            {
+              "text": "Try the framework. A pitcher’s stride is shorter than his peers’. Generate competing explanations."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-stride",
+            "type": "choice",
+            "concept": "c-newell-constraints",
+            "prompt": "A pitcher’s stride is shorter than his peers’. What is the most defensible next step?",
+            "answer": "b",
+            "options": [
+              {
+                "id": "a",
+                "text": "Prescribe a longer stride; the difference is a fault"
+              },
+              {
+                "id": "b",
+                "text": "List organismic, environmental and task explanations, then choose measurements that distinguish them"
+              },
+              {
+                "id": "c",
+                "text": "Ignore it; individual solutions are always optimal"
+              },
+              {
+                "id": "d",
+                "text": "Assume it is hip mobility and start a mobility program"
+              }
+            ],
+            "feedback": {
+              "a": "No. A kinematic difference is not, by itself, a deficiency; it has to be shown to matter for him.",
+              "b": "Right. Hip mobility or lead-leg strength, mound slope or footing, pitch type, intent or the drill: decide what would tell them apart before prescribing.",
+              "c": "No. Many solutions exist, but not all are equally good. Some differences are deficiencies.",
+              "d": "Too fast. That is one organismic candidate among several, chosen before any test."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "How far the argument goes",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Functional variability: two readings",
+            "left": {
+              "title": "For",
+              "points": [
+                "Healthy movement has optimal variability",
+                "Too little can be as bad as too much"
+              ]
+            },
+            "right": {
+              "title": "Against",
+              "points": [
+                "Optimal is rarely specified in advance",
+                "Evidence mostly from gait and clinic",
+                "Measured variability includes error"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Now the challenge, aimed at this lecture. The functional-variability view holds that skilled movement has an optimal amount and structure of variability, and too little can be as problematic as too much.",
+              "reveal": 1,
+              "refs": [
+                "R-stergiou-2011-human"
+              ]
+            },
+            {
+              "text": "It is influential, and hard to falsify. Optimal is rarely specified in advance, much of the evidence comes from gait and clinical populations, and measured variability always includes measurement error that must be separated first.",
+              "reveal": 2,
+              "refs": [
+                "R-preatoni-2013-movement"
+              ]
+            },
+            {
+              "text": "In baseball, pitch-to-pitch variability of many kinematic and kinetic variables was smaller at higher levels, but timing variability was not. That fits reduced noise in skilled pitchers, and persistent timing variability. It does not decide between theories.",
+              "refs": [
+                "R-fleisig-2009-variability"
+              ]
+            },
+            {
+              "text": "And the individual-solutions idea can be overstated. Many solutions exist; that does not make them equally good for velocity, command or tissue loading. The demand is narrower: show that a difference matters for this athlete before calling it a fault."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Claim: less joint variability, better command",
+            "steps": [
+              "Observed: joint, release and location SDs",
+              "Mechanism: steadier joints, steadier release",
+              "Evidence: indirect, level differences and theory",
+              "Uncertain: structure, error, relevance to command",
+              "Intervention: none shown",
+              "Transfer to game command: unknown",
+              "Loading: unknown; a hypothesis only"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Seven questions, one claim: reducing this pitcher’s joint-angle variability will improve his command. Observed: between-pitch standard deviations of joint angles, release point and location.",
+              "reveal": 1
+            },
+            {
+              "text": "Mechanism: steadier joints give a steadier release and more accurate pitches.",
+              "reveal": 2
+            },
+            {
+              "text": "Evidence: indirect. Higher-level pitchers vary less in many variables, while theory predicts that compensated joint variability does not affect release.",
+              "reveal": 3,
+              "refs": [
+                "R-fleisig-2009-variability",
+                "R-todorov-2002-optimal"
+              ]
+            },
+            {
+              "text": "Uncertain: how much variability is compensated, how much is measurement error, and whether release variability limits his command at all.",
+              "reveal": 4
+            },
+            {
+              "text": "Has changing it improved performance? No intervention study shows it.",
+              "reveal": 5
+            },
+            {
+              "text": "Transfer to game command? Unknown.",
+              "reveal": 6
+            },
+            {
+              "text": "Loading? Also unknown. Constraining variability might concentrate repetitive load on the same tissues, but that is a hypothesis, offered as education, not a finding.",
+              "reveal": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Reading variability in practice",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "What to ask of variability",
+            "left": {
+              "title": "Pitcher",
+              "points": [
+                "Task variables: release, direction, velocity, spin axis",
+                "Is joint variability compensated?"
+              ]
+            },
+            "right": {
+              "title": "Hitter",
+              "points": [
+                "Bat timing and orientation at contact",
+                "Variability is partly the point",
+                "Tee consistency says little"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "For a pitcher: which task variables matter, how variable is each, and is joint variability compensated? Trunk tilt that varies while arm angle co-varies to keep release height stable is coordination.",
+              "reveal": 1
+            },
+            {
+              "text": "Release height that wanders with trunk tilt may be a command problem with a mechanical source worth investigating."
+            },
+            {
+              "text": "For a hitter, variability is partly the point: different pitches need different swings. Swing-to-swing variability off a tee says little about adaptability, and reducing it is not obviously desirable.",
+              "reveal": 2
+            },
+            {
+              "text": "That is also why a single consistency score averaged over twenty joint angles fails. It mixes relevant and irrelevant variability, includes measurement error, and implies less is always better. Report task-outcome variability with its error, and use joints to explain it."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Many movements, one goal.",
+              "Irrelevant variability is not error.",
+              "Constraints shape the solution.",
+              "Ask: which dimension, how much error, does it matter?"
+            ],
+            "sub": "A primer for Week 9"
+          },
+          "cues": [
+            {
+              "text": "To close. Redundancy means many movements achieve one goal."
+            },
+            {
+              "text": "Variability that leaves the goal unchanged is not error, and optimal feedback control predicts skilled performers will allow it.",
+              "reveal": 1
+            },
+            {
+              "text": "Body, environment and task constraints shape which solution an athlete uses.",
+              "reveal": 2
+            },
+            {
+              "text": "So for any variability measure ask: in which dimension, how much is measurement error, and does it matter for the outcome?",
+              "reveal": 3
+            },
+            {
+              "text": "Treat this as a primer. Week 9 returns to motor control in depth: theories compared, internal models, coordination dynamics, and how to measure variability properly."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "The Biomechanics Foundations Lab",
+                "detail": "The week’s interactive laboratory",
+                "href": "#/exercise/b01-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Bartlett (2007) Is movement variability important for sports biomechanists?",
+                "href": "#/library/R-bartlett-2007-is"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Next, the comprehension check, then the week’s laboratory. And read Bartlett and colleagues closely on throwing.",
+              "reveal": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

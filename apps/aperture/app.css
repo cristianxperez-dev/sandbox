@@ -372,3 +372,25 @@ main:focus { outline: none; }
   .syl-wbody { padding-left: 0; }
 }
 @media print { .syl-toc, .syl-cta, .syl .btn { display: none; } .syl-week { break-inside: avoid; } }
+
+/* Courses: header switch, course cards, Coming Soon weeks */
+.course-switch { display: flex; flex: none; margin-left: 1rem; border: 1px solid var(--line-strong); border-radius: var(--radius); overflow: hidden; }
+.course-switch__opt { display: flex; gap: 0.35rem; align-items: baseline; padding: 0.3rem 0.6rem; font: 500 0.72rem/1.2 var(--sans); color: var(--text-muted); text-decoration: none; white-space: nowrap; }
+.course-switch__opt + .course-switch__opt { border-left: 1px solid var(--line-strong); }
+.course-switch__opt b { font: 600 0.7rem/1.2 var(--mono); letter-spacing: 0.08em; }
+.course-switch__opt[aria-current] { background: var(--text); color: var(--bg); }
+@media (max-width: 1500px) { .course-switch__opt span { display: none; } }
+@media (max-width: 900px) { .course-switch { margin-left: auto; } }
+.course-bar { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--line-strong); border-radius: var(--radius); margin: 0 0 1.75rem; max-width: 52rem; }
+.course-card { display: flex; flex-direction: column; gap: 0.2rem; padding: 0.85rem 1rem; text-decoration: none; color: var(--text-muted); }
+.course-card + .course-card { border-left: 1px solid var(--line-strong); }
+.course-card b { font: 500 1.05rem/1.25 var(--serif); color: var(--text); }
+.course-card[aria-current] { background: var(--text); color: var(--bg); }
+.course-card[aria-current] b, .course-card[aria-current] .muted, .course-card[aria-current] .label { color: var(--bg); }
+@media (max-width: 560px) { .course-bar { grid-template-columns: 1fr; } .course-card + .course-card { border-left: 0; border-top: 1px solid var(--line-strong); } }
+.week-soon > summary { list-style: none; cursor: pointer; }
+.week-soon > summary::-webkit-details-marker { display: none; }
+.week-soon .week-row__n, .week-soon h3 { color: var(--text-muted); }
+.week-soon__body { padding: 0 0 1.25rem 4.5rem; }
+@media (max-width: 640px) { .week-soon__body { padding-left: 0; } }
+.tag--soon { border-style: dashed; color: var(--text-muted); }

@@ -1,0 +1,708 @@
+{
+  "id": "b02-l5-lecture",
+  "lesson": "b02-l5",
+  "title": "Is That Change Real?",
+  "subtitle": "Reliability, validity and measurement error",
+  "summary": "A narrated, interactive version of Lesson 5. It covers the same objectives — accuracy, precision, reliability and validity; typical error, ICC, limits of agreement and the minimal detectable change worked from data; and judging an athlete's change against error and variability for a decision — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Three numbers, one pitcher",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Course B · Week 2 · Lesson 5 · Lecture",
+            "title": "Is that change real?",
+            "sub": "Reliability, validity and measurement error"
+          },
+          "cues": [
+            {
+              "text": "A pitcher measures a hundred and seventy-seven degrees of peak shoulder external rotation in the laboratory in January, a mean of ten fastballs. The pitcher and every number in this lecture are synthetic."
+            },
+            {
+              "text": "After a six-week mobility and drill block, the same laboratory reads a hundred and seventy-one. Then a second analyst brings his March in-game markerless value: a hundred and sixty-six."
+            },
+            {
+              "text": "The development staff ask a fair question. Did the drill block reduce his layback, and by how much?"
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "What you need before calculating",
+            "cards": [
+              {
+                "title": "Instrument error",
+                "q": "Session-to-session typical error in pitchers like him",
+                "fail": "Without it, any change looks real"
+              },
+              {
+                "title": "His variability",
+                "q": "Pitch-to-pitch spread within a session",
+                "fail": "One pitch is not his usual value"
+              },
+              {
+                "title": "System bias",
+                "q": "Laboratory versus in-game offset",
+                "fail": "Crossing systems mixes bias with change"
+              },
+              {
+                "title": "The decision",
+                "q": "Does any plausible change alter an action?",
+                "fail": "Detectable is not the same as meaningful"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Before any arithmetic, you need four things."
+            },
+            {
+              "text": "First, the laboratory's session-to-session typical error for this variable, in pitchers like him.",
+              "reveal": 1
+            },
+            {
+              "text": "Second, his own trial-to-trial variability within a session.",
+              "reveal": 2
+            },
+            {
+              "text": "Third, the bias between the laboratory and the in-game system.",
+              "reveal": 3
+            },
+            {
+              "text": "And fourth, whether the change matters for any decision. This lecture builds each one from data.",
+              "reveal": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Four distinctions",
+      "scenes": [
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "Accuracy and precision are independent",
+            "x": [
+              "Low precision",
+              "High precision"
+            ],
+            "y": [
+              "Low accuracy",
+              "High accuracy"
+            ],
+            "cells": [
+              [
+                "Scattered around truth: group means fine, individuals not",
+                "Tight and centred: the goal"
+              ],
+              [
+                "Scattered and offset: useless",
+                "Tight but offset: tracks change within one system"
+              ]
+            ]
+          },
+          "cues": [
+            {
+              "text": "Accuracy is closeness to the true value. Precision is closeness of repeated measurements to one another. They are independent.",
+              "refs": [
+                "R-hopkins-2000-measures",
+                "R-atkinson-1998-statistical"
+              ]
+            },
+            {
+              "text": "Scattered around the truth: group means are fine, individual values are not.",
+              "reveal": 1
+            },
+            {
+              "text": "Tight and centred is the goal, and for long-axis joint rotations it is rarely achieved.",
+              "reveal": 2
+            },
+            {
+              "text": "Scattered and offset is useless for individuals and groups alike.",
+              "reveal": 3
+            },
+            {
+              "text": "And tight but offset is the common case with a system-specific bias. Excellent for tracking change within that system; wrong in absolute terms.",
+              "reveal": 4
+            },
+            {
+              "text": "The same split applies one level up. Validity asks whether an instrument measures what it claims, usually against a reference. Reliability asks whether it gives consistent results on repetition.",
+              "refs": [
+                "R-hopkins-2000-measures"
+              ]
+            },
+            {
+              "text": "Hopkins names three components of reliability: within-subject random variation, called the typical error; systematic change in the mean between trials; and the retest correlation.",
+              "refs": [
+                "R-hopkins-2000-measures"
+              ]
+            },
+            {
+              "text": "Atkinson and Nevill add the governing rule: choose the statistic from how the measurement will be used, and never let a relative index like a correlation stand alone without an absolute index in the units of measurement.",
+              "refs": [
+                "R-atkinson-1998-statistical"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Three rules behind every formula",
+            "steps": [
+              "Independent errors add as variances, not SDs",
+              "A difference of two measurements has SD √2 × σ",
+              "Averaging k trials divides the SD by √k"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Three rules generate every formula ahead. First, independent errors add as variances. Biological variation with a standard deviation of two point five degrees, plus instrument error of one point five, gives a total of the square root of eight point five, about two point nine. Not four.",
+              "reveal": 1
+            },
+            {
+              "text": "Second, a change score built from two measurements, each with error sigma, has a standard deviation of root two times sigma.",
+              "reveal": 2
+            },
+            {
+              "text": "Third, averaging k independent trials divides the standard deviation by root k. And the one point nine six you will see comes from the normal distribution: ninety-five percent of values lie within one point nine six standard deviations, assuming roughly normal errors unrelated to the measurement's size.",
+              "reveal": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Typical error and detectable change",
+      "scenes": [
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "Test–retest: eight synthetic pitchers",
+            "items": [
+              {
+                "value": "8",
+                "label": "pitchers, sessions one week apart"
+              },
+              {
+                "value": "+1.38°",
+                "label": "mean difference, session 2 minus 1"
+              },
+              {
+                "value": "2.62°",
+                "label": "SD of the eight differences"
+              }
+            ],
+            "note": "Synthetic data: differences 3, −2, 3, −2, 4, 2, −1, 4 degrees."
+          },
+          "cues": [
+            {
+              "text": "Here is a synthetic test-retest study: eight pitchers, the same marker-based laboratory, sessions a week apart, each value a mean of ten fastballs.",
+              "reveal": 1
+            },
+            {
+              "text": "The eight differences are three, minus two, three, minus two, four, two, minus one and four degrees. Their mean is one point three eight degrees, a small systematic shift, perhaps learning or warm-up.",
+              "reveal": 2
+            },
+            {
+              "text": "Their standard deviation is two point six two degrees.",
+              "reveal": 3
+            },
+            {
+              "text": "So here is your prediction. How big would one pitcher's change have to be before you could be ninety-five percent confident it is not error?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-mdc",
+            "type": "estimate",
+            "prompt": "With a standard deviation of test–retest differences of 2.62°, how large must one pitcher's change be to exceed error at 95% confidence?",
+            "min": 0,
+            "max": 15,
+            "step": 0.1,
+            "unit": "°",
+            "initial": 2.6,
+            "answer": 5.1,
+            "tolerance": 0.5,
+            "concept": "c-minimal-detectable-change",
+            "feedback": {
+              "correct": "Yes: about 5.1°. The next scene builds it from the typical error.",
+              "incorrect": "The answer is about 5.1°, roughly twice the SD of the differences. The next scene shows why."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Typical error and MDC95",
+            "lines": [
+              {
+                "label": "SD of differences",
+                "value": "2.62°"
+              },
+              {
+                "label": "Typical error = 2.62 ÷ √2",
+                "value": "1.85°"
+              },
+              {
+                "label": "Error of a change score = √2 × 1.85",
+                "value": "2.62°"
+              }
+            ],
+            "result": {
+              "label": "MDC95 = 1.96 × √2 × 1.85",
+              "value": "5.13°"
+            },
+            "note": "MDC95 = 1.96 × √2 × TE ≈ 2.77 × TE. Synthetic data."
+          },
+          "cues": [
+            {
+              "text": "Each difference contains the error of two measurements. So the typical error is the standard deviation of the differences divided by root two.",
+              "reveal": 1,
+              "refs": [
+                "R-hopkins-2000-measures"
+              ]
+            },
+            {
+              "text": "Two point six two divided by one point four one four is one point eight five degrees. That is the typical error.",
+              "reveal": 2
+            },
+            {
+              "text": "A change in one pitcher is itself a difference of two measurements, so its error is root two times the typical error, back to two point six two.",
+              "reveal": 3
+            },
+            {
+              "text": "Multiply by one point nine six for ninety-five percent confidence. The minimal detectable change is one point nine six times root two times one point eight five: five point one three degrees.",
+              "reveal": 4,
+              "refs": [
+                "R-hopkins-2000-measures",
+                "R-weir-2005-quantifying"
+              ]
+            },
+            {
+              "text": "As a shortcut, it is about two point seven seven times the typical error. Weir derives the same quantity from the standard error of measurement.",
+              "refs": [
+                "R-weir-2005-quantifying"
+              ]
+            },
+            {
+              "text": "Note what this typical error contains. Each session value is a session mean, so it includes day-to-day biological variation as well as instrument error. That is right when the decision is about change across days."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "ICC: ranking, not change",
+      "scenes": [
+        {
+          "visual": {
+            "type": "calc",
+            "title": "ICC from the same eight pitchers",
+            "lines": [
+              {
+                "label": "Between-pitcher mean square",
+                "value": "98.71"
+              },
+              {
+                "label": "Between-session mean square",
+                "value": "7.56"
+              },
+              {
+                "label": "Error mean square",
+                "value": "3.42"
+              },
+              {
+                "label": "ICC(3,1) consistency = 95.29 ÷ 102.13",
+                "value": "0.93"
+              },
+              {
+                "label": "ICC(2,1) agreement = 95.29 ÷ 103.17",
+                "value": "0.92"
+              }
+            ],
+            "result": {
+              "label": "√ error mean square",
+              "value": "1.85° = typical error"
+            },
+            "note": "Synthetic two-way ANOVA."
+          },
+          "cues": [
+            {
+              "text": "The intraclass correlation expresses reliability as the share of total variance that lies between subjects.",
+              "refs": [
+                "R-koo-2016-guideline"
+              ]
+            },
+            {
+              "text": "A two-way analysis of variance on our eight pitchers gives a between-pitcher mean square of ninety-eight point seven one,",
+              "reveal": 1
+            },
+            {
+              "text": "a between-session mean square of seven point five six,",
+              "reveal": 2
+            },
+            {
+              "text": "and an error mean square of three point four two.",
+              "reveal": 3
+            },
+            {
+              "text": "The consistency form, single measure, is ninety-eight point seven one minus three point four two, over ninety-eight point seven one plus three point four two. Zero point nine three.",
+              "reveal": 4
+            },
+            {
+              "text": "The absolute-agreement form adds two times the session term minus error, divided by eight, to the denominator. Zero point nine two: the small systematic shift lowers agreement slightly.",
+              "reveal": 5
+            },
+            {
+              "text": "And the square root of the error mean square, one point eight five, is exactly the typical error we found from the differences.",
+              "reveal": 6
+            },
+            {
+              "text": "Koo and Li describe ten forms of ICC, set by model, type and definition. Report all three with confidence intervals, and interpret the lower bound: below zero point five poor, up to zero point seven five moderate, up to zero point nine good, above that excellent.",
+              "refs": [
+                "R-koo-2016-guideline"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Same instrument, different sample",
+            "left": {
+              "title": "Heterogeneous pitchers",
+              "points": [
+                "Between-pitcher SD 6.7°",
+                "ICC ≈ 44.9 ÷ 48.3 ≈ 0.93",
+                "MDC95 still 5.1°"
+              ]
+            },
+            "right": {
+              "title": "Homogeneous pitchers",
+              "points": [
+                "Between-pitcher SD 2.5°",
+                "ICC ≈ 6.25 ÷ 9.67 ≈ 0.65",
+                "MDC95 still 5.1°"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Here is why ICC can mislead about individuals. Hold the error fixed at a variance of three point four two.",
+              "refs": [
+                "R-weir-2005-quantifying"
+              ]
+            },
+            {
+              "text": "In a varied sample with a true between-pitcher standard deviation of six point seven degrees, ICC is about forty-four point nine over forty-eight point three: zero point nine three.",
+              "reveal": 1
+            },
+            {
+              "text": "Select pitchers for similar layback, a standard deviation of two point five, and ICC falls to about six point two five over nine point six seven: zero point six five.",
+              "reveal": 2
+            },
+            {
+              "text": "Same instrument, same minimal detectable change. Only the sample changed. ICC answers whether a measure can rank athletes in this population. Typical error and the detectable change answer whether it can see change in one athlete. Report both."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Agreement between systems",
+      "scenes": [
+        {
+          "visual": {
+            "type": "agreement",
+            "title": "Laboratory versus field, same pitches",
+            "pairs": [
+              [
+                174,
+                166
+              ],
+              [
+                166,
+                161
+              ],
+              [
+                181,
+                170
+              ],
+              [
+                175,
+                167
+              ],
+              [
+                170,
+                165
+              ],
+              [
+                185,
+                175
+              ],
+              [
+                169,
+                162
+              ],
+              [
+                180,
+                171
+              ]
+            ],
+            "unit": "°",
+            "labels": [
+              "Laboratory",
+              "Field"
+            ],
+            "note": "Synthetic paired data: peak shoulder external rotation captured simultaneously by both systems."
+          },
+          "cues": [
+            {
+              "text": "Now the in-game number. Eight synthetic pitches, captured at once by the laboratory marker-based system and a field markerless system.",
+              "reveal": 1
+            },
+            {
+              "text": "Bland and Altman argued that correlation is the wrong tool for comparing methods, because two methods can correlate highly while disagreeing substantially. Here the rankings agree almost perfectly.",
+              "refs": [
+                "R-bland-1986-statistical"
+              ]
+            },
+            {
+              "text": "Instead, plot each pair's difference against its mean. The field system reads, on average, seven point eight eight degrees lower. That is the bias.",
+              "reveal": 2,
+              "refs": [
+                "R-bland-1986-statistical"
+              ]
+            },
+            {
+              "text": "The standard deviation of the differences is two point one seven. The limits of agreement are the bias plus or minus one point nine six times that: minus twelve point one to minus three point six degrees.",
+              "reveal": 3,
+              "refs": [
+                "R-bland-1986-statistical"
+              ]
+            },
+            {
+              "text": "For an individual pitch, the field value should fall between about four and twelve degrees below the laboratory value. Notice too that the largest differences sit at the largest means, a hint of proportional bias that a larger sample should test."
+            },
+            {
+              "text": "Bland and Altman also stressed that the bias has its own confidence interval, wide with eight pairs, and that when differences grow with magnitude, one pair of limits misrepresents both ends of the range.",
+              "refs": [
+                "R-bland-1986-statistical"
+              ]
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-cross",
+            "type": "choice",
+            "prompt": "The pitcher's March in-game markerless value is 166°; his latest laboratory value is 171°. What is the best reading?",
+            "concept": "c-limits-of-agreement",
+            "answer": "c",
+            "options": [
+              {
+                "id": "a",
+                "text": "Layback fell a further 5° after the laboratory retest"
+              },
+              {
+                "id": "b",
+                "text": "The systems correlate highly, so the values can be compared directly"
+              },
+              {
+                "id": "c",
+                "text": "Corrected for bias, 166° in the field is roughly 174° in the laboratory, ±4°: no evidence of a further decrease"
+              },
+              {
+                "id": "d",
+                "text": "The field system is wrong, so the value should be discarded"
+              }
+            ],
+            "feedback": {
+              "a": "That crosses systems with a bias of about −7.9°. The 5° gap is smaller than the bias itself.",
+              "b": "High correlation is exactly the trap Bland and Altman described: rankings can agree while values differ by several degrees.",
+              "c": "Correct. 166 + 7.9 ≈ 174°, and the limits of agreement put the individual-level range at about 170° to 178°.",
+              "d": "Not necessarily. A biased system can still track change within itself; it just cannot be swapped for the laboratory without correction."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Variability is part of the athlete.",
+              "Ten pitches: mean 177.0°, SD 2.58°",
+              "Standard error of the mean: 2.58 ÷ √10 = 0.82°"
+            ],
+            "sub": "Averaging shrinks random error, not bias or real day-to-day change."
+          },
+          "cues": [
+            {
+              "text": "That correction only holds if the comparison is like for like. Now look inside one session. Within-athlete variability is not noise to average away; it is part of the athlete."
+            },
+            {
+              "text": "The same synthetic pitcher's ten fastballs read from a hundred and seventy-three to a hundred and eighty-one degrees. Mean one hundred seventy-seven, standard deviation two point five eight.",
+              "reveal": 1
+            },
+            {
+              "text": "The standard error of the ten-pitch mean is two point five eight over root ten, zero point eight two degrees. The session mean is precise, but any single pitch can sit four or five degrees from it.",
+              "reveal": 2
+            },
+            {
+              "text": "So one pitch before a drill block against one pitch after it conflates pitch-to-pitch variation with change. And averaging helps only for independent trial errors. It does not touch bias, or genuine day-to-day variation."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Detectable is not meaningful",
+      "scenes": [
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "177° → 171° in the laboratory: 6°",
+              "MDC95: 5.1°",
+              "Probably real. Cause not established."
+            ],
+            "sub": "A mechanical change is not an improvement by itself."
+          },
+          "cues": [
+            {
+              "text": "Answer the opening question. Laboratory to laboratory, a hundred and seventy-seven to a hundred and seventy-one is six degrees."
+            },
+            {
+              "text": "That is just beyond the detectable change of five point one. Probably real, modestly so.",
+              "reveal": 1
+            },
+            {
+              "text": "But a single pitcher, measured before and after, with no control condition, cannot attribute the change to the drill. Fatigue, mobility or the season could also explain it, and nothing says it will persist.",
+              "reveal": 2
+            },
+            {
+              "text": "Run it through the seven questions. No velocity or command change is reported, so performance has not been shown to improve. Transfer has not been tested. And less external rotation is not, by itself, lower injury risk; that would need kinetics and clinical input. This is educational, not clinical advice."
+            },
+            {
+              "text": "Now the challenge to everything I have just said. Exceeding the detectable change is a statement about statistics, not importance.",
+              "refs": [
+                "R-atkinson-1998-statistical"
+              ]
+            },
+            {
+              "text": "Atkinson and Nevill want acceptable error judged against an analytical goal set by the intended use, and sports-science practice often uses a smallest worthwhile change tied to performance.",
+              "refs": [
+                "R-atkinson-1998-statistical",
+                "R-hopkins-2000-measures"
+              ]
+            },
+            {
+              "text": "For most biomechanical variables, no such anchor exists, because the variable's link to performance or health in an individual is not established. That question remains contested and open."
+            },
+            {
+              "text": "And Lerch and colleagues found within-pitcher variability broadly similar in game and laboratory settings for most variables, alongside large differences in means. Random and systematic error must both be estimated in the setting of use.",
+              "refs": [
+                "R-lerch-2025-variability"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Fitness for purpose",
+            "steps": [
+              "Name the decision and the change that would alter it",
+              "Use typical error from the same system, setting and population",
+              "Keep comparisons within one system and version",
+              "Choose how many trials to average",
+              "Re-estimate error periodically"
+            ]
+          },
+          "cues": [
+            {
+              "text": "An instrument is not reliable or unreliable in the abstract. It is adequate or inadequate for detecting a change of a given size, in a given use.",
+              "refs": [
+                "R-atkinson-1998-statistical",
+                "R-weir-2005-quantifying"
+              ]
+            },
+            {
+              "text": "So name the decision first, and the change that would alter it.",
+              "reveal": 1
+            },
+            {
+              "text": "Use the typical error from the same system, setting, population and variable, and require a detectable change smaller than the change that matters.",
+              "reveal": 2
+            },
+            {
+              "text": "Keep comparisons within one system and version, or state the uncertainty of any correction.",
+              "reveal": 3
+            },
+            {
+              "text": "Decide how many trials to average,",
+              "reveal": 4
+            },
+            {
+              "text": "and re-estimate error periodically, because hardware, software, installations and athletes all change.",
+              "reveal": 5
+            },
+            {
+              "text": "Hitters too. If game-to-game typical error in average bat speed were zero point nine miles per hour, a synthetic value, the detectable change would be two point five. A one-and-a-half-mile gain after an off-season would not yet be distinguishable from variation."
+            },
+            {
+              "text": "And a dashboard that flags any five percent change? Near a hundred seventy-five degrees that is eight point eight degrees; near twenty degrees it is one degree, far below plausible error. Set each threshold from that variable's own typical error."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-threshold",
+            "type": "reflect",
+            "concept": "c-fitness-for-purpose",
+            "prompt": "Pick one number your staff acts on. What decision does it drive, what change would alter that decision, and do you know the typical error from the same system and setting?"
+          }
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Three questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "The Measurement Science Laboratory",
+                "detail": "Compute error, ICC and agreement from data",
+                "href": "#/exercise/b02-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Hopkins (2000), Measures of reliability in sports medicine and science",
+                "href": "#/library/R-hopkins-2000-measures"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let's bring it together. Accuracy is about bias, precision about random error. Validity needs a reference; reliability needs repetition."
+            },
+            {
+              "text": "Typical error and the detectable change answer questions about individuals. ICC answers ranking questions in one sample. Bland-Altman answers interchangeability. And a change matters only if it exceeds error in the same system and connects to a decision."
+            },
+            {
+              "text": "Take the comprehension check below, the same as the written lesson. Then open the Measurement Science Laboratory, and read Hopkins on typical error and individual change, with Bland and Altman's short paper alongside.",
+              "reveal": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

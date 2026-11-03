@@ -33,6 +33,11 @@ const VISUALS = {
   quote: { check: (v) => str(v.text) && words(v.text) <= 40 && str(v.who) && arr(v.refs, 1), steps: () => 1 },
   definition: { check: (v) => str(v.term) && str(v.definition), steps: (v) => (v.example ? 2 : 1) },
   next: { check: (v) => str(v.title) && arr(v.items, 1, 4) && v.items.every((i) => str(i.label) && str(i.detail) && /^(#check|#\/(exercise|library|assess|case|assignment|week|lesson)\/[A-Za-z0-9-]+)$/.test(i.href || '')), steps: () => 1 },
+  // Course B biomechanics visuals (geometry/statistics computed by the player from these numbers)
+  frame3d: { check: (v) => str(v.title) && /^(XYZ|XZY|YXZ|YZX|ZXY|ZYX)$/.test(v.sequence || '') && arr(v.angles, 3, 3) && v.angles.every(Number.isFinite) && (!v.compare || /^(XYZ|XZY|YXZ|YZX|ZXY|ZYX|YXY)$/.test(v.compare)), steps: (v) => (v.compare ? 4 : 3) },
+  curves: { check: (v) => str(v.title) && str(v.xLabel) && str(v.yLabel) && arr(v.series, 1, 4) && v.series.every((q) => str(q.label) && arr(q.points, 3, 120) && q.points.every((p) => Array.isArray(p) && p.length === 2 && p.every(Number.isFinite))), steps: (v) => v.series.length },
+  torque: { check: (v) => str(v.title) && [v.force, v.arm, v.angle].every(Number.isFinite) && v.arm > 0 && v.angle >= 0 && v.angle <= 180, steps: () => 3 },
+  agreement: { check: (v) => str(v.title) && arr(v.pairs, 5, 40) && v.pairs.every((p) => Array.isArray(p) && p.length === 2 && p.every(Number.isFinite)), steps: () => 3 },
   // pilot-specific renderers
   tree: { check: (v) => Number.isFinite(v.population) && Number.isFinite(v.prevalence), steps: () => 5 },
   anchor: { check: (v) => Number.isFinite(v.low) && Number.isFinite(v.high), steps: () => 2 },
@@ -62,7 +67,7 @@ export function narrationHash(s, cfg) {
 // Structural and academic lint of one script. ctx: { lessons: Map(id→lesson), resources: Set, concepts: obj, exercises: Set }
 export function lintScript(s, ctx, err, warn = () => {}) {
   const where = `lectures/${s.lesson || '?'}`;
-  if (!/^w\d{2}-l\d-lecture$/.test(s.id || '') || s.id !== `${s.lesson}-lecture`) err(where, 'id must be <lesson>-lecture');
+  if (!/^[wb]\d{2}-l\d-lecture$/.test(s.id || '') || s.id !== `${s.lesson}-lecture`) err(where, 'id must be <lesson>-lecture');
   const lesson = ctx.lessons.get(s.lesson);
   if (!lesson) err(where, `unknown lesson ${s.lesson}`);
   for (const k of ['title', 'subtitle', 'summary']) if (!str(s[k])) err(where, `${k} missing`);
@@ -126,12 +131,13 @@ export function lintScript(s, ctx, err, warn = () => {}) {
   return { refs, cps, cueCount, wordCount, cpIds };
 }
 
-export function buildLectures({ base, appDir, lessonIds, lessons, resources, concepts, exercises, err, partial = false }) {
-  const dir = join(base, 'content', 'lectures');
-  if (!existsSync(dir)) return { index: {}, files: {} };
+export function buildLectures({ base, contentDir = 'content', appDir, lessonIds, lessons, resources, concepts, exercises, err, partial = false }) {
+  const dir = join(base, contentDir, 'lectures');
+  if (!existsSync(dir)) return { index: {}, files: {}, soon: [] };
   const ctx = { lessons: lessons || new Map([...lessonIds].map((id) => [id, null])), resources, concepts, exercises: exercises || new Set() };
   const cfg = narrationConfig(base);
-  const release = new Set(cfg.release || []);
+  const prefix = contentDir === 'content-b' ? 'b' : 'w';
+  const release = new Set((cfg.release || []).filter((id) => id[0] === prefix)); // this course's released lectures
   for (const id of release) if (!lessonIds.has(id)) err('narration.json', `release lists unknown lesson ${id}`);
   const index = {}, files = {}, soon = [];
   for (const f of readdirSync(dir).filter((x) => x.endsWith('.json')).sort()) {
@@ -173,12 +179,14 @@ export function buildLectures({ base, appDir, lessonIds, lessons, resources, con
 /* ---------------- CLI ---------------- */
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
   const BASE = join(dirname(fileURLToPath(import.meta.url)), '..');
-  const C = JSON.parse(readFileSync(join(BASE, 'build', 'content.json'), 'utf8'));
+  const argv0 = process.argv.slice(2);
+  const CB = argv0.includes('--course') && argv0[argv0.indexOf('--course') + 1] === 'b'; // `--course b` → Course B
+  const C = JSON.parse(readFileSync(join(BASE, 'build', CB ? 'course-b.json' : 'content.json'), 'utf8'));
   const lessons = new Map(C.weeks.flatMap((w) => w.lessons.map((l) => [l.id, l])));
   const exercises = new Set(C.weeks.flatMap((w) => [w.exercise.id, `${w.assignment.id}-studio`]));
   const ctx = { lessons, resources: new Set(C.library.map((r) => r.id)), concepts: C.concepts, exercises };
-  const args = process.argv.slice(2);
-  const dir = join(BASE, 'content', 'lectures');
+  const args = argv0.filter((x, i) => x !== '--course' && argv0[i - 1] !== '--course');
+  const dir = join(BASE, CB ? 'content-b' : 'content', 'lectures');
   if (args[0] === '--lint') {
     const pick = args.slice(1);
     const files = readdirSync(dir).filter((f) => f.endsWith('.json') && (!pick.length || pick.includes(f.replace('.json', ''))));
@@ -193,7 +201,7 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
     process.exit(bad ? 1 : 0);
   }
   if (args[0] === '--audit') {
-    const cfg = narrationConfig(BASE); const release = new Set(cfg.release || []);
+    const cfg = narrationConfig(BASE); const release = new Set((cfg.release || []).filter((id) => id[0] === (CB ? 'b' : 'w')));
     let ok = 0, soon = 0; const rows = [];
     for (const [id] of lessons) {
       const f = join(dir, `${id}.json`); const lid = `${id}-lecture`;

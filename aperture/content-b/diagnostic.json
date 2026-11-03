@@ -1,0 +1,1112 @@
+{
+  "id": "diagnostic",
+  "title": "Course B baseline diagnostic",
+  "minutes": 30,
+  "intro": [
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "This diagnostic has 28 questions, four in each of the course's seven domains: functional anatomy, vector and rotational mathematics, kinematics, kinetics, motor control, measurement science and research literacy. Expect it to take about 30 minutes. Some items are calculations; a basic calculator is fine, but answer without looking anything up."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "Its purpose is to identify prerequisite gaps before you start. The course assumes a working command of vectors, rotational mechanics and measurement error, and the diagnostic shows quickly where a short refresher would make the lessons easier to follow."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "The diagnostic is never graded and never counts toward any mark. It does not block you from starting the course: every lesson stays open whatever you score. Several items are stretch-level, so missing some is expected."
+    },
+    {
+      "type": "p",
+      "kind": "original",
+      "text": "After you submit, each answer comes with an explanation and each domain shows a short interpretation. Where your answers suggest a gap, the interpretation names an optional refresher: what to review and roughly how, before or alongside the relevant lessons."
+    }
+  ],
+  "questions": [
+    {
+      "id": "dg-01",
+      "type": "numeric",
+      "domain": "functional-anatomy",
+      "difficulty": "core",
+      "lesson": "b01-l1",
+      "concepts": [
+        "c-muscle-moment-arm"
+      ],
+      "prompt": "A person holds the forearm horizontal with the elbow flexed to 90°. A hand-held load produces a downward force of 30 N at 0.35 m from the elbow joint center. The elbow flexors act at a perpendicular moment arm of 0.04 m. Ignoring the weight of the forearm and any co-contraction of the extensors, what flexor force (in newtons) is needed to hold the position statically?",
+      "answer": {
+        "value": 262.5,
+        "tolerance": 5,
+        "unit": "N"
+      },
+      "working": "Sum of moments about the elbow = 0: F_muscle × 0.04 m = 30 N × 0.35 m = 10.5 N·m. F_muscle = 10.5 / 0.04 = 262.5 N.",
+      "explanation": "Static equilibrium requires the flexor moment to equal the load moment about the elbow. Because the flexors' moment arm is about one ninth of the load's, the muscle force is roughly nine times the load. This is the usual arrangement in the limbs: short muscle moment arms trade force for range and speed at the distal end of the segment.",
+      "points": 1
+    },
+    {
+      "id": "dg-02",
+      "type": "mc",
+      "domain": "functional-anatomy",
+      "difficulty": "core",
+      "lesson": "b01-l1",
+      "concepts": [
+        "c-force-velocity-relationship"
+      ],
+      "prompt": "Which statement best describes the force–velocity relationship of skeletal muscle?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Muscle force is independent of contraction velocity once the muscle is fully activated"
+        },
+        {
+          "id": "b",
+          "text": "Concentric force falls as shortening velocity increases, and eccentric force can exceed isometric force"
+        },
+        {
+          "id": "c",
+          "text": "Muscle produces its greatest force at its maximum shortening velocity"
+        },
+        {
+          "id": "d",
+          "text": "Eccentric force is always lower than isometric force because the cross-bridges are being pulled apart"
+        }
+      ],
+      "answer": "b",
+      "explanation": "In concentric (shortening) contractions the force a fully activated muscle can produce falls as shortening velocity rises, approaching zero at maximum shortening velocity. In eccentric (lengthening) contractions force can exceed the isometric maximum. This is one reason fast segments in throwing and swinging depend on energy delivered from other segments rather than on their own muscles alone.",
+      "optionFeedback": {
+        "a": "Activation sets the available force, but at full activation force still depends strongly on velocity.",
+        "c": "The reverse: force approaches zero as shortening velocity approaches its maximum, and peak mechanical power occurs at intermediate velocities.",
+        "d": "Lengthening contractions typically produce forces above the isometric maximum."
+      },
+      "errorTags": {
+        "c": "confuses-force-with-power"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-03",
+      "type": "multi",
+      "domain": "functional-anatomy",
+      "difficulty": "stretch",
+      "lesson": "b01-l1",
+      "concepts": [
+        "c-muscle-architecture"
+      ],
+      "prompt": "Which statements about muscle and joint function are correct? Select all that apply.",
+      "options": [
+        {
+          "id": "a",
+          "text": "After ball release, posterior shoulder muscles act largely eccentrically to decelerate the arm"
+        },
+        {
+          "id": "b",
+          "text": "Active muscle force depends on sarcomere length, peaking near an optimal length"
+        },
+        {
+          "id": "c",
+          "text": "Two-joint (biarticular) muscles can transfer mechanical energy between the joints they cross"
+        },
+        {
+          "id": "d",
+          "text": "A muscle's moment arm about a joint is constant through the joint's range of motion"
+        },
+        {
+          "id": "e",
+          "text": "Type II muscle fibers have a lower maximum shortening velocity than type I fibers"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "explanation": "Posterior shoulder muscles work eccentrically to decelerate the arm after ball release, active force depends on sarcomere length, and two-joint muscles can redistribute mechanical energy between joints. Muscle moment arms change with joint angle, and fast-twitch (type II) fibers shorten faster than slow-twitch fibers, not slower.",
+      "optionFeedback": {
+        "a": "Correct. Deceleration requires the muscles to absorb energy while lengthening.",
+        "b": "Correct. This is the length–tension relationship.",
+        "c": "Correct. A biarticular muscle can shorten little while one joint extends and the other flexes, moving energy between segments.",
+        "d": "Incorrect. Moment arms vary with joint angle, often substantially.",
+        "e": "Incorrect. Type II fibers have the higher maximum shortening velocity."
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-04",
+      "type": "scenario",
+      "domain": "functional-anatomy",
+      "difficulty": "stretch",
+      "lesson": "b01-l1",
+      "concepts": [
+        "c-stretch-shortening-cycle"
+      ],
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "An athlete performs two maximal vertical jumps. In a squat jump she starts from a held half-squat and pushes upward. In a countermovement jump she starts standing, dips quickly to the same depth and pushes upward without pausing. The countermovement jump is consistently higher."
+        }
+      ],
+      "prompt": "Which explanation of this difference is most defensible?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The countermovement increases the athlete's maximal muscle strength for that one jump"
+        },
+        {
+          "id": "b",
+          "text": "The countermovement jump is higher only because of the stretch reflex"
+        },
+        {
+          "id": "c",
+          "text": "The quick dip lets muscles build force before the upward phase begins, and tendons return some stored elastic energy; the reflex share is debated"
+        },
+        {
+          "id": "d",
+          "text": "Energy stored in the dip creates extra work beyond what the muscles and tendons supply"
+        }
+      ],
+      "answer": "c",
+      "explanation": "The countermovement lets the muscles reach a high active state and force before the upward (concentric) phase begins, and stretched tendons return part of the stored elastic energy. The size of any stretch-reflex contribution is debated. The difference does not show that the muscles became stronger, and work done is not created from nothing.",
+      "optionFeedback": {
+        "a": "Maximal strength does not change within one movement; what changes is how much force is available at the start of the concentric phase.",
+        "b": "The reflex may contribute, but its share is contested and it is not the sole mechanism.",
+        "d": "Energy is conserved. Elastic recoil returns energy that muscles put into the tendons during the dip; it does not create extra work."
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-05",
+      "type": "numeric",
+      "domain": "vector-mathematics",
+      "difficulty": "core",
+      "lesson": "b01-l2",
+      "concepts": [
+        "c-dot-product"
+      ],
+      "prompt": "Two segment-direction vectors are a = (3, 4, 0) and b = (4, 0, 3), in the same units. Using the dot product, what is the angle between them in degrees? Round to one decimal place.",
+      "answer": {
+        "value": 61.3,
+        "tolerance": 0.5,
+        "unit": "°"
+      },
+      "working": "a·b = 3×4 + 4×0 + 0×3 = 12. |a| = √(9+16) = 5; |b| = √(16+9) = 5. cos θ = 12 / 25 = 0.48. θ = arccos 0.48 ≈ 61.3°.",
+      "explanation": "The dot product equals the product of the magnitudes and the cosine of the included angle, so the angle follows from the normalized dot product. This is how the angle between two segment axes is computed from marker-derived vectors, independent of any coordinate sequence.",
+      "points": 1
+    },
+    {
+      "id": "dg-06",
+      "type": "mc",
+      "domain": "vector-mathematics",
+      "difficulty": "core",
+      "lesson": "b01-l2",
+      "concepts": [
+        "c-cross-product-moment"
+      ],
+      "prompt": "In a right-handed coordinate system, a force F = (0, 20, 0) N acts at position r = (0.5, 0, 0) m relative to a joint center. What is the moment M = r × F about the joint center?",
+      "options": [
+        {
+          "id": "a",
+          "text": "(0, 0, +10) N·m"
+        },
+        {
+          "id": "b",
+          "text": "(0, 0, −10) N·m"
+        },
+        {
+          "id": "c",
+          "text": "(+10, 0, 0) N·m"
+        },
+        {
+          "id": "d",
+          "text": "(0, 10, 0) N·m, because the moment points along the force"
+        }
+      ],
+      "answer": "a",
+      "explanation": "M = r × F = (r_y F_z − r_z F_y, r_z F_x − r_x F_z, r_x F_y − r_y F_x) = (0, 0, 0.5 × 20) = (0, 0, 10) N·m. By the right-hand rule, curling the fingers from +x toward +y points the thumb along +z. The order matters: F × r would give the opposite sign.",
+      "optionFeedback": {
+        "b": "This is F × r. The cross product is anticommutative, so reversing the order flips the sign.",
+        "c": "The moment is perpendicular to both r (x) and F (y), so it must lie along z.",
+        "d": "A moment is perpendicular to the force and the moment arm, never parallel to the force."
+      },
+      "errorTags": {
+        "b": "reverses-cross-product-order"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-07",
+      "type": "numeric",
+      "domain": "vector-mathematics",
+      "difficulty": "core",
+      "lesson": "b01-l2",
+      "concepts": [
+        "c-radian-measure"
+      ],
+      "prompt": "A rigid segment rotates about a fixed axis at 1,000°/s. What is the linear (tangential) speed, in m/s, of a point 0.6 m from the axis? Round to two decimal places.",
+      "answer": {
+        "value": 10.47,
+        "tolerance": 0.15,
+        "unit": "m/s"
+      },
+      "working": "ω = 1,000°/s × (π / 180) = 17.453 rad/s. v = ω r = 17.453 × 0.6 = 10.47 m/s.",
+      "explanation": "The relation v = ωr holds only when ω is expressed in radians per second, because the radian is defined as arc length divided by radius. Using degrees per second directly would overstate the speed by a factor of about 57.3.",
+      "points": 1
+    },
+    {
+      "id": "dg-08",
+      "type": "multi",
+      "domain": "vector-mathematics",
+      "difficulty": "stretch",
+      "lesson": "b01-l2",
+      "concepts": [
+        "c-cardan-sequence"
+      ],
+      "prompt": "Which statements about describing three-dimensional rotations are correct? Select all that apply.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Applying the same two finite rotations in a different order generally produces a different final orientation"
+        },
+        {
+          "id": "b",
+          "text": "One orientation can produce different joint-angle values under different Cardan sequences"
+        },
+        {
+          "id": "c",
+          "text": "The angular velocity vector equals the time derivatives of the three Cardan angles, component by component"
+        },
+        {
+          "id": "d",
+          "text": "A proper rotation matrix is orthogonal and has a determinant of +1"
+        },
+        {
+          "id": "e",
+          "text": "A Cardan sequence becomes singular when its first rotation approaches 90°"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "d"
+      ],
+      "explanation": "Finite rotations about different axes do not commute, so the same orientation yields different angle triplets under different Cardan or Euler sequences, which is why the sequence must be reported. A rotation matrix is orthogonal with determinant +1. The angular velocity vector is not, in general, the time derivative of the three Cardan angles, and the singularity (gimbal lock) occurs when the second rotation approaches ±90°, not the first.",
+      "optionFeedback": {
+        "a": "Correct. Finite 3D rotations are not commutative.",
+        "b": "Correct. Angle values depend on the sequence, so comparisons across studies need the same convention.",
+        "c": "Incorrect. The Cardan-angle rates are measured about non-orthogonal axes; converting them to angular velocity requires a transformation that depends on the current angles.",
+        "d": "Correct. Orthogonality preserves lengths and angles; determinant +1 excludes reflections.",
+        "e": "Incorrect. The singularity occurs when the second (middle) rotation approaches ±90°, aligning the first and third axes."
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-09",
+      "type": "numeric",
+      "domain": "kinematics",
+      "difficulty": "core",
+      "lesson": "b02-l4",
+      "concepts": [
+        "c-projectile-motion"
+      ],
+      "prompt": "A ball leaves the bat at 45 m/s with a launch angle of 30° above horizontal. Ignoring air resistance and spin, and assuming it lands at the height it was struck, how far does it travel horizontally, in meters? Use g = 9.81 m/s². Round to the nearest meter.",
+      "answer": {
+        "value": 178.8,
+        "tolerance": 2,
+        "unit": "m"
+      },
+      "working": "R = v² sin(2θ) / g = 45² × sin 60° / 9.81 = 2,025 × 0.8660 / 9.81 = 1,753.7 / 9.81 ≈ 178.8 m.",
+      "explanation": "In a vacuum the range is v² sin(2θ) / g. The answer is far longer than real batted balls of this speed travel, because drag and the lift from backspin reshape the trajectory substantially. The idealized model is a reference point that shows how much of real ball flight is aerodynamics.",
+      "points": 1
+    },
+    {
+      "id": "dg-10",
+      "type": "scenario",
+      "domain": "kinematics",
+      "difficulty": "core",
+      "lesson": "b02-l1",
+      "concepts": [
+        "c-differentiation-noise"
+      ],
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Marker position data for a hand marker, captured at 240 Hz, look smooth when plotted. After two finite-difference differentiations, the hand's acceleration trace is dominated by large, rapid spikes that make peak acceleration impossible to identify."
+        }
+      ],
+      "prompt": "What is the most likely cause, and the appropriate response?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The hand truly accelerates in rapid spikes; report the largest spike as peak acceleration"
+        },
+        {
+          "id": "b",
+          "text": "Differentiation amplifies small high-frequency position noise; filter the data with a justified, reported cutoff before or while differentiating"
+        },
+        {
+          "id": "c",
+          "text": "Sampling at 240 Hz is too fast; resample to 60 Hz and differentiate again"
+        },
+        {
+          "id": "d",
+          "text": "Acceleration cannot be computed from position data and must always be measured with an accelerometer"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Measurement noise in position data is mostly high frequency, and differentiation multiplies each frequency component by its frequency, so noise is amplified once for velocity and again for acceleration. The standard response is to low-pass filter (choosing and reporting the cutoff, for example from residual analysis) before or while differentiating. Raising the sampling rate alone does not remove noise and can make finite-difference noise worse.",
+      "optionFeedback": {
+        "a": "The spikes are a signal-processing artifact, not physiology. Reporting them would grossly overstate peak acceleration.",
+        "c": "Downsampling discards information and can alias fast events; the issue is noise amplification, not sampling rate as such.",
+        "d": "Acceleration is routinely and validly derived from filtered position data; accelerometers have their own errors."
+      },
+      "errorTags": {
+        "a": "treats-noise-as-signal"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-11",
+      "type": "rank",
+      "domain": "kinematics",
+      "difficulty": "core",
+      "lesson": "b01-l4",
+      "concepts": [
+        "c-kinematic-sequence"
+      ],
+      "prompt": "In laboratory studies of professional pitchers, rank these peak angular velocities from largest (first) to smallest (last).",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pelvis (axial) rotation"
+        },
+        {
+          "id": "b",
+          "text": "Upper-trunk (axial) rotation"
+        },
+        {
+          "id": "c",
+          "text": "Elbow extension"
+        },
+        {
+          "id": "d",
+          "text": "Shoulder internal rotation"
+        }
+      ],
+      "answer": [
+        "d",
+        "c",
+        "b",
+        "a"
+      ],
+      "explanation": "Published three-dimensional studies of professional pitchers report peak pelvis rotation velocity of roughly 600–700°/s, upper-trunk rotation around 1,100–1,200°/s, elbow extension around 2,300–2,500°/s and shoulder internal rotation around 7,000°/s or more. The increase from proximal to distal segments reflects transfer of energy along the chain to lighter segments. Exact values vary by laboratory, marker model and definition, so compare only within one method.",
+      "optionFeedback": {
+        "a": "Smallest: the heavy pelvis rotates the slowest of the four.",
+        "b": "Faster than the pelvis but far slower than the arm joints.",
+        "c": "Fast, but typically about a third of shoulder internal rotation velocity.",
+        "d": "Largest: among the fastest joint motions recorded in human movement."
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-12",
+      "type": "mc",
+      "domain": "kinematics",
+      "difficulty": "core",
+      "lesson": "b02-l1",
+      "concepts": [
+        "c-joint-vs-segment-angular-velocity"
+      ],
+      "prompt": "A report states that a pitcher's peak \"elbow angular velocity\" was 2,400°/s. Which information is most necessary to interpret the number?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The pitcher's release velocity, because elbow angular velocity is proportional to it"
+        },
+        {
+          "id": "b",
+          "text": "Whether the value was measured during a game or a bullpen"
+        },
+        {
+          "id": "c",
+          "text": "Whether it is a joint angular velocity relative to the upper arm or a segment angular velocity in the laboratory frame, about which axis, and how the data were processed"
+        },
+        {
+          "id": "d",
+          "text": "Nothing: angular velocity is a scalar, so 2,400°/s has one meaning"
+        }
+      ],
+      "answer": "c",
+      "explanation": "An elbow value may be a joint (relative) angular velocity of the forearm with respect to the upper arm, about a defined flexion–extension axis, or a segment's angular velocity in the laboratory frame. These can differ greatly in the same pitch. Without the definition, axis convention and processing (marker model, filter cutoff), the number cannot be compared with another report.",
+      "optionFeedback": {
+        "a": "Release velocity is related across pitchers but is not a conversion factor for a kinematic definition.",
+        "b": "Context matters, but even within one context the definition determines what the number means.",
+        "d": "Angular velocity is a vector, and joint versus segment definitions give different values."
+      },
+      "errorTags": {
+        "d": "treats-angular-velocity-as-scalar"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-13",
+      "type": "numeric",
+      "domain": "kinetics",
+      "difficulty": "core",
+      "lesson": "b01-l3",
+      "concepts": [
+        "c-impulse-momentum"
+      ],
+      "prompt": "A 0.145 kg baseball arrives at the bat at 40 m/s and leaves in the opposite direction at 45 m/s. Contact lasts 0.7 ms. What is the average force of the bat on the ball during contact, in kilonewtons? Round to one decimal place.",
+      "answer": {
+        "value": 17.6,
+        "tolerance": 0.3,
+        "unit": "kN"
+      },
+      "working": "Δv = 45 − (−40) = 85 m/s. Δp = 0.145 × 85 = 12.325 kg·m/s. F_avg = 12.325 / 0.0007 = 17,607 N ≈ 17.6 kN.",
+      "explanation": "By the impulse–momentum theorem, average force equals the change in momentum divided by contact time. Because the ball reverses direction, the velocity change is the sum of the two speeds. The very short contact time is why bat–ball forces are so large, and why what happens during contact cannot be steered by the hitter.",
+      "points": 1
+    },
+    {
+      "id": "dg-14",
+      "type": "numeric",
+      "domain": "kinetics",
+      "difficulty": "core",
+      "lesson": "b01-l3",
+      "concepts": [
+        "c-joint-power"
+      ],
+      "prompt": "From inverse dynamics, a net joint moment of 80 N·m acts in the same direction as the joint's angular velocity of 600°/s at one instant. What is the joint power, in watts? Round to the nearest watt.",
+      "answer": {
+        "value": 838,
+        "tolerance": 10,
+        "unit": "W"
+      },
+      "working": "ω = 600 × π / 180 = 10.472 rad/s. P = M ω = 80 × 10.472 = 837.8 W ≈ 838 W.",
+      "explanation": "Joint power is the product of the net joint moment and the joint angular velocity in radians per second. Because the moment and angular velocity have the same sign, power is positive: net mechanical energy is being generated at the joint (often described as concentric dominance). Negative power would mean energy absorption. Net joint power does not identify which muscles did the work.",
+      "points": 1
+    },
+    {
+      "id": "dg-15",
+      "type": "flaw",
+      "domain": "kinetics",
+      "difficulty": "stretch",
+      "lesson": "b01-l3",
+      "concepts": [
+        "c-net-joint-moment"
+      ],
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "A report on two pitchers states: \"Pitcher A's peak elbow varus moment was 100 N·m and Pitcher B's was 85 N·m. Pitcher A's ulnar collateral ligament therefore carries about 18% more force, and A's risk of an elbow injury is about 18% higher.\""
+        }
+      ],
+      "prompt": "What is the central flaw in this reasoning?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It treats a net joint moment as the ligament's own load, and treats load as if it translated proportionally into injury probability"
+        },
+        {
+          "id": "b",
+          "text": "Elbow varus moments cannot be calculated from motion capture data"
+        },
+        {
+          "id": "c",
+          "text": "The percentage is calculated incorrectly; 100 is 15% more than 85"
+        },
+        {
+          "id": "d",
+          "text": "It should have compared shoulder moments, because the shoulder carries the highest loads"
+        }
+      ],
+      "answer": "a",
+      "explanation": "Inverse dynamics yields the net moment of every structure crossing the joint: muscles, ligaments, joint contact and capsule, with co-contraction hidden inside the net value. It does not give the ligament's force, and a load is not a probability of injury, which also depends on tissue capacity, repetitions, recovery and history. Body mass and height also need to be considered before comparing absolute moments.",
+      "optionFeedback": {
+        "b": "Elbow varus moments are routinely estimated with inverse dynamics; the issue is interpretation, not calculability.",
+        "c": "100 / 85 = 1.176, so about 18% is arithmetically right. The flaw is conceptual.",
+        "d": "Choosing another joint does not fix the confusion between a net moment, tissue load and injury risk."
+      },
+      "errorTags": {
+        "c": "checks-arithmetic-not-inference",
+        "d": "misses-net-moment-concept"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-16",
+      "type": "multi",
+      "domain": "kinetics",
+      "difficulty": "stretch",
+      "lesson": "b01-l3",
+      "concepts": [
+        "c-angular-momentum-conservation"
+      ],
+      "prompt": "An athlete is airborne. Ignoring air resistance, which statements are correct? Select all that apply.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Whole-body angular momentum about the center of mass stays constant"
+        },
+        {
+          "id": "b",
+          "text": "Pulling the limbs toward the rotation axis increases whole-body angular velocity"
+        },
+        {
+          "id": "c",
+          "text": "Swinging the arms in the air creates new whole-body angular momentum"
+        },
+        {
+          "id": "d",
+          "text": "With zero angular momentum the athlete can still change body orientation through internal movements"
+        },
+        {
+          "id": "e",
+          "text": "Moving the limbs in the air changes the path of the center of mass"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "d"
+      ],
+      "explanation": "With gravity as the only external force, and gravity acting through the center of mass, whole-body angular momentum about the center of mass is constant and the center of mass follows a parabola set at takeoff. Changing the moment of inertia changes angular velocity. Internal motions cannot create net angular momentum, but they can still change body orientation even when angular momentum is zero, as in the falling-cat problem.",
+      "optionFeedback": {
+        "a": "Correct. No external moment acts about the center of mass.",
+        "b": "Correct. Angular momentum is conserved, so a smaller moment of inertia means faster rotation.",
+        "c": "Incorrect. Arm motion redistributes angular momentum among segments; the total stays the same.",
+        "d": "Correct. Sequences of shape changes allow reorientation with zero net angular momentum.",
+        "e": "Incorrect. Only external forces change the center-of-mass path; it is fixed at takeoff."
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-17",
+      "type": "mc",
+      "domain": "motor-control",
+      "difficulty": "core",
+      "lesson": "b01-l5",
+      "concepts": [
+        "c-motor-abundance"
+      ],
+      "prompt": "Across 50 pitches, a pitcher's release point varies little, while shoulder, elbow and trunk angles at release vary more. Deviations in one joint tend to be offset by deviations in another. Which interpretation fits current motor control theory best?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The joint variability is error the pitcher should eliminate to achieve one correct pattern"
+        },
+        {
+          "id": "b",
+          "text": "The pattern is consistent with motor abundance: variability in directions that do not affect the task goal is tolerated, while compensation stabilizes release"
+        },
+        {
+          "id": "c",
+          "text": "Joint angles cannot vary if release point is consistent, so the data must contain measurement error"
+        },
+        {
+          "id": "d",
+          "text": "Release-point consistency shows the pitcher replays a single stored joint-angle trajectory"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The motor system has more degrees of freedom than the task requires. Variability that leaves the task variable unchanged (here, release location) is often allowed, while variability that would disturb it is corrected or compensated. Covariation among joints that stabilizes the outcome is the signature analyzed with uncontrolled-manifold methods. Joint variability is not by itself an error, and it is not evidence of a skill deficit.",
+      "optionFeedback": {
+        "a": "Treating all variability as error ignores that compensatory variability can protect the task outcome.",
+        "c": "With redundant joints, many joint configurations reach the same endpoint.",
+        "d": "The joint-level variability contradicts a single replayed trajectory."
+      },
+      "errorTags": {
+        "a": "treats-variability-as-deficiency"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-18",
+      "type": "scenario",
+      "domain": "motor-control",
+      "difficulty": "core",
+      "lesson": "b01-l5",
+      "concepts": [
+        "c-sensorimotor-delay"
+      ],
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "A 95 mph (about 42.5 m/s) pitch released about 16.8 m from the front of home plate arrives in roughly 0.40 s. A hitter's swing from initiation to contact takes around 0.15 s, and the delay between a visual event and a corrective motor response is typically 0.1–0.2 s."
+        }
+      ],
+      "prompt": "Which conclusion is best supported?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The hitter can track the ball to the bat and correct the swing continuously until contact"
+        },
+        {
+          "id": "b",
+          "text": "Visual information is irrelevant to hitting at this speed"
+        },
+        {
+          "id": "c",
+          "text": "Only reaction time distinguishes better hitters from weaker ones"
+        },
+        {
+          "id": "d",
+          "text": "The hitter must commit using predictions from early-flight and pre-release information, with limited capacity for late correction"
+        }
+      ],
+      "answer": "d",
+      "explanation": "Visuomotor delays of roughly 100–200 ms, combined with a swing that itself needs about 150 ms or more, leave little time for vision late in flight to change the swing. Hitting therefore relies heavily on prediction: early-flight information, pitcher cues and expectations about pitch type and location. Some late adjustment is possible, so the claim is not that vision is irrelevant late, but that prediction carries much of the load.",
+      "optionFeedback": {
+        "a": "Sensorimotor delays make continuous visual correction near contact impossible.",
+        "b": "Vision early in flight and before release supplies the information on which prediction depends.",
+        "c": "Simple reaction time differs little between elite and less skilled performers; anticipation and pattern use matter more."
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-19",
+      "type": "multi",
+      "domain": "motor-control",
+      "difficulty": "stretch",
+      "lesson": "b01-l5",
+      "concepts": [
+        "c-optimal-feedback-control"
+      ],
+      "prompt": "Which statements are consistent with optimal feedback control and internal-model accounts of movement? Select all that apply.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Deviations that do not affect the task goal tend not to be corrected"
+        },
+        {
+          "id": "b",
+          "text": "A forward model predicts the sensory consequences of a motor command"
+        },
+        {
+          "id": "c",
+          "text": "The nervous system plans one fixed joint trajectory and replays it identically on every attempt"
+        },
+        {
+          "id": "d",
+          "text": "Larger motor commands produce more variable output, which contributes to the speed–accuracy trade-off"
+        },
+        {
+          "id": "e",
+          "text": "Proprioceptive feedback is effectively delay-free, so internal prediction is unnecessary"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "d"
+      ],
+      "explanation": "Optimal feedback control holds that the nervous system corrects deviations that threaten the task goal and leaves others alone (the minimum intervention principle). State estimation combines forward-model predictions of a command's sensory consequences with delayed, noisy feedback. Motor noise grows with the size of the command, which contributes to the speed–accuracy trade-off. Sensory feedback is never delay-free, and these accounts do not prescribe one fixed joint trajectory.",
+      "optionFeedback": {
+        "a": "Correct. This is the minimum intervention principle.",
+        "b": "Correct. Forward models help compensate for sensory delay.",
+        "c": "Incorrect. Optimal feedback control produces flexible, state-dependent corrections rather than a replayed trajectory.",
+        "d": "Correct. This is signal-dependent noise.",
+        "e": "Incorrect. Proprioceptive loops still take tens of milliseconds, which is why prediction matters."
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-20",
+      "type": "flaw",
+      "domain": "motor-control",
+      "difficulty": "core",
+      "lesson": "b01-l5",
+      "concepts": [
+        "c-performance-vs-learning"
+      ],
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "A hitting coach introduces a new cue in a 30-minute session of front-toss. By the end of the session, a hitter's rate of hard contact on front-toss has risen from 35% to 55%. The coach writes: \"The cue fixed his swing; he has learned the new pattern.\" (Synthetic numbers.)"
+        }
+      ],
+      "prompt": "What is the main weakness in the coach's conclusion?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Front-toss cannot produce hard contact, so the numbers must be wrong"
+        },
+        {
+          "id": "b",
+          "text": "The improvement is too large to be real and should be ignored"
+        },
+        {
+          "id": "c",
+          "text": "Performance during acquisition was measured, but learning requires delayed retention and transfer tests, for example to live pitching"
+        },
+        {
+          "id": "d",
+          "text": "The coach should have used a larger percentage scale"
+        }
+      ],
+      "answer": "c",
+      "explanation": "The measurements were taken during or immediately after practice under the new cue, which captures temporary performance and possibly short-term adaptation. Learning is a relatively permanent change inferred from delayed retention and from transfer to other conditions, such as live pitching. Without those tests, the gains may fade or fail to appear in games.",
+      "optionFeedback": {
+        "a": "Hard contact on front-toss is plausible; the issue is what the measurement can show.",
+        "b": "Large practice gains can be real performance changes; they are just not proof of learning.",
+        "d": "The scale is irrelevant; the design lacks retention and transfer tests."
+      },
+      "errorTags": {
+        "b": "dismisses-data-instead-of-design"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-21",
+      "type": "numeric",
+      "domain": "measurement-science",
+      "difficulty": "core",
+      "lesson": "b02-l5",
+      "concepts": [
+        "c-typical-error"
+      ],
+      "prompt": "Twenty pitchers each throw a velocity test on two days one week apart, with no training change between. The standard deviation of the between-day difference scores is 2.4 mph. What is the typical error (within-subject standard deviation) in mph? Round to two decimal places.",
+      "answer": {
+        "value": 1.7,
+        "tolerance": 0.05,
+        "unit": "mph"
+      },
+      "working": "TE = SD_diff / √2 = 2.4 / 1.4142 ≈ 1.70 mph.",
+      "explanation": "When each athlete is measured twice, the difference score contains error from both trials, so its standard deviation is √2 times the typical error of a single measurement. Dividing by √2 recovers the error of one measurement, which is the noise against which any individual change should be judged.",
+      "points": 1
+    },
+    {
+      "id": "dg-22",
+      "type": "numeric",
+      "domain": "measurement-science",
+      "difficulty": "core",
+      "lesson": "b02-l5",
+      "concepts": [
+        "c-minimal-detectable-change"
+      ],
+      "prompt": "A joint-angle measure has a standard error of measurement (SEM) of 1.5°. What is the minimal detectable change at 95% confidence (MDC95) in degrees? Round to two decimal places.",
+      "answer": {
+        "value": 4.16,
+        "tolerance": 0.1,
+        "unit": "°"
+      },
+      "working": "MDC95 = 1.96 × 1.4142 × 1.5 = 4.158 ≈ 4.16°.",
+      "explanation": "MDC95 = 1.96 × √2 × SEM. The √2 term reflects that a change score involves two measurements, each with error. A change smaller than about 4.2° in this measure cannot be distinguished from measurement error at 95% confidence for an individual, whatever coaches or software report.",
+      "points": 1
+    },
+    {
+      "id": "dg-23",
+      "type": "scenario",
+      "domain": "measurement-science",
+      "difficulty": "core",
+      "lesson": "b02-l5",
+      "concepts": [
+        "c-accuracy-vs-precision"
+      ],
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Two velocity devices are tested against a criterion system. Device A reads on average 3.0 mph high, with a random error SD of 0.3 mph. Device B shows no average bias, with a random error SD of 1.5 mph. (Synthetic values.)"
+        }
+      ],
+      "prompt": "For tracking each pitcher's own changes across sessions on the same device, which statement is most accurate?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Device A is better for within-athlete change, because a constant bias cancels in change scores; its bias matters when comparing with other systems or norms"
+        },
+        {
+          "id": "b",
+          "text": "Device B is better for every purpose, because it is unbiased"
+        },
+        {
+          "id": "c",
+          "text": "Both devices are equally useful because their errors average out over a season"
+        },
+        {
+          "id": "d",
+          "text": "Device A is unusable because a biased instrument is never valid"
+        }
+      ],
+      "answer": "a",
+      "explanation": "A constant bias cancels when the same device measures the same athlete twice, so device A's small random error makes it the better tool for detecting individual change. Its bias still matters when its readings are compared with another system or with published norms. Device B is accurate on average but too noisy for small individual changes.",
+      "optionFeedback": {
+        "b": "Lack of bias does not compensate for large random error when the goal is detecting small individual changes.",
+        "c": "Bias and random error behave differently; random error does not disappear for single-session decisions.",
+        "d": "A known constant bias can be corrected or ignored for within-device comparisons; validity depends on the intended use."
+      },
+      "errorTags": {
+        "b": "equates-accuracy-with-usefulness"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-24",
+      "type": "scenario",
+      "domain": "measurement-science",
+      "difficulty": "stretch",
+      "lesson": "b02-l5",
+      "concepts": [
+        "c-limits-of-agreement"
+      ],
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "A markerless system is compared with a marker-based system for peak shoulder external rotation in 30 pitchers. The correlation between systems is r = 0.95. The mean difference (markerless minus marker-based) is 2.0°, and the standard deviation of the differences is 3.0°. (Synthetic values.)"
+        }
+      ],
+      "prompt": "What are the 95% limits of agreement, and what follows?",
+      "options": [
+        {
+          "id": "a",
+          "text": "About −1.0° to +5.0°; the systems can be used interchangeably because r = 0.95"
+        },
+        {
+          "id": "b",
+          "text": "About −3.9° to +7.9°; despite the high correlation, individual readings can differ by several degrees, so the systems are not interchangeable without considering that range"
+        },
+        {
+          "id": "c",
+          "text": "About −5.9° to +5.9°; there is no systematic bias"
+        },
+        {
+          "id": "d",
+          "text": "Limits of agreement cannot be computed without the raw data; r = 0.95 shows the systems agree"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Limits of agreement are the mean difference ± 1.96 × the SD of the differences: 2.0 ± 5.88, about −3.9° to +7.9°. A high correlation shows that the two systems rank pitchers similarly, not that they agree; a systematic offset and individual differences of several degrees can coexist with r = 0.95. Whether that range is acceptable depends on the size of the changes the users need to detect.",
+      "optionFeedback": {
+        "a": "That uses ±1 SD rather than ±1.96 SD, and treats correlation as agreement.",
+        "c": "This drops the 2.0° mean difference, which is the systematic bias.",
+        "d": "The mean and SD of the differences are exactly what is needed, and correlation is not agreement."
+      },
+      "errorTags": {
+        "a": "treats-correlation-as-agreement",
+        "d": "treats-correlation-as-agreement"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-25",
+      "type": "flaw",
+      "domain": "research-literacy",
+      "difficulty": "core",
+      "lesson": "b01-l4",
+      "concepts": [
+        "c-between-vs-within-athlete"
+      ],
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "In a cross-sectional study of 40 pitchers, those with greater peak hip–shoulder separation threw faster (r = 0.45). A report concludes: \"Each pitcher who increases his separation will throw harder, so all pitchers should train to increase it.\" (Synthetic study.)"
+        }
+      ],
+      "prompt": "What is the most important flaw in the recommendation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A correlation of 0.45 is too small to be statistically significant with 40 pitchers"
+        },
+        {
+          "id": "b",
+          "text": "It applies a between-athlete association to within-athlete change and treats correlation as causation"
+        },
+        {
+          "id": "c",
+          "text": "Hip–shoulder separation cannot be measured reliably"
+        },
+        {
+          "id": "d",
+          "text": "The study should have used more than one velocity measure per pitcher"
+        }
+      ],
+      "answer": "b",
+      "explanation": "A between-athlete correlation describes how pitchers differ from one another, not what happens when one pitcher changes. The association may reflect third variables such as body size, strength or skill level, and the within-athlete relationship can differ in size or even direction. Only an intervention design, ideally randomized with retention and transfer tests, can show that changing separation changes velocity.",
+      "optionFeedback": {
+        "a": "With n = 40, r = 0.45 is conventionally significant (p ≈ 0.004); significance is not the problem.",
+        "c": "Measurement quality matters, but the inferential leap would be invalid even with perfect measurement.",
+        "d": "More trials would improve reliability but would not license a causal, within-athlete conclusion."
+      },
+      "errorTags": {
+        "a": "focuses-on-significance-not-inference",
+        "c": "misses-between-within-distinction"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-26",
+      "type": "mc",
+      "domain": "research-literacy",
+      "difficulty": "core",
+      "lesson": "b02-l5",
+      "concepts": [
+        "c-regression-to-the-mean"
+      ],
+      "prompt": "A club selects the 10 hitters with the lowest average exit velocity in one week's batting practice for a new drill. The next week their average exit velocity has risen. Which conclusion is most justified?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The drill works, because every selected hitter improved on average"
+        },
+        {
+          "id": "b",
+          "text": "The drill harmed the other hitters, whose average fell"
+        },
+        {
+          "id": "c",
+          "text": "Some or all of the rise is expected from regression to the mean; a comparable control group is needed to estimate the drill's effect"
+        },
+        {
+          "id": "d",
+          "text": "Exit velocity is too unreliable to measure, so no conclusion is possible about anything"
+        }
+      ],
+      "answer": "c",
+      "explanation": "Hitters chosen for extreme low scores on a noisy measure will, on average, score closer to their true level next time even without any intervention. That is regression to the mean. To isolate the drill's effect you need a comparable control group selected the same way, ideally randomized, and repeated measures.",
+      "optionFeedback": {
+        "a": "Improvement after selection on low scores is expected even with no effect.",
+        "b": "No data on the other hitters are given, and any fall among high scorers would also reflect regression to the mean.",
+        "d": "Imperfect reliability is what produces regression to the mean; it does not make measurement worthless."
+      },
+      "errorTags": {
+        "a": "ignores-regression-to-the-mean"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-27",
+      "type": "numeric",
+      "domain": "research-literacy",
+      "difficulty": "core",
+      "lesson": "b02-l5",
+      "concepts": [
+        "c-confidence-interval"
+      ],
+      "prompt": "In a study of 16 hitters, the mean change in bat speed is 2.5 mph with a standard deviation of change of 8.0 mph. Using a two-sided t critical value of 2.131 (15 degrees of freedom), what is the half-width of the 95% confidence interval for the mean change, in mph? Round to two decimal places.",
+      "answer": {
+        "value": 4.26,
+        "tolerance": 0.15,
+        "unit": "mph"
+      },
+      "working": "SE = 8.0 / √16 = 2.0 mph. Half-width = 2.131 × 2.0 = 4.262 ≈ 4.26 mph. Interval ≈ 2.5 ± 4.26 = −1.76 to 6.76 mph.",
+      "explanation": "The standard error of the mean is SD / √n, and the half-width is t × SE. The interval runs from about −1.8 to +6.8 mph, so it includes zero as well as large benefits. Small samples with variable responses give very imprecise estimates, which is a common feature of applied biomechanics studies.",
+      "points": 1
+    },
+    {
+      "id": "dg-28",
+      "type": "rank",
+      "domain": "research-literacy",
+      "difficulty": "core",
+      "lesson": "b01-l4",
+      "concepts": [
+        "c-evidence-hierarchy-intervention"
+      ],
+      "prompt": "A vendor claims a training program increases bat speed. Rank these forms of evidence from strongest support for a causal effect on lasting bat speed (first) to weakest (last).",
+      "options": [
+        {
+          "id": "a",
+          "text": "A randomized controlled trial with a control group and a retention test weeks later"
+        },
+        {
+          "id": "b",
+          "text": "A non-randomized study comparing athletes who chose the program with athletes who did not"
+        },
+        {
+          "id": "c",
+          "text": "A single-group pre–post study measured on the program's first and last day"
+        },
+        {
+          "id": "d",
+          "text": "Video testimonials from athletes who used the program"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "explanation": "Random allocation with a control group and delayed retention testing best separates the program's effect from maturation, practice effects, regression to the mean and short-term warm-up effects. A non-randomized comparison group helps but leaves selection bias. A single-group pre–post design cannot separate the program from time and practice. Testimonials select successes and lack any comparison.",
+      "optionFeedback": {
+        "a": "Strongest: randomization and retention testing address the main alternative explanations.",
+        "b": "A comparison group helps, but self-selection may make groups differ in motivation or ability.",
+        "c": "No comparison group, and the last-day measure captures performance rather than retention.",
+        "d": "Weakest: selected, uncontrolled and unmeasured."
+      },
+      "points": 1
+    }
+  ],
+  "interpretation": {
+    "functional-anatomy": {
+      "strong": "You reason comfortably about moment arms, muscle mechanics and the stretch-shortening cycle. In Week 1, concentrate on how these properties constrain throwing and swinging, and on where the evidence for specific mechanisms is contested.",
+      "developing": "You handle some of the mechanics of muscle and joints but not all of it. Pay attention to the moment-arm calculations and to the force–velocity and length–tension relationships when they appear in Week 1.",
+      "foundation": "Optional refresher before Lesson 1: review lever mechanics and static moment balance about a joint, the length–tension and force–velocity relationships, fiber types, and the stretch-shortening cycle, using the muscle mechanics chapter of a standard biomechanics text. Work two or three static elbow or knee moment problems by hand.",
+      "lessons": [
+        "b01-l1",
+        "b01-l3"
+      ]
+    },
+    "vector-mathematics": {
+      "strong": "Your vector and rotation skills are ready for three-dimensional joint-angle work. In Week 1, focus on the conventions (axis definitions, Cardan sequences) that make published values comparable or not.",
+      "developing": "You are comfortable with parts of vector algebra but less sure of others, often cross products or rotation sequences. Rework the sign conventions and the right-hand rule carefully in Week 1 rather than skimming them.",
+      "foundation": "Optional refresher before Lesson 2: review vector addition, magnitude, the dot product (angles between vectors) and the cross product with the right-hand rule; converting degrees to radians and using v = ωr; and the idea of a rotation matrix and why rotation order matters. An introductory linear algebra or engineering mechanics chapter on vectors covers this; do a handful of hand calculations.",
+      "lessons": [
+        "b01-l2",
+        "b01-l3"
+      ]
+    },
+    "kinematics": {
+      "strong": "You interpret kinematic quantities and their processing well. In Weeks 1 and 2, concentrate on how definitions and filtering choices change the numbers reported for pitching and hitting.",
+      "developing": "You know the main kinematic quantities but some definitions or processing issues are unsettled. Watch the distinction between joint and segment angular velocity, and the role of filtering, when they appear.",
+      "foundation": "Optional refresher before Lesson 2: review position, velocity and acceleration as derivatives, projectile motion without drag, the relation between angular and linear velocity, and why differentiating noisy data requires filtering. A first-year physics kinematics chapter plus a short section on low-pass filtering in a biomechanics methods text is enough.",
+      "lessons": [
+        "b01-l2",
+        "b01-l4",
+        "b02-l1"
+      ]
+    },
+    "kinetics": {
+      "strong": "You apply impulse–momentum, joint power and angular momentum correctly and you separate net joint moments from tissue loads. In Week 1, focus on inverse dynamics assumptions and their limits.",
+      "developing": "You handle some kinetic reasoning but not all, often joint power or angular momentum. Work the examples in Lesson 3 step by step, stating sign conventions each time.",
+      "foundation": "Optional refresher before Lesson 3: review Newton's laws in linear and angular form, impulse and momentum, moment of inertia and conservation of angular momentum, and mechanical power as moment times angular velocity. A first-year physics treatment of rotational dynamics plus the inverse dynamics chapter of a biomechanics text covers it.",
+      "lessons": [
+        "b01-l3",
+        "b01-l4"
+      ]
+    },
+    "motor-control": {
+      "strong": "You reason well about redundancy, delays and the difference between performance and learning. In Week 1, focus on the competing theories of motor control and the quality of evidence for each.",
+      "developing": "You recognize some motor control ideas but not all, often optimal feedback control or the role of sensorimotor delay. Read Lesson 5 closely, especially the sections on prediction and on how variability is analyzed.",
+      "foundation": "Optional refresher before Lesson 5: review the degrees-of-freedom problem, feedback versus feedforward control and typical sensorimotor delays, the idea of forward models, and the difference between performance and learning (retention and transfer tests). A motor control textbook's chapters on control theories and motor learning cover this; Course A's learning science week also helps with the last point.",
+      "lessons": [
+        "b01-l5"
+      ]
+    },
+    "measurement-science": {
+      "strong": "You handle typical error, minimal detectable change and agreement analysis confidently. In Week 2, focus on how these statistics apply to specific systems and on what validation studies did and did not test.",
+      "developing": "You know some reliability statistics but mix up others, often agreement versus correlation or the √2 in change scores. Work the calculations in Week 2 Lesson 5 by hand.",
+      "foundation": "Optional refresher before Week 2: review accuracy versus precision, systematic versus random error, the standard error of measurement and typical error, minimal detectable change, intraclass correlation, and Bland–Altman limits of agreement. A measurement chapter in a sports science research methods text covers this; calculate each statistic once from a small made-up test–retest table.",
+      "lessons": [
+        "b02-l5",
+        "b02-l1"
+      ]
+    },
+    "research-literacy": {
+      "strong": "You read study designs critically and separate between- from within-athlete evidence. Throughout the course, apply this to the specific biomechanics literature, where samples are small and most designs are cross-sectional.",
+      "developing": "You catch some design problems but not all, often regression to the mean or the between- versus within-athlete distinction. Use the evidence tables in each lesson deliberately rather than skipping to conclusions.",
+      "foundation": "Optional refresher before Week 1: review study designs (cross-sectional, pre–post, controlled and randomized trials), confidence intervals and why small samples give imprecise estimates, regression to the mean, and why correlation does not establish causation. Course A's research methods week, or an introductory research methods text for sport science, covers it.",
+      "lessons": [
+        "b01-l4",
+        "b02-l5"
+      ]
+    }
+  }
+}

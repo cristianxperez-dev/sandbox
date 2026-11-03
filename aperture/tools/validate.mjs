@@ -4,15 +4,20 @@
 //   node aperture/tools/validate.mjs --week 4     validate one week (+ its sources) — for content writers
 //   node aperture/tools/validate.mjs --only capstone|diagnostic|midterm|audit|labs
 //   node aperture/tools/validate.mjs --strict     every file must exist (used before commit / in CI)
+//   node aperture/tools/validate.mjs --course b   validate Course B (aperture/content-b; weeks b01…, only the
+//                                                 weeks listed as available in course.json are required)
 // Exit code 1 on any error. Warnings never fail.
 
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', 'content');
 const args = process.argv.slice(2);
 const opt = (n) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : null; };
+const COURSE = opt('--course') === 'b' ? 'b' : 'a';
+const P = COURSE === 'b' ? 'b' : 'w'; // week-id prefix
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', COURSE === 'b' ? 'content-b' : 'content');
+const COURSE_META = COURSE === 'b' ? JSON.parse(readFileSync(join(ROOT, 'course.json'), 'utf8')) : null;
 const STRICT = args.includes('--strict');
 const ONLY_WEEK = opt('--week') ? Number(opt('--week')) : null;
 const ONLY = opt('--only');
@@ -23,11 +28,11 @@ const warnings = [];
 const err = (where, msg) => errors.push(`${where}: ${msg}`);
 const warn = (where, msg) => warnings.push(`${where}: ${msg}`);
 
-export const DOMAINS = ['behavioral-science', 'statistical-reasoning', 'business-strategy', 'financial-literacy', 'legal-reasoning', 'negotiation', 'organizational-behavior', 'leadership-judgment', 'communication'];
-const SCHOOLS = ['behavioral', 'business', 'law'];
+export const DOMAINS = COURSE_META ? COURSE_META.domains.map((d) => d.id) : ['behavioral-science', 'statistical-reasoning', 'business-strategy', 'financial-literacy', 'legal-reasoning', 'negotiation', 'organizational-behavior', 'leadership-judgment', 'communication'];
+const SCHOOLS = COURSE_META ? COURSE_META.schools.map((d) => d.id) : ['behavioral', 'business', 'law'];
 const KINDS = ['established', 'original', 'example', 'application', 'hypothesis', 'contested'];
-const LABS = ['behavioral-decision-lab', 'negotiation-simulator', 'organizational-design-studio', 'research-critique-lab', 'financial-decision-studio', 'executive-communication-studio', 'contract-issue-spotting-lab', 'strategic-decision-journal'];
-const ENGINES = ['calibration', 'simulation', 'design', 'branching', 'negotiation', 'allocation', 'orgdesign', 'stakeholder', 'issues', 'composer'];
+const LABS = ['behavioral-decision-lab', 'negotiation-simulator', 'organizational-design-studio', 'research-critique-lab', 'financial-decision-studio', 'executive-communication-studio', 'contract-issue-spotting-lab', 'strategic-decision-journal', 'biomechanics-laboratory'];
+const ENGINES = ['calibration', 'simulation', 'design', 'branching', 'negotiation', 'allocation', 'orgdesign', 'stakeholder', 'issues', 'composer', 'frames', 'measurement'];
 const QTYPES = ['mc', 'multi', 'scenario', 'flaw', 'research', 'decision', 'issue', 'rank', 'numeric', 'short'];
 const SINGLE = ['mc', 'scenario', 'flaw', 'research', 'decision'];
 const AUTO = QTYPES.filter((t) => t !== 'short');
@@ -237,6 +242,20 @@ function checkEngine(engine, c, w) {
   if (!c || typeof c !== 'object') return err(w, 'config missing');
   const blocks = (b, n) => b != null && checkBlocks(b, `${w}.${n}`);
   switch (engine) {
+    case 'frames':
+    case 'measurement': {
+      // Course B labs: every prediction task's truth is computed by the engine from stated mathematics.
+      const checks = engine === 'frames' ? ['reported', 'frameElev', 'moment', 'choice', 'value'] : ['bias', 'teB', 'mdcB', 'realA', 'realB', 'obsB', 'choice', 'value'];
+      if (!isArr(c.tasks, 3, 12)) err(w, `${engine} needs 3–12 prediction tasks`);
+      (c.tasks || []).forEach((t) => {
+        if (!/^t\d{1,2}$/.test(t.id || '') || !isStr(t.prompt) || !checks.includes(t.check) || !['number', 'choice'].includes(t.type)) err(w, `task ${t.id} needs id t#, prompt, type and check (${checks.join('|')})`);
+        if (t.type === 'number' && !(t.tolerance > 0)) err(w, `task ${t.id} needs a positive tolerance`);
+        if (t.type === 'choice' && (!isArr(t.options, 2) || (t.check === 'choice' && !t.options.some((o) => o.id === t.answer)))) err(w, `task ${t.id} choice options/answer`);
+        if (engine === 'frames' && !['rotation', 'frames', 'moment', 'chain'].includes(t.station)) err(w, `task ${t.id} station`);
+        if (t.prompt) checkText(t.prompt, `${w} task ${t.id}`, 'prompt');
+      });
+      break;
+    }
     case 'calibration':
       if (!isArr(c.binary, 10, 20)) err(w, 'calibration.binary needs 10–20 items');
       (c.binary || []).forEach((b) => { if (!isStr(b.statement) || typeof b.key?.answer !== 'boolean' || !isStr(b.key?.explanation)) err(w, `binary ${b.id} needs statement + key.answer boolean + key.explanation`); });
@@ -368,8 +387,9 @@ function checkAssignment(a, where) {
 /* ---------------- week ---------------- */
 const stats = { lessons: 0, words: 0, questions: 0, quizQuestions: 0, checks: 0, review: 0, glossary: 0, cases: 0, weeks: 0 };
 const weekFiles = [];
+const REQUIRED_WEEKS = COURSE_META ? new Set(COURSE_META.available) : null; // Course B: later weeks are planned, not missing
 for (let n = 1; n <= 14; n++) {
-  const id = `w${String(n).padStart(2, '0')}`;
+  const id = `${P}${String(n).padStart(2, '0')}`;
   if (ONLY_WEEK && n !== ONLY_WEEK) { // still register ids from other weeks for link resolution
     const other = readJSON(`weeks/${id}.json`);
     if (other) registerWeekIds(other);
@@ -377,7 +397,7 @@ for (let n = 1; n <= 14; n++) {
   }
   if (ONLY && !ONLY_WEEK) { const other = readJSON(`weeks/${id}.json`); if (other) registerWeekIds(other); continue; }
   const wk = readJSON(`weeks/${id}.json`);
-  if (wk === undefined) { (STRICT ? err : warn)(`weeks/${id}.json`, 'missing'); continue; }
+  if (wk === undefined) { if (REQUIRED_WEEKS && !REQUIRED_WEEKS.has(n)) continue; (STRICT ? err : warn)(`weeks/${id}.json`, 'missing'); continue; }
   if (wk) weekFiles.push(wk);
 }
 function registerWeekIds(wk) {
@@ -394,7 +414,7 @@ function checkWeek(wk) {
   const W = `weeks/${wk.id}.json`;
   stats.weeks++;
   const n = wk.number;
-  if (wk.id !== `w${String(n).padStart(2, '0')}`) err(W, 'id / number mismatch');
+  if (wk.id !== `${P}${String(n).padStart(2, '0')}`) err(W, 'id / number mismatch');
   for (const k of ['title', 'theme', 'question']) if (!isStr(wk[k])) err(W, `${k} missing`);
   if (!/\?$/.test((wk.question || '').trim())) err(W, 'question must end with ?');
   if (!SCHOOLS.includes(wk.school) || !isArr(wk.schools, 1) || !wk.schools.every((s) => SCHOOLS.includes(s))) err(W, 'school / schools invalid');
@@ -492,7 +512,7 @@ function checkBlocksQuiet(blocks) {
 }
 
 /* ---------------- diagnostic / midterm / capstone / audit / labs ---------------- */
-function want(name) { return !ONLY_WEEK && (!ONLY || ONLY === name); }
+function want(name) { return !ONLY_WEEK && (!ONLY || ONLY === name) && !(COURSE === 'b' && ['midterm', 'capstone', 'audit'].includes(name)); } // Course B has none yet
 
 if (want('diagnostic')) {
   const d = readJSON('diagnostic.json');
@@ -575,9 +595,10 @@ if (want('audit')) {
 
 // cross-links resolve
 for (const [where, target] of pendingLinks) {
-  if (/^w\d{2}$/.test(target)) { if (!weekIds.has(target) && STRICT) err(where, `link to missing week ${target}`); continue; }
-  if (/^w\d{2}-l\d$/.test(target)) {
+  if (/^[wb]\d{2}$/.test(target)) { if (target[0] !== P) { err(where, `link to another course's week ${target}`); continue; } if (!weekIds.has(target) && STRICT && !(REQUIRED_WEEKS && !REQUIRED_WEEKS.has(Number(target.slice(1))))) err(where, `link to missing week ${target}`); continue; }
+  if (/^[wb]\d{2}-l\d$/.test(target)) {
     const wk = target.slice(0, 3);
+    if (target[0] !== P) { err(where, `link to another course's lesson ${target}`); continue; }
     if (lessonIds.has(target)) continue;
     if (weekIds.has(wk)) err(where, `link to unknown lesson ${target}`);
     else (STRICT ? err : warn)(where, `link to ${target} (week not written yet)`);

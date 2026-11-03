@@ -1,0 +1,960 @@
+[
+ {
+  "id": "R-winter-2009-biomechanics",
+  "title": "Biomechanics and Motor Control of Human Movement (4th ed.)",
+  "authors": [
+   "David A. Winter"
+  ],
+  "publication": "John Wiley & Sons",
+  "year": 2009,
+  "url": "https://doi.org/10.1002/9780470549148",
+  "doi": "10.1002/9780470549148",
+  "discipline": "kinesiology",
+  "type": "textbook",
+  "access": "purchase",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Author, title, edition, publisher and DOI were supplied as pre-verified in the course brief (Nov 2026) and are consistent with the Wiley listing.",
+   "link": "not-opened"
+  },
+  "summary": "The standard graduate text on signal processing, kinematics, inverse dynamics and EMG in human movement. Its treatment of digital filtering, residual analysis and the link-segment model underpins most laboratory processing pipelines.",
+  "arguments": [
+   "Low-pass filtering with a cut-off chosen by residual analysis balances signal distortion against residual noise.",
+   "Inverse dynamics yields net joint moments, not the forces in individual structures.",
+   "EMG must be processed and normalized before amplitudes are compared."
+  ],
+  "evidence": "textbook",
+  "design": null,
+  "strengths": "Mathematically explicit and widely used as the reference for processing conventions.",
+  "limitations": "Pre-dates markerless capture and modern wearable sensors; examples are mostly gait.",
+  "contested": null,
+  "generalizability": "Methods transfer directly to pitching and hitting, though fast ballistic tasks stress filtering and sampling more than gait.",
+  "readingMinutes": 120,
+  "relevance": "The source for the filtering and inverse-dynamics reasoning used throughout this week."
+ },
+ {
+  "id": "R-robertson-2014-research",
+  "title": "Research Methods in Biomechanics (2nd ed.)",
+  "authors": [
+   "D. G. E. Robertson",
+   "G. E. Caldwell",
+   "J. Hamill",
+   "G. Kamen",
+   "S. N. Whittlesey"
+  ],
+  "publication": "Human Kinetics",
+  "year": 2014,
+  "url": "https://us.humankinetics.com/products/research-methods-in-biomechanics-2nd-edition",
+  "doi": null,
+  "discipline": "kinesiology",
+  "type": "textbook",
+  "access": "purchase",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "partially-confirmed",
+   "evidence": "Authors, title, edition, year and publisher supplied as pre-verified in the course brief; publisher page URL not opened from this environment.",
+   "link": "not-opened"
+  },
+  "summary": "A methods textbook covering videography and optical capture, force platforms, inverse dynamics, electromyography and signal processing, with worked procedures for each.",
+  "arguments": [
+   "Calibration, reconstruction and segment-frame definition determine what an optical system reports.",
+   "Force-platform outputs yield centre of pressure and, with kinematics, joint moments.",
+   "EMG acquisition and normalization choices change interpretable amplitudes."
+  ],
+  "evidence": "textbook",
+  "design": null,
+  "strengths": "Procedural detail useful for auditing a laboratory's methods.",
+  "limitations": "General rather than baseball-specific; markerless and wearable technology are treated briefly.",
+  "contested": null,
+  "generalizability": "Laboratory procedures transfer directly; field use requires the adaptations discussed this week.",
+  "readingMinutes": 120,
+  "relevance": "Reference for how each laboratory instrument produces its numbers."
+ },
+ {
+  "id": "R-wu-2005-isb",
+  "title": "ISB recommendation on definitions of joint coordinate systems of various joints for the reporting of human joint motion—Part II: shoulder, elbow, wrist and hand",
+  "authors": [
+   "G. Wu",
+   "F. C. T. van der Helm",
+   "H. E. J. Veeger",
+   "et al."
+  ],
+  "publication": "Journal of Biomechanics, 38(5), 981–992",
+  "year": 2005,
+  "url": "https://doi.org/10.1016/j.jbiomech.2004.05.042",
+  "doi": "10.1016/j.jbiomech.2004.05.042",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Title, journal, volume, pages and DOI supplied as pre-verified in the course brief (Nov 2026).",
+   "link": "not-opened"
+  },
+  "summary": "The International Society of Biomechanics' recommended segment coordinate systems and rotation sequences for the upper extremity, intended to make joint angles comparable across laboratories.",
+  "arguments": [
+   "Anatomical landmarks define segment frames for thorax, clavicle, scapula, humerus, forearm and hand.",
+   "A Y–X–Y sequence is recommended for the humerus relative to the thorax.",
+   "Standardization is a precondition for comparing angles across studies."
+  ],
+  "evidence": "theoretical",
+  "design": "Consensus recommendation of an ISB standardization committee.",
+  "strengths": "Authoritative, explicit definitions.",
+  "limitations": "Many pitching studies use other conventions; the recommendation does not resolve soft-tissue or joint-centre error.",
+  "contested": null,
+  "generalizability": "Directly relevant to every reported shoulder and elbow angle in pitching and hitting.",
+  "readingMinutes": 45,
+  "relevance": "Explains why shoulder angles from different laboratories may not be on the same scale."
+ },
+ {
+  "id": "R-leardini-2005-human",
+  "title": "Human movement analysis using stereophotogrammetry. Part 3. Soft tissue artifact assessment and compensation",
+  "authors": [
+   "A. Leardini",
+   "L. Chiari",
+   "U. Della Croce",
+   "A. Cappozzo"
+  ],
+  "publication": "Gait & Posture, 21(2), 212–225",
+  "year": 2005,
+  "url": "https://doi.org/10.1016/j.gaitpost.2004.05.002",
+  "doi": "10.1016/j.gaitpost.2004.05.002",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Authors, title, journal, volume, issue, pages and DOI matched across a university repository (unibo) and bibliographic records in web search.",
+   "link": "not-opened"
+  },
+  "summary": "A review of soft-tissue artifact — skin-marker motion relative to bone — in stereophotogrammetry. It identifies the artifact as the most critical source of error, describes methods to assess it, and reviews compensation techniques.",
+  "arguments": [
+   "Soft-tissue artifact is the most critical error in skin-marker movement analysis.",
+   "The artifact is subject- and task-specific and cannot be removed by simple filtering.",
+   "Rigid-cluster optimization and joint constraints reduce but do not eliminate it."
+  ],
+  "evidence": "review",
+  "design": "Narrative review of invasive, imaging and modelling studies.",
+  "strengths": "Authoritative, widely cited methodological review.",
+  "limitations": "Most source studies concern lower-limb and slower tasks; magnitudes in fast throwing are not directly quantified.",
+  "contested": null,
+  "generalizability": "The principle transfers to the throwing shoulder; magnitudes for pitching remain uncertain.",
+  "readingMinutes": 50,
+  "relevance": "Grounds the claim that marker-based capture is not a direct measurement of bone."
+ },
+ {
+  "id": "R-ehrig-2006-survey",
+  "title": "A survey of formal methods for determining the centre of rotation of ball joints",
+  "authors": [
+   "R. M. Ehrig",
+   "W. R. Taylor",
+   "G. N. Duda",
+   "M. O. Heller"
+  ],
+  "publication": "Journal of Biomechanics, 39(15), 2798–2809",
+  "year": 2006,
+  "url": "https://eprints.soton.ac.uk/348510",
+  "doi": null,
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "partially-confirmed",
+   "evidence": "Authors, title, journal, volume, issue, pages and year matched in a University of Southampton repository record and PubMed listing (PMID 16293257). DOI not confirmed in search results and therefore omitted.",
+   "link": "not-opened"
+  },
+  "summary": "Compares formal (functional) methods for locating a ball joint's centre of rotation from marker data and introduces a symmetrical method (SCoRE) that does not require one segment to remain stationary.",
+  "arguments": [
+   "Functional methods estimate joint centres from relative segment motion.",
+   "Under the test conditions, most methods located the centre within about 0.3 cm when range of motion was at least 45°.",
+   "The symmetrical approach allows both segments to move during calibration."
+  ],
+  "evidence": "lab-experiment",
+  "design": "Simulation and experimental comparison of joint-centre estimation methods.",
+  "strengths": "Formal comparison under controlled conditions.",
+  "limitations": "Accuracy under simulation is an upper bound; soft-tissue artifact during calibration movements degrades real performance.",
+  "contested": null,
+  "generalizability": "Relevant to hip and glenohumeral centres in pitching and hitting models.",
+  "readingMinutes": 40,
+  "relevance": "Explains the functional versus predictive joint-centre choice."
+ },
+ {
+  "id": "R-fleisig-2022-comparison",
+  "title": "Comparison of marker-less and marker-based motion capture for baseball pitching kinematics",
+  "authors": [
+   "G. S. Fleisig",
+   "Slowik",
+   "Wassom",
+   "Y. Yanagita",
+   "Bishop",
+   "Diffendaffer"
+  ],
+  "publication": "Sports Biomechanics (published online 2022)",
+  "year": 2022,
+  "url": "https://doi.org/10.1080/14763141.2022.2076608",
+  "doi": "10.1080/14763141.2022.2076608",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Authors, title, journal and DOI supplied as pre-verified in the course brief; sample (30 pitchers, age 17.1 ± 3.1 years, 275 fastballs), 240 Hz capture with a 9-camera marker-less and 12-camera marker system, CMC 0.88–0.97, and the recommendation of system-specific norms matched in web-search abstracts. An earlier ISBS proceedings version (9 pitchers) has different numbers and is not cited.",
+   "link": "not-opened"
+  },
+  "summary": "Captured fastballs simultaneously with a marker-less and a marker-based system. Waveforms agreed closely in shape, but discrete values differed systematically, and the authors recommended separate normative databases for each system.",
+  "arguments": [
+   "Time-series agreement between systems was high (CMC 0.88–0.97).",
+   "Discrete kinematic values differed systematically between systems.",
+   "Normative ranges should be established separately for each system."
+  ],
+  "evidence": "lab-experiment",
+  "design": "Concurrent-validity design: 275 fastballs from 30 pitchers captured simultaneously by both systems at 240 Hz.",
+  "strengths": "Simultaneous capture of the same pitches removes athlete and setting differences.",
+  "limitations": "Laboratory setting; adolescent and young-adult sample; marker system is itself an imperfect reference; markerless vendor model versions change over time.",
+  "contested": "Agreement with Aguinaldo et al. (R-aguinaldo-2025-assessing) on system-specific differences; Lerch et al. (R-lerch-2025-variability) address the in-game setting.",
+  "generalizability": "Supports within-system monitoring; does not license mixing systems or applying marker-based norms to markerless data.",
+  "readingMinutes": 35,
+  "relevance": "The core validation study for markerless pitching kinematics and this week's case."
+ },
+ {
+  "id": "R-lerch-2025-variability",
+  "title": "Variability of in-game markerless and laboratory marker-based baseball pitching biomechanics",
+  "authors": [
+   "B. G. Lerch",
+   "G. S. Fleisig",
+   "Slowik",
+   "G. D. Oliver"
+  ],
+  "publication": "Journal of Biomechanics, 188, 112775",
+  "year": 2025,
+  "url": "https://doi.org/10.1016/j.jbiomech.2025.112775",
+  "doi": "10.1016/j.jbiomech.2025.112775",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Title, authors, journal, volume, article number and DOI supplied in the brief and matched on PubMed (PMID 40418881) and an ASMI-hosted PDF listing in web search; design and main findings from the abstract as returned by search.",
+   "link": "not-opened"
+  },
+  "summary": "Compared within-pitcher variability across ten fastballs between collegiate pitchers measured in a laboratory with marker-based capture and Division I pitchers measured in games with markerless capture.",
+  "arguments": [
+   "Variability was greater in-game for two of ten parameters: maximum shoulder external rotation and elbow flexion at that instant.",
+   "Mean values differed substantially between settings and systems.",
+   "Initial evidence that pitch-to-pitch variability is broadly similar across the two settings."
+  ],
+  "evidence": "observational",
+  "design": "Between-group comparison: 30 laboratory pitchers vs 30 in-game pitchers; variability = SD over 10 fastballs.",
+  "strengths": "Directly addresses the in-game question with comparable variability metrics.",
+  "limitations": "Different pitchers in each condition, so system, setting and sample differences are confounded; collegiate sample.",
+  "contested": "Consistent with Fleisig et al. 2022 (R-fleisig-2022-comparison) on mean differences between systems.",
+  "generalizability": "Collegiate pitchers; in-game system and stadium specific.",
+  "readingMinutes": 30,
+  "relevance": "Evidence on whether in-game markerless data can replace laboratory testing."
+ },
+ {
+  "id": "R-aguinaldo-2025-assessing",
+  "title": "Assessing the accuracy of in-stadium and portable multi-camera markerless motion capture for baseball pitching kinematics and kinetics",
+  "authors": [
+   "A. L. Aguinaldo",
+   "T. Cardinale",
+   "D. T. La Salle",
+   "R. F. Escamilla",
+   "J. H. Buffi"
+  ],
+  "publication": "Journal of Sports Sciences (online 26 Nov 2025; 44(10), 1374–1388, 2026)",
+  "year": 2025,
+  "url": "https://doi.org/10.1080/02640414.2025.2595411",
+  "doi": "10.1080/02640414.2025.2595411",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Title, DOI and online date matched on PubMed (PMID 41294254); author list and issue details matched on the University of Kentucky Scholars profile; sample and per-joint errors from the abstract as returned by search.",
+   "link": "not-opened"
+  },
+  "summary": "Recorded 18 collegiate pitchers simultaneously with a marker-based reference, an in-stadium Hawk-Eye system and a portable Theia3D system, and compared kinematics and kinetics.",
+  "arguments": [
+   "Mean per-joint position error was 56.6 ± 9.4 mm (Hawk-Eye) and 52.0 ± 12.3 mm (Theia3D).",
+   "Stride length agreed best; shoulder rotational variables agreed least.",
+   "Camera configuration, deployment and pose-estimation model influence accuracy."
+  ],
+  "evidence": "lab-experiment",
+  "design": "Concurrent comparison of three systems on the same pitches; 18 collegiate pitchers.",
+  "strengths": "Includes an in-stadium system and kinetics, not only kinematics.",
+  "limitations": "Small sample; one installation of each system; marker-based reference has its own error.",
+  "contested": "Agrees with Fleisig et al. (R-fleisig-2022-comparison) that shoulder rotation is least consistent across systems.",
+  "generalizability": "Specific to the installations and software versions tested.",
+  "readingMinutes": 35,
+  "relevance": "The only peer-reviewed comparison found that includes an in-stadium Hawk-Eye system."
+ },
+ {
+  "id": "R-kanko-2021-concurrent",
+  "title": "Concurrent assessment of gait kinematics using marker-based and markerless motion capture",
+  "authors": [
+   "R. M. Kanko",
+   "E. K. Laende",
+   "E. M. Davis",
+   "W. S. Selbie",
+   "K. J. Deluzio"
+  ],
+  "publication": "Journal of Biomechanics, 127, 110665",
+  "year": 2021,
+  "url": "https://doi.org/10.1016/j.jbiomech.2021.110665",
+  "doi": "10.1016/j.jbiomech.2021.110665",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Authors, title, journal, volume, article number and DOI matched in web search (Elsevier Pure record and bioRxiv preprint); findings and the disclosed author conflict from the preprint and abstract.",
+   "link": "not-opened"
+  },
+  "summary": "Compared Theia3D markerless and marker-based capture during treadmill walking in 30 adults recorded simultaneously.",
+  "arguments": [
+   "Joint-centre differences were about 2.5 cm or less for most joints and 3.6 cm at the hip.",
+   "Joint-angle patterns were similar; rotations about segment long axes differed most.",
+   "The authors judged markerless capture a suitable alternative where its practical benefits are preferred."
+  ],
+  "evidence": "lab-experiment",
+  "design": "Simultaneous 8-camera markerless and 7-camera marker capture of treadmill gait, 30 adults.",
+  "strengths": "Simultaneous capture; clear reporting of joint-centre differences.",
+  "limitations": "Walking is slow and planar compared with throwing; one author led the vendor company.",
+  "contested": null,
+  "generalizability": "Gait agreement is an upper bound for fast throwing and swinging.",
+  "readingMinutes": 30,
+  "relevance": "Shows where markerless error concentrates (long-axis rotation) in a simpler task."
+ },
+ {
+  "id": "R-wade-2022-applications",
+  "title": "Applications and limitations of current markerless motion capture methods for clinical gait biomechanics",
+  "authors": [
+   "L. Wade",
+   "L. Needham",
+   "P. McGuigan",
+   "J. Bilzon"
+  ],
+  "publication": "PeerJ, 10, e12995",
+  "year": 2022,
+  "url": "https://doi.org/10.7717/peerj.12995",
+  "doi": "10.7717/peerj.12995",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "open",
+  "license": "CC BY 4.0",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Authors, title, journal, article number and DOI matched on peerj.com, DOAJ and PubMed Central (PMC8884063) in web search; open-access CC BY 4.0 status stated in those records.",
+   "link": "not-opened"
+  },
+  "summary": "A scoping review of markerless motion capture accuracy and use in clinical biomechanics. It finds spatiotemporal measures broadly equivalent to marker systems but joint centres and angles not yet accurate enough for clinical use, and stresses that pose-estimation training data were not labelled for biomechanics.",
+  "arguments": [
+   "Markerless temporospatial measures appear broadly equivalent to marker-based capture.",
+   "Joint-centre locations and joint angles are not yet sufficiently accurate for clinical applications.",
+   "Open-source pose models were not designed for biomechanics and are trained on inconsistently labelled data.",
+   "Without a bone-referenced standard such as biplanar videoradiography, true accuracy remains unknown."
+  ],
+  "evidence": "review",
+  "design": "Scoping review of markerless accuracy and application studies.",
+  "strengths": "Clear explanation of how pose estimation works and where it fails.",
+  "limitations": "Focus on gait; reviews literature up to its search date, before several sport-specific studies.",
+  "contested": null,
+  "generalizability": "Principles transfer to baseball; specific accuracy figures do not.",
+  "readingMinutes": 45,
+  "relevance": "Explains why markerless keypoints are not anatomical joint centres."
+ },
+ {
+  "id": "R-giordano-2024-normative",
+  "title": "Normative In-Game Data for Collegiate Baseball Pitchers Using Markerless Tracking Technology",
+  "authors": [
+   "K. Giordano",
+   "A. Schmitt",
+   "A. Nebel",
+   "Y. Yanagita",
+   "G. Oliver"
+  ],
+  "publication": "Orthopaedic Journal of Sports Medicine, 12(10)",
+  "year": 2024,
+  "url": "https://doi.org/10.1177/23259671241274137",
+  "doi": "10.1177/23259671241274137",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "open",
+  "license": "Open access; copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Title, authors, journal, volume, issue, DOI and PMCID (PMC11544755) matched in web search; methods (eight synchronized 300-Hz KinaTrax cameras at two SEC stadiums; 51 pitchers from five teams, 2023 season) from the abstract.",
+   "link": "not-opened"
+  },
+  "summary": "Provides in-game reference values for common pitching kinematic variables from a stadium markerless installation, motivated by evidence that markerless and marker systems produce different values.",
+  "arguments": [
+   "Markerless systems make in-game, high-precision kinematic data accessible.",
+   "System-specific reference values are needed because markerless and marker values differ.",
+   "Normative ranges are offered for researchers, coaches and clinicians."
+  ],
+  "evidence": "observational",
+  "design": "Descriptive in-game dataset: 51 NCAA Division I pitchers with more than three outings, eight 300-Hz cameras.",
+  "strengths": "In-game data in a competitive setting with a disclosed system configuration.",
+  "limitations": "Two stadiums; collegiate sample; norms specific to one vendor and software version; no validation component.",
+  "contested": null,
+  "generalizability": "Applies to the same system and level; not a laboratory or professional norm.",
+  "readingMinutes": 30,
+  "relevance": "Verified public information about a KinaTrax in-game configuration."
+ },
+ {
+  "id": "R-jump-2026-influence",
+  "title": "Influence of Hip-Shoulder separation on pitch velocity in college baseball pitchers",
+  "authors": [
+   "I. P. Jump",
+   "B. G. Lerch",
+   "R. M. Zappa",
+   "Pfund",
+   "Giordano",
+   "G. D. Oliver"
+  ],
+  "publication": "Journal of Biomechanics, 195, 113117 (online December 2025)",
+  "year": 2026,
+  "url": "https://doi.org/10.1016/j.jbiomech.2025.113117",
+  "doi": "10.1016/j.jbiomech.2025.113117",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "partially-confirmed",
+   "evidence": "Title, journal, volume, DOI and PubMed record (PMID 41389727) matched in web search; author surnames from search summaries; sample of 335 pitchers and peak r ≈ 0.16 from the abstract as summarized by search. Full text not read.",
+   "link": "not-opened"
+  },
+  "summary": "Used in-game markerless motion capture and statistical parametric mapping to relate hip–shoulder separation across the delivery to pitch velocity in Division I pitchers.",
+  "arguments": [
+   "Hip–shoulder separation was positively but weakly associated with pitch velocity (peak r ≈ 0.16).",
+   "Individual pitchers differed substantially, supporting pitcher-by-pitcher evaluation."
+  ],
+  "evidence": "observational",
+  "design": "Retrospective in-game markerless data; waveform analysis by statistical parametric mapping.",
+  "strengths": "Large in-game sample; waveform rather than single-instant analysis.",
+  "limitations": "Cross-sectional association; markerless system offsets; collegiate sample.",
+  "contested": null,
+  "generalizability": "Illustrates in-game markerless research at scale; does not establish causation.",
+  "readingMinutes": 25,
+  "relevance": "Shows what in-game markerless pitching research can and cannot establish."
+ },
+ {
+  "id": "R-hoechstetter-2026-relationship",
+  "title": "The relationship between hip-shoulder separation angle and bat speed in division I batters",
+  "authors": [
+   "A. Hoechstetter",
+   "I. P. Jump",
+   "R. M. Zappa",
+   "G. D. Oliver"
+  ],
+  "publication": "Journal of Biomechanics, 207, 113550",
+  "year": 2026,
+  "url": "https://www.sciencedirect.com/science/article/abs/pii/S0021929026004057",
+  "doi": null,
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "partially-confirmed",
+   "evidence": "Title, authors, journal, volume, article number and design (retrospective in-game markerless and ball-tracking data; 3,958 swings from 247 NCAA Division I batters; between- and within-batter analysis) matched on the ScienceDirect abstract listing in web search. The direction of the association (greater separation with higher bat speed) appeared in one search summary of the abstract but not in another; effect sizes were not confirmed. DOI not confirmed and omitted.",
+   "link": "not-opened"
+  },
+  "summary": "A retrospective analysis of in-game markerless motion capture paired with ball-tracking data, examining whether hip–shoulder separation is associated with bat speed between and within Division I batters.",
+  "arguments": [
+   "Uses in-game markerless kinematics and tracking-derived bat speed at large scale.",
+   "Separates between-batter from within-batter associations.",
+   "The abstract reports greater separation associated with higher bat speed (effect sizes not confirmed here)."
+  ],
+  "evidence": "observational",
+  "design": "Retrospective observational analysis; 3,958 swings, 247 batters, NCAA Division I games.",
+  "strengths": "The largest in-game hitting biomechanics dataset found; within-batter analysis.",
+  "limitations": "Association only; markerless hitting kinematics not validated against a laboratory reference in this or any peer-reviewed study found; collegiate sample.",
+  "contested": null,
+  "generalizability": "Collegiate in-game hitting; generalization to professional hitters and to interventions is untested.",
+  "readingMinutes": 25,
+  "relevance": "The key peer-reviewed in-game markerless hitting study as of November 2026."
+ },
+ {
+  "id": "R-sonnenfeld-2021-analysis",
+  "title": "An Analysis of In Vivo Hip Kinematics in Elite Baseball Batters Using a Markerless Motion-Capture System",
+  "authors": [
+   "Sonnenfeld",
+   "et al."
+  ],
+  "publication": "Arthroscopy, Sports Medicine, and Rehabilitation, 3(3)",
+  "year": 2021,
+  "url": "https://doi.org/10.1016/j.asmr.2021.03.006",
+  "doi": "10.1016/j.asmr.2021.03.006",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "open",
+  "license": "Open access; copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "partially-confirmed",
+   "evidence": "Title, journal, first author, year and DOI matched on the Wiley/ScienceDirect listing in web search; sample of 29 elite players and the markerless system (Dynamic Athletic Research Institute) from the abstract. Volume/issue and co-authors not confirmed.",
+   "link": "not-opened"
+  },
+  "summary": "Used a markerless system to measure lead- and trail-hip motion during swings in 29 elite baseball players, reporting differences between the two hips.",
+  "arguments": [
+   "Markerless capture was used to describe hip range of motion during batting.",
+   "Lead and trail hips differed significantly."
+  ],
+  "evidence": "observational",
+  "design": "Cross-sectional descriptive study, 29 elite players.",
+  "strengths": "An early application of markerless capture to hitting.",
+  "limitations": "Small sample; no validation against a marker-based reference reported in the material reviewed.",
+  "contested": null,
+  "generalizability": "Descriptive; not a validation of markerless swing measurement.",
+  "readingMinutes": 20,
+  "relevance": "Shows the early, descriptive state of markerless hitting research."
+ },
+ {
+  "id": "R-camomilla-2018-trends",
+  "title": "Trends Supporting the In-Field Use of Wearable Inertial Sensors for Sport Performance Evaluation: A Systematic Review",
+  "authors": [
+   "V. Camomilla",
+   "E. Bergamini",
+   "S. Fantozzi",
+   "G. Vannozzi"
+  ],
+  "publication": "Sensors, 18(3), 873",
+  "year": 2018,
+  "url": "https://doi.org/10.3390/s18030873",
+  "doi": "10.3390/s18030873",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "open",
+  "license": "Open access (MDPI); copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Authors, title, journal, volume, article number and DOI matched on PubMed Central (PMC5877384) and university repositories in web search; review scope from the abstract.",
+   "link": "not-opened"
+  },
+  "summary": "A systematic review of wearable inertial sensors in sport (286 studies and 23 reviews to April 2017), covering capacity assessment, technique analysis, activity classification and physical demands.",
+  "arguments": [
+   "Most in-field IMU studies were conducted in training rather than competition.",
+   "Technique analysis was the most common application.",
+   "Reliability of sensor-based indicators and calibration remain central concerns."
+  ],
+  "evidence": "systematic-review",
+  "design": "Systematic search of four databases to April 2017.",
+  "strengths": "Broad, systematic coverage of in-field IMU use.",
+  "limitations": "Search ends in 2017; heterogeneous studies limit quantitative synthesis.",
+  "contested": null,
+  "generalizability": "Principles apply to baseball wearables; few included studies concern throwing or batting.",
+  "readingMinutes": 45,
+  "relevance": "Frames what IMUs measure and why field reliability must be shown."
+ },
+ {
+  "id": "R-boddy-2019-exploring",
+  "title": "Exploring wearable sensors as an alternative to marker-based motion capture in the pitching delivery",
+  "authors": [
+   "K. J. Boddy",
+   "et al."
+  ],
+  "publication": "PeerJ, 7, e6365",
+  "year": 2019,
+  "url": "https://doi.org/10.7717/peerj.6365",
+  "doi": "10.7717/peerj.6365",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "open",
+  "license": "CC BY 4.0 (PeerJ)",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "partially-confirmed",
+   "evidence": "Journal, article number, DOI and first author supplied in the brief and matched on peerj.com and PubMed Central (PMC6348088) in web search; findings (arm slot ≈ 8° lower; stress ≈ 41 N·m, 38.7% lower than elbow torque; significant correlations) from search excerpts. Co-authors not listed because they were not confirmed in search results.",
+   "link": "not-opened"
+  },
+  "summary": "Compared a commercial arm-worn inertial sensor's outputs with marker-based motion capture during pitching.",
+  "arguments": [
+   "Arm slot and shoulder rotation correlated with motion capture; arm slot averaged about 8° lower.",
+   "The sensor's stress metric correlated with elbow varus torque but was about 41 N·m (39%) lower.",
+   "Further work on validity and reliability was recommended."
+  ],
+  "evidence": "lab-experiment",
+  "design": "Concurrent comparison of sensor and marker-based outputs during pitching.",
+  "strengths": "Same throws measured by both systems; open access.",
+  "limitations": "Authors affiliated with a private training company; one sensor model and firmware; laboratory throws.",
+  "contested": "A later independent comparison reported poorer agreement for some sensor outputs; not cited here because its details could not be verified.",
+  "generalizability": "Specific to the device and version tested.",
+  "readingMinutes": 30,
+  "relevance": "Shows that wearable 'torque' is a correlated but biased estimate."
+ },
+ {
+  "id": "R-camp-2017-relationship",
+  "title": "The Relationship of Throwing Arm Mechanics and Elbow Varus Torque: Within-Subject Variation for Professional Baseball Pitchers Across 82,000 Throws",
+  "authors": [
+   "C. L. Camp",
+   "T. G. Tubbs",
+   "G. S. Fleisig",
+   "J. S. Dines",
+   "D. M. Dines",
+   "D. W. Altchek",
+   "B. Dowling"
+  ],
+  "publication": "American Journal of Sports Medicine, 45(13), 3030–3035",
+  "year": 2017,
+  "url": "https://doi.org/10.1177/0363546517719047",
+  "doi": "10.1177/0363546517719047",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Title, authors, journal, volume, issue, pages, DOI and PubMed ID (28806094) matched in web search; 81 professional pitchers wearing a sensor sleeve across about 82,000 throws from the abstract.",
+   "link": "not-opened"
+  },
+  "summary": "Described within-pitcher relationships between sensor-estimated elbow varus torque and arm slot, arm speed and arm rotation across many throws by professional pitchers.",
+  "arguments": [
+   "Estimated varus torque was related to arm slot, arm speed and shoulder rotation within pitchers.",
+   "Large numbers of throws were captured across warm-up, long toss, bullpens and games."
+  ],
+  "evidence": "observational",
+  "design": "Within-subject analysis of sensor data from 81 professional pitchers.",
+  "strengths": "Very large number of throws in real training and competition contexts.",
+  "limitations": "All variables come from the same sensor, so relationships may partly reflect the sensor's model; not a validation study; no injury outcomes.",
+  "contested": null,
+  "generalizability": "Professional pitchers; device-specific.",
+  "readingMinutes": 30,
+  "relevance": "Illustrates the difference between large data and validated measurement."
+ },
+ {
+  "id": "R-hermens-2000-development",
+  "title": "Development of recommendations for SEMG sensors and sensor placement procedures",
+  "authors": [
+   "H. J. Hermens",
+   "B. Freriks",
+   "C. Disselhorst-Klug",
+   "G. Rau"
+  ],
+  "publication": "Journal of Electromyography and Kinesiology, 10(5), 361–374",
+  "year": 2000,
+  "url": "https://doi.org/10.1016/S1050-6411(00)00027-4",
+  "doi": "10.1016/S1050-6411(00)00027-4",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Authors, title, journal, volume, issue, pages and DOI matched on the DOI resolver listing and PubMed (PMID 11018445) in web search; scope (144 papers, 27 muscles, SENIAM project) from the abstract.",
+   "link": "not-opened"
+  },
+  "summary": "Reports the European SENIAM project's recommendations for surface EMG sensor properties and placement, developed from a review of 144 papers, a workshop and multi-laboratory evaluation.",
+  "arguments": [
+   "Sensor size, inter-electrode distance and placement affect the recorded signal.",
+   "Placement procedures were specified for 27 muscles.",
+   "Standardization improves comparability across laboratories."
+  ],
+  "evidence": "review",
+  "design": "Literature inventory plus consensus and multi-laboratory evaluation.",
+  "strengths": "Widely adopted practical standard.",
+  "limitations": "Placement guidance does not solve crosstalk or electrode shift in fast movements.",
+  "contested": null,
+  "generalizability": "Applies to any surface EMG study of pitching or hitting.",
+  "readingMinutes": 30,
+  "relevance": "Standard reference for judging EMG methods."
+ },
+ {
+  "id": "R-mlb-2024-statcast",
+  "title": "Statcast Glossary: Bat Tracking — Bat Speed, Swing Length and Attack Angle",
+  "authors": [
+   "Major League Baseball"
+  ],
+  "publication": "MLB.com Statcast glossary",
+  "year": 2024,
+  "url": "https://www.mlb.com/glossary/statcast/swing-length",
+  "doi": null,
+  "discipline": "kinesiology",
+  "type": "website",
+  "access": "open",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "partially-confirmed",
+   "evidence": "Definitions matched in web search on MLB.com glossary pages for swing length and attack angle and in secondary quotations of the MLB bat-speed definition; the brief also supplied these URLs. Year reflects the 2024 introduction of bat tracking; individual pages may have been updated since.",
+   "link": "not-opened"
+  },
+  "summary": "MLB's published definitions of Statcast bat-tracking metrics: bat speed at the sweet spot at contact (or projected contact), swing length as the three-dimensional distance travelled by the bat head from the start of tracking to impact, and attack angle as the vertical direction of sweet-spot travel at contact.",
+  "arguments": [
+   "Bat speed is measured at the sweet spot at contact or the projected contact point.",
+   "Swing length sums the bat head's 3D path to impact.",
+   "Attack angle is the vertical angle of sweet-spot travel at contact."
+  ],
+  "evidence": "practitioner",
+  "design": null,
+  "strengths": "Authoritative definitions from the system's operator.",
+  "limitations": "Not a validation; per-swing measurement error is not published in the material reviewed.",
+  "contested": null,
+  "generalizability": "Applies to MLB Hawk-Eye installations; other sensors define bat speed differently.",
+  "readingMinutes": 15,
+  "relevance": "Exact definitions needed before interpreting tracked bat metrics."
+ },
+ {
+  "id": "R-petriello-2020-latest",
+  "title": "What the latest Statcast upgrade makes possible",
+  "authors": [
+   "M. Petriello"
+  ],
+  "publication": "MLB.com",
+  "year": 2020,
+  "url": "https://www.mlb.com/news/2020-statcast-update-includes-pose-tracking-capabilities",
+  "doi": null,
+  "discipline": "kinesiology",
+  "type": "article",
+  "access": "open",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "partially-confirmed",
+   "evidence": "Title, outlet, year and author matched in web search; content (twelve cameras for optical pitch, hit and player tracking; introduction of pose tracking) from the article's opening as returned by search. The 100 frames-per-second pitch-camera figure appeared in search excerpts attributed to MLB's 2020 description and should be treated as the 2020 configuration.",
+   "link": "not-opened"
+  },
+  "summary": "MLB's explanation of the 2020 move to Hawk-Eye optical tracking, including full-field tracking with twelve cameras and the introduction of pose tracking of players' bodies.",
+  "arguments": [
+   "Hawk-Eye provides optical pitch, batted-ball and player tracking from twelve cameras per park.",
+   "Pose tracking of player body positions was introduced with the upgrade."
+  ],
+  "evidence": "practitioner",
+  "design": null,
+  "strengths": "Primary public description from the league.",
+  "limitations": "Promotional context; no accuracy data; configuration may have changed since 2020.",
+  "contested": null,
+  "generalizability": "Describes MLB parks; not peer-reviewed.",
+  "readingMinutes": 10,
+  "relevance": "Verified public information about Hawk-Eye, without assuming accuracy."
+ },
+ {
+  "id": "R-hopkins-2000-measures",
+  "title": "Measures of reliability in sports medicine and science",
+  "authors": [
+   "W. G. Hopkins"
+  ],
+  "publication": "Sports Medicine, 30(1), 1–15",
+  "year": 2000,
+  "url": "https://doi.org/10.2165/00007256-200030010-00001",
+  "doi": "10.2165/00007256-200030010-00001",
+  "discipline": "statistics",
+  "type": "journal-article",
+  "access": "open",
+  "license": "Author-hosted copy at sportsci.org; copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Title, author, journal, volume, issue, pages and DOI supplied in the brief and matched on the DOI resolver and Victoria University repository in web search; author-hosted PDF on sportsci.org.",
+   "link": "not-opened"
+  },
+  "summary": "Argues that the typical error of measurement — within-subject standard deviation, often expressed as a coefficient of variation — should be the main reliability statistic in sport science, alongside change in the mean and retest correlation.",
+  "arguments": [
+   "Reliability has three components: within-subject random variation, systematic change in the mean, and retest correlation.",
+   "The typical error is the standard deviation of an individual's repeated measurements.",
+   "For two trials, typical error equals the SD of difference scores divided by √2."
+  ],
+  "evidence": "review",
+  "design": "Methodological review with worked statistics.",
+  "strengths": "Practical, widely used framework.",
+  "limitations": "Some recommendations (e.g., log transformation) need judgement for angular data.",
+  "contested": null,
+  "generalizability": "Directly applicable to biomechanical monitoring.",
+  "readingMinutes": 50,
+  "relevance": "The basis of this week's typical-error and MDC calculations."
+ },
+ {
+  "id": "R-atkinson-1998-statistical",
+  "title": "Statistical methods for assessing measurement error (reliability) in variables relevant to sports medicine",
+  "authors": [
+   "G. Atkinson",
+   "A. M. Nevill"
+  ],
+  "publication": "Sports Medicine, 26(4), 217–238",
+  "year": 1998,
+  "url": "https://doi.org/10.2165/00007256-199826040-00002",
+  "doi": "10.2165/00007256-199826040-00002",
+  "discipline": "statistics",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Title, authors, journal, volume, issue, pages and DOI supplied as pre-verified in the course brief (Nov 2026).",
+   "link": "not-opened"
+  },
+  "summary": "Reviews statistics for measurement error in sports medicine and argues that the choice should follow the intended use, combining absolute indices in measurement units with relative indices, and judging error against analytical goals.",
+  "arguments": [
+   "Correlation-based indices alone are inadequate for assessing measurement error.",
+   "Absolute error should be expressed in the units of measurement.",
+   "Acceptable error depends on the analytical goal of the measurement."
+  ],
+  "evidence": "review",
+  "design": "Methodological review.",
+  "strengths": "Clear comparison of statistics and their assumptions.",
+  "limitations": "Predates some later reporting guidance on ICC forms.",
+  "contested": null,
+  "generalizability": "Applies to biomechanical variables used in development decisions.",
+  "readingMinutes": 50,
+  "relevance": "Connects error statistics to fitness for a specific decision."
+ },
+ {
+  "id": "R-bland-1986-statistical",
+  "title": "Statistical methods for assessing agreement between two methods of clinical measurement",
+  "authors": [
+   "J. M. Bland",
+   "D. G. Altman"
+  ],
+  "publication": "The Lancet, 327(8476), 307–310",
+  "year": 1986,
+  "url": "https://doi.org/10.1016/S0140-6736(86)90837-8",
+  "doi": "10.1016/S0140-6736(86)90837-8",
+  "discipline": "statistics",
+  "type": "journal-article",
+  "access": "free-registration",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Title, authors, journal, volume, issue, pages and DOI matched in web search (DOI resolver, Cardiff and Oxford repository listings).",
+   "link": "not-opened"
+  },
+  "summary": "Shows why correlation is inappropriate for comparing two measurement methods and proposes plotting differences against means and reporting the mean difference and 95% limits of agreement.",
+  "arguments": [
+   "High correlation does not imply agreement.",
+   "Bias and limits of agreement (bias ± 1.96 SD of differences) describe interchangeability in measurement units.",
+   "Repeatability of each method limits the agreement achievable."
+  ],
+  "evidence": "theoretical",
+  "design": "Methodological paper with clinical examples.",
+  "strengths": "Simple, interpretable, widely adopted.",
+  "limitations": "Assumes differences are roughly normal and unrelated to magnitude unless adjusted.",
+  "contested": null,
+  "generalizability": "Standard for every markerless–marker comparison.",
+  "readingMinutes": 25,
+  "relevance": "The method for judging whether two systems can be swapped."
+ },
+ {
+  "id": "R-koo-2016-guideline",
+  "title": "A Guideline of Selecting and Reporting Intraclass Correlation Coefficients for Reliability Research",
+  "authors": [
+   "T. K. Koo",
+   "M. Y. Li"
+  ],
+  "publication": "Journal of Chiropractic Medicine, 15(2), 155–163",
+  "year": 2016,
+  "url": "https://doi.org/10.1016/j.jcm.2016.02.012",
+  "doi": "10.1016/j.jcm.2016.02.012",
+  "discipline": "statistics",
+  "type": "journal-article",
+  "access": "open",
+  "license": "Open access via PubMed Central (PMC4913118); copyright holder's terms.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Title, journal, volume, issue, pages, DOI and PMCID matched in web search (Scilit, GESIS and PMC records); interpretation thresholds from a secondary summary and consistent with the paper's widely cited guidance.",
+   "link": "not-opened"
+  },
+  "summary": "Explains the ten forms of ICC defined by model, type and definition, recommends reporting each choice with confidence intervals, and offers interpretation thresholds based on the confidence interval.",
+  "arguments": [
+   "ICC form depends on model (one-way random, two-way random, two-way mixed), type (single or mean) and definition (agreement or consistency).",
+   "Report software, model, type, definition and the 95% confidence interval.",
+   "Values below 0.5 indicate poor, 0.5–0.75 moderate, 0.75–0.9 good and above 0.9 excellent reliability."
+  ],
+  "evidence": "review",
+  "design": "Methodological guideline.",
+  "strengths": "Practical, explicit reporting checklist.",
+  "limitations": "Thresholds are conventions, not decision rules for individuals.",
+  "contested": null,
+  "generalizability": "Applies to all reliability studies in biomechanics.",
+  "readingMinutes": 30,
+  "relevance": "Reference for reading ICCs in validation papers."
+ },
+ {
+  "id": "R-weir-2005-quantifying",
+  "title": "Quantifying test-retest reliability using the intraclass correlation coefficient and the SEM",
+  "authors": [
+   "J. P. Weir"
+  ],
+  "publication": "Journal of Strength and Conditioning Research, 19(1), 231–240",
+  "year": 2005,
+  "url": "https://doi.org/10.1519/15184.1",
+  "doi": "10.1519/15184.1",
+  "discipline": "statistics",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Title, author, journal, volume, issue, pages and DOI matched in web search (bibliographic databases and sciencegate DOI listing).",
+   "link": "not-opened"
+  },
+  "summary": "A tutorial on ICC forms and the standard error of measurement for test–retest reliability, including the minimal difference needed to be considered real.",
+  "arguments": [
+   "ICC values depend on the chosen form and on between-subject variability.",
+   "The SEM expresses error in measurement units.",
+   "A minimal difference derived from the SEM indicates the change needed to exceed error."
+  ],
+  "evidence": "review",
+  "design": "Methodological tutorial with worked ANOVA examples.",
+  "strengths": "Clear derivations from ANOVA mean squares.",
+  "limitations": "Examples from strength testing rather than kinematics.",
+  "contested": null,
+  "generalizability": "Directly applicable to biomechanical test–retest data.",
+  "readingMinutes": 40,
+  "relevance": "Derivation of ICC and MDC used in this week's worked example."
+ }
+]

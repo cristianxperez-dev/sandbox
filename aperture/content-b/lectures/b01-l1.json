@@ -1,0 +1,975 @@
+{
+  "id": "b01-l1-lecture",
+  "lesson": "b01-l1",
+  "title": "The Body Sets the Menu",
+  "subtitle": "Functional anatomy and physical constraints",
+  "summary": "A narrated, interactive version of Lesson 1: joint structure, force–length, force–velocity and series elasticity, humeral retroversion, and how to tell a physical limitation from a coordination strategy or a task-specific adaptation. It covers the same objectives and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "One number, three stories",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Course B · Week 1 · Lesson 1 · Lecture",
+            "title": "The body sets the menu",
+            "sub": "Functional anatomy and physical constraints"
+          },
+          "cues": [
+            {
+              "text": "Two right-handed pitchers walk out of the same range-of-motion screen with the same number."
+            },
+            {
+              "text": "Each has about twenty degrees less internal rotation in his throwing shoulder than in the other one."
+            },
+            {
+              "text": "The case is hypothetical. The anatomy behind it is not. And by the end of this lecture you should be able to say why the same number can mean three very different things."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Three staff members, one screen",
+            "cards": [
+              {
+                "title": "Stretch both",
+                "q": "The shoulder is tight",
+                "fail": "Assumes soft tissue is the cause"
+              },
+              {
+                "title": "Check the total arc",
+                "q": "Add external rotation; ask about the bone",
+                "fail": "Needs both rotations, both sides"
+              },
+              {
+                "title": "Compare with layback",
+                "q": "How does passive range relate to the pitch?",
+                "fail": "Links a screen to a dynamic task"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Here is the meeting. One staff member says stretch them both.",
+              "reveal": 1
+            },
+            {
+              "text": "A second says the number means nothing until you know the total arc of rotation, and the shape of the bone.",
+              "reveal": 2
+            },
+            {
+              "text": "A third asks how each pitcher’s external rotation at maximal layback compares with his passive range.",
+              "reveal": 3
+            },
+            {
+              "text": "All three have a point. They are describing different mechanisms behind the same measurement."
+            },
+            {
+              "text": "So this lecture is not an anatomy review. It is about the parts of structure and muscle mechanics that change how you read a biomechanics report."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "What the joints permit",
+      "scenes": [
+        {
+          "visual": {
+            "type": "definition",
+            "kicker": "Prerequisite",
+            "term": "Degrees of freedom",
+            "definition": "A free rigid body has six: three translations and three rotations. A joint removes some of them.",
+            "example": "Humeroulnar hinge: about one rotation. Glenohumeral or hip ball-and-socket: three rotations, small translations."
+          },
+          "cues": [
+            {
+              "text": "Start with what a joint allows. A rigid body moving freely has six degrees of freedom: three translations and three rotations.",
+              "reveal": 1
+            },
+            {
+              "text": "A joint takes some of them away. The humeroulnar hinge allows essentially one rotation, flexion and extension. A ball-and-socket joint like the shoulder or hip allows three rotations, plus small translations.",
+              "reveal": 2,
+              "refs": [
+                "R-winter-2009-biomechanics"
+              ]
+            },
+            {
+              "text": "When a report lists shoulder external rotation, abduction and horizontal abduction, it is naming the three rotations of one joint under one definition. Lesson Two takes that definition apart."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Structures that shape throwing and hitting",
+            "cards": [
+              {
+                "title": "Glenohumeral joint",
+                "q": "Shallow socket, huge rotational range",
+                "fail": "Soft tissue must control the net loads"
+              },
+              {
+                "title": "Elbow",
+                "q": "Forearm lags as the humerus rotates",
+                "fail": "Medial side loaded in valgus"
+              },
+              {
+                "title": "Hip and thorax",
+                "q": "Pelvis turns over a fixed lead leg; the rib cage reorients the shoulder girdle",
+                "fail": "Limits show up as early finishes"
+              },
+              {
+                "title": "Lead knee",
+                "q": "Pivot of a decelerating body",
+                "fail": "Its flexion or extension differs by velocity group"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Four structures do most of the work in this course."
+            },
+            {
+              "text": "The glenohumeral joint is a shallow ball and socket. Its stability leans heavily on capsule, labrum and rotator cuff. That mobility is what makes extreme layback possible, and it is why large net loads have to be controlled by soft tissue.",
+              "reveal": 1
+            },
+            {
+              "text": "Inverse-dynamics studies of skilled pitchers report large net internal-rotation and varus moments around maximal external rotation, and large compressive forces near release.",
+              "refs": [
+                "R-fleisig-1995-kinetics",
+                "R-winter-2009-biomechanics"
+              ]
+            },
+            {
+              "text": "At the elbow, the forearm lags behind the rotating upper arm. That loads the medial elbow in valgus, and the net varus moment you see in a report is the summed response of every structure crossing the joint.",
+              "reveal": 2,
+              "refs": [
+                "R-fleisig-1995-kinetics"
+              ]
+            },
+            {
+              "text": "The hip’s rotation, together with pelvis orientation, decides how the pelvis can turn over a planted lead leg, in the delivery and in the swing. The thoracic spine and rib cage add rotation, side bending and extension that reorient the whole shoulder girdle.",
+              "reveal": 3
+            },
+            {
+              "text": "And the lead knee is the pivot of a body that is rotating and braking. Between-group comparisons find that how the lead knee flexes or extends after foot contact differs between pitchers who throw at different velocities.",
+              "reveal": 4,
+              "refs": [
+                "R-matsuo-2001-comparison"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Muscles at speed",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two curves that set capacity",
+            "left": {
+              "title": "Force–length",
+              "points": [
+                "Peak active force in mid-range",
+                "Less at very short or long lengths",
+                "Passive tissue adds force when long"
+              ]
+            },
+            "right": {
+              "title": "Force–velocity",
+              "points": [
+                "Faster shortening, less force",
+                "Lengthening can exceed isometric",
+                "Architecture sets both curves"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Now the muscle–tendon unit. Three relationships govern what it can do."
+            },
+            {
+              "text": "Force–length first. Active force is greatest over a middle range of sarcomere length and falls off at the extremes, while passive tissue adds force when the muscle is long.",
+              "reveal": 1,
+              "refs": [
+                "R-lieber-2000-functional"
+              ]
+            },
+            {
+              "text": "Force–velocity second. The faster a muscle shortens, the less force it makes. A lengthening muscle can actually exceed its isometric maximum.",
+              "reveal": 2,
+              "refs": [
+                "R-lieber-2000-functional",
+                "R-winter-2009-biomechanics"
+              ]
+            },
+            {
+              "text": "Third, architecture sets both curves. Cross-sectional area mainly sets maximal force. The number of sarcomeres in series sets excursion and maximal shortening speed.",
+              "refs": [
+                "R-lieber-2000-functional"
+              ]
+            },
+            {
+              "text": "Here’s a prediction. On a standard Hill-type curve, a muscle shortening at half its maximal velocity produces what fraction of its isometric force?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-hill",
+            "type": "estimate",
+            "prompt": "With the normalized Hill curve used in the lesson, what percentage of isometric force does a muscle produce when shortening at half its maximal velocity?",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "initial": 50,
+            "answer": 17,
+            "tolerance": 5,
+            "concept": "c-muscle-mechanics",
+            "feedback": {
+              "correct": "Right: about seventeen percent. Half the speed costs far more than half the force.",
+              "incorrect": "The answer is about seventeen percent. The curve is strongly hyperbolic, so force collapses well before shortening speed reaches its maximum."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "curves",
+            "title": "Force and power while shortening",
+            "xLabel": "Shortening velocity, fraction of maximum",
+            "yLabel": "Fraction of maximum",
+            "series": [
+              {
+                "label": "Force, fraction of isometric",
+                "points": [
+                  [
+                    0,
+                    1
+                  ],
+                  [
+                    0.05,
+                    0.792
+                  ],
+                  [
+                    0.1,
+                    0.643
+                  ],
+                  [
+                    0.15,
+                    0.531
+                  ],
+                  [
+                    0.2,
+                    0.444
+                  ],
+                  [
+                    0.25,
+                    0.375
+                  ],
+                  [
+                    0.3,
+                    0.318
+                  ],
+                  [
+                    0.35,
+                    0.271
+                  ],
+                  [
+                    0.4,
+                    0.231
+                  ],
+                  [
+                    0.45,
+                    0.196
+                  ],
+                  [
+                    0.5,
+                    0.167
+                  ],
+                  [
+                    0.55,
+                    0.141
+                  ],
+                  [
+                    0.6,
+                    0.118
+                  ],
+                  [
+                    0.65,
+                    0.097
+                  ],
+                  [
+                    0.7,
+                    0.079
+                  ],
+                  [
+                    0.75,
+                    0.063
+                  ],
+                  [
+                    0.8,
+                    0.048
+                  ],
+                  [
+                    0.85,
+                    0.034
+                  ],
+                  [
+                    0.9,
+                    0.022
+                  ],
+                  [
+                    0.95,
+                    0.01
+                  ],
+                  [
+                    1,
+                    0
+                  ]
+                ]
+              },
+              {
+                "label": "Power × 10, fraction of F0·Vmax",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    0.05,
+                    0.396
+                  ],
+                  [
+                    0.1,
+                    0.643
+                  ],
+                  [
+                    0.15,
+                    0.797
+                  ],
+                  [
+                    0.2,
+                    0.889
+                  ],
+                  [
+                    0.25,
+                    0.938
+                  ],
+                  [
+                    0.3,
+                    0.955
+                  ],
+                  [
+                    0.35,
+                    0.948
+                  ],
+                  [
+                    0.4,
+                    0.923
+                  ],
+                  [
+                    0.45,
+                    0.884
+                  ],
+                  [
+                    0.5,
+                    0.833
+                  ],
+                  [
+                    0.55,
+                    0.773
+                  ],
+                  [
+                    0.6,
+                    0.706
+                  ],
+                  [
+                    0.65,
+                    0.632
+                  ],
+                  [
+                    0.7,
+                    0.553
+                  ],
+                  [
+                    0.75,
+                    0.469
+                  ],
+                  [
+                    0.8,
+                    0.381
+                  ],
+                  [
+                    0.85,
+                    0.29
+                  ],
+                  [
+                    0.9,
+                    0.196
+                  ],
+                  [
+                    0.95,
+                    0.099
+                  ],
+                  [
+                    1,
+                    0
+                  ]
+                ]
+              }
+            ],
+            "markers": [
+              {
+                "x": 0.31,
+                "label": "Peak power"
+              }
+            ],
+            "note": "Illustrative: normalized Hill equation with a/F0 = 0.25, as in the lesson. Real muscles vary with fibre type and temperature."
+          },
+          "cues": [
+            {
+              "text": "About seventeen percent. Look at the force curve. It drops steeply and keeps dropping.",
+              "reveal": 1
+            },
+            {
+              "text": "These are idealized numbers from a common normalization, not measurements. At one third of maximal speed the force is already down to about twenty-nine percent."
+            },
+            {
+              "text": "Power is force times velocity, so it rises and falls. It peaks near thirty-one percent of maximal speed, at under a tenth of the theoretical product of maximal force and maximal speed. I have scaled it up tenfold so you can see it.",
+              "reveal": 2
+            },
+            {
+              "text": "So here is the point. A muscle shortening very fast contributes little force and little power."
+            },
+            {
+              "text": "The extreme segment speeds of a throw or a swing cannot come from muscles shortening at those speeds alone. Something else has to supply them."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "flow",
+            "title": "Series elasticity in the throwing shoulder",
+            "steps": [
+              {
+                "label": "Stretch",
+                "text": "Arm cocking drives the shoulder into external rotation"
+              },
+              {
+                "label": "Store",
+                "text": "Tendons and soft tissue lengthen under resistance"
+              },
+              {
+                "label": "Return",
+                "text": "Recoil during internal rotation, faster than contraction alone"
+              },
+              {
+                "label": "Interact",
+                "text": "Segment interaction adds velocity too, Lesson 3"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Two things, chiefly. The first is series elasticity."
+            },
+            {
+              "text": "Tendons, aponeuroses and other passive tissue sit in series with the contractile machinery. Drive a joint into a stretch while the muscles resist, and those tissues lengthen.",
+              "reveal": 1
+            },
+            {
+              "text": "They store elastic strain energy, and they can return it during the next shortening faster than the muscle fibres could deliver it.",
+              "reveal": 2
+            },
+            {
+              "text": "Roach and colleagues measured twenty experienced throwers and argued that the shoulder’s soft tissues store energy during arm cocking that powers the very fast internal rotation that follows.",
+              "reveal": 3,
+              "refs": [
+                "R-roach-2013-elastic"
+              ]
+            },
+            {
+              "text": "When they restricted external rotation with a brace, work and power at the elbow fell, which is consistent with that account.",
+              "refs": [
+                "R-roach-2013-elastic"
+              ]
+            },
+            {
+              "text": "The second mechanism is segment interaction: moving segments push and pull on their neighbours. That is the core of Lesson Three.",
+              "reveal": 4,
+              "refs": [
+                "R-hirashima-2008-kinetic"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "When throwing builds the bone",
+      "scenes": [
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Reading a range-of-motion screen",
+            "lines": [
+              {
+                "label": "Throwing side: internal + external",
+                "value": "45° + 120° = 165°"
+              },
+              {
+                "label": "Other side: internal + external",
+                "value": "65° + 100° = 165°"
+              },
+              {
+                "label": "Internal-rotation difference",
+                "value": "20°"
+              }
+            ],
+            "result": {
+              "label": "Total-arc deficit",
+              "value": "0°: the arc has shifted"
+            },
+            "note": "Hypothetical pitcher, from the lesson’s worked problem."
+          },
+          "cues": [
+            {
+              "text": "Back to our two pitchers. Throwing itself changes the arm."
+            },
+            {
+              "text": "Computed tomography of professional pitchers found more humeral head retroversion on the throwing side, with more external rotation and less internal rotation, while the total arc of rotation was similar between sides.",
+              "refs": [
+                "R-crockett-2002-osseous"
+              ]
+            },
+            {
+              "text": "Let’s read a screen with that in mind. The numbers are invented. Throwing side: forty-five degrees of internal rotation plus one hundred twenty of external rotation, one hundred sixty-five in total.",
+              "reveal": 1
+            },
+            {
+              "text": "Other side: sixty-five plus one hundred, also one hundred sixty-five.",
+              "reveal": 2
+            },
+            {
+              "text": "Yes, internal rotation differs by twenty degrees.",
+              "reveal": 3
+            },
+            {
+              "text": "But there is no total-arc deficit. The arc has moved toward external rotation, a pattern that fits bony retroversion and the professional data, not global tightness.",
+              "reveal": 4,
+              "refs": [
+                "R-crockett-2002-osseous"
+              ]
+            },
+            {
+              "text": "Now change one number. Suppose throwing-side external rotation were one hundred five degrees instead. What is the total-arc deficit?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-arc",
+            "type": "estimate",
+            "prompt": "Throwing side: internal rotation 45°, external rotation 105°. Other side: 65° and 100°. How large is the total-arc deficit?",
+            "min": 0,
+            "max": 40,
+            "step": 1,
+            "unit": "°",
+            "initial": 20,
+            "answer": 15,
+            "tolerance": 1,
+            "concept": "c-humeral-retroversion",
+            "feedback": {
+              "correct": "Yes: one hundred fifty against one hundred sixty-five, a fifteen-degree deficit.",
+              "incorrect": "Add each side: forty-five plus one hundred five is one hundred fifty; sixty-five plus one hundred is one hundred sixty-five. The deficit is fifteen degrees."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "A shifted arc is expected.",
+              "A shrunken arc is a reason to refer."
+            ],
+            "sub": "Not a diagnosis. Goniometry error is several degrees."
+          },
+          "cues": [
+            {
+              "text": "Fifteen degrees. One hundred fifty against one hundred sixty-five. Now the pattern no longer looks like the expected adaptation."
+            },
+            {
+              "text": "In a prospective study of professional pitchers over three seasons, a total-rotation deficit greater than five degrees was associated with more injuries.",
+              "refs": [
+                "R-wilk-2011-correlation"
+              ]
+            },
+            {
+              "text": "That makes the deficit a reason for clinical evaluation, not a diagnosis. This is educational content, and the clinical judgement belongs to licensed clinicians.",
+              "reveal": 1
+            },
+            {
+              "text": "And notice the measurement problem. Goniometry carries errors of several degrees, so a five-degree threshold sits close to measurement noise. Week Two takes that up."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Longer lever, same angular velocity",
+            "lines": [
+              {
+                "label": "Forearm and hand about the elbow",
+                "value": "40 rad/s"
+              },
+              {
+                "label": "Point 0.30 m from the elbow",
+                "value": "40 × 0.30 = 12 m/s"
+              },
+              {
+                "label": "Point 0.35 m from the elbow",
+                "value": "40 × 0.35 = 14 m/s"
+              }
+            ],
+            "result": {
+              "label": "But inertia grows with",
+              "value": "mass × distance²"
+            },
+            "note": "Synthetic numbers, from the lesson."
+          },
+          "cues": [
+            {
+              "text": "Bone shape is one fixed constraint. Segment size is another, and no coaching cue changes it."
+            },
+            {
+              "text": "Linear speed equals angular velocity times radius. Rotate the forearm and hand at forty radians per second, and a point thirty centimetres from the elbow moves at twelve metres per second.",
+              "reveal": 1
+            },
+            {
+              "text": "Thirty-five centimetres out, at the same angular velocity, it moves at fourteen.",
+              "reveal": 2
+            },
+            {
+              "text": "So taller athletes throw harder? Not automatically.",
+              "reveal": 3
+            },
+            {
+              "text": "A segment’s moment of inertia grows with mass times the square of distance, so the longer lever needs more moment to accelerate. And laboratories estimate those inertial values from tables or scaling rules, which adds error to every computed moment.",
+              "reveal": 4,
+              "refs": [
+                "R-winter-2009-biomechanics",
+                "R-robertson-2014-research"
+              ]
+            },
+            {
+              "text": "Physical capacity is the other half: strength, rate of force development, mobility and tissue tolerance. It is trainable, but slowly, and it reaches on-field mechanics through coordination, not directly."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Limit, strategy or adaptation",
+      "scenes": [
+        {
+          "visual": {
+            "type": "matrix",
+            "title": "Three explanations for one difference",
+            "x": [
+              "Little change through practice",
+              "Substantial change through practice"
+            ],
+            "y": [
+              "Not produced by the task",
+              "Produced or shaped by the task"
+            ],
+            "cells": [
+              [
+                "Task-specific adaptation: humeral retroversion, shifted arc",
+                "Adaptive strategy: a slot that fits his own shoulder"
+              ],
+              [
+                "Physical limitation: structure or capacity sets a boundary",
+                "Motor-control strategy: one learned option among several"
+              ]
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the central decision of this lesson. Every movement difference in a report needs a classification before it needs a cue."
+            },
+            {
+              "text": "Top left: a task-specific adaptation. Years of throwing changed the structure. Retroversion is the standard example, and stretching it would misread the anatomy.",
+              "reveal": 1
+            },
+            {
+              "text": "Top right: an adaptive strategy. A learned solution that exploits the athlete’s own anatomy, like an arm slot that fits his shoulder.",
+              "reveal": 2
+            },
+            {
+              "text": "Bottom left: a physical limitation. Structure or capacity sets a boundary: bone geometry from another cause, a strength deficit, an old injury.",
+              "reveal": 3
+            },
+            {
+              "text": "Bottom right: a motor-control strategy. The body permits alternatives, and the athlete has learned or chosen one of them.",
+              "reveal": 4
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "A hitter who stops his pelvis early",
+            "steps": [
+              "Structural limit of lead-hip internal rotation: imaging and clinical assessment",
+              "Strength or capacity limit: capacity work",
+              "Learned pattern: practice design",
+              "The swing alone does not say which"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Make it concrete with a hitter. He stops pelvis rotation early and finishes with his trunk alone. His lead hip does not internally rotate very far."
+            },
+            {
+              "text": "If that is a structural limit, the plan is imaging and clinical assessment.",
+              "reveal": 1
+            },
+            {
+              "text": "If it is a capacity limit, the plan is strength work.",
+              "reveal": 2
+            },
+            {
+              "text": "If the hip has the range and the strength, and he simply organizes the swing this way, it is a strategy, and the plan is practice design, or perhaps no change at all.",
+              "reveal": 3
+            },
+            {
+              "text": "The swing difference by itself does not tell you which. You need the passive range, a strength measure, and how the pattern behaves across tasks.",
+              "reveal": 4
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Claim: more layback, more velocity",
+            "steps": [
+              "Observed: high-velocity groups show more maximal external rotation",
+              "Mechanism: longer hand path, elastic storage",
+              "Evidence: cross-sectional groups, one small bracing study",
+              "Uncertain: range, bone, strength or timing? Within a pitcher?",
+              "Intervention raising layback raises velocity: not shown",
+              "Transfer to competition: unknown",
+              "Loading: coincides with large net moments, not an injury probability"
+            ]
+          },
+          "cues": [
+            {
+              "text": "Here is where the anatomy argument gets overstated. Take a popular claim: greater layback makes a pitcher throw harder. Run it through the seven questions."
+            },
+            {
+              "text": "Observed: a high-velocity group shows more maximal external rotation than a low-velocity group. That is a measurement linked to a mechanical output, ball speed.",
+              "reveal": 1,
+              "refs": [
+                "R-matsuo-2001-comparison"
+              ]
+            },
+            {
+              "text": "Mechanism: a longer acceleration path for the hand, plus elastic storage.",
+              "reveal": 2,
+              "refs": [
+                "R-roach-2013-elastic"
+              ]
+            },
+            {
+              "text": "Evidence: cross-sectional comparisons and one small bracing manipulation. No randomized study raises layback and measures velocity.",
+              "reveal": 3
+            },
+            {
+              "text": "Uncertain: whether the association reflects passive range, bone, strength or timing, and whether it holds within one pitcher.",
+              "reveal": 4
+            },
+            {
+              "text": "Has changing the variable improved performance? Not demonstrated. Transfer to competition? Unknown.",
+              "reveal": 6
+            },
+            {
+              "text": "And loading: greater external rotation coincides with large net internal-rotation and varus moments. A net moment is not an injury probability, but the claim cannot be judged on velocity alone.",
+              "reveal": 7,
+              "refs": [
+                "R-fleisig-1995-kinetics"
+              ]
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-layback",
+            "type": "choice",
+            "prompt": "A development staff wants to train every pitcher toward more layback because high-velocity groups show more of it. Which part of the seven-question standard is the weakest link?",
+            "concept": "c-physical-vs-coordination-constraint",
+            "options": [
+              {
+                "id": "a",
+                "text": "Whether the high-velocity group really shows more layback"
+              },
+              {
+                "id": "b",
+                "text": "Whether changing layback has been shown to raise velocity"
+              },
+              {
+                "id": "c",
+                "text": "Whether a mechanism has been proposed"
+              },
+              {
+                "id": "d",
+                "text": "Whether layback can be measured at all"
+              }
+            ],
+            "answer": "b",
+            "feedback": {
+              "a": "The group difference is the best-supported piece. The problem is what it licenses: a between-group association does not show that changing one pitcher changes his velocity.",
+              "b": "Correct. No intervention study shows that training greater layback raises velocity, and transfer to competition is unknown. A group difference is not a prescription.",
+              "c": "A mechanism has been proposed, a longer hand path plus elastic storage. A plausible mechanism is not a demonstrated intervention effect.",
+              "d": "Layback is measurable, with definitional caveats covered in Lesson 2. The weak link is the missing intervention evidence."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Holding the argument honestly",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Where the evidence is thinner",
+            "left": {
+              "title": "Range of motion and injury",
+              "points": [
+                "Internal-rotation deficit: not significant",
+                "Total-arc deficit: associated",
+                "Review: low power, no prospective 3D studies"
+              ]
+            },
+            "right": {
+              "title": "Elastic energy",
+              "points": [
+                "Storage inferred from a model and a brace",
+                "Non-elite throwers",
+                "Share of elite arm speed unknown"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Now let me argue against my own lecture. The anatomy story is cleaner than the evidence."
+            },
+            {
+              "text": "In the professional cohort, pitchers with an internal-rotation deficit were nearly twice as likely to be injured, but the difference was not statistically significant.",
+              "reveal": 1,
+              "refs": [
+                "R-wilk-2011-correlation"
+              ]
+            },
+            {
+              "text": "A systematic review of pitching mechanics and injury found that low power and a lack of prospective three-dimensional studies keep most mechanical variables from being established as risk factors.",
+              "refs": [
+                "R-bullock-2021-baseball"
+              ]
+            },
+            {
+              "text": "The elastic-energy story is also easier to state than to quantify. Storage was inferred from a model and a brace, in non-elite throwers. How much of an elite pitcher’s arm speed it supplies, and whether training can safely raise it, is not established.",
+              "reveal": 2,
+              "refs": [
+                "R-roach-2013-elastic"
+              ]
+            },
+            {
+              "text": "Their evolutionary claim, that throwing shaped early humans, is a separate argument that some anthropologists dispute.",
+              "refs": [
+                "R-roach-2013-elastic"
+              ]
+            },
+            {
+              "text": "And induced-acceleration work credits much of distal speed to interaction torques. The two accounts are compatible, but they compete for the same velocity budget, and nobody knows the shares.",
+              "refs": [
+                "R-hirashima-2008-kinetic"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "Agree the referral rules in advance.",
+              "Read total arc, both sides.",
+              "Treat bony shifts as normal for throwers."
+            ],
+            "sub": "Clinical judgement belongs to licensed clinicians."
+          },
+          "cues": [
+            {
+              "text": "So what does an executive do with one screen read by three departments? Medical sees a risk factor, strength sees a mobility target, coaching sees a slot."
+            },
+            {
+              "text": "Agree in advance which pattern triggers which referral.",
+              "reveal": 1
+            },
+            {
+              "text": "Read total arc and side-to-side differences, never one number.",
+              "reveal": 2
+            },
+            {
+              "text": "And treat bone-driven shifts as normal for throwers unless a clinician says otherwise. Your job is to get the data to clinicians in a form they can interpret."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "The Biomechanics Foundations Lab",
+                "detail": "Four hands-on stations, about ten minutes each",
+                "href": "#/exercise/b01-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Putnam (1993), sequential motions in striking and throwing",
+                "href": "#/library/R-putnam-1993-sequential"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let’s bring it together."
+            },
+            {
+              "text": "Structure, muscle mechanics and adaptation set the menu of movements an athlete can use. Fast-shortening muscle makes little force, so the fastest motions in baseball lean on elastic recoil and segment interaction."
+            },
+            {
+              "text": "And a movement difference may be a limitation, a strategy or an adaptation. Only additional evidence tells you which, and each calls for a different decision."
+            },
+            {
+              "text": "Take the comprehension check below, the same as the written lesson. Then open the Biomechanics Foundations Lab, and read Putnam on sequential segment motion, which sets up the kinetics of Lesson Three.",
+              "reveal": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

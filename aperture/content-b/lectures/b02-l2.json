@@ -1,0 +1,1049 @@
+{
+  "id": "b02-l2-lecture",
+  "lesson": "b02-l2",
+  "title": "Joints Without Markers",
+  "subtitle": "Markerless motion capture: how it works and what the evidence supports",
+  "summary": "A narrated, interactive version of Lesson 2. It covers the same objectives — how keypoint detection, multi-camera reconstruction and skeletal fitting produce markerless angles, how to read agreement studies and their systematic biases, and what the evidence does and does not establish for in-game pitching and hitting — and leads into the same comprehension check.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "Lab says 176, game says 165",
+      "scenes": [
+        {
+          "visual": {
+            "type": "title",
+            "kicker": "Week 2 · Lesson 2 · Lecture",
+            "title": "Joints without markers",
+            "sub": "Markerless motion capture: how it works and what the evidence supports"
+          },
+          "cues": [
+            {
+              "text": "Markerless capture promises something marker systems never could: biomechanics during an actual game."
+            },
+            {
+              "text": "This lecture asks what that promise is worth. How does video become a joint angle? What do the agreement studies really show? And what can in-game pitching and hitting data support today, and what can't they?"
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "Two systems, one pitcher",
+            "items": [
+              {
+                "value": "176°",
+                "label": "Lab, marker-based: peak shoulder external rotation"
+              },
+              {
+                "value": "165°",
+                "label": "Next start, stadium markerless system"
+              },
+              {
+                "value": "Same",
+                "label": "Fastball velocity"
+              }
+            ],
+            "note": "Synthetic data from the lesson vignette."
+          },
+          "cues": [
+            {
+              "text": "Here is the scene, with an invented pitcher and invented numbers.",
+              "reveal": 0
+            },
+            {
+              "text": "His laboratory report, from a marker-based system, shows peak shoulder external rotation of one hundred seventy-six degrees.",
+              "reveal": 1
+            },
+            {
+              "text": "The stadium's markerless system, at his next start, shows one hundred sixty-five, on fastballs of the same velocity.",
+              "reveal": 2
+            },
+            {
+              "text": "His pitching coach asks whether he has lost his layback between the lab and the game. Before we go on, think of three explanations for an eleven-degree gap that have nothing to do with a change in the pitcher.",
+              "reveal": 3
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Four candidate explanations",
+            "steps": [
+              "System-specific bias",
+              "Setting: game versus laboratory",
+              "Random error in either system",
+              "A genuine change in the athlete"
+            ]
+          },
+          "cues": [
+            {
+              "text": "There are at least four candidates.",
+              "reveal": 0
+            },
+            {
+              "text": "First, a system-specific bias: the two systems define or locate the shoulder differently.",
+              "reveal": 1
+            },
+            {
+              "text": "Second, the setting: game versus laboratory intensity, clothing, warm-up and arousal.",
+              "reveal": 2
+            },
+            {
+              "text": "Third, random error in either system.",
+              "reveal": 3
+            },
+            {
+              "text": "Only fourth, a genuine change in the athlete.",
+              "reveal": 4
+            },
+            {
+              "text": "The literature can estimate the first, partly inform the second, and tell you how large the third is likely to be. Only after subtracting those can you consider the fourth. This lecture is about doing that subtraction honestly."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "How video becomes an angle",
+      "scenes": [
+        {
+          "visual": {
+            "type": "flow",
+            "title": "The markerless pipeline",
+            "steps": [
+              {
+                "label": "Video",
+                "text": "Synchronized, calibrated cameras"
+              },
+              {
+                "label": "2D keypoints",
+                "text": "Network trained on human labels"
+              },
+              {
+                "label": "3D reconstruction",
+                "text": "Triangulate or fit across views"
+              },
+              {
+                "label": "Skeletal model",
+                "text": "Segment lengths, joint limits"
+              },
+              {
+                "label": "Angles and events",
+                "text": "Sequence and event definitions"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let's build the pipeline, and at every step name the assumption hiding inside it.",
+              "reveal": 0
+            },
+            {
+              "text": "It starts with synchronized, calibrated video. Frame rate and exposure set motion blur and temporal resolution.",
+              "reveal": 1
+            },
+            {
+              "text": "In each image, a convolutional neural network detects keypoints. It was trained on large sets of images in which people labelled joint locations, and it outputs the most likely two-dimensional position of each keypoint.",
+              "reveal": 2,
+              "refs": [
+                "R-wade-2022-applications"
+              ]
+            },
+            {
+              "text": "The assumption: that the labelled point corresponds to the joint you care about. Wade and colleagues' review makes the central point. Open-source pose models were not designed for biomechanics, and their labels are visual estimates of joint locations, inconsistently placed, not anatomical joint centres.",
+              "refs": [
+                "R-wade-2022-applications"
+              ]
+            },
+            {
+              "text": "Next, the two-dimensional detections from several views are triangulated, or used to fit a three-dimensional model. That assumes enough cameras see each joint without occlusion.",
+              "reveal": 3,
+              "refs": [
+                "R-wade-2022-applications"
+              ]
+            },
+            {
+              "text": "The skeletal model then imposes segment lengths and limits on joint freedom. It assumes the model's anatomy fits this athlete.",
+              "reveal": 4,
+              "refs": [
+                "R-wade-2022-applications"
+              ]
+            },
+            {
+              "text": "Finally, angles come from the fitted segment orientations, and events like foot contact are detected. Those definitions must match whatever system you compare against.",
+              "reveal": 5
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "compare",
+            "title": "Two consequences",
+            "left": {
+              "title": "An analogous artifact",
+              "points": [
+                "No skin markers to slide",
+                "Joints inferred from surface and clothing",
+                "Long-axis rotation poorly constrained"
+              ]
+            },
+            "right": {
+              "title": "Systems not interchangeable",
+              "points": [
+                "Each vendor trains differently",
+                "Each constrains the skeleton differently",
+                "Not interchangeable with each other either"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Two consequences follow.",
+              "reveal": 0
+            },
+            {
+              "text": "First, markerless systems have no soft-tissue artifact in the marker sense, but they have an analogue. The network infers joints from the visible body surface and clothing, and an outline barely constrains long-axis rotations like humeral rotation or forearm pronation.",
+              "reveal": 1
+            },
+            {
+              "text": "Second, every vendor's model is trained and constrained differently. Two markerless systems are no more interchangeable with each other than either is with a marker system.",
+              "reveal": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "What the agreement studies show",
+      "scenes": [
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Three comparisons",
+            "cards": [
+              {
+                "title": "Fleisig 2022",
+                "q": "Pitching: 30 pitchers, 275 fastballs, simultaneous",
+                "fail": "Shapes agree; discrete values differ"
+              },
+              {
+                "title": "Aguinaldo 2025",
+                "q": "Pitching: 18 collegiate; Hawk-Eye and Theia3D",
+                "fail": "Joint error ≈ 52–57 mm; shoulder rotation worst"
+              },
+              {
+                "title": "Kanko 2021",
+                "q": "Treadmill gait: 30 adults, Theia3D",
+                "fail": "Gait is an upper bound for throwing"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Now the evidence. Three comparisons matter most.",
+              "reveal": 0
+            },
+            {
+              "text": "Fleisig and colleagues recorded two hundred seventy-five fastballs from thirty pitchers, with a mean age of about seventeen, simultaneously with a nine-camera markerless system and a twelve-camera marker system, both at two hundred forty frames per second.",
+              "reveal": 1,
+              "refs": [
+                "R-fleisig-2022-comparison"
+              ]
+            },
+            {
+              "text": "The waveforms agreed closely in shape, with coefficients of multiple correlation from zero point eight eight to zero point nine seven. But several discrete values differed systematically, and the authors recommended separate normative ranges for each system.",
+              "refs": [
+                "R-fleisig-2022-comparison"
+              ]
+            },
+            {
+              "text": "Aguinaldo and colleagues captured eighteen collegiate pitchers with a marker-based reference, an in-stadium Hawk-Eye system and a portable Theia3D system at once. Mean per-joint position errors were fifty-six point six and fifty-two millimetres.",
+              "reveal": 2,
+              "refs": [
+                "R-aguinaldo-2025-assessing"
+              ],
+              "say": "Aguinaldo and colleagues captured eighteen collegiate pitchers with a marker-based reference, an in-stadium Hawk-Eye system and a portable Theia three D system at once. Mean per-joint position errors were fifty-six point six and fifty-two millimetres."
+            },
+            {
+              "text": "Stride length agreed best and shoulder rotational variables least. The authors concluded that camera configuration, deployment and the pose model all affect accuracy, and their kinetic estimates inherit these position errors.",
+              "refs": [
+                "R-aguinaldo-2025-assessing"
+              ]
+            },
+            {
+              "text": "Outside baseball, Kanko and colleagues compared Theia3D with markers in treadmill walking in thirty adults. Most joint centres differed by about two and a half centimetres or less, three point six at the hip, and long-axis rotations differed most.",
+              "reveal": 3,
+              "refs": [
+                "R-kanko-2021-concurrent"
+              ],
+              "say": "Outside baseball, Kanko and colleagues compared Theia three D with markers in treadmill walking in thirty adults. Most joint centres differed by about two and a half centimetres or less, three point six at the hip, and long-axis rotations differed most."
+            },
+            {
+              "text": "One author was the developer company's president, a conflict the preprint disclosed. And walking is slow. Agreement in gait is an upper bound for throwing, not an estimate of it.",
+              "refs": [
+                "R-kanko-2021-concurrent"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "curves",
+            "title": "Same shape, different peak",
+            "xLabel": "Delivery (% of time)",
+            "yLabel": "Shoulder external rotation (°)",
+            "series": [
+              {
+                "label": "Marker-based",
+                "points": [
+                  [
+                    0,
+                    40
+                  ],
+                  [
+                    5,
+                    40
+                  ],
+                  [
+                    10,
+                    40
+                  ],
+                  [
+                    15,
+                    40
+                  ],
+                  [
+                    20,
+                    40
+                  ],
+                  [
+                    25,
+                    40
+                  ],
+                  [
+                    30,
+                    40.1
+                  ],
+                  [
+                    35,
+                    40.6
+                  ],
+                  [
+                    40,
+                    42.5
+                  ],
+                  [
+                    45,
+                    47.9
+                  ],
+                  [
+                    50,
+                    60.5
+                  ],
+                  [
+                    55,
+                    84
+                  ],
+                  [
+                    60,
+                    117.5
+                  ],
+                  [
+                    65,
+                    152.3
+                  ],
+                  [
+                    70,
+                    173.9
+                  ],
+                  [
+                    75,
+                    171.3
+                  ],
+                  [
+                    80,
+                    145.9
+                  ],
+                  [
+                    85,
+                    110.3
+                  ],
+                  [
+                    90,
+                    78.4
+                  ],
+                  [
+                    95,
+                    57.2
+                  ],
+                  [
+                    100,
+                    46.4
+                  ]
+                ]
+              },
+              {
+                "label": "Markerless",
+                "points": [
+                  [
+                    0,
+                    30
+                  ],
+                  [
+                    5,
+                    30
+                  ],
+                  [
+                    10,
+                    30
+                  ],
+                  [
+                    15,
+                    30
+                  ],
+                  [
+                    20,
+                    30
+                  ],
+                  [
+                    25,
+                    30
+                  ],
+                  [
+                    30,
+                    30.1
+                  ],
+                  [
+                    35,
+                    30.6
+                  ],
+                  [
+                    40,
+                    32.5
+                  ],
+                  [
+                    45,
+                    37.9
+                  ],
+                  [
+                    50,
+                    50.5
+                  ],
+                  [
+                    55,
+                    74
+                  ],
+                  [
+                    60,
+                    107.5
+                  ],
+                  [
+                    65,
+                    142.3
+                  ],
+                  [
+                    70,
+                    163.9
+                  ],
+                  [
+                    75,
+                    161.3
+                  ],
+                  [
+                    80,
+                    135.9
+                  ],
+                  [
+                    85,
+                    100.3
+                  ],
+                  [
+                    90,
+                    68.4
+                  ],
+                  [
+                    95,
+                    47.2
+                  ],
+                  [
+                    100,
+                    36.4
+                  ]
+                ]
+              }
+            ],
+            "markers": [
+              {
+                "x": 72,
+                "label": "Peak"
+              }
+            ],
+            "note": "Illustrative waveforms, not real data."
+          },
+          "cues": [
+            {
+              "text": "How can shapes agree so well while the values differ? Look at two illustrative curves.",
+              "reveal": 0
+            },
+            {
+              "text": "Here is a marker-based shoulder external rotation trace across the delivery.",
+              "reveal": 1
+            },
+            {
+              "text": "And here is a markerless trace that rises and falls with it exactly, but sits ten degrees lower throughout.",
+              "reveal": 2
+            },
+            {
+              "text": "The coefficient of multiple correlation measures similarity of shape. It is largely insensitive to a constant offset. So what would it say about these two curves?"
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-cmc",
+            "type": "choice",
+            "prompt": "Two shoulder-rotation curves have a coefficient of multiple correlation above 0.9, but the markerless peak sits about 10° below the marker-based peak. What follows?",
+            "options": [
+              {
+                "id": "a",
+                "text": "The systems are interchangeable for peak values."
+              },
+              {
+                "id": "b",
+                "text": "The patterns agree; the peak values need their own bias and limits of agreement, and system-specific norms."
+              },
+              {
+                "id": "c",
+                "text": "A CMC above 0.9 rules out any offset larger than a few degrees."
+              },
+              {
+                "id": "d",
+                "text": "The markerless system is wrong, because the marker system is the truth."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-system-specific-bias",
+            "feedback": {
+              "a": "High waveform agreement says the curves move together. It says nothing about whether a 10° offset separates them, so peaks are not interchangeable.",
+              "b": "Right. That is exactly why one study can report excellent waveform agreement and still recommend separate norms for each system.",
+              "c": "The opposite: a constant offset barely changes a CMC. That is the trap.",
+              "d": "The marker system is a second imperfect estimate, not a bone-referenced truth. You can measure the disagreement without knowing which side owns it."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "agreement",
+            "title": "Peak external rotation, two systems",
+            "pairs": [
+              [
+                172,
+                164
+              ],
+              [
+                178,
+                166
+              ],
+              [
+                169,
+                160
+              ],
+              [
+                181,
+                170
+              ],
+              [
+                175,
+                165
+              ],
+              [
+                166,
+                153
+              ],
+              [
+                184,
+                177
+              ],
+              [
+                171,
+                161
+              ],
+              [
+                177,
+                165
+              ],
+              [
+                179,
+                170
+              ],
+              [
+                168,
+                157
+              ],
+              [
+                174,
+                166
+              ],
+              [
+                182,
+                172
+              ],
+              [
+                170,
+                156
+              ],
+              [
+                176,
+                170
+              ]
+            ],
+            "unit": "°",
+            "labels": [
+              "Marker-based",
+              "Markerless"
+            ],
+            "note": "Synthetic pairs: fifteen pitches captured by both systems."
+          },
+          "cues": [
+            {
+              "text": "For individual decisions, you need the bias and limits of agreement for the specific discrete variable. Here are fifteen synthetic pitches, each captured by both systems at once.",
+              "reveal": 0
+            },
+            {
+              "text": "Each point is one pitch: the markerless value minus the marker value, plotted against the mean of the two.",
+              "reveal": 1
+            },
+            {
+              "text": "The bias line sits at about minus ten degrees: the markerless system reads ten degrees lower on average. That is systematic, and correctable only within this installation and software version.",
+              "reveal": 2
+            },
+            {
+              "text": "The limits of agreement run from about minus fourteen and a half to about minus five and a half degrees. Ninety-five percent of single-pitch differences should fall in that band. You'll build these properly in Lesson 5.",
+              "reveal": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "Where the bias comes from",
+      "scenes": [
+        {
+          "visual": {
+            "type": "steps",
+            "title": "Stacked sources of offset",
+            "steps": [
+              "Labels: the visible top of the arm, not the joint centre",
+              "Skeletal model: limited scapular motion",
+              "Clothing, sleeves and body shape",
+              "Camera number and placement: occlusion",
+              "Event definitions shift every value"
+            ]
+          },
+          "cues": [
+            {
+              "text": "A markerless offset is not one error but several stacked together.",
+              "reveal": 0
+            },
+            {
+              "text": "Training labels put the shoulder keypoint where annotators judged it in photographs, usually near the visible top of the arm. A marker model places the glenohumeral centre inside the body.",
+              "reveal": 1
+            },
+            {
+              "text": "The skeletal model imposes its own segment definitions. If it allows only limited scapular motion, humeral elevation and rotation absorb what the scapula did.",
+              "reveal": 2
+            },
+            {
+              "text": "Clothing, sleeves and body shape change the visible outline the keypoints come from.",
+              "reveal": 3
+            },
+            {
+              "text": "Camera number and placement decide how often the trunk hides the throwing arm at maximum external rotation.",
+              "reveal": 4
+            },
+            {
+              "text": "And event definitions, how foot contact or release is detected, shift every time-normalized value.",
+              "reveal": 5
+            },
+            {
+              "text": "Each is systematic for one installation and software version. That is why a constant offset can coexist with good waveform agreement, and why bias can change when the vendor updates its model.",
+              "refs": [
+                "R-aguinaldo-2025-assessing",
+                "R-wade-2022-applications"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "numbers",
+            "title": "From position error to angle error",
+            "items": [
+              {
+                "value": "≈ 5 cm",
+                "label": "Mean per-joint position error"
+              },
+              {
+                "value": "30 cm",
+                "label": "Segment length"
+              },
+              {
+                "value": "Independent",
+                "label": "Errors at each end, perpendicular"
+              }
+            ],
+            "note": "Worked example from the lesson."
+          },
+          "cues": [
+            {
+              "text": "A per-joint error of about five centimetres sounds large. What does it do to an angle? It depends on how the errors at the two ends co-vary.",
+              "reveal": 0
+            },
+            {
+              "text": "Suppose the segment is thirty centimetres long.",
+              "reveal": 1
+            },
+            {
+              "text": "If the model places both shoulder and elbow five centimetres forward, the upper-arm angle is unchanged. Correlated errors cancel and show up as offsets.",
+              "reveal": 2
+            },
+            {
+              "text": "Now make the two errors independent and perpendicular to the segment. Predict the worst-case angle error, in degrees.",
+              "reveal": 3
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-angle-error",
+            "type": "estimate",
+            "prompt": "Independent, perpendicular 5 cm errors sit at each end of a 30 cm segment. About how large can the resulting angle error be?",
+            "min": 0,
+            "max": 40,
+            "step": 1,
+            "unit": "°",
+            "initial": 5,
+            "answer": 13,
+            "tolerance": 3,
+            "concept": "c-pose-estimation",
+            "feedback": {
+              "correct": "Right, about 13°: the arctangent of root two times five over thirty.",
+              "incorrect": "It is about 13°: the arctangent of √2 × 5/30. Independent errors appear as noise; correlated ones cancel into offsets."
+            }
+          }
+        },
+        {
+          "visual": {
+            "type": "calc",
+            "title": "Independent errors become noise",
+            "lines": [
+              {
+                "label": "Combined error: √2 × 5 cm",
+                "value": "≈ 7.1 cm"
+              },
+              {
+                "label": "Over a 30 cm segment",
+                "value": "7.1 ÷ 30 ≈ 0.24"
+              }
+            ],
+            "result": {
+              "label": "Angle error: arctangent of 0.24",
+              "value": "≈ 13°"
+            },
+            "note": "Worked example from the lesson."
+          },
+          "cues": [
+            {
+              "text": "The arithmetic.",
+              "reveal": 0
+            },
+            {
+              "text": "Two independent five-centimetre errors combine to about seven centimetres.",
+              "reveal": 1
+            },
+            {
+              "text": "Over thirty centimetres, that is a ratio of about a quarter.",
+              "reveal": 2
+            },
+            {
+              "text": "The arctangent gives roughly thirteen degrees. Long-axis rotation is worse still, because it depends on keypoints close to the axis.",
+              "reveal": 3
+            },
+            {
+              "text": "So per-joint position error is a screening metric. The decision-relevant quantity is the error in the specific angle, at the specific instant, in the specific task."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Games and swings",
+      "scenes": [
+        {
+          "visual": {
+            "type": "compare",
+            "title": "In-game pitching evidence",
+            "left": {
+              "title": "What exists",
+              "points": [
+                "In-game reference values: 51 pitchers",
+                "Separation–velocity link: 335 pitchers",
+                "Weak association, peak r ≈ 0.16"
+              ]
+            },
+            "right": {
+              "title": "Contested",
+              "points": [
+                "Lab vs game variability: similar for 8 of 10",
+                "Greater in-game for 2 shoulder-elbow values",
+                "Different pitchers per condition"
+              ]
+            }
+          },
+          "cues": [
+            {
+              "text": "Markerless capture's main advantage is that it works where markers cannot: in games.",
+              "reveal": 0
+            },
+            {
+              "text": "Giordano and colleagues published in-game reference values from eight synchronized three-hundred-hertz KinaTrax cameras at two Division One stadiums, for fifty-one pitchers from five teams in the two thousand twenty-three season.",
+              "reveal": 1,
+              "refs": [
+                "R-giordano-2024-normative"
+              ]
+            },
+            {
+              "text": "Jump and colleagues used in-game data from three hundred thirty-five Division One pitchers, with statistical parametric mapping, to relate hip–shoulder separation to velocity. The association was positive but weak, a peak correlation around zero point one six, with substantial differences between individual pitchers.",
+              "refs": [
+                "R-jump-2026-influence"
+              ]
+            },
+            {
+              "text": "Whether in-game data can stand in for the lab is unresolved. Lerch and colleagues found within-pitcher variability across ten fastballs similar for eight of ten variables, but greater in games for maximum shoulder external rotation and elbow flexion at that instant. Mean values differed substantially.",
+              "reveal": 2,
+              "refs": [
+                "R-lerch-2025-variability"
+              ]
+            },
+            {
+              "text": "Here is the limit. They compared different pitchers in each condition, so system, setting and sample are confounded. And Fleisig and Aguinaldo show system-specific offsets even when the same pitch is captured simultaneously.",
+              "refs": [
+                "R-lerch-2025-variability",
+                "R-fleisig-2022-comparison",
+                "R-aguinaldo-2025-assessing"
+              ]
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "cards",
+            "title": "Hitting: what exists",
+            "cards": [
+              {
+                "title": "Hoechstetter 2026",
+                "q": "3,958 in-game swings, 247 batters",
+                "fail": "An association, not a validation"
+              },
+              {
+                "title": "Sonnenfeld 2021",
+                "q": "Hip motion in 29 elite batters",
+                "fail": "Descriptive; lead and trail hips differ"
+              },
+              {
+                "title": "Agreement studies",
+                "q": "Markerless vs marker for swings",
+                "fail": "None peer-reviewed found, November 2026"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Hitting research is newer and thinner.",
+              "reveal": 0
+            },
+            {
+              "text": "Hoechstetter and colleagues analyzed in-game markerless capture and ball-tracking data from three thousand nine hundred fifty-eight swings by two hundred forty-seven Division One batters. The abstract reports that greater hip–shoulder separation was associated with higher bat speed, between and within batters.",
+              "reveal": 1,
+              "refs": [
+                "R-hoechstetter-2026-relationship"
+              ]
+            },
+            {
+              "text": "Earlier, Sonnenfeld and colleagues used a markerless system to describe lead- and trail-hip motion during swings in twenty-nine elite players, and found asymmetries between the hips.",
+              "reveal": 2,
+              "refs": [
+                "R-sonnenfeld-2021-analysis"
+              ]
+            },
+            {
+              "text": "And in searches for this course in November two thousand twenty-six, no peer-reviewed study compared markerless and marker-based swing kinematics, wrist and forearm rotation, or bat orientation. A vendor validation figure in a press release is a vendor claim until its methods are published.",
+              "reveal": 3
+            },
+            {
+              "text": "Hitting is also hard for video models. The hands and bat move fastest, overlap each other and the body, and blur at ordinary frame rates."
+            }
+          ],
+          "checkpoint": {
+            "id": "cp-tier",
+            "type": "choice",
+            "prompt": "Applying the seven-question standard and its five tiers, what does the Hoechstetter et al. in-game hitting study establish?",
+            "options": [
+              {
+                "id": "a",
+                "text": "That markerless swing kinematics are valid against a laboratory reference."
+              },
+              {
+                "id": "b",
+                "text": "An observational association between a markerless angle and tracked bat speed, within and between batters."
+              },
+              {
+                "id": "c",
+                "text": "That training greater separation increases bat speed."
+              },
+              {
+                "id": "d",
+                "text": "That separation improves competitive outcomes such as run value."
+              }
+            ],
+            "answer": "b",
+            "concept": "c-in-game-measurement",
+            "feedback": {
+              "a": "It did not compare against a laboratory reference. Measurement validity for swings remains untested in peer-reviewed work we could find.",
+              "b": "Right. It sits in the mechanics-to-output tier: a large retrospective association. It is not validation, not an intervention and not an outcome study.",
+              "c": "That is an intervention claim. An association across swings does not show that changing separation changes bat speed.",
+              "d": "No competitive outcome was analyzed. We found no markerless study linking kinematics to outcomes such as run value."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "Monitoring honestly",
+      "scenes": [
+        {
+          "visual": {
+            "type": "statement",
+            "lines": [
+              "The 11° gap cannot be interpreted.",
+              "Baseline within the in-game system.",
+              "Simultaneous capture to link the two."
+            ],
+            "sub": "Published shoulder-rotation offsets are of the same order as the gap."
+          },
+          "cues": [
+            {
+              "text": "Back to our pitcher. The defensible conclusion is that the eleven-degree gap cannot be interpreted.",
+              "reveal": 0
+            },
+            {
+              "text": "The two systems are known to disagree on shoulder rotation, published offsets are of the same order as the gap, and the setting changed at the same moment as the instrument.",
+              "refs": [
+                "R-fleisig-2022-comparison",
+                "R-aguinaldo-2025-assessing"
+              ]
+            },
+            {
+              "text": "To monitor him in games, establish a baseline with the in-game system across several starts, and track change within that system.",
+              "reveal": 1
+            },
+            {
+              "text": "To relate game values to lab values, you would need both systems capturing the same pitches.",
+              "reveal": 2
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "steps",
+            "title": "A protocol for in-game data",
+            "steps": [
+              "Few variables, decent published agreement",
+              "Within-athlete typical error, by pitch type",
+              "Check home versus away installations",
+              "Version-stamp every value",
+              "Set flags per variable from its own error"
+            ]
+          },
+          "cues": [
+            {
+              "text": "A club that wants to use in-game markerless data can follow a short protocol.",
+              "reveal": 0
+            },
+            {
+              "text": "Choose a few variables with plausible relevance and decent published agreement: stride length, and pelvis and trunk rotation timing, before humeral rotation.",
+              "reveal": 1,
+              "refs": [
+                "R-aguinaldo-2025-assessing"
+              ]
+            },
+            {
+              "text": "Estimate each variable's within-athlete typical error from several outings in a stable period, by pitch type.",
+              "reveal": 2
+            },
+            {
+              "text": "Check stability across stadiums by comparing the same pitchers at home and away installations where you can.",
+              "reveal": 3
+            },
+            {
+              "text": "Record the software version with every value.",
+              "reveal": 4
+            },
+            {
+              "text": "Then set change flags per variable, from its own error, not from a generic percentage.",
+              "reveal": 5
+            },
+            {
+              "text": "For hitters, ask descriptive questions, such as how consistent pelvis-rotation timing is relative to stride, after estimating within-hitter variability. Treat wrist, forearm and bat-orientation outputs as unvalidated, and keep tracked bat metrics separate from body kinematics."
+            },
+            {
+              "text": "One more scene. Midway through a season, your vendor ships a new pose model, and every pitcher's trend line shifts three to six degrees on the update date. The change is not physiological. Insist on version-stamped outputs, reprocessing of old video, and a written description of what changed."
+            }
+          ]
+        },
+        {
+          "visual": {
+            "type": "next",
+            "title": "Where to go next",
+            "items": [
+              {
+                "label": "Comprehension check",
+                "detail": "Two questions — the same check as the written lesson",
+                "href": "#check"
+              },
+              {
+                "label": "The Measurement Science Laboratory",
+                "detail": "Bias, limits of agreement and typical error with synthetic data",
+                "href": "#/exercise/b02-x"
+              },
+              {
+                "label": "Required reading",
+                "detail": "Fleisig et al. (2022) Comparison of marker-less and marker-based motion capture for baseball pitching kinematics",
+                "href": "#/library/R-fleisig-2022-comparison"
+              }
+            ]
+          },
+          "cues": [
+            {
+              "text": "Let's bring it together."
+            },
+            {
+              "text": "Markerless capture moves biomechanics into the game by inferring joints from video. The price is system-specific offsets, weak long-axis rotations and dependence on a vendor's model."
+            },
+            {
+              "text": "Pitching has agreement studies and in-game associations. Hitting has in-game associations but, as far as we could find, no peer-reviewed agreement study. Track change within one system and one version."
+            },
+            {
+              "text": "From here, take the comprehension check below, the same check as the written lesson. Then open the Measurement Science Laboratory, and read Fleisig and colleagues' comparison in full.",
+              "reveal": 1
+            },
+            {
+              "text": "The written lesson stays here whenever you want the full tables and methodological notes. Thank you for working through this with me."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -205,3 +205,33 @@
 .lv-quote-t { font: italic 400 clamp(1.1rem, 3vw, 2.2rem)/1.3 var(--serif); color: #f4ecdd; max-width: 36ch; margin: 0; }
 .lv-quote-c { font: 500 clamp(0.62rem, 1.2vw, 0.8rem)/1.4 var(--mono); color: #c9a3a6; letter-spacing: 0.08em; margin-top: 1rem; }
 .lv-def-d { font: 400 clamp(0.95rem, 2.2vw, 1.5rem)/1.45 var(--serif); color: #e7dfd0; max-width: 44ch; margin: 1rem 0 0; }
+
+/* Course B biomechanics visuals */
+.lv-svgwrap { max-width: 34rem; margin: 0.2rem auto 0; }
+.lv-svg { width: 100%; height: auto; max-height: min(52vh, 19rem); display: block; margin: 0 auto; }
+.lv-frame3d .lv-note, .lv-curves .lv-note, .lv-torque .lv-note, .lv-agree .lv-note { margin-top: 0.4rem; }
+.lv-torque .lv-calc-line, .lv-agree .lv-calc-line { margin-top: 0.5rem; }
+.lv-svg .lv-step { opacity: 0; transition: opacity 0.45s ease; }
+.lv-svg .lv-step.is-on { opacity: 1; }
+:root[data-motion="reduce"] .lv-svg .lv-step { transition: none; }
+.lv-gax { stroke: currentColor; opacity: 0.45; fill: none; }
+.lv-glab { fill: currentColor; opacity: 0.7; font: 500 10.5px var(--mono); }
+.lv-seg { stroke: currentColor; fill: none; opacity: 0.8; }
+.lv-stage0 .lv-seg, .lv-stage0 line { opacity: 0.18; }
+.lv-stage0 text { opacity: 0.3; }
+.lv-lx { stroke: #e2b9bc; fill: #e2b9bc; }
+.lv-ly { stroke: currentColor; fill: currentColor; }
+.lv-lz { stroke: #c4ad94; fill: #c4ad94; }
+.lv-llab { font: 600 11px var(--mono); stroke: none; }
+.lv-steplab { fill: currentColor; font: 600 12px var(--mono); }
+.lv-dot { fill: currentColor; } .lv-dotx { fill: #e2b9bc; }
+.lv-curve { fill: none; stroke-width: 2.4; }
+.lv-ser0 .lv-curve { stroke: #e2b9bc; } .lv-ser0 text { fill: #e2b9bc; }
+.lv-ser1 .lv-curve { stroke: currentColor; } .lv-ser1 text { fill: currentColor; }
+.lv-ser2 .lv-curve { stroke: #c4ad94; } .lv-ser2 text { fill: #c4ad94; }
+.lv-ser3 .lv-curve { stroke: currentColor; stroke-dasharray: 6 4; } .lv-ser3 text { fill: currentColor; }
+.lv-angtab { margin: 0.6rem auto 0; border-collapse: collapse; font-size: 0.85rem; }
+.lv-angtab th, .lv-angtab td { padding: 0.25rem 0.6rem; border-bottom: 1px solid rgba(239,231,216,.2); text-align: left; }
+.lv-angtab td.num { font-variant-numeric: tabular-nums; }
+.lv-svg .lv-stage.is-on:has(~ .lv-stage.is-on) { opacity: 0.22; }
+.lv-svg .lv-step { transform: none; }

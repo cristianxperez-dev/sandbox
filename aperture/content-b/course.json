@@ -1,0 +1,49 @@
+{
+  "id": "b",
+  "code": "Course B",
+  "title": "Applied Biomechanics & Human Performance",
+  "subtitle": "Advanced Hitting, Pitching, Motor Control & Skill Acquisition",
+  "hoursPerWeek": "5–6",
+  "available": [1, 2],
+  "grading": { "quizzes": 35, "assignments": 40, "capstone": 25, "mastery": 0.8, "provisional": true },
+  "allocation": { "pitching": 30, "hitting": 29, "motor": 25, "measurement": 16 },
+  "schools": [
+    { "id": "biomechanics", "name": "Biomechanics & Movement Science" },
+    { "id": "motor", "name": "Motor Control & Skill Acquisition" },
+    { "id": "measurement", "name": "Measurement & Scientific Validation" }
+  ],
+  "domains": [
+    { "id": "functional-anatomy", "name": "Functional anatomy & physical capacity" },
+    { "id": "vector-mathematics", "name": "Vector & rotational mathematics" },
+    { "id": "kinematics", "name": "Kinematics" },
+    { "id": "kinetics", "name": "Kinetics & mechanical reasoning" },
+    { "id": "motor-control", "name": "Motor control & learning" },
+    { "id": "measurement-science", "name": "Measurement science" },
+    { "id": "research-literacy", "name": "Scientific research literacy" }
+  ],
+  "standard": [
+    "What has been observed?",
+    "What mechanism is proposed?",
+    "What evidence supports it?",
+    "What remains uncertain?",
+    "Has changing the variable improved performance?",
+    "Does the improvement transfer to competition?",
+    "What are the implications for loading or potential injury-related risk?"
+  ],
+  "weeks": [
+    { "number": 1, "title": "Advanced Biomechanical Foundations", "school": "biomechanics", "overview": "Functional anatomy and physical capacity, three-dimensional kinematics, kinetics and moments, the kinetic chain, and the foundations of motor control — the physical, mathematical and neuromotor prerequisites for reading pitching and hitting research.", "objectives": ["Distinguish a physical limitation from a coordination strategy or task-specific adaptation.", "Interpret 3D joint angles and explain why reported values depend on reference frames and rotation sequences.", "Reason quantitatively about forces, moments, impulse, angular momentum and power.", "Evaluate kinetic-chain claims, separating mechanical outputs from competitive outcomes.", "Explain redundancy, variability and individual movement solutions."] },
+    { "number": 2, "title": "Biomechanical Measurement & Technology", "school": "measurement", "overview": "How human movement is measured — marker-based and markerless capture, force plates, IMUs, EMG, high-speed video and ball and bat tracking — and how to decide whether a measurement is valid, reliable and fit for a specific development decision.", "objectives": ["Explain how each technology produces its outputs and where systematic and random error enter.", "Interpret validation and agreement studies, including bias and limits of agreement.", "Calculate typical error, ICC-based reliability and minimal detectable change.", "Judge whether an observed change exceeds measurement error and within-athlete variability.", "Evaluate a vendor claim or biomechanics report before acting on it."] },
+    { "number": 3, "title": "Pitching Biomechanics I — Lower Body & Kinetic Chain", "school": "biomechanics", "overview": "Phases and events of the delivery, ground reaction forces, pelvis–trunk sequencing, trunk tilt and rotation, and energy-flow analysis — with the correlational evidence read critically.", "objectives": ["Describe lower-body and trunk mechanics and their relationships with ball velocity.", "Separate associations with mechanical outputs from demonstrated intervention effects.", "Evaluate energy-flow methods and their assumptions."] },
+    { "number": 4, "title": "Pitching Biomechanics II — Upper Extremity & Joint Loading", "school": "biomechanics", "overview": "Shoulder and elbow kinematics, inverse-dynamics joint moments, load versus tissue capacity, pitch type and velocity effects, EMG, and clinical boundaries.", "objectives": ["Interpret net joint moments without equating them with injury probability.", "Weigh evidence on pitch type, velocity and loading.", "State clinical boundaries for injury-related questions."] },
+    { "number": 5, "title": "Pitching Biomechanics III — Individualization, Variability & Adaptation", "school": "biomechanics", "overview": "Individual movement solutions, anthropometric and physical constraints, functional variability, fatigue, and the evidence from intervention trials such as weighted-implement programs.", "objectives": ["Distinguish a kinematic difference from a deficiency.", "Evaluate pitching intervention trials critically.", "Form individualized, testable development hypotheses."] },
+    { "number": 6, "title": "Hitting Biomechanics I — Rotational Mechanics & Force Production", "school": "biomechanics", "overview": "Swing phases, ground reaction forces, pelvis–trunk–arm sequencing, segmental angular velocities, joint kinetics and bat acceleration — and the limits of tee-based, cross-sectional designs.", "objectives": ["Explain how force and rotation produce bat speed.", "Evaluate the design limits of the hitting biomechanics literature.", "Separate mechanical outputs from competitive outcomes."] },
+    { "number": 7, "title": "Hitting Biomechanics II — Bat Path, Contact & Efficiency", "school": "biomechanics", "overview": "Bat speed, attack angle and swing-path tilt; bat–ball collision physics; contact-point adaptability; what 'mechanical efficiency' can and cannot mean; and the evidence linking swing measures to outcomes.", "objectives": ["Connect bat path and collision physics to contact quality.", "Interpret tracking-derived bat metrics and their limits.", "Characterize what current evidence links mechanics to competitive outcomes."] },
+    { "number": 8, "title": "Hitting Biomechanics III — Perception, Timing & Adaptability", "school": "motor", "overview": "Visual limits, gaze and head movement, anticipation and pitch recognition, prospective control of timing, on-line adjustment, and perceptual training and its transfer.", "objectives": ["Explain perception–action coupling in hitting.", "Evaluate perceptual-training claims and transfer evidence.", "Design representative timing and adaptability tasks."] },
+    { "number": 9, "title": "Motor Control, Coordination & Movement Variability", "school": "motor", "overview": "Neural control of movement, internal models and optimal feedback control, coordination dynamics, degrees of freedom, and the measurement and meaning of variability.", "objectives": ["Compare major theories of motor control and their practical implications.", "Measure and interpret movement variability.", "Apply theory to a pitching and a hitting problem."] },
+    { "number": 10, "title": "Advanced Skill Acquisition & Practice Design", "school": "motor", "overview": "Practice schedule, constraints, feedback, variability, attentional focus and perceptual representativeness treated as distinct design variables, with bias-corrected evidence — building on, not repeating, Course A Week 3.", "objectives": ["Design practice from mechanisms rather than philosophies.", "Weigh effect sizes honestly after bias correction.", "Distinguish established relationships from illustrative assumptions."] },
+    { "number": 11, "title": "Motor Memory, Retention & Transfer to Competition", "school": "motor", "overview": "The learning–performance distinction, consolidation and its contested evidence, sensorimotor adaptation, transfer from training to competition, and expertise development.", "objectives": ["Measure durable learning rather than practice performance.", "Design retention and transfer tests.", "Plan for competitive transfer."] },
+    { "number": 12, "title": "Experimental Design & Intervention Evaluation", "school": "measurement", "overview": "Randomized, crossover and single-case designs; power and the replication problem; causal inference from observational development data; longitudinal within-athlete models; waveform statistics.", "objectives": ["Design and critique intervention studies.", "Separate real change from noise and regression to the mean.", "Write a pre-registered evaluation plan."] },
+    { "number": 13, "title": "Integrated, Individualized Player Development", "school": "biomechanics", "overview": "From assessment to competing hypotheses, individualized pitcher and hitter plans, load and readiness decisions within clinical boundaries, and communicating science to players and coaches.", "objectives": ["Turn assessment into individual, testable plans.", "Integrate mechanics, physical capacity and motor learning.", "Communicate recommendations to players, coaches and executives."] },
+    { "number": 14, "title": "Applied Performance Science Capstone", "school": "biomechanics", "overview": "The Applied Player Performance Laboratory: two fictional athletes — a pitcher and a hitter — each with a biomechanical assessment, competing explanations, evidence review, individualized hypotheses, intervention, measurement plan, retention and transfer evaluation, risk analysis and executive summary.", "objectives": ["Connect research to actionable, measurable development decisions.", "Defend recommendations under uncertainty.", "Integrate the semester's science in one applied laboratory."] }
+  ]
+}

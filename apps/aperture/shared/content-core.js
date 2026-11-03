@@ -84,6 +84,7 @@ function presentationComposer(cap) {
 export function catalog() {
   const ix = index();
   return {
+    course: CONTENT.course || 'a',
     semester: CONTENT.semester,
     stats: CONTENT.stats,
     weeks: CONTENT.weeks.map((w) => ({

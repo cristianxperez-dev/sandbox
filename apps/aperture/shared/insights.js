@@ -65,6 +65,8 @@ export function computeProgress({ attempts, cards, state, events, now = Date.now
     { id: 'midterm', label: 'Midterm', weight: g.midterm, completed: mid ? 1 : 0, of: CONTENT.midterm ? 1 : 0, score: mid ? mid.s : null, basis: 'Best attempt. Auto-graded items plus self-assessed short responses.' },
     { id: 'capstone', label: 'Capstone', weight: g.capstone, completed: capDel.length, of: CONTENT.capstone ? CONTENT.capstone.deliverables.length : 0, score: capDel.length ? avg(capDel.map((a) => a.selfScore)) : null, basis: 'Self-assessed against each deliverable rubric.' },
   ];
+  // A course without a component (Course B has no midterm; its capstone is not yet released) omits it.
+  for (let i = components.length - 1; i >= 0; i--) if (components[i].weight == null || !components[i].of) components.splice(i, 1);
   const counted = components.filter((c) => c.score != null);
   const wsum = counted.reduce((a, c) => a + c.weight, 0);
   const standing = wsum ? counted.reduce((a, c) => a + c.weight * c.score, 0) / wsum : null;
@@ -102,10 +104,12 @@ export function computeProgress({ attempts, cards, state, events, now = Date.now
 
   /* ---------- domains ---------- */
   const diag = latest('diagnostic');
-  const domains = Object.keys(DOMAIN_LABEL).map((d) => {
+  // Course B defines its own domains (course.json); Course A uses the nine below.
+  const LABELS = CONTENT.semester.domains ? Object.fromEntries(CONTENT.semester.domains.map((d) => [d.id, d.name])) : DOMAIN_LABEL;
+  const domains = Object.keys(LABELS).map((d) => {
     const its = items.filter((i) => i.domain === d && i.assessment !== 'diagnostic');
     const dg = diag ? (diag.data.items || []).filter((i) => i.domain === d && i.score != null) : [];
-    return { domain: d, label: DOMAIN_LABEL[d], n: its.length, accuracy: its.length ? its.reduce((a, i) => a + i.score, 0) / its.length : null, diagnostic: dg.length ? dg.reduce((a, i) => a + i.score, 0) / dg.length : null, diagnosticN: dg.length };
+    return { domain: d, label: LABELS[d], n: its.length, accuracy: its.length ? its.reduce((a, i) => a + i.score, 0) / its.length : null, diagnostic: dg.length ? dg.reduce((a, i) => a + i.score, 0) / dg.length : null, diagnosticN: dg.length };
   });
 
   /* ---------- common errors ---------- */

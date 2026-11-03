@@ -69,6 +69,86 @@
   R.timeline = (v) => ({ el: h('div', { class: 'lv lv-timeline' }, h('h3', { class: 'lv-t', text: v.title }), h('ol', { class: 'lv-tl' }, v.events.map((e, i) => step(i + 1, h('li', null, h('b', { text: e.when }), h('span', { text: e.text })))))) });
   R.quote = (v) => ({ el: h('div', { class: 'lv lv-quote' }, h('p', { class: 'lv-quote-t', text: `“${v.text}”` }), step(1, h('p', { class: 'lv-quote-c', text: `— ${v.who}` }))) });
   R.definition = (v) => ({ el: h('div', { class: 'lv lv-def' }, h('span', { class: 'lv-kicker', text: v.kicker || 'Key concept' }), h('h2', { class: 'lv-h', text: v.term }), step(1, h('p', { class: 'lv-def-d', text: v.definition })), v.example ? step(2, h('p', { class: 'lv-sub', text: v.example })) : null) });
+  /* ---- Course B: biomechanics visuals. Geometry and statistics are computed here, exactly, from the script's numbers. ---- */
+  const NS = 'http://www.w3.org/2000/svg';
+  const sv = (name, attrs, text) => { const e = document.createElementNS(NS, name); for (const [k, x] of Object.entries(attrs || {})) e.setAttribute(k, x); if (text != null) e.textContent = text; return e; };
+  const svgBox = (w, hh, label) => { const e = sv('svg', { viewBox: `0 0 ${w} ${hh}`, class: 'lv-svg', role: 'img', 'aria-label': label }); return e; };
+  const DEG = Math.PI / 180;
+  const mm = (A, B) => A.map((r, i) => B[0].map((_, j) => A[i][0] * B[0][j] + A[i][1] * B[1][j] + A[i][2] * B[2][j]));
+  const rotA = (ax, t) => { const c = Math.cos(t), s2 = Math.sin(t); return ax === 'X' ? [[1, 0, 0], [0, c, -s2], [0, s2, c]] : ax === 'Y' ? [[c, 0, s2], [0, 1, 0], [-s2, 0, c]] : [[c, -s2, 0], [s2, c, 0], [0, 0, 1]]; };
+  const applyR = (Rm, v) => Rm.map((r) => r[0] * v[0] + r[1] * v[1] + r[2] * v[2]);
+  const cl = (x) => Math.max(-1, Math.min(1, x));
+  function eulerOf(seq, Rm) {
+    if (seq === 'YXY') return [Math.atan2(Rm[0][1], Rm[2][1]) / DEG, Math.acos(cl(Rm[1][1])) / DEG, Math.atan2(Rm[1][0], -Rm[1][2]) / DEG];
+    const I = { X: 0, Y: 1, Z: 2 }, p = I[seq[0]], q = I[seq[1]], r = I[seq[2]], e = (q - p + 3) % 3 === 1 ? 1 : -1;
+    return [Math.atan2(-e * Rm[q][r], Rm[r][r]) / DEG, Math.asin(cl(e * Rm[p][r])) / DEG, Math.atan2(-e * Rm[p][q], Rm[p][p]) / DEG];
+  }
+  R.frame3d = (v) => {
+    const s = svgBox(420, 300, `${v.title}: a segment rotated by the ${v.sequence} sequence`);
+    const az = 35 * DEG, el = 18 * DEG, ca = Math.cos(az), sa = Math.sin(az), ce = Math.cos(el), se = Math.sin(el);
+    const P = (q) => { const x = q[0] * ca - q[2] * sa, z = q[0] * sa + q[2] * ca; return [210 + x * 105, 165 - (q[1] * ce - z * se) * 105]; };
+    const ln = (g, a, b, cls, w) => { const p = P(a), q = P(b); g.appendChild(sv('line', { x1: p[0], y1: p[1], x2: q[0], y2: q[1], class: cls, 'stroke-width': w })); };
+    const tx = (g, a, t, cls) => { const p = P(a); g.appendChild(sv('text', { x: p[0] + 4, y: p[1] - 4, class: cls }, t)); };
+    const lab = sv('g');
+    [['X', [1.3, 0, 0]], ['Y', [0, 1.3, 0]], ['Z', [0, 0, 1.3]]].forEach(([n, q]) => { ln(lab, [0, 0, 0], q, 'lv-gax', 1); tx(lab, q, (v.axisLabels && v.axisLabels[n]) || n, 'lv-glab'); });
+    s.appendChild(lab);
+    const segment = (Rm, cls) => { const g = sv('g', { class: cls }); const c = []; for (const x of [-0.1, 0.1]) for (const y of [-0.05, 1]) for (const z of [-0.1, 0.1]) c.push(applyR(Rm, [x, y, z])); [[0, 1], [2, 3], [4, 5], [6, 7], [0, 2], [1, 3], [4, 6], [5, 7], [0, 4], [1, 5], [2, 6], [3, 7]].forEach(([a, b]) => ln(g, c[a], c[b], 'lv-seg', 1.4)); [['x', [0.75, 0, 0], 'lv-lx'], ['y', [0, 1.1, 0], 'lv-ly'], ['z', [0, 0, 0.75], 'lv-lz']].forEach(([n, q, k]) => { const e = applyR(Rm, q); ln(g, [0, 0, 0], e, k, 2.4); tx(g, e, n, `lv-llab ${k}`); }); return g; };
+    let Rm = [[1, 0, 0], [0, 1, 0], [0, 0, 1]];
+    s.appendChild(segment(Rm, 'lv-stage0'));
+    const label = (k) => `${k}. ${v.sequence[k - 1]} ${v.angles[k - 1] >= 0 ? '+' : ''}${v.angles[k - 1]}°`;
+    v.sequence.split('').forEach((ax, i) => { Rm = mm(Rm, rotA(ax, v.angles[i] * DEG)); const g = segment(Rm, `lv-stage lv-stage${i + 1}`); g.appendChild(sv('text', { x: 12, y: 22 + i * 18, class: 'lv-steplab' }, label(i + 1))); s.appendChild(step(i + 1, g)); });
+    const extra = [];
+    if (v.compare) {
+      const a = eulerOf(v.compare, Rm), b = eulerOf(v.sequence, Rm);
+      extra.push(step(4, h('table', { class: 'lv-angtab' }, h('tbody', null,
+        h('tr', null, h('th', { text: `${v.sequence} (as set)` }), ...b.map((x) => h('td', { class: 'num', text: `${x.toFixed(1)}°` }))),
+        h('tr', null, h('th', { text: `${v.compare} (same orientation)` }), ...a.map((x) => h('td', { class: 'num', text: `${x.toFixed(1)}°` })))))));
+    }
+    return { el: h('div', { class: 'lv lv-frame3d' }, h('h3', { class: 'lv-t', text: v.title }), h('div', { class: 'lv-svgwrap' }, s), ...extra, v.note ? h('p', { class: 'lv-note', text: v.note }) : null) };
+  };
+  R.curves = (v) => {
+    const s = svgBox(440, 260, v.title);
+    const xs = v.series.flatMap((q) => q.points.map((p) => p[0])), ys = v.series.flatMap((q) => q.points.map((p) => p[1])).concat(v.yMin ?? [], v.yMax ?? []);
+    const x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys, 0), y1 = Math.max(...ys);
+    const X = (x) => 52 + ((x - x0) / (x1 - x0 || 1)) * 370, Y = (y) => 220 - ((y - y0) / (y1 - y0 || 1)) * 195;
+    s.appendChild(sv('line', { x1: 52, y1: Y(Math.max(y0, 0)), x2: 425, y2: Y(Math.max(y0, 0)), class: 'lv-gax' }));
+    s.appendChild(sv('line', { x1: 52, y1: 20, x2: 52, y2: 222, class: 'lv-gax' }));
+    s.appendChild(sv('text', { x: 425, y: 248, 'text-anchor': 'end', class: 'lv-glab' }, `${v.xLabel} →`));
+    s.appendChild(sv('text', { x: 6, y: 14, class: 'lv-glab' }, v.yLabel));
+    [x0, x1].forEach((x) => s.appendChild(sv('text', { x: X(x), y: 236, 'text-anchor': 'middle', class: 'lv-glab' }, String(x))));
+    [y0, y1].forEach((y) => s.appendChild(sv('text', { x: 46, y: Y(y) + 3, 'text-anchor': 'end', class: 'lv-glab' }, String(Math.round(y * 100) / 100))));
+    (v.markers || []).forEach((m) => { s.appendChild(sv('line', { x1: X(m.x), y1: 20, x2: X(m.x), y2: 220, class: 'lv-gax', 'stroke-dasharray': '3 4' })); s.appendChild(sv('text', { x: X(m.x) + 3, y: 30, class: 'lv-glab' }, m.label)); });
+    v.series.forEach((q, i) => { const g = sv('g', { class: `lv-ser lv-ser${i % 4}` }); g.appendChild(sv('path', { d: q.points.map((p, j) => `${j ? 'L' : 'M'}${X(p[0]).toFixed(1)},${Y(p[1]).toFixed(1)}`).join(''), class: 'lv-curve' })); const pk = q.points.reduce((a, b) => (b[1] > a[1] ? b : a)); g.appendChild(sv('text', { x: X(pk[0]) + 4, y: Y(pk[1]) - 5, class: 'lv-llab' }, q.label)); s.appendChild(step(i + 1, g)); });
+    return { el: h('div', { class: 'lv lv-curves' }, h('h3', { class: 'lv-t', text: v.title }), h('div', { class: 'lv-svgwrap' }, s), v.note ? h('p', { class: 'lv-note', text: v.note }) : null) };
+  };
+  R.torque = (v) => {
+    const tau = v.arm * v.force * Math.sin(v.angle * DEG), d = v.arm * Math.sin(v.angle * DEG);
+    const s = svgBox(420, 240, `${v.title}: moment of a force about an axis`);
+    const ox = 80, oy = 170, px = ox + 240, ux = Math.cos(-v.angle * DEG), uy = Math.sin(-v.angle * DEG);
+    s.appendChild(sv('circle', { cx: ox, cy: oy, r: 6, class: 'lv-dot' })); s.appendChild(sv('text', { x: ox - 22, y: oy + 24, class: 'lv-glab' }, v.axisLabel || 'axis'));
+    const g1 = sv('g'); g1.appendChild(sv('line', { x1: ox, y1: oy, x2: px, y2: oy, class: 'lv-seg', 'stroke-width': 6 })); g1.appendChild(sv('text', { x: (ox + px) / 2 - 20, y: oy + 22, class: 'lv-glab' }, `r = ${v.arm} m`)); s.appendChild(step(1, g1));
+    const g2 = sv('g'); g2.appendChild(sv('line', { x1: px, y1: oy, x2: px + 110 * ux, y2: oy + 110 * uy, class: 'lv-lx', 'stroke-width': 3.5 })); g2.appendChild(sv('circle', { cx: px + 110 * ux, cy: oy + 110 * uy, r: 4, class: 'lv-dotx' })); g2.appendChild(sv('text', { x: px + 110 * ux + 6, y: oy + 110 * uy, class: 'lv-llab lv-lx' }, `F = ${v.force} N at ${v.angle}°`)); s.appendChild(step(2, g2));
+    const t = (ox - px) * ux, qx = px + t * ux, qy = oy + t * uy;
+    const g3 = sv('g'); g3.appendChild(sv('line', { x1: px - 260 * ux, y1: oy - 260 * uy, x2: px + 120 * ux, y2: oy + 120 * uy, class: 'lv-gax', 'stroke-dasharray': '3 4' })); g3.appendChild(sv('line', { x1: ox, y1: oy, x2: qx, y2: qy, class: 'lv-ly', 'stroke-width': 2.4 })); s.appendChild(step(3, g3));
+    return { el: h('div', { class: 'lv lv-torque' }, h('h3', { class: 'lv-t', text: v.title }), h('div', { class: 'lv-svgwrap' }, s),
+      step(3, h('p', { class: 'lv-calc-line lv-calc-res' }, h('span', { text: `τ = r · F · sin θ = ${v.arm} × ${v.force} × sin ${v.angle}° · moment arm ${d.toFixed(3)} m` }), h('b', { class: 'num', text: `${tau.toFixed(1)} N·m` }))), v.note ? h('p', { class: 'lv-note', text: v.note }) : null) };
+  };
+  R.agreement = (v) => {
+    const diffs = v.pairs.map((p) => p[1] - p[0]), means = v.pairs.map((p) => (p[0] + p[1]) / 2);
+    const m = diffs.reduce((a, b) => a + b, 0) / diffs.length, sd = Math.sqrt(diffs.reduce((a, b) => a + (b - m) ** 2, 0) / (diffs.length - 1));
+    const lo = m - 1.96 * sd, hi = m + 1.96 * sd, u = v.unit || '';
+    const s = svgBox(440, 250, `${v.title}: Bland–Altman plot`);
+    const x0 = Math.min(...means) - 1, x1 = Math.max(...means) + 1, y0 = Math.min(...diffs, lo, 0) - 1, y1 = Math.max(...diffs, hi, 0) + 1;
+    const X = (x) => 52 + ((x - x0) / (x1 - x0)) * 370, Y = (y) => 215 - ((y - y0) / (y1 - y0)) * 190;
+    s.appendChild(sv('line', { x1: 52, y1: Y(0), x2: 425, y2: Y(0), class: 'lv-gax', 'stroke-dasharray': '2 4' }));
+    s.appendChild(sv('text', { x: 425, y: 244, 'text-anchor': 'end', class: 'lv-glab' }, `mean of the two systems (${u}) →`)); s.appendChild(sv('text', { x: 6, y: 14, class: 'lv-glab' }, `${v.labels ? `${v.labels[1]} − ${v.labels[0]}` : 'B − A'} (${u})`));
+    const g1 = sv('g'); means.forEach((x, i) => g1.appendChild(sv('circle', { cx: X(x), cy: Y(diffs[i]), r: 3.5, class: 'lv-dotx' }))); s.appendChild(step(1, g1));
+    const line = (yv, t, cls) => { const g = sv('g'); g.appendChild(sv('line', { x1: 52, y1: Y(yv), x2: 425, y2: Y(yv), class: cls, 'stroke-width': 1.6 })); g.appendChild(sv('text', { x: 300, y: Y(yv) - 4, class: `lv-llab ${cls}` }, `${t} ${yv.toFixed(1)}${u}`)); return g; };
+    s.appendChild(step(2, line(m, 'bias', 'lv-lx')));
+    const g3 = sv('g'); g3.appendChild(line(lo, '−1.96 SD', 'lv-ly')); g3.appendChild(line(hi, '+1.96 SD', 'lv-ly')); s.appendChild(step(3, g3));
+    return { el: h('div', { class: 'lv lv-agree' }, h('h3', { class: 'lv-t', text: v.title }), h('div', { class: 'lv-svgwrap' }, s),
+      step(3, h('p', { class: 'lv-calc-line lv-calc-res' }, h('span', { text: `n = ${diffs.length} · bias ${m.toFixed(2)}${u} · SD of differences ${sd.toFixed(2)}${u}` }), h('b', { class: 'num', text: `LoA ${lo.toFixed(1)} to ${hi.toFixed(1)}${u}` }))), v.note ? h('p', { class: 'lv-note', text: v.note }) : null) };
+  };
   R.next = (v) => ({ el: h('div', { class: 'lv lv-next' }, h('h3', { class: 'lv-t', text: v.title }), step(1, h('div', { class: 'lv-next-row' }, v.items.map((it) => h('a', { class: 'lv-next-item', href: it.href || '#', dataset: { href: it.href || '' } }, h('b', { text: it.label }), h('span', { text: it.detail })))))) });
 
   /* ---------------- player ---------------- */

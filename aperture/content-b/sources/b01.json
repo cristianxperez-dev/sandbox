@@ -1,0 +1,1320 @@
+[
+ {
+  "id": "R-winter-2009-biomechanics",
+  "title": "Biomechanics and Motor Control of Human Movement (4th ed.)",
+  "authors": [
+   "David A. Winter"
+  ],
+  "publication": "John Wiley & Sons",
+  "year": 2009,
+  "url": "https://doi.org/10.1002/9780470549148",
+  "doi": "10.1002/9780470549148",
+  "discipline": "kinesiology",
+  "type": "textbook",
+  "access": "purchase",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Title, author, edition, publisher, year and DOI supplied by the course brief as verified in November 2026; rechecked against the Wiley DOI record listed there.",
+   "link": "not-opened"
+  },
+  "summary": "The standard graduate textbook on the mechanics of human movement. It develops segment kinematics, anthropometry, link-segment kinetics, inverse dynamics, mechanical work, energy and power, and muscle mechanics, with worked numerical procedures that can be implemented directly.",
+  "arguments": [
+   "Net joint moments and joint reaction forces can be computed from kinematics, segment inertial properties and external forces by solving the link-segment equations from the distal end inward.",
+   "A net joint moment is the summed effect of all muscles, ligaments and contact forces crossing the joint; it cannot be partitioned into individual structures without further modelling.",
+   "Mechanical power at a joint is the product of the net joint moment and the joint angular velocity, and its sign shows whether the moment is generating or absorbing energy."
+  ],
+  "evidence": "textbook",
+  "design": "Textbook with derivations and worked examples.",
+  "strengths": "Rigorous, explicit about assumptions (rigid segments, frictionless hinge joints, estimated inertial parameters), and widely used, so its vocabulary matches the research literature.",
+  "limitations": "Examples come mostly from gait and planar analyses; three-dimensional and high-speed sporting applications need extension; the 4th edition predates markerless capture.",
+  "contested": null,
+  "generalizability": "The mechanics are general and apply directly to pitching and hitting; the numerical examples need rescaling to the much higher velocities of throwing and swinging.",
+  "readingMinutes": 90,
+  "relevance": "Gives you the mechanics behind every joint moment, power and energy value in a biomechanics report, so you can see what was assumed to produce them."
+ },
+ {
+  "id": "R-robertson-2014-research",
+  "title": "Research Methods in Biomechanics (2nd ed.)",
+  "authors": [
+   "D. Gordon E. Robertson",
+   "Graham E. Caldwell",
+   "Joseph Hamill",
+   "Gary Kamen",
+   "Saunders N. Whittlesey"
+  ],
+  "publication": "Human Kinetics",
+  "year": 2014,
+  "url": "https://us.humankinetics.com/products/research-methods-in-biomechanics-2nd-edition",
+  "doi": null,
+  "discipline": "kinesiology",
+  "type": "textbook",
+  "access": "purchase",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Title, edition, the five editors, publisher and 2014 date matched on the Human Kinetics product page and a Journal of Sports Science and Medicine book review (14 chapters in four parts).",
+   "link": "not-opened"
+  },
+  "summary": "A methods textbook covering planar and three-dimensional kinematics, kinetics, inverse dynamics, energy and power, electromyography, and signal processing as practised in biomechanics laboratories.",
+  "arguments": [
+   "Three-dimensional joint angles depend on how segment coordinate systems are defined and on the rotation sequence chosen to decompose relative orientation.",
+   "Inverse dynamics yields net joint moments and powers whose accuracy depends on marker placement, filtering and segment parameter estimates.",
+   "Reported variables are products of a chain of methodological decisions, each of which should be stated in a paper."
+  ],
+  "evidence": "textbook",
+  "design": "Edited methods textbook with chapter-level worked procedures.",
+  "strengths": "Written by active methodologists; separates what is measured from what is computed; good chapters on 3D kinematics and kinetics.",
+  "limitations": "Chapter authorship differs across listings; it is a methods reference rather than a review of sport findings.",
+  "contested": null,
+  "generalizability": "Directly applicable to motion-capture reports in pitching and hitting.",
+  "readingMinutes": 60,
+  "relevance": "The bridge between the physics in this week and the decisions a laboratory makes when it produces numbers for you."
+ },
+ {
+  "id": "R-wu-2005-isb",
+  "title": "ISB recommendation on definitions of joint coordinate systems of various joints for the reporting of human joint motion — Part II: shoulder, elbow, wrist and hand",
+  "authors": [
+   "Ge Wu",
+   "Frans C. T. van der Helm",
+   "H. E. J. (DirkJan) Veeger",
+   "Mohsen Makhsous",
+   "Peter Van Roy",
+   "Carolyn Anglin",
+   "Jochem Nagels",
+   "Andrew R. Karduna",
+   "Kevin McQuade",
+   "Xuguang Wang",
+   "Frederick W. Werner",
+   "Bryan Buchholz"
+  ],
+  "publication": "Journal of Biomechanics, 38(5), 981–992",
+  "year": 2005,
+  "url": "https://doi.org/10.1016/j.jbiomech.2004.05.042",
+  "doi": "10.1016/j.jbiomech.2004.05.042",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Journal, volume, issue, pages and DOI supplied by the course brief as verified; title and authorship matched on the University of Victoria hosted PDF listing (Wu et al. 2005) seen in search results.",
+   "link": "not-opened"
+  },
+  "summary": "The International Society of Biomechanics recommendation for defining segment coordinate systems and joint angles in the upper limb. For the humerus relative to the thorax it recommends a Y–X–Y Euler sequence (plane of elevation, elevation, axial rotation) and discusses the singularities and alternatives.",
+  "arguments": [
+   "Anatomical landmarks define each segment coordinate system so that laboratories can compare results.",
+   "Thoracohumeral motion is described by plane of elevation, elevation and axial rotation (Y–X–Y), a sequence closer to clinical description than a Cardan sequence for many arm positions.",
+   "Every sequence has orientations where it becomes singular or hard to interpret; users must report the convention they used."
+  ],
+  "evidence": "review",
+  "design": "Consensus standardization recommendation by a scientific society committee.",
+  "strengths": "Authoritative, widely adopted, explicit about definitions.",
+  "limitations": "A recommendation, not a proof that one convention is best; Y–X–Y is singular near zero elevation and alternative sequences are common in the pitching literature.",
+  "contested": "The best sequence for high-elevation sporting tasks is debated; see R-senk-2006-rotation, which shows that sequence choice changes reported angles and argues for task-specific choice.",
+  "generalizability": "Applies to every upper-limb kinematic report; many baseball laboratories use other conventions, so the recommendation is a reference point rather than a guarantee of comparability.",
+  "readingMinutes": 45,
+  "relevance": "Lets you ask the first question about any shoulder angle in a report: under which definition?"
+ },
+ {
+  "id": "R-wu-2002-isb",
+  "title": "ISB recommendation on definitions of joint coordinate system of various joints for the reporting of human joint motion — part I: ankle, hip, and spine",
+  "authors": [
+   "Ge Wu",
+   "Sorin Siegler",
+   "Paul Allard",
+   "Chris Kirtley",
+   "Alberto Leardini",
+   "Dieter Rosenbaum",
+   "Mike Whittle",
+   "Darryl D. D'Lima",
+   "Luca Cristofolini",
+   "Hartmut Witte",
+   "Oskar Schmid",
+   "Ian Stokes"
+  ],
+  "publication": "Journal of Biomechanics, 35(4), 543–548",
+  "year": 2002,
+  "url": "https://doi.org/10.1016/S0021-9290(01)00222-6",
+  "doi": "10.1016/S0021-9290(01)00222-6",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "partially-confirmed",
+   "evidence": "Journal, volume, issue, pages and DOI matched in multiple index records (CiNii, Drexel research discovery, scilit); first author and committee authorship confirmed. Full co-author list taken from the paper's standard citation; not every name was individually displayed in the search snippets.",
+   "link": "not-opened"
+  },
+  "summary": "The first part of the ISB recommendation, extending Grood and Suntay's joint coordinate system to the ankle, hip and spine, with standard segment axes for each articulating bone.",
+  "arguments": [
+   "A joint coordinate system defined from anatomical axes reports motion in clinically meaningful terms.",
+   "Standard local axes in each bone make results comparable across laboratories.",
+   "The approach extends the knee convention of Grood and Suntay to other joints."
+  ],
+  "evidence": "review",
+  "design": "Consensus standardization recommendation.",
+  "strengths": "Authoritative; explicit axis definitions for the hip and spine segments that matter in rotational sport skills.",
+  "limitations": "Baker (2003) argued that some implementations give angle definitions inconsistent with conventional clinical usage.",
+  "contested": "Implementation details for some joints have been criticized as departing from clinical usage; the recommendation remains the common reference.",
+  "generalizability": "Directly relevant to pelvis, hip and trunk angles in pitching and hitting reports.",
+  "readingMinutes": 25,
+  "relevance": "Pelvis and trunk rotation values in hitting and pitching reports depend on these definitions."
+ },
+ {
+  "id": "R-grood-1983-joint",
+  "title": "A Joint Coordinate System for the Clinical Description of Three-Dimensional Motions: Application to the Knee",
+  "authors": [
+   "Edward S. Grood",
+   "Wilfredo J. Suntay"
+  ],
+  "publication": "Journal of Biomechanical Engineering, 105(2), 136–144",
+  "year": 1983,
+  "url": "https://doi.org/10.1115/1.3138397",
+  "doi": "10.1115/1.3138397",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Title, authors, journal, volume, pages and DOI matched in citedrive and scholarhub index records; its adoption by the ISB is stated in Wu et al. 2002 and 2005.",
+   "link": "not-opened"
+  },
+  "summary": "Introduces the joint coordinate system: one axis fixed in each segment and a floating axis perpendicular to both, so that the three rotations correspond to clinical terms and the reported large displacements do not depend on the order of rotations.",
+  "arguments": [
+   "Clinical joint angles can be defined geometrically with two body-fixed axes and a floating axis.",
+   "With this construction the description is sequence-independent in the sense that rotations are not applied in an order.",
+   "Without the translations, the convention is mathematically equivalent to a particular Cardan sequence."
+  ],
+  "evidence": "theoretical",
+  "design": "Mathematical and geometric development with application to the knee.",
+  "strengths": "Elegant, clinically interpretable, foundation of the ISB standards.",
+  "limitations": "Equivalent to a Cardan sequence and therefore shares its singularity; knee-specific application.",
+  "contested": null,
+  "generalizability": "The logic generalizes to the hip, spine and upper-limb joints through the ISB recommendations.",
+  "readingMinutes": 30,
+  "relevance": "Explains why a joint coordinate system and a Cardan sequence are two descriptions of the same mathematics."
+ },
+ {
+  "id": "R-senk-2006-rotation",
+  "title": "Rotation sequence as an important factor in shoulder kinematics",
+  "authors": [
+   "Miroslav Šenk",
+   "Laurence Chèze"
+  ],
+  "publication": "Clinical Biomechanics, 21(Suppl. 1), S3–S8",
+  "year": 2006,
+  "url": "https://doi.org/10.1016/j.clinbiomech.2005.09.007",
+  "doi": "10.1016/j.clinbiomech.2005.09.007",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "partially-confirmed",
+   "evidence": "Title, authors, journal, supplement pages and DOI matched in reference listings (arXiv paper on tilt-and-torsion; informahealthcare reference lists); abstract not displayed, so findings are described only as reported by citing papers.",
+   "link": "not-opened"
+  },
+  "summary": "A study of how the choice of Euler or Cardan sequence changes reported shoulder angles. Citing papers report that each sequence produced materially different angles for the same motion and that the authors recommended choosing the sequence according to the task, partly to avoid gimbal lock.",
+  "arguments": [
+   "Reported humeral angles depend on the rotation sequence.",
+   "Sequences become singular (gimbal lock) at particular arm positions, which may fall inside the range of a sporting task.",
+   "The sequence should be chosen for the task analysed and always reported."
+  ],
+  "evidence": "lab-experiment",
+  "design": "Kinematic comparison of rotation sequences applied to the same shoulder motions (details not confirmed here).",
+  "strengths": "Directly demonstrates the definitional dependence that this week teaches.",
+  "limitations": "Specific numerical results were not confirmed in this course's checks; summarized from citing papers only.",
+  "contested": "Complements and partly challenges the single ISB recommendation (R-wu-2005-isb).",
+  "generalizability": "Highly relevant to throwing, where the arm passes near 90° of abduction, a singular position for some sequences.",
+  "readingMinutes": 20,
+  "relevance": "Supports the rule that two shoulder values are only comparable if computed with the same sequence."
+ },
+ {
+  "id": "R-roach-2013-elastic",
+  "title": "Elastic energy storage in the shoulder and the evolution of high-speed throwing in Homo",
+  "authors": [
+   "Neil T. Roach",
+   "Madhusudhan Venkadesan",
+   "Michael J. Rainbow",
+   "Daniel E. Lieberman"
+  ],
+  "publication": "Nature, 498(7455), 483–486",
+  "year": 2013,
+  "url": "https://doi.org/10.1038/nature12267",
+  "doi": "10.1038/nature12267",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Title, authors, journal, volume, issue, pages and DOI matched in search results from the Yale lab-hosted PDF listing, the Harvard Human Evolutionary Biology press release and an Altmetric record; 20 experienced throwers and the bracing manipulation confirmed in summaries of the abstract.",
+   "link": "not-opened"
+  },
+  "summary": "Uses three-dimensional kinematics and kinetics of 20 experienced throwers to argue that the shoulder stores elastic energy during arm cocking and releases it to power rapid humeral internal rotation. Restricting shoulder motion with a brace reduced work and power downstream. The authors link the anatomical features that enable this to early Homo.",
+  "arguments": [
+   "During arm cocking, the shoulder's soft tissues are stretched and can store elastic energy that is released during acceleration.",
+   "Experimentally restricting shoulder external rotation reduced elbow work and power, consistent with a role for stored shoulder energy.",
+   "Features such as a laterally oriented glenoid, low humeral torsion and a mobile waist appear together in Homo erectus, which the authors connect to selection for throwing."
+  ],
+  "evidence": "lab-experiment",
+  "design": "Laboratory motion capture and inverse dynamics in 20 experienced throwers, with a bracing manipulation; evolutionary inference from fossil anatomy.",
+  "strengths": "Combines a mechanical model with an experimental manipulation; high-profile, influential account of elastic contributions in throwing.",
+  "limitations": "Small sample of non-elite throwers; elastic storage is inferred from modelling rather than measured directly in tissue; the evolutionary claims are a separate, more speculative inference.",
+  "contested": "The evolutionary hunting interpretation has been questioned by other anthropologists; the mechanical claim that tissues store energy is better supported than the exact magnitude of storage.",
+  "generalizability": "Mechanism is plausibly general to overhead throwing; magnitudes for elite pitchers are not established by this study.",
+  "readingMinutes": 25,
+  "relevance": "Grounds the idea that layback is partly a spring, and shows the difference between a mechanism and a training prescription."
+ },
+ {
+  "id": "R-crockett-2002-osseous",
+  "title": "Osseous Adaptation and Range of Motion at the Glenohumeral Joint in Professional Baseball Pitchers",
+  "authors": [
+   "Heber C. Crockett",
+   "Lori B. Gross",
+   "Kevin E. Wilk",
+   "Martin L. Schwartz",
+   "Jamie Reed",
+   "James O'Mara",
+   "Michael T. Reilly",
+   "Jeffrey R. Dugas",
+   "Keith Meister",
+   "Stephen Lyman",
+   "James R. Andrews"
+  ],
+  "publication": "American Journal of Sports Medicine, 30(1), 20–26",
+  "year": 2002,
+  "url": "https://doi.org/10.1177/03635465020300011701",
+  "doi": "10.1177/03635465020300011701",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Title, journal, volume, pages and DOI matched in library index records (bib-bvb, KB Digitale Bibliotheek, Weill Cornell VIVO); author list from one indexer; a secondary source reports 25 pitchers and 25 non-throwing controls, which was not confirmed in the abstract and is therefore not used in lessons.",
+   "link": "not-opened"
+  },
+  "summary": "Used CT to measure humeral head and glenoid version in professional pitchers and controls. Pitchers' throwing shoulders showed greater humeral retroversion, greater external rotation and less internal rotation than the non-throwing side, while the total arc of rotation was similar between sides.",
+  "arguments": [
+   "The throwing humerus is more retroverted than the non-throwing humerus in professional pitchers.",
+   "The shift of the rotational arc toward external rotation is at least partly bony, not only soft-tissue tightness.",
+   "Total rotational range was similar between sides, so loss of internal rotation was accompanied by gain in external rotation."
+  ],
+  "evidence": "observational",
+  "design": "Cross-sectional imaging and range-of-motion comparison of throwing and non-throwing shoulders in professional pitchers with non-throwing controls.",
+  "strengths": "Direct imaging of bone rather than inference from range of motion.",
+  "limitations": "Cross-sectional; cannot establish when the adaptation develops or whether it is caused by throwing rather than selection; one professional sample.",
+  "contested": "Later work debates how much of the internal-rotation loss is bony versus soft-tissue and how to interpret it clinically.",
+  "generalizability": "Applies to adult overhead throwers; youth development of retroversion requires different evidence.",
+  "readingMinutes": 20,
+  "relevance": "A model case of a physical adaptation that looks like a deficit if judged against a non-throwing norm."
+ },
+ {
+  "id": "R-lieber-2000-functional",
+  "title": "Functional and clinical significance of skeletal muscle architecture",
+  "authors": [
+   "Richard L. Lieber",
+   "Jan Fridén"
+  ],
+  "publication": "Muscle & Nerve, 23(11), 1647–1666",
+  "year": 2000,
+  "url": "https://www.deepdyve.com/lp/doc/HghGVBigDy",
+  "doi": null,
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "partially-confirmed",
+   "evidence": "Title, authors, journal, volume, issue and pages matched in several reference listings and index records (Thieme reference list, unibo index, typeset); DOI not displayed in results, so it is omitted; URL is the DeepDyve listing seen in search.",
+   "link": "not-opened"
+  },
+  "summary": "A review of skeletal muscle architecture — fibre length, pennation and physiological cross-sectional area — and why it dominates a muscle's force and excursion capacity, with clinical applications such as tendon transfer.",
+  "arguments": [
+   "Physiological cross-sectional area is the main architectural determinant of maximal isometric force.",
+   "Fibre length (number of sarcomeres in series) determines excursion range and maximal shortening velocity.",
+   "Architecture differs widely across upper- and lower-limb muscles and should guide clinical and functional interpretation."
+  ],
+  "evidence": "review",
+  "design": "Narrative review of cadaveric architectural data and muscle physiology.",
+  "strengths": "Widely used reference; clear link between structure and function.",
+  "limitations": "Cadaveric architecture data come mainly from older adults; in vivo architecture adapts with training.",
+  "contested": null,
+  "generalizability": "The structure–function principles transfer to athletes; the specific values do not.",
+  "readingMinutes": 40,
+  "relevance": "Explains why a muscle's design, not only its size, constrains speed and range in throwing and swinging."
+ },
+ {
+  "id": "R-wilk-2011-correlation",
+  "title": "Correlation of glenohumeral internal rotation deficit and total rotational motion to shoulder injuries in professional baseball pitchers",
+  "authors": [
+   "Kevin E. Wilk",
+   "Leonard C. Macrina",
+   "Glenn S. Fleisig",
+   "et al."
+  ],
+  "publication": "American Journal of Sports Medicine, 39(2), 329–335",
+  "year": 2011,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/21131681/",
+  "doi": null,
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "partially-confirmed",
+   "evidence": "Title, journal, volume, issue, pages and PubMed ID 21131681 matched; the 122 pitchers over three seasons, the non-significant GIRD association (P = .17) and the total-rotation finding matched abstract excerpts. Author list abbreviated; DOI not confirmed in results and therefore omitted.",
+   "link": "not-opened"
+  },
+  "summary": "Followed professional pitchers measured over three seasons for passive shoulder rotation. Pitchers with internal-rotation deficit were nearly twice as likely to be injured, but the difference was not statistically significant; a total rotational motion deficit greater than 5° compared with the non-throwing side was associated with a higher injury rate.",
+  "arguments": [
+   "The commonly cited internal-rotation deficit showed a non-significant association with shoulder injury in this sample.",
+   "Total rotational motion deficit (sum of internal and external rotation, compared between sides) was associated with injury.",
+   "Interpreting rotation requires both sides and the total arc, not internal rotation alone."
+  ],
+  "evidence": "observational",
+  "design": "Prospective observational cohort of professional pitchers with preseason goniometry over three seasons.",
+  "strengths": "Prospective measurement in a professional population; considers total arc.",
+  "limitations": "Modest number of injuries; goniometric measurement error; association, not causation.",
+  "contested": "A later study by the same group did not replicate the internal-rotation association; findings on rotation deficits and injury remain mixed.",
+  "generalizability": "Professional pitchers; extrapolation to youth or position players is uncertain.",
+  "readingMinutes": 20,
+  "relevance": "Shows that a range-of-motion difference is not automatically a risk factor, and why the denominator (total arc, other side) matters."
+ },
+ {
+  "id": "R-fleisig-1995-kinetics",
+  "title": "Kinetics of baseball pitching with implications about injury mechanisms",
+  "authors": [
+   "Glenn S. Fleisig",
+   "James R. Andrews",
+   "Charles J. Dillman",
+   "Rafael F. Escamilla"
+  ],
+  "publication": "American Journal of Sports Medicine, 23(2), 233–239",
+  "year": 1995,
+  "url": "https://doi.org/10.1177/036354659502300218",
+  "doi": "10.1177/036354659502300218",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Citation and DOI supplied by the course brief as verified in November 2026 (n = 26).",
+   "link": "not-opened"
+  },
+  "summary": "A foundational inverse-dynamics description of shoulder and elbow forces and torques during the pitch in 26 highly skilled pitchers, identifying the arm-cocking and deceleration phases as periods of large net loads and proposing injury mechanisms.",
+  "arguments": [
+   "Large net internal-rotation and varus torques occur near maximal shoulder external rotation.",
+   "Large compressive forces at the shoulder and elbow occur near ball release and during deceleration.",
+   "Phases of large net loading suggest, but do not prove, mechanisms for specific injuries."
+  ],
+  "evidence": "observational",
+  "design": "Cross-sectional 3D motion analysis with inverse dynamics in skilled adult pitchers.",
+  "strengths": "Established the method and vocabulary of pitching kinetics; a reference for later normative work.",
+  "limitations": "One laboratory; small sample; net joint loads only; injury mechanisms are inferred, not observed.",
+  "contested": null,
+  "generalizability": "Adult skilled pitchers in a laboratory; values depend on the model and filtering used.",
+  "readingMinutes": 30,
+  "relevance": "The origin of most joint-moment numbers you will see in pitching reports — and of their limits."
+ },
+ {
+  "id": "R-zajac-1989-determining",
+  "title": "Determining muscle's force and action in multi-articular movement",
+  "authors": [
+   "Felix E. Zajac",
+   "M. E. Gordon"
+  ],
+  "publication": "Exercise and Sport Sciences Reviews, 17, 187–230",
+  "year": 1989,
+  "url": "https://scilit.net/publications/51c922b970457241d3d61e5f15f9c5c8",
+  "doi": null,
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "library",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "partially-confirmed",
+   "evidence": "Title, first author, journal, volume and pages matched in a scilit record, a Biomch-L reference and a Thieme reference list; the co-author's first name differs between listings, so only initials are given; no abstract or DOI found.",
+   "link": "not-opened"
+  },
+  "summary": "A review arguing that, in multi-joint movement, a muscle's action must be described by the accelerations it produces at all joints, because inertial coupling lets a muscle accelerate joints it does not cross and even oppose its anatomical action at a joint it does cross.",
+  "arguments": [
+   "Because limb segments are coupled, a muscle's force accelerates every joint in the chain.",
+   "Anatomical classification (flexor, extensor) can mislead about a muscle's actual effect on motion.",
+   "Understanding coordination requires dynamic models, not only joint moments."
+  ],
+  "evidence": "review",
+  "design": "Theoretical and modelling review.",
+  "strengths": "Foundational for interpreting segment interaction and induced acceleration analysis.",
+  "limitations": "Older; relies on models whose parameters are uncertain; full text not easily available.",
+  "contested": null,
+  "generalizability": "Applies to any multi-segment skill, including throwing and swinging.",
+  "readingMinutes": 60,
+  "relevance": "Explains why 'this muscle does that' statements in coaching are often too simple."
+ },
+ {
+  "id": "R-hirashima-2008-kinetic",
+  "title": "Kinetic chain of overarm throwing in terms of joint rotations revealed by induced acceleration analysis",
+  "authors": [
+   "Masaya Hirashima",
+   "Katsu Yamane",
+   "Yoshihiko Nakamura",
+   "Tatsuyuki Ohtsuki"
+  ],
+  "publication": "Journal of Biomechanics, 41(13), 2874–2883",
+  "year": 2008,
+  "url": "https://doi.org/10.1016/j.jbiomech.2008.06.014",
+  "doi": "10.1016/j.jbiomech.2008.06.014",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "partially-confirmed",
+   "evidence": "Journal, volume, issue, pages and DOI matched in a reference listing; topic matched in a university-hosted PDF listing; findings described as reported by citing papers (abstract not displayed).",
+   "link": "not-opened"
+  },
+  "summary": "Applies induced acceleration analysis to overarm throwing to separate how much of each joint's angular acceleration comes from muscle torques and how much from velocity-dependent interaction torques. Citing papers report that elbow extension and wrist flexion at release are driven largely by velocity-dependent torques arising from trunk rotation and shoulder internal rotation.",
+  "arguments": [
+   "Distal joint velocities in throwing are produced substantially by interaction torques, not only by the muscles crossing those joints.",
+   "Proximal joint torques early in the throw create the velocity-dependent effects that accelerate distal joints later.",
+   "The kinetic chain can be described joint by joint with an explicit dynamic model."
+  ],
+  "evidence": "lab-experiment",
+  "design": "Motion capture of skilled throwers with a multi-segment dynamic model and induced acceleration analysis.",
+  "strengths": "Gives the kinetic chain a mechanical decomposition rather than a verbal metaphor.",
+  "limitations": "Model-dependent; small samples typical of the method; results depend on segment parameters.",
+  "contested": null,
+  "generalizability": "Mechanistic logic applies to pitching; magnitudes for individual pitchers are not established.",
+  "readingMinutes": 40,
+  "relevance": "The clearest mechanical meaning of 'the arm is along for the ride' — and its limits."
+ },
+ {
+  "id": "R-putnam-1993-sequential",
+  "title": "Sequential motions of body segments in striking and throwing skills: descriptions and explanations",
+  "authors": [
+   "Carol A. Putnam"
+  ],
+  "publication": "Journal of Biomechanics, 26(Suppl. 1), 125–135",
+  "year": 1993,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/8505347/",
+  "doi": null,
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "partially-confirmed",
+   "evidence": "Title, author, journal, supplement and pages matched in the PubMed record 8505347 and several reference lists; abstract content seen in search snippets; DOI not displayed, so omitted.",
+   "link": "not-opened"
+  },
+  "summary": "A review of the proximal-to-distal sequence in striking and throwing. It argues that the sequence is not explained by joint moments alone: the interaction between linked segments, which changes with their motion and orientation, is central, and differences in interaction can explain timing differences between skills.",
+  "arguments": [
+   "Proximal-to-distal ordering of segment motion is common in striking and throwing.",
+   "Explaining the sequence requires analysing segment interaction, not only muscle moments.",
+   "Differences in interaction between skills should be studied before general principles are stated."
+  ],
+  "evidence": "review",
+  "design": "Narrative review of descriptive and kinetic studies.",
+  "strengths": "Separates description of a sequence from its explanation.",
+  "limitations": "Predates modern induced-acceleration and energy-flow methods.",
+  "contested": null,
+  "generalizability": "Directly relevant to pitching and hitting; warns against assuming one sequence explanation fits both.",
+  "readingMinutes": 35,
+  "relevance": "The scholarly basis for treating 'kinetic sequence' graphics as descriptions that still need explanation."
+ },
+ {
+  "id": "R-aguinaldo-2007-effects",
+  "title": "Effects of upper trunk rotation on shoulder joint torque among baseball pitchers of various levels",
+  "authors": [
+   "Arnel L. Aguinaldo",
+   "Jeremy Buttermore",
+   "Henry Chambers"
+  ],
+  "publication": "Journal of Applied Biomechanics, 23(1), 42–51",
+  "year": 2007,
+  "url": "https://doi.org/10.1123/jab.23.1.42",
+  "doi": "10.1123/jab.23.1.42",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "PubMed record 17585177 confirmed title, journal, volume, pages and DOI; 38 pitchers across professional, college, high school and youth levels and the later trunk-rotation timing in professionals matched the abstract excerpt.",
+   "link": "not-opened"
+  },
+  "summary": "Compared 38 pitchers from youth to professional level. Professional pitchers rotated the upper trunk later in the delivery and had the lowest normalized shoulder rotational torque among skeletally mature groups.",
+  "arguments": [
+   "Timing of upper trunk rotation differed across levels, with later rotation in professionals.",
+   "Later trunk rotation coincided with lower normalized shoulder torque.",
+   "The authors proposed that trunk rotation timing lets the shoulder move with less joint loading."
+  ],
+  "evidence": "observational",
+  "design": "Cross-sectional comparison across competitive levels.",
+  "strengths": "Links trunk timing to arm loading across development levels.",
+  "limitations": "Between-group, cross-sectional; level differs in many variables at once (age, size, skill, selection).",
+  "contested": null,
+  "generalizability": "Associations across levels do not show that changing an individual's timing will change his loading.",
+  "readingMinutes": 25,
+  "relevance": "A key kinetic-chain study that is often cited as if it were an intervention."
+ },
+ {
+  "id": "R-matsuo-2001-comparison",
+  "title": "Comparison of kinematic and temporal parameters between different pitch velocity groups",
+  "authors": [
+   "Tomoyuki Matsuo",
+   "Rafael F. Escamilla",
+   "Glenn S. Fleisig",
+   "Steven W. Barrentine",
+   "James R. Andrews"
+  ],
+  "publication": "Journal of Applied Biomechanics, 17(1), 1–13",
+  "year": 2001,
+  "url": "https://doi.org/10.1123/jab.17.1.1",
+  "doi": "10.1123/jab.17.1.1",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Citation and DOI supplied by the course brief as verified; design (12 kinematic and 9 temporal parameters, high- and low-velocity groups from 127 college and professional pitchers) and principal findings matched abstract excerpts in index records.",
+   "link": "not-opened"
+  },
+  "summary": "Compared high- and low-velocity groups drawn from 127 college and professional pitchers. The high-velocity group showed greater maximum shoulder external rotation, more forward trunk tilt at release and greater lead-knee extension velocity at release; the low-velocity group showed greater lead-knee flexion velocity.",
+  "arguments": [
+   "Several kinematic variables differ between pitchers who throw harder and those who throw softer.",
+   "Greater shoulder external rotation lengthens the acceleration path.",
+   "Lead-knee behaviour differs between velocity groups."
+  ],
+  "evidence": "observational",
+  "design": "Cross-sectional comparison of extreme velocity groups.",
+  "strengths": "Large sample for its era; explicit group contrast.",
+  "limitations": "Between-pitcher comparison of extreme groups inflates apparent differences; does not show that changing a variable changes velocity.",
+  "contested": null,
+  "generalizability": "College and professional pitchers; associations only.",
+  "readingMinutes": 25,
+  "relevance": "A classic example of between-athlete differences that are easily misread as coaching targets."
+ },
+ {
+  "id": "R-howenstein-2019-energy",
+  "title": "Energy Flow Analysis to Investigate Youth Pitching Velocity and Efficiency",
+  "authors": [
+   "Jacob Howenstein",
+   "Kristof Kipp",
+   "Michelle B. Sabick"
+  ],
+  "publication": "Medicine & Science in Sports & Exercise, 51(3), 523–531",
+  "year": 2019,
+  "url": "https://doi.org/10.1249/MSS.0000000000001813",
+  "doi": "10.1249/MSS.0000000000001813",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Citation and DOI supplied by the course brief as verified; 24 youth pitchers, the energy-flow method and the trunk-to-arm correlation with velocity (r = 0.900) matched abstract excerpts in the Marquette ePublications record.",
+   "link": "not-opened"
+  },
+  "summary": "Computed segmental energy flow (joint force power and segment torque power) in 24 youth pitchers. All calculated energy-flow variables correlated with pitch velocity, most strongly the energy flowing from the trunk into the arm; energy entering the trunk through joint forces was associated with lower velocity-normalized arm loads.",
+  "arguments": [
+   "Energy flow quantifies power moving between segments through joint forces and joint moments.",
+   "Energy transferred from the trunk to the arm was strongly associated with velocity in this youth sample.",
+   "The authors define 'efficiency' as velocity relative to arm joint loads."
+  ],
+  "evidence": "observational",
+  "design": "Cross-sectional laboratory study of youth pitchers with inverse dynamics and energy-flow analysis.",
+  "strengths": "Uses a mechanically defined quantity rather than a metaphor for 'transfer'.",
+  "limitations": "Small youth sample; correlations between variables that share kinematic inputs can be inflated; 'efficiency' is a defined ratio, not a general property.",
+  "contested": null,
+  "generalizability": "Youth pitchers; adult and professional magnitudes may differ.",
+  "readingMinutes": 30,
+  "relevance": "Shows what 'energy transfer' can mean precisely, and how a defined 'efficiency' differs from the everyday word."
+ },
+ {
+  "id": "R-urbin-2013-associations",
+  "title": "Associations between timing in the baseball pitch and shoulder kinetics, elbow kinetics, and ball speed",
+  "authors": [
+   "M. A. Urbin",
+   "Glenn S. Fleisig",
+   "Asheber Abebe",
+   "James R. Andrews"
+  ],
+  "publication": "American Journal of Sports Medicine, 41(2), 336–342",
+  "year": 2013,
+  "url": "https://pubmed.ncbi.nlm.nih.gov/23204507/",
+  "doi": null,
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "partially-confirmed",
+   "evidence": "Title, authors, journal, volume, issue, pages and MEDLINE ID 23204507 matched in a BVS/MEDLINE record and a KB index; the phase-timing design and direction of findings matched abstract excerpts; sample size and DOI not confirmed and therefore not stated.",
+   "link": "not-opened"
+  },
+  "summary": "Divided each pitch into phases between successive peak segment angular velocities and used mixed models to relate phase durations to ball speed and arm kinetics. Longer phase times were associated with lower kinetics and lower ball speed, and slower ball speed was tied to a longer gap between peak upper-torso and peak elbow-extension angular velocity.",
+  "arguments": [
+   "Timing between peak segment velocities is associated with both arm kinetics and ball speed.",
+   "Longer intervals between peaks tended to accompany lower loads and lower velocity.",
+   "Timing variables therefore present a trade-off rather than a free improvement."
+  ],
+  "evidence": "observational",
+  "design": "Repeated-pitch laboratory data analysed with mixed models.",
+  "strengths": "Mixed models use repeated pitches within pitchers.",
+  "limitations": "Associational; small number of pitchers typical of laboratory studies; within- and between-pitcher effects need careful separation.",
+  "contested": null,
+  "generalizability": "Skilled pitchers in a laboratory setting.",
+  "readingMinutes": 25,
+  "relevance": "A direct example of why one timing variable can move velocity and load in the same direction."
+ },
+ {
+  "id": "R-stodden-2005-relationship",
+  "title": "Relationship of biomechanical factors to baseball pitching velocity: within pitcher variation",
+  "authors": [
+   "David F. Stodden",
+   "Glenn S. Fleisig",
+   "Scott P. McLean",
+   "James R. Andrews"
+  ],
+  "publication": "Journal of Applied Biomechanics, 21(1), 44–56",
+  "year": 2005,
+  "url": "https://doi.org/10.1123/jab.21.1.44",
+  "doi": "10.1123/jab.21.1.44",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "partially-confirmed",
+   "evidence": "Title, journal, volume, pages and DOI matched in a BISp record, a QxMD record (PubMed 16131704) and sciencegate; the design (19 pitchers, 6–10 fastballs each, velocity range at least 1.8 m/s) matched the BISp abstract; findings summarized only at the level reported there.",
+   "link": "not-opened"
+  },
+  "summary": "Examined how pitch-to-pitch variation in mechanics within each of 19 pitchers related to variation in fastball velocity. Within a pitcher, faster pitches were associated with differences in several kinematic and kinetic variables, including trunk and pelvis rotation and arm kinetics.",
+  "arguments": [
+   "Within-pitcher variation in mechanics is related to within-pitcher variation in velocity.",
+   "Within-athlete analyses address a different question from between-athlete comparisons.",
+   "Faster pitches within a pitcher tend to coincide with larger arm kinetics."
+  ],
+  "evidence": "observational",
+  "design": "Within-pitcher repeated-trial analysis of 19 pitchers with 3D motion analysis.",
+  "strengths": "One of the few pitching studies explicitly designed around within-athlete variation.",
+  "limitations": "Small number of trials per pitcher; natural variation is not an intervention; small velocity ranges.",
+  "contested": null,
+  "generalizability": "Skilled pitchers; associations at the trial level.",
+  "readingMinutes": 25,
+  "relevance": "The within-athlete counterpart to between-athlete studies such as Matsuo et al."
+ },
+ {
+  "id": "R-oyama-2013-effect",
+  "title": "Effect of Excessive Contralateral Trunk Tilt on Pitching Biomechanics and Performance in High School Baseball Pitchers",
+  "authors": [
+   "Sakiko Oyama",
+   "Bing Yu",
+   "J. Troy Blackburn",
+   "Darin A. Padua",
+   "Li Li",
+   "Joseph B. Myers"
+  ],
+  "publication": "American Journal of Sports Medicine, 41(10), 2430–2438",
+  "year": 2013,
+  "url": "https://doi.org/10.1177/0363546513496547",
+  "doi": "10.1177/0363546513496547",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Citation and DOI supplied by the course brief as verified; 72 high school pitchers, higher ball speed (about 32.6 vs 31.1 m/s) and higher arm kinetics in the excessive-tilt group matched the Georgia Southern repository abstract.",
+   "link": "not-opened"
+  },
+  "summary": "Compared high school pitchers with and without excessive contralateral trunk tilt. The tilt group threw faster and also had greater elbow and shoulder forces and moments; the authors called contralateral tilt a strategy associated with both higher ball speed and higher joint loading.",
+  "arguments": [
+   "Contralateral trunk tilt is associated with higher ball speed in high school pitchers.",
+   "The same strategy is associated with greater shoulder and elbow loads.",
+   "Whether coaches should encourage or discourage it is unresolved."
+  ],
+  "evidence": "observational",
+  "design": "Cross-sectional comparison of two groups defined by frontal-view trunk tilt.",
+  "strengths": "Reports performance and loading together.",
+  "limitations": "Cross-sectional; group split on one variable; high school sample.",
+  "contested": null,
+  "generalizability": "High school pitchers; adult magnitudes may differ.",
+  "readingMinutes": 25,
+  "relevance": "A clean example of a mechanical choice that trades velocity against load."
+ },
+ {
+  "id": "R-welch-1995-hitting",
+  "title": "Hitting a baseball: a biomechanical description",
+  "authors": [
+   "Chris M. Welch",
+   "Scott A. Banks",
+   "Frank F. Cook",
+   "Pete Draovitch"
+  ],
+  "publication": "Journal of Orthopaedic & Sports Physical Therapy, 22(5), 193–201",
+  "year": 1995,
+  "url": "https://doi.org/10.2519/jospt.1995.22.5.193",
+  "doi": "10.2519/jospt.1995.22.5.193",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Citation and DOI supplied by the course brief as verified in November 2026.",
+   "link": "not-opened"
+  },
+  "summary": "An early three-dimensional description of the baseball swing in skilled hitters, documenting weight shift, a proximal-to-distal rotation of hips, shoulders and arms, and the kinetics associated with these phases.",
+  "arguments": [
+   "The swing shows a sequence in which pelvis rotation leads trunk and arm rotation.",
+   "Ground reaction forces shift between the legs during the swing.",
+   "The description provides reference patterns for skilled hitters."
+  ],
+  "evidence": "observational",
+  "design": "Descriptive laboratory motion analysis of skilled hitters.",
+  "strengths": "Foundational description of swing kinematics and kinetics.",
+  "limitations": "Small sample, tee or laboratory conditions, descriptive only.",
+  "contested": null,
+  "generalizability": "Describes skilled hitters in a laboratory; not a performance model.",
+  "readingMinutes": 25,
+  "relevance": "The hitting counterpart to the pitching kinetic-chain literature."
+ },
+ {
+  "id": "R-dowling-2016-kinematic",
+  "title": "Kinematic comparison of baseball batting off of a tee among various competition levels",
+  "authors": [
+   "Brittany Dowling",
+   "Glenn S. Fleisig"
+  ],
+  "publication": "Sports Biomechanics, 15(3), 255–269",
+  "year": 2016,
+  "url": "https://doi.org/10.1080/14763141.2016.1159320",
+  "doi": "10.1080/14763141.2016.1159320",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Citation and DOI supplied by the course brief as verified; title, authors, volume and pages also matched a 2024 International Journal of Sports Medicine reference list.",
+   "link": "not-opened"
+  },
+  "summary": "Compared tee-batting kinematics across competition levels. Citing work reports that higher-level hitters held the bat farther from the body at contact, with more back-shoulder abduction and less back-elbow flexion.",
+  "arguments": [
+   "Swing kinematics differ across competition levels.",
+   "Some differences are in arm configuration at contact.",
+   "Level comparisons describe groups, not individual development paths."
+  ],
+  "evidence": "observational",
+  "design": "Cross-sectional comparison across levels in tee batting.",
+  "strengths": "Spans development levels in one laboratory protocol.",
+  "limitations": "Tee batting removes the perceptual and timing demands of live pitching; cross-sectional.",
+  "contested": null,
+  "generalizability": "Associations across levels; tee conditions limit transfer to game hitting.",
+  "readingMinutes": 25,
+  "relevance": "Illustrates the design limits of tee-based, between-group hitting research."
+ },
+ {
+  "id": "R-bullock-2021-baseball",
+  "title": "Baseball pitching biomechanics in relation to pain, injury, and surgery: A systematic review",
+  "authors": [
+   "Garrett S. Bullock",
+   "et al."
+  ],
+  "publication": "Journal of Science and Medicine in Sport, 24(1), 13–20",
+  "year": 2021,
+  "url": "https://doi.org/10.1016/j.jsams.2020.06.015",
+  "doi": "10.1016/j.jsams.2020.06.015",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Citation and DOI supplied by the course brief as verified; 11 included studies (1,376 pitchers), the elbow valgus torque and early trunk rotation findings and the low-power conclusion matched the abstract in index records (Melbourne, Oxford, Wake Forest). Author list abbreviated.",
+   "link": "not-opened"
+  },
+  "summary": "A systematic review of 11 studies (1,376 pitchers) linking pitching biomechanics to pain, injury and surgery. Elbow valgus torque and early trunk rotation emerged as risk factors, but most studies were underpowered and no prospective 3D biomechanical studies were found, so other variables could not be established as risk factors.",
+  "arguments": [
+   "Only a small number of studies link pitching mechanics prospectively to injury.",
+   "Elbow valgus torque and early trunk rotation have the most support among the variables studied.",
+   "Low power and design limits prevent firm conclusions about most mechanical variables."
+  ],
+  "evidence": "systematic-review",
+  "design": "PROSPERO-registered systematic review of four databases through June 2019.",
+  "strengths": "Systematic, registered, explicit about evidence quality.",
+  "limitations": "Few eligible studies; heterogeneous designs and outcomes.",
+  "contested": null,
+  "generalizability": "Mostly adult and high school pitchers; conclusions about specific mechanics remain provisional.",
+  "readingMinutes": 30,
+  "relevance": "Sets the evidentiary ceiling for any claim that a mechanical variable is an injury risk factor."
+ },
+ {
+  "id": "R-bernstein-1967-coordination",
+  "title": "The Co-ordination and Regulation of Movements",
+  "authors": [
+   "Nikolai A. Bernstein"
+  ],
+  "publication": "Pergamon Press, Oxford",
+  "year": 1967,
+  "url": "https://libcat.library.tamu.edu/Record/in00000267953",
+  "doi": null,
+  "discipline": "kinesiology",
+  "type": "book",
+  "access": "library",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Title, author, publisher and 1967 English edition matched in the Texas A&M library catalogue record and Elsevier's description of the 1984 reassessment volume, which reprints the text.",
+   "link": "not-opened"
+  },
+  "summary": "A collection of Bernstein's papers translated into English. It frames coordination as the mastery of redundant degrees of freedom and emphasizes that the same goal is achieved by different movements on each repetition.",
+  "arguments": [
+   "The motor system has many more degrees of freedom than any task requires (the degrees-of-freedom problem).",
+   "Coordination is the process of mastering redundant degrees of freedom, converting the body into a controllable system.",
+   "Repetition without repetition: skilled performers solve the same problem anew rather than reproducing a fixed motion."
+  ],
+  "evidence": "theoretical",
+  "design": "Theoretical and experimental papers from the 1920s–1960s.",
+  "strengths": "Foundational for modern motor control and the study of variability.",
+  "limitations": "Historical; much of the evidence predates modern measurement.",
+  "contested": null,
+  "generalizability": "General to all skilled movement.",
+  "readingMinutes": 60,
+  "relevance": "The origin of the questions that underlie individual movement solutions in pitching and hitting."
+ },
+ {
+  "id": "R-newell-1986-constraints",
+  "title": "Constraints on the development of coordination",
+  "authors": [
+   "Karl M. Newell"
+  ],
+  "publication": "In M. G. Wade & H. T. A. Whiting (Eds.), Motor Development in Children: Aspects of Coordination and Control (pp. 341–360). Martinus Nijhoff",
+  "year": 1986,
+  "url": "https://link.springer.com/book/9789024733897",
+  "doi": null,
+  "discipline": "kinesiology",
+  "type": "book-chapter",
+  "access": "library",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Chapter title, author, editors, book title, pages and publisher matched in the Springer book record and several reference lists; chapter content described from secondary sources only.",
+   "link": "not-opened"
+  },
+  "summary": "Proposes that coordination emerges from the interaction of organismic, environmental and task constraints, rather than from a prescribed motor program.",
+  "arguments": [
+   "Organismic constraints include body size, strength, flexibility and neural factors.",
+   "Environmental constraints include gravity, surfaces and conditions; task constraints include goals, rules and implements.",
+   "Changing constraints changes which coordination patterns are available and preferred."
+  ],
+  "evidence": "theoretical",
+  "design": "Theoretical chapter.",
+  "strengths": "Simple, general framework widely used in skill acquisition.",
+  "limitations": "A framework, not a predictive model; it does not say how much each constraint matters.",
+  "contested": null,
+  "generalizability": "Used across sports and development; supports individualized interpretation.",
+  "readingMinutes": 30,
+  "relevance": "The organizing framework for asking whether a movement difference is a body, environment or task effect."
+ },
+ {
+  "id": "R-kelso-1995-dynamic",
+  "title": "Dynamic Patterns: The Self-Organization of Brain and Behavior",
+  "authors": [
+   "J. A. Scott Kelso"
+  ],
+  "publication": "MIT Press, Cambridge, MA",
+  "year": 1995,
+  "url": "https://carta.anthropogeny.org/node/1892",
+  "doi": null,
+  "discipline": "kinesiology",
+  "type": "book",
+  "access": "purchase",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Title, author, publisher and 1995 date matched in the CARTA record, MIT Press ISBN listings and library catalogues.",
+   "link": "not-opened"
+  },
+  "summary": "Presents coordination dynamics: patterned behaviour, from neurons to limb coordination, emerges through self-organization and can be described by collective variables whose stability changes with control parameters.",
+  "arguments": [
+   "Coordination patterns can be described by low-dimensional collective variables such as relative phase.",
+   "Changes in a control parameter can make a pattern lose stability and switch to another.",
+   "Stability and transitions, not stored commands, are central to coordination."
+  ],
+  "evidence": "theoretical",
+  "design": "Monograph synthesizing experiments and dynamical models.",
+  "strengths": "Rigorous framework with experimental support in rhythmic tasks.",
+  "limitations": "Strongest evidence comes from simple rhythmic tasks; application to discrete ballistic skills is more interpretive.",
+  "contested": null,
+  "generalizability": "Concepts transfer to pitching and hitting as a way of thinking; quantitative models rarely do.",
+  "readingMinutes": 60,
+  "relevance": "The dynamical-systems vocabulary used in skill acquisition and constraints-based coaching."
+ },
+ {
+  "id": "R-todorov-2002-optimal",
+  "title": "Optimal feedback control as a theory of motor coordination",
+  "authors": [
+   "Emanuel Todorov",
+   "Michael I. Jordan"
+  ],
+  "publication": "Nature Neuroscience, 5(11), 1226–1235",
+  "year": 2002,
+  "url": "https://doi.org/10.1038/nn963",
+  "doi": "10.1038/nn963",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Citation and DOI supplied by the course brief as verified; PubMed record 12404008 and the abstract (task-irrelevant variability, minimal intervention) seen in search results.",
+   "link": "not-opened"
+  },
+  "summary": "Proposes that the nervous system acts as a stochastic optimal feedback controller: it does not enforce a fixed trajectory but corrects only deviations that threaten the task goal, allowing variability to accumulate in task-irrelevant dimensions.",
+  "arguments": [
+   "Under noise and uncertainty, the optimal strategy lets variability appear in redundant dimensions.",
+   "Corrections are applied only where deviations interfere with the goal (minimal intervention).",
+   "Task-constrained variability, goal-directed corrections and synergies emerge from optimality."
+  ],
+  "evidence": "theoretical",
+  "design": "Computational theory with simulations compared against experimental data.",
+  "strengths": "Unifies several empirical regularities in one normative framework.",
+  "limitations": "Normative theory; identifying the cost function the nervous system uses is difficult; evidence from relatively simple tasks.",
+  "contested": null,
+  "generalizability": "Conceptually applicable to throwing and hitting; direct tests in baseball are lacking.",
+  "readingMinutes": 45,
+  "relevance": "Explains why skilled athletes vary from rep to rep without being inconsistent where it matters."
+ },
+ {
+  "id": "R-scholz-1999-uncontrolled",
+  "title": "The uncontrolled manifold concept: identifying control variables for a functional task",
+  "authors": [
+   "John P. Scholz",
+   "Gregor Schöner"
+  ],
+  "publication": "Experimental Brain Research, 126(3), 289–306",
+  "year": 1999,
+  "url": "https://doi.org/10.1007/s002210050738",
+  "doi": "10.1007/s002210050738",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "open",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Title, authors, journal, volume, pages and DOI matched on doi.org and an author-institution PDF (Ruhr-Universität Bochum); method and sit-to-stand results matched abstract text.",
+   "link": "not-opened"
+  },
+  "summary": "Introduces the uncontrolled manifold method: joint-configuration variance is split into a component that leaves a hypothesized task variable unchanged and a component that changes it. More variance in the first than the second indicates that the variable is stabilized.",
+  "arguments": [
+   "Hypotheses about controlled variables can be tested by partitioning variance in joint space.",
+   "Variance within the uncontrolled manifold does not affect the task variable; variance orthogonal to it does.",
+   "In sit-to-stand, the centre of mass position appeared controlled while some other variables were less stabilized."
+  ],
+  "evidence": "lab-experiment",
+  "design": "Methodological paper with an experimental application to sit-to-stand.",
+  "strengths": "Operational, testable definition of 'controlled variable'.",
+  "limitations": "Requires a model linking joints to the task variable; results depend on the hypothesized variable and on linearization.",
+  "contested": null,
+  "generalizability": "Applied widely in reaching and posture; few applications to pitching or hitting.",
+  "readingMinutes": 50,
+  "relevance": "A quantitative way to ask whether a pitcher's variability is noise or compensation."
+ },
+ {
+  "id": "R-latash-2002-motor",
+  "title": "Motor control strategies revealed in the structure of motor variability",
+  "authors": [
+   "Mark L. Latash",
+   "John P. Scholz",
+   "Gregor Schöner"
+  ],
+  "publication": "Exercise and Sport Sciences Reviews, 30(1), 26–31",
+  "year": 2002,
+  "url": "https://doi.org/10.1097/00003677-200201000-00006",
+  "doi": "10.1097/00003677-200201000-00006",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Title, authors, journal, volume, issue, pages and DOI matched on the Penn State research portal record.",
+   "link": "not-opened"
+  },
+  "summary": "A short review of the uncontrolled manifold approach, arguing that the structure of variability across repetitions reveals which performance variables the nervous system stabilizes, with applications to rehabilitation and skill acquisition.",
+  "arguments": [
+   "Variability has structure that can be partitioned relative to task variables.",
+   "Synergies can be defined as co-variation that stabilizes a performance variable.",
+   "The approach has potential applications in rehabilitation and skill learning."
+  ],
+  "evidence": "review",
+  "design": "Short review.",
+  "strengths": "Accessible introduction by the method's developers.",
+  "limitations": "Advocacy review by the method's proponents.",
+  "contested": null,
+  "generalizability": "Conceptual; sport applications require task models.",
+  "readingMinutes": 20,
+  "relevance": "A compact entry point to analysing variability structure rather than variability size."
+ },
+ {
+  "id": "R-stergiou-2011-human",
+  "title": "Human movement variability, nonlinear dynamics, and pathology: Is there a connection?",
+  "authors": [
+   "Nicholas Stergiou",
+   "Leslie M. Decker"
+  ],
+  "publication": "Human Movement Science, 30(5), 869–888",
+  "year": 2011,
+  "url": "https://doi.org/10.1016/j.humov.2011.06.002",
+  "doi": "10.1016/j.humov.2011.06.002",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Citation and DOI supplied by the course brief as verified in November 2026.",
+   "link": "not-opened"
+  },
+  "summary": "Argues that healthy movement shows an optimal amount and structure of variability, and that too little or too much, or a loss of complex structure, may accompany pathology; reviews nonlinear measures used to quantify variability structure.",
+  "arguments": [
+   "Variability can reflect adaptability rather than error.",
+   "Both too little and too much variability may be problematic (the optimal variability hypothesis).",
+   "Nonlinear measures capture the temporal structure of variability, not only its magnitude."
+  ],
+  "evidence": "review",
+  "design": "Theoretical review.",
+  "strengths": "Clear statement of the functional-variability view and its measurement.",
+  "limitations": "Much of the evidence comes from gait and clinical populations; the 'optimal' amount is hard to define in advance.",
+  "contested": "The optimal-variability hypothesis is influential but difficult to falsify; see R-bartlett-2007-is for a sport-biomechanics perspective.",
+  "generalizability": "Conceptually relevant to pitching and hitting; quantitative thresholds do not transfer.",
+  "readingMinutes": 40,
+  "relevance": "Frames variability as information about the system rather than a defect to be removed."
+ },
+ {
+  "id": "R-preatoni-2013-movement",
+  "title": "Movement variability and skills monitoring in sports",
+  "authors": [
+   "Ezio Preatoni",
+   "Joseph Hamill",
+   "Amanda J. Harrison",
+   "Kevin Hayes",
+   "Richard E. A. van Emmerik",
+   "Cathy Wilson",
+   "Renato Rodano"
+  ],
+  "publication": "Sports Biomechanics, 12(2), 69–92",
+  "year": 2013,
+  "url": "https://doi.org/10.1080/14763141.2012.738700",
+  "doi": "10.1080/14763141.2012.738700",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Citation and DOI supplied by the course brief as verified; title and journal also matched the LIDA (sport-iat) record seen in search results.",
+   "link": "not-opened"
+  },
+  "summary": "Reviews how movement variability is measured and interpreted in sport, distinguishing measurement noise from biological variability and discussing linear and nonlinear methods for skills monitoring.",
+  "arguments": [
+   "Observed variability combines measurement error and biological variability.",
+   "Different variability measures answer different questions.",
+   "Monitoring a skill requires knowing typical variability before interpreting change."
+  ],
+  "evidence": "review",
+  "design": "Narrative methodological review.",
+  "strengths": "Practical and methodological; written for sport biomechanists.",
+  "limitations": "Broad; not baseball-specific.",
+  "contested": null,
+  "generalizability": "Directly applicable to monitoring pitchers and hitters across sessions.",
+  "readingMinutes": 40,
+  "relevance": "Prepares the measurement questions in Week 2 and the variability analysis in Week 9."
+ },
+ {
+  "id": "R-bartlett-2007-is",
+  "title": "Is movement variability important for sports biomechanists?",
+  "authors": [
+   "Roger Bartlett",
+   "Jon Wheat",
+   "Matthew Robins"
+  ],
+  "publication": "Sports Biomechanics, 6(2), 224–243",
+  "year": 2007,
+  "url": "https://doi.org/10.1080/14763140701322994",
+  "doi": "10.1080/14763140701322994",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "open",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Title, authors, journal, volume, issue, pages and DOI matched the Sheffield Hallam (SHURA) record and an open post-print at Nottingham Trent University (IRep).",
+   "link": "not-opened"
+  },
+  "summary": "Argues that movement variability, long treated by sport biomechanists as noise, is or may be functional; reviews within- and between-individual variability in throwing, basketball shooting and locomotion and notes that even elite performers do not reproduce identical patterns.",
+  "arguments": [
+   "Variability is not solely neuromuscular or measurement noise; some of it may be functional.",
+   "Elite athletes do not show motor invariance, which challenges the use of a single 'representative' trial.",
+   "Biomechanists should study variability together with coordination and learning."
+  ],
+  "evidence": "review",
+  "design": "Narrative review.",
+  "strengths": "Sport-specific; accessible open post-print; directly addresses practice in biomechanics laboratories.",
+  "limitations": "Selective rather than systematic review.",
+  "contested": null,
+  "generalizability": "Applies directly to how pitching and hitting trials are averaged and interpreted.",
+  "readingMinutes": 45,
+  "relevance": "A short, sharp argument against reading one 'best' trial as the athlete's movement."
+ },
+ {
+  "id": "R-fleisig-2009-variability",
+  "title": "Variability in baseball pitching biomechanics among various levels of competition",
+  "authors": [
+   "Glenn S. Fleisig",
+   "Yungchien Chu",
+   "Adam Weber",
+   "James R. Andrews"
+  ],
+  "publication": "Sports Biomechanics, 8(1), 10–21",
+  "year": 2009,
+  "url": "https://manuscript.isc.ac/Inventory/10/450955.htm",
+  "doi": null,
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "partially-confirmed",
+   "evidence": "Title, journal, volume, issue, pages and authors matched in reference lists and an index record with the abstract (93 pitchers, five levels, five fastballs each); DOI not confirmed and therefore omitted; URL is the index record seen in search results.",
+   "link": "not-opened"
+  },
+  "summary": "Compared pitch-to-pitch variability in 93 pitchers across five competition levels. Individual standard deviations of kinematic and kinetic variables were largest in youth pitchers and smaller at higher levels, but variability in timing did not differ significantly between levels.",
+  "arguments": [
+   "Within-pitcher variability of many kinematic and kinetic variables decreases with competition level.",
+   "Variability of temporal (timing) parameters did not differ significantly across levels.",
+   "Reduced variability at higher levels may reflect skill, selection, maturation or all three."
+  ],
+  "evidence": "observational",
+  "design": "Cross-sectional comparison of within-pitcher variability across five levels.",
+  "strengths": "Directly quantifies within-athlete variability in baseball pitching.",
+  "limitations": "Cross-sectional; five pitches per pitcher limit precision of variability estimates; selection and age confound level.",
+  "contested": null,
+  "generalizability": "Pitching across development levels; does not show how variability changes within an individual over time.",
+  "readingMinutes": 25,
+  "relevance": "Baseball evidence that variability changes with level — and that timing variability does not follow the same pattern."
+ },
+ {
+  "id": "R-wolpert-1995-internal",
+  "title": "An internal model for sensorimotor integration",
+  "authors": [
+   "Daniel M. Wolpert",
+   "Zoubin Ghahramani",
+   "Michael I. Jordan"
+  ],
+  "publication": "Science, 269(5232), 1880–1882",
+  "year": 1995,
+  "url": "https://doi.org/10.1126/science.7569931",
+  "doi": "10.1126/science.7569931",
+  "discipline": "kinesiology",
+  "type": "journal-article",
+  "access": "paywalled",
+  "license": "Copyright holder's terms. Linked, not reproduced.",
+  "verified": {
+   "date": "2026-11-03",
+   "method": "web-search",
+   "status": "metadata-confirmed",
+   "evidence": "Citation and DOI supplied by the course brief as verified in November 2026.",
+   "link": "not-opened"
+  },
+  "summary": "Shows that human estimates of hand position during movement in the dark are consistent with an internal model that combines a forward prediction from motor commands with delayed sensory feedback, in the manner of a Kalman filter.",
+  "arguments": [
+   "The nervous system estimates limb state by combining prediction from motor commands with sensory feedback.",
+   "Errors in estimated hand position over the course of a movement follow the pattern predicted by such an observer model.",
+   "Internal models offer a way to act despite sensory delays."
+  ],
+  "evidence": "lab-experiment",
+  "design": "Psychophysical experiment on hand-position estimation compared with an observer model.",
+  "strengths": "Influential, quantitative link between theory and behaviour.",
+  "limitations": "Simple arm movements in the laboratory; inference about neural implementation is indirect.",
+  "contested": null,
+  "generalizability": "Conceptual foundation for prediction in fast sport skills; no direct baseball test.",
+  "readingMinutes": 15,
+  "relevance": "Explains why fast skills depend on prediction and planning more than on correction."
+ }
+]
