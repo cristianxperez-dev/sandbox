@@ -1,0 +1,282 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:12.523
+A pitcher measures a hundred and seventy-seven degrees of peak shoulder external rotation in the laboratory in January, a mean of ten fastballs. The pitcher and every number in this lecture are synthetic.
+
+2
+00:00:12.823 --> 00:00:24.449
+After a six-week mobility and drill block, the same laboratory reads a hundred and seventy-one. Then a second analyst brings his March in-game markerless value: a hundred and sixty-six.
+
+3
+00:00:24.749 --> 00:00:30.573
+The development staff ask a fair question. Did the drill block reduce his layback, and by how much?
+
+4
+00:00:31.423 --> 00:00:33.813
+Before any arithmetic, you need four things.
+
+5
+00:00:34.113 --> 00:00:39.553
+First, the laboratory's session-to-session typical error for this variable, in pitchers like him.
+
+6
+00:00:39.853 --> 00:00:43.415
+Second, his own trial-to-trial variability within a session.
+
+7
+00:00:43.715 --> 00:00:47.342
+Third, the bias between the laboratory and the in-game system.
+
+8
+00:00:47.642 --> 00:00:53.061
+And fourth, whether the change matters for any decision. This lecture builds each one from data.
+
+9
+00:00:54.311 --> 00:01:01.735
+Accuracy is closeness to the true value. Precision is closeness of repeated measurements to one another. They are independent.
+
+10
+00:01:02.035 --> 00:01:06.557
+Scattered around the truth: group means are fine, individual values are not.
+
+11
+00:01:06.857 --> 00:01:12.127
+Tight and centred is the goal, and for long-axis joint rotations it is rarely achieved.
+
+12
+00:01:12.427 --> 00:01:16.203
+Scattered and offset is useless for individuals and groups alike.
+
+13
+00:01:16.503 --> 00:01:25.249
+And tight but offset is the common case with a system-specific bias. Excellent for tracking change within that system; wrong in absolute terms.
+
+14
+00:01:25.549 --> 00:01:37.517
+The same split applies one level up. Validity asks whether an instrument measures what it claims, usually against a reference. Reliability asks whether it gives consistent results on repetition.
+
+15
+00:01:37.817 --> 00:01:49.359
+Hopkins names three components of reliability: within-subject random variation, called the typical error; systematic change in the mean between trials; and the retest correlation.
+
+16
+00:01:49.659 --> 00:02:02.672
+Atkinson and Nevill add the governing rule: choose the statistic from how the measurement will be used, and never let a relative index like a correlation stand alone without an absolute index in the units of measurement.
+
+17
+00:02:03.522 --> 00:02:22.487
+Three rules generate every formula ahead. First, independent errors add as variances. Biological variation with a standard deviation of two point five degrees, plus instrument error of one point five, gives a total of the square root of eight point five, about two point nine. Not four.
+
+18
+00:02:22.787 --> 00:02:30.275
+Second, a change score built from two measurements, each with error sigma, has a standard deviation of root two times sigma.
+
+19
+00:02:30.575 --> 00:02:50.287
+Third, averaging k independent trials divides the standard deviation by root k. And the one point nine six you will see comes from the normal distribution: ninety-five percent of values lie within one point nine six standard deviations, assuming roughly normal errors unrelated to the measurement's size.
+
+20
+00:02:51.537 --> 00:03:00.967
+Here is a synthetic test-retest study: eight pitchers, the same marker-based laboratory, sessions a week apart, each value a mean of ten fastballs.
+
+21
+00:03:01.267 --> 00:03:13.427
+The eight differences are three, minus two, three, minus two, four, two, minus one and four degrees. Their mean is one point three eight degrees, a small systematic shift, perhaps learning or warm-up.
+
+22
+00:03:13.727 --> 00:03:16.799
+Their standard deviation is two point six two degrees.
+
+23
+00:03:17.099 --> 00:03:24.949
+So here is your prediction. How big would one pitcher's change have to be before you could be ninety-five percent confident it is not error?
+
+24
+00:03:26.399 --> 00:03:34.741
+Each difference contains the error of two measurements. So the typical error is the standard deviation of the differences divided by root two.
+
+25
+00:03:35.041 --> 00:03:42.614
+Two point six two divided by one point four one four is one point eight five degrees. That is the typical error.
+
+26
+00:03:42.914 --> 00:03:51.511
+A change in one pitcher is itself a difference of two measurements, so its error is root two times the typical error, back to two point six two.
+
+27
+00:03:51.811 --> 00:04:05.017
+Multiply by one point nine six for ninety-five percent confidence. The minimal detectable change is one point nine six times root two times one point eight five: five point one three degrees.
+
+28
+00:04:05.317 --> 00:04:13.914
+As a shortcut, it is about two point seven seven times the typical error. Weir derives the same quantity from the standard error of measurement.
+
+29
+00:04:14.214 --> 00:04:27.377
+Note what this typical error contains. Each session value is a session mean, so it includes day-to-day biological variation as well as instrument error. That is right when the decision is about change across days.
+
+30
+00:04:28.627 --> 00:04:35.325
+The intraclass correlation expresses reliability as the share of total variance that lies between subjects.
+
+31
+00:04:35.625 --> 00:04:42.473
+A two-way analysis of variance on our eight pitchers gives a between-pitcher mean square of ninety-eight point seven one,
+
+32
+00:04:42.773 --> 00:04:46.016
+a between-session mean square of seven point five six,
+
+33
+00:04:46.316 --> 00:04:48.641
+and an error mean square of three point four two.
+
+34
+00:04:48.941 --> 00:05:00.141
+The consistency form, single measure, is ninety-eight point seven one minus three point four two, over ninety-eight point seven one plus three point four two. Zero point nine three.
+
+35
+00:05:00.441 --> 00:05:12.495
+The absolute-agreement form adds two times the session term minus error, divided by eight, to the denominator. Zero point nine two: the small systematic shift lowers agreement slightly.
+
+36
+00:05:12.795 --> 00:05:20.005
+And the square root of the error mean square, one point eight five, is exactly the typical error we found from the differences.
+
+37
+00:05:20.305 --> 00:05:38.417
+Koo and Li describe ten forms of ICC, set by model, type and definition. Report all three with confidence intervals, and interpret the lower bound: below zero point five poor, up to zero point seven five moderate, up to zero point nine good, above that excellent.
+
+38
+00:05:39.267 --> 00:05:45.945
+Here is why ICC can mislead about individuals. Hold the error fixed at a variance of three point four two.
+
+39
+00:05:46.245 --> 00:05:57.829
+In a varied sample with a true between-pitcher standard deviation of six point seven degrees, ICC is about forty-four point nine over forty-eight point three: zero point nine three.
+
+40
+00:05:58.129 --> 00:06:09.563
+Select pitchers for similar layback, a standard deviation of two point five, and ICC falls to about six point two five over nine point six seven: zero point six five.
+
+41
+00:06:09.863 --> 00:06:25.735
+Same instrument, same minimal detectable change. Only the sample changed. ICC answers whether a measure can rank athletes in this population. Typical error and the detectable change answer whether it can see change in one athlete. Report both.
+
+42
+00:06:26.985 --> 00:06:35.220
+Now the in-game number. Eight synthetic pitches, captured at once by the laboratory marker-based system and a field markerless system.
+
+43
+00:06:35.520 --> 00:06:47.573
+Bland and Altman argued that correlation is the wrong tool for comparing methods, because two methods can correlate highly while disagreeing substantially. Here the rankings agree almost perfectly.
+
+44
+00:06:47.873 --> 00:06:56.769
+Instead, plot each pair's difference against its mean. The field system reads, on average, seven point eight eight degrees lower. That is the bias.
+
+45
+00:06:57.069 --> 00:07:09.955
+The standard deviation of the differences is two point one seven. The limits of agreement are the bias plus or minus one point nine six times that: minus twelve point one to minus three point six degrees.
+
+46
+00:07:10.255 --> 00:07:25.060
+For an individual pitch, the field value should fall between about four and twelve degrees below the laboratory value. Notice too that the largest differences sit at the largest means, a hint of proportional bias that a larger sample should test.
+
+47
+00:07:25.360 --> 00:07:37.605
+Bland and Altman also stressed that the bias has its own confidence interval, wide with eight pairs, and that when differences grow with magnitude, one pair of limits misrepresents both ends of the range.
+
+48
+00:07:39.055 --> 00:07:50.021
+That correction only holds if the comparison is like for like. Now look inside one session. Within-athlete variability is not noise to average away; it is part of the athlete.
+
+49
+00:07:50.321 --> 00:08:01.947
+The same synthetic pitcher's ten fastballs read from a hundred and seventy-three to a hundred and eighty-one degrees. Mean one hundred seventy-seven, standard deviation two point five eight.
+
+50
+00:08:02.247 --> 00:08:14.066
+The standard error of the ten-pitch mean is two point five eight over root ten, zero point eight two degrees. The session mean is precise, but any single pitch can sit four or five degrees from it.
+
+51
+00:08:14.366 --> 00:08:28.233
+So one pitch before a drill block against one pitch after it conflates pitch-to-pitch variation with change. And averaging helps only for independent trial errors. It does not touch bias, or genuine day-to-day variation.
+
+52
+00:08:29.483 --> 00:08:37.675
+Answer the opening question. Laboratory to laboratory, a hundred and seventy-seven to a hundred and seventy-one is six degrees.
+
+53
+00:08:37.975 --> 00:08:43.756
+That is just beyond the detectable change of five point one. Probably real, modestly so.
+
+54
+00:08:44.056 --> 00:08:56.429
+But a single pitcher, measured before and after, with no control condition, cannot attribute the change to the drill. Fatigue, mobility or the season could also explain it, and nothing says it will persist.
+
+55
+00:08:56.729 --> 00:09:16.505
+Run it through the seven questions. No velocity or command change is reported, so performance has not been shown to improve. Transfer has not been tested. And less external rotation is not, by itself, lower injury risk; that would need kinetics and clinical input. This is educational, not clinical advice.
+
+56
+00:09:16.805 --> 00:09:24.443
+Now the challenge to everything I have just said. Exceeding the detectable change is a statement about statistics, not importance.
+
+57
+00:09:24.743 --> 00:09:37.159
+Atkinson and Nevill want acceptable error judged against an analytical goal set by the intended use, and sports-science practice often uses a smallest worthwhile change tied to performance.
+
+58
+00:09:37.459 --> 00:09:49.789
+For most biomechanical variables, no such anchor exists, because the variable's link to performance or health in an individual is not established. That question remains contested and open.
+
+59
+00:09:50.089 --> 00:10:05.492
+And Lerch and colleagues found within-pitcher variability broadly similar in game and laboratory settings for most variables, alongside large differences in means. Random and systematic error must both be estimated in the setting of use.
+
+60
+00:10:06.342 --> 00:10:15.622
+An instrument is not reliable or unreliable in the abstract. It is adequate or inadequate for detecting a change of a given size, in a given use.
+
+61
+00:10:15.922 --> 00:10:19.165
+So name the decision first, and the change that would alter it.
+
+62
+00:10:19.465 --> 00:10:28.702
+Use the typical error from the same system, setting, population and variable, and require a detectable change smaller than the change that matters.
+
+63
+00:10:29.002 --> 00:10:34.101
+Keep comparisons within one system and version, or state the uncertainty of any correction.
+
+64
+00:10:34.401 --> 00:10:36.534
+Decide how many trials to average,
+
+65
+00:10:36.834 --> 00:10:43.021
+and re-estimate error periodically, because hardware, software, installations and athletes all change.
+
+66
+00:10:43.321 --> 00:11:00.046
+Hitters too. If game-to-game typical error in average bat speed were zero point nine miles per hour, a synthetic value, the detectable change would be two point five. A one-and-a-half-mile gain after an off-season would not yet be distinguishable from variation.
+
+67
+00:11:00.346 --> 00:11:15.301
+And a dashboard that flags any five percent change? Near a hundred seventy-five degrees that is eight point eight degrees; near twenty degrees it is one degree, far below plausible error. Set each threshold from that variable's own typical error.
+
+68
+00:11:16.751 --> 00:11:25.561
+Let's bring it together. Accuracy is about bias, precision about random error. Validity needs a reference; reliability needs repetition.
+
+69
+00:11:25.861 --> 00:11:42.224
+Typical error and the detectable change answer questions about individuals. ICC answers ranking questions in one sample. Bland-Altman answers interchangeability. And a change matters only if it exceeds error in the same system and connects to a decision.
+
+70
+00:11:42.524 --> 00:11:55.388
+Take the comprehension check below, the same as the written lesson. Then open the Measurement Science Laboratory, and read Hopkins on typical error and individual change, with Bland and Altman's short paper alongside.
+
