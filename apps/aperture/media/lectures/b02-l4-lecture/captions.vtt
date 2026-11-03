@@ -1,0 +1,314 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.099
+A hitting coach films a hitter at two hundred and forty frames per second, from the open side.
+
+2
+00:00:05.399 --> 00:00:11.969
+He reports that the bat was level through contact, and that the lead elbow extended at thirty degrees before contact.
+
+3
+00:00:12.269 --> 00:00:21.336
+The stadium bat-tracking output for the very same swing reports an attack angle of fourteen degrees. The hitter is synthetic, and so are the numbers.
+
+4
+00:00:21.636 --> 00:00:29.273
+Two instruments, two stories. Before we decide who is right, let us ask a simpler question: what could the camera actually have seen?
+
+5
+00:00:30.123 --> 00:00:41.110
+Start with the clock. At two hundred and forty frames per second, one frame follows the last after one two-hundred-and-fortieth of a second, about four point one seven milliseconds.
+
+6
+00:00:41.410 --> 00:00:54.551
+A sweet spot moving at thirty-two metres per second covers thirty-two times zero point zero zero four one seven metres in that gap. That is about thirteen centimetres, roughly five inches, between pictures.
+
+7
+00:00:54.851 --> 00:01:02.595
+Now take bat-ball contact as lasting on the order of a millisecond. One millisecond is a working value, not a measurement.
+
+8
+00:01:02.895 --> 00:01:14.479
+Contact occupies one millisecond out of every four point one seven. So the chance that any given frame falls inside contact is about one in four point one seven, roughly a quarter.
+
+9
+00:01:14.779 --> 00:01:23.569
+Most two-hundred-and-forty-hertz swings have no frame at contact at all. Level through contact is not an observation. It is an interpolation.
+
+10
+00:01:24.819 --> 00:01:33.736
+The textbook rule is the sampling theorem. To avoid aliasing, you need a sampling rate of at least twice the highest frequency present in the signal.
+
+11
+00:01:34.036 --> 00:01:43.764
+Biomechanists go well beyond that minimum, sampling several times higher than the frequencies they care about, so that peaks and event timing are actually resolved.
+
+12
+00:01:44.064 --> 00:01:52.128
+And a frame is not an instant. It is an exposure lasting some finite time, so the shutter adds a second limit on top of the frame rate.
+
+13
+00:01:52.428 --> 00:02:03.841
+Let us put a pitching number on the frame-rate limit first. Take seven thousand degrees per second as an order-of-magnitude peak for shoulder internal rotation. Again, a working value.
+
+14
+00:02:05.291 --> 00:02:15.083
+Seven thousand divided by two hundred and forty is about twenty-nine degrees between frames. At sixty frames per second it is a hundred and seventeen degrees.
+
+15
+00:02:15.383 --> 00:02:23.597
+Now the contact problem, across frame rates. At sixty hertz, you expect six hundredths of a frame during a one-millisecond contact.
+
+16
+00:02:23.897 --> 00:02:26.670
+At two hundred and forty, about a quarter of a frame.
+
+17
+00:02:26.970 --> 00:02:31.706
+At four hundred and eighty, about half a frame. Still more likely to miss than to catch it.
+
+18
+00:02:32.006 --> 00:02:40.411
+At a thousand hertz, one frame on average, with a frame interval of one millisecond and seven degrees of shoulder rotation between samples.
+
+19
+00:02:40.711 --> 00:02:51.591
+And at five thousand hertz, five frames inside contact, with about one and a half degrees of rotation between them. Each step is just the frame rate times the contact time.
+
+20
+00:02:52.441 --> 00:02:57.753
+Here is the consequence for peaks. The smooth curve is an illustrative angular-velocity peak.
+
+21
+00:02:58.053 --> 00:03:08.443
+The dots are what a two-hundred-and-forty-hertz camera keeps. The largest sample is not the largest value; the true peak sits between frames, and smoothing lowers it further.
+
+22
+00:03:08.743 --> 00:03:22.503
+Timing suffers the same way. Foot contact, maximum external rotation, release, contact: each is uncertain by up to half a frame either side, about plus or minus two milliseconds at two hundred and forty hertz.
+
+23
+00:03:22.803 --> 00:03:31.677
+So a sequencing claim built on a few milliseconds between segment peaks needs either a higher sampling rate or an explicit statement of its uncertainty.
+
+24
+00:03:31.977 --> 00:03:47.252
+Interpolation helps when motion is smooth, like trunk rotation. It cannot rebuild a discontinuity like the collision itself, which is why tracking systems estimate contact from ball and bat trajectories before and after, not from an image of it.
+
+25
+00:03:48.102 --> 00:03:58.662
+Exposure is the second constraint. Expose a frame for one thousandth of a second while the ball moves at forty metres per second, and the ball smears across forty millimetres.
+
+26
+00:03:58.962 --> 00:04:09.949
+That is more than half the ball's diameter, and the hand at release, moving at a comparable speed, blurs the same way. Pose models and human coders then locate it less precisely.
+
+27
+00:04:10.249 --> 00:04:17.374
+Cut the exposure to one four-thousandth of a second and the smear drops to ten millimetres. But you need four times the light.
+
+28
+00:04:17.674 --> 00:04:24.863
+That is why high-speed capture at night or in a dim cage so often trades frame rate or exposure for image quality.
+
+29
+00:04:26.113 --> 00:04:30.935
+Now geometry. A single camera projects the world onto a flat image plane.
+
+30
+00:04:31.235 --> 00:04:49.155
+Picture a segment inclined forty-five degrees above horizontal, moving in a plane turned thirty degrees away from the image plane about the vertical axis. Its horizontal extent shrinks by the cosine of thirty degrees, about zero point eight six six. Its vertical extent does not.
+
+31
+00:04:49.455 --> 00:04:59.204
+So the apparent inclination is the arctangent of tan forty-five over cos thirty, the arctangent of one point one five five. About forty-nine degrees.
+
+32
+00:04:59.504 --> 00:05:06.736
+Turn the plane sixty degrees away and the same segment reads about sixty-three degrees. Nothing about the segment changed.
+
+33
+00:05:07.036 --> 00:05:16.103
+The true angle was forty-five degrees the whole time. Add lens distortion and an athlete moving toward or away from the camera, and the error grows.
+
+34
+00:05:16.953 --> 00:05:27.619
+Two-dimensional analysis is valid only for motion that stays in a plane parallel to the image plane, with the camera far away, perpendicular to that plane, and the scale known in it.
+
+35
+00:05:27.919 --> 00:05:34.831
+Pitching and hitting fail that test. Trunk rotation, shoulder rotation and bat path all leave any single plane.
+
+36
+00:05:35.131 --> 00:05:44.987
+So two-dimensional video remains excellent for timing events, counting and talking with athletes. It is not a measurement of joint angles in throwing or swinging.
+
+37
+00:05:45.287 --> 00:05:58.258
+Three-dimensional reconstruction requires at least two calibrated, synchronized views of every point you care about. That is the coach's thirty-degree elbow: a projected angle that depends on where he stood.
+
+38
+00:05:59.508 --> 00:06:07.103
+Now the stadium. Major League Baseball's Statcast system has used Hawk-Eye optical tracking since two thousand twenty.
+
+39
+00:06:07.403 --> 00:06:15.893
+Twelve cameras around each park cover pitches, batted balls and players, with a pose-tracking capability that follows players' body positions.
+
+40
+00:06:16.193 --> 00:06:30.039
+MLB's two thousand twenty description listed one hundred frames per second for the pitch-tracking cameras. Press coverage of bat tracking later described higher rates, which we could not confirm from a primary MLB source.
+
+41
+00:06:30.889 --> 00:06:40.574
+Statcast publishes its bat-tracking definitions. Bat speed is the speed of the bat's sweet spot at the point of contact, or where contact would have occurred on a miss.
+
+42
+00:06:40.874 --> 00:06:52.074
+A player's average comes from the faster portion of his swings. That is sensible for estimating capacity, but it excludes checked and defensive swings, so it is not a mean of all swings.
+
+43
+00:06:52.374 --> 00:07:00.139
+Swing length is the total three-dimensional distance, in feet, travelled by the head of the bat from the start of tracking until impact.
+
+44
+00:07:00.439 --> 00:07:05.495
+Attack angle is the vertical direction in which the sweet spot is travelling at contact.
+
+45
+00:07:05.795 --> 00:07:17.081
+Because the bat moves on an arc through the zone, contact at a different height or depth can change that angle. A change in attack angle can reflect pitch location rather than a changed swing.
+
+46
+00:07:17.381 --> 00:07:30.586
+Ball tracking works the same way for pitchers. Release height, side, extension, velocity and spin are properties of the ball, reconstructed from its trajectory. Extension is a ball position, not a stride length.
+
+47
+00:07:32.436 --> 00:07:43.999
+Real reports combine instruments: force plates at a thousand hertz, marker cameras at two hundred and forty, a tracking system, EMG at two thousand. They need a common time base.
+
+48
+00:07:44.299 --> 00:07:53.088
+Hardware synchronization uses a shared trigger or clock. Software synchronization aligns timestamps or detected events after the fact.
+
+49
+00:07:53.388 --> 00:07:56.545
+Signals at different rates are resampled to a common rate,
+
+50
+00:07:56.845 --> 00:08:01.197
+and their filters must be matched before they are combined in inverse dynamics.
+
+51
+00:08:01.497 --> 00:08:15.727
+Then the events themselves. Contact in bat tracking is a modelled bat-ball intersection. Release in markerless pitching is often a detected instant of hand-ball separation in video. Same word, different definitions.
+
+52
+00:08:16.027 --> 00:08:27.525
+Studies that pair the two, such as Hoechstetter and colleagues' analysis of in-game markerless kinematics with tracking-derived bat speed, have to align those events. When you read one, check how.
+
+53
+00:08:28.375 --> 00:08:36.717
+Synchronization error is easy to size. Suppose force and motion data are offset by a single two-hundred-and-forty-hertz frame.
+
+54
+00:08:37.017 --> 00:08:39.278
+With the bat at thirty-two metres per second,
+
+55
+00:08:39.578 --> 00:08:50.714
+the bat is about thirteen centimetres from where it was when the force was recorded. At foot contact, the onset of ground force shifts relative to the stride by the same four milliseconds.
+
+56
+00:08:51.014 --> 00:09:04.689
+Pair a tracking system's contact time with a markerless system's swing frames and you inherit both clocks and both event definitions. Every integrated report should say how synchronization was achieved and verified.
+
+57
+00:09:06.139 --> 00:09:11.600
+Here is the central error in applied practice: treating tracking outputs as biomechanics.
+
+58
+00:09:11.900 --> 00:09:22.993
+Bat speed, attack angle and swing length tell you what the bat did. They do not tell you how the body produced it, what the joints experienced, or which of many movement solutions the hitter used.
+
+59
+00:09:23.293 --> 00:09:36.200
+Two hitters with identical bat speed can differ greatly in pelvis-trunk timing. One hitter can produce the same attack angle with different postures at different pitch locations. A difference is not a deficiency.
+
+60
+00:09:36.500 --> 00:09:52.159
+Now let me argue against my own case. Statcast's definitions are published and precise, and it may be tempting to treat them as ground truth. But their measurement error for an individual swing is not, to our knowledge, documented in a peer-reviewed validation.
+
+61
+00:09:52.459 --> 00:10:03.211
+And algorithm or hardware changes can shift league-wide distributions. A tracked number is a better estimate of bat direction than a side-view video, not a perfect one.
+
+62
+00:10:03.511 --> 00:10:18.828
+Stadium pose tracking raises its own questions. Those cameras were placed for ball tracking and broadcast-scale coverage, so views of the throwing arm or the hitter's hands may be poor, and club-facing pose outputs may differ in rate or skeletal model.
+
+63
+00:10:19.128 --> 00:10:35.725
+Aguinaldo and colleagues' comparison is the only peer-reviewed evaluation we found of an in-stadium Hawk-Eye installation for pitching biomechanics. It found joint position errors of about five to six centimetres, with the weakest agreement for shoulder rotation.
+
+64
+00:10:36.575 --> 00:10:45.151
+Run one claim through the course's seven-question standard: raising a hitter's tracked bat speed by two miles per hour will improve his results.
+
+65
+00:10:45.451 --> 00:10:54.049
+What is observed? A tracked property of the bat at contact, which is a biomechanical measurement only in the narrow sense of describing the implement.
+
+66
+00:10:54.349 --> 00:11:06.359
+The mechanism is collision physics: more sweet-spot speed raises potential exit velocity, if contact quality holds. That is a mechanics-to-output relationship, and Week Seven develops it.
+
+67
+00:11:06.659 --> 00:11:15.854
+What remains uncertain? Whether a training-induced gain preserves contact rate, timing and pitch selection, and how large the per-swing tracking error is.
+
+68
+00:11:16.154 --> 00:11:28.378
+Has changing the variable improved performance? Not established here. The link to competitive outcomes depends on contact, timing and decisions, and intervention evidence is not reviewed this week.
+
+69
+00:11:28.678 --> 00:11:33.734
+Transfer and retention need repeated in-game measurement over enough plate appearances.
+
+70
+00:11:34.034 --> 00:11:43.975
+And loading: faster swings and heavier implements may change it, but tracking data support no inference about injury. That point is educational, not clinical.
+
+71
+00:11:45.225 --> 00:11:54.612
+So, back to the coach. Level through contact cannot be observed at two hundred and forty hertz from one side, and it conflicts with a tracked fourteen degrees.
+
+72
+00:11:54.912 --> 00:12:11.957
+The tracked value is the better estimate of bat direction at contact, subject to its unknown per-swing error, and read against where the pitch was. The elbow angle becomes a two-dimensional projected angle from a stated camera position, for comparing identically filmed swings.
+
+73
+00:12:12.257 --> 00:12:30.881
+For a pitcher, choose by question. Release consistency across a season: ball tracking. Arm timing within the delivery: four hundred and eighty hertz or more from fixed, documented positions, or markerless capture. Joint angles and moments: three-dimensional capture with synchronized force plates.
+
+74
+00:12:31.181 --> 00:12:43.149
+A report that mixes these should label every number with its instrument. And when buying cameras, name the event you need to resolve, compute the frame interval it requires, and buy to that requirement.
+
+75
+00:12:43.999 --> 00:12:45.279
+Let's bring it together.
+
+76
+00:12:45.579 --> 00:12:58.401
+Frame rate sets what can be seen in time. Camera geometry sets what can be seen in space. Tracking systems describe the ball and bat precisely, by published definitions, but they do not describe the body.
+
+77
+00:12:58.701 --> 00:13:04.823
+Integrating instruments takes a common clock and shared event definitions, and a good report states both.
+
+78
+00:13:05.123 --> 00:13:18.990
+Take the comprehension check below, the same as the written lesson. Then open the Measurement Science Laboratory, and read Fleisig and colleagues' comparison of markerless and marker-based pitching capture, which sets up the next lesson on error.
+
