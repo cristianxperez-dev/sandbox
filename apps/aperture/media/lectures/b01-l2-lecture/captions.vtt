@@ -1,0 +1,274 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:06.955
+A pitcher is captured by two systems on consecutive days. The pitcher is hypothetical, and so are the numbers.
+
+2
+00:00:07.255 --> 00:00:11.649
+He may well have thrown identically both days. The reports disagree anyway.
+
+3
+00:00:12.499 --> 00:00:17.726
+System A reports one hundred sixty-five degrees of maximal external rotation.
+
+4
+00:00:18.026 --> 00:00:20.586
+System B reports one hundred seventy-eight.
+
+5
+00:00:20.886 --> 00:00:25.793
+The staff asks which system is wrong. Here’s the uncomfortable answer: both could be right.
+
+6
+00:00:26.093 --> 00:00:33.538
+They might define the trunk differently, use different rotation sequences, or measure external rotation against different segments.
+
+7
+00:00:33.838 --> 00:00:48.259
+Try this. Hold your right arm out to the side at shoulder height, then turn it so the palm faces forward. How many ways could you describe that position in three numbers? By the end of this lecture, you will know the answer is: several, all correct.
+
+8
+00:00:49.509 --> 00:00:54.629
+Every joint angle starts with a frame: an origin and three perpendicular unit vectors.
+
+9
+00:00:54.929 --> 00:01:06.236
+In this course the laboratory frame has X pointing forward, toward home plate for a pitcher, Y pointing up, and Z pointing to the right. X cross Y gives Z, a right-handed set.
+
+10
+00:01:06.536 --> 00:01:19.123
+Positive rotation follows the right-hand rule. Point your right thumb along the axis, and your fingers curl in the positive direction. A report that does not state these choices cannot be fully interpreted.
+
+11
+00:01:19.973 --> 00:01:27.269
+Now two kinds of frame. A global frame is fixed to the ground. A segment angle describes one segment relative to it.
+
+12
+00:01:27.569 --> 00:01:37.894
+A segment-fixed frame is built from landmarks and rides with the bone. For the thorax, that means points such as the sternum and the seventh cervical and eighth thoracic vertebrae.
+
+13
+00:01:38.194 --> 00:01:53.661
+A joint angle describes one segment-fixed frame relative to another: the humerus relative to the thorax, the pelvis relative to the femur. The ISB recommendations specify the landmarks and axes so that laboratories can compare results.
+
+14
+00:01:54.511 --> 00:02:01.785
+Here is why the distinction matters on the field. A pitcher’s trunk is tilted thirty degrees toward his glove side at release.
+
+15
+00:02:02.085 --> 00:02:07.333
+His humerus is abducted ninety degrees relative to the trunk, an ordinary shoulder angle.
+
+16
+00:02:07.633 --> 00:02:12.327
+In the laboratory frame, the arm is one hundred twenty degrees from the downward vertical.
+
+17
+00:02:12.627 --> 00:02:24.424
+That is thirty degrees above horizontal. The coach on video sees a high slot; the joint-angle report sees an ordinary ninety. Both are correct. The slot comes mostly from the trunk.
+
+18
+00:02:24.724 --> 00:02:35.796
+That is why trunk tilt and arm slot are studied together. In high school pitchers, excessive contralateral tilt went with higher ball speed and also with greater shoulder and elbow loads.
+
+19
+00:02:36.096 --> 00:02:47.125
+Your turn. Trunk tilt forty degrees toward the glove side, humerus abducted eighty-five degrees relative to the trunk. How far above horizontal is the arm in the laboratory?
+
+20
+00:02:48.575 --> 00:02:57.429
+Thirty-five degrees. Frames also govern velocity. A segment’s motion combines translation of a reference point and rotation about it.
+
+21
+00:02:57.729 --> 00:03:01.227
+Take a swing. The hands move forward at eight metres per second.
+
+22
+00:03:01.527 --> 00:03:04.919
+The bat rotates about the hands at thirty radians per second.
+
+23
+00:03:05.219 --> 00:03:13.155
+A barrel point sixty centimetres out gains eighteen metres per second from that rotation: angular velocity crossed with the radius.
+
+24
+00:03:13.455 --> 00:03:24.954
+If the rotational part points the same way as the hands’ velocity, the barrel moves at about twenty-six. If not, the vector sum is smaller. Speeds without directions cannot be added.
+
+25
+00:03:25.254 --> 00:03:36.625
+And watch the units. Reports quote degrees per second; physics uses radians. A pelvis turning at six hundred degrees per second is turning at about ten and a half radians per second.
+
+26
+00:03:37.875 --> 00:03:41.992
+Here is the fact that drives everything else. Rotations do not commute.
+
+27
+00:03:42.292 --> 00:03:50.847
+Rotate ninety degrees about X and then ninety about Y, and you land somewhere different from Y first, then X. Try it with a book on your desk.
+
+28
+00:03:51.147 --> 00:04:01.707
+So to report an orientation as three angles, you must choose a sequence. Each sequence is a valid description of the same orientation, and each returns different angles.
+
+29
+00:04:02.557 --> 00:04:10.258
+There are two families. Cardan sequences, also called Tait–Bryan, use three different axes, such as Z, then X, then Y.
+
+30
+00:04:10.558 --> 00:04:28.585
+Grood and Suntay’s joint coordinate system puts one axis in the proximal segment, one in the distal segment and a floating axis perpendicular to both. Without the translations, it is equivalent to a particular Cardan sequence, and it became the basis of the ISB recommendations.
+
+31
+00:04:28.885 --> 00:04:41.663
+Proper Euler sequences repeat the first axis. For the humerus relative to the thorax, the ISB recommends Y, then X, then Y: plane of elevation, then elevation, then axial rotation.
+
+32
+00:04:42.913 --> 00:04:50.849
+Now watch one orientation of a right humerus relative to the thorax. Anterior is X, superior is Y, right is Z.
+
+33
+00:04:51.149 --> 00:05:03.309
+We build it with a flexion-first Cardan sequence. First, about fifty-four degrees about Z. Under these axes the player shows that flexion with a minus sign; the lesson’s table gives magnitudes.
+
+34
+00:05:03.609 --> 00:05:08.324
+Second, fifty-four and a half degrees about the new X axis. Call that abduction.
+
+35
+00:05:08.624 --> 00:05:14.469
+Third, about one hundred nineteen degrees about the humerus’s own long axis. Axial rotation.
+
+36
+00:05:14.769 --> 00:05:23.985
+Now read the very same orientation with the ISB sequence: plane of elevation thirty degrees, elevation seventy, axial rotation sixty.
+
+37
+00:05:24.285 --> 00:05:38.259
+Nothing about the arm changed. Axial rotation is one hundred nineteen under one sequence and sixty under another. The lesson’s table adds an abduction-first sequence, which reads sixty-seven, twenty-eight and seventy-one.
+
+38
+00:05:38.559 --> 00:05:47.945
+So abduction is sixty-seven under one sequence and fifty-four and a half under another. A difference that size between two reports is entirely definitional.
+
+39
+00:05:48.245 --> 00:06:00.896
+Even inside one sequence, each orientation has two equivalent solutions, and software must pick a branch. A plane of elevation of thirty in one program can appear as minus one hundred fifty in another.
+
+40
+00:06:02.746 --> 00:06:06.138
+That was the definitional problem. Now the numerical one.
+
+41
+00:06:06.438 --> 00:06:14.054
+Every three-angle sequence has orientations where it becomes singular. Watch a flexion-first sequence: twenty degrees about Z.
+
+42
+00:06:14.354 --> 00:06:18.855
+Then eighty-eight degrees about X, close to ninety. These angles are synthetic.
+
+43
+00:06:19.155 --> 00:06:28.478
+Now the third axis, Y, sits almost on top of where the first axis was. Rotation thirty about it looks nearly like more rotation about the first.
+
+44
+00:06:28.778 --> 00:06:40.447
+At exactly ninety, only the sum or difference of the first and third angles is defined. Near it, tiny changes in orientation make the reported angles jump. That is gimbal lock.
+
+45
+00:06:40.747 --> 00:06:53.185
+Cardan sequences lock at a middle angle of plus or minus ninety. Proper Euler sequences lock at zero or one hundred eighty. For the ISB shoulder sequence, that is the arm hanging at the side.
+
+46
+00:06:53.485 --> 00:07:05.346
+In pitching this is not theoretical. At foot contact the humerus is often near ninety degrees of abduction relative to the trunk, exactly where a flexion-abduction-rotation sequence locks.
+
+47
+00:07:05.646 --> 00:07:22.030
+A system using it can report wildly oscillating horizontal abduction and external rotation for an arm moving smoothly. Laboratories choose another sequence, redefine the humeral frame, or report only where the sequence is stable. The report should say which.
+
+48
+00:07:22.880 --> 00:07:25.547
+One more trap, for when you read velocity curves.
+
+49
+00:07:25.847 --> 00:07:35.511
+For motion about one fixed axis, angular velocity is the time derivative of the angle. In three dimensions it is not, because the three axes move.
+
+50
+00:07:35.811 --> 00:07:46.157
+Many pitching reports compute angular velocity directly from segment orientations, which is correct. Others differentiate angles. The methods section tells you which.
+
+51
+00:07:47.407 --> 00:07:53.594
+Now let me push against the tidy story. The ISB recommendation is a consensus, not a proof.
+
+52
+00:07:53.894 --> 00:08:13.521
+Its shoulder sequence is intuitive at high elevation but singular at the side, and many baseball laboratories do not use it for the throwing shoulder. Shoulder research shows sequence choice changes angles enough to alter interpretation, and argues for choosing by task. The ISB authors themselves acknowledge alternatives.
+
+53
+00:08:13.821 --> 00:08:20.285
+So test a common coaching claim: shoulder abduction below ninety at foot contact is a flaw to correct.
+
+54
+00:08:20.585 --> 00:08:27.731
+Observed: one reported angle at one event, compared with group averages. Its value depends on frame and sequence.
+
+55
+00:08:28.031 --> 00:08:38.037
+Mechanism: usually unstated. Evidence: group-average angles, little linking this threshold to ball speed within pitchers, and none to competitive outcomes.
+
+56
+00:08:38.337 --> 00:08:45.654
+Uncertain: was it computed under a sequence that is singular right near ninety, and is it stable across this pitcher’s trials?
+
+57
+00:08:45.954 --> 00:08:53.399
+Raising it has not been shown to improve velocity or command. There is no transfer evidence. And an angle is not a load.
+
+58
+00:08:54.849 --> 00:09:08.972
+Back to the thirteen-degree gap. System A measures the humerus relative to the thorax, with a sequence chosen to avoid the singularity near ninety. System B measures relative to a trunk built from shoulder and hip joint centres.
+
+59
+00:09:09.272 --> 00:09:12.749
+Before you compare anything, ask: are the trunk segments the same?
+
+60
+00:09:13.049 --> 00:09:16.164
+Is rotation measured about the same humeral axis?
+
+61
+00:09:16.464 --> 00:09:18.128
+Which sequence, and which branch?
+
+62
+00:09:18.428 --> 00:09:27.879
+Are both values from the same pitches and events? If the answers differ, the thirteen degrees is a definitional offset, and each system needs its own norms.
+
+63
+00:09:28.179 --> 00:09:42.109
+Hitting has the same trap. Hip–shoulder separation can be a projection onto the horizontal plane or a three-dimensional rotation about the trunk’s long axis. With a flexed, tilted trunk, those can differ by many degrees.
+
+64
+00:09:42.409 --> 00:09:58.047
+And if your organization switches capture systems, last season and this season cannot share a chart without a bridging study: the same athletes on both systems, offset and agreement estimated per variable. Make written definitions a condition of the contract.
+
+65
+00:09:58.897 --> 00:10:00.177
+Let’s bring it together.
+
+66
+00:10:00.477 --> 00:10:16.007
+A three-dimensional joint angle is a description the analyst chooses: a reference segment, a set of axes and a rotation sequence. The same orientation can yield very different numbers, and every sequence has orientations where it becomes unstable.
+
+67
+00:10:16.307 --> 00:10:19.017
+Compare angles only when the definitions match.
+
+68
+00:10:19.317 --> 00:10:35.935
+Take the comprehension check below, the same as the written lesson. Then open the Biomechanics Foundations Lab, where the first station re-describes one orientation under every sequence, and read the ISB shoulder recommendation, especially its discussion of sequences.
+
