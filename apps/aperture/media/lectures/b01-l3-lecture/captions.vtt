@@ -1,0 +1,298 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:08.896
+A force-plate report lands on your desk. One hitter’s lead leg shows a higher peak vertical force than another’s. The scenario is hypothetical.
+
+2
+00:00:09.196 --> 00:00:12.929
+A staff member concludes that the first hitter is using the ground better.
+
+3
+00:00:13.229 --> 00:00:18.243
+Hold that thought. Peak force alone cannot establish it, and this lecture is about why.
+
+4
+00:00:19.093 --> 00:00:29.205
+Here is a cleaner version of the question. A pitcher’s lead leg produces a braking force that rises to one thousand two hundred newtons in five hundredths of a second.
+
+5
+00:00:29.505 --> 00:00:31.659
+It rises in a straight line to that peak.
+
+6
+00:00:31.959 --> 00:00:34.946
+Then it falls back to zero over the next tenth of a second.
+
+7
+00:00:35.246 --> 00:00:40.750
+How much braking did that deliver? Estimate the impulse, in newton-seconds, before I show you how.
+
+8
+00:00:42.600 --> 00:00:52.904
+Ninety newton-seconds. Integrate Newton’s second law over time and you get impulse–momentum: the area under the force–time curve equals the change in momentum.
+
+9
+00:00:53.204 --> 00:01:01.737
+Our curve is a triangle. One half, times one thousand two hundred newtons, times fifteen hundredths of a second, is ninety newton-seconds.
+
+10
+00:01:02.037 --> 00:01:11.189
+If that is the net horizontal force on a ninety-kilogram pitcher, his centre of mass slows by ninety divided by ninety: one metre per second.
+
+11
+00:01:11.489 --> 00:01:16.759
+Now the second curve. Double the peak to two thousand four hundred newtons and halve the duration.
+
+12
+00:01:17.059 --> 00:01:22.883
+The area is identical. Same impulse, same change in velocity, and a peak twice as high.
+
+13
+00:01:23.183 --> 00:01:30.820
+So the force-plate staff member was looking at the wrong number. A brief, high peak can deliver less impulse than a lower, longer push.
+
+14
+00:01:31.670 --> 00:01:44.107
+Vertical forces add one more step. Subtract body weight first. A ninety-kilogram athlete weighs about eight hundred eighty-three newtons, and only the force above that changes vertical momentum.
+
+15
+00:01:44.407 --> 00:01:56.013
+Suppose a hitter’s lead leg averages one thousand five hundred newtons over twelve hundredths of a second. His rear leg is also on the ground, so the lead leg alone does not decide anything.
+
+16
+00:01:56.313 --> 00:02:04.227
+If both legs together average one thousand three hundred newtons over that window, the net vertical impulse is about fifty newton-seconds.
+
+17
+00:02:04.527 --> 00:02:16.879
+That is an upward velocity change of about fifty-six hundredths of a metre per second. The rule for reading reports: sum every contact and net out gravity before saying anything about the centre of mass.
+
+18
+00:02:18.129 --> 00:02:22.268
+Forces change linear momentum. Moments change angular momentum.
+
+19
+00:02:22.568 --> 00:02:31.549
+A force that misses an axis produces a moment about it. Moment equals r cross F, where r runs from the axis to the point where the force acts.
+
+20
+00:02:31.849 --> 00:02:34.153
+Here, the lever is thirty centimetres long.
+
+21
+00:02:34.453 --> 00:02:38.123
+A two-hundred-newton force acts at its end, perpendicular to it.
+
+22
+00:02:38.423 --> 00:02:47.361
+The magnitude is the lever length times the force times the sine of the angle between them. Sine of ninety is one, so the moment is sixty newton-metres.
+
+23
+00:02:47.661 --> 00:02:58.200
+In vector form, with r along X and F along Z, the cross product points along minus Y: sixty newton-metres about the negative Y axis, by the right-hand rule.
+
+24
+00:02:58.500 --> 00:03:09.124
+Swap the order, F cross r, and the sign flips. That alone is one reason reports disagree about whether a moment is positive. Always check the stated convention.
+
+25
+00:03:09.974 --> 00:03:12.278
+Now keep the same force and the same lever,
+
+26
+00:03:12.578 --> 00:03:16.930
+but tilt the force so it makes thirty degrees with the lever instead of ninety.
+
+27
+00:03:17.230 --> 00:03:19.321
+Before I draw it, estimate the moment.
+
+28
+00:03:20.771 --> 00:03:24.248
+Thirty newton-metres. Here is the lever, and the tilted force.
+
+29
+00:03:24.548 --> 00:03:27.620
+Sine of thirty degrees is one half, so the moment halves.
+
+30
+00:03:27.920 --> 00:03:39.333
+Another way to see it: the perpendicular distance from the axis to the line of action, the moment arm, is now fifteen centimetres. Two hundred newtons times fifteen centimetres is thirty.
+
+31
+00:03:39.633 --> 00:03:49.340
+The same arithmetic applies inside the body. A four-hundred-newton muscle force acting five centimetres from a joint centre produces twenty newton-metres.
+
+32
+00:03:50.590 --> 00:03:59.465
+The rotational version of impulse works the same way. Angular impulse, moment integrated over time, equals the change in angular momentum.
+
+33
+00:03:59.765 --> 00:04:02.218
+An average net moment of fifty newton-metres
+
+34
+00:04:02.518 --> 00:04:04.459
+acting for eight hundredths of a second
+
+35
+00:04:04.759 --> 00:04:06.594
+delivers four newton-metre-seconds.
+
+36
+00:04:06.894 --> 00:04:12.121
+Apply it to a segment with a moment of inertia of two tenths of a kilogram-metre squared,
+
+37
+00:04:12.421 --> 00:04:29.295
+and its angular velocity changes by twenty radians per second, about one thousand one hundred fifty degrees per second. A segment ten times heavier in rotational terms would change by a tenth as much. Big segments are slow to start; small ones can be made very fast.
+
+38
+00:04:30.145 --> 00:04:38.444
+Now the whole body. During the stride and the swing, the only significant external forces are gravity and the ground reaction forces.
+
+39
+00:04:38.744 --> 00:04:52.589
+Gravity acts at the centre of mass, so it produces no moment about it. Every change in the body’s total angular momentum about its centre of mass comes from ground reaction forces whose lines of action miss the centre of mass.
+
+40
+00:04:52.889 --> 00:05:03.535
+Muscles can pass angular momentum among trunk, arms and bat, but they cannot change the total. Where the trunk’s rotation comes from is partly a question about the feet.
+
+41
+00:05:04.385 --> 00:05:09.867
+Last, power. Joint power is the net joint moment times the joint angular velocity.
+
+42
+00:05:10.167 --> 00:05:26.338
+During arm cocking, an internal-rotation moment of sixty newton-metres opposes a humerus still rotating externally at forty radians per second. Power is minus two thousand four hundred watts: the moment absorbs energy. The numbers are synthetic.
+
+43
+00:05:26.638 --> 00:05:35.171
+During acceleration, the same moment acts with internal rotation at the same speed: plus two thousand four hundred watts, generating energy.
+
+44
+00:05:35.471 --> 00:05:49.573
+That sign change is the mechanical signature of the decelerate-then-accelerate pattern from Lesson One. Power can also flow between neighbouring segments through joint forces, which move energy without doing net work on the pair.
+
+45
+00:05:50.823 --> 00:05:56.988
+So where do the elbow and shoulder moments in a pitching report come from? They are not measured. They are computed.
+
+46
+00:05:57.288 --> 00:06:01.853
+Motion data, filtered, give each segment’s linear and angular accelerations.
+
+47
+00:06:02.153 --> 00:06:06.164
+Segment masses and inertias come from tables or scaling rules.
+
+48
+00:06:06.464 --> 00:06:12.288
+External forces come from force plates, or from an assumption, such as zero force at a free hand.
+
+49
+00:06:12.588 --> 00:06:21.569
+Newton–Euler equations are solved segment by segment, from the distal end inward, using the third law to pass forces from one segment to the next.
+
+50
+00:06:21.869 --> 00:06:28.333
+Out come net joint forces and moments, expressed in a chosen frame and often normalized to body size.
+
+51
+00:06:28.633 --> 00:06:41.711
+Net is the key word. The moment combines every structure crossing the joint. Co-contraction raises tissue loads without raising the net value, and ligament and joint contact can carry load the net value hides.
+
+52
+00:06:42.561 --> 00:06:46.017
+And one more reason a net moment is not a muscle story.
+
+53
+00:06:46.317 --> 00:06:57.602
+In a chain of linked segments, a moving segment produces moments on its neighbours, with terms tied to the proximal segment’s angular acceleration and the square of its angular velocity.
+
+54
+00:06:57.902 --> 00:07:05.006
+So muscles accelerate joints they do not cross, and can even oppose their anatomical action at joints they do cross.
+
+55
+00:07:05.306 --> 00:07:19.023
+Induced-acceleration analysis of throwing credits much of elbow extension and wrist flexion speed near release to velocity-dependent effects arising from trunk rotation and shoulder internal rotation.
+
+56
+00:07:20.273 --> 00:07:34.716
+Now let me argue against the power of everything I just taught. Pitching kinetics grew up partly to explain injury, and the moments at maximal external rotation have been described as approaching tissue failure limits from cadaver testing.
+
+57
+00:07:35.016 --> 00:07:45.000
+But a systematic review of eleven studies found elbow valgus torque among the few variables with support, with low power and no prospective three-dimensional studies.
+
+58
+00:07:45.300 --> 00:07:55.839
+Normalized moments also rise with ball velocity, across pitchers and within a pitcher, pitch to pitch. High torque and high velocity are not independent findings.
+
+59
+00:07:56.139 --> 00:08:08.960
+Filtering matters. Moments rest on accelerations, second derivatives of noisy positions. Filter markers and force data differently and you can create artificial peaks near foot contact or release.
+
+60
+00:08:09.260 --> 00:08:21.505
+And normalization by body weight times height assumes loads scale linearly with size, and does nothing about velocity. A percentile chart of normalized moments mixes skill, size and load.
+
+61
+00:08:22.355 --> 00:08:36.563
+Run the strongest version of the injury claim through the seven questions. This pitcher’s elbow varus moment is one hundred newton-metres, so his ulnar collateral ligament is at high risk. This is educational, not clinical.
+
+62
+00:08:36.863 --> 00:08:48.213
+Observed: a net moment computed by inverse dynamics, a biomechanical measurement. Mechanism: the ligament resists valgus load, along with every other medial structure.
+
+63
+00:08:48.513 --> 00:08:55.275
+Evidence: cadaver failure data and a handful of studies; the review supports valgus torque only provisionally.
+
+64
+00:08:55.575 --> 00:09:05.730
+Uncertain: how load is shared among ligament, muscle and bone, this athlete’s tissue capacity, his workload, and the model and filtering error in the estimate itself.
+
+65
+00:09:06.030 --> 00:09:14.819
+No controlled study shows that mechanically lowering the moment reduces injury, and if the change lowers velocity, there is a competitive cost.
+
+66
+00:09:15.119 --> 00:09:17.999
+So the number is a load indicator, not a probability.
+
+67
+00:09:19.449 --> 00:09:30.756
+Here is a synthetic report. Elbow varus moment eighty-eight newton-metres, shoulder internal-rotation moment ninety, lead-leg vertical force one point nine times body weight.
+
+68
+00:09:31.056 --> 00:09:42.064
+Before any interpretation: averaged over several fastballs, or one? Same filter cut-off and segment model as the comparison data? Distal or proximal segment frame?
+
+69
+00:09:42.364 --> 00:09:48.572
+Only then ask whether eighty-eight is high for this pitcher, against his own history at similar velocity.
+
+70
+00:09:48.872 --> 00:10:05.640
+For a hitter, a bigger lead-leg braking impulse slows forward motion, and that momentum can be redirected into rotation. Whether a given hitter benefits depends on his timing and bat path, and the evidence for prescribing it is associational. Lesson Four takes that up.
+
+71
+00:10:06.490 --> 00:10:07.770
+Let’s bring it together.
+
+72
+00:10:08.070 --> 00:10:23.515
+Impulse, the area under the force–time curve, changes momentum; peak force does not. Angular impulse changes angular momentum. Power is moment times angular velocity, and its sign says whether energy is generated or absorbed.
+
+73
+00:10:23.815 --> 00:10:34.503
+Inverse dynamics turns motion into net joint moments that are model-dependent and summed over every structure at the joint. They are not tissue loads, and not injury probabilities.
+
+74
+00:10:34.803 --> 00:10:47.113
+Take the comprehension check below, the same as the written lesson. Then open the Biomechanics Foundations Lab, and work one inverse-dynamics example by hand from Winter’s kinetics chapters.
+
