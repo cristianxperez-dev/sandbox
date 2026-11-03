@@ -1,0 +1,322 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.973
+Markerless capture promises something marker systems never could: biomechanics during an actual game.
+
+2
+00:00:06.273 --> 00:00:18.028
+This lecture asks what that promise is worth. How does video become a joint angle? What do the agreement studies really show? And what can in-game pitching and hitting data support today, and what can't they?
+
+3
+00:00:18.878 --> 00:00:22.633
+Here is the scene, with an invented pitcher and invented numbers.
+
+4
+00:00:22.933 --> 00:00:30.570
+His laboratory report, from a marker-based system, shows peak shoulder external rotation of one hundred seventy-six degrees.
+
+5
+00:00:30.870 --> 00:00:38.166
+The stadium's markerless system, at his next start, shows one hundred sixty-five, on fastballs of the same velocity.
+
+6
+00:00:38.466 --> 00:00:50.455
+His pitching coach asks whether he has lost his layback between the lab and the game. Before we go on, think of three explanations for an eleven-degree gap that have nothing to do with a change in the pitcher.
+
+7
+00:00:51.305 --> 00:00:52.948
+There are at least four candidates.
+
+8
+00:00:53.248 --> 00:00:58.859
+First, a system-specific bias: the two systems define or locate the shoulder differently.
+
+9
+00:00:59.159 --> 00:01:04.535
+Second, the setting: game versus laboratory intensity, clothing, warm-up and arousal.
+
+10
+00:01:04.835 --> 00:01:06.989
+Third, random error in either system.
+
+11
+00:01:07.289 --> 00:01:09.913
+Only fourth, a genuine change in the athlete.
+
+12
+00:01:10.213 --> 00:01:24.187
+The literature can estimate the first, partly inform the second, and tell you how large the third is likely to be. Only after subtracting those can you consider the fourth. This lecture is about doing that subtraction honestly.
+
+13
+00:01:25.437 --> 00:01:30.002
+Let's build the pipeline, and at every step name the assumption hiding inside it.
+
+14
+00:01:30.302 --> 00:01:37.534
+It starts with synchronized, calibrated video. Frame rate and exposure set motion blur and temporal resolution.
+
+15
+00:01:37.834 --> 00:01:51.509
+In each image, a convolutional neural network detects keypoints. It was trained on large sets of images in which people labelled joint locations, and it outputs the most likely two-dimensional position of each keypoint.
+
+16
+00:01:51.809 --> 00:02:10.667
+The assumption: that the labelled point corresponds to the joint you care about. Wade and colleagues' review makes the central point. Open-source pose models were not designed for biomechanics, and their labels are visual estimates of joint locations, inconsistently placed, not anatomical joint centres.
+
+17
+00:02:10.967 --> 00:02:21.805
+Next, the two-dimensional detections from several views are triangulated, or used to fit a three-dimensional model. That assumes enough cameras see each joint without occlusion.
+
+18
+00:02:22.105 --> 00:02:29.763
+The skeletal model then imposes segment lengths and limits on joint freedom. It assumes the model's anatomy fits this athlete.
+
+19
+00:02:30.063 --> 00:02:40.218
+Finally, angles come from the fitted segment orientations, and events like foot contact are detected. Those definitions must match whatever system you compare against.
+
+20
+00:02:41.068 --> 00:02:42.540
+Two consequences follow.
+
+21
+00:02:42.840 --> 00:02:59.928
+First, markerless systems have no soft-tissue artifact in the marker sense, but they have an analogue. The network infers joints from the visible body surface and clothing, and an outline barely constrains long-axis rotations like humeral rotation or forearm pronation.
+
+22
+00:03:00.228 --> 00:03:10.468
+Second, every vendor's model is trained and constrained differently. Two markerless systems are no more interchangeable with each other than either is with a marker system.
+
+23
+00:03:11.718 --> 00:03:14.683
+Now the evidence. Three comparisons matter most.
+
+24
+00:03:14.983 --> 00:03:30.685
+Fleisig and colleagues recorded two hundred seventy-five fastballs from thirty pitchers, with a mean age of about seventeen, simultaneously with a nine-camera markerless system and a twelve-camera marker system, both at two hundred forty frames per second.
+
+25
+00:03:30.985 --> 00:03:47.027
+The waveforms agreed closely in shape, with coefficients of multiple correlation from zero point eight eight to zero point nine seven. But several discrete values differed systematically, and the authors recommended separate normative ranges for each system.
+
+26
+00:03:47.327 --> 00:04:03.007
+Aguinaldo and colleagues captured eighteen collegiate pitchers with a marker-based reference, an in-stadium Hawk-Eye system and a portable Theia3D system at once. Mean per-joint position errors were fifty-six point six and fifty-two millimetres.
+
+27
+00:04:03.307 --> 00:04:17.345
+Stride length agreed best and shoulder rotational variables least. The authors concluded that camera configuration, deployment and the pose model all affect accuracy, and their kinetic estimates inherit these position errors.
+
+28
+00:04:17.645 --> 00:04:32.877
+Outside baseball, Kanko and colleagues compared Theia3D with markers in treadmill walking in thirty adults. Most joint centres differed by about two and a half centimetres or less, three point six at the hip, and long-axis rotations differed most.
+
+29
+00:04:33.177 --> 00:04:44.014
+One author was the developer company's president, a conflict the preprint disclosed. And walking is slow. Agreement in gait is an upper bound for throwing, not an estimate of it.
+
+30
+00:04:44.864 --> 00:04:49.685
+How can shapes agree so well while the values differ? Look at two illustrative curves.
+
+31
+00:04:49.985 --> 00:04:54.508
+Here is a marker-based shoulder external rotation trace across the delivery.
+
+32
+00:04:54.808 --> 00:05:00.781
+And here is a markerless trace that rises and falls with it exactly, but sits ten degrees lower throughout.
+
+33
+00:05:01.081 --> 00:05:11.151
+The coefficient of multiple correlation measures similarity of shape. It is largely insensitive to a constant offset. So what would it say about these two curves?
+
+34
+00:05:12.601 --> 00:05:23.374
+For individual decisions, you need the bias and limits of agreement for the specific discrete variable. Here are fifteen synthetic pitches, each captured by both systems at once.
+
+35
+00:05:23.674 --> 00:05:29.669
+Each point is one pitch: the markerless value minus the marker value, plotted against the mean of the two.
+
+36
+00:05:29.969 --> 00:05:41.830
+The bias line sits at about minus ten degrees: the markerless system reads ten degrees lower on average. That is systematic, and correctable only within this installation and software version.
+
+37
+00:05:42.130 --> 00:05:54.909
+The limits of agreement run from about minus fourteen and a half to about minus five and a half degrees. Ninety-five percent of single-pitch differences should fall in that band. You'll build these properly in Lesson 5.
+
+38
+00:05:56.159 --> 00:05:59.849
+A markerless offset is not one error but several stacked together.
+
+39
+00:06:00.149 --> 00:06:11.883
+Training labels put the shoulder keypoint where annotators judged it in photographs, usually near the visible top of the arm. A marker model places the glenohumeral centre inside the body.
+
+40
+00:06:12.183 --> 00:06:22.807
+The skeletal model imposes its own segment definitions. If it allows only limited scapular motion, humeral elevation and rotation absorb what the scapula did.
+
+41
+00:06:23.107 --> 00:06:28.141
+Clothing, sleeves and body shape change the visible outline the keypoints come from.
+
+42
+00:06:28.441 --> 00:06:35.417
+Camera number and placement decide how often the trunk hides the throwing arm at maximum external rotation.
+
+43
+00:06:35.717 --> 00:06:42.053
+And event definitions, how foot contact or release is detected, shift every time-normalized value.
+
+44
+00:06:42.353 --> 00:06:54.428
+Each is systematic for one installation and software version. That is why a constant offset can coexist with good waveform agreement, and why bias can change when the vendor updates its model.
+
+45
+00:06:55.278 --> 00:07:03.406
+A per-joint error of about five centimetres sounds large. What does it do to an angle? It depends on how the errors at the two ends co-vary.
+
+46
+00:07:03.706 --> 00:07:06.245
+Suppose the segment is thirty centimetres long.
+
+47
+00:07:06.545 --> 00:07:16.166
+If the model places both shoulder and elbow five centimetres forward, the upper-arm angle is unchanged. Correlated errors cancel and show up as offsets.
+
+48
+00:07:16.466 --> 00:07:23.399
+Now make the two errors independent and perpendicular to the segment. Predict the worst-case angle error, in degrees.
+
+49
+00:07:24.849 --> 00:07:25.916
+The arithmetic.
+
+50
+00:07:26.216 --> 00:07:30.803
+Two independent five-centimetre errors combine to about seven centimetres.
+
+51
+00:07:31.103 --> 00:07:34.473
+Over thirty centimetres, that is a ratio of about a quarter.
+
+52
+00:07:34.773 --> 00:07:42.795
+The arctangent gives roughly thirteen degrees. Long-axis rotation is worse still, because it depends on keypoints close to the axis.
+
+53
+00:07:43.095 --> 00:07:53.228
+So per-joint position error is a screening metric. The decision-relevant quantity is the error in the specific angle, at the specific instant, in the specific task.
+
+54
+00:07:54.478 --> 00:07:59.385
+Markerless capture's main advantage is that it works where markers cannot: in games.
+
+55
+00:07:59.685 --> 00:08:13.615
+Giordano and colleagues published in-game reference values from eight synchronized three-hundred-hertz KinaTrax cameras at two Division One stadiums, for fifty-one pitchers from five teams in the two thousand twenty-three season.
+
+56
+00:08:13.915 --> 00:08:34.267
+Jump and colleagues used in-game data from three hundred thirty-five Division One pitchers, with statistical parametric mapping, to relate hip–shoulder separation to velocity. The association was positive but weak, a peak correlation around zero point one six, with substantial differences between individual pitchers.
+
+57
+00:08:34.567 --> 00:08:53.575
+Whether in-game data can stand in for the lab is unresolved. Lerch and colleagues found within-pitcher variability across ten fastballs similar for eight of ten variables, but greater in games for maximum shoulder external rotation and elbow flexion at that instant. Mean values differed substantially.
+
+58
+00:08:53.875 --> 00:09:08.105
+Here is the limit. They compared different pitchers in each condition, so system, setting and sample are confounded. And Fleisig and Aguinaldo show system-specific offsets even when the same pitch is captured simultaneously.
+
+59
+00:09:08.955 --> 00:09:10.875
+Hitting research is newer and thinner.
+
+60
+00:09:11.175 --> 00:09:29.521
+Hoechstetter and colleagues analyzed in-game markerless capture and ball-tracking data from three thousand nine hundred fifty-eight swings by two hundred forty-seven Division One batters. The abstract reports that greater hip–shoulder separation was associated with higher bat speed, between and within batters.
+
+61
+00:09:29.821 --> 00:09:41.000
+Earlier, Sonnenfeld and colleagues used a markerless system to describe lead- and trail-hip motion during swings in twenty-nine elite players, and found asymmetries between the hips.
+
+62
+00:09:41.300 --> 00:09:59.241
+And in searches for this course in November two thousand twenty-six, no peer-reviewed study compared markerless and marker-based swing kinematics, wrist and forearm rotation, or bat orientation. A vendor validation figure in a press release is a vendor claim until its methods are published.
+
+63
+00:09:59.541 --> 00:10:08.416
+Hitting is also hard for video models. The hands and bat move fastest, overlap each other and the body, and blur at ordinary frame rates.
+
+64
+00:10:10.266 --> 00:10:15.919
+Back to our pitcher. The defensible conclusion is that the eleven-degree gap cannot be interpreted.
+
+65
+00:10:16.219 --> 00:10:26.139
+The two systems are known to disagree on shoulder rotation, published offsets are of the same order as the gap, and the setting changed at the same moment as the instrument.
+
+66
+00:10:26.439 --> 00:10:33.778
+To monitor him in games, establish a baseline with the in-game system across several starts, and track change within that system.
+
+67
+00:10:34.078 --> 00:10:39.411
+To relate game values to lab values, you would need both systems capturing the same pitches.
+
+68
+00:10:40.261 --> 00:10:44.827
+A club that wants to use in-game markerless data can follow a short protocol.
+
+69
+00:10:45.127 --> 00:10:54.983
+Choose a few variables with plausible relevance and decent published agreement: stride length, and pelvis and trunk rotation timing, before humeral rotation.
+
+70
+00:10:55.283 --> 00:11:01.704
+Estimate each variable's within-athlete typical error from several outings in a stable period, by pitch type.
+
+71
+00:11:02.004 --> 00:11:08.383
+Check stability across stadiums by comparing the same pitchers at home and away installations where you can.
+
+72
+00:11:08.683 --> 00:11:11.179
+Record the software version with every value.
+
+73
+00:11:11.479 --> 00:11:16.492
+Then set change flags per variable, from its own error, not from a generic percentage.
+
+74
+00:11:16.792 --> 00:11:34.840
+For hitters, ask descriptive questions, such as how consistent pelvis-rotation timing is relative to stride, after estimating within-hitter variability. Treat wrist, forearm and bat-orientation outputs as unvalidated, and keep tracked bat metrics separate from body kinematics.
+
+75
+00:11:35.140 --> 00:11:53.081
+One more scene. Midway through a season, your vendor ships a new pose model, and every pitcher's trend line shifts three to six degrees on the update date. The change is not physiological. Insist on version-stamped outputs, reprocessing of old video, and a written description of what changed.
+
+76
+00:11:53.931 --> 00:11:55.211
+Let's bring it together.
+
+77
+00:11:55.511 --> 00:12:07.607
+Markerless capture moves biomechanics into the game by inferring joints from video. The price is system-specific offsets, weak long-axis rotations and dependence on a vendor's model.
+
+78
+00:12:07.907 --> 00:12:20.366
+Pitching has agreement studies and in-game associations. Hitting has in-game associations but, as far as we could find, no peer-reviewed agreement study. Track change within one system and one version.
+
+79
+00:12:20.666 --> 00:12:31.141
+From here, take the comprehension check below, the same check as the written lesson. Then open the Measurement Science Laboratory, and read Fleisig and colleagues' comparison in full.
+
+80
+00:12:31.441 --> 00:12:38.566
+The written lesson stays here whenever you want the full tables and methodological notes. Thank you for working through this with me.
+
