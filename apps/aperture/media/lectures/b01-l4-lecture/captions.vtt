@@ -1,0 +1,346 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.715
+Picture a development meeting. The meeting is hypothetical, and so is the pitcher.
+
+2
+00:00:05.015 --> 00:00:11.201
+His report shows that his pelvis and his trunk reach peak angular velocity almost at the same moment.
+
+3
+00:00:11.501 --> 00:00:19.821
+A coach proposes drills to create separation, so the trunk peaks later. He cites studies in which harder throwers had more separation.
+
+4
+00:00:20.671 --> 00:00:23.573
+The coach is reasoning from a difference between pitchers.
+
+5
+00:00:23.873 --> 00:00:31.958
+A biomechanist asks a sharper question. Did those studies compare pitchers with one another, or follow pitchers who actually changed?
+
+6
+00:00:32.258 --> 00:00:36.589
+And someone from the medical staff asks what the change would do to arm loading.
+
+7
+00:00:36.889 --> 00:00:45.294
+Each question points to a different kind of evidence. By the end of this lecture you’ll be able to say which kinds exist for this claim, and which do not.
+
+8
+00:00:45.594 --> 00:00:56.346
+First, a question for you. When people say energy transfers from the legs to the arm, what physical quantity would actually show it? Hold your answer; we will define it precisely.
+
+9
+00:00:57.596 --> 00:01:01.543
+Start with the picture everyone has seen: the kinematic sequence graph.
+
+10
+00:01:01.843 --> 00:01:09.608
+It plots the angular velocity of several segments against time. Pelvis, trunk, upper arm or lead arm, and hand or bat.
+
+11
+00:01:09.908 --> 00:01:17.865
+The usual summary is the order of the peaks, their spacing and their size. That is a description of when segments rotate fastest.
+
+12
+00:01:18.165 --> 00:01:25.995
+It does not show forces. It does not show energy. It does not say why the peaks fall in that order. Those questions need kinetics.
+
+13
+00:01:26.845 --> 00:01:34.375
+Here is the canonical shape. A warning first: this is an illustration, not data. Every number on this graph is invented.
+
+14
+00:01:34.675 --> 00:01:40.030
+After the lead foot lands, the pelvis reaches its peak rotation about the vertical axis.
+
+15
+00:01:40.330 --> 00:01:42.527
+The upper trunk peaks later, and faster.
+
+16
+00:01:42.827 --> 00:01:45.878
+Then the arm. Elbow extension peaks near release.
+
+17
+00:01:46.178 --> 00:01:54.903
+And humeral internal rotation reaches several thousand degrees per second as the ball leaves the hand. Then the arm and trunk decelerate.
+
+18
+00:01:55.203 --> 00:02:04.163
+Across striking and throwing skills, segments generally begin and peak in this proximal-to-distal order, each distal segment faster than the one before.
+
+19
+00:02:04.463 --> 00:02:11.674
+Early three-dimensional work on hitting described the same pattern: pelvis rotation leading trunk and arm rotation.
+
+20
+00:02:11.974 --> 00:02:16.155
+So the description is robust. The interesting question is the mechanism.
+
+21
+00:02:17.405 --> 00:02:28.627
+Putnam’s review made a point that still matters. The sequence is not explained by joint moments alone. Segment interaction, which changes with motion and orientation, is central.
+
+22
+00:02:28.927 --> 00:02:40.553
+First account: interaction torques. A rapidly rotating proximal segment exerts velocity-dependent moments on the next one, so the forearm can accelerate with little elbow muscle torque.
+
+23
+00:02:40.853 --> 00:02:48.896
+Induced-acceleration analysis attributes much of elbow extension and wrist flexion velocity near release to those effects.
+
+24
+00:02:49.196 --> 00:02:57.857
+Second account: elastic storage. The trunk and arm are stretched before they shorten, and the shoulder in particular may store and return energy.
+
+25
+00:02:58.157 --> 00:03:07.928
+Third account: energy flow. Joint forces and joint moments move mechanical power from segment to segment, and energy-flow analysis puts numbers on it.
+
+26
+00:03:08.228 --> 00:03:12.900
+These are compatible, not rival theories. Hold on to that; it matters later.
+
+27
+00:03:13.750 --> 00:03:19.617
+So what does transfer mean, precisely? At each joint, energy-flow analysis computes two things.
+
+28
+00:03:19.917 --> 00:03:27.341
+Joint force power: the power delivered by the joint force. It moves energy between the two segments without generating any.
+
+29
+00:03:27.641 --> 00:03:31.971
+Segment torque power: the power of the joint moment acting on each segment.
+
+30
+00:03:32.271 --> 00:03:44.794
+Add them up and you have the rate at which each segment gains or loses mechanical energy, and from where. That is your answer to the opening question: transfer is power crossing a joint in a measured direction.
+
+31
+00:03:45.094 --> 00:03:56.785
+In twenty-four youth pitchers, every energy-flow variable correlated with pitch velocity. The strongest was energy flowing from the trunk into the arm, with a correlation of zero point nine.
+
+32
+00:03:57.085 --> 00:04:05.405
+Energy entering the trunk through joint forces went with lower velocity-normalized arm loads. The authors called that greater efficiency.
+
+33
+00:04:05.705 --> 00:04:18.142
+Now the limits. These quantities come from inverse dynamics and inherit its model and filtering assumptions. And they are computed from the same kinematics as velocity, which can inflate correlations.
+
+34
+00:04:19.992 --> 00:04:24.941
+Back to the coach. When he says separation, which quantity does he mean? There are at least three.
+
+35
+00:04:25.241 --> 00:04:31.172
+An angle: the difference between pelvis and upper-trunk orientation at an event such as foot contact.
+
+36
+00:04:31.472 --> 00:04:36.059
+An interval: the time between peak pelvis and peak trunk angular velocity.
+
+37
+00:04:36.359 --> 00:04:44.679
+A rate: how fast that angle closes. They are related, not interchangeable, and each depends on the segment definitions from Lesson 2.
+
+38
+00:04:44.979 --> 00:04:51.635
+Our pitcher could show a large separation angle at foot contact and still have nearly simultaneous velocity peaks.
+
+39
+00:04:51.935 --> 00:05:08.468
+Mechanically, a larger angle pre-stretches the trunk rotators, and a delay lets the pelvis decelerate while the trunk accelerates. That is consistent with momentum moving up the chain. Whether he benefits depends on his mobility, his strength and what his arm does next.
+
+40
+00:05:09.318 --> 00:05:15.185
+Here is the inconvenient part. Timing variables tend to move velocity and arm loading together.
+
+41
+00:05:15.485 --> 00:05:24.637
+Across youth to professional pitchers, professionals rotated the upper trunk later and had the lowest normalized shoulder torque among skeletally mature groups.
+
+42
+00:05:24.937 --> 00:05:35.113
+Using mixed models over repeated pitches, Urbin and colleagues found that longer phase times between successive peaks went with lower kinetics and lower ball speed.
+
+43
+00:05:35.413 --> 00:05:43.626
+And within individual pitchers, faster pitches coincided with differences in trunk and pelvis rotation, and with larger arm kinetics.
+
+44
+00:05:43.926 --> 00:05:47.766
+So timing looks less like a free improvement and more like a trade-off.
+
+45
+00:05:48.616 --> 00:05:54.397
+Now a synthetic example; the numbers are invented. Five pitchers each throw ten fastballs.
+
+46
+00:05:54.697 --> 00:06:06.985
+Across the five, average trunk delay ranges from twenty to sixty milliseconds and correlates strongly with velocity. But the two pitchers with the longest delays are also the largest and strongest.
+
+47
+00:06:07.285 --> 00:06:14.645
+Within each pitcher, delay varies by about eight milliseconds either way and is nearly uncorrelated with that pitch’s velocity.
+
+48
+00:06:14.945 --> 00:06:28.471
+A between-athlete correlation asks whether athletes with more X have more Y. A within-athlete correlation asks whether, when this athlete has more X, he has more Y. They can differ in size and even in sign.
+
+49
+00:06:28.771 --> 00:06:39.032
+Mixed models with separate within- and between-athlete terms estimate both; Week 12 returns to them. Real data can show either pattern, so both must be estimated.
+
+50
+00:06:40.882 --> 00:06:55.645
+Time to examine the slogans. Energy leaks. Mechanical energy does not escape through a gap like water from a pipe. It is absorbed by negative joint power, dissipated in tissue or returned to the ground, and which one has to be computed.
+
+51
+00:06:55.945 --> 00:07:08.190
+The arm is just along for the ride. Interaction torques contribute a great deal, but shoulder internal-rotation and elbow moments are large and active. The arm is driven, and it also drives.
+
+52
+00:07:08.490 --> 00:07:18.559
+There is one correct sequence. Skilled throwers vary in timing, and in a study of pitch-to-pitch variability, timing variability did not decrease with competitive level.
+
+53
+00:07:18.859 --> 00:07:29.782
+More separation is always better. Between-athlete associations give no dose-response for an individual, and timing changes that raise speed can raise load as well.
+
+54
+00:07:30.632 --> 00:07:36.072
+Now let me argue against my own framing. Even the mechanical meaning of the chain is debated.
+
+55
+00:07:36.372 --> 00:07:41.983
+Some accounts emphasize the transfer of angular momentum from large segments to small ones.
+
+56
+00:07:42.283 --> 00:07:50.539
+Others emphasize energy flow through joint forces. Each depends on a model. They answer different questions more than they compete as facts.
+
+57
+00:07:50.839 --> 00:08:02.913
+The literature has a structure worth naming, too. Much of the pitching canon comes from one laboratory group and its collaborators, so consistency across papers is partly consistency of method.
+
+58
+00:08:03.213 --> 00:08:15.373
+Samples of twenty to forty athletes analysed for dozens of variables invite false positives. And groups split at the extremes of velocity make differences look larger than they are in the middle.
+
+59
+00:08:15.673 --> 00:08:29.092
+On the injury side, early trunk rotation has some support as a risk factor, but low power limits most conclusions. This is educational material, and none of it turns a joint moment into an injury probability.
+
+60
+00:08:29.392 --> 00:08:37.200
+None of this makes the findings wrong. It makes them hypotheses that deserve replication and, eventually, intervention tests.
+
+61
+00:08:38.050 --> 00:08:45.090
+Apply the seven-question standard to the coach’s claim: increasing this pitcher’s separation will increase his velocity.
+
+62
+00:08:45.390 --> 00:08:55.630
+What has been observed? Between-pitcher differences in trunk timing, and kinematic differences between velocity groups. Measurements, associated with a mechanical output.
+
+63
+00:08:55.930 --> 00:09:03.418
+What mechanism is proposed? A later-peaking trunk is stretched more and can receive more energy and momentum from the pelvis.
+
+64
+00:09:03.718 --> 00:09:13.041
+What evidence supports it? Cross-sectional, between- and within-athlete associations, and mixed-model timing results. No randomized intervention.
+
+65
+00:09:13.341 --> 00:09:23.922
+What remains uncertain? Whether it holds within this pitcher at his own capacity, the dose-response, and whether separation is a cause or a by-product of strength and mobility.
+
+66
+00:09:24.222 --> 00:09:28.254
+Has changing the variable improved performance? Not demonstrated.
+
+67
+00:09:28.554 --> 00:09:36.661
+Does it transfer to competition? Unknown. No study links a trained change in separation to game velocity or run prevention.
+
+68
+00:09:36.961 --> 00:09:45.878
+And loading? Timing changes that raise velocity may raise shoulder and elbow kinetics. Monitor with consistent methods and clinical input.
+
+69
+00:09:46.728 --> 00:09:51.229
+Lay the answers on the five categories. Biomechanical measurements: yes.
+
+70
+00:09:51.529 --> 00:09:58.249
+Relationships between those mechanics and a mechanical output, ball velocity: yes, as associations.
+
+71
+00:09:58.549 --> 00:10:01.600
+Relationships with competitive outcomes: empty.
+
+72
+00:10:01.900 --> 00:10:04.695
+Demonstrated effects of an intervention: empty.
+
+73
+00:10:04.995 --> 00:10:10.179
+Retention and transfer to competition: empty. Two filled boxes are not a lever.
+
+74
+00:10:12.029 --> 00:10:25.085
+Pitching and hitting share the chain but not the problem. In pitching the implement is the hand and a ball of about a hundred and forty-five grams, and the binding constraint is how much load the shoulder and elbow tolerate.
+
+75
+00:10:25.385 --> 00:10:37.651
+In hitting it is a bat of about nine-tenths of a kilogram, held in two hands, timed to a pitch and adjusted on-line. The sequence must make bat speed and preserve the ability to change the swing late.
+
+76
+00:10:37.951 --> 00:10:46.677
+A sequence that maximizes bat speed off a tee may cost adaptability against live pitching, which tee studies across levels cannot test.
+
+77
+00:10:47.527 --> 00:10:55.121
+So what does the meeting decide? Here is a template. State the measurement: say, his trunk peaks twenty milliseconds after his pelvis.
+
+78
+00:10:55.421 --> 00:11:01.160
+State which category of evidence relates it to output; usually a between-athlete association.
+
+79
+00:11:01.460 --> 00:11:03.572
+State what is unknown for this athlete.
+
+80
+00:11:03.872 --> 00:11:12.299
+Propose a test, a change in a constraint or drill, measuring velocity, timing and arm kinetics before and after with the same system.
+
+81
+00:11:12.599 --> 00:11:24.759
+And a retention test weeks later. If a department wants separation drills at the core of a velocity program, pilot them with a comparison group and decide in advance what result would stop the program.
+
+82
+00:11:25.609 --> 00:11:31.006
+To pull it together. Proximal-to-distal sequencing describes skilled throwing and hitting well.
+
+83
+00:11:31.306 --> 00:11:41.077
+Interaction torques, elastic storage and energy flow are complementary, model-dependent accounts. Transfer and efficiency need explicit definitions.
+
+84
+00:11:41.377 --> 00:11:51.126
+Most evidence is cross-sectional and between athletes, and no intervention study shows that changing a sequencing variable raises velocity or bat speed.
+
+85
+00:11:51.426 --> 00:11:59.383
+And timing changes can move speed and load together. Treat every kinetic-chain idea as a hypothesis about this athlete.
+
+86
+00:12:00.233 --> 00:12:09.343
+Next, the comprehension check. Then the week’s laboratory, and Putnam’s review, which is still the clearest statement of why description is not explanation.
+
