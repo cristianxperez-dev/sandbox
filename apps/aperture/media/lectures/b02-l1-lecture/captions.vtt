@@ -1,0 +1,350 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.248
+Two laboratories test the same pitcher a week apart, and they disagree by fourteen degrees.
+
+2
+00:00:05.548 --> 00:00:13.911
+By the end of this lecture you should be able to say exactly where that disagreement could have come from, and what you would need to know before believing either number.
+
+3
+00:00:14.211 --> 00:00:23.853
+We'll trace the chain from camera calibration to joint angle, compare two ways of finding a joint centre, and see why a filter cut-off is a decision, not a default.
+
+4
+00:00:24.703 --> 00:00:30.463
+Here is the scene. The pitcher is invented and so are the numbers, but the situation is common.
+
+5
+00:00:30.763 --> 00:00:36.289
+Laboratory A reports peak shoulder external rotation of one hundred seventy-eight degrees.
+
+6
+00:00:36.589 --> 00:00:40.322
+Laboratory B, a week later, reports one hundred sixty-four.
+
+7
+00:00:40.622 --> 00:00:51.630
+Both labs run twelve optical cameras at two hundred forty frames per second. Both report calibration residuals under a millimetre. And his fastball velocity hasn't moved.
+
+8
+00:00:51.930 --> 00:01:00.762
+A coach reads the two reports and concludes the pitcher has lost fourteen degrees of layback. Before I say anything else, decide what you would conclude.
+
+9
+00:01:02.612 --> 00:01:11.807
+The answer is that nearly every step after a marker is reconstructed involves a modelling choice. Let's walk the chain and look for the error at each link.
+
+10
+00:01:12.107 --> 00:01:30.880
+Step one is calibration. Infrared cameras emit light and detect its reflection from retro-reflective markers. A static frame defines the global axes, and a wand of known length is moved through the volume, so the system can estimate each camera's position, orientation and lens parameters.
+
+11
+00:01:31.180 --> 00:01:45.473
+Step two, reconstruction. Once at least two calibrated cameras see the same marker, its three-dimensional position is triangulated. Trajectories are labelled, and short gaps, where too few cameras saw a marker, are interpolated.
+
+12
+00:01:45.773 --> 00:02:01.240
+The residual, how far the camera rays miss one another, indexes reconstruction quality. Notice what it does not tell you: whether the marker sat on the intended landmark, whether the skin moved, or whether a gap was filled with a plausible but invented curve.
+
+13
+00:02:01.540 --> 00:02:17.007
+Step three, the segment model. Each segment is treated as a rigid body. Three or more non-collinear markers define a technical frame, and landmarks palpated or digitized in a static trial define an anatomical frame tied to bone.
+
+14
+00:02:17.307 --> 00:02:24.731
+Step four, joint centres. They define segment axes and, later, feed the joint moments. We will come back to them in a moment.
+
+15
+00:02:25.031 --> 00:02:37.276
+Step five, angles. A three-dimensional joint angle isn't measured. It's computed, by decomposing the relative orientation of two segment frames into three rotations in a chosen order.
+
+16
+00:02:37.576 --> 00:02:42.952
+And step six: filtering, then differentiation to get velocities and accelerations.
+
+17
+00:02:43.252 --> 00:02:53.151
+Here is the point of the chain. Reconstruction is the best-controlled error and usually the smallest. The errors that move a number by ten degrees live further down.
+
+18
+00:02:54.001 --> 00:02:59.953
+Let's make step five concrete with an illustrative orientation of the upper arm relative to the trunk.
+
+19
+00:03:00.253 --> 00:03:03.581
+Build it as three rotations in one order: thirty degrees,
+
+20
+00:03:03.881 --> 00:03:04.862
+then sixty,
+
+21
+00:03:05.162 --> 00:03:06.079
+then twenty.
+
+22
+00:03:06.379 --> 00:03:15.041
+Now read the very same orientation with a Y, X, Y sequence. The three numbers change completely, although nothing about the arm changed.
+
+23
+00:03:15.341 --> 00:03:32.919
+That is why the International Society of Biomechanics recommends coordinate systems and sequences for each joint, a Y, X, Y sequence for the humerus relative to the thorax, so that angles from different labs mean the same thing. Many pitching studies have used other conventions.
+
+24
+00:03:33.219 --> 00:03:46.062
+Some sequences also become unstable near particular postures, the gimbal problem you met in Week 1. Hold that thought: if our two labs used different sequences, their numbers aren't even on the same scale.
+
+25
+00:03:47.312 --> 00:03:49.189
+Joint centres come in two families.
+
+26
+00:03:49.489 --> 00:04:03.569
+Predictive, or regression, methods place the centre from anatomical landmarks, using equations derived from cadaver or imaging samples. The hip centre, for instance, is placed as proportions of pelvic width and depth.
+
+27
+00:04:03.869 --> 00:04:15.347
+They need only a static trial, and they're robust when an athlete can't or won't perform a calibration movement. But they inherit the population and the imaging method behind the equations.
+
+28
+00:04:15.647 --> 00:04:27.743
+Functional methods estimate the centre from the movement itself. When one segment rotates about a ball joint, its markers lie on spheres around a common point, and a least-squares fit recovers that point.
+
+29
+00:04:28.043 --> 00:04:45.877
+Ehrig and colleagues compared formal functional methods and proposed a symmetrical approach, SCoRE, that doesn't need one segment to stay still. In their test conditions most methods located the centre within about three millimetres when the range of motion was at least forty-five degrees.
+
+30
+00:04:46.177 --> 00:04:55.799
+Treat that as an upper bound for a pitcher. Functional fitting needs enough range, and it is sensitive to soft tissue moving during the calibration movement itself.
+
+31
+00:04:56.099 --> 00:05:03.800
+The joint where this choice matters most for pitching is the glenohumeral centre. It can't be palpated, and it moves with the scapula.
+
+32
+00:05:05.250 --> 00:05:10.157
+Whichever method you choose, both rest on markers on skin. And skin is not bone.
+
+33
+00:05:10.457 --> 00:05:27.097
+Skin slides, muscles contract and change shape, and fast movement shakes soft tissue. Leardini and colleagues' review identified this soft-tissue artifact as the most critical source of error in human movement analysis, and found it specific to the subject and the task.
+
+34
+00:05:27.397 --> 00:05:39.407
+Rigid clusters, optimization and joint constraints reduce it. They do not remove it. The review concluded that reliable skeletal kinematics from skin markers had not been fully achieved.
+
+35
+00:05:39.707 --> 00:05:47.579
+Let's size it, with hypothetical numbers. A cluster on the upper arm sits about forty millimetres from the humerus's long axis.
+
+36
+00:05:47.879 --> 00:05:52.125
+During arm cocking, the skin under it slides ten millimetres around the arm.
+
+37
+00:05:52.425 --> 00:05:58.633
+Apparent rotation is roughly arc divided by radius: ten over forty, a quarter of a radian.
+
+38
+00:05:58.933 --> 00:06:05.439
+That is about fourteen degrees of rotation the bone never made. The same size as our two-laboratory gap.
+
+39
+00:06:05.739 --> 00:06:19.691
+So long-axis rotations of segments with thick soft-tissue cover, humeral rotation and thigh rotation, deserve the least trust. It is one reason reported shoulder external rotation peaks differ across marker sets.
+
+40
+00:06:20.941 --> 00:06:31.032
+Soft tissue is a systematic problem. Now the random one. Marker noise is spread across frequencies, while the movement itself lives mostly at low frequencies.
+
+41
+00:06:31.332 --> 00:06:35.300
+Two markers a hundred millimetres apart define a segment angle.
+
+42
+00:06:35.600 --> 00:06:40.272
+Give each an independent one-millimetre random error, perpendicular to the segment.
+
+43
+00:06:40.572 --> 00:06:47.783
+The angle error is about root two times one over a hundred radians: roughly eight tenths of a degree. That looks harmless.
+
+44
+00:06:48.083 --> 00:07:01.224
+Now sample at two hundred forty hertz and compute angular velocity by finite differences. Each difference combines two independent angle errors. Predict the noise in the velocity, in degrees per second.
+
+45
+00:07:02.674 --> 00:07:04.018
+Here's the arithmetic.
+
+46
+00:07:04.318 --> 00:07:07.049
+Start with eight tenths of a degree of angle error.
+
+47
+00:07:07.349 --> 00:07:20.682
+The velocity difference combines two independent errors, so multiply by root two, then divide by the frame interval, a two hundred fortieth of a second. About two hundred seventy-five degrees per second of noise.
+
+48
+00:07:20.982 --> 00:07:30.667
+The second difference, for acceleration, multiplies by root six and by two hundred forty squared. Roughly one hundred fourteen thousand degrees per second squared.
+
+49
+00:07:30.967 --> 00:07:40.098
+A clean-looking angle can produce a meaningless angular acceleration, and therefore a meaningless net joint moment. That's why filtering isn't optional.
+
+50
+00:07:40.948 --> 00:07:51.487
+Laboratories commonly apply a low-pass Butterworth filter, run forwards and then backwards so it introduces no phase lag. The real decision is the cut-off frequency.
+
+51
+00:07:51.787 --> 00:08:05.205
+Winter's residual analysis makes that decision explicit. Filter at many cut-offs and plot the root-mean-square difference between raw and filtered data against cut-off frequency. The curve on screen is illustrative.
+
+52
+00:08:05.505 --> 00:08:14.081
+At high cut-offs the residual is mostly noise and falls along a nearly straight line. Extrapolate that line back toward zero frequency.
+
+53
+00:08:14.381 --> 00:08:23.021
+The chosen cut-off is where the residual begins to exceed that noise line: the point at which signal distortion and remaining noise are balanced.
+
+54
+00:08:23.871 --> 00:08:34.495
+But filtering creates the opposite problem. A cut-off low enough to suppress noise also flattens and shifts sharp peaks, so filtered peak velocities can be underestimates.
+
+55
+00:08:34.795 --> 00:08:41.494
+And pitching and hitting are full of brief, high-frequency events: foot contact, ball release, bat–ball contact.
+
+56
+00:08:41.794 --> 00:08:54.530
+If kinematic and force data are filtered at different cut-offs before inverse dynamics, the two signals no longer describe the same event at the same bandwidth. Spurious moment peaks can appear near impacts.
+
+57
+00:08:54.830 --> 00:09:03.214
+So ask every report four things: the filter type, the cut-off, whether it was chosen per signal or fixed, and how impacts were handled.
+
+58
+00:09:04.464 --> 00:09:12.656
+Now let me argue against the framing I've used all lecture. Calling marker-based capture the gold standard is a convenience, not a fact.
+
+59
+00:09:12.956 --> 00:09:24.839
+Its validity is established against calibration objects of known geometry, and, for bone motion, against invasive or radiographic methods that show substantial soft-tissue artifact.
+
+60
+00:09:25.139 --> 00:09:41.011
+Wade and colleagues note that without a bone-referenced comparison, such as biplanar videoradiography, the true accuracy of marker and markerless systems alike remains unknown. When the two disagree, some of the disagreement may belong to the marker system.
+
+61
+00:09:41.311 --> 00:09:57.673
+Second, reproducibility. Placement depends on who palpates the landmarks, marker sets and sequences differ, and reports rarely give enough detail to reconstruct the processing. Much of the pitching canon comes from a small number of laboratories with their own conventions.
+
+62
+00:09:57.973 --> 00:10:13.952
+Third, ecology. Pitchers may throw at slightly lower intensity, hitters often hit off a tee or a machine, and the perceptual demands of competition disappear. A precise measurement of a modified task may answer a different question from the coach's.
+
+63
+00:10:14.802 --> 00:10:23.719
+Let's run the claim, marker capture is the reference standard for pitching joint angles, through the course's seven questions and sort it into the five tiers.
+
+64
+00:10:24.019 --> 00:10:33.342
+On measurement it is strongest: reconstruction is precise, while segment and joint-angle accuracy is limited by soft tissue and model choices.
+
+65
+00:10:33.642 --> 00:10:41.087
+Many associations between kinematics and ball velocity come from this method. They are cross-sectional and laboratory-bound.
+
+66
+00:10:41.387 --> 00:10:47.595
+Links from laboratory kinematics to competitive outcomes are very few. That isn't what the method measures.
+
+67
+00:10:47.895 --> 00:10:57.730
+Has changing the variable improved performance? Not applicable. A measurement system improves nothing. The question is whether its numbers support a decision that might.
+
+68
+00:10:58.030 --> 00:11:05.539
+Retention and transfer need repeated measurement over time, ideally in the competitive setting the lab cannot reproduce.
+
+69
+00:11:05.839 --> 00:11:17.701
+And on loading: joint moments computed from these kinematics inherit their joint-centre and filtering errors. This is educational, not clinical, and a moment is not an injury probability.
+
+70
+00:11:19.551 --> 00:11:24.969
+Back to our pitcher. Before accepting fourteen degrees of lost layback, ask for four things.
+
+71
+00:11:25.269 --> 00:11:29.963
+The marker set, and whether the glenohumeral centre was predicted or fitted functionally.
+
+72
+00:11:30.263 --> 00:11:38.327
+The rotation sequence for the humerus relative to the thorax. If the labs used different sequences, the values aren't on the same scale.
+
+73
+00:11:38.627 --> 00:11:40.205
+The filter type and cut-off.
+
+74
+00:11:40.505 --> 00:11:53.668
+And each laboratory's test–retest typical error. Even within one lab, a fourteen-degree change is informative only if it exceeds that lab's minimal detectable change, which you'll calculate in Lesson 5.
+
+75
+00:11:54.518 --> 00:11:58.038
+For hitting, the same logic applies, with different weak points.
+
+76
+00:11:58.338 --> 00:12:06.850
+The bat is rigid, so its motion is well measured whenever its markers are visible. Peak pelvis and trunk angular velocities are robust.
+
+77
+00:12:07.150 --> 00:12:23.022
+But the body occludes hand and bat markers during the swing, and the hands and wrists are small segments with short marker spacing. Remember the noise example: shorter spacing means larger angle noise. Wrist and forearm long-axis rotations are fragile.
+
+78
+00:12:23.872 --> 00:12:33.408
+One budget question. A department can fund one marker-based session per pitcher per year, or buy time at an outside laboratory that uses a different model.
+
+79
+00:12:33.708 --> 00:12:43.777
+If the purpose is to follow each athlete's change over time, consistency of method within athletes matters more than the absolute accuracy of any single laboratory.
+
+80
+00:12:44.077 --> 00:12:45.400
+So commit to one model,
+
+81
+00:12:45.700 --> 00:12:52.505
+one processing pipeline, and one set of definitions, documented so a new analyst produces the same numbers.
+
+82
+00:12:52.805 --> 00:12:58.139
+Comparing an athlete with a published norm from another laboratory is the weakest use of the data.
+
+83
+00:12:58.989 --> 00:13:00.269
+Let's bring it together.
+
+84
+00:13:00.569 --> 00:13:08.547
+Marker-based capture measures marker positions precisely and infers everything else. The main error is soft tissue, not cameras.
+
+85
+00:13:08.847 --> 00:13:22.031
+Joint-centre methods, rotation sequences and filter choices change the numbers. Differentiation multiplies noise, and filtering attenuates peaks. Compare numbers only when the pipeline is known and shared.
+
+86
+00:13:22.331 --> 00:13:36.923
+From here, take the comprehension check below, the same check as the written lesson. Then open the Measurement Science Laboratory, and read Hopkins on measures of reliability, which sets up the minimal detectable change you will need in Lesson 5.
+
+87
+00:13:37.223 --> 00:13:44.754
+The written lesson stays here whenever you want the full detail and the methodological notes. Thank you for working through this with me.
+
