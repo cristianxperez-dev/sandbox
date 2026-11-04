@@ -148,7 +148,7 @@ export function computeProgress({ attempts, cards, state, events, now = Date.now
       const weak = missedConcepts.filter((m) => ix.concepts.get(m.concept)?.domain === d.domain).slice(0, 3).map((m) => m.name);
       insights.push({ kind: 'gap', text: `${d.label} is your least secure area so far: ${pct(d.accuracy)}% across ${d.n} items${weak.length ? `, with most misses on ${weak.join(', ')}` : ''}.`, rule: 'Shown when a domain has 6+ graded items below 65% accuracy.' });
     }
-    if (d.diagnostic != null && d.diagnosticN >= 3 && d.diagnostic < 0.5 && d.n >= 6 && d.accuracy >= 0.8) insights.push({ kind: 'growth', text: `${d.label}: ${pct(d.diagnostic)}% on the Week 1 diagnostic, ${pct(d.accuracy)}% on ${d.n} later items.`, rule: 'Shown when a diagnostic domain under 50% is followed by 6+ later items at 80%+.' });
+    if (d.diagnostic != null && d.diagnosticN >= 2 && d.diagnostic < 0.5 && d.n >= 6 && d.accuracy >= 0.8) insights.push({ kind: 'growth', text: `${d.label}: ${pct(d.diagnostic)}% on the Week 1 diagnostic, ${pct(d.accuracy)}% on ${d.n} later items.`, rule: 'Shown when a diagnostic domain under 50% is followed by 6+ later items at 80%+.' });
   }
   const strong = [...conceptStats.entries()].filter(([, s]) => s.n >= 3 && s.sum / s.n >= 0.85);
   const weakC = [...conceptStats.entries()].filter(([, s]) => s.n >= 3 && s.sum / s.n <= 0.5);

@@ -46,7 +46,7 @@ export function index() {
     w.review.forEach((c) => ix.cards.set(c.id, { ...c, week: w.id }));
   }
   const d = CONTENT.diagnostic;
-  if (d) { addQs(d.questions, 'diagnostic'); ix.assessments.set('diagnostic', { id: 'diagnostic', kind: 'diagnostic', title: d.title, minutes: d.minutes, main: d.questions.map((q) => q.id), reserve: [], mastery: null }); }
+  if (d) { addQs(d.questions, 'diagnostic'); addQs(d.retired, 'diagnostic'); /* retired: no longer asked, kept so earlier attempts display */ ix.assessments.set('diagnostic', { id: 'diagnostic', kind: 'diagnostic', title: d.title, minutes: d.minutes, main: d.questions.map((q) => q.id), reserve: [], mastery: null }); }
   const m = CONTENT.midterm;
   if (m) {
     addQs(m.questions, 'midterm'); addQs(m.reserve, 'midterm');
@@ -135,5 +135,9 @@ export function publicMidterm() {
 }
 export function publicDiagnostic() {
   const d = CONTENT.diagnostic;
-  return d ? { id: d.id, title: d.title, minutes: d.minutes, intro: d.intro, count: d.questions.length } : null;
+  if (!d) return null;
+  const domains = {};
+  for (const q of d.questions) domains[q.domain] = (domains[q.domain] || 0) + 1;
+  // Interpretations (strong / developing / foundation text and lessons to revisit) contain no answers.
+  return { id: d.id, title: d.title, minutes: d.minutes, intro: d.intro, count: d.questions.length, domains, interpretation: d.interpretation || {} };
 }

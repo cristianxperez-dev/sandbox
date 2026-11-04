@@ -1,12 +1,12 @@
 {
   "id": "diagnostic",
   "title": "Baseline diagnostic",
-  "minutes": 45,
+  "minutes": 15,
   "intro": [
     {
       "type": "p",
       "kind": "original",
-      "text": "This baseline diagnostic has 32 short questions spread across the nine domains of the semester: behavioral science, statistical reasoning, business strategy, financial literacy, legal reasoning, negotiation, organizational behavior, leadership judgment and communication. Most items ask you to reason through a situation rather than recall a definition. Expect it to take about 45 minutes. Answer without looking anything up; the point is an honest starting picture, not a high score."
+      "text": "This placement diagnostic has 18 questions, two in each of the semester’s nine domains: behavioral science, statistical reasoning, business strategy, financial literacy, legal reasoning, negotiation, organizational behavior, leadership judgment and communication. Almost every item is a short scenario that asks you to reason, not recall; one asks for a quick calculation. Expect it to take 12–15 minutes. Answer without looking anything up — the point is an honest starting picture, not a high score."
     },
     {
       "type": "p",
@@ -113,141 +113,6 @@
       "points": 1
     },
     {
-      "id": "dg-03",
-      "type": "research",
-      "domain": "behavioral-science",
-      "difficulty": "stretch",
-      "lesson": "w01-l3",
-      "concepts": [
-        "c-calibration",
-        "c-overconfidence"
-      ],
-      "stimulus": [
-        {
-          "type": "p",
-          "kind": "original",
-          "text": "A fictional consulting firm asked 40 analysts to attach a probability to each of their yes/no forecasts over one year. The table groups forecasts by the stated probability. (Synthetic data.)"
-        },
-        {
-          "type": "table",
-          "kind": "original",
-          "caption": "Stated probability vs. how often the forecast came true",
-          "headers": [
-            "Stated probability",
-            "Forecasts",
-            "Came true"
-          ],
-          "rows": [
-            [
-              "60%",
-              210,
-              "61%"
-            ],
-            [
-              "70%",
-              340,
-              "66%"
-            ],
-            [
-              "80%",
-              420,
-              "69%"
-            ],
-            [
-              "90%",
-              380,
-              "71%"
-            ],
-            [
-              "99%",
-              150,
-              "78%"
-            ]
-          ],
-          "note": "Synthetic data for a diagnostic item."
-        }
-      ],
-      "prompt": "What is the best interpretation of this table?",
-      "options": [
-        {
-          "id": "a",
-          "text": "The analysts are well calibrated, because most forecasts came true"
-        },
-        {
-          "id": "b",
-          "text": "The analysts are reasonably calibrated at moderate probabilities but increasingly overconfident as stated probability rises"
-        },
-        {
-          "id": "c",
-          "text": "The analysts are underconfident, because outcomes improve as stated probability rises"
-        },
-        {
-          "id": "d",
-          "text": "Nothing can be concluded without knowing which forecasts were about the most important questions"
-        }
-      ],
-      "answer": "b",
-      "explanation": "Calibration compares stated probability with observed frequency. At 60% the hit rate (61%) matches; at 90% and 99% the hit rates (71% and 78%) fall far short, so the gap widens as confidence rises. That widening gap is the typical signature of overconfidence in the form called overprecision. Outcomes do rise with stated probability, which shows some discrimination, but discrimination is not calibration.",
-      "optionFeedback": {
-        "a": "A high overall hit rate says nothing about calibration. A forecaster who says 99% and is right 78% of the time is miscalibrated even though most forecasts came true.",
-        "c": "Underconfidence would mean hit rates above the stated probabilities. Here they are below them at every level above 60%.",
-        "d": "Importance matters for decisions, but calibration is defined on the probabilities themselves. The table supports a clear conclusion about calibration."
-      },
-      "errorTags": {
-        "a": "confuses-accuracy-with-calibration",
-        "c": "confuses-discrimination-with-underconfidence",
-        "d": "refuses-to-infer-from-adequate-data"
-      },
-      "points": 1
-    },
-    {
-      "id": "dg-04",
-      "type": "multi",
-      "domain": "behavioral-science",
-      "difficulty": "stretch",
-      "lesson": "w01-l1",
-      "concepts": [
-        "c-dual-process",
-        "c-intuitive-expertise"
-      ],
-      "prompt": "Which statements about fast and slow thinking are defensible given current research? Select all that apply.",
-      "options": [
-        {
-          "id": "a",
-          "text": "Intuitive judgment can be highly accurate in environments that are regular and give practitioners rapid, clear feedback."
-        },
-        {
-          "id": "b",
-          "text": "“System 1” and “System 2” refer to two separate, identifiable brain regions."
-        },
-        {
-          "id": "c",
-          "text": "Whether the mind has two distinct kinds of processing, or a continuum, is still debated among researchers."
-        },
-        {
-          "id": "d",
-          "text": "Slowing down and deliberating reliably improves the accuracy of any judgment."
-        },
-        {
-          "id": "e",
-          "text": "A strong feeling of confidence is a dependable signal that an intuitive judgment is correct."
-        }
-      ],
-      "answer": [
-        "a",
-        "c"
-      ],
-      "explanation": "Research on expert intuition finds that skilled intuition develops where the environment has stable cues and learners get timely feedback, and fails where those conditions are missing. The two-systems vocabulary is a useful description, but whether there are two kinds of processing is contested, and the systems are not brain regions. Deliberation helps on some problems and hurts on others, and subjective confidence tracks familiarity and fluency as much as accuracy.",
-      "optionFeedback": {
-        "a": "Correct. Regularity plus feedback is the condition under which intuition can be trusted.",
-        "b": "Incorrect. The systems are a functional description, not anatomy. Even advocates treat them as labels for types of processing.",
-        "c": "Correct. Critics argue the dichotomy is too clean and that properties attributed to each system do not cluster as claimed.",
-        "d": "Incorrect. Deliberation can rationalize a poor initial answer or override a well-trained intuition; its value depends on the task.",
-        "e": "Incorrect. Confidence reflects how coherent and fluent a judgment feels, which can be high in environments where accuracy is low."
-      },
-      "points": 1
-    },
-    {
       "id": "dg-05",
       "type": "numeric",
       "domain": "statistical-reasoning",
@@ -313,98 +178,6 @@
         "a": "blames-sample-size-for-design-flaw",
         "c": "overgeneralizes-skepticism",
         "d": "misses-regression-to-the-mean"
-      },
-      "points": 1
-    },
-    {
-      "id": "dg-07",
-      "type": "research",
-      "domain": "statistical-reasoning",
-      "difficulty": "stretch",
-      "lesson": "w04-l2",
-      "concepts": [
-        "c-confounding",
-        "c-selection-bias"
-      ],
-      "stimulus": [
-        {
-          "type": "p",
-          "kind": "original",
-          "text": "Fictional study summary: “Among 3,200 employees of a logistics company, those who voluntarily joined the wellness program took 30% fewer sick days the following year than those who did not join (p < .01). The program reduces absence and should be made mandatory.”"
-        }
-      ],
-      "prompt": "Which is the strongest reason to doubt the causal conclusion?",
-      "options": [
-        {
-          "id": "a",
-          "text": "The p-value is too large to trust"
-        },
-        {
-          "id": "b",
-          "text": "Employees who chose to join may already have differed from non-joiners in health, motivation or job type, which could explain the gap"
-        },
-        {
-          "id": "c",
-          "text": "The study should have measured sick days over five years instead of one"
-        },
-        {
-          "id": "d",
-          "text": "A 30% difference is too large to be believable"
-        }
-      ],
-      "answer": "b",
-      "explanation": "Participation was self-selected, so joiners and non-joiners may differ in ways that independently affect absence: healthier or more conscientious people are more likely to join a wellness program. The correlation is real, but the causal effect of the program is not identified. Random assignment, or at minimum comparison with baseline absence for the same people, would be needed before mandating it.",
-      "optionFeedback": {
-        "a": "A p-value below .01 indicates the gap is unlikely to be pure chance. The problem is not chance but confounding.",
-        "c": "A longer window could add information, but it would not fix the self-selection problem.",
-        "d": "Large differences are entirely plausible when groups differ at baseline. Size is not the issue; attribution is."
-      },
-      "errorTags": {
-        "a": "misreads-p-value",
-        "c": "focuses-on-duration-not-design",
-        "d": "judges-plausibility-by-size"
-      },
-      "points": 1
-    },
-    {
-      "id": "dg-08",
-      "type": "mc",
-      "domain": "statistical-reasoning",
-      "difficulty": "stretch",
-      "lesson": "w04-l3",
-      "concepts": [
-        "c-practical-significance"
-      ],
-      "prompt": "An analysis of 200,000 customers finds that those who received a redesigned onboarding email scored 0.3 points higher on a 100-point satisfaction scale than those who received the old one (p < .001; the two groups were randomly assigned). What is the best interpretation?",
-      "options": [
-        {
-          "id": "a",
-          "text": "The new email has a large effect on satisfaction, because the result is highly significant"
-        },
-        {
-          "id": "b",
-          "text": "The difference is very unlikely to be zero, but it is small; whether it matters depends on cost and on what 0.3 points means for behavior"
-        },
-        {
-          "id": "c",
-          "text": "The result is probably a false positive, because very small p-values usually indicate an error"
-        },
-        {
-          "id": "d",
-          "text": "Random assignment means the 0.3-point effect will hold for every individual customer"
-        }
-      ],
-      "answer": "b",
-      "explanation": "With 200,000 people, even tiny real differences produce very small p-values. Statistical significance speaks to whether an effect is distinguishable from zero, not to whether it is large or worth acting on. The decision turns on effect size in context: what a 0.3-point change predicts for retention or revenue, and what the redesign costs.",
-      "optionFeedback": {
-        "a": "Significance is not magnitude. A p-value this small with a huge sample is compatible with a trivially small effect.",
-        "c": "Nothing about a small p-value implies an error. Large samples are expected to produce small p-values for small real effects.",
-        "d": "Randomization identifies the average effect across the group, not a uniform effect for each person."
-      },
-      "errorTags": {
-        "a": "equates-significance-with-importance",
-        "c": "distrusts-small-p-values",
-        "d": "confuses-average-with-individual-effect"
       },
       "points": 1
     },
@@ -493,120 +266,6 @@
       "points": 1
     },
     {
-      "id": "dg-11",
-      "type": "rank",
-      "domain": "business-strategy",
-      "difficulty": "stretch",
-      "lesson": "w09-l2",
-      "concepts": [
-        "c-sustainable-advantage",
-        "c-imitability"
-      ],
-      "prompt": "Rank these sources of a firm’s advantage from hardest for a competitor to imitate (first) to easiest (last).",
-      "options": [
-        {
-          "id": "a",
-          "text": "A decade-old network of trusted relationships and working routines spread across many people in the organization"
-        },
-        {
-          "id": "b",
-          "text": "A patent on a key process with eight years remaining"
-        },
-        {
-          "id": "c",
-          "text": "An exclusive one-year supply contract with a key vendor"
-        },
-        {
-          "id": "d",
-          "text": "Analytics software sold openly to every company in the industry"
-        }
-      ],
-      "answer": [
-        "a",
-        "b",
-        "c",
-        "d"
-      ],
-      "explanation": "Socially complex, path-dependent assets such as relationships and embedded routines are the hardest to copy because rivals cannot buy them or even see clearly how they work. A patent gives legal protection for a defined period, though competitors can sometimes design around it. A one-year exclusive contract protects for a short time and can be rebid. Software anyone can license offers no barrier.",
-      "optionFeedback": {
-        "a": "Hardest to imitate: it took years to build, involves many people and cannot be purchased.",
-        "b": "Strong but bounded: legal protection lasts a set period and can sometimes be designed around.",
-        "c": "Short-lived: the contract expires within a year and rivals can compete for the next one.",
-        "d": "Easiest: competitors can acquire the same tool at market price."
-      },
-      "points": 1
-    },
-    {
-      "id": "dg-12",
-      "type": "scenario",
-      "domain": "business-strategy",
-      "difficulty": "stretch",
-      "lesson": "w09-l2",
-      "concepts": [
-        "c-five-forces",
-        "c-industry-structure"
-      ],
-      "stimulus": [
-        {
-          "type": "p",
-          "kind": "original",
-          "text": "A fictional industry: forty small firms sell an identical cleaning chemical to large hospital chains. Customers switch suppliers at no cost after each annual tender, new firms can enter by renting a mixing facility, and three hospital purchasing groups account for most demand."
-        }
-      ],
-      "prompt": "What is the most likely profitability of a typical firm in this industry, and why?",
-      "options": [
-        {
-          "id": "a",
-          "text": "High, because hospitals always need cleaning chemicals"
-        },
-        {
-          "id": "b",
-          "text": "Low, because powerful buyers, an undifferentiated product, easy entry and many rivals push prices toward cost"
-        },
-        {
-          "id": "c",
-          "text": "High for the largest firm, because scale always guarantees superior margins"
-        },
-        {
-          "id": "d",
-          "text": "Unpredictable, because profitability depends only on each firm’s management quality"
-        }
-      ],
-      "answer": "b",
-      "explanation": "Industry structure shapes how much value firms can capture. Concentrated buyers with zero switching costs, an identical product, low entry barriers and many competitors all push prices toward cost. Steady demand does not help if the firms cannot capture value from it.",
-      "optionFeedback": {
-        "a": "Steady demand is not the same as profitability. The question is who captures the value.",
-        "c": "Scale can help on cost, but with powerful buyers and an identical product even the largest firm faces heavy price pressure.",
-        "d": "Management matters, but structure sets the range of likely outcomes; ignoring it is a common error."
-      },
-      "errorTags": {
-        "a": "confuses-demand-with-profitability",
-        "c": "overrates-scale",
-        "d": "ignores-industry-structure"
-      },
-      "points": 1
-    },
-    {
-      "id": "dg-13",
-      "type": "numeric",
-      "domain": "financial-literacy",
-      "difficulty": "core",
-      "lesson": "w10-l1",
-      "concepts": [
-        "c-npv",
-        "c-time-value-of-money"
-      ],
-      "prompt": "A project costs $1,000 today and returns $600 at the end of year 1 and $600 at the end of year 2. At a 10% discount rate, what is its net present value in dollars? Round to the nearest cent.",
-      "answer": {
-        "value": 41.32,
-        "tolerance": 1,
-        "unit": "$"
-      },
-      "working": "Present value of year 1 = 600 / 1.10 = 545.45. Present value of year 2 = 600 / 1.10² = 600 / 1.21 = 495.87. NPV = 545.45 + 495.87 − 1,000 = 41.32.",
-      "explanation": "Net present value discounts each future cash flow back to today and subtracts the initial cost. The project returns $1,200 in total, but money received later is worth less than money today at a 10% cost of capital, so the surplus shrinks to about $41. A positive NPV means the project earns more than the required return.",
-      "points": 1
-    },
-    {
       "id": "dg-14",
       "type": "mc",
       "domain": "financial-literacy",
@@ -692,26 +351,6 @@
       "points": 1
     },
     {
-      "id": "dg-16",
-      "type": "numeric",
-      "domain": "financial-literacy",
-      "difficulty": "stretch",
-      "lesson": "w10-l2",
-      "concepts": [
-        "c-break-even",
-        "c-contribution-margin"
-      ],
-      "prompt": "A training academy has fixed annual costs of $300,000. It charges $50 per session, and each session costs $30 in variable costs (coach time and facility hourly fees). How many sessions per year must it sell to break even?",
-      "answer": {
-        "value": 15000,
-        "tolerance": 0,
-        "unit": "sessions"
-      },
-      "working": "Contribution margin per session = price − variable cost = 50 − 30 = $20. Break-even volume = fixed costs / contribution margin = 300,000 / 20 = 15,000 sessions.",
-      "explanation": "Each session contributes $20 toward covering fixed costs after paying for its own variable costs. Fixed costs of $300,000 require 15,000 such contributions before the academy makes any profit. Break-even analysis is a simple, transparent way to test whether a pricing or volume plan is realistic.",
-      "points": 1
-    },
-    {
       "id": "dg-17",
       "type": "mc",
       "domain": "legal-reasoning",
@@ -751,62 +390,6 @@
         "a": "overstates-writing-requirement",
         "c": "confuses-jurisdiction-with-validity",
         "d": "overgeneralizes-rule"
-      },
-      "points": 1
-    },
-    {
-      "id": "dg-18",
-      "type": "issue",
-      "domain": "legal-reasoning",
-      "difficulty": "stretch",
-      "lesson": "w11-l2",
-      "concepts": [
-        "c-ip-assignment",
-        "c-restrictive-covenant",
-        "c-scope-ambiguity"
-      ],
-      "stimulus": [
-        {
-          "type": "p",
-          "kind": "original",
-          "text": "Fictional excerpt from a consulting agreement (educational exercise, not legal advice): “1. Consultant shall provide analytics services as reasonably requested by Client from time to time. 2. All work product, including any tools, code or methods Consultant developed before this Agreement, shall become the exclusive property of Client. 3. For five years after termination, Consultant shall not provide services to any organization in Client’s industry anywhere in the world. 4. Either party may terminate this Agreement on 30 days’ written notice. 5. Client shall pay $10,000 per month within 30 days of receiving each invoice.”"
-        }
-      ],
-      "prompt": "Select every clause that raises a real issue a careful reader should question before signing.",
-      "options": [
-        {
-          "id": "a",
-          "text": "Clause 1: the scope of services is open-ended and undefined"
-        },
-        {
-          "id": "b",
-          "text": "Clause 2: the ownership transfer reaches tools and methods the consultant created before the engagement"
-        },
-        {
-          "id": "c",
-          "text": "Clause 3: the restriction is broad in duration, geography and scope, and its enforceability varies by jurisdiction"
-        },
-        {
-          "id": "d",
-          "text": "Clause 4: mutual termination on 30 days’ notice is unusual and probably unenforceable"
-        },
-        {
-          "id": "e",
-          "text": "Clause 5: payment within 30 days of invoice is an unlawful delay"
-        }
-      ],
-      "answer": [
-        "a",
-        "b",
-        "c"
-      ],
-      "explanation": "Clause 1 leaves the workload to the client’s discretion, which invites disputes over what was promised. Clause 2 would transfer the consultant’s pre-existing intellectual property, typically handled instead by a license or a carve-out. Clause 3 is a sweeping non-compete; many jurisdictions limit or refuse to enforce restrictions of this breadth, and the rules differ widely. Clauses 4 and 5 are ordinary commercial terms.",
-      "optionFeedback": {
-        "a": "Real issue: undefined scope is a common source of disputes and unpaid work.",
-        "b": "Real issue: assigning pre-existing tools could prevent the consultant from using their own methods elsewhere.",
-        "c": "Real issue: duration, worldwide reach and an industry-wide bar make this restriction unusually broad; enforceability depends on the governing law.",
-        "d": "Not an issue: mutual termination on notice is a common, generally enforceable term. Whether 30 days is long enough is a business question.",
-        "e": "Not an issue: net-30 payment is a standard commercial term."
       },
       "points": 1
     },
@@ -946,26 +529,6 @@
       "points": 1
     },
     {
-      "id": "dg-22",
-      "type": "numeric",
-      "domain": "negotiation",
-      "difficulty": "core",
-      "lesson": "w07-l1",
-      "concepts": [
-        "c-zopa",
-        "c-reservation-price"
-      ],
-      "prompt": "A seller will not accept less than $420,000 for a property (her reservation price). A buyer will pay at most $460,000 (his reservation price). How large, in dollars, is the zone of possible agreement?",
-      "answer": {
-        "value": 40000,
-        "tolerance": 0,
-        "unit": "$"
-      },
-      "working": "The zone of possible agreement runs from the seller’s minimum ($420,000) to the buyer’s maximum ($460,000). Size = 460,000 − 420,000 = $40,000.",
-      "explanation": "A deal is possible at any price between the seller’s minimum and the buyer’s maximum. The $40,000 zone is the surplus the two sides divide; where the final price lands within it depends on information, anchors and skill. If the buyer’s maximum were below the seller’s minimum, there would be no zone and no deal on price alone.",
-      "points": 1
-    },
-    {
       "id": "dg-23",
       "type": "mc",
       "domain": "organizational-behavior",
@@ -1054,54 +617,6 @@
         "a": "misidentifies-motivation-issue",
         "c": "focuses-on-timing",
         "d": "underestimates-incentive-response"
-      },
-      "points": 1
-    },
-    {
-      "id": "dg-25",
-      "type": "multi",
-      "domain": "organizational-behavior",
-      "difficulty": "core",
-      "lesson": "w02-l1",
-      "concepts": [
-        "c-self-determination-theory",
-        "c-intrinsic-motivation"
-      ],
-      "prompt": "Self-determination theory proposes that people are more likely to sustain high-quality motivation when certain basic psychological needs are supported. Which of the following are among those needs? Select all that apply.",
-      "options": [
-        {
-          "id": "a",
-          "text": "Autonomy: experiencing one’s actions as self-endorsed"
-        },
-        {
-          "id": "b",
-          "text": "Competence: feeling effective and capable"
-        },
-        {
-          "id": "c",
-          "text": "Relatedness: feeling connected to others"
-        },
-        {
-          "id": "d",
-          "text": "Fear of punishment: knowing that mistakes carry penalties"
-        },
-        {
-          "id": "e",
-          "text": "Status ranking: knowing exactly where one stands against peers"
-        }
-      ],
-      "answer": [
-        "a",
-        "b",
-        "c"
-      ],
-      "explanation": "Self-determination theory names three basic needs: autonomy, competence and relatedness. Environments that support them tend to foster more self-endorsed motivation; environments built on pressure and control tend to produce motivation that is more fragile. Status comparisons and threat can drive effort in the short term but are not among the theory’s basic needs.",
-      "optionFeedback": {
-        "a": "Correct. Autonomy is one of the three basic needs.",
-        "b": "Correct. Competence is one of the three basic needs.",
-        "c": "Correct. Relatedness is one of the three basic needs.",
-        "d": "Incorrect. Threat is a form of controlling pressure, which the theory associates with lower-quality motivation.",
-        "e": "Incorrect. Social comparison can motivate, but it is not one of the theory’s basic needs."
       },
       "points": 1
     },
@@ -1199,87 +714,6 @@
       "points": 1
     },
     {
-      "id": "dg-28",
-      "type": "rank",
-      "domain": "leadership-judgment",
-      "difficulty": "core",
-      "lesson": "w01-l3",
-      "concepts": [
-        "c-decision-hygiene",
-        "c-noise"
-      ],
-      "prompt": "A leadership team must estimate next year’s demand for a new service. Rank these ways of gathering the team’s judgment from most likely to produce an accurate estimate (first) to least likely (last).",
-      "options": [
-        {
-          "id": "a",
-          "text": "Each member writes an estimate and reasoning independently; the estimates are shared and discussed, then averaged or revised"
-        },
-        {
-          "id": "b",
-          "text": "The team discusses openly and then votes on a number"
-        },
-        {
-          "id": "c",
-          "text": "The most senior leader states an estimate first, then others comment on it"
-        }
-      ],
-      "answer": [
-        "a",
-        "b",
-        "c"
-      ],
-      "explanation": "Independent estimates preserve the diversity of information each person holds, and averaging independent judgments tends to cancel individual errors. Open discussion before anyone commits lets early or confident voices dominate and makes errors correlated. When the most senior person speaks first, their number anchors everyone else and others may defer, so the group adds little beyond one opinion.",
-      "optionFeedback": {
-        "a": "Best: independence first, discussion second.",
-        "b": "Middle: discussion helps share information, but without prior independent estimates the group converges early and errors become correlated.",
-        "c": "Worst: the leader’s estimate anchors the group and invites deference."
-      },
-      "points": 1
-    },
-    {
-      "id": "dg-29",
-      "type": "decision",
-      "domain": "leadership-judgment",
-      "difficulty": "stretch",
-      "lesson": "w12-l2",
-      "concepts": [
-        "c-change-management",
-        "c-piloting"
-      ],
-      "prompt": "You believe a new evidence-based scheduling process would help a 300-person operation, but several respected supervisors openly doubt it, and the data supporting it come from another organization. What is the strongest next move?",
-      "options": [
-        {
-          "id": "a",
-          "text": "Mandate the change across the operation immediately, to show resolve"
-        },
-        {
-          "id": "b",
-          "text": "Run a time-limited pilot in units that volunteer, agree in advance with skeptics on what results would count as success or failure, and decide on expansion from the results"
-        },
-        {
-          "id": "c",
-          "text": "Drop the idea, because resistance means it will fail"
-        },
-        {
-          "id": "d",
-          "text": "Wait until every supervisor agrees before doing anything"
-        }
-      ],
-      "answer": "b",
-      "explanation": "A pilot tests whether evidence from elsewhere transfers to this setting, limits the cost of being wrong, and turns skeptics into co-designers of the test. Agreeing on success criteria beforehand prevents both sides from reinterpreting the results afterward. This keeps the principle (decide on evidence) while respecting legitimate uncertainty.",
-      "optionFeedback": {
-        "a": "A mandate ignores real uncertainty about transfer and spends goodwill you may need later.",
-        "c": "Resistance carries information, but it is not proof the idea is wrong; dropping it forgoes a possible improvement.",
-        "d": "Unanimity is rarely reachable and gives any single person a veto over improvement."
-      },
-      "errorTags": {
-        "a": "imposes-change",
-        "c": "treats-resistance-as-verdict",
-        "d": "requires-unanimity"
-      },
-      "points": 1
-    },
-    {
       "id": "dg-30",
       "type": "mc",
       "domain": "communication",
@@ -1319,55 +753,6 @@
         "a": "buries-the-lead",
         "c": "data-dump",
         "d": "buries-the-lead"
-      },
-      "points": 1
-    },
-    {
-      "id": "dg-31",
-      "type": "flaw",
-      "domain": "communication",
-      "difficulty": "core",
-      "lesson": "w05-l2",
-      "concepts": [
-        "c-relative-vs-absolute-risk"
-      ],
-      "stimulus": [
-        {
-          "type": "p",
-          "kind": "original",
-          "text": "Fictional briefing slide: “The new protocol cuts the risk of a serious complication by 50%. We recommend adopting it immediately.” Background data, not on the slide: the complication occurs in 2 of every 1,000 patients under the current protocol and 1 of every 1,000 under the new one, which costs substantially more per patient."
-        }
-      ],
-      "prompt": "What is the main problem with how the slide communicates the evidence?",
-      "options": [
-        {
-          "id": "a",
-          "text": "It overstates the result: the risk did not really fall by half"
-        },
-        {
-          "id": "b",
-          "text": "It reports only the relative reduction, hiding that the absolute reduction is 1 in 1,000 patients, which decision-makers need to weigh against cost"
-        },
-        {
-          "id": "c",
-          "text": "It should have reported the result as a p-value"
-        },
-        {
-          "id": "d",
-          "text": "It uses numbers, which senior audiences find confusing"
-        }
-      ],
-      "answer": "b",
-      "explanation": "Going from 2 to 1 in 1,000 is a 50% relative reduction and a 0.1-percentage-point absolute reduction; both are accurate. Presenting only the relative figure makes the benefit sound large and hides the information needed to weigh it against cost, such as how many patients must be treated to prevent one complication (here, 1,000). Good risk communication gives absolute numbers and the baseline.",
-      "optionFeedback": {
-        "a": "The relative reduction is accurate; the problem is that it is incomplete.",
-        "c": "A p-value addresses chance, not the size or decision-relevance of the benefit.",
-        "d": "Numbers are essential here; the issue is which numbers are shown."
-      },
-      "errorTags": {
-        "a": "misreads-relative-risk",
-        "c": "misplaces-significance",
-        "d": "avoids-quantification"
       },
       "points": 1
     },
@@ -1513,5 +898,622 @@
         "w05-l3"
       ]
     }
-  }
+  },
+  "retired": [
+    {
+      "id": "dg-03",
+      "type": "research",
+      "domain": "behavioral-science",
+      "difficulty": "stretch",
+      "lesson": "w01-l3",
+      "concepts": [
+        "c-calibration",
+        "c-overconfidence"
+      ],
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "A fictional consulting firm asked 40 analysts to attach a probability to each of their yes/no forecasts over one year. The table groups forecasts by the stated probability. (Synthetic data.)"
+        },
+        {
+          "type": "table",
+          "kind": "original",
+          "caption": "Stated probability vs. how often the forecast came true",
+          "headers": [
+            "Stated probability",
+            "Forecasts",
+            "Came true"
+          ],
+          "rows": [
+            [
+              "60%",
+              210,
+              "61%"
+            ],
+            [
+              "70%",
+              340,
+              "66%"
+            ],
+            [
+              "80%",
+              420,
+              "69%"
+            ],
+            [
+              "90%",
+              380,
+              "71%"
+            ],
+            [
+              "99%",
+              150,
+              "78%"
+            ]
+          ],
+          "note": "Synthetic data for a diagnostic item."
+        }
+      ],
+      "prompt": "What is the best interpretation of this table?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The analysts are well calibrated, because most forecasts came true"
+        },
+        {
+          "id": "b",
+          "text": "The analysts are reasonably calibrated at moderate probabilities but increasingly overconfident as stated probability rises"
+        },
+        {
+          "id": "c",
+          "text": "The analysts are underconfident, because outcomes improve as stated probability rises"
+        },
+        {
+          "id": "d",
+          "text": "Nothing can be concluded without knowing which forecasts were about the most important questions"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Calibration compares stated probability with observed frequency. At 60% the hit rate (61%) matches; at 90% and 99% the hit rates (71% and 78%) fall far short, so the gap widens as confidence rises. That widening gap is the typical signature of overconfidence in the form called overprecision. Outcomes do rise with stated probability, which shows some discrimination, but discrimination is not calibration.",
+      "optionFeedback": {
+        "a": "A high overall hit rate says nothing about calibration. A forecaster who says 99% and is right 78% of the time is miscalibrated even though most forecasts came true.",
+        "c": "Underconfidence would mean hit rates above the stated probabilities. Here they are below them at every level above 60%.",
+        "d": "Importance matters for decisions, but calibration is defined on the probabilities themselves. The table supports a clear conclusion about calibration."
+      },
+      "errorTags": {
+        "a": "confuses-accuracy-with-calibration",
+        "c": "confuses-discrimination-with-underconfidence",
+        "d": "refuses-to-infer-from-adequate-data"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-04",
+      "type": "multi",
+      "domain": "behavioral-science",
+      "difficulty": "stretch",
+      "lesson": "w01-l1",
+      "concepts": [
+        "c-dual-process",
+        "c-intuitive-expertise"
+      ],
+      "prompt": "Which statements about fast and slow thinking are defensible given current research? Select all that apply.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Intuitive judgment can be highly accurate in environments that are regular and give practitioners rapid, clear feedback."
+        },
+        {
+          "id": "b",
+          "text": "“System 1” and “System 2” refer to two separate, identifiable brain regions."
+        },
+        {
+          "id": "c",
+          "text": "Whether the mind has two distinct kinds of processing, or a continuum, is still debated among researchers."
+        },
+        {
+          "id": "d",
+          "text": "Slowing down and deliberating reliably improves the accuracy of any judgment."
+        },
+        {
+          "id": "e",
+          "text": "A strong feeling of confidence is a dependable signal that an intuitive judgment is correct."
+        }
+      ],
+      "answer": [
+        "a",
+        "c"
+      ],
+      "explanation": "Research on expert intuition finds that skilled intuition develops where the environment has stable cues and learners get timely feedback, and fails where those conditions are missing. The two-systems vocabulary is a useful description, but whether there are two kinds of processing is contested, and the systems are not brain regions. Deliberation helps on some problems and hurts on others, and subjective confidence tracks familiarity and fluency as much as accuracy.",
+      "optionFeedback": {
+        "a": "Correct. Regularity plus feedback is the condition under which intuition can be trusted.",
+        "b": "Incorrect. The systems are a functional description, not anatomy. Even advocates treat them as labels for types of processing.",
+        "c": "Correct. Critics argue the dichotomy is too clean and that properties attributed to each system do not cluster as claimed.",
+        "d": "Incorrect. Deliberation can rationalize a poor initial answer or override a well-trained intuition; its value depends on the task.",
+        "e": "Incorrect. Confidence reflects how coherent and fluent a judgment feels, which can be high in environments where accuracy is low."
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-07",
+      "type": "research",
+      "domain": "statistical-reasoning",
+      "difficulty": "stretch",
+      "lesson": "w04-l2",
+      "concepts": [
+        "c-confounding",
+        "c-selection-bias"
+      ],
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Fictional study summary: “Among 3,200 employees of a logistics company, those who voluntarily joined the wellness program took 30% fewer sick days the following year than those who did not join (p < .01). The program reduces absence and should be made mandatory.”"
+        }
+      ],
+      "prompt": "Which is the strongest reason to doubt the causal conclusion?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The p-value is too large to trust"
+        },
+        {
+          "id": "b",
+          "text": "Employees who chose to join may already have differed from non-joiners in health, motivation or job type, which could explain the gap"
+        },
+        {
+          "id": "c",
+          "text": "The study should have measured sick days over five years instead of one"
+        },
+        {
+          "id": "d",
+          "text": "A 30% difference is too large to be believable"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Participation was self-selected, so joiners and non-joiners may differ in ways that independently affect absence: healthier or more conscientious people are more likely to join a wellness program. The correlation is real, but the causal effect of the program is not identified. Random assignment, or at minimum comparison with baseline absence for the same people, would be needed before mandating it.",
+      "optionFeedback": {
+        "a": "A p-value below .01 indicates the gap is unlikely to be pure chance. The problem is not chance but confounding.",
+        "c": "A longer window could add information, but it would not fix the self-selection problem.",
+        "d": "Large differences are entirely plausible when groups differ at baseline. Size is not the issue; attribution is."
+      },
+      "errorTags": {
+        "a": "misreads-p-value",
+        "c": "focuses-on-duration-not-design",
+        "d": "judges-plausibility-by-size"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-08",
+      "type": "mc",
+      "domain": "statistical-reasoning",
+      "difficulty": "stretch",
+      "lesson": "w04-l3",
+      "concepts": [
+        "c-practical-significance"
+      ],
+      "prompt": "An analysis of 200,000 customers finds that those who received a redesigned onboarding email scored 0.3 points higher on a 100-point satisfaction scale than those who received the old one (p < .001; the two groups were randomly assigned). What is the best interpretation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The new email has a large effect on satisfaction, because the result is highly significant"
+        },
+        {
+          "id": "b",
+          "text": "The difference is very unlikely to be zero, but it is small; whether it matters depends on cost and on what 0.3 points means for behavior"
+        },
+        {
+          "id": "c",
+          "text": "The result is probably a false positive, because very small p-values usually indicate an error"
+        },
+        {
+          "id": "d",
+          "text": "Random assignment means the 0.3-point effect will hold for every individual customer"
+        }
+      ],
+      "answer": "b",
+      "explanation": "With 200,000 people, even tiny real differences produce very small p-values. Statistical significance speaks to whether an effect is distinguishable from zero, not to whether it is large or worth acting on. The decision turns on effect size in context: what a 0.3-point change predicts for retention or revenue, and what the redesign costs.",
+      "optionFeedback": {
+        "a": "Significance is not magnitude. A p-value this small with a huge sample is compatible with a trivially small effect.",
+        "c": "Nothing about a small p-value implies an error. Large samples are expected to produce small p-values for small real effects.",
+        "d": "Randomization identifies the average effect across the group, not a uniform effect for each person."
+      },
+      "errorTags": {
+        "a": "equates-significance-with-importance",
+        "c": "distrusts-small-p-values",
+        "d": "confuses-average-with-individual-effect"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-11",
+      "type": "rank",
+      "domain": "business-strategy",
+      "difficulty": "stretch",
+      "lesson": "w09-l2",
+      "concepts": [
+        "c-sustainable-advantage",
+        "c-imitability"
+      ],
+      "prompt": "Rank these sources of a firm’s advantage from hardest for a competitor to imitate (first) to easiest (last).",
+      "options": [
+        {
+          "id": "a",
+          "text": "A decade-old network of trusted relationships and working routines spread across many people in the organization"
+        },
+        {
+          "id": "b",
+          "text": "A patent on a key process with eight years remaining"
+        },
+        {
+          "id": "c",
+          "text": "An exclusive one-year supply contract with a key vendor"
+        },
+        {
+          "id": "d",
+          "text": "Analytics software sold openly to every company in the industry"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "explanation": "Socially complex, path-dependent assets such as relationships and embedded routines are the hardest to copy because rivals cannot buy them or even see clearly how they work. A patent gives legal protection for a defined period, though competitors can sometimes design around it. A one-year exclusive contract protects for a short time and can be rebid. Software anyone can license offers no barrier.",
+      "optionFeedback": {
+        "a": "Hardest to imitate: it took years to build, involves many people and cannot be purchased.",
+        "b": "Strong but bounded: legal protection lasts a set period and can sometimes be designed around.",
+        "c": "Short-lived: the contract expires within a year and rivals can compete for the next one.",
+        "d": "Easiest: competitors can acquire the same tool at market price."
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-12",
+      "type": "scenario",
+      "domain": "business-strategy",
+      "difficulty": "stretch",
+      "lesson": "w09-l2",
+      "concepts": [
+        "c-five-forces",
+        "c-industry-structure"
+      ],
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "A fictional industry: forty small firms sell an identical cleaning chemical to large hospital chains. Customers switch suppliers at no cost after each annual tender, new firms can enter by renting a mixing facility, and three hospital purchasing groups account for most demand."
+        }
+      ],
+      "prompt": "What is the most likely profitability of a typical firm in this industry, and why?",
+      "options": [
+        {
+          "id": "a",
+          "text": "High, because hospitals always need cleaning chemicals"
+        },
+        {
+          "id": "b",
+          "text": "Low, because powerful buyers, an undifferentiated product, easy entry and many rivals push prices toward cost"
+        },
+        {
+          "id": "c",
+          "text": "High for the largest firm, because scale always guarantees superior margins"
+        },
+        {
+          "id": "d",
+          "text": "Unpredictable, because profitability depends only on each firm’s management quality"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Industry structure shapes how much value firms can capture. Concentrated buyers with zero switching costs, an identical product, low entry barriers and many competitors all push prices toward cost. Steady demand does not help if the firms cannot capture value from it.",
+      "optionFeedback": {
+        "a": "Steady demand is not the same as profitability. The question is who captures the value.",
+        "c": "Scale can help on cost, but with powerful buyers and an identical product even the largest firm faces heavy price pressure.",
+        "d": "Management matters, but structure sets the range of likely outcomes; ignoring it is a common error."
+      },
+      "errorTags": {
+        "a": "confuses-demand-with-profitability",
+        "c": "overrates-scale",
+        "d": "ignores-industry-structure"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-13",
+      "type": "numeric",
+      "domain": "financial-literacy",
+      "difficulty": "core",
+      "lesson": "w10-l1",
+      "concepts": [
+        "c-npv",
+        "c-time-value-of-money"
+      ],
+      "prompt": "A project costs $1,000 today and returns $600 at the end of year 1 and $600 at the end of year 2. At a 10% discount rate, what is its net present value in dollars? Round to the nearest cent.",
+      "answer": {
+        "value": 41.32,
+        "tolerance": 1,
+        "unit": "$"
+      },
+      "working": "Present value of year 1 = 600 / 1.10 = 545.45. Present value of year 2 = 600 / 1.10² = 600 / 1.21 = 495.87. NPV = 545.45 + 495.87 − 1,000 = 41.32.",
+      "explanation": "Net present value discounts each future cash flow back to today and subtracts the initial cost. The project returns $1,200 in total, but money received later is worth less than money today at a 10% cost of capital, so the surplus shrinks to about $41. A positive NPV means the project earns more than the required return.",
+      "points": 1
+    },
+    {
+      "id": "dg-16",
+      "type": "numeric",
+      "domain": "financial-literacy",
+      "difficulty": "stretch",
+      "lesson": "w10-l2",
+      "concepts": [
+        "c-break-even",
+        "c-contribution-margin"
+      ],
+      "prompt": "A training academy has fixed annual costs of $300,000. It charges $50 per session, and each session costs $30 in variable costs (coach time and facility hourly fees). How many sessions per year must it sell to break even?",
+      "answer": {
+        "value": 15000,
+        "tolerance": 0,
+        "unit": "sessions"
+      },
+      "working": "Contribution margin per session = price − variable cost = 50 − 30 = $20. Break-even volume = fixed costs / contribution margin = 300,000 / 20 = 15,000 sessions.",
+      "explanation": "Each session contributes $20 toward covering fixed costs after paying for its own variable costs. Fixed costs of $300,000 require 15,000 such contributions before the academy makes any profit. Break-even analysis is a simple, transparent way to test whether a pricing or volume plan is realistic.",
+      "points": 1
+    },
+    {
+      "id": "dg-18",
+      "type": "issue",
+      "domain": "legal-reasoning",
+      "difficulty": "stretch",
+      "lesson": "w11-l2",
+      "concepts": [
+        "c-ip-assignment",
+        "c-restrictive-covenant",
+        "c-scope-ambiguity"
+      ],
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Fictional excerpt from a consulting agreement (educational exercise, not legal advice): “1. Consultant shall provide analytics services as reasonably requested by Client from time to time. 2. All work product, including any tools, code or methods Consultant developed before this Agreement, shall become the exclusive property of Client. 3. For five years after termination, Consultant shall not provide services to any organization in Client’s industry anywhere in the world. 4. Either party may terminate this Agreement on 30 days’ written notice. 5. Client shall pay $10,000 per month within 30 days of receiving each invoice.”"
+        }
+      ],
+      "prompt": "Select every clause that raises a real issue a careful reader should question before signing.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Clause 1: the scope of services is open-ended and undefined"
+        },
+        {
+          "id": "b",
+          "text": "Clause 2: the ownership transfer reaches tools and methods the consultant created before the engagement"
+        },
+        {
+          "id": "c",
+          "text": "Clause 3: the restriction is broad in duration, geography and scope, and its enforceability varies by jurisdiction"
+        },
+        {
+          "id": "d",
+          "text": "Clause 4: mutual termination on 30 days’ notice is unusual and probably unenforceable"
+        },
+        {
+          "id": "e",
+          "text": "Clause 5: payment within 30 days of invoice is an unlawful delay"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "explanation": "Clause 1 leaves the workload to the client’s discretion, which invites disputes over what was promised. Clause 2 would transfer the consultant’s pre-existing intellectual property, typically handled instead by a license or a carve-out. Clause 3 is a sweeping non-compete; many jurisdictions limit or refuse to enforce restrictions of this breadth, and the rules differ widely. Clauses 4 and 5 are ordinary commercial terms.",
+      "optionFeedback": {
+        "a": "Real issue: undefined scope is a common source of disputes and unpaid work.",
+        "b": "Real issue: assigning pre-existing tools could prevent the consultant from using their own methods elsewhere.",
+        "c": "Real issue: duration, worldwide reach and an industry-wide bar make this restriction unusually broad; enforceability depends on the governing law.",
+        "d": "Not an issue: mutual termination on notice is a common, generally enforceable term. Whether 30 days is long enough is a business question.",
+        "e": "Not an issue: net-30 payment is a standard commercial term."
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-22",
+      "type": "numeric",
+      "domain": "negotiation",
+      "difficulty": "core",
+      "lesson": "w07-l1",
+      "concepts": [
+        "c-zopa",
+        "c-reservation-price"
+      ],
+      "prompt": "A seller will not accept less than $420,000 for a property (her reservation price). A buyer will pay at most $460,000 (his reservation price). How large, in dollars, is the zone of possible agreement?",
+      "answer": {
+        "value": 40000,
+        "tolerance": 0,
+        "unit": "$"
+      },
+      "working": "The zone of possible agreement runs from the seller’s minimum ($420,000) to the buyer’s maximum ($460,000). Size = 460,000 − 420,000 = $40,000.",
+      "explanation": "A deal is possible at any price between the seller’s minimum and the buyer’s maximum. The $40,000 zone is the surplus the two sides divide; where the final price lands within it depends on information, anchors and skill. If the buyer’s maximum were below the seller’s minimum, there would be no zone and no deal on price alone.",
+      "points": 1
+    },
+    {
+      "id": "dg-25",
+      "type": "multi",
+      "domain": "organizational-behavior",
+      "difficulty": "core",
+      "lesson": "w02-l1",
+      "concepts": [
+        "c-self-determination-theory",
+        "c-intrinsic-motivation"
+      ],
+      "prompt": "Self-determination theory proposes that people are more likely to sustain high-quality motivation when certain basic psychological needs are supported. Which of the following are among those needs? Select all that apply.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Autonomy: experiencing one’s actions as self-endorsed"
+        },
+        {
+          "id": "b",
+          "text": "Competence: feeling effective and capable"
+        },
+        {
+          "id": "c",
+          "text": "Relatedness: feeling connected to others"
+        },
+        {
+          "id": "d",
+          "text": "Fear of punishment: knowing that mistakes carry penalties"
+        },
+        {
+          "id": "e",
+          "text": "Status ranking: knowing exactly where one stands against peers"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "explanation": "Self-determination theory names three basic needs: autonomy, competence and relatedness. Environments that support them tend to foster more self-endorsed motivation; environments built on pressure and control tend to produce motivation that is more fragile. Status comparisons and threat can drive effort in the short term but are not among the theory’s basic needs.",
+      "optionFeedback": {
+        "a": "Correct. Autonomy is one of the three basic needs.",
+        "b": "Correct. Competence is one of the three basic needs.",
+        "c": "Correct. Relatedness is one of the three basic needs.",
+        "d": "Incorrect. Threat is a form of controlling pressure, which the theory associates with lower-quality motivation.",
+        "e": "Incorrect. Social comparison can motivate, but it is not one of the theory’s basic needs."
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-28",
+      "type": "rank",
+      "domain": "leadership-judgment",
+      "difficulty": "core",
+      "lesson": "w01-l3",
+      "concepts": [
+        "c-decision-hygiene",
+        "c-noise"
+      ],
+      "prompt": "A leadership team must estimate next year’s demand for a new service. Rank these ways of gathering the team’s judgment from most likely to produce an accurate estimate (first) to least likely (last).",
+      "options": [
+        {
+          "id": "a",
+          "text": "Each member writes an estimate and reasoning independently; the estimates are shared and discussed, then averaged or revised"
+        },
+        {
+          "id": "b",
+          "text": "The team discusses openly and then votes on a number"
+        },
+        {
+          "id": "c",
+          "text": "The most senior leader states an estimate first, then others comment on it"
+        }
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "explanation": "Independent estimates preserve the diversity of information each person holds, and averaging independent judgments tends to cancel individual errors. Open discussion before anyone commits lets early or confident voices dominate and makes errors correlated. When the most senior person speaks first, their number anchors everyone else and others may defer, so the group adds little beyond one opinion.",
+      "optionFeedback": {
+        "a": "Best: independence first, discussion second.",
+        "b": "Middle: discussion helps share information, but without prior independent estimates the group converges early and errors become correlated.",
+        "c": "Worst: the leader’s estimate anchors the group and invites deference."
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-29",
+      "type": "decision",
+      "domain": "leadership-judgment",
+      "difficulty": "stretch",
+      "lesson": "w12-l2",
+      "concepts": [
+        "c-change-management",
+        "c-piloting"
+      ],
+      "prompt": "You believe a new evidence-based scheduling process would help a 300-person operation, but several respected supervisors openly doubt it, and the data supporting it come from another organization. What is the strongest next move?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Mandate the change across the operation immediately, to show resolve"
+        },
+        {
+          "id": "b",
+          "text": "Run a time-limited pilot in units that volunteer, agree in advance with skeptics on what results would count as success or failure, and decide on expansion from the results"
+        },
+        {
+          "id": "c",
+          "text": "Drop the idea, because resistance means it will fail"
+        },
+        {
+          "id": "d",
+          "text": "Wait until every supervisor agrees before doing anything"
+        }
+      ],
+      "answer": "b",
+      "explanation": "A pilot tests whether evidence from elsewhere transfers to this setting, limits the cost of being wrong, and turns skeptics into co-designers of the test. Agreeing on success criteria beforehand prevents both sides from reinterpreting the results afterward. This keeps the principle (decide on evidence) while respecting legitimate uncertainty.",
+      "optionFeedback": {
+        "a": "A mandate ignores real uncertainty about transfer and spends goodwill you may need later.",
+        "c": "Resistance carries information, but it is not proof the idea is wrong; dropping it forgoes a possible improvement.",
+        "d": "Unanimity is rarely reachable and gives any single person a veto over improvement."
+      },
+      "errorTags": {
+        "a": "imposes-change",
+        "c": "treats-resistance-as-verdict",
+        "d": "requires-unanimity"
+      },
+      "points": 1
+    },
+    {
+      "id": "dg-31",
+      "type": "flaw",
+      "domain": "communication",
+      "difficulty": "core",
+      "lesson": "w05-l2",
+      "concepts": [
+        "c-relative-vs-absolute-risk"
+      ],
+      "stimulus": [
+        {
+          "type": "p",
+          "kind": "original",
+          "text": "Fictional briefing slide: “The new protocol cuts the risk of a serious complication by 50%. We recommend adopting it immediately.” Background data, not on the slide: the complication occurs in 2 of every 1,000 patients under the current protocol and 1 of every 1,000 under the new one, which costs substantially more per patient."
+        }
+      ],
+      "prompt": "What is the main problem with how the slide communicates the evidence?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It overstates the result: the risk did not really fall by half"
+        },
+        {
+          "id": "b",
+          "text": "It reports only the relative reduction, hiding that the absolute reduction is 1 in 1,000 patients, which decision-makers need to weigh against cost"
+        },
+        {
+          "id": "c",
+          "text": "It should have reported the result as a p-value"
+        },
+        {
+          "id": "d",
+          "text": "It uses numbers, which senior audiences find confusing"
+        }
+      ],
+      "answer": "b",
+      "explanation": "Going from 2 to 1 in 1,000 is a 50% relative reduction and a 0.1-percentage-point absolute reduction; both are accurate. Presenting only the relative figure makes the benefit sound large and hides the information needed to weigh it against cost, such as how many patients must be treated to prevent one complication (here, 1,000). Good risk communication gives absolute numbers and the baseline.",
+      "optionFeedback": {
+        "a": "The relative reduction is accurate; the problem is that it is incomplete.",
+        "c": "A p-value addresses chance, not the size or decision-relevance of the benefit.",
+        "d": "Numbers are essential here; the issue is which numbers are shown."
+      },
+      "errorTags": {
+        "a": "misreads-relative-risk",
+        "c": "misplaces-significance",
+        "d": "avoids-quantification"
+      },
+      "points": 1
+    }
+  ]
 }

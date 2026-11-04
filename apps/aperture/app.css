@@ -394,3 +394,11 @@ main:focus { outline: none; }
 .week-soon__body { padding: 0 0 1.25rem 4.5rem; }
 @media (max-width: 640px) { .week-soon__body { padding-left: 0; } }
 .tag--soon { border-style: dashed; color: var(--text-muted); }
+
+/* Diagnostic placement profile */
+.placement { margin: 0 0 2rem; }
+.placement__sum h3 { font: 600 0.7rem/1.2 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin: 0.6rem 0 0.2rem; }
+.placement__table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.placement__table th, .placement__table td { text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); padding: 0.5rem 0.75rem 0.5rem 0; }
+.placement__table thead th { font: 600 0.65rem var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); border-bottom: 1px solid var(--text); }
+.placement__table td.num { white-space: nowrap; }

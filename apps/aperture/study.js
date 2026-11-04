@@ -280,6 +280,7 @@
         status.textContent = '';
         submit.remove();
         root.appendChild(resultSummary(spec, r, compact));
+        if (spec.id === 'diagnostic') root.appendChild(h('p', { class: 'row' }, h('a', { class: 'btn btn--primary', href: '#/diagnostic', text: 'See your placement profile' }), h('span', { class: 'small muted', text: 'Strengths, gaps and where to start — nothing is locked.' })));
         AP.announce(`Scored ${AP.pct(r.ratio)} on auto-graded items.`);
         if (onDone && (r.ratio == null || r.ratio >= 0.5)) onDone(r);
         if (onResult) onResult(r);
@@ -572,10 +573,38 @@
   };
 
   /* ======================= Diagnostic, midterm, capstone ======================= */
+  // Placement profile: per-domain result of the latest diagnostic, read through the course's own interpretations.
+  // A starting signal from two or three items per domain — it shapes suggestions and support, never access.
+  async function placementProfile(d) {
+    const [prog, cat] = await Promise.all([AP.api('progress'), AP.catalog()]);
+    if (!prog.diagnostic) return null;
+    const lessonLink = (id) => { const fl = AP.findLesson(cat, id); return fl ? h('a', { href: `#/lesson/${id}`, text: `W${fl.w.number} · ${fl.l.title}` }) : null; };
+    const rows = prog.domains.filter((x) => x.diagnosticN > 0).map((x) => {
+      const band = x.diagnostic >= 0.75 ? 'strong' : x.diagnostic >= 0.5 ? 'developing' : 'foundation';
+      return { ...x, band, interp: (d.interpretation || {})[x.domain] || {} };
+    });
+    const label = { strong: 'Strength', developing: 'Developing', foundation: 'Needs attention' };
+    const list = (band) => rows.filter((r) => r.band === band).map((r) => r.label);
+    const firstLessons = rows.filter((r) => r.band === 'foundation').flatMap((r) => (r.interp.lessons || []).slice(0, 1));
+    const adapt = AP.settings.adaptFromDiagnostic !== false;
+    return h('section', { class: 'placement rule' },
+      h('span', { class: 'label label--accent', text: `Your placement profile · ${AP.date(prog.diagnostic.submitted)} · ${AP.pct(prog.diagnostic.overall)} overall` }),
+      h('div', { class: 'grid grid--3 placement__sum' },
+        h('div', null, h('h3', { text: 'Strengths' }), h('p', { class: 'small', text: list('strong').join(' · ') || 'None yet at this sample size.' })),
+        h('div', null, h('h3', { text: 'Developing' }), h('p', { class: 'small', text: list('developing').join(' · ') || '—' })),
+        h('div', null, h('h3', { text: 'Needs attention' }), h('p', { class: 'small', text: list('foundation').join(' · ') || 'Nothing flagged.' }))),
+      firstLessons.length ? h('p', null, h('b', { text: 'Suggested starting points: ' }), ...firstLessons.map(lessonLink).filter(Boolean).flatMap((a, i) => (i ? [' · ', a] : [a]))) : null,
+      h('p', { class: 'small muted', text: adapt ? 'In weeks tied to a domain marked “needs attention”, lessons open with prerequisite support by default. Nothing is locked or skipped: every lesson stays open. You can change this in Settings.' : 'Diagnostic-based support is switched off in Settings; these results are for your information only. Nothing is locked or skipped.' }),
+      h('div', { class: 'tablewrap' }, h('table', { class: 'placement__table' }, h('thead', null, h('tr', null, ['Domain', 'Result', 'Reading', 'Revisit'].map((t) => h('th', { text: t })))),
+        h('tbody', null, rows.map((r) => h('tr', null, h('th', { text: r.label }), h('td', { class: 'num' }, `${Math.round(r.diagnostic * r.diagnosticN)}/${r.diagnosticN} `, h('span', { class: `tag ${r.band === 'strong' ? 'tag--done' : r.band === 'foundation' ? 'tag--accent' : ''}`, text: label[r.band] })),
+          h('td', { class: 'small', html: AP.inline(r.interp[r.band] || '') }), h('td', { class: 'small' }, ...(r.interp.lessons || []).slice(0, 2).map(lessonLink).filter(Boolean).flatMap((a, i) => (i ? [h('br'), a] : [a])))))))),
+      h('p', { class: 'small muted', text: `Each domain has only ${Math.min(...rows.map((r) => r.diagnosticN))}–${Math.max(...rows.map((r) => r.diagnosticN))} items, so treat this as a starting signal, not a verdict. Your course work soon replaces it as evidence (Progress page). Retake the diagnostic whenever you like; the most recent attempt is used.` }));
+  }
   S.diagnostic = async function () {
     const d = await AP.get('diagnostic', 'diagnostic');
     const prev = await AP.api('attempts', { params: { id: 'diagnostic' } });
-    return { el: h('div', null, AP.head(`Week 1 · not graded · about ${d.minutes} min`, d.title, null), AP.blocks(h('div', { class: 'prose' }), d.intro),
+    const profile = prev.attempts.length ? await placementProfile(d) : null;
+    return { el: h('div', null, AP.head(`Placement diagnostic · not graded · ${d.count} questions · about ${d.minutes} min`, d.title, null), profile, AP.blocks(h('div', { class: 'prose' }), d.intro),
       prev.attempts.length ? h('p', { class: 'small muted' }, `Taken ${AP.date(prev.attempts[prev.attempts.length - 1].submitted)}. `, h('a', { href: `#/attempt/${prev.attempts[prev.attempts.length - 1].id}`, text: 'See results' }), '. You may retake it, but the first attempt is your baseline.') : null,
       h('p', null, h('a', { class: 'btn btn--primary', href: '#/assess/diagnostic', text: prev.attempts.length ? 'Retake the diagnostic' : 'Begin the diagnostic' }))), title: d.title };
   };

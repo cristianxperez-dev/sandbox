@@ -519,11 +519,19 @@ if (want('diagnostic')) {
   if (d === undefined) (STRICT ? err : warn)('diagnostic.json', 'missing');
   else if (d) {
     checkBlocks(d.intro, 'diagnostic intro');
-    if (!isArr(d.questions, 27, 40)) err('diagnostic.json', 'needs 27–36 questions');
+    // A short placement assessment: 15–18 questions, 10–15 minutes, every domain at least twice, mostly
+    // single-choice and scenario items, at most two short answers (none at present: all items feed the gap analysis).
+    if (!isArr(d.questions, 15, 18)) err('diagnostic.json', `needs 15–18 questions (has ${(d.questions || []).length})`);
+    if (!(d.minutes >= 10 && d.minutes <= 15)) err('diagnostic.json', 'minutes must be 10–15');
     (d.questions || []).forEach((q) => checkQuestion(q, 'diagnostic', { autoOnly: true, idPattern: /^dg-\d{2}$/ }));
+    if ((d.questions || []).filter((q) => q.type === 'short').length > 2) err('diagnostic.json', 'at most 2 short answers');
+    if ((d.questions || []).filter((q) => ['mc', 'scenario', 'flaw', 'decision', 'research'].includes(q.type)).length < Math.ceil((d.questions || []).length * 0.75)) err('diagnostic.json', 'at least 75% single-choice / scenario items');
+    // Retired items are no longer asked; they are kept so earlier attempts still display in full.
+    const ids = new Set((d.questions || []).map((q) => q.id));
+    (d.retired || []).forEach((q) => { if (ids.has(q.id)) err('diagnostic.json', `retired ${q.id} is also an active question`); ids.add(q.id); });
     for (const dom of DOMAINS) {
       const n = (d.questions || []).filter((q) => q.domain === dom).length;
-      if (n < 3) err('diagnostic.json', `domain ${dom} has ${n} questions (need 3+)`);
+      if (n < 2) err('diagnostic.json', `domain ${dom} has ${n} questions (need 2+)`);
       const it = d.interpretation?.[dom];
       if (!it || !isStr(it.strong) || !isStr(it.developing) || !isStr(it.foundation) || !isArr(it.lessons, 1)) err('diagnostic.json', `interpretation.${dom} needs strong, developing, foundation, lessons`);
       else it.lessons.forEach((l) => pendingLinks.push([`diagnostic ${dom}`, l]));

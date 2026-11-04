@@ -16,7 +16,7 @@ import { STATE_KINDS } from './shared/kinds.js';
 // (always read from and written to Course A's store).
 const BASE_P = 'aperture:v1:';
 const PREFIX = { a: BASE_P, b: BASE_P + 'b:' };
-const BUNDLE = { a: 'data/content.json?v=20261101b', b: 'data/course-b.json?v=20261103a' };
+const BUNDLE = { a: 'data/content.json?v=20261104a', b: 'data/course-b.json?v=20261104a' };
 const COURSE_KEY = BASE_P + 'course';
 let P = BASE_P;
 const MAX_EVENTS = 3000;

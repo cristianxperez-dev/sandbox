@@ -11,7 +11,7 @@ window.APERTURE_CONFIG = { mode: 'local', lectures: true }; // lectures: feature
   window.__apertureLocal = { promise, resolve, reject };
   if (window.APERTURE_CONFIG.mode !== 'server') {
     const s = document.createElement('script');
-    s.type = 'module'; s.src = 'local.js?v=20261103a';
+    s.type = 'module'; s.src = 'local.js?v=20261104a';
     document.head.appendChild(s);
   }
 })();
