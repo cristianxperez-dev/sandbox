@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FUEL — Player Nutrition & Performance</title>
+<meta name="description" content="FUEL: player nutrition, body composition and performance context for sports nutrition staff. Sandbox demo with synthetic players.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#002D62">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="app.css?v=1">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#/home" aria-label="FUEL — home">
+    <span class="word">FUEL</span>
+    <span class="sub">Player Nutrition<br>&amp; Performance</span>
+  </a>
+  <nav class="nav" aria-label="Main">
+    <a href="#/home" data-nav="home">Home</a>
+    <a href="#/players" data-nav="players">Players</a>
+    <a href="#/log" data-nav="log">Daily Log</a>
+    <a href="#/followups" data-nav="followups">Follow-Ups</a>
+    <a href="#/reports" data-nav="reports">Reports</a>
+    <a href="#/data" data-nav="data">Data</a>
+  </nav>
+  <div class="top-r">
+    <div class="gsearch" role="search">
+      <input id="gsearch" type="search" placeholder="Find a player…" autocomplete="off" aria-label="Find a player" aria-controls="gsearchList" aria-expanded="false">
+      <div class="gs-list" id="gsearchList" role="listbox" hidden></div>
+    </div>
+    <button class="btn qe" id="qeBtn" type="button" title="Quick Entry (Q)"><span aria-hidden="true">+</span> Quick Entry</button>
+  </div>
+</header>
+<div class="strip" id="strip"></div>
+<main id="app" tabindex="-1"><div class="loading">Loading FUEL…</div></main>
+<nav class="tabbar" aria-label="Main (mobile)">
+  <a href="#/home" data-nav="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"/></svg>Home</a>
+  <a href="#/players" data-nav="players"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Players</a>
+  <button type="button" class="tb-qe" id="qeTab" aria-label="Quick Entry"><span>+</span></button>
+  <a href="#/followups" data-nav="followups"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Follow-ups</a>
+  <a href="#/more" data-nav="more"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="19" cy="12" r="1.6"/></svg>More</a>
+</nav>
+<div class="scrim" id="scrim" hidden><div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script type="module" src="app.js?v=1"></script>
+</body>
+</html>

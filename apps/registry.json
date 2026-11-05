@@ -136,5 +136,26 @@
       "affiliates",
       "printing"
     ]
+  },
+  {
+    "id": "fuel",
+    "name": "FUEL",
+    "description": "Player nutrition and body composition tracking with quick notes, follow-ups and performance context. Synthetic-data sandbox demo.",
+    "discipline": "Baseball",
+    "alsoIn": [
+      "Health & Fitness"
+    ],
+    "status": "prototype",
+    "returnLink": false,
+    "logoBackground": "#002D62",
+    "tags": [
+      "nutrition",
+      "body composition",
+      "dexa",
+      "sports dietitian",
+      "player development",
+      "performance",
+      "astros"
+    ]
   }
 ]
