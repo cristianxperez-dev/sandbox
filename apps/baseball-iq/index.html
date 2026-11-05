@@ -943,6 +943,166 @@ body:not(.fm-off) #end [data-g="playAgain"]{background:transparent;color:var(--w
   .bd th{letter-spacing:.08em}
   #end .ov-foot,#end .ov-foot .grp{flex-wrap:wrap}
 }
+/* ================= PLAYS MODE ================= */
+.sb.st-pl{border-color:rgba(255,122,26,.7);color:var(--orange-hi)}
+.sb.st-pl:hover{background:rgba(255,122,26,.12)}
+#plBar{display:none}
+body.plays #plBar{display:flex;flex-direction:column;gap:.9vh;min-width:0}
+body.plays .hstrip{display:none}
+body.plays .v-frame{max-height:calc(100% - 17vh)}
+body.plays .v-frame iframe.emb{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000}
+body.plays.pl-emb #speedSeg{display:none}
+body.plays.pl-emb .v-ctrls [data-g="vfs"]::after{content:''}
+/* watch view: the video is the centrepiece */
+body.plays.pl-watch .g-main{grid-template-columns:minmax(0,1fr)}
+body.plays.pl-watch .b-col{display:none}
+body.plays.pl-watch .v-col{align-items:center}
+body.plays.pl-watch .v-frame{width:auto;height:calc(100% - 17vh);max-height:none;max-width:100%}
+body.plays.pl-watch .v-ctrls,body.plays.pl-watch #plBar{width:100%;max-width:calc((100vh - 30vh) * 16 / 9)}
+.pl-tl{display:flex;align-items:center;gap:.6vw;flex-wrap:wrap;font-family:var(--cond);font-weight:700;letter-spacing:.06em;font-size:clamp(11px,1.7vh,24px);color:#c9d4e6;min-width:0}
+.pl-al{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:40vw}
+.pl-jl{color:var(--gray);margin-left:.6vw;letter-spacing:.14em}
+.pl-ang{display:inline-block;font-family:var(--cond);font-weight:800;letter-spacing:.12em;font-size:clamp(10px,1.5vh,20px);border-radius:.6vh;padding:.25vh .6vw;white-space:nowrap}
+.pl-ang.a-high-home{background:#4fd18b;color:#062a17}
+.pl-ang.a-wide{background:var(--sky);color:var(--navy-900)}
+.pl-ang.a-broadcast{background:rgba(149,163,187,.18);color:#c9d4e6;border:1px solid rgba(149,163,187,.55)}
+.pl-seg{font-family:var(--cond);font-weight:700;font-size:clamp(11px,1.6vh,22px);letter-spacing:.04em;color:var(--orange-hi);background:rgba(255,122,26,.1);border:1px solid rgba(255,122,26,.5);border-radius:.8vh;padding:.3vh .6vw;cursor:pointer}
+.pl-seg:hover{background:rgba(255,122,26,.22)}
+.pl-sc{display:flex;align-items:center;gap:.8vw}
+.pl-sc.off{display:none}
+.pl-sc input{flex:1;accent-color:var(--orange);height:2.2vh;min-height:18px;cursor:pointer}
+.pl-t{font-family:var(--cond);font-weight:700;font-size:clamp(12px,1.8vh,24px);color:#c9d4e6;min-width:3.2em;text-align:center}
+.pl-tools{display:flex;gap:.6vw;align-items:center;flex-wrap:wrap}
+.pl-tools .grow{flex:1}
+.sb.pl-go{font-size:clamp(14px,2.3vh,32px);padding:1.1vh 1.6vw;border-radius:1vh}
+.pl-frz{position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.4vh;text-align:center;
+  background:rgba(4,9,20,.72);backdrop-filter:blur(2px)}
+.pl-frz[hidden]{display:none}
+.pl-fk{font-family:var(--cond);font-weight:800;letter-spacing:.3em;color:var(--sky);font-size:clamp(12px,2.2vh,30px)}
+.pl-ft{font-family:var(--cond);font-weight:900;font-size:clamp(26px,6vh,96px);line-height:.95;color:var(--white)}
+.pl-fs{color:#c9d4e6;font-size:clamp(13px,2vh,26px)}
+#plCoach{display:none}
+body.plays #plCoach{display:flex;gap:1vw;align-items:flex-start;margin-top:1.2vh;padding:1.2vh 1.2vw;border:1px solid var(--line, rgba(138,180,230,.22));border-radius:1.2vh;background:rgba(14,31,61,.72);max-height:24vh;overflow:auto;flex:none}
+#plCoach p{margin:.5vh 0 0;font-size:clamp(12px,1.9vh,24px);line-height:1.35;color:#d6deec}
+.pl-ch{font-size:clamp(12px,1.9vh,24px);color:#c9d4e6;line-height:1.35}
+.pl-cn,.pl-rn{flex:none;width:4.2vh;height:4.2vh;min-width:28px;min-height:28px;border-radius:50%;background:var(--orange);color:#081226;font-family:var(--cond);font-weight:900;
+  font-size:clamp(14px,2.4vh,30px);display:flex;align-items:center;justify-content:center}
+.pl-cl,.pl-rlab{font-family:var(--cond);font-weight:800;font-size:clamp(15px,2.5vh,34px);text-transform:uppercase;letter-spacing:.02em;line-height:1.05}
+.pl-cl span,.pl-rc{font-size:.62em;color:var(--sky);letter-spacing:.12em;margin-left:.4em}
+/* full-viewport video when the browser can't do element fullscreen (iPhone) */
+body.pl-theater .v-frame{position:fixed!important;inset:0!important;width:100vw!important;height:100vh!important;max-height:none!important;z-index:60;border-radius:0}
+body.pl-theater .v-frame::after{content:'ESC / ⛶ to exit';position:absolute;top:8px;right:12px;z-index:6;font-family:var(--cond);color:#c9d4e6;font-size:13px;letter-spacing:.1em;pointer-events:none}
+/* overlays */
+.pl-ov{z-index:70;align-items:flex-start;overflow:auto}
+.pl-ov[hidden]{display:none}
+.pl-in{height:auto;min-height:100%;gap:1.6vh}
+.pl-h{font-family:var(--cond);font-weight:900;font-size:clamp(34px,8vh,120px);margin:.4vh 0 0;line-height:.95;text-transform:uppercase}
+.pl-sub{font-size:clamp(14px,2.4vh,32px);color:#c9d4e6}
+.pl-sit{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.5fr);gap:2vw;flex:1;min-height:0}
+.pl-card{border:1px solid rgba(138,180,230,.25);border-radius:1.4vh;background:rgba(14,31,61,.72);padding:2vh 1.6vw}
+.pl-card h4{margin:0 0 .8vh;font-family:var(--cond);font-weight:800;letter-spacing:.16em;color:var(--orange-hi);font-size:clamp(13px,2vh,26px)}
+.pl-card p{margin:0;font-size:clamp(13px,2.05vh,26px);line-height:1.42;color:#d6deec}
+.pl-state{display:flex;flex-direction:column;align-items:center;gap:1.2vh}
+.pl-dia{width:100%;max-width:34vh}
+.pl-dia .ln{fill:none;stroke:rgba(138,180,230,.5);stroke-width:3}
+.pl-dia rect{fill:#0b1830;stroke:#8ab4e6;stroke-width:3}
+.pl-dia rect.on{fill:var(--orange);stroke:#ffd0a0}
+.pl-dia .hp{fill:#f4f7fc}
+.pl-outs{display:flex;align-items:center;gap:.6vw;font-family:var(--cond);font-weight:800;letter-spacing:.12em;font-size:clamp(14px,2.4vh,32px)}
+.pl-outs i{width:2.2vh;height:2.2vh;min-width:14px;min-height:14px;border-radius:50%;border:2px solid #5f6f8c}
+.pl-outs i.on{background:#ff4b4b;border-color:#ff4b4b}
+.pl-kv{width:100%;display:grid;gap:.6vh}
+.pl-kv div{display:flex;justify-content:space-between;gap:1vw;border-bottom:1px solid rgba(138,180,230,.2);padding:.4vh 0;font-size:clamp(13px,2vh,26px)}
+.pl-kv span{color:var(--gray,#95a3bb);font-family:var(--cond);letter-spacing:.14em}
+.pl-kv b{font-family:var(--cond);font-size:1.15em;letter-spacing:.03em}
+.pl-run{font-family:var(--cond);font-weight:800;font-size:clamp(15px,2.5vh,34px);letter-spacing:.06em;text-transform:uppercase;color:var(--orange-hi)}
+.pl-story{display:flex;flex-direction:column;gap:1.4vh}
+.pl-game{font-family:var(--cond);font-weight:800;font-size:clamp(18px,3.1vh,42px);text-transform:uppercase;letter-spacing:.03em;line-height:1.1}
+.pl-game small{display:block;font-family:var(--sans);font-weight:500;font-size:.55em;color:#95a3bb;text-transform:none;letter-spacing:0;margin-top:.3vh}
+.pl-story .pl-setup{font-size:clamp(14px,2.3vh,30px);line-height:1.4;margin:0;color:#e3e9f3}
+.pl-ant{border-left:4px solid var(--orange);background:rgba(255,122,26,.08);border-radius:0 1vh 1vh 0;padding:1vh 1vw;font-size:clamp(13px,2.1vh,28px);line-height:1.38;color:#e3e9f3}
+.pl-ant b{display:block;font-family:var(--cond);letter-spacing:.14em;color:var(--orange-hi);font-size:.85em;margin-bottom:.3vh}
+.pl-q{font-family:var(--cond);font-weight:800;font-size:clamp(18px,3.2vh,44px);line-height:1.1;text-transform:uppercase;color:var(--white)}
+.pl-q b{color:var(--orange)}
+.pl-vid{font-size:clamp(12px,1.8vh,24px);color:#c9d4e6;display:flex;gap:.6vw;align-items:center;flex-wrap:wrap}
+/* review */
+#tkList.pl-rev{display:block;overflow:auto;margin:2vh 0}
+.pl-rv{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:2vw}
+.pl-rl{display:flex;flex-direction:column;gap:1.2vh}
+.pl-rr{display:flex;gap:1vw;align-items:flex-start;border:1px solid rgba(138,180,230,.22);border-radius:1.2vh;background:rgba(14,31,61,.6);padding:1.1vh 1vw}
+.pl-rr p{margin:.5vh 0 0;font-size:clamp(12px,1.85vh,24px);line-height:1.38;color:#d6deec}
+.pl-rr .tk-team{margin-left:.6em;font-size:.55em;vertical-align:middle}
+.pl-ev{display:inline-block;font-family:var(--cond);font-weight:700;font-size:.5em;letter-spacing:.1em;border-radius:.4vh;padding:.1vh .4vw;margin-left:.5em;vertical-align:middle;border:1px solid}
+.pl-ev.e-record{color:#4fd18b;border-color:rgba(79,209,139,.5)}
+.pl-ev.e-report{color:var(--sky);border-color:rgba(138,180,230,.5)}
+.pl-ev.e-fundamental{color:var(--orange-hi);border-color:rgba(255,122,26,.5)}
+.pl-ev.e-check{color:#ff8f8f;border-color:rgba(255,75,75,.5)}
+.pl-rs{display:flex;flex-direction:column;gap:1.4vh}
+.pl-bq{font-weight:600;color:var(--white)!important;margin-bottom:1vh!important}
+.pl-ba{color:#c9d4e6!important;margin-bottom:1vh!important}
+.pl-bonus .sb{margin-top:.6vh}
+.pl-src{font-size:clamp(11px,1.5vh,18px);color:#95a3bb;line-height:1.4}
+.pl-src a{color:var(--orange-hi)}
+.pl-key{display:flex;flex-direction:column;gap:1vh;margin:2vh 0}
+.pl-al2{font-size:clamp(11px,1.7vh,22px);color:var(--sky);margin-top:.4vh}
+/* library */
+.pl-hh{display:flex;justify-content:space-between;align-items:flex-end;gap:2vw;flex-wrap:wrap}
+.pl-hh .grp{display:flex;gap:.8vw;flex-wrap:wrap}
+.pl-cols{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:2vw;flex:1;min-height:0}
+.pl-lib,.pl-game{border:1px solid rgba(138,180,230,.22);border-radius:1.4vh;background:rgba(14,31,61,.55);padding:1.6vh 1.2vw;display:flex;flex-direction:column;gap:1.2vh;min-height:0}
+.pl-lh{display:flex;align-items:center;gap:.8vw;flex-wrap:wrap;font-family:var(--cond);letter-spacing:.14em}
+.pl-lh b{font-size:clamp(15px,2.2vh,28px);color:var(--orange-hi)} .pl-lh>span{color:#95a3bb;font-size:14px}
+.pl-lh .seg{display:flex;border:1px solid rgba(138,180,230,.3);border-radius:8px;overflow:hidden;margin-left:auto}
+.pl-lh .seg button{font-family:var(--cond);font-weight:700;letter-spacing:.1em;font-size:12.5px;padding:6px 10px;background:transparent;color:#c9d4e6;border:0;cursor:pointer}
+.pl-lh .seg button.on{background:var(--orange);color:#1c0d00}
+.pl-search{flex:1 1 160px;min-width:120px}
+.pl-rows{display:flex;flex-direction:column;gap:.8vh;overflow:auto;max-height:54vh;padding-right:4px}
+.pl-row{display:flex;align-items:center;gap:.9vw;border:1px solid rgba(138,180,230,.18);border-radius:1vh;padding:.9vh .8vw;background:rgba(8,18,38,.5)}
+.pl-row.in{border-color:rgba(255,122,26,.6);background:rgba(255,122,26,.07)}
+.pl-add{flex:none;width:36px;height:36px;border-radius:50%;border:2px solid var(--orange);background:transparent;color:var(--orange-hi);font-size:20px;font-weight:800;cursor:pointer}
+.pl-row.in .pl-add{background:var(--orange);color:#1c0d00}
+.pl-rm{flex:1;min-width:0}
+.pl-rt{font-family:var(--cond);font-weight:800;font-size:clamp(15px,2.2vh,28px);text-transform:uppercase;letter-spacing:.02em}
+.pl-rs2{font-size:13px;color:#95a3bb;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pl-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px;align-items:center}
+.pl-vt{font-family:var(--cond);font-weight:700;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#c9d4e6;border:1px solid rgba(138,180,230,.35);border-radius:5px;padding:1px 6px}
+.pl-vt.ok{color:#4fd18b;border-color:rgba(79,209,139,.5)} .pl-vt.no{color:#ff9d9d;border-color:rgba(255,75,75,.45)}
+.pl-tags .pl-ang{font-size:11.5px;padding:1px 6px}
+.pl-lf,.pl-save,.pl-start{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.pl-start{justify-content:flex-end}
+.pl-save .in{flex:1 1 180px}
+.pl-cl{display:flex;gap:6px;flex-wrap:wrap}
+.pl-coll{font-family:var(--cond);font-weight:700;font-size:13px;letter-spacing:.08em;color:var(--sky);background:transparent;border:1px solid rgba(138,180,230,.45);border-radius:999px;padding:4px 10px;cursor:pointer}
+.pl-coll i{font-style:normal;color:#95a3bb;margin-left:4px}
+.pl-order{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;overflow:auto;max-height:32vh;min-height:0}
+.pl-order li{display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(138,180,230,.15);padding:4px 0}
+.pl-on{flex:none;width:26px;height:26px;border-radius:50%;background:var(--orange);color:#1c0d00;font-family:var(--cond);font-weight:900;display:flex;align-items:center;justify-content:center}
+.pl-ot{flex:1;min-width:0;font-family:var(--cond);font-weight:700;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pl-order button{flex:none;width:30px;height:30px;border-radius:6px;border:1px solid rgba(138,180,230,.3);background:transparent;color:#c9d4e6;cursor:pointer}
+.pl-order .pl-ang{font-size:11px}
+.pl-note{font-size:12.5px;color:#95a3bb;line-height:1.45;margin:0}
+.pl-empty{color:#95a3bb;font-size:14px;padding:1vh 0}
+/* editor */
+.pl-form{display:flex;flex-direction:column;gap:1.6vh}
+.pl-form fieldset{border:1px solid rgba(138,180,230,.25);border-radius:1.2vh;padding:1.4vh 1.2vw;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1vh 1vw;margin:0}
+.pl-form legend{font-family:var(--cond);font-weight:800;letter-spacing:.16em;color:var(--orange-hi);padding:0 .5vw}
+.pl-f{display:flex;flex-direction:column;gap:4px;font-size:12.5px;color:#95a3bb}
+.pl-f.wide{grid-column:1/-1}
+.pl-f textarea{resize:vertical;font:inherit;color:var(--white)}
+.pl-hint{grid-column:1/-1;font-size:13px;color:var(--sky);margin-top:-4px}
+.pl-bases{display:flex;gap:14px;color:var(--white);font-size:14px;padding-top:6px}
+.pl-arow{grid-column:1/-1;display:grid;grid-template-columns:24px repeat(auto-fill,minmax(200px,1fr));gap:1vh 1vw;align-items:end;border-top:1px solid rgba(138,180,230,.15);padding-top:1vh}
+.pl-arow>b{font-family:var(--cond);color:var(--orange);font-size:20px;align-self:start;padding-top:18px}
+.pl-arow .pl-f.wide{grid-column:2/-1}
+.pl-ans .sb.add{grid-column:1/-1}
+@media (max-width:900px){
+  .pl-sit,.pl-cols,.pl-rv{grid-template-columns:1fr}
+  .ov.pl-ov{padding:3vh 16px}
+  body.plays .v-frame,body.plays.pl-watch .v-frame{width:100%;height:auto;max-height:none}
+  body.plays.pl-watch .v-ctrls,body.plays.pl-watch #plBar{max-width:none}
+  .pl-rows,.pl-order{max-height:none}
+  .pl-al{max-width:70vw}
+}
 </style>
 </head>
 <body class="team-off">
@@ -983,11 +1143,12 @@ body:not(.fm-off) #end [data-g="playAgain"]{background:transparent;color:var(--w
       <button class="sb primary st-go" id="stGo">▶ START GAME</button>
       <button class="sb ghost lg" id="stLive" hidden>SKIP TO LIVE PLAYS</button>
       <button class="sb ghost lg" id="stNew" hidden>NEW GAME</button>
+      <button class="sb lg st-pl" id="stPlays" title="Real MLB plays — What Went Wrong? (P)">🎬 PLAYS — WHAT WENT WRONG?</button>
       <button class="sb ghost lg" id="stPr" hidden>PRACTICE PLAY</button>
       <button class="sb ghost lg st-fm" id="stFm">⚡ FAST MONEY</button>
       <button class="sb ghost lg" id="stSetup">⚙ SETUP</button>
     </div>
-    <div class="st-hint"><kbd>ENTER</kbd> start · <kbd>F</kbd> full screen · <kbd>E</kbd> setup<a class="st-sbx" href="../../">‹ Back to Sandbox</a></div>
+    <div class="st-hint"><kbd>ENTER</kbd> start · <kbd>P</kbd> plays · <kbd>F</kbd> full screen · <kbd>E</kbd> setup<a class="st-sbx" href="../../">‹ Back to Sandbox</a></div>
   </div>
   <div class="st-right">
     <div class="st-hwrap">
@@ -1063,6 +1224,7 @@ body:not(.fm-off) #end [data-g="playAgain"]{background:transparent;color:var(--w
         <span class="grow"></span>
         <button class="vbtn" data-g="vfs" title="Video full screen (Shift+F)">⛶ VIDEO</button>
       </div>
+      <div id="plBar"></div>
       <div class="pr-note" id="prNote" aria-live="polite"></div>
       <div class="hstrip host-on" id="hStrip" aria-live="polite">
         <img class="host-img" alt="Game host" width="944" height="706">
@@ -1083,6 +1245,7 @@ body:not(.fm-off) #end [data-g="playAgain"]{background:transparent;color:var(--w
       <div class="found" id="gFound"><span class="pips" id="gPips"></span><span id="gFoundT">0 / 5 FOUND</span>
         <span class="bank team-only" id="gBank"><span id="gBankL">ROUND BANK</span><b id="gBankV">0</b></span></div>
       <div class="board-wrap"><div class="board" id="board"></div></div>
+      <div id="plCoach" aria-live="polite"></div>
     </div>
   </section>
 
@@ -1341,6 +1504,7 @@ body:not(.fm-off) #end [data-g="playAgain"]{background:transparent;color:var(--w
 <input type="file" id="fileImport" accept="application/json,.json" hidden>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+<script src="plays/volume-1.js"></script>
 <script>
 (() => {
 'use strict';
@@ -1569,6 +1733,7 @@ function saveNow() {
   try {
     const { firstRun, migrated, ...rest } = state;
     if (practice) { rest.plays = practice.livePlays; rest.session = practice.liveSession; }   // never persist the practice sandbox
+    if (playsRun) { rest.plays = playsRun.livePlays; rest.session = playsRun.liveSession; plSaveSession(); }   // a Plays game keeps its own save
     localStorage.setItem(LS_KEY, JSON.stringify(rest));
   }
   catch (e) { console.warn(e); toast('Couldn’t save setup to this browser. Use EXPORT GAME to keep a copy.'); }
@@ -1832,6 +1997,7 @@ let flowT = null;          // pending automatic transition (steal banner / summa
 let stealStartedAt = 0;    // guards against an accidental X while the steal banner is starting
 
 function renderGame() {
+  if (playsRun) plCoachUI();
   const p = curPlay(), i = curIndex(), n = state.plays.length;
   $('#gCount').textContent = practice ? 'PRACTICE PLAY' : `PLAY ${i + 1} OF ${n}`;
   const t = str(p.title).trim();
@@ -1847,6 +2013,7 @@ function renderGame() {
   updateSoundBtn();
 }
 function syncGameVideo(p) {
+  if (playsRun && plSyncVideo(p)) return;
   const v = videos[p.id], empty = $('#vEmpty');
   if (v) {
     if (gv.dataset.url !== v.url) { gv.src = v.url; gv.dataset.url = v.url; gv.defaultPlaybackRate = speed; gv.playbackRate = speed; }
@@ -2148,6 +2315,7 @@ function toggleReveal(i, { silent = false, forceShow = false, bulk = false } = {
     }
   }
   updateFound(); save();
+  if (playsRun) plCoachUI();
 }
 function revealAll() {
   const p = curPlay(), rev = new Set(revealedOf(p)), pid = p.id;
@@ -2342,25 +2510,28 @@ function go(d) {
   renderGame(); showIntro();
 }
 function replay() {
+  if (embOn()) { emb.armed = true; embSeek(0); embPlay(); return; }
   if (!gv.dataset.url) { toast('No video loaded for this play'); return; }
   gv.currentTime = 0; gv.play().catch(() => {});
 }
 function togglePlay() {
+  if (embOn()) { if (emb.playing) embSend('pause'); else embPlay(); return; }
   if (!gv.dataset.url) { toast('No video loaded for this play'); return; }
   if (gv.paused || gv.ended) gv.play().catch(() => {}); else gv.pause();
 }
-function skip(s) { if (!gv.dataset.url) return; gv.currentTime = Math.max(0, Math.min((gv.duration || 0), gv.currentTime + s)); }
-function step(dir) { if (!gv.dataset.url) return; gv.pause(); gv.currentTime = Math.max(0, gv.currentTime + dir / 30); }
+function skip(s) { if (embOn()) { embSeek(emb.t + s); return; } if (!gv.dataset.url) return; gv.currentTime = Math.max(0, Math.min((gv.duration || 0), gv.currentTime + s)); }
+function step(dir) { if (embOn()) { embSend('pause'); embSeek(emb.t + dir / 30); return; } if (!gv.dataset.url) return; gv.pause(); gv.currentTime = Math.max(0, gv.currentTime + dir / 30); }
 function setSpeed(r) {
   speed = r; gv.defaultPlaybackRate = r; gv.playbackRate = r;
   $$('#speedSeg button').forEach(b => b.classList.toggle('on', +b.dataset.speed === r));
 }
-function updatePlayBtn() { $('#bPlay').textContent = (!gv.dataset.url || gv.paused || gv.ended) ? '▶ PLAY' : '❚❚ PAUSE'; }
+function updatePlayBtn() { if (embOn()) { $('#bPlay').textContent = emb.playing ? '❚❚ PAUSE' : '▶ PLAY'; return; } $('#bPlay').textContent = (!gv.dataset.url || gv.paused || gv.ended) ? '▶ PLAY' : '❚❚ PAUSE'; }
 gv.addEventListener('play', updatePlayBtn); gv.addEventListener('pause', updatePlayBtn); gv.addEventListener('ended', updatePlayBtn);
 gv.addEventListener('loadedmetadata', () => { gv.playbackRate = speed; });
 gv.addEventListener('error', () => { if (gv.dataset.url) toast('Chrome can’t play this video format. Try an MP4 (H.264).', 5000); });
 
 function videoFullscreen() {
+  if (playsRun) { plFullscreen(); return; }
   if (!gv.dataset.url) { toast('No video loaded for this play'); return; }
   (gv.requestFullscreen ? gv.requestFullscreen() : Promise.reject()).catch(() => {});
 }
@@ -2378,6 +2549,7 @@ function updateSoundBtn() { const b = $('#bSound'); b.textContent = '♪ ' + (st
 function restartFx(el) { el.classList.remove('show'); void el.offsetWidth; el.classList.add('show'); }
 function goodThought() { if (!state.settings.showGood) return; restartFx($('#fxGood')); sfx.good(); }
 function showIntro() {
+  if (playsRun) { plSetView('watch'); plCoachUI(); plShowSituation(); return; }
   const p = curPlay(), i = curIndex(), n = state.plays.length;
   $('#inK').textContent = practice ? 'PRACTICE PLAY · DOESN’T COUNT' : `PLAY ${i + 1} OF ${n}`;
   const t = str(p.title).trim(); $('#inT').textContent = t || (str(p.prompt).trim() || DEFAULT_PROMPT);
@@ -2447,6 +2619,7 @@ function openTakeaways() {
   }).join('') : '<div class="tk-empty">No observations on this play yet. Add some in Setup.</div>';
   $('#tkNext').textContent = practice ? 'START THE LIVE GAME →' : i === n - 1 ? (team ? 'FINAL SCORE →' : 'FINISH SESSION →') : 'NEXT PLAY →';
   $('#bReopen').hidden = !done;
+  $('#tkList').classList.toggle('pl-rev', !!playsRun); if (playsRun) plReview(p);
   closeOverlay('help');
   $('#tk').hidden = false; updateFound();
 }
@@ -2496,6 +2669,7 @@ function openEnd() {
   $('#end').hidden = false;
 }
 function playAgain() {
+  if (playsRun) { closeOverlay('end'); newGame(); renderGame(); showIntro(); toast('New Plays game — same plays, scores cleared'); return; }
   closeOverlay('end'); newGame(); renderGame(); showStart();
   toast('New game — same plays, scores cleared');
 }
@@ -2596,7 +2770,8 @@ function act(g) {
     case 'resetGame': return resetGame();
     case 'resCsv': return exportResultsCsv();
     case 'resPrint': return printResults();
-    case 'chooseVideo': return pickVideoFor(curPlay().id);
+    case 'chooseVideo': return playsRun ? plOpenLink() : pickVideoFor(curPlay().id);
+    default: return plAct(g, actEl);
   }
 }
 
@@ -2607,7 +2782,7 @@ $('#game').addEventListener('click', e => {
   const ed = e.target.closest('[data-edit]');
   if (ed) { editTotal(+ed.dataset.edit); ed.blur(); return; }
   const b = e.target.closest('[data-g]');
-  if (b) { act(b.dataset.g); if (b.blur) b.blur(); return; }
+  if (b) { actEl = b; act(b.dataset.g); if (b.blur) b.blur(); return; }
   const card = e.target.closest('#gScores .team');
   if (card) { setControl(+card.dataset.team); return; }
 });
@@ -2620,12 +2795,14 @@ board.addEventListener('click', e => {
 window.addEventListener('keydown', e => {
   if (state.ui.mode !== 'game') return;
   const t = e.target;
+  if (plKey(e)) return;
   if (startOpen() && !(t && /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) {
     if (e.metaKey || e.ctrlKey || e.altKey) return;
     const k = e.key.toLowerCase();
     if (k === 'enter' || k === ' ') { e.preventDefault(); if (!(t && t.tagName === 'BUTTON')) primaryStart(); else t.click(); }
     else if (k === 'f') { e.preventDefault(); appFullscreen(); }
     else if (k === 'e') { e.preventDefault(); hideStart(); enterSetup(); }
+    else if (k === 'p') { e.preventDefault(); hideStart(); plOpenHub(); }
     return;
   }
   if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
@@ -2687,7 +2864,7 @@ window.addEventListener('drop', e => {
   if (!hasFiles(e)) return; e.preventDefault();
   $('#vFrame').classList.remove('over');
   const f = e.dataTransfer.files[0];
-  if (state.ui.mode === 'game') { if (f) setVideo(curPlay().id, f); }
+  if (state.ui.mode === 'game') { if (playsRun) toast('Plays use MLB’s own player — add videos to plays in the Plays library.'); else if (f) setVideo(curPlay().id, f); }
   else toast('Drop the video onto a play’s VIDEO box.');
 });
 
@@ -2764,7 +2941,7 @@ function hasProgress() {
 function showStart() {
   hostSilence();
   if (fm) closeFastMoney();
-  restoreLive(); closeOverlay('prDone');
+  plExit(); restoreLive(); closeOverlay('prDone');
   gv.pause(); clearFlow(); stopReactions(); ['tk', 'end', 'help'].forEach(closeOverlay);
   const n = state.plays.length, obs = state.plays.reduce((a, p) => a + p.observations.length, 0), prog = hasProgress();
   $('#stSess').textContent = str(state.sessionName).trim() || 'GAME REVIEW';
@@ -2807,7 +2984,7 @@ $('#stSetup').addEventListener('click', () => { hideStart(); enterSetup(); });
 function enterSetup() {
   hostSilence();
   if (fm) closeFastMoney();
-  restoreLive(); closeOverlay('prDone');
+  plExit(); restoreLive(); closeOverlay('prDone');
   gv.pause(); closeOverlay('tk'); closeOverlay('end'); closeOverlay('help');
   state.ui.mode = 'setup'; state.ui.selected = curPlay().id; saveNow();
   applyMode(); renderSetup();
@@ -3773,6 +3950,554 @@ $('#fileImport').addEventListener('change', async e => {
 });
 $('#fileVideo').addEventListener('change', e => { const f = e.target.files[0]; const pid = e.target.dataset.pid; if (f && pid) setVideo(pid, f); });
 $('#bPresent').addEventListener('click', () => enterGame());
+
+/* ================= PLAYS MODE — Baseball Feud Plays: “What Went Wrong?” =================
+   A library of real MLB teaching plays (plays/volume-1.js + any the host adds), played on the normal board.
+   While a Plays game runs, the regular game (plays + session) is set aside untouched — like the Practice Play —
+   and the Plays game keeps its own session under its own storage key.
+   Video: MLB.com's own embed (its Share → Embed code, hosted by Streamable), driven through the embed's player.js
+   interface. Clips are never downloaded, copied or rehosted; a play without an embed opens MLB's page in a new tab. */
+const PL_KEY = 'baseballIQ.plays.v1';
+const PL_POINTS = 10;                     // every teaching answer is worth the same — no survey numbers, no ranking
+const PL_PROMPT = 'WHAT WENT WRONG?';
+const PL_CATS = ['Throwing', 'Catching', 'Cutoffs & relays', 'Backing up', 'Covering a base', 'Communication', 'Baserunning', 'Know the outs', 'Rundowns', 'Decision-making', 'Pitcher fielding', 'Catcher play', 'Next-play mindset', 'Hustle'];
+const PL_DIFF = ['', 'Intro', 'Intermediate', 'Advanced'];
+const PL_ANGLE = { 'high-home': 'HIGH HOME', wide: 'WIDE ANGLE', broadcast: 'BROADCAST' };
+const PL_EVID = { record: 'OFFICIAL RECORD', report: 'REPORTED', fundamental: 'COACHING STANDARD' };
+const PL_VERIFY = { verified: 'Verified', unverified: 'Not verified', review: 'Needs review' };
+const EMBED_ORIGIN = 'https://streamable.com';
+let playsRun = null;                      // { livePlays, liveSession } while a Plays game runs
+let plView = 'watch';
+let actEl = null;                         // the button behind the current data-g action (for actions that carry data)
+
+/* ----- the play format (see plays/README.md) ----- */
+function plEmbedFrom(url) {
+  url = str(url).trim();
+  let m = url.match(/^https:\/\/(?:www\.)?mlb\.com\/(?:[a-z-]+\/)?video\/([a-z0-9-]+)\/?(?:[?#].*)?$/i);
+  if (m) return EMBED_ORIGIN + '/m/' + m[1].toLowerCase();
+  m = url.match(/^https:\/\/streamable\.com\/m\/([a-z0-9-]+)\/?$/i);
+  return m ? EMBED_ORIGIN + '/m/' + m[1].toLowerCase() : '';
+}
+const plSafeUrl = u => /^https:\/\//i.test(str(u).trim()) ? str(u).trim() : '';
+const plSecs = t => { const m = str(t).match(/(\d+):(\d\d)/); return m ? +m[1] * 60 + +m[2] : (str(t).trim() !== '' && Number.isFinite(+t) ? +t : null); };
+const plTime = s => { s = Math.max(0, Math.floor(num(s))); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); };
+const plList = v => (Array.isArray(v) ? v : str(v).split(',')).map(x => str(x).trim()).filter(Boolean);
+function plNorm(p) {
+  p = obj(p); const s = obj(p.situation), v = obj(p.video), a = obj(v.angle), b = obj(s.bases), bo = obj(p.bonus), ver = obj(p.verification);
+  const embedUrl = plEmbedFrom(v.embedUrl) || plEmbedFrom(v.pageUrl);
+  return {
+    id: str(p.id) || 'play-' + uid(), title: str(p.title), subtitle: str(p.subtitle), stage: str(p.stage),
+    category: str(p.category), categories: plList(p.categories), difficulty: PL_DIFF.includes(p.difficulty) ? p.difficulty : '',
+    situation: { teams: str(s.teams), date: str(s.date), venue: str(s.venue), inning: str(s.inning), outs: s.outs === '' || s.outs == null ? '' : Math.min(2, Math.max(0, num(s.outs))),
+      runners: str(s.runners), bases: { '1B': !!b['1B'], '2B': !!b['2B'], '3B': !!b['3B'] }, score: str(s.score), count: str(s.count),
+      batter: str(s.batter), pitcher: str(s.pitcher), batting: str(s.batting), fielding: str(s.fielding), anticipate: str(s.anticipate), setup: str(s.setup) },
+    video: { provider: embedUrl ? 'mlb-embed' : (plSafeUrl(v.pageUrl) ? 'link' : 'none'), embedUrl, pageUrl: plSafeUrl(v.pageUrl), title: str(v.title), source: str(v.source),
+      savantUrl: plSafeUrl(v.savantUrl),
+      angle: { category: PL_ANGLE[a.category] ? a.category : 'broadcast', label: str(a.label), howVerified: str(a.howVerified),
+        segments: (Array.isArray(a.segments) ? a.segments : []).map(g => { g = obj(g); return { time: str(g.time), view: str(g.view), start: g.start == null ? plSecs(g.time) : num(g.start) }; }) },
+      pauseAt: v.pauseAt == null || v.pauseAt === '' ? null : Math.max(0, num(v.pauseAt)) },
+    answers: (Array.isArray(p.answers) ? p.answers : []).map(x => { x = obj(x); return { label: str(x.label), category: str(x.category), explanation: str(x.explanation),
+      evidence: str(x.evidence), aliases: plList(x.aliases), checkClip: !!x.checkClip }; }).filter(x => x.label),
+    coach: str(p.coach), bonus: { question: str(bo.question), answer: str(bo.answer) }, officialRecord: str(p.officialRecord),
+    sources: (Array.isArray(p.sources) ? p.sources : []).map(x => ({ label: str(obj(x).label), url: plSafeUrl(obj(x).url) })).filter(x => x.label || x.url),
+    verification: { status: PL_VERIFY[ver.status] ? ver.status : 'unverified', notes: str(ver.notes), gamePk: str(ver.gamePk), playId: str(ver.playId) },
+    builtin: str(p.builtin),
+  };
+}
+/* The research file format (rounds.json from the Baseball Feud Plays research) → the play format. */
+function plFromResearch(r) {
+  r = obj(r); const v = obj(r.video), s = obj(r.situation);
+  return plNorm({
+    id: r.id, title: r.title, subtitle: r.subtitle, stage: r.stage, categories: (r.categories || []).map(c => obj(c).label || c),
+    category: (obj((r.categories || [])[0]).label) || '', situation: s,
+    video: { embedUrl: '', pageUrl: v.url, title: v.title, source: v.source, savantUrl: obj(v.savant).url, angle: v.angle },
+    answers: (r.answers || []).map(a => ({ label: a.label, category: a.categoryLabel || a.category, explanation: a.explanation, evidence: a.evidence, aliases: a.aliases, checkClip: a.watch })),
+    coach: r.coachExplanation, bonus: r.bonus, officialRecord: r.officialRecord, sources: r.sources,
+    verification: { status: v.playId ? 'verified' : 'unverified', gamePk: v.gamePk, playId: v.playId },
+  });
+}
+function plParseFile(data) {
+  data = obj(data);
+  if (Array.isArray(data.plays)) return data.plays.map(plNorm);
+  if (Array.isArray(data.rounds)) return data.rounds.map(plFromResearch);
+  return [];
+}
+
+/* ----- library storage (its own key — the regular game's save is never touched) ----- */
+function plBuiltins() { const b = window.BASEBALL_FEUD_PLAYS; return b && Array.isArray(b.plays) ? b.plays.map(plNorm) : []; }
+function plLoad() {
+  let d = null;
+  try { d = JSON.parse(localStorage.getItem(PL_KEY) || 'null'); } catch (e) {}
+  d = obj(d);
+  const lib = Array.isArray(d.library) ? d.library.map(plNorm) : [];
+  const out = { library: lib, collections: Array.isArray(d.collections) ? d.collections.map(c => ({ id: str(obj(c).id) || uid(), name: str(obj(c).name) || 'Collection', ids: plList(obj(c).ids) })) : [],
+    game: { ids: plList(obj(d.game).ids), session: obj(d.game).session || null, name: str(obj(d.game).name) }, seeded: str(d.seeded) };
+  const b = window.BASEBALL_FEUD_PLAYS;
+  if (b && out.seeded !== b.collection.version) {           // first run (or a new edition): add the built-in plays that aren't there yet
+    const have = new Set(out.library.map(p => p.id));
+    plBuiltins().forEach(p => { if (!have.has(p.id)) out.library.push(p); });
+    if (!out.collections.some(c => c.id === b.collection.id)) out.collections.unshift({ id: b.collection.id, name: b.collection.name, ids: b.plays.map(p => p.id) });
+    out.seeded = b.collection.version;
+  }
+  return out;
+}
+let pl = plLoad();
+function plSave() { try { localStorage.setItem(PL_KEY, JSON.stringify(pl)); } catch (e) { toast('Couldn’t save the Plays library in this browser. Use EXPORT to keep a copy.'); } }
+const plById = id => pl.library.find(p => p.id === id);
+const curLib = () => { if (!playsRun) return null; const p = curPlay(); return p && p.lib ? plById(p.lib) : null; };
+function plSaveSession() { if (playsRun) { pl.game.session = clone(state.session); plSave(); } }
+
+/* ----- run a Plays game on the normal board ----- */
+function plToGame(lp) {
+  return { id: 'pl-' + lp.id, lib: lp.id, title: lp.title, prompt: PL_PROMPT, videoName: '',
+    observations: lp.answers.map((a, i) => ({ id: 'pl-' + lp.id + '-' + i, text: a.label, points: PL_POINTS })) };
+}
+function plStart(ids, resume) {
+  const plays = ids.map(plById).filter(p => p && p.answers.length);
+  if (!plays.length) { toast('Pick at least one play with answers'); return; }
+  if (fm) closeFastMoney();
+  restoreLive(); ['tk', 'end', 'help', 'prDone'].forEach(closeOverlay); hostSilence(); clearFlow(); stopReactions();
+  if (!playsRun) playsRun = { livePlays: state.plays, liveSession: state.session };
+  gv.pause();
+  state.plays = plays.map(plToGame);
+  state.session = resume && pl.game.session ? normSession(pl.game.session, state.plays) : newSession();
+  if (!resume) pl.game.ids = plays.map(p => p.id);
+  plSaveSession();
+  if (state.ui.mode !== 'game') { state.ui.mode = 'game'; applyMode(); }
+  document.body.classList.add('plays'); $('.g-head .brand .s').textContent = 'PLAYS · WHAT WENT WRONG?';
+  plCloseOv('plHub'); hideStart(); sfx.start(); lastRevealed = null;
+  renderGame(); showIntro(); poke(); requestAnimationFrame(fitAll);
+}
+function plExit() {
+  if (!playsRun) return false;
+  plSaveSession(); embStop(); plCloseOv('plSit'); plCloseOv('plKeyOv');
+  state.plays = playsRun.livePlays; state.session = playsRun.liveSession; playsRun = null;
+  document.body.classList.remove('plays', 'pl-watch', 'pl-theater', 'pl-emb'); $('.g-head .brand .s').textContent = 'GAME REVIEW';
+  lastRevealed = null; return true;
+}
+const plResumable = () => !!(pl.game.session && pl.game.ids.length && pl.game.ids.every(id => plById(id)) &&
+  (num(pl.game.session.current) > 0 || Object.values(obj(pl.game.session.revealed)).some(a => a && a.length)));
+
+/* ----- MLB's embedded player, driven through player.js (postMessage) ----- */
+const emb = { el: null, url: '', ready: false, t: 0, dur: 0, playing: false, q: [], armed: true, started: false };
+const embOn = () => !!(playsRun && emb.el);
+function embMount(url) {
+  if (emb.el && emb.url === url) return;
+  embStop();
+  const f = document.createElement('iframe');
+  f.className = 'emb'; f.src = url; f.title = 'MLB video'; f.allowFullscreen = true;
+  f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.referrerPolicy = 'strict-origin-when-cross-origin';
+  $('#vFrame').insertBefore(f, $('#vFrame').firstChild);
+  Object.assign(emb, { el: f, url, ready: false, t: 0, dur: 0, playing: false, q: [], armed: true, started: false });
+  plTimeUI();
+}
+function embStop() { if (emb.el) emb.el.remove(); Object.assign(emb, { el: null, url: '', ready: false, playing: false, q: [] }); plFreezeUI(false); }
+function embSend(method, value) {
+  if (!emb.el) return;
+  if (!emb.ready) { emb.q.push([method, value]); return; }
+  const m = { context: 'player.js', version: '0.0.11', method };
+  if (value !== undefined) m.value = value;
+  if (method === 'addEventListener') m.listener = 'biq-' + value;
+  emb.el.contentWindow.postMessage(JSON.stringify(m), EMBED_ORIGIN);
+}
+function embSeek(s) {
+  s = Math.max(0, Math.min(emb.dur || s, s)); emb.t = s; embSend('setCurrentTime', s);
+  const lp = curLib(); if (lp && lp.video.pauseAt != null && s < lp.video.pauseAt) emb.armed = true;
+  plFreezeUI(false); plTimeUI();
+}
+function embPlay() { plFreezeUI(false); embSend('play'); emb.started = true; }
+window.addEventListener('message', e => {
+  if (!emb.el || e.source !== emb.el.contentWindow || e.origin !== EMBED_ORIGIN) return;
+  let d = e.data; try { if (typeof d === 'string') d = JSON.parse(d); } catch (x) { return; }
+  if (!d || d.context !== 'player.js') return;
+  if (d.event === 'ready') {
+    emb.ready = true;
+    ['play', 'pause', 'ended', 'timeupdate', 'error'].forEach(ev => embSend('addEventListener', ev));
+    embSend('setLoop', false);
+    const q = emb.q.splice(0); q.forEach(([m, v]) => embSend(m, v));
+  } else if (d.event === 'play') { emb.playing = true; emb.started = true; updatePlayBtn(); }
+  else if (d.event === 'pause' || d.event === 'ended') { emb.playing = false; updatePlayBtn(); }
+  else if (d.event === 'timeupdate' && d.value) {
+    emb.t = num(d.value.seconds); emb.dur = num(d.value.duration) || emb.dur;
+    const lp = curLib();
+    if (lp && lp.video.pauseAt != null && emb.armed && emb.playing && emb.t >= lp.video.pauseAt && emb.t < lp.video.pauseAt + 2) {
+      emb.armed = false; embSend('pause'); plFreezeUI(true);
+    }
+    plTimeUI();
+  } else if (d.event === 'error') toast('MLB’s player reported a playback problem — try ↺ REPLAY or open the clip on MLB.com.', 5000);
+});
+
+/* ----- video area in Plays mode ----- */
+function plSyncVideo(p) {
+  const lp = curLib(), empty = $('#vEmpty');
+  if (gv.dataset.url) { gv.pause(); gv.removeAttribute('src'); gv.load(); gv.dataset.url = ''; }
+  gv.hidden = true;
+  const btn = $('#vEmpty .vbtn');
+  if (lp && lp.video.embedUrl) {
+    embMount(lp.video.embedUrl); empty.hidden = true; document.body.classList.add('pl-emb');
+  } else {
+    embStop(); document.body.classList.remove('pl-emb'); empty.hidden = false;
+    const link = lp && (lp.video.pageUrl || lp.video.savantUrl);
+    $('#veT').textContent = link ? 'WATCH ON MLB' : 'NO VIDEO FOR THIS PLAY';
+    $('#veS').textContent = link ? 'MLB offers no embed for this clip. It opens on MLB’s site in a new tab — come back to this tab for the board.' : 'Add an MLB.com video link to this play in the Plays library.';
+    btn.textContent = link ? 'OPEN THE CLIP ↗' : 'PLAYS LIBRARY'; btn.hidden = false;
+  }
+  plRenderBar(lp); updatePlayBtn();
+  return true;
+}
+function plOpenLink() {
+  const lp = curLib(); const link = lp && (lp.video.pageUrl || lp.video.savantUrl);
+  if (link) window.open(link, '_blank', 'noopener'); else plOpenHub();
+}
+function angleChip(a) { return `<span class="pl-ang a-${esc(a.category)}">${PL_ANGLE[a.category] || 'VIDEO'}</span>`; }
+function plRenderBar(lp) {
+  const bar = $('#plBar'); if (!bar) return;
+  if (!lp) { bar.innerHTML = ''; return; }
+  const a = lp.video.angle;
+  const segs = a.segments.filter(g => g.start != null).map(g => `<button class="pl-seg" data-g="plSeg" data-s="${g.start}" title="${esc(g.view)}">${esc(g.time)}</button>`).join('');
+  const fz = lp.video.pauseAt != null;
+  bar.innerHTML = `<div class="pl-tl">${angleChip(a)}<span class="pl-al">${esc(a.label)}</span>${segs ? `<span class="pl-jl">JUMP TO</span>${segs}` : ''}</div>
+    <div class="pl-sc ${lp.video.embedUrl ? '' : 'off'}"><span class="pl-t" id="plT">0:00</span><input type="range" id="plScrub" min="0" max="100" step="0.1" value="0" aria-label="Scrub the video"><span class="pl-t" id="plD">–:––</span></div>
+    <div class="pl-tools">
+      <button class="vbtn" data-g="plFreeze" title="Freeze the clip at a moment to ask what happens next">${fz ? '❄ FREEZE AT ' + plTime(lp.video.pauseAt) : '❄ SET FREEZE POINT'}</button>
+      <button class="vbtn" data-g="plSit" title="Show the situation again (I)">ⓘ SITUATION</button>
+      <button class="vbtn" data-g="plKey" title="Host answer key">🔑 HOST KEY</button>
+      <span class="grow"></span>
+      <button class="sb primary pl-go" data-g="plView" id="plViewBtn" title="Switch between the video and the board (V)"></button>
+    </div>`;
+  plViewBtn(); plTimeUI();
+}
+function plTimeUI() {
+  const t = $('#plT'), d = $('#plD'), r = $('#plScrub'); if (!t) return;
+  t.textContent = plTime(emb.t); d.textContent = emb.dur ? plTime(emb.dur) : '–:––';
+  if (r && !r.matches(':active')) { r.max = emb.dur || 100; r.value = emb.t; }
+}
+function plFreezeUI(on) {
+  let f = $('#plFrz');
+  if (!on) { if (f) f.hidden = true; return; }
+  if (!f) { f = document.createElement('div'); f.id = 'plFrz'; f.className = 'pl-frz'; $('#vFrame').appendChild(f); }
+  f.innerHTML = `<div class="pl-fk">❄ FREEZE</div><div class="pl-ft">WHAT SHOULD HAPPEN NEXT?</div><div class="pl-fs">Who has the ball, who covers, where does the throw go?</div>
+    <button class="sb primary lg" data-g="plCont">▶ CONTINUE THE PLAY</button>`;
+  f.hidden = false; sfx.tick();
+}
+function plSetView(v) {
+  plView = v; document.body.classList.toggle('pl-watch', v === 'watch'); plViewBtn();
+  requestAnimationFrame(fitAll);
+}
+function plViewBtn() { const b = $('#plViewBtn'); if (b) b.textContent = plView === 'watch' ? 'WHAT WENT WRONG? →' : '▶ BACK TO THE VIDEO'; }
+function plFullscreen() {
+  const fr = $('#vFrame');
+  if (document.fullscreenElement || document.webkitFullscreenElement) { (document.exitFullscreen || document.webkitExitFullscreen).call(document); return; }
+  const req = fr.requestFullscreen || fr.webkitRequestFullscreen;
+  if (req) { try { const r = req.call(fr); if (r && r.catch) r.catch(() => plTheater()); return; } catch (e) {} }
+  plTheater();
+}
+function plTheater() { document.body.classList.toggle('pl-theater'); }
+
+/* ----- screen 1: the situation ----- */
+function diamondSVG(b, outs) {
+  const base = (x, y, on) => `<rect x="${x - 13}" y="${y - 13}" width="26" height="26" transform="rotate(45 ${x} ${y})" class="${on ? 'on' : ''}"/>`;
+  return `<svg class="pl-dia" viewBox="0 0 200 170" aria-label="Runners: ${b['1B'] ? 'first ' : ''}${b['2B'] ? 'second ' : ''}${b['3B'] ? 'third' : ''}">
+    <path d="M100 150 L160 90 L100 30 L40 90 Z" class="ln"/>${base(160, 90, b['1B'])}${base(100, 30, b['2B'])}${base(40, 90, b['3B'])}
+    <path d="M90 140 h20 v8 l-10 9 l-10 -9 z" class="hp"/></svg>
+    <div class="pl-outs">${[0, 1, 2].map(i => `<i class="${i < outs ? 'on' : ''}"></i>`).join('')}<span>${outs === '' ? '' : outs + ' OUT' + (outs === 1 ? '' : 'S')}</span></div>`;
+}
+function plShowSituation() {
+  const lp = curLib(); if (!lp) return;
+  const s = lp.situation, i = curIndex(), n = state.plays.length, a = lp.video.angle;
+  const ov = plOv('plSit');
+  ov.innerHTML = `<div class="ov-inner pl-in">
+    <div class="ov-k">PLAY ${i + 1} OF ${n}${lp.stage ? ' · ' + esc(lp.stage) : ''}</div>
+    <h2 class="pl-h">${esc(lp.title)}</h2>${lp.subtitle ? `<div class="pl-sub">${esc(lp.subtitle)}</div>` : ''}
+    <div class="pl-sit">
+      <div class="pl-card pl-state">${diamondSVG(s.bases, s.outs)}
+        <div class="pl-kv">${[['INNING', s.inning], ['SCORE', s.score], ['COUNT', s.count]].filter(x => x[1]).map(([k, v]) => `<div><span>${k}</span><b>${esc(v)}</b></div>`).join('')}</div>
+        ${s.runners ? `<div class="pl-run">${esc(s.runners)}</div>` : ''}</div>
+      <div class="pl-card pl-story">
+        <div class="pl-game">${esc(s.teams)}<small>${[s.date, s.venue].filter(Boolean).map(esc).join(' · ')}${s.batter ? ` · ${esc(s.batter)} batting` : ''}${s.pitcher ? `, ${esc(s.pitcher)} pitching` : ''}</small></div>
+        <p class="pl-setup">${esc(s.setup)}</p>
+        ${s.anticipate ? `<div class="pl-ant"><b>WHAT SHOULD THE DEFENSE ANTICIPATE?</b>${esc(s.anticipate)}</div>` : ''}
+        <div class="pl-q">Before you watch: what is <b>each defender</b> responsible for on this play?</div>
+        <div class="pl-vid">${angleChip(a)} ${esc(a.label)}${lp.video.embedUrl ? '' : ' · opens on MLB’s site'}</div>
+      </div>
+    </div>
+    <div class="ov-foot"><div class="grp"><button class="sb ghost lg" data-pl="home">‹ EXIT PLAYS</button>${i > 0 ? '<button class="sb ghost lg" data-pl="prev">‹ PREVIOUS PLAY</button>' : ''}</div>
+      <div class="grp"><button class="sb ghost lg" data-pl="board">SKIP TO THE BOARD</button><button class="sb primary lg" data-pl="watch">▶ WATCH THE PLAY</button></div></div>
+  </div>`;
+  ov.hidden = false; hostSilence();
+}
+function plWatch(play) {
+  plCloseOv('plSit'); plSetView('watch');
+  const lp = curLib();
+  if (lp && lp.video.embedUrl) {
+    if (play) { embPlay(); setTimeout(() => { if (embOn() && !emb.playing) toast('Tap ▶ on the video to start it (some browsers need a tap on the player itself).', 4500); }, 2500); }
+  } else if (play && lp) plOpenLink();
+}
+
+/* ----- screen 3 helper: coaching line under the board ----- */
+function plCoachUI() {
+  const el = $('#plCoach'); if (!el) return;
+  const lp = curLib(), p = curPlay(); if (!lp) { el.innerHTML = ''; return; }
+  const k = p.observations.findIndex(o => o.id === lastRevealed && revealedOf(p).includes(o.id));
+  if (k < 0) { el.innerHTML = `<div class="pl-ch">Name a mistake, a missed responsibility or a better decision. Tap a tile (or press its number) when someone gets it.</div>`; return; }
+  const x = lp.answers[k];
+  el.innerHTML = `<div class="pl-cn">${k + 1}</div><div><div class="pl-cl">${esc(x.label)} <span>${esc(x.category)}</span></div><p>${esc(x.explanation)}</p></div>`;
+}
+
+/* ----- screen 4: teaching review (inside the round-summary overlay) ----- */
+function plReview(p) {
+  const lp = curLib(); if (!lp) return;
+  embSend('pause');
+  $('#tkH').innerHTML = 'TEACHING <b>REVIEW</b>';
+  const team = teamOn();
+  $('#tkList').innerHTML = `<div class="pl-rv">
+    <div class="pl-rl">${lp.answers.map((x, k) => {
+      const o = p.observations[k], f = o && foundOf(o.id);
+      const tag = team ? (f ? `<span class="tk-team tm${f.t}">${f.ph === 'steal' ? 'STEAL · ' : ''}${esc(shortName(f.t))}</span>` : '<span class="tk-team miss">NOT FOUND</span>') : '';
+      return `<div class="pl-rr"><div class="pl-rn">${k + 1}</div><div><div class="pl-rlab">${esc(x.label)} <span class="pl-rc">${esc(x.category)}</span>
+        ${String(x.evidence).split('+').map(e => PL_EVID[e] ? `<span class="pl-ev e-${e}">${PL_EVID[e]}</span>` : '').join('')}${tag}</div><p>${esc(x.explanation)}</p></div></div>`;
+    }).join('')}</div>
+    <div class="pl-rs">
+      ${lp.coach ? `<div class="pl-card"><h4>COACH’S EXPLANATION</h4><p>${esc(lp.coach)}</p></div>` : ''}
+      ${lp.bonus.question ? `<div class="pl-card pl-bonus"><h4>BONUS — BASEBALL IQ</h4><p class="pl-bq">${esc(lp.bonus.question)}</p>
+        <p class="pl-ba" hidden><b>Answer:</b> ${esc(lp.bonus.answer)}</p><button class="sb" data-g="plBonus">SHOW THE ANSWER</button></div>` : ''}
+      <div class="pl-rb"><button class="sb lg" data-g="plReplay">↺ REPLAY THE VIDEO</button></div>
+      <div class="pl-src">${lp.video.title ? `Video: ${lp.video.pageUrl ? `<a href="${esc(lp.video.pageUrl)}" target="_blank" rel="noopener">${esc(lp.video.title)}</a>` : esc(lp.video.title)} (MLB) · ${esc(lp.video.angle.label)}. ` : ''}
+        ${lp.sources.length ? 'Sources: ' + lp.sources.map(x => x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.label || x.url)}</a>` : esc(x.label)).join(' · ') : ''}</div>
+    </div></div>`;
+}
+
+/* ----- host answer key ----- */
+function plShowKey() {
+  const lp = curLib(); if (!lp) return;
+  const ov = plOv('plKeyOv');
+  ov.innerHTML = `<div class="ov-inner pl-in"><div class="ov-k">HOST ONLY · ${esc(lp.title)}</div><h2>ANSWER <b>KEY</b></h2>
+    <div class="pl-key">${lp.answers.map((x, k) => `<div class="pl-rr"><div class="pl-rn">${k + 1}</div><div><div class="pl-rlab">${esc(x.label)} <span class="pl-rc">${esc(x.category)}</span>${x.checkClip ? '<span class="pl-ev e-check">CHECK THE CLIP</span>' : ''}</div>
+      ${x.aliases.length ? `<div class="pl-al2">Also accept: ${x.aliases.map(esc).join(' · ')}</div>` : ''}<p>${esc(x.explanation)}</p></div></div>`).join('')}</div>
+    <div class="ov-foot"><span></span><button class="sb primary lg" data-pl="closeKey">CLOSE</button></div></div>`;
+  ov.hidden = false;
+}
+
+/* ----- overlays (outside #game, so they get their own click handling) ----- */
+function plOv(id) {
+  let o = $('#' + id);
+  if (!o) { o = document.createElement('div'); o.id = id; o.className = 'ov pl-ov'; o.hidden = true; document.body.appendChild(o); o.addEventListener('click', plClick); o.addEventListener('input', plInput); o.addEventListener('change', plInput); }
+  return o;
+}
+function plCloseOv(id) { const o = $('#' + id); if (o) o.hidden = true; }
+const plOvOpen = id => { const o = $('#' + id); return !!(o && !o.hidden); };
+
+/* ----- the Plays library: choose, order, save collections, add / edit / import plays ----- */
+const hub = { sel: [], filter: 'all', q: '', name: '', editing: null };
+function plOpenHub() {
+  if (!hub.sel.length) hub.sel = (pl.game.ids.length ? pl.game.ids : (pl.collections[0] ? pl.collections[0].ids : [])).filter(id => plById(id));
+  plRenderHub(); plOv('plHub').hidden = false;
+}
+function plRenderHub() {
+  const ov = plOv('plHub'), q = hub.q.toLowerCase();
+  const rows = pl.library.filter(p => (hub.filter === 'all' || p.video.angle.category === hub.filter) &&
+    (!q || [p.title, p.subtitle, p.stage, p.category, p.situation.teams].join(' ').toLowerCase().includes(q)));
+  const inSel = new Set(hub.sel);
+  const vtag = p => p.video.embedUrl ? '<span class="pl-vt ok">▶ IN-APP VIDEO</span>' : (p.video.pageUrl || p.video.savantUrl ? '<span class="pl-vt">↗ MLB LINK</span>' : '<span class="pl-vt no">NO VIDEO</span>');
+  ov.innerHTML = `<div class="ov-inner pl-in pl-hub">
+    <div class="pl-hh"><div><div class="ov-k">BASEBALL FEUD</div><h2>PLAYS — <b>WHAT WENT WRONG?</b></h2></div><button class="sb ghost lg" data-pl="closeHub">‹ BACK</button></div>
+    <div class="pl-cols">
+      <section class="pl-lib">
+        <div class="pl-lh"><b>LIBRARY</b> <span>${pl.library.length} plays</span>
+          <div class="seg">${[['all', 'ALL'], ['high-home', 'HIGH HOME'], ['broadcast', 'BROADCAST']].map(([k, l]) => `<button data-pl="filter" data-v="${k}" class="${hub.filter === k ? 'on' : ''}">${l}</button>`).join('')}</div>
+          <input class="in pl-search" data-pl-in="q" placeholder="Search plays" value="${esc(hub.q)}"></div>
+        <div class="pl-rows">${rows.map(p => `<div class="pl-row ${inSel.has(p.id) ? 'in' : ''}">
+          <button class="pl-add" data-pl="toggle" data-id="${esc(p.id)}" title="${inSel.has(p.id) ? 'Remove from this game' : 'Add to this game'}">${inSel.has(p.id) ? '✓' : '+'}</button>
+          <div class="pl-rm"><div class="pl-rt">${esc(p.title) || 'Untitled play'}</div><div class="pl-rs2">${[p.stage, p.situation.teams, p.situation.date].filter(Boolean).map(esc).join(' · ')}</div>
+            <div class="pl-tags">${angleChip(p.video.angle)}${vtag(p)}${p.category ? `<span class="pl-vt">${esc(p.category)}</span>` : ''}${p.difficulty ? `<span class="pl-vt">${esc(p.difficulty)}</span>` : ''}<span class="pl-vt">${p.answers.length} ANSWERS</span>${p.verification.status !== 'verified' ? `<span class="pl-vt no">${esc(PL_VERIFY[p.verification.status])}</span>` : ''}</div></div>
+          <button class="sb sm ghost" data-pl="edit" data-id="${esc(p.id)}">EDIT</button></div>`).join('') || '<div class="pl-empty">No plays match.</div>'}</div>
+        <div class="pl-lf"><button class="sb sm" data-pl="new">+ NEW PLAY</button><button class="sb sm" data-pl="import">IMPORT PLAYS (JSON)</button><button class="sb sm" data-pl="export">EXPORT LIBRARY</button><button class="sb sm ghost" data-pl="restore">RESTORE VOLUME 1</button></div>
+      </section>
+      <section class="pl-game">
+        <div class="pl-lh"><b>THIS GAME</b> <span>${hub.sel.length} play${hub.sel.length === 1 ? '' : 's'}</span></div>
+        <div class="pl-cl">${pl.collections.map(c => `<button class="pl-coll" data-pl="coll" data-id="${esc(c.id)}">${esc(c.name)} <i>${c.ids.length}</i></button>`).join('')}</div>
+        <ol class="pl-order">${hub.sel.map((id, k) => { const p = plById(id); return p ? `<li><span class="pl-on">${k + 1}</span><span class="pl-ot">${esc(p.title)}</span>${angleChip(p.video.angle)}
+          <button data-pl="up" data-k="${k}" title="Move up">↑</button><button data-pl="down" data-k="${k}" title="Move down">↓</button><button data-pl="drop" data-k="${k}" title="Remove">✕</button></li>` : ''; }).join('') || '<li class="pl-empty">Add plays from the library.</li>'}</ol>
+        <div class="pl-save"><input class="in" data-pl-in="name" placeholder="Name this collection" value="${esc(hub.name)}" maxlength="60"><button class="sb sm" data-pl="saveColl">SAVE COLLECTION</button>${pl.collections.some(c => c.name === hub.name && c.id !== 'vol1') ? '<button class="sb sm danger" data-pl="delColl">DELETE</button>' : ''}</div>
+        <div class="pl-start">${plResumable() ? `<button class="sb ghost lg" data-pl="resume">RESUME LAST PLAYS GAME</button>` : ''}<button class="sb primary lg" data-pl="start" ${hub.sel.length ? '' : 'disabled'}>▶ START ${hub.sel.length} PLAY${hub.sel.length === 1 ? '' : 'S'}</button></div>
+        <p class="pl-note">Video plays inside the game through MLB’s own embedded player (MLB.com’s share/embed code). Nothing is downloaded or copied. Answers are curated coaching points — equal value, no survey numbers.</p>
+      </section>
+    </div></div>`;
+}
+
+/* editor */
+function plEdit(id) {
+  const p = id ? plById(id) : plNorm({ id: 'play-' + uid(), answers: [{}, {}, {}, {}].map(() => ({ label: '' })) });
+  hub.editing = clone(p); if (hub.editing.answers.length < 4) while (hub.editing.answers.length < 4) hub.editing.answers.push({ label: '', category: '', explanation: '', aliases: [], evidence: '' });
+  plRenderEdit(!id);
+}
+function plRenderEdit(isNew) {
+  const p = hub.editing, s = p.situation, v = p.video, a = v.angle;
+  const f = (k, label, val, opt = {}) => `<label class="pl-f ${opt.cls || ''}"><span>${label}</span>${opt.area ? `<textarea class="in" data-f="${k}" rows="${opt.area}">${esc(val)}</textarea>` : `<input class="in" data-f="${k}" value="${esc(val)}" ${opt.ph ? `placeholder="${esc(opt.ph)}"` : ''}>`}</label>`;
+  const sel = (k, label, val, list) => `<label class="pl-f"><span>${label}</span><select class="in" data-f="${k}">${list.map(([x, l]) => `<option value="${esc(x)}" ${x === val ? 'selected' : ''}>${esc(l)}</option>`).join('')}</select></label>`;
+  const ov = plOv('plEd');
+  ov.innerHTML = `<div class="ov-inner pl-in pl-ed"><div class="pl-hh"><div><div class="ov-k">PLAYS LIBRARY</div><h2>${isNew ? 'NEW' : 'EDIT'} <b>PLAY</b></h2></div>
+    <div class="grp">${isNew ? '' : '<button class="sb danger" data-pl="delPlay">DELETE PLAY</button>'}<button class="sb ghost lg" data-pl="cancelEd">CANCEL</button><button class="sb primary lg" data-pl="saveEd">SAVE PLAY</button></div></div>
+    <div class="pl-form">
+      <fieldset><legend>THE PLAY</legend>${f('title', 'Title (board name)', p.title)}${f('subtitle', 'Subtitle', p.subtitle)}${f('stage', 'Stage (e.g. 2025 NLCS · Game 1)', p.stage)}
+        ${sel('category', 'Main category', p.category, [['', '—'], ...PL_CATS.map(c => [c, c])])}${sel('difficulty', 'Difficulty', p.difficulty, PL_DIFF.map(d => [d, d || '—']))}
+        ${sel('verification.status', 'Verification', p.verification.status, Object.entries(PL_VERIFY))}${f('verification.notes', 'Verification notes', p.verification.notes, { area: 2 })}</fieldset>
+      <fieldset><legend>VIDEO</legend>${f('video.pageUrl', 'MLB.com video link (the in-game player comes from MLB’s own embed)', v.pageUrl, { ph: 'https://www.mlb.com/video/…' })}
+        <div class="pl-hint">${plEmbedFrom(v.pageUrl) ? '✓ Plays inside the game (MLB embed)' : (v.pageUrl ? '↗ Not an MLB.com video link — it will open in a new tab' : 'Paste an MLB.com video page link.')}</div>
+        ${f('video.title', 'Clip title', v.title)}
+        ${sel('video.angle.category', 'Camera angle', a.category, Object.entries(PL_ANGLE).map(([k, l]) => [k, l]))}${f('video.angle.label', 'Angle label (e.g. HIGH HOME — whole clip)', a.label)}
+        ${f('segments', 'Timecoded views, one per line: 0:20–0:24 | what it shows', a.segments.map(g => `${g.time} | ${g.view}`).join('\n'), { area: 3 })}
+        ${f('video.pauseAt', 'Freeze point (m:ss, optional)', v.pauseAt == null ? '' : plTime(v.pauseAt), { ph: '0:12' })}${f('video.angle.howVerified', 'How the angle was checked', a.howVerified, { area: 2 })}</fieldset>
+      <fieldset><legend>SITUATION</legend>${f('situation.teams', 'Teams (Away at Home)', s.teams)}${f('situation.date', 'Date', s.date, { ph: '2025-10-13' })}${f('situation.venue', 'Venue', s.venue)}
+        ${f('situation.inning', 'Inning', s.inning, { ph: 'Top 4th' })}${sel('situation.outs', 'Outs', String(s.outs), [['', '—'], ['0', '0'], ['1', '1'], ['2', '2']])}
+        <div class="pl-f"><span>Runners</span><div class="pl-bases">${['1B', '2B', '3B'].map(b => `<label><input type="checkbox" data-f="base.${b}" ${s.bases[b] ? 'checked' : ''}> ${b}</label>`).join('')}</div></div>
+        ${f('situation.score', 'Score', s.score)}${f('situation.count', 'Count', s.count, { ph: '1-0' })}${f('situation.batter', 'Batter', s.batter)}${f('situation.pitcher', 'Pitcher', s.pitcher)}
+        ${f('situation.setup', 'What happened before the pitch', s.setup, { area: 3, cls: 'wide' })}${f('situation.anticipate', 'What should the defense anticipate?', s.anticipate, { area: 2, cls: 'wide' })}</fieldset>
+      <fieldset class="pl-ans"><legend>TEACHING ANSWERS (4–6)</legend>${p.answers.map((x, k) => `<div class="pl-arow"><b>${k + 1}</b>
+        ${f(`a.${k}.label`, 'Board label', x.label)}${sel(`a.${k}.category`, 'Category', x.category, [['', '—'], ...PL_CATS.map(c => [c, c])])}
+        ${sel(`a.${k}.evidence`, 'Evidence', x.evidence, [['', '—'], ['record', 'Official record'], ['report', 'Reported'], ['fundamental', 'Coaching standard'], ['record+report', 'Official record + reported']])}
+        ${f(`a.${k}.explanation`, 'Coaching explanation', x.explanation, { area: 2, cls: 'wide' })}${f(`a.${k}.aliases`, 'Also accept (comma-separated)', x.aliases.join(', '), { cls: 'wide' })}
+        ${p.answers.length > 4 ? `<button class="sb sm danger" data-pl="delAns" data-k="${k}">REMOVE</button>` : ''}</div>`).join('')}
+        ${p.answers.length < 6 ? '<button class="sb sm add" data-pl="addAns">+ ADD ANSWER</button>' : ''}</fieldset>
+      <fieldset><legend>TEACHING REVIEW</legend>${f('coach', 'Coach’s explanation', p.coach, { area: 3, cls: 'wide' })}${f('bonus.question', 'Bonus question', p.bonus.question, { area: 2, cls: 'wide' })}${f('bonus.answer', 'Bonus answer', p.bonus.answer, { area: 2, cls: 'wide' })}
+        ${f('sources', 'Sources, one per line: label | https://…', p.sources.map(x => `${x.label} | ${x.url}`).join('\n'), { area: 3, cls: 'wide' })}</fieldset>
+    </div></div>`;
+  ov.hidden = false;
+}
+function plEdInput(el) {
+  const p = hub.editing, k = el.dataset.f; if (!p || !k) return;
+  const v = el.type === 'checkbox' ? el.checked : el.value;
+  const set = (path, val) => { const ks = path.split('.'); let o = p; ks.slice(0, -1).forEach(x => { o = o[x]; }); o[ks[ks.length - 1]] = val; };
+  if (k.startsWith('base.')) p.situation.bases[k.slice(5)] = v;
+  else if (k.startsWith('a.')) { const [, i, f] = k.split('.'); p.answers[+i][f] = f === 'aliases' ? plList(v) : v; }
+  else if (k === 'segments') p.video.angle.segments = str(v).split('\n').map(l => l.split('|')).filter(x => x[0].trim()).map(([t, w]) => ({ time: t.trim(), view: str(w).trim(), start: plSecs(t) }));
+  else if (k === 'sources') p.sources = str(v).split('\n').map(l => l.split('|')).filter(x => x.join('').trim()).map(([l, u]) => ({ label: str(l).trim(), url: str(u).trim() }));
+  else if (k === 'video.pauseAt') p.video.pauseAt = str(v).trim() === '' ? null : plSecs(v);
+  else if (k === 'situation.outs') p.situation.outs = v === '' ? '' : +v;
+  else set(k, v);
+  if (k === 'video.pageUrl') { const h = el.closest('fieldset').querySelector('.pl-hint'); if (h) h.textContent = plEmbedFrom(v) ? '✓ Plays inside the game (MLB embed)' : (v ? '↗ Not an MLB.com video link — it will open in a new tab' : 'Paste an MLB.com video page link.'); }
+}
+function plEdSave() {
+  const p = plNorm(hub.editing);
+  if (!p.title.trim()) { toast('Give the play a title'); return; }
+  if (p.answers.length < 4 || p.answers.length > 6) { toast('A play needs 4–6 teaching answers with board labels'); return; }
+  const i = pl.library.findIndex(x => x.id === p.id);
+  if (i >= 0) pl.library[i] = p; else pl.library.push(p);
+  plSave(); hub.editing = null; plCloseOv('plEd'); plRenderHub(); toast('Play saved');
+}
+
+function plClick(e) {
+  const b = e.target.closest('[data-pl],[data-g]'); if (!b) return;
+  if (b.dataset.g) { actEl = b; act(b.dataset.g); return; }
+  const v = b.dataset.pl, k = +b.dataset.k;
+  switch (v) {
+    case 'watch': return plWatch(true);
+    case 'board': plCloseOv('plSit'); return plSetView('board');
+    case 'prev': plCloseOv('plSit'); return go(-1);
+    case 'home': return showStart();
+    case 'closeKey': return plCloseOv('plKeyOv');
+    case 'closeHub': plCloseOv('plHub'); if (!playsRun) showStart(); return;
+    case 'filter': hub.filter = b.dataset.v; return plRenderHub();
+    case 'toggle': { const id = b.dataset.id, j = hub.sel.indexOf(id); if (j >= 0) hub.sel.splice(j, 1); else hub.sel.push(id); return plRenderHub(); }
+    case 'up': if (k > 0) [hub.sel[k - 1], hub.sel[k]] = [hub.sel[k], hub.sel[k - 1]]; return plRenderHub();
+    case 'down': if (k < hub.sel.length - 1) [hub.sel[k + 1], hub.sel[k]] = [hub.sel[k], hub.sel[k + 1]]; return plRenderHub();
+    case 'drop': hub.sel.splice(k, 1); return plRenderHub();
+    case 'coll': { const c = pl.collections.find(x => x.id === b.dataset.id); if (c) { hub.sel = c.ids.filter(id => plById(id)); hub.name = c.name; } return plRenderHub(); }
+    case 'saveColl': {
+      const name = hub.name.trim(); if (!name) { toast('Name the collection first'); return; }
+      if (!hub.sel.length) { toast('Add plays first'); return; }
+      const c = pl.collections.find(x => x.name === name);
+      if (c && c.id === 'vol1') { toast('Volume 1 is the built-in set — save under a new name'); return; }
+      if (c) c.ids = hub.sel.slice(); else pl.collections.push({ id: uid(), name, ids: hub.sel.slice() });
+      plSave(); plRenderHub(); toast('Collection saved'); return;
+    }
+    case 'delColl': { const c = pl.collections.find(x => x.name === hub.name.trim()); if (c && confirm(`Delete the collection “${c.name}”? The plays stay in the library.`)) { pl.collections = pl.collections.filter(x => x !== c); hub.name = ''; plSave(); plRenderHub(); } return; }
+    case 'start': return plStart(hub.sel.slice(), false);
+    case 'resume': return plStart(pl.game.ids.slice(), true);
+    case 'new': return plEdit(null);
+    case 'edit': return plEdit(b.dataset.id);
+    case 'cancelEd': hub.editing = null; return plCloseOv('plEd');
+    case 'saveEd': return plEdSave();
+    case 'addAns': hub.editing.answers.push({ label: '', category: '', explanation: '', aliases: [], evidence: '' }); return plRenderEdit(!plById(hub.editing.id));
+    case 'delAns': hub.editing.answers.splice(k, 1); return plRenderEdit(!plById(hub.editing.id));
+    case 'delPlay': {
+      const id = hub.editing.id; if (!confirm('Delete this play from the library?')) return;
+      pl.library = pl.library.filter(p => p.id !== id); pl.collections.forEach(c => { c.ids = c.ids.filter(x => x !== id); }); hub.sel = hub.sel.filter(x => x !== id);
+      plSave(); hub.editing = null; plCloseOv('plEd'); return plRenderHub();
+    }
+    case 'import': { const f = $('#filePlays'); f.value = ''; return f.click(); }
+    case 'export': return download('baseball-feud-plays-library.json', JSON.stringify({ app: 'baseball-iq', kind: 'baseball-feud-plays', exportedAt: new Date().toISOString(), collections: pl.collections, plays: pl.library }, null, 2), 'application/json');
+    case 'restore': {
+      if (!confirm('Restore the 12 Volume 1 plays to their original text and video? Your own plays and collections stay.')) return;
+      const b0 = plBuiltins(); b0.forEach(p => { const i = pl.library.findIndex(x => x.id === p.id); if (i >= 0) pl.library[i] = p; else pl.library.push(p); });
+      const B = window.BASEBALL_FEUD_PLAYS; if (B && !pl.collections.some(c => c.id === B.collection.id)) pl.collections.unshift({ id: B.collection.id, name: B.collection.name, ids: b0.map(p => p.id) });
+      plSave(); plRenderHub(); toast('Volume 1 restored'); return;
+    }
+  }
+}
+function plInput(e) {
+  const el = e.target;
+  if (el.dataset.plIn === 'q') { hub.q = el.value; if (e.type === 'input') { const pos = el.selectionStart; plRenderHub(); const n = $('[data-pl-in="q"]'); n.focus(); n.setSelectionRange(pos, pos); } return; }
+  if (el.dataset.plIn === 'name') { hub.name = el.value; return; }
+  if (el.dataset.f) plEdInput(el);
+}
+document.body.insertAdjacentHTML('beforeend', '<input type="file" id="filePlays" accept="application/json,.json" hidden>');
+$('#filePlays').addEventListener('change', async e => {
+  const f = e.target.files[0]; if (!f) return;
+  let plays; try { plays = plParseFile(JSON.parse(await f.text())); } catch (err) { toast('That file isn’t valid JSON.'); return; }
+  plays = plays.filter(p => p.title && p.answers.length >= 4 && p.answers.length <= 6);
+  if (!plays.length) { toast('No usable plays in that file (each needs a title and 4–6 answers).'); return; }
+  let added = 0, updated = 0;
+  plays.forEach(p => { const i = pl.library.findIndex(x => x.id === p.id); if (i >= 0) { pl.library[i] = p; updated++; } else { pl.library.push(p); added++; } });
+  plSave(); plRenderHub(); toast(`Imported: ${added} new, ${updated} updated`);
+});
+
+/* ----- actions from the game screen (data-g) and keys ----- */
+function plAct(g, el) {
+  if (!playsRun) return;
+  switch (g) {
+    case 'plView': return plSetView(plView === 'watch' ? 'board' : 'watch');
+    case 'plSit': return plShowSituation();
+    case 'plKey': return plShowKey();
+    case 'plCont': plFreezeUI(false); return embSend('play');
+    case 'plSeg': if (el) { embSeek(+el.dataset.s); embPlay(); } return;
+    case 'plFreeze': {
+      const lp = curLib(); if (!lp || !embOn()) return;
+      if (lp.video.pauseAt != null && !confirm(`Freeze point is ${plTime(lp.video.pauseAt)}. OK = move it to now (${plTime(emb.t)}), Cancel = keep it.`)) {
+        if (confirm('Remove the freeze point?')) { lp.video.pauseAt = null; plSave(); plRenderBar(lp); } return;
+      }
+      lp.video.pauseAt = Math.round(emb.t * 10) / 10; emb.armed = false; plSave(); plRenderBar(lp);
+      toast(`Freeze point set at ${plTime(lp.video.pauseAt)} — the clip will stop there next time`); return;
+    }
+    case 'plBonus': { const a = $('#tk .pl-ba'); if (a) { a.hidden = !a.hidden; el && (el.textContent = a.hidden ? 'SHOW THE ANSWER' : 'HIDE THE ANSWER'); } return; }
+    case 'plReplay': closeOverlay('tk'); plWatch(false); return replay();
+  }
+}
+function plKey(e) {
+  if (plOvOpen('plEd') || plOvOpen('plHub')) { if (e.key === 'Escape') { plCloseOv(plOvOpen('plEd') ? 'plEd' : 'plHub'); if (!playsRun && !plOvOpen('plHub')) showStart(); } return true; }
+  if (!playsRun) return false;
+  const t = e.target; if (t && /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName) && t.type !== 'range') return true;
+  if (plOvOpen('plKeyOv')) { if (e.key === 'Escape' || e.key === 'Enter') { e.preventDefault(); plCloseOv('plKeyOv'); } return true; }
+  if (plOvOpen('plSit')) {
+    if (e.metaKey || e.ctrlKey || e.altKey) return true;
+    const k = e.key.toLowerCase();
+    if (k === 'enter' || k === ' ') { e.preventDefault(); plWatch(true); }
+    else if (k === 'b') { e.preventDefault(); plCloseOv('plSit'); plSetView('board'); }
+    else if (k === 'escape') { e.preventDefault(); plCloseOv('plSit'); }
+    else if (k === 'f') { e.preventDefault(); appFullscreen(); }
+    return true;
+  }
+  if (e.metaKey || e.ctrlKey || e.altKey) return false;
+  const k = e.key.toLowerCase();
+  if (k === 'v') { e.preventDefault(); plSetView(plView === 'watch' ? 'board' : 'watch'); return true; }
+  if (k === 'i') { e.preventDefault(); plShowSituation(); return true; }
+  if (k === 'escape' && document.body.classList.contains('pl-theater')) { e.preventDefault(); plTheater(); return true; }
+  if (/^[0-9]$/.test(k) && plView === 'watch' && !isOpen('tk') && !isOpen('end')) plSetView('board');   // revealing an answer brings up the board
+  return false;
+}
+document.addEventListener('input', e => { if (e.target && e.target.id === 'plScrub' && embOn()) { emb.t = +e.target.value; $('#plT').textContent = plTime(emb.t); } });
+document.addEventListener('change', e => { if (e.target && e.target.id === 'plScrub' && embOn()) embSeek(+e.target.value); });
+$('#stPlays').addEventListener('click', () => { hideStart(); plOpenHub(); });
 
 /* ================= BOOT ================= */
 (async function boot() {
