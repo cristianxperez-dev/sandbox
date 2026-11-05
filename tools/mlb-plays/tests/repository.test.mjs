@@ -1,6 +1,7 @@
 // Play Repository — data integrity + filter / search / similarity logic (node --test tools/mlb-plays/tests/)
 import test from "node:test";
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import { loadCore, J, index, detail } from "./load-core.mjs";
 
 const PR = loadCore();
@@ -11,10 +12,10 @@ const run = (f, user = {}) => J(PR.filter(P, f, user, FL)).map((p) => p.id).sort
 const ids = (pred) => P.filter(pred).map((p) => p.id).sort();
 const F = (o) => Object.assign(J(PR.emptyFilters()), o);
 
-/* ------------------------------------------------------------- the 50 */
-test("50 unique plays, 50 detail files, ids are MLB game + event ids", () => {
-  assert.equal(P.length, 50);
-  assert.equal(new Set(P.map((p) => p.id)).size, 50);
+/* ------------------------------------------------------------- the 200 */
+test("200 unique plays, 200 detail files, ids are MLB game + event ids", () => {
+  assert.equal(P.length, 200);
+  assert.equal(new Set(P.map((p) => p.id)).size, 200);
   for (const p of P) {
     assert.match(p.id, /^mlb-\d{6}-\d{1,3}(-e\d{1,3})?$/);
     const d = detail(p.id);
@@ -23,11 +24,28 @@ test("50 unique plays, 50 detail files, ids are MLB game + event ids", () => {
     assert.equal(String(d.source.atBatIndex), p.id.split("-")[2]);
   }
 });
-test("category distribution matches the brief (10/10/10/5/5/5/5)", () => {
+test("category distribution matches the brief (35/35/35/25/25/25/20)", () => {
   const c = {};
   P.forEach((p) => (c[p.category] = (c[p.category] || 0) + 1));
-  assert.deepEqual(c, { "Baserunning & advancement": 10, "Infield defense & decisions": 10, "Outfield defense, cutoffs & relays": 10,
-    "Catcher defense & plays at the plate": 5, "Situational hitting": 5, "High-leverage & unusual situations": 5, "Miscellaneous teaching moments": 5 });
+  assert.deepEqual(c, { "Baserunning & advancement": 35, "Infield defense & decisions": 35, "Outfield defense, cutoffs & relays": 35,
+    "Catcher defense & plays at the plate": 25, "Situational hitting": 25, "High-leverage & unusual situations": 25, "Miscellaneous teaching moments": 20 });
+});
+test("no duplicate events or clips, and no glut of home runs or strikeouts", () => {
+  const ev = new Set(), clips = new Set();
+  for (const p of P) {
+    const d = detail(p.id);
+    const key = `${d.game.gamePk}:${d.source.playId || d.source.atBatIndex + ":" + (d.source.eventIndex ?? "")}`;
+    assert.ok(!ev.has(key), "duplicate event " + key); ev.add(key);
+    const first = d.clips[0].slug;
+    assert.ok(!clips.has(first), "duplicate primary clip " + first); clips.add(first);
+  }
+  const n = (e) => P.filter((p) => p.event === e).length;
+  assert.ok(n("home_run") <= 8 && n("strikeout") <= 10, `home runs ${n("home_run")}, strikeouts ${n("strikeout")}`);
+  assert.ok(new Set(P.map((p) => p.bases)).size === 8 && new Set(P.map((p) => p.outs)).size === 3, "every base and out state is represented");
+});
+test("the 50 original plays are all still published", () => {
+  const orig = JSON.parse(readFileSync(new URL("./original-50.json", import.meta.url), "utf8"));
+  for (const id of orig) assert.ok(P.some((p) => p.id === id), "kept " + id);
 });
 test("every play has at least one verified, playable MLB clip with provenance", () => {
   for (const p of P) {

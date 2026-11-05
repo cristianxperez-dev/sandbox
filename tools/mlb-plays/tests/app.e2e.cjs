@@ -29,6 +29,7 @@ async function fresh(b, opts = {}) {
   return { ctx, p, errs };
 }
 const visibleIds = (p) => p.$$eval("#grid .card", (cs) => cs.map((c) => c.dataset.open).sort());
+const clearAll = async (p) => { const b = p.locator('#filters [data-clear="all"]'); if (await b.isEnabled()) await b.click(); };
 const count = async (p) => +((await p.locator("#count").innerText()).match(/^\d+/) || [0])[0];
 
 (async () => {
@@ -38,42 +39,44 @@ const count = async (p) => +((await p.locator("#count").innerText()).match(/^\d+
   /* 1–7: data on screen, base-out filters, combined filters, people/team/outcome search */
   await safe("explore", async () => {
     const { ctx, p, errs } = await fresh(b);
-    ok(await count(p) === 50 && (await p.locator(".card").count()) === 50, "Explore lists all 50 verified plays");
+    ok(await count(p) === P.length && (await p.locator("#grid .card").count()) === P.length, `Explore lists all ${P.length} verified plays`);
     // diamond: Exactly, every occupancy state
     const states = [["___", []], ["1__", [1]], ["_2_", [2]], ["__3", [3]], ["12_", [1, 2]], ["1_3", [1, 3]], ["_23", [2, 3]], ["123", [1, 2, 3]]];
     let allOk = true;
     for (const [code, sel] of states) {
-      await p.click('[data-clear="all"]');
-      if (!sel.length) await p.click('[data-q="empty"]');
+      await clearAll(p);
       for (const s of sel) await p.click(`g.base[data-base="${s}"]`);
       await p.click('[data-bmode="exact"]');
       const got = await visibleIds(p), want = idsWhere((x) => x.bases === code);
       if (JSON.stringify(got) !== JSON.stringify(want)) { allOk = false; console.log("  mismatch", code, got.length, want.length); }
     }
     ok(allOk, "diamond 'Exactly': all 8 base states return exactly the qualifying plays");
-    await p.click('[data-clear="all"]');
+    await clearAll(p);
     await p.click('g.base[data-base="2"]'); await p.click('[data-bmode="includes"]');
     ok(JSON.stringify(await visibleIds(p)) === JSON.stringify(idsWhere((x) => x.bases[1] === "2")), "diamond 'At least': runner on second plus any others");
-    await p.click('[data-clear="all"]');
+    await clearAll(p);
     for (const o of [0, 1, 2]) {
       await p.click(`[data-outs="${o}"]`);
       const same = JSON.stringify(await visibleIds(p)) === JSON.stringify(idsWhere((x) => x.outs === o));
       ok(same, `outs = ${o}`);
       await p.click(`[data-outs="${o}"]`);
     }
-    const quick = [["risp", (x) => x.bases[1] === "2" || x.bases[2] === "3"], ["force_available", (x) => x.bases[0] === "1"], ["dp_situation", (x) => x.bases[0] === "1" && x.outs < 2], ["two_outs", (x) => x.outs === 2]];
-    for (const [fl, pred] of quick) {
-      await p.click(`#filters .fsec [data-flag="${fl}"]`);
-      ok(JSON.stringify(await visibleIds(p)) === JSON.stringify(idsWhere(pred)), `quick situation: ${fl}`);
-      await p.click(`#filters .fsec [data-flag="${fl}"]`);
+    await p.click('details[data-more] > summary');
+    const quick = [["risp", (x) => x.bases[1] === "2" || x.bases[2] === "3"], ["force", (x) => x.bases[0] === "1"], ["dp", (x) => x.bases[0] === "1" && x.outs < 2], ["twoouts", (x) => x.outs === 2],
+      ["loaded", (x) => x.bases === "123"], ["third", (x) => x.bases === "__3"], ["onerun", (x) => x.flags.includes("one_run")]];
+    for (const [k, pred] of quick) {
+      await p.click(`#filters [data-preset="${k}"]`);
+      ok(JSON.stringify(await visibleIds(p)) === JSON.stringify(idsWhere(pred)), `quick situation: ${k}`);
+      await p.click(`#filters [data-preset="${k}"]`);
+      ok((await p.locator("#activeBar .af").count()) === 0, `quick situation ${k} toggles off cleanly`);
     }
-    await p.click('[data-q="anyon"]');
+    await p.click('[data-preset="anyon"]');
     ok(JSON.stringify(await visibleIds(p)) === JSON.stringify(idsWhere((x) => x.bases !== "___")), "quick situation: any runner on");
     // combined: late innings + close game + RISP + fewer than two outs (score + inning)
-    await p.click('[data-clear="all"]');
-    if (!(await p.locator('details[data-s="context"]').evaluate((d) => d.open))) await p.click('details[data-s="context"] summary');
+    await clearAll(p);
+    if (!(await p.locator('details[data-s="inn"]').evaluate((d) => d.open))) await p.click('details[data-s="inn"] summary');
     await p.click('[data-phase="late"]'); await p.click('[data-phase="extra"]');
-    await p.click('#filters [data-flag="close"]'); await p.click('#filters [data-flag="risp"]');
+    await p.click('#filters [data-flag="close"]'); await p.click('#filters [data-preset="risp"]');
     await p.click('[data-outs="0"]'); await p.click('[data-outs="1"]');
     const comb = idsWhere((x) => x.inning >= 7 && Math.abs(x.score[0] - x.score[1]) <= 2 && (x.bases[1] === "2" || x.bases[2] === "3") && x.outs < 2);
     ok(comb.length > 0 && JSON.stringify(await visibleIds(p)) === JSON.stringify(comb), `combined score + inning + base-out filters (${comb.length} plays)`);
@@ -81,20 +84,21 @@ const count = async (p) => +((await p.locator("#count").innerText()).match(/^\d+
     await p.locator("#activeBar .af button").first().click();
     ok((await p.locator("#activeBar .af").count()) === 4, "removing one active filter keeps the rest");
     // team, player, outcome
-    await p.click('[data-clear="all"]');
-    await p.click('details[data-s="people"] summary');
+    await clearAll(p);
+    await p.click('details[data-s="who"] > summary');
     const team = P[0].home;
     await p.selectOption('[data-sel="team"]', team);
     ok(JSON.stringify(await visibleIds(p)) === JSON.stringify(idsWhere((x) => x.home === team || x.away === team)), `team ${team}`);
-    await p.click('[data-clear="all"]');
+    await clearAll(p);
     const batter = P.find((x) => x.batter.name.split(" ").length === 2).batter.name;
     await p.fill('[data-txt="batter"]', batter); await p.press('[data-txt="batter"]', "Enter"); await p.locator('[data-txt="batter"]').blur(); await wait(p, 200);
     ok(JSON.stringify(await visibleIds(p)) === JSON.stringify(idsWhere((x) => x.batter.name === batter)), `batter ${batter}`);
-    await p.click('[data-clear="all"]');
+    await clearAll(p);
     await p.selectOption('[data-sel="event"]', "single");
     ok(JSON.stringify(await visibleIds(p)) === JSON.stringify(idsWhere((x) => x.event === "single")), "official result: single");
     // every card on screen satisfies the filter — check a stricter combination too
-    await p.click('[data-clear="all"]');
+    await clearAll(p);
+    await p.click('details[data-sub="defense"] > summary');
     await p.click('#filters [data-flag="outfield_assist"]'); await p.click('#filters [data-flag="single"]');
     const shown = await visibleIds(p);
     ok(shown.length > 0 && shown.every((id) => { const x = P.find((q) => q.id === id); return x.flags.includes("outfield_assist") && x.flags.includes("single"); }), "filters return only qualifying plays (single + outfield assist)");
@@ -205,7 +209,7 @@ const count = async (p) => +((await p.locator("#count").innerText()).match(/^\d+
     await p.goto(BASE + "#/saved"); await wait(p, 200);
     ok((await p.locator("#vSaved .card").count()) === 1, "Saved Plays lists the saved play");
     await p.goto(BASE + "#/explore"); await p.waitForSelector(".card");
-    await p.click('details[data-s="mine"] summary'); await p.click('[data-tag="late cutoff alignment"]');
+    await p.click('details[data-s="adv"] > summary'); await p.click('[data-tag="late cutoff alignment"]');
     ok(JSON.stringify(await visibleIds(p)) === JSON.stringify([a.id]), "filter by a manual coaching tag");
     await p.goto(BASE + "#/collections"); await wait(p, 200);
     ok(/First and Third Defense/.test(await p.locator("#vCollections").innerText()) && /2 plays/i.test(await p.locator("#vCollections").innerText()), "collection with both plays");
@@ -265,28 +269,92 @@ const count = async (p) => +((await p.locator("#count").innerText()).match(/^\d+
     ok(/1 play\(s\) added to the review queue/.test(await p.locator("#impOut").innerText()), "import lands in the review queue (nothing added automatically)");
     await p.click('[data-qa="ok"]'); await wait(p, 200);
     await p.goto(BASE + "#/explore"); await p.waitForSelector(".card");
-    ok(await count(p) === 51 && /Imported test play/.test(await p.locator("#grid").innerText()), "approved play joins the repository");
+    ok(await count(p) === P.length + 1 && /Imported test play/.test(await p.locator("#grid").innerText()), "approved play joins the repository");
     await p.reload(); await p.waitForSelector(".card");
-    ok(await count(p) === 51, "imported play persists after refresh");
+    ok(await count(p) === P.length + 1, "imported play persists after refresh");
     ok(errs.length === 0, "import: no app errors " + errs.join(" | ").slice(0, 300));
     await ctx.close();
   });
 
-  /* phone + large display */
-  await safe("layouts", async () => {
-    const { ctx, p, errs } = await fresh(b, { ctx: { viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true } });
-    ok(await p.evaluate(() => document.documentElement.scrollWidth - innerWidth) <= 1, "phone: no horizontal scroll on Explore");
+  /* phone: the filter sheet at 375 / 390 / 430 */
+  for (const W of [375, 390, 430]) await safe("phone " + W, async () => {
+    const { ctx, p, errs } = await fresh(b, { ctx: { viewport: { width: W, height: 844 }, isMobile: true, hasTouch: true } });
+    const hs = () => p.evaluate(() => document.documentElement.scrollWidth - innerWidth);
+    const clipped = () => p.evaluate(() => [...document.querySelectorAll("#filters.open *, .mbar *, #activeBar *, #grid .card")].filter((e) => { const r = e.getBoundingClientRect(); return r.width > 0 && (r.right > innerWidth + 0.5 || r.left < -0.5); }).length);
+    ok(await hs() <= 0, `${W}: no horizontal scroll on Explore`);
+    ok(await p.locator("#filters").evaluate((e) => getComputedStyle(e).visibility === "hidden"), `${W}: filter sheet starts closed`);
+    await p.click("#btnFilters"); await wait(p, 350);
+    const box = await p.locator("#filters").boundingBox();
+    ok(box && Math.round(box.width) === W && box.y <= 1, `${W}: filters open as a full-screen sheet`);
+    ok(await p.locator(".fhead .fback").isVisible() && await p.locator(".ffoot .primary").isVisible() && await p.locator('.ffoot [data-clear="all"]').isVisible(), `${W}: sticky header (Back) and footer (Show N / Clear all) visible`);
+    ok(await p.locator('details[data-s="sit"]').evaluate((d) => d.open) && !(await p.locator('details[data-s="inn"]').evaluate((d) => d.open)), `${W}: only Game situation starts expanded`);
+    // diamond + outs side by side; touch targets
+    const dia = await p.locator(".dia-ctl").boundingBox(), outsSeg = await p.locator('.gs-r [data-outs="1"]').boundingBox();
+    ok(outsSeg.x > dia.x + dia.width - 1 && Math.abs(outsSeg.y - dia.y) < dia.height, `${W}: outs selector sits beside the diamond`);
+    const small = await p.$$eval("#filters .fin button, #filters g.base .hit", (els) => els.filter((e) => { const r = e.getBoundingClientRect(); return r.width > 0 && r.height > 0 && r.height < 34; }).length);
+    ok(small === 0, `${W}: visible filter controls are at least 34 px tall (${small} smaller)`);
+    await p.click('g.base[data-base="1"]'); await p.click('g.base[data-base="3"]'); await p.click('#filters [data-outs="1"]'); await wait(p, 100);
+    ok(/1st & 3rd/.test(await p.locator(".gs-sum").innerText()) && /Outs:\s*1/.test(await p.locator(".gs-sum").innerText()), `${W}: plain-language summary "Runners on: 1st & 3rd · Outs: 1"`);
+    const want13 = idsWhere((x) => x.bases === "1_3" && x.outs === 1);
+    ok((await p.locator(".ffoot .primary").innerText()).includes(`Show ${want13.length} play`), `${W}: Show X Plays count is live (${want13.length})`);
+    // a preset layers on top without resetting the base-out choice
+    await p.click('#filters [data-preset="dp"]'); await wait(p, 100);
+    ok(/1st & 3rd/.test(await p.locator(".gs-sum").innerText()) && (await p.locator("#filters .fcount").innerText()).startsWith("3"), `${W}: preset adds to the diamond without resetting it`);
+    ok(await clipped() === 0 && (await p.locator(".fscroll").evaluate((e) => e.scrollWidth - e.clientWidth)) <= 0, `${W}: nothing in the sheet is clipped or scrolls sideways`);
+    // conflict: runner on 3rd only + double-play situation — explained, one-tap fix
+    await clearAll(p);
+    await p.click('#filters [data-preset="third"]'); await p.click('#filters [data-preset="dp"]'); await wait(p, 100);
+    ok(await p.locator(".conflict").isVisible() && /can't happen together/.test(await p.locator(".conflict").innerText()), `${W}: conflicting base state + preset is explained`);
+    await p.locator(".conflict [data-fix]").first().click(); await wait(p, 100);
+    ok(!(await p.locator(".conflict").count()) && !(await p.locator(".ffoot .primary").innerText()).includes("Show 0"), `${W}: one tap resolves the conflict`);
+    // runner-count conflict is cleared when bases are set
+    await clearAll(p);
+    await p.click('#filters [data-rn="1"]'); await p.click('#filters [data-preset="loaded"]'); await wait(p, 100);
+    ok(!(await p.locator('#filters [data-rn="1"]').getAttribute("aria-pressed")).includes("true") && /1st, 2nd & 3rd|loaded/i.test(await p.locator(".gs-sum").innerText()), `${W}: Bases loaded clears a contradicting "1 runner" count`);
+    // category in Play type, then Show N
+    await clearAll(p);
+    await p.click('g.base[data-base="2"]'); await p.click('#filters [data-outs="2"]');
+    await p.click('details[data-s="play"] > summary'); await wait(p, 100);
+    await p.click('#filters [data-flag="single"]'); await wait(p, 100);
+    const want = idsWhere((x) => x.bases === "_2_" && x.outs === 2 && x.flags.includes("single"));
+    await p.click(".ffoot .primary"); await wait(p, 350);
+    ok(await p.locator("#filters").evaluate((e) => getComputedStyle(e).visibility === "hidden"), `${W}: Show X Plays closes the sheet`);
+    ok(JSON.stringify(await visibleIds(p)) === JSON.stringify(want), `${W}: results match runners + outs + play type (${want.length})`);
+    ok((await p.locator("#grid").boundingBox()).y < 844, `${W}: first result is on screen after Show — no scrolling needed`);
+    ok((await p.locator("#activeBar .af").count()) === 3 && /3/.test(await p.locator("#btnFilters .fbadge").innerText()), `${W}: active filter summary + badge above results`);
+    // adjust outs from the quick bar, without reopening the sheet
+    await p.click('#mOuts [data-mouts="1"]'); await wait(p, 100);
+    ok(JSON.stringify(await visibleIds(p)) === JSON.stringify(idsWhere((x) => x.bases === "_2_" && [1, 2].includes(x.outs) && x.flags.includes("single"))), `${W}: outs adjustable from the quick bar`);
+    await p.locator("#activeBar .af button").first().click(); await wait(p, 100);
+    ok((await p.locator("#activeBar .af").count()) === 2, `${W}: an active filter is removable in one tap`);
+    ok(await hs() <= 0 && await clipped() === 0, `${W}: results, quick bar and chips fit the screen`);
+    // card: thumbnail, situation, save
+    const c0 = p.locator("#grid .card").first();
+    ok(await c0.locator(".thumb").isVisible() && /out/.test(await c0.locator(".csit").innerText()), `${W}: card shows thumbnail and situation`);
+    const id0 = await c0.getAttribute("data-open");
+    await c0.locator("[data-save]").click(); await wait(p, 150);
+    ok(await p.evaluate((id) => JSON.parse(localStorage.getItem("playRepository.v1")).saved.includes(id), id0) && !p.url().includes("#/play"), `${W}: save from the card without opening it`);
+    // open the video and come back: filters and sections persist
+    const before = await visibleIds(p);
+    await p.locator("#grid .card").first().click(); await p.waitForSelector("#stage iframe");
+    const src = await p.locator("#stage iframe").getAttribute("src");
+    ok(/^https:\/\/streamable\.com\/m\//.test(src) && (await p.locator("#stage iframe").boundingBox()).width >= W - 40, `${W}: MLB video embed fills the phone width`);
+    ok(await hs() <= 0, `${W}: no horizontal scroll on a play`);
+    await p.goBack(); await p.waitForSelector("#grid .card");
+    ok(JSON.stringify(await visibleIds(p)) === JSON.stringify(before), `${W}: filters survive opening a video and coming back`);
     await p.click("#btnFilters"); await wait(p, 300);
-    await p.click('g.base[data-base="1"]'); await wait(p, 100);
-    ok(await count(p) === P.filter((x) => x.bases === "1__").length, "phone: filters drawer works");
-    await p.click('[data-done="1"]'); await wait(p, 300); await p.locator(".card").first().click(); await p.waitForSelector("#stage iframe");
-    ok(await p.evaluate(() => document.documentElement.scrollWidth - innerWidth) <= 1, "phone: no horizontal scroll on a play");
+    ok(await p.locator('details[data-s="play"]').evaluate((d) => d.open), `${W}: expanded sections persist`);
+    ok(errs.length === 0, `${W}: no app errors ` + errs.join(" | ").slice(0, 300));
     await ctx.close();
+  });
+
+  /* large display */
+  await safe("layouts", async () => {
     const big = await fresh(b, { ctx: { viewport: { width: 2560, height: 1440 } } });
     await big.p.goto(BASE + "#/play/" + P[0].id); await big.p.waitForSelector("#stage iframe");
     const w = await big.p.evaluate(() => document.querySelector("#stage").getBoundingClientRect().width);
     ok(w > 1300, `large monitor: the video gets the room (${Math.round(w)} px wide)`);
-    ok(errs.length === 0 && big.errs.length === 0, "layouts: no app errors");
+    ok(big.errs.length === 0, "layouts: no app errors");
     await big.ctx.close();
   });
 

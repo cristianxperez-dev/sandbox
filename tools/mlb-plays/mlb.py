@@ -71,7 +71,7 @@ def fetch(url: str, *, data: bytes | None = None, headers: dict | None = None, c
             continue
         if status == 429 or status >= 500:
             err = SourceError(f"{status} from {url}")
-            time.sleep(3 * (i + 1))
+            time.sleep((20 if status in (429, 509) else 3) * (i + 1))   # 509 = MLB.com's bandwidth throttle: back off hard
             continue
         if cache and status in ok:
             with open(fp, "wb") as f:

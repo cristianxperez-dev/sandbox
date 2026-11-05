@@ -297,6 +297,75 @@
     return r.concat(shared.slice(0, 3)).join(" · ");
   }
 
+  /* ------------------------------------------- situation conflicts
+     Base-out constraints that can't all be true at once (e.g. "Runner on 3rd only" + "Double-play situation").
+     Checked against all 24 base-out states; the smallest conflicting pairs are reported with their labels so
+     the page can offer one-tap fixes. Nothing is changed silently. */
+  const ALL_STATES = [];
+  ["___", "1__", "_2_", "__3", "12_", "1_3", "_23", "123"].forEach((c) => [0, 1, 2].forEach((o) => ALL_STATES.push([c, o])));
+  const SIT_FLAGS = {
+    bases_empty: (c) => c === "___", risp: (c) => c[1] === "2" || c[2] === "3", force_available: (c) => c[0] === "1",
+    dp_situation: (c, o) => c[0] === "1" && o < 2, two_outs: (c, o) => o === 2,
+    tying_run_on: (c) => c !== "___", go_ahead_on: (c) => c !== "___", winning_run_on: (c) => c !== "___",
+  };
+  function situationConstraints(f, flagDefs = {}) {
+    const out = [], sel = (f.bases && f.bases.sel) || [];
+    if (f.bases && f.bases.mode === "exact") {
+      const want = (sel.includes(1) ? "1" : "_") + (sel.includes(2) ? "2" : "_") + (sel.includes(3) ? "3" : "_");
+      out.push({ id: "bases", label: want === "___" ? "Bases empty" : basesLabel(want) + " only", test: (c) => c === want });
+    } else if (f.bases && f.bases.mode === "includes" && sel.length) {
+      out.push({ id: "bases", label: "At least a runner on " + sel.map(ORD).join(" & "), test: (c) => sel.every((b) => c[b - 1] !== "_") });
+    }
+    if (f.outs && f.outs.length) out.push({ id: "outs", label: f.outs.map(outsLabel).join(" or "), test: (c, o) => f.outs.includes(o) });
+    if (f.runners && f.runners.length) out.push({ id: "runners", label: f.runners.join("/") + " runner" + (f.runners.join() === "1" ? "" : "s") + " on base", test: (c) => f.runners.includes(runnersN(c)) });
+    (f.flags || []).forEach((fl) => { if (SIT_FLAGS[fl]) out.push({ id: "flag:" + fl, label: (flagDefs[fl] || {}).label || fl, test: SIT_FLAGS[fl] }); });
+    return out;
+  }
+  /** [] when the base-out filters can be satisfied; otherwise conflicting pairs [{a, b}] (constraint objects) */
+  function conflicts(f, flagDefs) {
+    const cs = situationConstraints(f, flagDefs);
+    const sat = (list) => ALL_STATES.some(([c, o]) => list.every((x) => x.test(c, o)));
+    if (sat(cs)) return [];
+    const pairs = [];
+    for (let i = 0; i < cs.length; i++) for (let j = i + 1; j < cs.length; j++) if (!sat([cs[i], cs[j]])) pairs.push({ a: cs[i], b: cs[j] });
+    if (!pairs.length) pairs.push({ a: cs[cs.length - 2], b: cs[cs.length - 1], more: true });
+    return pairs;
+  }
+  /** quick situations: what a shortcut sets, and whether it is currently "on" */
+  const PRESETS = {
+    risp: { label: "RISP", on: (f) => f.flags.includes("risp"), apply: (f, on) => toggleFlag(f, "risp", on) },
+    dp: { label: "Double-play situation", on: (f) => f.flags.includes("dp_situation"), apply: (f, on) => toggleFlag(f, "dp_situation", on) },
+    loaded: { label: "Bases loaded", on: (f) => f.bases.mode === "exact" && f.bases.sel.length === 3, apply: (f, on) => setBases(f, on ? [] : [1, 2, 3], on) },
+    third: { label: "Runner on 3B", on: (f) => f.bases.mode === "exact" && f.bases.sel.join() === "3", apply: (f, on) => setBases(f, on ? [] : [3], on) },
+    twoouts: { label: "Two outs", on: (f) => f.outs.join() === "2" || f.flags.includes("two_outs"), apply: (f, on) => { f.outs = on ? [] : [2]; toggleFlag(f, "two_outs", true); } },
+    onerun: { label: "One-run game", on: (f) => f.flags.includes("one_run"), apply: (f, on) => toggleFlag(f, "one_run", on) },
+    empty: { label: "Bases empty", on: (f) => f.bases.mode === "exact" && !f.bases.sel.length, apply: (f, on) => setBases(f, [], on, true) },
+    anyon: { label: "Any runner on", on: (f) => f.runners.join() === "1,2,3", apply: (f, on) => { f.runners = on ? [] : [1, 2, 3]; if (!on && f.bases.mode === "exact" && !f.bases.sel.length) f.bases = { mode: "any", sel: [] }; } },
+    force: { label: "Force available", on: (f) => f.flags.includes("force_available"), apply: (f, on) => toggleFlag(f, "force_available", on) },
+    firstsecond: { label: "1st & 2nd", on: (f) => f.bases.mode === "exact" && f.bases.sel.join() === "1,2", apply: (f, on) => setBases(f, on ? [] : [1, 2], on) },
+    corners: { label: "1st & 3rd", on: (f) => f.bases.mode === "exact" && f.bases.sel.join() === "1,3", apply: (f, on) => setBases(f, on ? [] : [1, 3], on) },
+    nooutsrisp: { label: "RISP, nobody out", on: (f) => f.flags.includes("risp") && f.outs.join() === "0", apply: (f, on) => { toggleFlag(f, "risp", on); f.outs = on ? [] : [0]; } },
+    tying: { label: "Tying run on base", on: (f) => f.flags.includes("tying_run_on"), apply: (f, on) => toggleFlag(f, "tying_run_on", on) },
+    goahead: { label: "Go-ahead run on base", on: (f) => f.flags.includes("go_ahead_on"), apply: (f, on) => toggleFlag(f, "go_ahead_on", on) },
+    walkoff: { label: "Walk-off situation", on: (f) => f.flags.includes("walkoff_situation"), apply: (f, on) => toggleFlag(f, "walkoff_situation", on) },
+    highlev: { label: "High leverage", on: (f) => f.flags.includes("high_leverage"), apply: (f, on) => toggleFlag(f, "high_leverage", on) },
+  };
+  function toggleFlag(f, fl, on) { const i = f.flags.indexOf(fl); if (on && i >= 0) f.flags.splice(i, 1); else if (!on && i < 0) f.flags.push(fl); }
+  /** a base preset defines occupancy exactly; a runner count that contradicts it is cleared (and only that) */
+  function setBases(f, sel, on, emptyPreset) {
+    if (on) { f.bases = { mode: "any", sel: [] }; return; }
+    f.bases = { mode: "exact", sel: sel.slice() };
+    if (f.runners.length && !f.runners.includes(sel.length)) f.runners = [];
+    if (emptyPreset) { ["risp", "force_available", "dp_situation", "tying_run_on", "go_ahead_on", "winning_run_on"].forEach((x) => toggleFlag(f, x, true)); }
+  }
+  const situationSummary = (f) => {
+    const sel = f.bases.sel || [];
+    const r = f.bases.mode === "any" ? (f.runners.length ? f.runners.join("/") + " on base" : "Any") :
+      f.bases.mode === "exact" ? (sel.length === 3 ? "Bases loaded" : sel.length ? sel.map(ORD).join(" & ") + " only" : "Bases empty") : (sel.length ? "at least " + sel.map(ORD).join(" & ") : "Any");
+    const o = f.outs.length ? f.outs.slice().sort().join(" or ") : "Any";
+    return { runners: r, outs: o };
+  };
+
   /* -------------------------------------------------- URL state (filters) */
   function encodeFilters(f) {
     const d = emptyFilters(), o = {};
@@ -311,5 +380,5 @@
   }
 
   return { ORD, halfLabel, batScore, fldScore, diff, phase, runnersN, basesLabel, outsLabel, battingTeam, fieldingTeam, POS, LOC_NAME, OR_GROUPS,
-    emptyFilters, matches, filter, facets, parseQuery, similarity, similar, whySimilar, encodeFilters, decodeFilters, wpaBat, nameHit };
+    emptyFilters, matches, filter, facets, parseQuery, conflicts, situationConstraints, PRESETS, situationSummary, similarity, similar, whySimilar, encodeFilters, decodeFilters, wpaBat, nameHit };
 });

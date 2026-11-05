@@ -90,29 +90,39 @@ def detail(r, title, title_src):
             "verification": {"status": "verified", "checkedAt": time.strftime("%Y-%m-%d"), "notes": r["verification"]["report"]}}
 
 
-def validation_md(plays, log, index):
-    n = len(plays)
-    ang = collections.Counter(c["angle"]["category"] for r in plays for c in r["video"]["clips"])
-    primary = collections.Counter(sorted(r["video"]["clips"], key=lambda c: ORDER.index(c["kind"]))[0]["kind"] for r in plays)
-    cats = collections.Counter(r["curation"]["category"] for r in plays)
-    seasons = collections.Counter(r["game"]["season"] for r in plays)
-    sav = sum(1 for r in plays if (r["video"].get("savant") or {}).get("match"))
+def validation_md(app, log, new_ids, kept):
+    """Report over every published play (old and new), read back from the app's own data files."""
+    idx = json.load(open(os.path.join(app, "data", "index.json")))
+    det = [json.load(open(os.path.join(app, "data", "plays", p["id"] + ".json"))) for p in idx["plays"]]
+    n = len(det)
+    ang = collections.Counter(c["angle"]["category"] for d in det for c in d["clips"])
+    primary = collections.Counter(d["clips"][0]["kind"] for d in det)
+    cats = collections.Counter(d["curation"]["category"] for d in det)
+    new_cats = collections.Counter(d["curation"]["category"] for d in det if d["id"] in new_ids)
+    seasons = collections.Counter(d["game"]["season"] for d in det)
+    events = collections.Counter(d["event"]["type"] for d in det)
+    states = collections.Counter(d["before"]["bases"] + f"/{d['before']['outs']}" for d in det)
+    sav = sum(1 for d in det if (d.get("savant") or {}).get("match"))
+    slugs = collections.Counter(c["slug"] for d in det for c in d["clips"])
+    dup_slugs = [s for s, k in slugs.items() if k > 1]
+    games = {d["game"]["gamePk"] for d in det}
+    teams = {t for d in det for t in (d["game"]["away"]["abbr"], d["game"]["home"]["abbr"])}
     missing = collections.Counter()
-    for r in plays:
-        if not r.get("batted") and r["source"]["terminal"] and r["event"]["type"] not in ("strikeout", "walk", "intent_walk", "hit_by_pitch"):
+    for d in det:
+        if not d.get("batted") and d["source"]["terminal"] and d["event"]["type"] not in ("strikeout", "walk", "intent_walk", "hit_by_pitch", "catcher_interf"):
             missing["batted-ball data"] += 1
-        if not r.get("statcast"):
-            missing["Statcast pitch row (alignment, run/win expectancy change)"] += 1
-        if not (r.get("winprob") or {}).get("li"):
+        if not d.get("statcast"):
+            missing["Statcast pitch row (alignment, run/win expectancy change) — between-pitch events have none"] += 1
+        if not (d.get("winprob") or {}).get("li"):
             missing["leverage index"] += 1
-        if not (r.get("winprob") or {}).get("homeAdded") and r["source"]["terminal"]:
-            missing["win probability change"] += 1
-    L = [f"# Play Repository — validation report ({time.strftime('%Y-%m-%d')})", "",
-         f"**{n} plays imported**, every one with at least one verified, playable MLB clip and core metadata checked against MLB's official play-by-play.", "",
-         "## Per category", "", "| Category | Plays | Target |", "|---|---|---|"]
     tgt = json.load(open(os.path.join(WORK, "validation.json")))["target"]
+    L = [f"# Play Repository — validation report ({time.strftime('%Y-%m-%d')})", "",
+         f"**{n} plays published** ({kept} kept unchanged from earlier publishes, {len(new_ids)} added in this run). Every play has at least one verified, playable MLB clip and core metadata from MLB's official play-by-play.", "",
+         f"- Unique events: {len({d['id'] for d in det})} · unique clips: {len(slugs)} · clips shared by two plays: {len(dup_slugs)}",
+         f"- Games: {len(games)} · teams: {len(teams)} · seasons: " + ", ".join(f"{k}: {v}" for k, v in sorted(seasons.items())), "",
+         "## Per category", "", "| Category | Plays | Target | Added this run |", "|---|---|---|---|"]
     for c, t in tgt.items():
-        L.append(f"| {c} | {cats.get(c, 0)} | {t} |")
+        L.append(f"| {c} | {cats.get(c, 0)} | {t} | {new_cats.get(c, 0)} |")
     L += ["", "## Checks applied to every play", "",
           "1. Game ID (`gamePk`) and play/event ID (`atBatIndex`, event index, Statcast `playId`) from MLB's live feed.",
           "2. Date, teams, venue from the same feed.",
@@ -120,16 +130,19 @@ def validation_md(plays, log, index):
           "4. Outcome: MLB's official event, description, every runner movement and fielder credit.",
           "5. Video: MLB.com's clip page exists and declares MLB's embed; the embed answers 200/206.",
           "6. Correspondence: highlight `guid` = the play's `playId`, or Film Room's play info = the play's game, inning, half, outs, runners, batter and pitcher; angle clips without a guid must be identified by MLB's own text (batter or inning + event) and be the only play that fits.",
-          "7. Camera angle: High Home only when MLB's own title says so; broadcast feeds labelled by MLB's feed type (home / away / national / edited highlight).",
+          "7. Camera angle: High Home only when MLB's own title says so; broadcast feeds labelled by MLB's feed type.",
           f"8. Independent cross-check: Baseball Savant's clip page names the same game, batter and pitcher for **{sav} of {n}** plays (stolen bases, pickoffs and other between-pitch events have no Savant pitch clip).",
+          "9. Duplicates: one record per event id, and no clip is attached to two different plays.",
           "", "## Video availability and camera angles", "",
-          f"- Primary clip: " + ", ".join(f"{k} {v}" for k, v in primary.most_common()),
-          f"- All verified clips by angle: " + ", ".join(f"{k} {v}" for k, v in ang.most_common()),
-          f"- High Home: {ang.get('high-home', 0)} play(s). MLB's 2024–25 video sitemaps contain only two clips MLB labels High Home; both are here if their plays qualified.",
-          "", "## Seasons", "", ", ".join(f"{k}: {v}" for k, v in sorted(seasons.items())),
-          "", "## Missing fields (by design or not published by MLB)", ""]
+          "- Primary clip: " + ", ".join(f"{k} {v}" for k, v in primary.most_common()),
+          "- All verified clips by angle: " + ", ".join(f"{k} {v}" for k, v in ang.most_common()),
+          f"- High Home: {ang.get('high-home', 0)} play(s). MLB's 2024–25 video sitemaps contain only two clips MLB labels High Home.",
+          "", "## Spread", "",
+          "- Most common outcomes: " + ", ".join(f"{k} {v}" for k, v in events.most_common(10)),
+          "- Base-out states covered: " + str(len(states)) + " of 24",
+          "", "## Missing fields (not published by MLB for these plays)", ""]
     L += [f"- {k}: {v} play(s)" for k, v in missing.most_common()] or ["- none"]
-    L += ["", "## Selection log (rejections and replacements)", "", "| Slot | Play | Result |", "|---|---|---|"]
+    L += ["", "## Selection log for this run (rejections and replacements)", "", "| Slot | Play | Result |", "|---|---|---|"]
     for e in log:
         L.append(f"| {e['slot']} | {e.get('id') or '—'} | {e['result']}{(' — ' + '; '.join(e.get('details', [])[:2])) if e.get('details') else ''} |")
     return "\n".join(L) + "\n"
@@ -180,7 +193,12 @@ def main(argv):
     idx_path = os.path.join(app, "data", "index.json")
     old = json.load(open(idx_path)) if os.path.exists(idx_path) else {"plays": []}
     rows = {p["id"]: p for p in old["plays"]}
+    kept = len(rows)
+    new_ids = set()
     for r in plays:
+        if r["id"] in rows and "--refresh" not in argv:       # never overwrite a published play unless asked
+            continue
+        new_ids.add(r["id"])
         title, src = gen_title(r)
         rows[r["id"]] = index_row(r, title, src)
         json.dump(detail(r, title, src), open(os.path.join(app, "data", "plays", r["id"] + ".json"), "w"), ensure_ascii=False, separators=(",", ":"))
@@ -188,10 +206,10 @@ def main(argv):
            "flags": {k: {"label": v[0], "group": v[1], "rule": v[2]} for k, v in FLAGS.items()},
            "plays": sorted(rows.values(), key=lambda p: (p["category"], p["date"]))}
     json.dump(out, open(idx_path, "w"), ensure_ascii=False, separators=(",", ":"))
-    open(os.path.join(app, "VALIDATION.md"), "w").write(validation_md(plays, log, out))
+    open(os.path.join(app, "VALIDATION.md"), "w").write(validation_md(app, log, new_ids, kept))
     if "--feud" in argv:
         feud_export(plays, argv[argv.index("--feud") + 1])
-    print("published", len(rows), "plays →", idx_path)
+    print("published", len(rows), "plays (", len(new_ids), "new ) →", idx_path)
 
 
 if __name__ == "__main__":

@@ -24,7 +24,7 @@
   function toggleSaved(id) {
     const i = U.saved.indexOf(id);
     if (i >= 0) U.saved.splice(i, 1); else U.saved.unshift(id);
-    save(); toast(i >= 0 ? "Removed from Saved Plays" : "Saved", i >= 0 ? null : { label: "Undo", fn: () => toggleSaved(id) });
+    save(); toast(i >= 0 ? "Removed from Saved Plays" : "Saved", i >= 0 ? null : { label: "Undo", fn: () => { toggleSaved(id); if (!$("#vExplore").hidden) renderResults(); } });
     return i < 0;
   }
   const uid = () => "c" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
@@ -124,144 +124,187 @@
     renderFilters(); renderResults();
   }
 
-  /* ================================================================ filters panel */
-  const FGROUPS = [
-    ["Offense", "offense"], ["Baserunning", "baserunning"], ["Defense", "defense"], ["Catcher", "catcher"], ["Pitching", "pitching"]
-  ];
+  /* ================================================================ filters panel
+     One renderer for the desktop sidebar and the mobile sheet. Five collapsible sections; which ones are open is
+     remembered separately for desktop and mobile. */
+  const MQ = window.matchMedia("(max-width: 900px)");
+  const isMobile = () => MQ.matches;
+  const UI_KEY = "playRepository.ui";
+  const UI = (() => { try { return JSON.parse(localStorage.getItem(UI_KEY) || "{}") || {}; } catch (e) { return {}; } })();
+  UI.open = UI.open || { desktop: ["sit", "play"], mobile: ["sit"] };
+  UI.sub = UI.sub || ["offense"];
+  const saveUI = () => { try { localStorage.setItem(UI_KEY, JSON.stringify(UI)); } catch (e) { /* private mode */ } };
+  const openList = () => UI.open[isMobile() ? "mobile" : "desktop"];
+  const SECTIONS = [["sit", "Game situation"], ["inn", "Inning & score"], ["play", "Play type"], ["who", "Players & teams"], ["adv", "Advanced"]];
+  const PLAY_GROUPS = [["offense", "Hitting & results", ["offense"]], ["baserunning", "Baserunning", ["baserunning"]], ["defense", "Defense", ["defense"]], ["catching", "Catching & pitching", ["catcher", "pitching"]]];
+  const QUICK = ["risp", "dp", "loaded", "third", "twoouts", "onerun"];
+  const MORE = ["empty", "anyon", "firstsecond", "corners", "force", "nooutsrisp", "tying", "goahead", "walkoff", "highlev"];
+
   function chip(label, on, attrs, count, disabled) {
     return `<button type="button" class="chip${on ? " on" : ""}" ${attrs}${disabled ? " disabled" : ""} aria-pressed="${on}">${esc(label)}${count != null ? ` <span class="n">${count}</span>` : ""}</button>`;
   }
+  const seg = (items, cls = "") => `<div class="seg ${cls}" role="group">${items.map(([lab, attrs, on]) => `<button type="button" ${attrs} class="${on ? "on" : ""}" aria-pressed="${!!on}">${lab}</button>`).join("")}</div>`;
+  function conflictHTML() {
+    const cs = PR.conflicts(S.f, S.flags);
+    if (!cs.length) return "";
+    const c = cs[0];
+    return `<div class="conflict" role="alert"><b>These can't happen together:</b> ${esc(c.a.label)} + ${esc(c.b.label)}.
+      <div class="conflict-a"><button type="button" class="btn sm" data-fix="${esc(c.b.id)}">Keep “${esc(c.a.label)}”</button><button type="button" class="btn sm" data-fix="${esc(c.a.id)}">Keep “${esc(c.b.label)}”</button></div></div>`;
+  }
+  function removeConstraint(id) {
+    const f = S.f;
+    if (id === "bases") f.bases = { mode: "any", sel: [] };
+    else if (id === "outs") f.outs = [];
+    else if (id === "runners") f.runners = [];
+    else if (id.startsWith("flag:")) { const i = f.flags.indexOf(id.slice(5)); if (i >= 0) f.flags.splice(i, 1); }
+  }
   function renderFilters() {
     const f = S.f, fc = PR.facets(S.plays), host = $("#filters");
-    const open = new Set($$("details.fsec[open]", host).map((d) => d.dataset.s));
-    if (!host.dataset.init) ["play", "context"].forEach((x) => open.add(x));
+    const scroller = $(".fscroll", host), keep = scroller ? scroller.scrollTop : 0;
+    const open = new Set(openList());
+    const counts = {}; activeChips().forEach((c) => (counts[c.sec] = (counts[c.sec] || 0) + 1));
+    const nActive = activeChips().length, nNow = PR.filter(S.plays, f, userView(), S.flags).length;
     const sel = f.bases.sel || [];
-    const baseG = (i, x, y) => `<g class="base${sel.includes(i) ? " on" : ""}" data-base="${i}" tabindex="0" role="checkbox" aria-checked="${sel.includes(i)}" aria-label="${["", "First", "Second", "Third"][i]} base"><rect x="${x - 15}" y="${y - 15}" width="30" height="30" transform="rotate(45 ${x} ${y})"/></g>`;
-    const flagChips = (group) => Object.entries(S.flags).filter(([, d]) => d.group === group)
-      .map(([id, d]) => chip(d.label, f.flags.includes(id), `data-flag="${id}" title="${esc(d.rule)}"`, fc.flags[id] || 0, !fc.flags[id] && !f.flags.includes(id))).join("");
+    const sum = PR.situationSummary(f);
+    const baseG = (i, x, y) => `<g class="base${sel.includes(i) ? " on" : ""}" data-base="${i}" tabindex="0" role="checkbox" aria-checked="${sel.includes(i)}" aria-label="${["", "First", "Second", "Third"][i]} base"><rect x="${x - 15}" y="${y - 15}" width="30" height="30" transform="rotate(45 ${x} ${y})"/><rect class="hit" x="${x - 26}" y="${y - 26}" width="52" height="52" fill="transparent" stroke="none"/></g>`;
+    const flagChip = (id, label) => chip(label || (S.flags[id] || {}).label || id, f.flags.includes(id), `data-flag="${id}" title="${esc((S.flags[id] || {}).rule || "")}"`, fc.flags[id] || 0, !fc.flags[id] && !f.flags.includes(id));
+    const groupChips = (groups) => Object.entries(S.flags).filter(([id, d]) => groups.includes(d.group) && (fc.flags[id] || f.flags.includes(id))).map(([id]) => flagChip(id)).join("");
+    const preset = (k) => { const P = PR.PRESETS[k]; return chip(P.label, P.on(f), `data-preset="${k}"`); };
     const opts = (obj, cur, fmt = (x) => x) => Object.keys(obj).sort().map((k) => `<option value="${esc(k)}"${String(cur) === k ? " selected" : ""}>${esc(fmt(k))} (${obj[k]})</option>`).join("");
     const people = [...new Set(S.plays.map((p) => p.batter.name))].sort();
     const pitchers = [...new Set(S.plays.map((p) => p.pitcher.name))].sort();
-    const nNow = PR.filter(S.plays, S.f, userView(), S.flags).length;
-    host.innerHTML = `
-      <div class="fdone"><b>Filters</b><span class="sp"></span><button class="btn primary sm" type="button" data-done="1">Show ${nNow} play${nNow === 1 ? "" : "s"}</button></div>
-      <div class="fsec"><h3>Base-out state <button class="clr" data-clear="bases">clear</button></h3>
-        <div class="dia-wrap">
-          <svg class="dia-ctl" viewBox="0 0 150 132" aria-label="Runner occupancy — click bases">
+    const section = (id, title, body) => `<details class="fsec" data-s="${id}"${open.has(id) ? " open" : ""}><summary><span>${title}</span>${counts[id] ? `<span class="fbadge">${counts[id]}</span>` : ""}</summary><div class="fin">${body}</div></details>`;
+    const lev = f.flags.includes("high_leverage") ? "high" : f.flags.includes("low_leverage") ? "low" : "";
+    const secs = {
+      sit: `
+        <div class="gs">
+          <svg class="dia-ctl" viewBox="-4 -6 158 140" aria-label="Runners on base — tap bases">
             <path d="M75 120 L130 66 L75 12 L20 66 Z" fill="none" stroke="#A28B77" stroke-width="1.5"/>
             ${baseG(1, 130, 66)}${baseG(2, 75, 18)}${baseG(3, 20, 66)}
             <path d="M68 112 h14 v7 l-7 7 l-7 -7 z" fill="#252525" opacity=".75"/>
           </svg>
-          <div class="dia-modes">
-            <span class="k">Runners</span>
-            <div class="seg" role="group" aria-label="How to match the selected bases">
-              <button type="button" data-bmode="any" class="${f.bases.mode === "any" ? "on" : ""}">Any</button>
-              <button type="button" data-bmode="exact" class="${f.bases.mode === "exact" ? "on" : ""}" title="Exactly the selected bases occupied (none selected = bases empty)">Exactly</button>
-              <button type="button" data-bmode="includes" class="${f.bases.mode === "includes" ? "on" : ""}" title="At least the selected bases occupied">At least</button>
-            </div>
-            <span class="fnote">${f.bases.mode === "any" ? "Click a base to choose runners." : f.bases.mode === "exact" ? (sel.length ? PR.basesLabel(code(sel)) + " only" : "Bases empty") : (sel.length ? "Includes " + sel.map((b) => PR.ORD(b)).join(" & ") : "Pick bases")}</span>
+          <div class="gs-r">
+            <span class="k">Runners</span>${seg([["Any", 'data-bmode="any"', f.bases.mode === "any"], ["Exactly", 'data-bmode="exact" title="Exactly the bases you tap (none = bases empty)"', f.bases.mode === "exact"], ["At least", 'data-bmode="includes" title="At least the bases you tap"', f.bases.mode === "includes"]], "seg3")}
+            <span class="k">Outs</span>${seg([["Any", 'data-outs="any"', !f.outs.length], ["0", 'data-outs="0"', f.outs.includes(0)], ["1", 'data-outs="1"', f.outs.includes(1)], ["2", 'data-outs="2"', f.outs.includes(2)]], "seg4")}
           </div>
         </div>
-        <div class="fgrp"><span class="k">Outs</span><div class="chips">${[0, 1, 2].map((o) => chip(o + (o === 1 ? " out" : " outs"), f.outs.includes(o), `data-outs="${o}"`)).join("")}</div></div>
-        <div class="fgrp"><span class="k">Quick situations</span><div class="chips">
-          ${chip("Bases empty", f.bases.mode === "exact" && !sel.length, 'data-q="empty"')}${chip("Any runner on", f.runners.join() === "1,2,3", 'data-q="anyon"')}
-          ${chip("RISP", f.flags.includes("risp"), 'data-flag="risp"', fc.flags.risp || 0)}${chip("Force available", f.flags.includes("force_available"), 'data-flag="force_available"', fc.flags.force_available || 0)}
-          ${chip("Double-play situation", f.flags.includes("dp_situation"), 'data-flag="dp_situation"', fc.flags.dp_situation || 0)}${chip("Two outs", f.flags.includes("two_outs"), 'data-flag="two_outs"', fc.flags.two_outs || 0)}
-        </div></div>
-        <div class="fgrp"><span class="k">Number of runners</span><div class="chips">${[0, 1, 2, 3].map((n) => chip(String(n), f.runners.includes(n), `data-rn="${n}"`)).join("")}</div></div>
-      </div>
-      <details class="fsec" data-s="context" ${open.has("context") ? "open" : ""}><summary>Inning, score &amp; game context</summary>
-        <div class="fgrp"><span class="k">Innings</span><div class="chips">${[["early", "Early 1–3"], ["middle", "Middle 4–6"], ["late", "Late 7–9"], ["extra", "Extra"]].map(([k, l]) => chip(l, f.phases.includes(k), `data-phase="${k}"`)).join("")}</div>
-          <div class="frow" style="margin-top:6px"><input type="number" min="1" max="20" placeholder="from" data-num="innMin" value="${f.innMin ?? ""}" aria-label="Inning from"> – <input type="number" min="1" max="20" placeholder="to" data-num="innMax" value="${f.innMax ?? ""}" aria-label="Inning to">
-          <div class="seg">${[["", "Both"], ["top", "Top"], ["bottom", "Bottom"]].map(([k, l]) => `<button type="button" data-half="${k}" class="${(f.half || "") === k ? "on" : ""}">${l}</button>`).join("")}</div></div></div>
-        <div class="fgrp"><span class="k">Batting team</span><div class="chips">${chip("Home", f.batSide === "home", 'data-bside="home"')}${chip("Away", f.batSide === "away", 'data-bside="away"')}
-          ${chip("Tied", f.scoreState.includes("tied"), 'data-ss="tied"')}${chip("Leading", f.scoreState.includes("leading"), 'data-ss="leading"')}${chip("Trailing", f.scoreState.includes("trailing"), 'data-ss="trailing"')}</div></div>
-        <div class="fgrp"><span class="k">Score, leverage &amp; stakes</span><div class="chips">${flagChips("context")}</div>
-          <div class="frow" style="margin-top:6px">LI <input type="number" step="0.1" min="0" placeholder="min" data-num="liMin" value="${f.liMin ?? ""}" aria-label="Leverage index minimum"> – <input type="number" step="0.1" min="0" placeholder="max" data-num="liMax" value="${f.liMax ?? ""}" aria-label="Leverage index maximum"></div>
-          <p class="fnote">Leverage index and win probability are MLB's own (Stats API). Every game-state filter uses the state <b>before</b> the play.</p></div>
-      </details>
-      <details class="fsec" data-s="play" ${open.has("play") ? "open" : ""}><summary>Play type &amp; outcome</summary>
-        ${FGROUPS.map(([lab, g]) => `<div class="fgrp"><span class="k">${lab} <span style="text-transform:none;letter-spacing:0">— any of</span></span><div class="chips">${flagChips(g)}</div></div>`).join("")}
-        <div class="fgrp"><span class="k">Official result</span><select class="fsel" data-sel="event" style="width:100%"><option value="">Any result</option>${opts(fc.events, f.events[0] || "", (k) => k.replace(/_/g, " "))}</select></div>
-        <p class="fnote">Every chip is computed from MLB's official play-by-play — hover for the exact rule. Communication, "infield in", cutoff responsibilities and other judgements aren't in MLB's data: add them as <b>coaching tags</b> on a play and filter by them below.</p>
-      </details>
-      <details class="fsec" data-s="people" ${open.has("people") ? "open" : ""}><summary>Teams, players &amp; fielders</summary>
-        <div class="fgrp"><span class="k">Team</span><div class="frow"><select class="fsel" data-sel="team"><option value="">Any team</option>${opts(fc.teams, f.team)}</select>
-          <div class="seg">${[["any", "Either"], ["batting", "Batting"], ["fielding", "Fielding"]].map(([k, l]) => `<button type="button" data-trole="${k}" class="${(f.teamRole || "any") === k ? "on" : ""}">${l}</button>`).join("")}</div></div></div>
-        <div class="fgrp"><span class="k">Batter / pitcher</span><div class="frow"><input list="dlBatters" placeholder="Batter" data-txt="batter" value="${esc(f.batter)}" aria-label="Batter" style="flex:1"><input list="dlPitchers" placeholder="Pitcher" data-txt="pitcher" value="${esc(f.pitcher)}" aria-label="Pitcher" style="flex:1"></div>
-          <datalist id="dlBatters">${people.map((n) => `<option value="${esc(n)}">`).join("")}</datalist><datalist id="dlPitchers">${pitchers.map((n) => `<option value="${esc(n)}">`).join("")}</datalist></div>
-        <div class="fgrp"><span class="k">Handedness</span><div class="chips">${chip("LHB", f.batHand === "L", 'data-bh="L"')}${chip("RHB", f.batHand === "R", 'data-bh="R"')}${chip("LHP", f.pitHand === "L", 'data-ph="L"')}${chip("RHP", f.pitHand === "R", 'data-ph="R"')}</div></div>
-        <div class="fgrp"><span class="k">Fielder involved (official credits)</span><div class="chips">${["P", "C", "1B", "2B", "3B", "SS", "LF", "CF", "RF"].map((x) => chip(x, f.positions.includes(x), `data-pos="${x}"`, fc.positions[x] || 0, !fc.positions[x])).join("")}</div></div>
-      </details>
-      <details class="fsec" data-s="ball" ${open.has("ball") ? "open" : ""}><summary>Batted ball, pitch &amp; Statcast</summary>
-        <div class="fgrp"><span class="k">Fielded in</span><div class="chips">${[7, 8, 9, 5, 6, 4, 3, 1, 2].map((n) => chip(PR.LOC_NAME[n], f.locations.includes(n), `data-loc="${n}"`)).join("")}</div></div>
-        <div class="fgrp"><span class="k">Spray direction</span><div class="chips">${["pull", "center", "opposite"].map((k) => chip(k, f.spray.includes(k), `data-spray="${k}"`)).join("")}</div></div>
-        <div class="fgrp"><span class="k">Exit velocity · launch angle · distance</span><div class="frow">EV <input type="number" placeholder="min" data-num="evMin" value="${f.evMin ?? ""}" aria-label="Exit velocity minimum"> <input type="number" placeholder="max" data-num="evMax" value="${f.evMax ?? ""}" aria-label="Exit velocity maximum"></div>
-          <div class="frow" style="margin-top:5px">LA <input type="number" placeholder="min" data-num="laMin" value="${f.laMin ?? ""}" aria-label="Launch angle minimum"> <input type="number" placeholder="max" data-num="laMax" value="${f.laMax ?? ""}" aria-label="Launch angle maximum"> ft ≥ <input type="number" placeholder="dist" data-num="distMin" value="${f.distMin ?? ""}" aria-label="Distance minimum"></div></div>
-        <div class="fgrp"><span class="k">Pitch</span><div class="frow"><select class="fsel" data-sel="pitchType"><option value="">Any pitch type</option>${opts(fc.pitchTypes, f.pitchTypes[0] || "")}</select>
-          mph <input type="number" placeholder="min" data-num="veloMin" value="${f.veloMin ?? ""}" aria-label="Velocity minimum"></div>
-          <div class="frow" style="margin-top:5px">Count <select class="fsel" data-cnt="balls"><option value="">B</option>${[0, 1, 2, 3].map((n) => `<option ${f.balls === n ? "selected" : ""}>${n}</option>`).join("")}</select>–<select class="fsel" data-cnt="strikes"><option value="">S</option>${[0, 1, 2].map((n) => `<option ${f.strikes === n ? "selected" : ""}>${n}</option>`).join("")}</select></div></div>
-        <div class="fgrp"><span class="k">Statcast alignment</span><div class="frow"><select class="fsel" data-sel="ifAlign"><option value="">Infield: any</option>${opts(fc.ifAlign, f.ifAlign[0] || "")}</select><select class="fsel" data-sel="ofAlign"><option value="">Outfield: any</option>${opts(fc.ofAlign, f.ofAlign[0] || "")}</select></div></div>
-        <div class="fgrp"><span class="k">Result of the play</span><div class="chips">${[0, 1, 2, 3].map((n) => chip(n + " out" + (n === 1 ? "" : "s"), f.outsOnPlay.includes(n), `data-oop="${n}"`)).join("")}${chip("Run(s) scored", f.runsMin === 1, 'data-runs="1"')}</div>
-          <div class="frow" style="margin-top:5px">Δ run exp. <input type="number" step="0.05" placeholder="min" data-num="dreMin" value="${f.dreMin ?? ""}" aria-label="Run expectancy change minimum"> <input type="number" step="0.05" placeholder="max" data-num="dreMax" value="${f.dreMax ?? ""}" aria-label="Run expectancy change maximum"></div>
-          <div class="frow" style="margin-top:5px">Δ win prob. (pts, batting team) <input type="number" step="1" placeholder="min" data-num="wpaMin" value="${f.wpaMin ?? ""}" aria-label="Win probability change minimum"> <input type="number" step="1" placeholder="max" data-num="wpaMax" value="${f.wpaMax ?? ""}" aria-label="Win probability change maximum"></div></div>
-      </details>
-      <details class="fsec" data-s="when" ${open.has("when") ? "open" : ""}><summary>Season, date &amp; level</summary>
-        <div class="fgrp"><span class="k">Season</span><div class="chips">${Object.keys(fc.seasons).sort().map((y) => chip(y, f.seasons.includes(+y), `data-season="${y}"`, fc.seasons[y])).join("")}
-          ${chip("Regular season", f.gameTypes.includes("regular"), 'data-gt="regular"')}${chip("Postseason", f.gameTypes.includes("post"), 'data-gt="post"')}</div></div>
-        <div class="fgrp"><span class="k">Dates</span><div class="frow"><input type="date" data-txt="dateFrom" value="${esc(f.dateFrom)}" aria-label="From date"> – <input type="date" data-txt="dateTo" value="${esc(f.dateTo)}" aria-label="To date"></div></div>
-        <div class="fgrp"><span class="k">Level</span><div class="chips">${chip("MLB", true, "disabled")}</div><p class="fnote">MiLB isn't included yet: MLB Film Room's per-play clips and the Statcast fields used here are MLB-only.</p></div>
-      </details>
-      <details class="fsec" data-s="mine" ${open.has("mine") ? "open" : ""}><summary>Teaching categories &amp; your tags</summary>
-        <div class="fgrp"><span class="k">Curated category</span><div class="chips">${Object.keys(fc.categories).sort().map((c) => chip(c, f.categories.includes(c), `data-cat="${esc(c)}"`, fc.categories[c])).join("")}</div></div>
-        <div class="fgrp"><span class="k">Your coaching tags (manual)</span><div class="chips">${allTags().map((t) => chip(t, f.tags.includes(t), `data-tag="${esc(t)}"`)).join("") || '<span class="fnote">None yet — add tags on any play.</span>'}</div></div>
-        <div class="fgrp"><div class="chips">${chip("★ Saved only", f.savedOnly, 'data-saved="1"')}</div></div>
-      </details>
-      <div style="padding-top:12px"><button class="btn sm" type="button" data-clear="all">Clear all filters</button></div>`;
+        <div class="gs-sum" aria-live="polite"><span><b>Runners on:</b> ${esc(sum.runners)}</span><span><b>Outs:</b> ${esc(sum.outs)}</span></div>
+        ${conflictHTML()}
+        <span class="k">Quick situations</span>
+        <div class="cgrid c2">${QUICK.map(preset).join("")}</div>
+        <details class="more" data-more="1"${UI.more ? " open" : ""}><summary>More situations</summary><div class="cgrid c2">${MORE.map(preset).join("")}</div></details>
+        <span class="k">Number of runners</span>${seg([["Any", 'data-rn="any"', !f.runners.length], ["0", 'data-rn="0"', f.runners.includes(0)], ["1", 'data-rn="1"', f.runners.includes(1)], ["2", 'data-rn="2"', f.runners.includes(2)], ["3", 'data-rn="3"', f.runners.includes(3)]], "seg5")}`,
+      inn: `
+        <span class="k">Innings</span>
+        <div class="cgrid c4">${[["early", "1–3"], ["middle", "4–6"], ["late", "7–9"], ["extra", "Extra"]].map(([k, l]) => chip(l, f.phases.includes(k), `data-phase="${k}" title="${k} innings"`)).join("")}</div>
+        <div class="frow"><input type="number" inputmode="numeric" min="1" max="20" placeholder="From" data-num="innMin" value="${f.innMin ?? ""}" aria-label="Inning from"><input type="number" inputmode="numeric" min="1" max="20" placeholder="To" data-num="innMax" value="${f.innMax ?? ""}" aria-label="Inning to">
+          ${seg([["Both", 'data-half=""', !f.half], ["Top", 'data-half="top"', f.half === "top"], ["Bot", 'data-half="bottom"', f.half === "bottom"]])}</div>
+        <span class="k">Batting team is</span>
+        ${seg([["Any", 'data-ss="any"', !f.scoreState.length], ["Tied", 'data-ss="tied"', f.scoreState.includes("tied")], ["Leading", 'data-ss="leading"', f.scoreState.includes("leading")], ["Trailing", 'data-ss="trailing"', f.scoreState.includes("trailing")]], "seg4")}
+        ${seg([["Home or away", 'data-bside=""', !f.batSide], ["Home", 'data-bside="home"', f.batSide === "home"], ["Away", 'data-bside="away"', f.batSide === "away"]], "seg3 mt")}
+        <span class="k">Score margin</span>
+        <div class="cgrid c3">${flagChip("one_run", "One-run")}${flagChip("close", "Within 2")}${flagChip("blowout", "5+ runs")}</div>
+        <span class="k">Stakes</span>
+        <div class="cgrid c2">${["tying_run_on", "go_ahead_on", "walkoff_situation", "winning_run_on", "postseason", "challenge"].map((x) => flagChip(x)).join("")}</div>
+        <span class="k">Leverage</span>
+        ${seg([["Any", 'data-lev=""', !lev], ["High (LI ≥ 2)", 'data-lev="high"', lev === "high"], ["Low (< 0.85)", 'data-lev="low"', lev === "low"]], "seg3")}
+        <div class="frow">LI <input type="number" step="0.1" min="0" placeholder="min" data-num="liMin" value="${f.liMin ?? ""}" aria-label="Leverage index minimum"><input type="number" step="0.1" min="0" placeholder="max" data-num="liMax" value="${f.liMax ?? ""}" aria-label="Leverage index maximum"></div>
+        <p class="fnote">Every game-state filter uses the state <b>before</b> the play. Leverage and win probability are MLB's own.</p>`,
+      play: `
+        ${PLAY_GROUPS.map(([id, label, groups]) => { const n = f.flags.filter((x) => groups.includes((S.flags[x] || {}).group)).length;
+          return `<details class="sub" data-sub="${id}"${UI.sub.includes(id) ? " open" : ""}><summary>${label}${n ? ` <span class="fbadge">${n}</span>` : ""}<span class="any">any of</span></summary><div class="cgrid c2">${groupChips(groups)}</div></details>`; }).join("")}
+        <span class="k">Official result</span><select class="fsel wide" data-sel="event"><option value="">Any result</option>${opts(fc.events, f.events[0] || "", (k) => k.replace(/_/g, " "))}</select>
+        <p class="fnote">Computed from MLB's official play-by-play — hover or long-press a chip for its rule. Communication, "infield in" and other judgements aren't in MLB's data: tag plays yourself (Advanced → your tags).</p>`,
+      who: `
+        <span class="k">Team</span><div class="frow"><select class="fsel" data-sel="team"><option value="">Any team</option>${opts(fc.teams, f.team)}</select>
+          ${seg([["Either", 'data-trole="any"', (f.teamRole || "any") === "any"], ["Batting", 'data-trole="batting"', f.teamRole === "batting"], ["Fielding", 'data-trole="fielding"', f.teamRole === "fielding"]])}</div>
+        <span class="k">Batter · pitcher</span><div class="frow two"><input list="dlBatters" placeholder="Batter" data-txt="batter" value="${esc(f.batter)}" aria-label="Batter"><input list="dlPitchers" placeholder="Pitcher" data-txt="pitcher" value="${esc(f.pitcher)}" aria-label="Pitcher"></div>
+        <datalist id="dlBatters">${people.map((n) => `<option value="${esc(n)}">`).join("")}</datalist><datalist id="dlPitchers">${pitchers.map((n) => `<option value="${esc(n)}">`).join("")}</datalist>
+        <span class="k">Handedness</span><div class="cgrid c4">${chip("LHB", f.batHand === "L", 'data-bh="L"')}${chip("RHB", f.batHand === "R", 'data-bh="R"')}${chip("LHP", f.pitHand === "L", 'data-ph="L"')}${chip("RHP", f.pitHand === "R", 'data-ph="R"')}</div>
+        <span class="k">Fielder involved (official credits)</span><div class="cgrid c5">${["P", "C", "1B", "2B", "3B", "SS", "LF", "CF", "RF"].map((x) => chip(x, f.positions.includes(x), `data-pos="${x}"`, null, !fc.positions[x])).join("")}</div>`,
+      adv: `
+        <span class="k">Teaching</span>
+        <select class="fsel wide" data-sel="category"><option value="">Any curated category</option>${opts(fc.categories, f.categories[0] || "")}</select>
+        <div class="cgrid c2 mt">${allTags().map((t) => chip(t, f.tags.includes(t), `data-tag="${esc(t)}" title="Your coaching tag"`)).join("")}${chip("★ Saved only", f.savedOnly, 'data-saved="1"')}</div>
+        ${allTags().length ? "" : '<p class="fnote">Your coaching tags appear here once you add some to plays.</p>'}
+        <span class="k">Fielded in</span><div class="cgrid c3">${[7, 8, 9, 5, 6, 4, 3, 1, 2].map((n) => chip(PR.LOC_NAME[n], f.locations.includes(n), `data-loc="${n}"`)).join("")}</div>
+        <span class="k">Spray</span>${seg([["Any", 'data-spray="any"', !f.spray.length], ["Pull", 'data-spray="pull"', f.spray.includes("pull")], ["Center", 'data-spray="center"', f.spray.includes("center")], ["Oppo", 'data-spray="opposite"', f.spray.includes("opposite")]], "seg4")}
+        <span class="k">Exit velocity · launch angle · distance</span>
+        <div class="frow">EV <input type="number" inputmode="decimal" placeholder="min" data-num="evMin" value="${f.evMin ?? ""}" aria-label="Exit velocity minimum"><input type="number" inputmode="decimal" placeholder="max" data-num="evMax" value="${f.evMax ?? ""}" aria-label="Exit velocity maximum"></div>
+        <div class="frow">LA <input type="number" inputmode="decimal" placeholder="min" data-num="laMin" value="${f.laMin ?? ""}" aria-label="Launch angle minimum"><input type="number" inputmode="decimal" placeholder="max" data-num="laMax" value="${f.laMax ?? ""}" aria-label="Launch angle maximum"></div>
+        <div class="frow">Distance ≥ <input type="number" inputmode="numeric" placeholder="ft" data-num="distMin" value="${f.distMin ?? ""}" aria-label="Distance minimum"></div>
+        <span class="k">Pitch</span><div class="frow"><select class="fsel" data-sel="pitchType"><option value="">Any pitch type</option>${opts(fc.pitchTypes, f.pitchTypes[0] || "")}</select>
+          <input type="number" inputmode="decimal" placeholder="mph ≥" data-num="veloMin" value="${f.veloMin ?? ""}" aria-label="Velocity minimum"></div>
+        <div class="frow">Count <select class="fsel" data-cnt="balls" aria-label="Balls"><option value="">Balls</option>${[0, 1, 2, 3].map((n) => `<option ${f.balls === n ? "selected" : ""}>${n}</option>`).join("")}</select><select class="fsel" data-cnt="strikes" aria-label="Strikes"><option value="">Strikes</option>${[0, 1, 2].map((n) => `<option ${f.strikes === n ? "selected" : ""}>${n}</option>`).join("")}</select></div>
+        <span class="k">Statcast alignment</span><div class="frow two"><select class="fsel" data-sel="ifAlign"><option value="">Infield: any</option>${opts(fc.ifAlign, f.ifAlign[0] || "")}</select><select class="fsel" data-sel="ofAlign"><option value="">Outfield: any</option>${opts(fc.ofAlign, f.ofAlign[0] || "")}</select></div>
+        <span class="k">Result of the play</span>${seg([["Any", 'data-oop="any"', !f.outsOnPlay.length], ["0 outs", 'data-oop="0"', f.outsOnPlay.includes(0)], ["1", 'data-oop="1"', f.outsOnPlay.includes(1)], ["2+", 'data-oop="2"', f.outsOnPlay.includes(2)]], "seg4")}
+        <div class="cgrid c2 mt">${chip("Run(s) scored", f.runsMin === 1, 'data-runs="1"')}</div>
+        <div class="frow">ΔRE <input type="number" step="0.05" placeholder="min" data-num="dreMin" value="${f.dreMin ?? ""}" aria-label="Run expectancy change minimum"><input type="number" step="0.05" placeholder="max" data-num="dreMax" value="${f.dreMax ?? ""}" aria-label="Run expectancy change maximum"></div>
+        <div class="frow">ΔWP pts <input type="number" step="1" placeholder="min" data-num="wpaMin" value="${f.wpaMin ?? ""}" aria-label="Win probability change minimum"><input type="number" step="1" placeholder="max" data-num="wpaMax" value="${f.wpaMax ?? ""}" aria-label="Win probability change maximum"></div>
+        <span class="k">Season · dates · level</span>
+        <div class="cgrid c3">${Object.keys(fc.seasons).sort().map((y) => chip(y, f.seasons.includes(+y), `data-season="${y}"`, fc.seasons[y])).join("")}${chip("Regular", f.gameTypes.includes("regular"), 'data-gt="regular"')}${chip("Postseason", f.gameTypes.includes("post"), 'data-gt="post"')}</div>
+        <div class="frow two"><input type="date" data-txt="dateFrom" value="${esc(f.dateFrom)}" aria-label="From date"><input type="date" data-txt="dateTo" value="${esc(f.dateTo)}" aria-label="To date"></div>
+        <p class="fnote">Level: MLB. MiLB isn't included — MLB Film Room clips and these Statcast fields are MLB-only.</p>`,
+    };
+    host.innerHTML = `
+      <div class="fhead"><button type="button" class="fback" data-done="1" aria-label="Close filters">‹ Back</button><b>Filters</b><span class="fcount">${nActive ? nActive + " active" : "None active"}</span></div>
+      <div class="fscroll">${SECTIONS.map(([id, t]) => section(id, t, secs[id])).join("")}</div>
+      <div class="ffoot"><button class="btn" type="button" data-clear="all"${nActive ? "" : " disabled"}>Clear all</button><button class="btn primary" type="button" data-done="1">Show ${nNow} play${nNow === 1 ? "" : "s"}</button></div>`;
+    const sc2 = $(".fscroll", host); if (sc2) sc2.scrollTop = keep;
     host.dataset.init = "1";
   }
   const code = (sel) => (sel.includes(1) ? "1" : "_") + (sel.includes(2) ? "2" : "_") + (sel.includes(3) ? "3" : "_");
   const toggleIn = (arr, v) => { const i = arr.indexOf(v); if (i >= 0) arr.splice(i, 1); else arr.push(v); };
-  $("#filters").addEventListener("click", (e) => {
-    const t = e.target.closest("button, g.base"); if (!t) return;
+  const anyOr = (arr, v, parse = (x) => x) => { if (v === "any") arr.splice(0); else toggleIn(arr, parse(v)); };
+  function filterClick(e) {
+    const t = e.target.closest("button, g.base"); if (!t || t.disabled) return;
     const f = S.f, d = t.dataset;
-    if (d.base) { const b = +d.base; toggleIn(f.bases.sel, b); if (f.bases.mode === "any") f.bases.mode = "exact"; }
+    if (d.base) { const b = +d.base; toggleIn(f.bases.sel, b); f.bases.sel.sort(); if (f.bases.mode === "any") f.bases.mode = "exact"; if (f.runners.length && f.bases.mode === "exact" && !f.runners.includes(f.bases.sel.length)) f.runners = []; }
     else if (d.bmode) { f.bases.mode = d.bmode; if (d.bmode === "any") f.bases.sel = []; }
-    else if (d.outs) toggleIn(f.outs, +d.outs);
-    else if (d.q === "empty") { f.bases = f.bases.mode === "exact" && !f.bases.sel.length ? { mode: "any", sel: [] } : { mode: "exact", sel: [] }; }
-    else if (d.q === "anyon") { f.runners = f.runners.join() === "1,2,3" ? [] : [1, 2, 3]; }
+    else if (d.outs) { anyOr(f.outs, d.outs, Number); f.outs.sort(); }
+    else if (d.preset) { const P = PR.PRESETS[d.preset]; P.apply(f, P.on(f)); }
+    else if (d.fix) removeConstraint(d.fix);
     else if (d.flag) toggleIn(f.flags, d.flag);
-    else if (d.rn) toggleIn(f.runners, +d.rn);
+    else if (d.rn) { anyOr(f.runners, d.rn, Number); f.runners.sort(); }
     else if (d.phase) toggleIn(f.phases, d.phase);
     else if (d.half !== undefined) f.half = d.half || null;
-    else if (d.bside) f.batSide = f.batSide === d.bside ? null : d.bside;
-    else if (d.ss) toggleIn(f.scoreState, d.ss);
+    else if (d.bside !== undefined) f.batSide = d.bside || null;
+    else if (d.ss) anyOr(f.scoreState, d.ss);
+    else if (d.lev !== undefined) { ["high_leverage", "low_leverage"].forEach((x) => { const i = f.flags.indexOf(x); if (i >= 0) f.flags.splice(i, 1); }); if (d.lev) f.flags.push(d.lev + "_leverage"); }
     else if (d.trole) f.teamRole = d.trole;
     else if (d.bh) f.batHand = f.batHand === d.bh ? null : d.bh;
     else if (d.ph) f.pitHand = f.pitHand === d.ph ? null : d.ph;
     else if (d.pos) toggleIn(f.positions, d.pos);
     else if (d.loc) toggleIn(f.locations, +d.loc);
-    else if (d.spray) toggleIn(f.spray, d.spray);
-    else if (d.oop) toggleIn(f.outsOnPlay, +d.oop);
+    else if (d.spray) anyOr(f.spray, d.spray);
+    else if (d.oop) anyOr(f.outsOnPlay, d.oop, Number);
     else if (d.runs) f.runsMin = f.runsMin ? null : 1;
     else if (d.season) toggleIn(f.seasons, +d.season);
     else if (d.gt) toggleIn(f.gameTypes, d.gt);
-    else if (d.cat) toggleIn(f.categories, d.cat);
     else if (d.tag) toggleIn(f.tags, d.tag);
     else if (d.saved) f.savedOnly = !f.savedOnly;
-    else if (d.done) { $("#filters").classList.remove("open"); window.scrollTo(0, 0); return; }
-    else if (d.clear === "bases") { f.bases = { mode: "any", sel: [] }; f.outs = []; f.runners = []; ["risp", "force_available", "dp_situation", "two_outs"].forEach((x) => { const i = f.flags.indexOf(x); if (i >= 0) f.flags.splice(i, 1); }); }
+    else if (d.done) { closeSheet(true); return; }
     else if (d.clear === "all") { S.f = PR.emptyFilters(); S.understood = null; $("#ask").value = ""; }
     else return;
     pushFilters();
-  });
+  }
+  $("#filters").addEventListener("click", filterClick);
   $("#filters").addEventListener("keydown", (e) => { const g = e.target.closest("g.base"); if (g && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); g.dispatchEvent(new MouseEvent("click", { bubbles: true })); setTimeout(() => { const n = $(`g.base[data-base="${g.dataset.base}"]`); n && n.focus(); }); } });
+  // remember which sections are open (toggle doesn't bubble — listen in the capture phase)
+  $("#filters").addEventListener("toggle", (e) => {
+    const d = e.target;
+    if (d.dataset.s) { const L = openList(), i = L.indexOf(d.dataset.s); if (d.open && i < 0) L.push(d.dataset.s); if (!d.open && i >= 0) L.splice(i, 1); }
+    else if (d.dataset.sub) { const i = UI.sub.indexOf(d.dataset.sub); if (d.open && i < 0) UI.sub.push(d.dataset.sub); if (!d.open && i >= 0) UI.sub.splice(i, 1); }
+    else if (d.dataset.more) UI.more = d.open;
+    saveUI();
+  }, true);
   $("#filters").addEventListener("change", (e) => {
     const t = e.target, f = S.f, d = t.dataset;
     if (d.num) f[d.num] = t.value === "" ? null : +t.value;
     else if (d.txt) f[d.txt] = t.value.trim();
     else if (d.sel === "event") f.events = t.value ? [t.value] : [];
     else if (d.sel === "team") f.team = t.value;
+    else if (d.sel === "category") f.categories = t.value ? [t.value] : [];
     else if (d.sel === "pitchType") f.pitchTypes = t.value ? [t.value] : [];
     else if (d.sel === "ifAlign") f.ifAlign = t.value ? [t.value] : [];
     else if (d.sel === "ofAlign") f.ofAlign = t.value ? [t.value] : [];
@@ -269,41 +312,58 @@
     else return;
     pushFilters();
   });
-  $("#btnFilters").onclick = () => $("#filters").classList.toggle("open");
+  /* the mobile sheet */
+  function openSheet() { $("#filters").classList.add("open"); document.body.classList.add("sheet-open"); renderFilters(); const b = $(".fback"); b && b.focus({ preventScroll: true }); }
+  function closeSheet(toResults) {
+    const was = $("#filters").classList.contains("open");
+    $("#filters").classList.remove("open"); document.body.classList.remove("sheet-open");
+    if (was && toResults && isMobile()) { const y = $(".results").getBoundingClientRect().top + window.scrollY - 58; window.scrollTo({ top: Math.max(0, y), behavior: "instant" }); }
+  }
+  $("#mOuts").addEventListener("click", (e) => { const b = e.target.closest("[data-mouts]"); if (!b) return; anyOr(S.f.outs, b.dataset.mouts, Number); S.f.outs.sort(); pushFilters(); });
+  $("#btnFilters").onclick = () => ($("#filters").classList.contains("open") ? closeSheet(true) : openSheet());
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && $("#filters").classList.contains("open")) closeSheet(true); });
+  MQ.addEventListener("change", () => { closeSheet(false); renderFilters(); });
 
   /* ================================================================ results */
   function activeChips(f = S.f) {
     const out = [];
-    const add = (label, fn) => out.push({ label, fn });
+    let sec = "sit";
+    const add = (label, fn) => out.push({ label, fn, sec });
+    const flagSec = (x) => { const g = (S.flags[x] || {}).group; return g === "situation" ? "sit" : g === "context" ? "inn" : "play"; };
     if (f.bases.mode !== "any") add(f.bases.mode === "exact" ? PR.basesLabel(code(f.bases.sel)) : "Includes " + f.bases.sel.map((b) => PR.ORD(b)).join(" & "), () => (f.bases = { mode: "any", sel: [] }));
     if (f.outs.length) add(f.outs.map((o) => PR.outsLabel(o)).join(" or "), () => (f.outs = []));
     if (f.runners.length) add(f.runners.join() === "1,2,3" ? "Any runner on" : f.runners.join("/") + " runners", () => (f.runners = []));
-    f.flags.forEach((x) => add((S.flags[x] || {}).label || x, () => f.flags.splice(f.flags.indexOf(x), 1)));
+    f.flags.forEach((x) => { sec = flagSec(x); add((S.flags[x] || {}).label || x, () => f.flags.splice(f.flags.indexOf(x), 1)); });
+    sec = "inn";
     f.phases.forEach((x) => add(x + " innings", () => f.phases.splice(f.phases.indexOf(x), 1)));
     if (f.innMin != null || f.innMax != null) add(`Inning ${f.innMin ?? 1}–${f.innMax ?? "…"}`, () => (f.innMin = f.innMax = null));
     if (f.half) add(f.half === "top" ? "Top half" : "Bottom half", () => (f.half = null));
     if (f.batSide) add(`${f.batSide} team batting`, () => (f.batSide = null));
     f.scoreState.forEach((x) => add("Batting team " + x, () => f.scoreState.splice(f.scoreState.indexOf(x), 1)));
+    [["liMin", "LI ≥ "], ["liMax", "LI ≤ "]].forEach(([k, l]) => f[k] != null && add(l + f[k], () => (f[k] = null)));
+    sec = "play";
     f.events.forEach((x) => add(x.replace(/_/g, " "), () => (f.events = [])));
+    f.categories.forEach((x) => add(x, () => f.categories.splice(f.categories.indexOf(x), 1)));
+    f.positions.forEach((x) => add("Fielder " + x, () => f.positions.splice(f.positions.indexOf(x), 1)));
+    f.locations.forEach((x) => add("To " + PR.LOC_NAME[x], () => f.locations.splice(f.locations.indexOf(x), 1)));
+    f.spray.forEach((x) => add(x + " field", () => f.spray.splice(f.spray.indexOf(x), 1)));
+    f.outsOnPlay.forEach((x) => add(x + " out(s) on play", () => f.outsOnPlay.splice(f.outsOnPlay.indexOf(x), 1)));
+    if (f.runsMin) add("Run(s) scored", () => (f.runsMin = null));
+    sec = "who";
     if (f.team) add(`${f.team}${f.teamRole !== "any" ? " " + f.teamRole : ""}`, () => (f.team = ""));
     if (f.batter) add("Batter: " + f.batter, () => (f.batter = ""));
     if (f.pitcher) add("Pitcher: " + f.pitcher, () => (f.pitcher = ""));
     if (f.batHand) add(f.batHand + "HB", () => (f.batHand = null));
     if (f.pitHand) add(f.pitHand + "HP", () => (f.pitHand = null));
-    f.positions.forEach((x) => add("Fielder " + x, () => f.positions.splice(f.positions.indexOf(x), 1)));
-    f.locations.forEach((x) => add("To " + PR.LOC_NAME[x], () => f.locations.splice(f.locations.indexOf(x), 1)));
-    f.spray.forEach((x) => add(x + " field", () => f.spray.splice(f.spray.indexOf(x), 1)));
+    sec = "adv";
     f.pitchTypes.forEach((x) => add(x, () => (f.pitchTypes = [])));
-    [["evMin", "EV ≥ "], ["evMax", "EV ≤ "], ["laMin", "LA ≥ "], ["laMax", "LA ≤ "], ["distMin", "Distance ≥ "], ["veloMin", "Pitch ≥ "], ["veloMax", "Pitch ≤ "], ["liMin", "LI ≥ "], ["liMax", "LI ≤ "], ["dreMin", "ΔRE ≥ "], ["dreMax", "ΔRE ≤ "], ["wpaMin", "ΔWP ≥ "], ["wpaMax", "ΔWP ≤ "]]
+    [["evMin", "EV ≥ "], ["evMax", "EV ≤ "], ["laMin", "LA ≥ "], ["laMax", "LA ≤ "], ["distMin", "Distance ≥ "], ["veloMin", "Pitch ≥ "], ["veloMax", "Pitch ≤ "], ["dreMin", "ΔRE ≥ "], ["dreMax", "ΔRE ≤ "], ["wpaMin", "ΔWP ≥ "], ["wpaMax", "ΔWP ≤ "]]
       .forEach(([k, l]) => f[k] != null && add(l + f[k], () => (f[k] = null)));
     if (f.balls != null || f.strikes != null) add(`Count ${f.balls ?? "?"}-${f.strikes ?? "?"}`, () => (f.balls = f.strikes = null));
-    f.outsOnPlay.forEach((x) => add(x + " out(s) on play", () => f.outsOnPlay.splice(f.outsOnPlay.indexOf(x), 1)));
-    if (f.runsMin) add("Run(s) scored", () => (f.runsMin = null));
     f.seasons.forEach((x) => add(String(x), () => f.seasons.splice(f.seasons.indexOf(x), 1)));
     f.gameTypes.forEach((x) => add(x === "post" ? "Postseason" : "Regular season", () => f.gameTypes.splice(f.gameTypes.indexOf(x), 1)));
     if (f.dateFrom || f.dateTo) add(`${f.dateFrom || "…"} → ${f.dateTo || "…"}`, () => (f.dateFrom = f.dateTo = ""));
     f.ifAlign.forEach((x) => add("IF: " + x, () => (f.ifAlign = []))); f.ofAlign.forEach((x) => add("OF: " + x, () => (f.ofAlign = [])));
-    f.categories.forEach((x) => add(x, () => f.categories.splice(f.categories.indexOf(x), 1)));
     f.tags.forEach((x) => add("Tag: " + x, () => f.tags.splice(f.tags.indexOf(x), 1)));
     if (f.savedOnly) add("★ Saved", () => (f.savedOnly = false));
     return out;
@@ -317,21 +377,26 @@
   function card(p, extra = "") {
     const tags = (U.tags[p.id] || []).slice(0, 2);
     const teach = p.flags.filter((x) => S.flags[x] && ["baserunning", "defense", "catcher", "offense", "pitching"].includes(S.flags[x].group)).slice(0, 3);
-    return `<button class="card" data-open="${esc(p.id)}" aria-label="${esc(p.title)}">
+    const sv = isSaved(p.id);
+    return `<article class="card" data-open="${esc(p.id)}" tabindex="0" role="link" aria-label="${esc(p.title)}">
       <div class="thumb">${p.thumb ? `<img src="${esc(p.thumb)}" alt="" loading="lazy" onerror="this.remove()">` : ""}<div class="alt" ${p.thumb ? "style=\"z-index:-1\"" : ""}>${diamond(p.bases, { size: 70, outs: p.outs, dark: true })}</div>
-        ${angleChip(p.angles[0])}${isSaved(p.id) ? '<span class="sv" title="Saved">★</span>' : ""}
+        ${angleChip(p.angles[0])}
         <div class="bug">${diamond(p.bases, { size: 22, dark: true })}<span>${esc(PR.halfLabel(p))} · ${esc(PR.outsLabel(p.outs))}</span><span class="sp"></span><span>${esc(teamLine(p))}</span></div></div>
       <div class="cbody"><div class="cmeta"><span>${esc(fmtDate(p.date))}</span><span>${esc(p.away)} @ ${esc(p.home)}</span></div>
         <div class="ctitle">${esc(p.title)}</div>
-        <div class="csit">${esc(PR.basesLabel(p.bases))}, ${esc(PR.outsLabel(p.outs).toLowerCase())} · ${esc(p.eventLabel)}</div>
+        <div class="csit"><span class="cdia">${diamond(p.bases, { size: 18 })}</span>${esc(PR.basesLabel(p.bases))}, ${esc(PR.outsLabel(p.outs).toLowerCase())} · ${esc(p.eventLabel)}</div>
         ${extra}
-        <div class="ctags"><span class="tag" style="border-color:var(--oxblood);color:var(--oxblood)" title="Teaching slot this play was curated for">${esc(p.slot)}</span>${teach.slice(0, 2).map((x) => `<span class="tag" title="${esc(S.flags[x].rule)}">${esc(S.flags[x].label)}</span>`).join("")}${tags.map((t) => `<span class="tag coach" title="Your coaching tag">${esc(t)}</span>`).join("")}</div></div></button>`;
+        <div class="ctags"><span class="tag" style="border-color:var(--oxblood);color:var(--oxblood)" title="Teaching slot this play was curated for">${esc(p.slot)}</span>${teach.slice(0, 2).map((x) => `<span class="tag" title="${esc(S.flags[x].rule)}">${esc(S.flags[x].label)}</span>`).join("")}${tags.map((t) => `<span class="tag coach" title="Your coaching tag">${esc(t)}</span>`).join("")}</div></div>
+      <button class="csave${sv ? " on" : ""}" type="button" data-save="${esc(p.id)}" aria-pressed="${sv}" aria-label="${sv ? "Remove from saved" : "Save play"}" title="${sv ? "Saved" : "Save"}">${sv ? "★" : "☆"}</button></article>`;
   }
   function renderResults() {
     const list = sortPlays(PR.filter(S.plays, S.f, userView(), S.flags));
     $("#count").innerHTML = `${list.length} play${list.length === 1 ? "" : "s"}<small>of ${S.plays.length}</small>`;
     $("#sort").value = S.sort;
     const chips = activeChips();
+    $("#btnFilters").innerHTML = `${diamond(S.f.bases.mode === "any" ? "___" : code(S.f.bases.sel), { size: 24 })}Filters${chips.length ? ` <span class="fbadge">${chips.length}</span>` : ""}`;
+    $("#btnFilters").setAttribute("aria-label", `Filters, ${chips.length} active`);
+    $("#mOuts").innerHTML = `<span class="k">Outs</span>` + seg([["Any", 'data-mouts="any"', !S.f.outs.length], ["0", 'data-mouts="0"', S.f.outs.includes(0)], ["1", 'data-mouts="1"', S.f.outs.includes(1)], ["2", 'data-mouts="2"', S.f.outs.includes(2)]]);
     $("#activeBar").innerHTML = chips.map((c, i) => `<span class="af">${esc(c.label)}<button data-rm="${i}" aria-label="Remove ${esc(c.label)}">×</button></span>`).join("") +
       (chips.length ? `<button class="btn sm ghost" data-rm="all">Clear all</button>` : "");
     $$("#activeBar [data-rm]").forEach((b) => (b.onclick = () => { if (b.dataset.rm === "all") { S.f = PR.emptyFilters(); S.understood = null; } else chips[+b.dataset.rm].fn(); pushFilters(); }));
@@ -355,7 +420,12 @@
   $("#grid").addEventListener("click", (e) => {
     const r = e.target.closest("[data-relax]");
     if (r) { const o = (S.relax || []).find((x) => x.i === +r.dataset.relax); if (o) { S.f = o.g; pushFilters(); } return; }
+    const sv = e.target.closest("[data-save]");
+    if (sv) { e.stopPropagation(); toggleSaved(sv.dataset.save); renderResults(); return; }
     const c = e.target.closest("[data-open]"); if (c) openPlay(c.dataset.open);
+  });
+  $("#grid").addEventListener("keydown", (e) => {
+    if ((e.key === "Enter" || e.key === " ") && e.target.matches("article[data-open]")) { e.preventDefault(); openPlay(e.target.dataset.open); }
   });
   $("#sort").onchange = (e) => { S.sort = e.target.value; pushFilters(); };
   function openPlay(id) { sessionStorage.setItem("pr.scroll", String(window.scrollY)); location.hash = "#/play/" + encodeURIComponent(id); }
