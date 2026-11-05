@@ -1,1 +1,352 @@
-{"schema":1,"id":"mlb-745096-13","title":"Anthony Volpe's two-run single","titleSource":"MLB.com clip title","source":{"gamePk":745096,"atBatIndex":13,"eventIndex":2,"playId":"29a42f32-6c1e-4f78-9e06-165949df1498","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/745096/feed/live"},"game":{"gamePk":745096,"date":"2024-05-11","season":2024,"gameType":"R","level":"MLB","venue":"Tropicana Field","away":{"id":147,"name":"New York Yankees","abbr":"NYY","club":"Yankees"},"home":{"id":139,"name":"Tampa Bay Rays","abbr":"TB","club":"Rays"},"series":""},"before":{"inning":2,"half":"top","outs":2,"bases":"123","runners":{"1B":{"id":663757,"name":"Trent Grisham"},"2B":{"id":669224,"name":"Austin Wells"},"3B":{"id":519203,"name":"Anthony Rizzo"}},"score":{"away":0,"home":1},"batting":"away","count":{"balls":0,"strikes":1}},"after":{"outs":3,"bases":"1__","score":{"away":2,"home":1}},"batter":{"id":683011,"name":"Anthony Volpe","side":"R"},"pitcher":{"id":641793,"name":"Zack Littell","hand":"R"},"event":{"type":"single","label":"Single","description":"Anthony Volpe singles on a line drive to left fielder Randy Arozarena. Anthony Rizzo scores. Austin Wells scores. Trent Grisham out at 3rd on the throw, left fielder Randy Arozarena to third baseman Isaac Paredes to second baseman Amed Rosario to third baseman Isaac Paredes.","rbi":2,"runs":2,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":683011,"name":"Anthony Volpe","start":null,"end":"1B","out":false,"outBase":null,"reason":null,"event":"single","isBatter":true,"credits":[{"id":668227,"name":"Randy Arozarena","pos":"LF","credit":"f_fielded_ball"}]},{"id":669224,"name":"Austin Wells","start":"2B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"single","isBatter":false,"credits":[]},{"id":663757,"name":"Trent Grisham","start":"1B","end":null,"out":true,"outBase":"3B","reason":"r_thrown_out","event":"single","isBatter":false,"credits":[{"id":668227,"name":"Randy Arozarena","pos":"LF","credit":"f_assist"},{"id":668227,"name":"Randy Arozarena","pos":"LF","credit":"f_assist_of"},{"id":670623,"name":"Isaac Paredes","pos":"3B","credit":"f_assist"},{"id":642708,"name":"Amed Rosario","pos":"2B","credit":"f_assist"},{"id":670623,"name":"Isaac Paredes","pos":"3B","credit":"f_putout"}]},{"id":519203,"name":"Anthony Rizzo","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_force","event":"other_out","isBatter":false,"credits":[]}],"chains":[{"runner":"Anthony Volpe","start":null,"out":false,"outBase":null,"chain":"7"},{"runner":"Trent Grisham","start":"1B","out":true,"outBase":"3B","chain":"7-5-4-5"}],"pitch":{"type":"Slider","code":"SL","speed":87.5,"zone":12,"px":1.0462841830051304,"pz":2.869518818482093,"spin":2362,"call":"E"},"batted":{"trajectory":"line_drive","hardness":"medium","location":7,"ev":74.9,"la":20.0,"distance":228.0,"sprayAngle":-14.7,"spray":"center"},"winprob":{"homeAfter":44.3,"homeBefore":57.5,"homeAdded":-13.199999999999996,"li":3.14},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":0.566,"deltaHomeWinExp":-0.144,"batWinExpBefore":0.413,"bbType":"line_drive","pitchName":"Slider","fielders":{"2":656577,"3":650490,"4":642708,"5":670623,"6":676609,"7":668227,"8":642350,"9":676356}},"flags":["close","force_available","go_ahead_on","go_ahead_play","high_leverage","line_drive","one_run","outfield_assist","outfield_play","productive_out","relay","risp","rundown","runner_out_on_bases","runner_scored_on_out","score_from_second_single","single","tag_play","trailing","two_out_rbi","two_outs","tying_run_on"],"curation":{"category":"Baserunning & advancement","slot":"Scoring from second on a single"},"clips":[{"kind":"highlight","slug":"zack-littell-in-play-run-s-to-anthony-volpe","title":"Anthony Volpe's two-run single","duration":"00:00:24","feed":"CMS","pageUrl":"https://www.mlb.com/video/zack-littell-in-play-run-s-to-anthony-volpe","embedUrl":"https://streamable.com/m/zack-littell-in-play-run-s-to-anthony-volpe","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/pxles1aca7dy72j31lre.jpg","match":{"guid":"29a42f32-6c1e-4f78-9e06-165949df1498"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=29a42f32-6c1e-4f78-9e06-165949df1498"},"sources":[{"label":"MLB Stats API — official play-by-play, game 745096","url":"https://statsapi.mlb.com/api/v1.1/game/745096/feed/live"},{"label":"MLB Stats API — win probability, game 745096","url":"https://statsapi.mlb.com/api/v1/game/745096/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=745096"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=29a42f32-6c1e-4f78-9e06-165949df1498"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-745096-13",
+ "title": "Anthony Volpe's two-run single",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 745096,
+  "atBatIndex": 13,
+  "eventIndex": 2,
+  "playId": "29a42f32-6c1e-4f78-9e06-165949df1498",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/745096/feed/live"
+ },
+ "game": {
+  "gamePk": 745096,
+  "date": "2024-05-11",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Tropicana Field",
+  "away": {
+   "id": 147,
+   "name": "New York Yankees",
+   "abbr": "NYY",
+   "club": "Yankees"
+  },
+  "home": {
+   "id": 139,
+   "name": "Tampa Bay Rays",
+   "abbr": "TB",
+   "club": "Rays"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 2,
+  "half": "top",
+  "outs": 2,
+  "bases": "123",
+  "runners": {
+   "1B": {
+    "id": 663757,
+    "name": "Trent Grisham"
+   },
+   "2B": {
+    "id": 669224,
+    "name": "Austin Wells"
+   },
+   "3B": {
+    "id": 519203,
+    "name": "Anthony Rizzo"
+   }
+  },
+  "score": {
+   "away": 0,
+   "home": 1
+  },
+  "batting": "away",
+  "count": {
+   "balls": 0,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 3,
+  "bases": "1__",
+  "score": {
+   "away": 2,
+   "home": 1
+  }
+ },
+ "batter": {
+  "id": 683011,
+  "name": "Anthony Volpe",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 641793,
+  "name": "Zack Littell",
+  "hand": "R"
+ },
+ "event": {
+  "type": "single",
+  "label": "Single",
+  "description": "Anthony Volpe singles on a line drive to left fielder Randy Arozarena. Anthony Rizzo scores. Austin Wells scores. Trent Grisham out at 3rd on the throw, left fielder Randy Arozarena to third baseman Isaac Paredes to second baseman Amed Rosario to third baseman Isaac Paredes.",
+  "rbi": 2,
+  "runs": 2,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 683011,
+   "name": "Anthony Volpe",
+   "start": null,
+   "end": "1B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "single",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 668227,
+     "name": "Randy Arozarena",
+     "pos": "LF",
+     "credit": "f_fielded_ball"
+    }
+   ]
+  },
+  {
+   "id": 669224,
+   "name": "Austin Wells",
+   "start": "2B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "single",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 663757,
+   "name": "Trent Grisham",
+   "start": "1B",
+   "end": null,
+   "out": true,
+   "outBase": "3B",
+   "reason": "r_thrown_out",
+   "event": "single",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 668227,
+     "name": "Randy Arozarena",
+     "pos": "LF",
+     "credit": "f_assist"
+    },
+    {
+     "id": 668227,
+     "name": "Randy Arozarena",
+     "pos": "LF",
+     "credit": "f_assist_of"
+    },
+    {
+     "id": 670623,
+     "name": "Isaac Paredes",
+     "pos": "3B",
+     "credit": "f_assist"
+    },
+    {
+     "id": 642708,
+     "name": "Amed Rosario",
+     "pos": "2B",
+     "credit": "f_assist"
+    },
+    {
+     "id": 670623,
+     "name": "Isaac Paredes",
+     "pos": "3B",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 519203,
+   "name": "Anthony Rizzo",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_force",
+   "event": "other_out",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Anthony Volpe",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": "7"
+  },
+  {
+   "runner": "Trent Grisham",
+   "start": "1B",
+   "out": true,
+   "outBase": "3B",
+   "chain": "7-5-4-5"
+  }
+ ],
+ "pitch": {
+  "type": "Slider",
+  "code": "SL",
+  "speed": 87.5,
+  "zone": 12,
+  "px": 1.0462841830051304,
+  "pz": 2.869518818482093,
+  "spin": 2362,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "line_drive",
+  "hardness": "medium",
+  "location": 7,
+  "ev": 74.9,
+  "la": 20.0,
+  "distance": 228.0,
+  "sprayAngle": -14.7,
+  "spray": "center"
+ },
+ "winprob": {
+  "homeAfter": 44.3,
+  "homeBefore": 57.5,
+  "homeAdded": -13.199999999999996,
+  "li": 3.14
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.566,
+  "deltaHomeWinExp": -0.144,
+  "batWinExpBefore": 0.413,
+  "bbType": "line_drive",
+  "pitchName": "Slider",
+  "fielders": {
+   "2": 656577,
+   "3": 650490,
+   "4": 642708,
+   "5": 670623,
+   "6": 676609,
+   "7": 668227,
+   "8": 642350,
+   "9": 676356
+  }
+ },
+ "flags": [
+  "close",
+  "force_available",
+  "go_ahead_on",
+  "go_ahead_play",
+  "high_leverage",
+  "line_drive",
+  "one_run",
+  "outfield_assist",
+  "outfield_play",
+  "productive_out",
+  "relay",
+  "risp",
+  "rundown",
+  "runner_out_on_bases",
+  "runner_scored_on_out",
+  "score_from_second_single",
+  "single",
+  "tag_play",
+  "trailing",
+  "two_out_rbi",
+  "two_outs",
+  "tying_run_on"
+ ],
+ "curation": {
+  "category": "Baserunning & advancement",
+  "slot": "Scoring from second on a single"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "zack-littell-in-play-run-s-to-anthony-volpe",
+   "title": "Anthony Volpe's two-run single",
+   "duration": "00:00:24",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/zack-littell-in-play-run-s-to-anthony-volpe",
+   "embedUrl": "https://streamable.com/m/zack-littell-in-play-run-s-to-anthony-volpe",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/pxles1aca7dy72j31lre.jpg",
+   "match": {
+    "guid": "29a42f32-6c1e-4f78-9e06-165949df1498"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=29a42f32-6c1e-4f78-9e06-165949df1498"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 745096",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/745096/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 745096",
+   "url": "https://statsapi.mlb.com/api/v1/game/745096/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=745096"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=29a42f32-6c1e-4f78-9e06-165949df1498"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

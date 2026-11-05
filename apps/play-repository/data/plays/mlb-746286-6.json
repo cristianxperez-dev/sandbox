@@ -1,1 +1,274 @@
-{"schema":1,"id":"mlb-746286-6","title":"Salvador Perez's RBI single","titleSource":"MLB.com clip title","source":{"gamePk":746286,"atBatIndex":6,"eventIndex":2,"playId":"5fad6975-5328-4b6e-b24f-ca00100f90bf","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/746286/feed/live"},"game":{"gamePk":746286,"date":"2024-07-20","season":2024,"gameType":"R","level":"MLB","venue":"Kauffman Stadium","away":{"id":145,"name":"Chicago White Sox","abbr":"CWS","club":"White Sox"},"home":{"id":118,"name":"Kansas City Royals","abbr":"KC","club":"Royals"},"series":""},"before":{"inning":1,"half":"bottom","outs":2,"bases":"_2_","runners":{"1B":null,"2B":{"id":686469,"name":"Vinnie Pasquantino"},"3B":null},"score":{"away":0,"home":0},"batting":"home","count":{"balls":0,"strikes":1}},"after":{"outs":2,"bases":"1__","score":{"away":0,"home":1}},"batter":{"id":521692,"name":"Salvador Perez","side":"R"},"pitcher":{"id":686563,"name":"Jonathan Cannon","hand":"R"},"event":{"type":"single","label":"Single","description":"Salvador Perez singles on a sharp line drive to right fielder Tommy Pham. Vinnie Pasquantino scores.","rbi":1,"runs":1,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":521692,"name":"Salvador Perez","start":null,"end":"1B","out":false,"outBase":null,"reason":null,"event":"single","isBatter":true,"credits":[{"id":502054,"name":"Tommy Pham","pos":"RF","credit":"f_fielded_ball"}]},{"id":686469,"name":"Vinnie Pasquantino","start":"2B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"single","isBatter":false,"credits":[]}],"chains":[{"runner":"Salvador Perez","start":null,"out":false,"outBase":null,"chain":"9"}],"pitch":{"type":"Sinker","code":"SI","speed":95.1,"zone":6,"px":0.43432765549195507,"pz":2.4853537965759176,"spin":2267,"call":"E"},"batted":{"trajectory":"line_drive","hardness":"hard","location":9,"ev":107.5,"la":14.0,"distance":305.0,"sprayAngle":22.8,"spray":"opposite"},"winprob":{"homeAfter":62.3,"homeBefore":53.3,"homeAdded":8.999999999999993,"li":1.9},"statcast":{"ifAlignment":"Infield shade","ofAlignment":"Standard","deltaRunExp":0.699,"deltaHomeWinExp":0.095,"batWinExpBefore":0.528,"bbType":"line_drive","pitchName":"Sinker","fielders":{"2":642020,"3":683734,"4":681460,"5":657557,"6":670032,"7":643217,"8":673357,"9":502054}},"flags":["close","go_ahead_on","go_ahead_play","line_drive","outfield_play","risp","score_from_second_single","shift_alignment","single","tied","two_out_rbi","two_outs"],"curation":{"category":"Situational hitting","slot":"Two-out RBI single"},"clips":[{"kind":"highlight","slug":"jonathan-cannon-in-play-run-s-to-salvador-perez","title":"Salvador Perez's RBI single","duration":"00:00:27","feed":"CMS","pageUrl":"https://www.mlb.com/video/jonathan-cannon-in-play-run-s-to-salvador-perez","embedUrl":"https://streamable.com/m/jonathan-cannon-in-play-run-s-to-salvador-perez","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/lv5bf1xdm3kfi0ogjo9v.jpg","match":{"guid":"5fad6975-5328-4b6e-b24f-ca00100f90bf"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=5fad6975-5328-4b6e-b24f-ca00100f90bf"},"sources":[{"label":"MLB Stats API — official play-by-play, game 746286","url":"https://statsapi.mlb.com/api/v1.1/game/746286/feed/live"},{"label":"MLB Stats API — win probability, game 746286","url":"https://statsapi.mlb.com/api/v1/game/746286/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=746286"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=5fad6975-5328-4b6e-b24f-ca00100f90bf"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-746286-6",
+ "title": "Salvador Perez's RBI single",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 746286,
+  "atBatIndex": 6,
+  "eventIndex": 2,
+  "playId": "5fad6975-5328-4b6e-b24f-ca00100f90bf",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/746286/feed/live"
+ },
+ "game": {
+  "gamePk": 746286,
+  "date": "2024-07-20",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Kauffman Stadium",
+  "away": {
+   "id": 145,
+   "name": "Chicago White Sox",
+   "abbr": "CWS",
+   "club": "White Sox"
+  },
+  "home": {
+   "id": 118,
+   "name": "Kansas City Royals",
+   "abbr": "KC",
+   "club": "Royals"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 1,
+  "half": "bottom",
+  "outs": 2,
+  "bases": "_2_",
+  "runners": {
+   "1B": null,
+   "2B": {
+    "id": 686469,
+    "name": "Vinnie Pasquantino"
+   },
+   "3B": null
+  },
+  "score": {
+   "away": 0,
+   "home": 0
+  },
+  "batting": "home",
+  "count": {
+   "balls": 0,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "1__",
+  "score": {
+   "away": 0,
+   "home": 1
+  }
+ },
+ "batter": {
+  "id": 521692,
+  "name": "Salvador Perez",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 686563,
+  "name": "Jonathan Cannon",
+  "hand": "R"
+ },
+ "event": {
+  "type": "single",
+  "label": "Single",
+  "description": "Salvador Perez singles on a sharp line drive to right fielder Tommy Pham. Vinnie Pasquantino scores.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 521692,
+   "name": "Salvador Perez",
+   "start": null,
+   "end": "1B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "single",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 502054,
+     "name": "Tommy Pham",
+     "pos": "RF",
+     "credit": "f_fielded_ball"
+    }
+   ]
+  },
+  {
+   "id": 686469,
+   "name": "Vinnie Pasquantino",
+   "start": "2B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "single",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Salvador Perez",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": "9"
+  }
+ ],
+ "pitch": {
+  "type": "Sinker",
+  "code": "SI",
+  "speed": 95.1,
+  "zone": 6,
+  "px": 0.43432765549195507,
+  "pz": 2.4853537965759176,
+  "spin": 2267,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "line_drive",
+  "hardness": "hard",
+  "location": 9,
+  "ev": 107.5,
+  "la": 14.0,
+  "distance": 305.0,
+  "sprayAngle": 22.8,
+  "spray": "opposite"
+ },
+ "winprob": {
+  "homeAfter": 62.3,
+  "homeBefore": 53.3,
+  "homeAdded": 8.999999999999993,
+  "li": 1.9
+ },
+ "statcast": {
+  "ifAlignment": "Infield shade",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.699,
+  "deltaHomeWinExp": 0.095,
+  "batWinExpBefore": 0.528,
+  "bbType": "line_drive",
+  "pitchName": "Sinker",
+  "fielders": {
+   "2": 642020,
+   "3": 683734,
+   "4": 681460,
+   "5": 657557,
+   "6": 670032,
+   "7": 643217,
+   "8": 673357,
+   "9": 502054
+  }
+ },
+ "flags": [
+  "close",
+  "go_ahead_on",
+  "go_ahead_play",
+  "line_drive",
+  "outfield_play",
+  "risp",
+  "score_from_second_single",
+  "shift_alignment",
+  "single",
+  "tied",
+  "two_out_rbi",
+  "two_outs"
+ ],
+ "curation": {
+  "category": "Situational hitting",
+  "slot": "Two-out RBI single"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "jonathan-cannon-in-play-run-s-to-salvador-perez",
+   "title": "Salvador Perez's RBI single",
+   "duration": "00:00:27",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/jonathan-cannon-in-play-run-s-to-salvador-perez",
+   "embedUrl": "https://streamable.com/m/jonathan-cannon-in-play-run-s-to-salvador-perez",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/lv5bf1xdm3kfi0ogjo9v.jpg",
+   "match": {
+    "guid": "5fad6975-5328-4b6e-b24f-ca00100f90bf"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=5fad6975-5328-4b6e-b24f-ca00100f90bf"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 746286",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/746286/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 746286",
+   "url": "https://statsapi.mlb.com/api/v1/game/746286/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=746286"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=5fad6975-5328-4b6e-b24f-ca00100f90bf"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

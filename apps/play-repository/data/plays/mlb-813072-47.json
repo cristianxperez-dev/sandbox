@@ -1,1 +1,296 @@
-{"schema":1,"id":"mlb-813072-47","title":"Zach McKinstry's go-ahead sacrifice bunt","titleSource":"MLB.com clip title","source":{"gamePk":813072,"atBatIndex":47,"eventIndex":0,"playId":"b7886149-a021-354f-9fcc-dea9b71b74af","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/813072/feed/live"},"game":{"gamePk":813072,"date":"2025-09-30","season":2025,"gameType":"F","level":"MLB","venue":"Progressive Field","away":{"id":116,"name":"Detroit Tigers","abbr":"DET","club":"Tigers"},"home":{"id":114,"name":"Cleveland Guardians","abbr":"CLE","club":"Guardians"},"series":""},"before":{"inning":7,"half":"top","outs":1,"bases":"1_3","runners":{"1B":{"id":672761,"name":"Wenceel Pérez"},"2B":null,"3B":{"id":682985,"name":"Riley Greene"}},"score":{"away":1,"home":1},"batting":"away","count":{"balls":0,"strikes":0}},"after":{"outs":2,"bases":"_2_","score":{"away":2,"home":1}},"batter":{"id":656716,"name":"Zach McKinstry","side":"L"},"pitcher":{"id":683769,"name":"Hunter Gaddis","hand":"R"},"event":{"type":"sac_bunt","label":"Sac Bunt","description":"Zach McKinstry out on a sacrifice bunt, first baseman Jhonkensy Noel to second baseman Brayan Rocchio. Riley Greene scores. Wenceel Pérez to 2nd.","rbi":1,"runs":1,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":656716,"name":"Zach McKinstry","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"sac_bunt","isBatter":true,"credits":[{"id":678877,"name":"Jhonkensy Noel","pos":"1B","credit":"f_assist"},{"id":677587,"name":"Brayan Rocchio","pos":"2B","credit":"f_putout"}]},{"id":682985,"name":"Riley Greene","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"sac_bunt","isBatter":false,"credits":[]},{"id":672761,"name":"Wenceel Pérez","start":"1B","end":"2B","out":false,"outBase":null,"reason":"r_adv_force","event":"sac_bunt","isBatter":false,"credits":[]}],"chains":[{"runner":"Zach McKinstry","start":null,"out":true,"outBase":"1B","chain":"3-4"}],"pitch":{"type":"Changeup","code":"CH","speed":79.4,"zone":4,"px":-0.5219960864456038,"pz":2.412429035021121,"spin":1536,"call":"E"},"batted":{"trajectory":"bunt_grounder","hardness":"medium","location":3,"ev":31.6,"la":-31.0,"distance":5.0,"sprayAngle":62.4,"spray":"pull"},"winprob":{"homeAfter":32.4,"homeBefore":38.2,"homeAdded":-5.800000000000004,"li":3.31},"statcast":{"ifAlignment":"Strategic","ofAlignment":"Strategic","deltaRunExp":0.043,"deltaHomeWinExp":-0.058,"batWinExpBefore":0.618,"bbType":"ground_ball","pitchName":"Changeup","fielders":{"2":595978,"3":678877,"4":677587,"5":608070,"6":672356,"7":680757,"8":682657,"9":671286}},"flags":["bunt","close","dp_situation","force_available","go_ahead_on","go_ahead_play","high_leverage","of_alignment_nonstd","postseason","productive_out","risp","runner_scored_on_out","shift_alignment","tied"],"curation":{"category":"Situational hitting","slot":"Squeeze play"},"clips":[{"kind":"highlight","slug":"zach-mckinstry-out-on-a-sacrifice-bunt-first-baseman-jhonkensy-noel-to-se","title":"Zach McKinstry's go-ahead sacrifice bunt","duration":"00:00:28","feed":"CMS","pageUrl":"https://www.mlb.com/video/zach-mckinstry-out-on-a-sacrifice-bunt-first-baseman-jhonkensy-noel-to-se","embedUrl":"https://streamable.com/m/zach-mckinstry-out-on-a-sacrifice-bunt-first-baseman-jhonkensy-noel-to-se","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/yrl3zosmdirfnntceewo.jpg","match":{"guid":"b7886149-a021-354f-9fcc-dea9b71b74af"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=b7886149-a021-354f-9fcc-dea9b71b74af"},"sources":[{"label":"MLB Stats API — official play-by-play, game 813072","url":"https://statsapi.mlb.com/api/v1.1/game/813072/feed/live"},{"label":"MLB Stats API — win probability, game 813072","url":"https://statsapi.mlb.com/api/v1/game/813072/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=813072"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=b7886149-a021-354f-9fcc-dea9b71b74af"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-813072-47",
+ "title": "Zach McKinstry's go-ahead sacrifice bunt",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 813072,
+  "atBatIndex": 47,
+  "eventIndex": 0,
+  "playId": "b7886149-a021-354f-9fcc-dea9b71b74af",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/813072/feed/live"
+ },
+ "game": {
+  "gamePk": 813072,
+  "date": "2025-09-30",
+  "season": 2025,
+  "gameType": "F",
+  "level": "MLB",
+  "venue": "Progressive Field",
+  "away": {
+   "id": 116,
+   "name": "Detroit Tigers",
+   "abbr": "DET",
+   "club": "Tigers"
+  },
+  "home": {
+   "id": 114,
+   "name": "Cleveland Guardians",
+   "abbr": "CLE",
+   "club": "Guardians"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 7,
+  "half": "top",
+  "outs": 1,
+  "bases": "1_3",
+  "runners": {
+   "1B": {
+    "id": 672761,
+    "name": "Wenceel Pérez"
+   },
+   "2B": null,
+   "3B": {
+    "id": 682985,
+    "name": "Riley Greene"
+   }
+  },
+  "score": {
+   "away": 1,
+   "home": 1
+  },
+  "batting": "away",
+  "count": {
+   "balls": 0,
+   "strikes": 0
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "_2_",
+  "score": {
+   "away": 2,
+   "home": 1
+  }
+ },
+ "batter": {
+  "id": 656716,
+  "name": "Zach McKinstry",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 683769,
+  "name": "Hunter Gaddis",
+  "hand": "R"
+ },
+ "event": {
+  "type": "sac_bunt",
+  "label": "Sac Bunt",
+  "description": "Zach McKinstry out on a sacrifice bunt, first baseman Jhonkensy Noel to second baseman Brayan Rocchio. Riley Greene scores. Wenceel Pérez to 2nd.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 656716,
+   "name": "Zach McKinstry",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "sac_bunt",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 678877,
+     "name": "Jhonkensy Noel",
+     "pos": "1B",
+     "credit": "f_assist"
+    },
+    {
+     "id": 677587,
+     "name": "Brayan Rocchio",
+     "pos": "2B",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 682985,
+   "name": "Riley Greene",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "sac_bunt",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 672761,
+   "name": "Wenceel Pérez",
+   "start": "1B",
+   "end": "2B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_force",
+   "event": "sac_bunt",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Zach McKinstry",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "3-4"
+  }
+ ],
+ "pitch": {
+  "type": "Changeup",
+  "code": "CH",
+  "speed": 79.4,
+  "zone": 4,
+  "px": -0.5219960864456038,
+  "pz": 2.412429035021121,
+  "spin": 1536,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "bunt_grounder",
+  "hardness": "medium",
+  "location": 3,
+  "ev": 31.6,
+  "la": -31.0,
+  "distance": 5.0,
+  "sprayAngle": 62.4,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 32.4,
+  "homeBefore": 38.2,
+  "homeAdded": -5.800000000000004,
+  "li": 3.31
+ },
+ "statcast": {
+  "ifAlignment": "Strategic",
+  "ofAlignment": "Strategic",
+  "deltaRunExp": 0.043,
+  "deltaHomeWinExp": -0.058,
+  "batWinExpBefore": 0.618,
+  "bbType": "ground_ball",
+  "pitchName": "Changeup",
+  "fielders": {
+   "2": 595978,
+   "3": 678877,
+   "4": 677587,
+   "5": 608070,
+   "6": 672356,
+   "7": 680757,
+   "8": 682657,
+   "9": 671286
+  }
+ },
+ "flags": [
+  "bunt",
+  "close",
+  "dp_situation",
+  "force_available",
+  "go_ahead_on",
+  "go_ahead_play",
+  "high_leverage",
+  "of_alignment_nonstd",
+  "postseason",
+  "productive_out",
+  "risp",
+  "runner_scored_on_out",
+  "shift_alignment",
+  "tied"
+ ],
+ "curation": {
+  "category": "Situational hitting",
+  "slot": "Squeeze play"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "zach-mckinstry-out-on-a-sacrifice-bunt-first-baseman-jhonkensy-noel-to-se",
+   "title": "Zach McKinstry's go-ahead sacrifice bunt",
+   "duration": "00:00:28",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/zach-mckinstry-out-on-a-sacrifice-bunt-first-baseman-jhonkensy-noel-to-se",
+   "embedUrl": "https://streamable.com/m/zach-mckinstry-out-on-a-sacrifice-bunt-first-baseman-jhonkensy-noel-to-se",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/yrl3zosmdirfnntceewo.jpg",
+   "match": {
+    "guid": "b7886149-a021-354f-9fcc-dea9b71b74af"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=b7886149-a021-354f-9fcc-dea9b71b74af"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 813072",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/813072/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 813072",
+   "url": "https://statsapi.mlb.com/api/v1/game/813072/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=813072"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=b7886149-a021-354f-9fcc-dea9b71b74af"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

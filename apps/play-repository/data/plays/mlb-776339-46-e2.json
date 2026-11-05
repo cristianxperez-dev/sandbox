@@ -1,1 +1,207 @@
-{"schema":1,"id":"mlb-776339-46-e2","title":"Pedro Pagés scores on a wild pitch","titleSource":"MLB.com clip title","source":{"gamePk":776339,"atBatIndex":46,"eventIndex":2,"playId":"1c71a252-6ca9-3e0c-b232-1f083ccb39fc","terminal":false,"feed":"https://statsapi.mlb.com/api/v1.1/game/776339/feed/live"},"game":{"gamePk":776339,"date":"2025-09-13","season":2025,"gameType":"R","level":"MLB","venue":"American Family Field","away":{"id":138,"name":"St. Louis Cardinals","abbr":"STL","club":"Cardinals"},"home":{"id":158,"name":"Milwaukee Brewers","abbr":"MIL","club":"Brewers"},"series":""},"before":{"inning":6,"half":"top","outs":2,"bases":"1_3","runners":{"1B":{"id":680977,"name":"Brendan Donovan"},"2B":null,"3B":{"id":686780,"name":"Pedro Pagés"}},"score":{"away":5,"home":1},"batting":"away","count":{"balls":1,"strikes":0}},"after":{"outs":2,"bases":"_2_","score":{"away":6,"home":1}},"batter":{"id":671056,"name":"Iván Herrera","side":"R"},"pitcher":{"id":642239,"name":"Rob Zastryzny","hand":"L"},"event":{"type":"wild_pitch","label":"Wild Pitch","description":"Wild pitch by pitcher Rob Zastryzny. Pedro Pagés scores. Brendan Donovan to 2nd.","rbi":null,"runs":1,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":686780,"name":"Pedro Pagés","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"wild_pitch","isBatter":false,"credits":[]},{"id":680977,"name":"Brendan Donovan","start":"1B","end":"2B","out":false,"outBase":null,"reason":"r_adv_play","event":"wild_pitch","isBatter":false,"credits":[]}],"chains":[],"pitch":null,"batted":null,"winprob":{"homeAfter":null,"homeBefore":null,"homeAdded":null,"li":0.6},"statcast":null,"flags":["force_available","leading","low_leverage","risp","two_outs","wild_pitch"],"curation":{"category":"Catcher defense & plays at the plate","slot":"Run scores on a wild pitch or passed ball"},"clips":[{"kind":"highlight","slug":"pedro-pages-scores-on-a-wild-pitch","title":"Pedro Pagés scores on a wild pitch","duration":"00:00:07","feed":"CMS","pageUrl":"https://www.mlb.com/video/pedro-pages-scores-on-a-wild-pitch","embedUrl":"https://streamable.com/m/pedro-pages-scores-on-a-wild-pitch","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/vn7ezg3s5hmuflbafgtz.jpg","match":{"guid":"1c71a252-6ca9-3e0c-b232-1f083ccb39fc"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":null,"sources":[{"label":"MLB Stats API — official play-by-play, game 776339","url":"https://statsapi.mlb.com/api/v1.1/game/776339/feed/live"},{"label":"MLB Stats API — win probability, game 776339","url":"https://statsapi.mlb.com/api/v1/game/776339/winProbability"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-776339-46-e2",
+ "title": "Pedro Pagés scores on a wild pitch",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 776339,
+  "atBatIndex": 46,
+  "eventIndex": 2,
+  "playId": "1c71a252-6ca9-3e0c-b232-1f083ccb39fc",
+  "terminal": false,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/776339/feed/live"
+ },
+ "game": {
+  "gamePk": 776339,
+  "date": "2025-09-13",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "American Family Field",
+  "away": {
+   "id": 138,
+   "name": "St. Louis Cardinals",
+   "abbr": "STL",
+   "club": "Cardinals"
+  },
+  "home": {
+   "id": 158,
+   "name": "Milwaukee Brewers",
+   "abbr": "MIL",
+   "club": "Brewers"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 6,
+  "half": "top",
+  "outs": 2,
+  "bases": "1_3",
+  "runners": {
+   "1B": {
+    "id": 680977,
+    "name": "Brendan Donovan"
+   },
+   "2B": null,
+   "3B": {
+    "id": 686780,
+    "name": "Pedro Pagés"
+   }
+  },
+  "score": {
+   "away": 5,
+   "home": 1
+  },
+  "batting": "away",
+  "count": {
+   "balls": 1,
+   "strikes": 0
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "_2_",
+  "score": {
+   "away": 6,
+   "home": 1
+  }
+ },
+ "batter": {
+  "id": 671056,
+  "name": "Iván Herrera",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 642239,
+  "name": "Rob Zastryzny",
+  "hand": "L"
+ },
+ "event": {
+  "type": "wild_pitch",
+  "label": "Wild Pitch",
+  "description": "Wild pitch by pitcher Rob Zastryzny. Pedro Pagés scores. Brendan Donovan to 2nd.",
+  "rbi": null,
+  "runs": 1,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 686780,
+   "name": "Pedro Pagés",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "wild_pitch",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 680977,
+   "name": "Brendan Donovan",
+   "start": "1B",
+   "end": "2B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "wild_pitch",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [],
+ "pitch": null,
+ "batted": null,
+ "winprob": {
+  "homeAfter": null,
+  "homeBefore": null,
+  "homeAdded": null,
+  "li": 0.6
+ },
+ "statcast": null,
+ "flags": [
+  "force_available",
+  "leading",
+  "low_leverage",
+  "risp",
+  "two_outs",
+  "wild_pitch"
+ ],
+ "curation": {
+  "category": "Catcher defense & plays at the plate",
+  "slot": "Run scores on a wild pitch or passed ball"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "pedro-pages-scores-on-a-wild-pitch",
+   "title": "Pedro Pagés scores on a wild pitch",
+   "duration": "00:00:07",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/pedro-pages-scores-on-a-wild-pitch",
+   "embedUrl": "https://streamable.com/m/pedro-pages-scores-on-a-wild-pitch",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/vn7ezg3s5hmuflbafgtz.jpg",
+   "match": {
+    "guid": "1c71a252-6ca9-3e0c-b232-1f083ccb39fc"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": null,
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 776339",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/776339/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 776339",
+   "url": "https://statsapi.mlb.com/api/v1/game/776339/winProbability"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

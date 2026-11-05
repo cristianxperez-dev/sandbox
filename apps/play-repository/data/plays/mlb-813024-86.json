@@ -1,1 +1,316 @@
-{"schema":1,"id":"mlb-813024-86","title":"Giménez throws out Betts at home in the 10th inning","titleSource":"MLB.com clip title","source":{"gamePk":813024,"atBatIndex":86,"eventIndex":4,"playId":"de4a752e-5245-3d4d-831b-b07caa317f5b","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/813024/feed/live"},"game":{"gamePk":813024,"date":"2025-11-01","season":2025,"gameType":"W","level":"MLB","venue":"Rogers Centre","away":{"id":119,"name":"Los Angeles Dodgers","abbr":"LAD","club":"Dodgers"},"home":{"id":141,"name":"Toronto Blue Jays","abbr":"TOR","club":"Blue Jays"},"series":""},"before":{"inning":10,"half":"top","outs":1,"bases":"123","runners":{"1B":{"id":606192,"name":"Teoscar Hernández"},"2B":{"id":571970,"name":"Max Muncy"},"3B":{"id":605141,"name":"Mookie Betts"}},"score":{"away":4,"home":4},"batting":"away","count":{"balls":2,"strikes":1}},"after":{"outs":2,"bases":"123","score":{"away":4,"home":4}},"batter":{"id":681624,"name":"Andy Pages","side":"R"},"pitcher":{"id":622554,"name":"Seranthony Domínguez","hand":"R"},"event":{"type":"force_out","label":"Forceout","description":"Andy Pages grounds into a force out, shortstop Andrés Giménez to catcher Alejandro Kirk. Mookie Betts out at home. Max Muncy to 3rd. Teoscar Hernández to 2nd. Andy Pages to 1st.","rbi":0,"runs":0,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":605141,"name":"Mookie Betts","start":"3B","end":null,"out":true,"outBase":"4B","reason":"r_force_out","event":"force_out","isBatter":false,"credits":[{"id":665926,"name":"Andrés Giménez","pos":"SS","credit":"f_assist"},{"id":672386,"name":"Alejandro Kirk","pos":"C","credit":"f_putout"}]},{"id":571970,"name":"Max Muncy","start":"2B","end":"3B","out":false,"outBase":null,"reason":"r_adv_play","event":"force_out","isBatter":false,"credits":[]},{"id":606192,"name":"Teoscar Hernández","start":"1B","end":"2B","out":false,"outBase":null,"reason":"r_adv_play","event":"force_out","isBatter":false,"credits":[]},{"id":681624,"name":"Andy Pages","start":null,"end":"1B","out":false,"outBase":null,"reason":null,"event":"force_out","isBatter":true,"credits":[]}],"chains":[{"runner":"Mookie Betts","start":"3B","out":true,"outBase":"4B","chain":"6-2"}],"pitch":{"type":"Sinker","code":"SI","speed":97.0,"zone":1,"px":-0.7389026543842628,"pz":3.1266010465659595,"spin":2275,"call":"X"},"batted":{"trajectory":"ground_ball","hardness":"medium","location":6,"ev":67.0,"la":-12.0,"distance":14.0,"sprayAngle":-8.2,"spray":"center"},"winprob":{"homeAfter":46.1,"homeBefore":28.2,"homeAdded":17.900000000000006,"li":5.65},"statcast":{"ifAlignment":"Strategic","ofAlignment":"Standard","deltaRunExp":-0.363,"deltaHomeWinExp":0.197,"batWinExpBefore":0.736,"bbType":"ground_ball","pitchName":"Sinker","fielders":{"2":672386,"3":665489,"4":643396,"5":676391,"6":665926,"7":664702,"8":662139,"9":680718}},"flags":["catcher_play","close","dp_situation","extra_innings","force_available","force_play","go_ahead_on","ground_ball","ground_ball_infield","high_leverage","middle_infield","out_at_plate","play_at_plate","postseason","productive_out","risp","shift_alignment","tied"],"curation":{"category":"Infield defense & decisions","slot":"Force at home, bases loaded"},"clips":[{"kind":"highlight","slug":"seranthony-dominguez-in-play-out-s-to-andy-pages-nucgmq","title":"Giménez throws out Betts at home in the 10th inning","duration":"00:00:21","feed":"CMS","pageUrl":"https://www.mlb.com/video/seranthony-dominguez-in-play-out-s-to-andy-pages-nucgmq","embedUrl":"https://streamable.com/m/seranthony-dominguez-in-play-out-s-to-andy-pages-nucgmq","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/zki52vc4no0ipdrpkd22.jpg","match":{"guid":"de4a752e-5245-3d4d-831b-b07caa317f5b"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=de4a752e-5245-3d4d-831b-b07caa317f5b"},"sources":[{"label":"MLB Stats API — official play-by-play, game 813024","url":"https://statsapi.mlb.com/api/v1.1/game/813024/feed/live"},{"label":"MLB Stats API — win probability, game 813024","url":"https://statsapi.mlb.com/api/v1/game/813024/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=813024"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=de4a752e-5245-3d4d-831b-b07caa317f5b"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-813024-86",
+ "title": "Giménez throws out Betts at home in the 10th inning",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 813024,
+  "atBatIndex": 86,
+  "eventIndex": 4,
+  "playId": "de4a752e-5245-3d4d-831b-b07caa317f5b",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/813024/feed/live"
+ },
+ "game": {
+  "gamePk": 813024,
+  "date": "2025-11-01",
+  "season": 2025,
+  "gameType": "W",
+  "level": "MLB",
+  "venue": "Rogers Centre",
+  "away": {
+   "id": 119,
+   "name": "Los Angeles Dodgers",
+   "abbr": "LAD",
+   "club": "Dodgers"
+  },
+  "home": {
+   "id": 141,
+   "name": "Toronto Blue Jays",
+   "abbr": "TOR",
+   "club": "Blue Jays"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 10,
+  "half": "top",
+  "outs": 1,
+  "bases": "123",
+  "runners": {
+   "1B": {
+    "id": 606192,
+    "name": "Teoscar Hernández"
+   },
+   "2B": {
+    "id": 571970,
+    "name": "Max Muncy"
+   },
+   "3B": {
+    "id": 605141,
+    "name": "Mookie Betts"
+   }
+  },
+  "score": {
+   "away": 4,
+   "home": 4
+  },
+  "batting": "away",
+  "count": {
+   "balls": 2,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "123",
+  "score": {
+   "away": 4,
+   "home": 4
+  }
+ },
+ "batter": {
+  "id": 681624,
+  "name": "Andy Pages",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 622554,
+  "name": "Seranthony Domínguez",
+  "hand": "R"
+ },
+ "event": {
+  "type": "force_out",
+  "label": "Forceout",
+  "description": "Andy Pages grounds into a force out, shortstop Andrés Giménez to catcher Alejandro Kirk. Mookie Betts out at home. Max Muncy to 3rd. Teoscar Hernández to 2nd. Andy Pages to 1st.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 605141,
+   "name": "Mookie Betts",
+   "start": "3B",
+   "end": null,
+   "out": true,
+   "outBase": "4B",
+   "reason": "r_force_out",
+   "event": "force_out",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 665926,
+     "name": "Andrés Giménez",
+     "pos": "SS",
+     "credit": "f_assist"
+    },
+    {
+     "id": 672386,
+     "name": "Alejandro Kirk",
+     "pos": "C",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 571970,
+   "name": "Max Muncy",
+   "start": "2B",
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "force_out",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 606192,
+   "name": "Teoscar Hernández",
+   "start": "1B",
+   "end": "2B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "force_out",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 681624,
+   "name": "Andy Pages",
+   "start": null,
+   "end": "1B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "force_out",
+   "isBatter": true,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Mookie Betts",
+   "start": "3B",
+   "out": true,
+   "outBase": "4B",
+   "chain": "6-2"
+  }
+ ],
+ "pitch": {
+  "type": "Sinker",
+  "code": "SI",
+  "speed": 97.0,
+  "zone": 1,
+  "px": -0.7389026543842628,
+  "pz": 3.1266010465659595,
+  "spin": 2275,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "ground_ball",
+  "hardness": "medium",
+  "location": 6,
+  "ev": 67.0,
+  "la": -12.0,
+  "distance": 14.0,
+  "sprayAngle": -8.2,
+  "spray": "center"
+ },
+ "winprob": {
+  "homeAfter": 46.1,
+  "homeBefore": 28.2,
+  "homeAdded": 17.900000000000006,
+  "li": 5.65
+ },
+ "statcast": {
+  "ifAlignment": "Strategic",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.363,
+  "deltaHomeWinExp": 0.197,
+  "batWinExpBefore": 0.736,
+  "bbType": "ground_ball",
+  "pitchName": "Sinker",
+  "fielders": {
+   "2": 672386,
+   "3": 665489,
+   "4": 643396,
+   "5": 676391,
+   "6": 665926,
+   "7": 664702,
+   "8": 662139,
+   "9": 680718
+  }
+ },
+ "flags": [
+  "catcher_play",
+  "close",
+  "dp_situation",
+  "extra_innings",
+  "force_available",
+  "force_play",
+  "go_ahead_on",
+  "ground_ball",
+  "ground_ball_infield",
+  "high_leverage",
+  "middle_infield",
+  "out_at_plate",
+  "play_at_plate",
+  "postseason",
+  "productive_out",
+  "risp",
+  "shift_alignment",
+  "tied"
+ ],
+ "curation": {
+  "category": "Infield defense & decisions",
+  "slot": "Force at home, bases loaded"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "seranthony-dominguez-in-play-out-s-to-andy-pages-nucgmq",
+   "title": "Giménez throws out Betts at home in the 10th inning",
+   "duration": "00:00:21",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/seranthony-dominguez-in-play-out-s-to-andy-pages-nucgmq",
+   "embedUrl": "https://streamable.com/m/seranthony-dominguez-in-play-out-s-to-andy-pages-nucgmq",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/zki52vc4no0ipdrpkd22.jpg",
+   "match": {
+    "guid": "de4a752e-5245-3d4d-831b-b07caa317f5b"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=de4a752e-5245-3d4d-831b-b07caa317f5b"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 813024",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/813024/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 813024",
+   "url": "https://statsapi.mlb.com/api/v1/game/813024/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=813024"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=de4a752e-5245-3d4d-831b-b07caa317f5b"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

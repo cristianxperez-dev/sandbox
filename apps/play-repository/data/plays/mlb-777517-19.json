@@ -1,1 +1,310 @@
-{"schema":1,"id":"mlb-777517-19","title":"The Reds execute perfect relay to nab Javier Báez","titleSource":"MLB.com clip title","source":{"gamePk":777517,"atBatIndex":19,"eventIndex":8,"playId":"92f9a7a5-461a-3c9a-b6bc-78de5db923e4","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/777517/feed/live"},"game":{"gamePk":777517,"date":"2025-06-14","season":2025,"gameType":"R","level":"MLB","venue":"Comerica Park","away":{"id":113,"name":"Cincinnati Reds","abbr":"CIN","club":"Reds"},"home":{"id":116,"name":"Detroit Tigers","abbr":"DET","club":"Tigers"},"series":""},"before":{"inning":3,"half":"bottom","outs":0,"bases":"1__","runners":{"1B":{"id":595879,"name":"Javier Báez"},"2B":null,"3B":null},"score":{"away":0,"home":0},"batting":"home","count":{"balls":3,"strikes":2}},"after":{"outs":1,"bases":"_2_","score":{"away":0,"home":0}},"batter":{"id":700242,"name":"Trey Sweeney","side":"L"},"pitcher":{"id":663903,"name":"Brady Singer","hand":"R"},"event":{"type":"double","label":"Double","description":"Trey Sweeney doubles (4) on a sharp line drive to right fielder Jake Fraley. Javier Báez out at home on the throw, right fielder Jake Fraley to shortstop Elly De La Cruz to catcher Jose Trevino.","rbi":0,"runs":0,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":700242,"name":"Trey Sweeney","start":null,"end":"2B","out":false,"outBase":null,"reason":null,"event":"double","isBatter":true,"credits":[{"id":641584,"name":"Jake Fraley","pos":"RF","credit":"f_fielded_ball"}]},{"id":595879,"name":"Javier Báez","start":"1B","end":null,"out":true,"outBase":"4B","reason":"r_thrown_out","event":"double","isBatter":false,"credits":[{"id":641584,"name":"Jake Fraley","pos":"RF","credit":"f_assist"},{"id":641584,"name":"Jake Fraley","pos":"RF","credit":"f_assist_of"},{"id":682829,"name":"Elly De La Cruz","pos":"SS","credit":"f_assist"},{"id":624431,"name":"Jose Trevino","pos":"C","credit":"f_putout"}]}],"chains":[{"runner":"Trey Sweeney","start":null,"out":false,"outBase":null,"chain":"9"},{"runner":"Javier Báez","start":"1B","out":true,"outBase":"4B","chain":"9-6-2"}],"pitch":{"type":"Sinker","code":"SI","speed":91.9,"zone":2,"px":0.026494310993860314,"pz":3.3169479854036457,"spin":2326,"call":"X"},"batted":{"trajectory":"line_drive","hardness":"hard","location":9,"ev":106.4,"la":19.0,"distance":379.0,"sprayAngle":22.4,"spray":"pull"},"winprob":{"homeAfter":57.699999999999996,"homeBefore":59.5,"homeAdded":-1.8000000000000043,"li":1.62},"statcast":{"ifAlignment":"Infield shade","ofAlignment":"Standard","deltaRunExp":0.681,"deltaHomeWinExp":-0.027,"batWinExpBefore":0.604,"bbType":"line_drive","pitchName":"Sinker","fielders":{"2":624431,"3":668715,"4":680574,"5":666158,"6":682829,"7":666181,"8":670770,"9":641584}},"flags":["catcher_play","close","double","dp_situation","force_available","go_ahead_on","line_drive","out_at_plate","outfield_assist","outfield_play","play_at_plate","relay","runner_out_on_bases","shift_alignment","tag_play","tied"],"curation":{"category":"Outfield defense, cutoffs & relays","slot":"Relay throw completes the out"},"clips":[{"kind":"highlight","slug":"brady-singer-in-play-out-s-to-trey-sweeney","title":"The Reds execute perfect relay to nab Javier Báez","duration":"00:00:28","feed":"CMS","pageUrl":"https://www.mlb.com/video/brady-singer-in-play-out-s-to-trey-sweeney","embedUrl":"https://streamable.com/m/brady-singer-in-play-out-s-to-trey-sweeney","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/yrg0rxaqtsui2po6s1c2.jpg","match":{"guid":"92f9a7a5-461a-3c9a-b6bc-78de5db923e4"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=92f9a7a5-461a-3c9a-b6bc-78de5db923e4"},"sources":[{"label":"MLB Stats API — official play-by-play, game 777517","url":"https://statsapi.mlb.com/api/v1.1/game/777517/feed/live"},{"label":"MLB Stats API — win probability, game 777517","url":"https://statsapi.mlb.com/api/v1/game/777517/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=777517"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=92f9a7a5-461a-3c9a-b6bc-78de5db923e4"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-777517-19",
+ "title": "The Reds execute perfect relay to nab Javier Báez",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 777517,
+  "atBatIndex": 19,
+  "eventIndex": 8,
+  "playId": "92f9a7a5-461a-3c9a-b6bc-78de5db923e4",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/777517/feed/live"
+ },
+ "game": {
+  "gamePk": 777517,
+  "date": "2025-06-14",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Comerica Park",
+  "away": {
+   "id": 113,
+   "name": "Cincinnati Reds",
+   "abbr": "CIN",
+   "club": "Reds"
+  },
+  "home": {
+   "id": 116,
+   "name": "Detroit Tigers",
+   "abbr": "DET",
+   "club": "Tigers"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 3,
+  "half": "bottom",
+  "outs": 0,
+  "bases": "1__",
+  "runners": {
+   "1B": {
+    "id": 595879,
+    "name": "Javier Báez"
+   },
+   "2B": null,
+   "3B": null
+  },
+  "score": {
+   "away": 0,
+   "home": 0
+  },
+  "batting": "home",
+  "count": {
+   "balls": 3,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 1,
+  "bases": "_2_",
+  "score": {
+   "away": 0,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 700242,
+  "name": "Trey Sweeney",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 663903,
+  "name": "Brady Singer",
+  "hand": "R"
+ },
+ "event": {
+  "type": "double",
+  "label": "Double",
+  "description": "Trey Sweeney doubles (4) on a sharp line drive to right fielder Jake Fraley. Javier Báez out at home on the throw, right fielder Jake Fraley to shortstop Elly De La Cruz to catcher Jose Trevino.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 700242,
+   "name": "Trey Sweeney",
+   "start": null,
+   "end": "2B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "double",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 641584,
+     "name": "Jake Fraley",
+     "pos": "RF",
+     "credit": "f_fielded_ball"
+    }
+   ]
+  },
+  {
+   "id": 595879,
+   "name": "Javier Báez",
+   "start": "1B",
+   "end": null,
+   "out": true,
+   "outBase": "4B",
+   "reason": "r_thrown_out",
+   "event": "double",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 641584,
+     "name": "Jake Fraley",
+     "pos": "RF",
+     "credit": "f_assist"
+    },
+    {
+     "id": 641584,
+     "name": "Jake Fraley",
+     "pos": "RF",
+     "credit": "f_assist_of"
+    },
+    {
+     "id": 682829,
+     "name": "Elly De La Cruz",
+     "pos": "SS",
+     "credit": "f_assist"
+    },
+    {
+     "id": 624431,
+     "name": "Jose Trevino",
+     "pos": "C",
+     "credit": "f_putout"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Trey Sweeney",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": "9"
+  },
+  {
+   "runner": "Javier Báez",
+   "start": "1B",
+   "out": true,
+   "outBase": "4B",
+   "chain": "9-6-2"
+  }
+ ],
+ "pitch": {
+  "type": "Sinker",
+  "code": "SI",
+  "speed": 91.9,
+  "zone": 2,
+  "px": 0.026494310993860314,
+  "pz": 3.3169479854036457,
+  "spin": 2326,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "line_drive",
+  "hardness": "hard",
+  "location": 9,
+  "ev": 106.4,
+  "la": 19.0,
+  "distance": 379.0,
+  "sprayAngle": 22.4,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 57.699999999999996,
+  "homeBefore": 59.5,
+  "homeAdded": -1.8000000000000043,
+  "li": 1.62
+ },
+ "statcast": {
+  "ifAlignment": "Infield shade",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.681,
+  "deltaHomeWinExp": -0.027,
+  "batWinExpBefore": 0.604,
+  "bbType": "line_drive",
+  "pitchName": "Sinker",
+  "fielders": {
+   "2": 624431,
+   "3": 668715,
+   "4": 680574,
+   "5": 666158,
+   "6": 682829,
+   "7": 666181,
+   "8": 670770,
+   "9": 641584
+  }
+ },
+ "flags": [
+  "catcher_play",
+  "close",
+  "double",
+  "dp_situation",
+  "force_available",
+  "go_ahead_on",
+  "line_drive",
+  "out_at_plate",
+  "outfield_assist",
+  "outfield_play",
+  "play_at_plate",
+  "relay",
+  "runner_out_on_bases",
+  "shift_alignment",
+  "tag_play",
+  "tied"
+ ],
+ "curation": {
+  "category": "Outfield defense, cutoffs & relays",
+  "slot": "Relay throw completes the out"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "brady-singer-in-play-out-s-to-trey-sweeney",
+   "title": "The Reds execute perfect relay to nab Javier Báez",
+   "duration": "00:00:28",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/brady-singer-in-play-out-s-to-trey-sweeney",
+   "embedUrl": "https://streamable.com/m/brady-singer-in-play-out-s-to-trey-sweeney",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/yrg0rxaqtsui2po6s1c2.jpg",
+   "match": {
+    "guid": "92f9a7a5-461a-3c9a-b6bc-78de5db923e4"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=92f9a7a5-461a-3c9a-b6bc-78de5db923e4"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 777517",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/777517/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 777517",
+   "url": "https://statsapi.mlb.com/api/v1/game/777517/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=777517"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=92f9a7a5-461a-3c9a-b6bc-78de5db923e4"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

@@ -1,1 +1,291 @@
-{"schema":1,"id":"mlb-775327-48","title":"Wenceel Pérez's RBI knock","titleSource":"MLB.com clip title","source":{"gamePk":775327,"atBatIndex":48,"eventIndex":3,"playId":"0aa6a46f-4b58-4470-9dbd-94d04e631ca8","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/775327/feed/live"},"game":{"gamePk":775327,"date":"2024-10-10","season":2024,"gameType":"D","level":"MLB","venue":"Comerica Park","away":{"id":114,"name":"Cleveland Guardians","abbr":"CLE","club":"Guardians"},"home":{"id":116,"name":"Detroit Tigers","abbr":"DET","club":"Tigers"},"series":""},"before":{"inning":6,"half":"bottom","outs":2,"bases":"12_","runners":{"1B":{"id":682985,"name":"Riley Greene"},"2B":{"id":681481,"name":"Kerry Carpenter"},"3B":null},"score":{"away":2,"home":2},"batting":"home","count":{"balls":1,"strikes":1}},"after":{"outs":2,"bases":"1__","score":{"away":2,"home":3}},"batter":{"id":672761,"name":"Wenceel Pérez","side":"L"},"pitcher":{"id":683769,"name":"Hunter Gaddis","hand":"R"},"event":{"type":"single","label":"Single","description":"Wenceel Pérez singles on a fly ball to left fielder Steven Kwan. Kerry Carpenter scores. Riley Greene to 3rd.","rbi":1,"runs":1,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":672761,"name":"Wenceel Pérez","start":null,"end":"1B","out":false,"outBase":null,"reason":null,"event":"single","isBatter":true,"credits":[{"id":680757,"name":"Steven Kwan","pos":"LF","credit":"f_fielded_ball"}]},{"id":682985,"name":"Riley Greene","start":"1B","end":"3B","out":false,"outBase":null,"reason":"r_adv_play","event":"single","isBatter":false,"credits":[]},{"id":681481,"name":"Kerry Carpenter","start":"2B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"single","isBatter":false,"credits":[]}],"chains":[{"runner":"Wenceel Pérez","start":null,"out":false,"outBase":null,"chain":"7"}],"pitch":{"type":"Slider","code":"SL","speed":90.2,"zone":9,"px":0.3925215661232334,"pz":1.57884520117387,"spin":2337,"call":"E"},"batted":{"trajectory":"fly_ball","hardness":"medium","location":7,"ev":71.0,"la":29.0,"distance":226.0,"sprayAngle":-15.6,"spray":"opposite"},"winprob":{"homeAfter":74.0,"homeBefore":56.6,"homeAdded":17.400000000000006,"li":2.61},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":0.555,"deltaHomeWinExp":0.177,"batWinExpBefore":0.563,"bbType":"fly_ball","pitchName":"Slider","fielders":{"2":666310,"3":647304,"4":665926,"5":608070,"6":677587,"7":680757,"8":657041,"9":686823}},"flags":["close","first_to_third","fly_ball","force_available","go_ahead_on","go_ahead_play","high_leverage","outfield_play","postseason","risp","score_from_second_single","single","tied","two_out_rbi","two_outs"],"curation":{"category":"Baserunning & advancement","slot":"First to third on a single"},"clips":[{"kind":"highlight","slug":"wenceel-perez-s-rbi-knock","title":"Wenceel Pérez's RBI knock","duration":"00:00:28","feed":"CMS","pageUrl":"https://www.mlb.com/video/wenceel-perez-s-rbi-knock","embedUrl":"https://streamable.com/m/wenceel-perez-s-rbi-knock","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/nrecb3djnjrmxxxid9l6.jpg","match":{"guid":"0aa6a46f-4b58-4470-9dbd-94d04e631ca8"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=0aa6a46f-4b58-4470-9dbd-94d04e631ca8"},"sources":[{"label":"MLB Stats API — official play-by-play, game 775327","url":"https://statsapi.mlb.com/api/v1.1/game/775327/feed/live"},{"label":"MLB Stats API — win probability, game 775327","url":"https://statsapi.mlb.com/api/v1/game/775327/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=775327"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=0aa6a46f-4b58-4470-9dbd-94d04e631ca8"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-775327-48",
+ "title": "Wenceel Pérez's RBI knock",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 775327,
+  "atBatIndex": 48,
+  "eventIndex": 3,
+  "playId": "0aa6a46f-4b58-4470-9dbd-94d04e631ca8",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/775327/feed/live"
+ },
+ "game": {
+  "gamePk": 775327,
+  "date": "2024-10-10",
+  "season": 2024,
+  "gameType": "D",
+  "level": "MLB",
+  "venue": "Comerica Park",
+  "away": {
+   "id": 114,
+   "name": "Cleveland Guardians",
+   "abbr": "CLE",
+   "club": "Guardians"
+  },
+  "home": {
+   "id": 116,
+   "name": "Detroit Tigers",
+   "abbr": "DET",
+   "club": "Tigers"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 6,
+  "half": "bottom",
+  "outs": 2,
+  "bases": "12_",
+  "runners": {
+   "1B": {
+    "id": 682985,
+    "name": "Riley Greene"
+   },
+   "2B": {
+    "id": 681481,
+    "name": "Kerry Carpenter"
+   },
+   "3B": null
+  },
+  "score": {
+   "away": 2,
+   "home": 2
+  },
+  "batting": "home",
+  "count": {
+   "balls": 1,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "1__",
+  "score": {
+   "away": 2,
+   "home": 3
+  }
+ },
+ "batter": {
+  "id": 672761,
+  "name": "Wenceel Pérez",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 683769,
+  "name": "Hunter Gaddis",
+  "hand": "R"
+ },
+ "event": {
+  "type": "single",
+  "label": "Single",
+  "description": "Wenceel Pérez singles on a fly ball to left fielder Steven Kwan. Kerry Carpenter scores. Riley Greene to 3rd.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 672761,
+   "name": "Wenceel Pérez",
+   "start": null,
+   "end": "1B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "single",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 680757,
+     "name": "Steven Kwan",
+     "pos": "LF",
+     "credit": "f_fielded_ball"
+    }
+   ]
+  },
+  {
+   "id": 682985,
+   "name": "Riley Greene",
+   "start": "1B",
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "single",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 681481,
+   "name": "Kerry Carpenter",
+   "start": "2B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "single",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Wenceel Pérez",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": "7"
+  }
+ ],
+ "pitch": {
+  "type": "Slider",
+  "code": "SL",
+  "speed": 90.2,
+  "zone": 9,
+  "px": 0.3925215661232334,
+  "pz": 1.57884520117387,
+  "spin": 2337,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "fly_ball",
+  "hardness": "medium",
+  "location": 7,
+  "ev": 71.0,
+  "la": 29.0,
+  "distance": 226.0,
+  "sprayAngle": -15.6,
+  "spray": "opposite"
+ },
+ "winprob": {
+  "homeAfter": 74.0,
+  "homeBefore": 56.6,
+  "homeAdded": 17.400000000000006,
+  "li": 2.61
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.555,
+  "deltaHomeWinExp": 0.177,
+  "batWinExpBefore": 0.563,
+  "bbType": "fly_ball",
+  "pitchName": "Slider",
+  "fielders": {
+   "2": 666310,
+   "3": 647304,
+   "4": 665926,
+   "5": 608070,
+   "6": 677587,
+   "7": 680757,
+   "8": 657041,
+   "9": 686823
+  }
+ },
+ "flags": [
+  "close",
+  "first_to_third",
+  "fly_ball",
+  "force_available",
+  "go_ahead_on",
+  "go_ahead_play",
+  "high_leverage",
+  "outfield_play",
+  "postseason",
+  "risp",
+  "score_from_second_single",
+  "single",
+  "tied",
+  "two_out_rbi",
+  "two_outs"
+ ],
+ "curation": {
+  "category": "Baserunning & advancement",
+  "slot": "First to third on a single"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "wenceel-perez-s-rbi-knock",
+   "title": "Wenceel Pérez's RBI knock",
+   "duration": "00:00:28",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/wenceel-perez-s-rbi-knock",
+   "embedUrl": "https://streamable.com/m/wenceel-perez-s-rbi-knock",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/nrecb3djnjrmxxxid9l6.jpg",
+   "match": {
+    "guid": "0aa6a46f-4b58-4470-9dbd-94d04e631ca8"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=0aa6a46f-4b58-4470-9dbd-94d04e631ca8"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 775327",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/775327/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 775327",
+   "url": "https://statsapi.mlb.com/api/v1/game/775327/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=775327"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=0aa6a46f-4b58-4470-9dbd-94d04e631ca8"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

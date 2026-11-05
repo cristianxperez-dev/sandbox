@@ -1,1 +1,261 @@
-{"schema":1,"id":"mlb-813066-24","title":"Dansby Swanson's nifty over-the-shoulder catch","titleSource":"MLB.com clip title","source":{"gamePk":813066,"atBatIndex":24,"eventIndex":4,"playId":"d163c35c-3b89-3ba4-bb7e-44543a4e5c0c","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/813066/feed/live"},"game":{"gamePk":813066,"date":"2025-09-30","season":2025,"gameType":"F","level":"MLB","venue":"Wrigley Field","away":{"id":135,"name":"San Diego Padres","abbr":"SD","club":"Padres"},"home":{"id":112,"name":"Chicago Cubs","abbr":"CHC","club":"Cubs"},"series":""},"before":{"inning":4,"half":"top","outs":1,"bases":"1_3","runners":{"1B":{"id":593428,"name":"Xander Bogaerts"},"2B":null,"3B":{"id":592518,"name":"Manny Machado"}},"score":{"away":1,"home":0},"batting":"away","count":{"balls":1,"strikes":2}},"after":{"outs":2,"bases":"1_3","score":{"away":1,"home":0}},"batter":{"id":656811,"name":"Ryan O'Hearn","side":"L"},"pitcher":{"id":571510,"name":"Matthew Boyd","hand":"L"},"event":{"type":"field_out","label":"Pop Out","description":"Ryan O'Hearn pops out to shortstop Dansby Swanson.","rbi":0,"runs":0,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":656811,"name":"Ryan O'Hearn","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"field_out","isBatter":true,"credits":[{"id":621020,"name":"Dansby Swanson","pos":"SS","credit":"f_putout"}]}],"chains":[{"runner":"Ryan O'Hearn","start":null,"out":true,"outBase":"1B","chain":"6"}],"pitch":{"type":"Four-Seam Fastball","code":"FF","speed":91.1,"zone":12,"px":0.8997853089520014,"pz":2.9456890286842725,"spin":2190,"call":"X"},"batted":{"trajectory":"popup","hardness":"medium","location":6,"ev":64.0,"la":27.0,"distance":196.0,"sprayAngle":1.1,"spray":"center"},"winprob":{"homeAfter":37.7,"homeBefore":30.8,"homeAdded":6.900000000000002,"li":1.92},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":-0.026,"deltaHomeWinExp":0.048,"batWinExpBefore":0.671,"bbType":"popup","pitchName":"4-Seam Fastball","fielders":{"2":608348,"3":683737,"4":663538,"5":807713,"6":621020,"7":664023,"8":691718,"9":673548}},"flags":["close","dp_situation","force_available","leading","middle_infield","one_run","popup","postseason","risp"],"curation":{"category":"Miscellaneous teaching moments","slot":"Pop-up with runners on"},"clips":[{"kind":"highlight","slug":"matthew-boyd-in-play-out-s-to-ryan-o-hearn-z19xp7","title":"Dansby Swanson's nifty over-the-shoulder catch","duration":"00:00:28","feed":"CMS","pageUrl":"https://www.mlb.com/video/matthew-boyd-in-play-out-s-to-ryan-o-hearn-z19xp7","embedUrl":"https://streamable.com/m/matthew-boyd-in-play-out-s-to-ryan-o-hearn-z19xp7","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/xly8cdzeietfdegdftj5.jpg","match":{"guid":"d163c35c-3b89-3ba4-bb7e-44543a4e5c0c"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=d163c35c-3b89-3ba4-bb7e-44543a4e5c0c"},"sources":[{"label":"MLB Stats API — official play-by-play, game 813066","url":"https://statsapi.mlb.com/api/v1.1/game/813066/feed/live"},{"label":"MLB Stats API — win probability, game 813066","url":"https://statsapi.mlb.com/api/v1/game/813066/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=813066"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=d163c35c-3b89-3ba4-bb7e-44543a4e5c0c"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-813066-24",
+ "title": "Dansby Swanson's nifty over-the-shoulder catch",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 813066,
+  "atBatIndex": 24,
+  "eventIndex": 4,
+  "playId": "d163c35c-3b89-3ba4-bb7e-44543a4e5c0c",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/813066/feed/live"
+ },
+ "game": {
+  "gamePk": 813066,
+  "date": "2025-09-30",
+  "season": 2025,
+  "gameType": "F",
+  "level": "MLB",
+  "venue": "Wrigley Field",
+  "away": {
+   "id": 135,
+   "name": "San Diego Padres",
+   "abbr": "SD",
+   "club": "Padres"
+  },
+  "home": {
+   "id": 112,
+   "name": "Chicago Cubs",
+   "abbr": "CHC",
+   "club": "Cubs"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 4,
+  "half": "top",
+  "outs": 1,
+  "bases": "1_3",
+  "runners": {
+   "1B": {
+    "id": 593428,
+    "name": "Xander Bogaerts"
+   },
+   "2B": null,
+   "3B": {
+    "id": 592518,
+    "name": "Manny Machado"
+   }
+  },
+  "score": {
+   "away": 1,
+   "home": 0
+  },
+  "batting": "away",
+  "count": {
+   "balls": 1,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "1_3",
+  "score": {
+   "away": 1,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 656811,
+  "name": "Ryan O'Hearn",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 571510,
+  "name": "Matthew Boyd",
+  "hand": "L"
+ },
+ "event": {
+  "type": "field_out",
+  "label": "Pop Out",
+  "description": "Ryan O'Hearn pops out to shortstop Dansby Swanson.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 656811,
+   "name": "Ryan O'Hearn",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "field_out",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 621020,
+     "name": "Dansby Swanson",
+     "pos": "SS",
+     "credit": "f_putout"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Ryan O'Hearn",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "6"
+  }
+ ],
+ "pitch": {
+  "type": "Four-Seam Fastball",
+  "code": "FF",
+  "speed": 91.1,
+  "zone": 12,
+  "px": 0.8997853089520014,
+  "pz": 2.9456890286842725,
+  "spin": 2190,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "popup",
+  "hardness": "medium",
+  "location": 6,
+  "ev": 64.0,
+  "la": 27.0,
+  "distance": 196.0,
+  "sprayAngle": 1.1,
+  "spray": "center"
+ },
+ "winprob": {
+  "homeAfter": 37.7,
+  "homeBefore": 30.8,
+  "homeAdded": 6.900000000000002,
+  "li": 1.92
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.026,
+  "deltaHomeWinExp": 0.048,
+  "batWinExpBefore": 0.671,
+  "bbType": "popup",
+  "pitchName": "4-Seam Fastball",
+  "fielders": {
+   "2": 608348,
+   "3": 683737,
+   "4": 663538,
+   "5": 807713,
+   "6": 621020,
+   "7": 664023,
+   "8": 691718,
+   "9": 673548
+  }
+ },
+ "flags": [
+  "close",
+  "dp_situation",
+  "force_available",
+  "leading",
+  "middle_infield",
+  "one_run",
+  "popup",
+  "postseason",
+  "risp"
+ ],
+ "curation": {
+  "category": "Miscellaneous teaching moments",
+  "slot": "Pop-up with runners on"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "matthew-boyd-in-play-out-s-to-ryan-o-hearn-z19xp7",
+   "title": "Dansby Swanson's nifty over-the-shoulder catch",
+   "duration": "00:00:28",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/matthew-boyd-in-play-out-s-to-ryan-o-hearn-z19xp7",
+   "embedUrl": "https://streamable.com/m/matthew-boyd-in-play-out-s-to-ryan-o-hearn-z19xp7",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/xly8cdzeietfdegdftj5.jpg",
+   "match": {
+    "guid": "d163c35c-3b89-3ba4-bb7e-44543a4e5c0c"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=d163c35c-3b89-3ba4-bb7e-44543a4e5c0c"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 813066",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/813066/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 813066",
+   "url": "https://statsapi.mlb.com/api/v1/game/813066/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=813066"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=d163c35c-3b89-3ba4-bb7e-44543a4e5c0c"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

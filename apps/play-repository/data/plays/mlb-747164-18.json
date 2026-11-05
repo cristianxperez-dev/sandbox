@@ -1,1 +1,323 @@
-{"schema":1,"id":"mlb-747164-18","title":"Geraldo Perdomo scores on an error","titleSource":"MLB.com clip title","source":{"gamePk":747164,"atBatIndex":18,"eventIndex":2,"playId":"075ae89a-c325-49d3-af73-c5556eb86399","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/747164/feed/live"},"game":{"gamePk":747164,"date":"2024-08-10","season":2024,"gameType":"R","level":"MLB","venue":"Chase Field","away":{"id":143,"name":"Philadelphia Phillies","abbr":"PHI","club":"Phillies"},"home":{"id":109,"name":"Arizona Diamondbacks","abbr":"AZ","club":"Diamondbacks"},"series":""},"before":{"inning":2,"half":"bottom","outs":1,"bases":"12_","runners":{"1B":{"id":645444,"name":"Jose Herrera"},"2B":{"id":672695,"name":"Geraldo Perdomo"},"3B":null},"score":{"away":0,"home":1},"batting":"home","count":{"balls":1,"strikes":1}},"after":{"outs":2,"bases":"1__","score":{"away":0,"home":2}},"batter":{"id":682998,"name":"Corbin Carroll","side":"L"},"pitcher":{"id":605400,"name":"Aaron Nola","hand":"R"},"event":{"type":"force_out","label":"Forceout","description":"Corbin Carroll grounds into a force out, second baseman Bryson Stott to shortstop Trea Turner. Geraldo Perdomo scores. Jose Herrera out at 2nd. Corbin Carroll to 1st. Fielding error by first baseman Bryce Harper.","rbi":0,"runs":1,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":645444,"name":"Jose Herrera","start":"1B","end":null,"out":true,"outBase":"2B","reason":"r_force_out","event":"force_out","isBatter":false,"credits":[{"id":681082,"name":"Bryson Stott","pos":"2B","credit":"f_assist"},{"id":607208,"name":"Trea Turner","pos":"SS","credit":"f_putout"}]},{"id":672695,"name":"Geraldo Perdomo","start":"2B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"error","isBatter":false,"credits":[{"id":547180,"name":"Bryce Harper","pos":"1B","credit":"f_fielding_error"}]},{"id":682998,"name":"Corbin Carroll","start":null,"end":"1B","out":false,"outBase":null,"reason":null,"event":"force_out","isBatter":true,"credits":[{"id":681082,"name":"Bryson Stott","pos":"2B","credit":"f_fielded_ball"}]}],"chains":[{"runner":"Jose Herrera","start":"1B","out":true,"outBase":"2B","chain":"4-6"},{"runner":"Geraldo Perdomo","start":"2B","out":false,"outBase":null,"chain":""},{"runner":"Corbin Carroll","start":null,"out":false,"outBase":null,"chain":"4"}],"pitch":{"type":"Knuckle Curve","code":"KC","speed":79.2,"zone":13,"px":-0.6803578343891022,"pz":1.3377796413759684,"spin":2775,"call":"E"},"batted":{"trajectory":"ground_ball","hardness":"medium","location":4,"ev":85.1,"la":7.0,"distance":93.0,"sprayAngle":29.3,"spray":"pull"},"winprob":{"homeAfter":72.8,"homeBefore":69.0,"homeAdded":3.799999999999997,"li":1.69},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":-0.346,"deltaHomeWinExp":0.04,"batWinExpBefore":0.688,"bbType":"ground_ball","pitchName":"Knuckle Curve","fielders":{"2":596117,"3":547180,"4":681082,"5":664761,"6":607208,"7":669016,"8":679032,"9":592206}},"flags":["close","dp_situation","error","force_available","force_play","ground_ball","ground_ball_infield","leading","middle_infield","one_run","risp","runner_scored_on_out"],"curation":{"category":"Infield defense & decisions","slot":"Infield fielding error"},"clips":[{"kind":"highlight","slug":"aaron-nola-in-play-run-s-to-corbin-carroll","title":"Geraldo Perdomo scores on an error","duration":"00:00:30","feed":"CMS","pageUrl":"https://www.mlb.com/video/aaron-nola-in-play-run-s-to-corbin-carroll","embedUrl":"https://streamable.com/m/aaron-nola-in-play-run-s-to-corbin-carroll","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/sejoll6vpswwce2hua9a.jpg","match":{"guid":"075ae89a-c325-49d3-af73-c5556eb86399"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=075ae89a-c325-49d3-af73-c5556eb86399"},"sources":[{"label":"MLB Stats API — official play-by-play, game 747164","url":"https://statsapi.mlb.com/api/v1.1/game/747164/feed/live"},{"label":"MLB Stats API — win probability, game 747164","url":"https://statsapi.mlb.com/api/v1/game/747164/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=747164"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=075ae89a-c325-49d3-af73-c5556eb86399"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-747164-18",
+ "title": "Geraldo Perdomo scores on an error",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 747164,
+  "atBatIndex": 18,
+  "eventIndex": 2,
+  "playId": "075ae89a-c325-49d3-af73-c5556eb86399",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/747164/feed/live"
+ },
+ "game": {
+  "gamePk": 747164,
+  "date": "2024-08-10",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Chase Field",
+  "away": {
+   "id": 143,
+   "name": "Philadelphia Phillies",
+   "abbr": "PHI",
+   "club": "Phillies"
+  },
+  "home": {
+   "id": 109,
+   "name": "Arizona Diamondbacks",
+   "abbr": "AZ",
+   "club": "Diamondbacks"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 2,
+  "half": "bottom",
+  "outs": 1,
+  "bases": "12_",
+  "runners": {
+   "1B": {
+    "id": 645444,
+    "name": "Jose Herrera"
+   },
+   "2B": {
+    "id": 672695,
+    "name": "Geraldo Perdomo"
+   },
+   "3B": null
+  },
+  "score": {
+   "away": 0,
+   "home": 1
+  },
+  "batting": "home",
+  "count": {
+   "balls": 1,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "1__",
+  "score": {
+   "away": 0,
+   "home": 2
+  }
+ },
+ "batter": {
+  "id": 682998,
+  "name": "Corbin Carroll",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 605400,
+  "name": "Aaron Nola",
+  "hand": "R"
+ },
+ "event": {
+  "type": "force_out",
+  "label": "Forceout",
+  "description": "Corbin Carroll grounds into a force out, second baseman Bryson Stott to shortstop Trea Turner. Geraldo Perdomo scores. Jose Herrera out at 2nd. Corbin Carroll to 1st. Fielding error by first baseman Bryce Harper.",
+  "rbi": 0,
+  "runs": 1,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 645444,
+   "name": "Jose Herrera",
+   "start": "1B",
+   "end": null,
+   "out": true,
+   "outBase": "2B",
+   "reason": "r_force_out",
+   "event": "force_out",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 681082,
+     "name": "Bryson Stott",
+     "pos": "2B",
+     "credit": "f_assist"
+    },
+    {
+     "id": 607208,
+     "name": "Trea Turner",
+     "pos": "SS",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 672695,
+   "name": "Geraldo Perdomo",
+   "start": "2B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "error",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 547180,
+     "name": "Bryce Harper",
+     "pos": "1B",
+     "credit": "f_fielding_error"
+    }
+   ]
+  },
+  {
+   "id": 682998,
+   "name": "Corbin Carroll",
+   "start": null,
+   "end": "1B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "force_out",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 681082,
+     "name": "Bryson Stott",
+     "pos": "2B",
+     "credit": "f_fielded_ball"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Jose Herrera",
+   "start": "1B",
+   "out": true,
+   "outBase": "2B",
+   "chain": "4-6"
+  },
+  {
+   "runner": "Geraldo Perdomo",
+   "start": "2B",
+   "out": false,
+   "outBase": null,
+   "chain": ""
+  },
+  {
+   "runner": "Corbin Carroll",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": "4"
+  }
+ ],
+ "pitch": {
+  "type": "Knuckle Curve",
+  "code": "KC",
+  "speed": 79.2,
+  "zone": 13,
+  "px": -0.6803578343891022,
+  "pz": 1.3377796413759684,
+  "spin": 2775,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "ground_ball",
+  "hardness": "medium",
+  "location": 4,
+  "ev": 85.1,
+  "la": 7.0,
+  "distance": 93.0,
+  "sprayAngle": 29.3,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 72.8,
+  "homeBefore": 69.0,
+  "homeAdded": 3.799999999999997,
+  "li": 1.69
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.346,
+  "deltaHomeWinExp": 0.04,
+  "batWinExpBefore": 0.688,
+  "bbType": "ground_ball",
+  "pitchName": "Knuckle Curve",
+  "fielders": {
+   "2": 596117,
+   "3": 547180,
+   "4": 681082,
+   "5": 664761,
+   "6": 607208,
+   "7": 669016,
+   "8": 679032,
+   "9": 592206
+  }
+ },
+ "flags": [
+  "close",
+  "dp_situation",
+  "error",
+  "force_available",
+  "force_play",
+  "ground_ball",
+  "ground_ball_infield",
+  "leading",
+  "middle_infield",
+  "one_run",
+  "risp",
+  "runner_scored_on_out"
+ ],
+ "curation": {
+  "category": "Infield defense & decisions",
+  "slot": "Infield fielding error"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "aaron-nola-in-play-run-s-to-corbin-carroll",
+   "title": "Geraldo Perdomo scores on an error",
+   "duration": "00:00:30",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/aaron-nola-in-play-run-s-to-corbin-carroll",
+   "embedUrl": "https://streamable.com/m/aaron-nola-in-play-run-s-to-corbin-carroll",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/sejoll6vpswwce2hua9a.jpg",
+   "match": {
+    "guid": "075ae89a-c325-49d3-af73-c5556eb86399"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=075ae89a-c325-49d3-af73-c5556eb86399"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 747164",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/747164/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 747164",
+   "url": "https://statsapi.mlb.com/api/v1/game/747164/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=747164"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=075ae89a-c325-49d3-af73-c5556eb86399"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

@@ -1,1 +1,292 @@
-{"schema":1,"id":"mlb-747148-51","title":"Blake Perkins' sac fly","titleSource":"MLB.com clip title","source":{"gamePk":747148,"atBatIndex":51,"eventIndex":2,"playId":"1a24d800-4f6c-4b96-bdab-c7fe11972743","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/747148/feed/live"},"game":{"gamePk":747148,"date":"2024-09-14","season":2024,"gameType":"R","level":"MLB","venue":"Chase Field","away":{"id":158,"name":"Milwaukee Brewers","abbr":"MIL","club":"Brewers"},"home":{"id":109,"name":"Arizona Diamondbacks","abbr":"AZ","club":"Diamondbacks"},"series":""},"before":{"inning":6,"half":"top","outs":0,"bases":"123","runners":{"1B":{"id":641343,"name":"Jake Bauers"},"2B":{"id":642715,"name":"Willy Adames"},"3B":{"id":669003,"name":"Garrett Mitchell"}},"score":{"away":12,"home":0},"batting":"away","count":{"balls":1,"strikes":1}},"after":{"outs":1,"bases":"1_3","score":{"away":13,"home":0}},"batter":{"id":663368,"name":"Blake Perkins","side":"L"},"pitcher":{"id":700270,"name":"Yilber Díaz","hand":"R"},"event":{"type":"sac_fly","label":"Sac Fly","description":"Blake Perkins out on a sacrifice fly to center fielder Jake McCarthy. Garrett Mitchell scores. Willy Adames to 3rd.","rbi":1,"runs":1,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":663368,"name":"Blake Perkins","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"sac_fly","isBatter":true,"credits":[{"id":664983,"name":"Jake McCarthy","pos":"CF","credit":"f_putout"}]},{"id":642715,"name":"Willy Adames","start":"2B","end":"3B","out":false,"outBase":null,"reason":"r_adv_play","event":"sac_fly","isBatter":false,"credits":[]},{"id":669003,"name":"Garrett Mitchell","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"sac_fly","isBatter":false,"credits":[]}],"chains":[{"runner":"Blake Perkins","start":null,"out":true,"outBase":"1B","chain":"8"}],"pitch":{"type":"Slider","code":"SL","speed":83.3,"zone":6,"px":0.3160855052001925,"pz":2.4133002066888474,"spin":2643,"call":"E"},"batted":{"trajectory":"fly_ball","hardness":"medium","location":8,"ev":96.0,"la":30.0,"distance":384.0,"sprayAngle":13.5,"spray":"center"},"winprob":{"homeAfter":0.1,"homeBefore":0.1,"homeAdded":0.0,"li":0.01},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":-0.211,"deltaHomeWinExp":0.0,"batWinExpBefore":0.999,"bbType":"fly_ball","pitchName":"Slider","fielders":{"2":680728,"3":605137,"4":621028,"5":641645,"6":672695,"7":656976,"8":664983,"9":545341}},"flags":["blowout","dp_situation","fly_ball","force_available","leading","low_leverage","outfield_play","productive_out","risp","runner_scored_on_out","sac_fly","tag_up"],"curation":{"category":"Situational hitting","slot":"Sacrifice fly with nobody out"},"clips":[{"kind":"highlight","slug":"blake-perkins-out-on-a-sacrifice-fly-to-center-fielder-jake-mccarthy-garr","title":"Blake Perkins' sac fly","duration":"00:00:19","feed":"CMS","pageUrl":"https://www.mlb.com/video/blake-perkins-out-on-a-sacrifice-fly-to-center-fielder-jake-mccarthy-garr","embedUrl":"https://streamable.com/m/blake-perkins-out-on-a-sacrifice-fly-to-center-fielder-jake-mccarthy-garr","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/d4avkqq7uutcqokkzpez.jpg","match":{"guid":"1a24d800-4f6c-4b96-bdab-c7fe11972743"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=1a24d800-4f6c-4b96-bdab-c7fe11972743"},"sources":[{"label":"MLB Stats API — official play-by-play, game 747148","url":"https://statsapi.mlb.com/api/v1.1/game/747148/feed/live"},{"label":"MLB Stats API — win probability, game 747148","url":"https://statsapi.mlb.com/api/v1/game/747148/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=747148"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=1a24d800-4f6c-4b96-bdab-c7fe11972743"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-747148-51",
+ "title": "Blake Perkins' sac fly",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 747148,
+  "atBatIndex": 51,
+  "eventIndex": 2,
+  "playId": "1a24d800-4f6c-4b96-bdab-c7fe11972743",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/747148/feed/live"
+ },
+ "game": {
+  "gamePk": 747148,
+  "date": "2024-09-14",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Chase Field",
+  "away": {
+   "id": 158,
+   "name": "Milwaukee Brewers",
+   "abbr": "MIL",
+   "club": "Brewers"
+  },
+  "home": {
+   "id": 109,
+   "name": "Arizona Diamondbacks",
+   "abbr": "AZ",
+   "club": "Diamondbacks"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 6,
+  "half": "top",
+  "outs": 0,
+  "bases": "123",
+  "runners": {
+   "1B": {
+    "id": 641343,
+    "name": "Jake Bauers"
+   },
+   "2B": {
+    "id": 642715,
+    "name": "Willy Adames"
+   },
+   "3B": {
+    "id": 669003,
+    "name": "Garrett Mitchell"
+   }
+  },
+  "score": {
+   "away": 12,
+   "home": 0
+  },
+  "batting": "away",
+  "count": {
+   "balls": 1,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 1,
+  "bases": "1_3",
+  "score": {
+   "away": 13,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 663368,
+  "name": "Blake Perkins",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 700270,
+  "name": "Yilber Díaz",
+  "hand": "R"
+ },
+ "event": {
+  "type": "sac_fly",
+  "label": "Sac Fly",
+  "description": "Blake Perkins out on a sacrifice fly to center fielder Jake McCarthy. Garrett Mitchell scores. Willy Adames to 3rd.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 663368,
+   "name": "Blake Perkins",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "sac_fly",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 664983,
+     "name": "Jake McCarthy",
+     "pos": "CF",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 642715,
+   "name": "Willy Adames",
+   "start": "2B",
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "sac_fly",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 669003,
+   "name": "Garrett Mitchell",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "sac_fly",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Blake Perkins",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "8"
+  }
+ ],
+ "pitch": {
+  "type": "Slider",
+  "code": "SL",
+  "speed": 83.3,
+  "zone": 6,
+  "px": 0.3160855052001925,
+  "pz": 2.4133002066888474,
+  "spin": 2643,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "fly_ball",
+  "hardness": "medium",
+  "location": 8,
+  "ev": 96.0,
+  "la": 30.0,
+  "distance": 384.0,
+  "sprayAngle": 13.5,
+  "spray": "center"
+ },
+ "winprob": {
+  "homeAfter": 0.1,
+  "homeBefore": 0.1,
+  "homeAdded": 0.0,
+  "li": 0.01
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.211,
+  "deltaHomeWinExp": 0.0,
+  "batWinExpBefore": 0.999,
+  "bbType": "fly_ball",
+  "pitchName": "Slider",
+  "fielders": {
+   "2": 680728,
+   "3": 605137,
+   "4": 621028,
+   "5": 641645,
+   "6": 672695,
+   "7": 656976,
+   "8": 664983,
+   "9": 545341
+  }
+ },
+ "flags": [
+  "blowout",
+  "dp_situation",
+  "fly_ball",
+  "force_available",
+  "leading",
+  "low_leverage",
+  "outfield_play",
+  "productive_out",
+  "risp",
+  "runner_scored_on_out",
+  "sac_fly",
+  "tag_up"
+ ],
+ "curation": {
+  "category": "Situational hitting",
+  "slot": "Sacrifice fly with nobody out"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "blake-perkins-out-on-a-sacrifice-fly-to-center-fielder-jake-mccarthy-garr",
+   "title": "Blake Perkins' sac fly",
+   "duration": "00:00:19",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/blake-perkins-out-on-a-sacrifice-fly-to-center-fielder-jake-mccarthy-garr",
+   "embedUrl": "https://streamable.com/m/blake-perkins-out-on-a-sacrifice-fly-to-center-fielder-jake-mccarthy-garr",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/d4avkqq7uutcqokkzpez.jpg",
+   "match": {
+    "guid": "1a24d800-4f6c-4b96-bdab-c7fe11972743"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=1a24d800-4f6c-4b96-bdab-c7fe11972743"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 747148",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/747148/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 747148",
+   "url": "https://statsapi.mlb.com/api/v1/game/747148/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=747148"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=1a24d800-4f6c-4b96-bdab-c7fe11972743"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

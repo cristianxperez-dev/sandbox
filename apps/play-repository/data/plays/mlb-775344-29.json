@@ -1,1 +1,303 @@
-{"schema":1,"id":"mlb-775344-29","title":"Brant Hurter induces double play to end 4th","titleSource":"MLB.com clip title","source":{"gamePk":775344,"atBatIndex":29,"eventIndex":4,"playId":"e394fd82-5616-4ad0-9676-0cdb060f310c","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/775344/feed/live"},"game":{"gamePk":775344,"date":"2024-10-02","season":2024,"gameType":"F","level":"MLB","venue":"Minute Maid Park","away":{"id":116,"name":"Detroit Tigers","abbr":"DET","club":"Tigers"},"home":{"id":117,"name":"Houston Astros","abbr":"HOU","club":"Astros"},"series":""},"before":{"inning":4,"half":"bottom","outs":1,"bases":"12_","runners":{"1B":{"id":605170,"name":"Victor Caratini"},"2B":{"id":673237,"name":"Yainer Diaz"},"3B":null},"score":{"away":0,"home":0},"batting":"home","count":{"balls":2,"strikes":1}},"after":{"outs":3,"bases":"_2_","score":{"away":0,"home":0}},"batter":{"id":665161,"name":"Jeremy Peña","side":"R"},"pitcher":{"id":676428,"name":"Brant Hurter","hand":"L"},"event":{"type":"grounded_into_double_play","label":"Grounded Into DP","description":"Jeremy Peña grounds into a double play, shortstop Trey Sweeney to second baseman Colt Keith to first baseman Spencer Torkelson. Victor Caratini out at 2nd. Jeremy Peña out at 1st.","rbi":0,"runs":0,"outs":2,"isReview":false,"walkoff":false},"runners":[{"id":605170,"name":"Victor Caratini","start":"1B","end":null,"out":true,"outBase":"2B","reason":"r_force_out","event":"grounded_into_double_play","isBatter":false,"credits":[{"id":700242,"name":"Trey Sweeney","pos":"SS","credit":"f_assist"},{"id":690993,"name":"Colt Keith","pos":"2B","credit":"f_putout"}]},{"id":665161,"name":"Jeremy Peña","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"grounded_into_double_play","isBatter":true,"credits":[{"id":690993,"name":"Colt Keith","pos":"2B","credit":"f_assist"},{"id":679529,"name":"Spencer Torkelson","pos":"1B","credit":"f_putout"}]}],"chains":[{"runner":"Victor Caratini","start":"1B","out":true,"outBase":"2B","chain":"6-4"},{"runner":"Jeremy Peña","start":null,"out":true,"outBase":"1B","chain":"4-3"}],"pitch":{"type":"Sinker","code":"SI","speed":93.2,"zone":8,"px":-0.10903173539436062,"pz":2.3164004766284556,"spin":2197,"call":"X"},"batted":{"trajectory":"ground_ball","hardness":"medium","location":6,"ev":108.1,"la":4.0,"distance":85.0,"sprayAngle":-22.7,"spray":"pull"},"winprob":{"homeAfter":50.0,"homeBefore":60.7,"homeAdded":-10.699999999999996,"li":2.3},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":-0.341,"deltaHomeWinExp":-0.114,"batWinExpBefore":0.614,"bbType":"ground_ball","pitchName":"Sinker","fielders":{"2":668670,"3":679529,"4":690993,"5":656716,"6":700242,"7":682985,"8":678009,"9":663837}},"flags":["close","double_play","dp_situation","force_available","force_play","go_ahead_on","ground_ball","ground_ball_infield","high_leverage","middle_infield","postseason","risp","tied"],"curation":{"category":"Infield defense & decisions","slot":"Ground-ball double play up the middle"},"clips":[{"kind":"highlight","slug":"jeremy-pena-grounds-into-a-double-play-shortstop-trey-sweeney-to-second-b","title":"Brant Hurter induces double play to end 4th","duration":"00:00:15","feed":"CMS","pageUrl":"https://www.mlb.com/video/jeremy-pena-grounds-into-a-double-play-shortstop-trey-sweeney-to-second-b","embedUrl":"https://streamable.com/m/jeremy-pena-grounds-into-a-double-play-shortstop-trey-sweeney-to-second-b","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/qrm2oq8mtbhunjqghhfc.jpg","match":{"guid":"e394fd82-5616-4ad0-9676-0cdb060f310c"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=e394fd82-5616-4ad0-9676-0cdb060f310c"},"sources":[{"label":"MLB Stats API — official play-by-play, game 775344","url":"https://statsapi.mlb.com/api/v1.1/game/775344/feed/live"},{"label":"MLB Stats API — win probability, game 775344","url":"https://statsapi.mlb.com/api/v1/game/775344/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=775344"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=e394fd82-5616-4ad0-9676-0cdb060f310c"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-775344-29",
+ "title": "Brant Hurter induces double play to end 4th",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 775344,
+  "atBatIndex": 29,
+  "eventIndex": 4,
+  "playId": "e394fd82-5616-4ad0-9676-0cdb060f310c",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/775344/feed/live"
+ },
+ "game": {
+  "gamePk": 775344,
+  "date": "2024-10-02",
+  "season": 2024,
+  "gameType": "F",
+  "level": "MLB",
+  "venue": "Minute Maid Park",
+  "away": {
+   "id": 116,
+   "name": "Detroit Tigers",
+   "abbr": "DET",
+   "club": "Tigers"
+  },
+  "home": {
+   "id": 117,
+   "name": "Houston Astros",
+   "abbr": "HOU",
+   "club": "Astros"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 4,
+  "half": "bottom",
+  "outs": 1,
+  "bases": "12_",
+  "runners": {
+   "1B": {
+    "id": 605170,
+    "name": "Victor Caratini"
+   },
+   "2B": {
+    "id": 673237,
+    "name": "Yainer Diaz"
+   },
+   "3B": null
+  },
+  "score": {
+   "away": 0,
+   "home": 0
+  },
+  "batting": "home",
+  "count": {
+   "balls": 2,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 3,
+  "bases": "_2_",
+  "score": {
+   "away": 0,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 665161,
+  "name": "Jeremy Peña",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 676428,
+  "name": "Brant Hurter",
+  "hand": "L"
+ },
+ "event": {
+  "type": "grounded_into_double_play",
+  "label": "Grounded Into DP",
+  "description": "Jeremy Peña grounds into a double play, shortstop Trey Sweeney to second baseman Colt Keith to first baseman Spencer Torkelson. Victor Caratini out at 2nd. Jeremy Peña out at 1st.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 2,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 605170,
+   "name": "Victor Caratini",
+   "start": "1B",
+   "end": null,
+   "out": true,
+   "outBase": "2B",
+   "reason": "r_force_out",
+   "event": "grounded_into_double_play",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 700242,
+     "name": "Trey Sweeney",
+     "pos": "SS",
+     "credit": "f_assist"
+    },
+    {
+     "id": 690993,
+     "name": "Colt Keith",
+     "pos": "2B",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 665161,
+   "name": "Jeremy Peña",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "grounded_into_double_play",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 690993,
+     "name": "Colt Keith",
+     "pos": "2B",
+     "credit": "f_assist"
+    },
+    {
+     "id": 679529,
+     "name": "Spencer Torkelson",
+     "pos": "1B",
+     "credit": "f_putout"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Victor Caratini",
+   "start": "1B",
+   "out": true,
+   "outBase": "2B",
+   "chain": "6-4"
+  },
+  {
+   "runner": "Jeremy Peña",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "4-3"
+  }
+ ],
+ "pitch": {
+  "type": "Sinker",
+  "code": "SI",
+  "speed": 93.2,
+  "zone": 8,
+  "px": -0.10903173539436062,
+  "pz": 2.3164004766284556,
+  "spin": 2197,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "ground_ball",
+  "hardness": "medium",
+  "location": 6,
+  "ev": 108.1,
+  "la": 4.0,
+  "distance": 85.0,
+  "sprayAngle": -22.7,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 50.0,
+  "homeBefore": 60.7,
+  "homeAdded": -10.699999999999996,
+  "li": 2.3
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.341,
+  "deltaHomeWinExp": -0.114,
+  "batWinExpBefore": 0.614,
+  "bbType": "ground_ball",
+  "pitchName": "Sinker",
+  "fielders": {
+   "2": 668670,
+   "3": 679529,
+   "4": 690993,
+   "5": 656716,
+   "6": 700242,
+   "7": 682985,
+   "8": 678009,
+   "9": 663837
+  }
+ },
+ "flags": [
+  "close",
+  "double_play",
+  "dp_situation",
+  "force_available",
+  "force_play",
+  "go_ahead_on",
+  "ground_ball",
+  "ground_ball_infield",
+  "high_leverage",
+  "middle_infield",
+  "postseason",
+  "risp",
+  "tied"
+ ],
+ "curation": {
+  "category": "Infield defense & decisions",
+  "slot": "Ground-ball double play up the middle"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "jeremy-pena-grounds-into-a-double-play-shortstop-trey-sweeney-to-second-b",
+   "title": "Brant Hurter induces double play to end 4th",
+   "duration": "00:00:15",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/jeremy-pena-grounds-into-a-double-play-shortstop-trey-sweeney-to-second-b",
+   "embedUrl": "https://streamable.com/m/jeremy-pena-grounds-into-a-double-play-shortstop-trey-sweeney-to-second-b",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/qrm2oq8mtbhunjqghhfc.jpg",
+   "match": {
+    "guid": "e394fd82-5616-4ad0-9676-0cdb060f310c"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=e394fd82-5616-4ad0-9676-0cdb060f310c"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 775344",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/775344/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 775344",
+   "url": "https://statsapi.mlb.com/api/v1/game/775344/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=775344"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=e394fd82-5616-4ad0-9676-0cdb060f310c"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

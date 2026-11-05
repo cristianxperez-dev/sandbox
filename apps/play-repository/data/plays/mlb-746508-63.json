@@ -1,1 +1,272 @@
-{"schema":1,"id":"mlb-746508-63","title":"Brenton Doyle's second sac fly","titleSource":"MLB.com clip title","source":{"gamePk":746508,"atBatIndex":63,"eventIndex":4,"playId":"a836433f-4a2b-469a-bf57-f96cbbcf46d3","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/746508/feed/live"},"game":{"gamePk":746508,"date":"2024-09-14","season":2024,"gameType":"R","level":"MLB","venue":"Coors Field","away":{"id":112,"name":"Chicago Cubs","abbr":"CHC","club":"Cubs"},"home":{"id":115,"name":"Colorado Rockies","abbr":"COL","club":"Rockies"},"series":""},"before":{"inning":8,"half":"bottom","outs":1,"bases":"__3","runners":{"1B":null,"2B":null,"3B":{"id":453568,"name":"Charlie Blackmon"}},"score":{"away":4,"home":2},"batting":"home","count":{"balls":2,"strikes":2}},"after":{"outs":2,"bases":"___","score":{"away":4,"home":3}},"batter":{"id":686668,"name":"Brenton Doyle","side":"R"},"pitcher":{"id":663878,"name":"Nate Pearson","hand":"R"},"event":{"type":"sac_fly","label":"Sac Fly","description":"Brenton Doyle out on a sacrifice fly to center fielder Pete Crow-Armstrong. Charlie Blackmon scores.","rbi":1,"runs":1,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":686668,"name":"Brenton Doyle","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"sac_fly","isBatter":true,"credits":[{"id":691718,"name":"Pete Crow-Armstrong","pos":"CF","credit":"f_putout"}]},{"id":453568,"name":"Charlie Blackmon","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"sac_fly","isBatter":false,"credits":[]}],"chains":[{"runner":"Brenton Doyle","start":null,"out":true,"outBase":"1B","chain":"8"}],"pitch":{"type":"Four-Seam Fastball","code":"FF","speed":98.6,"zone":11,"px":-0.4573654504479499,"pz":3.7959742997005312,"spin":2411,"call":"E"},"batted":{"trajectory":"fly_ball","hardness":"medium","location":8,"ev":95.4,"la":39.0,"distance":373.0,"sprayAngle":6.5,"spray":"center"},"winprob":{"homeAfter":19.7,"homeBefore":22.6,"homeAdded":-2.900000000000002,"li":2.49},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":-0.09,"deltaHomeWinExp":-0.015,"batWinExpBefore":0.212,"bbType":"fly_ball","pitchName":"4-Seam Fastball","fielders":{"2":542194,"3":683737,"4":663538,"5":670623,"6":621020,"7":664023,"8":691718,"9":641355}},"flags":["close","fly_ball","high_leverage","outfield_play","productive_out","risp","runner_scored_on_out","sac_fly","tag_up","trailing"],"curation":{"category":"Outfield defense, cutoffs & relays","slot":"Sacrifice fly to right or center"},"clips":[{"kind":"highlight","slug":"brenton-doyle-out-on-a-sacrifice-fly-to-center-fielder-pete-crow-armstron","title":"Brenton Doyle's second sac fly","duration":"00:00:21","feed":"CMS","pageUrl":"https://www.mlb.com/video/brenton-doyle-out-on-a-sacrifice-fly-to-center-fielder-pete-crow-armstron","embedUrl":"https://streamable.com/m/brenton-doyle-out-on-a-sacrifice-fly-to-center-fielder-pete-crow-armstron","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/uqom28wdzlqrepwziwsf.jpg","match":{"guid":"a836433f-4a2b-469a-bf57-f96cbbcf46d3"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=a836433f-4a2b-469a-bf57-f96cbbcf46d3"},"sources":[{"label":"MLB Stats API — official play-by-play, game 746508","url":"https://statsapi.mlb.com/api/v1.1/game/746508/feed/live"},{"label":"MLB Stats API — win probability, game 746508","url":"https://statsapi.mlb.com/api/v1/game/746508/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=746508"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=a836433f-4a2b-469a-bf57-f96cbbcf46d3"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-746508-63",
+ "title": "Brenton Doyle's second sac fly",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 746508,
+  "atBatIndex": 63,
+  "eventIndex": 4,
+  "playId": "a836433f-4a2b-469a-bf57-f96cbbcf46d3",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/746508/feed/live"
+ },
+ "game": {
+  "gamePk": 746508,
+  "date": "2024-09-14",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Coors Field",
+  "away": {
+   "id": 112,
+   "name": "Chicago Cubs",
+   "abbr": "CHC",
+   "club": "Cubs"
+  },
+  "home": {
+   "id": 115,
+   "name": "Colorado Rockies",
+   "abbr": "COL",
+   "club": "Rockies"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 8,
+  "half": "bottom",
+  "outs": 1,
+  "bases": "__3",
+  "runners": {
+   "1B": null,
+   "2B": null,
+   "3B": {
+    "id": 453568,
+    "name": "Charlie Blackmon"
+   }
+  },
+  "score": {
+   "away": 4,
+   "home": 2
+  },
+  "batting": "home",
+  "count": {
+   "balls": 2,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "___",
+  "score": {
+   "away": 4,
+   "home": 3
+  }
+ },
+ "batter": {
+  "id": 686668,
+  "name": "Brenton Doyle",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 663878,
+  "name": "Nate Pearson",
+  "hand": "R"
+ },
+ "event": {
+  "type": "sac_fly",
+  "label": "Sac Fly",
+  "description": "Brenton Doyle out on a sacrifice fly to center fielder Pete Crow-Armstrong. Charlie Blackmon scores.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 686668,
+   "name": "Brenton Doyle",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "sac_fly",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 691718,
+     "name": "Pete Crow-Armstrong",
+     "pos": "CF",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 453568,
+   "name": "Charlie Blackmon",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "sac_fly",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Brenton Doyle",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "8"
+  }
+ ],
+ "pitch": {
+  "type": "Four-Seam Fastball",
+  "code": "FF",
+  "speed": 98.6,
+  "zone": 11,
+  "px": -0.4573654504479499,
+  "pz": 3.7959742997005312,
+  "spin": 2411,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "fly_ball",
+  "hardness": "medium",
+  "location": 8,
+  "ev": 95.4,
+  "la": 39.0,
+  "distance": 373.0,
+  "sprayAngle": 6.5,
+  "spray": "center"
+ },
+ "winprob": {
+  "homeAfter": 19.7,
+  "homeBefore": 22.6,
+  "homeAdded": -2.900000000000002,
+  "li": 2.49
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.09,
+  "deltaHomeWinExp": -0.015,
+  "batWinExpBefore": 0.212,
+  "bbType": "fly_ball",
+  "pitchName": "4-Seam Fastball",
+  "fielders": {
+   "2": 542194,
+   "3": 683737,
+   "4": 663538,
+   "5": 670623,
+   "6": 621020,
+   "7": 664023,
+   "8": 691718,
+   "9": 641355
+  }
+ },
+ "flags": [
+  "close",
+  "fly_ball",
+  "high_leverage",
+  "outfield_play",
+  "productive_out",
+  "risp",
+  "runner_scored_on_out",
+  "sac_fly",
+  "tag_up",
+  "trailing"
+ ],
+ "curation": {
+  "category": "Outfield defense, cutoffs & relays",
+  "slot": "Sacrifice fly to right or center"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "brenton-doyle-out-on-a-sacrifice-fly-to-center-fielder-pete-crow-armstron",
+   "title": "Brenton Doyle's second sac fly",
+   "duration": "00:00:21",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/brenton-doyle-out-on-a-sacrifice-fly-to-center-fielder-pete-crow-armstron",
+   "embedUrl": "https://streamable.com/m/brenton-doyle-out-on-a-sacrifice-fly-to-center-fielder-pete-crow-armstron",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/uqom28wdzlqrepwziwsf.jpg",
+   "match": {
+    "guid": "a836433f-4a2b-469a-bf57-f96cbbcf46d3"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=a836433f-4a2b-469a-bf57-f96cbbcf46d3"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 746508",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/746508/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 746508",
+   "url": "https://statsapi.mlb.com/api/v1/game/746508/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=746508"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=a836433f-4a2b-469a-bf57-f96cbbcf46d3"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

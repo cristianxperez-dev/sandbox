@@ -1,1 +1,275 @@
-{"schema":1,"id":"mlb-777516-54","title":"Jasson Domínguez picked off and caught stealing 3rd base","titleSource":"From MLB's official play description","source":{"gamePk":777516,"atBatIndex":54,"eventIndex":4,"playId":"e020b6bf-6bdb-3a2a-a187-47daa3b6704e","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/777516/feed/live"},"game":{"gamePk":777516,"date":"2025-06-14","season":2025,"gameType":"R","level":"MLB","venue":"Fenway Park","away":{"id":147,"name":"New York Yankees","abbr":"NYY","club":"Yankees"},"home":{"id":111,"name":"Boston Red Sox","abbr":"BOS","club":"Red Sox"},"series":""},"before":{"inning":7,"half":"top","outs":2,"bases":"12_","runners":{"1B":{"id":669224,"name":"Austin Wells"},"2B":{"id":691176,"name":"Jasson Domínguez"},"3B":null},"score":{"away":2,"home":4},"batting":"away","count":{"balls":2,"strikes":1}},"after":{"outs":3,"bases":"1__","score":{"away":2,"home":4}},"batter":{"id":663757,"name":"Trent Grisham","side":"L"},"pitcher":{"id":458677,"name":"Justin Wilson","hand":"L"},"event":{"type":"pickoff_caught_stealing_3b","label":"Pickoff Caught Stealing 3B","description":"Jasson Domínguez picked off and caught stealing 3rd base, catcher Carlos Narváez to shortstop Trevor Story to third baseman Marcelo Mayer.","rbi":0,"runs":0,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":691176,"name":"Jasson Domínguez","start":"2B","end":null,"out":true,"outBase":"3B","reason":"r_pickoff_caught_stealing_3b","event":"pickoff_caught_stealing_3b","isBatter":false,"credits":[{"id":665966,"name":"Carlos Narváez","pos":"C","credit":"f_assist"},{"id":596115,"name":"Trevor Story","pos":"SS","credit":"f_assist"},{"id":691785,"name":"Marcelo Mayer","pos":"3B","credit":"f_putout"}]}],"chains":[{"runner":"Jasson Domínguez","start":"2B","out":true,"outBase":"3B","chain":"2-6-5"}],"pitch":{"type":"Four-Seam Fastball","code":"FF","speed":95.7,"zone":5,"px":-0.19125228366386343,"pz":2.337214800394163,"spin":2340,"call":"S"},"batted":null,"winprob":{"homeAfter":88.7,"homeBefore":82.0,"homeAdded":6.700000000000003,"li":2.66},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":0.0,"deltaHomeWinExp":0.072,"batWinExpBefore":0.185,"bbType":null,"pitchName":"4-Seam Fastball","fielders":{"2":665966,"3":663853,"4":666152,"5":691785,"6":596115,"7":680776,"8":678882,"9":608701}},"flags":["catcher_play","catcher_throw","caught_stealing","close","force_available","high_leverage","pickoff","risp","trailing","two_outs","tying_run_on"],"curation":{"category":"Catcher defense & plays at the plate","slot":"Catcher pickoff"},"clips":[{"kind":"filmroom","slug":"justin-wilson-swinging-strike-to-trent-grisham-91f0gg","title":"Jasson Domínguez picked off and caught stealing 3rd base, catcher Carlos Narváez to shortstop Trevor Story to third baseman Marcelo Mayer.","duration":"00:00:11","feed":"NETWORK","pageUrl":"https://www.mlb.com/video/justin-wilson-swinging-strike-to-trent-grisham-91f0gg","embedUrl":"https://streamable.com/m/justin-wilson-swinging-strike-to-trent-grisham-91f0gg","angle":{"category":"broadcast","label":"National TV broadcast"},"howVerified":"MLB Film Room clip for the playId; Film Room's play info matches game, inning, outs, runners, batter and pitcher","thumb":"https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/e020b6bf-6bdb-3a2a-a187-47daa3b6704e_network.jpg","match":{"filmroom":{"gamePk":true,"inning":true,"outs":true,"runners":true,"batter":true,"pitcher":true},"feeds":["NETWORK"]},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=e020b6bf-6bdb-3a2a-a187-47daa3b6704e"},"sources":[{"label":"MLB Stats API — official play-by-play, game 777516","url":"https://statsapi.mlb.com/api/v1.1/game/777516/feed/live"},{"label":"MLB Stats API — win probability, game 777516","url":"https://statsapi.mlb.com/api/v1/game/777516/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=777516"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=e020b6bf-6bdb-3a2a-a187-47daa3b6704e"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-777516-54",
+ "title": "Jasson Domínguez picked off and caught stealing 3rd base",
+ "titleSource": "From MLB's official play description",
+ "source": {
+  "gamePk": 777516,
+  "atBatIndex": 54,
+  "eventIndex": 4,
+  "playId": "e020b6bf-6bdb-3a2a-a187-47daa3b6704e",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/777516/feed/live"
+ },
+ "game": {
+  "gamePk": 777516,
+  "date": "2025-06-14",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Fenway Park",
+  "away": {
+   "id": 147,
+   "name": "New York Yankees",
+   "abbr": "NYY",
+   "club": "Yankees"
+  },
+  "home": {
+   "id": 111,
+   "name": "Boston Red Sox",
+   "abbr": "BOS",
+   "club": "Red Sox"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 7,
+  "half": "top",
+  "outs": 2,
+  "bases": "12_",
+  "runners": {
+   "1B": {
+    "id": 669224,
+    "name": "Austin Wells"
+   },
+   "2B": {
+    "id": 691176,
+    "name": "Jasson Domínguez"
+   },
+   "3B": null
+  },
+  "score": {
+   "away": 2,
+   "home": 4
+  },
+  "batting": "away",
+  "count": {
+   "balls": 2,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 3,
+  "bases": "1__",
+  "score": {
+   "away": 2,
+   "home": 4
+  }
+ },
+ "batter": {
+  "id": 663757,
+  "name": "Trent Grisham",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 458677,
+  "name": "Justin Wilson",
+  "hand": "L"
+ },
+ "event": {
+  "type": "pickoff_caught_stealing_3b",
+  "label": "Pickoff Caught Stealing 3B",
+  "description": "Jasson Domínguez picked off and caught stealing 3rd base, catcher Carlos Narváez to shortstop Trevor Story to third baseman Marcelo Mayer.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 691176,
+   "name": "Jasson Domínguez",
+   "start": "2B",
+   "end": null,
+   "out": true,
+   "outBase": "3B",
+   "reason": "r_pickoff_caught_stealing_3b",
+   "event": "pickoff_caught_stealing_3b",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 665966,
+     "name": "Carlos Narváez",
+     "pos": "C",
+     "credit": "f_assist"
+    },
+    {
+     "id": 596115,
+     "name": "Trevor Story",
+     "pos": "SS",
+     "credit": "f_assist"
+    },
+    {
+     "id": 691785,
+     "name": "Marcelo Mayer",
+     "pos": "3B",
+     "credit": "f_putout"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Jasson Domínguez",
+   "start": "2B",
+   "out": true,
+   "outBase": "3B",
+   "chain": "2-6-5"
+  }
+ ],
+ "pitch": {
+  "type": "Four-Seam Fastball",
+  "code": "FF",
+  "speed": 95.7,
+  "zone": 5,
+  "px": -0.19125228366386343,
+  "pz": 2.337214800394163,
+  "spin": 2340,
+  "call": "S"
+ },
+ "batted": null,
+ "winprob": {
+  "homeAfter": 88.7,
+  "homeBefore": 82.0,
+  "homeAdded": 6.700000000000003,
+  "li": 2.66
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.0,
+  "deltaHomeWinExp": 0.072,
+  "batWinExpBefore": 0.185,
+  "bbType": null,
+  "pitchName": "4-Seam Fastball",
+  "fielders": {
+   "2": 665966,
+   "3": 663853,
+   "4": 666152,
+   "5": 691785,
+   "6": 596115,
+   "7": 680776,
+   "8": 678882,
+   "9": 608701
+  }
+ },
+ "flags": [
+  "catcher_play",
+  "catcher_throw",
+  "caught_stealing",
+  "close",
+  "force_available",
+  "high_leverage",
+  "pickoff",
+  "risp",
+  "trailing",
+  "two_outs",
+  "tying_run_on"
+ ],
+ "curation": {
+  "category": "Catcher defense & plays at the plate",
+  "slot": "Catcher pickoff"
+ },
+ "clips": [
+  {
+   "kind": "filmroom",
+   "slug": "justin-wilson-swinging-strike-to-trent-grisham-91f0gg",
+   "title": "Jasson Domínguez picked off and caught stealing 3rd base, catcher Carlos Narváez to shortstop Trevor Story to third baseman Marcelo Mayer.",
+   "duration": "00:00:11",
+   "feed": "NETWORK",
+   "pageUrl": "https://www.mlb.com/video/justin-wilson-swinging-strike-to-trent-grisham-91f0gg",
+   "embedUrl": "https://streamable.com/m/justin-wilson-swinging-strike-to-trent-grisham-91f0gg",
+   "angle": {
+    "category": "broadcast",
+    "label": "National TV broadcast"
+   },
+   "howVerified": "MLB Film Room clip for the playId; Film Room's play info matches game, inning, outs, runners, batter and pitcher",
+   "thumb": "https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/e020b6bf-6bdb-3a2a-a187-47daa3b6704e_network.jpg",
+   "match": {
+    "filmroom": {
+     "gamePk": true,
+     "inning": true,
+     "outs": true,
+     "runners": true,
+     "batter": true,
+     "pitcher": true
+    },
+    "feeds": [
+     "NETWORK"
+    ]
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=e020b6bf-6bdb-3a2a-a187-47daa3b6704e"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 777516",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/777516/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 777516",
+   "url": "https://statsapi.mlb.com/api/v1/game/777516/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=777516"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=e020b6bf-6bdb-3a2a-a187-47daa3b6704e"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

@@ -1,1 +1,298 @@
-{"schema":1,"id":"mlb-775298-28","title":"Mark Leiter Jr. nabs Gavin Lux at home plate","titleSource":"MLB.com clip title","source":{"gamePk":775298,"atBatIndex":28,"eventIndex":1,"playId":"0e7bfb93-a501-4b68-b9f5-2ebde2b07705","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/775298/feed/live"},"game":{"gamePk":775298,"date":"2024-10-28","season":2024,"gameType":"W","level":"MLB","venue":"Yankee Stadium","away":{"id":119,"name":"Los Angeles Dodgers","abbr":"LAD","club":"Dodgers"},"home":{"id":147,"name":"New York Yankees","abbr":"NYY","club":"Yankees"},"series":""},"before":{"inning":4,"half":"top","outs":0,"bases":"1_3","runners":{"1B":{"id":571771,"name":"Enrique Hernández"},"2B":null,"3B":{"id":666158,"name":"Gavin Lux"}},"score":{"away":3,"home":0},"batting":"away","count":{"balls":0,"strikes":1}},"after":{"outs":1,"bases":"12_","score":{"away":3,"home":0}},"batter":{"id":669242,"name":"Tommy Edman","side":"L"},"pitcher":{"id":643410,"name":"Mark Leiter Jr.","hand":"R"},"event":{"type":"fielders_choice_out","label":"Fielders Choice Out","description":"Dodgers challenged (tag play), call on the field was upheld: Tommy Edman reaches on a fielder's choice out, pitcher Mark Leiter Jr. to catcher Jose Trevino. Gavin Lux out at home. Enrique Hernández to 2nd.","rbi":0,"runs":0,"outs":1,"isReview":true,"walkoff":false},"runners":[{"id":666158,"name":"Gavin Lux","start":"3B","end":null,"out":true,"outBase":"4B","reason":"r_runner_out","event":"fielders_choice_out","isBatter":false,"credits":[{"id":643410,"name":"Mark Leiter Jr.","pos":"P","credit":"f_assist"},{"id":624431,"name":"Jose Trevino","pos":"C","credit":"f_putout"}]},{"id":571771,"name":"Enrique Hernández","start":"1B","end":"2B","out":false,"outBase":null,"reason":"r_adv_play","event":"fielders_choice_out","isBatter":false,"credits":[]},{"id":669242,"name":"Tommy Edman","start":null,"end":"1B","out":false,"outBase":null,"reason":null,"event":"fielders_choice_out","isBatter":true,"credits":[]}],"chains":[{"runner":"Gavin Lux","start":"3B","out":true,"outBase":"4B","chain":"1-2"}],"pitch":{"type":"Splitter","code":"FS","speed":85.7,"zone":11,"px":-0.7979461563759116,"pz":3.5570089271012018,"spin":735,"call":"X"},"batted":{"trajectory":"bunt_grounder","hardness":"soft","location":1,"ev":16.4,"la":-8.0,"distance":10.0,"sprayAngle":64.7,"spray":"pull"},"winprob":{"homeAfter":16.5,"homeBefore":11.8,"homeAdded":4.700000000000001,"li":0.75},"statcast":{"ifAlignment":"Strategic","ofAlignment":"Standard","deltaRunExp":0.008,"deltaHomeWinExp":0.043,"batWinExpBefore":0.878,"bbType":"ground_ball","pitchName":"Split-Finger","fielders":{"2":624431,"3":519203,"4":650402,"5":665862,"6":683011,"7":657077,"8":592450,"9":665742}},"flags":["bunt","bunt_defense_pc","catcher_play","challenge","dp_situation","force_available","leading","low_leverage","out_at_plate","play_at_plate","postseason","productive_out","risp","runner_out_on_bases","shift_alignment","tag_play"],"curation":{"category":"Infield defense & decisions","slot":"Bunt defense: out at second or third"},"clips":[{"kind":"highlight","slug":"dodgers-challenged-tag-play-call-on-the-field-was-upheld-tommy-edman-reac","title":"Mark Leiter Jr. nabs Gavin Lux at home plate","duration":"00:00:30","feed":"CMS","pageUrl":"https://www.mlb.com/video/dodgers-challenged-tag-play-call-on-the-field-was-upheld-tommy-edman-reac","embedUrl":"https://streamable.com/m/dodgers-challenged-tag-play-call-on-the-field-was-upheld-tommy-edman-reac","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/udf6dqezrrq49gnsmbfq.jpg","match":{"guid":"0e7bfb93-a501-4b68-b9f5-2ebde2b07705"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=0e7bfb93-a501-4b68-b9f5-2ebde2b07705"},"sources":[{"label":"MLB Stats API — official play-by-play, game 775298","url":"https://statsapi.mlb.com/api/v1.1/game/775298/feed/live"},{"label":"MLB Stats API — win probability, game 775298","url":"https://statsapi.mlb.com/api/v1/game/775298/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=775298"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=0e7bfb93-a501-4b68-b9f5-2ebde2b07705"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-775298-28",
+ "title": "Mark Leiter Jr. nabs Gavin Lux at home plate",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 775298,
+  "atBatIndex": 28,
+  "eventIndex": 1,
+  "playId": "0e7bfb93-a501-4b68-b9f5-2ebde2b07705",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/775298/feed/live"
+ },
+ "game": {
+  "gamePk": 775298,
+  "date": "2024-10-28",
+  "season": 2024,
+  "gameType": "W",
+  "level": "MLB",
+  "venue": "Yankee Stadium",
+  "away": {
+   "id": 119,
+   "name": "Los Angeles Dodgers",
+   "abbr": "LAD",
+   "club": "Dodgers"
+  },
+  "home": {
+   "id": 147,
+   "name": "New York Yankees",
+   "abbr": "NYY",
+   "club": "Yankees"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 4,
+  "half": "top",
+  "outs": 0,
+  "bases": "1_3",
+  "runners": {
+   "1B": {
+    "id": 571771,
+    "name": "Enrique Hernández"
+   },
+   "2B": null,
+   "3B": {
+    "id": 666158,
+    "name": "Gavin Lux"
+   }
+  },
+  "score": {
+   "away": 3,
+   "home": 0
+  },
+  "batting": "away",
+  "count": {
+   "balls": 0,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 1,
+  "bases": "12_",
+  "score": {
+   "away": 3,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 669242,
+  "name": "Tommy Edman",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 643410,
+  "name": "Mark Leiter Jr.",
+  "hand": "R"
+ },
+ "event": {
+  "type": "fielders_choice_out",
+  "label": "Fielders Choice Out",
+  "description": "Dodgers challenged (tag play), call on the field was upheld: Tommy Edman reaches on a fielder's choice out, pitcher Mark Leiter Jr. to catcher Jose Trevino. Gavin Lux out at home. Enrique Hernández to 2nd.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": true,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 666158,
+   "name": "Gavin Lux",
+   "start": "3B",
+   "end": null,
+   "out": true,
+   "outBase": "4B",
+   "reason": "r_runner_out",
+   "event": "fielders_choice_out",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 643410,
+     "name": "Mark Leiter Jr.",
+     "pos": "P",
+     "credit": "f_assist"
+    },
+    {
+     "id": 624431,
+     "name": "Jose Trevino",
+     "pos": "C",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 571771,
+   "name": "Enrique Hernández",
+   "start": "1B",
+   "end": "2B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "fielders_choice_out",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 669242,
+   "name": "Tommy Edman",
+   "start": null,
+   "end": "1B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "fielders_choice_out",
+   "isBatter": true,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Gavin Lux",
+   "start": "3B",
+   "out": true,
+   "outBase": "4B",
+   "chain": "1-2"
+  }
+ ],
+ "pitch": {
+  "type": "Splitter",
+  "code": "FS",
+  "speed": 85.7,
+  "zone": 11,
+  "px": -0.7979461563759116,
+  "pz": 3.5570089271012018,
+  "spin": 735,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "bunt_grounder",
+  "hardness": "soft",
+  "location": 1,
+  "ev": 16.4,
+  "la": -8.0,
+  "distance": 10.0,
+  "sprayAngle": 64.7,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 16.5,
+  "homeBefore": 11.8,
+  "homeAdded": 4.700000000000001,
+  "li": 0.75
+ },
+ "statcast": {
+  "ifAlignment": "Strategic",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.008,
+  "deltaHomeWinExp": 0.043,
+  "batWinExpBefore": 0.878,
+  "bbType": "ground_ball",
+  "pitchName": "Split-Finger",
+  "fielders": {
+   "2": 624431,
+   "3": 519203,
+   "4": 650402,
+   "5": 665862,
+   "6": 683011,
+   "7": 657077,
+   "8": 592450,
+   "9": 665742
+  }
+ },
+ "flags": [
+  "bunt",
+  "bunt_defense_pc",
+  "catcher_play",
+  "challenge",
+  "dp_situation",
+  "force_available",
+  "leading",
+  "low_leverage",
+  "out_at_plate",
+  "play_at_plate",
+  "postseason",
+  "productive_out",
+  "risp",
+  "runner_out_on_bases",
+  "shift_alignment",
+  "tag_play"
+ ],
+ "curation": {
+  "category": "Infield defense & decisions",
+  "slot": "Bunt defense: out at second or third"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "dodgers-challenged-tag-play-call-on-the-field-was-upheld-tommy-edman-reac",
+   "title": "Mark Leiter Jr. nabs Gavin Lux at home plate",
+   "duration": "00:00:30",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/dodgers-challenged-tag-play-call-on-the-field-was-upheld-tommy-edman-reac",
+   "embedUrl": "https://streamable.com/m/dodgers-challenged-tag-play-call-on-the-field-was-upheld-tommy-edman-reac",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/udf6dqezrrq49gnsmbfq.jpg",
+   "match": {
+    "guid": "0e7bfb93-a501-4b68-b9f5-2ebde2b07705"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=0e7bfb93-a501-4b68-b9f5-2ebde2b07705"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 775298",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/775298/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 775298",
+   "url": "https://statsapi.mlb.com/api/v1/game/775298/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=775298"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=0e7bfb93-a501-4b68-b9f5-2ebde2b07705"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

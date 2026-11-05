@@ -1,1 +1,282 @@
-{"schema":1,"id":"mlb-778253-2","title":"Brewers turn double play, end inning","titleSource":"MLB.com clip title","source":{"gamePk":778253,"atBatIndex":2,"eventIndex":8,"playId":"7713b3c7-8b14-321c-92d6-f574d026280c","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/778253/feed/live"},"game":{"gamePk":778253,"date":"2025-04-19","season":2025,"gameType":"R","level":"MLB","venue":"American Family Field","away":{"id":133,"name":"Athletics","abbr":"ATH","club":"Athletics"},"home":{"id":158,"name":"Milwaukee Brewers","abbr":"MIL","club":"Brewers"},"series":""},"before":{"inning":1,"half":"top","outs":1,"bases":"1__","runners":{"1B":{"id":667670,"name":"Brent Rooker"},"2B":null,"3B":null},"score":{"away":0,"home":0},"batting":"away","count":{"balls":3,"strikes":2}},"after":{"outs":3,"bases":"___","score":{"away":0,"home":0}},"batter":{"id":691016,"name":"Tyler Soderstrom","side":"L"},"pitcher":{"id":694477,"name":"Chad Patrick","hand":"R"},"event":{"type":"strikeout_double_play","label":"Strikeout Double Play","description":"Tyler Soderstrom strikes out swinging and Brent Rooker caught stealing 2nd, catcher William Contreras to shortstop Joey Ortiz to catcher William Contreras.","rbi":0,"runs":0,"outs":2,"isReview":false,"walkoff":false},"runners":[{"id":691016,"name":"Tyler Soderstrom","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"strikeout_double_play","isBatter":true,"credits":[{"id":661388,"name":"William Contreras","pos":"C","credit":"f_putout"}]},{"id":667670,"name":"Brent Rooker","start":"1B","end":null,"out":true,"outBase":"2B","reason":"r_caught_stealing_2b","event":"caught_stealing_2b","isBatter":false,"credits":[{"id":661388,"name":"William Contreras","pos":"C","credit":"f_assist"},{"id":687401,"name":"Joey Ortiz","pos":"SS","credit":"f_putout"}]}],"chains":[{"runner":"Tyler Soderstrom","start":null,"out":true,"outBase":"1B","chain":"2"},{"runner":"Brent Rooker","start":"1B","out":true,"outBase":"2B","chain":"2-6"}],"pitch":{"type":"Four-Seam Fastball","code":"FF","speed":93.8,"zone":11,"px":-0.5960999240862775,"pz":3.8207385343210096,"spin":2290,"call":"S"},"batted":null,"winprob":{"homeAfter":54.800000000000004,"homeBefore":49.8,"homeAdded":5.000000000000007,"li":1.21},"statcast":{"ifAlignment":"Infield shade","ofAlignment":"Standard","deltaRunExp":-0.283,"deltaHomeWinExp":0.056,"batWinExpBefore":0.508,"bbType":null,"pitchName":"4-Seam Fastball","fielders":{"2":661388,"3":656555,"4":668930,"5":702332,"6":687401,"7":694192,"8":669003,"9":686217}},"flags":["close","double_play","dp_situation","force_available","go_ahead_on","shift_alignment","strikeout","tag_play","tied"],"curation":{"category":"Miscellaneous teaching moments","slot":"Strikeout with a runner in motion"},"clips":[{"kind":"highlight","slug":"tyler-soderstrom-strikes-out-swinging-and-brent-rooker-caught-stealing-2n","title":"Brewers turn double play, end inning","duration":"00:00:20","feed":"CMS","pageUrl":"https://www.mlb.com/video/tyler-soderstrom-strikes-out-swinging-and-brent-rooker-caught-stealing-2n","embedUrl":"https://streamable.com/m/tyler-soderstrom-strikes-out-swinging-and-brent-rooker-caught-stealing-2n","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/psiz6pyzwikhnx5bsqvo.jpg","match":{"guid":"7713b3c7-8b14-321c-92d6-f574d026280c"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=7713b3c7-8b14-321c-92d6-f574d026280c"},"sources":[{"label":"MLB Stats API — official play-by-play, game 778253","url":"https://statsapi.mlb.com/api/v1.1/game/778253/feed/live"},{"label":"MLB Stats API — win probability, game 778253","url":"https://statsapi.mlb.com/api/v1/game/778253/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=778253"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=7713b3c7-8b14-321c-92d6-f574d026280c"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-778253-2",
+ "title": "Brewers turn double play, end inning",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 778253,
+  "atBatIndex": 2,
+  "eventIndex": 8,
+  "playId": "7713b3c7-8b14-321c-92d6-f574d026280c",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/778253/feed/live"
+ },
+ "game": {
+  "gamePk": 778253,
+  "date": "2025-04-19",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "American Family Field",
+  "away": {
+   "id": 133,
+   "name": "Athletics",
+   "abbr": "ATH",
+   "club": "Athletics"
+  },
+  "home": {
+   "id": 158,
+   "name": "Milwaukee Brewers",
+   "abbr": "MIL",
+   "club": "Brewers"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 1,
+  "half": "top",
+  "outs": 1,
+  "bases": "1__",
+  "runners": {
+   "1B": {
+    "id": 667670,
+    "name": "Brent Rooker"
+   },
+   "2B": null,
+   "3B": null
+  },
+  "score": {
+   "away": 0,
+   "home": 0
+  },
+  "batting": "away",
+  "count": {
+   "balls": 3,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 3,
+  "bases": "___",
+  "score": {
+   "away": 0,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 691016,
+  "name": "Tyler Soderstrom",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 694477,
+  "name": "Chad Patrick",
+  "hand": "R"
+ },
+ "event": {
+  "type": "strikeout_double_play",
+  "label": "Strikeout Double Play",
+  "description": "Tyler Soderstrom strikes out swinging and Brent Rooker caught stealing 2nd, catcher William Contreras to shortstop Joey Ortiz to catcher William Contreras.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 2,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 691016,
+   "name": "Tyler Soderstrom",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "strikeout_double_play",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 661388,
+     "name": "William Contreras",
+     "pos": "C",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 667670,
+   "name": "Brent Rooker",
+   "start": "1B",
+   "end": null,
+   "out": true,
+   "outBase": "2B",
+   "reason": "r_caught_stealing_2b",
+   "event": "caught_stealing_2b",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 661388,
+     "name": "William Contreras",
+     "pos": "C",
+     "credit": "f_assist"
+    },
+    {
+     "id": 687401,
+     "name": "Joey Ortiz",
+     "pos": "SS",
+     "credit": "f_putout"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Tyler Soderstrom",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "2"
+  },
+  {
+   "runner": "Brent Rooker",
+   "start": "1B",
+   "out": true,
+   "outBase": "2B",
+   "chain": "2-6"
+  }
+ ],
+ "pitch": {
+  "type": "Four-Seam Fastball",
+  "code": "FF",
+  "speed": 93.8,
+  "zone": 11,
+  "px": -0.5960999240862775,
+  "pz": 3.8207385343210096,
+  "spin": 2290,
+  "call": "S"
+ },
+ "batted": null,
+ "winprob": {
+  "homeAfter": 54.800000000000004,
+  "homeBefore": 49.8,
+  "homeAdded": 5.000000000000007,
+  "li": 1.21
+ },
+ "statcast": {
+  "ifAlignment": "Infield shade",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.283,
+  "deltaHomeWinExp": 0.056,
+  "batWinExpBefore": 0.508,
+  "bbType": null,
+  "pitchName": "4-Seam Fastball",
+  "fielders": {
+   "2": 661388,
+   "3": 656555,
+   "4": 668930,
+   "5": 702332,
+   "6": 687401,
+   "7": 694192,
+   "8": 669003,
+   "9": 686217
+  }
+ },
+ "flags": [
+  "close",
+  "double_play",
+  "dp_situation",
+  "force_available",
+  "go_ahead_on",
+  "shift_alignment",
+  "strikeout",
+  "tag_play",
+  "tied"
+ ],
+ "curation": {
+  "category": "Miscellaneous teaching moments",
+  "slot": "Strikeout with a runner in motion"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "tyler-soderstrom-strikes-out-swinging-and-brent-rooker-caught-stealing-2n",
+   "title": "Brewers turn double play, end inning",
+   "duration": "00:00:20",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/tyler-soderstrom-strikes-out-swinging-and-brent-rooker-caught-stealing-2n",
+   "embedUrl": "https://streamable.com/m/tyler-soderstrom-strikes-out-swinging-and-brent-rooker-caught-stealing-2n",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/psiz6pyzwikhnx5bsqvo.jpg",
+   "match": {
+    "guid": "7713b3c7-8b14-321c-92d6-f574d026280c"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=7713b3c7-8b14-321c-92d6-f574d026280c"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 778253",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/778253/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 778253",
+   "url": "https://statsapi.mlb.com/api/v1/game/778253/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=778253"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=7713b3c7-8b14-321c-92d6-f574d026280c"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

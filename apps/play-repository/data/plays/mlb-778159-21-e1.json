@@ -1,1 +1,213 @@
-{"schema":1,"id":"mlb-778159-21-e1","title":"Josh Jung safe at second after review","titleSource":"MLB.com clip title","source":{"gamePk":778159,"atBatIndex":21,"eventIndex":1,"playId":"a5047493-ee8a-3717-a3d1-7b038f459c74","terminal":false,"feed":"https://statsapi.mlb.com/api/v1.1/game/778159/feed/live"},"game":{"gamePk":778159,"date":"2025-04-26","season":2025,"gameType":"R","level":"MLB","venue":"Oracle Park","away":{"id":140,"name":"Texas Rangers","abbr":"TEX","club":"Rangers"},"home":{"id":137,"name":"San Francisco Giants","abbr":"SF","club":"Giants"},"series":""},"before":{"inning":3,"half":"top","outs":1,"bases":"123","runners":{"1B":{"id":673962,"name":"Josh Jung"},"2B":{"id":607680,"name":"Kevin Pillar"},"3B":{"id":607680,"name":"Kevin Pillar"}},"score":{"away":1,"home":0},"batting":"away","count":{"balls":0,"strikes":1}},"after":{"outs":1,"bases":"_23","score":{"away":1,"home":0}},"batter":{"id":669394,"name":"Jake Burger","side":"R"},"pitcher":{"id":592662,"name":"Robbie Ray","hand":"L"},"event":{"type":"stolen_base_3b","label":"Stolen Base 3B","description":"Rangers challenged (tag play), call on the field was overturned: Kevin Pillar steals (3) 3rd base. Josh Jung steals (2) 2nd base.","rbi":null,"runs":0,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":607680,"name":"Kevin Pillar","start":"2B","end":"3B","out":false,"outBase":null,"reason":"r_stolen_base_3b","event":"stolen_base_3b","isBatter":false,"credits":[]},{"id":673962,"name":"Josh Jung","start":"1B","end":"2B","out":false,"outBase":null,"reason":"r_stolen_base_2b","event":"stolen_base_2b","isBatter":false,"credits":[]}],"chains":[],"pitch":null,"batted":null,"winprob":{"homeAfter":null,"homeBefore":null,"homeAdded":null,"li":1.87},"statcast":null,"flags":["close","dp_situation","force_available","leading","one_run","risp","stolen_base"],"curation":{"category":"Baserunning & advancement","slot":"Stealing third"},"clips":[{"kind":"highlight","slug":"robbie-ray-called-strike-to-jake-burger-c4kdci","title":"Josh Jung safe at second after review","duration":"00:00:58","feed":"CMS","pageUrl":"https://www.mlb.com/video/robbie-ray-called-strike-to-jake-burger-c4kdci","embedUrl":"https://streamable.com/m/robbie-ray-called-strike-to-jake-burger-c4kdci","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/m2bfzy7xybngqt6uigmj.jpg","match":{"guid":"a5047493-ee8a-3717-a3d1-7b038f459c74"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":null,"sources":[{"label":"MLB Stats API — official play-by-play, game 778159","url":"https://statsapi.mlb.com/api/v1.1/game/778159/feed/live"},{"label":"MLB Stats API — win probability, game 778159","url":"https://statsapi.mlb.com/api/v1/game/778159/winProbability"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":["Film Room robbie-ray-called-strike-to-jake-burger-c4kdci mismatch: runners"]}}
+{
+ "schema": 1,
+ "id": "mlb-778159-21-e1",
+ "title": "Josh Jung safe at second after review",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 778159,
+  "atBatIndex": 21,
+  "eventIndex": 1,
+  "playId": "a5047493-ee8a-3717-a3d1-7b038f459c74",
+  "terminal": false,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/778159/feed/live"
+ },
+ "game": {
+  "gamePk": 778159,
+  "date": "2025-04-26",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Oracle Park",
+  "away": {
+   "id": 140,
+   "name": "Texas Rangers",
+   "abbr": "TEX",
+   "club": "Rangers"
+  },
+  "home": {
+   "id": 137,
+   "name": "San Francisco Giants",
+   "abbr": "SF",
+   "club": "Giants"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 3,
+  "half": "top",
+  "outs": 1,
+  "bases": "123",
+  "runners": {
+   "1B": {
+    "id": 673962,
+    "name": "Josh Jung"
+   },
+   "2B": {
+    "id": 607680,
+    "name": "Kevin Pillar"
+   },
+   "3B": {
+    "id": 607680,
+    "name": "Kevin Pillar"
+   }
+  },
+  "score": {
+   "away": 1,
+   "home": 0
+  },
+  "batting": "away",
+  "count": {
+   "balls": 0,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 1,
+  "bases": "_23",
+  "score": {
+   "away": 1,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 669394,
+  "name": "Jake Burger",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 592662,
+  "name": "Robbie Ray",
+  "hand": "L"
+ },
+ "event": {
+  "type": "stolen_base_3b",
+  "label": "Stolen Base 3B",
+  "description": "Rangers challenged (tag play), call on the field was overturned: Kevin Pillar steals (3) 3rd base. Josh Jung steals (2) 2nd base.",
+  "rbi": null,
+  "runs": 0,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 607680,
+   "name": "Kevin Pillar",
+   "start": "2B",
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_stolen_base_3b",
+   "event": "stolen_base_3b",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 673962,
+   "name": "Josh Jung",
+   "start": "1B",
+   "end": "2B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_stolen_base_2b",
+   "event": "stolen_base_2b",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [],
+ "pitch": null,
+ "batted": null,
+ "winprob": {
+  "homeAfter": null,
+  "homeBefore": null,
+  "homeAdded": null,
+  "li": 1.87
+ },
+ "statcast": null,
+ "flags": [
+  "close",
+  "dp_situation",
+  "force_available",
+  "leading",
+  "one_run",
+  "risp",
+  "stolen_base"
+ ],
+ "curation": {
+  "category": "Baserunning & advancement",
+  "slot": "Stealing third"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "robbie-ray-called-strike-to-jake-burger-c4kdci",
+   "title": "Josh Jung safe at second after review",
+   "duration": "00:00:58",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/robbie-ray-called-strike-to-jake-burger-c4kdci",
+   "embedUrl": "https://streamable.com/m/robbie-ray-called-strike-to-jake-burger-c4kdci",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/m2bfzy7xybngqt6uigmj.jpg",
+   "match": {
+    "guid": "a5047493-ee8a-3717-a3d1-7b038f459c74"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": null,
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 778159",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/778159/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 778159",
+   "url": "https://statsapi.mlb.com/api/v1/game/778159/winProbability"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": [
+   "Film Room robbie-ray-called-strike-to-jake-burger-c4kdci mismatch: runners"
+  ]
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

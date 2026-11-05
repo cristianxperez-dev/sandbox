@@ -1,1 +1,278 @@
-{"schema":1,"id":"mlb-745528-5","title":"Starling Marte's RBI walk","titleSource":"MLB.com clip title","source":{"gamePk":745528,"atBatIndex":5,"eventIndex":6,"playId":"9b6c0f40-70aa-4fa9-ba27-f9bf5c591348","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/745528/feed/live"},"game":{"gamePk":745528,"date":"2024-09-14","season":2024,"gameType":"R","level":"MLB","venue":"Citizens Bank Park","away":{"id":121,"name":"New York Mets","abbr":"NYM","club":"Mets"},"home":{"id":143,"name":"Philadelphia Phillies","abbr":"PHI","club":"Phillies"},"series":""},"before":{"inning":1,"half":"top","outs":2,"bases":"123","runners":{"1B":{"id":502110,"name":"J.D. Martinez"},"2B":{"id":624413,"name":"Pete Alonso"},"3B":{"id":578428,"name":"Jose Iglesias"}},"score":{"away":0,"home":0},"batting":"away","count":{"balls":3,"strikes":2}},"after":{"outs":2,"bases":"123","score":{"away":1,"home":0}},"batter":{"id":516782,"name":"Starling Marte","side":"R"},"pitcher":{"id":663465,"name":"Kolby Allard","hand":"L"},"event":{"type":"walk","label":"Walk","description":"Starling Marte walks. Jose Iglesias scores. Pete Alonso to 3rd. J.D. Martinez to 2nd.","rbi":1,"runs":1,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":578428,"name":"Jose Iglesias","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_force","event":"walk","isBatter":false,"credits":[]},{"id":624413,"name":"Pete Alonso","start":"2B","end":"3B","out":false,"outBase":null,"reason":"r_adv_force","event":"walk","isBatter":false,"credits":[]},{"id":502110,"name":"J.D. Martinez","start":"1B","end":"2B","out":false,"outBase":null,"reason":"r_adv_force","event":"walk","isBatter":false,"credits":[]},{"id":516782,"name":"Starling Marte","start":null,"end":"1B","out":false,"outBase":null,"reason":null,"event":"walk","isBatter":true,"credits":[]}],"chains":[],"pitch":{"type":"Changeup","code":"CH","speed":80.9,"zone":14,"px":1.4375313237832907,"pz":1.7653790265374278,"spin":1562,"call":"B"},"batted":null,"winprob":{"homeAfter":38.2,"homeBefore":47.5,"homeAdded":-9.299999999999997,"li":2.83},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":0.294,"deltaHomeWinExp":-0.079,"batWinExpBefore":0.539,"bbType":null,"pitchName":"Changeup","fielders":{"2":592663,"3":547180,"4":681082,"5":665019,"6":607208,"7":669016,"8":670276,"9":592206}},"flags":["close","force_available","go_ahead_on","go_ahead_play","high_leverage","risp","tied","two_out_rbi","two_outs","walk"],"curation":{"category":"High-leverage & unusual situations","slot":"Bases loaded, high leverage"},"clips":[{"kind":"highlight","slug":"kolby-allard-ball-to-starling-marte-sprc2k","title":"Starling Marte's RBI walk","duration":"00:00:07","feed":"CMS","pageUrl":"https://www.mlb.com/video/kolby-allard-ball-to-starling-marte-sprc2k","embedUrl":"https://streamable.com/m/kolby-allard-ball-to-starling-marte-sprc2k","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/wxiqaeu6iavfoipj34im.jpg","match":{"guid":"9b6c0f40-70aa-4fa9-ba27-f9bf5c591348"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=9b6c0f40-70aa-4fa9-ba27-f9bf5c591348"},"sources":[{"label":"MLB Stats API — official play-by-play, game 745528","url":"https://statsapi.mlb.com/api/v1.1/game/745528/feed/live"},{"label":"MLB Stats API — win probability, game 745528","url":"https://statsapi.mlb.com/api/v1/game/745528/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=745528"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=9b6c0f40-70aa-4fa9-ba27-f9bf5c591348"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-745528-5",
+ "title": "Starling Marte's RBI walk",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 745528,
+  "atBatIndex": 5,
+  "eventIndex": 6,
+  "playId": "9b6c0f40-70aa-4fa9-ba27-f9bf5c591348",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/745528/feed/live"
+ },
+ "game": {
+  "gamePk": 745528,
+  "date": "2024-09-14",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Citizens Bank Park",
+  "away": {
+   "id": 121,
+   "name": "New York Mets",
+   "abbr": "NYM",
+   "club": "Mets"
+  },
+  "home": {
+   "id": 143,
+   "name": "Philadelphia Phillies",
+   "abbr": "PHI",
+   "club": "Phillies"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 1,
+  "half": "top",
+  "outs": 2,
+  "bases": "123",
+  "runners": {
+   "1B": {
+    "id": 502110,
+    "name": "J.D. Martinez"
+   },
+   "2B": {
+    "id": 624413,
+    "name": "Pete Alonso"
+   },
+   "3B": {
+    "id": 578428,
+    "name": "Jose Iglesias"
+   }
+  },
+  "score": {
+   "away": 0,
+   "home": 0
+  },
+  "batting": "away",
+  "count": {
+   "balls": 3,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "123",
+  "score": {
+   "away": 1,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 516782,
+  "name": "Starling Marte",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 663465,
+  "name": "Kolby Allard",
+  "hand": "L"
+ },
+ "event": {
+  "type": "walk",
+  "label": "Walk",
+  "description": "Starling Marte walks. Jose Iglesias scores. Pete Alonso to 3rd. J.D. Martinez to 2nd.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 578428,
+   "name": "Jose Iglesias",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_force",
+   "event": "walk",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 624413,
+   "name": "Pete Alonso",
+   "start": "2B",
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_force",
+   "event": "walk",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 502110,
+   "name": "J.D. Martinez",
+   "start": "1B",
+   "end": "2B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_force",
+   "event": "walk",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 516782,
+   "name": "Starling Marte",
+   "start": null,
+   "end": "1B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "walk",
+   "isBatter": true,
+   "credits": []
+  }
+ ],
+ "chains": [],
+ "pitch": {
+  "type": "Changeup",
+  "code": "CH",
+  "speed": 80.9,
+  "zone": 14,
+  "px": 1.4375313237832907,
+  "pz": 1.7653790265374278,
+  "spin": 1562,
+  "call": "B"
+ },
+ "batted": null,
+ "winprob": {
+  "homeAfter": 38.2,
+  "homeBefore": 47.5,
+  "homeAdded": -9.299999999999997,
+  "li": 2.83
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.294,
+  "deltaHomeWinExp": -0.079,
+  "batWinExpBefore": 0.539,
+  "bbType": null,
+  "pitchName": "Changeup",
+  "fielders": {
+   "2": 592663,
+   "3": 547180,
+   "4": 681082,
+   "5": 665019,
+   "6": 607208,
+   "7": 669016,
+   "8": 670276,
+   "9": 592206
+  }
+ },
+ "flags": [
+  "close",
+  "force_available",
+  "go_ahead_on",
+  "go_ahead_play",
+  "high_leverage",
+  "risp",
+  "tied",
+  "two_out_rbi",
+  "two_outs",
+  "walk"
+ ],
+ "curation": {
+  "category": "High-leverage & unusual situations",
+  "slot": "Bases loaded, high leverage"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "kolby-allard-ball-to-starling-marte-sprc2k",
+   "title": "Starling Marte's RBI walk",
+   "duration": "00:00:07",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/kolby-allard-ball-to-starling-marte-sprc2k",
+   "embedUrl": "https://streamable.com/m/kolby-allard-ball-to-starling-marte-sprc2k",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/wxiqaeu6iavfoipj34im.jpg",
+   "match": {
+    "guid": "9b6c0f40-70aa-4fa9-ba27-f9bf5c591348"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=9b6c0f40-70aa-4fa9-ba27-f9bf5c591348"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 745528",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/745528/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 745528",
+   "url": "https://statsapi.mlb.com/api/v1/game/745528/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=745528"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=9b6c0f40-70aa-4fa9-ba27-f9bf5c591348"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

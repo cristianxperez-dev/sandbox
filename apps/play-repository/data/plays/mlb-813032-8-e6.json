@@ -1,1 +1,214 @@
-{"schema":1,"id":"mlb-813032-8-e6","title":"Tyler Glasnow picks off Bo Bichette","titleSource":"MLB.com clip title","source":{"gamePk":813032,"atBatIndex":8,"eventIndex":6,"playId":"98f2e106-6f58-3b16-8f19-811d218d67b4","terminal":false,"feed":"https://statsapi.mlb.com/api/v1.1/game/813032/feed/live"},"game":{"gamePk":813032,"date":"2025-10-27","season":2025,"gameType":"W","level":"MLB","venue":"Dodger Stadium","away":{"id":141,"name":"Toronto Blue Jays","abbr":"TOR","club":"Blue Jays"},"home":{"id":119,"name":"Los Angeles Dodgers","abbr":"LAD","club":"Dodgers"},"series":""},"before":{"inning":2,"half":"top","outs":0,"bases":"1__","runners":{"1B":{"id":666182,"name":"Bo Bichette"},"2B":null,"3B":null},"score":{"away":0,"home":0},"batting":"away","count":{"balls":3,"strikes":2}},"after":{"outs":1,"bases":"___","score":{"away":0,"home":0}},"batter":{"id":662139,"name":"Daulton Varsho","side":"L"},"pitcher":{"id":607192,"name":"Tyler Glasnow","hand":"R"},"event":{"type":"pickoff_1b","label":"Pickoff 1B","description":"Pitcher Tyler Glasnow picks off Bo Bichette at 1st on throw to first baseman Freddie Freeman.","rbi":null,"runs":0,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":666182,"name":"Bo Bichette","start":"1B","end":null,"out":true,"outBase":"1B","reason":"r_pickoff_1b","event":"pickoff_1b","isBatter":false,"credits":[{"id":607192,"name":"Tyler Glasnow","pos":"P","credit":"f_assist"},{"id":518692,"name":"Freddie Freeman","pos":"1B","credit":"f_putout"}]}],"chains":[{"runner":"Bo Bichette","start":"1B","out":true,"outBase":"1B","chain":"1-3"}],"pitch":null,"batted":null,"winprob":{"homeAfter":null,"homeBefore":null,"homeAdded":null,"li":1.54},"statcast":null,"flags":["close","dp_situation","force_available","go_ahead_on","pickoff","postseason","tied"],"curation":{"category":"Baserunning & advancement","slot":"Picked off"},"clips":[{"kind":"highlight","slug":"tyler-glasnow-picks-off-bo-bichette-vbxorn","title":"Tyler Glasnow picks off Bo Bichette","duration":"00:00:26","feed":"CMS","pageUrl":"https://www.mlb.com/video/tyler-glasnow-picks-off-bo-bichette-vbxorn","embedUrl":"https://streamable.com/m/tyler-glasnow-picks-off-bo-bichette-vbxorn","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/mtommnawgwglocezoola.jpg","match":{"guid":"98f2e106-6f58-3b16-8f19-811d218d67b4"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":null,"sources":[{"label":"MLB Stats API — official play-by-play, game 813032","url":"https://statsapi.mlb.com/api/v1.1/game/813032/feed/live"},{"label":"MLB Stats API — win probability, game 813032","url":"https://statsapi.mlb.com/api/v1/game/813032/winProbability"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-813032-8-e6",
+ "title": "Tyler Glasnow picks off Bo Bichette",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 813032,
+  "atBatIndex": 8,
+  "eventIndex": 6,
+  "playId": "98f2e106-6f58-3b16-8f19-811d218d67b4",
+  "terminal": false,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/813032/feed/live"
+ },
+ "game": {
+  "gamePk": 813032,
+  "date": "2025-10-27",
+  "season": 2025,
+  "gameType": "W",
+  "level": "MLB",
+  "venue": "Dodger Stadium",
+  "away": {
+   "id": 141,
+   "name": "Toronto Blue Jays",
+   "abbr": "TOR",
+   "club": "Blue Jays"
+  },
+  "home": {
+   "id": 119,
+   "name": "Los Angeles Dodgers",
+   "abbr": "LAD",
+   "club": "Dodgers"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 2,
+  "half": "top",
+  "outs": 0,
+  "bases": "1__",
+  "runners": {
+   "1B": {
+    "id": 666182,
+    "name": "Bo Bichette"
+   },
+   "2B": null,
+   "3B": null
+  },
+  "score": {
+   "away": 0,
+   "home": 0
+  },
+  "batting": "away",
+  "count": {
+   "balls": 3,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 1,
+  "bases": "___",
+  "score": {
+   "away": 0,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 662139,
+  "name": "Daulton Varsho",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 607192,
+  "name": "Tyler Glasnow",
+  "hand": "R"
+ },
+ "event": {
+  "type": "pickoff_1b",
+  "label": "Pickoff 1B",
+  "description": "Pitcher Tyler Glasnow picks off Bo Bichette at 1st on throw to first baseman Freddie Freeman.",
+  "rbi": null,
+  "runs": 0,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 666182,
+   "name": "Bo Bichette",
+   "start": "1B",
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": "r_pickoff_1b",
+   "event": "pickoff_1b",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 607192,
+     "name": "Tyler Glasnow",
+     "pos": "P",
+     "credit": "f_assist"
+    },
+    {
+     "id": 518692,
+     "name": "Freddie Freeman",
+     "pos": "1B",
+     "credit": "f_putout"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Bo Bichette",
+   "start": "1B",
+   "out": true,
+   "outBase": "1B",
+   "chain": "1-3"
+  }
+ ],
+ "pitch": null,
+ "batted": null,
+ "winprob": {
+  "homeAfter": null,
+  "homeBefore": null,
+  "homeAdded": null,
+  "li": 1.54
+ },
+ "statcast": null,
+ "flags": [
+  "close",
+  "dp_situation",
+  "force_available",
+  "go_ahead_on",
+  "pickoff",
+  "postseason",
+  "tied"
+ ],
+ "curation": {
+  "category": "Baserunning & advancement",
+  "slot": "Picked off"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "tyler-glasnow-picks-off-bo-bichette-vbxorn",
+   "title": "Tyler Glasnow picks off Bo Bichette",
+   "duration": "00:00:26",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/tyler-glasnow-picks-off-bo-bichette-vbxorn",
+   "embedUrl": "https://streamable.com/m/tyler-glasnow-picks-off-bo-bichette-vbxorn",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/mtommnawgwglocezoola.jpg",
+   "match": {
+    "guid": "98f2e106-6f58-3b16-8f19-811d218d67b4"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": null,
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 813032",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/813032/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 813032",
+   "url": "https://statsapi.mlb.com/api/v1/game/813032/winProbability"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

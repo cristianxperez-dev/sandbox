@@ -1,1 +1,270 @@
-{"schema":1,"id":"mlb-776524-11","title":"Ezequiel Duran pops out to first baseman Tyler Soderstrom in foul territory","titleSource":"From MLB's official play description","source":{"gamePk":776524,"atBatIndex":11,"eventIndex":1,"playId":"b5a95dbd-d9ee-3d15-b444-c6dfcd5cb5d0","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/776524/feed/live"},"game":{"gamePk":776524,"date":"2025-08-30","season":2025,"gameType":"R","level":"MLB","venue":"Sutter Health Park","away":{"id":140,"name":"Texas Rangers","abbr":"TEX","club":"Rangers"},"home":{"id":133,"name":"Athletics","abbr":"ATH","club":"Athletics"},"series":""},"before":{"inning":2,"half":"top","outs":1,"bases":"12_","runners":{"1B":{"id":543309,"name":"Kyle Higashioka"},"2B":{"id":673962,"name":"Josh Jung"},"3B":null},"score":{"away":1,"home":0},"batting":"away","count":{"balls":1,"strikes":0}},"after":{"outs":2,"bases":"12_","score":{"away":1,"home":0}},"batter":{"id":677649,"name":"Ezequiel Duran","side":"R"},"pitcher":{"id":686930,"name":"Mason Barnett","hand":"R"},"event":{"type":"field_out","label":"Pop Out","description":"Ezequiel Duran pops out to first baseman Tyler Soderstrom in foul territory.","rbi":0,"runs":0,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":677649,"name":"Ezequiel Duran","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"field_out","isBatter":true,"credits":[{"id":691016,"name":"Tyler Soderstrom","pos":"1B","credit":"f_putout"}]}],"chains":[{"runner":"Ezequiel Duran","start":null,"out":true,"outBase":"1B","chain":"3"}],"pitch":{"type":"Four-Seam Fastball","code":"FF","speed":94.3,"zone":4,"px":-0.5652950360835576,"pz":2.799193329347304,"spin":2305,"call":"X"},"batted":{"trajectory":"popup","hardness":"medium","location":3,"ev":79.2,"la":75.0,"distance":94.0,"sprayAngle":76.5,"spray":"opposite"},"winprob":{"homeAfter":40.2,"homeBefore":36.0,"homeAdded":4.200000000000003,"li":1.79},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":-0.296,"deltaHomeWinExp":0.047,"batWinExpBefore":0.645,"bbType":"popup","pitchName":"4-Seam Fastball","fielders":{"2":669127,"3":691016,"4":680869,"5":687231,"6":805779,"7":666126,"8":671732,"9":668709}},"flags":["close","dp_situation","force_available","leading","one_run","popup","risp"],"curation":{"category":"Miscellaneous teaching moments","slot":"Pop-up with runners on"},"clips":[{"kind":"filmroom","slug":"mason-barnett-in-play-out-s-to-ezequiel-duran","title":"Ezequiel Duran pops out to first baseman Tyler Soderstrom in foul territory.","duration":"00:00:12","feed":"HOME","pageUrl":"https://www.mlb.com/video/mason-barnett-in-play-out-s-to-ezequiel-duran","embedUrl":"https://streamable.com/m/mason-barnett-in-play-out-s-to-ezequiel-duran","angle":{"category":"broadcast","label":"Home TV broadcast"},"howVerified":"MLB Film Room clip for the playId; Film Room's play info matches game, inning, outs, runners, batter and pitcher","thumb":"https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/b5a95dbd-d9ee-3d15-b444-c6dfcd5cb5d0_home.jpg","match":{"filmroom":{"gamePk":true,"inning":true,"outs":true,"runners":true,"batter":true,"pitcher":true},"feeds":["HOME","AWAY"]},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=b5a95dbd-d9ee-3d15-b444-c6dfcd5cb5d0"},"sources":[{"label":"MLB Stats API — official play-by-play, game 776524","url":"https://statsapi.mlb.com/api/v1.1/game/776524/feed/live"},{"label":"MLB Stats API — win probability, game 776524","url":"https://statsapi.mlb.com/api/v1/game/776524/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=776524"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=b5a95dbd-d9ee-3d15-b444-c6dfcd5cb5d0"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-776524-11",
+ "title": "Ezequiel Duran pops out to first baseman Tyler Soderstrom in foul territory",
+ "titleSource": "From MLB's official play description",
+ "source": {
+  "gamePk": 776524,
+  "atBatIndex": 11,
+  "eventIndex": 1,
+  "playId": "b5a95dbd-d9ee-3d15-b444-c6dfcd5cb5d0",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/776524/feed/live"
+ },
+ "game": {
+  "gamePk": 776524,
+  "date": "2025-08-30",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Sutter Health Park",
+  "away": {
+   "id": 140,
+   "name": "Texas Rangers",
+   "abbr": "TEX",
+   "club": "Rangers"
+  },
+  "home": {
+   "id": 133,
+   "name": "Athletics",
+   "abbr": "ATH",
+   "club": "Athletics"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 2,
+  "half": "top",
+  "outs": 1,
+  "bases": "12_",
+  "runners": {
+   "1B": {
+    "id": 543309,
+    "name": "Kyle Higashioka"
+   },
+   "2B": {
+    "id": 673962,
+    "name": "Josh Jung"
+   },
+   "3B": null
+  },
+  "score": {
+   "away": 1,
+   "home": 0
+  },
+  "batting": "away",
+  "count": {
+   "balls": 1,
+   "strikes": 0
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "12_",
+  "score": {
+   "away": 1,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 677649,
+  "name": "Ezequiel Duran",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 686930,
+  "name": "Mason Barnett",
+  "hand": "R"
+ },
+ "event": {
+  "type": "field_out",
+  "label": "Pop Out",
+  "description": "Ezequiel Duran pops out to first baseman Tyler Soderstrom in foul territory.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 677649,
+   "name": "Ezequiel Duran",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "field_out",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 691016,
+     "name": "Tyler Soderstrom",
+     "pos": "1B",
+     "credit": "f_putout"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Ezequiel Duran",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "3"
+  }
+ ],
+ "pitch": {
+  "type": "Four-Seam Fastball",
+  "code": "FF",
+  "speed": 94.3,
+  "zone": 4,
+  "px": -0.5652950360835576,
+  "pz": 2.799193329347304,
+  "spin": 2305,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "popup",
+  "hardness": "medium",
+  "location": 3,
+  "ev": 79.2,
+  "la": 75.0,
+  "distance": 94.0,
+  "sprayAngle": 76.5,
+  "spray": "opposite"
+ },
+ "winprob": {
+  "homeAfter": 40.2,
+  "homeBefore": 36.0,
+  "homeAdded": 4.200000000000003,
+  "li": 1.79
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.296,
+  "deltaHomeWinExp": 0.047,
+  "batWinExpBefore": 0.645,
+  "bbType": "popup",
+  "pitchName": "4-Seam Fastball",
+  "fielders": {
+   "2": 669127,
+   "3": 691016,
+   "4": 680869,
+   "5": 687231,
+   "6": 805779,
+   "7": 666126,
+   "8": 671732,
+   "9": 668709
+  }
+ },
+ "flags": [
+  "close",
+  "dp_situation",
+  "force_available",
+  "leading",
+  "one_run",
+  "popup",
+  "risp"
+ ],
+ "curation": {
+  "category": "Miscellaneous teaching moments",
+  "slot": "Pop-up with runners on"
+ },
+ "clips": [
+  {
+   "kind": "filmroom",
+   "slug": "mason-barnett-in-play-out-s-to-ezequiel-duran",
+   "title": "Ezequiel Duran pops out to first baseman Tyler Soderstrom in foul territory.",
+   "duration": "00:00:12",
+   "feed": "HOME",
+   "pageUrl": "https://www.mlb.com/video/mason-barnett-in-play-out-s-to-ezequiel-duran",
+   "embedUrl": "https://streamable.com/m/mason-barnett-in-play-out-s-to-ezequiel-duran",
+   "angle": {
+    "category": "broadcast",
+    "label": "Home TV broadcast"
+   },
+   "howVerified": "MLB Film Room clip for the playId; Film Room's play info matches game, inning, outs, runners, batter and pitcher",
+   "thumb": "https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/b5a95dbd-d9ee-3d15-b444-c6dfcd5cb5d0_home.jpg",
+   "match": {
+    "filmroom": {
+     "gamePk": true,
+     "inning": true,
+     "outs": true,
+     "runners": true,
+     "batter": true,
+     "pitcher": true
+    },
+    "feeds": [
+     "HOME",
+     "AWAY"
+    ]
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=b5a95dbd-d9ee-3d15-b444-c6dfcd5cb5d0"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 776524",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/776524/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 776524",
+   "url": "https://statsapi.mlb.com/api/v1/game/776524/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=776524"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=b5a95dbd-d9ee-3d15-b444-c6dfcd5cb5d0"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

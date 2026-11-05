@@ -1,1 +1,276 @@
-{"schema":1,"id":"mlb-776711-42","title":"Jake Mangum's great reaching catch","titleSource":"MLB.com clip title","source":{"gamePk":776711,"atBatIndex":42,"eventIndex":11,"playId":"ff35fee1-1e31-327e-af96-ed21180a3f56","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/776711/feed/live"},"game":{"gamePk":776711,"date":"2025-08-16","season":2025,"gameType":"R","level":"MLB","venue":"Oracle Park","away":{"id":139,"name":"Tampa Bay Rays","abbr":"TB","club":"Rays"},"home":{"id":137,"name":"San Francisco Giants","abbr":"SF","club":"Giants"},"series":""},"before":{"inning":6,"half":"bottom","outs":1,"bases":"12_","runners":{"1B":{"id":642086,"name":"Dominic Smith"},"2B":{"id":642715,"name":"Willy Adames"},"3B":null},"score":{"away":0,"home":0},"batting":"home","count":{"balls":2,"strikes":2}},"after":{"outs":2,"bases":"1_3","score":{"away":0,"home":0}},"batter":{"id":808982,"name":"Jung Hoo Lee","side":"L"},"pitcher":{"id":682254,"name":"Mason Montgomery","hand":"L"},"event":{"type":"field_out","label":"Flyout","description":"Jung Hoo Lee flies out sharply to right fielder Jake Mangum. Willy Adames to 3rd.","rbi":0,"runs":0,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":808982,"name":"Jung Hoo Lee","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"field_out","isBatter":true,"credits":[{"id":663968,"name":"Jake Mangum","pos":"RF","credit":"f_putout"}]},{"id":642715,"name":"Willy Adames","start":"2B","end":"3B","out":false,"outBase":null,"reason":"r_adv_play","event":"field_out","isBatter":false,"credits":[]}],"chains":[{"runner":"Jung Hoo Lee","start":null,"out":true,"outBase":"1B","chain":"9"}],"pitch":{"type":"Slider","code":"SL","speed":89.4,"zone":5,"px":-0.15145756571213664,"pz":2.564263428120228,"spin":2573,"call":"X"},"batted":{"trajectory":"fly_ball","hardness":"hard","location":9,"ev":100.3,"la":34.0,"distance":372.0,"sprayAngle":15.4,"spray":"pull"},"winprob":{"homeAfter":57.49999999999999,"homeBefore":63.0,"homeAdded":-5.500000000000007,"li":2.75},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":-0.193,"deltaHomeWinExp":-0.045,"batWinExpBefore":0.62,"bbType":"fly_ball","pitchName":"Slider","fielders":{"2":663743,"3":676044,"4":664040,"5":691406,"6":673490,"7":802415,"8":677592,"9":663968}},"flags":["close","dp_situation","fly_ball","force_available","go_ahead_on","high_leverage","outfield_play","productive_out","risp","tag_up","tied"],"curation":{"category":"Outfield defense, cutoffs & relays","slot":"Runner tags from second to third on a fly"},"clips":[{"kind":"highlight","slug":"mason-montgomery-in-play-out-s-to-jung-hoo-lee","title":"Jake Mangum's great reaching catch","duration":"00:00:25","feed":"CMS","pageUrl":"https://www.mlb.com/video/mason-montgomery-in-play-out-s-to-jung-hoo-lee","embedUrl":"https://streamable.com/m/mason-montgomery-in-play-out-s-to-jung-hoo-lee","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/fhjsu1xkx8u0l9ssffey.jpg","match":{"guid":"ff35fee1-1e31-327e-af96-ed21180a3f56"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=ff35fee1-1e31-327e-af96-ed21180a3f56"},"sources":[{"label":"MLB Stats API — official play-by-play, game 776711","url":"https://statsapi.mlb.com/api/v1.1/game/776711/feed/live"},{"label":"MLB Stats API — win probability, game 776711","url":"https://statsapi.mlb.com/api/v1/game/776711/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=776711"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=ff35fee1-1e31-327e-af96-ed21180a3f56"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-776711-42",
+ "title": "Jake Mangum's great reaching catch",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 776711,
+  "atBatIndex": 42,
+  "eventIndex": 11,
+  "playId": "ff35fee1-1e31-327e-af96-ed21180a3f56",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/776711/feed/live"
+ },
+ "game": {
+  "gamePk": 776711,
+  "date": "2025-08-16",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Oracle Park",
+  "away": {
+   "id": 139,
+   "name": "Tampa Bay Rays",
+   "abbr": "TB",
+   "club": "Rays"
+  },
+  "home": {
+   "id": 137,
+   "name": "San Francisco Giants",
+   "abbr": "SF",
+   "club": "Giants"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 6,
+  "half": "bottom",
+  "outs": 1,
+  "bases": "12_",
+  "runners": {
+   "1B": {
+    "id": 642086,
+    "name": "Dominic Smith"
+   },
+   "2B": {
+    "id": 642715,
+    "name": "Willy Adames"
+   },
+   "3B": null
+  },
+  "score": {
+   "away": 0,
+   "home": 0
+  },
+  "batting": "home",
+  "count": {
+   "balls": 2,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "1_3",
+  "score": {
+   "away": 0,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 808982,
+  "name": "Jung Hoo Lee",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 682254,
+  "name": "Mason Montgomery",
+  "hand": "L"
+ },
+ "event": {
+  "type": "field_out",
+  "label": "Flyout",
+  "description": "Jung Hoo Lee flies out sharply to right fielder Jake Mangum. Willy Adames to 3rd.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 808982,
+   "name": "Jung Hoo Lee",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "field_out",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 663968,
+     "name": "Jake Mangum",
+     "pos": "RF",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 642715,
+   "name": "Willy Adames",
+   "start": "2B",
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "field_out",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Jung Hoo Lee",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "9"
+  }
+ ],
+ "pitch": {
+  "type": "Slider",
+  "code": "SL",
+  "speed": 89.4,
+  "zone": 5,
+  "px": -0.15145756571213664,
+  "pz": 2.564263428120228,
+  "spin": 2573,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "fly_ball",
+  "hardness": "hard",
+  "location": 9,
+  "ev": 100.3,
+  "la": 34.0,
+  "distance": 372.0,
+  "sprayAngle": 15.4,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 57.49999999999999,
+  "homeBefore": 63.0,
+  "homeAdded": -5.500000000000007,
+  "li": 2.75
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.193,
+  "deltaHomeWinExp": -0.045,
+  "batWinExpBefore": 0.62,
+  "bbType": "fly_ball",
+  "pitchName": "Slider",
+  "fielders": {
+   "2": 663743,
+   "3": 676044,
+   "4": 664040,
+   "5": 691406,
+   "6": 673490,
+   "7": 802415,
+   "8": 677592,
+   "9": 663968
+  }
+ },
+ "flags": [
+  "close",
+  "dp_situation",
+  "fly_ball",
+  "force_available",
+  "go_ahead_on",
+  "high_leverage",
+  "outfield_play",
+  "productive_out",
+  "risp",
+  "tag_up",
+  "tied"
+ ],
+ "curation": {
+  "category": "Outfield defense, cutoffs & relays",
+  "slot": "Runner tags from second to third on a fly"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "mason-montgomery-in-play-out-s-to-jung-hoo-lee",
+   "title": "Jake Mangum's great reaching catch",
+   "duration": "00:00:25",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/mason-montgomery-in-play-out-s-to-jung-hoo-lee",
+   "embedUrl": "https://streamable.com/m/mason-montgomery-in-play-out-s-to-jung-hoo-lee",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/fhjsu1xkx8u0l9ssffey.jpg",
+   "match": {
+    "guid": "ff35fee1-1e31-327e-af96-ed21180a3f56"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=ff35fee1-1e31-327e-af96-ed21180a3f56"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 776711",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/776711/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 776711",
+   "url": "https://statsapi.mlb.com/api/v1/game/776711/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=776711"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=ff35fee1-1e31-327e-af96-ed21180a3f56"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

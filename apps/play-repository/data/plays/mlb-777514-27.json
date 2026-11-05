@@ -1,1 +1,303 @@
-{"schema":1,"id":"mlb-777514-27","title":"Janson Junk induces a double play to end the 3rd inning","titleSource":"MLB.com clip title","source":{"gamePk":777514,"atBatIndex":27,"eventIndex":5,"playId":"4f251883-ae48-3fb4-9238-fbf0ea862d3e","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/777514/feed/live"},"game":{"gamePk":777514,"date":"2025-06-14","season":2025,"gameType":"R","level":"MLB","venue":"Nationals Park","away":{"id":146,"name":"Miami Marlins","abbr":"MIA","club":"Marlins"},"home":{"id":120,"name":"Washington Nationals","abbr":"WSH","club":"Nationals"},"series":""},"before":{"inning":3,"half":"bottom","outs":1,"bases":"1_3","runners":{"1B":{"id":663993,"name":"Nathaniel Lowe"},"2B":null,"3B":{"id":642708,"name":"Amed Rosario"}},"score":{"away":1,"home":1},"batting":"home","count":{"balls":2,"strikes":1}},"after":{"outs":3,"bases":"__3","score":{"away":1,"home":1}},"batter":{"id":669743,"name":"Alex Call","side":"R"},"pitcher":{"id":676083,"name":"Janson Junk","hand":"R"},"event":{"type":"grounded_into_double_play","label":"Grounded Into DP","description":"Alex Call grounds into a double play, shortstop Otto Lopez to second baseman Javier Sanoja to first baseman Eric Wagaman. Nathaniel Lowe out at 2nd. Alex Call out at 1st.","rbi":0,"runs":0,"outs":2,"isReview":false,"walkoff":false},"runners":[{"id":663993,"name":"Nathaniel Lowe","start":"1B","end":null,"out":true,"outBase":"2B","reason":"r_force_out","event":"grounded_into_double_play","isBatter":false,"credits":[{"id":672640,"name":"Otto Lopez","pos":"SS","credit":"f_assist"},{"id":691594,"name":"Javier Sanoja","pos":"2B","credit":"f_putout"}]},{"id":669743,"name":"Alex Call","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"grounded_into_double_play","isBatter":true,"credits":[{"id":691594,"name":"Javier Sanoja","pos":"2B","credit":"f_assist"},{"id":676572,"name":"Eric Wagaman","pos":"1B","credit":"f_putout"}]}],"chains":[{"runner":"Nathaniel Lowe","start":"1B","out":true,"outBase":"2B","chain":"6-4"},{"runner":"Alex Call","start":null,"out":true,"outBase":"1B","chain":"4-3"}],"pitch":{"type":"Slider","code":"SL","speed":86.3,"zone":9,"px":0.8176776103389071,"pz":1.928241697816245,"spin":2364,"call":"X"},"batted":{"trajectory":"ground_ball","hardness":"medium","location":6,"ev":87.6,"la":-10.0,"distance":11.0,"sprayAngle":-22.6,"spray":"pull"},"winprob":{"homeAfter":50.0,"homeBefore":63.0,"homeAdded":-13.0,"li":2.08},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":-0.369,"deltaHomeWinExp":-0.133,"batWinExpBefore":0.633,"bbType":"ground_ball","pitchName":"Slider","fielders":{"2":682663,"3":676572,"4":691594,"5":681393,"6":672640,"7":669065,"8":667472,"9":660821}},"flags":["close","double_play","dp_situation","force_available","force_play","go_ahead_on","ground_ball","ground_ball_infield","high_leverage","middle_infield","risp","tied"],"curation":{"category":"Infield defense & decisions","slot":"First and third, ground ball to the middle infield"},"clips":[{"kind":"highlight","slug":"janson-junk-in-play-out-s-to-alex-call","title":"Janson Junk induces a double play to end the 3rd inning","duration":"00:00:12","feed":"CMS","pageUrl":"https://www.mlb.com/video/janson-junk-in-play-out-s-to-alex-call","embedUrl":"https://streamable.com/m/janson-junk-in-play-out-s-to-alex-call","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/tnsoczdrqrjvgbtj48o3.jpg","match":{"guid":"4f251883-ae48-3fb4-9238-fbf0ea862d3e"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=4f251883-ae48-3fb4-9238-fbf0ea862d3e"},"sources":[{"label":"MLB Stats API — official play-by-play, game 777514","url":"https://statsapi.mlb.com/api/v1.1/game/777514/feed/live"},{"label":"MLB Stats API — win probability, game 777514","url":"https://statsapi.mlb.com/api/v1/game/777514/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=777514"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=4f251883-ae48-3fb4-9238-fbf0ea862d3e"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-777514-27",
+ "title": "Janson Junk induces a double play to end the 3rd inning",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 777514,
+  "atBatIndex": 27,
+  "eventIndex": 5,
+  "playId": "4f251883-ae48-3fb4-9238-fbf0ea862d3e",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/777514/feed/live"
+ },
+ "game": {
+  "gamePk": 777514,
+  "date": "2025-06-14",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Nationals Park",
+  "away": {
+   "id": 146,
+   "name": "Miami Marlins",
+   "abbr": "MIA",
+   "club": "Marlins"
+  },
+  "home": {
+   "id": 120,
+   "name": "Washington Nationals",
+   "abbr": "WSH",
+   "club": "Nationals"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 3,
+  "half": "bottom",
+  "outs": 1,
+  "bases": "1_3",
+  "runners": {
+   "1B": {
+    "id": 663993,
+    "name": "Nathaniel Lowe"
+   },
+   "2B": null,
+   "3B": {
+    "id": 642708,
+    "name": "Amed Rosario"
+   }
+  },
+  "score": {
+   "away": 1,
+   "home": 1
+  },
+  "batting": "home",
+  "count": {
+   "balls": 2,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 3,
+  "bases": "__3",
+  "score": {
+   "away": 1,
+   "home": 1
+  }
+ },
+ "batter": {
+  "id": 669743,
+  "name": "Alex Call",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 676083,
+  "name": "Janson Junk",
+  "hand": "R"
+ },
+ "event": {
+  "type": "grounded_into_double_play",
+  "label": "Grounded Into DP",
+  "description": "Alex Call grounds into a double play, shortstop Otto Lopez to second baseman Javier Sanoja to first baseman Eric Wagaman. Nathaniel Lowe out at 2nd. Alex Call out at 1st.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 2,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 663993,
+   "name": "Nathaniel Lowe",
+   "start": "1B",
+   "end": null,
+   "out": true,
+   "outBase": "2B",
+   "reason": "r_force_out",
+   "event": "grounded_into_double_play",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 672640,
+     "name": "Otto Lopez",
+     "pos": "SS",
+     "credit": "f_assist"
+    },
+    {
+     "id": 691594,
+     "name": "Javier Sanoja",
+     "pos": "2B",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 669743,
+   "name": "Alex Call",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "grounded_into_double_play",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 691594,
+     "name": "Javier Sanoja",
+     "pos": "2B",
+     "credit": "f_assist"
+    },
+    {
+     "id": 676572,
+     "name": "Eric Wagaman",
+     "pos": "1B",
+     "credit": "f_putout"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Nathaniel Lowe",
+   "start": "1B",
+   "out": true,
+   "outBase": "2B",
+   "chain": "6-4"
+  },
+  {
+   "runner": "Alex Call",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "4-3"
+  }
+ ],
+ "pitch": {
+  "type": "Slider",
+  "code": "SL",
+  "speed": 86.3,
+  "zone": 9,
+  "px": 0.8176776103389071,
+  "pz": 1.928241697816245,
+  "spin": 2364,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "ground_ball",
+  "hardness": "medium",
+  "location": 6,
+  "ev": 87.6,
+  "la": -10.0,
+  "distance": 11.0,
+  "sprayAngle": -22.6,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 50.0,
+  "homeBefore": 63.0,
+  "homeAdded": -13.0,
+  "li": 2.08
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.369,
+  "deltaHomeWinExp": -0.133,
+  "batWinExpBefore": 0.633,
+  "bbType": "ground_ball",
+  "pitchName": "Slider",
+  "fielders": {
+   "2": 682663,
+   "3": 676572,
+   "4": 691594,
+   "5": 681393,
+   "6": 672640,
+   "7": 669065,
+   "8": 667472,
+   "9": 660821
+  }
+ },
+ "flags": [
+  "close",
+  "double_play",
+  "dp_situation",
+  "force_available",
+  "force_play",
+  "go_ahead_on",
+  "ground_ball",
+  "ground_ball_infield",
+  "high_leverage",
+  "middle_infield",
+  "risp",
+  "tied"
+ ],
+ "curation": {
+  "category": "Infield defense & decisions",
+  "slot": "First and third, ground ball to the middle infield"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "janson-junk-in-play-out-s-to-alex-call",
+   "title": "Janson Junk induces a double play to end the 3rd inning",
+   "duration": "00:00:12",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/janson-junk-in-play-out-s-to-alex-call",
+   "embedUrl": "https://streamable.com/m/janson-junk-in-play-out-s-to-alex-call",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/tnsoczdrqrjvgbtj48o3.jpg",
+   "match": {
+    "guid": "4f251883-ae48-3fb4-9238-fbf0ea862d3e"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=4f251883-ae48-3fb4-9238-fbf0ea862d3e"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 777514",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/777514/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 777514",
+   "url": "https://statsapi.mlb.com/api/v1/game/777514/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=777514"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=4f251883-ae48-3fb4-9238-fbf0ea862d3e"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

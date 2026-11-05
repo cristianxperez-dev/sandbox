@@ -1,1 +1,310 @@
-{"schema":1,"id":"mlb-775309-1","title":"Guardians nab Gleyber Torres at home","titleSource":"MLB.com clip title","source":{"gamePk":775309,"atBatIndex":1,"eventIndex":0,"playId":"017ec68d-37c8-4974-ab8f-f7041e1b8fd5","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/775309/feed/live"},"game":{"gamePk":775309,"date":"2024-10-19","season":2024,"gameType":"L","level":"MLB","venue":"Progressive Field","away":{"id":147,"name":"New York Yankees","abbr":"NYY","club":"Yankees"},"home":{"id":114,"name":"Cleveland Guardians","abbr":"CLE","club":"Guardians"},"series":""},"before":{"inning":1,"half":"top","outs":0,"bases":"1__","runners":{"1B":{"id":650402,"name":"Gleyber Torres"},"2B":null,"3B":null},"score":{"away":0,"home":0},"batting":"away","count":{"balls":0,"strikes":0}},"after":{"outs":1,"bases":"_2_","score":{"away":0,"home":0}},"batter":{"id":665742,"name":"Juan Soto","side":"L"},"pitcher":{"id":676440,"name":"Tanner Bibee","hand":"R"},"event":{"type":"double","label":"Double","description":"Juan Soto doubles (2) on a sharp line drive to right fielder Jhonkensy Noel. Gleyber Torres out at home on the throw, right fielder Jhonkensy Noel to second baseman Andrés Giménez to catcher Bo Naylor.","rbi":0,"runs":0,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":665742,"name":"Juan Soto","start":null,"end":"2B","out":false,"outBase":null,"reason":null,"event":"double","isBatter":true,"credits":[{"id":678877,"name":"Jhonkensy Noel","pos":"RF","credit":"f_fielded_ball"}]},{"id":650402,"name":"Gleyber Torres","start":"1B","end":null,"out":true,"outBase":"4B","reason":"r_thrown_out","event":"double","isBatter":false,"credits":[{"id":678877,"name":"Jhonkensy Noel","pos":"RF","credit":"f_assist"},{"id":678877,"name":"Jhonkensy Noel","pos":"RF","credit":"f_assist_of"},{"id":665926,"name":"Andrés Giménez","pos":"2B","credit":"f_assist"},{"id":666310,"name":"Bo Naylor","pos":"C","credit":"f_putout"}]}],"chains":[{"runner":"Juan Soto","start":null,"out":false,"outBase":null,"chain":"9"},{"runner":"Gleyber Torres","start":"1B","out":true,"outBase":"4B","chain":"9-4-2"}],"pitch":{"type":"Cutter","code":"FC","speed":89.9,"zone":8,"px":0.14161419972747585,"pz":1.772799372685214,"spin":2782,"call":"X"},"batted":{"trajectory":"line_drive","hardness":"hard","location":9,"ev":114.3,"la":10.0,"distance":220.0,"sprayAngle":21.2,"spray":"pull"},"winprob":{"homeAfter":48.1,"homeBefore":46.4,"homeAdded":1.6999999999999957,"li":1.46},"statcast":{"ifAlignment":"Standard","ofAlignment":"Strategic","deltaRunExp":0.741,"deltaHomeWinExp":0.017,"batWinExpBefore":0.536,"bbType":"line_drive","pitchName":"Cutter","fielders":{"2":666310,"3":647304,"4":665926,"5":608070,"6":677587,"7":680757,"8":657041,"9":678877}},"flags":["catcher_play","close","double","dp_situation","force_available","go_ahead_on","line_drive","of_alignment_nonstd","out_at_plate","outfield_assist","outfield_play","play_at_plate","postseason","relay","runner_out_on_bases","tag_play","tied"],"curation":{"category":"Outfield defense, cutoffs & relays","slot":"Outfield assist at the plate"},"clips":[{"kind":"highlight","slug":"tanner-bibee-in-play-out-s-to-juan-soto-lbaaqy","title":"Guardians nab Gleyber Torres at home","duration":"00:00:29","feed":"CMS","pageUrl":"https://www.mlb.com/video/tanner-bibee-in-play-out-s-to-juan-soto-lbaaqy","embedUrl":"https://streamable.com/m/tanner-bibee-in-play-out-s-to-juan-soto-lbaaqy","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/e6tvlxs8moitf9vtzkv6.jpg","match":{"guid":"017ec68d-37c8-4974-ab8f-f7041e1b8fd5"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=017ec68d-37c8-4974-ab8f-f7041e1b8fd5"},"sources":[{"label":"MLB Stats API — official play-by-play, game 775309","url":"https://statsapi.mlb.com/api/v1.1/game/775309/feed/live"},{"label":"MLB Stats API — win probability, game 775309","url":"https://statsapi.mlb.com/api/v1/game/775309/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=775309"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=017ec68d-37c8-4974-ab8f-f7041e1b8fd5"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-775309-1",
+ "title": "Guardians nab Gleyber Torres at home",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 775309,
+  "atBatIndex": 1,
+  "eventIndex": 0,
+  "playId": "017ec68d-37c8-4974-ab8f-f7041e1b8fd5",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/775309/feed/live"
+ },
+ "game": {
+  "gamePk": 775309,
+  "date": "2024-10-19",
+  "season": 2024,
+  "gameType": "L",
+  "level": "MLB",
+  "venue": "Progressive Field",
+  "away": {
+   "id": 147,
+   "name": "New York Yankees",
+   "abbr": "NYY",
+   "club": "Yankees"
+  },
+  "home": {
+   "id": 114,
+   "name": "Cleveland Guardians",
+   "abbr": "CLE",
+   "club": "Guardians"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 1,
+  "half": "top",
+  "outs": 0,
+  "bases": "1__",
+  "runners": {
+   "1B": {
+    "id": 650402,
+    "name": "Gleyber Torres"
+   },
+   "2B": null,
+   "3B": null
+  },
+  "score": {
+   "away": 0,
+   "home": 0
+  },
+  "batting": "away",
+  "count": {
+   "balls": 0,
+   "strikes": 0
+  }
+ },
+ "after": {
+  "outs": 1,
+  "bases": "_2_",
+  "score": {
+   "away": 0,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 665742,
+  "name": "Juan Soto",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 676440,
+  "name": "Tanner Bibee",
+  "hand": "R"
+ },
+ "event": {
+  "type": "double",
+  "label": "Double",
+  "description": "Juan Soto doubles (2) on a sharp line drive to right fielder Jhonkensy Noel. Gleyber Torres out at home on the throw, right fielder Jhonkensy Noel to second baseman Andrés Giménez to catcher Bo Naylor.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 665742,
+   "name": "Juan Soto",
+   "start": null,
+   "end": "2B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "double",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 678877,
+     "name": "Jhonkensy Noel",
+     "pos": "RF",
+     "credit": "f_fielded_ball"
+    }
+   ]
+  },
+  {
+   "id": 650402,
+   "name": "Gleyber Torres",
+   "start": "1B",
+   "end": null,
+   "out": true,
+   "outBase": "4B",
+   "reason": "r_thrown_out",
+   "event": "double",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 678877,
+     "name": "Jhonkensy Noel",
+     "pos": "RF",
+     "credit": "f_assist"
+    },
+    {
+     "id": 678877,
+     "name": "Jhonkensy Noel",
+     "pos": "RF",
+     "credit": "f_assist_of"
+    },
+    {
+     "id": 665926,
+     "name": "Andrés Giménez",
+     "pos": "2B",
+     "credit": "f_assist"
+    },
+    {
+     "id": 666310,
+     "name": "Bo Naylor",
+     "pos": "C",
+     "credit": "f_putout"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Juan Soto",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": "9"
+  },
+  {
+   "runner": "Gleyber Torres",
+   "start": "1B",
+   "out": true,
+   "outBase": "4B",
+   "chain": "9-4-2"
+  }
+ ],
+ "pitch": {
+  "type": "Cutter",
+  "code": "FC",
+  "speed": 89.9,
+  "zone": 8,
+  "px": 0.14161419972747585,
+  "pz": 1.772799372685214,
+  "spin": 2782,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "line_drive",
+  "hardness": "hard",
+  "location": 9,
+  "ev": 114.3,
+  "la": 10.0,
+  "distance": 220.0,
+  "sprayAngle": 21.2,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 48.1,
+  "homeBefore": 46.4,
+  "homeAdded": 1.6999999999999957,
+  "li": 1.46
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Strategic",
+  "deltaRunExp": 0.741,
+  "deltaHomeWinExp": 0.017,
+  "batWinExpBefore": 0.536,
+  "bbType": "line_drive",
+  "pitchName": "Cutter",
+  "fielders": {
+   "2": 666310,
+   "3": 647304,
+   "4": 665926,
+   "5": 608070,
+   "6": 677587,
+   "7": 680757,
+   "8": 657041,
+   "9": 678877
+  }
+ },
+ "flags": [
+  "catcher_play",
+  "close",
+  "double",
+  "dp_situation",
+  "force_available",
+  "go_ahead_on",
+  "line_drive",
+  "of_alignment_nonstd",
+  "out_at_plate",
+  "outfield_assist",
+  "outfield_play",
+  "play_at_plate",
+  "postseason",
+  "relay",
+  "runner_out_on_bases",
+  "tag_play",
+  "tied"
+ ],
+ "curation": {
+  "category": "Outfield defense, cutoffs & relays",
+  "slot": "Outfield assist at the plate"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "tanner-bibee-in-play-out-s-to-juan-soto-lbaaqy",
+   "title": "Guardians nab Gleyber Torres at home",
+   "duration": "00:00:29",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/tanner-bibee-in-play-out-s-to-juan-soto-lbaaqy",
+   "embedUrl": "https://streamable.com/m/tanner-bibee-in-play-out-s-to-juan-soto-lbaaqy",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/e6tvlxs8moitf9vtzkv6.jpg",
+   "match": {
+    "guid": "017ec68d-37c8-4974-ab8f-f7041e1b8fd5"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=017ec68d-37c8-4974-ab8f-f7041e1b8fd5"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 775309",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/775309/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 775309",
+   "url": "https://statsapi.mlb.com/api/v1/game/775309/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=775309"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=017ec68d-37c8-4974-ab8f-f7041e1b8fd5"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

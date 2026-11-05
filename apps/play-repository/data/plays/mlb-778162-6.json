@@ -1,1 +1,293 @@
-{"schema":1,"id":"mlb-778162-6","title":"Matt Olson, Nick Allen turn clean double play","titleSource":"MLB.com clip title","source":{"gamePk":778162,"atBatIndex":6,"eventIndex":1,"playId":"7f1ba675-cbed-30a9-a3ef-2e24f5748fff","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/778162/feed/live"},"game":{"gamePk":778162,"date":"2025-04-26","season":2025,"gameType":"R","level":"MLB","venue":"Chase Field","away":{"id":144,"name":"Atlanta Braves","abbr":"ATL","club":"Braves"},"home":{"id":109,"name":"Arizona Diamondbacks","abbr":"AZ","club":"Diamondbacks"},"series":""},"before":{"inning":1,"half":"bottom","outs":1,"bases":"1__","runners":{"1B":{"id":672695,"name":"Geraldo Perdomo"},"2B":null,"3B":null},"score":{"away":1,"home":0},"batting":"home","count":{"balls":0,"strikes":1}},"after":{"outs":3,"bases":"___","score":{"away":1,"home":0}},"batter":{"id":656976,"name":"Pavin Smith","side":"L"},"pitcher":{"id":656550,"name":"Grant Holmes","hand":"R"},"event":{"type":"grounded_into_double_play","label":"Grounded Into DP","description":"Pavin Smith grounds into a double play, first baseman Matt Olson to shortstop Nick Allen. Geraldo Perdomo out at 2nd. Pavin Smith out at 1st.","rbi":0,"runs":0,"outs":2,"isReview":false,"walkoff":false},"runners":[{"id":656976,"name":"Pavin Smith","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"grounded_into_double_play","isBatter":true,"credits":[{"id":621566,"name":"Matt Olson","pos":"1B","credit":"f_putout"}]},{"id":672695,"name":"Geraldo Perdomo","start":"1B","end":null,"out":true,"outBase":"2B","reason":"r_force_out","event":"grounded_into_double_play","isBatter":false,"credits":[{"id":621566,"name":"Matt Olson","pos":"1B","credit":"f_assist"},{"id":669397,"name":"Nick Allen","pos":"SS","credit":"f_putout"}]}],"chains":[{"runner":"Pavin Smith","start":null,"out":true,"outBase":"1B","chain":"3"},{"runner":"Geraldo Perdomo","start":"1B","out":true,"outBase":"2B","chain":"3-6"}],"pitch":{"type":"Slider","code":"SL","speed":84.1,"zone":8,"px":0.03417375597665333,"pz":1.6983949116255346,"spin":2866,"call":"X"},"batted":{"trajectory":"ground_ball","hardness":"medium","location":3,"ev":78.9,"la":-33.0,"distance":3.0,"sprayAngle":50.5,"spray":"pull"},"winprob":{"homeAfter":39.7,"homeBefore":45.0,"homeAdded":-5.299999999999997,"li":1.28},"statcast":{"ifAlignment":"Infield shade","ofAlignment":"Standard","deltaRunExp":-0.287,"deltaHomeWinExp":-0.049,"batWinExpBefore":0.446,"bbType":"ground_ball","pitchName":"Slider","fielders":{"2":669221,"3":621566,"4":645277,"5":663586,"6":669397,"7":657077,"8":671739,"9":642201}},"flags":["close","double_play","dp_situation","force_available","force_play","ground_ball","ground_ball_infield","one_run","shift_alignment","trailing","tying_run_on"],"curation":{"category":"Infield defense & decisions","slot":"Double play started at a corner"},"clips":[{"kind":"highlight","slug":"grant-holmes-in-play-out-s-to-pavin-smith","title":"Matt Olson, Nick Allen turn clean double play","duration":"00:00:20","feed":"CMS","pageUrl":"https://www.mlb.com/video/grant-holmes-in-play-out-s-to-pavin-smith","embedUrl":"https://streamable.com/m/grant-holmes-in-play-out-s-to-pavin-smith","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/c2recgiiz6o3kielpsf0.jpg","match":{"guid":"7f1ba675-cbed-30a9-a3ef-2e24f5748fff"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=7f1ba675-cbed-30a9-a3ef-2e24f5748fff"},"sources":[{"label":"MLB Stats API — official play-by-play, game 778162","url":"https://statsapi.mlb.com/api/v1.1/game/778162/feed/live"},{"label":"MLB Stats API — win probability, game 778162","url":"https://statsapi.mlb.com/api/v1/game/778162/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=778162"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=7f1ba675-cbed-30a9-a3ef-2e24f5748fff"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-778162-6",
+ "title": "Matt Olson, Nick Allen turn clean double play",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 778162,
+  "atBatIndex": 6,
+  "eventIndex": 1,
+  "playId": "7f1ba675-cbed-30a9-a3ef-2e24f5748fff",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/778162/feed/live"
+ },
+ "game": {
+  "gamePk": 778162,
+  "date": "2025-04-26",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Chase Field",
+  "away": {
+   "id": 144,
+   "name": "Atlanta Braves",
+   "abbr": "ATL",
+   "club": "Braves"
+  },
+  "home": {
+   "id": 109,
+   "name": "Arizona Diamondbacks",
+   "abbr": "AZ",
+   "club": "Diamondbacks"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 1,
+  "half": "bottom",
+  "outs": 1,
+  "bases": "1__",
+  "runners": {
+   "1B": {
+    "id": 672695,
+    "name": "Geraldo Perdomo"
+   },
+   "2B": null,
+   "3B": null
+  },
+  "score": {
+   "away": 1,
+   "home": 0
+  },
+  "batting": "home",
+  "count": {
+   "balls": 0,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 3,
+  "bases": "___",
+  "score": {
+   "away": 1,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 656976,
+  "name": "Pavin Smith",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 656550,
+  "name": "Grant Holmes",
+  "hand": "R"
+ },
+ "event": {
+  "type": "grounded_into_double_play",
+  "label": "Grounded Into DP",
+  "description": "Pavin Smith grounds into a double play, first baseman Matt Olson to shortstop Nick Allen. Geraldo Perdomo out at 2nd. Pavin Smith out at 1st.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 2,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 656976,
+   "name": "Pavin Smith",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "grounded_into_double_play",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 621566,
+     "name": "Matt Olson",
+     "pos": "1B",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 672695,
+   "name": "Geraldo Perdomo",
+   "start": "1B",
+   "end": null,
+   "out": true,
+   "outBase": "2B",
+   "reason": "r_force_out",
+   "event": "grounded_into_double_play",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 621566,
+     "name": "Matt Olson",
+     "pos": "1B",
+     "credit": "f_assist"
+    },
+    {
+     "id": 669397,
+     "name": "Nick Allen",
+     "pos": "SS",
+     "credit": "f_putout"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Pavin Smith",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "3"
+  },
+  {
+   "runner": "Geraldo Perdomo",
+   "start": "1B",
+   "out": true,
+   "outBase": "2B",
+   "chain": "3-6"
+  }
+ ],
+ "pitch": {
+  "type": "Slider",
+  "code": "SL",
+  "speed": 84.1,
+  "zone": 8,
+  "px": 0.03417375597665333,
+  "pz": 1.6983949116255346,
+  "spin": 2866,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "ground_ball",
+  "hardness": "medium",
+  "location": 3,
+  "ev": 78.9,
+  "la": -33.0,
+  "distance": 3.0,
+  "sprayAngle": 50.5,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 39.7,
+  "homeBefore": 45.0,
+  "homeAdded": -5.299999999999997,
+  "li": 1.28
+ },
+ "statcast": {
+  "ifAlignment": "Infield shade",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.287,
+  "deltaHomeWinExp": -0.049,
+  "batWinExpBefore": 0.446,
+  "bbType": "ground_ball",
+  "pitchName": "Slider",
+  "fielders": {
+   "2": 669221,
+   "3": 621566,
+   "4": 645277,
+   "5": 663586,
+   "6": 669397,
+   "7": 657077,
+   "8": 671739,
+   "9": 642201
+  }
+ },
+ "flags": [
+  "close",
+  "double_play",
+  "dp_situation",
+  "force_available",
+  "force_play",
+  "ground_ball",
+  "ground_ball_infield",
+  "one_run",
+  "shift_alignment",
+  "trailing",
+  "tying_run_on"
+ ],
+ "curation": {
+  "category": "Infield defense & decisions",
+  "slot": "Double play started at a corner"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "grant-holmes-in-play-out-s-to-pavin-smith",
+   "title": "Matt Olson, Nick Allen turn clean double play",
+   "duration": "00:00:20",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/grant-holmes-in-play-out-s-to-pavin-smith",
+   "embedUrl": "https://streamable.com/m/grant-holmes-in-play-out-s-to-pavin-smith",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/c2recgiiz6o3kielpsf0.jpg",
+   "match": {
+    "guid": "7f1ba675-cbed-30a9-a3ef-2e24f5748fff"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=7f1ba675-cbed-30a9-a3ef-2e24f5748fff"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 778162",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/778162/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 778162",
+   "url": "https://statsapi.mlb.com/api/v1/game/778162/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=778162"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=7f1ba675-cbed-30a9-a3ef-2e24f5748fff"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

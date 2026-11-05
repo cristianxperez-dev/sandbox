@@ -1,1 +1,255 @@
-{"schema":1,"id":"mlb-745478-15","title":"J.T. Realmuto throws out Hayes in return from IL","titleSource":"MLB.com clip title","source":{"gamePk":745478,"atBatIndex":15,"eventIndex":4,"playId":"745f8d90-7bfc-477e-9679-36d32575fd54","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/745478/feed/live"},"game":{"gamePk":745478,"date":"2024-07-20","season":2024,"gameType":"R","level":"MLB","venue":"PNC Park","away":{"id":143,"name":"Philadelphia Phillies","abbr":"PHI","club":"Phillies"},"home":{"id":134,"name":"Pittsburgh Pirates","abbr":"PIT","club":"Pirates"},"series":""},"before":{"inning":2,"half":"bottom","outs":2,"bases":"1__","runners":{"1B":{"id":663647,"name":"Ke'Bryan Hayes"},"2B":null,"3B":null},"score":{"away":0,"home":0},"batting":"home","count":{"balls":2,"strikes":2}},"after":{"outs":3,"bases":"___","score":{"away":0,"home":0}},"batter":{"id":641943,"name":"Joshua Palacios","side":"L"},"pitcher":{"id":650911,"name":"Cristopher Sánchez","hand":"L"},"event":{"type":"caught_stealing_2b","label":"Caught Stealing 2B","description":"Ke'Bryan Hayes caught stealing 2nd base, catcher J. T. Realmuto to shortstop Trea Turner.","rbi":0,"runs":0,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":663647,"name":"Ke'Bryan Hayes","start":"1B","end":null,"out":true,"outBase":"2B","reason":"r_caught_stealing_2b","event":"caught_stealing_2b","isBatter":false,"credits":[{"id":592663,"name":"J.T. Realmuto","pos":"C","credit":"f_assist"},{"id":607208,"name":"Trea Turner","pos":"SS","credit":"f_putout"}]}],"chains":[{"runner":"Ke'Bryan Hayes","start":"1B","out":true,"outBase":"2B","chain":"2-6"}],"pitch":{"type":"Changeup","code":"CH","speed":84.8,"zone":14,"px":1.3964374922585996,"pz":2.576435089286398,"spin":2120,"call":"B"},"batted":null,"winprob":{"homeAfter":50.0,"homeBefore":52.4,"homeAdded":-2.4000000000000057,"li":0.94},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":0.0,"deltaHomeWinExp":-0.02,"batWinExpBefore":0.52,"bbType":null,"pitchName":"Changeup","fielders":{"2":592663,"3":547180,"4":681082,"5":664761,"6":607208,"7":669016,"8":679032,"9":592206}},"flags":["catcher_play","catcher_throw","caught_stealing","close","force_available","go_ahead_on","tied","two_outs"],"curation":{"category":"Catcher defense & plays at the plate","slot":"Catcher throws out a base stealer"},"clips":[{"kind":"highlight","slug":"cristopher-sanchez-ball-to-joshua-palacios-naiukm","title":"J.T. Realmuto throws out Hayes in return from IL","duration":"00:00:24","feed":"CMS","pageUrl":"https://www.mlb.com/video/cristopher-sanchez-ball-to-joshua-palacios-naiukm","embedUrl":"https://streamable.com/m/cristopher-sanchez-ball-to-joshua-palacios-naiukm","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/l3d73fjg9xbhgblsx8rw.jpg","match":{"guid":"745f8d90-7bfc-477e-9679-36d32575fd54"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=745f8d90-7bfc-477e-9679-36d32575fd54"},"sources":[{"label":"MLB Stats API — official play-by-play, game 745478","url":"https://statsapi.mlb.com/api/v1.1/game/745478/feed/live"},{"label":"MLB Stats API — win probability, game 745478","url":"https://statsapi.mlb.com/api/v1/game/745478/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=745478"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=745f8d90-7bfc-477e-9679-36d32575fd54"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-745478-15",
+ "title": "J.T. Realmuto throws out Hayes in return from IL",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 745478,
+  "atBatIndex": 15,
+  "eventIndex": 4,
+  "playId": "745f8d90-7bfc-477e-9679-36d32575fd54",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/745478/feed/live"
+ },
+ "game": {
+  "gamePk": 745478,
+  "date": "2024-07-20",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "PNC Park",
+  "away": {
+   "id": 143,
+   "name": "Philadelphia Phillies",
+   "abbr": "PHI",
+   "club": "Phillies"
+  },
+  "home": {
+   "id": 134,
+   "name": "Pittsburgh Pirates",
+   "abbr": "PIT",
+   "club": "Pirates"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 2,
+  "half": "bottom",
+  "outs": 2,
+  "bases": "1__",
+  "runners": {
+   "1B": {
+    "id": 663647,
+    "name": "Ke'Bryan Hayes"
+   },
+   "2B": null,
+   "3B": null
+  },
+  "score": {
+   "away": 0,
+   "home": 0
+  },
+  "batting": "home",
+  "count": {
+   "balls": 2,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 3,
+  "bases": "___",
+  "score": {
+   "away": 0,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 641943,
+  "name": "Joshua Palacios",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 650911,
+  "name": "Cristopher Sánchez",
+  "hand": "L"
+ },
+ "event": {
+  "type": "caught_stealing_2b",
+  "label": "Caught Stealing 2B",
+  "description": "Ke'Bryan Hayes caught stealing 2nd base, catcher J. T. Realmuto to shortstop Trea Turner.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 663647,
+   "name": "Ke'Bryan Hayes",
+   "start": "1B",
+   "end": null,
+   "out": true,
+   "outBase": "2B",
+   "reason": "r_caught_stealing_2b",
+   "event": "caught_stealing_2b",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 592663,
+     "name": "J.T. Realmuto",
+     "pos": "C",
+     "credit": "f_assist"
+    },
+    {
+     "id": 607208,
+     "name": "Trea Turner",
+     "pos": "SS",
+     "credit": "f_putout"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Ke'Bryan Hayes",
+   "start": "1B",
+   "out": true,
+   "outBase": "2B",
+   "chain": "2-6"
+  }
+ ],
+ "pitch": {
+  "type": "Changeup",
+  "code": "CH",
+  "speed": 84.8,
+  "zone": 14,
+  "px": 1.3964374922585996,
+  "pz": 2.576435089286398,
+  "spin": 2120,
+  "call": "B"
+ },
+ "batted": null,
+ "winprob": {
+  "homeAfter": 50.0,
+  "homeBefore": 52.4,
+  "homeAdded": -2.4000000000000057,
+  "li": 0.94
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.0,
+  "deltaHomeWinExp": -0.02,
+  "batWinExpBefore": 0.52,
+  "bbType": null,
+  "pitchName": "Changeup",
+  "fielders": {
+   "2": 592663,
+   "3": 547180,
+   "4": 681082,
+   "5": 664761,
+   "6": 607208,
+   "7": 669016,
+   "8": 679032,
+   "9": 592206
+  }
+ },
+ "flags": [
+  "catcher_play",
+  "catcher_throw",
+  "caught_stealing",
+  "close",
+  "force_available",
+  "go_ahead_on",
+  "tied",
+  "two_outs"
+ ],
+ "curation": {
+  "category": "Catcher defense & plays at the plate",
+  "slot": "Catcher throws out a base stealer"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "cristopher-sanchez-ball-to-joshua-palacios-naiukm",
+   "title": "J.T. Realmuto throws out Hayes in return from IL",
+   "duration": "00:00:24",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/cristopher-sanchez-ball-to-joshua-palacios-naiukm",
+   "embedUrl": "https://streamable.com/m/cristopher-sanchez-ball-to-joshua-palacios-naiukm",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/l3d73fjg9xbhgblsx8rw.jpg",
+   "match": {
+    "guid": "745f8d90-7bfc-477e-9679-36d32575fd54"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=745f8d90-7bfc-477e-9679-36d32575fd54"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 745478",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/745478/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 745478",
+   "url": "https://statsapi.mlb.com/api/v1/game/745478/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=745478"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=745f8d90-7bfc-477e-9679-36d32575fd54"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

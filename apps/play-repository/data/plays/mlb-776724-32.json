@@ -1,1 +1,278 @@
-{"schema":1,"id":"mlb-776724-32","title":"Alex Bregman's RBI single","titleSource":"MLB.com clip title","source":{"gamePk":776724,"atBatIndex":32,"eventIndex":4,"playId":"4d210028-cb83-34ab-89ae-e1edfe5279a2","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/776724/feed/live"},"game":{"gamePk":776724,"date":"2025-08-16","season":2025,"gameType":"R","level":"MLB","venue":"Fenway Park","away":{"id":146,"name":"Miami Marlins","abbr":"MIA","club":"Marlins"},"home":{"id":111,"name":"Boston Red Sox","abbr":"BOS","club":"Red Sox"},"series":""},"before":{"inning":4,"half":"bottom","outs":2,"bases":"__3","runners":{"1B":null,"2B":null,"3B":{"id":678882,"name":"Ceddanne Rafaela"}},"score":{"away":0,"home":6},"batting":"home","count":{"balls":1,"strikes":2}},"after":{"outs":2,"bases":"1__","score":{"away":0,"home":7}},"batter":{"id":608324,"name":"Alex Bregman","side":"R"},"pitcher":{"id":615698,"name":"Cal Quantrill","hand":"R"},"event":{"type":"single","label":"Single","description":"Alex Bregman singles on a sharp ground ball to center fielder Derek Hill, deflected by second baseman Xavier Edwards. Ceddanne Rafaela scores.","rbi":1,"runs":1,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":608324,"name":"Alex Bregman","start":null,"end":"1B","out":false,"outBase":null,"reason":null,"event":"single","isBatter":true,"credits":[{"id":669364,"name":"Xavier Edwards","pos":"2B","credit":"f_deflection"},{"id":656537,"name":"Derek Hill","pos":"CF","credit":"f_fielded_ball"}]},{"id":678882,"name":"Ceddanne Rafaela","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"single","isBatter":false,"credits":[]}],"chains":[{"runner":"Alex Bregman","start":null,"out":false,"outBase":null,"chain":"4-8"}],"pitch":{"type":"Four-Seam Fastball","code":"FF","speed":94.2,"zone":5,"px":0.13280250396319898,"pz":2.5600564483121913,"spin":2085,"call":"E"},"batted":{"trajectory":"ground_ball","hardness":"hard","location":4,"ev":101.0,"la":-4.0,"distance":27.0,"sprayAngle":-0.8,"spray":"center"},"winprob":{"homeAfter":98.0,"homeBefore":96.7,"homeAdded":1.2999999999999972,"li":0.19},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":0.8,"deltaHomeWinExp":0.015,"batWinExpBefore":0.965,"bbType":"ground_ball","pitchName":"4-Seam Fastball","fielders":{"2":689414,"3":687859,"4":669364,"5":688363,"6":672640,"7":681715,"8":656537,"9":805300}},"flags":["blowout","ground_ball","ground_ball_infield","leading","low_leverage","middle_infield","risp","single","two_out_rbi","two_outs"],"curation":{"category":"Infield defense & decisions","slot":"Infield single"},"clips":[{"kind":"highlight","slug":"cal-quantrill-in-play-run-s-to-alex-bregman","title":"Alex Bregman's RBI single","duration":"00:00:20","feed":"CMS","pageUrl":"https://www.mlb.com/video/cal-quantrill-in-play-run-s-to-alex-bregman","embedUrl":"https://streamable.com/m/cal-quantrill-in-play-run-s-to-alex-bregman","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/merx9ol4prcn3m5s62rn.jpg","match":{"guid":"4d210028-cb83-34ab-89ae-e1edfe5279a2"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=4d210028-cb83-34ab-89ae-e1edfe5279a2"},"sources":[{"label":"MLB Stats API — official play-by-play, game 776724","url":"https://statsapi.mlb.com/api/v1.1/game/776724/feed/live"},{"label":"MLB Stats API — win probability, game 776724","url":"https://statsapi.mlb.com/api/v1/game/776724/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=776724"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=4d210028-cb83-34ab-89ae-e1edfe5279a2"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-776724-32",
+ "title": "Alex Bregman's RBI single",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 776724,
+  "atBatIndex": 32,
+  "eventIndex": 4,
+  "playId": "4d210028-cb83-34ab-89ae-e1edfe5279a2",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/776724/feed/live"
+ },
+ "game": {
+  "gamePk": 776724,
+  "date": "2025-08-16",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Fenway Park",
+  "away": {
+   "id": 146,
+   "name": "Miami Marlins",
+   "abbr": "MIA",
+   "club": "Marlins"
+  },
+  "home": {
+   "id": 111,
+   "name": "Boston Red Sox",
+   "abbr": "BOS",
+   "club": "Red Sox"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 4,
+  "half": "bottom",
+  "outs": 2,
+  "bases": "__3",
+  "runners": {
+   "1B": null,
+   "2B": null,
+   "3B": {
+    "id": 678882,
+    "name": "Ceddanne Rafaela"
+   }
+  },
+  "score": {
+   "away": 0,
+   "home": 6
+  },
+  "batting": "home",
+  "count": {
+   "balls": 1,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "1__",
+  "score": {
+   "away": 0,
+   "home": 7
+  }
+ },
+ "batter": {
+  "id": 608324,
+  "name": "Alex Bregman",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 615698,
+  "name": "Cal Quantrill",
+  "hand": "R"
+ },
+ "event": {
+  "type": "single",
+  "label": "Single",
+  "description": "Alex Bregman singles on a sharp ground ball to center fielder Derek Hill, deflected by second baseman Xavier Edwards. Ceddanne Rafaela scores.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 608324,
+   "name": "Alex Bregman",
+   "start": null,
+   "end": "1B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "single",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 669364,
+     "name": "Xavier Edwards",
+     "pos": "2B",
+     "credit": "f_deflection"
+    },
+    {
+     "id": 656537,
+     "name": "Derek Hill",
+     "pos": "CF",
+     "credit": "f_fielded_ball"
+    }
+   ]
+  },
+  {
+   "id": 678882,
+   "name": "Ceddanne Rafaela",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "single",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Alex Bregman",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": "4-8"
+  }
+ ],
+ "pitch": {
+  "type": "Four-Seam Fastball",
+  "code": "FF",
+  "speed": 94.2,
+  "zone": 5,
+  "px": 0.13280250396319898,
+  "pz": 2.5600564483121913,
+  "spin": 2085,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "ground_ball",
+  "hardness": "hard",
+  "location": 4,
+  "ev": 101.0,
+  "la": -4.0,
+  "distance": 27.0,
+  "sprayAngle": -0.8,
+  "spray": "center"
+ },
+ "winprob": {
+  "homeAfter": 98.0,
+  "homeBefore": 96.7,
+  "homeAdded": 1.2999999999999972,
+  "li": 0.19
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.8,
+  "deltaHomeWinExp": 0.015,
+  "batWinExpBefore": 0.965,
+  "bbType": "ground_ball",
+  "pitchName": "4-Seam Fastball",
+  "fielders": {
+   "2": 689414,
+   "3": 687859,
+   "4": 669364,
+   "5": 688363,
+   "6": 672640,
+   "7": 681715,
+   "8": 656537,
+   "9": 805300
+  }
+ },
+ "flags": [
+  "blowout",
+  "ground_ball",
+  "ground_ball_infield",
+  "leading",
+  "low_leverage",
+  "middle_infield",
+  "risp",
+  "single",
+  "two_out_rbi",
+  "two_outs"
+ ],
+ "curation": {
+  "category": "Infield defense & decisions",
+  "slot": "Infield single"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "cal-quantrill-in-play-run-s-to-alex-bregman",
+   "title": "Alex Bregman's RBI single",
+   "duration": "00:00:20",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/cal-quantrill-in-play-run-s-to-alex-bregman",
+   "embedUrl": "https://streamable.com/m/cal-quantrill-in-play-run-s-to-alex-bregman",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/merx9ol4prcn3m5s62rn.jpg",
+   "match": {
+    "guid": "4d210028-cb83-34ab-89ae-e1edfe5279a2"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=4d210028-cb83-34ab-89ae-e1edfe5279a2"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 776724",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/776724/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 776724",
+   "url": "https://statsapi.mlb.com/api/v1/game/776724/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=776724"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=4d210028-cb83-34ab-89ae-e1edfe5279a2"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

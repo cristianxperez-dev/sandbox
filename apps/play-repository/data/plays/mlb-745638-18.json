@@ -1,1 +1,270 @@
-{"schema":1,"id":"mlb-745638-18","title":"Anthony Rendon's sac fly","titleSource":"MLB.com clip title","source":{"gamePk":745638,"atBatIndex":18,"eventIndex":2,"playId":"4fcabe43-7be2-4006-814f-6aa63ce4a7e2","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/745638/feed/live"},"game":{"gamePk":745638,"date":"2024-07-20","season":2024,"gameType":"R","level":"MLB","venue":"Oakland Coliseum","away":{"id":108,"name":"Los Angeles Angels","abbr":"LAA","club":"Angels"},"home":{"id":133,"name":"Oakland Athletics","abbr":"OAK","club":"Athletics"},"series":""},"before":{"inning":3,"half":"top","outs":1,"bases":"__3","runners":{"1B":null,"2B":null,"3B":{"id":666176,"name":"Jo Adell"}},"score":{"away":0,"home":3},"batting":"away","count":{"balls":2,"strikes":0}},"after":{"outs":2,"bases":"___","score":{"away":1,"home":3}},"batter":{"id":543685,"name":"Anthony Rendon","side":"R"},"pitcher":{"id":687765,"name":"Mitch Spence","hand":"R"},"event":{"type":"sac_fly","label":"Sac Fly","description":"Anthony Rendon out on a sacrifice fly to left fielder Miguel Andujar. Jo Adell scores.","rbi":1,"runs":1,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":543685,"name":"Anthony Rendon","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"sac_fly","isBatter":true,"credits":[{"id":609280,"name":"Miguel Andujar","pos":"LF","credit":"f_putout"}]},{"id":666176,"name":"Jo Adell","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"sac_fly","isBatter":false,"credits":[]}],"chains":[{"runner":"Anthony Rendon","start":null,"out":true,"outBase":"1B","chain":"7"}],"pitch":{"type":"Sinker","code":"SI","speed":90.7,"zone":5,"px":-0.08204456373577208,"pz":2.5673490976171682,"spin":1464,"call":"E"},"batted":{"trajectory":"line_drive","hardness":"medium","location":7,"ev":92.2,"la":24.0,"distance":305.0,"sprayAngle":-36.9,"spray":"pull"},"winprob":{"homeAfter":75.4,"homeBefore":75.7,"homeAdded":-0.29999999999999716,"li":1.18},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":-0.161,"deltaHomeWinExp":0.005,"batWinExpBefore":0.251,"bbType":"line_drive","pitchName":"Sinker","fielders":{"2":668832,"3":664913,"4":680869,"5":695391,"6":680474,"7":609280,"8":668709,"9":671732}},"flags":["line_drive","outfield_play","productive_out","risp","runner_scored_on_out","sac_fly","tag_up","trailing"],"curation":{"category":"Situational hitting","slot":"Sacrifice fly to left"},"clips":[{"kind":"highlight","slug":"mitch-spence-in-play-run-s-to-anthony-rendon","title":"Anthony Rendon's sac fly","duration":"00:00:20","feed":"CMS","pageUrl":"https://www.mlb.com/video/mitch-spence-in-play-run-s-to-anthony-rendon","embedUrl":"https://streamable.com/m/mitch-spence-in-play-run-s-to-anthony-rendon","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/thtbnisarnobji3ybr8v.jpg","match":{"guid":"4fcabe43-7be2-4006-814f-6aa63ce4a7e2"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=4fcabe43-7be2-4006-814f-6aa63ce4a7e2"},"sources":[{"label":"MLB Stats API — official play-by-play, game 745638","url":"https://statsapi.mlb.com/api/v1.1/game/745638/feed/live"},{"label":"MLB Stats API — win probability, game 745638","url":"https://statsapi.mlb.com/api/v1/game/745638/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=745638"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=4fcabe43-7be2-4006-814f-6aa63ce4a7e2"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-745638-18",
+ "title": "Anthony Rendon's sac fly",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 745638,
+  "atBatIndex": 18,
+  "eventIndex": 2,
+  "playId": "4fcabe43-7be2-4006-814f-6aa63ce4a7e2",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/745638/feed/live"
+ },
+ "game": {
+  "gamePk": 745638,
+  "date": "2024-07-20",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Oakland Coliseum",
+  "away": {
+   "id": 108,
+   "name": "Los Angeles Angels",
+   "abbr": "LAA",
+   "club": "Angels"
+  },
+  "home": {
+   "id": 133,
+   "name": "Oakland Athletics",
+   "abbr": "OAK",
+   "club": "Athletics"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 3,
+  "half": "top",
+  "outs": 1,
+  "bases": "__3",
+  "runners": {
+   "1B": null,
+   "2B": null,
+   "3B": {
+    "id": 666176,
+    "name": "Jo Adell"
+   }
+  },
+  "score": {
+   "away": 0,
+   "home": 3
+  },
+  "batting": "away",
+  "count": {
+   "balls": 2,
+   "strikes": 0
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "___",
+  "score": {
+   "away": 1,
+   "home": 3
+  }
+ },
+ "batter": {
+  "id": 543685,
+  "name": "Anthony Rendon",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 687765,
+  "name": "Mitch Spence",
+  "hand": "R"
+ },
+ "event": {
+  "type": "sac_fly",
+  "label": "Sac Fly",
+  "description": "Anthony Rendon out on a sacrifice fly to left fielder Miguel Andujar. Jo Adell scores.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 543685,
+   "name": "Anthony Rendon",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "sac_fly",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 609280,
+     "name": "Miguel Andujar",
+     "pos": "LF",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 666176,
+   "name": "Jo Adell",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "sac_fly",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Anthony Rendon",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "7"
+  }
+ ],
+ "pitch": {
+  "type": "Sinker",
+  "code": "SI",
+  "speed": 90.7,
+  "zone": 5,
+  "px": -0.08204456373577208,
+  "pz": 2.5673490976171682,
+  "spin": 1464,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "line_drive",
+  "hardness": "medium",
+  "location": 7,
+  "ev": 92.2,
+  "la": 24.0,
+  "distance": 305.0,
+  "sprayAngle": -36.9,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 75.4,
+  "homeBefore": 75.7,
+  "homeAdded": -0.29999999999999716,
+  "li": 1.18
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.161,
+  "deltaHomeWinExp": 0.005,
+  "batWinExpBefore": 0.251,
+  "bbType": "line_drive",
+  "pitchName": "Sinker",
+  "fielders": {
+   "2": 668832,
+   "3": 664913,
+   "4": 680869,
+   "5": 695391,
+   "6": 680474,
+   "7": 609280,
+   "8": 668709,
+   "9": 671732
+  }
+ },
+ "flags": [
+  "line_drive",
+  "outfield_play",
+  "productive_out",
+  "risp",
+  "runner_scored_on_out",
+  "sac_fly",
+  "tag_up",
+  "trailing"
+ ],
+ "curation": {
+  "category": "Situational hitting",
+  "slot": "Sacrifice fly to left"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "mitch-spence-in-play-run-s-to-anthony-rendon",
+   "title": "Anthony Rendon's sac fly",
+   "duration": "00:00:20",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/mitch-spence-in-play-run-s-to-anthony-rendon",
+   "embedUrl": "https://streamable.com/m/mitch-spence-in-play-run-s-to-anthony-rendon",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/thtbnisarnobji3ybr8v.jpg",
+   "match": {
+    "guid": "4fcabe43-7be2-4006-814f-6aa63ce4a7e2"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=4fcabe43-7be2-4006-814f-6aa63ce4a7e2"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 745638",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/745638/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 745638",
+   "url": "https://statsapi.mlb.com/api/v1/game/745638/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=745638"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=4fcabe43-7be2-4006-814f-6aa63ce4a7e2"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

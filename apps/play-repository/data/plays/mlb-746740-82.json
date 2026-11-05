@@ -1,1 +1,243 @@
-{"schema":1,"id":"mlb-746740-82","title":"Andrew Benintendi's walk-off home run (17)","titleSource":"MLB.com clip title","source":{"gamePk":746740,"atBatIndex":82,"eventIndex":5,"playId":"848d56df-6a5b-41f4-a681-16b6002e9e55","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/746740/feed/live"},"game":{"gamePk":746740,"date":"2024-09-14","season":2024,"gameType":"R","level":"MLB","venue":"Guaranteed Rate Field","away":{"id":133,"name":"Oakland Athletics","abbr":"OAK","club":"Athletics"},"home":{"id":145,"name":"Chicago White Sox","abbr":"CWS","club":"White Sox"},"series":""},"before":{"inning":9,"half":"bottom","outs":0,"bases":"___","runners":{"1B":null,"2B":null,"3B":null},"score":{"away":6,"home":6},"batting":"home","count":{"balls":1,"strikes":2}},"after":{"outs":0,"bases":"___","score":{"away":6,"home":7}},"batter":{"id":643217,"name":"Andrew Benintendi","side":"L"},"pitcher":{"id":663687,"name":"Hogan Harris","hand":"L"},"event":{"type":"home_run","label":"Home Run","description":"Andrew Benintendi homers (17) on a fly ball to right field.","rbi":1,"runs":1,"outs":0,"isReview":false,"walkoff":true},"runners":[{"id":643217,"name":"Andrew Benintendi","start":null,"end":"score","out":false,"outBase":null,"reason":null,"event":"home_run","isBatter":true,"credits":[]}],"chains":[],"pitch":{"type":"Sweeper","code":"ST","speed":76.7,"zone":5,"px":0.25599101679176417,"pz":2.4667944087692617,"spin":2422,"call":"E"},"batted":{"trajectory":"fly_ball","hardness":"medium","location":9,"ev":95.8,"la":29.0,"distance":366.0,"sprayAngle":48.4,"spray":"pull"},"winprob":{"homeAfter":100.0,"homeBefore":63.9,"homeAdded":36.1,"li":2.22},"statcast":{"ifAlignment":"Strategic","ofAlignment":"Standard","deltaRunExp":1.182,"deltaHomeWinExp":0.378,"batWinExpBefore":0.622,"bbType":"fly_ball","pitchName":"Sweeper","fielders":{"2":669127,"3":691016,"4":680869,"5":680474,"6":805779,"7":664913,"8":668709,"9":671732}},"flags":["bases_empty","close","fly_ball","go_ahead_play","high_leverage","home_run","outfield_play","shift_alignment","tied","walkoff","walkoff_situation"],"curation":{"category":"High-leverage & unusual situations","slot":"Walk-off"},"clips":[{"kind":"highlight","slug":"andrew-benintendi-homers-17-on-a-fly-ball-to-right-field","title":"Andrew Benintendi's walk-off home run (17)","duration":"00:00:29","feed":"CMS","pageUrl":"https://www.mlb.com/video/andrew-benintendi-homers-17-on-a-fly-ball-to-right-field","embedUrl":"https://streamable.com/m/andrew-benintendi-homers-17-on-a-fly-ball-to-right-field","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/rcqc8rjcto7gv4hgpqn9.jpg","match":{"guid":"848d56df-6a5b-41f4-a681-16b6002e9e55"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=848d56df-6a5b-41f4-a681-16b6002e9e55"},"sources":[{"label":"MLB Stats API — official play-by-play, game 746740","url":"https://statsapi.mlb.com/api/v1.1/game/746740/feed/live"},{"label":"MLB Stats API — win probability, game 746740","url":"https://statsapi.mlb.com/api/v1/game/746740/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=746740"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=848d56df-6a5b-41f4-a681-16b6002e9e55"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-746740-82",
+ "title": "Andrew Benintendi's walk-off home run (17)",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 746740,
+  "atBatIndex": 82,
+  "eventIndex": 5,
+  "playId": "848d56df-6a5b-41f4-a681-16b6002e9e55",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/746740/feed/live"
+ },
+ "game": {
+  "gamePk": 746740,
+  "date": "2024-09-14",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Guaranteed Rate Field",
+  "away": {
+   "id": 133,
+   "name": "Oakland Athletics",
+   "abbr": "OAK",
+   "club": "Athletics"
+  },
+  "home": {
+   "id": 145,
+   "name": "Chicago White Sox",
+   "abbr": "CWS",
+   "club": "White Sox"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 9,
+  "half": "bottom",
+  "outs": 0,
+  "bases": "___",
+  "runners": {
+   "1B": null,
+   "2B": null,
+   "3B": null
+  },
+  "score": {
+   "away": 6,
+   "home": 6
+  },
+  "batting": "home",
+  "count": {
+   "balls": 1,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 0,
+  "bases": "___",
+  "score": {
+   "away": 6,
+   "home": 7
+  }
+ },
+ "batter": {
+  "id": 643217,
+  "name": "Andrew Benintendi",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 663687,
+  "name": "Hogan Harris",
+  "hand": "L"
+ },
+ "event": {
+  "type": "home_run",
+  "label": "Home Run",
+  "description": "Andrew Benintendi homers (17) on a fly ball to right field.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": true
+ },
+ "runners": [
+  {
+   "id": 643217,
+   "name": "Andrew Benintendi",
+   "start": null,
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "home_run",
+   "isBatter": true,
+   "credits": []
+  }
+ ],
+ "chains": [],
+ "pitch": {
+  "type": "Sweeper",
+  "code": "ST",
+  "speed": 76.7,
+  "zone": 5,
+  "px": 0.25599101679176417,
+  "pz": 2.4667944087692617,
+  "spin": 2422,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "fly_ball",
+  "hardness": "medium",
+  "location": 9,
+  "ev": 95.8,
+  "la": 29.0,
+  "distance": 366.0,
+  "sprayAngle": 48.4,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 100.0,
+  "homeBefore": 63.9,
+  "homeAdded": 36.1,
+  "li": 2.22
+ },
+ "statcast": {
+  "ifAlignment": "Strategic",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 1.182,
+  "deltaHomeWinExp": 0.378,
+  "batWinExpBefore": 0.622,
+  "bbType": "fly_ball",
+  "pitchName": "Sweeper",
+  "fielders": {
+   "2": 669127,
+   "3": 691016,
+   "4": 680869,
+   "5": 680474,
+   "6": 805779,
+   "7": 664913,
+   "8": 668709,
+   "9": 671732
+  }
+ },
+ "flags": [
+  "bases_empty",
+  "close",
+  "fly_ball",
+  "go_ahead_play",
+  "high_leverage",
+  "home_run",
+  "outfield_play",
+  "shift_alignment",
+  "tied",
+  "walkoff",
+  "walkoff_situation"
+ ],
+ "curation": {
+  "category": "High-leverage & unusual situations",
+  "slot": "Walk-off"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "andrew-benintendi-homers-17-on-a-fly-ball-to-right-field",
+   "title": "Andrew Benintendi's walk-off home run (17)",
+   "duration": "00:00:29",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/andrew-benintendi-homers-17-on-a-fly-ball-to-right-field",
+   "embedUrl": "https://streamable.com/m/andrew-benintendi-homers-17-on-a-fly-ball-to-right-field",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/rcqc8rjcto7gv4hgpqn9.jpg",
+   "match": {
+    "guid": "848d56df-6a5b-41f4-a681-16b6002e9e55"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=848d56df-6a5b-41f4-a681-16b6002e9e55"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 746740",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/746740/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 746740",
+   "url": "https://statsapi.mlb.com/api/v1/game/746740/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=746740"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=848d56df-6a5b-41f4-a681-16b6002e9e55"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

@@ -1,1 +1,237 @@
-{"schema":1,"id":"mlb-778161-71","title":"Elly De La Cruz steals 11th base of the season","titleSource":"MLB.com clip title","source":{"gamePk":778161,"atBatIndex":71,"eventIndex":5,"playId":"b4850412-d962-3858-bbf4-7236eef6ef11","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/778161/feed/live"},"game":{"gamePk":778161,"date":"2025-04-26","season":2025,"gameType":"R","level":"MLB","venue":"Coors Field","away":{"id":113,"name":"Cincinnati Reds","abbr":"CIN","club":"Reds"},"home":{"id":115,"name":"Colorado Rockies","abbr":"COL","club":"Rockies"},"series":""},"before":{"inning":9,"half":"top","outs":1,"bases":"_23","runners":{"1B":null,"2B":{"id":682829,"name":"Elly De La Cruz"},"3B":{"id":670770,"name":"TJ Friedl"}},"score":{"away":5,"home":3},"batting":"away","count":{"balls":0,"strikes":1}},"after":{"outs":1,"bases":"123","score":{"away":5,"home":3}},"batter":{"id":669720,"name":"Austin Hays","side":"R"},"pitcher":{"id":641755,"name":"Tyler Kinley","hand":"R"},"event":{"type":"intent_walk","label":"Intent Walk","description":"Tyler Kinley intentionally walks Austin Hays.","rbi":0,"runs":0,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":669720,"name":"Austin Hays","start":null,"end":"1B","out":false,"outBase":null,"reason":null,"event":"intent_walk","isBatter":true,"credits":[]}],"chains":[],"pitch":{"type":"Slider","code":"SL","speed":87.8,"zone":14,"px":0.11746429554683983,"pz":1.1382837133341595,"spin":2613,"call":"B"},"batted":null,"winprob":{"homeAfter":4.6,"homeBefore":4.7,"homeAdded":-0.10000000000000053,"li":0.69},"statcast":{"ifAlignment":"Strategic","ofAlignment":"Standard","deltaRunExp":0.044,"deltaHomeWinExp":-0.008,"batWinExpBefore":0.944,"bbType":null,"pitchName":"Slider","fielders":{"2":696100,"3":669911,"4":691182,"5":641857,"6":571657,"7":687597,"8":686668,"9":666160}},"flags":["close","leading","low_leverage","risp","shift_alignment","walk"],"curation":{"category":"Miscellaneous teaching moments","slot":"Intentional walk to set up a force"},"clips":[{"kind":"highlight","slug":"tyler-kinley-ball-to-austin-hays-fiqcka","title":"Elly De La Cruz steals 11th base of the season ","duration":"00:00:12","feed":"CMS","pageUrl":"https://www.mlb.com/video/tyler-kinley-ball-to-austin-hays-fiqcka","embedUrl":"https://streamable.com/m/tyler-kinley-ball-to-austin-hays-fiqcka","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/u4kvttx1fqxu9xdotbyo.jpg","match":{"guid":"b4850412-d962-3858-bbf4-7236eef6ef11"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=b4850412-d962-3858-bbf4-7236eef6ef11"},"sources":[{"label":"MLB Stats API — official play-by-play, game 778161","url":"https://statsapi.mlb.com/api/v1.1/game/778161/feed/live"},{"label":"MLB Stats API — win probability, game 778161","url":"https://statsapi.mlb.com/api/v1/game/778161/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=778161"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=b4850412-d962-3858-bbf4-7236eef6ef11"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":["Film Room tyler-kinley-ball-to-austin-hays-fiqcka mismatch: runners"]}}
+{
+ "schema": 1,
+ "id": "mlb-778161-71",
+ "title": "Elly De La Cruz steals 11th base of the season",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 778161,
+  "atBatIndex": 71,
+  "eventIndex": 5,
+  "playId": "b4850412-d962-3858-bbf4-7236eef6ef11",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/778161/feed/live"
+ },
+ "game": {
+  "gamePk": 778161,
+  "date": "2025-04-26",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Coors Field",
+  "away": {
+   "id": 113,
+   "name": "Cincinnati Reds",
+   "abbr": "CIN",
+   "club": "Reds"
+  },
+  "home": {
+   "id": 115,
+   "name": "Colorado Rockies",
+   "abbr": "COL",
+   "club": "Rockies"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 9,
+  "half": "top",
+  "outs": 1,
+  "bases": "_23",
+  "runners": {
+   "1B": null,
+   "2B": {
+    "id": 682829,
+    "name": "Elly De La Cruz"
+   },
+   "3B": {
+    "id": 670770,
+    "name": "TJ Friedl"
+   }
+  },
+  "score": {
+   "away": 5,
+   "home": 3
+  },
+  "batting": "away",
+  "count": {
+   "balls": 0,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 1,
+  "bases": "123",
+  "score": {
+   "away": 5,
+   "home": 3
+  }
+ },
+ "batter": {
+  "id": 669720,
+  "name": "Austin Hays",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 641755,
+  "name": "Tyler Kinley",
+  "hand": "R"
+ },
+ "event": {
+  "type": "intent_walk",
+  "label": "Intent Walk",
+  "description": "Tyler Kinley intentionally walks Austin Hays.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 669720,
+   "name": "Austin Hays",
+   "start": null,
+   "end": "1B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "intent_walk",
+   "isBatter": true,
+   "credits": []
+  }
+ ],
+ "chains": [],
+ "pitch": {
+  "type": "Slider",
+  "code": "SL",
+  "speed": 87.8,
+  "zone": 14,
+  "px": 0.11746429554683983,
+  "pz": 1.1382837133341595,
+  "spin": 2613,
+  "call": "B"
+ },
+ "batted": null,
+ "winprob": {
+  "homeAfter": 4.6,
+  "homeBefore": 4.7,
+  "homeAdded": -0.10000000000000053,
+  "li": 0.69
+ },
+ "statcast": {
+  "ifAlignment": "Strategic",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.044,
+  "deltaHomeWinExp": -0.008,
+  "batWinExpBefore": 0.944,
+  "bbType": null,
+  "pitchName": "Slider",
+  "fielders": {
+   "2": 696100,
+   "3": 669911,
+   "4": 691182,
+   "5": 641857,
+   "6": 571657,
+   "7": 687597,
+   "8": 686668,
+   "9": 666160
+  }
+ },
+ "flags": [
+  "close",
+  "leading",
+  "low_leverage",
+  "risp",
+  "shift_alignment",
+  "walk"
+ ],
+ "curation": {
+  "category": "Miscellaneous teaching moments",
+  "slot": "Intentional walk to set up a force"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "tyler-kinley-ball-to-austin-hays-fiqcka",
+   "title": "Elly De La Cruz steals 11th base of the season ",
+   "duration": "00:00:12",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/tyler-kinley-ball-to-austin-hays-fiqcka",
+   "embedUrl": "https://streamable.com/m/tyler-kinley-ball-to-austin-hays-fiqcka",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/u4kvttx1fqxu9xdotbyo.jpg",
+   "match": {
+    "guid": "b4850412-d962-3858-bbf4-7236eef6ef11"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=b4850412-d962-3858-bbf4-7236eef6ef11"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 778161",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/778161/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 778161",
+   "url": "https://statsapi.mlb.com/api/v1/game/778161/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=778161"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=b4850412-d962-3858-bbf4-7236eef6ef11"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": [
+   "Film Room tyler-kinley-ball-to-austin-hays-fiqcka mismatch: runners"
+  ]
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

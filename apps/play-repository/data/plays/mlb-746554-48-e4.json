@@ -1,1 +1,220 @@
-{"schema":1,"id":"mlb-746554-48-e4","title":"Ryan McMahon scores on a balk","titleSource":"From MLB's official play description","source":{"gamePk":746554,"atBatIndex":48,"eventIndex":4,"playId":"182e9a41-fc72-4234-a851-9128940ba66c","terminal":false,"feed":"https://statsapi.mlb.com/api/v1.1/game/746554/feed/live"},"game":{"gamePk":746554,"date":"2024-05-11","season":2024,"gameType":"R","level":"MLB","venue":"Coors Field","away":{"id":140,"name":"Texas Rangers","abbr":"TEX","club":"Rangers"},"home":{"id":115,"name":"Colorado Rockies","abbr":"COL","club":"Rockies"},"series":""},"before":{"inning":6,"half":"bottom","outs":0,"bases":"_23","runners":{"1B":null,"2B":{"id":553869,"name":"Elias Díaz"},"3B":{"id":641857,"name":"Ryan McMahon"}},"score":{"away":2,"home":1},"batting":"home","count":{"balls":0,"strikes":1}},"after":{"outs":0,"bases":"__3","score":{"away":2,"home":2}},"batter":{"id":656248,"name":"Sean Bouchard","side":"R"},"pitcher":{"id":600917,"name":"José Leclerc","hand":"R"},"event":{"type":"balk","label":"Balk","description":"With Sean Bouchard batting, Ryan McMahon scores on a balk. Elias Díaz advances to 3rd on a balk.","rbi":null,"runs":1,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":641857,"name":"Ryan McMahon","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"balk","isBatter":false,"credits":[]},{"id":553869,"name":"Elias Díaz","start":"2B","end":"3B","out":false,"outBase":null,"reason":"r_adv_play","event":"balk","isBatter":false,"credits":[]}],"chains":[],"pitch":null,"batted":null,"winprob":{"homeAfter":null,"homeBefore":null,"homeAdded":null,"li":2.34},"statcast":null,"flags":["balk","close","go_ahead_on","high_leverage","one_run","risp","trailing","tying_run_on"],"curation":{"category":"Miscellaneous teaching moments","slot":"Balk"},"clips":[{"kind":"filmroom","slug":"jose-leclerc-foul-to-sean-bouchard","title":"José Leclerc Foul to Sean Bouchard","duration":"00:00:06","feed":"HOME","pageUrl":"https://www.mlb.com/video/jose-leclerc-foul-to-sean-bouchard","embedUrl":"https://streamable.com/m/jose-leclerc-foul-to-sean-bouchard","angle":{"category":"broadcast","label":"Home TV broadcast"},"howVerified":"MLB Film Room clip for the playId; Film Room's play info matches game, inning, outs, runners, batter and pitcher","thumb":"https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/182e9a41-fc72-4234-a851-9128940ba66c_home.jpg","match":{"filmroom":{"gamePk":true,"inning":true,"outs":true,"runners":true,"batter":true,"pitcher":true},"feeds":["HOME","AWAY"]},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":null,"sources":[{"label":"MLB Stats API — official play-by-play, game 746554","url":"https://statsapi.mlb.com/api/v1.1/game/746554/feed/live"},{"label":"MLB Stats API — win probability, game 746554","url":"https://statsapi.mlb.com/api/v1/game/746554/winProbability"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-746554-48-e4",
+ "title": "Ryan McMahon scores on a balk",
+ "titleSource": "From MLB's official play description",
+ "source": {
+  "gamePk": 746554,
+  "atBatIndex": 48,
+  "eventIndex": 4,
+  "playId": "182e9a41-fc72-4234-a851-9128940ba66c",
+  "terminal": false,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/746554/feed/live"
+ },
+ "game": {
+  "gamePk": 746554,
+  "date": "2024-05-11",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Coors Field",
+  "away": {
+   "id": 140,
+   "name": "Texas Rangers",
+   "abbr": "TEX",
+   "club": "Rangers"
+  },
+  "home": {
+   "id": 115,
+   "name": "Colorado Rockies",
+   "abbr": "COL",
+   "club": "Rockies"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 6,
+  "half": "bottom",
+  "outs": 0,
+  "bases": "_23",
+  "runners": {
+   "1B": null,
+   "2B": {
+    "id": 553869,
+    "name": "Elias Díaz"
+   },
+   "3B": {
+    "id": 641857,
+    "name": "Ryan McMahon"
+   }
+  },
+  "score": {
+   "away": 2,
+   "home": 1
+  },
+  "batting": "home",
+  "count": {
+   "balls": 0,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 0,
+  "bases": "__3",
+  "score": {
+   "away": 2,
+   "home": 2
+  }
+ },
+ "batter": {
+  "id": 656248,
+  "name": "Sean Bouchard",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 600917,
+  "name": "José Leclerc",
+  "hand": "R"
+ },
+ "event": {
+  "type": "balk",
+  "label": "Balk",
+  "description": "With Sean Bouchard batting, Ryan McMahon scores on a balk. Elias Díaz advances to 3rd on a balk.",
+  "rbi": null,
+  "runs": 1,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 641857,
+   "name": "Ryan McMahon",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "balk",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 553869,
+   "name": "Elias Díaz",
+   "start": "2B",
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "balk",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [],
+ "pitch": null,
+ "batted": null,
+ "winprob": {
+  "homeAfter": null,
+  "homeBefore": null,
+  "homeAdded": null,
+  "li": 2.34
+ },
+ "statcast": null,
+ "flags": [
+  "balk",
+  "close",
+  "go_ahead_on",
+  "high_leverage",
+  "one_run",
+  "risp",
+  "trailing",
+  "tying_run_on"
+ ],
+ "curation": {
+  "category": "Miscellaneous teaching moments",
+  "slot": "Balk"
+ },
+ "clips": [
+  {
+   "kind": "filmroom",
+   "slug": "jose-leclerc-foul-to-sean-bouchard",
+   "title": "José Leclerc Foul to Sean Bouchard",
+   "duration": "00:00:06",
+   "feed": "HOME",
+   "pageUrl": "https://www.mlb.com/video/jose-leclerc-foul-to-sean-bouchard",
+   "embedUrl": "https://streamable.com/m/jose-leclerc-foul-to-sean-bouchard",
+   "angle": {
+    "category": "broadcast",
+    "label": "Home TV broadcast"
+   },
+   "howVerified": "MLB Film Room clip for the playId; Film Room's play info matches game, inning, outs, runners, batter and pitcher",
+   "thumb": "https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/182e9a41-fc72-4234-a851-9128940ba66c_home.jpg",
+   "match": {
+    "filmroom": {
+     "gamePk": true,
+     "inning": true,
+     "outs": true,
+     "runners": true,
+     "batter": true,
+     "pitcher": true
+    },
+    "feeds": [
+     "HOME",
+     "AWAY"
+    ]
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": null,
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 746554",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/746554/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 746554",
+   "url": "https://statsapi.mlb.com/api/v1/game/746554/winProbability"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

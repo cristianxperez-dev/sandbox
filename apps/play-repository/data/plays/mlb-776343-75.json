@@ -1,1 +1,287 @@
-{"schema":1,"id":"mlb-776343-75","title":"Alejandro Kirk's walk-off sacrifice fly","titleSource":"MLB.com clip title","source":{"gamePk":776343,"atBatIndex":75,"eventIndex":1,"playId":"3667617d-8d58-3d33-943b-6d2b6a0728ca","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/776343/feed/live"},"game":{"gamePk":776343,"date":"2025-09-13","season":2025,"gameType":"R","level":"MLB","venue":"Rogers Centre","away":{"id":110,"name":"Baltimore Orioles","abbr":"BAL","club":"Orioles"},"home":{"id":141,"name":"Toronto Blue Jays","abbr":"TOR","club":"Blue Jays"},"series":""},"before":{"inning":9,"half":"bottom","outs":1,"bases":"123","runners":{"1B":{"id":543807,"name":"George Springer"},"2B":{"id":665926,"name":"Andrés Giménez"},"3B":{"id":694388,"name":"Joey Loperfido"}},"score":{"away":4,"home":4},"batting":"home","count":{"balls":0,"strikes":1}},"after":{"outs":2,"bases":"12_","score":{"away":4,"home":5}},"batter":{"id":672386,"name":"Alejandro Kirk","side":"R"},"pitcher":{"id":666974,"name":"Yennier Cano","hand":"R"},"event":{"type":"sac_fly","label":"Sac Fly","description":"Alejandro Kirk out on a sacrifice fly to center fielder Colton Cowser. Joey Loperfido scores.","rbi":1,"runs":1,"outs":1,"isReview":false,"walkoff":true},"runners":[{"id":672386,"name":"Alejandro Kirk","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"sac_fly","isBatter":true,"credits":[{"id":681297,"name":"Colton Cowser","pos":"CF","credit":"f_putout"}]},{"id":694388,"name":"Joey Loperfido","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"sac_fly","isBatter":false,"credits":[]}],"chains":[{"runner":"Alejandro Kirk","start":null,"out":true,"outBase":"1B","chain":"8"}],"pitch":{"type":"Sinker","code":"SI","speed":95.5,"zone":7,"px":-0.46054479260249576,"pz":1.7787390149225442,"spin":1973,"call":"E"},"batted":{"trajectory":"fly_ball","hardness":"hard","location":8,"ev":100.7,"la":42.0,"distance":321.0,"sprayAngle":-11.6,"spray":"center"},"winprob":{"homeAfter":100.0,"homeBefore":83.7,"homeAdded":16.299999999999997,"li":5.37},"statcast":{"ifAlignment":"Strategic","ofAlignment":"Strategic","deltaRunExp":-0.122,"deltaHomeWinExp":0.189,"batWinExpBefore":0.811,"bbType":"fly_ball","pitchName":"Sinker","fielders":{"2":694212,"3":691723,"4":702616,"5":656896,"6":683002,"7":666185,"8":681297,"9":687637}},"flags":["close","dp_situation","fly_ball","force_available","go_ahead_on","go_ahead_play","high_leverage","of_alignment_nonstd","outfield_play","productive_out","risp","runner_scored_on_out","sac_fly","shift_alignment","tag_up","tied","walkoff","walkoff_situation","winning_run_on"],"curation":{"category":"High-leverage & unusual situations","slot":"Walk-off"},"clips":[{"kind":"highlight","slug":"alejandro-kirk-out-on-a-sacrifice-fly-to-center-fielder-colton-cowser-joe","title":"Alejandro Kirk's walk-off sacrifice fly ","duration":"00:00:29","feed":"CMS","pageUrl":"https://www.mlb.com/video/alejandro-kirk-out-on-a-sacrifice-fly-to-center-fielder-colton-cowser-joe","embedUrl":"https://streamable.com/m/alejandro-kirk-out-on-a-sacrifice-fly-to-center-fielder-colton-cowser-joe","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/lucnovvjkjk2qtyep9ee.jpg","match":{"guid":"3667617d-8d58-3d33-943b-6d2b6a0728ca"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=3667617d-8d58-3d33-943b-6d2b6a0728ca"},"sources":[{"label":"MLB Stats API — official play-by-play, game 776343","url":"https://statsapi.mlb.com/api/v1.1/game/776343/feed/live"},{"label":"MLB Stats API — win probability, game 776343","url":"https://statsapi.mlb.com/api/v1/game/776343/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=776343"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=3667617d-8d58-3d33-943b-6d2b6a0728ca"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-776343-75",
+ "title": "Alejandro Kirk's walk-off sacrifice fly",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 776343,
+  "atBatIndex": 75,
+  "eventIndex": 1,
+  "playId": "3667617d-8d58-3d33-943b-6d2b6a0728ca",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/776343/feed/live"
+ },
+ "game": {
+  "gamePk": 776343,
+  "date": "2025-09-13",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Rogers Centre",
+  "away": {
+   "id": 110,
+   "name": "Baltimore Orioles",
+   "abbr": "BAL",
+   "club": "Orioles"
+  },
+  "home": {
+   "id": 141,
+   "name": "Toronto Blue Jays",
+   "abbr": "TOR",
+   "club": "Blue Jays"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 9,
+  "half": "bottom",
+  "outs": 1,
+  "bases": "123",
+  "runners": {
+   "1B": {
+    "id": 543807,
+    "name": "George Springer"
+   },
+   "2B": {
+    "id": 665926,
+    "name": "Andrés Giménez"
+   },
+   "3B": {
+    "id": 694388,
+    "name": "Joey Loperfido"
+   }
+  },
+  "score": {
+   "away": 4,
+   "home": 4
+  },
+  "batting": "home",
+  "count": {
+   "balls": 0,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "12_",
+  "score": {
+   "away": 4,
+   "home": 5
+  }
+ },
+ "batter": {
+  "id": 672386,
+  "name": "Alejandro Kirk",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 666974,
+  "name": "Yennier Cano",
+  "hand": "R"
+ },
+ "event": {
+  "type": "sac_fly",
+  "label": "Sac Fly",
+  "description": "Alejandro Kirk out on a sacrifice fly to center fielder Colton Cowser. Joey Loperfido scores.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": true
+ },
+ "runners": [
+  {
+   "id": 672386,
+   "name": "Alejandro Kirk",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "sac_fly",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 681297,
+     "name": "Colton Cowser",
+     "pos": "CF",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 694388,
+   "name": "Joey Loperfido",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "sac_fly",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Alejandro Kirk",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "8"
+  }
+ ],
+ "pitch": {
+  "type": "Sinker",
+  "code": "SI",
+  "speed": 95.5,
+  "zone": 7,
+  "px": -0.46054479260249576,
+  "pz": 1.7787390149225442,
+  "spin": 1973,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "fly_ball",
+  "hardness": "hard",
+  "location": 8,
+  "ev": 100.7,
+  "la": 42.0,
+  "distance": 321.0,
+  "sprayAngle": -11.6,
+  "spray": "center"
+ },
+ "winprob": {
+  "homeAfter": 100.0,
+  "homeBefore": 83.7,
+  "homeAdded": 16.299999999999997,
+  "li": 5.37
+ },
+ "statcast": {
+  "ifAlignment": "Strategic",
+  "ofAlignment": "Strategic",
+  "deltaRunExp": -0.122,
+  "deltaHomeWinExp": 0.189,
+  "batWinExpBefore": 0.811,
+  "bbType": "fly_ball",
+  "pitchName": "Sinker",
+  "fielders": {
+   "2": 694212,
+   "3": 691723,
+   "4": 702616,
+   "5": 656896,
+   "6": 683002,
+   "7": 666185,
+   "8": 681297,
+   "9": 687637
+  }
+ },
+ "flags": [
+  "close",
+  "dp_situation",
+  "fly_ball",
+  "force_available",
+  "go_ahead_on",
+  "go_ahead_play",
+  "high_leverage",
+  "of_alignment_nonstd",
+  "outfield_play",
+  "productive_out",
+  "risp",
+  "runner_scored_on_out",
+  "sac_fly",
+  "shift_alignment",
+  "tag_up",
+  "tied",
+  "walkoff",
+  "walkoff_situation",
+  "winning_run_on"
+ ],
+ "curation": {
+  "category": "High-leverage & unusual situations",
+  "slot": "Walk-off"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "alejandro-kirk-out-on-a-sacrifice-fly-to-center-fielder-colton-cowser-joe",
+   "title": "Alejandro Kirk's walk-off sacrifice fly ",
+   "duration": "00:00:29",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/alejandro-kirk-out-on-a-sacrifice-fly-to-center-fielder-colton-cowser-joe",
+   "embedUrl": "https://streamable.com/m/alejandro-kirk-out-on-a-sacrifice-fly-to-center-fielder-colton-cowser-joe",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/lucnovvjkjk2qtyep9ee.jpg",
+   "match": {
+    "guid": "3667617d-8d58-3d33-943b-6d2b6a0728ca"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=3667617d-8d58-3d33-943b-6d2b6a0728ca"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 776343",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/776343/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 776343",
+   "url": "https://statsapi.mlb.com/api/v1/game/776343/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=776343"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=3667617d-8d58-3d33-943b-6d2b6a0728ca"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

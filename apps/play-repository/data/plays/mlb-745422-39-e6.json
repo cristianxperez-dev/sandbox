@@ -1,1 +1,203 @@
-{"schema":1,"id":"mlb-745422-39-e6","title":"Shohei Ohtani advances to 2nd on a balk","titleSource":"From MLB's official play description","source":{"gamePk":745422,"atBatIndex":39,"eventIndex":6,"playId":"7d3ba469-6fd7-440f-a23a-8d9df585f03d","terminal":false,"feed":"https://statsapi.mlb.com/api/v1.1/game/745422/feed/live"},"game":{"gamePk":745422,"date":"2024-05-11","season":2024,"gameType":"R","level":"MLB","venue":"Petco Park","away":{"id":119,"name":"Los Angeles Dodgers","abbr":"LAD","club":"Dodgers"},"home":{"id":135,"name":"San Diego Padres","abbr":"SD","club":"Padres"},"series":""},"before":{"inning":6,"half":"top","outs":2,"bases":"1__","runners":{"1B":{"id":660271,"name":"Shohei Ohtani"},"2B":null,"3B":null},"score":{"away":1,"home":0},"batting":"away","count":{"balls":3,"strikes":1}},"after":{"outs":2,"bases":"_2_","score":{"away":1,"home":0}},"batter":{"id":669257,"name":"Will Smith","side":"R"},"pitcher":{"id":670970,"name":"Adrian Morejon","hand":"L"},"event":{"type":"balk","label":"Balk","description":"With Will Smith batting, Shohei Ohtani advances to 2nd on a balk.","rbi":null,"runs":0,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":660271,"name":"Shohei Ohtani","start":"1B","end":"2B","out":false,"outBase":null,"reason":"r_adv_play","event":"balk","isBatter":false,"credits":[]}],"chains":[],"pitch":null,"batted":null,"winprob":{"homeAfter":null,"homeBefore":null,"homeAdded":null,"li":1.03},"statcast":null,"flags":["balk","close","force_available","leading","one_run","two_outs"],"curation":{"category":"Miscellaneous teaching moments","slot":"Balk"},"clips":[{"kind":"filmroom","slug":"adrian-morejon-called-strike-to-will-smith-osunbf","title":"Adrian Morejon Called Strike to Will Smith","duration":"00:00:06","feed":"HOME","pageUrl":"https://www.mlb.com/video/adrian-morejon-called-strike-to-will-smith-osunbf","embedUrl":"https://streamable.com/m/adrian-morejon-called-strike-to-will-smith-osunbf","angle":{"category":"broadcast","label":"Home TV broadcast"},"howVerified":"MLB Film Room clip for the playId; Film Room's play info matches game, inning, outs, runners, batter and pitcher","thumb":"https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/7d3ba469-6fd7-440f-a23a-8d9df585f03d_home.jpg","match":{"filmroom":{"gamePk":true,"inning":true,"outs":true,"runners":true,"batter":true,"pitcher":true},"feeds":["HOME","AWAY"]},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":null,"sources":[{"label":"MLB Stats API — official play-by-play, game 745422","url":"https://statsapi.mlb.com/api/v1.1/game/745422/feed/live"},{"label":"MLB Stats API — win probability, game 745422","url":"https://statsapi.mlb.com/api/v1/game/745422/winProbability"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-745422-39-e6",
+ "title": "Shohei Ohtani advances to 2nd on a balk",
+ "titleSource": "From MLB's official play description",
+ "source": {
+  "gamePk": 745422,
+  "atBatIndex": 39,
+  "eventIndex": 6,
+  "playId": "7d3ba469-6fd7-440f-a23a-8d9df585f03d",
+  "terminal": false,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/745422/feed/live"
+ },
+ "game": {
+  "gamePk": 745422,
+  "date": "2024-05-11",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Petco Park",
+  "away": {
+   "id": 119,
+   "name": "Los Angeles Dodgers",
+   "abbr": "LAD",
+   "club": "Dodgers"
+  },
+  "home": {
+   "id": 135,
+   "name": "San Diego Padres",
+   "abbr": "SD",
+   "club": "Padres"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 6,
+  "half": "top",
+  "outs": 2,
+  "bases": "1__",
+  "runners": {
+   "1B": {
+    "id": 660271,
+    "name": "Shohei Ohtani"
+   },
+   "2B": null,
+   "3B": null
+  },
+  "score": {
+   "away": 1,
+   "home": 0
+  },
+  "batting": "away",
+  "count": {
+   "balls": 3,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "_2_",
+  "score": {
+   "away": 1,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 669257,
+  "name": "Will Smith",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 670970,
+  "name": "Adrian Morejon",
+  "hand": "L"
+ },
+ "event": {
+  "type": "balk",
+  "label": "Balk",
+  "description": "With Will Smith batting, Shohei Ohtani advances to 2nd on a balk.",
+  "rbi": null,
+  "runs": 0,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 660271,
+   "name": "Shohei Ohtani",
+   "start": "1B",
+   "end": "2B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "balk",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [],
+ "pitch": null,
+ "batted": null,
+ "winprob": {
+  "homeAfter": null,
+  "homeBefore": null,
+  "homeAdded": null,
+  "li": 1.03
+ },
+ "statcast": null,
+ "flags": [
+  "balk",
+  "close",
+  "force_available",
+  "leading",
+  "one_run",
+  "two_outs"
+ ],
+ "curation": {
+  "category": "Miscellaneous teaching moments",
+  "slot": "Balk"
+ },
+ "clips": [
+  {
+   "kind": "filmroom",
+   "slug": "adrian-morejon-called-strike-to-will-smith-osunbf",
+   "title": "Adrian Morejon Called Strike to Will Smith",
+   "duration": "00:00:06",
+   "feed": "HOME",
+   "pageUrl": "https://www.mlb.com/video/adrian-morejon-called-strike-to-will-smith-osunbf",
+   "embedUrl": "https://streamable.com/m/adrian-morejon-called-strike-to-will-smith-osunbf",
+   "angle": {
+    "category": "broadcast",
+    "label": "Home TV broadcast"
+   },
+   "howVerified": "MLB Film Room clip for the playId; Film Room's play info matches game, inning, outs, runners, batter and pitcher",
+   "thumb": "https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/7d3ba469-6fd7-440f-a23a-8d9df585f03d_home.jpg",
+   "match": {
+    "filmroom": {
+     "gamePk": true,
+     "inning": true,
+     "outs": true,
+     "runners": true,
+     "batter": true,
+     "pitcher": true
+    },
+    "feeds": [
+     "HOME",
+     "AWAY"
+    ]
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": null,
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 745422",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/745422/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 745422",
+   "url": "https://statsapi.mlb.com/api/v1/game/745422/winProbability"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

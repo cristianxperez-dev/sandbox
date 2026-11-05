@@ -1,1 +1,283 @@
-{"schema":1,"id":"mlb-777888-71","title":"Francisco Lindor's go-ahead sac fly","titleSource":"MLB.com clip title","source":{"gamePk":777888,"atBatIndex":71,"eventIndex":5,"playId":"65cff6d9-61de-3ac0-badd-34154e81ada7","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/777888/feed/live"},"game":{"gamePk":777888,"date":"2025-05-17","season":2025,"gameType":"R","level":"MLB","venue":"Yankee Stadium","away":{"id":121,"name":"New York Mets","abbr":"NYM","club":"Mets"},"home":{"id":147,"name":"New York Yankees","abbr":"NYY","club":"Yankees"},"series":""},"before":{"inning":9,"half":"top","outs":1,"bases":"123","runners":{"1B":{"id":621438,"name":"Tyrone Taylor"},"2B":{"id":683146,"name":"Brett Baty"},"3B":{"id":682668,"name":"Luisangel Acuña"}},"score":{"away":2,"home":2},"batting":"away","count":{"balls":3,"strikes":1}},"after":{"outs":2,"bases":"12_","score":{"away":3,"home":2}},"batter":{"id":596019,"name":"Francisco Lindor","side":"L"},"pitcher":{"id":518585,"name":"Fernando Cruz","hand":"R"},"event":{"type":"sac_fly","label":"Sac Fly","description":"Francisco Lindor out on a sacrifice fly to center fielder Cody Bellinger. Luisangel Acuña scores.","rbi":1,"runs":1,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":596019,"name":"Francisco Lindor","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"sac_fly","isBatter":true,"credits":[{"id":641355,"name":"Cody Bellinger","pos":"CF","credit":"f_putout"}]},{"id":682668,"name":"Luisangel Acuña","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"sac_fly","isBatter":false,"credits":[]}],"chains":[{"runner":"Francisco Lindor","start":null,"out":true,"outBase":"1B","chain":"8"}],"pitch":{"type":"Four-Seam Fastball","code":"FF","speed":94.0,"zone":6,"px":0.3021288044270423,"pz":2.6352925726712533,"spin":2360,"call":"E"},"batted":{"trajectory":"fly_ball","hardness":"medium","location":8,"ev":94.8,"la":45.0,"distance":293.0,"sprayAngle":-17.5,"spray":"opposite"},"winprob":{"homeAfter":17.0,"homeBefore":28.2,"homeAdded":-11.199999999999996,"li":5.65},"statcast":{"ifAlignment":"Strategic","ofAlignment":"Standard","deltaRunExp":-0.302,"deltaHomeWinExp":-0.039,"batWinExpBefore":0.791,"bbType":"fly_ball","pitchName":"4-Seam Fastball","fielders":{"2":641555,"3":502671,"4":518934,"5":672724,"6":683011,"7":691176,"8":641355,"9":592450}},"flags":["close","dp_situation","fly_ball","force_available","go_ahead_on","go_ahead_play","high_leverage","outfield_play","productive_out","risp","runner_scored_on_out","sac_fly","shift_alignment","tag_up","tied"],"curation":{"category":"Outfield defense, cutoffs & relays","slot":"Sacrifice fly to right or center"},"clips":[{"kind":"highlight","slug":"fernando-cruz-in-play-run-s-to-francisco-lindor","title":"Francisco Lindor's go-ahead sac fly","duration":"00:00:19","feed":"CMS","pageUrl":"https://www.mlb.com/video/fernando-cruz-in-play-run-s-to-francisco-lindor","embedUrl":"https://streamable.com/m/fernando-cruz-in-play-run-s-to-francisco-lindor","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/vuqonthwvmabjkwzuadv.jpg","match":{"guid":"65cff6d9-61de-3ac0-badd-34154e81ada7"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=65cff6d9-61de-3ac0-badd-34154e81ada7"},"sources":[{"label":"MLB Stats API — official play-by-play, game 777888","url":"https://statsapi.mlb.com/api/v1.1/game/777888/feed/live"},{"label":"MLB Stats API — win probability, game 777888","url":"https://statsapi.mlb.com/api/v1/game/777888/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=777888"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=65cff6d9-61de-3ac0-badd-34154e81ada7"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-777888-71",
+ "title": "Francisco Lindor's go-ahead sac fly",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 777888,
+  "atBatIndex": 71,
+  "eventIndex": 5,
+  "playId": "65cff6d9-61de-3ac0-badd-34154e81ada7",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/777888/feed/live"
+ },
+ "game": {
+  "gamePk": 777888,
+  "date": "2025-05-17",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Yankee Stadium",
+  "away": {
+   "id": 121,
+   "name": "New York Mets",
+   "abbr": "NYM",
+   "club": "Mets"
+  },
+  "home": {
+   "id": 147,
+   "name": "New York Yankees",
+   "abbr": "NYY",
+   "club": "Yankees"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 9,
+  "half": "top",
+  "outs": 1,
+  "bases": "123",
+  "runners": {
+   "1B": {
+    "id": 621438,
+    "name": "Tyrone Taylor"
+   },
+   "2B": {
+    "id": 683146,
+    "name": "Brett Baty"
+   },
+   "3B": {
+    "id": 682668,
+    "name": "Luisangel Acuña"
+   }
+  },
+  "score": {
+   "away": 2,
+   "home": 2
+  },
+  "batting": "away",
+  "count": {
+   "balls": 3,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "12_",
+  "score": {
+   "away": 3,
+   "home": 2
+  }
+ },
+ "batter": {
+  "id": 596019,
+  "name": "Francisco Lindor",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 518585,
+  "name": "Fernando Cruz",
+  "hand": "R"
+ },
+ "event": {
+  "type": "sac_fly",
+  "label": "Sac Fly",
+  "description": "Francisco Lindor out on a sacrifice fly to center fielder Cody Bellinger. Luisangel Acuña scores.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 596019,
+   "name": "Francisco Lindor",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "sac_fly",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 641355,
+     "name": "Cody Bellinger",
+     "pos": "CF",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 682668,
+   "name": "Luisangel Acuña",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "sac_fly",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Francisco Lindor",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "8"
+  }
+ ],
+ "pitch": {
+  "type": "Four-Seam Fastball",
+  "code": "FF",
+  "speed": 94.0,
+  "zone": 6,
+  "px": 0.3021288044270423,
+  "pz": 2.6352925726712533,
+  "spin": 2360,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "fly_ball",
+  "hardness": "medium",
+  "location": 8,
+  "ev": 94.8,
+  "la": 45.0,
+  "distance": 293.0,
+  "sprayAngle": -17.5,
+  "spray": "opposite"
+ },
+ "winprob": {
+  "homeAfter": 17.0,
+  "homeBefore": 28.2,
+  "homeAdded": -11.199999999999996,
+  "li": 5.65
+ },
+ "statcast": {
+  "ifAlignment": "Strategic",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.302,
+  "deltaHomeWinExp": -0.039,
+  "batWinExpBefore": 0.791,
+  "bbType": "fly_ball",
+  "pitchName": "4-Seam Fastball",
+  "fielders": {
+   "2": 641555,
+   "3": 502671,
+   "4": 518934,
+   "5": 672724,
+   "6": 683011,
+   "7": 691176,
+   "8": 641355,
+   "9": 592450
+  }
+ },
+ "flags": [
+  "close",
+  "dp_situation",
+  "fly_ball",
+  "force_available",
+  "go_ahead_on",
+  "go_ahead_play",
+  "high_leverage",
+  "outfield_play",
+  "productive_out",
+  "risp",
+  "runner_scored_on_out",
+  "sac_fly",
+  "shift_alignment",
+  "tag_up",
+  "tied"
+ ],
+ "curation": {
+  "category": "Outfield defense, cutoffs & relays",
+  "slot": "Sacrifice fly to right or center"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "fernando-cruz-in-play-run-s-to-francisco-lindor",
+   "title": "Francisco Lindor's go-ahead sac fly",
+   "duration": "00:00:19",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/fernando-cruz-in-play-run-s-to-francisco-lindor",
+   "embedUrl": "https://streamable.com/m/fernando-cruz-in-play-run-s-to-francisco-lindor",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/vuqonthwvmabjkwzuadv.jpg",
+   "match": {
+    "guid": "65cff6d9-61de-3ac0-badd-34154e81ada7"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=65cff6d9-61de-3ac0-badd-34154e81ada7"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 777888",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/777888/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 777888",
+   "url": "https://statsapi.mlb.com/api/v1/game/777888/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=777888"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=65cff6d9-61de-3ac0-badd-34154e81ada7"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

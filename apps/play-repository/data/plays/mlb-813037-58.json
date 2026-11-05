@@ -1,1 +1,323 @@
-{"schema":1,"id":"mlb-813037-58","title":"George Springer's go-ahead three-run homer","titleSource":"MLB.com clip title","source":{"gamePk":813037,"atBatIndex":58,"eventIndex":3,"playId":"43ff90e6-f8cd-3a3f-b93b-de5f2237a323","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/813037/feed/live"},"game":{"gamePk":813037,"date":"2025-10-20","season":2025,"gameType":"L","level":"MLB","venue":"Rogers Centre","away":{"id":136,"name":"Seattle Mariners","abbr":"SEA","club":"Mariners"},"home":{"id":141,"name":"Toronto Blue Jays","abbr":"TOR","club":"Blue Jays"},"series":""},"before":{"inning":7,"half":"bottom","outs":1,"bases":"_23","runners":{"1B":null,"2B":{"id":643396,"name":"Isiah Kiner-Falefa"},"3B":{"id":680718,"name":"Addison Barger"}},"score":{"away":3,"home":1},"batting":"home","count":{"balls":1,"strikes":0}},"after":{"outs":1,"bases":"___","score":{"away":3,"home":4}},"batter":{"id":543807,"name":"George Springer","side":"R"},"pitcher":{"id":660825,"name":"Eduard Bazardo","hand":"R"},"event":{"type":"home_run","label":"Home Run","description":"George Springer homers (4) on a fly ball to left center field. Addison Barger scores. Isiah Kiner-Falefa scores.","rbi":3,"runs":3,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":543807,"name":"George Springer","start":null,"end":"score","out":false,"outBase":null,"reason":null,"event":"home_run","isBatter":true,"credits":[]},{"id":680718,"name":"Addison Barger","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_force","event":"home_run","isBatter":false,"credits":[]},{"id":643396,"name":"Isiah Kiner-Falefa","start":"2B","end":"score","out":false,"outBase":null,"reason":"r_adv_force","event":"home_run","isBatter":false,"credits":[]}],"chains":[],"pitch":{"type":"Sinker","code":"SI","speed":96.0,"zone":4,"px":-0.37618595339285726,"pz":2.309200745868939,"spin":2276,"call":"E"},"batted":{"trajectory":"fly_ball","hardness":"medium","location":78,"ev":99.1,"la":30.0,"distance":381.0,"sprayAngle":-24.9,"spray":"pull"},"winprob":{"homeAfter":77.0,"homeBefore":37.8,"homeAdded":39.2,"li":3.35},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":0.991,"deltaHomeWinExp":0.389,"batWinExpBefore":0.381,"bbType":"fly_ball","pitchName":"Sinker","fielders":{"2":663728,"3":647304,"4":660844,"5":553993,"6":641487,"7":668227,"8":677594,"9":645302}},"flags":["close","fly_ball","go_ahead_play","high_leverage","home_run","postseason","risp","trailing","tying_run_on"],"curation":{"category":"High-leverage & unusual situations","slot":"Go-ahead swing late in a postseason game"},"clips":[{"kind":"high-home","slug":"high-home-angle-of-george-springer-s-go-ahead-homer","title":"HIGH HOME angle of George Springer's go-ahead homer","duration":"00:00:36","feed":"CMS","pageUrl":"https://www.mlb.com/video/high-home-angle-of-george-springer-s-go-ahead-homer","embedUrl":"https://streamable.com/m/high-home-angle-of-george-springer-s-go-ahead-homer","angle":{"category":"high-home","label":"HIGH HOME — labelled by MLB"},"howVerified":"MLB's own title/description names this camera angle and identifies this play (same game, batter or inning, event)","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/mlb/slspxg6zzv0vquyoojvx","match":{"text":true},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}},{"kind":"highlight","slug":"george-springer-homers-4-on-a-fly-ball-to-left-center-field-addison-barge","title":"George Springer's go-ahead three-run homer","duration":"00:00:29","feed":"CMS","pageUrl":"https://www.mlb.com/video/george-springer-homers-4-on-a-fly-ball-to-left-center-field-addison-barge","embedUrl":"https://streamable.com/m/george-springer-homers-4-on-a-fly-ball-to-left-center-field-addison-barge","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/zacga8hhespmnw1j4gh7.jpg","match":{"guid":"43ff90e6-f8cd-3a3f-b93b-de5f2237a323"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}},{"kind":"alternate","slug":"field-view-george-springer-s-three-run-home-run","title":"Field View: George Springer's go-ahead home run","duration":"00:00:30","feed":"CMS","pageUrl":"https://www.mlb.com/video/field-view-george-springer-s-three-run-home-run","embedUrl":"https://streamable.com/m/field-view-george-springer-s-three-run-home-run","angle":{"category":"alternate","label":"Field View (MLB's name for this angle)"},"howVerified":"MLB's own title/description names this camera angle and identifies this play (same game, batter or inning, event)","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/dpmomydm1mabxuyma04e.jpg","match":{"text":true},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=43ff90e6-f8cd-3a3f-b93b-de5f2237a323"},"sources":[{"label":"MLB Stats API — official play-by-play, game 813037","url":"https://statsapi.mlb.com/api/v1.1/game/813037/feed/live"},{"label":"MLB Stats API — win probability, game 813037","url":"https://statsapi.mlb.com/api/v1/game/813037/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=813037"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=43ff90e6-f8cd-3a3f-b93b-de5f2237a323"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-813037-58",
+ "title": "George Springer's go-ahead three-run homer",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 813037,
+  "atBatIndex": 58,
+  "eventIndex": 3,
+  "playId": "43ff90e6-f8cd-3a3f-b93b-de5f2237a323",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/813037/feed/live"
+ },
+ "game": {
+  "gamePk": 813037,
+  "date": "2025-10-20",
+  "season": 2025,
+  "gameType": "L",
+  "level": "MLB",
+  "venue": "Rogers Centre",
+  "away": {
+   "id": 136,
+   "name": "Seattle Mariners",
+   "abbr": "SEA",
+   "club": "Mariners"
+  },
+  "home": {
+   "id": 141,
+   "name": "Toronto Blue Jays",
+   "abbr": "TOR",
+   "club": "Blue Jays"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 7,
+  "half": "bottom",
+  "outs": 1,
+  "bases": "_23",
+  "runners": {
+   "1B": null,
+   "2B": {
+    "id": 643396,
+    "name": "Isiah Kiner-Falefa"
+   },
+   "3B": {
+    "id": 680718,
+    "name": "Addison Barger"
+   }
+  },
+  "score": {
+   "away": 3,
+   "home": 1
+  },
+  "batting": "home",
+  "count": {
+   "balls": 1,
+   "strikes": 0
+  }
+ },
+ "after": {
+  "outs": 1,
+  "bases": "___",
+  "score": {
+   "away": 3,
+   "home": 4
+  }
+ },
+ "batter": {
+  "id": 543807,
+  "name": "George Springer",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 660825,
+  "name": "Eduard Bazardo",
+  "hand": "R"
+ },
+ "event": {
+  "type": "home_run",
+  "label": "Home Run",
+  "description": "George Springer homers (4) on a fly ball to left center field. Addison Barger scores. Isiah Kiner-Falefa scores.",
+  "rbi": 3,
+  "runs": 3,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 543807,
+   "name": "George Springer",
+   "start": null,
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "home_run",
+   "isBatter": true,
+   "credits": []
+  },
+  {
+   "id": 680718,
+   "name": "Addison Barger",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_force",
+   "event": "home_run",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 643396,
+   "name": "Isiah Kiner-Falefa",
+   "start": "2B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_force",
+   "event": "home_run",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [],
+ "pitch": {
+  "type": "Sinker",
+  "code": "SI",
+  "speed": 96.0,
+  "zone": 4,
+  "px": -0.37618595339285726,
+  "pz": 2.309200745868939,
+  "spin": 2276,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "fly_ball",
+  "hardness": "medium",
+  "location": 78,
+  "ev": 99.1,
+  "la": 30.0,
+  "distance": 381.0,
+  "sprayAngle": -24.9,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 77.0,
+  "homeBefore": 37.8,
+  "homeAdded": 39.2,
+  "li": 3.35
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.991,
+  "deltaHomeWinExp": 0.389,
+  "batWinExpBefore": 0.381,
+  "bbType": "fly_ball",
+  "pitchName": "Sinker",
+  "fielders": {
+   "2": 663728,
+   "3": 647304,
+   "4": 660844,
+   "5": 553993,
+   "6": 641487,
+   "7": 668227,
+   "8": 677594,
+   "9": 645302
+  }
+ },
+ "flags": [
+  "close",
+  "fly_ball",
+  "go_ahead_play",
+  "high_leverage",
+  "home_run",
+  "postseason",
+  "risp",
+  "trailing",
+  "tying_run_on"
+ ],
+ "curation": {
+  "category": "High-leverage & unusual situations",
+  "slot": "Go-ahead swing late in a postseason game"
+ },
+ "clips": [
+  {
+   "kind": "high-home",
+   "slug": "high-home-angle-of-george-springer-s-go-ahead-homer",
+   "title": "HIGH HOME angle of George Springer's go-ahead homer",
+   "duration": "00:00:36",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/high-home-angle-of-george-springer-s-go-ahead-homer",
+   "embedUrl": "https://streamable.com/m/high-home-angle-of-george-springer-s-go-ahead-homer",
+   "angle": {
+    "category": "high-home",
+    "label": "HIGH HOME — labelled by MLB"
+   },
+   "howVerified": "MLB's own title/description names this camera angle and identifies this play (same game, batter or inning, event)",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/mlb/slspxg6zzv0vquyoojvx",
+   "match": {
+    "text": true
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  },
+  {
+   "kind": "highlight",
+   "slug": "george-springer-homers-4-on-a-fly-ball-to-left-center-field-addison-barge",
+   "title": "George Springer's go-ahead three-run homer",
+   "duration": "00:00:29",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/george-springer-homers-4-on-a-fly-ball-to-left-center-field-addison-barge",
+   "embedUrl": "https://streamable.com/m/george-springer-homers-4-on-a-fly-ball-to-left-center-field-addison-barge",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/zacga8hhespmnw1j4gh7.jpg",
+   "match": {
+    "guid": "43ff90e6-f8cd-3a3f-b93b-de5f2237a323"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  },
+  {
+   "kind": "alternate",
+   "slug": "field-view-george-springer-s-three-run-home-run",
+   "title": "Field View: George Springer's go-ahead home run",
+   "duration": "00:00:30",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/field-view-george-springer-s-three-run-home-run",
+   "embedUrl": "https://streamable.com/m/field-view-george-springer-s-three-run-home-run",
+   "angle": {
+    "category": "alternate",
+    "label": "Field View (MLB's name for this angle)"
+   },
+   "howVerified": "MLB's own title/description names this camera angle and identifies this play (same game, batter or inning, event)",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/dpmomydm1mabxuyma04e.jpg",
+   "match": {
+    "text": true
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=43ff90e6-f8cd-3a3f-b93b-de5f2237a323"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 813037",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/813037/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 813037",
+   "url": "https://statsapi.mlb.com/api/v1/game/813037/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=813037"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=43ff90e6-f8cd-3a3f-b93b-de5f2237a323"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    1
+   ]
+  },
+  "highHome": {
+   "available": true,
+   "clips": [
+    0
+   ],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 1,
+     "result": "matched high-home-angle-of-george-springer-s-go-ahead-homer"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": [
+   {
+    "clip": 2,
+    "label": "Field View (MLB's name for this angle)"
+   }
+  ]
+ }
+}

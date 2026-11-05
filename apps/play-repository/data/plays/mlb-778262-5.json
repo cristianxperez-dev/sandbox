@@ -1,1 +1,319 @@
-{"schema":1,"id":"mlb-778262-5","title":"Tyler O'Neill throws out Austin Hays at home","titleSource":"MLB.com clip title","source":{"gamePk":778262,"atBatIndex":5,"eventIndex":3,"playId":"7ae1bd95-1d17-3183-b37f-4c231e20f1b2","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/778262/feed/live"},"game":{"gamePk":778262,"date":"2025-04-19","season":2025,"gameType":"R","level":"MLB","venue":"Oriole Park at Camden Yards","away":{"id":113,"name":"Cincinnati Reds","abbr":"CIN","club":"Reds"},"home":{"id":110,"name":"Baltimore Orioles","abbr":"BAL","club":"Orioles"},"series":""},"before":{"inning":1,"half":"top","outs":2,"bases":"12_","runners":{"1B":{"id":666158,"name":"Gavin Lux"},"2B":{"id":669720,"name":"Austin Hays"},"3B":null},"score":{"away":1,"home":0},"batting":"away","count":{"balls":2,"strikes":1}},"after":{"outs":3,"bases":"12_","score":{"away":1,"home":0}},"batter":{"id":669289,"name":"Santiago Espinal","side":"R"},"pitcher":{"id":687064,"name":"Brandon Young","hand":"R"},"event":{"type":"single","label":"Single","description":"Santiago Espinal singles on a ground ball to right fielder Tyler O'Neill. Austin Hays out at home on the throw, right fielder Tyler O'Neill to catcher Adley Rutschman. Gavin Lux to 2nd.","rbi":0,"runs":0,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":669289,"name":"Santiago Espinal","start":null,"end":"1B","out":false,"outBase":null,"reason":null,"event":"single","isBatter":true,"credits":[{"id":641933,"name":"Tyler O'Neill","pos":"RF","credit":"f_fielded_ball"}]},{"id":669720,"name":"Austin Hays","start":"2B","end":null,"out":true,"outBase":"4B","reason":"r_thrown_out","event":"single","isBatter":false,"credits":[{"id":641933,"name":"Tyler O'Neill","pos":"RF","credit":"f_assist"},{"id":641933,"name":"Tyler O'Neill","pos":"RF","credit":"f_assist_of"},{"id":668939,"name":"Adley Rutschman","pos":"C","credit":"f_putout"}]},{"id":666158,"name":"Gavin Lux","start":"1B","end":"2B","out":false,"outBase":null,"reason":"r_adv_force","event":"other_out","isBatter":false,"credits":[]}],"chains":[{"runner":"Santiago Espinal","start":null,"out":false,"outBase":null,"chain":"9"},{"runner":"Austin Hays","start":"2B","out":true,"outBase":"4B","chain":"9-2"}],"pitch":{"type":"Four-Seam Fastball","code":"FF","speed":94.8,"zone":9,"px":0.8196470138208707,"pz":2.079584205456998,"spin":2071,"call":"X"},"batted":{"trajectory":"ground_ball","hardness":"medium","location":9,"ev":98.2,"la":-5.0,"distance":20.0,"sprayAngle":31.8,"spray":"opposite"},"winprob":{"homeAfter":44.800000000000004,"homeBefore":40.9,"homeAdded":3.9000000000000057,"li":1.55},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":0.522,"deltaHomeWinExp":0.042,"batWinExpBefore":0.594,"bbType":"ground_ball","pitchName":"4-Seam Fastball","fielders":{"2":668939,"3":656811,"4":702616,"5":602104,"6":683002,"7":677008,"8":656775,"9":641933}},"flags":["catcher_play","close","force_available","ground_ball","leading","one_run","out_at_plate","outfield_assist","outfield_play","play_at_plate","productive_out","risp","runner_out_on_bases","single","tag_play","two_outs"],"curation":{"category":"Outfield defense, cutoffs & relays","slot":"Single to right, runner from second thrown out at home"},"clips":[{"kind":"highlight","slug":"brandon-young-in-play-out-s-to-santiago-espinal","title":"Tyler O'Neill throws out Austin Hays at home","duration":"00:00:19","feed":"CMS","pageUrl":"https://www.mlb.com/video/brandon-young-in-play-out-s-to-santiago-espinal","embedUrl":"https://streamable.com/m/brandon-young-in-play-out-s-to-santiago-espinal","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/zgsusnbd7cax2wuvqjm6.jpg","match":{"guid":"7ae1bd95-1d17-3183-b37f-4c231e20f1b2"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=7ae1bd95-1d17-3183-b37f-4c231e20f1b2"},"sources":[{"label":"MLB Stats API — official play-by-play, game 778262","url":"https://statsapi.mlb.com/api/v1.1/game/778262/feed/live"},{"label":"MLB Stats API — win probability, game 778262","url":"https://statsapi.mlb.com/api/v1/game/778262/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=778262"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=7ae1bd95-1d17-3183-b37f-4c231e20f1b2"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-778262-5",
+ "title": "Tyler O'Neill throws out Austin Hays at home",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 778262,
+  "atBatIndex": 5,
+  "eventIndex": 3,
+  "playId": "7ae1bd95-1d17-3183-b37f-4c231e20f1b2",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/778262/feed/live"
+ },
+ "game": {
+  "gamePk": 778262,
+  "date": "2025-04-19",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Oriole Park at Camden Yards",
+  "away": {
+   "id": 113,
+   "name": "Cincinnati Reds",
+   "abbr": "CIN",
+   "club": "Reds"
+  },
+  "home": {
+   "id": 110,
+   "name": "Baltimore Orioles",
+   "abbr": "BAL",
+   "club": "Orioles"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 1,
+  "half": "top",
+  "outs": 2,
+  "bases": "12_",
+  "runners": {
+   "1B": {
+    "id": 666158,
+    "name": "Gavin Lux"
+   },
+   "2B": {
+    "id": 669720,
+    "name": "Austin Hays"
+   },
+   "3B": null
+  },
+  "score": {
+   "away": 1,
+   "home": 0
+  },
+  "batting": "away",
+  "count": {
+   "balls": 2,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 3,
+  "bases": "12_",
+  "score": {
+   "away": 1,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 669289,
+  "name": "Santiago Espinal",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 687064,
+  "name": "Brandon Young",
+  "hand": "R"
+ },
+ "event": {
+  "type": "single",
+  "label": "Single",
+  "description": "Santiago Espinal singles on a ground ball to right fielder Tyler O'Neill. Austin Hays out at home on the throw, right fielder Tyler O'Neill to catcher Adley Rutschman. Gavin Lux to 2nd.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 669289,
+   "name": "Santiago Espinal",
+   "start": null,
+   "end": "1B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "single",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 641933,
+     "name": "Tyler O'Neill",
+     "pos": "RF",
+     "credit": "f_fielded_ball"
+    }
+   ]
+  },
+  {
+   "id": 669720,
+   "name": "Austin Hays",
+   "start": "2B",
+   "end": null,
+   "out": true,
+   "outBase": "4B",
+   "reason": "r_thrown_out",
+   "event": "single",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 641933,
+     "name": "Tyler O'Neill",
+     "pos": "RF",
+     "credit": "f_assist"
+    },
+    {
+     "id": 641933,
+     "name": "Tyler O'Neill",
+     "pos": "RF",
+     "credit": "f_assist_of"
+    },
+    {
+     "id": 668939,
+     "name": "Adley Rutschman",
+     "pos": "C",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 666158,
+   "name": "Gavin Lux",
+   "start": "1B",
+   "end": "2B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_force",
+   "event": "other_out",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Santiago Espinal",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": "9"
+  },
+  {
+   "runner": "Austin Hays",
+   "start": "2B",
+   "out": true,
+   "outBase": "4B",
+   "chain": "9-2"
+  }
+ ],
+ "pitch": {
+  "type": "Four-Seam Fastball",
+  "code": "FF",
+  "speed": 94.8,
+  "zone": 9,
+  "px": 0.8196470138208707,
+  "pz": 2.079584205456998,
+  "spin": 2071,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "ground_ball",
+  "hardness": "medium",
+  "location": 9,
+  "ev": 98.2,
+  "la": -5.0,
+  "distance": 20.0,
+  "sprayAngle": 31.8,
+  "spray": "opposite"
+ },
+ "winprob": {
+  "homeAfter": 44.800000000000004,
+  "homeBefore": 40.9,
+  "homeAdded": 3.9000000000000057,
+  "li": 1.55
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.522,
+  "deltaHomeWinExp": 0.042,
+  "batWinExpBefore": 0.594,
+  "bbType": "ground_ball",
+  "pitchName": "4-Seam Fastball",
+  "fielders": {
+   "2": 668939,
+   "3": 656811,
+   "4": 702616,
+   "5": 602104,
+   "6": 683002,
+   "7": 677008,
+   "8": 656775,
+   "9": 641933
+  }
+ },
+ "flags": [
+  "catcher_play",
+  "close",
+  "force_available",
+  "ground_ball",
+  "leading",
+  "one_run",
+  "out_at_plate",
+  "outfield_assist",
+  "outfield_play",
+  "play_at_plate",
+  "productive_out",
+  "risp",
+  "runner_out_on_bases",
+  "single",
+  "tag_play",
+  "two_outs"
+ ],
+ "curation": {
+  "category": "Outfield defense, cutoffs & relays",
+  "slot": "Single to right, runner from second thrown out at home"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "brandon-young-in-play-out-s-to-santiago-espinal",
+   "title": "Tyler O'Neill throws out Austin Hays at home",
+   "duration": "00:00:19",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/brandon-young-in-play-out-s-to-santiago-espinal",
+   "embedUrl": "https://streamable.com/m/brandon-young-in-play-out-s-to-santiago-espinal",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/zgsusnbd7cax2wuvqjm6.jpg",
+   "match": {
+    "guid": "7ae1bd95-1d17-3183-b37f-4c231e20f1b2"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=7ae1bd95-1d17-3183-b37f-4c231e20f1b2"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 778262",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/778262/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 778262",
+   "url": "https://statsapi.mlb.com/api/v1/game/778262/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=778262"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=7ae1bd95-1d17-3183-b37f-4c231e20f1b2"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

@@ -1,1 +1,206 @@
-{"schema":1,"id":"mlb-745262-65-e1","title":"Brett Harris scores on a wild pitch","titleSource":"MLB.com clip title","source":{"gamePk":745262,"atBatIndex":65,"eventIndex":1,"playId":"921c63ec-a991-474f-a1e2-529b8f21ed33","terminal":false,"feed":"https://statsapi.mlb.com/api/v1.1/game/745262/feed/live"},"game":{"gamePk":745262,"date":"2024-05-11","season":2024,"gameType":"R","level":"MLB","venue":"T-Mobile Park","away":{"id":133,"name":"Oakland Athletics","abbr":"OAK","club":"Athletics"},"home":{"id":136,"name":"Seattle Mariners","abbr":"SEA","club":"Mariners"},"series":""},"before":{"inning":9,"half":"top","outs":1,"bases":"_23","runners":{"1B":null,"2B":{"id":647351,"name":"Abraham Toro"},"3B":{"id":695391,"name":"Brett Harris"}},"score":{"away":5,"home":1},"batting":"away","count":{"balls":1,"strikes":0}},"after":{"outs":1,"bases":"__3","score":{"away":6,"home":1}},"batter":{"id":668709,"name":"JJ Bleday","side":"L"},"pitcher":{"id":660825,"name":"Eduard Bazardo","hand":"R"},"event":{"type":"wild_pitch","label":"Wild Pitch","description":"Wild pitch by pitcher Eduard Bazardo. Brett Harris scores. Abraham Toro to 3rd.","rbi":null,"runs":1,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":695391,"name":"Brett Harris","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"wild_pitch","isBatter":false,"credits":[]},{"id":647351,"name":"Abraham Toro","start":"2B","end":"3B","out":false,"outBase":null,"reason":"r_adv_play","event":"wild_pitch","isBatter":false,"credits":[]}],"chains":[],"pitch":null,"batted":null,"winprob":{"homeAfter":null,"homeBefore":null,"homeAdded":null,"li":0.12},"statcast":null,"flags":["leading","low_leverage","risp","wild_pitch"],"curation":{"category":"Catcher defense & plays at the plate","slot":"Wild pitch or passed ball, runner advances"},"clips":[{"kind":"highlight","slug":"brett-harris-scores-on-a-wild-pitch","title":"Brett Harris scores on a wild pitch","duration":"00:00:07","feed":"CMS","pageUrl":"https://www.mlb.com/video/brett-harris-scores-on-a-wild-pitch","embedUrl":"https://streamable.com/m/brett-harris-scores-on-a-wild-pitch","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/omewpptxpatqzoabrqlp.jpg","match":{"guid":"921c63ec-a991-474f-a1e2-529b8f21ed33"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":null,"sources":[{"label":"MLB Stats API — official play-by-play, game 745262","url":"https://statsapi.mlb.com/api/v1.1/game/745262/feed/live"},{"label":"MLB Stats API — win probability, game 745262","url":"https://statsapi.mlb.com/api/v1/game/745262/winProbability"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-745262-65-e1",
+ "title": "Brett Harris scores on a wild pitch",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 745262,
+  "atBatIndex": 65,
+  "eventIndex": 1,
+  "playId": "921c63ec-a991-474f-a1e2-529b8f21ed33",
+  "terminal": false,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/745262/feed/live"
+ },
+ "game": {
+  "gamePk": 745262,
+  "date": "2024-05-11",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "T-Mobile Park",
+  "away": {
+   "id": 133,
+   "name": "Oakland Athletics",
+   "abbr": "OAK",
+   "club": "Athletics"
+  },
+  "home": {
+   "id": 136,
+   "name": "Seattle Mariners",
+   "abbr": "SEA",
+   "club": "Mariners"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 9,
+  "half": "top",
+  "outs": 1,
+  "bases": "_23",
+  "runners": {
+   "1B": null,
+   "2B": {
+    "id": 647351,
+    "name": "Abraham Toro"
+   },
+   "3B": {
+    "id": 695391,
+    "name": "Brett Harris"
+   }
+  },
+  "score": {
+   "away": 5,
+   "home": 1
+  },
+  "batting": "away",
+  "count": {
+   "balls": 1,
+   "strikes": 0
+  }
+ },
+ "after": {
+  "outs": 1,
+  "bases": "__3",
+  "score": {
+   "away": 6,
+   "home": 1
+  }
+ },
+ "batter": {
+  "id": 668709,
+  "name": "JJ Bleday",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 660825,
+  "name": "Eduard Bazardo",
+  "hand": "R"
+ },
+ "event": {
+  "type": "wild_pitch",
+  "label": "Wild Pitch",
+  "description": "Wild pitch by pitcher Eduard Bazardo. Brett Harris scores. Abraham Toro to 3rd.",
+  "rbi": null,
+  "runs": 1,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 695391,
+   "name": "Brett Harris",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "wild_pitch",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 647351,
+   "name": "Abraham Toro",
+   "start": "2B",
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "wild_pitch",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [],
+ "pitch": null,
+ "batted": null,
+ "winprob": {
+  "homeAfter": null,
+  "homeBefore": null,
+  "homeAdded": null,
+  "li": 0.12
+ },
+ "statcast": null,
+ "flags": [
+  "leading",
+  "low_leverage",
+  "risp",
+  "wild_pitch"
+ ],
+ "curation": {
+  "category": "Catcher defense & plays at the plate",
+  "slot": "Wild pitch or passed ball, runner advances"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "brett-harris-scores-on-a-wild-pitch",
+   "title": "Brett Harris scores on a wild pitch",
+   "duration": "00:00:07",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/brett-harris-scores-on-a-wild-pitch",
+   "embedUrl": "https://streamable.com/m/brett-harris-scores-on-a-wild-pitch",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/omewpptxpatqzoabrqlp.jpg",
+   "match": {
+    "guid": "921c63ec-a991-474f-a1e2-529b8f21ed33"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": null,
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 745262",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/745262/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 745262",
+   "url": "https://statsapi.mlb.com/api/v1/game/745262/winProbability"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

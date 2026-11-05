@@ -1,1 +1,223 @@
-{"schema":1,"id":"mlb-745056-41-e7","title":"Lowe scores on error after Caballero steals second","titleSource":"MLB.com clip title","source":{"gamePk":745056,"atBatIndex":41,"eventIndex":7,"playId":"7e6a4d10-282f-4f63-8204-ff33538508a0","terminal":false,"feed":"https://statsapi.mlb.com/api/v1.1/game/745056/feed/live"},"game":{"gamePk":745056,"date":"2024-08-10","season":2024,"gameType":"R","level":"MLB","venue":"Tropicana Field","away":{"id":110,"name":"Baltimore Orioles","abbr":"BAL","club":"Orioles"},"home":{"id":139,"name":"Tampa Bay Rays","abbr":"TB","club":"Rays"},"series":""},"before":{"inning":5,"half":"bottom","outs":1,"bases":"1_3","runners":{"1B":{"id":676609,"name":"José Caballero"},"2B":null,"3B":{"id":666139,"name":"Josh Lowe"}},"score":{"away":4,"home":0},"batting":"home","count":{"balls":2,"strikes":2}},"after":{"outs":1,"bases":"_2_","score":{"away":4,"home":1}},"batter":{"id":678554,"name":"Curtis Mead","side":"R"},"pitcher":{"id":669203,"name":"Corbin Burnes","hand":"R"},"event":{"type":"stolen_base_2b","label":"Stolen Base 2B","description":"José Caballero steals (32) 2nd base. Josh Lowe scores. Throwing error by catcher Adley Rutschman.","rbi":null,"runs":1,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":676609,"name":"José Caballero","start":"1B","end":"2B","out":false,"outBase":null,"reason":"r_stolen_base_2b","event":"stolen_base_2b","isBatter":false,"credits":[]},{"id":666139,"name":"Josh Lowe","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"error","isBatter":false,"credits":[{"id":668939,"name":"Adley Rutschman","pos":"C","credit":"f_throwing_error"}]}],"chains":[{"runner":"Josh Lowe","start":"3B","out":false,"outBase":null,"chain":""}],"pitch":null,"batted":null,"winprob":{"homeAfter":null,"homeBefore":null,"homeAdded":null,"li":1.78},"statcast":null,"flags":["dp_situation","error","force_available","play_at_plate","risp","stolen_base","trailing"],"curation":{"category":"Baserunning & advancement","slot":"Double steal"},"clips":[{"kind":"highlight","slug":"lowe-scores-on-error-after-caballero-steals-second","title":"Lowe scores on error after Caballero steals second","duration":"00:00:21","feed":"CMS","pageUrl":"https://www.mlb.com/video/lowe-scores-on-error-after-caballero-steals-second","embedUrl":"https://streamable.com/m/lowe-scores-on-error-after-caballero-steals-second","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/yo74rr4frpyjf7kwpkxf.jpg","match":{"guid":"7e6a4d10-282f-4f63-8204-ff33538508a0"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":null,"sources":[{"label":"MLB Stats API — official play-by-play, game 745056","url":"https://statsapi.mlb.com/api/v1.1/game/745056/feed/live"},{"label":"MLB Stats API — win probability, game 745056","url":"https://statsapi.mlb.com/api/v1/game/745056/winProbability"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-745056-41-e7",
+ "title": "Lowe scores on error after Caballero steals second",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 745056,
+  "atBatIndex": 41,
+  "eventIndex": 7,
+  "playId": "7e6a4d10-282f-4f63-8204-ff33538508a0",
+  "terminal": false,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/745056/feed/live"
+ },
+ "game": {
+  "gamePk": 745056,
+  "date": "2024-08-10",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Tropicana Field",
+  "away": {
+   "id": 110,
+   "name": "Baltimore Orioles",
+   "abbr": "BAL",
+   "club": "Orioles"
+  },
+  "home": {
+   "id": 139,
+   "name": "Tampa Bay Rays",
+   "abbr": "TB",
+   "club": "Rays"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 5,
+  "half": "bottom",
+  "outs": 1,
+  "bases": "1_3",
+  "runners": {
+   "1B": {
+    "id": 676609,
+    "name": "José Caballero"
+   },
+   "2B": null,
+   "3B": {
+    "id": 666139,
+    "name": "Josh Lowe"
+   }
+  },
+  "score": {
+   "away": 4,
+   "home": 0
+  },
+  "batting": "home",
+  "count": {
+   "balls": 2,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 1,
+  "bases": "_2_",
+  "score": {
+   "away": 4,
+   "home": 1
+  }
+ },
+ "batter": {
+  "id": 678554,
+  "name": "Curtis Mead",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 669203,
+  "name": "Corbin Burnes",
+  "hand": "R"
+ },
+ "event": {
+  "type": "stolen_base_2b",
+  "label": "Stolen Base 2B",
+  "description": "José Caballero steals (32) 2nd base. Josh Lowe scores. Throwing error by catcher Adley Rutschman.",
+  "rbi": null,
+  "runs": 1,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 676609,
+   "name": "José Caballero",
+   "start": "1B",
+   "end": "2B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_stolen_base_2b",
+   "event": "stolen_base_2b",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 666139,
+   "name": "Josh Lowe",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "error",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 668939,
+     "name": "Adley Rutschman",
+     "pos": "C",
+     "credit": "f_throwing_error"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Josh Lowe",
+   "start": "3B",
+   "out": false,
+   "outBase": null,
+   "chain": ""
+  }
+ ],
+ "pitch": null,
+ "batted": null,
+ "winprob": {
+  "homeAfter": null,
+  "homeBefore": null,
+  "homeAdded": null,
+  "li": 1.78
+ },
+ "statcast": null,
+ "flags": [
+  "dp_situation",
+  "error",
+  "force_available",
+  "play_at_plate",
+  "risp",
+  "stolen_base",
+  "trailing"
+ ],
+ "curation": {
+  "category": "Baserunning & advancement",
+  "slot": "Double steal"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "lowe-scores-on-error-after-caballero-steals-second",
+   "title": "Lowe scores on error after Caballero steals second",
+   "duration": "00:00:21",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/lowe-scores-on-error-after-caballero-steals-second",
+   "embedUrl": "https://streamable.com/m/lowe-scores-on-error-after-caballero-steals-second",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/yo74rr4frpyjf7kwpkxf.jpg",
+   "match": {
+    "guid": "7e6a4d10-282f-4f63-8204-ff33538508a0"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": null,
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 745056",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/745056/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 745056",
+   "url": "https://statsapi.mlb.com/api/v1/game/745056/winProbability"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

@@ -1,1 +1,300 @@
-{"schema":1,"id":"mlb-746554-66","title":"Charlie Blackmon's bases-clearing double","titleSource":"MLB.com clip title","source":{"gamePk":746554,"atBatIndex":66,"eventIndex":2,"playId":"5cca3337-b5ef-4de7-9f33-5788fa7f2d5f","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/746554/feed/live"},"game":{"gamePk":746554,"date":"2024-05-11","season":2024,"gameType":"R","level":"MLB","venue":"Coors Field","away":{"id":140,"name":"Texas Rangers","abbr":"TEX","club":"Rangers"},"home":{"id":115,"name":"Colorado Rockies","abbr":"COL","club":"Rockies"},"series":""},"before":{"inning":7,"half":"bottom","outs":2,"bases":"1_3","runners":{"1B":{"id":607732,"name":"Jacob Stallings"},"2B":null,"3B":{"id":686668,"name":"Brenton Doyle"}},"score":{"away":3,"home":6},"batting":"home","count":{"balls":0,"strikes":1}},"after":{"outs":2,"bases":"___","score":{"away":3,"home":8}},"batter":{"id":453568,"name":"Charlie Blackmon","side":"L"},"pitcher":{"id":668390,"name":"Cole Winn","hand":"R"},"event":{"type":"double","label":"Double","description":"Charlie Blackmon doubles (7) on a ground ball to right fielder Adolis García, deflected by first baseman Nathaniel Lowe. Brenton Doyle scores. Jacob Stallings scores. Charlie Blackmon to 3rd. Charlie Blackmon advances to 3rd, on a fielding error by right fielder Adolis García.","rbi":2,"runs":2,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":453568,"name":"Charlie Blackmon","start":null,"end":"3B","out":false,"outBase":null,"reason":"r_adv_play","event":"double","isBatter":true,"credits":[{"id":663993,"name":"Nathaniel Lowe","pos":"1B","credit":"f_deflection"},{"id":666969,"name":"Adolis García","pos":"RF","credit":"f_fielded_ball"},{"id":666969,"name":"Adolis García","pos":"RF","credit":"f_fielding_error"}]},{"id":607732,"name":"Jacob Stallings","start":"1B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"error","isBatter":false,"credits":[]},{"id":686668,"name":"Brenton Doyle","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"error","isBatter":false,"credits":[]}],"chains":[{"runner":"Charlie Blackmon","start":null,"out":false,"outBase":null,"chain":"3-9"}],"pitch":{"type":"Splitter","code":"FS","speed":87.7,"zone":14,"px":0.08819929242458033,"pz":1.3563321803684658,"spin":1842,"call":"E"},"batted":{"trajectory":"ground_ball","hardness":"medium","location":3,"ev":79.0,"la":6.0,"distance":84.0,"sprayAngle":47.1,"spray":"pull"},"winprob":{"homeAfter":98.5,"homeBefore":94.1,"homeAdded":4.400000000000006,"li":0.49},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":0.935,"deltaHomeWinExp":0.046,"batWinExpBefore":0.939,"bbType":"ground_ball","pitchName":"Split-Finger","fielders":{"2":641680,"3":663993,"4":543760,"5":669701,"6":608369,"7":608671,"8":665750,"9":666969}},"flags":["double","error","force_available","ground_ball","ground_ball_infield","leading","low_leverage","risp","score_from_first_xbh","two_out_rbi","two_outs"],"curation":{"category":"Infield defense & decisions","slot":"Infield fielding error"},"clips":[{"kind":"highlight","slug":"charlie-blackmon-doubles-7-on-a-ground-ball-to-right-fielder-adolis-garci","title":"Charlie Blackmon's bases-clearing double","duration":"00:00:29","feed":"CMS","pageUrl":"https://www.mlb.com/video/charlie-blackmon-doubles-7-on-a-ground-ball-to-right-fielder-adolis-garci","embedUrl":"https://streamable.com/m/charlie-blackmon-doubles-7-on-a-ground-ball-to-right-fielder-adolis-garci","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/fv0cco90i9elydj7m6ts.jpg","match":{"guid":"5cca3337-b5ef-4de7-9f33-5788fa7f2d5f"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=5cca3337-b5ef-4de7-9f33-5788fa7f2d5f"},"sources":[{"label":"MLB Stats API — official play-by-play, game 746554","url":"https://statsapi.mlb.com/api/v1.1/game/746554/feed/live"},{"label":"MLB Stats API — win probability, game 746554","url":"https://statsapi.mlb.com/api/v1/game/746554/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=746554"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=5cca3337-b5ef-4de7-9f33-5788fa7f2d5f"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-746554-66",
+ "title": "Charlie Blackmon's bases-clearing double",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 746554,
+  "atBatIndex": 66,
+  "eventIndex": 2,
+  "playId": "5cca3337-b5ef-4de7-9f33-5788fa7f2d5f",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/746554/feed/live"
+ },
+ "game": {
+  "gamePk": 746554,
+  "date": "2024-05-11",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Coors Field",
+  "away": {
+   "id": 140,
+   "name": "Texas Rangers",
+   "abbr": "TEX",
+   "club": "Rangers"
+  },
+  "home": {
+   "id": 115,
+   "name": "Colorado Rockies",
+   "abbr": "COL",
+   "club": "Rockies"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 7,
+  "half": "bottom",
+  "outs": 2,
+  "bases": "1_3",
+  "runners": {
+   "1B": {
+    "id": 607732,
+    "name": "Jacob Stallings"
+   },
+   "2B": null,
+   "3B": {
+    "id": 686668,
+    "name": "Brenton Doyle"
+   }
+  },
+  "score": {
+   "away": 3,
+   "home": 6
+  },
+  "batting": "home",
+  "count": {
+   "balls": 0,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "___",
+  "score": {
+   "away": 3,
+   "home": 8
+  }
+ },
+ "batter": {
+  "id": 453568,
+  "name": "Charlie Blackmon",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 668390,
+  "name": "Cole Winn",
+  "hand": "R"
+ },
+ "event": {
+  "type": "double",
+  "label": "Double",
+  "description": "Charlie Blackmon doubles (7) on a ground ball to right fielder Adolis García, deflected by first baseman Nathaniel Lowe. Brenton Doyle scores. Jacob Stallings scores. Charlie Blackmon to 3rd. Charlie Blackmon advances to 3rd, on a fielding error by right fielder Adolis García.",
+  "rbi": 2,
+  "runs": 2,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 453568,
+   "name": "Charlie Blackmon",
+   "start": null,
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "double",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 663993,
+     "name": "Nathaniel Lowe",
+     "pos": "1B",
+     "credit": "f_deflection"
+    },
+    {
+     "id": 666969,
+     "name": "Adolis García",
+     "pos": "RF",
+     "credit": "f_fielded_ball"
+    },
+    {
+     "id": 666969,
+     "name": "Adolis García",
+     "pos": "RF",
+     "credit": "f_fielding_error"
+    }
+   ]
+  },
+  {
+   "id": 607732,
+   "name": "Jacob Stallings",
+   "start": "1B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "error",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 686668,
+   "name": "Brenton Doyle",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "error",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Charlie Blackmon",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": "3-9"
+  }
+ ],
+ "pitch": {
+  "type": "Splitter",
+  "code": "FS",
+  "speed": 87.7,
+  "zone": 14,
+  "px": 0.08819929242458033,
+  "pz": 1.3563321803684658,
+  "spin": 1842,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "ground_ball",
+  "hardness": "medium",
+  "location": 3,
+  "ev": 79.0,
+  "la": 6.0,
+  "distance": 84.0,
+  "sprayAngle": 47.1,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 98.5,
+  "homeBefore": 94.1,
+  "homeAdded": 4.400000000000006,
+  "li": 0.49
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.935,
+  "deltaHomeWinExp": 0.046,
+  "batWinExpBefore": 0.939,
+  "bbType": "ground_ball",
+  "pitchName": "Split-Finger",
+  "fielders": {
+   "2": 641680,
+   "3": 663993,
+   "4": 543760,
+   "5": 669701,
+   "6": 608369,
+   "7": 608671,
+   "8": 665750,
+   "9": 666969
+  }
+ },
+ "flags": [
+  "double",
+  "error",
+  "force_available",
+  "ground_ball",
+  "ground_ball_infield",
+  "leading",
+  "low_leverage",
+  "risp",
+  "score_from_first_xbh",
+  "two_out_rbi",
+  "two_outs"
+ ],
+ "curation": {
+  "category": "Infield defense & decisions",
+  "slot": "Infield fielding error"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "charlie-blackmon-doubles-7-on-a-ground-ball-to-right-fielder-adolis-garci",
+   "title": "Charlie Blackmon's bases-clearing double",
+   "duration": "00:00:29",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/charlie-blackmon-doubles-7-on-a-ground-ball-to-right-fielder-adolis-garci",
+   "embedUrl": "https://streamable.com/m/charlie-blackmon-doubles-7-on-a-ground-ball-to-right-fielder-adolis-garci",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/fv0cco90i9elydj7m6ts.jpg",
+   "match": {
+    "guid": "5cca3337-b5ef-4de7-9f33-5788fa7f2d5f"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=5cca3337-b5ef-4de7-9f33-5788fa7f2d5f"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 746554",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/746554/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 746554",
+   "url": "https://statsapi.mlb.com/api/v1/game/746554/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=746554"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=5cca3337-b5ef-4de7-9f33-5788fa7f2d5f"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

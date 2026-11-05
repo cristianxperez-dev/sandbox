@@ -213,3 +213,15 @@
 | Intentional walk to set up a force | mlb-747041-76 | rejected — no unused verified playable clip |
 | Intentional walk to set up a force | mlb-775323-39 | imported (after 8 rejected) |
 | Obstruction or interference | mlb-777081-6 | imported |
+
+## Camera availability (cameras.py)
+
+| Camera | Plays with verified, playable video |
+|---|---|
+| Broadcast | 200 |
+| High Home | 2 |
+| Both | 2 |
+
+High Home plays: mlb-813037-58, mlb-813036-24.
+
+Every play was searched for High Home independently of broadcast: MLB Film Room feeds for its playId, MLB.com clips MLB titles "High Home" (weekly video sitemaps 2024–2026) and the game's MLB.com content list. Film Room's schema defines HIGHHOME, MIDHOME, CF and side-view feed types, but none of the plays here (nor any of 1,500 clips sampled across 2024–2026 regular season and postseason) exposes one publicly; MLB.com has published two High Home clips in that period. Broadcast clips are never labelled High Home, and MLB's "Field View" (a ground-level angle) is never counted as High Home.

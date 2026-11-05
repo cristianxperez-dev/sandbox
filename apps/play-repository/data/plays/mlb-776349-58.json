@@ -1,1 +1,251 @@
-{"schema":1,"id":"mlb-776349-58","title":"Josh Smith reaches on catcher interference by Francisco Alvarez","titleSource":"From MLB's official play description","source":{"gamePk":776349,"atBatIndex":58,"eventIndex":6,"playId":"eb118878-687f-3f3b-b670-b1755883e79d","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/776349/feed/live"},"game":{"gamePk":776349,"date":"2025-09-13","season":2025,"gameType":"R","level":"MLB","venue":"Citi Field","away":{"id":140,"name":"Texas Rangers","abbr":"TEX","club":"Rangers"},"home":{"id":121,"name":"New York Mets","abbr":"NYM","club":"Mets"},"series":""},"before":{"inning":8,"half":"top","outs":0,"bases":"___","runners":{"1B":null,"2B":null,"3B":null},"score":{"away":0,"home":2},"batting":"away","count":{"balls":1,"strikes":2}},"after":{"outs":0,"bases":"1__","score":{"away":0,"home":2}},"batter":{"id":669701,"name":"Josh Smith","side":"L"},"pitcher":{"id":643511,"name":"Tyler Rogers","hand":"R"},"event":{"type":"catcher_interf","label":"Catcher Interference","description":"Josh Smith reaches on catcher interference by Francisco Alvarez. Josh Smith to 1st.","rbi":0,"runs":0,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":669701,"name":"Josh Smith","start":null,"end":"1B","out":false,"outBase":null,"reason":null,"event":"catcher_interf","isBatter":true,"credits":[{"id":682626,"name":"Francisco Alvarez","pos":"C","credit":"c_catcher_interf"}]}],"chains":[{"runner":"Josh Smith","start":null,"out":false,"outBase":null,"chain":""}],"pitch":{"type":"Sinker","code":"SI","speed":83.5,"zone":7,"px":-0.3937054393996171,"pz":1.9310039697708687,"spin":2005,"call":"F"},"batted":null,"winprob":{"homeAfter":79.3,"homeBefore":86.2,"homeAdded":-6.900000000000006,"li":1.47},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":0.0,"deltaHomeWinExp":-0.08,"batWinExpBefore":0.127,"bbType":null,"pitchName":"Sinker","fielders":{"2":682626,"3":624413,"4":643446,"5":682668,"6":596019,"7":607043,"8":642350,"9":665742}},"flags":["bases_empty","close","trailing"],"curation":{"category":"Catcher defense & plays at the plate","slot":"Catcher's interference"},"clips":[{"kind":"filmroom","slug":"josh-smith-hit-by-pitch-15pggg","title":"Josh Smith reaches on catcher interference by Francisco Alvarez. Josh Smith to 1st.","duration":"00:00:10","feed":"HOME","pageUrl":"https://www.mlb.com/video/josh-smith-hit-by-pitch-15pggg","embedUrl":"https://streamable.com/m/josh-smith-hit-by-pitch-15pggg","angle":{"category":"broadcast","label":"Home TV broadcast"},"howVerified":"MLB Film Room clip for the playId; Film Room's play info matches game, inning, outs, runners, batter and pitcher","thumb":"https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/eb118878-687f-3f3b-b670-b1755883e79d_home.jpg","match":{"filmroom":{"gamePk":true,"inning":true,"outs":true,"runners":true,"batter":true,"pitcher":true},"feeds":["HOME","AWAY"]},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=eb118878-687f-3f3b-b670-b1755883e79d"},"sources":[{"label":"MLB Stats API — official play-by-play, game 776349","url":"https://statsapi.mlb.com/api/v1.1/game/776349/feed/live"},{"label":"MLB Stats API — win probability, game 776349","url":"https://statsapi.mlb.com/api/v1/game/776349/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=776349"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=eb118878-687f-3f3b-b670-b1755883e79d"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-776349-58",
+ "title": "Josh Smith reaches on catcher interference by Francisco Alvarez",
+ "titleSource": "From MLB's official play description",
+ "source": {
+  "gamePk": 776349,
+  "atBatIndex": 58,
+  "eventIndex": 6,
+  "playId": "eb118878-687f-3f3b-b670-b1755883e79d",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/776349/feed/live"
+ },
+ "game": {
+  "gamePk": 776349,
+  "date": "2025-09-13",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Citi Field",
+  "away": {
+   "id": 140,
+   "name": "Texas Rangers",
+   "abbr": "TEX",
+   "club": "Rangers"
+  },
+  "home": {
+   "id": 121,
+   "name": "New York Mets",
+   "abbr": "NYM",
+   "club": "Mets"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 8,
+  "half": "top",
+  "outs": 0,
+  "bases": "___",
+  "runners": {
+   "1B": null,
+   "2B": null,
+   "3B": null
+  },
+  "score": {
+   "away": 0,
+   "home": 2
+  },
+  "batting": "away",
+  "count": {
+   "balls": 1,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 0,
+  "bases": "1__",
+  "score": {
+   "away": 0,
+   "home": 2
+  }
+ },
+ "batter": {
+  "id": 669701,
+  "name": "Josh Smith",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 643511,
+  "name": "Tyler Rogers",
+  "hand": "R"
+ },
+ "event": {
+  "type": "catcher_interf",
+  "label": "Catcher Interference",
+  "description": "Josh Smith reaches on catcher interference by Francisco Alvarez. Josh Smith to 1st.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 669701,
+   "name": "Josh Smith",
+   "start": null,
+   "end": "1B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "catcher_interf",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 682626,
+     "name": "Francisco Alvarez",
+     "pos": "C",
+     "credit": "c_catcher_interf"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Josh Smith",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": ""
+  }
+ ],
+ "pitch": {
+  "type": "Sinker",
+  "code": "SI",
+  "speed": 83.5,
+  "zone": 7,
+  "px": -0.3937054393996171,
+  "pz": 1.9310039697708687,
+  "spin": 2005,
+  "call": "F"
+ },
+ "batted": null,
+ "winprob": {
+  "homeAfter": 79.3,
+  "homeBefore": 86.2,
+  "homeAdded": -6.900000000000006,
+  "li": 1.47
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.0,
+  "deltaHomeWinExp": -0.08,
+  "batWinExpBefore": 0.127,
+  "bbType": null,
+  "pitchName": "Sinker",
+  "fielders": {
+   "2": 682626,
+   "3": 624413,
+   "4": 643446,
+   "5": 682668,
+   "6": 596019,
+   "7": 607043,
+   "8": 642350,
+   "9": 665742
+  }
+ },
+ "flags": [
+  "bases_empty",
+  "close",
+  "trailing"
+ ],
+ "curation": {
+  "category": "Catcher defense & plays at the plate",
+  "slot": "Catcher's interference"
+ },
+ "clips": [
+  {
+   "kind": "filmroom",
+   "slug": "josh-smith-hit-by-pitch-15pggg",
+   "title": "Josh Smith reaches on catcher interference by Francisco Alvarez. Josh Smith to 1st.",
+   "duration": "00:00:10",
+   "feed": "HOME",
+   "pageUrl": "https://www.mlb.com/video/josh-smith-hit-by-pitch-15pggg",
+   "embedUrl": "https://streamable.com/m/josh-smith-hit-by-pitch-15pggg",
+   "angle": {
+    "category": "broadcast",
+    "label": "Home TV broadcast"
+   },
+   "howVerified": "MLB Film Room clip for the playId; Film Room's play info matches game, inning, outs, runners, batter and pitcher",
+   "thumb": "https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/eb118878-687f-3f3b-b670-b1755883e79d_home.jpg",
+   "match": {
+    "filmroom": {
+     "gamePk": true,
+     "inning": true,
+     "outs": true,
+     "runners": true,
+     "batter": true,
+     "pitcher": true
+    },
+    "feeds": [
+     "HOME",
+     "AWAY"
+    ]
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=eb118878-687f-3f3b-b670-b1755883e79d"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 776349",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/776349/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 776349",
+   "url": "https://statsapi.mlb.com/api/v1/game/776349/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=776349"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=eb118878-687f-3f3b-b670-b1755883e79d"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

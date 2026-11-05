@@ -1,1 +1,282 @@
-{"schema":1,"id":"mlb-747070-2","title":"The Braves relay to nab Teoscar Hernandez at 3rd base","titleSource":"MLB.com clip title","source":{"gamePk":747070,"atBatIndex":2,"eventIndex":3,"playId":"56acb97d-6f3a-4a5b-a248-4fa172fd783f","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/747070/feed/live"},"game":{"gamePk":747070,"date":"2024-09-14","season":2024,"gameType":"R","level":"MLB","venue":"Truist Park","away":{"id":119,"name":"Los Angeles Dodgers","abbr":"LAD","club":"Dodgers"},"home":{"id":144,"name":"Atlanta Braves","abbr":"ATL","club":"Braves"},"series":""},"before":{"inning":1,"half":"top","outs":2,"bases":"___","runners":{"1B":null,"2B":null,"3B":null},"score":{"away":0,"home":0},"batting":"away","count":{"balls":2,"strikes":1}},"after":{"outs":3,"bases":"___","score":{"away":0,"home":0}},"batter":{"id":606192,"name":"Teoscar Hernández","side":"R"},"pitcher":{"id":519242,"name":"Chris Sale","hand":"L"},"event":{"type":"double","label":"Double","description":"Teoscar Hernández doubles (31) on a sharp line drive to right fielder Jorge Soler. Teoscar Hernández out at 3rd on the throw, right fielder Jorge Soler to second baseman Whit Merrifield to third baseman Gio Urshela.","rbi":0,"runs":0,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":606192,"name":"Teoscar Hernández","start":null,"end":null,"out":true,"outBase":"3B","reason":"r_out_stretching","event":"double","isBatter":true,"credits":[{"id":624585,"name":"Jorge Soler","pos":"RF","credit":"f_fielded_ball"},{"id":624585,"name":"Jorge Soler","pos":"RF","credit":"f_assist"},{"id":624585,"name":"Jorge Soler","pos":"RF","credit":"f_assist_of"},{"id":593160,"name":"Whit Merrifield","pos":"2B","credit":"f_assist"},{"id":570482,"name":"Gio Urshela","pos":"3B","credit":"f_putout"}]}],"chains":[{"runner":"Teoscar Hernández","start":null,"out":true,"outBase":"3B","chain":"9-4-5"}],"pitch":{"type":"Four-Seam Fastball","code":"FF","speed":96.5,"zone":2,"px":-0.000920363917871824,"pz":3.3940555622066526,"spin":2371,"call":"X"},"batted":{"trajectory":"line_drive","hardness":"hard","location":9,"ev":104.1,"la":21.0,"distance":357.0,"sprayAngle":21.1,"spray":"opposite"},"winprob":{"homeAfter":54.800000000000004,"homeBefore":53.8,"homeAdded":1.0,"li":0.4},"statcast":{"ifAlignment":"Infield shade","ofAlignment":"Standard","deltaRunExp":0.492,"deltaHomeWinExp":0.011,"batWinExpBefore":0.463,"bbType":"line_drive","pitchName":"4-Seam Fastball","fielders":{"2":669221,"3":621566,"4":593160,"5":570482,"6":606115,"7":672284,"8":671739,"9":624585}},"flags":["bases_empty","close","double","line_drive","low_leverage","outfield_assist","outfield_play","relay","shift_alignment","tied","two_outs"],"curation":{"category":"Outfield defense, cutoffs & relays","slot":"Outfield assist at third"},"clips":[{"kind":"highlight","slug":"chris-sale-in-play-out-s-to-teoscar-hernandez","title":"The Braves relay to nab Teoscar Hernandez at 3rd base","duration":"00:00:27","feed":"CMS","pageUrl":"https://www.mlb.com/video/chris-sale-in-play-out-s-to-teoscar-hernandez","embedUrl":"https://streamable.com/m/chris-sale-in-play-out-s-to-teoscar-hernandez","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/aro17bvrwgtwifryueem.jpg","match":{"guid":"56acb97d-6f3a-4a5b-a248-4fa172fd783f"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=56acb97d-6f3a-4a5b-a248-4fa172fd783f"},"sources":[{"label":"MLB Stats API — official play-by-play, game 747070","url":"https://statsapi.mlb.com/api/v1.1/game/747070/feed/live"},{"label":"MLB Stats API — win probability, game 747070","url":"https://statsapi.mlb.com/api/v1/game/747070/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=747070"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=56acb97d-6f3a-4a5b-a248-4fa172fd783f"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-747070-2",
+ "title": "The Braves relay to nab Teoscar Hernandez at 3rd base",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 747070,
+  "atBatIndex": 2,
+  "eventIndex": 3,
+  "playId": "56acb97d-6f3a-4a5b-a248-4fa172fd783f",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/747070/feed/live"
+ },
+ "game": {
+  "gamePk": 747070,
+  "date": "2024-09-14",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Truist Park",
+  "away": {
+   "id": 119,
+   "name": "Los Angeles Dodgers",
+   "abbr": "LAD",
+   "club": "Dodgers"
+  },
+  "home": {
+   "id": 144,
+   "name": "Atlanta Braves",
+   "abbr": "ATL",
+   "club": "Braves"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 1,
+  "half": "top",
+  "outs": 2,
+  "bases": "___",
+  "runners": {
+   "1B": null,
+   "2B": null,
+   "3B": null
+  },
+  "score": {
+   "away": 0,
+   "home": 0
+  },
+  "batting": "away",
+  "count": {
+   "balls": 2,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 3,
+  "bases": "___",
+  "score": {
+   "away": 0,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 606192,
+  "name": "Teoscar Hernández",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 519242,
+  "name": "Chris Sale",
+  "hand": "L"
+ },
+ "event": {
+  "type": "double",
+  "label": "Double",
+  "description": "Teoscar Hernández doubles (31) on a sharp line drive to right fielder Jorge Soler. Teoscar Hernández out at 3rd on the throw, right fielder Jorge Soler to second baseman Whit Merrifield to third baseman Gio Urshela.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 606192,
+   "name": "Teoscar Hernández",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "3B",
+   "reason": "r_out_stretching",
+   "event": "double",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 624585,
+     "name": "Jorge Soler",
+     "pos": "RF",
+     "credit": "f_fielded_ball"
+    },
+    {
+     "id": 624585,
+     "name": "Jorge Soler",
+     "pos": "RF",
+     "credit": "f_assist"
+    },
+    {
+     "id": 624585,
+     "name": "Jorge Soler",
+     "pos": "RF",
+     "credit": "f_assist_of"
+    },
+    {
+     "id": 593160,
+     "name": "Whit Merrifield",
+     "pos": "2B",
+     "credit": "f_assist"
+    },
+    {
+     "id": 570482,
+     "name": "Gio Urshela",
+     "pos": "3B",
+     "credit": "f_putout"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Teoscar Hernández",
+   "start": null,
+   "out": true,
+   "outBase": "3B",
+   "chain": "9-4-5"
+  }
+ ],
+ "pitch": {
+  "type": "Four-Seam Fastball",
+  "code": "FF",
+  "speed": 96.5,
+  "zone": 2,
+  "px": -0.000920363917871824,
+  "pz": 3.3940555622066526,
+  "spin": 2371,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "line_drive",
+  "hardness": "hard",
+  "location": 9,
+  "ev": 104.1,
+  "la": 21.0,
+  "distance": 357.0,
+  "sprayAngle": 21.1,
+  "spray": "opposite"
+ },
+ "winprob": {
+  "homeAfter": 54.800000000000004,
+  "homeBefore": 53.8,
+  "homeAdded": 1.0,
+  "li": 0.4
+ },
+ "statcast": {
+  "ifAlignment": "Infield shade",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.492,
+  "deltaHomeWinExp": 0.011,
+  "batWinExpBefore": 0.463,
+  "bbType": "line_drive",
+  "pitchName": "4-Seam Fastball",
+  "fielders": {
+   "2": 669221,
+   "3": 621566,
+   "4": 593160,
+   "5": 570482,
+   "6": 606115,
+   "7": 672284,
+   "8": 671739,
+   "9": 624585
+  }
+ },
+ "flags": [
+  "bases_empty",
+  "close",
+  "double",
+  "line_drive",
+  "low_leverage",
+  "outfield_assist",
+  "outfield_play",
+  "relay",
+  "shift_alignment",
+  "tied",
+  "two_outs"
+ ],
+ "curation": {
+  "category": "Outfield defense, cutoffs & relays",
+  "slot": "Outfield assist at third"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "chris-sale-in-play-out-s-to-teoscar-hernandez",
+   "title": "The Braves relay to nab Teoscar Hernandez at 3rd base",
+   "duration": "00:00:27",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/chris-sale-in-play-out-s-to-teoscar-hernandez",
+   "embedUrl": "https://streamable.com/m/chris-sale-in-play-out-s-to-teoscar-hernandez",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/aro17bvrwgtwifryueem.jpg",
+   "match": {
+    "guid": "56acb97d-6f3a-4a5b-a248-4fa172fd783f"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=56acb97d-6f3a-4a5b-a248-4fa172fd783f"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 747070",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/747070/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 747070",
+   "url": "https://statsapi.mlb.com/api/v1/game/747070/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=747070"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=56acb97d-6f3a-4a5b-a248-4fa172fd783f"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

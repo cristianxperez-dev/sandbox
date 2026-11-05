@@ -1,1 +1,326 @@
-{"schema":1,"id":"mlb-813043-41","title":"Ernie Clement's RBI single","titleSource":"MLB.com clip title","source":{"gamePk":813043,"atBatIndex":41,"eventIndex":0,"playId":"d8b8d189-270e-33ec-a05a-2d96d857cd0e","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/813043/feed/live"},"game":{"gamePk":813043,"date":"2025-10-15","season":2025,"gameType":"L","level":"MLB","venue":"T-Mobile Park","away":{"id":141,"name":"Toronto Blue Jays","abbr":"TOR","club":"Blue Jays"},"home":{"id":136,"name":"Seattle Mariners","abbr":"SEA","club":"Mariners"},"series":""},"before":{"inning":5,"half":"top","outs":2,"bases":"12_","runners":{"1B":{"id":672386,"name":"Alejandro Kirk"},"2B":{"id":623993,"name":"Anthony Santander"},"3B":null},"score":{"away":7,"home":2},"batting":"away","count":{"balls":0,"strikes":0}},"after":{"outs":3,"bases":"1__","score":{"away":8,"home":2}},"batter":{"id":676391,"name":"Ernie Clement","side":"R"},"pitcher":{"id":672841,"name":"Carlos Vargas","hand":"R"},"event":{"type":"single","label":"Single","description":"Ernie Clement singles on a line drive to right fielder Victor Robles. Anthony Santander scores. Alejandro Kirk out at 3rd on the throw, right fielder Victor Robles to first baseman Josh Naylor to third baseman Eugenio Suárez.","rbi":1,"runs":1,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":676391,"name":"Ernie Clement","start":null,"end":"1B","out":false,"outBase":null,"reason":null,"event":"single","isBatter":true,"credits":[{"id":645302,"name":"Victor Robles","pos":"RF","credit":"f_fielded_ball"}]},{"id":672386,"name":"Alejandro Kirk","start":"1B","end":null,"out":true,"outBase":"3B","reason":"r_thrown_out","event":"single","isBatter":false,"credits":[{"id":645302,"name":"Victor Robles","pos":"RF","credit":"f_assist"},{"id":645302,"name":"Victor Robles","pos":"RF","credit":"f_assist_of"},{"id":647304,"name":"Josh Naylor","pos":"1B","credit":"f_assist"},{"id":553993,"name":"Eugenio Suárez","pos":"3B","credit":"f_putout"}]},{"id":623993,"name":"Anthony Santander","start":"2B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"other_out","isBatter":false,"credits":[]}],"chains":[{"runner":"Ernie Clement","start":null,"out":false,"outBase":null,"chain":"9"},{"runner":"Alejandro Kirk","start":"1B","out":true,"outBase":"3B","chain":"9-3-5"}],"pitch":{"type":"Cutter","code":"FC","speed":97.0,"zone":8,"px":0.17624418046284812,"pz":1.923506630761823,"spin":2374,"call":"E"},"batted":{"trajectory":"line_drive","hardness":"medium","location":9,"ev":97.9,"la":11.0,"distance":211.0,"sprayAngle":32.8,"spray":"opposite"},"winprob":{"homeAfter":4.5,"homeBefore":6.5,"homeAdded":-2.0,"li":0.4},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":0.543,"deltaHomeWinExp":-0.02,"batWinExpBefore":0.935,"bbType":"line_drive","pitchName":"Cutter","fielders":{"2":663728,"3":647304,"4":593871,"5":553993,"6":641487,"7":668227,"8":677594,"9":645302}},"flags":["blowout","force_available","leading","line_drive","low_leverage","outfield_assist","outfield_play","postseason","productive_out","relay","risp","runner_out_on_bases","runner_scored_on_out","score_from_second_single","single","tag_play","two_out_rbi","two_outs"],"curation":{"category":"Outfield defense, cutoffs & relays","slot":"Outfield assist at third"},"clips":[{"kind":"highlight","slug":"carlos-vargas-in-play-run-s-to-ernie-clement-101525","title":"Ernie Clement's RBI single","duration":"00:00:19","feed":"CMS","pageUrl":"https://www.mlb.com/video/carlos-vargas-in-play-run-s-to-ernie-clement-101525","embedUrl":"https://streamable.com/m/carlos-vargas-in-play-run-s-to-ernie-clement-101525","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/itmusbmqlx5uliyzaoqh.jpg","match":{"guid":"d8b8d189-270e-33ec-a05a-2d96d857cd0e"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=d8b8d189-270e-33ec-a05a-2d96d857cd0e"},"sources":[{"label":"MLB Stats API — official play-by-play, game 813043","url":"https://statsapi.mlb.com/api/v1.1/game/813043/feed/live"},{"label":"MLB Stats API — win probability, game 813043","url":"https://statsapi.mlb.com/api/v1/game/813043/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=813043"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=d8b8d189-270e-33ec-a05a-2d96d857cd0e"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-813043-41",
+ "title": "Ernie Clement's RBI single",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 813043,
+  "atBatIndex": 41,
+  "eventIndex": 0,
+  "playId": "d8b8d189-270e-33ec-a05a-2d96d857cd0e",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/813043/feed/live"
+ },
+ "game": {
+  "gamePk": 813043,
+  "date": "2025-10-15",
+  "season": 2025,
+  "gameType": "L",
+  "level": "MLB",
+  "venue": "T-Mobile Park",
+  "away": {
+   "id": 141,
+   "name": "Toronto Blue Jays",
+   "abbr": "TOR",
+   "club": "Blue Jays"
+  },
+  "home": {
+   "id": 136,
+   "name": "Seattle Mariners",
+   "abbr": "SEA",
+   "club": "Mariners"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 5,
+  "half": "top",
+  "outs": 2,
+  "bases": "12_",
+  "runners": {
+   "1B": {
+    "id": 672386,
+    "name": "Alejandro Kirk"
+   },
+   "2B": {
+    "id": 623993,
+    "name": "Anthony Santander"
+   },
+   "3B": null
+  },
+  "score": {
+   "away": 7,
+   "home": 2
+  },
+  "batting": "away",
+  "count": {
+   "balls": 0,
+   "strikes": 0
+  }
+ },
+ "after": {
+  "outs": 3,
+  "bases": "1__",
+  "score": {
+   "away": 8,
+   "home": 2
+  }
+ },
+ "batter": {
+  "id": 676391,
+  "name": "Ernie Clement",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 672841,
+  "name": "Carlos Vargas",
+  "hand": "R"
+ },
+ "event": {
+  "type": "single",
+  "label": "Single",
+  "description": "Ernie Clement singles on a line drive to right fielder Victor Robles. Anthony Santander scores. Alejandro Kirk out at 3rd on the throw, right fielder Victor Robles to first baseman Josh Naylor to third baseman Eugenio Suárez.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 676391,
+   "name": "Ernie Clement",
+   "start": null,
+   "end": "1B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "single",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 645302,
+     "name": "Victor Robles",
+     "pos": "RF",
+     "credit": "f_fielded_ball"
+    }
+   ]
+  },
+  {
+   "id": 672386,
+   "name": "Alejandro Kirk",
+   "start": "1B",
+   "end": null,
+   "out": true,
+   "outBase": "3B",
+   "reason": "r_thrown_out",
+   "event": "single",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 645302,
+     "name": "Victor Robles",
+     "pos": "RF",
+     "credit": "f_assist"
+    },
+    {
+     "id": 645302,
+     "name": "Victor Robles",
+     "pos": "RF",
+     "credit": "f_assist_of"
+    },
+    {
+     "id": 647304,
+     "name": "Josh Naylor",
+     "pos": "1B",
+     "credit": "f_assist"
+    },
+    {
+     "id": 553993,
+     "name": "Eugenio Suárez",
+     "pos": "3B",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 623993,
+   "name": "Anthony Santander",
+   "start": "2B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "other_out",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Ernie Clement",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": "9"
+  },
+  {
+   "runner": "Alejandro Kirk",
+   "start": "1B",
+   "out": true,
+   "outBase": "3B",
+   "chain": "9-3-5"
+  }
+ ],
+ "pitch": {
+  "type": "Cutter",
+  "code": "FC",
+  "speed": 97.0,
+  "zone": 8,
+  "px": 0.17624418046284812,
+  "pz": 1.923506630761823,
+  "spin": 2374,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "line_drive",
+  "hardness": "medium",
+  "location": 9,
+  "ev": 97.9,
+  "la": 11.0,
+  "distance": 211.0,
+  "sprayAngle": 32.8,
+  "spray": "opposite"
+ },
+ "winprob": {
+  "homeAfter": 4.5,
+  "homeBefore": 6.5,
+  "homeAdded": -2.0,
+  "li": 0.4
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.543,
+  "deltaHomeWinExp": -0.02,
+  "batWinExpBefore": 0.935,
+  "bbType": "line_drive",
+  "pitchName": "Cutter",
+  "fielders": {
+   "2": 663728,
+   "3": 647304,
+   "4": 593871,
+   "5": 553993,
+   "6": 641487,
+   "7": 668227,
+   "8": 677594,
+   "9": 645302
+  }
+ },
+ "flags": [
+  "blowout",
+  "force_available",
+  "leading",
+  "line_drive",
+  "low_leverage",
+  "outfield_assist",
+  "outfield_play",
+  "postseason",
+  "productive_out",
+  "relay",
+  "risp",
+  "runner_out_on_bases",
+  "runner_scored_on_out",
+  "score_from_second_single",
+  "single",
+  "tag_play",
+  "two_out_rbi",
+  "two_outs"
+ ],
+ "curation": {
+  "category": "Outfield defense, cutoffs & relays",
+  "slot": "Outfield assist at third"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "carlos-vargas-in-play-run-s-to-ernie-clement-101525",
+   "title": "Ernie Clement's RBI single",
+   "duration": "00:00:19",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/carlos-vargas-in-play-run-s-to-ernie-clement-101525",
+   "embedUrl": "https://streamable.com/m/carlos-vargas-in-play-run-s-to-ernie-clement-101525",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/itmusbmqlx5uliyzaoqh.jpg",
+   "match": {
+    "guid": "d8b8d189-270e-33ec-a05a-2d96d857cd0e"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=d8b8d189-270e-33ec-a05a-2d96d857cd0e"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 813043",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/813043/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 813043",
+   "url": "https://statsapi.mlb.com/api/v1/game/813043/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=813043"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=d8b8d189-270e-33ec-a05a-2d96d857cd0e"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

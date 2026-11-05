@@ -1,1 +1,307 @@
-{"schema":1,"id":"mlb-777879-72","title":"Patrick Bailey out on a sacrifice bunt","titleSource":"From MLB's official play description","source":{"gamePk":777879,"atBatIndex":72,"eventIndex":0,"playId":"3d59f0aa-8a30-33c3-b0d7-c3829b1358af","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/777879/feed/live"},"game":{"gamePk":777879,"date":"2025-05-17","season":2025,"gameType":"R","level":"MLB","venue":"Oracle Park","away":{"id":133,"name":"Athletics","abbr":"ATH","club":"Athletics"},"home":{"id":137,"name":"San Francisco Giants","abbr":"SF","club":"Giants"},"series":""},"before":{"inning":10,"half":"bottom","outs":0,"bases":"12_","runners":{"1B":{"id":664774,"name":"LaMonte Wade Jr."},"2B":{"id":642715,"name":"Willy Adames"},"3B":null},"score":{"away":0,"home":0},"batting":"home","count":{"balls":0,"strikes":0}},"after":{"outs":1,"bases":"_23","score":{"away":0,"home":0}},"batter":{"id":672275,"name":"Patrick Bailey","side":"L"},"pitcher":{"id":695243,"name":"Mason Miller","hand":"R"},"event":{"type":"sac_bunt","label":"Sac Bunt","description":"Patrick Bailey out on a sacrifice bunt, pitcher Mason Miller to second baseman Max Schuemann. Willy Adames to 3rd. LaMonte Wade Jr. to 2nd.","rbi":0,"runs":0,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":672275,"name":"Patrick Bailey","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"sac_bunt","isBatter":true,"credits":[{"id":695243,"name":"Mason Miller","pos":"P","credit":"f_assist"},{"id":680474,"name":"Max Schuemann","pos":"2B","credit":"f_putout"}]},{"id":642715,"name":"Willy Adames","start":"2B","end":"3B","out":false,"outBase":null,"reason":"r_adv_force","event":"sac_bunt","isBatter":false,"credits":[]},{"id":664774,"name":"LaMonte Wade Jr.","start":"1B","end":"2B","out":false,"outBase":null,"reason":"r_adv_force","event":"sac_bunt","isBatter":false,"credits":[]}],"chains":[{"runner":"Patrick Bailey","start":null,"out":true,"outBase":"1B","chain":"1-4"}],"pitch":{"type":"Four-Seam Fastball","code":"FF","speed":101.8,"zone":6,"px":0.727690296204568,"pz":2.4189281909392077,"spin":2474,"call":"X"},"batted":{"trajectory":"bunt_grounder","hardness":"soft","location":1,"ev":43.7,"la":-75.0,"distance":3.0,"sprayAngle":-2.0,"spray":"center"},"winprob":{"homeAfter":84.3,"homeBefore":81.1,"homeAdded":3.1999999999999886,"li":3.23},"statcast":{"ifAlignment":"Strategic","ofAlignment":"Standard","deltaRunExp":-0.001,"deltaHomeWinExp":0.032,"batWinExpBefore":0.811,"bbType":"ground_ball","pitchName":"4-Seam Fastball","fielders":{"2":669127,"3":701762,"4":680474,"5":609280,"6":805779,"7":691016,"8":668709,"9":671732}},"flags":["bunt","bunt_defense_pc","close","dp_situation","extra_innings","force_available","go_ahead_on","high_leverage","productive_out","risp","shift_alignment","tied","walkoff_situation","winning_run_on"],"curation":{"category":"Situational hitting","slot":"Sacrifice bunt"},"clips":[{"kind":"filmroom","slug":"patrick-bailey-out-on-a-sacrifice-bunt-pitcher-mason-miller-to-second-bas","title":"Patrick Bailey out on a sacrifice bunt, pitcher Mason Miller to second baseman Max Schuemann. Willy Adames to 3rd. LaMonte Wade Jr. to 2nd.","duration":"00:00:15","feed":"HOME","pageUrl":"https://www.mlb.com/video/patrick-bailey-out-on-a-sacrifice-bunt-pitcher-mason-miller-to-second-bas","embedUrl":"https://streamable.com/m/patrick-bailey-out-on-a-sacrifice-bunt-pitcher-mason-miller-to-second-bas","angle":{"category":"broadcast","label":"Home TV broadcast"},"howVerified":"MLB Film Room clip for the playId; Film Room's play info matches game, inning, outs, runners, batter and pitcher","thumb":"https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/3d59f0aa-8a30-33c3-b0d7-c3829b1358af_home.jpg","match":{"filmroom":{"gamePk":true,"inning":true,"outs":true,"runners":true,"batter":true,"pitcher":true},"feeds":["HOME","AWAY"]},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=3d59f0aa-8a30-33c3-b0d7-c3829b1358af"},"sources":[{"label":"MLB Stats API — official play-by-play, game 777879","url":"https://statsapi.mlb.com/api/v1.1/game/777879/feed/live"},{"label":"MLB Stats API — win probability, game 777879","url":"https://statsapi.mlb.com/api/v1/game/777879/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=777879"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=3d59f0aa-8a30-33c3-b0d7-c3829b1358af"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-777879-72",
+ "title": "Patrick Bailey out on a sacrifice bunt",
+ "titleSource": "From MLB's official play description",
+ "source": {
+  "gamePk": 777879,
+  "atBatIndex": 72,
+  "eventIndex": 0,
+  "playId": "3d59f0aa-8a30-33c3-b0d7-c3829b1358af",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/777879/feed/live"
+ },
+ "game": {
+  "gamePk": 777879,
+  "date": "2025-05-17",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Oracle Park",
+  "away": {
+   "id": 133,
+   "name": "Athletics",
+   "abbr": "ATH",
+   "club": "Athletics"
+  },
+  "home": {
+   "id": 137,
+   "name": "San Francisco Giants",
+   "abbr": "SF",
+   "club": "Giants"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 10,
+  "half": "bottom",
+  "outs": 0,
+  "bases": "12_",
+  "runners": {
+   "1B": {
+    "id": 664774,
+    "name": "LaMonte Wade Jr."
+   },
+   "2B": {
+    "id": 642715,
+    "name": "Willy Adames"
+   },
+   "3B": null
+  },
+  "score": {
+   "away": 0,
+   "home": 0
+  },
+  "batting": "home",
+  "count": {
+   "balls": 0,
+   "strikes": 0
+  }
+ },
+ "after": {
+  "outs": 1,
+  "bases": "_23",
+  "score": {
+   "away": 0,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 672275,
+  "name": "Patrick Bailey",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 695243,
+  "name": "Mason Miller",
+  "hand": "R"
+ },
+ "event": {
+  "type": "sac_bunt",
+  "label": "Sac Bunt",
+  "description": "Patrick Bailey out on a sacrifice bunt, pitcher Mason Miller to second baseman Max Schuemann. Willy Adames to 3rd. LaMonte Wade Jr. to 2nd.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 672275,
+   "name": "Patrick Bailey",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "sac_bunt",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 695243,
+     "name": "Mason Miller",
+     "pos": "P",
+     "credit": "f_assist"
+    },
+    {
+     "id": 680474,
+     "name": "Max Schuemann",
+     "pos": "2B",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 642715,
+   "name": "Willy Adames",
+   "start": "2B",
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_force",
+   "event": "sac_bunt",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 664774,
+   "name": "LaMonte Wade Jr.",
+   "start": "1B",
+   "end": "2B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_force",
+   "event": "sac_bunt",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Patrick Bailey",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "1-4"
+  }
+ ],
+ "pitch": {
+  "type": "Four-Seam Fastball",
+  "code": "FF",
+  "speed": 101.8,
+  "zone": 6,
+  "px": 0.727690296204568,
+  "pz": 2.4189281909392077,
+  "spin": 2474,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "bunt_grounder",
+  "hardness": "soft",
+  "location": 1,
+  "ev": 43.7,
+  "la": -75.0,
+  "distance": 3.0,
+  "sprayAngle": -2.0,
+  "spray": "center"
+ },
+ "winprob": {
+  "homeAfter": 84.3,
+  "homeBefore": 81.1,
+  "homeAdded": 3.1999999999999886,
+  "li": 3.23
+ },
+ "statcast": {
+  "ifAlignment": "Strategic",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.001,
+  "deltaHomeWinExp": 0.032,
+  "batWinExpBefore": 0.811,
+  "bbType": "ground_ball",
+  "pitchName": "4-Seam Fastball",
+  "fielders": {
+   "2": 669127,
+   "3": 701762,
+   "4": 680474,
+   "5": 609280,
+   "6": 805779,
+   "7": 691016,
+   "8": 668709,
+   "9": 671732
+  }
+ },
+ "flags": [
+  "bunt",
+  "bunt_defense_pc",
+  "close",
+  "dp_situation",
+  "extra_innings",
+  "force_available",
+  "go_ahead_on",
+  "high_leverage",
+  "productive_out",
+  "risp",
+  "shift_alignment",
+  "tied",
+  "walkoff_situation",
+  "winning_run_on"
+ ],
+ "curation": {
+  "category": "Situational hitting",
+  "slot": "Sacrifice bunt"
+ },
+ "clips": [
+  {
+   "kind": "filmroom",
+   "slug": "patrick-bailey-out-on-a-sacrifice-bunt-pitcher-mason-miller-to-second-bas",
+   "title": "Patrick Bailey out on a sacrifice bunt, pitcher Mason Miller to second baseman Max Schuemann. Willy Adames to 3rd. LaMonte Wade Jr. to 2nd.",
+   "duration": "00:00:15",
+   "feed": "HOME",
+   "pageUrl": "https://www.mlb.com/video/patrick-bailey-out-on-a-sacrifice-bunt-pitcher-mason-miller-to-second-bas",
+   "embedUrl": "https://streamable.com/m/patrick-bailey-out-on-a-sacrifice-bunt-pitcher-mason-miller-to-second-bas",
+   "angle": {
+    "category": "broadcast",
+    "label": "Home TV broadcast"
+   },
+   "howVerified": "MLB Film Room clip for the playId; Film Room's play info matches game, inning, outs, runners, batter and pitcher",
+   "thumb": "https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/3d59f0aa-8a30-33c3-b0d7-c3829b1358af_home.jpg",
+   "match": {
+    "filmroom": {
+     "gamePk": true,
+     "inning": true,
+     "outs": true,
+     "runners": true,
+     "batter": true,
+     "pitcher": true
+    },
+    "feeds": [
+     "HOME",
+     "AWAY"
+    ]
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=3d59f0aa-8a30-33c3-b0d7-c3829b1358af"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 777879",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/777879/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 777879",
+   "url": "https://statsapi.mlb.com/api/v1/game/777879/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=777879"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=3d59f0aa-8a30-33c3-b0d7-c3829b1358af"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

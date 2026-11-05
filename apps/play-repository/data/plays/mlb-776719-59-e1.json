@@ -1,1 +1,200 @@
-{"schema":1,"id":"mlb-776719-59-e1","title":"Kyle Tucker steals second in the 8th inning","titleSource":"MLB.com clip title","source":{"gamePk":776719,"atBatIndex":59,"eventIndex":1,"playId":"77b18222-522f-37c0-a36d-0fe0960cfd04","terminal":false,"feed":"https://statsapi.mlb.com/api/v1.1/game/776719/feed/live"},"game":{"gamePk":776719,"date":"2025-08-16","season":2025,"gameType":"R","level":"MLB","venue":"Wrigley Field","away":{"id":134,"name":"Pittsburgh Pirates","abbr":"PIT","club":"Pirates"},"home":{"id":112,"name":"Chicago Cubs","abbr":"CHC","club":"Cubs"},"series":""},"before":{"inning":8,"half":"bottom","outs":0,"bases":"12_","runners":{"1B":{"id":663656,"name":"Kyle Tucker"},"2B":{"id":663656,"name":"Kyle Tucker"},"3B":null},"score":{"away":1,"home":1},"batting":"home","count":{"balls":1,"strikes":0}},"after":{"outs":0,"bases":"_2_","score":{"away":1,"home":1}},"batter":{"id":673548,"name":"Seiya Suzuki","side":"R"},"pitcher":{"id":681895,"name":"Evan Sisk","hand":"L"},"event":{"type":"stolen_base_2b","label":"Stolen Base 2B","description":"Kyle Tucker steals (25) 2nd base.","rbi":null,"runs":0,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":663656,"name":"Kyle Tucker","start":"1B","end":"2B","out":false,"outBase":null,"reason":"r_stolen_base_2b","event":"stolen_base_2b","isBatter":false,"credits":[]}],"chains":[],"pitch":null,"batted":null,"winprob":{"homeAfter":null,"homeBefore":null,"homeAdded":null,"li":2.67},"statcast":null,"flags":["close","dp_situation","force_available","go_ahead_on","high_leverage","risp","stolen_base","tied"],"curation":{"category":"Baserunning & advancement","slot":"Stolen base"},"clips":[{"kind":"highlight","slug":"evan-sisk-ball-to-seiya-suzuki-04e1cb","title":"Kyle Tucker steals second in the 8th inning ","duration":"00:00:22","feed":"CMS","pageUrl":"https://www.mlb.com/video/evan-sisk-ball-to-seiya-suzuki-04e1cb","embedUrl":"https://streamable.com/m/evan-sisk-ball-to-seiya-suzuki-04e1cb","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/rn8ha0ajtojnlcmgmsgz.jpg","match":{"guid":"77b18222-522f-37c0-a36d-0fe0960cfd04"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":null,"sources":[{"label":"MLB Stats API — official play-by-play, game 776719","url":"https://statsapi.mlb.com/api/v1.1/game/776719/feed/live"},{"label":"MLB Stats API — win probability, game 776719","url":"https://statsapi.mlb.com/api/v1/game/776719/winProbability"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":["Film Room evan-sisk-ball-to-seiya-suzuki-04e1cb mismatch: runners"]}}
+{
+ "schema": 1,
+ "id": "mlb-776719-59-e1",
+ "title": "Kyle Tucker steals second in the 8th inning",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 776719,
+  "atBatIndex": 59,
+  "eventIndex": 1,
+  "playId": "77b18222-522f-37c0-a36d-0fe0960cfd04",
+  "terminal": false,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/776719/feed/live"
+ },
+ "game": {
+  "gamePk": 776719,
+  "date": "2025-08-16",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Wrigley Field",
+  "away": {
+   "id": 134,
+   "name": "Pittsburgh Pirates",
+   "abbr": "PIT",
+   "club": "Pirates"
+  },
+  "home": {
+   "id": 112,
+   "name": "Chicago Cubs",
+   "abbr": "CHC",
+   "club": "Cubs"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 8,
+  "half": "bottom",
+  "outs": 0,
+  "bases": "12_",
+  "runners": {
+   "1B": {
+    "id": 663656,
+    "name": "Kyle Tucker"
+   },
+   "2B": {
+    "id": 663656,
+    "name": "Kyle Tucker"
+   },
+   "3B": null
+  },
+  "score": {
+   "away": 1,
+   "home": 1
+  },
+  "batting": "home",
+  "count": {
+   "balls": 1,
+   "strikes": 0
+  }
+ },
+ "after": {
+  "outs": 0,
+  "bases": "_2_",
+  "score": {
+   "away": 1,
+   "home": 1
+  }
+ },
+ "batter": {
+  "id": 673548,
+  "name": "Seiya Suzuki",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 681895,
+  "name": "Evan Sisk",
+  "hand": "L"
+ },
+ "event": {
+  "type": "stolen_base_2b",
+  "label": "Stolen Base 2B",
+  "description": "Kyle Tucker steals (25) 2nd base.",
+  "rbi": null,
+  "runs": 0,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 663656,
+   "name": "Kyle Tucker",
+   "start": "1B",
+   "end": "2B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_stolen_base_2b",
+   "event": "stolen_base_2b",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [],
+ "pitch": null,
+ "batted": null,
+ "winprob": {
+  "homeAfter": null,
+  "homeBefore": null,
+  "homeAdded": null,
+  "li": 2.67
+ },
+ "statcast": null,
+ "flags": [
+  "close",
+  "dp_situation",
+  "force_available",
+  "go_ahead_on",
+  "high_leverage",
+  "risp",
+  "stolen_base",
+  "tied"
+ ],
+ "curation": {
+  "category": "Baserunning & advancement",
+  "slot": "Stolen base"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "evan-sisk-ball-to-seiya-suzuki-04e1cb",
+   "title": "Kyle Tucker steals second in the 8th inning ",
+   "duration": "00:00:22",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/evan-sisk-ball-to-seiya-suzuki-04e1cb",
+   "embedUrl": "https://streamable.com/m/evan-sisk-ball-to-seiya-suzuki-04e1cb",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/rn8ha0ajtojnlcmgmsgz.jpg",
+   "match": {
+    "guid": "77b18222-522f-37c0-a36d-0fe0960cfd04"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": null,
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 776719",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/776719/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 776719",
+   "url": "https://statsapi.mlb.com/api/v1/game/776719/winProbability"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": [
+   "Film Room evan-sisk-ball-to-seiya-suzuki-04e1cb mismatch: runners"
+  ]
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

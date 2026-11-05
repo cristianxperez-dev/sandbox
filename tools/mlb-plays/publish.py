@@ -17,6 +17,7 @@ import sys
 import time
 
 import mlb
+from cameras import cameras_from
 from normalize import FLAGS
 
 WORK = os.path.join(mlb.HERE, "work")
@@ -70,6 +71,8 @@ def index_row(r, title, title_src):
         "description": r["event"]["description"],
         "thumb": next((c["thumb"] for c in clips if c.get("thumb")), None),
         "angles": [c["angle"]["category"] for c in clips], "clipKinds": [c["kind"] for c in clips],
+        "cameras": (lambda cm: {"broadcast": cm["broadcast"]["available"], "highHome": cm["highHome"]["available"],
+                                "other": [o["label"] for o in cm["other"]]})(cameras_from(clips)),
     }
 
 
@@ -86,7 +89,7 @@ def detail(r, title, title_src):
             "before": r["before"], "after": r["after"], "batter": r["batter"], "pitcher": r["pitcher"], "event": r["event"],
             "runners": r["runners"], "chains": r.get("chains", []), "pitch": r.get("pitch"), "batted": r.get("batted"),
             "winprob": r.get("winprob"), "statcast": r.get("statcast"), "flags": r["flags"], "curation": r["curation"],
-            "clips": clips, "savant": r["video"].get("savant"), "sources": sources,
+            "clips": clips, "cameras": cameras_from(clips), "savant": r["video"].get("savant"), "sources": sources,
             "verification": {"status": "verified", "checkedAt": time.strftime("%Y-%m-%d"), "notes": r["verification"]["report"]}}
 
 

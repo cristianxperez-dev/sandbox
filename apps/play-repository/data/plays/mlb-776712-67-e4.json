@@ -1,1 +1,215 @@
-{"schema":1,"id":"mlb-776712-67-e4","title":"Kyle Teel nabs Tyler Tolbert trying to steal second","titleSource":"MLB.com clip title","source":{"gamePk":776712,"atBatIndex":67,"eventIndex":4,"playId":"d33eade1-4b26-3c7b-8591-80c1304386d8","terminal":false,"feed":"https://statsapi.mlb.com/api/v1.1/game/776712/feed/live"},"game":{"gamePk":776712,"date":"2025-08-16","season":2025,"gameType":"R","level":"MLB","venue":"Kauffman Stadium","away":{"id":145,"name":"Chicago White Sox","abbr":"CWS","club":"White Sox"},"home":{"id":118,"name":"Kansas City Royals","abbr":"KC","club":"Royals"},"series":""},"before":{"inning":8,"half":"bottom","outs":1,"bases":"1__","runners":{"1B":{"id":545341,"name":"Randal Grichuk"},"2B":null,"3B":null},"score":{"away":2,"home":6},"batting":"home","count":{"balls":1,"strikes":1}},"after":{"outs":2,"bases":"1__","score":{"away":2,"home":6}},"batter":{"id":679845,"name":"Nick Loftin","side":"R"},"pitcher":{"id":678024,"name":"Mike Vasil","hand":"R"},"event":{"type":"caught_stealing_2b","label":"Caught Stealing 2B","description":"Tyler Tolbert caught stealing 2nd base, catcher Kyle Teel to second baseman Chase Meidroth.","rbi":null,"runs":0,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":686475,"name":"Tyler Tolbert","start":"1B","end":null,"out":true,"outBase":"2B","reason":"r_caught_stealing_2b","event":"caught_stealing_2b","isBatter":false,"credits":[{"id":691019,"name":"Kyle Teel","pos":"C","credit":"f_assist"},{"id":805367,"name":"Chase Meidroth","pos":"2B","credit":"f_putout"}]}],"chains":[{"runner":"Tyler Tolbert","start":"1B","out":true,"outBase":"2B","chain":"2-4"}],"pitch":null,"batted":null,"winprob":{"homeAfter":null,"homeBefore":null,"homeAdded":null,"li":0.07},"statcast":null,"flags":["catcher_play","catcher_throw","caught_stealing","dp_situation","force_available","leading","low_leverage"],"curation":{"category":"Catcher defense & plays at the plate","slot":"Catcher throws out a base stealer"},"clips":[{"kind":"highlight","slug":"mike-vasil-called-strike-to-nick-loftin","title":"Kyle Teel nabs Tyler Tolbert trying to steal second","duration":"00:00:14","feed":"CMS","pageUrl":"https://www.mlb.com/video/mike-vasil-called-strike-to-nick-loftin","embedUrl":"https://streamable.com/m/mike-vasil-called-strike-to-nick-loftin","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/zglkykn8mxkfbcxd0mip.jpg","match":{"guid":"d33eade1-4b26-3c7b-8591-80c1304386d8"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":null,"sources":[{"label":"MLB Stats API — official play-by-play, game 776712","url":"https://statsapi.mlb.com/api/v1.1/game/776712/feed/live"},{"label":"MLB Stats API — win probability, game 776712","url":"https://statsapi.mlb.com/api/v1/game/776712/winProbability"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-776712-67-e4",
+ "title": "Kyle Teel nabs Tyler Tolbert trying to steal second",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 776712,
+  "atBatIndex": 67,
+  "eventIndex": 4,
+  "playId": "d33eade1-4b26-3c7b-8591-80c1304386d8",
+  "terminal": false,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/776712/feed/live"
+ },
+ "game": {
+  "gamePk": 776712,
+  "date": "2025-08-16",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Kauffman Stadium",
+  "away": {
+   "id": 145,
+   "name": "Chicago White Sox",
+   "abbr": "CWS",
+   "club": "White Sox"
+  },
+  "home": {
+   "id": 118,
+   "name": "Kansas City Royals",
+   "abbr": "KC",
+   "club": "Royals"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 8,
+  "half": "bottom",
+  "outs": 1,
+  "bases": "1__",
+  "runners": {
+   "1B": {
+    "id": 545341,
+    "name": "Randal Grichuk"
+   },
+   "2B": null,
+   "3B": null
+  },
+  "score": {
+   "away": 2,
+   "home": 6
+  },
+  "batting": "home",
+  "count": {
+   "balls": 1,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "1__",
+  "score": {
+   "away": 2,
+   "home": 6
+  }
+ },
+ "batter": {
+  "id": 679845,
+  "name": "Nick Loftin",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 678024,
+  "name": "Mike Vasil",
+  "hand": "R"
+ },
+ "event": {
+  "type": "caught_stealing_2b",
+  "label": "Caught Stealing 2B",
+  "description": "Tyler Tolbert caught stealing 2nd base, catcher Kyle Teel to second baseman Chase Meidroth.",
+  "rbi": null,
+  "runs": 0,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 686475,
+   "name": "Tyler Tolbert",
+   "start": "1B",
+   "end": null,
+   "out": true,
+   "outBase": "2B",
+   "reason": "r_caught_stealing_2b",
+   "event": "caught_stealing_2b",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 691019,
+     "name": "Kyle Teel",
+     "pos": "C",
+     "credit": "f_assist"
+    },
+    {
+     "id": 805367,
+     "name": "Chase Meidroth",
+     "pos": "2B",
+     "credit": "f_putout"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Tyler Tolbert",
+   "start": "1B",
+   "out": true,
+   "outBase": "2B",
+   "chain": "2-4"
+  }
+ ],
+ "pitch": null,
+ "batted": null,
+ "winprob": {
+  "homeAfter": null,
+  "homeBefore": null,
+  "homeAdded": null,
+  "li": 0.07
+ },
+ "statcast": null,
+ "flags": [
+  "catcher_play",
+  "catcher_throw",
+  "caught_stealing",
+  "dp_situation",
+  "force_available",
+  "leading",
+  "low_leverage"
+ ],
+ "curation": {
+  "category": "Catcher defense & plays at the plate",
+  "slot": "Catcher throws out a base stealer"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "mike-vasil-called-strike-to-nick-loftin",
+   "title": "Kyle Teel nabs Tyler Tolbert trying to steal second",
+   "duration": "00:00:14",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/mike-vasil-called-strike-to-nick-loftin",
+   "embedUrl": "https://streamable.com/m/mike-vasil-called-strike-to-nick-loftin",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/zglkykn8mxkfbcxd0mip.jpg",
+   "match": {
+    "guid": "d33eade1-4b26-3c7b-8591-80c1304386d8"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": null,
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 776712",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/776712/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 776712",
+   "url": "https://statsapi.mlb.com/api/v1/game/776712/winProbability"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

@@ -1,1 +1,255 @@
-{"schema":1,"id":"mlb-746527-8","title":"Curt Casali nabs Brenton Doyle stealing second","titleSource":"MLB.com clip title","source":{"gamePk":746527,"atBatIndex":8,"eventIndex":3,"playId":"64eed0d8-3d59-4213-b18f-e47171e9d207","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/746527/feed/live"},"game":{"gamePk":746527,"date":"2024-07-20","season":2024,"gameType":"R","level":"MLB","venue":"Coors Field","away":{"id":137,"name":"San Francisco Giants","abbr":"SF","club":"Giants"},"home":{"id":115,"name":"Colorado Rockies","abbr":"COL","club":"Rockies"},"series":""},"before":{"inning":1,"half":"bottom","outs":2,"bases":"1__","runners":{"1B":{"id":686668,"name":"Brenton Doyle"},"2B":null,"3B":null},"score":{"away":0,"home":2},"batting":"home","count":{"balls":1,"strikes":1}},"after":{"outs":3,"bases":"___","score":{"away":0,"home":2}},"batter":{"id":595909,"name":"Jake Cave","side":"L"},"pitcher":{"id":657277,"name":"Logan Webb","hand":"R"},"event":{"type":"caught_stealing_2b","label":"Caught Stealing 2B","description":"Brenton Doyle caught stealing 2nd base, catcher Curt Casali to shortstop Tyler Fitzgerald.","rbi":0,"runs":0,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":686668,"name":"Brenton Doyle","start":"1B","end":null,"out":true,"outBase":"2B","reason":"r_caught_stealing_2b","event":"caught_stealing_2b","isBatter":false,"credits":[{"id":592200,"name":"Curt Casali","pos":"C","credit":"f_assist"},{"id":666149,"name":"Tyler Fitzgerald","pos":"SS","credit":"f_putout"}]}],"chains":[{"runner":"Brenton Doyle","start":"1B","out":true,"outBase":"2B","chain":"2-6"}],"pitch":{"type":"Sinker","code":"SI","speed":92.3,"zone":2,"px":-0.1857833488652617,"pz":3.2064254876086946,"spin":1720,"call":"B"},"batted":null,"winprob":{"homeAfter":69.8,"homeBefore":71.4,"homeAdded":-1.5999999999999943,"li":0.64},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":0.0,"deltaHomeWinExp":-0.015,"batWinExpBefore":0.713,"bbType":null,"pitchName":"Sinker","fielders":{"2":592200,"3":527038,"4":642731,"5":656305,"6":666149,"7":682641,"8":671218,"9":573262}},"flags":["catcher_play","catcher_throw","caught_stealing","close","force_available","leading","low_leverage","two_outs"],"curation":{"category":"Catcher defense & plays at the plate","slot":"Catcher throws out a base stealer"},"clips":[{"kind":"highlight","slug":"logan-webb-ball-to-jake-cave-mid5qn","title":"Curt Casali nabs Brenton Doyle stealing second","duration":"00:00:13","feed":"CMS","pageUrl":"https://www.mlb.com/video/logan-webb-ball-to-jake-cave-mid5qn","embedUrl":"https://streamable.com/m/logan-webb-ball-to-jake-cave-mid5qn","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/wftgcvryzgpe1kmhmgzw.jpg","match":{"guid":"64eed0d8-3d59-4213-b18f-e47171e9d207"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=64eed0d8-3d59-4213-b18f-e47171e9d207"},"sources":[{"label":"MLB Stats API — official play-by-play, game 746527","url":"https://statsapi.mlb.com/api/v1.1/game/746527/feed/live"},{"label":"MLB Stats API — win probability, game 746527","url":"https://statsapi.mlb.com/api/v1/game/746527/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=746527"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=64eed0d8-3d59-4213-b18f-e47171e9d207"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-746527-8",
+ "title": "Curt Casali nabs Brenton Doyle stealing second",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 746527,
+  "atBatIndex": 8,
+  "eventIndex": 3,
+  "playId": "64eed0d8-3d59-4213-b18f-e47171e9d207",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/746527/feed/live"
+ },
+ "game": {
+  "gamePk": 746527,
+  "date": "2024-07-20",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Coors Field",
+  "away": {
+   "id": 137,
+   "name": "San Francisco Giants",
+   "abbr": "SF",
+   "club": "Giants"
+  },
+  "home": {
+   "id": 115,
+   "name": "Colorado Rockies",
+   "abbr": "COL",
+   "club": "Rockies"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 1,
+  "half": "bottom",
+  "outs": 2,
+  "bases": "1__",
+  "runners": {
+   "1B": {
+    "id": 686668,
+    "name": "Brenton Doyle"
+   },
+   "2B": null,
+   "3B": null
+  },
+  "score": {
+   "away": 0,
+   "home": 2
+  },
+  "batting": "home",
+  "count": {
+   "balls": 1,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 3,
+  "bases": "___",
+  "score": {
+   "away": 0,
+   "home": 2
+  }
+ },
+ "batter": {
+  "id": 595909,
+  "name": "Jake Cave",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 657277,
+  "name": "Logan Webb",
+  "hand": "R"
+ },
+ "event": {
+  "type": "caught_stealing_2b",
+  "label": "Caught Stealing 2B",
+  "description": "Brenton Doyle caught stealing 2nd base, catcher Curt Casali to shortstop Tyler Fitzgerald.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 686668,
+   "name": "Brenton Doyle",
+   "start": "1B",
+   "end": null,
+   "out": true,
+   "outBase": "2B",
+   "reason": "r_caught_stealing_2b",
+   "event": "caught_stealing_2b",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 592200,
+     "name": "Curt Casali",
+     "pos": "C",
+     "credit": "f_assist"
+    },
+    {
+     "id": 666149,
+     "name": "Tyler Fitzgerald",
+     "pos": "SS",
+     "credit": "f_putout"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Brenton Doyle",
+   "start": "1B",
+   "out": true,
+   "outBase": "2B",
+   "chain": "2-6"
+  }
+ ],
+ "pitch": {
+  "type": "Sinker",
+  "code": "SI",
+  "speed": 92.3,
+  "zone": 2,
+  "px": -0.1857833488652617,
+  "pz": 3.2064254876086946,
+  "spin": 1720,
+  "call": "B"
+ },
+ "batted": null,
+ "winprob": {
+  "homeAfter": 69.8,
+  "homeBefore": 71.4,
+  "homeAdded": -1.5999999999999943,
+  "li": 0.64
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.0,
+  "deltaHomeWinExp": -0.015,
+  "batWinExpBefore": 0.713,
+  "bbType": null,
+  "pitchName": "Sinker",
+  "fielders": {
+   "2": 592200,
+   "3": 527038,
+   "4": 642731,
+   "5": 656305,
+   "6": 666149,
+   "7": 682641,
+   "8": 671218,
+   "9": 573262
+  }
+ },
+ "flags": [
+  "catcher_play",
+  "catcher_throw",
+  "caught_stealing",
+  "close",
+  "force_available",
+  "leading",
+  "low_leverage",
+  "two_outs"
+ ],
+ "curation": {
+  "category": "Catcher defense & plays at the plate",
+  "slot": "Catcher throws out a base stealer"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "logan-webb-ball-to-jake-cave-mid5qn",
+   "title": "Curt Casali nabs Brenton Doyle stealing second",
+   "duration": "00:00:13",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/logan-webb-ball-to-jake-cave-mid5qn",
+   "embedUrl": "https://streamable.com/m/logan-webb-ball-to-jake-cave-mid5qn",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/wftgcvryzgpe1kmhmgzw.jpg",
+   "match": {
+    "guid": "64eed0d8-3d59-4213-b18f-e47171e9d207"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=64eed0d8-3d59-4213-b18f-e47171e9d207"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 746527",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/746527/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 746527",
+   "url": "https://statsapi.mlb.com/api/v1/game/746527/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=746527"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=64eed0d8-3d59-4213-b18f-e47171e9d207"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

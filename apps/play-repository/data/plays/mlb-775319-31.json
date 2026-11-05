@@ -1,1 +1,254 @@
-{"schema":1,"id":"mlb-775319-31","title":"Francisco Alvarez nabs Bryson Stott at second","titleSource":"MLB.com clip title","source":{"gamePk":775319,"atBatIndex":31,"eventIndex":3,"playId":"658b50b8-1cc5-42f2-bcc4-42fde0892b9a","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/775319/feed/live"},"game":{"gamePk":775319,"date":"2024-10-06","season":2024,"gameType":"D","level":"MLB","venue":"Citizens Bank Park","away":{"id":121,"name":"New York Mets","abbr":"NYM","club":"Mets"},"home":{"id":143,"name":"Philadelphia Phillies","abbr":"PHI","club":"Phillies"},"series":""},"before":{"inning":4,"half":"bottom","outs":2,"bases":"1__","runners":{"1B":{"id":681082,"name":"Bryson Stott"},"2B":null,"3B":null},"score":{"away":2,"home":0},"batting":"home","count":{"balls":2,"strikes":1}},"after":{"outs":3,"bases":"___","score":{"away":2,"home":0}},"batter":{"id":592663,"name":"J.T. Realmuto","side":"R"},"pitcher":{"id":622663,"name":"Luis Severino","hand":"R"},"event":{"type":"caught_stealing_2b","label":"Caught Stealing 2B","description":"Bryson Stott caught stealing 2nd base, catcher Francisco Alvarez to second baseman Jose Iglesias.","rbi":0,"runs":0,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":681082,"name":"Bryson Stott","start":"1B","end":null,"out":true,"outBase":"2B","reason":"r_caught_stealing_2b","event":"caught_stealing_2b","isBatter":false,"credits":[{"id":682626,"name":"Francisco Alvarez","pos":"C","credit":"f_assist"},{"id":578428,"name":"Jose Iglesias","pos":"2B","credit":"f_putout"}]}],"chains":[{"runner":"Bryson Stott","start":"1B","out":true,"outBase":"2B","chain":"2-4"}],"pitch":{"type":"Sinker","code":"SI","speed":97.5,"zone":4,"px":-0.3863618593930554,"pz":2.665753013611591,"spin":2131,"call":"C"},"batted":null,"winprob":{"homeAfter":24.9,"homeBefore":27.7,"homeAdded":-2.8000000000000043,"li":1.12},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":0.0,"deltaHomeWinExp":-0.031,"batWinExpBefore":0.28,"bbType":null,"pitchName":"Sinker","fielders":{"2":682626,"3":624413,"4":578428,"5":668901,"6":596019,"7":607043,"8":664056,"9":516782}},"flags":["catcher_play","catcher_throw","caught_stealing","close","force_available","postseason","trailing","two_outs"],"curation":{"category":"Baserunning & advancement","slot":"Caught stealing"},"clips":[{"kind":"highlight","slug":"luis-severino-called-strike-to-j-t-realmuto-aadxcb","title":"Francisco Alvarez nabs Bryson Stott at second","duration":"00:00:14","feed":"CMS","pageUrl":"https://www.mlb.com/video/luis-severino-called-strike-to-j-t-realmuto-aadxcb","embedUrl":"https://streamable.com/m/luis-severino-called-strike-to-j-t-realmuto-aadxcb","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/zfrqf1ocvrgeaxqhjp1a.jpg","match":{"guid":"658b50b8-1cc5-42f2-bcc4-42fde0892b9a"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=658b50b8-1cc5-42f2-bcc4-42fde0892b9a"},"sources":[{"label":"MLB Stats API — official play-by-play, game 775319","url":"https://statsapi.mlb.com/api/v1.1/game/775319/feed/live"},{"label":"MLB Stats API — win probability, game 775319","url":"https://statsapi.mlb.com/api/v1/game/775319/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=775319"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=658b50b8-1cc5-42f2-bcc4-42fde0892b9a"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-775319-31",
+ "title": "Francisco Alvarez nabs Bryson Stott at second",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 775319,
+  "atBatIndex": 31,
+  "eventIndex": 3,
+  "playId": "658b50b8-1cc5-42f2-bcc4-42fde0892b9a",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/775319/feed/live"
+ },
+ "game": {
+  "gamePk": 775319,
+  "date": "2024-10-06",
+  "season": 2024,
+  "gameType": "D",
+  "level": "MLB",
+  "venue": "Citizens Bank Park",
+  "away": {
+   "id": 121,
+   "name": "New York Mets",
+   "abbr": "NYM",
+   "club": "Mets"
+  },
+  "home": {
+   "id": 143,
+   "name": "Philadelphia Phillies",
+   "abbr": "PHI",
+   "club": "Phillies"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 4,
+  "half": "bottom",
+  "outs": 2,
+  "bases": "1__",
+  "runners": {
+   "1B": {
+    "id": 681082,
+    "name": "Bryson Stott"
+   },
+   "2B": null,
+   "3B": null
+  },
+  "score": {
+   "away": 2,
+   "home": 0
+  },
+  "batting": "home",
+  "count": {
+   "balls": 2,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 3,
+  "bases": "___",
+  "score": {
+   "away": 2,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 592663,
+  "name": "J.T. Realmuto",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 622663,
+  "name": "Luis Severino",
+  "hand": "R"
+ },
+ "event": {
+  "type": "caught_stealing_2b",
+  "label": "Caught Stealing 2B",
+  "description": "Bryson Stott caught stealing 2nd base, catcher Francisco Alvarez to second baseman Jose Iglesias.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 681082,
+   "name": "Bryson Stott",
+   "start": "1B",
+   "end": null,
+   "out": true,
+   "outBase": "2B",
+   "reason": "r_caught_stealing_2b",
+   "event": "caught_stealing_2b",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 682626,
+     "name": "Francisco Alvarez",
+     "pos": "C",
+     "credit": "f_assist"
+    },
+    {
+     "id": 578428,
+     "name": "Jose Iglesias",
+     "pos": "2B",
+     "credit": "f_putout"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Bryson Stott",
+   "start": "1B",
+   "out": true,
+   "outBase": "2B",
+   "chain": "2-4"
+  }
+ ],
+ "pitch": {
+  "type": "Sinker",
+  "code": "SI",
+  "speed": 97.5,
+  "zone": 4,
+  "px": -0.3863618593930554,
+  "pz": 2.665753013611591,
+  "spin": 2131,
+  "call": "C"
+ },
+ "batted": null,
+ "winprob": {
+  "homeAfter": 24.9,
+  "homeBefore": 27.7,
+  "homeAdded": -2.8000000000000043,
+  "li": 1.12
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.0,
+  "deltaHomeWinExp": -0.031,
+  "batWinExpBefore": 0.28,
+  "bbType": null,
+  "pitchName": "Sinker",
+  "fielders": {
+   "2": 682626,
+   "3": 624413,
+   "4": 578428,
+   "5": 668901,
+   "6": 596019,
+   "7": 607043,
+   "8": 664056,
+   "9": 516782
+  }
+ },
+ "flags": [
+  "catcher_play",
+  "catcher_throw",
+  "caught_stealing",
+  "close",
+  "force_available",
+  "postseason",
+  "trailing",
+  "two_outs"
+ ],
+ "curation": {
+  "category": "Baserunning & advancement",
+  "slot": "Caught stealing"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "luis-severino-called-strike-to-j-t-realmuto-aadxcb",
+   "title": "Francisco Alvarez nabs Bryson Stott at second",
+   "duration": "00:00:14",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/luis-severino-called-strike-to-j-t-realmuto-aadxcb",
+   "embedUrl": "https://streamable.com/m/luis-severino-called-strike-to-j-t-realmuto-aadxcb",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/zfrqf1ocvrgeaxqhjp1a.jpg",
+   "match": {
+    "guid": "658b50b8-1cc5-42f2-bcc4-42fde0892b9a"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=658b50b8-1cc5-42f2-bcc4-42fde0892b9a"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 775319",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/775319/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 775319",
+   "url": "https://statsapi.mlb.com/api/v1/game/775319/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=775319"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=658b50b8-1cc5-42f2-bcc4-42fde0892b9a"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

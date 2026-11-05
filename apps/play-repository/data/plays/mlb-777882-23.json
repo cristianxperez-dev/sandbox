@@ -1,1 +1,303 @@
-{"schema":1,"id":"mlb-777882-23","title":"Wyatt Langford's RBI single","titleSource":"MLB.com clip title","source":{"gamePk":777882,"atBatIndex":23,"eventIndex":6,"playId":"e398f740-7e3f-3eca-85a2-feb331e520eb","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/777882/feed/live"},"game":{"gamePk":777882,"date":"2025-05-17","season":2025,"gameType":"R","level":"MLB","venue":"Globe Life Field","away":{"id":117,"name":"Houston Astros","abbr":"HOU","club":"Astros"},"home":{"id":140,"name":"Texas Rangers","abbr":"TEX","club":"Rangers"},"series":""},"before":{"inning":3,"half":"bottom","outs":1,"bases":"_23","runners":{"1B":null,"2B":{"id":664059,"name":"Sam Haggerty"},"3B":{"id":543309,"name":"Kyle Higashioka"}},"score":{"away":1,"home":0},"batting":"home","count":{"balls":3,"strikes":2}},"after":{"outs":1,"bases":"1_3","score":{"away":1,"home":1}},"batter":{"id":694671,"name":"Wyatt Langford","side":"R"},"pitcher":{"id":669854,"name":"Ronel Blanco","hand":"R"},"event":{"type":"single","label":"Single","description":"Wyatt Langford singles on a ground ball to shortstop Jeremy Peña. Kyle Higashioka scores. Sam Haggerty to 3rd. Throwing error by shortstop Jeremy Peña.","rbi":1,"runs":1,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":694671,"name":"Wyatt Langford","start":null,"end":"1B","out":false,"outBase":null,"reason":null,"event":"single","isBatter":true,"credits":[{"id":665161,"name":"Jeremy Peña","pos":"SS","credit":"f_fielded_ball"}]},{"id":664059,"name":"Sam Haggerty","start":"2B","end":"3B","out":false,"outBase":null,"reason":"r_adv_play","event":"error","isBatter":false,"credits":[{"id":665161,"name":"Jeremy Peña","pos":"SS","credit":"f_throwing_error"}]},{"id":543309,"name":"Kyle Higashioka","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"error","isBatter":false,"credits":[]}],"chains":[{"runner":"Wyatt Langford","start":null,"out":false,"outBase":null,"chain":"6"},{"runner":"Sam Haggerty","start":"2B","out":false,"outBase":null,"chain":""}],"pitch":{"type":"Curveball","code":"CU","speed":82.0,"zone":12,"px":0.9840123179197662,"pz":2.642865224511998,"spin":2334,"call":"E"},"batted":{"trajectory":"ground_ball","hardness":"medium","location":6,"ev":93.5,"la":2.0,"distance":64.0,"sprayAngle":-21.5,"spray":"pull"},"winprob":{"homeAfter":63.0,"homeBefore":54.2,"homeAdded":8.799999999999997,"li":2.0},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":0.497,"deltaHomeWinExp":0.085,"batWinExpBefore":0.545,"bbType":"ground_ball","pitchName":"Curveball","fielders":{"2":673237,"3":572233,"4":663898,"5":670623,"6":665161,"7":514888,"8":676694,"9":701358}},"flags":["close","error","go_ahead_on","ground_ball","ground_ball_infield","high_leverage","middle_infield","one_run","risp","single","trailing","tying_run_on"],"curation":{"category":"Infield defense & decisions","slot":"Infield throwing error"},"clips":[{"kind":"highlight","slug":"ronel-blanco-in-play-run-s-to-wyatt-langford-b9eozl","title":"Wyatt Langford's RBI single","duration":"00:00:30","feed":"CMS","pageUrl":"https://www.mlb.com/video/ronel-blanco-in-play-run-s-to-wyatt-langford-b9eozl","embedUrl":"https://streamable.com/m/ronel-blanco-in-play-run-s-to-wyatt-langford-b9eozl","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/spacfldr9d7m9bmgmxft.jpg","match":{"guid":"e398f740-7e3f-3eca-85a2-feb331e520eb"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=e398f740-7e3f-3eca-85a2-feb331e520eb"},"sources":[{"label":"MLB Stats API — official play-by-play, game 777882","url":"https://statsapi.mlb.com/api/v1.1/game/777882/feed/live"},{"label":"MLB Stats API — win probability, game 777882","url":"https://statsapi.mlb.com/api/v1/game/777882/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=777882"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=e398f740-7e3f-3eca-85a2-feb331e520eb"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-777882-23",
+ "title": "Wyatt Langford's RBI single",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 777882,
+  "atBatIndex": 23,
+  "eventIndex": 6,
+  "playId": "e398f740-7e3f-3eca-85a2-feb331e520eb",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/777882/feed/live"
+ },
+ "game": {
+  "gamePk": 777882,
+  "date": "2025-05-17",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Globe Life Field",
+  "away": {
+   "id": 117,
+   "name": "Houston Astros",
+   "abbr": "HOU",
+   "club": "Astros"
+  },
+  "home": {
+   "id": 140,
+   "name": "Texas Rangers",
+   "abbr": "TEX",
+   "club": "Rangers"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 3,
+  "half": "bottom",
+  "outs": 1,
+  "bases": "_23",
+  "runners": {
+   "1B": null,
+   "2B": {
+    "id": 664059,
+    "name": "Sam Haggerty"
+   },
+   "3B": {
+    "id": 543309,
+    "name": "Kyle Higashioka"
+   }
+  },
+  "score": {
+   "away": 1,
+   "home": 0
+  },
+  "batting": "home",
+  "count": {
+   "balls": 3,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 1,
+  "bases": "1_3",
+  "score": {
+   "away": 1,
+   "home": 1
+  }
+ },
+ "batter": {
+  "id": 694671,
+  "name": "Wyatt Langford",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 669854,
+  "name": "Ronel Blanco",
+  "hand": "R"
+ },
+ "event": {
+  "type": "single",
+  "label": "Single",
+  "description": "Wyatt Langford singles on a ground ball to shortstop Jeremy Peña. Kyle Higashioka scores. Sam Haggerty to 3rd. Throwing error by shortstop Jeremy Peña.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 694671,
+   "name": "Wyatt Langford",
+   "start": null,
+   "end": "1B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "single",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 665161,
+     "name": "Jeremy Peña",
+     "pos": "SS",
+     "credit": "f_fielded_ball"
+    }
+   ]
+  },
+  {
+   "id": 664059,
+   "name": "Sam Haggerty",
+   "start": "2B",
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "error",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 665161,
+     "name": "Jeremy Peña",
+     "pos": "SS",
+     "credit": "f_throwing_error"
+    }
+   ]
+  },
+  {
+   "id": 543309,
+   "name": "Kyle Higashioka",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "error",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Wyatt Langford",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": "6"
+  },
+  {
+   "runner": "Sam Haggerty",
+   "start": "2B",
+   "out": false,
+   "outBase": null,
+   "chain": ""
+  }
+ ],
+ "pitch": {
+  "type": "Curveball",
+  "code": "CU",
+  "speed": 82.0,
+  "zone": 12,
+  "px": 0.9840123179197662,
+  "pz": 2.642865224511998,
+  "spin": 2334,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "ground_ball",
+  "hardness": "medium",
+  "location": 6,
+  "ev": 93.5,
+  "la": 2.0,
+  "distance": 64.0,
+  "sprayAngle": -21.5,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 63.0,
+  "homeBefore": 54.2,
+  "homeAdded": 8.799999999999997,
+  "li": 2.0
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.497,
+  "deltaHomeWinExp": 0.085,
+  "batWinExpBefore": 0.545,
+  "bbType": "ground_ball",
+  "pitchName": "Curveball",
+  "fielders": {
+   "2": 673237,
+   "3": 572233,
+   "4": 663898,
+   "5": 670623,
+   "6": 665161,
+   "7": 514888,
+   "8": 676694,
+   "9": 701358
+  }
+ },
+ "flags": [
+  "close",
+  "error",
+  "go_ahead_on",
+  "ground_ball",
+  "ground_ball_infield",
+  "high_leverage",
+  "middle_infield",
+  "one_run",
+  "risp",
+  "single",
+  "trailing",
+  "tying_run_on"
+ ],
+ "curation": {
+  "category": "Infield defense & decisions",
+  "slot": "Infield throwing error"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "ronel-blanco-in-play-run-s-to-wyatt-langford-b9eozl",
+   "title": "Wyatt Langford's RBI single",
+   "duration": "00:00:30",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/ronel-blanco-in-play-run-s-to-wyatt-langford-b9eozl",
+   "embedUrl": "https://streamable.com/m/ronel-blanco-in-play-run-s-to-wyatt-langford-b9eozl",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/spacfldr9d7m9bmgmxft.jpg",
+   "match": {
+    "guid": "e398f740-7e3f-3eca-85a2-feb331e520eb"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=e398f740-7e3f-3eca-85a2-feb331e520eb"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 777882",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/777882/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 777882",
+   "url": "https://statsapi.mlb.com/api/v1/game/777882/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=777882"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=e398f740-7e3f-3eca-85a2-feb331e520eb"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

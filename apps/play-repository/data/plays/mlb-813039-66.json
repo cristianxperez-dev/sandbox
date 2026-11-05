@@ -1,1 +1,289 @@
-{"schema":1,"id":"mlb-813039-66","title":"Eugenio Suárez's go-ahead GRAND SLAM!","titleSource":"MLB.com clip title","source":{"gamePk":813039,"atBatIndex":66,"eventIndex":5,"playId":"c6dc4ac2-e761-3d22-9e21-7f0c4eb54208","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/813039/feed/live"},"game":{"gamePk":813039,"date":"2025-10-17","season":2025,"gameType":"L","level":"MLB","venue":"T-Mobile Park","away":{"id":141,"name":"Toronto Blue Jays","abbr":"TOR","club":"Blue Jays"},"home":{"id":136,"name":"Seattle Mariners","abbr":"SEA","club":"Mariners"},"series":""},"before":{"inning":8,"half":"bottom","outs":0,"bases":"123","runners":{"1B":{"id":668227,"name":"Randy Arozarena"},"2B":{"id":647304,"name":"Josh Naylor"},"3B":{"id":593871,"name":"Jorge Polanco"}},"score":{"away":2,"home":2},"batting":"home","count":{"balls":2,"strikes":2}},"after":{"outs":0,"bases":"___","score":{"away":2,"home":6}},"batter":{"id":553993,"name":"Eugenio Suárez","side":"R"},"pitcher":{"id":622554,"name":"Seranthony Domínguez","hand":"R"},"event":{"type":"home_run","label":"Home Run","description":"Eugenio Suárez hits a grand slam (3) to right field. Jorge Polanco scores. Josh Naylor scores. Randy Arozarena scores.","rbi":4,"runs":4,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":553993,"name":"Eugenio Suárez","start":null,"end":"score","out":false,"outBase":null,"reason":null,"event":"home_run","isBatter":true,"credits":[]},{"id":593871,"name":"Jorge Polanco","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_force","event":"home_run","isBatter":false,"credits":[]},{"id":647304,"name":"Josh Naylor","start":"2B","end":"score","out":false,"outBase":null,"reason":"r_adv_force","event":"home_run","isBatter":false,"credits":[]},{"id":668227,"name":"Randy Arozarena","start":"1B","end":"score","out":false,"outBase":null,"reason":"r_adv_force","event":"home_run","isBatter":false,"credits":[]}],"chains":[],"pitch":{"type":"Four-Seam Fastball","code":"FF","speed":98.5,"zone":6,"px":0.36517929175571695,"pz":2.3135634670506153,"spin":2473,"call":"E"},"batted":{"trajectory":"fly_ball","hardness":"medium","location":9,"ev":103.6,"la":32.0,"distance":351.0,"sprayAngle":41.0,"spray":"opposite"},"winprob":{"homeAfter":98.8,"homeBefore":86.3,"homeAdded":12.5,"li":2.3},"statcast":{"ifAlignment":"Strategic","ofAlignment":"Standard","deltaRunExp":0.914,"deltaHomeWinExp":0.138,"batWinExpBefore":0.85,"bbType":"fly_ball","pitchName":"4-Seam Fastball","fielders":{"2":672386,"3":665489,"4":643396,"5":676391,"6":665926,"7":664702,"8":662139,"9":664770}},"flags":["close","dp_situation","fly_ball","force_available","go_ahead_on","go_ahead_play","high_leverage","home_run","outfield_play","postseason","risp","shift_alignment","tied"],"curation":{"category":"High-leverage & unusual situations","slot":"Go-ahead swing late in a postseason game"},"clips":[{"kind":"highlight","slug":"eugenio-suarez-hits-a-grand-slam-3-to-right-field-jorge-polanco-scores-jo","title":"Eugenio Suárez's go-ahead GRAND SLAM!","duration":"00:00:29","feed":"CMS","pageUrl":"https://www.mlb.com/video/eugenio-suarez-hits-a-grand-slam-3-to-right-field-jorge-polanco-scores-jo","embedUrl":"https://streamable.com/m/eugenio-suarez-hits-a-grand-slam-3-to-right-field-jorge-polanco-scores-jo","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/fidvmpwvgnbfjkpwizgq.jpg","match":{"guid":"c6dc4ac2-e761-3d22-9e21-7f0c4eb54208"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=c6dc4ac2-e761-3d22-9e21-7f0c4eb54208"},"sources":[{"label":"MLB Stats API — official play-by-play, game 813039","url":"https://statsapi.mlb.com/api/v1.1/game/813039/feed/live"},{"label":"MLB Stats API — win probability, game 813039","url":"https://statsapi.mlb.com/api/v1/game/813039/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=813039"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=c6dc4ac2-e761-3d22-9e21-7f0c4eb54208"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-813039-66",
+ "title": "Eugenio Suárez's go-ahead GRAND SLAM!",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 813039,
+  "atBatIndex": 66,
+  "eventIndex": 5,
+  "playId": "c6dc4ac2-e761-3d22-9e21-7f0c4eb54208",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/813039/feed/live"
+ },
+ "game": {
+  "gamePk": 813039,
+  "date": "2025-10-17",
+  "season": 2025,
+  "gameType": "L",
+  "level": "MLB",
+  "venue": "T-Mobile Park",
+  "away": {
+   "id": 141,
+   "name": "Toronto Blue Jays",
+   "abbr": "TOR",
+   "club": "Blue Jays"
+  },
+  "home": {
+   "id": 136,
+   "name": "Seattle Mariners",
+   "abbr": "SEA",
+   "club": "Mariners"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 8,
+  "half": "bottom",
+  "outs": 0,
+  "bases": "123",
+  "runners": {
+   "1B": {
+    "id": 668227,
+    "name": "Randy Arozarena"
+   },
+   "2B": {
+    "id": 647304,
+    "name": "Josh Naylor"
+   },
+   "3B": {
+    "id": 593871,
+    "name": "Jorge Polanco"
+   }
+  },
+  "score": {
+   "away": 2,
+   "home": 2
+  },
+  "batting": "home",
+  "count": {
+   "balls": 2,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 0,
+  "bases": "___",
+  "score": {
+   "away": 2,
+   "home": 6
+  }
+ },
+ "batter": {
+  "id": 553993,
+  "name": "Eugenio Suárez",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 622554,
+  "name": "Seranthony Domínguez",
+  "hand": "R"
+ },
+ "event": {
+  "type": "home_run",
+  "label": "Home Run",
+  "description": "Eugenio Suárez hits a grand slam (3) to right field. Jorge Polanco scores. Josh Naylor scores. Randy Arozarena scores.",
+  "rbi": 4,
+  "runs": 4,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 553993,
+   "name": "Eugenio Suárez",
+   "start": null,
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "home_run",
+   "isBatter": true,
+   "credits": []
+  },
+  {
+   "id": 593871,
+   "name": "Jorge Polanco",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_force",
+   "event": "home_run",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 647304,
+   "name": "Josh Naylor",
+   "start": "2B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_force",
+   "event": "home_run",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 668227,
+   "name": "Randy Arozarena",
+   "start": "1B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_force",
+   "event": "home_run",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [],
+ "pitch": {
+  "type": "Four-Seam Fastball",
+  "code": "FF",
+  "speed": 98.5,
+  "zone": 6,
+  "px": 0.36517929175571695,
+  "pz": 2.3135634670506153,
+  "spin": 2473,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "fly_ball",
+  "hardness": "medium",
+  "location": 9,
+  "ev": 103.6,
+  "la": 32.0,
+  "distance": 351.0,
+  "sprayAngle": 41.0,
+  "spray": "opposite"
+ },
+ "winprob": {
+  "homeAfter": 98.8,
+  "homeBefore": 86.3,
+  "homeAdded": 12.5,
+  "li": 2.3
+ },
+ "statcast": {
+  "ifAlignment": "Strategic",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.914,
+  "deltaHomeWinExp": 0.138,
+  "batWinExpBefore": 0.85,
+  "bbType": "fly_ball",
+  "pitchName": "4-Seam Fastball",
+  "fielders": {
+   "2": 672386,
+   "3": 665489,
+   "4": 643396,
+   "5": 676391,
+   "6": 665926,
+   "7": 664702,
+   "8": 662139,
+   "9": 664770
+  }
+ },
+ "flags": [
+  "close",
+  "dp_situation",
+  "fly_ball",
+  "force_available",
+  "go_ahead_on",
+  "go_ahead_play",
+  "high_leverage",
+  "home_run",
+  "outfield_play",
+  "postseason",
+  "risp",
+  "shift_alignment",
+  "tied"
+ ],
+ "curation": {
+  "category": "High-leverage & unusual situations",
+  "slot": "Go-ahead swing late in a postseason game"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "eugenio-suarez-hits-a-grand-slam-3-to-right-field-jorge-polanco-scores-jo",
+   "title": "Eugenio Suárez's go-ahead GRAND SLAM!",
+   "duration": "00:00:29",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/eugenio-suarez-hits-a-grand-slam-3-to-right-field-jorge-polanco-scores-jo",
+   "embedUrl": "https://streamable.com/m/eugenio-suarez-hits-a-grand-slam-3-to-right-field-jorge-polanco-scores-jo",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/fidvmpwvgnbfjkpwizgq.jpg",
+   "match": {
+    "guid": "c6dc4ac2-e761-3d22-9e21-7f0c4eb54208"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=c6dc4ac2-e761-3d22-9e21-7f0c4eb54208"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 813039",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/813039/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 813039",
+   "url": "https://statsapi.mlb.com/api/v1/game/813039/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=813039"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=c6dc4ac2-e761-3d22-9e21-7f0c4eb54208"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

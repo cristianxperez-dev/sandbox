@@ -73,6 +73,23 @@ test("High Home is only ever MLB-labelled High Home footage, and both MLB High H
   // High Home is the first clip shown whenever a play has one
   hh.forEach((p) => assert.equal(detail(p.id).clips[0].kind, "high-home"));
 });
+test("camera availability: stored per play, matches verified clips, High Home only when MLB labels it", () => {
+  for (const p of P) {
+    const d = detail(p.id), c = d.cameras;
+    assert.ok(c && c.broadcast && c.highHome, p.id);
+    const ok = (x) => x.checks && x.checks.pageEmbed && [200, 206].includes(x.checks.embedStatus);
+    assert.equal(c.broadcast.available, d.clips.some((x) => x.angle.category === "broadcast" && ok(x)), p.id);
+    assert.equal(c.highHome.available, d.clips.some((x) => x.kind === "high-home" && ok(x)), p.id);
+    assert.deepEqual(p.cameras.broadcast, c.broadcast.available); assert.deepEqual(p.cameras.highHome, c.highHome.available);
+    for (const i of c.highHome.clips) { assert.equal(d.clips[i].kind, "high-home"); assert.match(d.clips[i].title, /high home/i); }
+    for (const i of c.broadcast.clips) assert.equal(d.clips[i].angle.category, "broadcast");
+    assert.ok(Array.isArray(c.highHome.searched) && c.highHome.searched.length >= 2, "High Home was actively searched for " + p.id);
+  }
+  const f = (k) => run(F({ camera: k })).length;
+  assert.equal(f("highHome"), P.filter((p) => p.cameras.highHome).length);
+  assert.equal(f("both"), P.filter((p) => p.cameras.highHome && p.cameras.broadcast).length);
+  assert.equal(f("broadcast"), P.filter((p) => p.cameras.broadcast).length);
+});
 test("game state fields are well-formed and consistent with the official record", () => {
   for (const p of P) {
     const d = detail(p.id);

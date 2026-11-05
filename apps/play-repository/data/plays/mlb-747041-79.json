@@ -1,1 +1,311 @@
-{"schema":1,"id":"mlb-747041-79","title":"Bryce Jarvis induces double play, escapes jam","titleSource":"MLB.com clip title","source":{"gamePk":747041,"atBatIndex":79,"eventIndex":5,"playId":"0032633d-ca03-4de8-9725-4595f36136da","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/747041/feed/live"},"game":{"gamePk":747041,"date":"2024-05-11","season":2024,"gameType":"R","level":"MLB","venue":"Oriole Park at Camden Yards","away":{"id":109,"name":"Arizona Diamondbacks","abbr":"AZ","club":"Diamondbacks"},"home":{"id":110,"name":"Baltimore Orioles","abbr":"BAL","club":"Orioles"},"series":""},"before":{"inning":10,"half":"bottom","outs":1,"bases":"123","runners":{"1B":{"id":623993,"name":"Anthony Santander"},"2B":{"id":656811,"name":"Ryan O'Hearn"},"3B":{"id":663630,"name":"Ryan McKenna"}},"score":{"away":4,"home":4},"batting":"home","count":{"balls":1,"strikes":2}},"after":{"outs":3,"bases":"_23","score":{"away":4,"home":4}},"batter":{"id":681297,"name":"Colton Cowser","side":"L"},"pitcher":{"id":686826,"name":"Bryce Jarvis","hand":"R"},"event":{"type":"grounded_into_double_play","label":"Grounded Into DP","description":"Colton Cowser grounds into a double play, second baseman Blaze Alexander to shortstop Kevin Newman to first baseman Christian Walker. Anthony Santander out at 2nd. Colton Cowser out at 1st.","rbi":0,"runs":0,"outs":2,"isReview":false,"walkoff":false},"runners":[{"id":623993,"name":"Anthony Santander","start":"1B","end":null,"out":true,"outBase":"2B","reason":"r_force_out","event":"grounded_into_double_play","isBatter":false,"credits":[{"id":677942,"name":"Blaze Alexander","pos":"2B","credit":"f_assist"},{"id":621028,"name":"Kevin Newman","pos":"SS","credit":"f_putout"}]},{"id":681297,"name":"Colton Cowser","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"grounded_into_double_play","isBatter":true,"credits":[{"id":621028,"name":"Kevin Newman","pos":"SS","credit":"f_assist"},{"id":572233,"name":"Christian Walker","pos":"1B","credit":"f_putout"}]}],"chains":[{"runner":"Anthony Santander","start":"1B","out":true,"outBase":"2B","chain":"4-6"},{"runner":"Colton Cowser","start":null,"out":true,"outBase":"1B","chain":"6-3"}],"pitch":{"type":"Four-Seam Fastball","code":"FF","speed":95.9,"zone":5,"px":-0.17173784202780631,"pz":2.7686937764520154,"spin":2229,"call":"X"},"batted":{"trajectory":"ground_ball","hardness":"medium","location":4,"ev":101.6,"la":-11.0,"distance":15.0,"sprayAngle":29.1,"spray":"pull"},"winprob":{"homeAfter":50.0,"homeBefore":83.7,"homeAdded":-33.7,"li":5.37},"statcast":{"ifAlignment":"Strategic","ofAlignment":"Strategic","deltaRunExp":-0.221,"deltaHomeWinExp":-0.285,"batWinExpBefore":0.785,"bbType":"ground_ball","pitchName":"4-Seam Fastball","fielders":{"2":672515,"3":572233,"4":677942,"5":553993,"6":621028,"7":666971,"8":682998,"9":664983}},"flags":["close","double_play","dp_situation","extra_innings","force_available","force_play","go_ahead_on","ground_ball","ground_ball_infield","high_leverage","middle_infield","of_alignment_nonstd","risp","shift_alignment","tied","walkoff_situation","winning_run_on"],"curation":{"category":"Infield defense & decisions","slot":"Ground-ball double play up the middle"},"clips":[{"kind":"highlight","slug":"bryce-jarvis-in-play-out-s-to-colton-cowser","title":"Bryce Jarvis induces double play, escapes jam","duration":"00:00:12","feed":"CMS","pageUrl":"https://www.mlb.com/video/bryce-jarvis-in-play-out-s-to-colton-cowser","embedUrl":"https://streamable.com/m/bryce-jarvis-in-play-out-s-to-colton-cowser","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/rccyo1yriu5qf5fze3t2.jpg","match":{"guid":"0032633d-ca03-4de8-9725-4595f36136da"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=0032633d-ca03-4de8-9725-4595f36136da"},"sources":[{"label":"MLB Stats API — official play-by-play, game 747041","url":"https://statsapi.mlb.com/api/v1.1/game/747041/feed/live"},{"label":"MLB Stats API — win probability, game 747041","url":"https://statsapi.mlb.com/api/v1/game/747041/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=747041"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=0032633d-ca03-4de8-9725-4595f36136da"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-747041-79",
+ "title": "Bryce Jarvis induces double play, escapes jam",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 747041,
+  "atBatIndex": 79,
+  "eventIndex": 5,
+  "playId": "0032633d-ca03-4de8-9725-4595f36136da",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/747041/feed/live"
+ },
+ "game": {
+  "gamePk": 747041,
+  "date": "2024-05-11",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Oriole Park at Camden Yards",
+  "away": {
+   "id": 109,
+   "name": "Arizona Diamondbacks",
+   "abbr": "AZ",
+   "club": "Diamondbacks"
+  },
+  "home": {
+   "id": 110,
+   "name": "Baltimore Orioles",
+   "abbr": "BAL",
+   "club": "Orioles"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 10,
+  "half": "bottom",
+  "outs": 1,
+  "bases": "123",
+  "runners": {
+   "1B": {
+    "id": 623993,
+    "name": "Anthony Santander"
+   },
+   "2B": {
+    "id": 656811,
+    "name": "Ryan O'Hearn"
+   },
+   "3B": {
+    "id": 663630,
+    "name": "Ryan McKenna"
+   }
+  },
+  "score": {
+   "away": 4,
+   "home": 4
+  },
+  "batting": "home",
+  "count": {
+   "balls": 1,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 3,
+  "bases": "_23",
+  "score": {
+   "away": 4,
+   "home": 4
+  }
+ },
+ "batter": {
+  "id": 681297,
+  "name": "Colton Cowser",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 686826,
+  "name": "Bryce Jarvis",
+  "hand": "R"
+ },
+ "event": {
+  "type": "grounded_into_double_play",
+  "label": "Grounded Into DP",
+  "description": "Colton Cowser grounds into a double play, second baseman Blaze Alexander to shortstop Kevin Newman to first baseman Christian Walker. Anthony Santander out at 2nd. Colton Cowser out at 1st.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 2,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 623993,
+   "name": "Anthony Santander",
+   "start": "1B",
+   "end": null,
+   "out": true,
+   "outBase": "2B",
+   "reason": "r_force_out",
+   "event": "grounded_into_double_play",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 677942,
+     "name": "Blaze Alexander",
+     "pos": "2B",
+     "credit": "f_assist"
+    },
+    {
+     "id": 621028,
+     "name": "Kevin Newman",
+     "pos": "SS",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 681297,
+   "name": "Colton Cowser",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "grounded_into_double_play",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 621028,
+     "name": "Kevin Newman",
+     "pos": "SS",
+     "credit": "f_assist"
+    },
+    {
+     "id": 572233,
+     "name": "Christian Walker",
+     "pos": "1B",
+     "credit": "f_putout"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Anthony Santander",
+   "start": "1B",
+   "out": true,
+   "outBase": "2B",
+   "chain": "4-6"
+  },
+  {
+   "runner": "Colton Cowser",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "6-3"
+  }
+ ],
+ "pitch": {
+  "type": "Four-Seam Fastball",
+  "code": "FF",
+  "speed": 95.9,
+  "zone": 5,
+  "px": -0.17173784202780631,
+  "pz": 2.7686937764520154,
+  "spin": 2229,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "ground_ball",
+  "hardness": "medium",
+  "location": 4,
+  "ev": 101.6,
+  "la": -11.0,
+  "distance": 15.0,
+  "sprayAngle": 29.1,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 50.0,
+  "homeBefore": 83.7,
+  "homeAdded": -33.7,
+  "li": 5.37
+ },
+ "statcast": {
+  "ifAlignment": "Strategic",
+  "ofAlignment": "Strategic",
+  "deltaRunExp": -0.221,
+  "deltaHomeWinExp": -0.285,
+  "batWinExpBefore": 0.785,
+  "bbType": "ground_ball",
+  "pitchName": "4-Seam Fastball",
+  "fielders": {
+   "2": 672515,
+   "3": 572233,
+   "4": 677942,
+   "5": 553993,
+   "6": 621028,
+   "7": 666971,
+   "8": 682998,
+   "9": 664983
+  }
+ },
+ "flags": [
+  "close",
+  "double_play",
+  "dp_situation",
+  "extra_innings",
+  "force_available",
+  "force_play",
+  "go_ahead_on",
+  "ground_ball",
+  "ground_ball_infield",
+  "high_leverage",
+  "middle_infield",
+  "of_alignment_nonstd",
+  "risp",
+  "shift_alignment",
+  "tied",
+  "walkoff_situation",
+  "winning_run_on"
+ ],
+ "curation": {
+  "category": "Infield defense & decisions",
+  "slot": "Ground-ball double play up the middle"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "bryce-jarvis-in-play-out-s-to-colton-cowser",
+   "title": "Bryce Jarvis induces double play, escapes jam",
+   "duration": "00:00:12",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/bryce-jarvis-in-play-out-s-to-colton-cowser",
+   "embedUrl": "https://streamable.com/m/bryce-jarvis-in-play-out-s-to-colton-cowser",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/rccyo1yriu5qf5fze3t2.jpg",
+   "match": {
+    "guid": "0032633d-ca03-4de8-9725-4595f36136da"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=0032633d-ca03-4de8-9725-4595f36136da"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 747041",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/747041/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 747041",
+   "url": "https://statsapi.mlb.com/api/v1/game/747041/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=747041"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=0032633d-ca03-4de8-9725-4595f36136da"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

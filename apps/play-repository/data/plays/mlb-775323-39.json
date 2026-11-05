@@ -1,1 +1,239 @@
-{"schema":1,"id":"mlb-775323-39","title":"Tommy Edman scores on a wild pitch","titleSource":"MLB.com clip title","source":{"gamePk":775323,"atBatIndex":39,"eventIndex":7,"playId":"ea7fd04a-7167-4ad3-81dd-253807523544","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/775323/feed/live"},"game":{"gamePk":775323,"date":"2024-10-05","season":2024,"gameType":"D","level":"MLB","venue":"Dodger Stadium","away":{"id":135,"name":"San Diego Padres","abbr":"SD","club":"Padres"},"home":{"id":119,"name":"Los Angeles Dodgers","abbr":"LAD","club":"Dodgers"},"series":""},"before":{"inning":4,"half":"bottom","outs":1,"bases":"_23","runners":{"1B":null,"2B":{"id":660271,"name":"Shohei Ohtani"},"3B":{"id":500743,"name":"Miguel Rojas"}},"score":{"away":5,"home":4},"batting":"home","count":{"balls":1,"strikes":2}},"after":{"outs":1,"bases":"123","score":{"away":5,"home":4}},"batter":{"id":605141,"name":"Mookie Betts","side":"R"},"pitcher":{"id":670970,"name":"Adrian Morejon","hand":"L"},"event":{"type":"intent_walk","label":"Intent Walk","description":"Adrian Morejon intentionally walks Mookie Betts.","rbi":0,"runs":0,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":605141,"name":"Mookie Betts","start":null,"end":"1B","out":false,"outBase":null,"reason":null,"event":"intent_walk","isBatter":true,"credits":[]}],"chains":[],"pitch":{"type":"Knuckle Ball","code":"KN","speed":86.8,"zone":13,"px":-2.121829046846105,"pz":1.0589216704494837,"spin":1087,"call":"B"},"batted":null,"winprob":{"homeAfter":56.2,"homeBefore":54.5,"homeAdded":1.6999999999999957,"li":3.34},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":0.044,"deltaHomeWinExp":0.113,"batWinExpBefore":0.416,"bbType":null,"pitchName":"Knuckleball","fielders":{"2":543309,"3":456781,"4":630105,"5":592518,"6":593428,"7":595777,"8":701538,"9":665487}},"flags":["close","go_ahead_on","high_leverage","one_run","postseason","risp","trailing","tying_run_on","walk"],"curation":{"category":"Miscellaneous teaching moments","slot":"Intentional walk to set up a force"},"clips":[{"kind":"highlight","slug":"adrian-morejon-ball-to-mookie-betts-wovzed","title":"Tommy Edman scores on a wild pitch","duration":"00:00:25","feed":"CMS","pageUrl":"https://www.mlb.com/video/adrian-morejon-ball-to-mookie-betts-wovzed","embedUrl":"https://streamable.com/m/adrian-morejon-ball-to-mookie-betts-wovzed","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/r246ztzddnwsm1s6st9q.jpg","match":{"guid":"ea7fd04a-7167-4ad3-81dd-253807523544"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=ea7fd04a-7167-4ad3-81dd-253807523544"},"sources":[{"label":"MLB Stats API — official play-by-play, game 775323","url":"https://statsapi.mlb.com/api/v1.1/game/775323/feed/live"},{"label":"MLB Stats API — win probability, game 775323","url":"https://statsapi.mlb.com/api/v1/game/775323/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=775323"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=ea7fd04a-7167-4ad3-81dd-253807523544"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":["Film Room adrian-morejon-ball-to-mookie-betts-wovzed mismatch: runners"]}}
+{
+ "schema": 1,
+ "id": "mlb-775323-39",
+ "title": "Tommy Edman scores on a wild pitch",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 775323,
+  "atBatIndex": 39,
+  "eventIndex": 7,
+  "playId": "ea7fd04a-7167-4ad3-81dd-253807523544",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/775323/feed/live"
+ },
+ "game": {
+  "gamePk": 775323,
+  "date": "2024-10-05",
+  "season": 2024,
+  "gameType": "D",
+  "level": "MLB",
+  "venue": "Dodger Stadium",
+  "away": {
+   "id": 135,
+   "name": "San Diego Padres",
+   "abbr": "SD",
+   "club": "Padres"
+  },
+  "home": {
+   "id": 119,
+   "name": "Los Angeles Dodgers",
+   "abbr": "LAD",
+   "club": "Dodgers"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 4,
+  "half": "bottom",
+  "outs": 1,
+  "bases": "_23",
+  "runners": {
+   "1B": null,
+   "2B": {
+    "id": 660271,
+    "name": "Shohei Ohtani"
+   },
+   "3B": {
+    "id": 500743,
+    "name": "Miguel Rojas"
+   }
+  },
+  "score": {
+   "away": 5,
+   "home": 4
+  },
+  "batting": "home",
+  "count": {
+   "balls": 1,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 1,
+  "bases": "123",
+  "score": {
+   "away": 5,
+   "home": 4
+  }
+ },
+ "batter": {
+  "id": 605141,
+  "name": "Mookie Betts",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 670970,
+  "name": "Adrian Morejon",
+  "hand": "L"
+ },
+ "event": {
+  "type": "intent_walk",
+  "label": "Intent Walk",
+  "description": "Adrian Morejon intentionally walks Mookie Betts.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 605141,
+   "name": "Mookie Betts",
+   "start": null,
+   "end": "1B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "intent_walk",
+   "isBatter": true,
+   "credits": []
+  }
+ ],
+ "chains": [],
+ "pitch": {
+  "type": "Knuckle Ball",
+  "code": "KN",
+  "speed": 86.8,
+  "zone": 13,
+  "px": -2.121829046846105,
+  "pz": 1.0589216704494837,
+  "spin": 1087,
+  "call": "B"
+ },
+ "batted": null,
+ "winprob": {
+  "homeAfter": 56.2,
+  "homeBefore": 54.5,
+  "homeAdded": 1.6999999999999957,
+  "li": 3.34
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.044,
+  "deltaHomeWinExp": 0.113,
+  "batWinExpBefore": 0.416,
+  "bbType": null,
+  "pitchName": "Knuckleball",
+  "fielders": {
+   "2": 543309,
+   "3": 456781,
+   "4": 630105,
+   "5": 592518,
+   "6": 593428,
+   "7": 595777,
+   "8": 701538,
+   "9": 665487
+  }
+ },
+ "flags": [
+  "close",
+  "go_ahead_on",
+  "high_leverage",
+  "one_run",
+  "postseason",
+  "risp",
+  "trailing",
+  "tying_run_on",
+  "walk"
+ ],
+ "curation": {
+  "category": "Miscellaneous teaching moments",
+  "slot": "Intentional walk to set up a force"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "adrian-morejon-ball-to-mookie-betts-wovzed",
+   "title": "Tommy Edman scores on a wild pitch",
+   "duration": "00:00:25",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/adrian-morejon-ball-to-mookie-betts-wovzed",
+   "embedUrl": "https://streamable.com/m/adrian-morejon-ball-to-mookie-betts-wovzed",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/r246ztzddnwsm1s6st9q.jpg",
+   "match": {
+    "guid": "ea7fd04a-7167-4ad3-81dd-253807523544"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=ea7fd04a-7167-4ad3-81dd-253807523544"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 775323",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/775323/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 775323",
+   "url": "https://statsapi.mlb.com/api/v1/game/775323/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=775323"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=ea7fd04a-7167-4ad3-81dd-253807523544"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": [
+   "Film Room adrian-morejon-ball-to-mookie-betts-wovzed mismatch: runners"
+  ]
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

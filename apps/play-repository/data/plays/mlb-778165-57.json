@@ -1,1 +1,286 @@
-{"schema":1,"id":"mlb-778165-57","title":"Bobby Dalbec's RBI single","titleSource":"MLB.com clip title","source":{"gamePk":778165,"atBatIndex":57,"eventIndex":5,"playId":"cf5a1a34-3438-3815-8b6c-982ddf083c7b","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/778165/feed/live"},"game":{"gamePk":778165,"date":"2025-04-26","season":2025,"gameType":"R","level":"MLB","venue":"Sutter Health Park","away":{"id":145,"name":"Chicago White Sox","abbr":"CWS","club":"White Sox"},"home":{"id":133,"name":"Athletics","abbr":"ATH","club":"Athletics"},"series":""},"before":{"inning":7,"half":"top","outs":2,"bases":"_23","runners":{"1B":null,"2B":{"id":572191,"name":"Michael A. Taylor"},"3B":{"id":683734,"name":"Andrew Vaughn"}},"score":{"away":9,"home":1},"batting":"away","count":{"balls":2,"strikes":2}},"after":{"outs":2,"bases":"1_3","score":{"away":10,"home":1}},"batter":{"id":666915,"name":"Bobby Dalbec","side":"R"},"pitcher":{"id":668716,"name":"Noah Murdock","hand":"R"},"event":{"type":"single","label":"Single","description":"Bobby Dalbec singles on a ground ball to pitcher Noah Murdock. Andrew Vaughn scores. Michael A. Taylor to 3rd.","rbi":1,"runs":1,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":666915,"name":"Bobby Dalbec","start":null,"end":"1B","out":false,"outBase":null,"reason":null,"event":"single","isBatter":true,"credits":[{"id":668716,"name":"Noah Murdock","pos":"P","credit":"f_fielded_ball"}]},{"id":683734,"name":"Andrew Vaughn","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"single","isBatter":false,"credits":[]},{"id":572191,"name":"Michael A. Taylor","start":"2B","end":"3B","out":false,"outBase":null,"reason":"r_adv_play","event":"single","isBatter":false,"credits":[]}],"chains":[{"runner":"Bobby Dalbec","start":null,"out":false,"outBase":null,"chain":"1"}],"pitch":{"type":"Sinker","code":"SI","speed":95.0,"zone":11,"px":-1.3148308557971462,"pz":3.453729458820129,"spin":2082,"call":"E"},"batted":{"trajectory":"ground_ball","hardness":"medium","location":1,"ev":null,"la":null,"distance":null,"sprayAngle":-39.2,"spray":"pull"},"winprob":{"homeAfter":0.2,"homeBefore":0.4,"homeAdded":-0.2,"li":0.04},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":0.775,"deltaHomeWinExp":-0.002,"batWinExpBefore":0.996,"bbType":"ground_ball","pitchName":"Sinker","fielders":{"2":640902,"3":701762,"4":649966,"5":570482,"6":805779,"7":609280,"8":668709,"9":667670}},"flags":["blowout","ground_ball","ground_ball_infield","leading","low_leverage","risp","single","two_out_rbi","two_outs"],"curation":{"category":"Infield defense & decisions","slot":"Infield single"},"clips":[{"kind":"highlight","slug":"noah-murdock-in-play-run-s-to-bobby-dalbec","title":"Bobby Dalbec's RBI single","duration":"00:00:29","feed":"CMS","pageUrl":"https://www.mlb.com/video/noah-murdock-in-play-run-s-to-bobby-dalbec","embedUrl":"https://streamable.com/m/noah-murdock-in-play-run-s-to-bobby-dalbec","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/paay53eaizhg0fyhvsyl.jpg","match":{"guid":"cf5a1a34-3438-3815-8b6c-982ddf083c7b"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=cf5a1a34-3438-3815-8b6c-982ddf083c7b"},"sources":[{"label":"MLB Stats API — official play-by-play, game 778165","url":"https://statsapi.mlb.com/api/v1.1/game/778165/feed/live"},{"label":"MLB Stats API — win probability, game 778165","url":"https://statsapi.mlb.com/api/v1/game/778165/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=778165"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=cf5a1a34-3438-3815-8b6c-982ddf083c7b"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-778165-57",
+ "title": "Bobby Dalbec's RBI single",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 778165,
+  "atBatIndex": 57,
+  "eventIndex": 5,
+  "playId": "cf5a1a34-3438-3815-8b6c-982ddf083c7b",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/778165/feed/live"
+ },
+ "game": {
+  "gamePk": 778165,
+  "date": "2025-04-26",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Sutter Health Park",
+  "away": {
+   "id": 145,
+   "name": "Chicago White Sox",
+   "abbr": "CWS",
+   "club": "White Sox"
+  },
+  "home": {
+   "id": 133,
+   "name": "Athletics",
+   "abbr": "ATH",
+   "club": "Athletics"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 7,
+  "half": "top",
+  "outs": 2,
+  "bases": "_23",
+  "runners": {
+   "1B": null,
+   "2B": {
+    "id": 572191,
+    "name": "Michael A. Taylor"
+   },
+   "3B": {
+    "id": 683734,
+    "name": "Andrew Vaughn"
+   }
+  },
+  "score": {
+   "away": 9,
+   "home": 1
+  },
+  "batting": "away",
+  "count": {
+   "balls": 2,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "1_3",
+  "score": {
+   "away": 10,
+   "home": 1
+  }
+ },
+ "batter": {
+  "id": 666915,
+  "name": "Bobby Dalbec",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 668716,
+  "name": "Noah Murdock",
+  "hand": "R"
+ },
+ "event": {
+  "type": "single",
+  "label": "Single",
+  "description": "Bobby Dalbec singles on a ground ball to pitcher Noah Murdock. Andrew Vaughn scores. Michael A. Taylor to 3rd.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 666915,
+   "name": "Bobby Dalbec",
+   "start": null,
+   "end": "1B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "single",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 668716,
+     "name": "Noah Murdock",
+     "pos": "P",
+     "credit": "f_fielded_ball"
+    }
+   ]
+  },
+  {
+   "id": 683734,
+   "name": "Andrew Vaughn",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "single",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 572191,
+   "name": "Michael A. Taylor",
+   "start": "2B",
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "single",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Bobby Dalbec",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": "1"
+  }
+ ],
+ "pitch": {
+  "type": "Sinker",
+  "code": "SI",
+  "speed": 95.0,
+  "zone": 11,
+  "px": -1.3148308557971462,
+  "pz": 3.453729458820129,
+  "spin": 2082,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "ground_ball",
+  "hardness": "medium",
+  "location": 1,
+  "ev": null,
+  "la": null,
+  "distance": null,
+  "sprayAngle": -39.2,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 0.2,
+  "homeBefore": 0.4,
+  "homeAdded": -0.2,
+  "li": 0.04
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.775,
+  "deltaHomeWinExp": -0.002,
+  "batWinExpBefore": 0.996,
+  "bbType": "ground_ball",
+  "pitchName": "Sinker",
+  "fielders": {
+   "2": 640902,
+   "3": 701762,
+   "4": 649966,
+   "5": 570482,
+   "6": 805779,
+   "7": 609280,
+   "8": 668709,
+   "9": 667670
+  }
+ },
+ "flags": [
+  "blowout",
+  "ground_ball",
+  "ground_ball_infield",
+  "leading",
+  "low_leverage",
+  "risp",
+  "single",
+  "two_out_rbi",
+  "two_outs"
+ ],
+ "curation": {
+  "category": "Infield defense & decisions",
+  "slot": "Infield single"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "noah-murdock-in-play-run-s-to-bobby-dalbec",
+   "title": "Bobby Dalbec's RBI single",
+   "duration": "00:00:29",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/noah-murdock-in-play-run-s-to-bobby-dalbec",
+   "embedUrl": "https://streamable.com/m/noah-murdock-in-play-run-s-to-bobby-dalbec",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/paay53eaizhg0fyhvsyl.jpg",
+   "match": {
+    "guid": "cf5a1a34-3438-3815-8b6c-982ddf083c7b"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=cf5a1a34-3438-3815-8b6c-982ddf083c7b"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 778165",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/778165/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 778165",
+   "url": "https://statsapi.mlb.com/api/v1/game/778165/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=778165"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=cf5a1a34-3438-3815-8b6c-982ddf083c7b"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

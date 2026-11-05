@@ -1,1 +1,254 @@
-{"schema":1,"id":"mlb-777104-64","title":"Denzel Clarke's triple in the 9th","titleSource":"MLB.com clip title","source":{"gamePk":777104,"atBatIndex":64,"eventIndex":3,"playId":"0eb25a6b-fed1-37c4-8bf5-4bb44c71a70e","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/777104/feed/live"},"game":{"gamePk":777104,"date":"2025-07-19","season":2025,"gameType":"R","level":"MLB","venue":"Progressive Field","away":{"id":133,"name":"Athletics","abbr":"ATH","club":"Athletics"},"home":{"id":114,"name":"Cleveland Guardians","abbr":"CLE","club":"Guardians"},"series":""},"before":{"inning":9,"half":"top","outs":1,"bases":"___","runners":{"1B":null,"2B":null,"3B":null},"score":{"away":5,"home":2},"batting":"away","count":{"balls":2,"strikes":1}},"after":{"outs":1,"bases":"__3","score":{"away":5,"home":2}},"batter":{"id":672016,"name":"Denzel Clarke","side":"R"},"pitcher":{"id":663465,"name":"Kolby Allard","hand":"L"},"event":{"type":"triple","label":"Triple","description":"Denzel Clarke triples (2) on a sharp line drive to center fielder Angel Martínez.","rbi":0,"runs":0,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":672016,"name":"Denzel Clarke","start":null,"end":"3B","out":false,"outBase":null,"reason":null,"event":"triple","isBatter":true,"credits":[{"id":682657,"name":"Angel Martínez","pos":"CF","credit":"f_fielded_ball"}]}],"chains":[{"runner":"Denzel Clarke","start":null,"out":false,"outBase":null,"chain":"8"}],"pitch":{"type":"Four-Seam Fastball","code":"FF","speed":89.6,"zone":6,"px":0.5707651442831475,"pz":2.230564826994661,"spin":2061,"call":"D"},"batted":{"trajectory":"line_drive","hardness":"hard","location":8,"ev":106.3,"la":11.0,"distance":268.0,"sprayAngle":21.7,"spray":"opposite"},"winprob":{"homeAfter":2.4,"homeBefore":3.8,"homeAdded":-1.4,"li":0.11},"statcast":{"ifAlignment":"Infield shade","ofAlignment":"Standard","deltaRunExp":1.022,"deltaHomeWinExp":-0.014,"batWinExpBefore":0.962,"bbType":"line_drive","pitchName":"4-Seam Fastball","fielders":{"2":666310,"3":467793,"4":682177,"5":608070,"6":677587,"7":666134,"8":682657,"9":671286}},"flags":["bases_empty","leading","line_drive","low_leverage","outfield_play","shift_alignment","triple"],"curation":{"category":"Outfield defense, cutoffs & relays","slot":"Triple: relay to third"},"clips":[{"kind":"highlight","slug":"kolby-allard-in-play-no-out-to-denzel-clarke","title":"Denzel Clarke's triple in the 9th","duration":"00:00:40","feed":"CMS","pageUrl":"https://www.mlb.com/video/kolby-allard-in-play-no-out-to-denzel-clarke","embedUrl":"https://streamable.com/m/kolby-allard-in-play-no-out-to-denzel-clarke","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/gzccytk9a5g7jra80dzx.jpg","match":{"guid":"0eb25a6b-fed1-37c4-8bf5-4bb44c71a70e"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=0eb25a6b-fed1-37c4-8bf5-4bb44c71a70e"},"sources":[{"label":"MLB Stats API — official play-by-play, game 777104","url":"https://statsapi.mlb.com/api/v1.1/game/777104/feed/live"},{"label":"MLB Stats API — win probability, game 777104","url":"https://statsapi.mlb.com/api/v1/game/777104/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=777104"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=0eb25a6b-fed1-37c4-8bf5-4bb44c71a70e"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-777104-64",
+ "title": "Denzel Clarke's triple in the 9th",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 777104,
+  "atBatIndex": 64,
+  "eventIndex": 3,
+  "playId": "0eb25a6b-fed1-37c4-8bf5-4bb44c71a70e",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/777104/feed/live"
+ },
+ "game": {
+  "gamePk": 777104,
+  "date": "2025-07-19",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Progressive Field",
+  "away": {
+   "id": 133,
+   "name": "Athletics",
+   "abbr": "ATH",
+   "club": "Athletics"
+  },
+  "home": {
+   "id": 114,
+   "name": "Cleveland Guardians",
+   "abbr": "CLE",
+   "club": "Guardians"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 9,
+  "half": "top",
+  "outs": 1,
+  "bases": "___",
+  "runners": {
+   "1B": null,
+   "2B": null,
+   "3B": null
+  },
+  "score": {
+   "away": 5,
+   "home": 2
+  },
+  "batting": "away",
+  "count": {
+   "balls": 2,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 1,
+  "bases": "__3",
+  "score": {
+   "away": 5,
+   "home": 2
+  }
+ },
+ "batter": {
+  "id": 672016,
+  "name": "Denzel Clarke",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 663465,
+  "name": "Kolby Allard",
+  "hand": "L"
+ },
+ "event": {
+  "type": "triple",
+  "label": "Triple",
+  "description": "Denzel Clarke triples (2) on a sharp line drive to center fielder Angel Martínez.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 672016,
+   "name": "Denzel Clarke",
+   "start": null,
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "triple",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 682657,
+     "name": "Angel Martínez",
+     "pos": "CF",
+     "credit": "f_fielded_ball"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Denzel Clarke",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": "8"
+  }
+ ],
+ "pitch": {
+  "type": "Four-Seam Fastball",
+  "code": "FF",
+  "speed": 89.6,
+  "zone": 6,
+  "px": 0.5707651442831475,
+  "pz": 2.230564826994661,
+  "spin": 2061,
+  "call": "D"
+ },
+ "batted": {
+  "trajectory": "line_drive",
+  "hardness": "hard",
+  "location": 8,
+  "ev": 106.3,
+  "la": 11.0,
+  "distance": 268.0,
+  "sprayAngle": 21.7,
+  "spray": "opposite"
+ },
+ "winprob": {
+  "homeAfter": 2.4,
+  "homeBefore": 3.8,
+  "homeAdded": -1.4,
+  "li": 0.11
+ },
+ "statcast": {
+  "ifAlignment": "Infield shade",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 1.022,
+  "deltaHomeWinExp": -0.014,
+  "batWinExpBefore": 0.962,
+  "bbType": "line_drive",
+  "pitchName": "4-Seam Fastball",
+  "fielders": {
+   "2": 666310,
+   "3": 467793,
+   "4": 682177,
+   "5": 608070,
+   "6": 677587,
+   "7": 666134,
+   "8": 682657,
+   "9": 671286
+  }
+ },
+ "flags": [
+  "bases_empty",
+  "leading",
+  "line_drive",
+  "low_leverage",
+  "outfield_play",
+  "shift_alignment",
+  "triple"
+ ],
+ "curation": {
+  "category": "Outfield defense, cutoffs & relays",
+  "slot": "Triple: relay to third"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "kolby-allard-in-play-no-out-to-denzel-clarke",
+   "title": "Denzel Clarke's triple in the 9th",
+   "duration": "00:00:40",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/kolby-allard-in-play-no-out-to-denzel-clarke",
+   "embedUrl": "https://streamable.com/m/kolby-allard-in-play-no-out-to-denzel-clarke",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/gzccytk9a5g7jra80dzx.jpg",
+   "match": {
+    "guid": "0eb25a6b-fed1-37c4-8bf5-4bb44c71a70e"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=0eb25a6b-fed1-37c4-8bf5-4bb44c71a70e"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 777104",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/777104/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 777104",
+   "url": "https://statsapi.mlb.com/api/v1/game/777104/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=777104"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=0eb25a6b-fed1-37c4-8bf5-4bb44c71a70e"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

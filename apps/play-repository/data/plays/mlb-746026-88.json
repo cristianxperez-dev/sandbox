@@ -1,1 +1,289 @@
-{"schema":1,"id":"mlb-746026-88","title":"Luis Arraez's go-ahead groundout","titleSource":"MLB.com clip title","source":{"gamePk":746026,"atBatIndex":88,"eventIndex":9,"playId":"c7e8a580-3860-4402-9ae9-be30959a75e8","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/746026/feed/live"},"game":{"gamePk":746026,"date":"2024-08-10","season":2024,"gameType":"R","level":"MLB","venue":"loanDepot park","away":{"id":135,"name":"San Diego Padres","abbr":"SD","club":"Padres"},"home":{"id":146,"name":"Miami Marlins","abbr":"MIA","club":"Marlins"},"series":""},"before":{"inning":10,"half":"top","outs":1,"bases":"_23","runners":{"1B":null,"2B":{"id":673490,"name":"Ha-Seong Kim"},"3B":{"id":642180,"name":"Tyler Wade"}},"score":{"away":8,"home":8},"batting":"away","count":{"balls":3,"strikes":2}},"after":{"outs":2,"bases":"__3","score":{"away":9,"home":8}},"batter":{"id":650333,"name":"Luis Arraez","side":"L"},"pitcher":{"id":669111,"name":"John McMillon","hand":"R"},"event":{"type":"field_out","label":"Groundout","description":"Luis Arraez grounds out to first baseman Jonah Bride. Tyler Wade scores. Ha-Seong Kim to 3rd.","rbi":1,"runs":1,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":650333,"name":"Luis Arraez","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"field_out","isBatter":true,"credits":[{"id":681146,"name":"Jonah Bride","pos":"1B","credit":"f_putout"}]},{"id":642180,"name":"Tyler Wade","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"field_out","isBatter":false,"credits":[]},{"id":673490,"name":"Ha-Seong Kim","start":"2B","end":"3B","out":false,"outBase":null,"reason":"r_adv_play","event":"field_out","isBatter":false,"credits":[]}],"chains":[{"runner":"Luis Arraez","start":null,"out":true,"outBase":"1B","chain":"3"}],"pitch":{"type":"Slider","code":"SL","speed":87.2,"zone":4,"px":-0.8341212799234397,"pz":2.1900217525271484,"spin":2245,"call":"E"},"batted":{"trajectory":"ground_ball","hardness":"medium","location":3,"ev":73.9,"la":-34.0,"distance":5.0,"sprayAngle":54.6,"spray":"pull"},"winprob":{"homeAfter":37.6,"homeBefore":43.7,"homeAdded":-6.100000000000001,"li":4.42},"statcast":{"ifAlignment":"Strategic","ofAlignment":"Standard","deltaRunExp":-0.255,"deltaHomeWinExp":-0.059,"batWinExpBefore":0.565,"bbType":"ground_ball","pitchName":"Slider","fielders":{"2":640902,"3":681146,"4":672640,"5":669394,"6":669364,"7":669065,"8":656537,"9":660644}},"flags":["close","extra_innings","go_ahead_on","go_ahead_play","ground_ball","ground_ball_infield","high_leverage","productive_out","risp","runner_scored_on_out","shift_alignment","tied"],"curation":{"category":"High-leverage & unusual situations","slot":"Extra innings, runner in scoring position"},"clips":[{"kind":"highlight","slug":"john-mcmillon-in-play-run-s-to-luis-arraez","title":"Luis Arraez's go-ahead groundout","duration":"00:00:25","feed":"CMS","pageUrl":"https://www.mlb.com/video/john-mcmillon-in-play-run-s-to-luis-arraez","embedUrl":"https://streamable.com/m/john-mcmillon-in-play-run-s-to-luis-arraez","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/pevo5ouefnlpviskmln4.jpg","match":{"guid":"c7e8a580-3860-4402-9ae9-be30959a75e8"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=c7e8a580-3860-4402-9ae9-be30959a75e8"},"sources":[{"label":"MLB Stats API — official play-by-play, game 746026","url":"https://statsapi.mlb.com/api/v1.1/game/746026/feed/live"},{"label":"MLB Stats API — win probability, game 746026","url":"https://statsapi.mlb.com/api/v1/game/746026/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=746026"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=c7e8a580-3860-4402-9ae9-be30959a75e8"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-746026-88",
+ "title": "Luis Arraez's go-ahead groundout",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 746026,
+  "atBatIndex": 88,
+  "eventIndex": 9,
+  "playId": "c7e8a580-3860-4402-9ae9-be30959a75e8",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/746026/feed/live"
+ },
+ "game": {
+  "gamePk": 746026,
+  "date": "2024-08-10",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "loanDepot park",
+  "away": {
+   "id": 135,
+   "name": "San Diego Padres",
+   "abbr": "SD",
+   "club": "Padres"
+  },
+  "home": {
+   "id": 146,
+   "name": "Miami Marlins",
+   "abbr": "MIA",
+   "club": "Marlins"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 10,
+  "half": "top",
+  "outs": 1,
+  "bases": "_23",
+  "runners": {
+   "1B": null,
+   "2B": {
+    "id": 673490,
+    "name": "Ha-Seong Kim"
+   },
+   "3B": {
+    "id": 642180,
+    "name": "Tyler Wade"
+   }
+  },
+  "score": {
+   "away": 8,
+   "home": 8
+  },
+  "batting": "away",
+  "count": {
+   "balls": 3,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "__3",
+  "score": {
+   "away": 9,
+   "home": 8
+  }
+ },
+ "batter": {
+  "id": 650333,
+  "name": "Luis Arraez",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 669111,
+  "name": "John McMillon",
+  "hand": "R"
+ },
+ "event": {
+  "type": "field_out",
+  "label": "Groundout",
+  "description": "Luis Arraez grounds out to first baseman Jonah Bride. Tyler Wade scores. Ha-Seong Kim to 3rd.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 650333,
+   "name": "Luis Arraez",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "field_out",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 681146,
+     "name": "Jonah Bride",
+     "pos": "1B",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 642180,
+   "name": "Tyler Wade",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "field_out",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 673490,
+   "name": "Ha-Seong Kim",
+   "start": "2B",
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "field_out",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Luis Arraez",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "3"
+  }
+ ],
+ "pitch": {
+  "type": "Slider",
+  "code": "SL",
+  "speed": 87.2,
+  "zone": 4,
+  "px": -0.8341212799234397,
+  "pz": 2.1900217525271484,
+  "spin": 2245,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "ground_ball",
+  "hardness": "medium",
+  "location": 3,
+  "ev": 73.9,
+  "la": -34.0,
+  "distance": 5.0,
+  "sprayAngle": 54.6,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 37.6,
+  "homeBefore": 43.7,
+  "homeAdded": -6.100000000000001,
+  "li": 4.42
+ },
+ "statcast": {
+  "ifAlignment": "Strategic",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.255,
+  "deltaHomeWinExp": -0.059,
+  "batWinExpBefore": 0.565,
+  "bbType": "ground_ball",
+  "pitchName": "Slider",
+  "fielders": {
+   "2": 640902,
+   "3": 681146,
+   "4": 672640,
+   "5": 669394,
+   "6": 669364,
+   "7": 669065,
+   "8": 656537,
+   "9": 660644
+  }
+ },
+ "flags": [
+  "close",
+  "extra_innings",
+  "go_ahead_on",
+  "go_ahead_play",
+  "ground_ball",
+  "ground_ball_infield",
+  "high_leverage",
+  "productive_out",
+  "risp",
+  "runner_scored_on_out",
+  "shift_alignment",
+  "tied"
+ ],
+ "curation": {
+  "category": "High-leverage & unusual situations",
+  "slot": "Extra innings, runner in scoring position"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "john-mcmillon-in-play-run-s-to-luis-arraez",
+   "title": "Luis Arraez's go-ahead groundout",
+   "duration": "00:00:25",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/john-mcmillon-in-play-run-s-to-luis-arraez",
+   "embedUrl": "https://streamable.com/m/john-mcmillon-in-play-run-s-to-luis-arraez",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/pevo5ouefnlpviskmln4.jpg",
+   "match": {
+    "guid": "c7e8a580-3860-4402-9ae9-be30959a75e8"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=c7e8a580-3860-4402-9ae9-be30959a75e8"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 746026",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/746026/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 746026",
+   "url": "https://statsapi.mlb.com/api/v1/game/746026/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=746026"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=c7e8a580-3860-4402-9ae9-be30959a75e8"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

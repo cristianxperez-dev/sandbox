@@ -1,1 +1,299 @@
-{"schema":1,"id":"mlb-813057-62","title":"Julio Rodríguez's go-ahead double","titleSource":"MLB.com clip title","source":{"gamePk":813057,"atBatIndex":62,"eventIndex":1,"playId":"bb2bf372-2e66-340a-a794-93e5cd5adf84","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/813057/feed/live"},"game":{"gamePk":813057,"date":"2025-10-05","season":2025,"gameType":"D","level":"MLB","venue":"T-Mobile Park","away":{"id":116,"name":"Detroit Tigers","abbr":"DET","club":"Tigers"},"home":{"id":136,"name":"Seattle Mariners","abbr":"SEA","club":"Mariners"},"series":""},"before":{"inning":8,"half":"bottom","outs":1,"bases":"_2_","runners":{"1B":null,"2B":{"id":663728,"name":"Cal Raleigh"},"3B":null},"score":{"away":2,"home":2},"batting":"home","count":{"balls":1,"strikes":0}},"after":{"outs":1,"bases":"_2_","score":{"away":2,"home":3}},"batter":{"id":677594,"name":"Julio Rodríguez","side":"R"},"pitcher":{"id":640448,"name":"Kyle Finnegan","hand":"R"},"event":{"type":"double","label":"Double","description":"Julio Rodríguez doubles (1) on a line drive to left fielder Riley Greene. Cal Raleigh scores.","rbi":1,"runs":1,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":677594,"name":"Julio Rodríguez","start":null,"end":"2B","out":false,"outBase":null,"reason":null,"event":"double","isBatter":true,"credits":[{"id":682985,"name":"Riley Greene","pos":"LF","credit":"f_fielded_ball"}]},{"id":663728,"name":"Cal Raleigh","start":"2B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"double","isBatter":false,"credits":[]}],"chains":[{"runner":"Julio Rodríguez","start":null,"out":false,"outBase":null,"chain":"7"}],"pitch":{"type":"Splitter","code":"FS","speed":85.1,"zone":7,"px":-0.2816615326321651,"pz":1.8934629218799945,"spin":740,"call":"E"},"batted":{"trajectory":"line_drive","hardness":"medium","location":7,"ev":86.0,"la":13.0,"distance":182.0,"sprayAngle":-46.6,"spray":"pull"},"winprob":{"homeAfter":88.0,"homeBefore":65.6,"homeAdded":22.39999999999999,"li":2.68},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":0.779,"deltaHomeWinExp":0.222,"batWinExpBefore":0.658,"bbType":"line_drive","pitchName":"Split-Finger","fielders":{"2":693307,"3":679529,"4":650402,"5":656716,"6":595879,"7":682985,"8":678009,"9":681481}},"flags":["close","double","go_ahead_on","go_ahead_play","high_leverage","line_drive","outfield_play","postseason","risp","tied"],"curation":{"category":"High-leverage & unusual situations","slot":"Go-ahead swing late in a postseason game"},"clips":[{"kind":"highlight","slug":"julio-rodriguez-s-go-ahead-double","title":"Julio Rodríguez's go-ahead double","duration":"00:00:30","feed":"CMS","pageUrl":"https://www.mlb.com/video/julio-rodriguez-s-go-ahead-double","embedUrl":"https://streamable.com/m/julio-rodriguez-s-go-ahead-double","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/rlhlgienmsblstk21cf6.jpg","match":{"guid":"bb2bf372-2e66-340a-a794-93e5cd5adf84"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}},{"kind":"alternate","slug":"field-view-julio-rodriguez-s-go-ahead-rbi-double","title":"Field View: Julio Rodríguez's go-ahead RBI double ","duration":"00:00:18","feed":"CMS","pageUrl":"https://www.mlb.com/video/field-view-julio-rodriguez-s-go-ahead-rbi-double","embedUrl":"https://streamable.com/m/field-view-julio-rodriguez-s-go-ahead-rbi-double","angle":{"category":"alternate","label":"Field View (MLB's name for this angle)"},"howVerified":"MLB's own title/description names this camera angle and identifies this play (same game, batter or inning, event)","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/tpecsgabzlgzmvtynmxf.jpg","match":{"text":true},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=bb2bf372-2e66-340a-a794-93e5cd5adf84"},"sources":[{"label":"MLB Stats API — official play-by-play, game 813057","url":"https://statsapi.mlb.com/api/v1.1/game/813057/feed/live"},{"label":"MLB Stats API — win probability, game 813057","url":"https://statsapi.mlb.com/api/v1/game/813057/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=813057"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=bb2bf372-2e66-340a-a794-93e5cd5adf84"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-813057-62",
+ "title": "Julio Rodríguez's go-ahead double",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 813057,
+  "atBatIndex": 62,
+  "eventIndex": 1,
+  "playId": "bb2bf372-2e66-340a-a794-93e5cd5adf84",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/813057/feed/live"
+ },
+ "game": {
+  "gamePk": 813057,
+  "date": "2025-10-05",
+  "season": 2025,
+  "gameType": "D",
+  "level": "MLB",
+  "venue": "T-Mobile Park",
+  "away": {
+   "id": 116,
+   "name": "Detroit Tigers",
+   "abbr": "DET",
+   "club": "Tigers"
+  },
+  "home": {
+   "id": 136,
+   "name": "Seattle Mariners",
+   "abbr": "SEA",
+   "club": "Mariners"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 8,
+  "half": "bottom",
+  "outs": 1,
+  "bases": "_2_",
+  "runners": {
+   "1B": null,
+   "2B": {
+    "id": 663728,
+    "name": "Cal Raleigh"
+   },
+   "3B": null
+  },
+  "score": {
+   "away": 2,
+   "home": 2
+  },
+  "batting": "home",
+  "count": {
+   "balls": 1,
+   "strikes": 0
+  }
+ },
+ "after": {
+  "outs": 1,
+  "bases": "_2_",
+  "score": {
+   "away": 2,
+   "home": 3
+  }
+ },
+ "batter": {
+  "id": 677594,
+  "name": "Julio Rodríguez",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 640448,
+  "name": "Kyle Finnegan",
+  "hand": "R"
+ },
+ "event": {
+  "type": "double",
+  "label": "Double",
+  "description": "Julio Rodríguez doubles (1) on a line drive to left fielder Riley Greene. Cal Raleigh scores.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 677594,
+   "name": "Julio Rodríguez",
+   "start": null,
+   "end": "2B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "double",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 682985,
+     "name": "Riley Greene",
+     "pos": "LF",
+     "credit": "f_fielded_ball"
+    }
+   ]
+  },
+  {
+   "id": 663728,
+   "name": "Cal Raleigh",
+   "start": "2B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "double",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Julio Rodríguez",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": "7"
+  }
+ ],
+ "pitch": {
+  "type": "Splitter",
+  "code": "FS",
+  "speed": 85.1,
+  "zone": 7,
+  "px": -0.2816615326321651,
+  "pz": 1.8934629218799945,
+  "spin": 740,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "line_drive",
+  "hardness": "medium",
+  "location": 7,
+  "ev": 86.0,
+  "la": 13.0,
+  "distance": 182.0,
+  "sprayAngle": -46.6,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 88.0,
+  "homeBefore": 65.6,
+  "homeAdded": 22.39999999999999,
+  "li": 2.68
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.779,
+  "deltaHomeWinExp": 0.222,
+  "batWinExpBefore": 0.658,
+  "bbType": "line_drive",
+  "pitchName": "Split-Finger",
+  "fielders": {
+   "2": 693307,
+   "3": 679529,
+   "4": 650402,
+   "5": 656716,
+   "6": 595879,
+   "7": 682985,
+   "8": 678009,
+   "9": 681481
+  }
+ },
+ "flags": [
+  "close",
+  "double",
+  "go_ahead_on",
+  "go_ahead_play",
+  "high_leverage",
+  "line_drive",
+  "outfield_play",
+  "postseason",
+  "risp",
+  "tied"
+ ],
+ "curation": {
+  "category": "High-leverage & unusual situations",
+  "slot": "Go-ahead swing late in a postseason game"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "julio-rodriguez-s-go-ahead-double",
+   "title": "Julio Rodríguez's go-ahead double",
+   "duration": "00:00:30",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/julio-rodriguez-s-go-ahead-double",
+   "embedUrl": "https://streamable.com/m/julio-rodriguez-s-go-ahead-double",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/rlhlgienmsblstk21cf6.jpg",
+   "match": {
+    "guid": "bb2bf372-2e66-340a-a794-93e5cd5adf84"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  },
+  {
+   "kind": "alternate",
+   "slug": "field-view-julio-rodriguez-s-go-ahead-rbi-double",
+   "title": "Field View: Julio Rodríguez's go-ahead RBI double ",
+   "duration": "00:00:18",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/field-view-julio-rodriguez-s-go-ahead-rbi-double",
+   "embedUrl": "https://streamable.com/m/field-view-julio-rodriguez-s-go-ahead-rbi-double",
+   "angle": {
+    "category": "alternate",
+    "label": "Field View (MLB's name for this angle)"
+   },
+   "howVerified": "MLB's own title/description names this camera angle and identifies this play (same game, batter or inning, event)",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/tpecsgabzlgzmvtynmxf.jpg",
+   "match": {
+    "text": true
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=bb2bf372-2e66-340a-a794-93e5cd5adf84"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 813057",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/813057/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 813057",
+   "url": "https://statsapi.mlb.com/api/v1/game/813057/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=813057"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=bb2bf372-2e66-340a-a794-93e5cd5adf84"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": [
+   {
+    "clip": 1,
+    "label": "Field View (MLB's name for this angle)"
+   }
+  ]
+ }
+}

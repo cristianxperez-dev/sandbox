@@ -1,4 +1,4 @@
-"""One command for a bulk, incremental import: discover → curate → publish → re-verify.
+"""One command for a bulk, incremental import: discover → curate → publish → cameras → re-verify.
 
     python3 pipeline.py --total 300 2025-05-01:2025-05-31 2025-07-04
     python3 pipeline.py --total 300            # no new dates: curate from games already scanned
@@ -40,6 +40,8 @@ def main(argv: list[str]) -> int:
         print("curate stopped early — re-run this command to resume (checks are cached)")
         return 3
     if run("publish.py", APP, *(["--bundle", bundle] if bundle else [])):
+        return 1
+    if not bundle and run("cameras.py", APP):          # search Broadcast and High Home independently for every play
         return 1
     if not bundle and run("verify_published.py", APP):
         return 1

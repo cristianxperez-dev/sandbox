@@ -1,1 +1,298 @@
-{"schema":1,"id":"mlb-775316-40","title":"Mets turn clutch inning-ending double play in 6th","titleSource":"MLB.com clip title","source":{"gamePk":775316,"atBatIndex":40,"eventIndex":2,"playId":"685bd476-6dd7-4d96-8565-5d24bb611bd3","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/775316/feed/live"},"game":{"gamePk":775316,"date":"2024-10-08","season":2024,"gameType":"D","level":"MLB","venue":"Citi Field","away":{"id":143,"name":"Philadelphia Phillies","abbr":"PHI","club":"Phillies"},"home":{"id":121,"name":"New York Mets","abbr":"NYM","club":"Mets"},"series":""},"before":{"inning":6,"half":"top","outs":1,"bases":"12_","runners":{"1B":{"id":607208,"name":"Trea Turner"},"2B":{"id":656941,"name":"Kyle Schwarber"},"3B":null},"score":{"away":0,"home":2},"batting":"away","count":{"balls":0,"strikes":2}},"after":{"outs":3,"bases":"1__","score":{"away":0,"home":2}},"batter":{"id":592206,"name":"Nick Castellanos","side":"R"},"pitcher":{"id":640455,"name":"Sean Manaea","hand":"L"},"event":{"type":"double_play","label":"Double Play","description":"Nick Castellanos lines into a double play, second baseman Jose Iglesias to shortstop Francisco Lindor. Kyle Schwarber out at 2nd.","rbi":0,"runs":0,"outs":2,"isReview":false,"walkoff":false},"runners":[{"id":592206,"name":"Nick Castellanos","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"double_play","isBatter":true,"credits":[{"id":578428,"name":"Jose Iglesias","pos":"2B","credit":"f_putout"}]},{"id":656941,"name":"Kyle Schwarber","start":"2B","end":null,"out":true,"outBase":"2B","reason":"r_doubled_off","event":"double_play","isBatter":false,"credits":[{"id":578428,"name":"Jose Iglesias","pos":"2B","credit":"f_assist"},{"id":596019,"name":"Francisco Lindor","pos":"SS","credit":"f_putout"}]}],"chains":[{"runner":"Nick Castellanos","start":null,"out":true,"outBase":"1B","chain":"4"},{"runner":"Kyle Schwarber","start":"2B","out":true,"outBase":"2B","chain":"4-6"}],"pitch":{"type":"Changeup","code":"CH","speed":85.1,"zone":14,"px":1.280219171958496,"pz":2.3959072154722043,"spin":1656,"call":"X"},"batted":{"trajectory":"line_drive","hardness":"medium","location":4,"ev":95.7,"la":5.0,"distance":165.0,"sprayAngle":25.1,"spray":"opposite"},"winprob":{"homeAfter":84.5,"homeBefore":71.6,"homeAdded":12.900000000000006,"li":2.88},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":-0.139,"deltaHomeWinExp":0.102,"batWinExpBefore":0.257,"bbType":"line_drive","pitchName":"Changeup","fielders":{"2":682626,"3":624413,"4":578428,"5":668901,"6":596019,"7":607043,"8":621438,"9":516782}},"flags":["close","double_play","doubled_off","dp_situation","force_available","high_leverage","line_drive","middle_infield","postseason","risp","runner_out_on_bases","tag_play","trailing","tying_run_on"],"curation":{"category":"Miscellaneous teaching moments","slot":"Doubled off"},"clips":[{"kind":"highlight","slug":"sean-manaea-in-play-out-s-to-nick-castellanos-m8xtdb","title":"Mets turn clutch inning-ending double play in 6th","duration":"00:00:17","feed":"CMS","pageUrl":"https://www.mlb.com/video/sean-manaea-in-play-out-s-to-nick-castellanos-m8xtdb","embedUrl":"https://streamable.com/m/sean-manaea-in-play-out-s-to-nick-castellanos-m8xtdb","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/n2dvctkyheszsvg0nzwa.jpg","match":{"guid":"685bd476-6dd7-4d96-8565-5d24bb611bd3"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=685bd476-6dd7-4d96-8565-5d24bb611bd3"},"sources":[{"label":"MLB Stats API — official play-by-play, game 775316","url":"https://statsapi.mlb.com/api/v1.1/game/775316/feed/live"},{"label":"MLB Stats API — win probability, game 775316","url":"https://statsapi.mlb.com/api/v1/game/775316/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=775316"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=685bd476-6dd7-4d96-8565-5d24bb611bd3"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-775316-40",
+ "title": "Mets turn clutch inning-ending double play in 6th",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 775316,
+  "atBatIndex": 40,
+  "eventIndex": 2,
+  "playId": "685bd476-6dd7-4d96-8565-5d24bb611bd3",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/775316/feed/live"
+ },
+ "game": {
+  "gamePk": 775316,
+  "date": "2024-10-08",
+  "season": 2024,
+  "gameType": "D",
+  "level": "MLB",
+  "venue": "Citi Field",
+  "away": {
+   "id": 143,
+   "name": "Philadelphia Phillies",
+   "abbr": "PHI",
+   "club": "Phillies"
+  },
+  "home": {
+   "id": 121,
+   "name": "New York Mets",
+   "abbr": "NYM",
+   "club": "Mets"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 6,
+  "half": "top",
+  "outs": 1,
+  "bases": "12_",
+  "runners": {
+   "1B": {
+    "id": 607208,
+    "name": "Trea Turner"
+   },
+   "2B": {
+    "id": 656941,
+    "name": "Kyle Schwarber"
+   },
+   "3B": null
+  },
+  "score": {
+   "away": 0,
+   "home": 2
+  },
+  "batting": "away",
+  "count": {
+   "balls": 0,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 3,
+  "bases": "1__",
+  "score": {
+   "away": 0,
+   "home": 2
+  }
+ },
+ "batter": {
+  "id": 592206,
+  "name": "Nick Castellanos",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 640455,
+  "name": "Sean Manaea",
+  "hand": "L"
+ },
+ "event": {
+  "type": "double_play",
+  "label": "Double Play",
+  "description": "Nick Castellanos lines into a double play, second baseman Jose Iglesias to shortstop Francisco Lindor. Kyle Schwarber out at 2nd.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 2,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 592206,
+   "name": "Nick Castellanos",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "double_play",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 578428,
+     "name": "Jose Iglesias",
+     "pos": "2B",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 656941,
+   "name": "Kyle Schwarber",
+   "start": "2B",
+   "end": null,
+   "out": true,
+   "outBase": "2B",
+   "reason": "r_doubled_off",
+   "event": "double_play",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 578428,
+     "name": "Jose Iglesias",
+     "pos": "2B",
+     "credit": "f_assist"
+    },
+    {
+     "id": 596019,
+     "name": "Francisco Lindor",
+     "pos": "SS",
+     "credit": "f_putout"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Nick Castellanos",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "4"
+  },
+  {
+   "runner": "Kyle Schwarber",
+   "start": "2B",
+   "out": true,
+   "outBase": "2B",
+   "chain": "4-6"
+  }
+ ],
+ "pitch": {
+  "type": "Changeup",
+  "code": "CH",
+  "speed": 85.1,
+  "zone": 14,
+  "px": 1.280219171958496,
+  "pz": 2.3959072154722043,
+  "spin": 1656,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "line_drive",
+  "hardness": "medium",
+  "location": 4,
+  "ev": 95.7,
+  "la": 5.0,
+  "distance": 165.0,
+  "sprayAngle": 25.1,
+  "spray": "opposite"
+ },
+ "winprob": {
+  "homeAfter": 84.5,
+  "homeBefore": 71.6,
+  "homeAdded": 12.900000000000006,
+  "li": 2.88
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.139,
+  "deltaHomeWinExp": 0.102,
+  "batWinExpBefore": 0.257,
+  "bbType": "line_drive",
+  "pitchName": "Changeup",
+  "fielders": {
+   "2": 682626,
+   "3": 624413,
+   "4": 578428,
+   "5": 668901,
+   "6": 596019,
+   "7": 607043,
+   "8": 621438,
+   "9": 516782
+  }
+ },
+ "flags": [
+  "close",
+  "double_play",
+  "doubled_off",
+  "dp_situation",
+  "force_available",
+  "high_leverage",
+  "line_drive",
+  "middle_infield",
+  "postseason",
+  "risp",
+  "runner_out_on_bases",
+  "tag_play",
+  "trailing",
+  "tying_run_on"
+ ],
+ "curation": {
+  "category": "Miscellaneous teaching moments",
+  "slot": "Doubled off"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "sean-manaea-in-play-out-s-to-nick-castellanos-m8xtdb",
+   "title": "Mets turn clutch inning-ending double play in 6th",
+   "duration": "00:00:17",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/sean-manaea-in-play-out-s-to-nick-castellanos-m8xtdb",
+   "embedUrl": "https://streamable.com/m/sean-manaea-in-play-out-s-to-nick-castellanos-m8xtdb",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/n2dvctkyheszsvg0nzwa.jpg",
+   "match": {
+    "guid": "685bd476-6dd7-4d96-8565-5d24bb611bd3"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=685bd476-6dd7-4d96-8565-5d24bb611bd3"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 775316",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/775316/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 775316",
+   "url": "https://statsapi.mlb.com/api/v1/game/775316/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=775316"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=685bd476-6dd7-4d96-8565-5d24bb611bd3"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

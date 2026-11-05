@@ -1,1 +1,303 @@
-{"schema":1,"id":"mlb-744943-28","title":"Davis Schneider nabs Edouard Julien at home","titleSource":"MLB.com clip title","source":{"gamePk":744943,"atBatIndex":28,"eventIndex":6,"playId":"3faa0194-b552-479c-9be8-5a61aa2c5afd","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/744943/feed/live"},"game":{"gamePk":744943,"date":"2024-05-11","season":2024,"gameType":"R","level":"MLB","venue":"Rogers Centre","away":{"id":142,"name":"Minnesota Twins","abbr":"MIN","club":"Twins"},"home":{"id":141,"name":"Toronto Blue Jays","abbr":"TOR","club":"Blue Jays"},"series":""},"before":{"inning":3,"half":"top","outs":2,"bases":"_2_","runners":{"1B":null,"2B":{"id":666397,"name":"Edouard Julien"},"3B":null},"score":{"away":7,"home":1},"batting":"away","count":{"balls":2,"strikes":2}},"after":{"outs":3,"bases":"1__","score":{"away":7,"home":1}},"batter":{"id":663616,"name":"Trevor Larnach","side":"L"},"pitcher":{"id":592332,"name":"Kevin Gausman","hand":"R"},"event":{"type":"single","label":"Single","description":"Trevor Larnach singles on a ground ball to left fielder Davis Schneider. Edouard Julien out at home on the throw, left fielder Davis Schneider to catcher Danny Jansen.","rbi":0,"runs":0,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":663616,"name":"Trevor Larnach","start":null,"end":"1B","out":false,"outBase":null,"reason":null,"event":"single","isBatter":true,"credits":[{"id":676914,"name":"Davis Schneider","pos":"LF","credit":"f_fielded_ball"}]},{"id":666397,"name":"Edouard Julien","start":"2B","end":null,"out":true,"outBase":"4B","reason":"r_thrown_out","event":"other_out","isBatter":false,"credits":[{"id":676914,"name":"Davis Schneider","pos":"LF","credit":"f_assist"},{"id":676914,"name":"Davis Schneider","pos":"LF","credit":"f_assist_of"},{"id":643376,"name":"Danny Jansen","pos":"C","credit":"f_putout"}]}],"chains":[{"runner":"Trevor Larnach","start":null,"out":false,"outBase":null,"chain":"7"},{"runner":"Edouard Julien","start":"2B","out":true,"outBase":"4B","chain":"7-2"}],"pitch":{"type":"Four-Seam Fastball","code":"FF","speed":97.2,"zone":2,"px":0.0008455742970607,"pz":3.4166228071476104,"spin":2447,"call":"X"},"batted":{"trajectory":"ground_ball","hardness":"medium","location":7,"ev":92.2,"la":2.0,"distance":83.0,"sprayAngle":-24.5,"spray":"opposite"},"winprob":{"homeAfter":7.199999999999999,"homeBefore":6.4,"homeAdded":0.7999999999999989,"li":0.19},"statcast":{"ifAlignment":"Infield shade","ofAlignment":"Standard","deltaRunExp":0.699,"deltaHomeWinExp":0.007,"batWinExpBefore":0.935,"bbType":"ground_ball","pitchName":"4-Seam Fastball","fielders":{"2":643376,"3":665489,"4":643396,"5":676391,"6":666182,"7":676914,"8":662139,"9":624415}},"flags":["blowout","catcher_play","ground_ball","leading","low_leverage","out_at_plate","outfield_assist","outfield_play","play_at_plate","risp","runner_out_on_bases","shift_alignment","single","tag_play","two_outs"],"curation":{"category":"Catcher defense & plays at the plate","slot":"Tag play at the plate"},"clips":[{"kind":"highlight","slug":"kevin-gausman-in-play-out-s-to-trevor-larnach","title":"Davis Schneider nabs Edouard Julien at home","duration":"00:00:18","feed":"CMS","pageUrl":"https://www.mlb.com/video/kevin-gausman-in-play-out-s-to-trevor-larnach","embedUrl":"https://streamable.com/m/kevin-gausman-in-play-out-s-to-trevor-larnach","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/iifjrtlvrtsdfm8vyrlo.jpg","match":{"guid":"3faa0194-b552-479c-9be8-5a61aa2c5afd"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=3faa0194-b552-479c-9be8-5a61aa2c5afd"},"sources":[{"label":"MLB Stats API — official play-by-play, game 744943","url":"https://statsapi.mlb.com/api/v1.1/game/744943/feed/live"},{"label":"MLB Stats API — win probability, game 744943","url":"https://statsapi.mlb.com/api/v1/game/744943/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=744943"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=3faa0194-b552-479c-9be8-5a61aa2c5afd"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-744943-28",
+ "title": "Davis Schneider nabs Edouard Julien at home",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 744943,
+  "atBatIndex": 28,
+  "eventIndex": 6,
+  "playId": "3faa0194-b552-479c-9be8-5a61aa2c5afd",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/744943/feed/live"
+ },
+ "game": {
+  "gamePk": 744943,
+  "date": "2024-05-11",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Rogers Centre",
+  "away": {
+   "id": 142,
+   "name": "Minnesota Twins",
+   "abbr": "MIN",
+   "club": "Twins"
+  },
+  "home": {
+   "id": 141,
+   "name": "Toronto Blue Jays",
+   "abbr": "TOR",
+   "club": "Blue Jays"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 3,
+  "half": "top",
+  "outs": 2,
+  "bases": "_2_",
+  "runners": {
+   "1B": null,
+   "2B": {
+    "id": 666397,
+    "name": "Edouard Julien"
+   },
+   "3B": null
+  },
+  "score": {
+   "away": 7,
+   "home": 1
+  },
+  "batting": "away",
+  "count": {
+   "balls": 2,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 3,
+  "bases": "1__",
+  "score": {
+   "away": 7,
+   "home": 1
+  }
+ },
+ "batter": {
+  "id": 663616,
+  "name": "Trevor Larnach",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 592332,
+  "name": "Kevin Gausman",
+  "hand": "R"
+ },
+ "event": {
+  "type": "single",
+  "label": "Single",
+  "description": "Trevor Larnach singles on a ground ball to left fielder Davis Schneider. Edouard Julien out at home on the throw, left fielder Davis Schneider to catcher Danny Jansen.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 663616,
+   "name": "Trevor Larnach",
+   "start": null,
+   "end": "1B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "single",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 676914,
+     "name": "Davis Schneider",
+     "pos": "LF",
+     "credit": "f_fielded_ball"
+    }
+   ]
+  },
+  {
+   "id": 666397,
+   "name": "Edouard Julien",
+   "start": "2B",
+   "end": null,
+   "out": true,
+   "outBase": "4B",
+   "reason": "r_thrown_out",
+   "event": "other_out",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 676914,
+     "name": "Davis Schneider",
+     "pos": "LF",
+     "credit": "f_assist"
+    },
+    {
+     "id": 676914,
+     "name": "Davis Schneider",
+     "pos": "LF",
+     "credit": "f_assist_of"
+    },
+    {
+     "id": 643376,
+     "name": "Danny Jansen",
+     "pos": "C",
+     "credit": "f_putout"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Trevor Larnach",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": "7"
+  },
+  {
+   "runner": "Edouard Julien",
+   "start": "2B",
+   "out": true,
+   "outBase": "4B",
+   "chain": "7-2"
+  }
+ ],
+ "pitch": {
+  "type": "Four-Seam Fastball",
+  "code": "FF",
+  "speed": 97.2,
+  "zone": 2,
+  "px": 0.0008455742970607,
+  "pz": 3.4166228071476104,
+  "spin": 2447,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "ground_ball",
+  "hardness": "medium",
+  "location": 7,
+  "ev": 92.2,
+  "la": 2.0,
+  "distance": 83.0,
+  "sprayAngle": -24.5,
+  "spray": "opposite"
+ },
+ "winprob": {
+  "homeAfter": 7.199999999999999,
+  "homeBefore": 6.4,
+  "homeAdded": 0.7999999999999989,
+  "li": 0.19
+ },
+ "statcast": {
+  "ifAlignment": "Infield shade",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.699,
+  "deltaHomeWinExp": 0.007,
+  "batWinExpBefore": 0.935,
+  "bbType": "ground_ball",
+  "pitchName": "4-Seam Fastball",
+  "fielders": {
+   "2": 643376,
+   "3": 665489,
+   "4": 643396,
+   "5": 676391,
+   "6": 666182,
+   "7": 676914,
+   "8": 662139,
+   "9": 624415
+  }
+ },
+ "flags": [
+  "blowout",
+  "catcher_play",
+  "ground_ball",
+  "leading",
+  "low_leverage",
+  "out_at_plate",
+  "outfield_assist",
+  "outfield_play",
+  "play_at_plate",
+  "risp",
+  "runner_out_on_bases",
+  "shift_alignment",
+  "single",
+  "tag_play",
+  "two_outs"
+ ],
+ "curation": {
+  "category": "Catcher defense & plays at the plate",
+  "slot": "Tag play at the plate"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "kevin-gausman-in-play-out-s-to-trevor-larnach",
+   "title": "Davis Schneider nabs Edouard Julien at home",
+   "duration": "00:00:18",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/kevin-gausman-in-play-out-s-to-trevor-larnach",
+   "embedUrl": "https://streamable.com/m/kevin-gausman-in-play-out-s-to-trevor-larnach",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/iifjrtlvrtsdfm8vyrlo.jpg",
+   "match": {
+    "guid": "3faa0194-b552-479c-9be8-5a61aa2c5afd"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=3faa0194-b552-479c-9be8-5a61aa2c5afd"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 744943",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/744943/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 744943",
+   "url": "https://statsapi.mlb.com/api/v1/game/744943/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=744943"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=3faa0194-b552-479c-9be8-5a61aa2c5afd"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

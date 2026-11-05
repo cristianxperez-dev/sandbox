@@ -1,1 +1,286 @@
-{"schema":1,"id":"mlb-778160-4","title":"Gavin Sheets grounds out","titleSource":"From MLB's official play description","source":{"gamePk":778160,"atBatIndex":4,"eventIndex":3,"playId":"2d9c6168-ad5e-3b3b-9118-fa9e6d9b25ea","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/778160/feed/live"},"game":{"gamePk":778160,"date":"2025-04-26","season":2025,"gameType":"R","level":"MLB","venue":"Petco Park","away":{"id":139,"name":"Tampa Bay Rays","abbr":"TB","club":"Rays"},"home":{"id":135,"name":"San Diego Padres","abbr":"SD","club":"Padres"},"series":""},"before":{"inning":1,"half":"bottom","outs":0,"bases":"_2_","runners":{"1B":null,"2B":{"id":665487,"name":"Fernando Tatis Jr."},"3B":null},"score":{"away":0,"home":0},"batting":"home","count":{"balls":1,"strikes":2}},"after":{"outs":1,"bases":"__3","score":{"away":0,"home":0}},"batter":{"id":657757,"name":"Gavin Sheets","side":"L"},"pitcher":{"id":686752,"name":"Ryan Pepiot","hand":"R"},"event":{"type":"field_out","label":"Groundout","description":"Gavin Sheets grounds out, second baseman Brandon Lowe to first baseman Jonathan Aranda. Fernando Tatis Jr. to 3rd.","rbi":0,"runs":0,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":657757,"name":"Gavin Sheets","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"field_out","isBatter":true,"credits":[{"id":664040,"name":"Brandon Lowe","pos":"2B","credit":"f_assist"},{"id":666018,"name":"Jonathan Aranda","pos":"1B","credit":"f_putout"}]},{"id":665487,"name":"Fernando Tatis Jr.","start":"2B","end":"3B","out":false,"outBase":null,"reason":"r_adv_play","event":"field_out","isBatter":false,"credits":[]}],"chains":[{"runner":"Gavin Sheets","start":null,"out":true,"outBase":"1B","chain":"4-3"}],"pitch":{"type":"Changeup","code":"CH","speed":86.4,"zone":13,"px":-0.8710418208832497,"pz":1.372852801465403,"spin":2398,"call":"X"},"batted":{"trajectory":"ground_ball","hardness":"medium","location":4,"ev":72.0,"la":8.0,"distance":115.0,"sprayAngle":19.3,"spray":"pull"},"winprob":{"homeAfter":59.5,"homeBefore":60.7,"homeAdded":-1.1999999999999957,"li":1.2},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":-0.091,"deltaHomeWinExp":0.0,"batWinExpBefore":0.595,"bbType":"ground_ball","pitchName":"Changeup","fielders":{"2":643376,"3":666018,"4":664040,"5":691406,"6":676609,"7":666624,"8":802415,"9":670224}},"flags":["close","go_ahead_on","ground_ball","ground_ball_infield","middle_infield","productive_out","risp","tied"],"curation":{"category":"Situational hitting","slot":"Moving the runner over with nobody out"},"clips":[{"kind":"filmroom","slug":"ryan-pepiot-in-play-out-s-to-gavin-sheets","title":"Gavin Sheets grounds out, second baseman Brandon Lowe to first baseman Jonathan Aranda. Fernando Tatis Jr. to 3rd.","duration":"00:00:11","feed":"HOME","pageUrl":"https://www.mlb.com/video/ryan-pepiot-in-play-out-s-to-gavin-sheets","embedUrl":"https://streamable.com/m/ryan-pepiot-in-play-out-s-to-gavin-sheets","angle":{"category":"broadcast","label":"Home TV broadcast"},"howVerified":"MLB Film Room clip for the playId; Film Room's play info matches game, inning, outs, runners, batter and pitcher","thumb":"https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/2d9c6168-ad5e-3b3b-9118-fa9e6d9b25ea_home.jpg","match":{"filmroom":{"gamePk":true,"inning":true,"outs":true,"runners":true,"batter":true,"pitcher":true},"feeds":["HOME","AWAY"]},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=2d9c6168-ad5e-3b3b-9118-fa9e6d9b25ea"},"sources":[{"label":"MLB Stats API — official play-by-play, game 778160","url":"https://statsapi.mlb.com/api/v1.1/game/778160/feed/live"},{"label":"MLB Stats API — win probability, game 778160","url":"https://statsapi.mlb.com/api/v1/game/778160/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=778160"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=2d9c6168-ad5e-3b3b-9118-fa9e6d9b25ea"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-778160-4",
+ "title": "Gavin Sheets grounds out",
+ "titleSource": "From MLB's official play description",
+ "source": {
+  "gamePk": 778160,
+  "atBatIndex": 4,
+  "eventIndex": 3,
+  "playId": "2d9c6168-ad5e-3b3b-9118-fa9e6d9b25ea",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/778160/feed/live"
+ },
+ "game": {
+  "gamePk": 778160,
+  "date": "2025-04-26",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Petco Park",
+  "away": {
+   "id": 139,
+   "name": "Tampa Bay Rays",
+   "abbr": "TB",
+   "club": "Rays"
+  },
+  "home": {
+   "id": 135,
+   "name": "San Diego Padres",
+   "abbr": "SD",
+   "club": "Padres"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 1,
+  "half": "bottom",
+  "outs": 0,
+  "bases": "_2_",
+  "runners": {
+   "1B": null,
+   "2B": {
+    "id": 665487,
+    "name": "Fernando Tatis Jr."
+   },
+   "3B": null
+  },
+  "score": {
+   "away": 0,
+   "home": 0
+  },
+  "batting": "home",
+  "count": {
+   "balls": 1,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 1,
+  "bases": "__3",
+  "score": {
+   "away": 0,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 657757,
+  "name": "Gavin Sheets",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 686752,
+  "name": "Ryan Pepiot",
+  "hand": "R"
+ },
+ "event": {
+  "type": "field_out",
+  "label": "Groundout",
+  "description": "Gavin Sheets grounds out, second baseman Brandon Lowe to first baseman Jonathan Aranda. Fernando Tatis Jr. to 3rd.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 657757,
+   "name": "Gavin Sheets",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "field_out",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 664040,
+     "name": "Brandon Lowe",
+     "pos": "2B",
+     "credit": "f_assist"
+    },
+    {
+     "id": 666018,
+     "name": "Jonathan Aranda",
+     "pos": "1B",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 665487,
+   "name": "Fernando Tatis Jr.",
+   "start": "2B",
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "field_out",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Gavin Sheets",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "4-3"
+  }
+ ],
+ "pitch": {
+  "type": "Changeup",
+  "code": "CH",
+  "speed": 86.4,
+  "zone": 13,
+  "px": -0.8710418208832497,
+  "pz": 1.372852801465403,
+  "spin": 2398,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "ground_ball",
+  "hardness": "medium",
+  "location": 4,
+  "ev": 72.0,
+  "la": 8.0,
+  "distance": 115.0,
+  "sprayAngle": 19.3,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 59.5,
+  "homeBefore": 60.7,
+  "homeAdded": -1.1999999999999957,
+  "li": 1.2
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.091,
+  "deltaHomeWinExp": 0.0,
+  "batWinExpBefore": 0.595,
+  "bbType": "ground_ball",
+  "pitchName": "Changeup",
+  "fielders": {
+   "2": 643376,
+   "3": 666018,
+   "4": 664040,
+   "5": 691406,
+   "6": 676609,
+   "7": 666624,
+   "8": 802415,
+   "9": 670224
+  }
+ },
+ "flags": [
+  "close",
+  "go_ahead_on",
+  "ground_ball",
+  "ground_ball_infield",
+  "middle_infield",
+  "productive_out",
+  "risp",
+  "tied"
+ ],
+ "curation": {
+  "category": "Situational hitting",
+  "slot": "Moving the runner over with nobody out"
+ },
+ "clips": [
+  {
+   "kind": "filmroom",
+   "slug": "ryan-pepiot-in-play-out-s-to-gavin-sheets",
+   "title": "Gavin Sheets grounds out, second baseman Brandon Lowe to first baseman Jonathan Aranda. Fernando Tatis Jr. to 3rd.",
+   "duration": "00:00:11",
+   "feed": "HOME",
+   "pageUrl": "https://www.mlb.com/video/ryan-pepiot-in-play-out-s-to-gavin-sheets",
+   "embedUrl": "https://streamable.com/m/ryan-pepiot-in-play-out-s-to-gavin-sheets",
+   "angle": {
+    "category": "broadcast",
+    "label": "Home TV broadcast"
+   },
+   "howVerified": "MLB Film Room clip for the playId; Film Room's play info matches game, inning, outs, runners, batter and pitcher",
+   "thumb": "https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/2d9c6168-ad5e-3b3b-9118-fa9e6d9b25ea_home.jpg",
+   "match": {
+    "filmroom": {
+     "gamePk": true,
+     "inning": true,
+     "outs": true,
+     "runners": true,
+     "batter": true,
+     "pitcher": true
+    },
+    "feeds": [
+     "HOME",
+     "AWAY"
+    ]
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=2d9c6168-ad5e-3b3b-9118-fa9e6d9b25ea"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 778160",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/778160/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 778160",
+   "url": "https://statsapi.mlb.com/api/v1/game/778160/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=778160"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=2d9c6168-ad5e-3b3b-9118-fa9e6d9b25ea"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

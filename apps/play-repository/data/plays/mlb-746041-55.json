@@ -1,1 +1,288 @@
-{"schema":1,"id":"mlb-746041-55","title":"Nick Fortes out on a sacrifice bunt","titleSource":"From MLB's official play description","source":{"gamePk":746041,"atBatIndex":55,"eventIndex":1,"playId":"8b88725b-e614-4a65-bfe5-b098aad7d001","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/746041/feed/live"},"game":{"gamePk":746041,"date":"2024-07-20","season":2024,"gameType":"R","level":"MLB","venue":"loanDepot park","away":{"id":121,"name":"New York Mets","abbr":"NYM","club":"Mets"},"home":{"id":146,"name":"Miami Marlins","abbr":"MIA","club":"Marlins"},"series":""},"before":{"inning":7,"half":"bottom","outs":0,"bases":"1__","runners":{"1B":{"id":669364,"name":"Xavier Edwards"},"2B":null,"3B":null},"score":{"away":1,"home":0},"batting":"home","count":{"balls":0,"strikes":0}},"after":{"outs":1,"bases":"_2_","score":{"away":1,"home":0}},"batter":{"id":663743,"name":"Nick Fortes","side":"R"},"pitcher":{"id":676130,"name":"José Buttó","hand":"R"},"event":{"type":"sac_bunt","label":"Sac Bunt","description":"Nick Fortes out on a sacrifice bunt, first baseman Pete Alonso to second baseman Jose Iglesias. Xavier Edwards to 2nd.","rbi":0,"runs":0,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":663743,"name":"Nick Fortes","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"sac_bunt","isBatter":true,"credits":[{"id":624413,"name":"Pete Alonso","pos":"1B","credit":"f_assist"},{"id":578428,"name":"Jose Iglesias","pos":"2B","credit":"f_putout"}]},{"id":669364,"name":"Xavier Edwards","start":"1B","end":"2B","out":false,"outBase":null,"reason":"r_adv_force","event":"sac_bunt","isBatter":false,"credits":[]}],"chains":[{"runner":"Nick Fortes","start":null,"out":true,"outBase":"1B","chain":"3-4"}],"pitch":{"type":"Four-Seam Fastball","code":"FF","speed":93.2,"zone":11,"px":-0.47754477638917425,"pz":3.741845989085508,"spin":2295,"call":"X"},"batted":{"trajectory":"bunt_grounder","hardness":"medium","location":3,"ev":48.2,"la":-41.0,"distance":6.0,"sprayAngle":32.4,"spray":"opposite"},"winprob":{"homeAfter":40.9,"homeBefore":44.1,"homeAdded":-3.200000000000003,"li":3.11},"statcast":{"ifAlignment":"Strategic","ofAlignment":"Standard","deltaRunExp":-0.069,"deltaHomeWinExp":-0.032,"batWinExpBefore":0.441,"bbType":"ground_ball","pitchName":"4-Seam Fastball","fielders":{"2":682626,"3":624413,"4":578428,"5":668901,"6":596019,"7":607043,"8":664056,"9":643446}},"flags":["bunt","close","dp_situation","force_available","high_leverage","one_run","productive_out","shift_alignment","trailing","tying_run_on"],"curation":{"category":"Situational hitting","slot":"Sacrifice bunt"},"clips":[{"kind":"filmroom","slug":"jose-butto-in-play-out-s-to-nick-fortes","title":"Nick Fortes out on a sacrifice bunt, first baseman Pete Alonso to second baseman Jose Iglesias.   Xavier Edwards to 2nd.","duration":"00:00:13","feed":"HOME","pageUrl":"https://www.mlb.com/video/jose-butto-in-play-out-s-to-nick-fortes","embedUrl":"https://streamable.com/m/jose-butto-in-play-out-s-to-nick-fortes","angle":{"category":"broadcast","label":"Home TV broadcast"},"howVerified":"MLB Film Room clip for the playId; Film Room's play info matches game, inning, outs, runners, batter and pitcher","thumb":"https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/8b88725b-e614-4a65-bfe5-b098aad7d001_home.jpg","match":{"filmroom":{"gamePk":true,"inning":true,"outs":true,"runners":true,"batter":true,"pitcher":true},"feeds":["HOME","AWAY"]},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=8b88725b-e614-4a65-bfe5-b098aad7d001"},"sources":[{"label":"MLB Stats API — official play-by-play, game 746041","url":"https://statsapi.mlb.com/api/v1.1/game/746041/feed/live"},{"label":"MLB Stats API — win probability, game 746041","url":"https://statsapi.mlb.com/api/v1/game/746041/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=746041"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=8b88725b-e614-4a65-bfe5-b098aad7d001"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-746041-55",
+ "title": "Nick Fortes out on a sacrifice bunt",
+ "titleSource": "From MLB's official play description",
+ "source": {
+  "gamePk": 746041,
+  "atBatIndex": 55,
+  "eventIndex": 1,
+  "playId": "8b88725b-e614-4a65-bfe5-b098aad7d001",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/746041/feed/live"
+ },
+ "game": {
+  "gamePk": 746041,
+  "date": "2024-07-20",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "loanDepot park",
+  "away": {
+   "id": 121,
+   "name": "New York Mets",
+   "abbr": "NYM",
+   "club": "Mets"
+  },
+  "home": {
+   "id": 146,
+   "name": "Miami Marlins",
+   "abbr": "MIA",
+   "club": "Marlins"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 7,
+  "half": "bottom",
+  "outs": 0,
+  "bases": "1__",
+  "runners": {
+   "1B": {
+    "id": 669364,
+    "name": "Xavier Edwards"
+   },
+   "2B": null,
+   "3B": null
+  },
+  "score": {
+   "away": 1,
+   "home": 0
+  },
+  "batting": "home",
+  "count": {
+   "balls": 0,
+   "strikes": 0
+  }
+ },
+ "after": {
+  "outs": 1,
+  "bases": "_2_",
+  "score": {
+   "away": 1,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 663743,
+  "name": "Nick Fortes",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 676130,
+  "name": "José Buttó",
+  "hand": "R"
+ },
+ "event": {
+  "type": "sac_bunt",
+  "label": "Sac Bunt",
+  "description": "Nick Fortes out on a sacrifice bunt, first baseman Pete Alonso to second baseman Jose Iglesias. Xavier Edwards to 2nd.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 663743,
+   "name": "Nick Fortes",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "sac_bunt",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 624413,
+     "name": "Pete Alonso",
+     "pos": "1B",
+     "credit": "f_assist"
+    },
+    {
+     "id": 578428,
+     "name": "Jose Iglesias",
+     "pos": "2B",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 669364,
+   "name": "Xavier Edwards",
+   "start": "1B",
+   "end": "2B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_force",
+   "event": "sac_bunt",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Nick Fortes",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "3-4"
+  }
+ ],
+ "pitch": {
+  "type": "Four-Seam Fastball",
+  "code": "FF",
+  "speed": 93.2,
+  "zone": 11,
+  "px": -0.47754477638917425,
+  "pz": 3.741845989085508,
+  "spin": 2295,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "bunt_grounder",
+  "hardness": "medium",
+  "location": 3,
+  "ev": 48.2,
+  "la": -41.0,
+  "distance": 6.0,
+  "sprayAngle": 32.4,
+  "spray": "opposite"
+ },
+ "winprob": {
+  "homeAfter": 40.9,
+  "homeBefore": 44.1,
+  "homeAdded": -3.200000000000003,
+  "li": 3.11
+ },
+ "statcast": {
+  "ifAlignment": "Strategic",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.069,
+  "deltaHomeWinExp": -0.032,
+  "batWinExpBefore": 0.441,
+  "bbType": "ground_ball",
+  "pitchName": "4-Seam Fastball",
+  "fielders": {
+   "2": 682626,
+   "3": 624413,
+   "4": 578428,
+   "5": 668901,
+   "6": 596019,
+   "7": 607043,
+   "8": 664056,
+   "9": 643446
+  }
+ },
+ "flags": [
+  "bunt",
+  "close",
+  "dp_situation",
+  "force_available",
+  "high_leverage",
+  "one_run",
+  "productive_out",
+  "shift_alignment",
+  "trailing",
+  "tying_run_on"
+ ],
+ "curation": {
+  "category": "Situational hitting",
+  "slot": "Sacrifice bunt"
+ },
+ "clips": [
+  {
+   "kind": "filmroom",
+   "slug": "jose-butto-in-play-out-s-to-nick-fortes",
+   "title": "Nick Fortes out on a sacrifice bunt, first baseman Pete Alonso to second baseman Jose Iglesias.   Xavier Edwards to 2nd.",
+   "duration": "00:00:13",
+   "feed": "HOME",
+   "pageUrl": "https://www.mlb.com/video/jose-butto-in-play-out-s-to-nick-fortes",
+   "embedUrl": "https://streamable.com/m/jose-butto-in-play-out-s-to-nick-fortes",
+   "angle": {
+    "category": "broadcast",
+    "label": "Home TV broadcast"
+   },
+   "howVerified": "MLB Film Room clip for the playId; Film Room's play info matches game, inning, outs, runners, batter and pitcher",
+   "thumb": "https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/8b88725b-e614-4a65-bfe5-b098aad7d001_home.jpg",
+   "match": {
+    "filmroom": {
+     "gamePk": true,
+     "inning": true,
+     "outs": true,
+     "runners": true,
+     "batter": true,
+     "pitcher": true
+    },
+    "feeds": [
+     "HOME",
+     "AWAY"
+    ]
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=8b88725b-e614-4a65-bfe5-b098aad7d001"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 746041",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/746041/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 746041",
+   "url": "https://statsapi.mlb.com/api/v1/game/746041/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=746041"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=8b88725b-e614-4a65-bfe5-b098aad7d001"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

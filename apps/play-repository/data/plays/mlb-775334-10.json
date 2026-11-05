@@ -1,1 +1,320 @@
-{"schema":1,"id":"mlb-775334-10","title":"Juan Soto throws out Salvador Perez at home","titleSource":"MLB.com clip title","source":{"gamePk":775334,"atBatIndex":10,"eventIndex":0,"playId":"d67704d0-7ce7-4a0f-9e28-7654fb2d2d39","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/775334/feed/live"},"game":{"gamePk":775334,"date":"2024-10-05","season":2024,"gameType":"D","level":"MLB","venue":"Yankee Stadium","away":{"id":118,"name":"Kansas City Royals","abbr":"KC","club":"Royals"},"home":{"id":147,"name":"New York Yankees","abbr":"NYY","club":"Yankees"},"series":""},"before":{"inning":2,"half":"top","outs":0,"bases":"12_","runners":{"1B":{"id":493329,"name":"Yuli Gurriel"},"2B":{"id":521692,"name":"Salvador Perez"},"3B":null},"score":{"away":0,"home":0},"batting":"away","count":{"balls":0,"strikes":0}},"after":{"outs":1,"bases":"1_3","score":{"away":0,"home":0}},"batter":{"id":669004,"name":"MJ Melendez","side":"L"},"pitcher":{"id":543037,"name":"Gerrit Cole","hand":"R"},"event":{"type":"single","label":"Single","description":"MJ Melendez singles on a sharp line drive to right fielder Juan Soto. Salvador Perez out at home on the throw, right fielder Juan Soto to catcher Austin Wells. Yuli Gurriel to 3rd.","rbi":0,"runs":0,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":669004,"name":"MJ Melendez","start":null,"end":"1B","out":false,"outBase":null,"reason":null,"event":"single","isBatter":true,"credits":[{"id":665742,"name":"Juan Soto","pos":"RF","credit":"f_fielded_ball"}]},{"id":521692,"name":"Salvador Perez","start":"2B","end":null,"out":true,"outBase":"4B","reason":"r_thrown_out","event":"single","isBatter":false,"credits":[{"id":665742,"name":"Juan Soto","pos":"RF","credit":"f_assist"},{"id":665742,"name":"Juan Soto","pos":"RF","credit":"f_assist_of"},{"id":669224,"name":"Austin Wells","pos":"C","credit":"f_putout"}]},{"id":493329,"name":"Yuli Gurriel","start":"1B","end":"3B","out":false,"outBase":null,"reason":"r_adv_play","event":"other_out","isBatter":false,"credits":[]}],"chains":[{"runner":"MJ Melendez","start":null,"out":false,"outBase":null,"chain":"9"},{"runner":"Salvador Perez","start":"2B","out":true,"outBase":"4B","chain":"9-2"}],"pitch":{"type":"Slider","code":"SL","speed":89.5,"zone":9,"px":0.3333889955672676,"pz":1.7765778871591484,"spin":2579,"call":"X"},"batted":{"trajectory":"line_drive","hardness":"hard","location":9,"ev":100.1,"la":15.0,"distance":221.0,"sprayAngle":36.8,"spray":"pull"},"winprob":{"homeAfter":43.0,"homeBefore":40.5,"homeAdded":2.5,"li":1.93},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":0.475,"deltaHomeWinExp":0.025,"batWinExpBefore":0.595,"bbType":"line_drive","pitchName":"Slider","fielders":{"2":669224,"3":665828,"4":650402,"5":665862,"6":683011,"7":657077,"8":592450,"9":665742}},"flags":["catcher_play","close","dp_situation","first_to_third","force_available","go_ahead_on","line_drive","out_at_plate","outfield_assist","outfield_play","play_at_plate","postseason","productive_out","risp","runner_out_on_bases","single","tag_play","tied"],"curation":{"category":"Baserunning & advancement","slot":"First to third on a single"},"clips":[{"kind":"highlight","slug":"gerrit-cole-in-play-out-s-to-mj-melendez-xot6di","title":"Juan Soto throws out Salvador Perez at home","duration":"00:00:29","feed":"CMS","pageUrl":"https://www.mlb.com/video/gerrit-cole-in-play-out-s-to-mj-melendez-xot6di","embedUrl":"https://streamable.com/m/gerrit-cole-in-play-out-s-to-mj-melendez-xot6di","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/bbgan7goai7ajmydhqor.jpg","match":{"guid":"d67704d0-7ce7-4a0f-9e28-7654fb2d2d39"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=d67704d0-7ce7-4a0f-9e28-7654fb2d2d39"},"sources":[{"label":"MLB Stats API — official play-by-play, game 775334","url":"https://statsapi.mlb.com/api/v1.1/game/775334/feed/live"},{"label":"MLB Stats API — win probability, game 775334","url":"https://statsapi.mlb.com/api/v1/game/775334/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=775334"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=d67704d0-7ce7-4a0f-9e28-7654fb2d2d39"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-775334-10",
+ "title": "Juan Soto throws out Salvador Perez at home",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 775334,
+  "atBatIndex": 10,
+  "eventIndex": 0,
+  "playId": "d67704d0-7ce7-4a0f-9e28-7654fb2d2d39",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/775334/feed/live"
+ },
+ "game": {
+  "gamePk": 775334,
+  "date": "2024-10-05",
+  "season": 2024,
+  "gameType": "D",
+  "level": "MLB",
+  "venue": "Yankee Stadium",
+  "away": {
+   "id": 118,
+   "name": "Kansas City Royals",
+   "abbr": "KC",
+   "club": "Royals"
+  },
+  "home": {
+   "id": 147,
+   "name": "New York Yankees",
+   "abbr": "NYY",
+   "club": "Yankees"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 2,
+  "half": "top",
+  "outs": 0,
+  "bases": "12_",
+  "runners": {
+   "1B": {
+    "id": 493329,
+    "name": "Yuli Gurriel"
+   },
+   "2B": {
+    "id": 521692,
+    "name": "Salvador Perez"
+   },
+   "3B": null
+  },
+  "score": {
+   "away": 0,
+   "home": 0
+  },
+  "batting": "away",
+  "count": {
+   "balls": 0,
+   "strikes": 0
+  }
+ },
+ "after": {
+  "outs": 1,
+  "bases": "1_3",
+  "score": {
+   "away": 0,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 669004,
+  "name": "MJ Melendez",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 543037,
+  "name": "Gerrit Cole",
+  "hand": "R"
+ },
+ "event": {
+  "type": "single",
+  "label": "Single",
+  "description": "MJ Melendez singles on a sharp line drive to right fielder Juan Soto. Salvador Perez out at home on the throw, right fielder Juan Soto to catcher Austin Wells. Yuli Gurriel to 3rd.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 669004,
+   "name": "MJ Melendez",
+   "start": null,
+   "end": "1B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "single",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 665742,
+     "name": "Juan Soto",
+     "pos": "RF",
+     "credit": "f_fielded_ball"
+    }
+   ]
+  },
+  {
+   "id": 521692,
+   "name": "Salvador Perez",
+   "start": "2B",
+   "end": null,
+   "out": true,
+   "outBase": "4B",
+   "reason": "r_thrown_out",
+   "event": "single",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 665742,
+     "name": "Juan Soto",
+     "pos": "RF",
+     "credit": "f_assist"
+    },
+    {
+     "id": 665742,
+     "name": "Juan Soto",
+     "pos": "RF",
+     "credit": "f_assist_of"
+    },
+    {
+     "id": 669224,
+     "name": "Austin Wells",
+     "pos": "C",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 493329,
+   "name": "Yuli Gurriel",
+   "start": "1B",
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "other_out",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "MJ Melendez",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": "9"
+  },
+  {
+   "runner": "Salvador Perez",
+   "start": "2B",
+   "out": true,
+   "outBase": "4B",
+   "chain": "9-2"
+  }
+ ],
+ "pitch": {
+  "type": "Slider",
+  "code": "SL",
+  "speed": 89.5,
+  "zone": 9,
+  "px": 0.3333889955672676,
+  "pz": 1.7765778871591484,
+  "spin": 2579,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "line_drive",
+  "hardness": "hard",
+  "location": 9,
+  "ev": 100.1,
+  "la": 15.0,
+  "distance": 221.0,
+  "sprayAngle": 36.8,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 43.0,
+  "homeBefore": 40.5,
+  "homeAdded": 2.5,
+  "li": 1.93
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.475,
+  "deltaHomeWinExp": 0.025,
+  "batWinExpBefore": 0.595,
+  "bbType": "line_drive",
+  "pitchName": "Slider",
+  "fielders": {
+   "2": 669224,
+   "3": 665828,
+   "4": 650402,
+   "5": 665862,
+   "6": 683011,
+   "7": 657077,
+   "8": 592450,
+   "9": 665742
+  }
+ },
+ "flags": [
+  "catcher_play",
+  "close",
+  "dp_situation",
+  "first_to_third",
+  "force_available",
+  "go_ahead_on",
+  "line_drive",
+  "out_at_plate",
+  "outfield_assist",
+  "outfield_play",
+  "play_at_plate",
+  "postseason",
+  "productive_out",
+  "risp",
+  "runner_out_on_bases",
+  "single",
+  "tag_play",
+  "tied"
+ ],
+ "curation": {
+  "category": "Baserunning & advancement",
+  "slot": "First to third on a single"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "gerrit-cole-in-play-out-s-to-mj-melendez-xot6di",
+   "title": "Juan Soto throws out Salvador Perez at home",
+   "duration": "00:00:29",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/gerrit-cole-in-play-out-s-to-mj-melendez-xot6di",
+   "embedUrl": "https://streamable.com/m/gerrit-cole-in-play-out-s-to-mj-melendez-xot6di",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/bbgan7goai7ajmydhqor.jpg",
+   "match": {
+    "guid": "d67704d0-7ce7-4a0f-9e28-7654fb2d2d39"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=d67704d0-7ce7-4a0f-9e28-7654fb2d2d39"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 775334",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/775334/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 775334",
+   "url": "https://statsapi.mlb.com/api/v1/game/775334/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=775334"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=d67704d0-7ce7-4a0f-9e28-7654fb2d2d39"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

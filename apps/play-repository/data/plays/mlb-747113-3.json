@@ -1,1 +1,288 @@
-{"schema":1,"id":"mlb-747113-3","title":"Josh Lowe's sac fly","titleSource":"MLB.com clip title","source":{"gamePk":747113,"atBatIndex":3,"eventIndex":3,"playId":"28661217-8736-4067-b08d-dd0b134f962c","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/747113/feed/live"},"game":{"gamePk":747113,"date":"2024-06-15","season":2024,"gameType":"R","level":"MLB","venue":"Truist Park","away":{"id":139,"name":"Tampa Bay Rays","abbr":"TB","club":"Rays"},"home":{"id":144,"name":"Atlanta Braves","abbr":"ATL","club":"Braves"},"series":""},"before":{"inning":1,"half":"top","outs":1,"bases":"_23","runners":{"1B":null,"2B":{"id":670623,"name":"Isaac Paredes"},"3B":{"id":664040,"name":"Brandon Lowe"}},"score":{"away":0,"home":0},"batting":"away","count":{"balls":2,"strikes":1}},"after":{"outs":2,"bases":"__3","score":{"away":1,"home":0}},"batter":{"id":666139,"name":"Josh Lowe","side":"L"},"pitcher":{"id":450203,"name":"Charlie Morton","hand":"R"},"event":{"type":"sac_fly","label":"Sac Fly","description":"Josh Lowe out on a sacrifice fly to center fielder Jarred Kelenic. Brandon Lowe scores. Isaac Paredes to 3rd.","rbi":1,"runs":1,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":666139,"name":"Josh Lowe","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"sac_fly","isBatter":true,"credits":[{"id":672284,"name":"Jarred Kelenic","pos":"CF","credit":"f_putout"}]},{"id":670623,"name":"Isaac Paredes","start":"2B","end":"3B","out":false,"outBase":null,"reason":"r_adv_play","event":"sac_fly","isBatter":false,"credits":[]},{"id":664040,"name":"Brandon Lowe","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"sac_fly","isBatter":false,"credits":[]}],"chains":[{"runner":"Josh Lowe","start":null,"out":true,"outBase":"1B","chain":"8"}],"pitch":{"type":"Curveball","code":"CU","speed":81.8,"zone":9,"px":0.2383377013026303,"pz":2.1592066599589943,"spin":3225,"call":"E"},"batted":{"trajectory":"fly_ball","hardness":"medium","location":8,"ev":97.9,"la":30.0,"distance":377.0,"sprayAngle":-17.2,"spray":"opposite"},"winprob":{"homeAfter":41.4,"homeBefore":41.5,"homeAdded":-0.10000000000000142,"li":1.61},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":-0.199,"deltaHomeWinExp":0.0,"batWinExpBefore":0.586,"bbType":"fly_ball","pitchName":"Curveball","fielders":{"2":669221,"3":621566,"4":645277,"5":663586,"6":606115,"7":594807,"8":672284,"9":657656}},"flags":["close","fly_ball","go_ahead_on","go_ahead_play","outfield_play","productive_out","risp","runner_scored_on_out","sac_fly","tag_up","tied"],"curation":{"category":"Outfield defense, cutoffs & relays","slot":"Runner tags from second to third on a fly"},"clips":[{"kind":"highlight","slug":"charlie-morton-in-play-run-s-to-josh-lowe","title":"Josh Lowe's sac fly ","duration":"00:00:16","feed":"CMS","pageUrl":"https://www.mlb.com/video/charlie-morton-in-play-run-s-to-josh-lowe","embedUrl":"https://streamable.com/m/charlie-morton-in-play-run-s-to-josh-lowe","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/ugqgr13rxgbirpa9xrqq.jpg","match":{"guid":"28661217-8736-4067-b08d-dd0b134f962c"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=28661217-8736-4067-b08d-dd0b134f962c"},"sources":[{"label":"MLB Stats API — official play-by-play, game 747113","url":"https://statsapi.mlb.com/api/v1.1/game/747113/feed/live"},{"label":"MLB Stats API — win probability, game 747113","url":"https://statsapi.mlb.com/api/v1/game/747113/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=747113"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=28661217-8736-4067-b08d-dd0b134f962c"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-747113-3",
+ "title": "Josh Lowe's sac fly",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 747113,
+  "atBatIndex": 3,
+  "eventIndex": 3,
+  "playId": "28661217-8736-4067-b08d-dd0b134f962c",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/747113/feed/live"
+ },
+ "game": {
+  "gamePk": 747113,
+  "date": "2024-06-15",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Truist Park",
+  "away": {
+   "id": 139,
+   "name": "Tampa Bay Rays",
+   "abbr": "TB",
+   "club": "Rays"
+  },
+  "home": {
+   "id": 144,
+   "name": "Atlanta Braves",
+   "abbr": "ATL",
+   "club": "Braves"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 1,
+  "half": "top",
+  "outs": 1,
+  "bases": "_23",
+  "runners": {
+   "1B": null,
+   "2B": {
+    "id": 670623,
+    "name": "Isaac Paredes"
+   },
+   "3B": {
+    "id": 664040,
+    "name": "Brandon Lowe"
+   }
+  },
+  "score": {
+   "away": 0,
+   "home": 0
+  },
+  "batting": "away",
+  "count": {
+   "balls": 2,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "__3",
+  "score": {
+   "away": 1,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 666139,
+  "name": "Josh Lowe",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 450203,
+  "name": "Charlie Morton",
+  "hand": "R"
+ },
+ "event": {
+  "type": "sac_fly",
+  "label": "Sac Fly",
+  "description": "Josh Lowe out on a sacrifice fly to center fielder Jarred Kelenic. Brandon Lowe scores. Isaac Paredes to 3rd.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 666139,
+   "name": "Josh Lowe",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "sac_fly",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 672284,
+     "name": "Jarred Kelenic",
+     "pos": "CF",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 670623,
+   "name": "Isaac Paredes",
+   "start": "2B",
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "sac_fly",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 664040,
+   "name": "Brandon Lowe",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "sac_fly",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Josh Lowe",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "8"
+  }
+ ],
+ "pitch": {
+  "type": "Curveball",
+  "code": "CU",
+  "speed": 81.8,
+  "zone": 9,
+  "px": 0.2383377013026303,
+  "pz": 2.1592066599589943,
+  "spin": 3225,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "fly_ball",
+  "hardness": "medium",
+  "location": 8,
+  "ev": 97.9,
+  "la": 30.0,
+  "distance": 377.0,
+  "sprayAngle": -17.2,
+  "spray": "opposite"
+ },
+ "winprob": {
+  "homeAfter": 41.4,
+  "homeBefore": 41.5,
+  "homeAdded": -0.10000000000000142,
+  "li": 1.61
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.199,
+  "deltaHomeWinExp": 0.0,
+  "batWinExpBefore": 0.586,
+  "bbType": "fly_ball",
+  "pitchName": "Curveball",
+  "fielders": {
+   "2": 669221,
+   "3": 621566,
+   "4": 645277,
+   "5": 663586,
+   "6": 606115,
+   "7": 594807,
+   "8": 672284,
+   "9": 657656
+  }
+ },
+ "flags": [
+  "close",
+  "fly_ball",
+  "go_ahead_on",
+  "go_ahead_play",
+  "outfield_play",
+  "productive_out",
+  "risp",
+  "runner_scored_on_out",
+  "sac_fly",
+  "tag_up",
+  "tied"
+ ],
+ "curation": {
+  "category": "Outfield defense, cutoffs & relays",
+  "slot": "Runner tags from second to third on a fly"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "charlie-morton-in-play-run-s-to-josh-lowe",
+   "title": "Josh Lowe's sac fly ",
+   "duration": "00:00:16",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/charlie-morton-in-play-run-s-to-josh-lowe",
+   "embedUrl": "https://streamable.com/m/charlie-morton-in-play-run-s-to-josh-lowe",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/ugqgr13rxgbirpa9xrqq.jpg",
+   "match": {
+    "guid": "28661217-8736-4067-b08d-dd0b134f962c"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=28661217-8736-4067-b08d-dd0b134f962c"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 747113",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/747113/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 747113",
+   "url": "https://statsapi.mlb.com/api/v1/game/747113/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=747113"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=28661217-8736-4067-b08d-dd0b134f962c"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

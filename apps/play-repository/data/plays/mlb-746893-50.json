@@ -1,1 +1,255 @@
-{"schema":1,"id":"mlb-746893-50","title":"Nick Fortes catches Dansby Swanson stealing","titleSource":"MLB.com clip title","source":{"gamePk":746893,"atBatIndex":50,"eventIndex":5,"playId":"99dd6834-7f78-4f9a-8c27-b4edbe98c93b","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/746893/feed/live"},"game":{"gamePk":746893,"date":"2024-04-20","season":2024,"gameType":"R","level":"MLB","venue":"Wrigley Field","away":{"id":146,"name":"Miami Marlins","abbr":"MIA","club":"Marlins"},"home":{"id":112,"name":"Chicago Cubs","abbr":"CHC","club":"Cubs"},"series":""},"before":{"inning":6,"half":"bottom","outs":2,"bases":"1__","runners":{"1B":{"id":621020,"name":"Dansby Swanson"},"2B":null,"3B":null},"score":{"away":1,"home":2},"batting":"home","count":{"balls":2,"strikes":2}},"after":{"outs":3,"bases":"___","score":{"away":1,"home":2}},"batter":{"id":663611,"name":"Nick Madrigal","side":"R"},"pitcher":{"id":666200,"name":"Jesús Luzardo","hand":"L"},"event":{"type":"caught_stealing_2b","label":"Caught Stealing 2B","description":"Dansby Swanson caught stealing 2nd base, catcher Nick Fortes to second baseman Luis Arraez.","rbi":0,"runs":0,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":621020,"name":"Dansby Swanson","start":"1B","end":null,"out":true,"outBase":"2B","reason":"r_caught_stealing_2b","event":"caught_stealing_2b","isBatter":false,"credits":[{"id":663743,"name":"Nick Fortes","pos":"C","credit":"f_assist"},{"id":650333,"name":"Luis Arraez","pos":"2B","credit":"f_putout"}]}],"chains":[{"runner":"Dansby Swanson","start":"1B","out":true,"outBase":"2B","chain":"2-4"}],"pitch":{"type":"Four-Seam Fastball","code":"FF","speed":96.0,"zone":12,"px":0.8573803075754153,"pz":3.720902951201764,"spin":2202,"call":"B"},"batted":null,"winprob":{"homeAfter":69.19999999999999,"homeBefore":71.5,"homeAdded":-2.3000000000000114,"li":0.89},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":0.0,"deltaHomeWinExp":-0.02,"batWinExpBefore":0.712,"bbType":null,"pitchName":"4-Seam Fastball","fielders":{"2":663743,"3":605137,"4":650333,"5":656896,"6":660644,"7":624503,"8":665862,"9":660821}},"flags":["catcher_play","catcher_throw","caught_stealing","close","force_available","leading","one_run","two_outs"],"curation":{"category":"Catcher defense & plays at the plate","slot":"Catcher throws out a base stealer"},"clips":[{"kind":"highlight","slug":"dansby-swanson-caught-stealing-2nd-base-catcher-nick-fortes-to-second-bas","title":"Nick Fortes catches Dansby Swanson stealing","duration":"00:00:18","feed":"CMS","pageUrl":"https://www.mlb.com/video/dansby-swanson-caught-stealing-2nd-base-catcher-nick-fortes-to-second-bas","embedUrl":"https://streamable.com/m/dansby-swanson-caught-stealing-2nd-base-catcher-nick-fortes-to-second-bas","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/sva8gzgjlrsuceuak7yx.jpg","match":{"guid":"99dd6834-7f78-4f9a-8c27-b4edbe98c93b"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=99dd6834-7f78-4f9a-8c27-b4edbe98c93b"},"sources":[{"label":"MLB Stats API — official play-by-play, game 746893","url":"https://statsapi.mlb.com/api/v1.1/game/746893/feed/live"},{"label":"MLB Stats API — win probability, game 746893","url":"https://statsapi.mlb.com/api/v1/game/746893/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=746893"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=99dd6834-7f78-4f9a-8c27-b4edbe98c93b"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-746893-50",
+ "title": "Nick Fortes catches Dansby Swanson stealing",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 746893,
+  "atBatIndex": 50,
+  "eventIndex": 5,
+  "playId": "99dd6834-7f78-4f9a-8c27-b4edbe98c93b",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/746893/feed/live"
+ },
+ "game": {
+  "gamePk": 746893,
+  "date": "2024-04-20",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Wrigley Field",
+  "away": {
+   "id": 146,
+   "name": "Miami Marlins",
+   "abbr": "MIA",
+   "club": "Marlins"
+  },
+  "home": {
+   "id": 112,
+   "name": "Chicago Cubs",
+   "abbr": "CHC",
+   "club": "Cubs"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 6,
+  "half": "bottom",
+  "outs": 2,
+  "bases": "1__",
+  "runners": {
+   "1B": {
+    "id": 621020,
+    "name": "Dansby Swanson"
+   },
+   "2B": null,
+   "3B": null
+  },
+  "score": {
+   "away": 1,
+   "home": 2
+  },
+  "batting": "home",
+  "count": {
+   "balls": 2,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 3,
+  "bases": "___",
+  "score": {
+   "away": 1,
+   "home": 2
+  }
+ },
+ "batter": {
+  "id": 663611,
+  "name": "Nick Madrigal",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 666200,
+  "name": "Jesús Luzardo",
+  "hand": "L"
+ },
+ "event": {
+  "type": "caught_stealing_2b",
+  "label": "Caught Stealing 2B",
+  "description": "Dansby Swanson caught stealing 2nd base, catcher Nick Fortes to second baseman Luis Arraez.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 621020,
+   "name": "Dansby Swanson",
+   "start": "1B",
+   "end": null,
+   "out": true,
+   "outBase": "2B",
+   "reason": "r_caught_stealing_2b",
+   "event": "caught_stealing_2b",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 663743,
+     "name": "Nick Fortes",
+     "pos": "C",
+     "credit": "f_assist"
+    },
+    {
+     "id": 650333,
+     "name": "Luis Arraez",
+     "pos": "2B",
+     "credit": "f_putout"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Dansby Swanson",
+   "start": "1B",
+   "out": true,
+   "outBase": "2B",
+   "chain": "2-4"
+  }
+ ],
+ "pitch": {
+  "type": "Four-Seam Fastball",
+  "code": "FF",
+  "speed": 96.0,
+  "zone": 12,
+  "px": 0.8573803075754153,
+  "pz": 3.720902951201764,
+  "spin": 2202,
+  "call": "B"
+ },
+ "batted": null,
+ "winprob": {
+  "homeAfter": 69.19999999999999,
+  "homeBefore": 71.5,
+  "homeAdded": -2.3000000000000114,
+  "li": 0.89
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.0,
+  "deltaHomeWinExp": -0.02,
+  "batWinExpBefore": 0.712,
+  "bbType": null,
+  "pitchName": "4-Seam Fastball",
+  "fielders": {
+   "2": 663743,
+   "3": 605137,
+   "4": 650333,
+   "5": 656896,
+   "6": 660644,
+   "7": 624503,
+   "8": 665862,
+   "9": 660821
+  }
+ },
+ "flags": [
+  "catcher_play",
+  "catcher_throw",
+  "caught_stealing",
+  "close",
+  "force_available",
+  "leading",
+  "one_run",
+  "two_outs"
+ ],
+ "curation": {
+  "category": "Catcher defense & plays at the plate",
+  "slot": "Catcher throws out a base stealer"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "dansby-swanson-caught-stealing-2nd-base-catcher-nick-fortes-to-second-bas",
+   "title": "Nick Fortes catches Dansby Swanson stealing",
+   "duration": "00:00:18",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/dansby-swanson-caught-stealing-2nd-base-catcher-nick-fortes-to-second-bas",
+   "embedUrl": "https://streamable.com/m/dansby-swanson-caught-stealing-2nd-base-catcher-nick-fortes-to-second-bas",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/sva8gzgjlrsuceuak7yx.jpg",
+   "match": {
+    "guid": "99dd6834-7f78-4f9a-8c27-b4edbe98c93b"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=99dd6834-7f78-4f9a-8c27-b4edbe98c93b"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 746893",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/746893/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 746893",
+   "url": "https://statsapi.mlb.com/api/v1/game/746893/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=746893"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=99dd6834-7f78-4f9a-8c27-b4edbe98c93b"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

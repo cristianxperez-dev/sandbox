@@ -66,6 +66,7 @@
       ${b(82, 50, 0)}${b(50, 18, 1)}${b(18, 50, 2)}<path d="M44 76 h12 v6 l-6 6 l-6 -6 z" fill="${stroke}" opacity=".7"/>${outsSvg}${lab}</svg>`;
   }
   const teamLine = (p) => `${p.away} ${p.score[0]}–${p.score[1]} ${p.home}`;
+  const camChip = (p) => { const c = PR.cameras(p); return c.highHome ? `<span class="ang a-high-home" title="Verified High Home video${c.broadcast ? " and broadcast video" : ""}">High Home${c.broadcast ? " + Broadcast" : ""}</span>` : `<span class="ang" title="Verified broadcast video · High Home not published by MLB for this play">Broadcast</span>`; };
   const angleChip = (cat) => `<span class="ang a-${esc(cat)}">${cat === "high-home" ? "High Home" : cat === "alternate" ? "Alt angle" : "Broadcast"}</span>`;
   const fmtDate = (d) => new Date(d + "T12:00:00").toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" });
 
@@ -174,6 +175,8 @@
     const people = [...new Set(S.plays.map((p) => p.batter.name))].sort();
     const pitchers = [...new Set(S.plays.map((p) => p.pitcher.name))].sort();
     const section = (id, title, body) => `<details class="fsec" data-s="${id}"${open.has(id) ? " open" : ""}><summary><span>${title}</span>${counts[id] ? `<span class="fbadge">${counts[id]}</span>` : ""}</summary><div class="fin">${body}</div></details>`;
+    const camCounts = { broadcast: 0, highHome: 0, both: 0 };
+    S.plays.forEach((p) => { const c = PR.cameras(p); if (c.broadcast) camCounts.broadcast++; if (c.highHome) camCounts.highHome++; if (c.broadcast && c.highHome) camCounts.both++; });
     const lev = f.flags.includes("high_leverage") ? "high" : f.flags.includes("low_leverage") ? "low" : "";
     const secs = {
       sit: `
@@ -211,6 +214,8 @@
         <div class="frow">LI <input type="number" step="0.1" min="0" placeholder="min" data-num="liMin" value="${f.liMin ?? ""}" aria-label="Leverage index minimum"><input type="number" step="0.1" min="0" placeholder="max" data-num="liMax" value="${f.liMax ?? ""}" aria-label="Leverage index maximum"></div>
         <p class="fnote">Every game-state filter uses the state <b>before</b> the play. Leverage and win probability are MLB's own.</p>`,
       play: `
+        <span class="k">Camera angle</span>
+        <div class="cgrid c3">${[["broadcast", "Broadcast"], ["highHome", "High Home"], ["both", "Both angles"]].map(([k, l]) => chip(l, f.camera === k, `data-cam="${k}" title="${esc(PR.CAMERA_LABEL[k])} — verified, playable MLB video"`, camCounts[k], !camCounts[k] && f.camera !== k)).join("")}</div>
         ${PLAY_GROUPS.map(([id, label, groups]) => { const n = f.flags.filter((x) => groups.includes((S.flags[x] || {}).group)).length;
           return `<details class="sub" data-sub="${id}"${UI.sub.includes(id) ? " open" : ""}><summary>${label}${n ? ` <span class="fbadge">${n}</span>` : ""}<span class="any">any of</span></summary><div class="cgrid c2">${groupChips(groups)}</div></details>`; }).join("")}
         <span class="k">Official result</span><select class="fsel wide" data-sel="event"><option value="">Any result</option>${opts(fc.events, f.events[0] || "", (k) => k.replace(/_/g, " "))}</select>
@@ -275,6 +280,7 @@
     else if (d.bh) f.batHand = f.batHand === d.bh ? null : d.bh;
     else if (d.ph) f.pitHand = f.pitHand === d.ph ? null : d.ph;
     else if (d.pos) toggleIn(f.positions, d.pos);
+    else if (d.cam) f.camera = f.camera === d.cam ? "" : d.cam;
     else if (d.loc) toggleIn(f.locations, +d.loc);
     else if (d.spray) anyOr(f.spray, d.spray);
     else if (d.oop) anyOr(f.outsOnPlay, d.oop, Number);
@@ -349,6 +355,7 @@
     f.spray.forEach((x) => add(x + " field", () => f.spray.splice(f.spray.indexOf(x), 1)));
     f.outsOnPlay.forEach((x) => add(x + " out(s) on play", () => f.outsOnPlay.splice(f.outsOnPlay.indexOf(x), 1)));
     if (f.runsMin) add("Run(s) scored", () => (f.runsMin = null));
+    if (f.camera) add(PR.CAMERA_LABEL[f.camera], () => (f.camera = ""));
     sec = "who";
     if (f.team) add(`${f.team}${f.teamRole !== "any" ? " " + f.teamRole : ""}`, () => (f.team = ""));
     if (f.batter) add("Batter: " + f.batter, () => (f.batter = ""));
@@ -380,7 +387,7 @@
     const sv = isSaved(p.id);
     return `<article class="card" data-open="${esc(p.id)}" tabindex="0" role="link" aria-label="${esc(p.title)}">
       <div class="thumb">${p.thumb ? `<img src="${esc(p.thumb)}" alt="" loading="lazy" onerror="this.remove()">` : ""}<div class="alt" ${p.thumb ? "style=\"z-index:-1\"" : ""}>${diamond(p.bases, { size: 70, outs: p.outs, dark: true })}</div>
-        ${angleChip(p.angles[0])}
+        ${camChip(p)}
         <div class="bug">${diamond(p.bases, { size: 22, dark: true })}<span>${esc(PR.halfLabel(p))} · ${esc(PR.outsLabel(p.outs))}</span><span class="sp"></span><span>${esc(teamLine(p))}</span></div></div>
       <div class="cbody"><div class="cmeta"><span>${esc(fmtDate(p.date))}</span><span>${esc(p.away)} @ ${esc(p.home)}</span></div>
         <div class="ctitle">${esc(p.title)}</div>
@@ -455,7 +462,7 @@
     let d;
     try { d = await detail(id); } catch (e) { host.innerHTML = `<div class="empty">The play's details couldn't be loaded. <a href="#/explore">Back</a></div>`; return; }
     if (location.hash.indexOf(encodeURIComponent(id)) < 0 && location.hash.indexOf(id) < 0) return;
-    cur = { p, d, clip: 0, loop: { a: null, b: null, on: false } };
+    cur = { p, d, clip: 0, loop: { a: null, b: null, on: false }, pos: {}, cam: null };
     const notes = U.notes[id] || {};
     const colsWith = collections().filter((c) => c.plays.includes(id));
     host.innerHTML = `
@@ -469,7 +476,9 @@
       <div class="dgrid">
         <div>
           <div class="stagewrap">
-            <div class="angles" id="angles">${d.clips.map((c, i) => `<button data-clip="${i}" class="${i === 0 ? "on" : ""}" title="${esc(c.howVerified)}">${angleChip(c.angle.category)}${esc(clipName(c))}</button>`).join("")}</div>
+            <div class="camsel" id="camsel"></div>
+            <div class="camnote" id="camnote" aria-live="polite"></div>
+            <div class="angles" id="angles"></div>
             <div class="stage" id="stage">${scorebug(p, d)}</div>
             <div class="ctl" id="ctl">
               <button class="btn sm" data-c="play" title="Play / pause (space)">▶︎ Play</button>
@@ -541,14 +550,64 @@
     $("#dSave").onclick = () => { const on = toggleSaved(id); $("#dSave").classList.toggle("on", on); $("#dSave").textContent = on ? "★ Saved" : "☆ Save"; };
     $("#dAdd").onclick = () => addToCollection(id);
     $("#dSim").onclick = () => showSimilar(p);
-    $$("#angles [data-clip]").forEach((b) => (b.onclick = () => { $$("#angles button").forEach((x) => x.classList.remove("on")); b.classList.add("on"); mountClip(+b.dataset.clip); }));
+    $("#camsel").onclick = (e) => { const b = e.target.closest("[data-cam]"); if (!b) return;
+      if (b.getAttribute("aria-disabled") === "true") { camNote(true); toast("High Home isn't published by MLB for this play — staying on broadcast"); return; }
+      if (b.dataset.cam === cur.cam) return;
+      UI.cam = b.dataset.cam; saveUI(); showCam(b.dataset.cam, true); };
+    $("#angles").onclick = (e) => { const b = e.target.closest("[data-clip]"); if (b && +b.dataset.clip !== cur.clip) switchClip(+b.dataset.clip); };
     $("#ctl").onclick = (e) => { const b = e.target.closest("[data-c]"); if (b) control(b.dataset.c); };
     $$("[data-note]", host).forEach((el) => el.addEventListener("input", () => saveNote(id, el)));
     $("#tagAdd").onclick = () => addTag(id);
     $("#tagIn").addEventListener("keydown", (e) => { if (e.key === "Enter") addTag(id); });
     $("#myTags").onclick = (e) => { const b = e.target.closest("[data-untag]"); if (b) { U.tags[id] = (U.tags[id] || []).filter((t) => t !== b.dataset.untag); if (!U.tags[id].length) delete U.tags[id]; save(); b.parentElement.remove(); } };
-    mountClip(0);
+    showCam(startCam(p, d), false);
     window.scrollTo(0, 0);
+  }
+  /* ---------------------------------------------- cameras: Broadcast and High Home, availability stored per play */
+  const camOf = (c) => (c.kind === "high-home" && c.angle.category === "high-home" ? "highHome" : c.angle.category === "broadcast" ? "broadcast" : "other:" + c.angle.label);
+  const verified = (c) => !c.checks || (c.checks.pageEmbed && [200, 206].includes(c.checks.embedStatus));
+  function detailCams(d) {
+    const ix = (k) => d.clips.map((c, i) => [c, i]).filter(([c]) => camOf(c) === k && verified(c)).map(([, i]) => i);
+    const cm = d.cameras || {};
+    return { broadcast: { available: ix("broadcast").length > 0, clips: ix("broadcast") },
+      highHome: Object.assign({}, cm.highHome || {}, { available: ix("highHome").length > 0, clips: ix("highHome") }),
+      other: [...new Set(d.clips.filter((c) => camOf(c).startsWith("other:") && verified(c)).map(camOf))] };
+  }
+  const TEACH_HH = /Baserunning|Infield|Outfield|Catcher/;   // High Home matters most for positioning, running, cutoffs and relays
+  function startCam(p, d) {
+    const cm = detailCams(d);
+    if (cm.highHome.available && (UI.cam === "highHome" || (UI.cam !== "broadcast" && TEACH_HH.test(p.category)))) return "highHome";
+    return cm.broadcast.available ? "broadcast" : cm.highHome.available ? "highHome" : cm.other[0] || "broadcast";
+  }
+  function camNote(flash) {
+    const cm = detailCams(cur.d), n = $("#camnote"); if (!n) return;
+    const hh = cm.highHome, when = hh.checkedAt ? ` · checked ${esc(hh.checkedAt)}` : "";
+    const srcs = (hh.searched || []).map((x) => x.source.replace(/ \(.*$/, "")).join(", ");
+    n.innerHTML = cur.cam === "highHome"
+      ? `<b>High Home</b> — MLB labels this clip High Home. It's edited separately from the broadcast clip, so the same second can be a different moment; switching back returns you to where you were.`
+      : !hh.available ? `<b>High Home unavailable</b> — MLB hasn't published High Home video of this play${srcs ? ` (searched: ${esc(srcs)}${when})` : ""}. Showing broadcast.`
+      : `<b>Broadcast</b> — High Home is also available for this play.`;
+    n.classList.toggle("flash", !!flash);
+    if (flash) setTimeout(() => n.classList.remove("flash"), 900);
+  }
+  function showCam(cam, keep) {
+    const cm = detailCams(cur.d);
+    const list = cam === "highHome" ? cm.highHome.clips : cam === "broadcast" ? cm.broadcast.clips : cur.d.clips.map((c, i) => [c, i]).filter(([c]) => camOf(c) === cam).map(([, i]) => i);
+    if (!list.length) return;
+    cur.cam = cam;
+    const btn = (k, label, ok) => `<button type="button" data-cam="${esc(k)}" role="radio" aria-checked="${cur.cam === k}" class="${cur.cam === k ? "on" : ""}${ok ? "" : " na"}"${ok ? "" : ' aria-disabled="true"'} title="${ok ? esc(label) + " — verified MLB video of this play" : "Not published by MLB for this play"}">${esc(label)}${ok ? "" : " <small>unavailable</small>"}</button>`;
+    $("#camsel").innerHTML = `<span class="k">Camera</span><div class="cams" role="radiogroup" aria-label="Camera angle">${btn("broadcast", "Broadcast", cm.broadcast.available)}${btn("highHome", "High Home", cm.highHome.available)}${cm.other.map((o) => btn(o, o.slice(6).replace(/ \(MLB's name.*\)/, ""), true)).join("")}</div>`;
+    const target = list.find((i) => cur.pos[i] != null) ?? list[0];
+    $("#angles").innerHTML = list.length > 1 ? `<span class="k">Version</span>${list.map((i) => `<button data-clip="${i}" class="${i === target ? "on" : ""}" title="${esc(cur.d.clips[i].howVerified)}">${esc(clipName(cur.d.clips[i]))}</button>`).join("")}` : "";
+    camNote(false);
+    switchClip(target, keep);
+  }
+  /** change clip inside the play: notes, tags and the page stay; playback position and play state carry over */
+  function switchClip(i, keep = true) {
+    if (keep && emb.el && cur.clip != null) cur.pos[cur.clip] = emb.t;
+    const was = keep && emb.playing, at = keep ? (cur.pos[i] != null ? cur.pos[i] : emb.t) : 0;
+    $$("#angles [data-clip]").forEach((x) => x.classList.toggle("on", +x.dataset.clip === i));
+    mountClip(i, $("#stage"), { at, play: was });
   }
   function clipName(c) { return c.kind === "high-home" ? "High Home" : c.kind === "highlight" ? "MLB.com highlight" : c.kind === "filmroom" ? (c.angle.label || "Broadcast") : (c.angle.label || "Alternate angle").replace(/ \(MLB's name.*\)/, ""); }
   function facts(p, d) {
@@ -605,16 +664,18 @@
 
   /* ---------------------------------------------- MLB's embedded player (player.js) */
   const emb = { el: null, ready: false, t: 0, dur: 0, playing: false, q: [] };
-  function mountClip(i, host = $("#stage")) {
+  function mountClip(i, host = $("#stage"), opt = {}) {
     const c = cur.d.clips[i]; cur.clip = i; cur.loop = { a: null, b: null, on: false };
     stopPlayer();
     const f = document.createElement("iframe");
     f.src = c.embedUrl; f.title = `MLB video — ${c.title || cur.p.title}`; f.allowFullscreen = true;
     f.allow = "autoplay; fullscreen; picture-in-picture; encrypted-media"; f.referrerPolicy = "strict-origin-when-cross-origin";
     (host.querySelector(".vid") || host).appendChild(f);
-    Object.assign(emb, { el: f, ready: false, t: 0, dur: 0, playing: false, q: [] });
+    Object.assign(emb, { el: f, ready: false, t: opt.at || 0, dur: 0, playing: false, q: [] });
+    if (opt.at > 0.3) send("setCurrentTime", opt.at);     // queued until MLB's player says it's ready
+    if (opt.play) send("play");
     const vm = $("#vmeta");
-    if (vm) vm.innerHTML = `${angleChip(c.angle.category)} <span>${esc(c.angle.label)}</span> · <span>${esc(c.title || "")}</span>${c.duration ? " · " + esc(c.duration.replace(/^00:/, "")) : ""} · <a href="${esc(c.pageUrl)}" target="_blank" rel="noopener">Open on MLB.com</a>`;
+    if (vm) vm.innerHTML = `<span data-playing-cam="${esc(camOf(c))}">${angleChip(c.angle.category)}</span> <span>${esc(c.angle.label)}</span> · <span>${esc(c.title || "")}</span>${c.duration ? " · " + esc(c.duration.replace(/^00:/, "")) : ""} · <a href="${esc(c.pageUrl)}" target="_blank" rel="noopener">Open on MLB.com</a>`;
     updateCtl();
   }
   function stopPlayer(keep) { if (emb.el) { emb.el.remove(); } Object.assign(emb, { el: null, ready: false, playing: false, q: [] }); }

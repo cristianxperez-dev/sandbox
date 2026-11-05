@@ -1,1 +1,282 @@
-{"schema":1,"id":"mlb-778254-66","title":"Enmanuel Valdez is out after a review","titleSource":"MLB.com clip title","source":{"gamePk":778254,"atBatIndex":66,"eventIndex":3,"playId":"0929aef9-0d1a-35f0-a106-050777f296c2","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/778254/feed/live"},"game":{"gamePk":778254,"date":"2025-04-19","season":2025,"gameType":"R","level":"MLB","venue":"PNC Park","away":{"id":114,"name":"Cleveland Guardians","abbr":"CLE","club":"Guardians"},"home":{"id":134,"name":"Pittsburgh Pirates","abbr":"PIT","club":"Pirates"},"series":""},"before":{"inning":9,"half":"bottom","outs":0,"bases":"___","runners":{"1B":null,"2B":null,"3B":null},"score":{"away":3,"home":0},"batting":"home","count":{"balls":1,"strikes":1}},"after":{"outs":1,"bases":"___","score":{"away":3,"home":0}},"batter":{"id":665839,"name":"Enmanuel Valdez","side":"L"},"pitcher":{"id":661403,"name":"Emmanuel Clase","hand":"R"},"event":{"type":"triple","label":"Triple","description":"Pirates challenged (tag play), call on the field was upheld: Enmanuel Valdez triples (2) on a line drive to center fielder Lane Thomas. Enmanuel Valdez out at home on the throw, center fielder Lane Thomas to shortstop Brayan Rocchio to third baseman José Ramírez.","rbi":0,"runs":0,"outs":1,"isReview":true,"walkoff":false},"runners":[{"id":665839,"name":"Enmanuel Valdez","start":null,"end":null,"out":true,"outBase":"4B","reason":"r_out_stretching","event":"triple","isBatter":true,"credits":[{"id":657041,"name":"Lane Thomas","pos":"CF","credit":"f_fielded_ball"},{"id":657041,"name":"Lane Thomas","pos":"CF","credit":"f_assist"},{"id":657041,"name":"Lane Thomas","pos":"CF","credit":"f_assist_of"},{"id":677587,"name":"Brayan Rocchio","pos":"SS","credit":"f_assist"},{"id":608070,"name":"José Ramírez","pos":"3B","credit":"f_putout"}]}],"chains":[{"runner":"Enmanuel Valdez","start":null,"out":true,"outBase":"4B","chain":"8-6-5"}],"pitch":{"type":"Cutter","code":"FC","speed":99.7,"zone":7,"px":-0.3214991109370199,"pz":1.9771311351345497,"spin":2585,"call":"X"},"batted":{"trajectory":"line_drive","hardness":"medium","location":8,"ev":101.7,"la":10.0,"distance":249.0,"sprayAngle":-8.3,"spray":"center"},"winprob":{"homeAfter":1.7999999999999998,"homeBefore":4.3,"homeAdded":-2.5,"li":0.95},"statcast":{"ifAlignment":"Infield shade","ofAlignment":"Strategic","deltaRunExp":0.945,"deltaHomeWinExp":-0.024,"batWinExpBefore":0.042,"bbType":"line_drive","pitchName":"Cutter","fielders":{"2":666310,"3":467793,"4":672356,"5":608070,"6":677587,"7":680757,"8":657041,"9":682657}},"flags":["bases_empty","challenge","line_drive","of_alignment_nonstd","outfield_assist","outfield_play","relay","shift_alignment","trailing","triple","walkoff_situation"],"curation":{"category":"Outfield defense, cutoffs & relays","slot":"Relay throw completes the out"},"clips":[{"kind":"highlight","slug":"emmanuel-clase-in-play-no-out-to-enmanuel-valdez","title":"Enmanuel Valdez is out after a review","duration":"00:00:30","feed":"CMS","pageUrl":"https://www.mlb.com/video/emmanuel-clase-in-play-no-out-to-enmanuel-valdez","embedUrl":"https://streamable.com/m/emmanuel-clase-in-play-no-out-to-enmanuel-valdez","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/tzvrrjd6joi9xyufhu0v.jpg","match":{"guid":"0929aef9-0d1a-35f0-a106-050777f296c2"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=0929aef9-0d1a-35f0-a106-050777f296c2"},"sources":[{"label":"MLB Stats API — official play-by-play, game 778254","url":"https://statsapi.mlb.com/api/v1.1/game/778254/feed/live"},{"label":"MLB Stats API — win probability, game 778254","url":"https://statsapi.mlb.com/api/v1/game/778254/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=778254"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=0929aef9-0d1a-35f0-a106-050777f296c2"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-778254-66",
+ "title": "Enmanuel Valdez is out after a review",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 778254,
+  "atBatIndex": 66,
+  "eventIndex": 3,
+  "playId": "0929aef9-0d1a-35f0-a106-050777f296c2",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/778254/feed/live"
+ },
+ "game": {
+  "gamePk": 778254,
+  "date": "2025-04-19",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "PNC Park",
+  "away": {
+   "id": 114,
+   "name": "Cleveland Guardians",
+   "abbr": "CLE",
+   "club": "Guardians"
+  },
+  "home": {
+   "id": 134,
+   "name": "Pittsburgh Pirates",
+   "abbr": "PIT",
+   "club": "Pirates"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 9,
+  "half": "bottom",
+  "outs": 0,
+  "bases": "___",
+  "runners": {
+   "1B": null,
+   "2B": null,
+   "3B": null
+  },
+  "score": {
+   "away": 3,
+   "home": 0
+  },
+  "batting": "home",
+  "count": {
+   "balls": 1,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 1,
+  "bases": "___",
+  "score": {
+   "away": 3,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 665839,
+  "name": "Enmanuel Valdez",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 661403,
+  "name": "Emmanuel Clase",
+  "hand": "R"
+ },
+ "event": {
+  "type": "triple",
+  "label": "Triple",
+  "description": "Pirates challenged (tag play), call on the field was upheld: Enmanuel Valdez triples (2) on a line drive to center fielder Lane Thomas. Enmanuel Valdez out at home on the throw, center fielder Lane Thomas to shortstop Brayan Rocchio to third baseman José Ramírez.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": true,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 665839,
+   "name": "Enmanuel Valdez",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "4B",
+   "reason": "r_out_stretching",
+   "event": "triple",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 657041,
+     "name": "Lane Thomas",
+     "pos": "CF",
+     "credit": "f_fielded_ball"
+    },
+    {
+     "id": 657041,
+     "name": "Lane Thomas",
+     "pos": "CF",
+     "credit": "f_assist"
+    },
+    {
+     "id": 657041,
+     "name": "Lane Thomas",
+     "pos": "CF",
+     "credit": "f_assist_of"
+    },
+    {
+     "id": 677587,
+     "name": "Brayan Rocchio",
+     "pos": "SS",
+     "credit": "f_assist"
+    },
+    {
+     "id": 608070,
+     "name": "José Ramírez",
+     "pos": "3B",
+     "credit": "f_putout"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Enmanuel Valdez",
+   "start": null,
+   "out": true,
+   "outBase": "4B",
+   "chain": "8-6-5"
+  }
+ ],
+ "pitch": {
+  "type": "Cutter",
+  "code": "FC",
+  "speed": 99.7,
+  "zone": 7,
+  "px": -0.3214991109370199,
+  "pz": 1.9771311351345497,
+  "spin": 2585,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "line_drive",
+  "hardness": "medium",
+  "location": 8,
+  "ev": 101.7,
+  "la": 10.0,
+  "distance": 249.0,
+  "sprayAngle": -8.3,
+  "spray": "center"
+ },
+ "winprob": {
+  "homeAfter": 1.7999999999999998,
+  "homeBefore": 4.3,
+  "homeAdded": -2.5,
+  "li": 0.95
+ },
+ "statcast": {
+  "ifAlignment": "Infield shade",
+  "ofAlignment": "Strategic",
+  "deltaRunExp": 0.945,
+  "deltaHomeWinExp": -0.024,
+  "batWinExpBefore": 0.042,
+  "bbType": "line_drive",
+  "pitchName": "Cutter",
+  "fielders": {
+   "2": 666310,
+   "3": 467793,
+   "4": 672356,
+   "5": 608070,
+   "6": 677587,
+   "7": 680757,
+   "8": 657041,
+   "9": 682657
+  }
+ },
+ "flags": [
+  "bases_empty",
+  "challenge",
+  "line_drive",
+  "of_alignment_nonstd",
+  "outfield_assist",
+  "outfield_play",
+  "relay",
+  "shift_alignment",
+  "trailing",
+  "triple",
+  "walkoff_situation"
+ ],
+ "curation": {
+  "category": "Outfield defense, cutoffs & relays",
+  "slot": "Relay throw completes the out"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "emmanuel-clase-in-play-no-out-to-enmanuel-valdez",
+   "title": "Enmanuel Valdez is out after a review",
+   "duration": "00:00:30",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/emmanuel-clase-in-play-no-out-to-enmanuel-valdez",
+   "embedUrl": "https://streamable.com/m/emmanuel-clase-in-play-no-out-to-enmanuel-valdez",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/tzvrrjd6joi9xyufhu0v.jpg",
+   "match": {
+    "guid": "0929aef9-0d1a-35f0-a106-050777f296c2"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=0929aef9-0d1a-35f0-a106-050777f296c2"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 778254",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/778254/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 778254",
+   "url": "https://statsapi.mlb.com/api/v1/game/778254/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=778254"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=0929aef9-0d1a-35f0-a106-050777f296c2"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

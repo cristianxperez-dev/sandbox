@@ -1,1 +1,303 @@
-{"schema":1,"id":"mlb-776333-43","title":"Jo Adell nabs Josh Naylor to complete double play","titleSource":"MLB.com clip title","source":{"gamePk":776333,"atBatIndex":43,"eventIndex":3,"playId":"413a0c29-43d1-3c1f-9eec-129ee8fb90c5","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/776333/feed/live"},"game":{"gamePk":776333,"date":"2025-09-13","season":2025,"gameType":"R","level":"MLB","venue":"T-Mobile Park","away":{"id":108,"name":"Los Angeles Angels","abbr":"LAA","club":"Angels"},"home":{"id":136,"name":"Seattle Mariners","abbr":"SEA","club":"Mariners"},"series":""},"before":{"inning":5,"half":"bottom","outs":1,"bases":"1_3","runners":{"1B":{"id":647304,"name":"Josh Naylor"},"2B":null,"3B":{"id":593871,"name":"Jorge Polanco"}},"score":{"away":2,"home":5},"batting":"home","count":{"balls":1,"strikes":1}},"after":{"outs":3,"bases":"__3","score":{"away":2,"home":5}},"batter":{"id":641598,"name":"Mitch Garver","side":"R"},"pitcher":{"id":681217,"name":"Chase Silseth","hand":"R"},"event":{"type":"double_play","label":"Double Play","description":"Mitch Garver flies into a double play, right fielder Jo Adell to first baseman Logan Davidson. Josh Naylor out at 1st.","rbi":0,"runs":0,"outs":2,"isReview":false,"walkoff":false},"runners":[{"id":641598,"name":"Mitch Garver","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"double_play","isBatter":true,"credits":[{"id":666176,"name":"Jo Adell","pos":"RF","credit":"f_putout"}]},{"id":647304,"name":"Josh Naylor","start":"1B","end":null,"out":true,"outBase":"1B","reason":"r_doubled_off","event":"double_play","isBatter":false,"credits":[{"id":666176,"name":"Jo Adell","pos":"RF","credit":"f_assist"},{"id":666176,"name":"Jo Adell","pos":"RF","credit":"f_assist_of"},{"id":669722,"name":"Logan Davidson","pos":"1B","credit":"f_putout"}]}],"chains":[{"runner":"Mitch Garver","start":null,"out":true,"outBase":"1B","chain":"9"},{"runner":"Josh Naylor","start":"1B","out":true,"outBase":"1B","chain":"9-3"}],"pitch":{"type":"Sweeper","code":"ST","speed":84.3,"zone":5,"px":0.07233222883755369,"pz":2.885758686192125,"spin":2786,"call":"X"},"batted":{"trajectory":"fly_ball","hardness":"medium","location":9,"ev":88.5,"la":62.0,"distance":177.0,"sprayAngle":38.0,"spray":"opposite"},"winprob":{"homeAfter":86.3,"homeBefore":91.3,"homeAdded":-5.0,"li":0.8},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":-0.098,"deltaHomeWinExp":-0.049,"batWinExpBefore":0.912,"bbType":"fly_ball","pitchName":"Sweeper","fielders":{"2":665861,"3":669722,"4":695681,"5":660162,"6":694203,"7":621493,"8":669326,"9":666176}},"flags":["double_play","doubled_off","dp_situation","fly_ball","force_available","leading","low_leverage","outfield_assist","outfield_play","risp","runner_out_on_bases","tag_play"],"curation":{"category":"Miscellaneous teaching moments","slot":"Doubled off"},"clips":[{"kind":"highlight","slug":"chase-silseth-in-play-out-s-to-mitch-garver","title":"Jo Adell nabs Josh Naylor to complete double play","duration":"00:00:24","feed":"CMS","pageUrl":"https://www.mlb.com/video/chase-silseth-in-play-out-s-to-mitch-garver","embedUrl":"https://streamable.com/m/chase-silseth-in-play-out-s-to-mitch-garver","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/brn12sdfcy5cmp9f97ys.jpg","match":{"guid":"413a0c29-43d1-3c1f-9eec-129ee8fb90c5"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=413a0c29-43d1-3c1f-9eec-129ee8fb90c5"},"sources":[{"label":"MLB Stats API — official play-by-play, game 776333","url":"https://statsapi.mlb.com/api/v1.1/game/776333/feed/live"},{"label":"MLB Stats API — win probability, game 776333","url":"https://statsapi.mlb.com/api/v1/game/776333/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=776333"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=413a0c29-43d1-3c1f-9eec-129ee8fb90c5"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-776333-43",
+ "title": "Jo Adell nabs Josh Naylor to complete double play",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 776333,
+  "atBatIndex": 43,
+  "eventIndex": 3,
+  "playId": "413a0c29-43d1-3c1f-9eec-129ee8fb90c5",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/776333/feed/live"
+ },
+ "game": {
+  "gamePk": 776333,
+  "date": "2025-09-13",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "T-Mobile Park",
+  "away": {
+   "id": 108,
+   "name": "Los Angeles Angels",
+   "abbr": "LAA",
+   "club": "Angels"
+  },
+  "home": {
+   "id": 136,
+   "name": "Seattle Mariners",
+   "abbr": "SEA",
+   "club": "Mariners"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 5,
+  "half": "bottom",
+  "outs": 1,
+  "bases": "1_3",
+  "runners": {
+   "1B": {
+    "id": 647304,
+    "name": "Josh Naylor"
+   },
+   "2B": null,
+   "3B": {
+    "id": 593871,
+    "name": "Jorge Polanco"
+   }
+  },
+  "score": {
+   "away": 2,
+   "home": 5
+  },
+  "batting": "home",
+  "count": {
+   "balls": 1,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 3,
+  "bases": "__3",
+  "score": {
+   "away": 2,
+   "home": 5
+  }
+ },
+ "batter": {
+  "id": 641598,
+  "name": "Mitch Garver",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 681217,
+  "name": "Chase Silseth",
+  "hand": "R"
+ },
+ "event": {
+  "type": "double_play",
+  "label": "Double Play",
+  "description": "Mitch Garver flies into a double play, right fielder Jo Adell to first baseman Logan Davidson. Josh Naylor out at 1st.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 2,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 641598,
+   "name": "Mitch Garver",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "double_play",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 666176,
+     "name": "Jo Adell",
+     "pos": "RF",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 647304,
+   "name": "Josh Naylor",
+   "start": "1B",
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": "r_doubled_off",
+   "event": "double_play",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 666176,
+     "name": "Jo Adell",
+     "pos": "RF",
+     "credit": "f_assist"
+    },
+    {
+     "id": 666176,
+     "name": "Jo Adell",
+     "pos": "RF",
+     "credit": "f_assist_of"
+    },
+    {
+     "id": 669722,
+     "name": "Logan Davidson",
+     "pos": "1B",
+     "credit": "f_putout"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Mitch Garver",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "9"
+  },
+  {
+   "runner": "Josh Naylor",
+   "start": "1B",
+   "out": true,
+   "outBase": "1B",
+   "chain": "9-3"
+  }
+ ],
+ "pitch": {
+  "type": "Sweeper",
+  "code": "ST",
+  "speed": 84.3,
+  "zone": 5,
+  "px": 0.07233222883755369,
+  "pz": 2.885758686192125,
+  "spin": 2786,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "fly_ball",
+  "hardness": "medium",
+  "location": 9,
+  "ev": 88.5,
+  "la": 62.0,
+  "distance": 177.0,
+  "sprayAngle": 38.0,
+  "spray": "opposite"
+ },
+ "winprob": {
+  "homeAfter": 86.3,
+  "homeBefore": 91.3,
+  "homeAdded": -5.0,
+  "li": 0.8
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.098,
+  "deltaHomeWinExp": -0.049,
+  "batWinExpBefore": 0.912,
+  "bbType": "fly_ball",
+  "pitchName": "Sweeper",
+  "fielders": {
+   "2": 665861,
+   "3": 669722,
+   "4": 695681,
+   "5": 660162,
+   "6": 694203,
+   "7": 621493,
+   "8": 669326,
+   "9": 666176
+  }
+ },
+ "flags": [
+  "double_play",
+  "doubled_off",
+  "dp_situation",
+  "fly_ball",
+  "force_available",
+  "leading",
+  "low_leverage",
+  "outfield_assist",
+  "outfield_play",
+  "risp",
+  "runner_out_on_bases",
+  "tag_play"
+ ],
+ "curation": {
+  "category": "Miscellaneous teaching moments",
+  "slot": "Doubled off"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "chase-silseth-in-play-out-s-to-mitch-garver",
+   "title": "Jo Adell nabs Josh Naylor to complete double play",
+   "duration": "00:00:24",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/chase-silseth-in-play-out-s-to-mitch-garver",
+   "embedUrl": "https://streamable.com/m/chase-silseth-in-play-out-s-to-mitch-garver",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/brn12sdfcy5cmp9f97ys.jpg",
+   "match": {
+    "guid": "413a0c29-43d1-3c1f-9eec-129ee8fb90c5"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=413a0c29-43d1-3c1f-9eec-129ee8fb90c5"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 776333",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/776333/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 776333",
+   "url": "https://statsapi.mlb.com/api/v1/game/776333/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=776333"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=413a0c29-43d1-3c1f-9eec-129ee8fb90c5"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

@@ -143,18 +143,42 @@ const count = async (p) => +((await p.locator("#count").innerText()).match(/^\d+
   /* 8–9: viewer — High Home first, labels, playback, scrubbing, loop, fullscreen */
   await safe("viewer", async () => {
     const { ctx, p, errs } = await fresh(b);
-    const hh = P.find((x) => x.angles[0] === "high-home");
+    // camera selector: Broadcast | High Home — availability per play, stored independently
+    const cams = (x) => x.cameras || {};
+    const hhPlays = P.filter((x) => cams(x).highHome), bcOnly = P.filter((x) => cams(x).broadcast && !cams(x).highHome);
+    ok(P.every((x) => typeof cams(x).broadcast === "boolean" && typeof cams(x).highHome === "boolean"), "every play stores Broadcast and High Home availability separately");
+    const hh = hhPlays.find((x) => /Baserunning|Infield|Outfield|Catcher/.test(x.category)) || hhPlays[0];
+    const hhDetail = JSON.parse(fs.readFileSync(path.join(__dirname, "../../../apps/play-repository/data/plays", hh.id + ".json"), "utf8"));
+    const hhSlug = hhDetail.clips.find((c) => c.kind === "high-home").slug;
+    const bcSlugs = hhDetail.clips.filter((c) => c.angle.category === "broadcast").map((c) => c.slug);
     await p.goto(BASE + "#/play/" + hh.id); await p.waitForSelector("#stage iframe");
-    const src = await p.locator("#stage iframe").getAttribute("src");
-    const tab0 = await p.locator("#angles button").first().innerText();
-    ok(/high-home/.test(src) && /High Home/i.test(tab0), `High Home is used first where MLB published it (${hh.id})`);
-    ok((await p.locator("#angles button").count()) >= 2, "angle selector offers the other verified clips");
-    await p.locator("#angles button").nth(1).click(); await wait(p, 300);
+    const src = () => p.locator("#stage iframe").getAttribute("src");
+    ok((await p.locator("#camsel [data-cam]").count()) >= 2 && /Broadcast/.test(await p.locator("#camsel").innerText()) && /High Home/.test(await p.locator("#camsel").innerText()), "camera selector above the player: Broadcast and High Home");
+    ok((await src()).endsWith("/" + hhSlug) && (await p.locator('#camsel [data-cam="highHome"]').getAttribute("aria-checked")) === "true", `High Home opens first for a defensive teaching play (${hh.id})`);
+    ok(/HIGH HOME/i.test(await p.locator("#vmeta").innerText()), "High Home clip is labelled as MLB's High Home");
+    await p.fill("#n_teaching", "Watch the pivot at second");
+    await p.click('#camsel [data-cam="broadcast"]'); await wait(p, 400);
+    ok(bcSlugs.includes((await src()).split("/m/")[1]), "Broadcast plays the same event's broadcast clip");
     const lab = await p.locator("#vmeta").innerText();
-    ok(/broadcast/i.test(lab) && !/high home/i.test(lab), "switching to the broadcast clip labels it as broadcast");
-    const bc = P.find((x) => !x.angles.includes("high-home"));
+    ok(/broadcast/i.test(lab) && !/high home/i.test(lab), "switching to broadcast labels it as broadcast, never High Home");
+    ok((await p.inputValue("#n_teaching")) === "Watch the pivot at second" && p.url().includes("#/play/" + hh.id), "switching cameras keeps you on the play with your notes");
+    await p.click('#camsel [data-cam="highHome"]'); await wait(p, 400);
+    ok((await src()).endsWith("/" + hhSlug), "switch back to High Home");
+    const bc = bcOnly[0];
     await p.goto(BASE + "#/play/" + bc.id); await p.waitForSelector("#stage iframe");
-    ok(!/high home/i.test(await p.locator("#angles").innerText()) && /broadcast/i.test(await p.locator("#vmeta").innerText()), "broadcast footage is never labelled High Home");
+    const na = p.locator('#camsel [data-cam="highHome"]');
+    ok((await na.getAttribute("aria-disabled")) === "true" && /unavailable/i.test(await na.innerText()) && /High Home unavailable/.test(await p.locator("#camnote").innerText()), "High Home shown as unavailable when MLB hasn't published it");
+    const before = await src(); await na.click({ force: true }); await wait(p, 300);
+    ok((await src()) === before && (await p.locator('#camsel [data-cam="broadcast"]').getAttribute("aria-checked")) === "true", "tapping unavailable High Home keeps broadcast playing (no substitute angle)");
+    ok(!/high home/i.test(await p.locator("#vmeta").innerText()) && /broadcast/i.test(await p.locator("#vmeta").innerText()), "broadcast footage is never labelled High Home");
+    // camera filters
+    await p.goto(BASE + "#/explore"); await p.waitForSelector("#grid .card");
+    for (const [k, pred] of [["highHome", (x) => cams(x).highHome], ["broadcast", (x) => cams(x).broadcast], ["both", (x) => cams(x).highHome && cams(x).broadcast]]) {
+      await p.click(`#filters [data-cam="${k}"]`);
+      ok(JSON.stringify(await visibleIds(p)) === JSON.stringify(idsWhere(pred)), `camera filter: ${k} (${idsWhere(pred).length})`);
+      await p.click(`#filters [data-cam="${k}"]`);
+    }
+    await p.goto(BASE + "#/play/" + bc.id); await p.waitForSelector("#stage iframe");
     // playback through MLB's embed (player.js)
     const frame = () => p.frames().find((f) => /streamable\.com\/m\//.test(f.url()));
     for (let i = 0; i < 40 && !frame(); i++) await wait(p, 250);
@@ -340,10 +364,17 @@ const count = async (p) => +((await p.locator("#count").innerText()).match(/^\d+
     const src = await p.locator("#stage iframe").getAttribute("src");
     ok(/^https:\/\/streamable\.com\/m\//.test(src) && (await p.locator("#stage iframe").boundingBox()).width >= W - 40, `${W}: MLB video embed fills the phone width`);
     ok(await hs() <= 0, `${W}: no horizontal scroll on a play`);
+
     await p.goBack(); await p.waitForSelector("#grid .card");
     ok(JSON.stringify(await visibleIds(p)) === JSON.stringify(before), `${W}: filters survive opening a video and coming back`);
     await p.click("#btnFilters"); await wait(p, 300);
     ok(await p.locator('details[data-s="play"]').evaluate((d) => d.open), `${W}: expanded sections persist`);
+    const hp = P.find((x) => (x.cameras || {}).highHome);
+    await p.goto(BASE + "#/play/" + hp.id); await p.waitForSelector("#stage iframe");
+    const s1 = await p.locator("#stage iframe").getAttribute("src");
+    await p.click('#camsel [data-cam="' + (/high-home/.test(s1) ? "broadcast" : "highHome") + '"]'); await wait(p, 300);
+    const s2 = await p.locator("#stage iframe").getAttribute("src");
+    ok(s1 !== s2 && (/high-home/.test(s1) !== /high-home/.test(s2)) && (await p.locator("#camsel .cams").boundingBox()).width <= W, `${W}: camera switch works on the phone`);
     ok(errs.length === 0, `${W}: no app errors ` + errs.join(" | ").slice(0, 300));
     await ctx.close();
   });

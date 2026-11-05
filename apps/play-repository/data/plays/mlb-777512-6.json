@@ -1,1 +1,261 @@
-{"schema":1,"id":"mlb-777512-6","title":"Sal Frelick steals second base due to obstruction","titleSource":"MLB.com clip title","source":{"gamePk":777512,"atBatIndex":6,"eventIndex":8,"playId":"5fd9fd7f-e86d-3c3e-ae86-5624d543a17f","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/777512/feed/live"},"game":{"gamePk":777512,"date":"2025-06-14","season":2025,"gameType":"R","level":"MLB","venue":"American Family Field","away":{"id":138,"name":"St. Louis Cardinals","abbr":"STL","club":"Cardinals"},"home":{"id":158,"name":"Milwaukee Brewers","abbr":"MIL","club":"Brewers"},"series":""},"before":{"inning":1,"half":"bottom","outs":0,"bases":"1__","runners":{"1B":{"id":686217,"name":"Sal Frelick"},"2B":null,"3B":null},"score":{"away":1,"home":0},"batting":"home","count":{"balls":2,"strikes":2}},"after":{"outs":1,"bases":"_2_","score":{"away":1,"home":0}},"batter":{"id":694192,"name":"Jackson Chourio","side":"R"},"pitcher":{"id":669467,"name":"Andre Pallante","hand":"R"},"event":{"type":"strikeout","label":"Strikeout","description":"Jackson Chourio strikes out swinging. Sal Frelick steals (14) 2nd base.","rbi":0,"runs":0,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":694192,"name":"Jackson Chourio","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"strikeout","isBatter":true,"credits":[{"id":686780,"name":"Pedro Pagés","pos":"C","credit":"f_putout"}]},{"id":686217,"name":"Sal Frelick","start":"1B","end":"2B","out":false,"outBase":null,"reason":"r_stolen_base_2b","event":"stolen_base_2b","isBatter":false,"credits":[]}],"chains":[{"runner":"Jackson Chourio","start":null,"out":true,"outBase":"1B","chain":"2"}],"pitch":{"type":"Four-Seam Fastball","code":"FF","speed":96.1,"zone":12,"px":0.15964392596290852,"pz":3.6376352277653217,"spin":2368,"call":"S"},"batted":null,"winprob":{"homeAfter":46.7,"homeBefore":48.6,"homeAdded":-1.8999999999999986,"li":1.55},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":-0.19,"deltaHomeWinExp":-0.014,"batWinExpBefore":0.481,"bbType":null,"pitchName":"4-Seam Fastball","fielders":{"2":686780,"3":575929,"4":669357,"5":571448,"6":691026,"7":676475,"8":687363,"9":691023}},"flags":["close","dp_situation","force_available","one_run","productive_out","strikeout","trailing","tying_run_on"],"curation":{"category":"Miscellaneous teaching moments","slot":"Strikeout with a runner in motion"},"clips":[{"kind":"highlight","slug":"andre-pallante-swinging-strike-to-jackson-chourio","title":"Sal Frelick steals second base due to obstruction","duration":"00:00:29","feed":"CMS","pageUrl":"https://www.mlb.com/video/andre-pallante-swinging-strike-to-jackson-chourio","embedUrl":"https://streamable.com/m/andre-pallante-swinging-strike-to-jackson-chourio","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/os8j7cki6ckwjaypprpo.jpg","match":{"guid":"5fd9fd7f-e86d-3c3e-ae86-5624d543a17f"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=5fd9fd7f-e86d-3c3e-ae86-5624d543a17f"},"sources":[{"label":"MLB Stats API — official play-by-play, game 777512","url":"https://statsapi.mlb.com/api/v1.1/game/777512/feed/live"},{"label":"MLB Stats API — win probability, game 777512","url":"https://statsapi.mlb.com/api/v1/game/777512/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=777512"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=5fd9fd7f-e86d-3c3e-ae86-5624d543a17f"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-777512-6",
+ "title": "Sal Frelick steals second base due to obstruction",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 777512,
+  "atBatIndex": 6,
+  "eventIndex": 8,
+  "playId": "5fd9fd7f-e86d-3c3e-ae86-5624d543a17f",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/777512/feed/live"
+ },
+ "game": {
+  "gamePk": 777512,
+  "date": "2025-06-14",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "American Family Field",
+  "away": {
+   "id": 138,
+   "name": "St. Louis Cardinals",
+   "abbr": "STL",
+   "club": "Cardinals"
+  },
+  "home": {
+   "id": 158,
+   "name": "Milwaukee Brewers",
+   "abbr": "MIL",
+   "club": "Brewers"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 1,
+  "half": "bottom",
+  "outs": 0,
+  "bases": "1__",
+  "runners": {
+   "1B": {
+    "id": 686217,
+    "name": "Sal Frelick"
+   },
+   "2B": null,
+   "3B": null
+  },
+  "score": {
+   "away": 1,
+   "home": 0
+  },
+  "batting": "home",
+  "count": {
+   "balls": 2,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 1,
+  "bases": "_2_",
+  "score": {
+   "away": 1,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 694192,
+  "name": "Jackson Chourio",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 669467,
+  "name": "Andre Pallante",
+  "hand": "R"
+ },
+ "event": {
+  "type": "strikeout",
+  "label": "Strikeout",
+  "description": "Jackson Chourio strikes out swinging. Sal Frelick steals (14) 2nd base.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 694192,
+   "name": "Jackson Chourio",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "strikeout",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 686780,
+     "name": "Pedro Pagés",
+     "pos": "C",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 686217,
+   "name": "Sal Frelick",
+   "start": "1B",
+   "end": "2B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_stolen_base_2b",
+   "event": "stolen_base_2b",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Jackson Chourio",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "2"
+  }
+ ],
+ "pitch": {
+  "type": "Four-Seam Fastball",
+  "code": "FF",
+  "speed": 96.1,
+  "zone": 12,
+  "px": 0.15964392596290852,
+  "pz": 3.6376352277653217,
+  "spin": 2368,
+  "call": "S"
+ },
+ "batted": null,
+ "winprob": {
+  "homeAfter": 46.7,
+  "homeBefore": 48.6,
+  "homeAdded": -1.8999999999999986,
+  "li": 1.55
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.19,
+  "deltaHomeWinExp": -0.014,
+  "batWinExpBefore": 0.481,
+  "bbType": null,
+  "pitchName": "4-Seam Fastball",
+  "fielders": {
+   "2": 686780,
+   "3": 575929,
+   "4": 669357,
+   "5": 571448,
+   "6": 691026,
+   "7": 676475,
+   "8": 687363,
+   "9": 691023
+  }
+ },
+ "flags": [
+  "close",
+  "dp_situation",
+  "force_available",
+  "one_run",
+  "productive_out",
+  "strikeout",
+  "trailing",
+  "tying_run_on"
+ ],
+ "curation": {
+  "category": "Miscellaneous teaching moments",
+  "slot": "Strikeout with a runner in motion"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "andre-pallante-swinging-strike-to-jackson-chourio",
+   "title": "Sal Frelick steals second base due to obstruction",
+   "duration": "00:00:29",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/andre-pallante-swinging-strike-to-jackson-chourio",
+   "embedUrl": "https://streamable.com/m/andre-pallante-swinging-strike-to-jackson-chourio",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/os8j7cki6ckwjaypprpo.jpg",
+   "match": {
+    "guid": "5fd9fd7f-e86d-3c3e-ae86-5624d543a17f"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=5fd9fd7f-e86d-3c3e-ae86-5624d543a17f"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 777512",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/777512/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 777512",
+   "url": "https://statsapi.mlb.com/api/v1/game/777512/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=777512"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=5fd9fd7f-e86d-3c3e-ae86-5624d543a17f"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

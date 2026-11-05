@@ -1,1 +1,316 @@
-{"schema":1,"id":"mlb-777883-21","title":"Sal Frelick nabs Brooks Lee","titleSource":"MLB.com clip title","source":{"gamePk":777883,"atBatIndex":21,"eventIndex":7,"playId":"e9f2dab0-24de-3970-9b2b-65c7a6d4a93c","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/777883/feed/live"},"game":{"gamePk":777883,"date":"2025-05-17","season":2025,"gameType":"R","level":"MLB","venue":"American Family Field","away":{"id":142,"name":"Minnesota Twins","abbr":"MIN","club":"Twins"},"home":{"id":158,"name":"Milwaukee Brewers","abbr":"MIL","club":"Brewers"},"series":""},"before":{"inning":3,"half":"top","outs":0,"bases":"12_","runners":{"1B":{"id":664034,"name":"Ty France"},"2B":{"id":686797,"name":"Brooks Lee"},"3B":null},"score":{"away":3,"home":0},"batting":"away","count":{"balls":2,"strikes":2}},"after":{"outs":1,"bases":"12_","score":{"away":3,"home":0}},"batter":{"id":665019,"name":"Kody Clemens","side":"L"},"pitcher":{"id":668964,"name":"Tobias Myers","hand":"R"},"event":{"type":"single","label":"Single","description":"Kody Clemens singles on a line drive to right fielder Sal Frelick. Brooks Lee out at home on the throw, right fielder Sal Frelick to catcher William Contreras. Ty France to 2nd.","rbi":0,"runs":0,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":665019,"name":"Kody Clemens","start":null,"end":"1B","out":false,"outBase":null,"reason":null,"event":"single","isBatter":true,"credits":[{"id":686217,"name":"Sal Frelick","pos":"RF","credit":"f_fielded_ball"}]},{"id":686797,"name":"Brooks Lee","start":"2B","end":null,"out":true,"outBase":"4B","reason":"r_thrown_out","event":"single","isBatter":false,"credits":[{"id":686217,"name":"Sal Frelick","pos":"RF","credit":"f_assist"},{"id":686217,"name":"Sal Frelick","pos":"RF","credit":"f_assist_of"},{"id":661388,"name":"William Contreras","pos":"C","credit":"f_putout"}]},{"id":664034,"name":"Ty France","start":"1B","end":"2B","out":false,"outBase":null,"reason":"r_adv_force","event":"other_out","isBatter":false,"credits":[]}],"chains":[{"runner":"Kody Clemens","start":null,"out":false,"outBase":null,"chain":"9"},{"runner":"Brooks Lee","start":"2B","out":true,"outBase":"4B","chain":"9-2"}],"pitch":{"type":"Cutter","code":"FC","speed":87.4,"zone":8,"px":-0.15418227929214218,"pz":2.1496765635504733,"spin":2185,"call":"X"},"batted":{"trajectory":"line_drive","hardness":"medium","location":9,"ev":106.0,"la":3.0,"distance":81.0,"sprayAngle":29.7,"spray":"pull"},"winprob":{"homeAfter":18.3,"homeBefore":15.4,"homeAdded":2.9000000000000004,"li":1.02},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":0.514,"deltaHomeWinExp":0.025,"batWinExpBefore":0.842,"bbType":"line_drive","pitchName":"Cutter","fielders":{"2":661388,"3":656555,"4":668930,"5":702332,"6":687401,"7":641343,"8":694192,"9":686217}},"flags":["catcher_play","dp_situation","force_available","leading","line_drive","out_at_plate","outfield_assist","outfield_play","play_at_plate","productive_out","risp","runner_out_on_bases","single","tag_play"],"curation":{"category":"Outfield defense, cutoffs & relays","slot":"Single to right, runner from second thrown out at home"},"clips":[{"kind":"highlight","slug":"tobias-myers-in-play-out-s-to-kody-clemens","title":"Sal Frelick nabs Brooks Lee","duration":"00:00:24","feed":"CMS","pageUrl":"https://www.mlb.com/video/tobias-myers-in-play-out-s-to-kody-clemens","embedUrl":"https://streamable.com/m/tobias-myers-in-play-out-s-to-kody-clemens","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/e1ecvxsxsielfirnwrt6.jpg","match":{"guid":"e9f2dab0-24de-3970-9b2b-65c7a6d4a93c"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=e9f2dab0-24de-3970-9b2b-65c7a6d4a93c"},"sources":[{"label":"MLB Stats API — official play-by-play, game 777883","url":"https://statsapi.mlb.com/api/v1.1/game/777883/feed/live"},{"label":"MLB Stats API — win probability, game 777883","url":"https://statsapi.mlb.com/api/v1/game/777883/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=777883"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=e9f2dab0-24de-3970-9b2b-65c7a6d4a93c"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-777883-21",
+ "title": "Sal Frelick nabs Brooks Lee",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 777883,
+  "atBatIndex": 21,
+  "eventIndex": 7,
+  "playId": "e9f2dab0-24de-3970-9b2b-65c7a6d4a93c",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/777883/feed/live"
+ },
+ "game": {
+  "gamePk": 777883,
+  "date": "2025-05-17",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "American Family Field",
+  "away": {
+   "id": 142,
+   "name": "Minnesota Twins",
+   "abbr": "MIN",
+   "club": "Twins"
+  },
+  "home": {
+   "id": 158,
+   "name": "Milwaukee Brewers",
+   "abbr": "MIL",
+   "club": "Brewers"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 3,
+  "half": "top",
+  "outs": 0,
+  "bases": "12_",
+  "runners": {
+   "1B": {
+    "id": 664034,
+    "name": "Ty France"
+   },
+   "2B": {
+    "id": 686797,
+    "name": "Brooks Lee"
+   },
+   "3B": null
+  },
+  "score": {
+   "away": 3,
+   "home": 0
+  },
+  "batting": "away",
+  "count": {
+   "balls": 2,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 1,
+  "bases": "12_",
+  "score": {
+   "away": 3,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 665019,
+  "name": "Kody Clemens",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 668964,
+  "name": "Tobias Myers",
+  "hand": "R"
+ },
+ "event": {
+  "type": "single",
+  "label": "Single",
+  "description": "Kody Clemens singles on a line drive to right fielder Sal Frelick. Brooks Lee out at home on the throw, right fielder Sal Frelick to catcher William Contreras. Ty France to 2nd.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 665019,
+   "name": "Kody Clemens",
+   "start": null,
+   "end": "1B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "single",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 686217,
+     "name": "Sal Frelick",
+     "pos": "RF",
+     "credit": "f_fielded_ball"
+    }
+   ]
+  },
+  {
+   "id": 686797,
+   "name": "Brooks Lee",
+   "start": "2B",
+   "end": null,
+   "out": true,
+   "outBase": "4B",
+   "reason": "r_thrown_out",
+   "event": "single",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 686217,
+     "name": "Sal Frelick",
+     "pos": "RF",
+     "credit": "f_assist"
+    },
+    {
+     "id": 686217,
+     "name": "Sal Frelick",
+     "pos": "RF",
+     "credit": "f_assist_of"
+    },
+    {
+     "id": 661388,
+     "name": "William Contreras",
+     "pos": "C",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 664034,
+   "name": "Ty France",
+   "start": "1B",
+   "end": "2B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_force",
+   "event": "other_out",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Kody Clemens",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": "9"
+  },
+  {
+   "runner": "Brooks Lee",
+   "start": "2B",
+   "out": true,
+   "outBase": "4B",
+   "chain": "9-2"
+  }
+ ],
+ "pitch": {
+  "type": "Cutter",
+  "code": "FC",
+  "speed": 87.4,
+  "zone": 8,
+  "px": -0.15418227929214218,
+  "pz": 2.1496765635504733,
+  "spin": 2185,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "line_drive",
+  "hardness": "medium",
+  "location": 9,
+  "ev": 106.0,
+  "la": 3.0,
+  "distance": 81.0,
+  "sprayAngle": 29.7,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 18.3,
+  "homeBefore": 15.4,
+  "homeAdded": 2.9000000000000004,
+  "li": 1.02
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.514,
+  "deltaHomeWinExp": 0.025,
+  "batWinExpBefore": 0.842,
+  "bbType": "line_drive",
+  "pitchName": "Cutter",
+  "fielders": {
+   "2": 661388,
+   "3": 656555,
+   "4": 668930,
+   "5": 702332,
+   "6": 687401,
+   "7": 641343,
+   "8": 694192,
+   "9": 686217
+  }
+ },
+ "flags": [
+  "catcher_play",
+  "dp_situation",
+  "force_available",
+  "leading",
+  "line_drive",
+  "out_at_plate",
+  "outfield_assist",
+  "outfield_play",
+  "play_at_plate",
+  "productive_out",
+  "risp",
+  "runner_out_on_bases",
+  "single",
+  "tag_play"
+ ],
+ "curation": {
+  "category": "Outfield defense, cutoffs & relays",
+  "slot": "Single to right, runner from second thrown out at home"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "tobias-myers-in-play-out-s-to-kody-clemens",
+   "title": "Sal Frelick nabs Brooks Lee",
+   "duration": "00:00:24",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/tobias-myers-in-play-out-s-to-kody-clemens",
+   "embedUrl": "https://streamable.com/m/tobias-myers-in-play-out-s-to-kody-clemens",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/e1ecvxsxsielfirnwrt6.jpg",
+   "match": {
+    "guid": "e9f2dab0-24de-3970-9b2b-65c7a6d4a93c"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=e9f2dab0-24de-3970-9b2b-65c7a6d4a93c"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 777883",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/777883/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 777883",
+   "url": "https://statsapi.mlb.com/api/v1/game/777883/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=777883"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=e9f2dab0-24de-3970-9b2b-65c7a6d4a93c"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

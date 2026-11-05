@@ -1,1 +1,296 @@
-{"schema":1,"id":"mlb-776532-43","title":"Matt Olson turns a clutch double play","titleSource":"MLB.com clip title","source":{"gamePk":776532,"atBatIndex":43,"eventIndex":0,"playId":"874c9969-61be-3cc0-b68e-75538df2ce0b","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/776532/feed/live"},"game":{"gamePk":776532,"date":"2025-08-30","season":2025,"gameType":"R","level":"MLB","venue":"Citizens Bank Park","away":{"id":144,"name":"Atlanta Braves","abbr":"ATL","club":"Braves"},"home":{"id":143,"name":"Philadelphia Phillies","abbr":"PHI","club":"Phillies"},"series":""},"before":{"inning":6,"half":"bottom","outs":1,"bases":"__3","runners":{"1B":null,"2B":null,"3B":{"id":607208,"name":"Trea Turner"}},"score":{"away":1,"home":1},"batting":"home","count":{"balls":0,"strikes":0}},"after":{"outs":3,"bases":"___","score":{"away":1,"home":1}},"batter":{"id":547180,"name":"Bryce Harper","side":"L"},"pitcher":{"id":519242,"name":"Chris Sale","hand":"L"},"event":{"type":"double_play","label":"Double Play","description":"Bryce Harper grounds into a double play, first baseman Matt Olson to catcher Drake Baldwin. Trea Turner out at home. Bryce Harper out at 1st.","rbi":0,"runs":0,"outs":2,"isReview":false,"walkoff":false},"runners":[{"id":547180,"name":"Bryce Harper","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"double_play","isBatter":true,"credits":[{"id":621566,"name":"Matt Olson","pos":"1B","credit":"f_putout"}]},{"id":607208,"name":"Trea Turner","start":"3B","end":null,"out":true,"outBase":"4B","reason":"r_runner_out","event":"double_play","isBatter":false,"credits":[{"id":621566,"name":"Matt Olson","pos":"1B","credit":"f_assist"},{"id":686948,"name":"Drake Baldwin","pos":"C","credit":"f_putout"}]}],"chains":[{"runner":"Bryce Harper","start":null,"out":true,"outBase":"1B","chain":"3"},{"runner":"Trea Turner","start":"3B","out":true,"outBase":"4B","chain":"3-2"}],"pitch":{"type":"Slider","code":"SL","speed":79.7,"zone":3,"px":0.5882558711853875,"pz":2.8648596847794146,"spin":2355,"call":"X"},"batted":{"trajectory":"ground_ball","hardness":"medium","location":3,"ev":86.0,"la":-12.0,"distance":16.0,"sprayAngle":46.1,"spray":"pull"},"winprob":{"homeAfter":50.0,"homeBefore":65.8,"homeAdded":-15.799999999999997,"li":2.25},"statcast":{"ifAlignment":"Strategic","ofAlignment":"Standard","deltaRunExp":-0.276,"deltaHomeWinExp":-0.158,"batWinExpBefore":0.658,"bbType":"ground_ball","pitchName":"Slider","fielders":{"2":686948,"3":621566,"4":645277,"5":805373,"6":669397,"7":595777,"8":671739,"9":660670}},"flags":["catcher_play","close","double_play","go_ahead_on","ground_ball","ground_ball_infield","high_leverage","out_at_plate","play_at_plate","risp","runner_out_on_bases","shift_alignment","tag_play","tied"],"curation":{"category":"Catcher defense & plays at the plate","slot":"Tag play at the plate"},"clips":[{"kind":"highlight","slug":"chris-sale-in-play-out-s-to-bryce-harper-vrv2ft-x8301","title":"Matt Olson turns a clutch double play","duration":"00:00:25","feed":"CMS","pageUrl":"https://www.mlb.com/video/chris-sale-in-play-out-s-to-bryce-harper-vrv2ft-x8301","embedUrl":"https://streamable.com/m/chris-sale-in-play-out-s-to-bryce-harper-vrv2ft-x8301","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/cbqugpere93cwkchgitw.jpg","match":{"guid":"874c9969-61be-3cc0-b68e-75538df2ce0b"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=874c9969-61be-3cc0-b68e-75538df2ce0b"},"sources":[{"label":"MLB Stats API — official play-by-play, game 776532","url":"https://statsapi.mlb.com/api/v1.1/game/776532/feed/live"},{"label":"MLB Stats API — win probability, game 776532","url":"https://statsapi.mlb.com/api/v1/game/776532/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=776532"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=874c9969-61be-3cc0-b68e-75538df2ce0b"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-776532-43",
+ "title": "Matt Olson turns a clutch double play",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 776532,
+  "atBatIndex": 43,
+  "eventIndex": 0,
+  "playId": "874c9969-61be-3cc0-b68e-75538df2ce0b",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/776532/feed/live"
+ },
+ "game": {
+  "gamePk": 776532,
+  "date": "2025-08-30",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Citizens Bank Park",
+  "away": {
+   "id": 144,
+   "name": "Atlanta Braves",
+   "abbr": "ATL",
+   "club": "Braves"
+  },
+  "home": {
+   "id": 143,
+   "name": "Philadelphia Phillies",
+   "abbr": "PHI",
+   "club": "Phillies"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 6,
+  "half": "bottom",
+  "outs": 1,
+  "bases": "__3",
+  "runners": {
+   "1B": null,
+   "2B": null,
+   "3B": {
+    "id": 607208,
+    "name": "Trea Turner"
+   }
+  },
+  "score": {
+   "away": 1,
+   "home": 1
+  },
+  "batting": "home",
+  "count": {
+   "balls": 0,
+   "strikes": 0
+  }
+ },
+ "after": {
+  "outs": 3,
+  "bases": "___",
+  "score": {
+   "away": 1,
+   "home": 1
+  }
+ },
+ "batter": {
+  "id": 547180,
+  "name": "Bryce Harper",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 519242,
+  "name": "Chris Sale",
+  "hand": "L"
+ },
+ "event": {
+  "type": "double_play",
+  "label": "Double Play",
+  "description": "Bryce Harper grounds into a double play, first baseman Matt Olson to catcher Drake Baldwin. Trea Turner out at home. Bryce Harper out at 1st.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 2,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 547180,
+   "name": "Bryce Harper",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "double_play",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 621566,
+     "name": "Matt Olson",
+     "pos": "1B",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 607208,
+   "name": "Trea Turner",
+   "start": "3B",
+   "end": null,
+   "out": true,
+   "outBase": "4B",
+   "reason": "r_runner_out",
+   "event": "double_play",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 621566,
+     "name": "Matt Olson",
+     "pos": "1B",
+     "credit": "f_assist"
+    },
+    {
+     "id": 686948,
+     "name": "Drake Baldwin",
+     "pos": "C",
+     "credit": "f_putout"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Bryce Harper",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "3"
+  },
+  {
+   "runner": "Trea Turner",
+   "start": "3B",
+   "out": true,
+   "outBase": "4B",
+   "chain": "3-2"
+  }
+ ],
+ "pitch": {
+  "type": "Slider",
+  "code": "SL",
+  "speed": 79.7,
+  "zone": 3,
+  "px": 0.5882558711853875,
+  "pz": 2.8648596847794146,
+  "spin": 2355,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "ground_ball",
+  "hardness": "medium",
+  "location": 3,
+  "ev": 86.0,
+  "la": -12.0,
+  "distance": 16.0,
+  "sprayAngle": 46.1,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 50.0,
+  "homeBefore": 65.8,
+  "homeAdded": -15.799999999999997,
+  "li": 2.25
+ },
+ "statcast": {
+  "ifAlignment": "Strategic",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.276,
+  "deltaHomeWinExp": -0.158,
+  "batWinExpBefore": 0.658,
+  "bbType": "ground_ball",
+  "pitchName": "Slider",
+  "fielders": {
+   "2": 686948,
+   "3": 621566,
+   "4": 645277,
+   "5": 805373,
+   "6": 669397,
+   "7": 595777,
+   "8": 671739,
+   "9": 660670
+  }
+ },
+ "flags": [
+  "catcher_play",
+  "close",
+  "double_play",
+  "go_ahead_on",
+  "ground_ball",
+  "ground_ball_infield",
+  "high_leverage",
+  "out_at_plate",
+  "play_at_plate",
+  "risp",
+  "runner_out_on_bases",
+  "shift_alignment",
+  "tag_play",
+  "tied"
+ ],
+ "curation": {
+  "category": "Catcher defense & plays at the plate",
+  "slot": "Tag play at the plate"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "chris-sale-in-play-out-s-to-bryce-harper-vrv2ft-x8301",
+   "title": "Matt Olson turns a clutch double play",
+   "duration": "00:00:25",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/chris-sale-in-play-out-s-to-bryce-harper-vrv2ft-x8301",
+   "embedUrl": "https://streamable.com/m/chris-sale-in-play-out-s-to-bryce-harper-vrv2ft-x8301",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/cbqugpere93cwkchgitw.jpg",
+   "match": {
+    "guid": "874c9969-61be-3cc0-b68e-75538df2ce0b"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=874c9969-61be-3cc0-b68e-75538df2ce0b"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 776532",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/776532/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 776532",
+   "url": "https://statsapi.mlb.com/api/v1/game/776532/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=776532"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=874c9969-61be-3cc0-b68e-75538df2ce0b"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

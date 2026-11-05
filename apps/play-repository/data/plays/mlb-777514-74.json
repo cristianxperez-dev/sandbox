@@ -1,1 +1,286 @@
-{"schema":1,"id":"mlb-777514-74","title":"Josh Bell comes in to score on an error","titleSource":"MLB.com clip title","source":{"gamePk":777514,"atBatIndex":74,"eventIndex":0,"playId":"06c6977d-c1bc-3b85-a281-27aaa102ff18","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/777514/feed/live"},"game":{"gamePk":777514,"date":"2025-06-14","season":2025,"gameType":"R","level":"MLB","venue":"Nationals Park","away":{"id":146,"name":"Miami Marlins","abbr":"MIA","club":"Marlins"},"home":{"id":120,"name":"Washington Nationals","abbr":"WSH","club":"Nationals"},"series":""},"before":{"inning":9,"half":"bottom","outs":0,"bases":"_23","runners":{"1B":null,"2B":{"id":671277,"name":"Luis García Jr."},"3B":{"id":605137,"name":"Josh Bell"}},"score":{"away":4,"home":2},"batting":"home","count":{"balls":0,"strikes":0}},"after":{"outs":0,"bases":"1_3","score":{"away":4,"home":3}},"batter":{"id":690987,"name":"Robert Hassell III","side":"L"},"pitcher":{"id":669622,"name":"Anthony Bender","hand":"R"},"event":{"type":"field_error","label":"Field Error","description":"Robert Hassell III reaches on a fielding error by first baseman Eric Wagaman. Josh Bell scores. Luis García Jr. to 3rd.","rbi":1,"runs":1,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":690987,"name":"Robert Hassell III","start":null,"end":"1B","out":false,"outBase":null,"reason":null,"event":"field_error","isBatter":true,"credits":[{"id":676572,"name":"Eric Wagaman","pos":"1B","credit":"f_fielding_error"}]},{"id":605137,"name":"Josh Bell","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"field_error","isBatter":false,"credits":[]},{"id":671277,"name":"Luis García Jr.","start":"2B","end":"3B","out":false,"outBase":null,"reason":"r_adv_play","event":"field_error","isBatter":false,"credits":[]}],"chains":[{"runner":"Robert Hassell III","start":null,"out":false,"outBase":null,"chain":""}],"pitch":{"type":"Sweeper","code":"ST","speed":85.3,"zone":6,"px":0.6121792709352215,"pz":2.2396653175224497,"spin":2765,"call":"E"},"batted":{"trajectory":"ground_ball","hardness":"medium","location":3,"ev":95.8,"la":2.0,"distance":65.0,"sprayAngle":39.7,"spray":"pull"},"winprob":{"homeAfter":64.7,"homeBefore":44.2,"homeAdded":20.5,"li":4.56},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":0.404,"deltaHomeWinExp":0.205,"batWinExpBefore":0.442,"bbType":"ground_ball","pitchName":"Sweeper","fielders":{"2":682663,"3":676572,"4":691594,"5":681393,"6":672640,"7":669065,"8":667472,"9":660821}},"flags":["close","error","ground_ball","ground_ball_infield","high_leverage","risp","trailing","tying_run_on","walkoff_situation"],"curation":{"category":"High-leverage & unusual situations","slot":"Tying run on base late, high leverage"},"clips":[{"kind":"highlight","slug":"anthony-bender-in-play-run-s-to-robert-hassell-iii","title":"Josh Bell comes in to score on an error","duration":"00:00:22","feed":"CMS","pageUrl":"https://www.mlb.com/video/anthony-bender-in-play-run-s-to-robert-hassell-iii","embedUrl":"https://streamable.com/m/anthony-bender-in-play-run-s-to-robert-hassell-iii","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/ix90nknq9lnwubkzn3yp.jpg","match":{"guid":"06c6977d-c1bc-3b85-a281-27aaa102ff18"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=06c6977d-c1bc-3b85-a281-27aaa102ff18"},"sources":[{"label":"MLB Stats API — official play-by-play, game 777514","url":"https://statsapi.mlb.com/api/v1.1/game/777514/feed/live"},{"label":"MLB Stats API — win probability, game 777514","url":"https://statsapi.mlb.com/api/v1/game/777514/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=777514"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=06c6977d-c1bc-3b85-a281-27aaa102ff18"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-777514-74",
+ "title": "Josh Bell comes in to score on an error",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 777514,
+  "atBatIndex": 74,
+  "eventIndex": 0,
+  "playId": "06c6977d-c1bc-3b85-a281-27aaa102ff18",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/777514/feed/live"
+ },
+ "game": {
+  "gamePk": 777514,
+  "date": "2025-06-14",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Nationals Park",
+  "away": {
+   "id": 146,
+   "name": "Miami Marlins",
+   "abbr": "MIA",
+   "club": "Marlins"
+  },
+  "home": {
+   "id": 120,
+   "name": "Washington Nationals",
+   "abbr": "WSH",
+   "club": "Nationals"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 9,
+  "half": "bottom",
+  "outs": 0,
+  "bases": "_23",
+  "runners": {
+   "1B": null,
+   "2B": {
+    "id": 671277,
+    "name": "Luis García Jr."
+   },
+   "3B": {
+    "id": 605137,
+    "name": "Josh Bell"
+   }
+  },
+  "score": {
+   "away": 4,
+   "home": 2
+  },
+  "batting": "home",
+  "count": {
+   "balls": 0,
+   "strikes": 0
+  }
+ },
+ "after": {
+  "outs": 0,
+  "bases": "1_3",
+  "score": {
+   "away": 4,
+   "home": 3
+  }
+ },
+ "batter": {
+  "id": 690987,
+  "name": "Robert Hassell III",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 669622,
+  "name": "Anthony Bender",
+  "hand": "R"
+ },
+ "event": {
+  "type": "field_error",
+  "label": "Field Error",
+  "description": "Robert Hassell III reaches on a fielding error by first baseman Eric Wagaman. Josh Bell scores. Luis García Jr. to 3rd.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 690987,
+   "name": "Robert Hassell III",
+   "start": null,
+   "end": "1B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "field_error",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 676572,
+     "name": "Eric Wagaman",
+     "pos": "1B",
+     "credit": "f_fielding_error"
+    }
+   ]
+  },
+  {
+   "id": 605137,
+   "name": "Josh Bell",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "field_error",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 671277,
+   "name": "Luis García Jr.",
+   "start": "2B",
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "field_error",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Robert Hassell III",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": ""
+  }
+ ],
+ "pitch": {
+  "type": "Sweeper",
+  "code": "ST",
+  "speed": 85.3,
+  "zone": 6,
+  "px": 0.6121792709352215,
+  "pz": 2.2396653175224497,
+  "spin": 2765,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "ground_ball",
+  "hardness": "medium",
+  "location": 3,
+  "ev": 95.8,
+  "la": 2.0,
+  "distance": 65.0,
+  "sprayAngle": 39.7,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 64.7,
+  "homeBefore": 44.2,
+  "homeAdded": 20.5,
+  "li": 4.56
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.404,
+  "deltaHomeWinExp": 0.205,
+  "batWinExpBefore": 0.442,
+  "bbType": "ground_ball",
+  "pitchName": "Sweeper",
+  "fielders": {
+   "2": 682663,
+   "3": 676572,
+   "4": 691594,
+   "5": 681393,
+   "6": 672640,
+   "7": 669065,
+   "8": 667472,
+   "9": 660821
+  }
+ },
+ "flags": [
+  "close",
+  "error",
+  "ground_ball",
+  "ground_ball_infield",
+  "high_leverage",
+  "risp",
+  "trailing",
+  "tying_run_on",
+  "walkoff_situation"
+ ],
+ "curation": {
+  "category": "High-leverage & unusual situations",
+  "slot": "Tying run on base late, high leverage"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "anthony-bender-in-play-run-s-to-robert-hassell-iii",
+   "title": "Josh Bell comes in to score on an error",
+   "duration": "00:00:22",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/anthony-bender-in-play-run-s-to-robert-hassell-iii",
+   "embedUrl": "https://streamable.com/m/anthony-bender-in-play-run-s-to-robert-hassell-iii",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/ix90nknq9lnwubkzn3yp.jpg",
+   "match": {
+    "guid": "06c6977d-c1bc-3b85-a281-27aaa102ff18"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=06c6977d-c1bc-3b85-a281-27aaa102ff18"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 777514",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/777514/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 777514",
+   "url": "https://statsapi.mlb.com/api/v1/game/777514/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=777514"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=06c6977d-c1bc-3b85-a281-27aaa102ff18"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

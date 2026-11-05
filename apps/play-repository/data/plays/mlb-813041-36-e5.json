@@ -1,1 +1,208 @@
-{"schema":1,"id":"mlb-813041-36-e5","title":"Bryson Stott, Trea Turner execute a double steal","titleSource":"MLB.com clip title","source":{"gamePk":813041,"atBatIndex":36,"eventIndex":5,"playId":"8e5574bd-3a8e-3924-adbe-249eef33bd4f","terminal":false,"feed":"https://statsapi.mlb.com/api/v1.1/game/813041/feed/live"},"game":{"gamePk":813041,"date":"2025-10-08","season":2025,"gameType":"D","level":"MLB","venue":"Dodger Stadium","away":{"id":143,"name":"Philadelphia Phillies","abbr":"PHI","club":"Phillies"},"home":{"id":119,"name":"Los Angeles Dodgers","abbr":"LAD","club":"Dodgers"},"series":""},"before":{"inning":5,"half":"top","outs":0,"bases":"12_","runners":{"1B":{"id":607208,"name":"Trea Turner"},"2B":{"id":681082,"name":"Bryson Stott"},"3B":null},"score":{"away":3,"home":1},"batting":"away","count":{"balls":1,"strikes":2}},"after":{"outs":0,"bases":"_23","score":{"away":3,"home":1}},"batter":{"id":656941,"name":"Kyle Schwarber","side":"L"},"pitcher":{"id":607455,"name":"Anthony Banda","hand":"L"},"event":{"type":"stolen_base_3b","label":"Stolen Base 3B","description":"Bryson Stott steals (1) 3rd base. Trea Turner steals (2) 2nd base.","rbi":null,"runs":0,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":681082,"name":"Bryson Stott","start":"2B","end":"3B","out":false,"outBase":null,"reason":"r_stolen_base_3b","event":"stolen_base_3b","isBatter":false,"credits":[]},{"id":607208,"name":"Trea Turner","start":"1B","end":"2B","out":false,"outBase":null,"reason":"r_stolen_base_2b","event":"stolen_base_2b","isBatter":false,"credits":[]}],"chains":[],"pitch":null,"batted":null,"winprob":{"homeAfter":null,"homeBefore":null,"homeAdded":null,"li":1.31},"statcast":null,"flags":["close","dp_situation","force_available","leading","postseason","risp","stolen_base"],"curation":{"category":"Baserunning & advancement","slot":"Stealing third"},"clips":[{"kind":"highlight","slug":"anthony-banda-ball-to-kyle-schwarber-j6cde3","title":"Bryson Stott, Trea Turner execute a double steal","duration":"00:00:21","feed":"CMS","pageUrl":"https://www.mlb.com/video/anthony-banda-ball-to-kyle-schwarber-j6cde3","embedUrl":"https://streamable.com/m/anthony-banda-ball-to-kyle-schwarber-j6cde3","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/yoo4celh0p4fd3p7qs5r.jpg","match":{"guid":"8e5574bd-3a8e-3924-adbe-249eef33bd4f"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":null,"sources":[{"label":"MLB Stats API — official play-by-play, game 813041","url":"https://statsapi.mlb.com/api/v1.1/game/813041/feed/live"},{"label":"MLB Stats API — win probability, game 813041","url":"https://statsapi.mlb.com/api/v1/game/813041/winProbability"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-813041-36-e5",
+ "title": "Bryson Stott, Trea Turner execute a double steal",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 813041,
+  "atBatIndex": 36,
+  "eventIndex": 5,
+  "playId": "8e5574bd-3a8e-3924-adbe-249eef33bd4f",
+  "terminal": false,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/813041/feed/live"
+ },
+ "game": {
+  "gamePk": 813041,
+  "date": "2025-10-08",
+  "season": 2025,
+  "gameType": "D",
+  "level": "MLB",
+  "venue": "Dodger Stadium",
+  "away": {
+   "id": 143,
+   "name": "Philadelphia Phillies",
+   "abbr": "PHI",
+   "club": "Phillies"
+  },
+  "home": {
+   "id": 119,
+   "name": "Los Angeles Dodgers",
+   "abbr": "LAD",
+   "club": "Dodgers"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 5,
+  "half": "top",
+  "outs": 0,
+  "bases": "12_",
+  "runners": {
+   "1B": {
+    "id": 607208,
+    "name": "Trea Turner"
+   },
+   "2B": {
+    "id": 681082,
+    "name": "Bryson Stott"
+   },
+   "3B": null
+  },
+  "score": {
+   "away": 3,
+   "home": 1
+  },
+  "batting": "away",
+  "count": {
+   "balls": 1,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 0,
+  "bases": "_23",
+  "score": {
+   "away": 3,
+   "home": 1
+  }
+ },
+ "batter": {
+  "id": 656941,
+  "name": "Kyle Schwarber",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 607455,
+  "name": "Anthony Banda",
+  "hand": "L"
+ },
+ "event": {
+  "type": "stolen_base_3b",
+  "label": "Stolen Base 3B",
+  "description": "Bryson Stott steals (1) 3rd base. Trea Turner steals (2) 2nd base.",
+  "rbi": null,
+  "runs": 0,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 681082,
+   "name": "Bryson Stott",
+   "start": "2B",
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_stolen_base_3b",
+   "event": "stolen_base_3b",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 607208,
+   "name": "Trea Turner",
+   "start": "1B",
+   "end": "2B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_stolen_base_2b",
+   "event": "stolen_base_2b",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [],
+ "pitch": null,
+ "batted": null,
+ "winprob": {
+  "homeAfter": null,
+  "homeBefore": null,
+  "homeAdded": null,
+  "li": 1.31
+ },
+ "statcast": null,
+ "flags": [
+  "close",
+  "dp_situation",
+  "force_available",
+  "leading",
+  "postseason",
+  "risp",
+  "stolen_base"
+ ],
+ "curation": {
+  "category": "Baserunning & advancement",
+  "slot": "Stealing third"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "anthony-banda-ball-to-kyle-schwarber-j6cde3",
+   "title": "Bryson Stott, Trea Turner execute a double steal",
+   "duration": "00:00:21",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/anthony-banda-ball-to-kyle-schwarber-j6cde3",
+   "embedUrl": "https://streamable.com/m/anthony-banda-ball-to-kyle-schwarber-j6cde3",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/yoo4celh0p4fd3p7qs5r.jpg",
+   "match": {
+    "guid": "8e5574bd-3a8e-3924-adbe-249eef33bd4f"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": null,
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 813041",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/813041/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 813041",
+   "url": "https://statsapi.mlb.com/api/v1/game/813041/winProbability"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

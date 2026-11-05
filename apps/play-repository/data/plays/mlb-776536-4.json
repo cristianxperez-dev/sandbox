@@ -1,1 +1,315 @@
-{"schema":1,"id":"mlb-776536-4","title":"Reds turn chaotic inning-ending double play","titleSource":"MLB.com clip title","source":{"gamePk":776536,"atBatIndex":4,"eventIndex":2,"playId":"f6fec0a4-b1a4-30e8-a298-8127ae4000e4","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/776536/feed/live"},"game":{"gamePk":776536,"date":"2025-08-30","season":2025,"gameType":"R","level":"MLB","venue":"Great American Ball Park","away":{"id":138,"name":"St. Louis Cardinals","abbr":"STL","club":"Cardinals"},"home":{"id":113,"name":"Cincinnati Reds","abbr":"CIN","club":"Reds"},"series":""},"before":{"inning":1,"half":"top","outs":1,"bases":"123","runners":{"1B":{"id":575929,"name":"Willson Contreras"},"2B":{"id":663457,"name":"Lars Nootbaar"},"3B":{"id":671056,"name":"Iván Herrera"}},"score":{"away":0,"home":0},"batting":"away","count":{"balls":0,"strikes":1}},"after":{"outs":3,"bases":"12_","score":{"away":0,"home":0}},"batter":{"id":691023,"name":"Jordan Walker","side":"R"},"pitcher":{"id":671096,"name":"Andrew Abbott","hand":"L"},"event":{"type":"double_play","label":"Double Play","description":"Jordan Walker pops into a double play, shortstop Elly De La Cruz to pitcher Andrew Abbott to catcher Jose Trevino to second baseman Matt McLain to catcher Jose Trevino. Iván Herrera out at home.","rbi":0,"runs":0,"outs":2,"isReview":false,"walkoff":false},"runners":[{"id":691023,"name":"Jordan Walker","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"double_play","isBatter":true,"credits":[{"id":682829,"name":"Elly De La Cruz","pos":"SS","credit":"f_putout"}]},{"id":671056,"name":"Iván Herrera","start":"3B","end":null,"out":true,"outBase":"4B","reason":"r_rundown","event":"double_play","isBatter":false,"credits":[{"id":671096,"name":"Andrew Abbott","pos":"P","credit":"f_assist"},{"id":624431,"name":"Jose Trevino","pos":"C","credit":"f_assist"},{"id":680574,"name":"Matt McLain","pos":"2B","credit":"f_assist"},{"id":624431,"name":"Jose Trevino","pos":"C","credit":"f_putout"}]}],"chains":[{"runner":"Jordan Walker","start":null,"out":true,"outBase":"1B","chain":"6"},{"runner":"Iván Herrera","start":"3B","out":true,"outBase":"4B","chain":"1-2-4-2"}],"pitch":{"type":"Four-Seam Fastball","code":"FF","speed":93.5,"zone":11,"px":-1.4392483887760765,"pz":3.5708535617014645,"spin":2372,"call":"X"},"batted":{"trajectory":"popup","hardness":"soft","location":6,"ev":52.2,"la":69.0,"distance":75.0,"sprayAngle":-10.2,"spray":"center"},"winprob":{"homeAfter":54.800000000000004,"homeBefore":40.1,"homeAdded":14.700000000000003,"li":2.38},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":-0.105,"deltaHomeWinExp":0.136,"batWinExpBefore":0.588,"bbType":"popup","pitchName":"4-Seam Fastball","fielders":{"2":624431,"3":668715,"4":680574,"5":663647,"6":682829,"7":666158,"8":670770,"9":682622}},"flags":["catcher_play","close","double_play","dp_situation","force_available","go_ahead_on","high_leverage","middle_infield","out_at_plate","play_at_plate","popup","risp","rundown","tag_play","tied"],"curation":{"category":"Baserunning & advancement","slot":"Rundown"},"clips":[{"kind":"highlight","slug":"andrew-abbott-in-play-out-s-to-jordan-walker-60fez8","title":"Reds turn chaotic inning-ending double play","duration":"00:00:40","feed":"CMS","pageUrl":"https://www.mlb.com/video/andrew-abbott-in-play-out-s-to-jordan-walker-60fez8","embedUrl":"https://streamable.com/m/andrew-abbott-in-play-out-s-to-jordan-walker-60fez8","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/scjpnsfe7stvwepvc7cr.jpg","match":{"guid":"f6fec0a4-b1a4-30e8-a298-8127ae4000e4"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=f6fec0a4-b1a4-30e8-a298-8127ae4000e4"},"sources":[{"label":"MLB Stats API — official play-by-play, game 776536","url":"https://statsapi.mlb.com/api/v1.1/game/776536/feed/live"},{"label":"MLB Stats API — win probability, game 776536","url":"https://statsapi.mlb.com/api/v1/game/776536/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=776536"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=f6fec0a4-b1a4-30e8-a298-8127ae4000e4"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-776536-4",
+ "title": "Reds turn chaotic inning-ending double play",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 776536,
+  "atBatIndex": 4,
+  "eventIndex": 2,
+  "playId": "f6fec0a4-b1a4-30e8-a298-8127ae4000e4",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/776536/feed/live"
+ },
+ "game": {
+  "gamePk": 776536,
+  "date": "2025-08-30",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Great American Ball Park",
+  "away": {
+   "id": 138,
+   "name": "St. Louis Cardinals",
+   "abbr": "STL",
+   "club": "Cardinals"
+  },
+  "home": {
+   "id": 113,
+   "name": "Cincinnati Reds",
+   "abbr": "CIN",
+   "club": "Reds"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 1,
+  "half": "top",
+  "outs": 1,
+  "bases": "123",
+  "runners": {
+   "1B": {
+    "id": 575929,
+    "name": "Willson Contreras"
+   },
+   "2B": {
+    "id": 663457,
+    "name": "Lars Nootbaar"
+   },
+   "3B": {
+    "id": 671056,
+    "name": "Iván Herrera"
+   }
+  },
+  "score": {
+   "away": 0,
+   "home": 0
+  },
+  "batting": "away",
+  "count": {
+   "balls": 0,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 3,
+  "bases": "12_",
+  "score": {
+   "away": 0,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 691023,
+  "name": "Jordan Walker",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 671096,
+  "name": "Andrew Abbott",
+  "hand": "L"
+ },
+ "event": {
+  "type": "double_play",
+  "label": "Double Play",
+  "description": "Jordan Walker pops into a double play, shortstop Elly De La Cruz to pitcher Andrew Abbott to catcher Jose Trevino to second baseman Matt McLain to catcher Jose Trevino. Iván Herrera out at home.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 2,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 691023,
+   "name": "Jordan Walker",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "double_play",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 682829,
+     "name": "Elly De La Cruz",
+     "pos": "SS",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 671056,
+   "name": "Iván Herrera",
+   "start": "3B",
+   "end": null,
+   "out": true,
+   "outBase": "4B",
+   "reason": "r_rundown",
+   "event": "double_play",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 671096,
+     "name": "Andrew Abbott",
+     "pos": "P",
+     "credit": "f_assist"
+    },
+    {
+     "id": 624431,
+     "name": "Jose Trevino",
+     "pos": "C",
+     "credit": "f_assist"
+    },
+    {
+     "id": 680574,
+     "name": "Matt McLain",
+     "pos": "2B",
+     "credit": "f_assist"
+    },
+    {
+     "id": 624431,
+     "name": "Jose Trevino",
+     "pos": "C",
+     "credit": "f_putout"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Jordan Walker",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "6"
+  },
+  {
+   "runner": "Iván Herrera",
+   "start": "3B",
+   "out": true,
+   "outBase": "4B",
+   "chain": "1-2-4-2"
+  }
+ ],
+ "pitch": {
+  "type": "Four-Seam Fastball",
+  "code": "FF",
+  "speed": 93.5,
+  "zone": 11,
+  "px": -1.4392483887760765,
+  "pz": 3.5708535617014645,
+  "spin": 2372,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "popup",
+  "hardness": "soft",
+  "location": 6,
+  "ev": 52.2,
+  "la": 69.0,
+  "distance": 75.0,
+  "sprayAngle": -10.2,
+  "spray": "center"
+ },
+ "winprob": {
+  "homeAfter": 54.800000000000004,
+  "homeBefore": 40.1,
+  "homeAdded": 14.700000000000003,
+  "li": 2.38
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.105,
+  "deltaHomeWinExp": 0.136,
+  "batWinExpBefore": 0.588,
+  "bbType": "popup",
+  "pitchName": "4-Seam Fastball",
+  "fielders": {
+   "2": 624431,
+   "3": 668715,
+   "4": 680574,
+   "5": 663647,
+   "6": 682829,
+   "7": 666158,
+   "8": 670770,
+   "9": 682622
+  }
+ },
+ "flags": [
+  "catcher_play",
+  "close",
+  "double_play",
+  "dp_situation",
+  "force_available",
+  "go_ahead_on",
+  "high_leverage",
+  "middle_infield",
+  "out_at_plate",
+  "play_at_plate",
+  "popup",
+  "risp",
+  "rundown",
+  "tag_play",
+  "tied"
+ ],
+ "curation": {
+  "category": "Baserunning & advancement",
+  "slot": "Rundown"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "andrew-abbott-in-play-out-s-to-jordan-walker-60fez8",
+   "title": "Reds turn chaotic inning-ending double play",
+   "duration": "00:00:40",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/andrew-abbott-in-play-out-s-to-jordan-walker-60fez8",
+   "embedUrl": "https://streamable.com/m/andrew-abbott-in-play-out-s-to-jordan-walker-60fez8",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/scjpnsfe7stvwepvc7cr.jpg",
+   "match": {
+    "guid": "f6fec0a4-b1a4-30e8-a298-8127ae4000e4"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=f6fec0a4-b1a4-30e8-a298-8127ae4000e4"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 776536",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/776536/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 776536",
+   "url": "https://statsapi.mlb.com/api/v1/game/776536/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=776536"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=f6fec0a4-b1a4-30e8-a298-8127ae4000e4"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

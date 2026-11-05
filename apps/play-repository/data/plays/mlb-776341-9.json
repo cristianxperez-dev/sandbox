@@ -1,1 +1,321 @@
-{"schema":1,"id":"mlb-776341-9","title":"Ramón Laureano's sac fly","titleSource":"MLB.com clip title","source":{"gamePk":776341,"atBatIndex":9,"eventIndex":3,"playId":"7d575df3-9673-3f35-890b-aba07e0aeeee","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/776341/feed/live"},"game":{"gamePk":776341,"date":"2025-09-13","season":2025,"gameType":"R","level":"MLB","venue":"Petco Park","away":{"id":115,"name":"Colorado Rockies","abbr":"COL","club":"Rockies"},"home":{"id":135,"name":"San Diego Padres","abbr":"SD","club":"Padres"},"series":""},"before":{"inning":1,"half":"bottom","outs":1,"bases":"123","runners":{"1B":{"id":657757,"name":"Gavin Sheets"},"2B":{"id":592518,"name":"Manny Machado"},"3B":{"id":650333,"name":"Luis Arraez"}},"score":{"away":1,"home":0},"batting":"home","count":{"balls":0,"strikes":2}},"after":{"outs":2,"bases":"_23","score":{"away":1,"home":1}},"batter":{"id":657656,"name":"Ramón Laureano","side":"R"},"pitcher":{"id":687134,"name":"Bradley Blalock","hand":"R"},"event":{"type":"sac_fly","label":"Sac Fly","description":"Ramón Laureano out on a sacrifice fly to center fielder Mickey Moniak. Luis Arraez scores. Manny Machado to 3rd. Throwing error by center fielder Mickey Moniak.","rbi":1,"runs":1,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":657656,"name":"Ramón Laureano","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"sac_fly","isBatter":true,"credits":[{"id":666160,"name":"Mickey Moniak","pos":"CF","credit":"f_putout"}]},{"id":592518,"name":"Manny Machado","start":"2B","end":"3B","out":false,"outBase":null,"reason":"r_adv_throw","event":"sac_fly","isBatter":false,"credits":[]},{"id":657757,"name":"Gavin Sheets","start":"1B","end":"2B","out":false,"outBase":null,"reason":"r_adv_play","event":"error","isBatter":false,"credits":[{"id":666160,"name":"Mickey Moniak","pos":"CF","credit":"f_throwing_error"}]},{"id":650333,"name":"Luis Arraez","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"error","isBatter":false,"credits":[]}],"chains":[{"runner":"Ramón Laureano","start":null,"out":true,"outBase":"1B","chain":"8"},{"runner":"Gavin Sheets","start":"1B","out":false,"outBase":null,"chain":""}],"pitch":{"type":"Cutter","code":"FC","speed":88.5,"zone":2,"px":-0.14607209541056007,"pz":3.34279505178161,"spin":2344,"call":"E"},"batted":{"trajectory":"fly_ball","hardness":"medium","location":8,"ev":83.9,"la":42.0,"distance":271.0,"sprayAngle":8.7,"spray":"center"},"winprob":{"homeAfter":55.60000000000001,"homeBefore":55.3,"homeAdded":0.30000000000000426,"li":2.57},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":-0.026,"deltaHomeWinExp":0.034,"batWinExpBefore":0.522,"bbType":"fly_ball","pitchName":"Cutter","fielders":{"2":696100,"3":688760,"4":606115,"5":691720,"6":678662,"7":687597,"8":666160,"9":671289}},"flags":["close","dp_situation","error","fly_ball","force_available","go_ahead_on","high_leverage","one_run","outfield_play","risp","runner_scored_on_out","sac_fly","tag_up","trailing","tying_run_on"],"curation":{"category":"High-leverage & unusual situations","slot":"Bases loaded, high leverage"},"clips":[{"kind":"highlight","slug":"bradley-blalock-in-play-run-s-to-ramon-laureano","title":"Ramón Laureano's sac fly","duration":"00:00:26","feed":"CMS","pageUrl":"https://www.mlb.com/video/bradley-blalock-in-play-run-s-to-ramon-laureano","embedUrl":"https://streamable.com/m/bradley-blalock-in-play-run-s-to-ramon-laureano","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/xhphfrmbpbzcm6ostrj8.jpg","match":{"guid":"7d575df3-9673-3f35-890b-aba07e0aeeee"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=7d575df3-9673-3f35-890b-aba07e0aeeee"},"sources":[{"label":"MLB Stats API — official play-by-play, game 776341","url":"https://statsapi.mlb.com/api/v1.1/game/776341/feed/live"},{"label":"MLB Stats API — win probability, game 776341","url":"https://statsapi.mlb.com/api/v1/game/776341/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=776341"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=7d575df3-9673-3f35-890b-aba07e0aeeee"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-776341-9",
+ "title": "Ramón Laureano's sac fly",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 776341,
+  "atBatIndex": 9,
+  "eventIndex": 3,
+  "playId": "7d575df3-9673-3f35-890b-aba07e0aeeee",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/776341/feed/live"
+ },
+ "game": {
+  "gamePk": 776341,
+  "date": "2025-09-13",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Petco Park",
+  "away": {
+   "id": 115,
+   "name": "Colorado Rockies",
+   "abbr": "COL",
+   "club": "Rockies"
+  },
+  "home": {
+   "id": 135,
+   "name": "San Diego Padres",
+   "abbr": "SD",
+   "club": "Padres"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 1,
+  "half": "bottom",
+  "outs": 1,
+  "bases": "123",
+  "runners": {
+   "1B": {
+    "id": 657757,
+    "name": "Gavin Sheets"
+   },
+   "2B": {
+    "id": 592518,
+    "name": "Manny Machado"
+   },
+   "3B": {
+    "id": 650333,
+    "name": "Luis Arraez"
+   }
+  },
+  "score": {
+   "away": 1,
+   "home": 0
+  },
+  "batting": "home",
+  "count": {
+   "balls": 0,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "_23",
+  "score": {
+   "away": 1,
+   "home": 1
+  }
+ },
+ "batter": {
+  "id": 657656,
+  "name": "Ramón Laureano",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 687134,
+  "name": "Bradley Blalock",
+  "hand": "R"
+ },
+ "event": {
+  "type": "sac_fly",
+  "label": "Sac Fly",
+  "description": "Ramón Laureano out on a sacrifice fly to center fielder Mickey Moniak. Luis Arraez scores. Manny Machado to 3rd. Throwing error by center fielder Mickey Moniak.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 657656,
+   "name": "Ramón Laureano",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "sac_fly",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 666160,
+     "name": "Mickey Moniak",
+     "pos": "CF",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 592518,
+   "name": "Manny Machado",
+   "start": "2B",
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_throw",
+   "event": "sac_fly",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 657757,
+   "name": "Gavin Sheets",
+   "start": "1B",
+   "end": "2B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "error",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 666160,
+     "name": "Mickey Moniak",
+     "pos": "CF",
+     "credit": "f_throwing_error"
+    }
+   ]
+  },
+  {
+   "id": 650333,
+   "name": "Luis Arraez",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "error",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Ramón Laureano",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "8"
+  },
+  {
+   "runner": "Gavin Sheets",
+   "start": "1B",
+   "out": false,
+   "outBase": null,
+   "chain": ""
+  }
+ ],
+ "pitch": {
+  "type": "Cutter",
+  "code": "FC",
+  "speed": 88.5,
+  "zone": 2,
+  "px": -0.14607209541056007,
+  "pz": 3.34279505178161,
+  "spin": 2344,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "fly_ball",
+  "hardness": "medium",
+  "location": 8,
+  "ev": 83.9,
+  "la": 42.0,
+  "distance": 271.0,
+  "sprayAngle": 8.7,
+  "spray": "center"
+ },
+ "winprob": {
+  "homeAfter": 55.60000000000001,
+  "homeBefore": 55.3,
+  "homeAdded": 0.30000000000000426,
+  "li": 2.57
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.026,
+  "deltaHomeWinExp": 0.034,
+  "batWinExpBefore": 0.522,
+  "bbType": "fly_ball",
+  "pitchName": "Cutter",
+  "fielders": {
+   "2": 696100,
+   "3": 688760,
+   "4": 606115,
+   "5": 691720,
+   "6": 678662,
+   "7": 687597,
+   "8": 666160,
+   "9": 671289
+  }
+ },
+ "flags": [
+  "close",
+  "dp_situation",
+  "error",
+  "fly_ball",
+  "force_available",
+  "go_ahead_on",
+  "high_leverage",
+  "one_run",
+  "outfield_play",
+  "risp",
+  "runner_scored_on_out",
+  "sac_fly",
+  "tag_up",
+  "trailing",
+  "tying_run_on"
+ ],
+ "curation": {
+  "category": "High-leverage & unusual situations",
+  "slot": "Bases loaded, high leverage"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "bradley-blalock-in-play-run-s-to-ramon-laureano",
+   "title": "Ramón Laureano's sac fly",
+   "duration": "00:00:26",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/bradley-blalock-in-play-run-s-to-ramon-laureano",
+   "embedUrl": "https://streamable.com/m/bradley-blalock-in-play-run-s-to-ramon-laureano",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/xhphfrmbpbzcm6ostrj8.jpg",
+   "match": {
+    "guid": "7d575df3-9673-3f35-890b-aba07e0aeeee"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=7d575df3-9673-3f35-890b-aba07e0aeeee"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 776341",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/776341/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 776341",
+   "url": "https://statsapi.mlb.com/api/v1/game/776341/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=776341"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=7d575df3-9673-3f35-890b-aba07e0aeeee"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

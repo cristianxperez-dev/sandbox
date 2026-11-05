@@ -1,1 +1,204 @@
-{"schema":1,"id":"mlb-776338-75-e3","title":"Dansby Swanson steals second in the 9th","titleSource":"MLB.com clip title","source":{"gamePk":776338,"atBatIndex":75,"eventIndex":3,"playId":"6ca1ab92-f487-3e7a-bd9d-a66773537b2b","terminal":false,"feed":"https://statsapi.mlb.com/api/v1.1/game/776338/feed/live"},"game":{"gamePk":776338,"date":"2025-09-13","season":2025,"gameType":"R","level":"MLB","venue":"Wrigley Field","away":{"id":139,"name":"Tampa Bay Rays","abbr":"TB","club":"Rays"},"home":{"id":112,"name":"Chicago Cubs","abbr":"CHC","club":"Cubs"},"series":""},"before":{"inning":9,"half":"bottom","outs":0,"bases":"12_","runners":{"1B":{"id":621020,"name":"Dansby Swanson"},"2B":{"id":621020,"name":"Dansby Swanson"},"3B":null},"score":{"away":5,"home":4},"batting":"home","count":{"balls":2,"strikes":0}},"after":{"outs":0,"bases":"_2_","score":{"away":5,"home":4}},"batter":{"id":650489,"name":"Willi Castro","side":"L"},"pitcher":{"id":664126,"name":"Pete Fairbanks","hand":"R"},"event":{"type":"stolen_base_2b","label":"Stolen Base 2B","description":"Dansby Swanson steals (16) 2nd base.","rbi":null,"runs":0,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":621020,"name":"Dansby Swanson","start":"1B","end":"2B","out":false,"outBase":null,"reason":"r_stolen_base_2b","event":"stolen_base_2b","isBatter":false,"credits":[]}],"chains":[],"pitch":null,"batted":null,"winprob":{"homeAfter":null,"homeBefore":null,"homeAdded":null,"li":5.48},"statcast":null,"flags":["close","dp_situation","force_available","go_ahead_on","high_leverage","one_run","risp","stolen_base","trailing","tying_run_on","walkoff_situation","winning_run_on"],"curation":{"category":"High-leverage & unusual situations","slot":"Winning run on base in a walk-off situation"},"clips":[{"kind":"highlight","slug":"pete-fairbanks-ball-to-willi-castro-jk0hnb","title":"Dansby Swanson steals second in the 9th","duration":"00:00:11","feed":"CMS","pageUrl":"https://www.mlb.com/video/pete-fairbanks-ball-to-willi-castro-jk0hnb","embedUrl":"https://streamable.com/m/pete-fairbanks-ball-to-willi-castro-jk0hnb","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/kalxsaf3b09vsqgqmpjz.jpg","match":{"guid":"6ca1ab92-f487-3e7a-bd9d-a66773537b2b"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":null,"sources":[{"label":"MLB Stats API — official play-by-play, game 776338","url":"https://statsapi.mlb.com/api/v1.1/game/776338/feed/live"},{"label":"MLB Stats API — win probability, game 776338","url":"https://statsapi.mlb.com/api/v1/game/776338/winProbability"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":["Film Room pete-fairbanks-ball-to-willi-castro-jk0hnb mismatch: runners"]}}
+{
+ "schema": 1,
+ "id": "mlb-776338-75-e3",
+ "title": "Dansby Swanson steals second in the 9th",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 776338,
+  "atBatIndex": 75,
+  "eventIndex": 3,
+  "playId": "6ca1ab92-f487-3e7a-bd9d-a66773537b2b",
+  "terminal": false,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/776338/feed/live"
+ },
+ "game": {
+  "gamePk": 776338,
+  "date": "2025-09-13",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Wrigley Field",
+  "away": {
+   "id": 139,
+   "name": "Tampa Bay Rays",
+   "abbr": "TB",
+   "club": "Rays"
+  },
+  "home": {
+   "id": 112,
+   "name": "Chicago Cubs",
+   "abbr": "CHC",
+   "club": "Cubs"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 9,
+  "half": "bottom",
+  "outs": 0,
+  "bases": "12_",
+  "runners": {
+   "1B": {
+    "id": 621020,
+    "name": "Dansby Swanson"
+   },
+   "2B": {
+    "id": 621020,
+    "name": "Dansby Swanson"
+   },
+   "3B": null
+  },
+  "score": {
+   "away": 5,
+   "home": 4
+  },
+  "batting": "home",
+  "count": {
+   "balls": 2,
+   "strikes": 0
+  }
+ },
+ "after": {
+  "outs": 0,
+  "bases": "_2_",
+  "score": {
+   "away": 5,
+   "home": 4
+  }
+ },
+ "batter": {
+  "id": 650489,
+  "name": "Willi Castro",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 664126,
+  "name": "Pete Fairbanks",
+  "hand": "R"
+ },
+ "event": {
+  "type": "stolen_base_2b",
+  "label": "Stolen Base 2B",
+  "description": "Dansby Swanson steals (16) 2nd base.",
+  "rbi": null,
+  "runs": 0,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 621020,
+   "name": "Dansby Swanson",
+   "start": "1B",
+   "end": "2B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_stolen_base_2b",
+   "event": "stolen_base_2b",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [],
+ "pitch": null,
+ "batted": null,
+ "winprob": {
+  "homeAfter": null,
+  "homeBefore": null,
+  "homeAdded": null,
+  "li": 5.48
+ },
+ "statcast": null,
+ "flags": [
+  "close",
+  "dp_situation",
+  "force_available",
+  "go_ahead_on",
+  "high_leverage",
+  "one_run",
+  "risp",
+  "stolen_base",
+  "trailing",
+  "tying_run_on",
+  "walkoff_situation",
+  "winning_run_on"
+ ],
+ "curation": {
+  "category": "High-leverage & unusual situations",
+  "slot": "Winning run on base in a walk-off situation"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "pete-fairbanks-ball-to-willi-castro-jk0hnb",
+   "title": "Dansby Swanson steals second in the 9th",
+   "duration": "00:00:11",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/pete-fairbanks-ball-to-willi-castro-jk0hnb",
+   "embedUrl": "https://streamable.com/m/pete-fairbanks-ball-to-willi-castro-jk0hnb",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/kalxsaf3b09vsqgqmpjz.jpg",
+   "match": {
+    "guid": "6ca1ab92-f487-3e7a-bd9d-a66773537b2b"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": null,
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 776338",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/776338/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 776338",
+   "url": "https://statsapi.mlb.com/api/v1/game/776338/winProbability"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": [
+   "Film Room pete-fairbanks-ball-to-willi-castro-jk0hnb mismatch: runners"
+  ]
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

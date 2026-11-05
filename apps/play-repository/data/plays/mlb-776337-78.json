@@ -1,1 +1,291 @@
-{"schema":1,"id":"mlb-776337-78","title":"Gabriel Moreno's RBI single","titleSource":"MLB.com clip title","source":{"gamePk":776337,"atBatIndex":78,"eventIndex":4,"playId":"2ed538b8-be09-3199-9ad8-500a6c503775","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/776337/feed/live"},"game":{"gamePk":776337,"date":"2025-09-13","season":2025,"gameType":"R","level":"MLB","venue":"Target Field","away":{"id":109,"name":"Arizona Diamondbacks","abbr":"AZ","club":"Diamondbacks"},"home":{"id":142,"name":"Minnesota Twins","abbr":"MIN","club":"Twins"},"series":""},"before":{"inning":10,"half":"top","outs":2,"bases":"_23","runners":{"1B":null,"2B":{"id":682998,"name":"Corbin Carroll"},"3B":{"id":678489,"name":"Jorge Barrosa"}},"score":{"away":2,"home":2},"batting":"away","count":{"balls":2,"strikes":1}},"after":{"outs":2,"bases":"1_3","score":{"away":3,"home":2}},"batter":{"id":672515,"name":"Gabriel Moreno","side":"R"},"pitcher":{"id":663485,"name":"Cole Sands","hand":"R"},"event":{"type":"single","label":"Single","description":"Gabriel Moreno singles on a ground ball to shortstop Brooks Lee. Jorge Barrosa scores. Corbin Carroll to 3rd.","rbi":1,"runs":1,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":672515,"name":"Gabriel Moreno","start":null,"end":"1B","out":false,"outBase":null,"reason":null,"event":"single","isBatter":true,"credits":[{"id":686797,"name":"Brooks Lee","pos":"SS","credit":"f_fielded_ball"}]},{"id":678489,"name":"Jorge Barrosa","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"single","isBatter":false,"credits":[]},{"id":682998,"name":"Corbin Carroll","start":"2B","end":"3B","out":false,"outBase":null,"reason":"r_adv_play","event":"single","isBatter":false,"credits":[]}],"chains":[{"runner":"Gabriel Moreno","start":null,"out":false,"outBase":null,"chain":"6"}],"pitch":{"type":"Curveball","code":"CU","speed":82.3,"zone":9,"px":0.3601404736100491,"pz":1.699153947651458,"spin":2978,"call":"E"},"batted":{"trajectory":"ground_ball","hardness":"medium","location":6,"ev":88.4,"la":-11.0,"distance":11.0,"sprayAngle":-30.4,"spray":"pull"},"winprob":{"homeAfter":36.4,"homeBefore":64.9,"homeAdded":-28.500000000000007,"li":5.25},"statcast":{"ifAlignment":"Infield shade","ofAlignment":"Standard","deltaRunExp":0.724,"deltaHomeWinExp":-0.281,"batWinExpBefore":0.355,"bbType":"ground_ball","pitchName":"Curveball","fielders":{"2":640902,"3":665019,"4":807712,"5":668904,"6":686797,"7":668885,"8":621439,"9":670242}},"flags":["close","extra_innings","go_ahead_on","go_ahead_play","ground_ball","ground_ball_infield","high_leverage","middle_infield","risp","shift_alignment","single","tied","two_out_rbi","two_outs"],"curation":{"category":"Infield defense & decisions","slot":"Ground ball into a non-standard infield alignment"},"clips":[{"kind":"highlight","slug":"cole-sands-in-play-run-s-to-gabriel-moreno-vmffku","title":"Gabriel Moreno's RBI single","duration":"00:00:17","feed":"CMS","pageUrl":"https://www.mlb.com/video/cole-sands-in-play-run-s-to-gabriel-moreno-vmffku","embedUrl":"https://streamable.com/m/cole-sands-in-play-run-s-to-gabriel-moreno-vmffku","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/m0nehhg8alp0evjtd2kx.jpg","match":{"guid":"2ed538b8-be09-3199-9ad8-500a6c503775"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=2ed538b8-be09-3199-9ad8-500a6c503775"},"sources":[{"label":"MLB Stats API — official play-by-play, game 776337","url":"https://statsapi.mlb.com/api/v1.1/game/776337/feed/live"},{"label":"MLB Stats API — win probability, game 776337","url":"https://statsapi.mlb.com/api/v1/game/776337/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=776337"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=2ed538b8-be09-3199-9ad8-500a6c503775"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-776337-78",
+ "title": "Gabriel Moreno's RBI single",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 776337,
+  "atBatIndex": 78,
+  "eventIndex": 4,
+  "playId": "2ed538b8-be09-3199-9ad8-500a6c503775",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/776337/feed/live"
+ },
+ "game": {
+  "gamePk": 776337,
+  "date": "2025-09-13",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Target Field",
+  "away": {
+   "id": 109,
+   "name": "Arizona Diamondbacks",
+   "abbr": "AZ",
+   "club": "Diamondbacks"
+  },
+  "home": {
+   "id": 142,
+   "name": "Minnesota Twins",
+   "abbr": "MIN",
+   "club": "Twins"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 10,
+  "half": "top",
+  "outs": 2,
+  "bases": "_23",
+  "runners": {
+   "1B": null,
+   "2B": {
+    "id": 682998,
+    "name": "Corbin Carroll"
+   },
+   "3B": {
+    "id": 678489,
+    "name": "Jorge Barrosa"
+   }
+  },
+  "score": {
+   "away": 2,
+   "home": 2
+  },
+  "batting": "away",
+  "count": {
+   "balls": 2,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "1_3",
+  "score": {
+   "away": 3,
+   "home": 2
+  }
+ },
+ "batter": {
+  "id": 672515,
+  "name": "Gabriel Moreno",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 663485,
+  "name": "Cole Sands",
+  "hand": "R"
+ },
+ "event": {
+  "type": "single",
+  "label": "Single",
+  "description": "Gabriel Moreno singles on a ground ball to shortstop Brooks Lee. Jorge Barrosa scores. Corbin Carroll to 3rd.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 672515,
+   "name": "Gabriel Moreno",
+   "start": null,
+   "end": "1B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "single",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 686797,
+     "name": "Brooks Lee",
+     "pos": "SS",
+     "credit": "f_fielded_ball"
+    }
+   ]
+  },
+  {
+   "id": 678489,
+   "name": "Jorge Barrosa",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "single",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 682998,
+   "name": "Corbin Carroll",
+   "start": "2B",
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "single",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Gabriel Moreno",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": "6"
+  }
+ ],
+ "pitch": {
+  "type": "Curveball",
+  "code": "CU",
+  "speed": 82.3,
+  "zone": 9,
+  "px": 0.3601404736100491,
+  "pz": 1.699153947651458,
+  "spin": 2978,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "ground_ball",
+  "hardness": "medium",
+  "location": 6,
+  "ev": 88.4,
+  "la": -11.0,
+  "distance": 11.0,
+  "sprayAngle": -30.4,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 36.4,
+  "homeBefore": 64.9,
+  "homeAdded": -28.500000000000007,
+  "li": 5.25
+ },
+ "statcast": {
+  "ifAlignment": "Infield shade",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.724,
+  "deltaHomeWinExp": -0.281,
+  "batWinExpBefore": 0.355,
+  "bbType": "ground_ball",
+  "pitchName": "Curveball",
+  "fielders": {
+   "2": 640902,
+   "3": 665019,
+   "4": 807712,
+   "5": 668904,
+   "6": 686797,
+   "7": 668885,
+   "8": 621439,
+   "9": 670242
+  }
+ },
+ "flags": [
+  "close",
+  "extra_innings",
+  "go_ahead_on",
+  "go_ahead_play",
+  "ground_ball",
+  "ground_ball_infield",
+  "high_leverage",
+  "middle_infield",
+  "risp",
+  "shift_alignment",
+  "single",
+  "tied",
+  "two_out_rbi",
+  "two_outs"
+ ],
+ "curation": {
+  "category": "Infield defense & decisions",
+  "slot": "Ground ball into a non-standard infield alignment"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "cole-sands-in-play-run-s-to-gabriel-moreno-vmffku",
+   "title": "Gabriel Moreno's RBI single",
+   "duration": "00:00:17",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/cole-sands-in-play-run-s-to-gabriel-moreno-vmffku",
+   "embedUrl": "https://streamable.com/m/cole-sands-in-play-run-s-to-gabriel-moreno-vmffku",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/m0nehhg8alp0evjtd2kx.jpg",
+   "match": {
+    "guid": "2ed538b8-be09-3199-9ad8-500a6c503775"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=2ed538b8-be09-3199-9ad8-500a6c503775"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 776337",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/776337/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 776337",
+   "url": "https://statsapi.mlb.com/api/v1/game/776337/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=776337"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=2ed538b8-be09-3199-9ad8-500a6c503775"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

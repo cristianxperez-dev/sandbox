@@ -1,1 +1,271 @@
-{"schema":1,"id":"mlb-777890-8","title":"Jacob Young's RBI triple","titleSource":"MLB.com clip title","source":{"gamePk":777890,"atBatIndex":8,"eventIndex":1,"playId":"6ff2dd68-8889-37a8-9f04-77e9052f33d9","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/777890/feed/live"},"game":{"gamePk":777890,"date":"2025-05-17","season":2025,"gameType":"R","level":"MLB","venue":"Oriole Park at Camden Yards","away":{"id":120,"name":"Washington Nationals","abbr":"WSH","club":"Nationals"},"home":{"id":110,"name":"Baltimore Orioles","abbr":"BAL","club":"Orioles"},"series":""},"before":{"inning":1,"half":"top","outs":2,"bases":"__3","runners":{"1B":null,"2B":null,"3B":{"id":605137,"name":"Josh Bell"}},"score":{"away":5,"home":0},"batting":"away","count":{"balls":0,"strikes":1}},"after":{"outs":2,"bases":"__3","score":{"away":6,"home":0}},"batter":{"id":696285,"name":"Jacob Young","side":"R"},"pitcher":{"id":502043,"name":"Kyle Gibson","hand":"R"},"event":{"type":"triple","label":"Triple","description":"Jacob Young triples (1) on a line drive to right fielder Heston Kjerstad. Josh Bell scores.","rbi":1,"runs":1,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":696285,"name":"Jacob Young","start":null,"end":"3B","out":false,"outBase":null,"reason":null,"event":"triple","isBatter":true,"credits":[{"id":677008,"name":"Heston Kjerstad","pos":"RF","credit":"f_fielded_ball"}]},{"id":605137,"name":"Josh Bell","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_force","event":"triple","isBatter":false,"credits":[]}],"chains":[{"runner":"Jacob Young","start":null,"out":false,"outBase":null,"chain":"9"}],"pitch":{"type":"Sinker","code":"SI","speed":92.3,"zone":6,"px":0.5937885181592146,"pz":2.57987193810939,"spin":2052,"call":"E"},"batted":{"trajectory":"line_drive","hardness":"medium","location":9,"ev":95.0,"la":18.0,"distance":286.0,"sprayAngle":43.4,"spray":"opposite"},"winprob":{"homeAfter":8.6,"homeBefore":12.5,"homeAdded":-3.9000000000000004,"li":0.53},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":0.873,"deltaHomeWinExp":-0.041,"batWinExpBefore":0.873,"bbType":"line_drive","pitchName":"Sinker","fielders":{"2":668974,"3":656811,"4":702616,"5":602104,"6":683002,"7":657656,"8":656775,"9":677008}},"flags":["blowout","leading","line_drive","low_leverage","outfield_play","risp","triple","two_out_rbi","two_outs"],"curation":{"category":"Outfield defense, cutoffs & relays","slot":"Extra-base hit down the line: cutoff and relay"},"clips":[{"kind":"highlight","slug":"kyle-gibson-in-play-run-s-to-jacob-young","title":"Jacob Young's RBI triple","duration":"00:00:30","feed":"CMS","pageUrl":"https://www.mlb.com/video/kyle-gibson-in-play-run-s-to-jacob-young","embedUrl":"https://streamable.com/m/kyle-gibson-in-play-run-s-to-jacob-young","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/gydgmuta4o4hr3azclbf.jpg","match":{"guid":"6ff2dd68-8889-37a8-9f04-77e9052f33d9"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=6ff2dd68-8889-37a8-9f04-77e9052f33d9"},"sources":[{"label":"MLB Stats API — official play-by-play, game 777890","url":"https://statsapi.mlb.com/api/v1.1/game/777890/feed/live"},{"label":"MLB Stats API — win probability, game 777890","url":"https://statsapi.mlb.com/api/v1/game/777890/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=777890"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=6ff2dd68-8889-37a8-9f04-77e9052f33d9"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-777890-8",
+ "title": "Jacob Young's RBI triple",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 777890,
+  "atBatIndex": 8,
+  "eventIndex": 1,
+  "playId": "6ff2dd68-8889-37a8-9f04-77e9052f33d9",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/777890/feed/live"
+ },
+ "game": {
+  "gamePk": 777890,
+  "date": "2025-05-17",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Oriole Park at Camden Yards",
+  "away": {
+   "id": 120,
+   "name": "Washington Nationals",
+   "abbr": "WSH",
+   "club": "Nationals"
+  },
+  "home": {
+   "id": 110,
+   "name": "Baltimore Orioles",
+   "abbr": "BAL",
+   "club": "Orioles"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 1,
+  "half": "top",
+  "outs": 2,
+  "bases": "__3",
+  "runners": {
+   "1B": null,
+   "2B": null,
+   "3B": {
+    "id": 605137,
+    "name": "Josh Bell"
+   }
+  },
+  "score": {
+   "away": 5,
+   "home": 0
+  },
+  "batting": "away",
+  "count": {
+   "balls": 0,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "__3",
+  "score": {
+   "away": 6,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 696285,
+  "name": "Jacob Young",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 502043,
+  "name": "Kyle Gibson",
+  "hand": "R"
+ },
+ "event": {
+  "type": "triple",
+  "label": "Triple",
+  "description": "Jacob Young triples (1) on a line drive to right fielder Heston Kjerstad. Josh Bell scores.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 696285,
+   "name": "Jacob Young",
+   "start": null,
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "triple",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 677008,
+     "name": "Heston Kjerstad",
+     "pos": "RF",
+     "credit": "f_fielded_ball"
+    }
+   ]
+  },
+  {
+   "id": 605137,
+   "name": "Josh Bell",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_force",
+   "event": "triple",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Jacob Young",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": "9"
+  }
+ ],
+ "pitch": {
+  "type": "Sinker",
+  "code": "SI",
+  "speed": 92.3,
+  "zone": 6,
+  "px": 0.5937885181592146,
+  "pz": 2.57987193810939,
+  "spin": 2052,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "line_drive",
+  "hardness": "medium",
+  "location": 9,
+  "ev": 95.0,
+  "la": 18.0,
+  "distance": 286.0,
+  "sprayAngle": 43.4,
+  "spray": "opposite"
+ },
+ "winprob": {
+  "homeAfter": 8.6,
+  "homeBefore": 12.5,
+  "homeAdded": -3.9000000000000004,
+  "li": 0.53
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.873,
+  "deltaHomeWinExp": -0.041,
+  "batWinExpBefore": 0.873,
+  "bbType": "line_drive",
+  "pitchName": "Sinker",
+  "fielders": {
+   "2": 668974,
+   "3": 656811,
+   "4": 702616,
+   "5": 602104,
+   "6": 683002,
+   "7": 657656,
+   "8": 656775,
+   "9": 677008
+  }
+ },
+ "flags": [
+  "blowout",
+  "leading",
+  "line_drive",
+  "low_leverage",
+  "outfield_play",
+  "risp",
+  "triple",
+  "two_out_rbi",
+  "two_outs"
+ ],
+ "curation": {
+  "category": "Outfield defense, cutoffs & relays",
+  "slot": "Extra-base hit down the line: cutoff and relay"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "kyle-gibson-in-play-run-s-to-jacob-young",
+   "title": "Jacob Young's RBI triple",
+   "duration": "00:00:30",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/kyle-gibson-in-play-run-s-to-jacob-young",
+   "embedUrl": "https://streamable.com/m/kyle-gibson-in-play-run-s-to-jacob-young",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/gydgmuta4o4hr3azclbf.jpg",
+   "match": {
+    "guid": "6ff2dd68-8889-37a8-9f04-77e9052f33d9"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=6ff2dd68-8889-37a8-9f04-77e9052f33d9"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 777890",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/777890/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 777890",
+   "url": "https://statsapi.mlb.com/api/v1/game/777890/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=777890"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=6ff2dd68-8889-37a8-9f04-77e9052f33d9"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

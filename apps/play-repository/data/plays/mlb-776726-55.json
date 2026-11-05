@@ -1,1 +1,301 @@
-{"schema":1,"id":"mlb-776726-55","title":"Randy Arozarena nabs Francisco Lindor at home","titleSource":"MLB.com clip title","source":{"gamePk":776726,"atBatIndex":55,"eventIndex":4,"playId":"bc550cb4-65e1-39b4-899e-923278bece07","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/776726/feed/live"},"game":{"gamePk":776726,"date":"2025-08-16","season":2025,"gameType":"R","level":"MLB","venue":"Citi Field","away":{"id":136,"name":"Seattle Mariners","abbr":"SEA","club":"Mariners"},"home":{"id":121,"name":"New York Mets","abbr":"NYM","club":"Mets"},"series":""},"before":{"inning":7,"half":"bottom","outs":1,"bases":"_2_","runners":{"1B":null,"2B":{"id":596019,"name":"Francisco Lindor"},"3B":null},"score":{"away":0,"home":2},"batting":"home","count":{"balls":2,"strikes":1}},"after":{"outs":2,"bases":"_2_","score":{"away":0,"home":2}},"batter":{"id":607043,"name":"Brandon Nimmo","side":"L"},"pitcher":{"id":657571,"name":"Caleb Ferguson","hand":"L"},"event":{"type":"single","label":"Single","description":"Brandon Nimmo singles on a line drive to left fielder Randy Arozarena. Francisco Lindor out at home on the throw, left fielder Randy Arozarena to catcher Cal Raleigh. Brandon Nimmo to 2nd.","rbi":0,"runs":0,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":607043,"name":"Brandon Nimmo","start":null,"end":"2B","out":false,"outBase":null,"reason":"r_adv_throw","event":"single","isBatter":true,"credits":[{"id":668227,"name":"Randy Arozarena","pos":"LF","credit":"f_fielded_ball"}]},{"id":596019,"name":"Francisco Lindor","start":"2B","end":null,"out":true,"outBase":"4B","reason":"r_thrown_out","event":"other_out","isBatter":false,"credits":[{"id":668227,"name":"Randy Arozarena","pos":"LF","credit":"f_assist"},{"id":668227,"name":"Randy Arozarena","pos":"LF","credit":"f_assist_of"},{"id":663728,"name":"Cal Raleigh","pos":"C","credit":"f_putout"}]}],"chains":[{"runner":"Brandon Nimmo","start":null,"out":false,"outBase":null,"chain":"7"},{"runner":"Francisco Lindor","start":"2B","out":true,"outBase":"4B","chain":"7-2"}],"pitch":{"type":"Slurve","code":"SV","speed":80.1,"zone":5,"px":-0.030064597596783073,"pz":2.830106179073824,"spin":3051,"call":"X"},"batted":{"trajectory":"line_drive","hardness":"medium","location":7,"ev":96.0,"la":8.0,"distance":164.0,"sprayAngle":-20.4,"spray":"opposite"},"winprob":{"homeAfter":88.0,"homeBefore":89.7,"homeAdded":-1.7000000000000028,"li":0.62},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":0.51,"deltaHomeWinExp":-0.018,"batWinExpBefore":0.898,"bbType":"line_drive","pitchName":"Slurve","fielders":{"2":663728,"3":647304,"4":702284,"5":553993,"6":641487,"7":668227,"8":677594,"9":686527}},"flags":["catcher_play","close","leading","line_drive","low_leverage","out_at_plate","outfield_assist","outfield_play","play_at_plate","risp","runner_out_on_bases","single","tag_play"],"curation":{"category":"Outfield defense, cutoffs & relays","slot":"Runner on second, one out, single — throw home, out at the plate"},"clips":[{"kind":"highlight","slug":"caleb-ferguson-in-play-out-s-to-brandon-nimmo-kgbbgx","title":"Randy Arozarena nabs Francisco Lindor at home","duration":"00:00:30","feed":"CMS","pageUrl":"https://www.mlb.com/video/caleb-ferguson-in-play-out-s-to-brandon-nimmo-kgbbgx","embedUrl":"https://streamable.com/m/caleb-ferguson-in-play-out-s-to-brandon-nimmo-kgbbgx","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/lmt2act8gusifnszt5gl.jpg","match":{"guid":"bc550cb4-65e1-39b4-899e-923278bece07"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=bc550cb4-65e1-39b4-899e-923278bece07"},"sources":[{"label":"MLB Stats API — official play-by-play, game 776726","url":"https://statsapi.mlb.com/api/v1.1/game/776726/feed/live"},{"label":"MLB Stats API — win probability, game 776726","url":"https://statsapi.mlb.com/api/v1/game/776726/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=776726"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=bc550cb4-65e1-39b4-899e-923278bece07"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-776726-55",
+ "title": "Randy Arozarena nabs Francisco Lindor at home",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 776726,
+  "atBatIndex": 55,
+  "eventIndex": 4,
+  "playId": "bc550cb4-65e1-39b4-899e-923278bece07",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/776726/feed/live"
+ },
+ "game": {
+  "gamePk": 776726,
+  "date": "2025-08-16",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Citi Field",
+  "away": {
+   "id": 136,
+   "name": "Seattle Mariners",
+   "abbr": "SEA",
+   "club": "Mariners"
+  },
+  "home": {
+   "id": 121,
+   "name": "New York Mets",
+   "abbr": "NYM",
+   "club": "Mets"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 7,
+  "half": "bottom",
+  "outs": 1,
+  "bases": "_2_",
+  "runners": {
+   "1B": null,
+   "2B": {
+    "id": 596019,
+    "name": "Francisco Lindor"
+   },
+   "3B": null
+  },
+  "score": {
+   "away": 0,
+   "home": 2
+  },
+  "batting": "home",
+  "count": {
+   "balls": 2,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "_2_",
+  "score": {
+   "away": 0,
+   "home": 2
+  }
+ },
+ "batter": {
+  "id": 607043,
+  "name": "Brandon Nimmo",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 657571,
+  "name": "Caleb Ferguson",
+  "hand": "L"
+ },
+ "event": {
+  "type": "single",
+  "label": "Single",
+  "description": "Brandon Nimmo singles on a line drive to left fielder Randy Arozarena. Francisco Lindor out at home on the throw, left fielder Randy Arozarena to catcher Cal Raleigh. Brandon Nimmo to 2nd.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 607043,
+   "name": "Brandon Nimmo",
+   "start": null,
+   "end": "2B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_throw",
+   "event": "single",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 668227,
+     "name": "Randy Arozarena",
+     "pos": "LF",
+     "credit": "f_fielded_ball"
+    }
+   ]
+  },
+  {
+   "id": 596019,
+   "name": "Francisco Lindor",
+   "start": "2B",
+   "end": null,
+   "out": true,
+   "outBase": "4B",
+   "reason": "r_thrown_out",
+   "event": "other_out",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 668227,
+     "name": "Randy Arozarena",
+     "pos": "LF",
+     "credit": "f_assist"
+    },
+    {
+     "id": 668227,
+     "name": "Randy Arozarena",
+     "pos": "LF",
+     "credit": "f_assist_of"
+    },
+    {
+     "id": 663728,
+     "name": "Cal Raleigh",
+     "pos": "C",
+     "credit": "f_putout"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Brandon Nimmo",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": "7"
+  },
+  {
+   "runner": "Francisco Lindor",
+   "start": "2B",
+   "out": true,
+   "outBase": "4B",
+   "chain": "7-2"
+  }
+ ],
+ "pitch": {
+  "type": "Slurve",
+  "code": "SV",
+  "speed": 80.1,
+  "zone": 5,
+  "px": -0.030064597596783073,
+  "pz": 2.830106179073824,
+  "spin": 3051,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "line_drive",
+  "hardness": "medium",
+  "location": 7,
+  "ev": 96.0,
+  "la": 8.0,
+  "distance": 164.0,
+  "sprayAngle": -20.4,
+  "spray": "opposite"
+ },
+ "winprob": {
+  "homeAfter": 88.0,
+  "homeBefore": 89.7,
+  "homeAdded": -1.7000000000000028,
+  "li": 0.62
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.51,
+  "deltaHomeWinExp": -0.018,
+  "batWinExpBefore": 0.898,
+  "bbType": "line_drive",
+  "pitchName": "Slurve",
+  "fielders": {
+   "2": 663728,
+   "3": 647304,
+   "4": 702284,
+   "5": 553993,
+   "6": 641487,
+   "7": 668227,
+   "8": 677594,
+   "9": 686527
+  }
+ },
+ "flags": [
+  "catcher_play",
+  "close",
+  "leading",
+  "line_drive",
+  "low_leverage",
+  "out_at_plate",
+  "outfield_assist",
+  "outfield_play",
+  "play_at_plate",
+  "risp",
+  "runner_out_on_bases",
+  "single",
+  "tag_play"
+ ],
+ "curation": {
+  "category": "Outfield defense, cutoffs & relays",
+  "slot": "Runner on second, one out, single — throw home, out at the plate"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "caleb-ferguson-in-play-out-s-to-brandon-nimmo-kgbbgx",
+   "title": "Randy Arozarena nabs Francisco Lindor at home",
+   "duration": "00:00:30",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/caleb-ferguson-in-play-out-s-to-brandon-nimmo-kgbbgx",
+   "embedUrl": "https://streamable.com/m/caleb-ferguson-in-play-out-s-to-brandon-nimmo-kgbbgx",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/lmt2act8gusifnszt5gl.jpg",
+   "match": {
+    "guid": "bc550cb4-65e1-39b4-899e-923278bece07"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=bc550cb4-65e1-39b4-899e-923278bece07"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 776726",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/776726/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 776726",
+   "url": "https://statsapi.mlb.com/api/v1/game/776726/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=776726"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=bc550cb4-65e1-39b4-899e-923278bece07"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

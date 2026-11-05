@@ -1,1 +1,283 @@
-{"schema":1,"id":"mlb-777515-82","title":"Josh Naylor reaches on a fielder's choice","titleSource":"From MLB's official play description","source":{"gamePk":777515,"atBatIndex":82,"eventIndex":2,"playId":"3c0a5029-6286-30c6-b971-aa32285d895e","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/777515/feed/live"},"game":{"gamePk":777515,"date":"2025-06-14","season":2025,"gameType":"R","level":"MLB","venue":"Chase Field","away":{"id":135,"name":"San Diego Padres","abbr":"SD","club":"Padres"},"home":{"id":109,"name":"Arizona Diamondbacks","abbr":"AZ","club":"Diamondbacks"},"series":""},"before":{"inning":9,"half":"bottom","outs":1,"bases":"__3","runners":{"1B":null,"2B":null,"3B":{"id":672695,"name":"Geraldo Perdomo"}},"score":{"away":7,"home":7},"batting":"home","count":{"balls":0,"strikes":0}},"after":{"outs":1,"bases":"1__","score":{"away":7,"home":8}},"batter":{"id":647304,"name":"Josh Naylor","side":"L"},"pitcher":{"id":670970,"name":"Adrian Morejon","hand":"L"},"event":{"type":"fielders_choice","label":"Fielders Choice","description":"Padres challenged (tag play), call on the field was upheld: Josh Naylor reaches on a fielder's choice, fielded by first baseman Luis Arraez. Geraldo Perdomo scores.","rbi":1,"runs":1,"outs":0,"isReview":true,"walkoff":true},"runners":[{"id":672695,"name":"Geraldo Perdomo","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"fielders_choice","isBatter":false,"credits":[]},{"id":647304,"name":"Josh Naylor","start":null,"end":"1B","out":false,"outBase":null,"reason":null,"event":"fielders_choice","isBatter":true,"credits":[{"id":650333,"name":"Luis Arraez","pos":"1B","credit":"f_fielded_ball"}]}],"chains":[{"runner":"Josh Naylor","start":null,"out":false,"outBase":null,"chain":"3"}],"pitch":{"type":"Slider","code":"SL","speed":89.6,"zone":1,"px":-0.4717920949428622,"pz":2.790172683933316,"spin":2768,"call":"E"},"batted":{"trajectory":"ground_ball","hardness":"medium","location":3,"ev":67.1,"la":-63.0,"distance":2.0,"sprayAngle":45.9,"spray":"pull"},"winprob":{"homeAfter":100.0,"homeBefore":83.3,"homeAdded":16.700000000000003,"li":4.79},"statcast":{"ifAlignment":"Infield shade","ofAlignment":"Standard","deltaRunExp":0.44,"deltaHomeWinExp":0.167,"batWinExpBefore":0.833,"bbType":"ground_ball","pitchName":"Slider","fielders":{"2":553869,"3":650333,"4":630105,"5":592518,"6":593428,"7":642180,"8":663604,"9":665487}},"flags":["challenge","close","go_ahead_on","go_ahead_play","ground_ball","ground_ball_infield","high_leverage","risp","shift_alignment","tied","walkoff","walkoff_situation","winning_run_on"],"curation":{"category":"High-leverage & unusual situations","slot":"Walk-off"},"clips":[{"kind":"filmroom","slug":"padres-challenged-tag-play-call-on-the-field-was-upheld-josh-naylor-reach","title":"Padres challenged (tag play), call on the field was upheld: Josh Naylor reaches on a fielder's choice, fielded by first baseman Luis Arraez. Geraldo Perdomo scores.","duration":"00:00:12","feed":"NETWORK","pageUrl":"https://www.mlb.com/video/padres-challenged-tag-play-call-on-the-field-was-upheld-josh-naylor-reach","embedUrl":"https://streamable.com/m/padres-challenged-tag-play-call-on-the-field-was-upheld-josh-naylor-reach","angle":{"category":"broadcast","label":"National TV broadcast"},"howVerified":"MLB Film Room clip for the playId; Film Room's play info matches game, inning, outs, runners, batter and pitcher","thumb":"https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/3c0a5029-6286-30c6-b971-aa32285d895e_network.jpg","match":{"filmroom":{"gamePk":true,"inning":true,"outs":true,"runners":true,"batter":true,"pitcher":true},"feeds":["NETWORK"]},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=3c0a5029-6286-30c6-b971-aa32285d895e"},"sources":[{"label":"MLB Stats API — official play-by-play, game 777515","url":"https://statsapi.mlb.com/api/v1.1/game/777515/feed/live"},{"label":"MLB Stats API — win probability, game 777515","url":"https://statsapi.mlb.com/api/v1/game/777515/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=777515"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=3c0a5029-6286-30c6-b971-aa32285d895e"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-777515-82",
+ "title": "Josh Naylor reaches on a fielder's choice",
+ "titleSource": "From MLB's official play description",
+ "source": {
+  "gamePk": 777515,
+  "atBatIndex": 82,
+  "eventIndex": 2,
+  "playId": "3c0a5029-6286-30c6-b971-aa32285d895e",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/777515/feed/live"
+ },
+ "game": {
+  "gamePk": 777515,
+  "date": "2025-06-14",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Chase Field",
+  "away": {
+   "id": 135,
+   "name": "San Diego Padres",
+   "abbr": "SD",
+   "club": "Padres"
+  },
+  "home": {
+   "id": 109,
+   "name": "Arizona Diamondbacks",
+   "abbr": "AZ",
+   "club": "Diamondbacks"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 9,
+  "half": "bottom",
+  "outs": 1,
+  "bases": "__3",
+  "runners": {
+   "1B": null,
+   "2B": null,
+   "3B": {
+    "id": 672695,
+    "name": "Geraldo Perdomo"
+   }
+  },
+  "score": {
+   "away": 7,
+   "home": 7
+  },
+  "batting": "home",
+  "count": {
+   "balls": 0,
+   "strikes": 0
+  }
+ },
+ "after": {
+  "outs": 1,
+  "bases": "1__",
+  "score": {
+   "away": 7,
+   "home": 8
+  }
+ },
+ "batter": {
+  "id": 647304,
+  "name": "Josh Naylor",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 670970,
+  "name": "Adrian Morejon",
+  "hand": "L"
+ },
+ "event": {
+  "type": "fielders_choice",
+  "label": "Fielders Choice",
+  "description": "Padres challenged (tag play), call on the field was upheld: Josh Naylor reaches on a fielder's choice, fielded by first baseman Luis Arraez. Geraldo Perdomo scores.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 0,
+  "isReview": true,
+  "walkoff": true
+ },
+ "runners": [
+  {
+   "id": 672695,
+   "name": "Geraldo Perdomo",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "fielders_choice",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 647304,
+   "name": "Josh Naylor",
+   "start": null,
+   "end": "1B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "fielders_choice",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 650333,
+     "name": "Luis Arraez",
+     "pos": "1B",
+     "credit": "f_fielded_ball"
+    }
+   ]
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Josh Naylor",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": "3"
+  }
+ ],
+ "pitch": {
+  "type": "Slider",
+  "code": "SL",
+  "speed": 89.6,
+  "zone": 1,
+  "px": -0.4717920949428622,
+  "pz": 2.790172683933316,
+  "spin": 2768,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "ground_ball",
+  "hardness": "medium",
+  "location": 3,
+  "ev": 67.1,
+  "la": -63.0,
+  "distance": 2.0,
+  "sprayAngle": 45.9,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 100.0,
+  "homeBefore": 83.3,
+  "homeAdded": 16.700000000000003,
+  "li": 4.79
+ },
+ "statcast": {
+  "ifAlignment": "Infield shade",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.44,
+  "deltaHomeWinExp": 0.167,
+  "batWinExpBefore": 0.833,
+  "bbType": "ground_ball",
+  "pitchName": "Slider",
+  "fielders": {
+   "2": 553869,
+   "3": 650333,
+   "4": 630105,
+   "5": 592518,
+   "6": 593428,
+   "7": 642180,
+   "8": 663604,
+   "9": 665487
+  }
+ },
+ "flags": [
+  "challenge",
+  "close",
+  "go_ahead_on",
+  "go_ahead_play",
+  "ground_ball",
+  "ground_ball_infield",
+  "high_leverage",
+  "risp",
+  "shift_alignment",
+  "tied",
+  "walkoff",
+  "walkoff_situation",
+  "winning_run_on"
+ ],
+ "curation": {
+  "category": "High-leverage & unusual situations",
+  "slot": "Walk-off"
+ },
+ "clips": [
+  {
+   "kind": "filmroom",
+   "slug": "padres-challenged-tag-play-call-on-the-field-was-upheld-josh-naylor-reach",
+   "title": "Padres challenged (tag play), call on the field was upheld: Josh Naylor reaches on a fielder's choice, fielded by first baseman Luis Arraez. Geraldo Perdomo scores.",
+   "duration": "00:00:12",
+   "feed": "NETWORK",
+   "pageUrl": "https://www.mlb.com/video/padres-challenged-tag-play-call-on-the-field-was-upheld-josh-naylor-reach",
+   "embedUrl": "https://streamable.com/m/padres-challenged-tag-play-call-on-the-field-was-upheld-josh-naylor-reach",
+   "angle": {
+    "category": "broadcast",
+    "label": "National TV broadcast"
+   },
+   "howVerified": "MLB Film Room clip for the playId; Film Room's play info matches game, inning, outs, runners, batter and pitcher",
+   "thumb": "https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/3c0a5029-6286-30c6-b971-aa32285d895e_network.jpg",
+   "match": {
+    "filmroom": {
+     "gamePk": true,
+     "inning": true,
+     "outs": true,
+     "runners": true,
+     "batter": true,
+     "pitcher": true
+    },
+    "feeds": [
+     "NETWORK"
+    ]
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=3c0a5029-6286-30c6-b971-aa32285d895e"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 777515",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/777515/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 777515",
+   "url": "https://statsapi.mlb.com/api/v1/game/777515/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=777515"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=3c0a5029-6286-30c6-b971-aa32285d895e"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

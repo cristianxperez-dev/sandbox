@@ -1,1 +1,290 @@
-{"schema":1,"id":"mlb-746963-59","title":"Rafael Devers' go-ahead two-run double","titleSource":"MLB.com clip title","source":{"gamePk":746963,"atBatIndex":59,"eventIndex":7,"playId":"c771668d-c10d-4e5b-a9a7-b8c0c44b8055","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/746963/feed/live"},"game":{"gamePk":746963,"date":"2024-05-11","season":2024,"gameType":"R","level":"MLB","venue":"Fenway Park","away":{"id":120,"name":"Washington Nationals","abbr":"WSH","club":"Nationals"},"home":{"id":111,"name":"Boston Red Sox","abbr":"BOS","club":"Red Sox"},"series":""},"before":{"inning":8,"half":"bottom","outs":2,"bases":"12_","runners":{"1B":{"id":641933,"name":"Tyler O'Neill"},"2B":{"id":663853,"name":"Romy Gonzalez"},"3B":null},"score":{"away":2,"home":2},"batting":"home","count":{"balls":2,"strikes":2}},"after":{"outs":2,"bases":"_2_","score":{"away":2,"home":4}},"batter":{"id":646240,"name":"Rafael Devers","side":"L"},"pitcher":{"id":676395,"name":"Robert Garcia","hand":"L"},"event":{"type":"double","label":"Double","description":"Rafael Devers doubles (8) on a sharp line drive to left fielder Eddie Rosario. Romy Gonzalez scores. Tyler O'Neill scores.","rbi":2,"runs":2,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":646240,"name":"Rafael Devers","start":null,"end":"2B","out":false,"outBase":null,"reason":null,"event":"double","isBatter":true,"credits":[{"id":592696,"name":"Eddie Rosario","pos":"LF","credit":"f_fielded_ball"}]},{"id":641933,"name":"Tyler O'Neill","start":"1B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"double","isBatter":false,"credits":[]},{"id":663853,"name":"Romy Gonzalez","start":"2B","end":"score","out":false,"outBase":null,"reason":"r_adv_force","event":"double","isBatter":false,"credits":[]}],"chains":[{"runner":"Rafael Devers","start":null,"out":false,"outBase":null,"chain":"7"}],"pitch":{"type":"Four-Seam Fastball","code":"FF","speed":96.0,"zone":9,"px":0.3344484282558875,"pz":1.6712247789827726,"spin":2206,"call":"E"},"batted":{"trajectory":"line_drive","hardness":"hard","location":7,"ev":108.5,"la":16.0,"distance":321.0,"sprayAngle":-25.9,"spray":"opposite"},"winprob":{"homeAfter":93.5,"homeBefore":59.1,"homeAdded":34.400000000000006,"li":3.6},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":1.021,"deltaHomeWinExp":0.358,"batWinExpBefore":0.577,"bbType":"line_drive","pitchName":"4-Seam Fastball","fielders":{"2":660688,"3":608841,"4":671277,"5":702358,"6":682928,"7":592696,"8":696285,"9":645302}},"flags":["close","double","force_available","go_ahead_on","go_ahead_play","high_leverage","line_drive","outfield_play","risp","score_from_first_xbh","tied","two_out_rbi","two_outs"],"curation":{"category":"Baserunning & advancement","slot":"Scoring from first on an extra-base hit"},"clips":[{"kind":"highlight","slug":"robert-garcia-in-play-run-s-to-rafael-devers","title":"Rafael Devers' go-ahead two-run double","duration":"00:00:29","feed":"CMS","pageUrl":"https://www.mlb.com/video/robert-garcia-in-play-run-s-to-rafael-devers","embedUrl":"https://streamable.com/m/robert-garcia-in-play-run-s-to-rafael-devers","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/rjjlaftitn46evcj76jc.jpg","match":{"guid":"c771668d-c10d-4e5b-a9a7-b8c0c44b8055"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=c771668d-c10d-4e5b-a9a7-b8c0c44b8055"},"sources":[{"label":"MLB Stats API — official play-by-play, game 746963","url":"https://statsapi.mlb.com/api/v1.1/game/746963/feed/live"},{"label":"MLB Stats API — win probability, game 746963","url":"https://statsapi.mlb.com/api/v1/game/746963/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=746963"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=c771668d-c10d-4e5b-a9a7-b8c0c44b8055"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-746963-59",
+ "title": "Rafael Devers' go-ahead two-run double",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 746963,
+  "atBatIndex": 59,
+  "eventIndex": 7,
+  "playId": "c771668d-c10d-4e5b-a9a7-b8c0c44b8055",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/746963/feed/live"
+ },
+ "game": {
+  "gamePk": 746963,
+  "date": "2024-05-11",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Fenway Park",
+  "away": {
+   "id": 120,
+   "name": "Washington Nationals",
+   "abbr": "WSH",
+   "club": "Nationals"
+  },
+  "home": {
+   "id": 111,
+   "name": "Boston Red Sox",
+   "abbr": "BOS",
+   "club": "Red Sox"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 8,
+  "half": "bottom",
+  "outs": 2,
+  "bases": "12_",
+  "runners": {
+   "1B": {
+    "id": 641933,
+    "name": "Tyler O'Neill"
+   },
+   "2B": {
+    "id": 663853,
+    "name": "Romy Gonzalez"
+   },
+   "3B": null
+  },
+  "score": {
+   "away": 2,
+   "home": 2
+  },
+  "batting": "home",
+  "count": {
+   "balls": 2,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "_2_",
+  "score": {
+   "away": 2,
+   "home": 4
+  }
+ },
+ "batter": {
+  "id": 646240,
+  "name": "Rafael Devers",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 676395,
+  "name": "Robert Garcia",
+  "hand": "L"
+ },
+ "event": {
+  "type": "double",
+  "label": "Double",
+  "description": "Rafael Devers doubles (8) on a sharp line drive to left fielder Eddie Rosario. Romy Gonzalez scores. Tyler O'Neill scores.",
+  "rbi": 2,
+  "runs": 2,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 646240,
+   "name": "Rafael Devers",
+   "start": null,
+   "end": "2B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "double",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 592696,
+     "name": "Eddie Rosario",
+     "pos": "LF",
+     "credit": "f_fielded_ball"
+    }
+   ]
+  },
+  {
+   "id": 641933,
+   "name": "Tyler O'Neill",
+   "start": "1B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "double",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 663853,
+   "name": "Romy Gonzalez",
+   "start": "2B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_force",
+   "event": "double",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Rafael Devers",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": "7"
+  }
+ ],
+ "pitch": {
+  "type": "Four-Seam Fastball",
+  "code": "FF",
+  "speed": 96.0,
+  "zone": 9,
+  "px": 0.3344484282558875,
+  "pz": 1.6712247789827726,
+  "spin": 2206,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "line_drive",
+  "hardness": "hard",
+  "location": 7,
+  "ev": 108.5,
+  "la": 16.0,
+  "distance": 321.0,
+  "sprayAngle": -25.9,
+  "spray": "opposite"
+ },
+ "winprob": {
+  "homeAfter": 93.5,
+  "homeBefore": 59.1,
+  "homeAdded": 34.400000000000006,
+  "li": 3.6
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 1.021,
+  "deltaHomeWinExp": 0.358,
+  "batWinExpBefore": 0.577,
+  "bbType": "line_drive",
+  "pitchName": "4-Seam Fastball",
+  "fielders": {
+   "2": 660688,
+   "3": 608841,
+   "4": 671277,
+   "5": 702358,
+   "6": 682928,
+   "7": 592696,
+   "8": 696285,
+   "9": 645302
+  }
+ },
+ "flags": [
+  "close",
+  "double",
+  "force_available",
+  "go_ahead_on",
+  "go_ahead_play",
+  "high_leverage",
+  "line_drive",
+  "outfield_play",
+  "risp",
+  "score_from_first_xbh",
+  "tied",
+  "two_out_rbi",
+  "two_outs"
+ ],
+ "curation": {
+  "category": "Baserunning & advancement",
+  "slot": "Scoring from first on an extra-base hit"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "robert-garcia-in-play-run-s-to-rafael-devers",
+   "title": "Rafael Devers' go-ahead two-run double",
+   "duration": "00:00:29",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/robert-garcia-in-play-run-s-to-rafael-devers",
+   "embedUrl": "https://streamable.com/m/robert-garcia-in-play-run-s-to-rafael-devers",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/rjjlaftitn46evcj76jc.jpg",
+   "match": {
+    "guid": "c771668d-c10d-4e5b-a9a7-b8c0c44b8055"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=c771668d-c10d-4e5b-a9a7-b8c0c44b8055"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 746963",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/746963/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 746963",
+   "url": "https://statsapi.mlb.com/api/v1/game/746963/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=746963"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=c771668d-c10d-4e5b-a9a7-b8c0c44b8055"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

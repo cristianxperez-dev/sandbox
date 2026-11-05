@@ -1,1 +1,295 @@
-{"schema":1,"id":"mlb-777092-47","title":"Tyler Stephenson's RBI forceout","titleSource":"MLB.com clip title","source":{"gamePk":777092,"atBatIndex":47,"eventIndex":3,"playId":"f23ee4ab-55c6-3a7d-a5df-cfbdbeb0b418","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/777092/feed/live"},"game":{"gamePk":777092,"date":"2025-07-19","season":2025,"gameType":"R","level":"MLB","venue":"Citi Field","away":{"id":113,"name":"Cincinnati Reds","abbr":"CIN","club":"Reds"},"home":{"id":121,"name":"New York Mets","abbr":"NYM","club":"Mets"},"series":""},"before":{"inning":6,"half":"top","outs":1,"bases":"1_3","runners":{"1B":{"id":668715,"name":"Spencer Steer"},"2B":null,"3B":{"id":669720,"name":"Austin Hays"}},"score":{"away":3,"home":2},"batting":"away","count":{"balls":0,"strikes":1}},"after":{"outs":2,"bases":"1__","score":{"away":4,"home":2}},"batter":{"id":663886,"name":"Tyler Stephenson","side":"R"},"pitcher":{"id":657585,"name":"Reed Garrett","hand":"R"},"event":{"type":"force_out","label":"Forceout","description":"Tyler Stephenson grounds into a force out, third baseman Ronny Mauricio to second baseman Brett Baty. Austin Hays scores. Spencer Steer out at 2nd. Tyler Stephenson to 1st.","rbi":1,"runs":1,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":668715,"name":"Spencer Steer","start":"1B","end":null,"out":true,"outBase":"2B","reason":"r_force_out","event":"force_out","isBatter":false,"credits":[{"id":677595,"name":"Ronny Mauricio","pos":"3B","credit":"f_assist"},{"id":683146,"name":"Brett Baty","pos":"2B","credit":"f_putout"}]},{"id":669720,"name":"Austin Hays","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"force_out","isBatter":false,"credits":[]},{"id":663886,"name":"Tyler Stephenson","start":null,"end":"1B","out":false,"outBase":null,"reason":null,"event":"force_out","isBatter":true,"credits":[]}],"chains":[{"runner":"Spencer Steer","start":"1B","out":true,"outBase":"2B","chain":"5-4"}],"pitch":{"type":"Sweeper","code":"ST","speed":87.9,"zone":8,"px":0.1048296383749929,"pz":1.8025384325387124,"spin":2921,"call":"E"},"batted":{"trajectory":"ground_ball","hardness":"medium","location":5,"ev":73.2,"la":-5.0,"distance":19.0,"sprayAngle":-28.0,"spray":"pull"},"winprob":{"homeAfter":24.2,"homeBefore":26.6,"homeAdded":-2.400000000000002,"li":2.09},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":-0.271,"deltaHomeWinExp":-0.035,"batWinExpBefore":0.723,"bbType":"ground_ball","pitchName":"Sweeper","fielders":{"2":620443,"3":624413,"4":683146,"5":677595,"6":596019,"7":607043,"8":643446,"9":665742}},"flags":["close","dp_situation","force_available","force_play","ground_ball","ground_ball_infield","high_leverage","leading","one_run","productive_out","risp","runner_scored_on_out"],"curation":{"category":"Infield defense & decisions","slot":"Fielder's choice: getting the lead runner"},"clips":[{"kind":"highlight","slug":"reed-garrett-in-play-out-s-to-tyler-stephenson","title":"Tyler Stephenson's RBI forceout","duration":"00:00:22","feed":"CMS","pageUrl":"https://www.mlb.com/video/reed-garrett-in-play-out-s-to-tyler-stephenson","embedUrl":"https://streamable.com/m/reed-garrett-in-play-out-s-to-tyler-stephenson","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/ud2jxn7f7rupygg18vql.jpg","match":{"guid":"f23ee4ab-55c6-3a7d-a5df-cfbdbeb0b418"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=f23ee4ab-55c6-3a7d-a5df-cfbdbeb0b418"},"sources":[{"label":"MLB Stats API — official play-by-play, game 777092","url":"https://statsapi.mlb.com/api/v1.1/game/777092/feed/live"},{"label":"MLB Stats API — win probability, game 777092","url":"https://statsapi.mlb.com/api/v1/game/777092/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=777092"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=f23ee4ab-55c6-3a7d-a5df-cfbdbeb0b418"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-777092-47",
+ "title": "Tyler Stephenson's RBI forceout",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 777092,
+  "atBatIndex": 47,
+  "eventIndex": 3,
+  "playId": "f23ee4ab-55c6-3a7d-a5df-cfbdbeb0b418",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/777092/feed/live"
+ },
+ "game": {
+  "gamePk": 777092,
+  "date": "2025-07-19",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Citi Field",
+  "away": {
+   "id": 113,
+   "name": "Cincinnati Reds",
+   "abbr": "CIN",
+   "club": "Reds"
+  },
+  "home": {
+   "id": 121,
+   "name": "New York Mets",
+   "abbr": "NYM",
+   "club": "Mets"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 6,
+  "half": "top",
+  "outs": 1,
+  "bases": "1_3",
+  "runners": {
+   "1B": {
+    "id": 668715,
+    "name": "Spencer Steer"
+   },
+   "2B": null,
+   "3B": {
+    "id": 669720,
+    "name": "Austin Hays"
+   }
+  },
+  "score": {
+   "away": 3,
+   "home": 2
+  },
+  "batting": "away",
+  "count": {
+   "balls": 0,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "1__",
+  "score": {
+   "away": 4,
+   "home": 2
+  }
+ },
+ "batter": {
+  "id": 663886,
+  "name": "Tyler Stephenson",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 657585,
+  "name": "Reed Garrett",
+  "hand": "R"
+ },
+ "event": {
+  "type": "force_out",
+  "label": "Forceout",
+  "description": "Tyler Stephenson grounds into a force out, third baseman Ronny Mauricio to second baseman Brett Baty. Austin Hays scores. Spencer Steer out at 2nd. Tyler Stephenson to 1st.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 668715,
+   "name": "Spencer Steer",
+   "start": "1B",
+   "end": null,
+   "out": true,
+   "outBase": "2B",
+   "reason": "r_force_out",
+   "event": "force_out",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 677595,
+     "name": "Ronny Mauricio",
+     "pos": "3B",
+     "credit": "f_assist"
+    },
+    {
+     "id": 683146,
+     "name": "Brett Baty",
+     "pos": "2B",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 669720,
+   "name": "Austin Hays",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "force_out",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 663886,
+   "name": "Tyler Stephenson",
+   "start": null,
+   "end": "1B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "force_out",
+   "isBatter": true,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Spencer Steer",
+   "start": "1B",
+   "out": true,
+   "outBase": "2B",
+   "chain": "5-4"
+  }
+ ],
+ "pitch": {
+  "type": "Sweeper",
+  "code": "ST",
+  "speed": 87.9,
+  "zone": 8,
+  "px": 0.1048296383749929,
+  "pz": 1.8025384325387124,
+  "spin": 2921,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "ground_ball",
+  "hardness": "medium",
+  "location": 5,
+  "ev": 73.2,
+  "la": -5.0,
+  "distance": 19.0,
+  "sprayAngle": -28.0,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 24.2,
+  "homeBefore": 26.6,
+  "homeAdded": -2.400000000000002,
+  "li": 2.09
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.271,
+  "deltaHomeWinExp": -0.035,
+  "batWinExpBefore": 0.723,
+  "bbType": "ground_ball",
+  "pitchName": "Sweeper",
+  "fielders": {
+   "2": 620443,
+   "3": 624413,
+   "4": 683146,
+   "5": 677595,
+   "6": 596019,
+   "7": 607043,
+   "8": 643446,
+   "9": 665742
+  }
+ },
+ "flags": [
+  "close",
+  "dp_situation",
+  "force_available",
+  "force_play",
+  "ground_ball",
+  "ground_ball_infield",
+  "high_leverage",
+  "leading",
+  "one_run",
+  "productive_out",
+  "risp",
+  "runner_scored_on_out"
+ ],
+ "curation": {
+  "category": "Infield defense & decisions",
+  "slot": "Fielder's choice: getting the lead runner"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "reed-garrett-in-play-out-s-to-tyler-stephenson",
+   "title": "Tyler Stephenson's RBI forceout",
+   "duration": "00:00:22",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/reed-garrett-in-play-out-s-to-tyler-stephenson",
+   "embedUrl": "https://streamable.com/m/reed-garrett-in-play-out-s-to-tyler-stephenson",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/ud2jxn7f7rupygg18vql.jpg",
+   "match": {
+    "guid": "f23ee4ab-55c6-3a7d-a5df-cfbdbeb0b418"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=f23ee4ab-55c6-3a7d-a5df-cfbdbeb0b418"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 777092",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/777092/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 777092",
+   "url": "https://statsapi.mlb.com/api/v1/game/777092/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=777092"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=f23ee4ab-55c6-3a7d-a5df-cfbdbeb0b418"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

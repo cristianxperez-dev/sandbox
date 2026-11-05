@@ -1,1 +1,287 @@
-{"schema":1,"id":"mlb-744820-72","title":"Taylor Ward grounds out, pitcher Derek Law to first baseman Juan Yepez","titleSource":"From MLB's official play description","source":{"gamePk":744820,"atBatIndex":72,"eventIndex":1,"playId":"3c31216b-6ab5-4c4d-9ef1-b09d4cb45557","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/744820/feed/live"},"game":{"gamePk":744820,"date":"2024-08-10","season":2024,"gameType":"R","level":"MLB","venue":"Nationals Park","away":{"id":108,"name":"Los Angeles Angels","abbr":"LAA","club":"Angels"},"home":{"id":120,"name":"Washington Nationals","abbr":"WSH","club":"Nationals"},"series":""},"before":{"inning":10,"half":"top","outs":0,"bases":"_2_","runners":{"1B":null,"2B":{"id":607680,"name":"Kevin Pillar"},"3B":null},"score":{"away":4,"home":4},"batting":"away","count":{"balls":0,"strikes":0}},"after":{"outs":1,"bases":"__3","score":{"away":4,"home":4}},"batter":{"id":621493,"name":"Taylor Ward","side":"R"},"pitcher":{"id":571882,"name":"Derek Law","hand":"R"},"event":{"type":"field_out","label":"Groundout","description":"Taylor Ward grounds out, pitcher Derek Law to first baseman Juan Yepez. Kevin Pillar to 3rd.","rbi":0,"runs":0,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":621493,"name":"Taylor Ward","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"field_out","isBatter":true,"credits":[{"id":571882,"name":"Derek Law","pos":"P","credit":"f_assist"},{"id":660766,"name":"Juan Yepez","pos":"1B","credit":"f_putout"}]},{"id":607680,"name":"Kevin Pillar","start":"2B","end":"3B","out":false,"outBase":null,"reason":"r_adv_play","event":"field_out","isBatter":false,"credits":[]}],"chains":[{"runner":"Taylor Ward","start":null,"out":true,"outBase":"1B","chain":"1-3"}],"pitch":{"type":"Cutter","code":"FC","speed":89.5,"zone":14,"px":0.9627101827562079,"pz":1.937042957201312,"spin":2150,"call":"X"},"batted":{"trajectory":"ground_ball","hardness":"medium","location":1,"ev":67.0,"la":-81.0,"distance":2.0,"sprayAngle":22.4,"spray":"opposite"},"winprob":{"homeAfter":51.300000000000004,"homeBefore":50.0,"homeAdded":1.3000000000000043,"li":2.29},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":-0.189,"deltaHomeWinExp":0.013,"batWinExpBefore":0.5,"bbType":"ground_ball","pitchName":"Cutter","fielders":{"2":660688,"3":660766,"4":671277,"5":677588,"6":683083,"7":695578,"8":696285,"9":669743}},"flags":["close","extra_innings","go_ahead_on","ground_ball","ground_ball_infield","high_leverage","productive_out","risp","tied"],"curation":{"category":"Situational hitting","slot":"Moving the runner over with nobody out"},"clips":[{"kind":"filmroom","slug":"derek-law-in-play-out-s-to-taylor-ward","title":"Taylor Ward grounds out, pitcher Derek Law to first baseman Juan Yepez.   Kevin Pillar to 3rd.","duration":"00:00:15","feed":"HOME","pageUrl":"https://www.mlb.com/video/derek-law-in-play-out-s-to-taylor-ward","embedUrl":"https://streamable.com/m/derek-law-in-play-out-s-to-taylor-ward","angle":{"category":"broadcast","label":"Home TV broadcast"},"howVerified":"MLB Film Room clip for the playId; Film Room's play info matches game, inning, outs, runners, batter and pitcher","thumb":"https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/3c31216b-6ab5-4c4d-9ef1-b09d4cb45557_home.jpg","match":{"filmroom":{"gamePk":true,"inning":true,"outs":true,"runners":true,"batter":true,"pitcher":true},"feeds":["HOME","AWAY"]},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=3c31216b-6ab5-4c4d-9ef1-b09d4cb45557"},"sources":[{"label":"MLB Stats API — official play-by-play, game 744820","url":"https://statsapi.mlb.com/api/v1.1/game/744820/feed/live"},{"label":"MLB Stats API — win probability, game 744820","url":"https://statsapi.mlb.com/api/v1/game/744820/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=744820"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=3c31216b-6ab5-4c4d-9ef1-b09d4cb45557"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-744820-72",
+ "title": "Taylor Ward grounds out, pitcher Derek Law to first baseman Juan Yepez",
+ "titleSource": "From MLB's official play description",
+ "source": {
+  "gamePk": 744820,
+  "atBatIndex": 72,
+  "eventIndex": 1,
+  "playId": "3c31216b-6ab5-4c4d-9ef1-b09d4cb45557",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/744820/feed/live"
+ },
+ "game": {
+  "gamePk": 744820,
+  "date": "2024-08-10",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Nationals Park",
+  "away": {
+   "id": 108,
+   "name": "Los Angeles Angels",
+   "abbr": "LAA",
+   "club": "Angels"
+  },
+  "home": {
+   "id": 120,
+   "name": "Washington Nationals",
+   "abbr": "WSH",
+   "club": "Nationals"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 10,
+  "half": "top",
+  "outs": 0,
+  "bases": "_2_",
+  "runners": {
+   "1B": null,
+   "2B": {
+    "id": 607680,
+    "name": "Kevin Pillar"
+   },
+   "3B": null
+  },
+  "score": {
+   "away": 4,
+   "home": 4
+  },
+  "batting": "away",
+  "count": {
+   "balls": 0,
+   "strikes": 0
+  }
+ },
+ "after": {
+  "outs": 1,
+  "bases": "__3",
+  "score": {
+   "away": 4,
+   "home": 4
+  }
+ },
+ "batter": {
+  "id": 621493,
+  "name": "Taylor Ward",
+  "side": "R"
+ },
+ "pitcher": {
+  "id": 571882,
+  "name": "Derek Law",
+  "hand": "R"
+ },
+ "event": {
+  "type": "field_out",
+  "label": "Groundout",
+  "description": "Taylor Ward grounds out, pitcher Derek Law to first baseman Juan Yepez. Kevin Pillar to 3rd.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 621493,
+   "name": "Taylor Ward",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "field_out",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 571882,
+     "name": "Derek Law",
+     "pos": "P",
+     "credit": "f_assist"
+    },
+    {
+     "id": 660766,
+     "name": "Juan Yepez",
+     "pos": "1B",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 607680,
+   "name": "Kevin Pillar",
+   "start": "2B",
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "field_out",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Taylor Ward",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "1-3"
+  }
+ ],
+ "pitch": {
+  "type": "Cutter",
+  "code": "FC",
+  "speed": 89.5,
+  "zone": 14,
+  "px": 0.9627101827562079,
+  "pz": 1.937042957201312,
+  "spin": 2150,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "ground_ball",
+  "hardness": "medium",
+  "location": 1,
+  "ev": 67.0,
+  "la": -81.0,
+  "distance": 2.0,
+  "sprayAngle": 22.4,
+  "spray": "opposite"
+ },
+ "winprob": {
+  "homeAfter": 51.300000000000004,
+  "homeBefore": 50.0,
+  "homeAdded": 1.3000000000000043,
+  "li": 2.29
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.189,
+  "deltaHomeWinExp": 0.013,
+  "batWinExpBefore": 0.5,
+  "bbType": "ground_ball",
+  "pitchName": "Cutter",
+  "fielders": {
+   "2": 660688,
+   "3": 660766,
+   "4": 671277,
+   "5": 677588,
+   "6": 683083,
+   "7": 695578,
+   "8": 696285,
+   "9": 669743
+  }
+ },
+ "flags": [
+  "close",
+  "extra_innings",
+  "go_ahead_on",
+  "ground_ball",
+  "ground_ball_infield",
+  "high_leverage",
+  "productive_out",
+  "risp",
+  "tied"
+ ],
+ "curation": {
+  "category": "Situational hitting",
+  "slot": "Moving the runner over with nobody out"
+ },
+ "clips": [
+  {
+   "kind": "filmroom",
+   "slug": "derek-law-in-play-out-s-to-taylor-ward",
+   "title": "Taylor Ward grounds out, pitcher Derek Law to first baseman Juan Yepez.   Kevin Pillar to 3rd.",
+   "duration": "00:00:15",
+   "feed": "HOME",
+   "pageUrl": "https://www.mlb.com/video/derek-law-in-play-out-s-to-taylor-ward",
+   "embedUrl": "https://streamable.com/m/derek-law-in-play-out-s-to-taylor-ward",
+   "angle": {
+    "category": "broadcast",
+    "label": "Home TV broadcast"
+   },
+   "howVerified": "MLB Film Room clip for the playId; Film Room's play info matches game, inning, outs, runners, batter and pitcher",
+   "thumb": "https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/3c31216b-6ab5-4c4d-9ef1-b09d4cb45557_home.jpg",
+   "match": {
+    "filmroom": {
+     "gamePk": true,
+     "inning": true,
+     "outs": true,
+     "runners": true,
+     "batter": true,
+     "pitcher": true
+    },
+    "feeds": [
+     "HOME",
+     "AWAY"
+    ]
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=3c31216b-6ab5-4c4d-9ef1-b09d4cb45557"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 744820",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/744820/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 744820",
+   "url": "https://statsapi.mlb.com/api/v1/game/744820/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=744820"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=3c31216b-6ab5-4c4d-9ef1-b09d4cb45557"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

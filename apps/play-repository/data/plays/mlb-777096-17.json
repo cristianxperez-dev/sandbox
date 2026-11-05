@@ -1,1 +1,276 @@
-{"schema":1,"id":"mlb-777096-17","title":"Vidal Bruján's sacrifice fly","titleSource":"MLB.com clip title","source":{"gamePk":777096,"atBatIndex":17,"eventIndex":0,"playId":"41e2ddca-41d6-33b7-a0b6-023a4da55637","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/777096/feed/live"},"game":{"gamePk":777096,"date":"2025-07-19","season":2025,"gameType":"R","level":"MLB","venue":"Wrigley Field","away":{"id":111,"name":"Boston Red Sox","abbr":"BOS","club":"Red Sox"},"home":{"id":112,"name":"Chicago Cubs","abbr":"CHC","club":"Cubs"},"series":""},"before":{"inning":2,"half":"bottom","outs":1,"bases":"1_3","runners":{"1B":{"id":624512,"name":"Reese McGuire"},"2B":null,"3B":{"id":621020,"name":"Dansby Swanson"}},"score":{"away":0,"home":2},"batting":"home","count":{"balls":0,"strikes":0}},"after":{"outs":2,"bases":"1__","score":{"away":0,"home":3}},"batter":{"id":660644,"name":"Vidal Bruján","side":"L"},"pitcher":{"id":678394,"name":"Brayan Bello","hand":"R"},"event":{"type":"sac_fly","label":"Sac Fly","description":"Vidal Bruján out on a sacrifice fly to left fielder Rob Refsnyder. Dansby Swanson scores.","rbi":1,"runs":1,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":660644,"name":"Vidal Bruján","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"sac_fly","isBatter":true,"credits":[{"id":608701,"name":"Rob Refsnyder","pos":"LF","credit":"f_putout"}]},{"id":621020,"name":"Dansby Swanson","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"sac_fly","isBatter":false,"credits":[]}],"chains":[{"runner":"Vidal Bruján","start":null,"out":true,"outBase":"1B","chain":"7"}],"pitch":{"type":"Sweeper","code":"ST","speed":87.2,"zone":8,"px":0.020327945229894735,"pz":1.9838449001923222,"spin":2471,"call":"E"},"batted":{"trajectory":"fly_ball","hardness":"medium","location":7,"ev":87.8,"la":50.0,"distance":251.0,"sprayAngle":-46.4,"spray":"opposite"},"winprob":{"homeAfter":80.7,"homeBefore":79.4,"homeAdded":1.2999999999999972,"li":1.32},"statcast":{"ifAlignment":"Strategic","ofAlignment":"Standard","deltaRunExp":-0.14,"deltaHomeWinExp":0.013,"batWinExpBefore":0.794,"bbType":"fly_ball","pitchName":"Sweeper","fielders":{"2":657136,"3":647351,"4":663853,"5":608324,"6":596115,"7":608701,"8":678882,"9":701350}},"flags":["close","dp_situation","fly_ball","force_available","leading","outfield_play","productive_out","risp","runner_scored_on_out","sac_fly","shift_alignment","tag_up"],"curation":{"category":"Situational hitting","slot":"Sacrifice fly to left"},"clips":[{"kind":"highlight","slug":"vidal-brujan-s-sacrifice-fly","title":"Vidal Bruján's sacrifice fly","duration":"00:00:24","feed":"CMS","pageUrl":"https://www.mlb.com/video/vidal-brujan-s-sacrifice-fly","embedUrl":"https://streamable.com/m/vidal-brujan-s-sacrifice-fly","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/a2xwefmrkst9zahqw4so.jpg","match":{"guid":"41e2ddca-41d6-33b7-a0b6-023a4da55637"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=41e2ddca-41d6-33b7-a0b6-023a4da55637"},"sources":[{"label":"MLB Stats API — official play-by-play, game 777096","url":"https://statsapi.mlb.com/api/v1.1/game/777096/feed/live"},{"label":"MLB Stats API — win probability, game 777096","url":"https://statsapi.mlb.com/api/v1/game/777096/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=777096"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=41e2ddca-41d6-33b7-a0b6-023a4da55637"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-777096-17",
+ "title": "Vidal Bruján's sacrifice fly",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 777096,
+  "atBatIndex": 17,
+  "eventIndex": 0,
+  "playId": "41e2ddca-41d6-33b7-a0b6-023a4da55637",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/777096/feed/live"
+ },
+ "game": {
+  "gamePk": 777096,
+  "date": "2025-07-19",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Wrigley Field",
+  "away": {
+   "id": 111,
+   "name": "Boston Red Sox",
+   "abbr": "BOS",
+   "club": "Red Sox"
+  },
+  "home": {
+   "id": 112,
+   "name": "Chicago Cubs",
+   "abbr": "CHC",
+   "club": "Cubs"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 2,
+  "half": "bottom",
+  "outs": 1,
+  "bases": "1_3",
+  "runners": {
+   "1B": {
+    "id": 624512,
+    "name": "Reese McGuire"
+   },
+   "2B": null,
+   "3B": {
+    "id": 621020,
+    "name": "Dansby Swanson"
+   }
+  },
+  "score": {
+   "away": 0,
+   "home": 2
+  },
+  "batting": "home",
+  "count": {
+   "balls": 0,
+   "strikes": 0
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "1__",
+  "score": {
+   "away": 0,
+   "home": 3
+  }
+ },
+ "batter": {
+  "id": 660644,
+  "name": "Vidal Bruján",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 678394,
+  "name": "Brayan Bello",
+  "hand": "R"
+ },
+ "event": {
+  "type": "sac_fly",
+  "label": "Sac Fly",
+  "description": "Vidal Bruján out on a sacrifice fly to left fielder Rob Refsnyder. Dansby Swanson scores.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 660644,
+   "name": "Vidal Bruján",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "sac_fly",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 608701,
+     "name": "Rob Refsnyder",
+     "pos": "LF",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 621020,
+   "name": "Dansby Swanson",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "sac_fly",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Vidal Bruján",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "7"
+  }
+ ],
+ "pitch": {
+  "type": "Sweeper",
+  "code": "ST",
+  "speed": 87.2,
+  "zone": 8,
+  "px": 0.020327945229894735,
+  "pz": 1.9838449001923222,
+  "spin": 2471,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "fly_ball",
+  "hardness": "medium",
+  "location": 7,
+  "ev": 87.8,
+  "la": 50.0,
+  "distance": 251.0,
+  "sprayAngle": -46.4,
+  "spray": "opposite"
+ },
+ "winprob": {
+  "homeAfter": 80.7,
+  "homeBefore": 79.4,
+  "homeAdded": 1.2999999999999972,
+  "li": 1.32
+ },
+ "statcast": {
+  "ifAlignment": "Strategic",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.14,
+  "deltaHomeWinExp": 0.013,
+  "batWinExpBefore": 0.794,
+  "bbType": "fly_ball",
+  "pitchName": "Sweeper",
+  "fielders": {
+   "2": 657136,
+   "3": 647351,
+   "4": 663853,
+   "5": 608324,
+   "6": 596115,
+   "7": 608701,
+   "8": 678882,
+   "9": 701350
+  }
+ },
+ "flags": [
+  "close",
+  "dp_situation",
+  "fly_ball",
+  "force_available",
+  "leading",
+  "outfield_play",
+  "productive_out",
+  "risp",
+  "runner_scored_on_out",
+  "sac_fly",
+  "shift_alignment",
+  "tag_up"
+ ],
+ "curation": {
+  "category": "Situational hitting",
+  "slot": "Sacrifice fly to left"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "vidal-brujan-s-sacrifice-fly",
+   "title": "Vidal Bruján's sacrifice fly",
+   "duration": "00:00:24",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/vidal-brujan-s-sacrifice-fly",
+   "embedUrl": "https://streamable.com/m/vidal-brujan-s-sacrifice-fly",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/a2xwefmrkst9zahqw4so.jpg",
+   "match": {
+    "guid": "41e2ddca-41d6-33b7-a0b6-023a4da55637"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=41e2ddca-41d6-33b7-a0b6-023a4da55637"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 777096",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/777096/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 777096",
+   "url": "https://statsapi.mlb.com/api/v1/game/777096/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=777096"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=41e2ddca-41d6-33b7-a0b6-023a4da55637"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

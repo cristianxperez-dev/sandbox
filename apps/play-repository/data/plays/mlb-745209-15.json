@@ -1,1 +1,294 @@
-{"schema":1,"id":"mlb-745209-15","title":"Josh Rojas opens scoring with a sacrifice fly","titleSource":"MLB.com clip title","source":{"gamePk":745209,"atBatIndex":15,"eventIndex":4,"playId":"ec707f41-a1c5-49a9-96a7-47241aa2199c","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/745209/feed/live"},"game":{"gamePk":745209,"date":"2024-09-14","season":2024,"gameType":"R","level":"MLB","venue":"T-Mobile Park","away":{"id":140,"name":"Texas Rangers","abbr":"TEX","club":"Rangers"},"home":{"id":136,"name":"Seattle Mariners","abbr":"SEA","club":"Mariners"},"series":""},"before":{"inning":2,"half":"bottom","outs":1,"bases":"123","runners":{"1B":{"id":641487,"name":"J.P. Crawford"},"2B":{"id":593871,"name":"Jorge Polanco"},"3B":{"id":457759,"name":"Justin Turner"}},"score":{"away":0,"home":0},"batting":"home","count":{"balls":1,"strikes":2}},"after":{"outs":2,"bases":"1_3","score":{"away":0,"home":1}},"batter":{"id":668942,"name":"Josh Rojas","side":"L"},"pitcher":{"id":453286,"name":"Max Scherzer","hand":"R"},"event":{"type":"sac_fly","label":"Sac Fly","description":"Josh Rojas out on a sacrifice fly to left fielder Wyatt Langford. Justin Turner scores. Jorge Polanco to 3rd.","rbi":1,"runs":1,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":668942,"name":"Josh Rojas","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"sac_fly","isBatter":true,"credits":[{"id":694671,"name":"Wyatt Langford","pos":"LF","credit":"f_putout"}]},{"id":593871,"name":"Jorge Polanco","start":"2B","end":"3B","out":false,"outBase":null,"reason":"r_adv_play","event":"sac_fly","isBatter":false,"credits":[]},{"id":457759,"name":"Justin Turner","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"sac_fly","isBatter":false,"credits":[]}],"chains":[{"runner":"Josh Rojas","start":null,"out":true,"outBase":"1B","chain":"7"}],"pitch":{"type":"Slider","code":"SL","speed":85.5,"zone":5,"px":-0.22083441050596864,"pz":2.289116291671223,"spin":2388,"call":"E"},"batted":{"trajectory":"fly_ball","hardness":"medium","location":7,"ev":98.5,"la":31.0,"distance":371.0,"sprayAngle":-18.2,"spray":"opposite"},"winprob":{"homeAfter":65.60000000000001,"homeBefore":65.4,"homeAdded":0.20000000000000284,"li":2.45},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":-0.035,"deltaHomeWinExp":0.025,"batWinExpBefore":0.631,"bbType":"fly_ball","pitchName":"Slider","fielders":{"2":608348,"3":663993,"4":543760,"5":673962,"6":669701,"7":694671,"8":665750,"9":666969}},"flags":["close","dp_situation","fly_ball","force_available","go_ahead_on","go_ahead_play","high_leverage","outfield_play","productive_out","risp","runner_scored_on_out","sac_fly","tag_up","tied"],"curation":{"category":"Outfield defense, cutoffs & relays","slot":"Runner tags from second to third on a fly"},"clips":[{"kind":"highlight","slug":"max-scherzer-in-play-run-s-to-josh-rojas","title":"Josh Rojas opens scoring with a sacrifice fly","duration":"00:00:21","feed":"CMS","pageUrl":"https://www.mlb.com/video/max-scherzer-in-play-run-s-to-josh-rojas","embedUrl":"https://streamable.com/m/max-scherzer-in-play-run-s-to-josh-rojas","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/i0dnfxzc5i8mqkxwpvsg.jpg","match":{"guid":"ec707f41-a1c5-49a9-96a7-47241aa2199c"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=ec707f41-a1c5-49a9-96a7-47241aa2199c"},"sources":[{"label":"MLB Stats API — official play-by-play, game 745209","url":"https://statsapi.mlb.com/api/v1.1/game/745209/feed/live"},{"label":"MLB Stats API — win probability, game 745209","url":"https://statsapi.mlb.com/api/v1/game/745209/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=745209"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=ec707f41-a1c5-49a9-96a7-47241aa2199c"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-745209-15",
+ "title": "Josh Rojas opens scoring with a sacrifice fly",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 745209,
+  "atBatIndex": 15,
+  "eventIndex": 4,
+  "playId": "ec707f41-a1c5-49a9-96a7-47241aa2199c",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/745209/feed/live"
+ },
+ "game": {
+  "gamePk": 745209,
+  "date": "2024-09-14",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "T-Mobile Park",
+  "away": {
+   "id": 140,
+   "name": "Texas Rangers",
+   "abbr": "TEX",
+   "club": "Rangers"
+  },
+  "home": {
+   "id": 136,
+   "name": "Seattle Mariners",
+   "abbr": "SEA",
+   "club": "Mariners"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 2,
+  "half": "bottom",
+  "outs": 1,
+  "bases": "123",
+  "runners": {
+   "1B": {
+    "id": 641487,
+    "name": "J.P. Crawford"
+   },
+   "2B": {
+    "id": 593871,
+    "name": "Jorge Polanco"
+   },
+   "3B": {
+    "id": 457759,
+    "name": "Justin Turner"
+   }
+  },
+  "score": {
+   "away": 0,
+   "home": 0
+  },
+  "batting": "home",
+  "count": {
+   "balls": 1,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "1_3",
+  "score": {
+   "away": 0,
+   "home": 1
+  }
+ },
+ "batter": {
+  "id": 668942,
+  "name": "Josh Rojas",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 453286,
+  "name": "Max Scherzer",
+  "hand": "R"
+ },
+ "event": {
+  "type": "sac_fly",
+  "label": "Sac Fly",
+  "description": "Josh Rojas out on a sacrifice fly to left fielder Wyatt Langford. Justin Turner scores. Jorge Polanco to 3rd.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 668942,
+   "name": "Josh Rojas",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "sac_fly",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 694671,
+     "name": "Wyatt Langford",
+     "pos": "LF",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 593871,
+   "name": "Jorge Polanco",
+   "start": "2B",
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "sac_fly",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 457759,
+   "name": "Justin Turner",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "sac_fly",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Josh Rojas",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "7"
+  }
+ ],
+ "pitch": {
+  "type": "Slider",
+  "code": "SL",
+  "speed": 85.5,
+  "zone": 5,
+  "px": -0.22083441050596864,
+  "pz": 2.289116291671223,
+  "spin": 2388,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "fly_ball",
+  "hardness": "medium",
+  "location": 7,
+  "ev": 98.5,
+  "la": 31.0,
+  "distance": 371.0,
+  "sprayAngle": -18.2,
+  "spray": "opposite"
+ },
+ "winprob": {
+  "homeAfter": 65.60000000000001,
+  "homeBefore": 65.4,
+  "homeAdded": 0.20000000000000284,
+  "li": 2.45
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.035,
+  "deltaHomeWinExp": 0.025,
+  "batWinExpBefore": 0.631,
+  "bbType": "fly_ball",
+  "pitchName": "Slider",
+  "fielders": {
+   "2": 608348,
+   "3": 663993,
+   "4": 543760,
+   "5": 673962,
+   "6": 669701,
+   "7": 694671,
+   "8": 665750,
+   "9": 666969
+  }
+ },
+ "flags": [
+  "close",
+  "dp_situation",
+  "fly_ball",
+  "force_available",
+  "go_ahead_on",
+  "go_ahead_play",
+  "high_leverage",
+  "outfield_play",
+  "productive_out",
+  "risp",
+  "runner_scored_on_out",
+  "sac_fly",
+  "tag_up",
+  "tied"
+ ],
+ "curation": {
+  "category": "Outfield defense, cutoffs & relays",
+  "slot": "Runner tags from second to third on a fly"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "max-scherzer-in-play-run-s-to-josh-rojas",
+   "title": "Josh Rojas opens scoring with a sacrifice fly",
+   "duration": "00:00:21",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/max-scherzer-in-play-run-s-to-josh-rojas",
+   "embedUrl": "https://streamable.com/m/max-scherzer-in-play-run-s-to-josh-rojas",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/i0dnfxzc5i8mqkxwpvsg.jpg",
+   "match": {
+    "guid": "ec707f41-a1c5-49a9-96a7-47241aa2199c"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=ec707f41-a1c5-49a9-96a7-47241aa2199c"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 745209",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/745209/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 745209",
+   "url": "https://statsapi.mlb.com/api/v1/game/745209/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=745209"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=ec707f41-a1c5-49a9-96a7-47241aa2199c"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

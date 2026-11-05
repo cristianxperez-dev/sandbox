@@ -1,1 +1,272 @@
-{"schema":1,"id":"mlb-775329-39","title":"Michael Massey's RBI triple","titleSource":"MLB.com clip title","source":{"gamePk":775329,"atBatIndex":39,"eventIndex":4,"playId":"2120987f-0fed-4ed4-9599-70cc9030f548","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/775329/feed/live"},"game":{"gamePk":775329,"date":"2024-10-09","season":2024,"gameType":"D","level":"MLB","venue":"Kauffman Stadium","away":{"id":147,"name":"New York Yankees","abbr":"NYY","club":"Yankees"},"home":{"id":118,"name":"Kansas City Royals","abbr":"KC","club":"Royals"},"series":""},"before":{"inning":5,"half":"bottom","outs":2,"bases":"_2_","runners":{"1B":null,"2B":{"id":664728,"name":"Kyle Isbel"},"3B":null},"score":{"away":2,"home":1},"batting":"home","count":{"balls":2,"strikes":2}},"after":{"outs":2,"bases":"__3","score":{"away":2,"home":2}},"batter":{"id":686681,"name":"Michael Massey","side":"L"},"pitcher":{"id":657376,"name":"Clarke Schmidt","hand":"R"},"event":{"type":"triple","label":"Triple","description":"Michael Massey triples (1) on a sharp line drive to center fielder Aaron Judge. Kyle Isbel scores.","rbi":1,"runs":1,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":686681,"name":"Michael Massey","start":null,"end":"3B","out":false,"outBase":null,"reason":null,"event":"triple","isBatter":true,"credits":[{"id":592450,"name":"Aaron Judge","pos":"CF","credit":"f_fielded_ball"}]},{"id":664728,"name":"Kyle Isbel","start":"2B","end":"score","out":false,"outBase":null,"reason":"r_adv_force","event":"triple","isBatter":false,"credits":[]}],"chains":[{"runner":"Michael Massey","start":null,"out":false,"outBase":null,"chain":"8"}],"pitch":{"type":"Cutter","code":"FC","speed":92.5,"zone":4,"px":-0.5932524461795707,"pz":2.644971854339214,"spin":2721,"call":"E"},"batted":{"trajectory":"line_drive","hardness":"hard","location":8,"ev":103.0,"la":17.0,"distance":306.0,"sprayAngle":20.9,"spray":"pull"},"winprob":{"homeAfter":55.400000000000006,"homeBefore":39.1,"homeAdded":16.300000000000004,"li":1.92},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":0.989,"deltaHomeWinExp":0.171,"batWinExpBefore":0.383,"bbType":"line_drive","pitchName":"Cutter","fielders":{"2":669224,"3":665828,"4":650402,"5":665862,"6":683011,"7":657077,"8":592450,"9":665742}},"flags":["close","line_drive","one_run","outfield_play","postseason","risp","trailing","triple","two_out_rbi","two_outs","tying_run_on"],"curation":{"category":"Outfield defense, cutoffs & relays","slot":"Extra-base hit down the line: cutoff and relay"},"clips":[{"kind":"highlight","slug":"michael-massey-triples-1-on-a-sharp-line-drive-to-center-fielder-aaron-ju","title":"Michael Massey's RBI triple","duration":"00:00:24","feed":"CMS","pageUrl":"https://www.mlb.com/video/michael-massey-triples-1-on-a-sharp-line-drive-to-center-fielder-aaron-ju","embedUrl":"https://streamable.com/m/michael-massey-triples-1-on-a-sharp-line-drive-to-center-fielder-aaron-ju","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/jwlen2mofnfvfbx2a8bh.jpg","match":{"guid":"2120987f-0fed-4ed4-9599-70cc9030f548"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=2120987f-0fed-4ed4-9599-70cc9030f548"},"sources":[{"label":"MLB Stats API — official play-by-play, game 775329","url":"https://statsapi.mlb.com/api/v1.1/game/775329/feed/live"},{"label":"MLB Stats API — win probability, game 775329","url":"https://statsapi.mlb.com/api/v1/game/775329/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=775329"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=2120987f-0fed-4ed4-9599-70cc9030f548"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-775329-39",
+ "title": "Michael Massey's RBI triple",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 775329,
+  "atBatIndex": 39,
+  "eventIndex": 4,
+  "playId": "2120987f-0fed-4ed4-9599-70cc9030f548",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/775329/feed/live"
+ },
+ "game": {
+  "gamePk": 775329,
+  "date": "2024-10-09",
+  "season": 2024,
+  "gameType": "D",
+  "level": "MLB",
+  "venue": "Kauffman Stadium",
+  "away": {
+   "id": 147,
+   "name": "New York Yankees",
+   "abbr": "NYY",
+   "club": "Yankees"
+  },
+  "home": {
+   "id": 118,
+   "name": "Kansas City Royals",
+   "abbr": "KC",
+   "club": "Royals"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 5,
+  "half": "bottom",
+  "outs": 2,
+  "bases": "_2_",
+  "runners": {
+   "1B": null,
+   "2B": {
+    "id": 664728,
+    "name": "Kyle Isbel"
+   },
+   "3B": null
+  },
+  "score": {
+   "away": 2,
+   "home": 1
+  },
+  "batting": "home",
+  "count": {
+   "balls": 2,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "__3",
+  "score": {
+   "away": 2,
+   "home": 2
+  }
+ },
+ "batter": {
+  "id": 686681,
+  "name": "Michael Massey",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 657376,
+  "name": "Clarke Schmidt",
+  "hand": "R"
+ },
+ "event": {
+  "type": "triple",
+  "label": "Triple",
+  "description": "Michael Massey triples (1) on a sharp line drive to center fielder Aaron Judge. Kyle Isbel scores.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 686681,
+   "name": "Michael Massey",
+   "start": null,
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "triple",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 592450,
+     "name": "Aaron Judge",
+     "pos": "CF",
+     "credit": "f_fielded_ball"
+    }
+   ]
+  },
+  {
+   "id": 664728,
+   "name": "Kyle Isbel",
+   "start": "2B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_force",
+   "event": "triple",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Michael Massey",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": "8"
+  }
+ ],
+ "pitch": {
+  "type": "Cutter",
+  "code": "FC",
+  "speed": 92.5,
+  "zone": 4,
+  "px": -0.5932524461795707,
+  "pz": 2.644971854339214,
+  "spin": 2721,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "line_drive",
+  "hardness": "hard",
+  "location": 8,
+  "ev": 103.0,
+  "la": 17.0,
+  "distance": 306.0,
+  "sprayAngle": 20.9,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 55.400000000000006,
+  "homeBefore": 39.1,
+  "homeAdded": 16.300000000000004,
+  "li": 1.92
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.989,
+  "deltaHomeWinExp": 0.171,
+  "batWinExpBefore": 0.383,
+  "bbType": "line_drive",
+  "pitchName": "Cutter",
+  "fielders": {
+   "2": 669224,
+   "3": 665828,
+   "4": 650402,
+   "5": 665862,
+   "6": 683011,
+   "7": 657077,
+   "8": 592450,
+   "9": 665742
+  }
+ },
+ "flags": [
+  "close",
+  "line_drive",
+  "one_run",
+  "outfield_play",
+  "postseason",
+  "risp",
+  "trailing",
+  "triple",
+  "two_out_rbi",
+  "two_outs",
+  "tying_run_on"
+ ],
+ "curation": {
+  "category": "Outfield defense, cutoffs & relays",
+  "slot": "Extra-base hit down the line: cutoff and relay"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "michael-massey-triples-1-on-a-sharp-line-drive-to-center-fielder-aaron-ju",
+   "title": "Michael Massey's RBI triple",
+   "duration": "00:00:24",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/michael-massey-triples-1-on-a-sharp-line-drive-to-center-fielder-aaron-ju",
+   "embedUrl": "https://streamable.com/m/michael-massey-triples-1-on-a-sharp-line-drive-to-center-fielder-aaron-ju",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/jwlen2mofnfvfbx2a8bh.jpg",
+   "match": {
+    "guid": "2120987f-0fed-4ed4-9599-70cc9030f548"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=2120987f-0fed-4ed4-9599-70cc9030f548"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 775329",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/775329/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 775329",
+   "url": "https://statsapi.mlb.com/api/v1/game/775329/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=775329"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=2120987f-0fed-4ed4-9599-70cc9030f548"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

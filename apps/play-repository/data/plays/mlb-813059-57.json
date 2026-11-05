@@ -1,1 +1,280 @@
-{"schema":1,"id":"mlb-813059-57","title":"Nico Hoerner is thrown out at home after review","titleSource":"MLB.com clip title","source":{"gamePk":813059,"atBatIndex":57,"eventIndex":4,"playId":"9cb006b3-2e83-30f8-8d40-2ac0546df9e2","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/813059/feed/live"},"game":{"gamePk":813059,"date":"2025-10-02","season":2025,"gameType":"F","level":"MLB","venue":"Wrigley Field","away":{"id":135,"name":"San Diego Padres","abbr":"SD","club":"Padres"},"home":{"id":112,"name":"Chicago Cubs","abbr":"CHC","club":"Cubs"},"series":""},"before":{"inning":7,"half":"bottom","outs":1,"bases":"__3","runners":{"1B":null,"2B":null,"3B":{"id":663538,"name":"Nico Hoerner"}},"score":{"away":0,"home":3},"batting":"home","count":{"balls":2,"strikes":1}},"after":{"outs":2,"bases":"1__","score":{"away":0,"home":3}},"batter":{"id":663656,"name":"Kyle Tucker","side":"L"},"pitcher":{"id":670970,"name":"Adrian Morejon","hand":"L"},"event":{"type":"fielders_choice_out","label":"Fielders Choice Out","description":"Cubs challenged (tag play), call on the field was upheld: Kyle Tucker reaches on a fielder's choice out, first baseman Luis Arraez to catcher Freddy Fermin. Nico Hoerner out at home.","rbi":0,"runs":0,"outs":1,"isReview":true,"walkoff":false},"runners":[{"id":663538,"name":"Nico Hoerner","start":"3B","end":null,"out":true,"outBase":"4B","reason":"r_runner_out","event":"fielders_choice_out","isBatter":false,"credits":[{"id":650333,"name":"Luis Arraez","pos":"1B","credit":"f_assist"},{"id":666023,"name":"Freddy Fermin","pos":"C","credit":"f_putout"}]},{"id":663656,"name":"Kyle Tucker","start":null,"end":"1B","out":false,"outBase":null,"reason":null,"event":"fielders_choice_out","isBatter":true,"credits":[]}],"chains":[{"runner":"Nico Hoerner","start":"3B","out":true,"outBase":"4B","chain":"3-2"}],"pitch":{"type":"Sinker","code":"SI","speed":98.7,"zone":3,"px":0.7919823517893112,"pz":3.035272598006003,"spin":2559,"call":"X"},"batted":{"trajectory":"ground_ball","hardness":"medium","location":3,"ev":60.7,"la":-16.0,"distance":11.0,"sprayAngle":37.6,"spray":"pull"},"winprob":{"homeAfter":93.4,"homeBefore":95.6,"homeAdded":-2.1999999999999886,"li":0.4},"statcast":{"ifAlignment":"Strategic","ofAlignment":"Standard","deltaRunExp":-0.282,"deltaHomeWinExp":-0.022,"batWinExpBefore":0.956,"bbType":"ground_ball","pitchName":"Sinker","fielders":{"2":666023,"3":650333,"4":630105,"5":592518,"6":593428,"7":669369,"8":701538,"9":665487}},"flags":["catcher_play","challenge","ground_ball","ground_ball_infield","leading","low_leverage","out_at_plate","play_at_plate","postseason","risp","runner_out_on_bases","shift_alignment","tag_play"],"curation":{"category":"Infield defense & decisions","slot":"Runner on third, infield ground ball, play at home"},"clips":[{"kind":"highlight","slug":"adrian-morejon-in-play-out-s-to-kyle-tucker","title":"Nico Hoerner is thrown out at home after review","duration":"00:00:20","feed":"CMS","pageUrl":"https://www.mlb.com/video/adrian-morejon-in-play-out-s-to-kyle-tucker","embedUrl":"https://streamable.com/m/adrian-morejon-in-play-out-s-to-kyle-tucker","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/gjqflr6xeqiisjxaodsw.jpg","match":{"guid":"9cb006b3-2e83-30f8-8d40-2ac0546df9e2"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=9cb006b3-2e83-30f8-8d40-2ac0546df9e2"},"sources":[{"label":"MLB Stats API — official play-by-play, game 813059","url":"https://statsapi.mlb.com/api/v1.1/game/813059/feed/live"},{"label":"MLB Stats API — win probability, game 813059","url":"https://statsapi.mlb.com/api/v1/game/813059/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=813059"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=9cb006b3-2e83-30f8-8d40-2ac0546df9e2"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-813059-57",
+ "title": "Nico Hoerner is thrown out at home after review",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 813059,
+  "atBatIndex": 57,
+  "eventIndex": 4,
+  "playId": "9cb006b3-2e83-30f8-8d40-2ac0546df9e2",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/813059/feed/live"
+ },
+ "game": {
+  "gamePk": 813059,
+  "date": "2025-10-02",
+  "season": 2025,
+  "gameType": "F",
+  "level": "MLB",
+  "venue": "Wrigley Field",
+  "away": {
+   "id": 135,
+   "name": "San Diego Padres",
+   "abbr": "SD",
+   "club": "Padres"
+  },
+  "home": {
+   "id": 112,
+   "name": "Chicago Cubs",
+   "abbr": "CHC",
+   "club": "Cubs"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 7,
+  "half": "bottom",
+  "outs": 1,
+  "bases": "__3",
+  "runners": {
+   "1B": null,
+   "2B": null,
+   "3B": {
+    "id": 663538,
+    "name": "Nico Hoerner"
+   }
+  },
+  "score": {
+   "away": 0,
+   "home": 3
+  },
+  "batting": "home",
+  "count": {
+   "balls": 2,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "1__",
+  "score": {
+   "away": 0,
+   "home": 3
+  }
+ },
+ "batter": {
+  "id": 663656,
+  "name": "Kyle Tucker",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 670970,
+  "name": "Adrian Morejon",
+  "hand": "L"
+ },
+ "event": {
+  "type": "fielders_choice_out",
+  "label": "Fielders Choice Out",
+  "description": "Cubs challenged (tag play), call on the field was upheld: Kyle Tucker reaches on a fielder's choice out, first baseman Luis Arraez to catcher Freddy Fermin. Nico Hoerner out at home.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": true,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 663538,
+   "name": "Nico Hoerner",
+   "start": "3B",
+   "end": null,
+   "out": true,
+   "outBase": "4B",
+   "reason": "r_runner_out",
+   "event": "fielders_choice_out",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 650333,
+     "name": "Luis Arraez",
+     "pos": "1B",
+     "credit": "f_assist"
+    },
+    {
+     "id": 666023,
+     "name": "Freddy Fermin",
+     "pos": "C",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 663656,
+   "name": "Kyle Tucker",
+   "start": null,
+   "end": "1B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "fielders_choice_out",
+   "isBatter": true,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Nico Hoerner",
+   "start": "3B",
+   "out": true,
+   "outBase": "4B",
+   "chain": "3-2"
+  }
+ ],
+ "pitch": {
+  "type": "Sinker",
+  "code": "SI",
+  "speed": 98.7,
+  "zone": 3,
+  "px": 0.7919823517893112,
+  "pz": 3.035272598006003,
+  "spin": 2559,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "ground_ball",
+  "hardness": "medium",
+  "location": 3,
+  "ev": 60.7,
+  "la": -16.0,
+  "distance": 11.0,
+  "sprayAngle": 37.6,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 93.4,
+  "homeBefore": 95.6,
+  "homeAdded": -2.1999999999999886,
+  "li": 0.4
+ },
+ "statcast": {
+  "ifAlignment": "Strategic",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.282,
+  "deltaHomeWinExp": -0.022,
+  "batWinExpBefore": 0.956,
+  "bbType": "ground_ball",
+  "pitchName": "Sinker",
+  "fielders": {
+   "2": 666023,
+   "3": 650333,
+   "4": 630105,
+   "5": 592518,
+   "6": 593428,
+   "7": 669369,
+   "8": 701538,
+   "9": 665487
+  }
+ },
+ "flags": [
+  "catcher_play",
+  "challenge",
+  "ground_ball",
+  "ground_ball_infield",
+  "leading",
+  "low_leverage",
+  "out_at_plate",
+  "play_at_plate",
+  "postseason",
+  "risp",
+  "runner_out_on_bases",
+  "shift_alignment",
+  "tag_play"
+ ],
+ "curation": {
+  "category": "Infield defense & decisions",
+  "slot": "Runner on third, infield ground ball, play at home"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "adrian-morejon-in-play-out-s-to-kyle-tucker",
+   "title": "Nico Hoerner is thrown out at home after review",
+   "duration": "00:00:20",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/adrian-morejon-in-play-out-s-to-kyle-tucker",
+   "embedUrl": "https://streamable.com/m/adrian-morejon-in-play-out-s-to-kyle-tucker",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/gjqflr6xeqiisjxaodsw.jpg",
+   "match": {
+    "guid": "9cb006b3-2e83-30f8-8d40-2ac0546df9e2"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=9cb006b3-2e83-30f8-8d40-2ac0546df9e2"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 813059",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/813059/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 813059",
+   "url": "https://statsapi.mlb.com/api/v1/game/813059/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=813059"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=9cb006b3-2e83-30f8-8d40-2ac0546df9e2"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

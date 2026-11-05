@@ -1,1 +1,328 @@
-{"schema":1,"id":"mlb-777089-6","title":"Angels catch Turner, Schwarber in a rundown","titleSource":"MLB.com clip title","source":{"gamePk":777089,"atBatIndex":6,"eventIndex":6,"playId":"6e5052a2-2a6c-395a-96c3-6b77c718f247","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/777089/feed/live"},"game":{"gamePk":777089,"date":"2025-07-19","season":2025,"gameType":"R","level":"MLB","venue":"Citizens Bank Park","away":{"id":108,"name":"Los Angeles Angels","abbr":"LAA","club":"Angels"},"home":{"id":143,"name":"Philadelphia Phillies","abbr":"PHI","club":"Phillies"},"series":""},"before":{"inning":1,"half":"bottom","outs":0,"bases":"_23","runners":{"1B":null,"2B":{"id":656941,"name":"Kyle Schwarber"},"3B":{"id":607208,"name":"Trea Turner"}},"score":{"away":0,"home":0},"batting":"home","count":{"balls":3,"strikes":2}},"after":{"outs":2,"bases":"_2_","score":{"away":0,"home":0}},"batter":{"id":547180,"name":"Bryce Harper","side":"L"},"pitcher":{"id":579328,"name":"Yusei Kikuchi","hand":"L"},"event":{"type":"double_play","label":"Double Play","description":"Bryce Harper hit into a fielder's choice double play, second baseman Luis Rengifo to catcher Travis d'Arnaud to shortstop Zach Neto to catcher Travis d'Arnaud to third baseman Yoán Moncada. Trea Turner out at home. Kyle Schwarber out at 3rd. Bryce Harper to 2nd.","rbi":0,"runs":0,"outs":2,"isReview":false,"walkoff":false},"runners":[{"id":656941,"name":"Kyle Schwarber","start":"2B","end":null,"out":true,"outBase":"3B","reason":"r_rundown","event":"double_play","isBatter":false,"credits":[{"id":650859,"name":"Luis Rengifo","pos":"2B","credit":"f_assist"},{"id":518595,"name":"Travis d'Arnaud","pos":"C","credit":"f_assist"},{"id":687263,"name":"Zach Neto","pos":"SS","credit":"f_putout"}]},{"id":607208,"name":"Trea Turner","start":"3B","end":null,"out":true,"outBase":"4B","reason":"r_rundown","event":"double_play","isBatter":false,"credits":[{"id":687263,"name":"Zach Neto","pos":"SS","credit":"f_assist"},{"id":518595,"name":"Travis d'Arnaud","pos":"C","credit":"f_assist"},{"id":660162,"name":"Yoán Moncada","pos":"3B","credit":"f_putout"}]},{"id":547180,"name":"Bryce Harper","start":null,"end":"2B","out":false,"outBase":null,"reason":"r_adv_play","event":"double_play","isBatter":true,"credits":[]}],"chains":[{"runner":"Kyle Schwarber","start":"2B","out":true,"outBase":"3B","chain":"4-2-6"},{"runner":"Trea Turner","start":"3B","out":true,"outBase":"4B","chain":"6-2-5"}],"pitch":{"type":"Slider","code":"SL","speed":87.8,"zone":13,"px":-1.2349627163462353,"pz":1.0728367362211733,"spin":2445,"call":"X"},"batted":{"trajectory":"ground_ball","hardness":"medium","location":4,"ev":63.5,"la":-13.0,"distance":8.0,"sprayAngle":26.1,"spray":"pull"},"winprob":{"homeAfter":53.300000000000004,"homeBefore":68.1,"homeAdded":-14.800000000000004,"li":1.33},"statcast":{"ifAlignment":"Strategic","ofAlignment":"Standard","deltaRunExp":-0.267,"deltaHomeWinExp":-0.151,"batWinExpBefore":0.684,"bbType":"ground_ball","pitchName":"Slider","fielders":{"2":518595,"3":694384,"4":650859,"5":660162,"6":687263,"7":621493,"8":666176,"9":664774}},"flags":["catcher_play","close","double_play","go_ahead_on","ground_ball","ground_ball_infield","middle_infield","out_at_plate","play_at_plate","risp","shift_alignment","tag_play","tied"],"curation":{"category":"Infield defense & decisions","slot":"Tag play on a runner at third"},"clips":[{"kind":"highlight","slug":"yusei-kikuchi-in-play-out-s-to-bryce-harper","title":"Angels catch Turner, Schwarber in a rundown","duration":"00:00:26","feed":"CMS","pageUrl":"https://www.mlb.com/video/yusei-kikuchi-in-play-out-s-to-bryce-harper","embedUrl":"https://streamable.com/m/yusei-kikuchi-in-play-out-s-to-bryce-harper","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/ai2m5ajuezwesydjs7gv.jpg","match":{"guid":"6e5052a2-2a6c-395a-96c3-6b77c718f247"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=6e5052a2-2a6c-395a-96c3-6b77c718f247"},"sources":[{"label":"MLB Stats API — official play-by-play, game 777089","url":"https://statsapi.mlb.com/api/v1.1/game/777089/feed/live"},{"label":"MLB Stats API — win probability, game 777089","url":"https://statsapi.mlb.com/api/v1/game/777089/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=777089"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=6e5052a2-2a6c-395a-96c3-6b77c718f247"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-777089-6",
+ "title": "Angels catch Turner, Schwarber in a rundown",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 777089,
+  "atBatIndex": 6,
+  "eventIndex": 6,
+  "playId": "6e5052a2-2a6c-395a-96c3-6b77c718f247",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/777089/feed/live"
+ },
+ "game": {
+  "gamePk": 777089,
+  "date": "2025-07-19",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Citizens Bank Park",
+  "away": {
+   "id": 108,
+   "name": "Los Angeles Angels",
+   "abbr": "LAA",
+   "club": "Angels"
+  },
+  "home": {
+   "id": 143,
+   "name": "Philadelphia Phillies",
+   "abbr": "PHI",
+   "club": "Phillies"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 1,
+  "half": "bottom",
+  "outs": 0,
+  "bases": "_23",
+  "runners": {
+   "1B": null,
+   "2B": {
+    "id": 656941,
+    "name": "Kyle Schwarber"
+   },
+   "3B": {
+    "id": 607208,
+    "name": "Trea Turner"
+   }
+  },
+  "score": {
+   "away": 0,
+   "home": 0
+  },
+  "batting": "home",
+  "count": {
+   "balls": 3,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "_2_",
+  "score": {
+   "away": 0,
+   "home": 0
+  }
+ },
+ "batter": {
+  "id": 547180,
+  "name": "Bryce Harper",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 579328,
+  "name": "Yusei Kikuchi",
+  "hand": "L"
+ },
+ "event": {
+  "type": "double_play",
+  "label": "Double Play",
+  "description": "Bryce Harper hit into a fielder's choice double play, second baseman Luis Rengifo to catcher Travis d'Arnaud to shortstop Zach Neto to catcher Travis d'Arnaud to third baseman Yoán Moncada. Trea Turner out at home. Kyle Schwarber out at 3rd. Bryce Harper to 2nd.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 2,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 656941,
+   "name": "Kyle Schwarber",
+   "start": "2B",
+   "end": null,
+   "out": true,
+   "outBase": "3B",
+   "reason": "r_rundown",
+   "event": "double_play",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 650859,
+     "name": "Luis Rengifo",
+     "pos": "2B",
+     "credit": "f_assist"
+    },
+    {
+     "id": 518595,
+     "name": "Travis d'Arnaud",
+     "pos": "C",
+     "credit": "f_assist"
+    },
+    {
+     "id": 687263,
+     "name": "Zach Neto",
+     "pos": "SS",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 607208,
+   "name": "Trea Turner",
+   "start": "3B",
+   "end": null,
+   "out": true,
+   "outBase": "4B",
+   "reason": "r_rundown",
+   "event": "double_play",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 687263,
+     "name": "Zach Neto",
+     "pos": "SS",
+     "credit": "f_assist"
+    },
+    {
+     "id": 518595,
+     "name": "Travis d'Arnaud",
+     "pos": "C",
+     "credit": "f_assist"
+    },
+    {
+     "id": 660162,
+     "name": "Yoán Moncada",
+     "pos": "3B",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 547180,
+   "name": "Bryce Harper",
+   "start": null,
+   "end": "2B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "double_play",
+   "isBatter": true,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Kyle Schwarber",
+   "start": "2B",
+   "out": true,
+   "outBase": "3B",
+   "chain": "4-2-6"
+  },
+  {
+   "runner": "Trea Turner",
+   "start": "3B",
+   "out": true,
+   "outBase": "4B",
+   "chain": "6-2-5"
+  }
+ ],
+ "pitch": {
+  "type": "Slider",
+  "code": "SL",
+  "speed": 87.8,
+  "zone": 13,
+  "px": -1.2349627163462353,
+  "pz": 1.0728367362211733,
+  "spin": 2445,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "ground_ball",
+  "hardness": "medium",
+  "location": 4,
+  "ev": 63.5,
+  "la": -13.0,
+  "distance": 8.0,
+  "sprayAngle": 26.1,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 53.300000000000004,
+  "homeBefore": 68.1,
+  "homeAdded": -14.800000000000004,
+  "li": 1.33
+ },
+ "statcast": {
+  "ifAlignment": "Strategic",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.267,
+  "deltaHomeWinExp": -0.151,
+  "batWinExpBefore": 0.684,
+  "bbType": "ground_ball",
+  "pitchName": "Slider",
+  "fielders": {
+   "2": 518595,
+   "3": 694384,
+   "4": 650859,
+   "5": 660162,
+   "6": 687263,
+   "7": 621493,
+   "8": 666176,
+   "9": 664774
+  }
+ },
+ "flags": [
+  "catcher_play",
+  "close",
+  "double_play",
+  "go_ahead_on",
+  "ground_ball",
+  "ground_ball_infield",
+  "middle_infield",
+  "out_at_plate",
+  "play_at_plate",
+  "risp",
+  "shift_alignment",
+  "tag_play",
+  "tied"
+ ],
+ "curation": {
+  "category": "Infield defense & decisions",
+  "slot": "Tag play on a runner at third"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "yusei-kikuchi-in-play-out-s-to-bryce-harper",
+   "title": "Angels catch Turner, Schwarber in a rundown",
+   "duration": "00:00:26",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/yusei-kikuchi-in-play-out-s-to-bryce-harper",
+   "embedUrl": "https://streamable.com/m/yusei-kikuchi-in-play-out-s-to-bryce-harper",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/ai2m5ajuezwesydjs7gv.jpg",
+   "match": {
+    "guid": "6e5052a2-2a6c-395a-96c3-6b77c718f247"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=6e5052a2-2a6c-395a-96c3-6b77c718f247"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 777089",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/777089/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 777089",
+   "url": "https://statsapi.mlb.com/api/v1/game/777089/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=777089"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=6e5052a2-2a6c-395a-96c3-6b77c718f247"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

@@ -1,1 +1,293 @@
-{"schema":1,"id":"mlb-778252-31","title":"Griffin Conine's RBI groundout","titleSource":"MLB.com clip title","source":{"gamePk":778252,"atBatIndex":31,"eventIndex":5,"playId":"8039c712-1c85-3aed-8d7c-ebb0d4d37f28","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/778252/feed/live"},"game":{"gamePk":778252,"date":"2025-04-19","season":2025,"gameType":"R","level":"MLB","venue":"Citizens Bank Park","away":{"id":146,"name":"Miami Marlins","abbr":"MIA","club":"Marlins"},"home":{"id":143,"name":"Philadelphia Phillies","abbr":"PHI","club":"Phillies"},"series":""},"before":{"inning":4,"half":"top","outs":1,"bases":"1_3","runners":{"1B":{"id":672640,"name":"Otto Lopez"},"2B":null,"3B":{"id":669065,"name":"Kyle Stowers"}},"score":{"away":0,"home":4},"batting":"away","count":{"balls":2,"strikes":1}},"after":{"outs":2,"bases":"_2_","score":{"away":1,"home":4}},"batter":{"id":665052,"name":"Griffin Conine","side":"L"},"pitcher":{"id":592836,"name":"Taijuan Walker","hand":"R"},"event":{"type":"field_out","label":"Groundout","description":"Griffin Conine grounds out, second baseman Bryson Stott to first baseman Bryce Harper. Kyle Stowers scores. Otto Lopez to 2nd.","rbi":1,"runs":1,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":665052,"name":"Griffin Conine","start":null,"end":null,"out":true,"outBase":"1B","reason":null,"event":"field_out","isBatter":true,"credits":[{"id":681082,"name":"Bryson Stott","pos":"2B","credit":"f_assist"},{"id":547180,"name":"Bryce Harper","pos":"1B","credit":"f_putout"}]},{"id":669065,"name":"Kyle Stowers","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_play","event":"field_out","isBatter":false,"credits":[]},{"id":672640,"name":"Otto Lopez","start":"1B","end":"2B","out":false,"outBase":null,"reason":"r_adv_force","event":"field_out","isBatter":false,"credits":[]}],"chains":[{"runner":"Griffin Conine","start":null,"out":true,"outBase":"1B","chain":"4-3"}],"pitch":{"type":"Splitter","code":"FS","speed":86.8,"zone":4,"px":-0.5287484035670389,"pz":2.2693456692073193,"spin":1584,"call":"E"},"batted":{"trajectory":"ground_ball","hardness":"medium","location":4,"ev":83.7,"la":-8.0,"distance":16.0,"sprayAngle":37.9,"spray":"pull"},"winprob":{"homeAfter":83.2,"homeBefore":82.6,"homeAdded":0.6000000000000085,"li":1.54},"statcast":{"ifAlignment":"Infield shade","ofAlignment":"Standard","deltaRunExp":-0.36,"deltaHomeWinExp":0.01,"batWinExpBefore":0.178,"bbType":"ground_ball","pitchName":"Split-Finger","fielders":{"2":592663,"3":547180,"4":681082,"5":664761,"6":607208,"7":656941,"8":679032,"9":596146}},"flags":["dp_situation","force_available","ground_ball","ground_ball_infield","middle_infield","productive_out","risp","runner_scored_on_out","shift_alignment","trailing"],"curation":{"category":"Infield defense & decisions","slot":"First and third, ground ball to the middle infield"},"clips":[{"kind":"highlight","slug":"taijuan-walker-in-play-run-s-to-griffin-conine","title":"Griffin Conine's RBI groundout ","duration":"00:00:18","feed":"CMS","pageUrl":"https://www.mlb.com/video/taijuan-walker-in-play-run-s-to-griffin-conine","embedUrl":"https://streamable.com/m/taijuan-walker-in-play-run-s-to-griffin-conine","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/ax01s4lztqepeoiquhds.jpg","match":{"guid":"8039c712-1c85-3aed-8d7c-ebb0d4d37f28"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=8039c712-1c85-3aed-8d7c-ebb0d4d37f28"},"sources":[{"label":"MLB Stats API — official play-by-play, game 778252","url":"https://statsapi.mlb.com/api/v1.1/game/778252/feed/live"},{"label":"MLB Stats API — win probability, game 778252","url":"https://statsapi.mlb.com/api/v1/game/778252/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=778252"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=8039c712-1c85-3aed-8d7c-ebb0d4d37f28"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-778252-31",
+ "title": "Griffin Conine's RBI groundout",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 778252,
+  "atBatIndex": 31,
+  "eventIndex": 5,
+  "playId": "8039c712-1c85-3aed-8d7c-ebb0d4d37f28",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/778252/feed/live"
+ },
+ "game": {
+  "gamePk": 778252,
+  "date": "2025-04-19",
+  "season": 2025,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Citizens Bank Park",
+  "away": {
+   "id": 146,
+   "name": "Miami Marlins",
+   "abbr": "MIA",
+   "club": "Marlins"
+  },
+  "home": {
+   "id": 143,
+   "name": "Philadelphia Phillies",
+   "abbr": "PHI",
+   "club": "Phillies"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 4,
+  "half": "top",
+  "outs": 1,
+  "bases": "1_3",
+  "runners": {
+   "1B": {
+    "id": 672640,
+    "name": "Otto Lopez"
+   },
+   "2B": null,
+   "3B": {
+    "id": 669065,
+    "name": "Kyle Stowers"
+   }
+  },
+  "score": {
+   "away": 0,
+   "home": 4
+  },
+  "batting": "away",
+  "count": {
+   "balls": 2,
+   "strikes": 1
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "_2_",
+  "score": {
+   "away": 1,
+   "home": 4
+  }
+ },
+ "batter": {
+  "id": 665052,
+  "name": "Griffin Conine",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 592836,
+  "name": "Taijuan Walker",
+  "hand": "R"
+ },
+ "event": {
+  "type": "field_out",
+  "label": "Groundout",
+  "description": "Griffin Conine grounds out, second baseman Bryson Stott to first baseman Bryce Harper. Kyle Stowers scores. Otto Lopez to 2nd.",
+  "rbi": 1,
+  "runs": 1,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 665052,
+   "name": "Griffin Conine",
+   "start": null,
+   "end": null,
+   "out": true,
+   "outBase": "1B",
+   "reason": null,
+   "event": "field_out",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 681082,
+     "name": "Bryson Stott",
+     "pos": "2B",
+     "credit": "f_assist"
+    },
+    {
+     "id": 547180,
+     "name": "Bryce Harper",
+     "pos": "1B",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 669065,
+   "name": "Kyle Stowers",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "field_out",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 672640,
+   "name": "Otto Lopez",
+   "start": "1B",
+   "end": "2B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_force",
+   "event": "field_out",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Griffin Conine",
+   "start": null,
+   "out": true,
+   "outBase": "1B",
+   "chain": "4-3"
+  }
+ ],
+ "pitch": {
+  "type": "Splitter",
+  "code": "FS",
+  "speed": 86.8,
+  "zone": 4,
+  "px": -0.5287484035670389,
+  "pz": 2.2693456692073193,
+  "spin": 1584,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "ground_ball",
+  "hardness": "medium",
+  "location": 4,
+  "ev": 83.7,
+  "la": -8.0,
+  "distance": 16.0,
+  "sprayAngle": 37.9,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 83.2,
+  "homeBefore": 82.6,
+  "homeAdded": 0.6000000000000085,
+  "li": 1.54
+ },
+ "statcast": {
+  "ifAlignment": "Infield shade",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.36,
+  "deltaHomeWinExp": 0.01,
+  "batWinExpBefore": 0.178,
+  "bbType": "ground_ball",
+  "pitchName": "Split-Finger",
+  "fielders": {
+   "2": 592663,
+   "3": 547180,
+   "4": 681082,
+   "5": 664761,
+   "6": 607208,
+   "7": 656941,
+   "8": 679032,
+   "9": 596146
+  }
+ },
+ "flags": [
+  "dp_situation",
+  "force_available",
+  "ground_ball",
+  "ground_ball_infield",
+  "middle_infield",
+  "productive_out",
+  "risp",
+  "runner_scored_on_out",
+  "shift_alignment",
+  "trailing"
+ ],
+ "curation": {
+  "category": "Infield defense & decisions",
+  "slot": "First and third, ground ball to the middle infield"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "taijuan-walker-in-play-run-s-to-griffin-conine",
+   "title": "Griffin Conine's RBI groundout ",
+   "duration": "00:00:18",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/taijuan-walker-in-play-run-s-to-griffin-conine",
+   "embedUrl": "https://streamable.com/m/taijuan-walker-in-play-run-s-to-griffin-conine",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/ax01s4lztqepeoiquhds.jpg",
+   "match": {
+    "guid": "8039c712-1c85-3aed-8d7c-ebb0d4d37f28"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=8039c712-1c85-3aed-8d7c-ebb0d4d37f28"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 778252",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/778252/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 778252",
+   "url": "https://statsapi.mlb.com/api/v1/game/778252/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=778252"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=8039c712-1c85-3aed-8d7c-ebb0d4d37f28"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

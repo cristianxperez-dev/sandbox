@@ -1,1 +1,305 @@
-{"schema":1,"id":"mlb-745190-13","title":"Brice Turang ground bunts into a force out","titleSource":"From MLB's official play description","source":{"gamePk":745190,"atBatIndex":13,"eventIndex":3,"playId":"15bf1c3e-8215-4751-9364-fe3fa1cbcf46","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/745190/feed/live"},"game":{"gamePk":745190,"date":"2024-04-20","season":2024,"gameType":"R","level":"MLB","venue":"Busch Stadium","away":{"id":158,"name":"Milwaukee Brewers","abbr":"MIL","club":"Brewers"},"home":{"id":138,"name":"St. Louis Cardinals","abbr":"STL","club":"Cardinals"},"series":""},"before":{"inning":2,"half":"top","outs":0,"bases":"12_","runners":{"1B":{"id":663368,"name":"Blake Perkins"},"2B":{"id":596142,"name":"Gary Sánchez"},"3B":null},"score":{"away":2,"home":1},"batting":"away","count":{"balls":2,"strikes":0}},"after":{"outs":1,"bases":"12_","score":{"away":2,"home":1}},"batter":{"id":668930,"name":"Brice Turang","side":"L"},"pitcher":{"id":571945,"name":"Miles Mikolas","hand":"R"},"event":{"type":"force_out","label":"Forceout","description":"Brice Turang ground bunts into a force out, catcher Iván Herrera to third baseman Nolan Arenado. Gary Sánchez out at 3rd. Blake Perkins to 2nd. Brice Turang to 1st.","rbi":0,"runs":0,"outs":1,"isReview":false,"walkoff":false},"runners":[{"id":596142,"name":"Gary Sánchez","start":"2B","end":null,"out":true,"outBase":"3B","reason":"r_force_out","event":"force_out","isBatter":false,"credits":[{"id":671056,"name":"Iván Herrera","pos":"C","credit":"f_assist"},{"id":571448,"name":"Nolan Arenado","pos":"3B","credit":"f_putout"}]},{"id":663368,"name":"Blake Perkins","start":"1B","end":"2B","out":false,"outBase":null,"reason":"r_adv_play","event":"force_out","isBatter":false,"credits":[]},{"id":668930,"name":"Brice Turang","start":null,"end":"1B","out":false,"outBase":null,"reason":null,"event":"force_out","isBatter":true,"credits":[]}],"chains":[{"runner":"Gary Sánchez","start":"2B","out":true,"outBase":"3B","chain":"2-5"}],"pitch":{"type":"Sinker","code":"SI","speed":89.0,"zone":4,"px":-0.46129286504753203,"pz":2.644654678194422,"spin":2159,"call":"X"},"batted":{"trajectory":"bunt_grounder","hardness":"medium","location":2,"ev":33.9,"la":-59.0,"distance":2.0,"sprayAngle":null,"spray":null},"winprob":{"homeAfter":36.0,"homeBefore":31.4,"homeAdded":4.600000000000001,"li":1.67},"statcast":{"ifAlignment":"Strategic","ofAlignment":"Standard","deltaRunExp":-0.125,"deltaHomeWinExp":0.065,"batWinExpBefore":0.705,"bbType":"ground_ball","pitchName":"Sinker","fielders":{"2":671056,"3":502671,"4":680977,"5":571448,"6":691026,"7":663457,"8":672279,"9":691023}},"flags":["bunt","bunt_defense_pc","catcher_play","close","dp_situation","force_available","force_play","leading","one_run","productive_out","risp","shift_alignment"],"curation":{"category":"Infield defense & decisions","slot":"Bunt defense: out at second or third"},"clips":[{"kind":"filmroom","slug":"miles-mikolas-in-play-out-s-to-brice-turang-gs2y2e","title":"Brice Turang ground bunts into a force out, catcher Iván Herrera to third baseman Nolan Arenado.   Gary Sánchez out at 3rd.    Blake Perkins to 2nd.    Brice Turang to 1st.","duration":"00:00:11","feed":"HOME","pageUrl":"https://www.mlb.com/video/miles-mikolas-in-play-out-s-to-brice-turang-gs2y2e","embedUrl":"https://streamable.com/m/miles-mikolas-in-play-out-s-to-brice-turang-gs2y2e","angle":{"category":"broadcast","label":"Home TV broadcast"},"howVerified":"MLB Film Room clip for the playId; Film Room's play info matches game, inning, outs, runners, batter and pitcher","thumb":"https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/15bf1c3e-8215-4751-9364-fe3fa1cbcf46_home.jpg","match":{"filmroom":{"gamePk":true,"inning":true,"outs":true,"runners":true,"batter":true,"pitcher":true},"feeds":["HOME","AWAY"]},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=15bf1c3e-8215-4751-9364-fe3fa1cbcf46"},"sources":[{"label":"MLB Stats API — official play-by-play, game 745190","url":"https://statsapi.mlb.com/api/v1.1/game/745190/feed/live"},{"label":"MLB Stats API — win probability, game 745190","url":"https://statsapi.mlb.com/api/v1/game/745190/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=745190"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=15bf1c3e-8215-4751-9364-fe3fa1cbcf46"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-745190-13",
+ "title": "Brice Turang ground bunts into a force out",
+ "titleSource": "From MLB's official play description",
+ "source": {
+  "gamePk": 745190,
+  "atBatIndex": 13,
+  "eventIndex": 3,
+  "playId": "15bf1c3e-8215-4751-9364-fe3fa1cbcf46",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/745190/feed/live"
+ },
+ "game": {
+  "gamePk": 745190,
+  "date": "2024-04-20",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "Busch Stadium",
+  "away": {
+   "id": 158,
+   "name": "Milwaukee Brewers",
+   "abbr": "MIL",
+   "club": "Brewers"
+  },
+  "home": {
+   "id": 138,
+   "name": "St. Louis Cardinals",
+   "abbr": "STL",
+   "club": "Cardinals"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 2,
+  "half": "top",
+  "outs": 0,
+  "bases": "12_",
+  "runners": {
+   "1B": {
+    "id": 663368,
+    "name": "Blake Perkins"
+   },
+   "2B": {
+    "id": 596142,
+    "name": "Gary Sánchez"
+   },
+   "3B": null
+  },
+  "score": {
+   "away": 2,
+   "home": 1
+  },
+  "batting": "away",
+  "count": {
+   "balls": 2,
+   "strikes": 0
+  }
+ },
+ "after": {
+  "outs": 1,
+  "bases": "12_",
+  "score": {
+   "away": 2,
+   "home": 1
+  }
+ },
+ "batter": {
+  "id": 668930,
+  "name": "Brice Turang",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 571945,
+  "name": "Miles Mikolas",
+  "hand": "R"
+ },
+ "event": {
+  "type": "force_out",
+  "label": "Forceout",
+  "description": "Brice Turang ground bunts into a force out, catcher Iván Herrera to third baseman Nolan Arenado. Gary Sánchez out at 3rd. Blake Perkins to 2nd. Brice Turang to 1st.",
+  "rbi": 0,
+  "runs": 0,
+  "outs": 1,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 596142,
+   "name": "Gary Sánchez",
+   "start": "2B",
+   "end": null,
+   "out": true,
+   "outBase": "3B",
+   "reason": "r_force_out",
+   "event": "force_out",
+   "isBatter": false,
+   "credits": [
+    {
+     "id": 671056,
+     "name": "Iván Herrera",
+     "pos": "C",
+     "credit": "f_assist"
+    },
+    {
+     "id": 571448,
+     "name": "Nolan Arenado",
+     "pos": "3B",
+     "credit": "f_putout"
+    }
+   ]
+  },
+  {
+   "id": 663368,
+   "name": "Blake Perkins",
+   "start": "1B",
+   "end": "2B",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_play",
+   "event": "force_out",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 668930,
+   "name": "Brice Turang",
+   "start": null,
+   "end": "1B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "force_out",
+   "isBatter": true,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Gary Sánchez",
+   "start": "2B",
+   "out": true,
+   "outBase": "3B",
+   "chain": "2-5"
+  }
+ ],
+ "pitch": {
+  "type": "Sinker",
+  "code": "SI",
+  "speed": 89.0,
+  "zone": 4,
+  "px": -0.46129286504753203,
+  "pz": 2.644654678194422,
+  "spin": 2159,
+  "call": "X"
+ },
+ "batted": {
+  "trajectory": "bunt_grounder",
+  "hardness": "medium",
+  "location": 2,
+  "ev": 33.9,
+  "la": -59.0,
+  "distance": 2.0,
+  "sprayAngle": null,
+  "spray": null
+ },
+ "winprob": {
+  "homeAfter": 36.0,
+  "homeBefore": 31.4,
+  "homeAdded": 4.600000000000001,
+  "li": 1.67
+ },
+ "statcast": {
+  "ifAlignment": "Strategic",
+  "ofAlignment": "Standard",
+  "deltaRunExp": -0.125,
+  "deltaHomeWinExp": 0.065,
+  "batWinExpBefore": 0.705,
+  "bbType": "ground_ball",
+  "pitchName": "Sinker",
+  "fielders": {
+   "2": 671056,
+   "3": 502671,
+   "4": 680977,
+   "5": 571448,
+   "6": 691026,
+   "7": 663457,
+   "8": 672279,
+   "9": 691023
+  }
+ },
+ "flags": [
+  "bunt",
+  "bunt_defense_pc",
+  "catcher_play",
+  "close",
+  "dp_situation",
+  "force_available",
+  "force_play",
+  "leading",
+  "one_run",
+  "productive_out",
+  "risp",
+  "shift_alignment"
+ ],
+ "curation": {
+  "category": "Infield defense & decisions",
+  "slot": "Bunt defense: out at second or third"
+ },
+ "clips": [
+  {
+   "kind": "filmroom",
+   "slug": "miles-mikolas-in-play-out-s-to-brice-turang-gs2y2e",
+   "title": "Brice Turang ground bunts into a force out, catcher Iván Herrera to third baseman Nolan Arenado.   Gary Sánchez out at 3rd.    Blake Perkins to 2nd.    Brice Turang to 1st.",
+   "duration": "00:00:11",
+   "feed": "HOME",
+   "pageUrl": "https://www.mlb.com/video/miles-mikolas-in-play-out-s-to-brice-turang-gs2y2e",
+   "embedUrl": "https://streamable.com/m/miles-mikolas-in-play-out-s-to-brice-turang-gs2y2e",
+   "angle": {
+    "category": "broadcast",
+    "label": "Home TV broadcast"
+   },
+   "howVerified": "MLB Film Room clip for the playId; Film Room's play info matches game, inning, outs, runners, batter and pitcher",
+   "thumb": "https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/15bf1c3e-8215-4751-9364-fe3fa1cbcf46_home.jpg",
+   "match": {
+    "filmroom": {
+     "gamePk": true,
+     "inning": true,
+     "outs": true,
+     "runners": true,
+     "batter": true,
+     "pitcher": true
+    },
+    "feeds": [
+     "HOME",
+     "AWAY"
+    ]
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=15bf1c3e-8215-4751-9364-fe3fa1cbcf46"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 745190",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/745190/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 745190",
+   "url": "https://statsapi.mlb.com/api/v1/game/745190/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=745190"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=15bf1c3e-8215-4751-9364-fe3fa1cbcf46"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

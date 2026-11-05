@@ -1,1 +1,305 @@
-{"schema":1,"id":"mlb-746069-45","title":"Bryson Stott's three-run triple","titleSource":"MLB.com clip title","source":{"gamePk":746069,"atBatIndex":45,"eventIndex":5,"playId":"ca4c68cd-e053-4b21-bfa4-31037511dd16","terminal":true,"feed":"https://statsapi.mlb.com/api/v1.1/game/746069/feed/live"},"game":{"gamePk":746069,"date":"2024-05-11","season":2024,"gameType":"R","level":"MLB","venue":"loanDepot park","away":{"id":143,"name":"Philadelphia Phillies","abbr":"PHI","club":"Phillies"},"home":{"id":146,"name":"Miami Marlins","abbr":"MIA","club":"Marlins"},"series":""},"before":{"inning":6,"half":"top","outs":2,"bases":"123","runners":{"1B":{"id":592206,"name":"Nick Castellanos"},"2B":{"id":664761,"name":"Alec Bohm"},"3B":{"id":592663,"name":"J.T. Realmuto"}},"score":{"away":1,"home":1},"batting":"away","count":{"balls":2,"strikes":2}},"after":{"outs":2,"bases":"__3","score":{"away":4,"home":1}},"batter":{"id":681082,"name":"Bryson Stott","side":"L"},"pitcher":{"id":687424,"name":"Anthony Maldonado","hand":"R"},"event":{"type":"triple","label":"Triple","description":"Bryson Stott triples (2) on a ground ball to right fielder Jesús Sánchez. J.T. Realmuto scores. Alec Bohm scores. Nick Castellanos scores.","rbi":3,"runs":3,"outs":0,"isReview":false,"walkoff":false},"runners":[{"id":681082,"name":"Bryson Stott","start":null,"end":"3B","out":false,"outBase":null,"reason":null,"event":"triple","isBatter":true,"credits":[{"id":660821,"name":"Jesús Sánchez","pos":"RF","credit":"f_fielded_ball"}]},{"id":592663,"name":"J.T. Realmuto","start":"3B","end":"score","out":false,"outBase":null,"reason":"r_adv_force","event":"triple","isBatter":false,"credits":[]},{"id":664761,"name":"Alec Bohm","start":"2B","end":"score","out":false,"outBase":null,"reason":"r_adv_force","event":"triple","isBatter":false,"credits":[]},{"id":592206,"name":"Nick Castellanos","start":"1B","end":"score","out":false,"outBase":null,"reason":"r_adv_force","event":"triple","isBatter":false,"credits":[]}],"chains":[{"runner":"Bryson Stott","start":null,"out":false,"outBase":null,"chain":"9"}],"pitch":{"type":"Four-Seam Fastball","code":"FF","speed":93.8,"zone":14,"px":1.46420190395691,"pz":1.967595589060825,"spin":2320,"call":"E"},"batted":{"trajectory":"ground_ball","hardness":"medium","location":9,"ev":89.9,"la":-2.0,"distance":32.0,"sprayAngle":49.8,"spray":"pull"},"winprob":{"homeAfter":14.2,"homeBefore":46.6,"homeAdded":-32.400000000000006,"li":4.22},"statcast":{"ifAlignment":"Standard","ofAlignment":"Standard","deltaRunExp":0.932,"deltaHomeWinExp":-0.34,"batWinExpBefore":0.518,"bbType":"ground_ball","pitchName":"4-Seam Fastball","fielders":{"2":663743,"3":605137,"4":672640,"5":669394,"6":660644,"7":624503,"8":665862,"9":660821}},"flags":["close","force_available","go_ahead_on","go_ahead_play","ground_ball","high_leverage","outfield_play","risp","score_from_first_xbh","tied","triple","two_out_rbi","two_outs"],"curation":{"category":"Outfield defense, cutoffs & relays","slot":"Triple: relay to third"},"clips":[{"kind":"highlight","slug":"anthony-maldonado-in-play-run-s-to-bryson-stott","title":"Bryson Stott's three-run triple","duration":"00:00:20","feed":"CMS","pageUrl":"https://www.mlb.com/video/anthony-maldonado-in-play-run-s-to-bryson-stott","embedUrl":"https://streamable.com/m/anthony-maldonado-in-play-run-s-to-bryson-stott","angle":{"category":"broadcast","label":"MLB.com highlight — broadcast footage, edited (may include replays)"},"howVerified":"MLB's highlight guid equals the play's playId","thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/hwt4sz2dg3eyqj1s1hyb.jpg","match":{"guid":"ca4c68cd-e053-4b21-bfa4-31037511dd16"},"checks":{"pageEmbed":true,"embedStatus":206,"checkedAt":"2026-11-05"}}],"savant":{"video":true,"match":true,"url":"https://baseballsavant.mlb.com/sporty-videos?playId=ca4c68cd-e053-4b21-bfa4-31037511dd16"},"sources":[{"label":"MLB Stats API — official play-by-play, game 746069","url":"https://statsapi.mlb.com/api/v1.1/game/746069/feed/live"},{"label":"MLB Stats API — win probability, game 746069","url":"https://statsapi.mlb.com/api/v1/game/746069/winProbability"},{"label":"Baseball Savant — Statcast pitch data","url":"https://baseballsavant.mlb.com/gamefeed?gamePk=746069"},{"label":"Baseball Savant — clip page for this pitch","url":"https://baseballsavant.mlb.com/sporty-videos?playId=ca4c68cd-e053-4b21-bfa4-31037511dd16"}],"verification":{"status":"verified","checkedAt":"2026-11-05","notes":[]}}
+{
+ "schema": 1,
+ "id": "mlb-746069-45",
+ "title": "Bryson Stott's three-run triple",
+ "titleSource": "MLB.com clip title",
+ "source": {
+  "gamePk": 746069,
+  "atBatIndex": 45,
+  "eventIndex": 5,
+  "playId": "ca4c68cd-e053-4b21-bfa4-31037511dd16",
+  "terminal": true,
+  "feed": "https://statsapi.mlb.com/api/v1.1/game/746069/feed/live"
+ },
+ "game": {
+  "gamePk": 746069,
+  "date": "2024-05-11",
+  "season": 2024,
+  "gameType": "R",
+  "level": "MLB",
+  "venue": "loanDepot park",
+  "away": {
+   "id": 143,
+   "name": "Philadelphia Phillies",
+   "abbr": "PHI",
+   "club": "Phillies"
+  },
+  "home": {
+   "id": 146,
+   "name": "Miami Marlins",
+   "abbr": "MIA",
+   "club": "Marlins"
+  },
+  "series": ""
+ },
+ "before": {
+  "inning": 6,
+  "half": "top",
+  "outs": 2,
+  "bases": "123",
+  "runners": {
+   "1B": {
+    "id": 592206,
+    "name": "Nick Castellanos"
+   },
+   "2B": {
+    "id": 664761,
+    "name": "Alec Bohm"
+   },
+   "3B": {
+    "id": 592663,
+    "name": "J.T. Realmuto"
+   }
+  },
+  "score": {
+   "away": 1,
+   "home": 1
+  },
+  "batting": "away",
+  "count": {
+   "balls": 2,
+   "strikes": 2
+  }
+ },
+ "after": {
+  "outs": 2,
+  "bases": "__3",
+  "score": {
+   "away": 4,
+   "home": 1
+  }
+ },
+ "batter": {
+  "id": 681082,
+  "name": "Bryson Stott",
+  "side": "L"
+ },
+ "pitcher": {
+  "id": 687424,
+  "name": "Anthony Maldonado",
+  "hand": "R"
+ },
+ "event": {
+  "type": "triple",
+  "label": "Triple",
+  "description": "Bryson Stott triples (2) on a ground ball to right fielder Jesús Sánchez. J.T. Realmuto scores. Alec Bohm scores. Nick Castellanos scores.",
+  "rbi": 3,
+  "runs": 3,
+  "outs": 0,
+  "isReview": false,
+  "walkoff": false
+ },
+ "runners": [
+  {
+   "id": 681082,
+   "name": "Bryson Stott",
+   "start": null,
+   "end": "3B",
+   "out": false,
+   "outBase": null,
+   "reason": null,
+   "event": "triple",
+   "isBatter": true,
+   "credits": [
+    {
+     "id": 660821,
+     "name": "Jesús Sánchez",
+     "pos": "RF",
+     "credit": "f_fielded_ball"
+    }
+   ]
+  },
+  {
+   "id": 592663,
+   "name": "J.T. Realmuto",
+   "start": "3B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_force",
+   "event": "triple",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 664761,
+   "name": "Alec Bohm",
+   "start": "2B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_force",
+   "event": "triple",
+   "isBatter": false,
+   "credits": []
+  },
+  {
+   "id": 592206,
+   "name": "Nick Castellanos",
+   "start": "1B",
+   "end": "score",
+   "out": false,
+   "outBase": null,
+   "reason": "r_adv_force",
+   "event": "triple",
+   "isBatter": false,
+   "credits": []
+  }
+ ],
+ "chains": [
+  {
+   "runner": "Bryson Stott",
+   "start": null,
+   "out": false,
+   "outBase": null,
+   "chain": "9"
+  }
+ ],
+ "pitch": {
+  "type": "Four-Seam Fastball",
+  "code": "FF",
+  "speed": 93.8,
+  "zone": 14,
+  "px": 1.46420190395691,
+  "pz": 1.967595589060825,
+  "spin": 2320,
+  "call": "E"
+ },
+ "batted": {
+  "trajectory": "ground_ball",
+  "hardness": "medium",
+  "location": 9,
+  "ev": 89.9,
+  "la": -2.0,
+  "distance": 32.0,
+  "sprayAngle": 49.8,
+  "spray": "pull"
+ },
+ "winprob": {
+  "homeAfter": 14.2,
+  "homeBefore": 46.6,
+  "homeAdded": -32.400000000000006,
+  "li": 4.22
+ },
+ "statcast": {
+  "ifAlignment": "Standard",
+  "ofAlignment": "Standard",
+  "deltaRunExp": 0.932,
+  "deltaHomeWinExp": -0.34,
+  "batWinExpBefore": 0.518,
+  "bbType": "ground_ball",
+  "pitchName": "4-Seam Fastball",
+  "fielders": {
+   "2": 663743,
+   "3": 605137,
+   "4": 672640,
+   "5": 669394,
+   "6": 660644,
+   "7": 624503,
+   "8": 665862,
+   "9": 660821
+  }
+ },
+ "flags": [
+  "close",
+  "force_available",
+  "go_ahead_on",
+  "go_ahead_play",
+  "ground_ball",
+  "high_leverage",
+  "outfield_play",
+  "risp",
+  "score_from_first_xbh",
+  "tied",
+  "triple",
+  "two_out_rbi",
+  "two_outs"
+ ],
+ "curation": {
+  "category": "Outfield defense, cutoffs & relays",
+  "slot": "Triple: relay to third"
+ },
+ "clips": [
+  {
+   "kind": "highlight",
+   "slug": "anthony-maldonado-in-play-run-s-to-bryson-stott",
+   "title": "Bryson Stott's three-run triple",
+   "duration": "00:00:20",
+   "feed": "CMS",
+   "pageUrl": "https://www.mlb.com/video/anthony-maldonado-in-play-run-s-to-bryson-stott",
+   "embedUrl": "https://streamable.com/m/anthony-maldonado-in-play-run-s-to-bryson-stott",
+   "angle": {
+    "category": "broadcast",
+    "label": "MLB.com highlight — broadcast footage, edited (may include replays)"
+   },
+   "howVerified": "MLB's highlight guid equals the play's playId",
+   "thumb": "https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/hwt4sz2dg3eyqj1s1hyb.jpg",
+   "match": {
+    "guid": "ca4c68cd-e053-4b21-bfa4-31037511dd16"
+   },
+   "checks": {
+    "pageEmbed": true,
+    "embedStatus": 206,
+    "checkedAt": "2026-11-05"
+   }
+  }
+ ],
+ "savant": {
+  "video": true,
+  "match": true,
+  "url": "https://baseballsavant.mlb.com/sporty-videos?playId=ca4c68cd-e053-4b21-bfa4-31037511dd16"
+ },
+ "sources": [
+  {
+   "label": "MLB Stats API — official play-by-play, game 746069",
+   "url": "https://statsapi.mlb.com/api/v1.1/game/746069/feed/live"
+  },
+  {
+   "label": "MLB Stats API — win probability, game 746069",
+   "url": "https://statsapi.mlb.com/api/v1/game/746069/winProbability"
+  },
+  {
+   "label": "Baseball Savant — Statcast pitch data",
+   "url": "https://baseballsavant.mlb.com/gamefeed?gamePk=746069"
+  },
+  {
+   "label": "Baseball Savant — clip page for this pitch",
+   "url": "https://baseballsavant.mlb.com/sporty-videos?playId=ca4c68cd-e053-4b21-bfa4-31037511dd16"
+  }
+ ],
+ "verification": {
+  "status": "verified",
+  "checkedAt": "2026-11-05",
+  "notes": []
+ },
+ "cameras": {
+  "broadcast": {
+   "available": true,
+   "clips": [
+    0
+   ]
+  },
+  "highHome": {
+   "available": false,
+   "clips": [],
+   "searched": [
+    {
+     "source": "MLB Film Room (playId)",
+     "feeds": [
+      "AWAY",
+      "CMS",
+      "HOME"
+     ],
+     "result": "broadcast feeds only"
+    },
+    {
+     "source": "MLB.com High Home clips (game content + weekly video sitemaps 2024–2026)",
+     "candidates": 0,
+     "result": "none for this game/date"
+    }
+   ],
+   "checkedAt": "2026-11-05"
+  },
+  "other": []
+ }
+}

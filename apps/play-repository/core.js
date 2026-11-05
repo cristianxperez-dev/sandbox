@@ -35,7 +35,7 @@
       batter: "", pitcher: "", batHand: null, pitHand: null, positions: [], spray: [], locations: [], pitchTypes: [],
       evMin: null, evMax: null, laMin: null, laMax: null, distMin: null, veloMin: null, veloMax: null, balls: null, strikes: null,
       outsOnPlay: [], runsMin: null, liMin: null, liMax: null, dreMin: null, dreMax: null, wpaMin: null, wpaMax: null,
-      ifAlign: [], ofAlign: [], categories: [], tags: [], savedOnly: false, collection: "" };
+      ifAlign: [], ofAlign: [], categories: [], tags: [], savedOnly: false, collection: "", camera: "" };
   }
   const has = (v) => v !== null && v !== undefined && v !== "" && !(Array.isArray(v) && !v.length);
   const between = (x, lo, hi) => (lo == null || (x != null && x >= lo)) && (hi == null || (x != null && x <= hi));
@@ -110,8 +110,12 @@
     if (has(f.tags)) { const mine = (user.tags || {})[p.id] || []; if (!f.tags.every((t) => mine.some((m) => m.toLowerCase() === t.toLowerCase()))) return false; }
     if (f.savedOnly && !savedHas(user.saved, p.id)) return false;
     if (f.collection) { const c = (user.collections || {})[f.collection]; if (!c || !c.plays.includes(p.id)) return false; }
+    if (f.camera) { const c = cameras(p); if (f.camera === "both" ? !(c.broadcast && c.highHome) : !c[f.camera]) return false; }
     return true;
   }
+  /** which cameras a play has verified video for — stored per play; older imports fall back to their clip angles */
+  const cameras = (p) => p.cameras || { broadcast: (p.angles || []).includes("broadcast"), highHome: (p.angles || []).includes("high-home"), other: [] };
+  const CAMERA_LABEL = { broadcast: "Broadcast available", highHome: "High Home available", both: "Both angles available" };
   const savedHas = (s, id) => (s instanceof Set ? s.has(id) : Array.isArray(s) ? s.includes(id) : false);
   function nameHit(person, q) {
     if (!q) return true;
@@ -237,6 +241,8 @@
     PITCHES.forEach(([name, re]) => take(re, () => { f.pitchTypes.push(name === "four-seam fastball" ? "Four-Seam Fastball" : name); understood.push(name); }));
     take(/\b(\d{2,3}) ?\+ ?mph\b|\b(?:over|above) (\d{2,3}) ?mph\b/, (m) => { f.veloMin = +(m[1] || m[2]); understood.push(`Pitch ${f.veloMin}+ mph`); });
     take(/\bhard[- ]hit\b/, () => { f.evMin = 95; understood.push("Exit velocity 95+ mph"); });
+    take(/\bboth (?:camera )?angles\b|\bhigh[- ]home and broadcast\b|\bbroadcast and high[- ]home\b/, () => { f.camera = "both"; understood.push(CAMERA_LABEL.both); });
+    take(/\bhigh[- ]home(?: (?:angle|camera|view|video|footage))?\b/, () => { f.camera = "highHome"; understood.push(CAMERA_LABEL.highHome); });
     take(/\bfull counts?\b|\b3-2\b/, () => { f.balls = 3; f.strikes = 2; understood.push("Full count"); });
     take(/\btwo[- ]strikes?\b|\b2[- ]strikes?\b/, () => { f.strikes = 2; understood.push("Two strikes"); });
     take(/\b(20\d\d)\b/, (m) => { f.seasons.push(+m[1]); understood.push("Season " + m[1]); });
@@ -380,5 +386,5 @@
   }
 
   return { ORD, halfLabel, batScore, fldScore, diff, phase, runnersN, basesLabel, outsLabel, battingTeam, fieldingTeam, POS, LOC_NAME, OR_GROUPS,
-    emptyFilters, matches, filter, facets, parseQuery, conflicts, situationConstraints, PRESETS, situationSummary, similarity, similar, whySimilar, encodeFilters, decodeFilters, wpaBat, nameHit };
+    emptyFilters, matches, filter, cameras, CAMERA_LABEL, facets, parseQuery, conflicts, situationConstraints, PRESETS, situationSummary, similarity, similar, whySimilar, encodeFilters, decodeFilters, wpaBat, nameHit };
 });
