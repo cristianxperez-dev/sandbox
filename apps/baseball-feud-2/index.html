@@ -1025,6 +1025,61 @@ body.v-theater .v-frame{position:fixed!important;inset:0!important;width:100vw!i
 .bf-gp{display:flex;gap:6px 14px;flex-wrap:wrap;margin-top:6px;font-size:13.5px;color:#d6deec}
 .st-btns .sb.st-lib{border-color:rgba(255,122,26,.7);color:var(--orange-hi)}
 @media (max-width:900px){.bf-pv{grid-template-columns:1fr}.ov.bf2-ov{padding:3vh 16px}.ob .ob-note{grid-column:1/-1}}
+/* ===== game situation: one look in the library, the round, the intro and fullscreen ===== */
+.sit-strip{display:none}
+body.has-sit .sit-strip{display:flex}
+.sit-strip{align-items:center;gap:1.6vw;flex:none;height:var(--ssh);padding:0 1.2vw;border-radius:1.2vh;
+  background:linear-gradient(180deg,rgba(21,41,79,.92),rgba(11,24,48,.92));border:1px solid rgba(138,180,230,.28);box-shadow:0 .6vh 2vh rgba(0,0,0,.35);min-width:0;overflow:hidden}
+:root{--ssh:9vh}
+body.has-sit .v-frame{max-height:calc(100% - 7.5vh - var(--ssh) - 1.5vh)}
+.ss-bo{display:flex;align-items:center;gap:.7vw;flex:none}
+.ss-dia{height:calc(var(--ssh) - 1.4vh);width:auto}
+.ss-out{display:flex;flex-direction:column;align-items:center;gap:.5vh;font-family:var(--cond);font-weight:800;font-size:clamp(12px,2vh,30px);letter-spacing:.12em;color:#fff;white-space:nowrap}
+.odots{display:inline-flex;gap:.45vh}
+.odots i{width:1.6vh;height:1.6vh;min-width:10px;min-height:10px;border-radius:50%;border:2px solid #5f6f8c}
+.odots i.on{background:#ff4b4b;border-color:#ff4b4b;box-shadow:0 0 1vh rgba(255,75,75,.6)}
+.ss-inn{font-family:var(--cond);font-weight:900;font-size:clamp(16px,3.4vh,52px);letter-spacing:.06em;color:var(--orange);white-space:nowrap;flex:none}
+.ss-sc{font-family:var(--cond);font-weight:800;font-size:clamp(15px,3vh,46px);letter-spacing:.06em;white-space:nowrap;flex:none;display:flex;align-items:center;gap:.6vw}
+.sc-t{color:#c9d4e6} .sc-t b{color:#fff;font-weight:900} .sc-t.bat{color:#fff} .sc-t.bat::before{content:'▸';color:var(--orange);margin-right:.25em;font-size:.8em}
+.sc-d{color:#5f6f8c}
+.ss-who{min-width:0;margin-left:auto;text-align:right;font-family:var(--cond);font-size:clamp(11px,1.8vh,26px);letter-spacing:.04em;color:#c9d4e6;line-height:1.25}
+.ss-who div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .ss-who b{color:#fff;font-weight:800;text-transform:uppercase}
+.ss-who span{color:var(--sky);font-weight:700;letter-spacing:.12em;font-size:.85em} .ss-who i{font-style:normal;color:#5f6f8c}
+.ss-who small{display:block;font-family:var(--sans);font-size:.78em;color:#95a3bb;letter-spacing:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ss-dia .ln,.is-dia .ln,.sb-dia .ln{fill:none;stroke:rgba(255,255,255,.5);stroke-width:3}
+.ss-dia rect,.is-dia rect,.sb-dia rect{fill:#0b1830;stroke:#e9eef7;stroke-width:2.5}
+.ss-dia rect.on,.is-dia rect.on,.sb-dia rect.on{fill:var(--orange);stroke:#ffd8b0;filter:drop-shadow(0 0 4px rgba(255,122,26,.8))}
+.ss-dia .hp,.is-dia .hp,.sb-dia .hp{fill:#f4f7fc}
+svg.unk rect{stroke-dasharray:3 3;fill:transparent;stroke:#5f6f8c}
+body.v-min .sit-strip{order:-1}
+/* fullscreen: a small score bug keeps the base-out state on screen */
+.sit-bug{display:none}
+.v-frame:fullscreen .sit-bug,.v-frame:-webkit-full-screen .sit-bug,body.v-theater .sit-bug{display:flex}
+.sit-bug{position:absolute;left:1.6vw;top:1.6vh;z-index:4;align-items:center;gap:.8vw;padding:.6vh 1vw;border-radius:1vh;background:rgba(6,14,30,.82);border:1px solid rgba(138,180,230,.35);
+  font-family:var(--cond);font-weight:800;color:#fff;font-size:clamp(14px,2.6vh,40px);letter-spacing:.06em;pointer-events:none}
+.sb-dia{height:6vh;width:auto} .sb-i{color:var(--orange)} .sb-s{display:flex;gap:.5vw;align-items:center}
+/* intro: the situation as the play opens */
+.intro-card .is:empty{display:none}
+.is-row{display:flex;align-items:center;justify-content:center;gap:2.4vw;margin-top:2.4vh}
+.is-dia{height:clamp(80px,17vh,260px);width:auto}
+.is-txt{text-align:left;font-family:var(--cond);text-transform:uppercase;line-height:1.08}
+.is-1{font-weight:900;font-size:clamp(20px,5vh,80px);letter-spacing:.06em;color:var(--orange)} .is-1 i{font-style:normal;color:#5f6f8c;margin:0 .2em}
+.is-2{font-weight:900;font-size:clamp(18px,4.4vh,70px);letter-spacing:.06em;display:flex;gap:.5em;align-items:center}
+.is-3{font-weight:800;font-size:clamp(14px,3vh,46px);letter-spacing:.08em;color:var(--sky);margin-top:.4vh}
+.is-4{font-family:var(--sans);text-transform:none;font-size:clamp(13px,2.3vh,34px);color:#d6deec;margin-top:.6vh} .is-4 b{color:#fff}
+.fx-intro.sit,.fx-intro.sit.has-host{background:radial-gradient(80% 70% at 58% 50%,rgba(4,9,20,.95),rgba(4,9,20,.86) 65%,rgba(4,9,20,.7))}
+.fx-intro.sit.show{animation-duration:3.6s} .fx-intro.sit.show .intro-card,.fx-intro.sit.show .il,.fx-intro.sit.show .fx-host{animation-duration:3.6s}
+/* library: add / remove */
+.bf-add.added{background:rgba(79,209,139,.16);color:#4fd18b;border-color:rgba(79,209,139,.55)}
+.bf-add .a2{display:none} .bf-add.added:hover .a1{display:none} .bf-add.added:hover .a2{display:inline} .bf-add.added:hover{color:#ff9d9d;border-color:rgba(255,75,75,.55);background:rgba(255,75,75,.1)}
+.bf-count{font-family:var(--cond);font-weight:700;letter-spacing:.1em;font-size:15px;color:#c9d4e6;white-space:nowrap;align-self:center}
+.bf-count b{color:var(--orange-hi);font-size:20px} .bf-count i{font-style:normal;color:#95a3bb;font-size:13px}
+.bf-outs{position:absolute;left:10px;bottom:10px;display:flex;align-items:center;gap:6px;font-family:var(--cond);font-weight:800;font-size:12.5px;letter-spacing:.1em;color:#fff}
+.bf-outs .odots i{width:10px;height:10px;min-width:0;min-height:0}
+.bf-dia.unk rect{stroke-dasharray:3 3}
+.sit-strip.pv{display:flex;--ssh:84px;height:var(--ssh);margin-bottom:4px}
+.sit-strip.pv .ss-who{display:none}
+@media (max-width:900px){:root{--ssh:64px} .ss-who{display:none} .sit-strip{gap:12px;padding:0 12px}}
 </style>
 </head>
 <body class="team-off">
@@ -1122,7 +1177,9 @@ body.v-theater .v-frame{position:fixed!important;inset:0!important;width:100vw!i
 
   <section class="g-main">
     <div class="v-col">
+      <div class="sit-strip" id="sitStrip" aria-label="Game situation"></div>
       <div class="v-frame" id="vFrame">
+        <div class="sit-bug" id="sitBug" aria-hidden="true"></div>
         <video id="gv" controls playsinline preload="auto" tabindex="-1"></video>
         <div class="rx rx-good" id="rxGood" aria-hidden="true">
           <div class="rx-rays"></div>
@@ -1310,7 +1367,7 @@ body.v-theater .v-frame{position:fixed!important;inset:0!important;width:100vw!i
     </div>
   </div>
 
-  <div class="fx fx-intro" id="fxIntro"><img class="host-img fx-host" alt="" width="944" height="706"><div class="intro-card"><div class="ik" id="inK">PLAY 1 OF 3</div><div class="it" id="inT"></div><div class="il"></div><div class="iu" id="inU"></div></div></div>
+  <div class="fx fx-intro" id="fxIntro"><img class="host-img fx-host" alt="" width="944" height="706"><div class="intro-card"><div class="ik" id="inK">PLAY 1 OF 3</div><div class="it" id="inT"></div><div class="il"></div><div class="is" id="inS"></div><div class="iu" id="inU"></div></div></div>
   <div class="fx fx-x" id="fxX"><div class="rx rx-bad" id="rxBad" aria-hidden="true"><img class="rx-img" alt="" width="1014" height="720"><div class="rx-cap"><b>YOU’RE <i>WRONG.</i></b></div></div><div class="x-wrap"><div class="xrow" id="xRow"></div><div class="xlab" id="xLab">WRONG ANSWER</div></div></div>
   <div class="fx fx-big c0" id="fxBig"><img class="host-img fx-host" alt="" width="944" height="706"><div class="big-card"><div class="bk" id="bigK"></div><div class="bt" id="bigT"></div><div class="bs" id="bigS"></div></div></div>
   <canvas id="fxConf"></canvas>
@@ -1484,7 +1541,37 @@ function normMlb(m) {
   if (!m || typeof m !== 'object') return null;
   const pageUrl = httpsOnly(m.pageUrl), embedUrl = embedFrom(m.embedUrl) || embedFrom(pageUrl);
   if (!pageUrl && !embedUrl) return null;
-  return { libId: str(m.libId), embedUrl, pageUrl, title: str(m.title), angle: normAngle(m.angle), situation: str(m.situation) };
+  return { libId: str(m.libId), embedUrl, pageUrl, title: str(m.title), angle: normAngle(m.angle), situation: str(m.situation), sit: normSit(m.sit) };
+}
+/* The game situation BEFORE the pitch, exactly as MLB's play record gives it (runners, outs and score before the play).
+   One normalised shape for the library and the live round. Unknown stays unknown (null) — never guessed. */
+function normSit(s) {
+  if (!s || typeof s !== 'object') return null;
+  const b = s.bases && typeof s.bases === 'object' ? { '1B': !!s.bases['1B'], '2B': !!s.bases['2B'], '3B': !!s.bases['3B'] } : null;
+  const outs = s.outs === '' || s.outs == null || !Number.isFinite(+s.outs) ? null : Math.max(0, Math.min(2, Math.round(+s.outs)));
+  return { teams: str(s.teams), date: str(s.date), venue: str(s.venue), inning: str(s.inning), outs, bases: b, runners: str(s.runners),
+    score: str(s.score), count: str(s.count), batter: str(s.batter), pitcher: str(s.pitcher) };
+}
+/* display pieces derived from a normalised situation (null when there is nothing to show) */
+function sitView(s) {
+  if (!s) return null;
+  const im = s.inning.match(/^\s*(top|bottom|bot)\s+(\d+)(st|nd|rd|th)?\s*$/i);
+  const ord = n => n + ({ 1: 'ST', 2: 'ND', 3: 'RD' }[n % 100 > 10 && n % 100 < 14 ? 0 : n % 10] || 'TH');
+  const inning = im ? `${/^top/i.test(im[1]) ? 'TOP' : 'BOT'} ${ord(+im[2])}` : (s.inning ? s.inning.toUpperCase() : '');
+  const half = im ? (/^top/i.test(im[1]) ? 'top' : 'bottom') : '';
+  const sm = s.score.match(/^\s*([A-Za-z]{2,4})\s+(\d+)\s*,\s*([A-Za-z]{2,4})\s+(\d+)\s*$/);
+  const score = sm ? [{ t: sm[1].toUpperCase(), r: +sm[2], bat: half === 'top' }, { t: sm[3].toUpperCase(), r: +sm[4], bat: half === 'bottom' }] : null;
+  const B = s.bases, on = B ? ['1B', '2B', '3B'].filter(k => B[k]) : [];
+  const nm = { '1B': '1st', '2B': '2nd', '3B': '3rd' };
+  const runners = B ? (!on.length ? 'Bases empty' : on.length === 3 ? 'Bases loaded' : (on.length === 1 ? 'Runner on ' : 'Runners on ') + on.map(k => nm[k]).join(' and ')) : s.runners;
+  const outs = s.outs == null ? '' : `${s.outs} OUT${s.outs === 1 ? '' : 'S'}`;
+  let date = '';
+  if (/^\d{4}-\d{2}-\d{2}$/.test(s.date)) { const d = new Date(s.date + 'T12:00:00Z'); date = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }); }
+  else date = s.date;
+  const v = { bases: B, outsN: s.outs, outs, inning, score, scoreText: score ? '' : s.score, runners, batter: s.batter, pitcher: s.pitcher, teams: s.teams, date };
+  v.any = !!(B || outs || inning || score || v.scoreText);
+  v.line = [inning, outs, runners, score ? `${score[0].t} ${score[0].r} – ${score[1].t} ${score[1].r}` : v.scoreText].filter(Boolean).join(' · ');
+  return v;
 }
 
 
@@ -1650,7 +1737,7 @@ function normPractice(x) {
 function seedPlays() {   // the first four Plays Library entries, as a ready-to-play game
   const L = window.BF2_LIBRARY; if (!L || !Array.isArray(L.plays) || !L.plays.length) return null;
   return L.plays.slice(0, 4).map(p => ({ id: uid(), title: p.title, prompt: p.question || 'WHAT WENT WRONG?', videoName: '',
-    mlb: normMlb({ libId: p.id, embedUrl: p.video.embedUrl, pageUrl: p.video.pageUrl, title: p.video.title, angle: p.video.angle, situation: p.situationLine }),
+    mlb: normMlb({ libId: p.id, embedUrl: p.video.embedUrl, pageUrl: p.video.pageUrl, title: p.video.title, angle: p.video.angle, situation: p.situationLine, sit: p.situation }),
     observations: p.answers.map(a => ({ id: uid(), text: a.text, points: 10, note: a.note })) }));
 }
 function defaultState() {
@@ -2514,6 +2601,7 @@ function showIntro() {
   $('#inK').textContent = practice ? 'PRACTICE PLAY · DOESN’T COUNT' : `PLAY ${i + 1} OF ${n}`;
   const t = str(p.title).trim(); $('#inT').textContent = t || (str(p.prompt).trim() || DEFAULT_PROMPT);
   $('#inU').textContent = teamOn() && roundOf(p).phase === 'play' ? `${teamName(roundOf(p).control)} STARTS` : '';
+  const sv = sitView(sitOfPlay(p)); $('#inS').innerHTML = sv && sv.any ? sitIntroHTML(sv) : ''; $('#fxIntro').classList.toggle('sit', !!(sv && sv.any));
   $('#fxIntro').classList.toggle('has-host', hostOn());
   restartFx($('#fxIntro'));
   const r0 = roundOf(p);
@@ -3937,14 +4025,12 @@ let actEl = null;
 function libNorm(p, status) {
   p = obj(p); const s = obj(p.situation), v = obj(p.video);
   const answers = (Array.isArray(p.answers) ? p.answers : []).map(a => { a = obj(a); return { text: str(a.text ?? a.label), note: str(a.note ?? a.explanation), category: str(a.category ?? a.categoryLabel) }; }).filter(a => a.text);
-  const line = str(p.situationLine) || [s.inning, s.outs === '' || s.outs == null ? '' : `${s.outs} out${s.outs == 1 ? '' : 's'}`, s.runners, s.score].filter(Boolean).join(', ');
+  const line = (sitView(normSit(s)) || {}).line || '';
   return {
     id: str(p.id) || 'play-' + uid(), title: str(p.title), subtitle: str(p.subtitle), stage: str(p.stage),
     category: str(p.category) || str(obj((p.categories || [])[0]).label || (p.categories || [])[0] || ''),
     categories: (Array.isArray(p.categories) ? p.categories : []).map(c => str(obj(c).label || c)).filter(Boolean),
-    situation: { teams: str(s.teams), date: str(s.date), venue: str(s.venue), inning: str(s.inning), outs: s.outs ?? '', runners: str(s.runners),
-      bases: { '1B': !!obj(s.bases)['1B'], '2B': !!obj(s.bases)['2B'], '3B': !!obj(s.bases)['3B'] }, score: str(s.score), count: str(s.count), batter: str(s.batter), pitcher: str(s.pitcher) },
-    situationLine: line, description: str(p.description || s.setup), officialRecord: str(p.officialRecord),
+    situation: normSit(s), situationLine: line, description: str(p.description || s.setup), officialRecord: str(p.officialRecord),
     question: str(p.question) || BF2_PROMPT,
     video: { embedUrl: embedFrom(v.embedUrl) || embedFrom(v.pageUrl || v.url), pageUrl: httpsOnly(v.pageUrl || v.url), title: str(v.title), savantUrl: httpsOnly(v.savantUrl || obj(v.savant).url), angle: normAngle(v.angle) },
     answers, sources: (Array.isArray(p.sources) ? p.sources : []).map(x => ({ label: str(obj(x).label), url: httpsOnly(obj(x).url) })).filter(x => x.label || x.url),
@@ -3980,7 +4066,7 @@ const libById = id => lib.plays.find(p => p.id === id) || lib.queue.find(p => p.
 /* a library play → a game play (a copy: editing the game never touches the library) */
 function gamePlayFrom(lp) {
   return { id: uid(), title: lp.title, prompt: lp.question || BF2_PROMPT, videoName: '',
-    mlb: normMlb({ libId: lp.id, embedUrl: lp.video.embedUrl, pageUrl: lp.video.pageUrl || lp.video.savantUrl, title: lp.video.title, angle: lp.video.angle, situation: lp.situationLine }),
+    mlb: normMlb({ libId: lp.id, embedUrl: lp.video.embedUrl, pageUrl: lp.video.pageUrl || lp.video.savantUrl, title: lp.video.title, angle: lp.video.angle, situation: lp.situationLine, sit: lp.situation }),
     observations: lp.answers.map(a => ({ id: uid(), text: a.text, points: BF2_POINTS, note: a.note })) };
 }
 
@@ -4055,22 +4141,85 @@ function openGames() {
 /* Plays Library: browse / pick (new game) / add (to the open game) */
 const L = { mode: 'browse', tab: 'plays', sel: [], filter: 'all', q: '' };
 function openLibrary(mode) { L.mode = mode || 'browse'; L.tab = 'plays'; if (L.mode !== 'pick') L.sel = []; renderLibrary(); ov('bfLib').hidden = false; }
-function diamond(b) {
-  const base = (x, y, on) => `<rect x="${x - 9}" y="${y - 9}" width="18" height="18" transform="rotate(45 ${x} ${y})" class="${on ? 'on' : ''}"/>`;
-  return `<svg class="bf-dia" viewBox="0 0 120 100" aria-hidden="true"><path d="M60 88 L98 52 L60 16 L22 52 Z" class="ln"/>${base(98, 52, b['1B'])}${base(60, 16, b['2B'])}${base(22, 52, b['3B'])}<path d="M54 82 h12 v5 l-6 6 l-6 -6 z" class="hp"/></svg>`;
+/* the base-out graphic: occupied bases in orange; unknown runners drawn dashed (never shown as empty) */
+function diamond(b, cls = 'bf-dia') {
+  const k = !!b, base = (x, y, on) => `<rect x="${x - 9}" y="${y - 9}" width="18" height="18" transform="rotate(45 ${x} ${y})" class="${on ? 'on' : ''}"/>`;
+  const label = !k ? 'Runners not recorded' : ['1B', '2B', '3B'].filter(x => b[x]).length ? 'Runners on ' + ['1B', '2B', '3B'].filter(x => b[x]).join(', ') : 'Bases empty';
+  return `<svg class="${cls}${k ? '' : ' unk'}" viewBox="0 0 120 100" role="img" aria-label="${label}"><path d="M60 88 L98 52 L60 16 L22 52 Z" class="ln"/>${base(98, 52, k && b['1B'])}${base(60, 16, k && b['2B'])}${base(22, 52, k && b['3B'])}<path d="M54 82 h12 v5 l-6 6 l-6 -6 z" class="hp"/></svg>`;
+}
+const outDots = n => n == null ? '' : `<span class="odots" aria-hidden="true">${[0, 1, 2].map(i => `<i class="${i < n ? 'on' : ''}"></i>`).join('')}</span>`;
+const scoreHTML = v => v.score ? v.score.map(x => `<span class="sc-t${x.bat ? ' bat' : ''}">${esc(x.t)} <b>${x.r}</b></span>`).join('<span class="sc-d">–</span>') : esc(v.scoreText);
+function sitOfPlay(p) {          // a game play's situation: its own copy; older saved games fall back to the library record
+  const m = p && p.mlb; if (!m) return null;
+  if (m.sit) return m.sit;
+  const lp = m.libId && libById(m.libId); return lp ? lp.situation : null;
+}
+function sitStripHTML(v) {
+  return `<div class="ss-bo">${diamond(v.bases, 'ss-dia')}<div class="ss-out">${outDots(v.outsN)}<b>${esc(v.outs || '—')}</b></div></div>
+    ${v.inning ? `<div class="ss-inn">${esc(v.inning)}</div>` : ''}
+    ${v.score || v.scoreText ? `<div class="ss-sc">${scoreHTML(v)}</div>` : ''}
+    <div class="ss-who">${v.batter || v.pitcher ? `<div>${v.batter ? `<span>AB</span> <b>${esc(v.batter)}</b>` : ''}${v.batter && v.pitcher ? ' <i>vs</i> ' : ''}${v.pitcher ? `<span>P</span> <b>${esc(v.pitcher)}</b>` : ''}</div>` : ''}
+      ${v.teams || v.date ? `<small>${esc([v.teams, v.date].filter(Boolean).join(' · '))}</small>` : ''}</div>`;
+}
+function sitIntroHTML(v) {
+  return `<div class="is-row">${diamond(v.bases, 'is-dia')}<div class="is-txt">
+    <div class="is-1">${[v.inning, v.outs].filter(Boolean).map(esc).join(' <i>|</i> ')}</div>
+    ${v.score || v.scoreText ? `<div class="is-2">${scoreHTML(v)}</div>` : ''}
+    ${v.runners ? `<div class="is-3">${esc(v.runners)}</div>` : ''}
+    ${v.batter ? `<div class="is-4">Batter: <b>${esc(v.batter)}</b></div>` : ''}</div></div>`;
+}
+function sitBugHTML(v) {
+  return `${diamond(v.bases, 'sb-dia')}<span class="sb-o">${outDots(v.outsN)}</span>${v.inning ? `<span class="sb-i">${esc(v.inning)}</span>` : ''}${v.score ? `<span class="sb-s">${scoreHTML(v)}</span>` : ''}`;
+}
+/* the plays in the upcoming game that came from a library entry */
+const gamePlaysNow = () => (practice ? practice.livePlays : state.plays);
+const inGame = libId => gamePlaysNow().some(p => p.mlb && p.mlb.libId === libId);
+function selCountHTML() { const n = gamePlaysNow().length; return `<span class="bf-count"><b>${n}</b> play${n === 1 ? '' : 's'} selected${n >= 3 && n <= 4 ? '' : ' <i>· a game uses 3–4</i>'}</span>`; }
+function addBtn(id, size = 'sm') {
+  const on = inGame(id);
+  return `<button class="sb ${size} bf-add ${on ? 'added' : 'primary'}" data-bf="toggle" data-id="${esc(id)}" title="${on ? 'In the upcoming game — click to remove' : 'Add to the upcoming game'}">${on ? '<span class="a1">✓ ADDED</span><span class="a2">✕ REMOVE</span>' : '+ ADD TO GAME'}</button>`;
+}
+function removeGamePlay(pid) {   // same clean-up as Setup's delete, without the confirmation (the library toggle is reversible)
+  const plays = gamePlaysNow(), i = plays.findIndex(p => p.id === pid); if (i < 0) return;
+  const p = plays[i], curId = curPlay().id;
+  plays.splice(i, 1);
+  p.observations.forEach(o => { delete state.session.found[o.id]; delete state.session.bulk[o.id]; });
+  ['revealed', 'rounds', 'adjust', 'summarized'].forEach(k => delete state.session[k][p.id]);
+  dropVideo(pid); idbDel(pid);
+  const ci = state.plays.findIndex(x => x.id === curId);
+  state.session.current = ci >= 0 ? ci : Math.min(i, state.plays.length - 1);
+  if (!state.plays.some(x => x.id === state.ui.selected)) state.ui.selected = state.plays[Math.min(i, state.plays.length - 1)].id;
+}
+function toggleInGame(libId) {
+  const plays = gamePlaysNow(), have = plays.filter(p => p.mlb && p.mlb.libId === libId);
+  const lp = libById(libId); if (!lp) return;
+  if (have.length) {
+    if (plays.length <= 1) { toast('A game needs at least one play — add another before removing this one.'); return; }
+    removeGamePlay(have[have.length - 1].id); toast(`Removed “${lp.title}” from the game`, 1800);
+  } else {
+    if (lp.status === 'queued') { toast('Approve this play first — then add it to the game.'); return; }
+    plays.push(gamePlayFrom(lp)); sfx.tick(); toast(`✓ Added “${lp.title}” — play ${plays.length} of the game`, 1800);
+  }
+  save();
+  if (state.ui.mode === 'setup') renderSetup(); else if (!$('#game').hidden) renderGame();
+  refreshAddButtons();
+}
+function refreshAddButtons() {   // update every Add button and the counter in place (no re-render: keeps the video playing)
+  $$('[data-bf="toggle"]').forEach(b => { const t = document.createElement('div'); t.innerHTML = addBtn(b.dataset.id, b.classList.contains('lg') ? 'lg' : 'sm'); b.replaceWith(t.firstElementChild); });
+  $$('.bf-count').forEach(c => { const t = document.createElement('div'); t.innerHTML = selCountHTML(); c.replaceWith(t.firstElementChild); });
 }
 function card(p) {
   const picked = L.sel.indexOf(p.id), queued = p.status === 'queued';
   let act;
   if (queued) act = `<button class="sb sm primary" data-bf="approve" data-id="${esc(p.id)}">✓ APPROVE</button><button class="sb sm danger" data-bf="discard" data-id="${esc(p.id)}">DISCARD</button>`;
   else if (L.mode === 'pick') act = `<button class="sb sm ${picked >= 0 ? 'primary' : ''}" data-bf="pick" data-id="${esc(p.id)}">${picked >= 0 ? '✓ PLAY ' + (picked + 1) : '+ SELECT'}</button>`;
-  else if (L.mode === 'add') act = `<button class="sb sm primary" data-bf="add" data-id="${esc(p.id)}">+ ADD TO GAME</button>`;
-  else act = '';
-  return `<div class="bf-card ${picked >= 0 ? 'on' : ''}">
-    <button class="bf-thumb" data-bf="preview" data-id="${esc(p.id)}" title="Preview the video">${diamond(p.situation.bases)}<span class="bf-play">▶</span>${angleChip(p.video.angle)}</button>
+  else act = addBtn(p.id);
+  const v = sitView(p.situation) || {};
+  return `<div class="bf-card ${picked >= 0 || (L.mode !== 'pick' && inGame(p.id)) ? 'on' : ''}">
+    <button class="bf-thumb" data-bf="preview" data-id="${esc(p.id)}" title="Preview the video">${diamond(v.bases)}${v.outs ? `<span class="bf-outs">${outDots(v.outsN)}${esc(v.outs)}</span>` : ''}<span class="bf-play">▶</span>${angleChip(p.video.angle)}</button>
     <div class="bf-cb"><div class="bf-ct">${esc(p.title)}</div>
-      <div class="bf-cs">${esc([p.situation.teams, p.situation.date].filter(Boolean).join(' · '))}</div>
-      <div class="bf-cs2">${esc(p.situationLine)}</div>
+      <div class="bf-cs">${esc([v.teams, v.date].filter(Boolean).join(' · '))}</div>
+      <div class="bf-cs2">${esc([v.inning, v.runners].filter(Boolean).join(' · '))}${v.score ? ` · ${v.score.map(x => esc(x.t) + ' ' + x.r).join(' – ')}` : ''}</div>
       <div class="bf-tags">${p.category ? `<span class="bf-t">${esc(p.category)}</span>` : ''}<span class="bf-t">${p.answers.length} ANSWERS</span>${p.video.embedUrl ? '' : '<span class="bf-t warn">MLB LINK ONLY</span>'}${p.verification.status !== 'verified' ? `<span class="bf-t warn">${esc(p.verification.status.toUpperCase())}</span>` : ''}</div>
       <div class="bf-ca"><button class="sb sm ghost" data-bf="preview" data-id="${esc(p.id)}">▶ PREVIEW</button>${act}</div></div></div>`;
 }
@@ -4078,7 +4227,7 @@ function renderLibrary() {
   const o = ov('bfLib'), q = L.q.toLowerCase();
   const list = (L.tab === 'queue' ? lib.queue : lib.plays).filter(p => (L.filter === 'all' || p.video.angle.category === L.filter) &&
     (!q || [p.title, p.category, p.situation.teams, p.description].join(' ').toLowerCase().includes(q)));
-  const head = L.mode === 'pick' ? `PICK <b>3–4 PLAYS</b>` : L.mode === 'add' ? `ADD A <b>PLAY</b>` : `PLAYS <b>LIBRARY</b>`;
+  const head = L.mode === 'pick' ? `PICK <b>3–4 PLAYS</b>` : `PLAYS <b>LIBRARY</b>`;
   const foot = L.mode === 'pick'
     ? `<div class="bf-pickbar"><div><b>${L.sel.length}</b> of 4 selected${L.sel.length ? ': ' + L.sel.map((id, i) => `${i + 1}. ${esc(libById(id)?.title || '')}`).join(' · ') : ' — a game uses 3 or 4 plays (4 is standard)'}</div>
        <input class="in" data-bfin="gname" placeholder="Game name" value="${esc(L.name || '')}" maxlength="60">
@@ -4090,7 +4239,7 @@ function renderLibrary() {
       <p class="bf-note">There is no live “search MLB” button in the app: a reliable search needs a server that can query MLB’s play-by-play and video catalogue on a schedule, plus a writing step for the answers. That isn’t part of this static site yet.</p>
       <button class="sb primary lg" data-bf="import">IMPORT DISCOVERED PLAYS (JSON)</button></div>`;
   o.innerHTML = `<div class="ov-inner bf-in"><div class="bf-hh"><div><div class="ov-k">BASEBALL FEUD 2.0</div><h2>${head}</h2></div>
-    <div class="grp"><button class="sb ghost lg" data-bf="close">‹ BACK</button></div></div>
+    <div class="grp">${L.mode === 'pick' ? '' : `${selCountHTML()}<button class="sb lg" data-bf="toSetup" title="Organise the selected plays and edit their answers">SETUP →</button>`}<button class="sb ghost lg" data-bf="close">‹ BACK</button></div></div>
     <div class="bf-bar"><div class="bf-tabs">
       <button data-bf="tab" data-v="plays" class="${L.tab === 'plays' ? 'on' : ''}">PLAYS <i>${lib.plays.length}</i></button>
       <button data-bf="tab" data-v="queue" class="${L.tab === 'queue' ? 'on' : ''}">REVIEW QUEUE <i>${lib.queue.length}</i></button>
@@ -4102,14 +4251,13 @@ function renderLibrary() {
 }
 function openPreview(id) {
   const p = libById(id); if (!p) return;
-  const o = ov('bfPrev');
+  const o = ov('bfPrev'); o.dataset.id = id;
   o.innerHTML = `<div class="ov-inner bf-in bf-prev"><div class="bf-hh"><div><div class="ov-k">${esc(p.stage || 'PREVIEW')}</div><h2>${esc(p.title)}</h2></div>
-    <div class="grp"><button class="sb ghost lg" data-bf="closePrev">‹ BACK TO THE LIBRARY</button></div></div>
+    <div class="grp">${p.status === 'queued' ? `<button class="sb lg primary" data-bf="approve" data-id="${esc(p.id)}">✓ APPROVE</button>` : L.mode === 'pick' ? `<button class="sb lg ${L.sel.includes(p.id) ? 'primary' : ''}" data-bf="pick" data-id="${esc(p.id)}">${L.sel.includes(p.id) ? '✓ SELECTED' : '+ SELECT'}</button>` : selCountHTML() + addBtn(p.id, 'lg')}<button class="sb ghost lg" data-bf="closePrev">‹ BACK TO THE LIBRARY</button></div></div>
     <div class="bf-pv"><div class="bf-pvv">${p.video.embedUrl ? `<iframe src="${esc(p.video.embedUrl)}" title="MLB video" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`
       : `<div class="bf-novid"><p>MLB offers no embed for this clip.</p>${p.video.pageUrl ? `<a class="sb primary" href="${esc(p.video.pageUrl)}" target="_blank" rel="noopener">WATCH ON MLB ↗</a>` : ''}</div>`}
       <div class="bf-cap">${angleChip(p.video.angle)} ${esc(p.video.angle.label)}${p.video.angle.segments.length ? ' · ' + p.video.angle.segments.map(g => `<b>${esc(g.time)}</b> ${esc(g.view)}`).join(' · ') : ''}</div></div>
-      <div class="bf-pvi"><div class="bf-cs">${esc([p.situation.teams, p.situation.date, p.situation.venue].filter(Boolean).join(' · '))}</div>
-        <div class="bf-cs2">${esc(p.situationLine)}${p.situation.count ? ' · count ' + esc(p.situation.count) : ''}</div>
+      <div class="bf-pvi">${(() => { const v = sitView(p.situation); return v && v.any ? `<div class="sit-strip pv">${sitStripHTML(v)}</div>` : ''; })()}
         <p>${esc(p.description)}</p>
         <div class="lb">SUGGESTED ANSWERS · ${esc(p.question)}</div>
         <ol class="bf-ans">${p.answers.map(a => `<li><b>${esc(a.text)}</b>${a.category ? ` <span class="bf-t">${esc(a.category)}</span>` : ''}${a.note ? `<p>${esc(a.note)}</p>` : ''}</li>`).join('')}</ol>
@@ -4125,16 +4273,11 @@ function bf2Click(e) {
     case 'tab': L.tab = b.dataset.v; return renderLibrary();
     case 'filter': L.filter = b.dataset.v; return renderLibrary();
     case 'preview': return openPreview(id);
-    case 'pick': { const i = L.sel.indexOf(id); if (i >= 0) L.sel.splice(i, 1); else if (L.sel.length >= 4) { toast('A game uses 3 or 4 plays — remove one first'); return; } else L.sel.push(id); return renderLibrary(); }
+    case 'pick': { const i = L.sel.indexOf(id); if (i >= 0) L.sel.splice(i, 1); else if (L.sel.length >= 4) { toast('A game uses 3 or 4 plays — remove one first'); return; } else L.sel.push(id); renderLibrary(); if (ovOpen('bfPrev')) openPreview(id); return; }
     case 'create': if (L.sel.length < 3 || L.sel.length > 4) return; return newGameFrom(L.sel.slice(), str(L.name).trim() || `Game — ${new Date().toLocaleDateString([], { month: 'short', day: 'numeric' })}`);
-    case 'add': {
-      const lp = libById(id); if (!lp) return;
-      const gp = gamePlayFrom(lp); state.plays.push(gp); state.ui.selected = gp.id; state.ui.fmEdit = false; state.ui.editPractice = false;
-      save(); closeAll(); if (state.ui.mode === 'setup') renderSetup(); else enterSetup();
-      if (state.plays.length > 4) toast(`Added — this game now has ${state.plays.length} plays (a standard game uses 3–4).`, 4500); else toast('Added. Review its answers below.');
-      return;
-    }
-    case 'approve': { const i = lib.queue.findIndex(p => p.id === id); if (i < 0) return; const p = lib.queue.splice(i, 1)[0]; p.status = 'approved'; lib.plays.push(p); libSave(); renderLibrary(); toast('Approved — now in your library'); return; }
+    case 'toggle': return toggleInGame(id);
+    case 'toSetup': closeAll(); if (state.ui.mode === 'setup') renderSetup(); else { hideStart(); enterSetup(); } return;
+    case 'approve': { const i = lib.queue.findIndex(p => p.id === id); if (i < 0) return; const p = lib.queue.splice(i, 1)[0]; p.status = 'approved'; lib.plays.push(p); libSave(); renderLibrary(); if (ovOpen('bfPrev')) openPreview(id); toast('Approved — now in your library'); return; }
     case 'discard': { if (!confirm('Discard this play from the review queue?')) return; lib.queue = lib.queue.filter(p => p.id !== id); libSave(); renderLibrary(); return; }
     case 'import': { const f = $('#fileLib'); f.value = ''; return f.click(); }
     case 'newGame': closeOv('bfGames'); L.sel = []; L.name = ''; return openLibrary('pick');
@@ -4192,7 +4335,14 @@ window.addEventListener('message', e => {
   else if (d.event === 'timeupdate' && d.value) { emb.t = num(d.value.seconds); emb.dur = num(d.value.duration) || emb.dur; }
 });
 /* the video area for a play that has an MLB video */
+function sitSync(p) {
+  const v = sitView(sitOfPlay(p)), st = $('#sitStrip'), bug = $('#sitBug');
+  const on = !!(v && v.any);
+  document.body.classList.toggle('has-sit', on);
+  st.innerHTML = on ? sitStripHTML(v) : ''; bug.innerHTML = on ? sitBugHTML(v) : '';
+}
 function mlbSync(p) {
+  sitSync(p);
   const m = p && p.mlb, cap = $('#mlbCap');
   document.body.classList.toggle('mlb-emb', !!(m && m.embedUrl));
   if (!m) { embStop(); if (cap) cap.innerHTML = ''; return false; }
@@ -4207,7 +4357,7 @@ function mlbSync(p) {
   }
   if (cap) {
     const segs = m.angle.segments.filter(g => g.start != null);
-    cap.innerHTML = `${angleChip(m.angle)}<span class="mc-l">${esc(m.angle.label)}</span>${m.situation ? `<span class="mc-s">${esc(m.situation)}</span>` : ''}
+    cap.innerHTML = `${angleChip(m.angle)}<span class="mc-l">${esc(m.angle.label)}</span>
       ${m.embedUrl && segs.length ? `<span class="mc-j">JUMP TO</span>${segs.map(g => `<button class="mc-seg" data-g="seg" data-s="${g.start}" title="${esc(g.view)}">${esc(g.time)}</button>`).join('')}` : ''}
       ${m.pageUrl ? `<a class="mc-a" href="${esc(m.pageUrl)}" target="_blank" rel="noopener">MLB.com ↗</a>` : ''}`;
   }
@@ -4237,8 +4387,8 @@ function mlbCardHTML(p) {
 $('#stLib').addEventListener('click', () => { hideStart(); openLibrary('browse'); });
 $('#stGames').addEventListener('click', () => { hideStart(); openGames(); });
 $('#bGames').addEventListener('click', () => { saveNow(); openGames(); });
-$('#bLib').addEventListener('click', () => openLibrary('add'));
-$('#bAddLib').addEventListener('click', () => openLibrary('add'));
+$('#bLib').addEventListener('click', () => openLibrary('browse'));
+$('#bAddLib').addEventListener('click', () => openLibrary('browse'));
 
 /* ================= BOOT ================= */
 (async function boot() {
