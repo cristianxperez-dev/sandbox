@@ -107,6 +107,11 @@ const count = async (p) => +((await p.locator("#count").innerText()).match(/^\d+
     await p.locator(".card").first().click(); await p.waitForSelector("#stage iframe");
     await p.click('a:has-text("← Results")'); await p.waitForSelector(".card");
     ok(JSON.stringify(await visibleIds(p)) === JSON.stringify(before) && (await p.locator("#activeBar .af").count()) === 2, "search state preserved when returning from a video");
+    // brand: the CP monogram from the Sandbox brand assets, once, beside the title
+    const mk = await p.evaluate(() => { const m = document.querySelectorAll(".brand-mark"); const r = m[0].getBoundingClientRect(), t = document.querySelector(".brand-n").getBoundingClientRect();
+      return { n: m.length, w: r.width, left: r.right <= t.left, mask: getComputedStyle(m[0]).webkitMaskImage || getComputedStyle(m[0]).maskImage }; });
+    const asset = await p.request.get(new URL("../../assets/brand/monogram-sm.png", BASE).href);
+    ok(mk.n === 1 && mk.w <= 30 && mk.left && /assets\/brand\/monogram-sm\.png/.test(mk.mask) && asset.status() === 200, "CP monogram (brand asset) sits once, small, left of the Play Repository title");
     // header: search first, then the Filters button; no outs quick control; Filters toggles the sidebar on desktop
     await p.goto(BASE + "#/explore"); await p.waitForSelector("#grid .card");
     const sb = await p.locator("#ask").boundingBox(), fb = await p.locator("#btnFilters").boundingBox();
@@ -330,7 +335,8 @@ const count = async (p) => +((await p.locator("#count").innerText()).match(/^\d+
   /* phone: the filter sheet at 375 / 390 / 430 */
   for (const W of [375, 390, 430]) await safe("phone " + W, async () => {
     const { ctx, p, errs } = await fresh(b, { ctx: { viewport: { width: W, height: 844 }, isMobile: true, hasTouch: true } });
-    const hs = () => p.evaluate(() => document.documentElement.scrollWidth - innerWidth);
+    // measured against the device width: a phone browser silently widens the page to fit overflowing content
+    const hs = () => p.evaluate((w) => Math.max(document.documentElement.scrollWidth, innerWidth) - w, W);
     const clipped = () => p.evaluate(() => [...document.querySelectorAll("#filters.open *, .searchrow *, #activeBar *, #grid .card")].filter((e) => { const r = e.getBoundingClientRect(); return r.width > 0 && (r.right > innerWidth + 0.5 || r.left < -0.5); }).length);
     ok(await hs() <= 0, `${W}: no horizontal scroll on Explore`);
     ok(await p.locator("#filters").evaluate((e) => getComputedStyle(e).visibility === "hidden"), `${W}: filter sheet starts closed`);

@@ -14,7 +14,12 @@ button{font:inherit;color:inherit}
 .sp{flex:1}
 /* header */
 .top{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:22px;height:58px;padding:0 22px;background:var(--charcoal);color:var(--cream)}
-.brand{display:flex;flex-direction:column;text-decoration:none;line-height:1.05}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;line-height:1.05}
+.brand-t{display:flex;flex-direction:column}
+/* the CP monogram from the Sandbox brand assets, filled in cream so it reads on the charcoal bar */
+.brand-mark{flex:none;width:27px;height:25px;background:var(--cream);opacity:.92;
+  -webkit-mask:url("../../assets/brand/monogram-sm.png") center/contain no-repeat;mask:url("../../assets/brand/monogram-sm.png") center/contain no-repeat}
+.brand:hover .brand-mark{opacity:1}
 .brand-k{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--taupe)}
 .brand-n{font-family:var(--serif);font-size:21px;font-weight:600;letter-spacing:.01em}
 .nav{display:flex;gap:4px;height:100%}
@@ -367,11 +372,25 @@ pre.code{background:var(--charcoal);color:var(--cream);padding:12px;border-radiu
 @media (max-width:560px){
   .top-r .lnk[data-nav=import]{display:none}
   .brand-n{font-size:18px}
+  .brand-mark{width:21px;height:20px}
+  .brand{gap:7px}
+  .top{gap:8px;padding:0 10px}
+  .nav a{padding:0 6px}
   .ask{flex-wrap:wrap}
   .ask-refine{order:3}
   .sit{grid-template-columns:110px 1fr}
   .scorebug{font-size:10.5px}
   #vPlay{padding:10px 10px 50px}
 }
+@media (max-width:370px){
+  .top{gap:6px;padding:0 8px}
+  .brand-n{font-size:16px}
+  .brand{gap:6px}
+  .brand-mark{width:19px;height:18px}
+  .nav{gap:0}
+  .nav a{padding:0 5px;font-size:12px}
+  .icon{width:26px;height:26px}
+}
+@media (max-width:335px){ .top-r .icon{display:none} }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media print{.top,.filters,.ask,.toolbar{display:none}}
