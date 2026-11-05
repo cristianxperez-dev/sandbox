@@ -111,8 +111,17 @@ details.more[open]>summary::after,details.sub[open]>summary::after{transform:rot
 details.sub>summary .any{margin-left:auto;font-weight:400;font-size:11px;color:var(--muted)}
 details.more>summary{justify-content:flex-start}
 details.more>.cgrid,details.sub>.cgrid{padding:0 8px 8px}
-/* mobile quick bar (results) */
-.mbar{display:none}
+/* search row: natural-language search, then the Filters button (the primary way into structured filters) */
+.searchrow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center}
+.btn.dark{background:var(--charcoal);border-color:var(--charcoal);color:#fff}
+.btn.dark:hover{background:#3A3633;border-color:#3A3633}
+.fbtn{background:var(--oxblood);border-color:var(--oxblood);color:#fff;font-weight:600;padding:9px 16px;gap:8px;min-height:42px;box-shadow:0 1px 0 rgba(0,0,0,.08)}
+.fbtn:hover{background:var(--oxblood-2);border-color:var(--oxblood-2)}
+.fbtn:focus-visible{outline:2px solid var(--oxblood);outline-offset:2px}
+.fbtn .ficon{flex:none}
+.fbtn .fcnt{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;padding:0 6px;border-radius:10px;background:#fff;color:var(--oxblood);font-family:var(--mono);font-size:11.5px;font-weight:700}
+body.filters-hidden #vExplore{grid-template-columns:minmax(0,1fr)}
+body.filters-hidden .filters{display:none}
 /* ask */
 .ask{display:flex;gap:8px;align-items:center}
 .ask input{flex:1;min-width:0;border:1px solid var(--line-2);border-radius:var(--r);background:var(--card);padding:10px 13px;font:inherit;font-size:15px;color:var(--ink)}
@@ -311,12 +320,9 @@ pre.code{background:var(--charcoal);color:var(--cream);padding:12px;border-radiu
   .dia-ctl{width:136px;height:120px}
   .gs-sum{font-size:14px}
   /* quick bar above results: open filters, set outs, see runners — without the sheet */
-  .mbar{display:flex;align-items:center;gap:8px;position:sticky;top:58px;z-index:20;margin:0 -14px;padding:8px 14px;background:var(--cream);border-bottom:1px solid var(--line)}
-  .mbar .mfil{min-height:42px;gap:7px;padding:6px 12px;font-weight:600;flex:none}
-  .mbar .mfil svg{flex:none}
-  .mbar .mouts{display:flex;align-items:center;gap:6px;margin-left:auto;min-width:0}
-  .mbar .mouts .seg button{min-height:40px;min-width:38px;padding:4px 8px;font-size:14px}
-  .ask{margin-top:2px}
+  .searchrow{grid-template-columns:minmax(0,1fr);gap:8px;padding-top:12px}
+  .fbtn{width:100%;justify-content:center;min-height:46px;font-size:15px}
+  body.filters-hidden .filters{display:flex}
   .ask input{font-size:16px;padding:9px 11px}
   .activebar{margin-top:8px}
   .activebar .af{padding:4px 4px 4px 10px;font-size:12.5px;max-width:100%}

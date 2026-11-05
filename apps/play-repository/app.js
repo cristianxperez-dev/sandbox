@@ -328,10 +328,24 @@
     $("#filters").classList.remove("open"); document.body.classList.remove("sheet-open");
     if (was && toResults && isMobile()) { const y = $(".results").getBoundingClientRect().top + window.scrollY - 58; window.scrollTo({ top: Math.max(0, y), behavior: "instant" }); }
   }
-  $("#mOuts").addEventListener("click", (e) => { const b = e.target.closest("[data-mouts]"); if (!b) return; anyOr(S.f.outs, b.dataset.mouts, Number); S.f.outs.sort(); pushFilters(); });
-  $("#btnFilters").onclick = () => ($("#filters").classList.contains("open") ? closeSheet(true) : openSheet());
+  /* Filters button: the mobile sheet on phones; on desktop it shows or hides the filter sidebar (remembered) */
+  const sidebarHidden = () => document.body.classList.contains("filters-hidden");
+  function setSidebar(hidden) { document.body.classList.toggle("filters-hidden", hidden); UI.sidebarHidden = hidden; saveUI(); filtersBtn(); }
+  $("#btnFilters").onclick = () => {
+    if (isMobile()) return $("#filters").classList.contains("open") ? closeSheet(true) : openSheet();
+    setSidebar(!sidebarHidden());
+  };
+  if (UI.sidebarHidden) document.body.classList.add("filters-hidden");
+  const FILTER_ICON = '<svg class="ficon" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M3 5h14M6 10h8M8.5 15h3" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>';
+  function filtersBtn() {
+    const n = activeChips().length, b = $("#btnFilters");
+    b.innerHTML = `${FILTER_ICON}<span>Filters</span>${n ? `<span class="fcnt" aria-hidden="true">${n}</span>` : ""}`;
+    b.setAttribute("aria-label", `Filters${n ? `, ${n} active` : ""}`);
+    b.setAttribute("aria-expanded", String(isMobile() ? $("#filters").classList.contains("open") : !sidebarHidden()));
+    b.classList.toggle("has", n > 0);
+  }
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && $("#filters").classList.contains("open")) closeSheet(true); });
-  MQ.addEventListener("change", () => { closeSheet(false); renderFilters(); });
+  MQ.addEventListener("change", () => { closeSheet(false); renderFilters(); filtersBtn(); });
 
   /* ================================================================ results */
   function activeChips(f = S.f) {
@@ -405,9 +419,7 @@
     $("#count").innerHTML = `${list.length} play${list.length === 1 ? "" : "s"}<small>of ${S.plays.length}</small>`;
     $("#sort").value = S.sort;
     const chips = activeChips();
-    $("#btnFilters").innerHTML = `${diamond(S.f.bases.mode === "any" ? "___" : code(S.f.bases.sel), { size: 24 })}Filters${chips.length ? ` <span class="fbadge">${chips.length}</span>` : ""}`;
-    $("#btnFilters").setAttribute("aria-label", `Filters, ${chips.length} active`);
-    $("#mOuts").innerHTML = `<span class="k">Outs</span>` + seg([["Any", 'data-mouts="any"', !S.f.outs.length], ["0", 'data-mouts="0"', S.f.outs.includes(0)], ["1", 'data-mouts="1"', S.f.outs.includes(1)], ["2", 'data-mouts="2"', S.f.outs.includes(2)]]);
+    filtersBtn();
     $("#activeBar").innerHTML = chips.map((c, i) => `<span class="af">${esc(c.label)}<button data-rm="${i}" aria-label="Remove ${esc(c.label)}">×</button></span>`).join("") +
       (chips.length ? `<button class="btn sm ghost" data-rm="all">Clear all</button>` : "");
     $$("#activeBar [data-rm]").forEach((b) => (b.onclick = () => { if (b.dataset.rm === "all") { S.f = PR.emptyFilters(); S.understood = null; } else chips[+b.dataset.rm].fn(); pushFilters(); }));

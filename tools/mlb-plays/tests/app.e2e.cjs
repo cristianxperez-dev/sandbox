@@ -107,6 +107,21 @@ const count = async (p) => +((await p.locator("#count").innerText()).match(/^\d+
     await p.locator(".card").first().click(); await p.waitForSelector("#stage iframe");
     await p.click('a:has-text("← Results")'); await p.waitForSelector(".card");
     ok(JSON.stringify(await visibleIds(p)) === JSON.stringify(before) && (await p.locator("#activeBar .af").count()) === 2, "search state preserved when returning from a video");
+    // header: search first, then the Filters button; no outs quick control; Filters toggles the sidebar on desktop
+    await p.goto(BASE + "#/explore"); await p.waitForSelector("#grid .card");
+    const sb = await p.locator("#ask").boundingBox(), fb = await p.locator("#btnFilters").boundingBox();
+    ok(fb.x > sb.x && Math.abs((fb.y + fb.height / 2) - (sb.y + sb.height / 2)) < 12 && await p.locator("[data-mouts], #mOuts").count() === 0, "desktop: Filters button sits beside the search bar; no outs quick filter");
+    ok((await p.locator("#btnFilters").evaluate((e) => getComputedStyle(e).backgroundColor)) === "rgb(88, 27, 32)", "Filters button is solid oxblood");
+    await p.click('#filters [data-outs="1"]'); await wait(p, 100);
+    const n1 = await count(p);
+    ok((await p.locator("#btnFilters .fcnt").innerText()) === "1" && n1 === P.filter((x) => x.outs === 1).length, "outs filtering still works inside Filters; the button shows the count");
+    await p.click("#btnFilters"); await wait(p, 150);
+    ok(!(await p.locator("#filters").isVisible()) && (await p.locator("#btnFilters").getAttribute("aria-expanded")) === "false" && await count(p) === n1, "desktop: Filters hides the sidebar and keeps the selections");
+    await p.reload(); await p.waitForSelector("#grid .card");
+    ok(!(await p.locator("#filters").isVisible()) && await count(p) === n1, "desktop: hidden sidebar and filters persist across reload");
+    await p.click("#btnFilters"); await wait(p, 150);
+    ok(await p.locator('#filters [data-outs="1"]').getAttribute("aria-pressed") === "true", "desktop: reopening Filters shows the same selections");
+    await clearAll(p);
     ok(errs.length === 0, "explore: no app errors " + errs.join(" | ").slice(0, 300));
     await ctx.close();
   });
@@ -316,7 +331,7 @@ const count = async (p) => +((await p.locator("#count").innerText()).match(/^\d+
   for (const W of [375, 390, 430]) await safe("phone " + W, async () => {
     const { ctx, p, errs } = await fresh(b, { ctx: { viewport: { width: W, height: 844 }, isMobile: true, hasTouch: true } });
     const hs = () => p.evaluate(() => document.documentElement.scrollWidth - innerWidth);
-    const clipped = () => p.evaluate(() => [...document.querySelectorAll("#filters.open *, .mbar *, #activeBar *, #grid .card")].filter((e) => { const r = e.getBoundingClientRect(); return r.width > 0 && (r.right > innerWidth + 0.5 || r.left < -0.5); }).length);
+    const clipped = () => p.evaluate(() => [...document.querySelectorAll("#filters.open *, .searchrow *, #activeBar *, #grid .card")].filter((e) => { const r = e.getBoundingClientRect(); return r.width > 0 && (r.right > innerWidth + 0.5 || r.left < -0.5); }).length);
     ok(await hs() <= 0, `${W}: no horizontal scroll on Explore`);
     ok(await p.locator("#filters").evaluate((e) => getComputedStyle(e).visibility === "hidden"), `${W}: filter sheet starts closed`);
     await p.click("#btnFilters"); await wait(p, 350);
@@ -357,12 +372,11 @@ const count = async (p) => +((await p.locator("#count").innerText()).match(/^\d+
     ok(await p.locator("#filters").evaluate((e) => getComputedStyle(e).visibility === "hidden"), `${W}: Show X Plays closes the sheet`);
     ok(JSON.stringify(await visibleIds(p)) === JSON.stringify(want), `${W}: results match runners + outs + play type (${want.length})`);
     ok((await p.locator("#grid").boundingBox()).y < 844, `${W}: first result is on screen after Show — no scrolling needed`);
-    ok((await p.locator("#activeBar .af").count()) === 3 && /3/.test(await p.locator("#btnFilters .fbadge").innerText()), `${W}: active filter summary + badge above results`);
-    // adjust outs from the quick bar, without reopening the sheet
-    await p.click('#mOuts [data-mouts="1"]'); await wait(p, 100);
-    ok(JSON.stringify(await visibleIds(p)) === JSON.stringify(idsWhere((x) => x.bases === "_2_" && [1, 2].includes(x.outs) && x.flags.includes("single"))), `${W}: outs adjustable from the quick bar`);
+    ok((await p.locator("#activeBar .af").count()) === 3 && (await p.locator("#btnFilters .fcnt").innerText()) === "3", `${W}: active filter summary + badge above results`);
+    // no quick outs control on the page — outs live in the Filters panel only
+    ok(await p.locator("[data-mouts], #mOuts").count() === 0, `${W}: no outs quick filter on the page`);
     await p.locator("#activeBar .af button").first().click(); await wait(p, 100);
-    ok((await p.locator("#activeBar .af").count()) === 2, `${W}: an active filter is removable in one tap`);
+    ok((await p.locator("#activeBar .af").count()) === 2 && (await p.locator("#btnFilters .fcnt").innerText()) === "2", `${W}: an active filter is removable in one tap; the Filters count follows`);
     ok(await hs() <= 0 && await clipped() === 0, `${W}: results, quick bar and chips fit the screen`);
     // card: thumbnail, situation, save
     const c0 = p.locator("#grid .card").first();

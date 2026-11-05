@@ -33,15 +33,14 @@
   <section class="view" id="vExplore" hidden>
     <aside class="filters" id="filters" aria-label="Filters"></aside>
     <div class="results">
-      <div class="mbar" id="mbar">
-        <button class="btn mfil" id="btnFilters" type="button" aria-haspopup="dialog">Filters</button>
-        <div class="mouts" id="mOuts"></div>
+      <div class="searchrow">
+        <form class="ask" id="askForm" autocomplete="off">
+          <input id="ask" type="search" placeholder="Describe a situation — “runner on second, one out, single to right, play at home”" aria-label="Search by situation">
+          <label class="ask-refine" title="Add to the filters you already have instead of replacing them"><input type="checkbox" id="askRefine"> refine</label>
+          <button class="btn dark" type="submit">Search</button>
+        </form>
+        <button class="btn fbtn" id="btnFilters" type="button" aria-controls="filters">Filters</button>
       </div>
-      <form class="ask" id="askForm" autocomplete="off">
-        <input id="ask" type="search" placeholder="Describe a situation — “runner on second, one out, single to right, play at home”" aria-label="Search by situation">
-        <label class="ask-refine" title="Add to the filters you already have instead of replacing them"><input type="checkbox" id="askRefine"> refine</label>
-        <button class="btn primary" type="submit">Search</button>
-      </form>
       <div class="understood" id="understood" hidden></div>
       <div class="activebar" id="activeBar"></div>
       <div class="toolbar">
