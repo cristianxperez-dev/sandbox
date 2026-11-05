@@ -110,7 +110,7 @@ const count = async (p) => +((await p.locator("#count").innerText()).match(/^\d+
     // brand: the CP monogram from the Sandbox brand assets, once, beside the title
     const mk = await p.evaluate(() => { const m = document.querySelectorAll(".brand-mark"); const r = m[0].getBoundingClientRect(), t = document.querySelector(".brand-n").getBoundingClientRect();
       return { n: m.length, w: r.width, left: r.right <= t.left, mask: getComputedStyle(m[0]).webkitMaskImage || getComputedStyle(m[0]).maskImage }; });
-    const asset = await p.request.get(new URL("../../assets/brand/monogram-sm.png", BASE).href);
+    const asset = { status: () => 0 }; const st = await p.evaluate(async (u) => (await fetch(u)).status, new URL("../../assets/brand/monogram-sm.png", BASE).href); asset.status = () => st;
     ok(mk.n === 1 && mk.w <= 30 && mk.left && /assets\/brand\/monogram-sm\.png/.test(mk.mask) && asset.status() === 200, "CP monogram (brand asset) sits once, small, left of the Play Repository title");
     // header: search first, then the Filters button; no outs quick control; Filters toggles the sidebar on desktop
     await p.goto(BASE + "#/explore"); await p.waitForSelector("#grid .card");
