@@ -7,17 +7,20 @@
 <meta name="description" content="FUEL: player nutrition, body composition and performance context for sports nutrition staff. Sandbox demo with synthetic players.">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#002D62">
-<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="icon" href="brand/favicon.ico" sizes="any">
+<link rel="icon" href="brand/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="brand/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="brand/apple-touch-icon.png">
+<link rel="preload" href="brand/fuel-lockup.webp" as="image" type="image/webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="app.css?v=1">
+<link rel="stylesheet" href="app.css?v=2">
 </head>
 <body>
 <header class="top">
-  <a class="brand" href="#/home" aria-label="FUEL — home">
-    <span class="word">FUEL</span>
-    <span class="sub">Player Nutrition<br>&amp; Performance</span>
+  <a class="brand" href="#/home" aria-label="FUEL Player Nutrition — home">
+    <picture><source srcset="brand/fuel-lockup.webp" type="image/webp"><img class="brand-lockup" src="brand/fuel-lockup.png" width="404" height="120" alt="FUEL"></picture>
   </a>
   <nav class="nav" aria-label="Main">
     <a href="#/home" data-nav="home">Home</a>
@@ -36,7 +39,13 @@
   </div>
 </header>
 <div class="strip" id="strip"></div>
-<main id="app" tabindex="-1"><div class="loading">Loading FUEL…</div></main>
+<main id="app" tabindex="-1"></main>
+<div class="splash" id="splash" role="status" aria-live="polite">
+  <div class="splash-in">
+    <picture><source srcset="brand/fuel-logo-512.webp" type="image/webp"><img class="splash-logo" src="brand/fuel-logo-512.png" width="512" height="477" alt="FUEL — Player Nutrition"></picture>
+    <div class="splash-msg" id="splashMsg">Loading…</div>
+  </div>
+</div>
 <nav class="tabbar" aria-label="Main (mobile)">
   <a href="#/home" data-nav="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"/></svg>Home</a>
   <a href="#/players" data-nav="players"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Players</a>
@@ -46,6 +55,6 @@
 </nav>
 <div class="scrim" id="scrim" hidden><div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"></div></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script type="module" src="app.js?v=1"></script>
+<script type="module" src="app.js?v=2"></script>
 </body>
 </html>

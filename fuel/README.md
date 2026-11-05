@@ -5,7 +5,8 @@ Sandbox URL: **https://cperez.app/apps/fuel/** — a working MVP running on **sy
 FUEL replaces a nutrition tracking spreadsheet with one persistent record per player: dated weights, DEXA scans,
 hydration and protocol records, goals, nutrition notes, follow-ups and performance measurements, all linked by a stable
 player ID and kept across seasons and affiliate moves. It is not an analytics platform and not affiliated with or approved
-by the Houston Astros; the navy/orange palette is a design choice for a demo.
+by the Houston Astros. The logo (below) includes the Astros star-H, a club trademark: it is used here as the owner's chosen
+identity for an internal prototype on a public sandbox, not as a sign of club approval.
 
 ## How it is built
 
@@ -19,6 +20,21 @@ by the Houston Astros; the navy/orange palette is a design choice for a demo.
 | Tests | `fuel/tests/` | `core.test.mjs` (logic), `server.test.mjs` (the real Function on SQLite with signed tokens), `app.e2e.cjs` (browser, desktop + 375/390/430). |
 
 `config.js` selects the mode: `"demo"` (current) or `"secure"`.
+
+## Brand assets (`apps/fuel/brand/`)
+
+All derived from the supplied logo, `source-fuel-logo.jpg` (kept unchanged as the reference), by cropping, resizing
+and keying out the background — nothing is redrawn. Regenerate with `python3 fuel/make_brand_assets.py` after
+re-creating `fuel-logo.png` (see the script header).
+
+| File | Use |
+|---|---|
+| `fuel-logo.png` (946×882), `fuel-logo-512.png/.webp`, `fuel-logo-256.png/.webp` | full logo, rounded square, transparent corners — launch / sign-in screen |
+| `fuel-lockup.png/.webp` (404×120, shown 36 px tall; 27–30 px on phones) | compact star-H + FUEL lockup, transparent — top navigation |
+| `fuel-mark-star.png`, `fuel-wordmark.png` | the two elements on transparent backgrounds |
+| `favicon.ico` (16–64), `favicon-32.png`, `favicon-16.png` | star-H mark on a navy tile (the full lockup is unreadable at 16–32 px) |
+| `apple-touch-icon.png` (180), `icon-192.png`, `icon-512.png` | full logo on an opaque square of the logo's navy |
+| `../logo.png` | the Sandbox homepage card |
 
 ## Data model
 

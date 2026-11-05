@@ -9,10 +9,25 @@ import { renderReports, renderData } from "./admin.js";
 
 const app = $("#app");
 
+/* launch screen: shown while FUEL starts; in secure mode it's also where a sign-in problem is explained */
+function splash(state, e) {
+  const el = $("#splash"), msg = $("#splashMsg");
+  if (state === "done") { el.classList.add("out"); setTimeout(() => (el.hidden = true), 300); return; }
+  el.hidden = false; el.classList.remove("out");
+  if (state === "loading") { msg.innerHTML = mode === "demo" ? "Loading the sandbox demo — synthetic players only." : "Signing you in…"; return; }
+  const st = e && e.status;
+  msg.innerHTML = st === 401 ? "<b>Sign in to continue.</b><br>Your session ended or this account isn't on FUEL's staff list."
+    : st === 503 ? "<b>FUEL's secure mode isn't switched on yet.</b><br>Ask the administrator to finish the setup."
+    : `<b>FUEL couldn't start.</b><br>${esc(e && e.message ? e.message : "Unknown error.")}`;
+  msg.insertAdjacentHTML("afterend", `<button class="btn accent" type="button" id="splashRetry">${st === 401 ? "Sign in" : "Try again"}</button>`);
+  $("#splashRetry").onclick = () => location.reload(); // in secure mode, Cloudflare Access shows its sign-in page on reload
+}
+
 async function boot() {
   let info;
+  splash("loading");
   try { info = await init(); S.session = await api("GET", "session"); S.staff = await api("GET", "staff"); }
-  catch (e) { app.innerHTML = `<div class="panel"><div class="empty">FUEL couldn't start: ${esc(e.message)}</div></div>`; return; }
+  catch (e) { splash("error", e); return; }
   strip(info);
   wireSearch();
   $("#qeBtn").onclick = () => openQuickEntry(currentPlayer());
@@ -23,7 +38,8 @@ async function boot() {
   });
   window.addEventListener("hashchange", route);
   window.addEventListener("fuel:saved", () => { const r = (location.hash || "").slice(2).split("/")[0]; if (["home", "log", "followups", "players"].includes(r)) route(); });
-  route();
+  await route();
+  splash("done");
 }
 function currentPlayer() {
   const m = (location.hash || "").match(/^#\/player\/([^/]+)/);
