@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Play Repository — CP Baseball Systems</title>
+<meta name="description" content="A searchable library of real MLB plays by game situation, with MLB video, collections and a teaching mode.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#/explore" aria-label="Play Repository — Explore">
+    <span class="brand-k">CP Baseball Systems</span>
+    <span class="brand-n">Play Repository</span>
+  </a>
+  <nav class="nav" aria-label="Main">
+    <a href="#/explore" data-nav="explore">Explore</a>
+    <a href="#/collections" data-nav="collections">Collections</a>
+    <a href="#/saved" data-nav="saved">Saved Plays</a>
+  </nav>
+  <div class="top-r">
+    <a class="lnk" href="#/import" data-nav="import" title="Discover and import more plays">Import</a>
+    <button class="icon" id="btnHelp" title="How Play Repository works" aria-label="Help">?</button>
+    <a class="lnk sbx" href="../../" title="Back to Sandbox">Sandbox</a>
+  </div>
+</header>
+
+<main id="app">
+  <!-- EXPLORE -->
+  <section class="view" id="vExplore" hidden>
+    <aside class="filters" id="filters" aria-label="Filters"></aside>
+    <div class="results">
+      <form class="ask" id="askForm" autocomplete="off">
+        <input id="ask" type="search" placeholder="Describe a situation — “runner on second, one out, single to right, play at home”" aria-label="Search by situation">
+        <label class="ask-refine" title="Add to the filters you already have instead of replacing them"><input type="checkbox" id="askRefine"> refine</label>
+        <button class="btn primary" type="submit">Search</button>
+      </form>
+      <div class="understood" id="understood" hidden></div>
+      <div class="activebar" id="activeBar"></div>
+      <div class="toolbar">
+        <span class="count" id="count"></span>
+        <span class="sp"></span>
+        <button class="btn ghost sm" id="btnFilters" type="button">Filters</button>
+        <label class="sortl">Sort <select id="sort">
+          <option value="category">Category</option><option value="date">Newest</option><option value="leverage">Leverage</option><option value="inning">Inning</option>
+        </select></label>
+      </div>
+      <div class="grid" id="grid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- PLAY DETAIL -->
+  <section class="view" id="vPlay" hidden></section>
+
+  <!-- COLLECTIONS / SAVED / IMPORT -->
+  <section class="view page" id="vCollections" hidden></section>
+  <section class="view page" id="vSaved" hidden></section>
+  <section class="view page" id="vImport" hidden></section>
+</main>
+
+<div class="present" id="present" hidden></div>
+<div class="scrim" id="scrim" hidden><div class="modal" id="modal" role="dialog" aria-modal="true"></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="core.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -25,6 +25,23 @@
     "status": "in-development"
   },
   {
+    "id": "play-repository",
+    "name": "Play Repository",
+    "description": "Search real MLB plays by base-out state, score and outcome, watch MLB video, and build teaching collections.",
+    "discipline": "Baseball",
+    "status": "prototype",
+    "returnLink": false,
+    "tags": [
+      "video library",
+      "game situations",
+      "teaching",
+      "coaching",
+      "mlb video",
+      "high home",
+      "statcast"
+    ]
+  },
+  {
     "id": "baseball-iq",
     "name": "Baseball IQ",
     "description": "A game-show style film review: players watch a play, name what stands out, and teams compete for points.",
