@@ -142,7 +142,19 @@ def _angle_matches(a, rec, plays_in_game):
     text = ((a.get("title") or "") + " " + (a.get("description") or "")).lower()
     hints = HINT.get(rec["event"]["type"], (re.escape((rec["event"]["label"] or "").lower()),))
     if not any(h and re.search(h, text) for h in hints):
-        return False
+        # MLB's wording can differ from the official event ("bunt" for a fielder's choice). Still a match when the
+        # text names the batter AND the exact half-inning, and that was his only plate appearance in the half-inning.
+        last = rec["batter"]["name"].split()[-1].lower()
+        m = re.search(r"\b(top|bottom) of the (\d{1,2})(?:st|nd|rd|th)", text)
+        if not (last in text and m and m.group(1) == rec["before"]["half"] and int(m.group(2)) == rec["before"]["inning"]):
+            return False
+        same_pa = {p["source"].get("atBatIndex") for p in plays_in_game if p["batter"]["id"] == rec["batter"]["id"]
+                   and p["before"]["inning"] == rec["before"]["inning"] and p["before"]["half"] == rec["before"]["half"]}
+        if len(same_pa) > 1:
+            return False
+        # mid-at-bat events (steals, wild pitches …) share the plate appearance — the clip is about its result
+        mid_pa = ("stolen_base", "caught_stealing", "wild_pitch", "passed_ball", "pickoff", "balk", "defensive_indiff")
+        return not rec["event"]["type"].startswith(mid_pa)
     last = rec["batter"]["name"].split()[-1].lower()
     m = re.search(r"\b(top|bottom) of the (\d{1,2})(?:st|nd|rd|th)", text)
     teams = [rec["game"]["away"]["club"] or "", rec["game"]["home"]["club"] or ""]

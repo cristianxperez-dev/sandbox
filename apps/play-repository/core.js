@@ -35,7 +35,7 @@
       batter: "", pitcher: "", batHand: null, pitHand: null, positions: [], spray: [], locations: [], pitchTypes: [],
       evMin: null, evMax: null, laMin: null, laMax: null, distMin: null, veloMin: null, veloMax: null, balls: null, strikes: null,
       outsOnPlay: [], runsMin: null, liMin: null, liMax: null, dreMin: null, dreMax: null, wpaMin: null, wpaMax: null,
-      ifAlign: [], ofAlign: [], categories: [], tags: [], savedOnly: false, collection: "", camera: "" };
+      ifAlign: [], ofAlign: [], categories: [], tags: [], savedOnly: false, collection: "", camera: "", hhStatus: "" };
   }
   const has = (v) => v !== null && v !== undefined && v !== "" && !(Array.isArray(v) && !v.length);
   const between = (x, lo, hi) => (lo == null || (x != null && x >= lo)) && (hi == null || (x != null && x <= hi));
@@ -110,11 +110,14 @@
     if (has(f.tags)) { const mine = (user.tags || {})[p.id] || []; if (!f.tags.every((t) => mine.some((m) => m.toLowerCase() === t.toLowerCase()))) return false; }
     if (f.savedOnly && !savedHas(user.saved, p.id)) return false;
     if (f.collection) { const c = (user.collections || {})[f.collection]; if (!c || !c.plays.includes(p.id)) return false; }
+    if (f.hhStatus && hhStatusOf(p) !== f.hhStatus) return false;
     if (f.camera) { const c = cameras(p); if (f.camera === "both" ? !(c.broadcast && c.highHome) : !c[f.camera]) return false; }
     return true;
   }
   /** which cameras a play has verified video for — stored per play; older imports fall back to their clip angles */
   const cameras = (p) => p.cameras || { broadcast: (p.angles || []).includes("broadcast"), highHome: (p.angles || []).includes("high-home"), other: [] };
+  const hhStatusOf = (p) => (cameras(p).highHome ? "verified" : (p.cameras || {}).highHomeStatus || "not_searched");
+  const HH_STATUS_LABEL = { verified: "High Home verified", inaccessible: "High Home exists, not public", not_found: "High Home not found", not_searched: "High Home not yet searched" };
   const CAMERA_LABEL = { broadcast: "Broadcast available", highHome: "High Home available", both: "Both angles available" };
   const savedHas = (s, id) => (s instanceof Set ? s.has(id) : Array.isArray(s) ? s.includes(id) : false);
   function nameHit(person, q) {
@@ -386,5 +389,5 @@
   }
 
   return { ORD, halfLabel, batScore, fldScore, diff, phase, runnersN, basesLabel, outsLabel, battingTeam, fieldingTeam, POS, LOC_NAME, OR_GROUPS,
-    emptyFilters, matches, filter, cameras, CAMERA_LABEL, facets, parseQuery, conflicts, situationConstraints, PRESETS, situationSummary, similarity, similar, whySimilar, encodeFilters, decodeFilters, wpaBat, nameHit };
+    emptyFilters, matches, filter, cameras, CAMERA_LABEL, hhStatusOf, HH_STATUS_LABEL, facets, parseQuery, conflicts, situationConstraints, PRESETS, situationSummary, similarity, similar, whySimilar, encodeFilters, decodeFilters, wpaBat, nameHit };
 });

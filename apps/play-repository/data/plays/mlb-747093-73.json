@@ -263,7 +263,8 @@
    "available": true,
    "clips": [
     0
-   ]
+   ],
+   "status": "verified"
   },
   "highHome": {
    "available": false,
@@ -283,8 +284,49 @@
      "result": "none for this game/date"
     }
    ],
-   "checkedAt": "2026-11-05"
+   "checkedAt": "2026-11-05",
+   "status": "not_found",
+   "sources": [
+    {
+     "source": "MLB Film Room — all editorial clips of the game",
+     "clips": 38,
+     "angleClips": 0,
+     "highHome": 0
+    },
+    {
+     "source": "MLB Stats API — game content (highlights, keywordsAll)",
+     "clips": 21,
+     "angleClips": 0
+    },
+    {
+     "source": "MLB.com weekly video sitemaps 2024–2026 (titles + descriptions)",
+     "clipsNearDate": 7,
+     "angleClips": 7,
+     "note": "not tied to a game — must name this play's batter"
+    },
+    {
+     "source": "MLB Film Room — camera feeds on the play's own clip (playId)",
+     "feeds": [
+      "AWAY",
+      "HOME"
+     ],
+     "nonBroadcast": []
+    },
+    {
+     "source": "MLB Gameday — the play's page (Gameday 3D)",
+     "ok": true,
+     "url": "https://www.mlb.com/gameday/cardinals-vs-braves/2024/07/20/747093/play/73"
+    }
+   ],
+   "inaccessible": [],
+   "review": []
   },
-  "other": []
+  "other": [],
+  "gameday": {
+   "url": "https://www.mlb.com/gameday/cardinals-vs-braves/2024/07/20/747093/play/73",
+   "linkVerified": true,
+   "checkedAt": "2026-11-05",
+   "access": "Gameday 3D needs a free MLB.com account; full regular-season games in 3D need MLB.TV. A tracking-based reconstruction, not camera footage."
+  }
  }
 }

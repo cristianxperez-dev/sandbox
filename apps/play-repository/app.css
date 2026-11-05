@@ -177,8 +177,14 @@ details.more>.cgrid,details.sub>.cgrid{padding:0 8px 8px}
 .cams button.na small{font-weight:400;font-size:10.5px;margin-left:3px}
 .camnote{font-size:12px;color:#BFB4A4;margin:0 0 8px;line-height:1.4;padding:5px 8px;border-left:2px solid rgba(242,235,221,.25);transition:background .3s}
 .camnote b{color:#F2EBDD}
+.camnote .srcs{margin-top:4px}
+.camnote .srcs summary{cursor:pointer;color:#C9A27E}
+.camnote .srcs ul{margin:4px 0 0;padding-left:18px}
+.camsel .v3d{display:inline-flex;align-items:center;gap:5px;border:1px dashed rgba(242,235,221,.45);border-radius:var(--r);padding:6px 12px;color:#E8DCC8;text-decoration:none;font-size:13px;font-weight:600;min-height:36px}
+.camsel .v3d small{font-weight:400;font-size:10.5px;color:#A79C8E}
+.camsel .v3d:hover{border-color:#F2EBDD}
 .camnote.flash{background:rgba(201,162,126,.25)}
-@media (max-width:900px){ .cams{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%} .cams button{min-height:44px;font-size:14px;padding:6px 8px} .camsel>.k{display:none} }
+@media (max-width:900px){ .cams{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%} .cams button{min-height:44px;font-size:14px;padding:6px 8px} .camsel>.k{display:none} .camsel .v3d{width:100%;justify-content:center;min-height:42px} }
 .stage{position:relative;background:#000;border-radius:2px;overflow:hidden;display:flex;flex-direction:column}
 .stage .vid{position:relative;aspect-ratio:16/9;width:100%}
 .stage iframe{position:absolute;inset:0;width:100%;height:100%;border:0}

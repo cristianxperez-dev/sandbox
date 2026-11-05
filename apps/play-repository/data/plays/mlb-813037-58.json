@@ -289,7 +289,8 @@
    "available": true,
    "clips": [
     1
-   ]
+   ],
+   "status": "verified"
   },
   "highHome": {
    "available": true,
@@ -311,13 +312,54 @@
      "result": "matched high-home-angle-of-george-springer-s-go-ahead-homer"
     }
    ],
-   "checkedAt": "2026-11-05"
+   "checkedAt": "2026-11-05",
+   "status": "verified",
+   "sources": [
+    {
+     "source": "MLB Film Room — all editorial clips of the game",
+     "clips": 70,
+     "angleClips": 7,
+     "highHome": 1
+    },
+    {
+     "source": "MLB Stats API — game content (highlights, keywordsAll)",
+     "clips": 47,
+     "angleClips": 0
+    },
+    {
+     "source": "MLB.com weekly video sitemaps 2024–2026 (titles + descriptions)",
+     "clipsNearDate": 9,
+     "angleClips": 3,
+     "note": "not tied to a game — must name this play's batter"
+    },
+    {
+     "source": "MLB Film Room — camera feeds on the play's own clip (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "nonBroadcast": []
+    },
+    {
+     "source": "MLB Gameday — the play's page (Gameday 3D)",
+     "ok": true,
+     "url": "https://www.mlb.com/gameday/mariners-vs-blue-jays/2025/10/20/813037/play/58"
+    }
+   ],
+   "inaccessible": [],
+   "review": []
   },
   "other": [
    {
     "clip": 2,
     "label": "Field View (MLB's name for this angle)"
    }
-  ]
+  ],
+  "gameday": {
+   "url": "https://www.mlb.com/gameday/mariners-vs-blue-jays/2025/10/20/813037/play/58",
+   "linkVerified": true,
+   "checkedAt": "2026-11-05",
+   "access": "Gameday 3D needs a free MLB.com account; full regular-season games in 3D need MLB.TV. A tracking-based reconstruction, not camera footage."
+  }
  }
 }

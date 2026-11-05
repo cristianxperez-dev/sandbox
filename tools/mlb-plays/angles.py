@@ -15,8 +15,9 @@ import sys
 
 import mlb
 
-HIGH_HOME = re.compile(r"high[- ]home", re.I)
-OTHER = re.compile(r"high[- ]angle|high[- ](?:first|third|1st|3rd)[- ]base|center[- ]?field[- ](?:camera|cam|angle|view)|field[- ]view|isolated|all[- ]22|overhead|bird'?s[- ]eye|alternate[- ]angle|wide[- ]angle|high[- ]view|skycam|drone", re.I)
+# "high home" as a camera, never "a high home run" or "high home plate umpire"
+HIGH_HOME = re.compile(r"\bhigh[- ]?home\b(?![- ]?(?:runs?|run's|plate|team|crowd|fans?|opener|stand|win))", re.I)
+OTHER = re.compile(r"unique (?:angle|look)|different angle|another angle|new angle|high[- ]angle|high[- ](?:first|third|1st|3rd)[- ]base|center[- ]?field[- ](?:camera|cam|angle|view)|field[- ]view|isolated|all[- ]22|overhead|bird'?s[- ]eye|alternate[- ]angle|wide[- ]angle|high[- ]view|skycam|drone", re.I)
 WORK = os.path.join(mlb.HERE, "work")
 
 
@@ -47,7 +48,7 @@ def scan(years):
                 continue
             title = (re.search(r"<video:title>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?</video:title>", u) or [None, ""])[1].strip()
             desc = (re.search(r"<video:description>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?</video:description>", u) or [None, ""])[1].strip()
-            a = angle_of(loc + " " + title)
+            a = angle_of(loc + " " + title + " " + desc)
             if a:
                 hits.append({"slug": loc.rstrip("/").split("/")[-1], "url": loc, "title": title, "description": desc, "angle": a,
                              "date": ((re.search(r"<video:publication_date>([^<]+)<", u) or [None, ""])[1])[:10]})
@@ -56,8 +57,10 @@ def scan(years):
 
 
 if __name__ == "__main__":
-    years = sys.argv[1:] or ["2025"]
+    args = sys.argv[1:]
+    out_name = args[args.index("--out") + 1] if "--out" in args else "angle-clips.json"
+    years = [a for a in args if a.isdigit()] or ["2025"]
     os.makedirs(WORK, exist_ok=True)
     hits = scan(years)
-    json.dump(hits, open(os.path.join(WORK, "angle-clips.json"), "w"), indent=1)
+    json.dump(hits, open(os.path.join(WORK, out_name), "w"), indent=1)
     print("DONE", len(hits), "angle-labelled clips;", sum(h["angle"] == "high-home" for h in hits), "High Home")

@@ -175,6 +175,7 @@
     const people = [...new Set(S.plays.map((p) => p.batter.name))].sort();
     const pitchers = [...new Set(S.plays.map((p) => p.pitcher.name))].sort();
     const section = (id, title, body) => `<details class="fsec" data-s="${id}"${open.has(id) ? " open" : ""}><summary><span>${title}</span>${counts[id] ? `<span class="fbadge">${counts[id]}</span>` : ""}</summary><div class="fin">${body}</div></details>`;
+    const hhCounts = {}; S.plays.forEach((p) => { const k = PR.hhStatusOf(p); hhCounts[k] = (hhCounts[k] || 0) + 1; });
     const camCounts = { broadcast: 0, highHome: 0, both: 0 };
     S.plays.forEach((p) => { const c = PR.cameras(p); if (c.broadcast) camCounts.broadcast++; if (c.highHome) camCounts.highHome++; if (c.broadcast && c.highHome) camCounts.both++; });
     const lev = f.flags.includes("high_leverage") ? "high" : f.flags.includes("low_leverage") ? "low" : "";
@@ -216,6 +217,7 @@
       play: `
         <span class="k">Camera angle</span>
         <div class="cgrid c3">${[["broadcast", "Broadcast"], ["highHome", "High Home"], ["both", "Both angles"]].map(([k, l]) => chip(l, f.camera === k, `data-cam="${k}" title="${esc(PR.CAMERA_LABEL[k])} — verified, playable MLB video"`, camCounts[k], !camCounts[k] && f.camera !== k)).join("")}</div>
+        <details class="sub" data-sub="hhstatus"${UI.sub.includes("hhstatus") ? " open" : ""}><summary>High Home search status${f.hhStatus ? ' <span class="fbadge">1</span>' : ""}</summary><div class="cgrid c2">${Object.entries(PR.HH_STATUS_LABEL).map(([k, l]) => chip(l.replace("High Home ", ""), f.hhStatus === k, `data-hhs="${k}" title="${esc(l)}"`, hhCounts[k] || 0, !hhCounts[k] && f.hhStatus !== k)).join("")}</div></details>
         ${PLAY_GROUPS.map(([id, label, groups]) => { const n = f.flags.filter((x) => groups.includes((S.flags[x] || {}).group)).length;
           return `<details class="sub" data-sub="${id}"${UI.sub.includes(id) ? " open" : ""}><summary>${label}${n ? ` <span class="fbadge">${n}</span>` : ""}<span class="any">any of</span></summary><div class="cgrid c2">${groupChips(groups)}</div></details>`; }).join("")}
         <span class="k">Official result</span><select class="fsel wide" data-sel="event"><option value="">Any result</option>${opts(fc.events, f.events[0] || "", (k) => k.replace(/_/g, " "))}</select>
@@ -281,6 +283,7 @@
     else if (d.ph) f.pitHand = f.pitHand === d.ph ? null : d.ph;
     else if (d.pos) toggleIn(f.positions, d.pos);
     else if (d.cam) f.camera = f.camera === d.cam ? "" : d.cam;
+    else if (d.hhs) f.hhStatus = f.hhStatus === d.hhs ? "" : d.hhs;
     else if (d.loc) toggleIn(f.locations, +d.loc);
     else if (d.spray) anyOr(f.spray, d.spray);
     else if (d.oop) anyOr(f.outsOnPlay, d.oop, Number);
@@ -356,6 +359,7 @@
     f.outsOnPlay.forEach((x) => add(x + " out(s) on play", () => f.outsOnPlay.splice(f.outsOnPlay.indexOf(x), 1)));
     if (f.runsMin) add("Run(s) scored", () => (f.runsMin = null));
     if (f.camera) add(PR.CAMERA_LABEL[f.camera], () => (f.camera = ""));
+    if (f.hhStatus) add(PR.HH_STATUS_LABEL[f.hhStatus], () => (f.hhStatus = ""));
     sec = "who";
     if (f.team) add(`${f.team}${f.teamRole !== "any" ? " " + f.teamRole : ""}`, () => (f.team = ""));
     if (f.batter) add("Batter: " + f.batter, () => (f.batter = ""));
@@ -581,22 +585,31 @@
   }
   function camNote(flash) {
     const cm = detailCams(cur.d), n = $("#camnote"); if (!n) return;
-    const hh = cm.highHome, when = hh.checkedAt ? ` · checked ${esc(hh.checkedAt)}` : "";
-    const srcs = (hh.searched || []).map((x) => x.source.replace(/ \(.*$/, "")).join(", ");
+    const hh = cm.highHome, when = hh.checkedAt ? ` on ${esc(hh.checkedAt)}` : "";
+    const srcList = (hh.sources || hh.searched || []).filter((x) => !/Gameday/.test(x.source));
+    const srcs = srcList.length ? ` <details class="srcs"><summary>${srcList.length} sources checked${when}</summary><ul>${srcList.map((x) => `<li>${esc(x.source)}${x.clips != null ? ` — ${x.clips} clips` : ""}${x.angleClips != null ? `, ${x.angleClips} angle-labelled` : ""}${x.feeds ? ` — feeds: ${esc(x.feeds.join(", ") || "none")}` : ""}${x.result ? ` — ${esc(x.result)}` : ""}${x.error ? ` — <b>error</b>: ${esc(x.error)}` : ""}</li>`).join("")}</ul></details>` : "";
+    const st = hhStatus(cm);
     n.innerHTML = cur.cam === "highHome"
       ? `<b>High Home</b> — MLB labels this clip High Home. It's edited separately from the broadcast clip, so the same second can be a different moment; switching back returns you to where you were.`
-      : !hh.available ? `<b>High Home unavailable</b> — MLB hasn't published High Home video of this play${srcs ? ` (searched: ${esc(srcs)}${when})` : ""}. Showing broadcast.`
-      : `<b>Broadcast</b> — High Home is also available for this play.`;
+      : cur.cam === "broadcast" && hh.available ? `<b>Broadcast</b> — High Home is also available for this play.`
+      : st === "inaccessible" ? `<b>High Home: exists, not public</b> — MLB has a High Home record for this play that can't be played through MLB's public player. Showing broadcast.${srcs}`
+      : st === "not_searched" ? `<b>High Home: not searched yet</b> — this play hasn't been through the full High Home search. Showing broadcast.${srcs}`
+      : `<b>High Home: not found</b> — no MLB High Home recording of this play was found in any public MLB source. Showing broadcast.${srcs}`;
     n.classList.toggle("flash", !!flash);
     if (flash) setTimeout(() => n.classList.remove("flash"), 900);
   }
+  const HH_STATUS = { verified: "verified", inaccessible: "not public", not_found: "not found", not_searched: "not searched" };
+  const hhStatus = (cm) => (cm.highHome.available ? "verified" : cm.highHome.status || (cm.highHome.searched ? "not_found" : "not_searched"));
   function showCam(cam, keep) {
     const cm = detailCams(cur.d);
     const list = cam === "highHome" ? cm.highHome.clips : cam === "broadcast" ? cm.broadcast.clips : cur.d.clips.map((c, i) => [c, i]).filter(([c]) => camOf(c) === cam).map(([, i]) => i);
     if (!list.length) return;
     cur.cam = cam;
-    const btn = (k, label, ok) => `<button type="button" data-cam="${esc(k)}" role="radio" aria-checked="${cur.cam === k}" class="${cur.cam === k ? "on" : ""}${ok ? "" : " na"}"${ok ? "" : ' aria-disabled="true"'} title="${ok ? esc(label) + " — verified MLB video of this play" : "Not published by MLB for this play"}">${esc(label)}${ok ? "" : " <small>unavailable</small>"}</button>`;
-    $("#camsel").innerHTML = `<span class="k">Camera</span><div class="cams" role="radiogroup" aria-label="Camera angle">${btn("broadcast", "Broadcast", cm.broadcast.available)}${btn("highHome", "High Home", cm.highHome.available)}${cm.other.map((o) => btn(o, o.slice(6).replace(/ \(MLB's name.*\)/, ""), true)).join("")}</div>`;
+    const st = hhStatus(cm);
+    const btn = (k, label, ok) => `<button type="button" data-cam="${esc(k)}" role="radio" aria-checked="${cur.cam === k}" class="${cur.cam === k ? "on" : ""}${ok ? "" : " na"}"${ok ? "" : ' aria-disabled="true"'} title="${ok ? esc(label) + " — verified MLB video of this play" : "High Home: " + HH_STATUS[st]}">${esc(label)}${ok ? "" : ` <small>${esc(HH_STATUS[st])}</small>`}</button>`;
+    const gd = (cur.d.cameras || {}).gameday;
+    const view3d = gd && gd.linkVerified ? `<a class="v3d" href="${esc(gd.url)}" target="_blank" rel="noopener" title="${esc(gd.access)}">3D View <small>MLB Gameday ↗</small></a>` : "";
+    $("#camsel").innerHTML = `<span class="k">Camera</span><div class="cams" role="radiogroup" aria-label="Camera angle">${btn("broadcast", "Broadcast", cm.broadcast.available)}${btn("highHome", "High Home", cm.highHome.available)}${cm.other.map((o) => btn(o, o.slice(6).replace(/ \(MLB's name.*\)/, ""), true)).join("")}</div>${view3d}`;
     const target = list.find((i) => cur.pos[i] != null) ?? list[0];
     $("#angles").innerHTML = list.length > 1 ? `<span class="k">Version</span>${list.map((i) => `<button data-clip="${i}" class="${i === target ? "on" : ""}" title="${esc(cur.d.clips[i].howVerified)}">${esc(clipName(cur.d.clips[i]))}</button>`).join("")}` : "";
     camNote(false);
@@ -834,6 +847,11 @@
   });
 
   /* ================================================================ import */
+  function hhSummary() {
+    const c = { verified: 0, inaccessible: 0, not_found: 0, not_searched: 0 };
+    S.plays.forEach((p) => { const k = (p.cameras || {}).highHome ? "verified" : (p.cameras || {}).highHomeStatus || "not_searched"; c[k] = (c[k] || 0) + 1; });
+    return `High Home verified ${c.verified} · exists but not public ${c.inaccessible} · not found ${c.not_found} · not yet searched ${c.not_searched}`;
+  }
   function renderImport() {
     const host = $("#vImport");
     host.innerHTML = `<div class="phead"><div><span class="label">Grow the repository</span><h1>Discover &amp; import plays</h1>
@@ -844,6 +862,12 @@ python3 discover.py 2025-06-01:2025-06-07      # scan games → normalized plays
 python3 curate.py                              # pick plays by teaching slot, verify video
 python3 publish.py ../../apps/play-repository --bundle new-plays.json</pre>
         <p class="fnote">Plays already in the repository are skipped by id; MLB's rate limits are respected with caching and retries.</p>
+        <h3>Find &amp; import plays because High Home exists (admin)</h3>
+        <pre class="code">python3 angles.py 2024 2025 2026            # MLB.com's catalog: every clip MLB titles or describes as High Home
+python3 hh_finder.py                        # resolve each High Home clip to its game and exact play
+python3 hh_finder.py --import               # scan those games, import the matched plays, verify both angles
+python3 hh_discover.py ../../apps/play-repository   # re-search every play's High Home status</pre>
+        <p class="fnote">Library now: ${hhSummary()}. New imports search for High Home before they're finalised and prefer multi-angle plays for baserunning, infield, outfield and catcher teaching.</p>
         <h3>2 · Import the bundle</h3>
         <input type="file" id="impFile" accept="application/json">
         <div id="impOut" style="margin-top:10px"></div>

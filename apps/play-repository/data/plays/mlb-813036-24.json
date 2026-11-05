@@ -363,7 +363,8 @@
    "clips": [
     1,
     2
-   ]
+   ],
+   "status": "verified"
   },
   "highHome": {
    "available": true,
@@ -385,8 +386,49 @@
      "result": "matched brewers-turn-miraculous-double-play-high-home-angle"
     }
    ],
-   "checkedAt": "2026-11-05"
+   "checkedAt": "2026-11-05",
+   "status": "verified",
+   "sources": [
+    {
+     "source": "MLB Film Room — all editorial clips of the game",
+     "clips": 54,
+     "angleClips": 2,
+     "highHome": 1
+    },
+    {
+     "source": "MLB Stats API — game content (highlights, keywordsAll)",
+     "clips": 30,
+     "angleClips": 0
+    },
+    {
+     "source": "MLB.com weekly video sitemaps 2024–2026 (titles + descriptions)",
+     "clipsNearDate": 10,
+     "angleClips": 8,
+     "note": "not tied to a game — must name this play's batter"
+    },
+    {
+     "source": "MLB Film Room — camera feeds on the play's own clip (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "nonBroadcast": []
+    },
+    {
+     "source": "MLB Gameday — the play's page (Gameday 3D)",
+     "ok": true,
+     "url": "https://www.mlb.com/gameday/dodgers-vs-brewers/2025/10/13/813036/play/24"
+    }
+   ],
+   "inaccessible": [],
+   "review": []
   },
-  "other": []
+  "other": [],
+  "gameday": {
+   "url": "https://www.mlb.com/gameday/dodgers-vs-brewers/2025/10/13/813036/play/24",
+   "linkVerified": true,
+   "checkedAt": "2026-11-05",
+   "access": "Gameday 3D needs a free MLB.com account; full regular-season games in 3D need MLB.TV. A tracking-based reconstruction, not camera footage."
+  }
  }
 }

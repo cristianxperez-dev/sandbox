@@ -167,7 +167,12 @@ const count = async (p) => +((await p.locator("#count").innerText()).match(/^\d+
     const bc = bcOnly[0];
     await p.goto(BASE + "#/play/" + bc.id); await p.waitForSelector("#stage iframe");
     const na = p.locator('#camsel [data-cam="highHome"]');
-    ok((await na.getAttribute("aria-disabled")) === "true" && /unavailable/i.test(await na.innerText()) && /High Home unavailable/.test(await p.locator("#camnote").innerText()), "High Home shown as unavailable when MLB hasn't published it");
+    const st = (bc.cameras || {}).highHomeStatus;
+    const word = { not_found: "not found", inaccessible: "not public", not_searched: "not searched" }[st];
+    ok((await na.getAttribute("aria-disabled")) === "true" && (await na.innerText()).includes(word) && /High Home: (not found|exists, not public|not searched yet)/.test(await p.locator("#camnote").innerText()), `High Home shows its search status (${st}), not a bare "unavailable"`);
+    ok((await p.locator("#camnote details.srcs li").count()) >= 3, "the sources checked for High Home are listed");
+    const v3 = p.locator("#camsel a.v3d");
+    ok(await v3.count() === 1 && /\/gameday\//.test(await v3.getAttribute("href")) && (await v3.getAttribute("href")).includes(String(bc.gamePk)) && /3D View/.test(await v3.innerText()) && !/high home/i.test(await v3.innerText()), "3D View links to MLB Gameday for this play and is never called High Home");
     const before = await src(); await na.click({ force: true }); await wait(p, 300);
     ok((await src()) === before && (await p.locator('#camsel [data-cam="broadcast"]').getAttribute("aria-checked")) === "true", "tapping unavailable High Home keeps broadcast playing (no substitute angle)");
     ok(!/high home/i.test(await p.locator("#vmeta").innerText()) && /broadcast/i.test(await p.locator("#vmeta").innerText()), "broadcast footage is never labelled High Home");
@@ -177,6 +182,13 @@ const count = async (p) => +((await p.locator("#count").innerText()).match(/^\d+
       await p.click(`#filters [data-cam="${k}"]`);
       ok(JSON.stringify(await visibleIds(p)) === JSON.stringify(idsWhere(pred)), `camera filter: ${k} (${idsWhere(pred).length})`);
       await p.click(`#filters [data-cam="${k}"]`);
+    }
+    await p.click('details[data-sub="hhstatus"] > summary');
+    for (const k of ["verified", "not_found"]) {
+      await p.click(`#filters [data-hhs="${k}"]`);
+      const want = idsWhere((x) => (k === "verified" ? (x.cameras || {}).highHome : (x.cameras || {}).highHomeStatus === k && !(x.cameras || {}).highHome));
+      ok(JSON.stringify(await visibleIds(p)) === JSON.stringify(want), `High Home status filter: ${k} (${want.length})`);
+      await p.click(`#filters [data-hhs="${k}"]`);
     }
     await p.goto(BASE + "#/play/" + bc.id); await p.waitForSelector("#stage iframe");
     // playback through MLB's embed (player.js)

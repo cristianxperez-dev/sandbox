@@ -293,7 +293,8 @@
    "available": true,
    "clips": [
     0
-   ]
+   ],
+   "status": "verified"
   },
   "highHome": {
    "available": false,
@@ -313,8 +314,49 @@
      "result": "none for this game/date"
     }
    ],
-   "checkedAt": "2026-11-05"
+   "checkedAt": "2026-11-05",
+   "status": "not_found",
+   "sources": [
+    {
+     "source": "MLB Film Room — all editorial clips of the game",
+     "clips": 60,
+     "angleClips": 1,
+     "highHome": 0
+    },
+    {
+     "source": "MLB Stats API — game content (highlights, keywordsAll)",
+     "clips": 41,
+     "angleClips": 0
+    },
+    {
+     "source": "MLB.com weekly video sitemaps 2024–2026 (titles + descriptions)",
+     "clipsNearDate": 10,
+     "angleClips": 9,
+     "note": "not tied to a game — must name this play's batter"
+    },
+    {
+     "source": "MLB Film Room — camera feeds on the play's own clip (playId)",
+     "feeds": [
+      "CMS",
+      "NETWORK"
+     ],
+     "nonBroadcast": []
+    },
+    {
+     "source": "MLB Gameday — the play's page (Gameday 3D)",
+     "ok": true,
+     "url": "https://www.mlb.com/gameday/royals-vs-yankees/2024/10/05/775334/play/10"
+    }
+   ],
+   "inaccessible": [],
+   "review": []
   },
-  "other": []
+  "other": [],
+  "gameday": {
+   "url": "https://www.mlb.com/gameday/royals-vs-yankees/2024/10/05/775334/play/10",
+   "linkVerified": true,
+   "checkedAt": "2026-11-05",
+   "access": "Gameday 3D needs a free MLB.com account; full regular-season games in 3D need MLB.TV. A tracking-based reconstruction, not camera footage."
+  }
  }
 }

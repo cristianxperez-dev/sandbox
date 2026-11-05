@@ -5,7 +5,7 @@ flags/fields, then a preference score (an MLB.com highlight for the play, High H
 game / team / player, clear outcome). Every pick goes through videos.clips_for(); a play without a verified,
 playable MLB clip is skipped and the next candidate takes the slot (logged as a replacement).
 Writes work/curated.json and work/validation.json.
-Usage: python3 curate.py [--total 300] [--app ../../apps/play-repository]
+Usage: python3 curate.py [--total 300] [--app ../../apps/play-repository] [--only-ids a,b] [--high-home-only]
   Incremental: plays already published are kept and counted; only new plays are written to work/curated.json.
 """
 from __future__ import annotations
@@ -209,10 +209,27 @@ def main(argv):
         by_game[r["game"]["gamePk"]].append(r)
     hh_items = [a for a in sitemap if a["angle"] == "high-home"]
     hh_content = {pk: [a for a in lst if a.get("angle") == "high-home"] for pk, lst in angled.items()}
+    # MLB-labelled High Home clips resolved to their game (hh_finder.py → work/hh-catalog.json): discovered before import
+    cat_path = os.path.join(WORK, "hh-catalog.json")
+    for a in (json.load(open(cat_path)) if os.path.exists(cat_path) else []):
+        if a.get("gamePk"):
+            lst = angled.setdefault(str(a["gamePk"]), [])
+            if not any(x["slug"] == a["slug"] for x in lst):
+                lst.append({"slug": a["slug"], "title": a["title"], "description": a.get("description"), "angle": "high-home",
+                            "duration": a.get("duration"), "thumb": a.get("thumb")})
+            hh_content.setdefault(str(a["gamePk"]), [])
+            if not any(x["slug"] == a["slug"] for x in hh_content[str(a["gamePk"])]):
+                hh_content[str(a["gamePk"])].append(angled[str(a["gamePk"])][-1] if angled[str(a["gamePk"])][-1]["slug"] == a["slug"] else a)
     hh_dates = {a["date"] for a in hh_items}
     hh_ids = {r["id"] for r in recs if (r["game"]["date"] in hh_dates or hh_content.get(str(r["game"]["gamePk"])))
               and any(videos._angle_matches(a, r, by_game[r["game"]["gamePk"]]) for a in videos.angle_candidates(r, hh_content, hh_items))}
     print("plays with an MLB High Home clip:", sorted(hh_ids), flush=True)
+    only = set(argv[argv.index("--only-ids") + 1].split(",")) if "--only-ids" in argv else None
+    if "--high-home-only" in argv:                      # admin: import plays because High Home footage exists
+        only = (only or set(hh_ids)) & set(hh_ids)
+    if only is not None:
+        recs = [r for r in recs if r["id"] in only]
+        print(f"restricted to {len(recs)} requested plays", flush=True)
 
     keep = published(app)
     used = {k["id"] for k in keep}
@@ -225,6 +242,8 @@ def main(argv):
     per_cat = collections.Counter(k["category"] for k in keep)
     per_slot = collections.Counter(k["slot"] for k in keep)
     seasons = collections.Counter()
+    if only is not None:                                  # targeted import: add the requested plays wherever they fit
+        target = {c: per_cat[c] + len(recs) for c in target}
     print(f"keeping {len(keep)} published plays; targets {target}", flush=True)
     checks = _checks()
     picked, log = [], []
@@ -244,6 +263,8 @@ def main(argv):
         return s
 
     def eligible(r):
+        if only is not None:
+            return r["id"] not in used
         return (r["id"] not in used and r["source"]["playId"] and games[r["game"]["gamePk"]] < MAX_PER_GAME
                 and people[r["batter"]["id"]] < MAX_PER_BATTER and events[r["event"]["type"]] < CAPS.get(r["event"]["type"], 10 ** 6))
 
@@ -275,7 +296,9 @@ def main(argv):
                     break
                 if slot in stalled or per_slot[slot] >= max(1, round(quota * scale * (200 / sum(TARGET.values())))):
                     stalled.add(slot); continue
-                cands = sorted((r for r in recs if eligible(r) and pred(r)), key=score, reverse=True)
+                # multi-angle plays win ties on educational value — most of all where High Home teaches positioning
+                bonus = 4 if cat in (BR, IF, OF, CA) else 0
+                cands = sorted((r for r in recs if eligible(r) and pred(r)), key=lambda r: score(r) + (bonus if r["id"] in hh_ids else 0), reverse=True)
                 ok = False
                 for tried, r in enumerate(cands[:15]):
                     cl, report, sav = verify(r)
@@ -305,7 +328,9 @@ def main(argv):
                         log.append({"slot": slot, "id": None, "result": "slot exhausted — no further eligible candidate in the scanned games"})
             if not progress:
                 break
-        if per_cat[cat] < target[cat]:
+        if only is not None and not any(r["id"] not in used for r in recs):
+            break
+        if per_cat[cat] < target[cat] and only is None:
             print(f"--  {cat}: {per_cat[cat]} of {target[cat]} — scan more games (discover.py) to fill it", flush=True)
     json.dump(picked, open(os.path.join(WORK, "curated.json"), "w"), indent=1, ensure_ascii=False)
     json.dump({"log": log, "perCategory": per_cat, "target": target, "kept": len(keep)}, open(os.path.join(WORK, "validation.json"), "w"), indent=1)

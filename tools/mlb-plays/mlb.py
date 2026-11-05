@@ -190,3 +190,54 @@ def embed_status(url: str) -> int:
         return status
     except SourceError:
         return 0
+
+
+# ------------------------------------------------- Film Room: every editorial clip of a game
+_FR_GAME_Q = """query Search($query: String!, $page: Int, $limit: Int) {
+ search(query: $query, limit: $limit, page: $page, languagePreference: EN, contentPreference: CMS_ONLY, queryType: STRUCTURED) {
+  total plays { mediaPlayback { id slug title blurb description date guid type feeds { type duration image { cuts { width src } } }
+   keywordsDisplay { slug displayName }
+   playInfo { inning inningHalf outs gamePk players { batter { id name } pitcher { id name } } } } } } }"""
+
+
+def filmroom_game_cms(pk: int, max_pages: int = 6) -> list[dict]:
+    """All of MLB's editorial (CMS) clips Film Room holds for a game — a superset of the Stats API content list
+    (it includes alternate-angle clips such as High Home and Field View that the content endpoint can omit)."""
+    out, page = [], 0
+    while page < max_pages:
+        body = json.dumps({"query": _FR_GAME_Q, "variables": {"query": f"GamePk = [{pk}]", "limit": 100, "page": page}}).encode()
+        status, raw = fetch("https://fastball-gateway.mlb.com/graphql", data=body,
+                            headers={"content-type": "application/json", "Origin": "https://www.mlb.com", "Referer": "https://www.mlb.com/video"})
+        if status != 200:
+            raise SourceError(f"Film Room {status}")
+        s = (json.loads(raw).get("data") or {}).get("search") or {}
+        items = [m for p in s.get("plays", []) for m in p.get("mediaPlayback", [])]
+        out += items
+        if not items or len(out) >= (s.get("total") or 0):
+            break
+        page += 1
+    return out
+
+
+def gameday_play(pk: int, at_bat_index: int) -> dict:
+    """MLB Gameday's page for one play (where Gameday 3D lives). Verified by MLB resolving it to that game's play URL."""
+    url = f"https://www.mlb.com/gameday/{pk}/play/{at_bat_index}"
+    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    for i in range(3):
+        try:
+            wait = MIN_GAP - (time.time() - _last[0])
+            if wait > 0:
+                time.sleep(wait)
+            _last[0] = time.time()
+            with urllib.request.urlopen(req, timeout=45) as r:
+                final, status = r.geturl(), r.status
+                head = r.read(400000).decode("utf-8", "replace")
+            ok = status == 200 and f"/{pk}/play/{at_bat_index}" in final and "fieldvision" in head.lower()
+            return {"url": url, "canonical": final, "status": status, "ok": ok, "fieldvision": "fieldvision" in head.lower()}
+        except urllib.error.HTTPError as e:
+            if e.code in (429, 503, 509):
+                time.sleep(15 * (i + 1)); continue
+            return {"url": url, "status": e.code, "ok": False}
+        except Exception as e:  # noqa: BLE001
+            time.sleep(3 * (i + 1)); err = str(e)
+    return {"url": url, "status": 0, "ok": False, "error": err}

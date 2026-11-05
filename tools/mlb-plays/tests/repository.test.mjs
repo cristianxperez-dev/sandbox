@@ -14,8 +14,8 @@ const F = (o) => Object.assign(J(PR.emptyFilters()), o);
 
 /* ------------------------------------------------------------- the 200 */
 test("200 unique plays, 200 detail files, ids are MLB game + event ids", () => {
-  assert.equal(P.length, 200);
-  assert.equal(new Set(P.map((p) => p.id)).size, 200);
+  assert.ok(P.length >= 200, "at least the 200 curated plays");
+  assert.equal(new Set(P.map((p) => p.id)).size, P.length);
   for (const p of P) {
     assert.match(p.id, /^mlb-\d{6}-\d{1,3}(-e\d{1,3})?$/);
     const d = detail(p.id);
@@ -24,11 +24,14 @@ test("200 unique plays, 200 detail files, ids are MLB game + event ids", () => {
     assert.equal(String(d.source.atBatIndex), p.id.split("-")[2]);
   }
 });
-test("category distribution matches the brief (35/35/35/25/25/25/20)", () => {
+test("category distribution: the brief's 35/35/35/25/25/25/20, plus only High Home imports beyond it", () => {
+  const want = { "Baserunning & advancement": 35, "Infield defense & decisions": 35, "Outfield defense, cutoffs & relays": 35,
+    "Catcher defense & plays at the plate": 25, "Situational hitting": 25, "High-leverage & unusual situations": 25, "Miscellaneous teaching moments": 20 };
+  const orig = new Set(JSON.parse(readFileSync(new URL("./original-200.json", import.meta.url), "utf8")));
   const c = {};
-  P.forEach((p) => (c[p.category] = (c[p.category] || 0) + 1));
-  assert.deepEqual(c, { "Baserunning & advancement": 35, "Infield defense & decisions": 35, "Outfield defense, cutoffs & relays": 35,
-    "Catcher defense & plays at the plate": 25, "Situational hitting": 25, "High-leverage & unusual situations": 25, "Miscellaneous teaching moments": 20 });
+  P.filter((p) => orig.has(p.id)).forEach((p) => (c[p.category] = (c[p.category] || 0) + 1));
+  assert.deepEqual(c, want);
+  for (const p of P.filter((x) => !orig.has(x.id))) assert.ok(p.cameras.highHome, p.id + " added beyond the 200 only because High Home was verified");
 });
 test("no duplicate events or clips, and no glut of home runs or strikeouts", () => {
   const ev = new Set(), clips = new Set();
@@ -63,11 +66,11 @@ test("every play has at least one verified, playable MLB clip with provenance", 
     }
   }
 });
-test("High Home is only ever MLB-labelled High Home footage, and both MLB High Home clips are used", () => {
+test("High Home is only ever MLB-labelled or visually confirmed High Home footage; the original two are kept", () => {
   const hh = P.filter((p) => p.angles.includes("high-home"));
-  assert.equal(hh.length, 2);
+  assert.ok(hh.length >= 2 && ["mlb-813036-24", "mlb-813037-58"].every((id) => hh.some((p) => p.id === id)));
   for (const p of P) for (const c of detail(p.id).clips) {
-    if (c.angle.category === "high-home") { assert.equal(c.kind, "high-home"); assert.match(c.title, /high home/i); assert.match(c.angle.label, /HIGH HOME/); }
+    if (c.angle.category === "high-home") { assert.equal(c.kind, "high-home"); assert.match(c.angle.label, /HIGH HOME/); if (!/high home/i.test(c.title)) assert.ok(c.angle.visual && c.angle.visual.verdict === "high-home"); }
     else assert.doesNotMatch(c.angle.label, /high home/i);
   }
   // High Home is the first clip shown whenever a play has one
@@ -81,9 +84,23 @@ test("camera availability: stored per play, matches verified clips, High Home on
     assert.equal(c.broadcast.available, d.clips.some((x) => x.angle.category === "broadcast" && ok(x)), p.id);
     assert.equal(c.highHome.available, d.clips.some((x) => x.kind === "high-home" && ok(x)), p.id);
     assert.deepEqual(p.cameras.broadcast, c.broadcast.available); assert.deepEqual(p.cameras.highHome, c.highHome.available);
-    for (const i of c.highHome.clips) { assert.equal(d.clips[i].kind, "high-home"); assert.match(d.clips[i].title, /high home/i); }
+    for (const i of c.highHome.clips) {
+      const x = d.clips[i];
+      assert.equal(x.kind, "high-home");
+      // High Home either because MLB says so, or because a person confirmed MLB's own frame (recorded verdict)
+      if (!/high home/i.test(x.title)) assert.ok(x.angle.visual && x.angle.visual.verdict === "high-home" && x.angle.visual.by, p.id + " visual verdict recorded");
+    }
     for (const i of c.broadcast.clips) assert.equal(d.clips[i].angle.category, "broadcast");
     assert.ok(Array.isArray(c.highHome.searched) && c.highHome.searched.length >= 2, "High Home was actively searched for " + p.id);
+  }
+  for (const p of P) {
+    const h = detail(p.id).cameras.highHome;
+    assert.ok(["verified", "inaccessible", "not_found", "not_searched"].includes(h.status), p.id + " status " + h.status);
+    assert.equal(h.status === "verified", h.available, p.id + " verified ⇔ playable High Home clip");
+    assert.equal(p.cameras.highHomeStatus, h.status, p.id);
+    if (h.status !== "not_searched") assert.ok((h.sources || []).length >= 4, p.id + " every source logged");
+    const g = detail(p.id).cameras.gameday;
+    assert.ok(g && /^https:\/\/www\.mlb\.com\/gameday\//.test(g.url) && g.url.includes(String(p.gamePk)), p.id + " Gameday link");
   }
   const f = (k) => run(F({ camera: k })).length;
   assert.equal(f("highHome"), P.filter((p) => p.cameras.highHome).length);
