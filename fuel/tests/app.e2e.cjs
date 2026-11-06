@@ -307,7 +307,7 @@ async function commitImport(p) { await p.click("#iCommit"); await p.click("#cGo"
   /* 22: phones */
   for (const W of [375, 390, 430]) await safe("phone " + W, async () => {
     const { ctx, p, errs } = await fresh(b, { viewport: { width: W, height: 844 }, isMobile: true, hasTouch: true });
-    for (const h of ["#/home", "#/players", "#/followups", "#/log", "#/reports", "#/data"]) { await go(p, h); if ((await hscroll(p)) > 0) ok(false, `${W}: horizontal scroll on ${h}`); }
+    for (const h of ["#/home", "#/players", "#/followups", "#/weighins", "#/reports", "#/data"]) { await go(p, h); if ((await hscroll(p)) > 0) ok(false, `${W}: horizontal scroll on ${h}`); }
     ok(true, `${W}: no horizontal scroll on the main pages`);
     await go(p, "#/home");
     await p.click("#qeTab"); await pickPlayer(p, "#modal", "Navarro");
@@ -319,12 +319,52 @@ async function commitImport(p) { await p.click("#iCommit"); await p.click("#cGo"
     ok(prof.weights.some((x) => x.weight === 211.2) && prof.followups.some((f) => f.description.startsWith("Follow up")), `${W}: mobile Quick Entry saves a note, weight and follow-up`);
     await go(p, `#/player/${nav.id}/overview`);
     ok((await hscroll(p)) <= 0, `${W}: player profile fits the screen`);
-    await go(p, "#/log/bulk");
-    const first = p.locator("[data-pid]").first();
+    await go(p, "#/weighins");
+    const first = p.locator("tr:not([hidden]) [data-pid]").first();
     await first.fill("199.9"); await first.press("Enter");
     await p.click("#bSave"); await wait(p, 800);
     ok(/1 weight saved/.test(await p.locator("#toast").innerText()), `${W}: bulk weigh-in works on a phone`);
     ok(errs.length === 0, `${W}: no app errors ` + errs.join(" | ").slice(0, 300));
+    await ctx.close();
+  });
+
+  /* weigh-ins: bulk-only page with a player search that never drops unsaved entries */
+  await safe("weigh-ins", async () => {
+    const { ctx, p, errs } = await fresh(b);
+    await go(p, "#/home");
+    ok((await p.locator('.nav a[data-nav="weighins"]').innerText()).trim() === "Weigh-Ins" && (await p.locator('.nav a', { hasText: "Daily Log" }).count()) === 0, "nav: Daily Log is now Weigh-Ins");
+    await go(p, "#/log/bulk");
+    ok(/#\/weighins$/.test(p.url()), "old Daily Log links land on Weigh-Ins");
+    ok((await p.locator("#qeInline, #todayList, .tabs").count()) === 0 && (await p.locator("#bBody").count()) === 1, "Weigh-Ins is bulk entry only (no inline quick entry, no tabs)");
+    ok((await p.locator("#qeBtn").isVisible()), "global Quick Entry is still in the top bar");
+    await p.selectOption("#bA", "");
+    const all = await p.locator("#bBody tr:not([hidden])").count();
+    const pl = (await api(p, "GET", "players")).slice().sort((x, y) => x.last_name.localeCompare(y.last_name));
+    const A = pl[0], B = pl.find((x) => x.id !== A.id && !`${A.first_name} ${A.last_name}`.toLowerCase().includes(x.last_name.slice(0, 4).toLowerCase()));
+    await p.fill(`[data-pid="${A.id}"]`, "201.4");
+    await p.fill(`[data-note="${A.id}"]`, "search test");
+    await p.fill("#bQ", B.last_name.slice(0, 4).toUpperCase());
+    const shown = await p.locator("#bBody tr:not([hidden])").count();
+    ok(shown >= 1 && shown < all && (await p.locator(`[data-row="${B.id}"]`).isVisible()), "search filters as you type (partial, case-insensitive)");
+    ok(!(await p.locator(`[data-row="${A.id}"]`).isVisible()) && (await p.inputValue(`[data-pid="${A.id}"]`)) === "201.4", "a hidden row keeps its unsaved weight");
+    ok(/1 entered · 1 not shown/.test(await p.locator("#bN").innerText()), "the count says an entry is hidden by the filter");
+    await p.fill(`[data-pid="${B.id}"]`, "188.8");
+    await p.fill("#bQ", `${B.first_name.toLowerCase()} ${B.last_name.slice(0, 3).toLowerCase()}`);
+    ok(await p.locator(`[data-row="${B.id}"]`).isVisible(), "search matches first + partial last name");
+    await p.fill("#bQ", "zzqq");
+    ok(await p.locator("#bNone").isVisible(), "no-match message shows");
+    await p.click("#bQx");
+    ok((await p.inputValue("#bQ")) === "" && (await p.locator("#bBody tr:not([hidden])").count()) === all, "clear restores every player");
+    await p.fill("#bQ", A.last_name); await p.press("#bQ", "Escape");
+    ok((await p.inputValue("#bQ")) === "", "Escape clears the search");
+    await p.selectOption("#bA", A.affiliate === B.affiliate ? "" : B.affiliate);
+    ok((await p.inputValue(`[data-pid="${A.id}"]`)) === "201.4", "changing affiliate keeps unsaved weights");
+    await p.click("#bSave"); await wait(p, 800);
+    ok(/2 weights saved/.test(await p.locator("#toast").innerText()), "saving includes entries hidden by the filter");
+    const pa = await api(p, "GET", "player", { params: { id: A.id } }), pb = await api(p, "GET", "player", { params: { id: B.id } });
+    const wa = pa.weights.find((x) => x.weight === 201.4), wb = pb.weights.find((x) => x.weight === 188.8);
+    ok(wa && wb && wa.player_id === A.id && wb.player_id === B.id && wa.note === "search test" && wa.date === wb.date, "weights saved to the right players with date and note");
+    ok(errs.length === 0, "weigh-ins: no app errors " + errs.join(" | ").slice(0, 300));
     await ctx.close();
   });
 
@@ -334,7 +374,10 @@ async function commitImport(p) { await p.click("#iCommit"); await p.click("#cGo"
     await go(p, "#/followups/overdue");
     const before = await api(p, "GET", "followups");
     const od = before.filter((f) => f.overdue).length;
-    ok(od > 0 && (await p.locator("#fT tbody tr").count()) === od, "overdue view lists exactly the overdue follow-ups");
+    ok(od > 0 && (await p.locator("#fT tr.fu").count()) === od, "overdue view lists exactly the overdue follow-ups");
+    ok((await p.locator("#fT thead th").allInnerTexts()).map((x) => x.trim().toLowerCase()).join("|") === "player|reason|latest weight|status", "follow-ups table has four columns: player, reason, latest weight, status");
+    await p.locator("[data-t]").first().click();
+    ok(/Assigned to/i.test(await p.locator("#fT tr.fu-more").innerText()) && (await p.locator("#fT tr.fu-more [data-r]").count()) === 1, "row details show assignment, priority and Reschedule");
     await p.locator("[data-c]").first().click(); await wait(p, 600);
     ok((await api(p, "GET", "followups")).filter((f) => f.overdue).length === od - 1, "completing a follow-up removes it from overdue");
     await go(p, "#/reports/weight_change");

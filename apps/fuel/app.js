@@ -1,9 +1,9 @@
-/* FUEL — app shell, router, home, players, daily log, follow-ups. */
+/* FUEL — app shell, router, home, players, weigh-ins, follow-ups. */
 import { api, init, mode, demoRole, setDemoRole } from "./api.js";
 import { ROLES } from "./shared/model.js";
 import { addDays, daysBetween } from "./shared/util.js";
 import { $, $$, esc, S, can, toast, errToast, fmtDate, relDay, w, playerName, players, invalidate, findPlayers, table, openModal, closeModal, today, playerPicker } from "./ui.js";
-import { openQuickEntry, mountQuickEntry } from "./quickentry.js";
+import { openQuickEntry } from "./quickentry.js";
 import { renderProfile } from "./profile.js";
 import { renderReports, renderData } from "./admin.js";
 
@@ -37,7 +37,7 @@ async function boot() {
     if (e.key === "/" && !/input|textarea|select/i.test(document.activeElement.tagName)) { e.preventDefault(); $("#gsearch").focus(); }
   });
   window.addEventListener("hashchange", route);
-  window.addEventListener("fuel:saved", () => { const r = (location.hash || "").slice(2).split("/")[0]; if (["home", "log", "followups", "players"].includes(r)) route(); });
+  window.addEventListener("fuel:saved", () => { const r = (location.hash || "").slice(2).split("/")[0]; if (["home", "followups", "players"].includes(r)) route(); /* not weigh-ins: a re-render would drop unsaved weights */ });
   await route();
   splash("done");
 }
@@ -88,7 +88,8 @@ async function route() {
   try {
     if (r === "player") { await players(); return renderProfile(app, decodeURIComponent(parts[1] || ""), parts[2]); }
     if (r === "players") return renderPlayers();
-    if (r === "log") return renderLog(parts[1]);
+    if (r === "log") { location.replace("#/weighins"); return; } // old Daily Log links (incl. Home's "Bulk weigh-in →")
+    if (r === "weighins") return renderWeighIns();
     if (r === "followups") return renderFollowups(parts[1]);
     if (r === "reports") return renderReports(app, parts[1]);
     if (r === "data") return renderData(app, parts[1]);
@@ -199,58 +200,70 @@ function newPlayer() {
   };
 }
 
-/* ------------------------------------------------------------------ daily log */
-async function renderLog(tab = "entry") {
+/* ------------------------------------------------------------------ weigh-ins (bulk entry only) */
+async function renderWeighIns() {
   await players();
-  if (!can("write_nutrition")) { app.innerHTML = `<div class="pagehead"><h1>Daily Log</h1></div><section class="panel"><div class="empty"><span class="lock">🔒 Your role can view players but not add nutrition entries.</span></div></section>`; return; }
-  app.innerHTML = `<div class="pagehead"><div><h1>Daily Log</h1><div class="sub">Fast entry for weigh-ins, conversations and check-ins</div></div></div>
-    <nav class="tabs"><a href="#/log/entry" class="${tab !== "bulk" ? "on" : ""}">Quick entry</a><a href="#/log/bulk" class="${tab === "bulk" ? "on" : ""}">Bulk weigh-in</a></nav><div id="logBody"></div>`;
-  if (tab === "bulk") return bulk($("#logBody"));
-  $("#logBody").innerHTML = `<div class="grid2"><section class="panel"><header><h2>New entry</h2><span class="sp"></span><span class="muted small hide-m"><span class="kbd">Ctrl</span>+<span class="kbd">Enter</span> continue · Save &amp; add another for back-to-back entries</span></header><div class="body" id="qeInline"></div></section>
-    <section class="panel"><header><h2>Entered today</h2></header><div id="todayList"></div></section></div>`;
-  mountQuickEntry($("#qeInline"), { onSaved: () => todayList() });
-  todayList();
-}
-async function todayList() {
-  const h = await api("GET", "home");
-  const t = today();
-  const mine = h.feed.filter((a) => a.at.slice(0, 10) === t || relDay(a.at.slice(0, 10)) === "today");
-  const el = $("#todayList"); if (!el) return;
-  el.innerHTML = mine.length ? `<ul class="list">${mine.map((a) => `<li><span class="d">${esc(new Date(a.at).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }))}</span><span class="grow small">${a.player_id ? `<a class="pname" href="#/player/${esc(a.player_id)}">${esc(a.player_name || "")}</a> — ` : ""}${esc(a.summary)}</span></li>`).join("")}</ul>` : '<div class="empty">Nothing entered yet today.</div>';
+  const head = `<div class="pagehead"><div><h1>Weigh-Ins</h1><div class="sub">Record weights for many players in one session</div></div></div>`;
+  if (!can("write_nutrition")) { app.innerHTML = `${head}<section class="panel"><div class="empty"><span class="lock">🔒 Your role can view players but not record weigh-ins.</span></div></section>`; return; }
+  app.innerHTML = `${head}<div id="wiBody"></div>`;
+  return bulk($("#wiBody"));
 }
 async function bulk(host) {
-  const list = await players(true);
+  const list = (await players(true)).slice().sort((x, y) => x.last_name.localeCompare(y.last_name) || x.first_name.localeCompare(y.first_name));
   const v = S.session.vocab;
   const affs = [...new Set(list.map((p) => p.affiliate).filter(Boolean))].sort((a, b) => v.affiliates.indexOf(a) - v.affiliates.indexOf(b));
-  const aff = sessionStorage.getItem("fuel:bulkAff") || affs[0] || "";
-  host.innerHTML = `<section class="panel"><header><div class="row" style="gap:10px"><div class="f"><label for="bD">Weigh-in date</label><input type="date" id="bD" value="${today()}" max="${addDays(today(), 1)}"></div>
-      <div class="f"><label for="bA">Affiliate</label><select id="bA">${affs.map((a) => `<option${a === aff ? " selected" : ""}>${esc(a)}</option>`).join("")}<option value="">All players</option></select></div>
-      <div class="f"><label for="bU">Unit</label><select id="bU" class="w80"><option>lb</option><option>kg</option></select></div></div><span class="sp"></span>
-      <span class="muted small hide-m">Tab / Enter moves to the next player · blank rows are skipped</span></header>
-    <div class="tblwrap" id="bT"></div>
-    <div class="row" style="padding:10px 12px;border-top:1px solid var(--line)"><span class="err" id="bErr" role="alert"></span><span class="sp"></span><span class="muted small" id="bN">0 entered</span><button class="btn primary" id="bSave" type="button">Save weights</button></div></section>`;
-  const draw = () => {
-    const a = $("#bA").value; sessionStorage.setItem("fuel:bulkAff", a);
-    const rows = list.filter((p) => !a || p.affiliate === a).sort((x, y) => x.last_name.localeCompare(y.last_name));
-    $("#bT").innerHTML = `<table class="tbl"><thead><tr><th>Player</th><th class="hide-m">Pos</th><th class="n">Last</th><th class="n">Weight</th><th class="hide-m">Note</th></tr></thead><tbody>${rows.map((p, i) => `<tr><td><a class="pname" href="#/player/${esc(p.id)}">${esc(p.last_name)}, ${esc(p.first_name)}</a></td><td class="hide-m">${esc(p.position || "")}</td>
+  const aff = sessionStorage.getItem("fuel:bulkAff") ?? affs[0] ?? "";
+  host.innerHTML = `<section class="panel wi"><div class="wi-bar">
+      <div class="f"><label for="bD">Date</label><input type="date" id="bD" value="${today()}" max="${addDays(today(), 1)}"></div>
+      <div class="f"><label for="bA">Affiliate</label><select id="bA">${affs.map((a) => `<option${a === aff ? " selected" : ""}>${esc(a)}</option>`).join("")}<option value=""${aff === "" ? " selected" : ""}>All players</option></select></div>
+      <div class="f"><label for="bU">Unit</label><select id="bU" class="w80"><option>lb</option><option>kg</option></select></div>
+      <span class="sp"></span><span class="muted small hide-m">Enter moves to the next player · blank rows are skipped</span></div>
+    <div class="tblwrap"><table class="tbl wi-tbl"><thead><tr>
+      <th class="wi-pcol"><div class="wi-search" role="search"><input type="search" id="bQ" placeholder="Search players…" autocomplete="off" aria-label="Search players by name" aria-controls="bBody"><button type="button" class="wi-clear" id="bQx" aria-label="Clear search" hidden>×</button></div></th>
+      <th class="hide-m">Pos</th><th class="n">Last</th><th class="n">Weight</th><th class="hide-m">Note</th></tr></thead>
+      <tbody id="bBody">${list.map((p) => `<tr data-row="${esc(p.id)}" data-aff="${esc(p.affiliate || "")}" data-q="${esc(`${p.first_name} ${p.last_name} ${p.last_name}, ${p.first_name}`.toLowerCase())}"><td><a class="pname" href="#/player/${esc(p.id)}">${esc(p.last_name)}, ${esc(p.first_name)}</a></td><td class="hide-m">${esc(p.position || "")}</td>
       <td class="n">${p.latest_weight ? `${w(p.latest_weight.value)} <span class="faint small">${esc(relDay(p.latest_weight.date))}</span>` : '<span class="faint">—</span>'}</td>
-      <td class="n"><input type="number" step="0.1" inputmode="decimal" class="w110" data-pid="${esc(p.id)}" data-last="${p.latest_weight ? p.latest_weight.value : ""}" aria-label="Weight for ${esc(playerName(p))}"></td><td class="hide-m"><input type="text" data-note="${esc(p.id)}" aria-label="Note for ${esc(playerName(p))}" style="width:100%"></td></tr>`).join("")}</tbody></table>`;
-    const ins = $$("[data-pid]", host);
-    ins.forEach((inp, i) => {
-      inp.onkeydown = (e) => { if (e.key === "Enter") { e.preventDefault(); (ins[i + 1] || $("#bSave")).focus(); } };
-      inp.oninput = () => {
-        $("#bN").textContent = `${ins.filter((x) => x.value !== "").length} entered`;
-        const last = +inp.dataset.last, val = +inp.value;
-        inp.style.borderColor = inp.value !== "" && last && Math.abs(val - last) > 8 ? "var(--warn)" : "";
-        inp.title = inp.value !== "" && last && Math.abs(val - last) > 8 ? `More than 8 lb from the last weigh-in (${last}) — check before saving` : "";
-      };
-    });
+      <td class="n"><input type="number" step="0.1" inputmode="decimal" class="w110" data-pid="${esc(p.id)}" data-last="${p.latest_weight ? p.latest_weight.value : ""}" aria-label="Weight for ${esc(playerName(p))}"></td><td class="hide-m"><input type="text" data-note="${esc(p.id)}" aria-label="Note for ${esc(playerName(p))}" style="width:100%"></td></tr>`).join("")}</tbody></table>
+      <div class="empty" id="bNone" hidden></div></div>
+    <div class="wi-foot"><span class="err" id="bErr" role="alert"></span><span class="sp"></span><span class="muted small" id="bN" aria-live="polite">0 entered</span><button class="btn primary" id="bSave" type="button">Save weights</button></div></section>`;
+  const ins = $$("[data-pid]", host), rows = $$("[data-row]", host), q = $("#bQ"), qx = $("#bQx");
+  const visible = () => ins.filter((x) => !x.closest("tr").hidden);
+  const count = () => {
+    const n = ins.filter((x) => x.value !== "").length, hid = ins.filter((x) => x.value !== "" && x.closest("tr").hidden).length;
+    $("#bN").textContent = `${n} entered${hid ? ` · ${hid} not shown by the current filter` : ""}`;
   };
-  $("#bA").onchange = draw;
-  draw();
+  // Filtering only hides rows: every typed weight and note stays in the table (and is saved) whatever is shown.
+  const filter = () => {
+    const a = $("#bA").value, terms = q.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    sessionStorage.setItem("fuel:bulkAff", a);
+    let shown = 0;
+    rows.forEach((tr) => { tr.hidden = !((!a || tr.dataset.aff === a) && terms.every((t) => tr.dataset.q.includes(t))); if (!tr.hidden) shown++; });
+    qx.hidden = !q.value;
+    const none = $("#bNone"); none.hidden = shown > 0;
+    none.textContent = q.value ? `No players match “${q.value.trim()}”${a ? ` in ${a}` : ""}.` : "No players in this affiliate.";
+    count();
+  };
+  ins.forEach((inp) => {
+    inp.onkeydown = (e) => { if (e.key === "Enter") { e.preventDefault(); const vis = visible(); (vis[vis.indexOf(inp) + 1] || $("#bSave")).focus(); } };
+    inp.oninput = () => {
+      count();
+      const last = +inp.dataset.last, val = +inp.value, far = inp.value !== "" && last && Math.abs(val - last) > 8;
+      inp.style.borderColor = far ? "var(--warn)" : "";
+      inp.title = far ? `More than 8 lb from the last weigh-in (${last}) — check before saving` : "";
+    };
+  });
+  q.oninput = filter;
+  q.onkeydown = (e) => {
+    if (e.key === "Escape" && q.value) { e.preventDefault(); q.value = ""; filter(); }
+    if (e.key === "Enter") { e.preventDefault(); const f = visible()[0]; if (f) f.focus(); }
+  };
+  qx.onclick = () => { q.value = ""; filter(); q.focus(); };
+  $("#bA").onchange = filter;
+  filter();
   $("#bSave").onclick = async () => {
-    const entries = $$("[data-pid]", host).filter((x) => x.value !== "").map((x) => ({ player_id: x.dataset.pid, weight: x.value, note: ($(`[data-note="${x.dataset.pid}"]`, host) || {}).value || "" }));
+    const entries = ins.filter((x) => x.value !== "").map((x) => ({ player_id: x.dataset.pid, weight: x.value, note: ($(`[data-note="${x.dataset.pid}"]`, host) || {}).value || "" }));
     if (!entries.length) { $("#bErr").textContent = "Enter at least one weight."; return; }
+    $("#bErr").textContent = "";
     try {
       const r = await api("POST", "weights.bulk", { body: { date: $("#bD").value, unit: $("#bU").value, entries } });
       if (r.errors.length) { const names = r.errors.map((e) => `${playerName(list.find((p) => p.id === e.player_id))}: ${e.error}`); $("#bErr").textContent = "Nothing saved — fix these first: " + names.join(" · "); return; }
@@ -262,28 +275,43 @@ async function bulk(host) {
 /* ------------------------------------------------------------------ follow-ups */
 async function renderFollowups(view = "open") {
   if (!can("read_notes")) { app.innerHTML = `<div class="pagehead"><h1>Follow-Ups</h1></div><section class="panel"><div class="empty"><span class="lock">🔒 Follow-ups are part of the nutrition notes, which your role can't view.</span></div></section>`; return; }
-  const all = await api("GET", "followups");
+  const [all, plist] = await Promise.all([api("GET", "followups"), players()]);
+  const PL = new Map(plist.map((p) => [p.id, p]));
   const t = today();
   const f = JSON.parse(sessionStorage.getItem("fuel:ff") || "{}");
   const views = { open: (x) => x.status === "open", overdue: (x) => x.overdue, completed: (x) => x.status === "completed", all: () => true };
   if (!views[view]) view = "open";
-  app.innerHTML = `<div class="pagehead"><div><h1>Follow-Ups</h1><div class="sub">${all.filter(views.open).length} open · ${all.filter(views.overdue).length} overdue</div></div><span class="sp"></span>${can("write_nutrition") ? '<button class="btn primary" id="newF">+ Follow-up</button>' : ""}</div>
-    <nav class="tabs">${[["open", "Open"], ["overdue", "Overdue"], ["completed", "Completed"], ["all", "All"]].map(([k, l]) => `<a href="#/followups/${k}" class="${k === view ? "on" : ""}">${l} <span class="num faint">${all.filter(views[k]).length}</span></a>`).join("")}</nav>
+  const write = can("write_nutrition");
+  app.innerHTML = `<div class="pagehead"><div><h1>Follow-Ups</h1><div class="sub">${all.filter(views.open).length} open · ${all.filter(views.overdue).length} overdue</div></div><span class="sp"></span>${write ? '<button class="btn primary" id="newF">+ Follow-up</button>' : ""}</div>
+    <div class="fu-bar"><nav class="tabs">${[["open", "Open"], ["overdue", "Overdue"], ["completed", "Completed"], ["all", "All"]].map(([k, l]) => `<a href="#/followups/${k}" class="${k === view ? "on" : ""}">${l} <span class="num faint">${all.filter(views[k]).length}</span></a>`).join("")}</nav>
     <div class="filters"><select id="ffA" aria-label="Assigned to"><option value="">Anyone</option>${S.staff.map((s) => `<option value="${esc(s.id)}"${s.id === f.a ? " selected" : ""}>${esc(s.name)}</option>`).join("")}</select>
-      <select id="ffAff" aria-label="Affiliate"><option value="">All affiliates</option>${S.session.vocab.affiliates.map((a) => `<option${a === f.aff ? " selected" : ""}>${esc(a)}</option>`).join("")}</select></div>
+      <select id="ffAff" aria-label="Affiliate"><option value="">All affiliates</option>${S.session.vocab.affiliates.map((a) => `<option${a === f.aff ? " selected" : ""}>${esc(a)}</option>`).join("")}</select></div></div>
     <section class="panel"><div class="tblwrap" id="fT"></div></section>`;
+  // one status line per follow-up: overdue / due today / due date / done
+  const status = (r) => r.status === "completed" ? `<span class="fu-st good">Done ${esc(fmtDate(r.completed_date, { year: false }))}</span>`
+    : r.overdue ? `<span class="fu-st bad">Overdue · ${esc(relDay(r.due_date))}</span>`
+    : r.due_date === t ? '<span class="fu-st orange">Due today</span>'
+    : `<span class="fu-st">Due ${esc(fmtDate(r.due_date, { year: false }))}</span>`;
+  const weight = (r) => { const lw = (PL.get(r.player_id) || {}).latest_weight; return lw ? `<span class="num">${w(lw.value)}</span><span class="faint small"> ${esc(lw.unit || "lb")}</span><div class="faint small">${esc(relDay(lw.date))}</div>` : '<span class="faint">—</span>'; };
+  const detail = (r) => `<tr class="fu-more" data-more="${esc(r.id)}"><td colspan="4"><dl class="fu-dl">
+      <div><dt>Due</dt><dd>${esc(fmtDate(r.due_date))}</dd></div>
+      <div><dt>Assigned to</dt><dd>${esc(r.assignee_name || "—")}</dd></div>
+      <div><dt>Priority</dt><dd>${esc(r.priority || "normal")}</dd></div>
+      ${r.status === "completed" ? `<div><dt>Completed</dt><dd>${esc(fmtDate(r.completed_date))}</dd></div>` : ""}
+      <div><dt>Source</dt><dd>${r.interaction_id ? `From a nutrition note · <a href="#/player/${esc(r.player_id)}/comms">view notes</a>` : "Added directly"}</dd></div></dl>
+      ${write ? `<div class="fu-acts">${r.status === "open" ? `<button class="btn ghost sm" data-r="${esc(r.id)}">Reschedule</button>` : `<button class="btn ghost sm" data-o="${esc(r.id)}">Reopen</button>`}</div>` : ""}</td></tr>`;
+  const open = new Set();
   const draw = () => {
     const a = $("#ffA").value, aff = $("#ffAff").value; sessionStorage.setItem("fuel:ff", JSON.stringify({ a, aff }));
-    const rows = all.filter(views[view]).filter((x) => (!a || x.assignee === a) && (!aff || x.affiliate === aff));
-    table($("#fT"), { rows, sortKey: "due_date", sortDir: view === "completed" ? -1 : 1, empty: "Nothing here.", cols: [
-      { key: "due_date", label: "Due", sort: (r) => r.due_date, render: (r) => `<span class="num">${esc(fmtDate(r.due_date, { year: false }))}</span> ${r.overdue ? '<span class="tag bad">overdue</span>' : r.status === "open" && r.due_date === t ? '<span class="tag orange">today</span>' : ""}` },
-      { key: "player_name", label: "Player", sort: (r) => r.player_name, render: (r) => `<a class="pname" href="#/player/${esc(r.player_id)}">${esc(r.player_name)}</a> <span class="faint small">${esc(r.affiliate || "")}</span>` },
-      { key: "description", label: "Follow-up", render: (r) => esc(r.description) + (r.interaction_id ? ' <span class="tag ghost" title="Created from a nutrition note">from note</span>' : "") },
-      { key: "assignee_name", label: "Assigned", sort: (r) => r.assignee_name || "", render: (r) => esc(r.assignee_name || "—") },
-      { key: "priority", label: "Priority", sort: (r) => ["high", "normal", "low"].indexOf(r.priority), render: (r) => r.priority === "high" ? '<span class="tag orange">high</span>' : esc(r.priority) },
-      { key: "status", label: "Status", render: (r) => r.status === "completed" ? `<span class="tag good">done ${esc(fmtDate(r.completed_date, { year: false }))}</span>` : esc(r.status) },
-      ...(can("write_nutrition") ? [{ key: "act", label: "", render: (r) => r.status === "open" ? `<button class="btn sm" data-c="${esc(r.id)}">Done</button> <button class="btn ghost sm" data-r="${esc(r.id)}">Reschedule</button>` : `<button class="btn ghost sm" data-o="${esc(r.id)}">Reopen</button>` }] : []),
-    ] });
+    const rows = all.filter(views[view]).filter((x) => (!a || x.assignee === a) && (!aff || x.affiliate === aff))
+      .sort((x, y) => (view === "completed" ? -1 : 1) * String(view === "completed" ? x.completed_date || x.due_date : x.due_date).localeCompare(String(view === "completed" ? y.completed_date || y.due_date : y.due_date)));
+    $("#fT").innerHTML = rows.length ? `<table class="tbl fu-tbl"><thead><tr><th>Player</th><th>Reason</th><th class="n">Latest weight</th><th class="fu-sc">Status</th></tr></thead><tbody>${rows.map((r) => `
+      <tr class="fu${r.priority === "high" && r.status === "open" ? " hi" : ""}${r.overdue ? " od" : ""}" data-id="${esc(r.id)}">
+        <td class="fu-p"><a class="pname" href="#/player/${esc(r.player_id)}">${esc(r.player_name)}</a><div class="faint small">${esc(r.affiliate || "")}</div></td>
+        <td class="fu-r">${esc(r.description)}${r.priority === "high" && r.status === "open" ? ' <span class="fu-hi" title="High priority">High priority</span>' : ""}</td>
+        <td class="n fu-w">${weight(r)}</td>
+        <td class="fu-s">${status(r)}<span class="fu-btns">${write && r.status === "open" ? `<button class="btn sm" data-c="${esc(r.id)}">Done</button>` : ""}<button class="btn ghost sm fu-tog" data-t="${esc(r.id)}" aria-expanded="${open.has(r.id)}" aria-label="Details for ${esc(r.player_name)}" title="Details">${open.has(r.id) ? "▴" : "▾"}</button></span></td></tr>${open.has(r.id) ? detail(r) : ""}`).join("")}</tbody></table>` : '<div class="empty">Nothing here.</div>';
+    $$("[data-t]").forEach((b) => (b.onclick = () => { open.has(b.dataset.t) ? open.delete(b.dataset.t) : open.add(b.dataset.t); draw(); }));
     const upd = async (id, body, msg) => { try { await api("POST", "followup.update", { body: { id, ...body } }); invalidate(); toast(msg); renderFollowups(view); } catch (e) { errToast(e); } };
     $$("[data-c]").forEach((b) => (b.onclick = () => upd(b.dataset.c, { status: "completed" }, "Follow-up completed")));
     $$("[data-o]").forEach((b) => (b.onclick = () => upd(b.dataset.o, { status: "open" }, "Follow-up reopened")));
@@ -305,7 +333,7 @@ async function renderFollowups(view = "open") {
 
 function renderMore() {
   app.innerHTML = `<div class="pagehead"><h1>More</h1></div><section class="panel more-list" style="padding:0 12px">
-    <a href="#/log">Daily Log <span>›</span></a><a href="#/log/bulk">Bulk weigh-in <span>›</span></a><a href="#/reports">Reports <span>›</span></a><a href="#/data">Data management <span>›</span></a></section>`;
+    <a href="#/weighins">Weigh-Ins <span>›</span></a><a href="#/reports">Reports <span>›</span></a><a href="#/data">Data management <span>›</span></a></section>`;
 }
 
 boot();
