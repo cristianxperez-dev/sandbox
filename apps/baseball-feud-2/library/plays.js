@@ -1,11 +1,11 @@
 /* Baseball Feud 2.0 — Plays Library seed: 11 verified MLB plays (Volume 1 research, High Home edition).
-   Generated from the research file — edit plays in the app (they are copied into your library on first run).
+   Generated from the research file; metadata filled from MLB's Stats API by tools/baseball-feud-discovery/enrich.py — edit plays in the app (they are copied into your library on first run).
    Video = MLB.com’s own embed code (Streamable); never downloaded or rehosted. */
 window.BF2_LIBRARY = {
  "collection": {
   "id": "vol1",
   "name": "What Went Wrong? — Volume 1",
-  "version": "2.0.0"
+  "version": "2.1.0"
  },
  "plays": [
   {
@@ -41,7 +41,11 @@ window.BF2_LIBRARY = {
     "batting": "Los Angeles Dodgers",
     "fielding": "Milwaukee Brewers",
     "anticipate": "Bases loaded, one out, scoreless: every runner is forced. On a deep fly the runner at third tags; the others go only as far as they can and still get back. If the ball is not caught, everyone must run.",
-    "setup": "Scoreless in the 4th. Max Muncy drove a 1-0 cutter from Quinn Priester to deep center. Sal Frelick leapt at the wall — the ball hit his glove, popped out and touched the top of the wall before he grabbed it."
+    "setup": "Scoreless in the 4th. Max Muncy drove a 1-0 cutter from Quinn Priester to deep center. Sal Frelick leapt at the wall — the ball hit his glove, popped out and touched the top of the wall before he grabbed it.",
+    "away": "Los Angeles Dodgers",
+    "home": "Milwaukee Brewers",
+    "awayAbbr": "LAD",
+    "homeAbbr": "MIL"
    },
    "video": {
     "provider": "mlb-embed",
@@ -150,12 +154,17 @@ window.BF2_LIBRARY = {
     "status": "verified",
     "gamePk": 813036,
     "playId": "f20b883d-7b87-3370-bd14-977a0eedce25",
-    "notes": "Play matched to MLB’s official play-by-play; clip page matched to game, batter and pitcher; camera angle checked on still frames."
+    "notes": "Play matched to MLB’s official play-by-play; clip page matched to game, batter and pitcher; camera angle checked on still frames.",
+    "atBatIndex": 24
    },
    "description": "Scoreless in the 4th. Max Muncy drove a 1-0 cutter from Quinn Priester to deep center. Sal Frelick leapt at the wall — the ball hit his glove, popped out and touched the top of the wall before he grabbed it.",
    "situationLine": "Top 4th, 1 out, Bases loaded, LAD 0, MIL 0",
    "question": "WHAT WENT WRONG?",
-   "status": "approved"
+   "status": "approved",
+   "result": {
+    "event": "Double Play",
+    "description": "Dodgers challenged (force play), call on the field was upheld: Dodgers challenged (force play), call on the field was upheld: Max Muncy grounds into a double play, center fielder Sal Frelick to shortstop Joey Ortiz to catcher William Contreras. Teoscar Hernández out at home. Will Smith out at 3rd."
+   }
   },
   {
    "id": "wwgw-v1-02-the-wheel",
@@ -189,7 +198,11 @@ window.BF2_LIBRARY = {
     "batting": "Philadelphia Phillies",
     "fielding": "Los Angeles Dodgers",
     "anticipate": "Runner on second, nobody out, down one in the ninth: everyone expects a bunt. Offense: move the tying run to third. Defense: get the lead runner at third.",
-    "setup": "The Dodgers led 4–1 in the bottom of the 9th; three straight hits made it 4–3 with Nick Castellanos, the tying run, on second and nobody out. Alex Vesia came in. Bryson Stott squared to bunt."
+    "setup": "The Dodgers led 4–1 in the bottom of the 9th; three straight hits made it 4–3 with Nick Castellanos, the tying run, on second and nobody out. Alex Vesia came in. Bryson Stott squared to bunt.",
+    "away": "Los Angeles Dodgers",
+    "home": "Philadelphia Phillies",
+    "awayAbbr": "LAD",
+    "homeAbbr": "PHI"
    },
    "video": {
     "provider": "mlb-embed",
@@ -305,12 +318,17 @@ window.BF2_LIBRARY = {
     "status": "verified",
     "gamePk": 813052,
     "playId": "d19c5ef0-56d4-30da-96ad-b47639879414",
-    "notes": "Play matched to MLB’s official play-by-play; clip page matched to game, batter and pitcher; camera angle checked on still frames."
+    "notes": "Play matched to MLB’s official play-by-play; clip page matched to game, batter and pitcher; camera angle checked on still frames.",
+    "atBatIndex": 71
    },
    "description": "The Dodgers led 4–1 in the bottom of the 9th; three straight hits made it 4–3 with Nick Castellanos, the tying run, on second and nobody out. Alex Vesia came in. Bryson Stott squared to bunt.",
    "situationLine": "Bottom 9th, 0 outs, Runner on second, LAD 4, PHI 3",
    "question": "WHAT WENT WRONG?",
-   "status": "approved"
+   "status": "approved",
+   "result": {
+    "event": "Fielders Choice Out",
+    "description": "Bryson Stott reaches on a fielder's choice out, third baseman Max Muncy to shortstop Mookie Betts. Nick Castellanos out at 3rd."
+   }
   },
   {
    "id": "wwgw-v1-03-three-extra-outs",
@@ -345,7 +363,11 @@ window.BF2_LIBRARY = {
     "batting": "Los Angeles Dodgers",
     "fielding": "New York Yankees",
     "anticipate": "Two outs, bases loaded. Any ground ball to the right side means a race to first base: the pitcher must break toward the bag on every ball hit to his left.",
-    "setup": "New York led 5–0 and Gerrit Cole had not allowed a hit. This inning: a dropped line drive in center, then a bounced throw to third, loaded the bases. Cole struck out the next two. Then Mookie Betts hit a chopper toward first."
+    "setup": "New York led 5–0 and Gerrit Cole had not allowed a hit. This inning: a dropped line drive in center, then a bounced throw to third, loaded the bases. Cole struck out the next two. Then Mookie Betts hit a chopper toward first.",
+    "away": "Los Angeles Dodgers",
+    "home": "New York Yankees",
+    "awayAbbr": "LAD",
+    "homeAbbr": "NYY"
    },
    "video": {
     "provider": "mlb-embed",
@@ -451,12 +473,17 @@ window.BF2_LIBRARY = {
     "status": "verified",
     "gamePk": 775296,
     "playId": "168b5f9b-3201-4930-a97e-dc790c609cc0",
-    "notes": "Play matched to MLB’s official play-by-play; clip page matched to game, batter and pitcher; camera angle checked on still frames."
+    "notes": "Play matched to MLB’s official play-by-play; clip page matched to game, batter and pitcher; camera angle checked on still frames.",
+    "atBatIndex": 41
    },
    "description": "New York led 5–0 and Gerrit Cole had not allowed a hit. This inning: a dropped line drive in center, then a bounced throw to third, loaded the bases. Cole struck out the next two. Then Mookie Betts hit a chopper toward first.",
    "situationLine": "Top 5th, 2 outs, Bases loaded, LAD 0, NYY 5",
    "question": "WHAT WENT WRONG?",
-   "status": "approved"
+   "status": "approved",
+   "result": {
+    "event": "Single",
+    "description": "Mookie Betts singles on a ground ball to first baseman Anthony Rizzo. Enrique Hernández scores. Tommy Edman to 3rd. Will Smith to 2nd."
+   }
   },
   {
    "id": "wwgw-v1-04-little-league-walk-off",
@@ -491,7 +518,11 @@ window.BF2_LIBRARY = {
     "batting": "San Francisco Giants",
     "fielding": "Texas Rangers",
     "anticipate": "Bottom of the ninth, tie game, nobody on, nobody out: a single run ends it. The defense's job is to give up nothing extra — catch it, make the sure throw, and back up every base.",
-    "setup": "Tie game, bottom of the 9th, leadoff hitter, first pitch from a pitcher who had just entered the game. Heliot Ramos tapped it softly toward the mound."
+    "setup": "Tie game, bottom of the 9th, leadoff hitter, first pitch from a pitcher who had just entered the game. Heliot Ramos tapped it softly toward the mound.",
+    "away": "Texas Rangers",
+    "home": "San Francisco Giants",
+    "awayAbbr": "TEX",
+    "homeAbbr": "SF"
    },
    "video": {
     "provider": "mlb-embed",
@@ -603,12 +634,17 @@ window.BF2_LIBRARY = {
     "status": "verified",
     "gamePk": 778151,
     "playId": "c29a6efc-f29c-3317-86f0-98f8462ac338",
-    "notes": "Play matched to MLB’s official play-by-play; clip page matched to game, batter and pitcher; camera angle checked on still frames."
+    "notes": "Play matched to MLB’s official play-by-play; clip page matched to game, batter and pitcher; camera angle checked on still frames.",
+    "atBatIndex": 67
    },
    "description": "Tie game, bottom of the 9th, leadoff hitter, first pitch from a pitcher who had just entered the game. Heliot Ramos tapped it softly toward the mound.",
    "situationLine": "Bottom 9th, 0 outs, Bases empty, TEX 2, SF 2",
    "question": "WHAT WENT WRONG?",
-   "status": "approved"
+   "status": "approved",
+   "result": {
+    "event": "Single",
+    "description": "Heliot Ramos singles on a soft ground ball to pitcher Luke Jackson. Heliot Ramos scores. Throwing error by pitcher Luke Jackson. Throwing error by first baseman Jake Burger."
+   }
   },
   {
    "id": "wwgw-v1-05-throw-throw-throw-again",
@@ -643,7 +679,11 @@ window.BF2_LIBRARY = {
     "batting": "New York Mets",
     "fielding": "Kansas City Royals",
     "anticipate": "Two outs, runners on first and second: the runners go on contact. Any out ends the inning — the batter is the easy one.",
-    "setup": "First inning, two outs, runners on first and second, no score. Carson Benge hit a weak comebacker to the pitcher."
+    "setup": "First inning, two outs, runners on first and second, no score. Carson Benge hit a weak comebacker to the pitcher.",
+    "away": "Kansas City Royals",
+    "home": "New York Mets",
+    "awayAbbr": "KC",
+    "homeAbbr": "NYM"
    },
    "video": {
     "provider": "mlb-embed",
@@ -757,12 +797,17 @@ window.BF2_LIBRARY = {
     "status": "verified",
     "gamePk": 823607,
     "playId": "4cdf9182-977e-37e9-9b76-2fddef3d3c5c",
-    "notes": "Play matched to MLB’s official play-by-play; clip page matched to game, batter and pitcher; camera angle checked on still frames."
+    "notes": "Play matched to MLB’s official play-by-play; clip page matched to game, batter and pitcher; camera angle checked on still frames.",
+    "atBatIndex": 9
    },
    "description": "First inning, two outs, runners on first and second, no score. Carson Benge hit a weak comebacker to the pitcher.",
    "situationLine": "Bottom 1st, 2 outs, Runners on first and second, KC 0, NYM 0",
    "question": "WHAT WENT WRONG?",
-   "status": "approved"
+   "status": "approved",
+   "result": {
+    "event": "Single",
+    "description": "Carson Benge singles on a ground ball to pitcher Seth Lugo. A.J. Ewing scores. Bo Bichette scores. Carson Benge scores. Throwing error by pitcher Seth Lugo. Throwing error by first baseman Jac Caglianone. Throwing error by third baseman Nick Loftin."
+   }
   },
   {
    "id": "wwgw-v1-06-wheres-the-cutoff",
@@ -796,7 +841,11 @@ window.BF2_LIBRARY = {
     "batting": "Baltimore Orioles",
     "fielding": "Boston Red Sox",
     "anticipate": "Runner on first, nobody out, ball in the gap: the runner from first will try to score. The relay man lines up between the ball and the base, and every throw needs a backup.",
-    "setup": "Top of the 8th, Baltimore up 3–0, runner on first, nobody out. Ryan O'Hearn lined a hard double to center (100 mph)."
+    "setup": "Top of the 8th, Baltimore up 3–0, runner on first, nobody out. Ryan O'Hearn lined a hard double to center (100 mph).",
+    "away": "Baltimore Orioles",
+    "home": "Boston Red Sox",
+    "awayAbbr": "BAL",
+    "homeAbbr": "BOS"
    },
    "video": {
     "provider": "mlb-embed",
@@ -895,12 +944,17 @@ window.BF2_LIBRARY = {
     "status": "verified",
     "gamePk": 777785,
     "playId": "d6221a6b-e989-3366-b155-4ee13f8d8f14",
-    "notes": "Play matched to MLB’s official play-by-play; clip page matched to game, batter and pitcher; camera angle checked on still frames."
+    "notes": "Play matched to MLB’s official play-by-play; clip page matched to game, batter and pitcher; camera angle checked on still frames.",
+    "atBatIndex": 59
    },
    "description": "Top of the 8th, Baltimore up 3–0, runner on first, nobody out. Ryan O'Hearn lined a hard double to center (100 mph).",
    "situationLine": "Top 8th, 0 outs, Runner on first, BAL 3, BOS 0",
    "question": "WHAT WENT WRONG?",
-   "status": "approved"
+   "status": "approved",
+   "result": {
+    "event": "Double",
+    "description": "Ryan O'Hearn doubles (7) on a sharp line drive to center fielder Ceddanne Rafaela. Gunnar Henderson scores. Ryan O'Hearn scores. Throwing error by center fielder Ceddanne Rafaela. Throwing error by shortstop Marcelo Mayer."
+   }
   },
   {
    "id": "wwgw-v1-07-bunt-chaos",
@@ -934,7 +988,11 @@ window.BF2_LIBRARY = {
     "batting": "Pittsburgh Pirates",
     "fielding": "Miami Marlins",
     "anticipate": "Runners on first and second, nobody out: bunt situation. Know who charges, who covers each base — and take the sure out if the lead runner can't be had.",
-    "setup": "Bottom of the 6th, Pittsburgh up 5–2, runners on first and second, nobody out. Ke'Bryan Hayes bunted toward third."
+    "setup": "Bottom of the 6th, Pittsburgh up 5–2, runners on first and second, nobody out. Ke'Bryan Hayes bunted toward third.",
+    "away": "Miami Marlins",
+    "home": "Pittsburgh Pirates",
+    "awayAbbr": "MIA",
+    "homeAbbr": "PIT"
    },
    "video": {
     "provider": "mlb-embed",
@@ -1040,12 +1098,17 @@ window.BF2_LIBRARY = {
     "status": "verified",
     "gamePk": 777574,
     "playId": "30b6ab82-dcce-322d-b23e-9cc9e98626f0",
-    "notes": "Play matched to MLB’s official play-by-play; clip page matched to game, batter and pitcher; camera angle checked on still frames."
+    "notes": "Play matched to MLB’s official play-by-play; clip page matched to game, batter and pitcher; camera angle checked on still frames.",
+    "atBatIndex": 50
    },
    "description": "Bottom of the 6th, Pittsburgh up 5–2, runners on first and second, nobody out. Ke'Bryan Hayes bunted toward third.",
    "situationLine": "Bottom 6th, 0 outs, Runners on first and second, MIA 2, PIT 5",
    "question": "WHAT WENT WRONG?",
-   "status": "approved"
+   "status": "approved",
+   "result": {
+    "event": "Single",
+    "description": "Ke'Bryan Hayes singles on a bunt ground ball to third baseman Connor Norby. Nick Gonzales scores. Adam Frazier scores. Ke'Bryan Hayes to 3rd. Throwing error by third baseman Connor Norby. Throwing error by right fielder Jesús Sánchez."
+   }
   },
   {
    "id": "wwgw-v1-08-rundown-that-wouldnt-end",
@@ -1078,7 +1141,11 @@ window.BF2_LIBRARY = {
     "batting": "San Francisco Giants",
     "fielding": "Arizona Diamondbacks",
     "anticipate": "First and third, one out, full count: the runner on first may go with the pitch. The catcher must check the runner on third before any throw, and the defense needs a plan for the double steal.",
-    "setup": "Bottom of the 7th, San Francisco trailing 5–0, runners on first and third, one out, full count. Casey Schmitt struck out swinging — and Willy Adames, the runner on third, got caught off the base."
+    "setup": "Bottom of the 7th, San Francisco trailing 5–0, runners on first and third, one out, full count. Casey Schmitt struck out swinging — and Willy Adames, the runner on third, got caught off the base.",
+    "away": "Arizona Diamondbacks",
+    "home": "San Francisco Giants",
+    "awayAbbr": "AZ",
+    "homeAbbr": "SF"
    },
    "video": {
     "provider": "mlb-embed",
@@ -1169,12 +1236,17 @@ window.BF2_LIBRARY = {
     "status": "verified",
     "gamePk": 776374,
     "playId": "59cd283a-4512-31bc-b652-6f996e30c754",
-    "notes": "Play matched to MLB’s official play-by-play; clip page matched to game, batter and pitcher; camera angle checked on still frames."
+    "notes": "Play matched to MLB’s official play-by-play; clip page matched to game, batter and pitcher; camera angle checked on still frames.",
+    "atBatIndex": 56
    },
    "description": "Bottom of the 7th, San Francisco trailing 5–0, runners on first and third, one out, full count. Casey Schmitt struck out swinging — and Willy Adames, the runner on third, got caught off the base.",
    "situationLine": "Bottom 7th, 1 out, Runners on first and third, AZ 5, SF 0",
    "question": "WHAT WENT WRONG?",
-   "status": "approved"
+   "status": "approved",
+   "result": {
+    "event": "Strikeout Double Play",
+    "description": "Casey Schmitt strikes out swinging and Willy Adames caught stealing home, catcher Gabriel Moreno to second baseman Ildemaro Vargas to third baseman Blaze Alexander to catcher Gabriel Moreno to third baseman Blaze Alexander to catcher Gabriel Moreno."
+   }
   },
   {
    "id": "wwgw-v1-09-did-the-runs-count",
@@ -1207,7 +1279,11 @@ window.BF2_LIBRARY = {
     "batting": "Milwaukee Brewers",
     "fielding": "Baltimore Orioles",
     "anticipate": "Two outs, runners on second and third: both runners go on contact. The batter-runner must not give the defense an easy third out before the runs score.",
-    "setup": "Bottom of the 2nd, tied 1–1, runners on second and third, two outs. Brice Turang lined a single to right."
+    "setup": "Bottom of the 2nd, tied 1–1, runners on second and third, two outs. Brice Turang lined a single to right.",
+    "away": "Baltimore Orioles",
+    "home": "Milwaukee Brewers",
+    "awayAbbr": "BAL",
+    "homeAbbr": "MIL"
    },
    "video": {
     "provider": "mlb-embed",
@@ -1298,12 +1374,17 @@ window.BF2_LIBRARY = {
     "status": "verified",
     "gamePk": 777860,
     "playId": "0ccd08a0-3dd1-3389-a96e-e7a471bc1dbc",
-    "notes": "Play matched to MLB’s official play-by-play; clip page matched to game, batter and pitcher; camera angle checked on still frames."
+    "notes": "Play matched to MLB’s official play-by-play; clip page matched to game, batter and pitcher; camera angle checked on still frames.",
+    "atBatIndex": 16
    },
    "description": "Bottom of the 2nd, tied 1–1, runners on second and third, two outs. Brice Turang lined a single to right.",
    "situationLine": "Bottom 2nd, 2 outs, Runners on second and third, BAL 1, MIL 1",
    "question": "WHAT WENT WRONG?",
-   "status": "approved"
+   "status": "approved",
+   "result": {
+    "event": "Single",
+    "description": "Brice Turang singles on a line drive to right fielder Ramón Laureano. Isaac Collins scores. Caleb Durbin scores. Brice Turang out at 2nd on the throw, right fielder Ramón Laureano to first baseman Ryan Mountcastle to shortstop Gunnar Henderson to first baseman Ryan Mountcastle to second baseman Jackson Holliday to shortstop Gunnar Henderson."
+   }
   },
   {
    "id": "wwgw-v1-10-two-outs-everybody-runs",
@@ -1338,7 +1419,11 @@ window.BF2_LIBRARY = {
     "batting": "Athletics",
     "fielding": "Tampa Bay Rays",
     "anticipate": "Two outs, runner on second: the runner goes on contact. A pop-up near home is the catcher's ball — catch it and the inning is over.",
-    "setup": "Bottom of the 4th, the Athletics up 3–0, runner on second, two outs. Luis Urías popped a pitch high above home plate (Statcast: pop-up, launch angle 80°)."
+    "setup": "Bottom of the 4th, the Athletics up 3–0, runner on second, two outs. Luis Urías popped a pitch high above home plate (Statcast: pop-up, launch angle 80°).",
+    "away": "Tampa Bay Rays",
+    "home": "Athletics",
+    "awayAbbr": "TB",
+    "homeAbbr": "ATH"
    },
    "video": {
     "provider": "mlb-embed",
@@ -1436,12 +1521,17 @@ window.BF2_LIBRARY = {
     "status": "verified",
     "gamePk": 776762,
     "playId": "374002e2-5687-35ec-b10c-1120ae999e79",
-    "notes": "Play matched to MLB’s official play-by-play; clip page matched to game, batter and pitcher; camera angle checked on still frames."
+    "notes": "Play matched to MLB’s official play-by-play; clip page matched to game, batter and pitcher; camera angle checked on still frames.",
+    "atBatIndex": 30
    },
    "description": "Bottom of the 4th, the Athletics up 3–0, runner on second, two outs. Luis Urías popped a pitch high above home plate (Statcast: pop-up, launch angle 80°).",
    "situationLine": "Bottom 4th, 2 outs, Runner on second, TB 0, ATH 3",
    "question": "WHAT WENT WRONG?",
-   "status": "approved"
+   "status": "approved",
+   "result": {
+    "event": "Field Error",
+    "description": "Luis Urías reaches on a fielding error by catcher Nick Fortes. Lawrence Butler scores."
+   }
   },
   {
    "id": "wwgw-v1-12-two-runners-one-base",
@@ -1474,7 +1564,11 @@ window.BF2_LIBRARY = {
     "batting": "Minnesota Twins",
     "fielding": "Chicago White Sox",
     "anticipate": "One out, runner on first, ground ball to the right side: the defense goes for the force at second. The batter-runner's job is to reach first and stay unless the ball gets loose.",
-    "setup": "Bottom of the 3rd, tied 1–1, runner on first, one out. Kody Clemens hit a ground ball to the first baseman, who threw to second."
+    "setup": "Bottom of the 3rd, tied 1–1, runner on first, one out. Kody Clemens hit a ground ball to the first baseman, who threw to second.",
+    "away": "Chicago White Sox",
+    "home": "Minnesota Twins",
+    "awayAbbr": "CWS",
+    "homeAbbr": "MIN"
    },
    "video": {
     "provider": "mlb-embed",
@@ -1565,12 +1659,17 @@ window.BF2_LIBRARY = {
     "status": "verified",
     "gamePk": 823702,
     "playId": "02cd5d6b-c594-3418-848d-e4ae2f97621b",
-    "notes": "Play matched to MLB’s official play-by-play; clip page matched to game, batter and pitcher; camera angle checked on still frames."
+    "notes": "Play matched to MLB’s official play-by-play; clip page matched to game, batter and pitcher; camera angle checked on still frames.",
+    "atBatIndex": 24
    },
    "description": "Bottom of the 3rd, tied 1–1, runner on first, one out. Kody Clemens hit a ground ball to the first baseman, who threw to second.",
    "situationLine": "Bottom 3rd, 1 out, Runner on first, CWS 1, MIN 1",
    "question": "WHAT WENT WRONG?",
-   "status": "approved"
+   "status": "approved",
+   "result": {
+    "event": "Forceout",
+    "description": "Kody Clemens grounds into a force out, first baseman Jacob Gonzalez to shortstop Colson Montgomery. Brooks Lee out at 2nd. Kody Clemens out at 2nd. Kody Clemens out at 2nd, first baseman Jacob Gonzalez to shortstop Colson Montgomery."
+   }
   }
  ]
 };

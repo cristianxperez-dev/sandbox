@@ -1042,7 +1042,7 @@ body.has-sit .v-frame{max-height:calc(100% - 7.5vh - var(--ssh) - 1.5vh)}
 .ss-sc{font-family:var(--cond);font-weight:800;font-size:clamp(15px,3vh,46px);letter-spacing:.06em;white-space:nowrap;flex:none;display:flex;align-items:center;gap:.6vw}
 .sc-t{color:#c9d4e6} .sc-t b{color:#fff;font-weight:900} .sc-t.bat{color:#fff} .sc-t.bat::before{content:'▸';color:var(--orange);margin-right:.25em;font-size:.8em}
 .sc-d{color:#5f6f8c}
-.ss-who{min-width:0;margin-left:auto;text-align:right;font-family:var(--cond);font-size:clamp(11px,1.8vh,26px);letter-spacing:.04em;color:#c9d4e6;line-height:1.25}
+.ss-who{min-width:0;margin-left:auto;text-align:right;font-family:var(--cond);font-size:clamp(11px,1.7vh,25px);letter-spacing:.04em;color:#c9d4e6;line-height:1.2}
 .ss-who div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis} .ss-who b{color:#fff;font-weight:800;text-transform:uppercase}
 .ss-who span{color:var(--sky);font-weight:700;letter-spacing:.12em;font-size:.85em} .ss-who i{font-style:normal;color:#5f6f8c}
 .ss-who small{display:block;font-family:var(--sans);font-size:.78em;color:#95a3bb;letter-spacing:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -1080,6 +1080,120 @@ body.v-min .sit-strip{order:-1}
 .sit-strip.pv{display:flex;--ssh:84px;height:var(--ssh);margin-bottom:4px}
 .sit-strip.pv .ss-who{display:none}
 @media (max-width:900px){:root{--ssh:64px} .ss-who{display:none} .sit-strip{gap:12px;padding:0 12px}}
+
+/* ===== Baseball Feud 2.0 — video angles, Manage Video, library details (Nov 2026) ===== */
+#mlbCap .mc-a{margin-left:0}
+.mc-mv{margin-left:auto;font-family:var(--cond);font-weight:700;font-size:inherit;letter-spacing:.06em;color:#c9d4e6;background:rgba(21,41,79,.72);border:1px solid rgba(138,180,230,.3);border-radius:.8vh;padding:.3vh .7vw;cursor:pointer;white-space:nowrap}
+.mc-mv:hover{border-color:var(--orange);color:var(--orange-hi)}
+.vc-sw{display:inline-flex;border:1px solid rgba(138,180,230,.35);border-radius:.8vh;overflow:hidden;flex:none}
+.vc-sw button{font-family:var(--cond);font-weight:800;letter-spacing:.1em;font-size:inherit;padding:.25vh .7vw;background:transparent;color:#c9d4e6;border:0;cursor:pointer;white-space:nowrap}
+.vc-sw button.on{background:var(--orange);color:#1c0d00}
+.bf-cap .vc-sw,.mv .vc-sw{font-size:13px} .bf-cap .vc-sw button,.mv .vc-sw button{padding:4px 10px}
+.vc-loc{font-size:.78em;letter-spacing:.14em;color:var(--orange-hi);border:1px solid rgba(255,122,26,.45);border-radius:.6vh;padding:.1vh .45vw;white-space:nowrap}
+.cb-lib{color:#c9d4e6;border-color:rgba(255,122,26,.45)}
+.cb-lib:hover{color:var(--orange-hi)}
+/* situation strip: inning over the batting / fielding teams */
+.ss-mid{display:flex;flex-direction:column;gap:.2vh;flex:none;min-width:0}
+.ss-mid .ss-inn{line-height:1}
+.ss-bat{font-family:var(--cond);font-weight:700;font-size:clamp(10px,1.6vh,24px);letter-spacing:.14em;color:var(--sky);white-space:nowrap}
+.ss-bat b{color:#fff;font-weight:900} .ss-bat i{font-style:normal;color:#5f6f8c}
+/* Manage Video */
+.bf2-ov#bfVid{z-index:75}
+.mv{gap:1.6vh}
+.mv-h{font-size:clamp(26px,5.4vh,80px)!important;text-transform:uppercase}
+.mv-meta{font-size:14px;color:#c9d4e6;margin-top:6px}
+.mv .sb[disabled]{opacity:.4;cursor:not-allowed;transform:none}
+.mv-body{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:2vw;align-items:start}
+.mv-pv{display:flex;flex-direction:column;gap:10px;min-width:0}
+.mv-pvh{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.mv-pvt{font-family:var(--cond);font-weight:700;letter-spacing:.08em;font-size:14px;color:#c9d4e6}
+.mv-stage{aspect-ratio:16/9;border-radius:12px;background:#000;overflow:hidden;border:1px solid rgba(138,180,230,.2)}
+.mv-stage video,.mv-stage iframe{width:100%;height:100%;border:0;display:block;background:#000}
+.mv-empty{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#95a3bb;text-align:center;padding:20px;border:2px dashed transparent;border-radius:12px}
+.mv-empty b{font-family:var(--cond);letter-spacing:.12em;color:#c9d4e6;font-size:18px}
+.mv-empty.over{border-color:var(--orange);background:rgba(255,122,26,.08)}
+.mv-uses{font-size:14px;color:#d6deec} .mv-uses b{color:var(--orange-hi);font-family:var(--cond);letter-spacing:.08em}
+.mv-slots{display:flex;flex-direction:column;gap:12px}
+.mv-slot{border:1px solid rgba(138,180,230,.25);border-radius:14px;background:rgba(14,31,61,.7);padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.mv-slot.on{border-color:rgba(255,122,26,.7);box-shadow:0 0 0 2px rgba(255,122,26,.25)}
+.mv-sh{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.mv-tab{display:flex;align-items:center;gap:10px;background:none;border:0;color:#fff;cursor:pointer;padding:0;font-family:var(--cond);font-size:20px;text-transform:uppercase;letter-spacing:.04em}
+.mv-def{display:flex;align-items:center;gap:6px;font-family:var(--cond);font-weight:700;letter-spacing:.1em;font-size:13px;color:#c9d4e6;cursor:pointer}
+.mv-def input{accent-color:var(--orange);width:16px;height:16px}
+.mv-def:has(input:disabled){opacity:.45;cursor:not-allowed}
+.mv-hint{font-size:12.5px;color:#95a3bb}
+.mv-src{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.mv-src li{display:flex;align-items:center;gap:10px;font-size:13.5px;color:#d6deec;background:rgba(6,14,30,.45);border-radius:8px;padding:7px 10px;flex-wrap:wrap}
+.mv-src li>span:nth-child(2){flex:1 1 200px;min-width:0;overflow-wrap:anywhere}
+.mv-k{font-family:var(--cond);font-weight:800;letter-spacing:.12em;font-size:11.5px;color:#95a3bb;flex:none;min-width:92px}
+.mv-new .mv-k{color:var(--orange-hi)} .mv-up .mv-k{color:#4fd18b} .mv-mlb .mv-k{color:var(--sky)} .mv-rm .mv-k,.mv-miss .mv-k{color:#ff9d9d}
+.mv-new{outline:1px solid rgba(255,122,26,.5)}
+.mv-drop{display:flex;align-items:center;justify-content:space-between;gap:10px;border:2px dashed rgba(138,180,230,.3);border-radius:10px;padding:8px 10px;font-size:13px;color:#95a3bb}
+.mv-drop.over,.mv-slot.over{border-color:var(--orange);background:rgba(255,122,26,.08)}
+.mv-note{max-width:1000px}
+@media (max-width:900px){.mv-body{grid-template-columns:1fr}}
+/* library: compact cards */
+.bf-grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,520px),1fr))}
+.bf-card{display:grid;grid-template-columns:118px minmax(0,1fr);flex-direction:row}
+.bf-card .bf-thumb{aspect-ratio:auto;height:100%;min-height:118px;border-right:1px solid rgba(138,180,230,.15)}
+.bf-card .bf-dia{width:78%}
+.bf-card .bf-play{width:30px;height:30px;font-size:13px;right:8px;bottom:8px}
+.bf-card.now{border-color:#4fd18b;box-shadow:0 0 0 2px rgba(79,209,139,.45)}
+.bf-card.det{outline:2px solid var(--sky)}
+.bf-cb{padding:10px 14px;gap:4px}
+.bf-now{font-family:var(--cond);font-weight:800;letter-spacing:.16em;font-size:11.5px;color:#4fd18b}
+.bf-l1{font-family:var(--cond);font-weight:700;font-size:14px;letter-spacing:.04em;color:var(--sky);text-transform:uppercase;display:flex;flex-wrap:wrap;gap:0 6px}
+.bf-l1 i{font-style:normal;color:#5f6f8c}
+.bf-card .bf-ct{font-size:19px}
+.bf-sd{font-size:13.5px;color:#d6deec;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.bf-l2{display:flex;gap:6px 8px;flex-wrap:wrap;align-items:center;margin-top:2px}
+.bf-o{display:inline-flex;align-items:center;gap:5px;font-family:var(--cond);font-weight:800;font-size:12.5px;letter-spacing:.1em;color:#fff}
+.bf-o .odots i{width:9px;height:9px;min-width:0;min-height:0}
+.bf-r{font-family:var(--cond);font-weight:700;font-size:13px;letter-spacing:.06em;color:#c9d4e6;text-transform:uppercase}
+.bf-l2 .ang{font-size:11px;padding:1px 6px}
+.bf-card .bf-ca{padding-top:4px;gap:6px}
+.bf-card .bf-ca .sb.sm{padding:6px 9px;font-size:12px;letter-spacing:.08em}
+.bf-nr{color:#5f6f8c;font-style:italic}
+.bf-sel{flex:0 1 210px;height:40px}
+.bf-chk{display:flex;align-items:center;gap:6px;font-family:var(--cond);font-weight:700;letter-spacing:.1em;font-size:13px;color:#c9d4e6;cursor:pointer;white-space:nowrap}
+.bf-chk input{accent-color:var(--orange);width:16px;height:16px}
+.bf-n{font-size:13px;color:#95a3bb;white-space:nowrap}
+.bf-nowbar{display:flex;align-items:center;gap:10px 14px;flex-wrap:wrap;border:1px solid rgba(79,209,139,.45);background:rgba(79,209,139,.07);border-radius:12px;padding:10px 14px}
+.bf-nk{font-family:var(--cond);font-weight:800;letter-spacing:.18em;font-size:12px;color:#4fd18b}
+.bf-nowbar b{font-family:var(--cond);font-size:18px;text-transform:uppercase}
+.bf-nm{font-size:13px;color:#95a3bb} .bf-nowbar .grow{flex:1}
+/* use in game */
+.bf-use{margin-top:8px;border:1px solid rgba(255,122,26,.45);border-radius:10px;background:rgba(6,14,30,.55);padding:10px 12px;display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.bf-uh{font-family:var(--cond);font-weight:700;letter-spacing:.1em;font-size:12.5px;color:#c9d4e6} .bf-uh b{color:#fff}
+.bf-uin{margin:0;font-size:13px;color:#4fd18b}
+.bf-ul{font-family:var(--cond);font-weight:700;letter-spacing:.12em;font-size:12px;color:var(--gray)} .bf-ul small{letter-spacing:0;font-family:var(--sans);font-weight:400}
+.bf-ur{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:5px;width:100%}
+.bf-ur li{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:13.5px;color:#d6deec}
+.bf-ur em{font-style:normal;font-family:var(--cond);font-weight:700;letter-spacing:.1em;font-size:11.5px;color:#95a3bb;text-transform:uppercase}
+/* details side panel: the list keeps its place underneath */
+.bf-det{position:fixed;top:0;right:0;bottom:0;width:min(480px,100vw);z-index:74;overflow:auto;background:linear-gradient(180deg,#0e1f3d,#081226);border-left:1px solid rgba(138,180,230,.3);box-shadow:-2vh 0 6vh rgba(0,0,0,.5);padding:18px 20px 28px;display:flex;flex-direction:column;gap:12px;animation:detin .25s ease-out}
+@keyframes detin{from{transform:translateX(30px);opacity:0}to{transform:none;opacity:1}}
+.bf-dh{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.bf-dh h3{font-family:var(--cond);font-weight:900;font-size:26px;text-transform:uppercase;margin:4px 0 0;line-height:1}
+.bf-dact{display:flex;gap:8px;flex-wrap:wrap}
+.bf-src-box{border:1px solid rgba(255,122,26,.45);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:8px;align-items:flex-start;background:rgba(255,122,26,.05)}
+.bf-line{display:flex;gap:8px;align-items:center;width:100%;flex-wrap:wrap}
+.bf-line code{flex:1 1 220px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;color:#fff;background:rgba(6,14,30,.7);border-radius:8px;padding:8px 10px;overflow-wrap:anywhere}
+.bf-ids{display:flex;gap:6px 16px;flex-wrap:wrap;font-size:12.5px;color:#95a3bb} .bf-ids b{color:#d6deec;font-family:ui-monospace,Menlo,Consolas,monospace;font-weight:500;overflow-wrap:anywhere}
+.bf-links{margin:0;padding-left:18px;font-size:13.5px;display:flex;flex-direction:column;gap:4px} .bf-links a{color:var(--orange-hi)} .bf-links small{color:#95a3bb}
+.bf-dl{display:grid;grid-template-columns:150px minmax(0,1fr);gap:7px 12px;margin:0;font-size:13.5px}
+.bf-dl dt{font-family:var(--cond);font-weight:700;letter-spacing:.08em;color:var(--gray);text-transform:uppercase;font-size:12.5px;padding-top:1px}
+.bf-dl dd{margin:0;color:#e9eef7;overflow-wrap:anywhere}
+.bf-cp{background:none;border:1px solid rgba(138,180,230,.35);border-radius:5px;color:var(--sky);cursor:pointer;font-size:11px;padding:0 5px;margin-left:4px}
+.bf-dp{margin:0;font-size:13.5px;color:#d6deec;line-height:1.45}
+@media (min-width:1100px){.bf-in.has-det{padding-right:calc(min(480px,100vw) + 1vw)}}
+.bf-prev video{width:100%;aspect-ratio:16/9;border-radius:12px;background:#000;display:block}
+@media (max-width:600px){
+  .bf-card{grid-template-columns:84px minmax(0,1fr)} .bf-card .bf-thumb{min-height:96px}
+  .bf-dl{grid-template-columns:120px minmax(0,1fr)} .bf-det{padding:14px 14px 24px}
+  .bf-sel,.bf-search{flex:1 1 100%;max-width:none}
+  #mlbCap{gap:6px}
+}
 </style>
 </head>
 <body class="team-off">
@@ -1253,6 +1367,7 @@ body.v-min .sit-strip{order:-1}
     <button class="cb cb-sound" data-g="sound" id="bSound" title="Sound on / off (M)">♪ ON</button>
     <button class="cb icon" data-g="fs" title="Full screen (F)">⛶</button>
     <button class="cb icon" data-g="help" title="Keyboard shortcuts (?)">?</button>
+    <button class="cb cb-lib" data-g="lib" title="Plays Library — the game stays exactly where it is (B)">📚 LIBRARY</button>
     <button class="cb" data-g="setup" title="Setup mode (E)">⚙ SETUP</button>
   </nav>
 
@@ -1360,6 +1475,7 @@ body.v-min .sit-strip{order:-1}
         <div><b>Full screen · Video full screen</b><span><kbd>F</kbd> · <kbd>Shift</kbd>+<kbd>F</kbd></span></div>
         <div><b>Sound on / off · Hide coach bar</b><span><kbd>M</kbd> · <kbd>H</kbd></span></div>
         <div><b>Setup mode · This screen</b><span><kbd>E</kbd> · <kbd>?</kbd></span></div>
+        <div><b>Plays Library (the game keeps its place)</b><span><kbd>B</kbd></span></div>
         <div><b>Fast Money round</b><span><kbd>Shift</kbd>+<kbd>M</kbd></span></div>
         <div><b>In Fast Money: correct · incorrect · clock · undo</b><span><kbd>Y</kbd> <kbd>N</kbd> · <kbd>Space</kbd> · <kbd>U</kbd></span></div>
       </div>
@@ -1518,6 +1634,10 @@ const PROMPTS = ['WHAT WENT WRONG?','WHAT STANDS OUT?','WHAT DO YOU SEE?','WHAT 
 const DEFAULT_TEAMS = ['TEAM ORANGE', 'TEAM NAVY'];
 /* ----- Baseball Feud 2.0: MLB video helpers (needed while loading saved games) ----- */
 const ANGLE_LABEL = { 'high-home': 'HIGH HOME', wide: 'WIDE ANGLE', broadcast: 'BROADCAST' };
+/* the two camera angles a library play can carry: Broadcast (public footage) and iHome / High Home (often an internal clip you upload) */
+const ANGLES = ['broadcast', 'high-home'];
+const ANG_LONG = { broadcast: 'Broadcast', 'high-home': 'iHome · High Home' };
+const ANG_HINT = { broadcast: 'Publicly available broadcast footage', 'high-home': 'The High Home camera — e.g. an internal iHome clip you upload' };
 const EMBED_ORIGIN = 'https://streamable.com';
 /* ----- helpers ----- */
 function embedFrom(url) {    // an MLB.com video page → MLB's own embed (MLB.com Share → Embed code)
@@ -1540,7 +1660,7 @@ function normAngle(a) {
 function normMlb(m) {
   if (!m || typeof m !== 'object') return null;
   const pageUrl = httpsOnly(m.pageUrl), embedUrl = embedFrom(m.embedUrl) || embedFrom(pageUrl);
-  if (!pageUrl && !embedUrl) return null;
+  if (!pageUrl && !embedUrl && !str(m.libId)) return null;
   return { libId: str(m.libId), embedUrl, pageUrl, title: str(m.title), angle: normAngle(m.angle), situation: str(m.situation), sit: normSit(m.sit) };
 }
 /* The game situation BEFORE the pitch, exactly as MLB's play record gives it (runners, outs and score before the play).
@@ -1550,7 +1670,8 @@ function normSit(s) {
   const b = s.bases && typeof s.bases === 'object' ? { '1B': !!s.bases['1B'], '2B': !!s.bases['2B'], '3B': !!s.bases['3B'] } : null;
   const outs = s.outs === '' || s.outs == null || !Number.isFinite(+s.outs) ? null : Math.max(0, Math.min(2, Math.round(+s.outs)));
   return { teams: str(s.teams), date: str(s.date), venue: str(s.venue), inning: str(s.inning), outs, bases: b, runners: str(s.runners),
-    score: str(s.score), count: str(s.count), batter: str(s.batter), pitcher: str(s.pitcher) };
+    score: str(s.score), count: str(s.count), batter: str(s.batter), pitcher: str(s.pitcher),
+    batting: str(s.batting), fielding: str(s.fielding), away: str(s.away), home: str(s.home), awayAbbr: str(s.awayAbbr), homeAbbr: str(s.homeAbbr) };
 }
 /* display pieces derived from a normalised situation (null when there is nothing to show) */
 function sitView(s) {
@@ -1568,7 +1689,11 @@ function sitView(s) {
   let date = '';
   if (/^\d{4}-\d{2}-\d{2}$/.test(s.date)) { const d = new Date(s.date + 'T12:00:00Z'); date = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }); }
   else date = s.date;
-  const v = { bases: B, outsN: s.outs, outs, inning, score, scoreText: score ? '' : s.score, runners, batter: s.batter, pitcher: s.pitcher, teams: s.teams, date };
+  const ab = [s.awayAbbr || (sm ? sm[1].toUpperCase() : ''), s.homeAbbr || (sm ? sm[3].toUpperCase() : '')];
+  const batI = half === 'top' ? 0 : half === 'bottom' ? 1 : (s.batting && s.batting === s.away ? 0 : s.batting && s.batting === s.home ? 1 : -1);
+  const batAbbr = batI >= 0 ? ab[batI] : '', fldAbbr = batI >= 0 ? ab[1 - batI] : '';
+  const v = { bases: B, outsN: s.outs, outs, inning, score, scoreText: score ? '' : s.score, runners, batter: s.batter, pitcher: s.pitcher, teams: s.teams, date,
+    batting: s.batting, fielding: s.fielding, batAbbr: batAbbr || '', fldAbbr: fldAbbr || '', matchup: ab[0] && ab[1] ? `${ab[0]} @ ${ab[1]}` : '' };
   v.any = !!(B || outs || inning || score || v.scoreText);
   v.line = [inning, outs, runners, score ? `${score[0].t} ${score[0].r} – ${score[1].t} ${score[1].r}` : v.scoreText].filter(Boolean).join(' · ');
   return v;
@@ -1971,7 +2096,7 @@ function removeVideo(pid) {
   onVideosChanged(); updateStorageInfo();
 }
 function vStatus(p) {
-  if (p.mlb) return 'mlb';
+  if (p.mlb) { const lp = p.mlb.libId && libById(p.mlb.libId); if (lp ? avail(lp) !== 'missing' : (p.mlb.embedUrl || p.mlb.pageUrl)) return 'mlb'; if (!videos[p.id]) return 'none'; }
   const v = videos[p.id];
   if (v) return v.stored ? 'saved' : (v.saving ? 'saving' : 'session');
   return p.videoName ? 'missing' : 'none';
@@ -2062,19 +2187,30 @@ function renderGame() {
   updateSoundBtn();
 }
 function syncGameVideo(p) {
-  if (mlbSync(p)) return;
-  const v = videos[p.id], empty = $('#vEmpty');
-  if (v) {
-    if (gv.dataset.url !== v.url) { gv.src = v.url; gv.dataset.url = v.url; gv.defaultPlaybackRate = speed; gv.playbackRate = speed; }
+  sitSync(p);
+  const src = playSource(p), empty = $('#vEmpty'), btn = $('#vEmpty .vbtn');
+  document.body.classList.toggle('mlb-emb', src.kind === 'embed');
+  const stopFile = () => { if (gv.dataset.url) { gv.pause(); gv.removeAttribute('src'); gv.load(); gv.dataset.url = ''; } };
+  if (src.kind === 'embed') { stopFile(); gv.hidden = true; embMount(src.m.embedUrl); empty.hidden = true; }
+  else if (src.kind === 'file') {
+    embStop();
+    if (gv.dataset.url !== src.url) { gv.src = src.url; gv.dataset.url = src.url; gv.defaultPlaybackRate = speed; gv.playbackRate = speed; }
     gv.hidden = false; empty.hidden = true;
   } else {
-    if (gv.dataset.url) { gv.pause(); gv.removeAttribute('src'); gv.load(); gv.dataset.url = ''; }
-    gv.hidden = true; empty.hidden = false;
-    $('#veT').textContent = p.videoName ? 'RE-SELECT VIDEO' : 'NO VIDEO LOADED';
-    $('#veS').textContent = p.videoName
-      ? `Choose “${p.videoName}” again — browsers can’t reopen local files on their own. Drop it here or click below.`
-      : 'Drop an MP4 anywhere on this screen or choose a file. It stays on this computer.';
+    embStop(); stopFile(); gv.hidden = true; empty.hidden = false;
+    if (src.kind === 'page') {
+      $('#veT').textContent = 'WATCH ON MLB'; $('#veS').textContent = 'MLB offers no embed for this clip. It opens on MLB’s site in a new tab — come back here for the board.';
+      btn.textContent = 'OPEN THE CLIP ↗';
+    } else {
+      $('#veT').textContent = src.reselect ? 'RE-SELECT VIDEO' : src.lp ? 'NO VIDEO YET' : 'NO VIDEO LOADED';
+      $('#veS').textContent = src.reselect
+        ? `Choose “${src.reselect}” again — browsers can’t reopen local files on their own. Drop it here or click below.`
+        : src.lp ? 'This library play has no clip on this computer. Add a Broadcast or iHome / High Home file — the round keeps going.'
+        : 'Drop an MP4 anywhere on this screen or choose a file. It stays on this computer.';
+      btn.textContent = src.reselect ? 'RE-SELECT VIDEO' : 'ADD VIDEO';
+    }
   }
+  vidCap(p, src);
   updatePlayBtn();
 }
 function tileHTML(o, i, rev) {
@@ -2817,7 +2953,10 @@ function act(g) {
     case 'resetGame': return resetGame();
     case 'resCsv': return exportResultsCsv();
     case 'resPrint': return printResults();
-    case 'chooseVideo': { const m = curPlay().mlb; if (m && m.pageUrl) { window.open(m.pageUrl, '_blank', 'noopener'); return; } return pickVideoFor(curPlay().id); }
+    case 'chooseVideo': { const p = curPlay(), src = playSource(p); if (src.kind === 'page' && src.m.pageUrl) { window.open(src.m.pageUrl, '_blank', 'noopener'); return; } return openManage('play', p.id, { from: 'game' }); }
+    case 'manage': return openManage('play', curPlay().id, { from: 'game' });
+    case 'angle': if (actEl) setAngle(actEl.dataset.a); return;
+    case 'lib': return openLibraryFromGame();
     case 'vmin': return toggleVideoMin();
     case 'seg': if (actEl && embOn()) { embSeek(+actEl.dataset.s); embSend('play'); } return;
   }
@@ -2843,7 +2982,16 @@ board.addEventListener('click', e => {
 window.addEventListener('keydown', e => {
   if (state.ui.mode !== 'game') return;
   const t = e.target;
-  if (['bfLib', 'bfPrev', 'bfGames'].some(ovOpen)) { if (e.key === 'Escape') { e.preventDefault(); const top = ['bfPrev', 'bfLib', 'bfGames'].find(ovOpen); closeOv(top); if (top !== 'bfPrev' && !['bfLib', 'bfGames'].some(ovOpen)) showStart(); } return; }
+  if (BF_OVS.some(ovOpen)) {
+    if (e.key === 'Escape' && !(t && /^(INPUT|SELECT)$/.test(t.tagName) && t.value && t.type === 'search')) {
+      e.preventDefault(); const top = BF_OVS.find(ovOpen);
+      if (top === 'bfVid') closeManage(true);
+      else if (top === 'bfLib' && (L.det || L.use)) { L.det = ''; L.use = ''; renderLibrary(); }
+      else if (top === 'bfLib') closeLibrary();
+      else { closeOv(top); if (top !== 'bfPrev' && !['bfLib', 'bfGames'].some(ovOpen)) showStart(); }
+    }
+    return;
+  }
   if (startOpen() && !(t && /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) {
     if (e.metaKey || e.ctrlKey || e.altKey) return;
     const k = e.key.toLowerCase();
@@ -2886,7 +3034,7 @@ window.addEventListener('keydown', e => {
     'f': () => e.shiftKey ? videoFullscreen() : appFullscreen(),
     'h': () => document.body.classList.toggle('bar-hidden'),
     'm': () => e.shiftKey ? openFastMoney() : toggleSound(),
-    'e': enterSetup,
+    'e': enterSetup, 'b': openLibraryFromGame,
     '?': toggleHelp, '/': toggleHelp,
   };
   const fn = map[lk];
@@ -2906,14 +3054,15 @@ document.addEventListener('pointerdown', poke, { passive: true });
 const hasFiles = e => e.dataTransfer && [...(e.dataTransfer.types || [])].includes('Files');
 window.addEventListener('dragover', e => {
   if (!hasFiles(e)) return; e.preventDefault();
-  if (state.ui.mode === 'game') $('#vFrame').classList.add('over');
+  if (state.ui.mode === 'game' && !BF_OVS.some(ovOpen)) $('#vFrame').classList.add('over');
 });
 window.addEventListener('dragleave', e => { if (!e.relatedTarget) $('#vFrame').classList.remove('over'); });
 window.addEventListener('drop', e => {
   if (!hasFiles(e)) return; e.preventDefault();
   $('#vFrame').classList.remove('over');
   const f = e.dataTransfer.files[0];
-  if (state.ui.mode === 'game') { if (f) setVideo(curPlay().id, f); }
+  if (BF_OVS.some(ovOpen)) return;
+  if (state.ui.mode === 'game') { if (f) openManage('play', curPlay().id, { file: f, from: 'game' }); }
   else toast('Drop the video onto a play’s VIDEO box.');
 });
 
@@ -3240,6 +3389,7 @@ ed.addEventListener('click', e => {
       save(); renderEditor(); toast('Sorted highest points first'); break;
     case 'chooseVideo': pickVideoFor(p.id); break;
     case 'mlbPreview': if (p.mlb && p.mlb.libId) openPreview(p.mlb.libId); break;
+    case 'manageVid': if (p.mlb && p.mlb.libId) openManage('lib', p.mlb.libId); break;
     case 'rmMlb': if (confirm('Remove the MLB video from this play? (You can add a local video file instead.)')) { p.mlb = null; save(); renderEditor(); renderPlayList(); } break;
     case 'rmVideo': removeVideo(p.id); break;
     case 'dup': duplicatePlay(p.id); break;
@@ -4034,9 +4184,34 @@ function libNorm(p, status) {
     question: str(p.question) || BF2_PROMPT,
     video: { embedUrl: embedFrom(v.embedUrl) || embedFrom(v.pageUrl || v.url), pageUrl: httpsOnly(v.pageUrl || v.url), title: str(v.title), savantUrl: httpsOnly(v.savantUrl || obj(v.savant).url), angle: normAngle(v.angle) },
     answers, sources: (Array.isArray(p.sources) ? p.sources : []).map(x => ({ label: str(obj(x).label), url: httpsOnly(obj(x).url) })).filter(x => x.label || x.url),
-    verification: { status: str(obj(p.verification).status) || 'unverified', notes: str(obj(p.verification).notes), gamePk: str(obj(p.verification).gamePk), playId: str(obj(p.verification).playId) },
+    verification: { status: str(obj(p.verification).status) || 'unverified', notes: str(obj(p.verification).notes), gamePk: str(obj(p.verification).gamePk), playId: str(obj(p.verification).playId),
+      atBatIndex: obj(p.verification).atBatIndex == null || obj(p.verification).atBatIndex === '' ? '' : str(obj(p.verification).atBatIndex) },
+    result: { event: str(obj(p.result).event), description: str(obj(p.result).description) },
+    media: normMedia(p.media),
     status: status || str(p.status) || 'approved', addedAt: str(p.addedAt) || new Date().toISOString(),
   };
+}
+/* per-angle videos kept with the library play: which angle games use, and files uploaded in this browser (the
+   files themselves live in IndexedDB under lib:<play id>:<angle>; this is only their description) */
+function normMedia(m) {
+  m = obj(m); const files = {};
+  for (const a of ANGLES) { const f = obj(obj(m.files)[a]); if (f.name) files[a] = { name: str(f.name), size: num(f.size), type: str(f.type), addedAt: str(f.addedAt), stored: !!f.stored }; }
+  return { def: ANGLES.includes(m.def) ? m.def : '', files };
+}
+/* The seed gained fields (e.g. from tools/baseball-feud-discovery/enrich.py): fill only what a stored play is missing —
+   never titles, answers, notes, questions, videos you attached or anything else a person edited. */
+function libFillMissing(have, seed) {
+  const fill = (dst, src, keys) => keys.forEach(k => { if ((dst[k] === '' || dst[k] == null) && src[k] !== '' && src[k] != null) dst[k] = src[k]; });
+  if (!have.situation && seed.situation) have.situation = seed.situation;
+  else if (have.situation && seed.situation) {
+    fill(have.situation, seed.situation, ['teams', 'date', 'venue', 'inning', 'runners', 'score', 'count', 'batter', 'pitcher', 'batting', 'fielding', 'away', 'home', 'awayAbbr', 'homeAbbr', 'outs']);
+    if (!have.situation.bases && seed.situation.bases) have.situation.bases = seed.situation.bases;
+  }
+  fill(have.result, seed.result, ['event', 'description']);
+  fill(have.verification, seed.verification, ['gamePk', 'playId', 'atBatIndex']);
+  fill(have.video, seed.video, ['embedUrl', 'pageUrl', 'savantUrl', 'title']);
+  if (!have.situationLine) have.situationLine = seed.situationLine;
+  if (!have.officialRecord) have.officialRecord = seed.officialRecord;
 }
 function libFromFile(data) {
   data = obj(data);
@@ -4053,7 +4228,7 @@ function libLoad() {
   const seed = window.BF2_LIBRARY;
   if (seed && out.seeded !== seed.collection.version) {
     const have = new Set(out.plays.map(p => p.id));
-    seed.plays.forEach(p => { if (!have.has(p.id)) out.plays.push(libNorm(p, 'approved')); });
+    seed.plays.forEach(p => { const n = libNorm(p, 'approved'), h = out.plays.find(x => x.id === p.id); if (h) libFillMissing(h, n); else if (!have.has(p.id)) out.plays.push(n); });
     out.seeded = seed.collection.version;
   }
   return out;
@@ -4118,7 +4293,7 @@ function ov(id) {
 }
 const ovOpen = id => { const o = $('#' + id); return !!(o && !o.hidden); };
 function closeOv(id) { const o = $('#' + id); if (o) { o.hidden = true; if (id === 'bfPrev') o.innerHTML = ''; } }
-function closeAll() { ['bfLib', 'bfPrev', 'bfGames'].forEach(closeOv); }
+function closeAll() { ['bfLib', 'bfPrev', 'bfGames', 'bfVid'].forEach(closeOv); L.det = ''; const h = $('#bfDet'); if (h) h.innerHTML = ''; }
 
 /* Games */
 function openGames() {
@@ -4127,7 +4302,7 @@ function openGames() {
     const pl = (g.data.plays || []), cur = g.id === state.gameId;
     return `<div class="bf-game ${cur ? 'cur' : ''}"><div class="bf-gm"><div class="bf-gt">${esc(g.name)}${cur ? ' <span class="bf-tag">OPEN NOW</span>' : ''}</div>
       <div class="bf-gs">${pl.length} play${pl.length === 1 ? '' : 's'} · saved ${esc(fmtDate(g.savedAt))}</div>
-      <div class="bf-gp">${pl.map((p, i) => `<span>${i + 1}. ${esc(p.title || 'Untitled play')}${p.mlb ? ' ▶' : ''}</span>`).join('')}</div></div>
+      <div class="bf-gp">${pl.map((p, i) => `<span>${i + 1}. ${esc(p.title || 'Untitled play')}${p.mlb && (p.mlb.embedUrl || p.mlb.pageUrl) ? ' ▶' : ''}</span>`).join('')}</div></div>
       <div class="bf-ga"><button class="sb primary" data-bf="gPlay" data-id="${esc(g.id)}">▶ PLAY</button><button class="sb" data-bf="gEdit" data-id="${esc(g.id)}">EDIT</button>
       ${cur ? '' : `<button class="sb danger sm" data-bf="gDel" data-id="${esc(g.id)}">DELETE</button>`}</div></div>`;
   }).join('') || '<p class="bf-empty">No saved games yet.</p>';
@@ -4139,8 +4314,25 @@ function openGames() {
 }
 
 /* Plays Library: browse / pick (new game) / add (to the open game) */
-const L = { mode: 'browse', tab: 'plays', sel: [], filter: 'all', q: '' };
-function openLibrary(mode) { L.mode = mode || 'browse'; L.tab = 'plays'; if (L.mode !== 'pick') L.sel = []; renderLibrary(); ov('bfLib').hidden = false; }
+const L = { mode: 'browse', tab: 'plays', sel: [], q: '', video: '', cat: '', inGame: false, from: 'start', now: null, det: '', use: '' };
+function openLibrary(mode, from) {
+  L.mode = mode || 'browse'; L.tab = 'plays'; if (L.mode !== 'pick') L.sel = [];
+  L.from = from || (state.ui.mode === 'setup' ? 'setup' : 'start'); L.det = ''; L.use = '';
+  if (L.from !== 'game') L.now = null;
+  renderLibrary(); ov('bfLib').hidden = false;
+}
+/* from the live round: the game stays exactly as it is (scores, strikes, revealed answers, queue); its play is highlighted */
+function openLibraryFromGame() {
+  pauseGameVideo(); const p = curPlay();
+  L.now = { pid: p.id, libId: p.mlb && p.mlb.libId && libById(p.mlb.libId) ? p.mlb.libId : '' };
+  openLibrary('browse', 'game');
+  const c = L.now.libId && $(`[data-card="${CSS.escape(L.now.libId)}"]`); if (c) c.scrollIntoView({ block: 'center' });
+}
+const BF_OVS = ['bfVid', 'bfPrev', 'bfLib', 'bfGames'];
+function closeLibrary() {
+  closeOv('bfLib'); L.det = ''; L.use = ''; detHost().innerHTML = '';
+  if (state.ui.mode === 'game' && !['bfLib', 'bfGames'].some(ovOpen)) { if (L.from === 'game') { syncGameVideo(curPlay()); requestAnimationFrame(fitAll); } else showStart(); }
+}
 /* the base-out graphic: occupied bases in orange; unknown runners drawn dashed (never shown as empty) */
 function diamond(b, cls = 'bf-dia') {
   const k = !!b, base = (x, y, on) => `<rect x="${x - 9}" y="${y - 9}" width="18" height="18" transform="rotate(45 ${x} ${y})" class="${on ? 'on' : ''}"/>`;
@@ -4156,17 +4348,17 @@ function sitOfPlay(p) {          // a game play's situation: its own copy; older
 }
 function sitStripHTML(v) {
   return `<div class="ss-bo">${diamond(v.bases, 'ss-dia')}<div class="ss-out">${outDots(v.outsN)}<b>${esc(v.outs || '—')}</b></div></div>
-    ${v.inning ? `<div class="ss-inn">${esc(v.inning)}</div>` : ''}
+    ${v.inning || v.batAbbr ? `<div class="ss-mid">${v.inning ? `<div class="ss-inn">${esc(v.inning)}</div>` : ''}${v.batAbbr ? `<div class="ss-bat"><b>${esc(v.batAbbr)}</b> BATTING${v.fldAbbr ? ` <i>·</i> <b>${esc(v.fldAbbr)}</b> IN FIELD` : ''}</div>` : ''}</div>` : ''}
     ${v.score || v.scoreText ? `<div class="ss-sc">${scoreHTML(v)}</div>` : ''}
-    <div class="ss-who">${v.batter || v.pitcher ? `<div>${v.batter ? `<span>AB</span> <b>${esc(v.batter)}</b>` : ''}${v.batter && v.pitcher ? ' <i>vs</i> ' : ''}${v.pitcher ? `<span>P</span> <b>${esc(v.pitcher)}</b>` : ''}</div>` : ''}
-      ${v.teams || v.date ? `<small>${esc([v.teams, v.date].filter(Boolean).join(' · '))}</small>` : ''}</div>`;
+    <div class="ss-who">${v.batter ? `<div><span>AB</span> <b>${esc(v.batter)}</b></div>` : ''}${v.pitcher ? `<div><span>P</span> <b>${esc(v.pitcher)}</b></div>` : ''}
+      ${v.date ? `<small>${esc(v.date)}</small>` : ''}</div>`;
 }
 function sitIntroHTML(v) {
   return `<div class="is-row">${diamond(v.bases, 'is-dia')}<div class="is-txt">
     <div class="is-1">${[v.inning, v.outs].filter(Boolean).map(esc).join(' <i>|</i> ')}</div>
     ${v.score || v.scoreText ? `<div class="is-2">${scoreHTML(v)}</div>` : ''}
     ${v.runners ? `<div class="is-3">${esc(v.runners)}</div>` : ''}
-    ${v.batter ? `<div class="is-4">Batter: <b>${esc(v.batter)}</b></div>` : ''}</div></div>`;
+    ${v.batter ? `<div class="is-4">Batter: <b>${esc(v.batter)}</b>${v.batAbbr ? ` (${esc(v.batAbbr)})` : ''}${v.pitcher ? ` · Pitcher: <b>${esc(v.pitcher)}</b>${v.fldAbbr ? ` (${esc(v.fldAbbr)})` : ''}` : ''}</div>` : ''}</div></div>`;
 }
 function sitBugHTML(v) {
   return `${diamond(v.bases, 'sb-dia')}<span class="sb-o">${outDots(v.outsN)}</span>${v.inning ? `<span class="sb-i">${esc(v.inning)}</span>` : ''}${v.score ? `<span class="sb-s">${scoreHTML(v)}</span>` : ''}`;
@@ -4208,25 +4400,147 @@ function refreshAddButtons() {   // update every Add button and the counter in p
   $$('[data-bf="toggle"]').forEach(b => { const t = document.createElement('div'); t.innerHTML = addBtn(b.dataset.id, b.classList.contains('lg') ? 'lg' : 'sm'); b.replaceWith(t.firstElementChild); });
   $$('.bf-count').forEach(c => { const t = document.createElement('div'); t.innerHTML = selCountHTML(); c.replaceWith(t.firstElementChild); });
 }
+/* ----- Plays Library: compact cards, a details panel, finding the original footage, using a play in the game ----- */
+const NR = '<span class="bf-nr">Not recorded</span>';
+const longDate = iso => /^\d{4}-\d{2}-\d{2}$/.test(iso) ? new Date(iso + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }) : iso;
+const AV_LABEL = { both: 'BROADCAST + HIGH HOME', broadcast: 'BROADCAST ONLY', 'high-home': 'HIGH HOME ONLY', missing: 'NO VIDEO' };
+function availChips(lp) {
+  const s = slots(lp);
+  const chip = a => s[a].has ? `<span class="ang a-${a}" title="${s[a].up ? 'Your upload (this computer)' : 'MLB.com clip (public)'}">${ANGLE_LABEL[a]}${s[a].up ? ' · YOURS' : ''}</span>` : '';
+  const c = ANGLES.map(chip).join('');
+  return c || '<span class="bf-t warn">NO VIDEO</span>';
+}
+/* the text a search runs over: names, clubs, date, play ids, description, inning */
+function libText(p) {
+  const s = p.situation || {}, v = sitView(s) || {};
+  return [p.title, p.subtitle, p.stage, p.category, ...(p.categories || []), s.teams, s.away, s.home, s.awayAbbr, s.homeAbbr, v.matchup, s.batting, s.fielding,
+    s.date, v.date, longDate(s.date), s.batter, s.pitcher, s.venue, s.inning, v.inning, v.runners, p.description, p.officialRecord, p.result.event, p.result.description,
+    p.id, p.verification.playId, p.verification.gamePk].join(' ').toLowerCase();
+}
+/* the line to paste into MLB Film Room, an internal video system or a search engine */
+function searchLine(p) {
+  const s = p.situation || {}, v = sitView(s) || {};
+  const who = s.batter && s.pitcher ? `${s.batter} vs ${s.pitcher}` : (s.batter || s.pitcher || '');
+  return [s.date, v.matchup || s.teams, s.inning, s.outs == null ? '' : `${s.outs} out${s.outs === 1 ? '' : 's'}`, who].filter(Boolean).join(' ');
+}
+function detailRows(p) {
+  const s = p.situation || {}, v = sitView(s) || {}, r = p.result, ver = p.verification;
+  const scoreTxt = v.score ? `${v.score[0].t} ${v.score[0].r}, ${v.score[1].t} ${v.score[1].r}` : s.score;
+  return [
+    ['Game date', longDate(s.date)], ['Away team', s.away || (s.teams.split(' at ')[1] ? s.teams.split(' at ')[0] : '')], ['Home team', s.home || s.teams.split(' at ')[1] || ''],
+    ['Matchup', v.matchup], ['Venue', s.venue], ['Inning', s.inning], ['Outs before play', s.outs == null ? '' : String(s.outs)],
+    ['Runners before play', v.runners], ['Count', s.count], ['Batter', s.batter], ['Pitcher', s.pitcher], ['Batting team', s.batting], ['Fielding team', s.fielding],
+    ['Score before play', scoreTxt], ['Play result', r.event], ['MLB play description', r.description || p.officialRecord],
+    ['MLB play ID', ver.playId, 'copy'], ['MLB game ID (gamePk)', ver.gamePk, 'copy'], ['At-bat index', ver.atBatIndex], ['Library play ID', p.id, 'copy'],
+    ['Video', AV_LABEL[avail(p)]],
+  ];
+}
+function detailsHTML(p) {
+  const rows = detailRows(p), line = searchLine(p), links = [];
+  if (p.video.pageUrl) links.push([p.video.pageUrl, p.video.title || 'MLB.com clip page', 'MLB’s own clip page']);
+  if (p.video.savantUrl) links.push([p.video.savantUrl, 'Baseball Savant video for this play', p.verification.status === 'verified' ? 'matched to the game, batter and pitcher' : 'not verified']);
+  for (const x of p.sources) if (x.url && !links.some(l => l[0] === x.url)) links.push([x.url, x.label || x.url, 'source']);
+  return `<aside class="bf-det" role="dialog" aria-label="Play details"><div class="bf-dh"><div><div class="ov-k">PLAY DETAILS</div><h3>${esc(p.title)}</h3></div><button class="sb ghost sm" data-bf="detClose" aria-label="Close details">✕ CLOSE</button></div>
+    <div class="bf-dact"><button class="sb sm" data-bf="preview" data-id="${esc(p.id)}">▶ PREVIEW</button><button class="sb sm" data-bf="manage" data-id="${esc(p.id)}">⇄ MANAGE VIDEO</button>${p.status === 'queued' ? '' : `<button class="sb sm primary" data-bf="use" data-id="${esc(p.id)}">USE IN GAME ▾</button>`}</div>
+    ${L.use === p.id ? useHTML(p) : ''}
+    <section class="bf-src-box" id="findSrc"><div class="lb">FIND SOURCE VIDEO</div>
+      ${line ? `<div class="bf-line"><code>${esc(line)}</code><button class="sb sm primary" data-bf="copy" data-v="${esc(line)}">COPY SEARCH</button></div>` : '<p class="bf-note">Not enough recorded details to build a search line.</p>'}
+      <div class="bf-ids">${p.verification.gamePk ? `<span>gamePk <b>${esc(p.verification.gamePk)}</b></span>` : ''}${p.verification.playId ? `<span>playId <b>${esc(p.verification.playId)}</b></span>` : ''}</div>
+      <button class="sb sm ghost" data-bf="copyAll" data-id="${esc(p.id)}">COPY ALL DETAILS</button>
+      ${links.length ? `<ul class="bf-links">${links.map(([u, t, n]) => `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)} ↗</a> <small>${esc(n)}</small></li>`).join('')}</ul>` : '<p class="bf-note">No verified link is stored for this play — use the search line and IDs above.</p>'}</section>
+    <dl class="bf-dl">${rows.map(([k, val, c]) => `<dt>${esc(k)}</dt><dd>${val ? esc(val) + (c ? ` <button class="bf-cp" data-bf="copy" data-v="${esc(val)}" title="Copy">⧉</button>` : '') : NR}</dd>`).join('')}</dl>
+    ${p.description ? `<div class="lb">SUMMARY</div><p class="bf-dp">${esc(p.description)}</p>` : ''}</aside>`;
+}
+function copyText(t) {
+  const ok = () => toast('Copied: ' + (t.length > 70 ? t.slice(0, 70) + '…' : t), 2200);
+  const fallback = () => { const a = document.createElement('textarea'); a.value = t; a.style.position = 'fixed'; a.style.opacity = '0'; document.body.appendChild(a); a.select(); try { document.execCommand('copy'); ok(); } catch (e) { toast('Copy isn’t available here — select the text instead.'); } a.remove(); };
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(ok, fallback); else fallback();
+}
+function allDetailsText(p) { return [p.title, searchLine(p), ...detailRows(p).map(([k, v]) => `${k}: ${v || 'not recorded'}`), ...(p.video.pageUrl ? ['MLB.com: ' + p.video.pageUrl] : []), ...(p.video.savantUrl ? ['Baseball Savant: ' + p.video.savantUrl] : [])].join('\n'); }
+
+/* ----- using a library play in the open game: add it, or replace an upcoming play that hasn't started ----- */
+const liveSess = () => (practice ? practice.liveSession : state.session);
+function playStarted(pid) {
+  const se = liveSess(), r = se.rounds[pid];
+  return !!((se.revealed[pid] || []).length || (r && (r.phase !== 'play' || r.strikes || r.start !== null)) || se.summarized[pid]);
+}
+function useSlots() {          // each game play: can it be replaced from the library?
+  const plays = gamePlaysNow(), live = !practice && (hasProgress() || state.session.startedAt), cur = practice ? -1 : curIndex();
+  return plays.map((p, i) => ({ p, i, lock: playStarted(p.id) ? 'started' : live && i < cur ? 'played' : live && i === cur ? 'on now' : '' }));
+}
+function useHTML(lp) {
+  const sl = useSlots(), there = sl.filter(x => x.p.mlb && x.p.mlb.libId === lp.id);
+  return `<div class="bf-use"><div class="bf-uh">USE IN THIS GAME · <b>${esc(state.sessionName || 'Current game')}</b> · ${sl.length} play${sl.length === 1 ? '' : 's'}${practice ? ' · practice running' : ''}</div>
+    ${there.length ? `<p class="bf-uin">✓ Already in the game as play ${there.map(x => x.i + 1).join(', ')}.${there.some(x => x.lock) ? '' : ` <button class="sb sm ghost" data-bf="useRemove" data-id="${esc(lp.id)}">REMOVE IT</button>`}</p>` : ''}
+    <button class="sb sm primary" data-bf="useAdd" data-id="${esc(lp.id)}">+ ADD AS PLAY ${sl.length + 1}</button>
+    <div class="bf-ul">REPLACE AN UPCOMING PLAY <small>— only plays that haven’t started; scores and answers already played stay as they are</small></div>
+    <ol class="bf-ur">${sl.map(x => `<li><span>${x.i + 1}. ${esc(x.p.title || 'Untitled play')}</span>${x.lock ? `<em>${x.lock}</em>` : `<button class="sb sm" data-bf="useReplace" data-id="${esc(lp.id)}" data-pid="${esc(x.p.id)}">REPLACE</button>`}</li>`).join('')}</ol></div>`;
+}
+function useAdd(libId) {
+  const lp = libById(libId); if (!lp) return;
+  if (lp.status === 'queued') { toast('Approve this play first — then add it to the game.'); return; }
+  const plays = gamePlaysNow(); plays.push(gamePlayFrom(lp)); sfx.tick();
+  afterGameEdit(`✓ Added “${lp.title}” as play ${plays.length}`);
+}
+function useReplace(libId, pid) {
+  const lp = libById(libId), plays = gamePlaysNow(), i = plays.findIndex(p => p.id === pid); if (!lp || i < 0) return;
+  const x = useSlots()[i]; if (x.lock) { toast(`Play ${i + 1} ${x.lock === 'on now' ? 'is on screen now' : 'has already started'} — it can’t be replaced.`); return; }
+  if (!confirm(`Replace play ${i + 1} “${plays[i].title || 'Untitled play'}” with “${lp.title}”?\nIts answers are replaced by the library’s suggested answers. Scores and the plays already played don’t change.`)) return;
+  const old = plays[i], np = gamePlayFrom(lp), se = liveSess();
+  plays.splice(i, 1, np);
+  old.observations.forEach(o => { delete se.found[o.id]; delete se.bulk[o.id]; });
+  ['revealed', 'rounds', 'adjust', 'summarized'].forEach(k => delete se[k][old.id]);
+  dropVideo(old.id); idbDel(old.id);
+  if (state.ui.selected === old.id) state.ui.selected = np.id;
+  afterGameEdit(`✓ Play ${i + 1} is now “${lp.title}”`);
+}
+function useRemove(libId) {
+  const sl = useSlots().filter(x => x.p.mlb && x.p.mlb.libId === libId); if (!sl.length) return;
+  const x = sl[sl.length - 1]; if (x.lock) { toast('That play has started — it stays in the game.'); return; }
+  if (gamePlaysNow().length <= 1) { toast('A game needs at least one play — add another before removing this one.'); return; }
+  removeGamePlay(x.p.id); afterGameEdit(`Removed play ${x.i + 1} from the game`);
+}
+function afterGameEdit(msg) {
+  save(); toast(msg, 2200);
+  if (state.ui.mode === 'setup') renderSetup(); else if (!$('#game').hidden) { renderGame(); pauseGameVideo(); }   // redraws from the saved state; resets nothing
+  renderLibrary();
+}
+
 function card(p) {
-  const picked = L.sel.indexOf(p.id), queued = p.status === 'queued';
+  const picked = L.sel.indexOf(p.id), queued = p.status === 'queued', s = p.situation || {}, v = sitView(s) || {};
+  const now = L.from === 'game' && L.now && L.now.libId === p.id;
   let act;
   if (queued) act = `<button class="sb sm primary" data-bf="approve" data-id="${esc(p.id)}">✓ APPROVE</button><button class="sb sm danger" data-bf="discard" data-id="${esc(p.id)}">DISCARD</button>`;
   else if (L.mode === 'pick') act = `<button class="sb sm ${picked >= 0 ? 'primary' : ''}" data-bf="pick" data-id="${esc(p.id)}">${picked >= 0 ? '✓ PLAY ' + (picked + 1) : '+ SELECT'}</button>`;
-  else act = addBtn(p.id);
-  const v = sitView(p.situation) || {};
-  return `<div class="bf-card ${picked >= 0 || (L.mode !== 'pick' && inGame(p.id)) ? 'on' : ''}">
-    <button class="bf-thumb" data-bf="preview" data-id="${esc(p.id)}" title="Preview the video">${diamond(v.bases)}${v.outs ? `<span class="bf-outs">${outDots(v.outsN)}${esc(v.outs)}</span>` : ''}<span class="bf-play">▶</span>${angleChip(p.video.angle)}</button>
-    <div class="bf-cb"><div class="bf-ct">${esc(p.title)}</div>
-      <div class="bf-cs">${esc([v.teams, v.date].filter(Boolean).join(' · '))}</div>
-      <div class="bf-cs2">${esc([v.inning, v.runners].filter(Boolean).join(' · '))}${v.score ? ` · ${v.score.map(x => esc(x.t) + ' ' + x.r).join(' – ')}` : ''}</div>
-      <div class="bf-tags">${p.category ? `<span class="bf-t">${esc(p.category)}</span>` : ''}<span class="bf-t">${p.answers.length} ANSWERS</span>${p.video.embedUrl ? '' : '<span class="bf-t warn">MLB LINK ONLY</span>'}${p.verification.status !== 'verified' ? `<span class="bf-t warn">${esc(p.verification.status.toUpperCase())}</span>` : ''}</div>
-      <div class="bf-ca"><button class="sb sm ghost" data-bf="preview" data-id="${esc(p.id)}">▶ PREVIEW</button>${act}</div></div></div>`;
+  else act = `<button class="sb sm ${inGame(p.id) ? 'bf-add added' : 'primary'}" data-bf="use" data-id="${esc(p.id)}" aria-expanded="${L.use === p.id}">${inGame(p.id) ? '✓ IN GAME ▾' : 'USE IN GAME ▾'}</button>`;
+  const l1 = [v.date, v.matchup || s.teams, v.inning, s.batter && s.pitcher ? `${s.batter} vs ${s.pitcher}` : s.batter].filter(Boolean);
+  const short = [p.result.event, p.subtitle].filter(Boolean).join(' — ');
+  return `<article class="bf-card ${picked >= 0 || (L.mode !== 'pick' && inGame(p.id)) ? 'on' : ''}${now ? ' now' : ''}${L.det === p.id ? ' det' : ''}" data-card="${esc(p.id)}">
+    <button class="bf-thumb" data-bf="preview" data-id="${esc(p.id)}" title="Preview the video" aria-label="Preview ${esc(p.title)}">${diamond(v.bases)}<span class="bf-play">▶</span></button>
+    <div class="bf-cb">${now ? '<div class="bf-now">NOW PLAYING IN YOUR GAME</div>' : ''}
+      <div class="bf-l1">${l1.length ? l1.map(esc).join('<i>·</i>') : NR}</div>
+      <div class="bf-ct">${esc(p.title)}</div>
+      ${short ? `<div class="bf-sd">${esc(short)}</div>` : ''}
+      <div class="bf-l2"><span class="bf-o">${outDots(v.outsN)}${esc(v.outs || 'OUTS ?')}</span><span class="bf-r">${esc(v.runners || 'Runners not recorded')}</span>${availChips(p)}${p.category ? `<span class="bf-t">${esc(p.category)}</span>` : ''}${p.verification.status !== 'verified' ? `<span class="bf-t warn">${esc(p.verification.status.toUpperCase())}</span>` : ''}</div>
+      <div class="bf-ca"><button class="sb sm ghost" data-bf="preview" data-id="${esc(p.id)}">▶ PREVIEW</button><button class="sb sm ghost" data-bf="manage" data-id="${esc(p.id)}">⇄ MANAGE VIDEO</button><button class="sb sm ghost" data-bf="details" data-id="${esc(p.id)}">DETAILS</button><button class="sb sm ghost" data-bf="find" data-id="${esc(p.id)}">FIND SOURCE</button>${act}</div>
+      ${L.use === p.id && L.mode !== 'pick' && !queued && L.det !== p.id ? useHTML(p) : ''}</div></article>`;
+}
+function libList() {
+  const terms = L.q.toLowerCase().split(/\s+/).filter(Boolean);
+  return (L.tab === 'queue' ? lib.queue : lib.plays).filter(p => {
+    const a = avail(p);
+    if (L.video === 'ihome' && !(a === 'high-home' || a === 'both')) return false;
+    if (L.video === 'broadcast' && a !== 'broadcast') return false;
+    if (L.video === 'missing' && a !== 'missing') return false;
+    if (L.cat && !(p.category === L.cat || p.categories.includes(L.cat))) return false;
+    if (L.inGame && !inGame(p.id)) return false;
+    if (!terms.length) return true;
+    const t = libText(p); return terms.every(x => t.includes(x));
+  });
 }
 function renderLibrary() {
-  const o = ov('bfLib'), q = L.q.toLowerCase();
-  const list = (L.tab === 'queue' ? lib.queue : lib.plays).filter(p => (L.filter === 'all' || p.video.angle.category === L.filter) &&
-    (!q || [p.title, p.category, p.situation.teams, p.description].join(' ').toLowerCase().includes(q)));
+  const o = ov('bfLib'), list = libList(), keepScroll = o.scrollTop;
+  const cats = [...new Set(lib.plays.flatMap(p => [p.category, ...p.categories]).filter(Boolean))].sort();
   const head = L.mode === 'pick' ? `PICK <b>3–4 PLAYS</b>` : `PLAYS <b>LIBRARY</b>`;
   const foot = L.mode === 'pick'
     ? `<div class="bf-pickbar"><div><b>${L.sel.length}</b> of 4 selected${L.sel.length ? ': ' + L.sel.map((id, i) => `${i + 1}. ${esc(libById(id)?.title || '')}`).join(' · ') : ' — a game uses 3 or 4 plays (4 is standard)'}</div>
@@ -4238,29 +4552,183 @@ function renderLibrary() {
       <p><b>Bring them in here.</b> Import that file: every play lands in the <b>Review queue</b>. Nothing reaches your library, or any game, until you approve it.</p>
       <p class="bf-note">There is no live “search MLB” button in the app: a reliable search needs a server that can query MLB’s play-by-play and video catalogue on a schedule, plus a writing step for the answers. That isn’t part of this static site yet.</p>
       <button class="sb primary lg" data-bf="import">IMPORT DISCOVERED PLAYS (JSON)</button></div>`;
-  o.innerHTML = `<div class="ov-inner bf-in"><div class="bf-hh"><div><div class="ov-k">BASEBALL FEUD 2.0</div><h2>${head}</h2></div>
-    <div class="grp">${L.mode === 'pick' ? '' : `${selCountHTML()}<button class="sb lg" data-bf="toSetup" title="Organise the selected plays and edit their answers">SETUP →</button>`}<button class="sb ghost lg" data-bf="close">‹ BACK</button></div></div>
+  const nowP = L.from === 'game' && L.now ? (gamePlaysNow().find(x => x.id === L.now.pid) || null) : null;
+  const nowBar = nowP ? `<div class="bf-nowbar"><span class="bf-nk">NOW PLAYING</span><b>${esc(nowP.title || 'Untitled play')}</b><span class="bf-nm">${esc(practice ? 'Practice play' : `Play ${curIndex() + 1} of ${state.plays.length}`)}${L.now.libId ? '' : ' · not from the library'}</span>
+      <span class="grow"></span><button class="sb sm" data-bf="manageNow">⇄ MANAGE ITS VIDEO</button>${L.now.libId && libById(L.now.libId) ? `<button class="sb sm ghost" data-bf="details" data-id="${esc(L.now.libId)}">DETAILS</button>` : ''}</div>` : '';
+  const det = L.det && libById(L.det);
+  o.innerHTML = `<div class="ov-inner bf-in${det ? ' has-det' : ''}"><div class="bf-hh"><div><div class="ov-k">BASEBALL FEUD 2.0</div><h2>${head}</h2></div>
+    <div class="grp">${L.mode === 'pick' ? '' : `${selCountHTML()}${L.from === 'game' ? '' : '<button class="sb lg" data-bf="toSetup" title="Organise the selected plays and edit their answers">SETUP →</button>'}`}${L.from === 'game' ? '<button class="sb primary lg" data-bf="close">‹ BACK TO GAME</button>' : '<button class="sb ghost lg" data-bf="close">‹ BACK</button>'}</div></div>
+    ${nowBar}
     <div class="bf-bar"><div class="bf-tabs">
       <button data-bf="tab" data-v="plays" class="${L.tab === 'plays' ? 'on' : ''}">PLAYS <i>${lib.plays.length}</i></button>
       <button data-bf="tab" data-v="queue" class="${L.tab === 'queue' ? 'on' : ''}">REVIEW QUEUE <i>${lib.queue.length}</i></button>
       <button data-bf="tab" data-v="find" class="${L.tab === 'find' ? 'on' : ''}">FIND NEW PLAYS</button></div>
-      ${L.tab === 'find' ? '' : `<div class="bf-seg">${[['all', 'ALL'], ['high-home', 'HIGH HOME'], ['broadcast', 'BROADCAST']].map(([k, l]) => `<button data-bf="filter" data-v="${k}" class="${L.filter === k ? 'on' : ''}">${l}</button>`).join('')}</div>
-      <input class="in bf-search" data-bfin="q" placeholder="Search plays" value="${esc(L.q)}">`}</div>
-    ${L.tab === 'find' ? findTab : `<div class="bf-grid">${list.map(card).join('') || `<p class="bf-empty">${L.tab === 'queue' ? 'Nothing waiting for review. Use FIND NEW PLAYS to import discovered plays.' : 'No plays match.'}</p>`}</div>`}
+      ${L.tab === 'find' ? '' : `<input class="in bf-search" type="search" data-bfin="q" placeholder="Search player, team, date, play ID…" aria-label="Search plays" value="${esc(L.q)}">
+      <select class="in bf-sel" data-bfin="video" aria-label="Video"><option value="">All video</option><option value="ihome"${L.video === 'ihome' ? ' selected' : ''}>iHome / High Home available</option><option value="broadcast"${L.video === 'broadcast' ? ' selected' : ''}>Broadcast only</option><option value="missing"${L.video === 'missing' ? ' selected' : ''}>Missing video</option></select>
+      <select class="in bf-sel" data-bfin="cat" aria-label="Category"><option value="">All categories</option>${cats.map(c => `<option${c === L.cat ? ' selected' : ''}>${esc(c)}</option>`).join('')}</select>
+      ${L.mode === 'pick' ? '' : `<label class="bf-chk"><input type="checkbox" data-bfin="inGame" ${L.inGame ? 'checked' : ''}> IN THIS GAME</label>`}
+      <span class="bf-n">${list.length} shown</span>`}</div>
+    ${L.tab === 'find' ? findTab : `<div class="bf-grid">${list.map(card).join('') || `<p class="bf-empty">${L.tab === 'queue' ? 'Nothing waiting for review. Use FIND NEW PLAYS to import discovered plays.' : 'No plays match.'}${L.q || L.video || L.cat || L.inGame ? ' <button class="sb sm ghost" data-bf="clearF">CLEAR SEARCH &amp; FILTERS</button>' : ''}</p>`}</div>`}
     ${foot}</div>`;
+  o.scrollTop = keepScroll;
+  detHost().innerHTML = det ? detailsHTML(det) : '';
 }
-function openPreview(id) {
+function detHost() {
+  let h = $('#bfDet');
+  if (!h) { h = document.createElement('div'); h.id = 'bfDet'; document.body.appendChild(h); h.addEventListener('click', bf2Click); h.addEventListener('input', bf2Input); }
+  return h;
+}
+
+/* ----- Manage Video: replace a clip or add another angle in one panel, from the library, Setup or the live round -----
+   Changes are staged: a new file is previewed first and nothing is stored or removed until SAVE. CANCEL restores
+   everything. Library plays keep one record with both angles; uploads never overwrite MLB's public clip (it stays
+   underneath and returns if the upload is removed) and never overwrite the other angle. A play that isn't from the
+   library has one video slot, as before. Files stay in this browser — nothing is uploaded anywhere. */
+const MV = { kind: '', id: '', staged: {}, def: '', view: '', from: '' };
+function mvTarget() { return MV.kind === 'lib' ? libById(MV.id) : (gamePlaysNow().find(p => p.id === MV.id) || playById(MV.id)); }
+function mvDirty() { return Object.keys(MV.staged).length > 0 || (MV.kind === 'lib' && MV.def !== (mvTarget() || { media: {} }).media.def); }
+function openManage(kind, id, opts = {}) {
+  if (kind === 'play') { const p = gamePlaysNow().find(x => x.id === id) || playById(id); if (p && p.mlb && p.mlb.libId && libById(p.mlb.libId)) { kind = 'lib'; id = p.mlb.libId; } }
+  mvRelease();
+  Object.assign(MV, { kind, id, staged: {}, view: '', from: opts.from || '' });
+  const t = mvTarget(); if (!t) return;
+  MV.def = kind === 'lib' ? t.media.def : '';
+  if (kind === 'lib') { const s = slots(t); MV.view = defAngle(t, s); } else MV.view = 'video';
+  if (!$('#game').hidden) pauseGameVideo();
+  if (opts.file) mvStage(opts.angle || MV.view, opts.file); else renderManage();
+  ov('bfVid').hidden = false;
+}
+function mvRelease() { Object.values(MV.staged).forEach(st => { if (st && st.url) URL.revokeObjectURL(st.url); }); MV.staged = {}; }
+function mvStage(slot, file) {
+  if (!isVideoFile(file)) { toast('That file doesn’t look like a video. MP4 (H.264) works best.'); return; }
+  const old = MV.staged[slot]; if (old && old.url) URL.revokeObjectURL(old.url);
+  MV.staged[slot] = { file, url: URL.createObjectURL(file) }; MV.view = slot;
+  if (MV.kind === 'lib' && slot === 'high-home' && !MV.def && !mvAfter()['broadcast'].has) MV.def = 'high-home';
+  renderManage();
+}
+/* what each slot will hold once saved */
+function mvAfter() {
+  const t = mvTarget(), out = {};
+  if (MV.kind !== 'lib') {
+    const st = MV.staged.video, v = videos[t.id];
+    out.video = { up: st && !st.remove ? { url: st.url, name: st.file.name, size: st.file.size, isNew: true } : (st && st.remove ? null : (v ? { url: v.url, name: v.name, size: v.blob && v.blob.size, stored: v.stored } : null)), mlb: null };
+    out.video.has = !!out.video.up; return out;
+  }
+  const s = slots(t);
+  for (const a of ANGLES) {
+    const st = MV.staged[a];
+    const up = st ? (st.remove ? null : { url: st.url, name: st.file.name, size: st.file.size, isNew: true }) : (s[a].up ? { ...s[a].up } : null);
+    out[a] = { up, mlb: s[a].mlb, file: s[a].file, has: !!(up || s[a].mlb) };
+  }
+  return out;
+}
+const mvSlotName = a => a === 'video' ? 'VIDEO' : ANGLE_LABEL[a];
+function mvPreview(a, sl) {
+  if (!sl || !sl.has) return `<div class="mv-empty" data-drop="${a}"><b>NO ${esc(mvSlotName(a))} VIDEO YET</b><span>Drop an MP4 here or choose a file on the right.</span></div>`;
+  if (sl.up) return `<video src="${esc(sl.up.url)}" controls playsinline preload="metadata"></video>`;
+  if (sl.mlb.embedUrl) return `<iframe src="${esc(sl.mlb.embedUrl)}" title="MLB video" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+  return `<div class="mv-empty"><b>MLB OFFERS NO EMBED FOR THIS CLIP</b>${sl.mlb.pageUrl ? `<a class="sb sm" href="${esc(sl.mlb.pageUrl)}" target="_blank" rel="noopener">WATCH ON MLB ↗</a>` : ''}</div>`;
+}
+function mvWhat(sl) {
+  if (!sl || !sl.has) return 'Nothing yet';
+  if (sl.up) return sl.up.isNew ? `Your new file “${sl.up.name}” — not saved yet` : `Your upload “${sl.up.name}”`;
+  return `MLB.com clip (public)${sl.mlb.embedUrl ? '' : ' — opens on MLB’s site'}`;
+}
+function renderManage() {
+  const o = ov('bfVid'), t = mvTarget(); if (!t) return;
+  const after = mvAfter(), keys = Object.keys(after), isLib = MV.kind === 'lib';
+  const v = isLib ? (sitView(t.situation) || {}) : {};
+  const meta = isLib ? [v.date, v.matchup || v.teams, v.inning, v.batter].filter(Boolean).join(' · ') : 'A play that isn’t from the Plays Library — one video slot';
+  const gameUses = isLib ? (() => { const d = MV.def && after[MV.def].has ? MV.def : (ANGLES.find(a => after[a].has) || ''); return d ? `Games play <b>${ANGLE_LABEL[d]}</b>${MV.def && MV.def !== d ? ` (${ANGLE_LABEL[MV.def]} has no video, so Broadcast is used)` : MV.def ? '' : ' (no default chosen — the first angle with a video)'}` : 'Games will show “No video yet” until you add one'; })() : '';
+  const slotHTML = a => {
+    const sl = after[a], st = MV.staged[a], cur = isLib ? slots(t)[a] : null;
+    const items = [];
+    if (sl.mlb) items.push(`<li class="mv-mlb"><span class="mv-k">MLB.COM</span><span>${esc(sl.mlb.title || 'MLB clip')} · public${sl.up ? ' · <i>your upload plays instead</i>' : ''}</span></li>`);
+    if (lib && cur.file && !cur.up && !st) items.push(`<li class="mv-miss"><span class="mv-k">NOT HERE</span><span>“${esc(cur.file.name)}” was uploaded in another browser or was cleared — choose it again to use it on this computer.</span></li>`);
+    if (st && st.remove) items.push(`<li class="mv-rm"><span class="mv-k">REMOVING</span><span>Your upload will be removed when you save.</span><button class="sb sm ghost" data-bf="mvUndo" data-a="${a}">UNDO</button></li>`);
+    else if (sl.up) items.push(`<li class="${sl.up.isNew ? 'mv-new' : 'mv-up'}"><span class="mv-k">${sl.up.isNew ? 'NEW · UNSAVED' : 'YOUR UPLOAD'}</span><span>${esc(sl.up.name)}${sl.up.size ? ' · ' + fmtBytes(sl.up.size) : ''}${sl.up.isNew ? '' : ` · ${sl.up.stored === false ? 'this session only' : 'saved on this computer only'}`}</span>
+      ${sl.up.isNew ? `<button class="sb sm ghost" data-bf="mvUndo" data-a="${a}">UNDO</button>` : `<button class="sb sm danger" data-bf="mvRemove" data-a="${a}">REMOVE</button>`}</li>`);
+    if (!items.length) items.push(`<li class="mv-none"><span class="mv-k">EMPTY</span><span>No video for this angle.</span></li>`);
+    return `<section class="mv-slot ${MV.view === a ? 'on' : ''}" data-drop="${a}">
+      <div class="mv-sh"><button class="mv-tab" data-bf="mvView" data-a="${a}" title="Preview this angle">${a === 'video' ? '<span class="ang a-broadcast">VIDEO</span>' : angleChip({ category: a })}<b>${a === 'video' ? 'Video' : esc(ANG_LONG[a])}</b></button>
+        ${isLib ? `<label class="mv-def" title="${sl.has ? 'Games play this angle first' : 'Add a video to this angle first'}"><input type="radio" name="mvdef" value="${a}" data-bf="mvDef" ${MV.def === a ? 'checked' : ''} ${sl.has ? '' : 'disabled'}> USE IN GAMES</label>` : ''}</div>
+      ${a !== 'video' ? `<div class="mv-hint">${esc(ANG_HINT[a])}</div>` : ''}
+      <ul class="mv-src">${items.join('')}</ul>
+      <div class="mv-drop" data-drop="${a}"><span>Drop an MP4 here</span><button class="sb sm primary" data-bf="mvChoose" data-a="${a}">${sl.up ? 'REPLACE FILE…' : sl.mlb ? 'UPLOAD A FILE INSTEAD…' : 'CHOOSE FILE…'}</button></div></section>`;
+  };
+  const pv = after[MV.view] || after[keys[0]];
+  o.innerHTML = `<div class="ov-inner bf-in mv"><div class="bf-hh"><div><div class="ov-k">MANAGE VIDEO</div><h2 class="mv-h">${esc(t.title || 'Untitled play')}</h2><div class="mv-meta">${esc(meta)}</div></div>
+    <div class="grp"><button class="sb ghost lg" data-bf="mvCancel">CANCEL</button><button class="sb primary lg" data-bf="mvSave" ${mvDirty() ? '' : 'disabled'}>SAVE CHANGES</button></div></div>
+    <div class="mv-body"><div class="mv-pv"><div class="mv-pvh">${keys.length > 1 ? `<span class="vc-sw">${keys.map(a => `<button class="${a === MV.view ? 'on' : ''}" data-bf="mvView" data-a="${a}">${mvSlotName(a)}</button>`).join('')}</span>` : ''}<span class="mv-pvt">PREVIEW · ${esc(mvWhat(pv))}</span></div>
+      <div class="mv-stage">${mvPreview(MV.view, pv)}</div>${isLib ? `<div class="mv-uses">${gameUses}</div>` : ''}</div>
+      <div class="mv-slots">${keys.map(slotHTML).join('')}</div></div>
+    <p class="bf-note mv-note"><b>Where files go:</b> uploads stay in this browser on this computer (its private storage). They are not uploaded to the Sandbox site, can’t be reached by a link and don’t appear on other computers — use the same computer for the session, or attach the file again elsewhere.${state.settings.rememberVideos && idb ? '' : ' <b>“Remember videos” is off or storage is unavailable, so uploads last for this session only.</b>'}</p></div>`;
+  o.onchange = mvChange;
+}
+function mvChange(e) { if (e.target.name === 'mvdef') { MV.def = e.target.value; renderManage(); } }
+async function mvSave() {
+  const t = mvTarget(); if (!t) return closeManage();
+  if (MV.kind !== 'lib') {
+    const st = MV.staged.video;
+    if (st && st.remove) removeVideo(t.id); else if (st) { await setVideo(t.id, st.file); URL.revokeObjectURL(st.url); }
+    MV.staged = {}; closeManage(); toast('Video saved — the round continues where it was'); return;
+  }
+  const keep = state.settings.rememberVideos && idb, msgs = [];
+  for (const a of ANGLES) {
+    const st = MV.staged[a]; if (!st) continue;
+    const k = vkey(t.id, a), old = libVids[k];
+    if (old) { URL.revokeObjectURL(old.url); delete libVids[k]; }
+    if (st.remove) { delete t.media.files[a]; idbDel(k); msgs.push(`${ANGLE_LABEL[a]} upload removed`); continue; }
+    const f = st.file; libVids[k] = { url: st.url, blob: f, name: f.name, size: f.size, stored: false }; st.url = null;
+    t.media.files[a] = { name: f.name, size: f.size, type: f.type, addedAt: new Date().toISOString(), stored: false };
+    if (keep) {
+      try { await idbPut(k, { blob: f, name: f.name, type: f.type, size: f.size }); libVids[k].stored = true; t.media.files[a].stored = true; try { navigator.storage && navigator.storage.persist && navigator.storage.persist(); } catch (e) {} }
+      catch (e) { toast('The browser couldn’t keep a copy (storage full?). The video works until the browser closes.', 6000); }
+    }
+    msgs.push(`${ANGLE_LABEL[a]}: ${f.name}`);
+  }
+  t.media.def = MV.def || '';
+  MV.staged = {}; libSave(); closeManage();
+  toast(`Saved${msgs.length ? ' — ' + msgs.join(' · ') : ''}${t.media.def ? ` · games use ${ANGLE_LABEL[t.media.def]}` : ''}`, 4200);
+}
+function closeManage(cancel) {
+  if (cancel && mvDirty() && !confirm('Discard these video changes? The play keeps its current videos.')) return;
+  mvRelease(); closeOv('bfVid');
+  if (state.ui.mode === 'game' && !$('#game').hidden) syncGameVideo(curPlay());
+  else if (state.ui.mode === 'setup') { refreshDropzone(); renderPlayList(); }
+  if (ovOpen('bfLib')) renderLibrary();
+  if (ovOpen('bfPrev') && $('#bfPrev').dataset.id) openPreview($('#bfPrev').dataset.id);
+  updateStorageInfo();
+}
+document.body.insertAdjacentHTML('beforeend', '<input type="file" id="fileMV" accept="video/*,.mp4,.m4v,.mov,.webm" hidden>');
+$('#fileMV').addEventListener('change', e => { const f = e.target.files[0]; if (f) mvStage(e.target.dataset.a, f); e.target.value = ''; });
+(() => {   // drag & drop onto the panel: the slot under the pointer (else the angle being previewed)
+  const o = ov('bfVid');
+  o.addEventListener('dragover', e => { if (!hasFiles(e)) return; e.preventDefault(); e.stopPropagation(); $$('[data-drop]', o).forEach(d => d.classList.toggle('over', d === e.target.closest('[data-drop]'))); });
+  o.addEventListener('dragleave', e => { if (!e.relatedTarget || !o.contains(e.relatedTarget)) $$('[data-drop]', o).forEach(d => d.classList.remove('over')); });
+  o.addEventListener('drop', e => {
+    if (!hasFiles(e)) return; e.preventDefault(); e.stopPropagation();
+    const z = e.target.closest('[data-drop]'), f = e.dataTransfer.files[0]; if (f) mvStage(z ? z.dataset.drop : MV.view, f);
+  });
+})();
+
+function openPreview(id, angle) {
   const p = libById(id); if (!p) return;
   const o = ov('bfPrev'); o.dataset.id = id;
+  const sl = slots(p), angles = ANGLES.filter(a => sl[a].has), a = angle && sl[angle].has ? angle : defAngle(p, sl), cur = sl[a];
+  const player = !cur.has ? `<div class="bf-novid"><p>No video for this play yet.</p><button class="sb primary" data-bf="manage" data-id="${esc(p.id)}">⇄ ADD VIDEO</button></div>`
+    : cur.up ? `<video src="${esc(cur.up.url)}" controls playsinline preload="metadata"></video>`
+    : cur.mlb.embedUrl ? `<iframe src="${esc(cur.mlb.embedUrl)}" title="MLB video" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`
+    : `<div class="bf-novid"><p>MLB offers no embed for this clip.</p>${cur.mlb.pageUrl ? `<a class="sb primary" href="${esc(cur.mlb.pageUrl)}" target="_blank" rel="noopener">WATCH ON MLB ↗</a>` : ''}</div>`;
+  const capTxt = !cur.has ? '' : cur.up ? `Your upload · ${esc(cur.up.name)} · on this computer only` : `${esc(cur.mlb.angle.label)}${cur.mlb.angle.segments.length ? ' · ' + cur.mlb.angle.segments.map(g => `<b>${esc(g.time)}</b> ${esc(g.view)}`).join(' · ') : ''}`;
   o.innerHTML = `<div class="ov-inner bf-in bf-prev"><div class="bf-hh"><div><div class="ov-k">${esc(p.stage || 'PREVIEW')}</div><h2>${esc(p.title)}</h2></div>
-    <div class="grp">${p.status === 'queued' ? `<button class="sb lg primary" data-bf="approve" data-id="${esc(p.id)}">✓ APPROVE</button>` : L.mode === 'pick' ? `<button class="sb lg ${L.sel.includes(p.id) ? 'primary' : ''}" data-bf="pick" data-id="${esc(p.id)}">${L.sel.includes(p.id) ? '✓ SELECTED' : '+ SELECT'}</button>` : selCountHTML() + addBtn(p.id, 'lg')}<button class="sb ghost lg" data-bf="closePrev">‹ BACK TO THE LIBRARY</button></div></div>
-    <div class="bf-pv"><div class="bf-pvv">${p.video.embedUrl ? `<iframe src="${esc(p.video.embedUrl)}" title="MLB video" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`
-      : `<div class="bf-novid"><p>MLB offers no embed for this clip.</p>${p.video.pageUrl ? `<a class="sb primary" href="${esc(p.video.pageUrl)}" target="_blank" rel="noopener">WATCH ON MLB ↗</a>` : ''}</div>`}
-      <div class="bf-cap">${angleChip(p.video.angle)} ${esc(p.video.angle.label)}${p.video.angle.segments.length ? ' · ' + p.video.angle.segments.map(g => `<b>${esc(g.time)}</b> ${esc(g.view)}`).join(' · ') : ''}</div></div>
+    <div class="grp">${p.status === 'queued' ? `<button class="sb lg primary" data-bf="approve" data-id="${esc(p.id)}">✓ APPROVE</button>` : L.mode === 'pick' ? `<button class="sb lg ${L.sel.includes(p.id) ? 'primary' : ''}" data-bf="pick" data-id="${esc(p.id)}">${L.sel.includes(p.id) ? '✓ SELECTED' : '+ SELECT'}</button>` : selCountHTML() + addBtn(p.id, 'lg')}<button class="sb lg" data-bf="manage" data-id="${esc(p.id)}">⇄ MANAGE VIDEO</button><button class="sb ghost lg" data-bf="closePrev">‹ BACK TO THE LIBRARY</button></div></div>
+    <div class="bf-pv"><div class="bf-pvv">${player}
+      <div class="bf-cap">${angles.length > 1 ? `<span class="vc-sw">${angles.map(x => `<button class="${x === a ? 'on' : ''}" data-bf="pvAngle" data-a="${x}">${ANGLE_LABEL[x]}</button>`).join('')}</span> ` : cur.has ? angleChip({ category: a }) + ' ' : ''}${capTxt}</div></div>
       <div class="bf-pvi">${(() => { const v = sitView(p.situation); return v && v.any ? `<div class="sit-strip pv">${sitStripHTML(v)}</div>` : ''; })()}
         <p>${esc(p.description)}</p>
         <div class="lb">SUGGESTED ANSWERS · ${esc(p.question)}</div>
-        <ol class="bf-ans">${p.answers.map(a => `<li><b>${esc(a.text)}</b>${a.category ? ` <span class="bf-t">${esc(a.category)}</span>` : ''}${a.note ? `<p>${esc(a.note)}</p>` : ''}</li>`).join('')}</ol>
+        <ol class="bf-ans">${p.answers.map(x => `<li><b>${esc(x.text)}</b>${x.category ? ` <span class="bf-t">${esc(x.category)}</span>` : ''}${x.note ? `<p>${esc(x.note)}</p>` : ''}</li>`).join('')}</ol>
         ${p.video.pageUrl ? `<a class="bf-src" href="${esc(p.video.pageUrl)}" target="_blank" rel="noopener">${esc(p.video.title || 'MLB.com video')} ↗</a>` : ''}</div></div></div>`;
   o.hidden = false;
 }
@@ -4268,10 +4736,28 @@ function bf2Click(e) {
   const b = e.target.closest('[data-bf]'); if (!b) return;
   const id = b.dataset.id;
   switch (b.dataset.bf) {
-    case 'close': closeOv(b.closest('.bf2-ov').id); if (state.ui.mode === 'game' && !ovOpen('bfLib') && !ovOpen('bfGames')) showStart(); return;
+    case 'close': { const o = (b.closest('.bf2-ov') || { id: 'bfLib' }).id; if (o === 'bfLib') return closeLibrary(); closeOv(o); if (state.ui.mode === 'game' && !ovOpen('bfLib') && !ovOpen('bfGames')) showStart(); return; }
+    case 'details': L.det = L.det === id ? '' : id; L.use = ''; return renderLibrary();
+    case 'find': L.det = id; L.use = ''; renderLibrary(); { const f = $('#findSrc'); if (f) f.scrollIntoView({ block: 'start' }); } return;
+    case 'detClose': L.det = ''; return renderLibrary();
+    case 'use': L.use = L.use === id ? '' : id; return renderLibrary();
+    case 'useAdd': return useAdd(id);
+    case 'useReplace': return useReplace(id, b.dataset.pid);
+    case 'useRemove': return useRemove(id);
+    case 'copy': return copyText(b.dataset.v);
+    case 'copyAll': { const p = libById(id); if (p) copyText(allDetailsText(p)); return; }
+    case 'clearF': Object.assign(L, { q: '', video: '', cat: '', inGame: false }); return renderLibrary();
+    case 'manage': return openManage('lib', id);
+    case 'manageNow': return L.now && openManage(L.now.libId ? 'lib' : 'play', L.now.libId || L.now.pid);
+    case 'pvAngle': return openPreview($('#bfPrev').dataset.id, b.dataset.a);
+    case 'mvView': MV.view = b.dataset.a; return renderManage();
+    case 'mvChoose': { const f = $('#fileMV'); f.dataset.a = b.dataset.a; f.value = ''; return f.click(); }
+    case 'mvRemove': { const a = b.dataset.a, old = MV.staged[a]; if (old && old.url) URL.revokeObjectURL(old.url); MV.staged[a] = { remove: true }; if (MV.def === a && !mvAfter()[a].has) MV.def = ''; return renderManage(); }
+    case 'mvUndo': { const st = MV.staged[b.dataset.a]; if (st && st.url) URL.revokeObjectURL(st.url); delete MV.staged[b.dataset.a]; if (MV.def && !mvAfter()[MV.def]?.has) MV.def = mvTarget().media ? mvTarget().media.def : ''; return renderManage(); }
+    case 'mvSave': return mvSave();
+    case 'mvCancel': return closeManage(true);
     case 'closePrev': return closeOv('bfPrev');
     case 'tab': L.tab = b.dataset.v; return renderLibrary();
-    case 'filter': L.filter = b.dataset.v; return renderLibrary();
     case 'preview': return openPreview(id);
     case 'pick': { const i = L.sel.indexOf(id); if (i >= 0) L.sel.splice(i, 1); else if (L.sel.length >= 4) { toast('A game uses 3 or 4 plays — remove one first'); return; } else L.sel.push(id); renderLibrary(); if (ovOpen('bfPrev')) openPreview(id); return; }
     case 'create': if (L.sel.length < 3 || L.sel.length > 4) return; return newGameFrom(L.sel.slice(), str(L.name).trim() || `Game — ${new Date().toLocaleDateString([], { month: 'short', day: 'numeric' })}`);
@@ -4289,7 +4775,9 @@ function bf2Click(e) {
 function bf2Input(e) {
   const k = e.target.dataset.bfin; if (!k) return;
   if (k === 'gname') { L.name = e.target.value; return; }
-  if (k === 'q') { L.q = e.target.value; const pos = e.target.selectionStart; renderLibrary(); const n = $('[data-bfin="q"]'); n.focus(); n.setSelectionRange(pos, pos); }
+  if (k === 'q') { L.q = e.target.value; const pos = e.target.selectionStart; renderLibrary(); const n = $('[data-bfin="q"]'); n.focus(); try { n.setSelectionRange(pos, pos); } catch (x) {} return; }
+  if (k === 'video' || k === 'cat') { L[k] = e.target.value; renderLibrary(); const n = $(`[data-bfin="${k}"]`); if (n) n.focus(); return; }
+  if (k === 'inGame') { L.inGame = e.target.checked; renderLibrary(); }
 }
 document.body.insertAdjacentHTML('beforeend', '<input type="file" id="fileLib" accept="application/json,.json" hidden>');
 $('#fileLib').addEventListener('change', async e => {
@@ -4341,29 +4829,66 @@ function sitSync(p) {
   document.body.classList.toggle('has-sit', on);
   st.innerHTML = on ? sitStripHTML(v) : ''; bug.innerHTML = on ? sitBugHTML(v) : '';
 }
-function mlbSync(p) {
-  sitSync(p);
-  const m = p && p.mlb, cap = $('#mlbCap');
-  document.body.classList.toggle('mlb-emb', !!(m && m.embedUrl));
-  if (!m) { embStop(); if (cap) cap.innerHTML = ''; return false; }
-  if (gv.dataset.url) { gv.pause(); gv.removeAttribute('src'); gv.load(); gv.dataset.url = ''; }
-  gv.hidden = true;
-  const empty = $('#vEmpty'), btn = $('#vEmpty .vbtn');
-  if (m.embedUrl) { embMount(m.embedUrl); empty.hidden = true; }
-  else {
-    embStop(); empty.hidden = false;
-    $('#veT').textContent = 'WATCH ON MLB'; $('#veS').textContent = 'MLB offers no embed for this clip. It opens on MLB’s site in a new tab — come back here for the board.';
-    btn.textContent = 'OPEN THE CLIP ↗';
+/* ----- which clip a game play shows -----
+   A play from the library uses the library's videos (one record per play, both angles): the angle picked with the
+   in-game switcher, else the play's default angle, else whichever angle exists (iHome missing → Broadcast).
+   Within an angle a file uploaded in this browser comes first, then MLB's public clip. Plays that aren't from the
+   library keep their own single video, as before. */
+let libVids = {};                    // 'lib:<id>:<angle>' → { url, blob, name, size, stored }
+const vkey = (id, a) => `lib:${id}:${a}`;
+const slotOf = cat => cat === 'high-home' ? 'high-home' : 'broadcast';
+function slots(lp) {
+  const out = {};
+  for (const a of ANGLES) {
+    const v = libVids[vkey(lp.id, a)] || null, f = lp.media.files[a] || null;
+    const mlb = (lp.video.embedUrl || lp.video.pageUrl) && slotOf(lp.video.angle.category) === a ? lp.video : null;
+    out[a] = { up: v, file: f, mlb, has: !!(v || mlb) };
   }
-  if (cap) {
-    const segs = m.angle.segments.filter(g => g.start != null);
-    cap.innerHTML = `${angleChip(m.angle)}<span class="mc-l">${esc(m.angle.label)}</span>
-      ${m.embedUrl && segs.length ? `<span class="mc-j">JUMP TO</span>${segs.map(g => `<button class="mc-seg" data-g="seg" data-s="${g.start}" title="${esc(g.view)}">${esc(g.time)}</button>`).join('')}` : ''}
-      ${m.pageUrl ? `<a class="mc-a" href="${esc(m.pageUrl)}" target="_blank" rel="noopener">MLB.com ↗</a>` : ''}`;
-  }
-  updatePlayBtn();
-  return true;
+  return out;
 }
+function avail(lp, s = slots(lp)) { const h = s['high-home'].has, b = s.broadcast.has; return h && b ? 'both' : h ? 'high-home' : b ? 'broadcast' : 'missing'; }
+function defAngle(lp, s = slots(lp)) { const d = lp.media.def; return d && s[d].has ? d : (ANGLES.find(a => s[a].has) || d || 'broadcast'); }
+const viewAngle = {};                // game play id → angle chosen with the in-game switcher (this session only)
+function playSource(p) {
+  const lp = p && p.mlb && p.mlb.libId ? libById(p.mlb.libId) : null;
+  if (lp) {
+    const s = slots(lp), angles = ANGLES.filter(a => s[a].has);
+    const a = viewAngle[p.id] && s[viewAngle[p.id]].has ? viewAngle[p.id] : defAngle(lp, s), sl = s[a];
+    if (sl.up) return { kind: 'file', url: sl.up.url, name: sl.up.name, stored: sl.up.stored, upload: true, angle: a, angles, lp };
+    if (sl.mlb) return { kind: sl.mlb.embedUrl ? 'embed' : 'page', m: sl.mlb, angle: a, angles, lp };
+  } else if (p && p.mlb && (p.mlb.embedUrl || p.mlb.pageUrl)) {        // the library entry is gone: the game's own copy of MLB's clip
+    const a = slotOf(p.mlb.angle.category);
+    return { kind: p.mlb.embedUrl ? 'embed' : 'page', m: p.mlb, angle: a, angles: [a], lp: null };
+  }
+  const v = p && videos[p.id];
+  if (v) return { kind: 'file', url: v.url, name: v.name, stored: v.stored, legacy: true, angles: [], lp };
+  return { kind: 'none', lp, reselect: !lp && p && p.videoName ? p.videoName : '', angles: [] };
+}
+/* the line under the video: angle switcher (when there are two), what's playing, MLB's jump points, Manage Video */
+function vidCap(p, src) {
+  const cap = $('#mlbCap'); if (!cap) return;
+  const ang = src.angles.length > 1
+    ? `<span class="vc-sw" role="group" aria-label="Camera angle">${src.angles.map(a => `<button class="${a === src.angle ? 'on' : ''}" data-g="angle" data-a="${a}" aria-pressed="${a === src.angle}">${ANGLE_LABEL[a]}</button>`).join('')}</span>`
+    : src.angle ? angleChip({ category: src.angle }) : '';
+  let what = '';
+  if (src.kind === 'file') what = `<span class="mc-l">${src.upload ? 'Your upload' : 'Local file'} · ${esc(src.name)}</span><span class="vc-loc" title="Stored in this browser on this computer — not uploaded anywhere">${src.stored ? 'THIS COMPUTER ONLY' : 'THIS SESSION ONLY'}</span>`;
+  else if (src.m) {
+    const segs = src.kind === 'embed' ? src.m.angle.segments.filter(g => g.start != null) : [];
+    what = `<span class="mc-l">${esc(src.m.angle.label || 'MLB.com clip')}</span>${segs.length ? `<span class="mc-j">JUMP TO</span>${segs.map(g => `<button class="mc-seg" data-g="seg" data-s="${g.start}" title="${esc(g.view)}">${esc(g.time)}</button>`).join('')}` : ''}
+      ${src.m.pageUrl ? `<a class="mc-a" href="${esc(src.m.pageUrl)}" target="_blank" rel="noopener">MLB.com ↗</a>` : ''}`;
+  }
+  cap.innerHTML = `${ang}${what}<button class="mc-mv" data-g="manage" title="Replace the video or add another angle — the round keeps going">⇄ ${src.kind === 'none' ? 'ADD VIDEO' : 'MANAGE VIDEO'}</button>`;
+}
+function setAngle(a) { const p = curPlay(); viewAngle[p.id] = a; syncGameVideo(p); }
+/* the library's uploaded clips, loaded from this browser's storage */
+async function initLibVideos() {
+  if (!idb) return;
+  for (const lp of [...lib.plays, ...lib.queue]) for (const a of Object.keys(lp.media.files)) {
+    const k = vkey(lp.id, a); if (libVids[k]) continue;
+    try { const rec = await idbGet(k); if (rec && rec.blob) libVids[k] = { url: URL.createObjectURL(rec.blob), blob: rec.blob, name: rec.name || lp.media.files[a].name, size: rec.size, stored: true }; } catch (e) {}
+  }
+}
+function pauseGameVideo() { try { gv.pause(); } catch (e) {} if (embOn()) embSend('pause'); }
 function vFullscreen() {
   const fr = $('#vFrame');
   if (document.fullscreenElement || document.webkitFullscreenElement) { (document.exitFullscreen || document.webkitExitFullscreen).call(document); return; }
@@ -4377,10 +4902,11 @@ function toggleVideoMin() { document.body.classList.toggle('v-min'); const b = $
 function mlbCardHTML(p) {
   const m = p.mlb;
   return `<div class="dz mlb" id="dz"><div class="dz-thumb mlb-th">${angleChip(m.angle)}<span>▶</span></div>
-    <div class="dz-info"><div class="dz-name">${esc(m.title || 'MLB video')}</div>
-      <div class="dz-st">${esc(m.angle.label)}${m.situation ? ' · ' + esc(m.situation) : ''}<br>${m.embedUrl ? 'Plays inside the round through MLB’s own embedded player.' : 'No embed from MLB — opens on MLB’s site in a new tab.'}</div>
+    <div class="dz-info"><div class="dz-name">${esc(m.title || (m.libId ? 'Plays Library play' : 'MLB video'))}</div>
+      <div class="dz-st">${(() => { const lp = m.libId && libById(m.libId); if (!lp) return `${esc(m.angle.label)}${m.situation ? ' · ' + esc(m.situation) : ''}<br>${m.embedUrl ? 'Plays inside the round through MLB’s own embedded player.' : 'No embed from MLB — opens on MLB’s site in a new tab.'}`;
+        const sl = slots(lp), d = defAngle(lp, sl); return `${availChips(lp)}${m.situation ? ' · ' + esc(m.situation) : ''}<br>${sl[d].has ? `Games play ${ANGLE_LABEL[d]}${sl[d].up ? ' — your upload (this computer only)' : sl[d].mlb && sl[d].mlb.embedUrl ? ' through MLB’s own embedded player' : ' — opens on MLB’s site'}.` : 'No video yet — use MANAGE VIDEO to add one.'}`; })()}</div>
       <div class="dz-acts">${m.libId && libById(m.libId) ? `<button class="sb primary sm" data-act="mlbPreview">▶ PREVIEW</button>` : (m.pageUrl ? `<a class="sb primary sm" href="${esc(m.pageUrl)}" target="_blank" rel="noopener">WATCH ON MLB ↗</a>` : '')}
-      <button class="sb ghost sm" data-act="rmMlb">REMOVE MLB VIDEO</button></div></div></div>`;
+      ${m.libId && libById(m.libId) ? `<button class="sb sm" data-act="manageVid">⇄ MANAGE VIDEO</button>` : ''}${m.embedUrl || m.pageUrl ? '<button class="sb ghost sm" data-act="rmMlb">REMOVE MLB VIDEO</button>' : ''}</div></div></div>`;
 }
 
 /* ----- buttons wired into the existing screens ----- */
@@ -4396,6 +4922,7 @@ $('#bAddLib').addEventListener('click', () => openLibrary('browse'));
   applyMode();
   await idbOpen();
   await initVideos();
+  await initLibVideos();
   setHostImgs(); initReactions();
   if (!state.fastMoney) state.fastMoney = sampleFastMoney();
   if (!state.practice) state.practice = samplePractice();

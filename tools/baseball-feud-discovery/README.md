@@ -13,6 +13,13 @@ Nothing it produces is published here: the scripts sit outside `apps/` and `site
 | 5. Package | `to_queue.py verified.json answers.json` | → `discovered-plays.json` |
 | 6. Review | Baseball Feud 2.0 → Plays Library → **Find New Plays** → Import | Every play lands in the **Review queue**; only plays you approve join the library. Nothing is added to a game automatically |
 
+**Metadata for existing plays:** `python3 enrich.py` checks every seed play against MLB's Stats API (by gamePk + playId)
+and reports any disagreement; `python3 enrich.py --write` fills only missing fields in `apps/baseball-feud-2/library/plays.js`
+and bumps its collection version so the app merges them in. It never overwrites a value or anything a person wrote.
+
+**Tests:** `node scripts/build.mjs && node scripts/serve.mjs &` then `node tools/baseball-feud-discovery/tests/app.e2e.cjs`
+(video replacement, iHome angle, finding a play, library ↔ game navigation, base-out state, phone layouts).
+
 Rules: never download, rehost or work around MLB's video access controls. The app plays MLB.com's own embed (its
 Share → Embed code, hosted by Streamable). High Home or wide footage first; label broadcast clips as broadcast.
 
