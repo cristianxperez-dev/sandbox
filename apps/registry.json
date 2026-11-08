@@ -42,6 +42,26 @@
     ]
   },
   {
+    "id": "decision-lab",
+    "name": "Decision Lab",
+    "description": "Make managing and third-base coaching calls, live with the simulated result, and learn the odds behind them.",
+    "discipline": "Baseball",
+    "status": "prototype",
+    "returnLink": false,
+    "tags": [
+      "simulator",
+      "decision making",
+      "strategy",
+      "run expectancy",
+      "win probability",
+      "third-base coach",
+      "manager",
+      "retrosheet",
+      "statcast",
+      "film room"
+    ]
+  },
+  {
     "id": "baseball-iq",
     "name": "Baseball IQ",
     "description": "A game-show style film review: players watch a play, name what stands out, and teams compete for points.",

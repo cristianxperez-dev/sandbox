@@ -1,0 +1,5697 @@
+{
+"schema":1,
+"source":{
+"app":"Play Repository",
+"index":"apps/play-repository/data/index.json",
+"indexGenerated":"2026-11-05",
+"indexSha256":"807eb3b2503c0adf8c8c8ee2a810fdfff646bf70a22247d70fd54559aa426f39",
+"plays":200,
+"readOnly":true
+},
+"note":"Real MLB plays from Play Repository, matched to Decision Lab families by their official records. Each illustrates a kind of outcome; none happened in a simulated game.",
+"films":[
+{
+"id":"mlb-745354-33",
+"families":[
+{
+"family":"send",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Single to the outfield with a runner on second"
+}
+],
+"title":"Kevin Newman's RBI single",
+"description":"Kevin Newman singles on a ground ball to center fielder Jung Hoo Lee. Blaze Alexander scores.",
+"event":"Single",
+"date":"2024-04-20",
+"season":2024,
+"gameType":"R",
+"venue":"Oracle Park",
+"away":{
+"abbr":"AZ",
+"name":"Arizona Diamondbacks"
+},
+"home":{
+"abbr":"SF",
+"name":"San Francisco Giants"
+},
+"before":{
+"inning":4,
+"half":"top",
+"outs":2,
+"bases":"_2_",
+"score":{
+"away":2,
+"home":3
+},
+"batting":"away"
+},
+"batter":"Kevin Newman",
+"pitcher":"Kyle Harrison",
+"runners":{
+"2B":"Blaze Alexander"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":8,
+"ev":102.1,
+"distance":49.0,
+"spray":"center"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/kyle-harrison-in-play-run-s-to-kevin-newman",
+"pageUrl":"https://www.mlb.com/video/kyle-harrison-in-play-run-s-to-kevin-newman",
+"title":"Kevin Newman's RBI single",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/l2ynghvam23yok77tvwj.jpg",
+"playRepository":"../play-repository/#/play/mlb-745354-33"
+},
+{
+"id":"mlb-746651-7",
+"families":[
+{
+"family":"send1",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Double to the outfield with a runner on first"
+}
+],
+"title":"Jos\u00e9 Ram\u00edrez's RBI double",
+"description":"Jos\u00e9 Ram\u00edrez doubles (4) on a ground ball to left fielder Brent Rooker. David Fry scores.",
+"event":"Double",
+"date":"2024-04-20",
+"season":2024,
+"gameType":"R",
+"venue":"Progressive Field",
+"away":{
+"abbr":"OAK",
+"name":"Oakland Athletics"
+},
+"home":{
+"abbr":"CLE",
+"name":"Cleveland Guardians"
+},
+"before":{
+"inning":1,
+"half":"bottom",
+"outs":1,
+"bases":"1__",
+"score":{
+"away":0,
+"home":0
+},
+"batting":"home"
+},
+"batter":"Jos\u00e9 Ram\u00edrez",
+"pitcher":"Alex Wood",
+"runners":{
+"1B":"David Fry"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":7,
+"ev":96.5,
+"distance":9.0,
+"spray":"pull"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/alex-wood-in-play-run-s-to-jose-ramirez",
+"pageUrl":"https://www.mlb.com/video/alex-wood-in-play-run-s-to-jose-ramirez",
+"title":"Jos\u00e9 Ram\u00edrez's RBI double\u00a0",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/pg0rb0lnd9wdzdlwrj72.jpg",
+"playRepository":"../play-repository/#/play/mlb-746651-7"
+},
+{
+"id":"mlb-747135-5-e4",
+"families":[
+{
+"family":"steal3",
+"outcome":"safe",
+"outcomeLabel":"safe",
+"why":"Steal of third"
+}
+],
+"title":"Ronald Acu\u00f1a Jr. ties Braves stolen base record",
+"description":"Ronald Acu\u00f1a Jr. steals (9) 3rd base. Michael Harris II steals (2) 2nd base.",
+"event":"Stolen Base 3B",
+"date":"2024-04-20",
+"season":2024,
+"gameType":"R",
+"venue":"Truist Park",
+"away":{
+"abbr":"TEX",
+"name":"Texas Rangers"
+},
+"home":{
+"abbr":"ATL",
+"name":"Atlanta Braves"
+},
+"before":{
+"inning":1,
+"half":"bottom",
+"outs":0,
+"bases":"12_",
+"score":{
+"away":0,
+"home":0
+},
+"batting":"home"
+},
+"batter":"Austin Riley",
+"pitcher":"Nathan Eovaldi",
+"runners":{
+"1B":"Michael Harris II",
+"2B":"Ronald Acu\u00f1a Jr."
+},
+"batted":{
+"trajectory":null,
+"location":null,
+"ev":null,
+"distance":null,
+"spray":null
+},
+"ifAlign":null,
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/nathan-eovaldi-ball-to-austin-riley-ragxfe",
+"pageUrl":"https://www.mlb.com/video/nathan-eovaldi-ball-to-austin-riley-ragxfe",
+"title":"Ronald Acu\u00f1a Jr. ties Braves stolen base record",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/qwxayp2neovtt00utebx.jpg",
+"playRepository":"../play-repository/#/play/mlb-747135-5-e4"
+},
+{
+"id":"mlb-746726-27-e9",
+"families":[
+{
+"family":"steal",
+"outcome":"caught",
+"outcomeLabel":"caught stealing",
+"why":"Steal of second"
+}
+],
+"title":"Stuart Fairchild picked off and caught stealing 2nd base",
+"description":"With Christian Encarnacion-Strand batting, Stuart Fairchild picked off and caught stealing 2nd base, shortstop Zach Neto.",
+"event":"Pickoff Caught Stealing 2B",
+"date":"2024-04-20",
+"season":2024,
+"gameType":"R",
+"venue":"Great American Ball Park",
+"away":{
+"abbr":"LAA",
+"name":"Los Angeles Angels"
+},
+"home":{
+"abbr":"CIN",
+"name":"Cincinnati Reds"
+},
+"before":{
+"inning":3,
+"half":"bottom",
+"outs":1,
+"bases":"1__",
+"score":{
+"away":2,
+"home":5
+},
+"batting":"home"
+},
+"batter":"Christian Encarnacion-Strand",
+"pitcher":"Patrick Sandoval",
+"runners":{
+"1B":"Stuart Fairchild"
+},
+"batted":{
+"trajectory":null,
+"location":null,
+"ev":null,
+"distance":null,
+"spray":null
+},
+"ifAlign":null,
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/patrick-sandoval-foul-to-christian-encarnacion-strand-haauus",
+"pageUrl":"https://www.mlb.com/video/patrick-sandoval-foul-to-christian-encarnacion-strand-haauus",
+"title":"Patrick Sandoval Foul to Christian Encarnacion-Strand",
+"label":"Home TV broadcast"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/ef5fa672-493f-4aa7-a777-50d076722db2_home.jpg",
+"playRepository":"../play-repository/#/play/mlb-746726-27-e9"
+},
+{
+"id":"mlb-745994-36",
+"families":[
+{
+"family":"send",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Single to the outfield with a runner on second"
+}
+],
+"title":"Lars Nootbaar's two-run single",
+"description":"Lars Nootbaar singles on a line drive to center fielder Blake Perkins. Matt Carpenter scores. Nolan Gorman scores. Masyn Winn to 3rd.",
+"event":"Single",
+"date":"2024-05-11",
+"season":2024,
+"gameType":"R",
+"venue":"American Family Field",
+"away":{
+"abbr":"STL",
+"name":"St. Louis Cardinals"
+},
+"home":{
+"abbr":"MIL",
+"name":"Milwaukee Brewers"
+},
+"before":{
+"inning":5,
+"half":"top",
+"outs":1,
+"bases":"123",
+"score":{
+"away":0,
+"home":1
+},
+"batting":"away"
+},
+"batter":"Lars Nootbaar",
+"pitcher":"Freddy Peralta",
+"runners":{
+"1B":"Masyn Winn",
+"2B":"Nolan Gorman",
+"3B":"Matt Carpenter"
+},
+"batted":{
+"trajectory":"line_drive",
+"location":8,
+"ev":92.7,
+"distance":268.0,
+"spray":"center"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/lars-nootbaar-singles-on-a-line-drive-to-center-fielder-blake-perkins-mat",
+"pageUrl":"https://www.mlb.com/video/lars-nootbaar-singles-on-a-line-drive-to-center-fielder-blake-perkins-mat",
+"title":"Lars Nootbaar's two-run single",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/yrmucq5rruu2jmyftdax.jpg",
+"playRepository":"../play-repository/#/play/mlb-745994-36"
+},
+{
+"id":"mlb-745096-13",
+"families":[
+{
+"family":"send",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Single to the outfield with a runner on second"
+}
+],
+"title":"Anthony Volpe's two-run single",
+"description":"Anthony Volpe singles on a line drive to left fielder Randy Arozarena. Anthony Rizzo scores. Austin Wells scores. Trent Grisham out at 3rd on the throw, left fielder Randy Arozarena to third baseman Isaac Paredes to second baseman Amed Rosario to third baseman Isaac Paredes.",
+"event":"Single",
+"date":"2024-05-11",
+"season":2024,
+"gameType":"R",
+"venue":"Tropicana Field",
+"away":{
+"abbr":"NYY",
+"name":"New York Yankees"
+},
+"home":{
+"abbr":"TB",
+"name":"Tampa Bay Rays"
+},
+"before":{
+"inning":2,
+"half":"top",
+"outs":2,
+"bases":"123",
+"score":{
+"away":0,
+"home":1
+},
+"batting":"away"
+},
+"batter":"Anthony Volpe",
+"pitcher":"Zack Littell",
+"runners":{
+"1B":"Trent Grisham",
+"2B":"Austin Wells",
+"3B":"Anthony Rizzo"
+},
+"batted":{
+"trajectory":"line_drive",
+"location":7,
+"ev":74.9,
+"distance":228.0,
+"spray":"center"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/zack-littell-in-play-run-s-to-anthony-volpe",
+"pageUrl":"https://www.mlb.com/video/zack-littell-in-play-run-s-to-anthony-volpe",
+"title":"Anthony Volpe's two-run single",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/pxles1aca7dy72j31lre.jpg",
+"playRepository":"../play-repository/#/play/mlb-745096-13"
+},
+{
+"id":"mlb-745056-41-e7",
+"families":[
+{
+"family":"steal",
+"outcome":"safe",
+"outcomeLabel":"safe",
+"why":"Steal of second"
+}
+],
+"title":"Lowe scores on error after Caballero steals second",
+"description":"Jos\u00e9 Caballero steals (32) 2nd base. Josh Lowe scores. Throwing error by catcher Adley Rutschman.",
+"event":"Stolen Base 2B",
+"date":"2024-08-10",
+"season":2024,
+"gameType":"R",
+"venue":"Tropicana Field",
+"away":{
+"abbr":"BAL",
+"name":"Baltimore Orioles"
+},
+"home":{
+"abbr":"TB",
+"name":"Tampa Bay Rays"
+},
+"before":{
+"inning":5,
+"half":"bottom",
+"outs":1,
+"bases":"1_3",
+"score":{
+"away":4,
+"home":0
+},
+"batting":"home"
+},
+"batter":"Curtis Mead",
+"pitcher":"Corbin Burnes",
+"runners":{
+"1B":"Jos\u00e9 Caballero",
+"3B":"Josh Lowe"
+},
+"batted":{
+"trajectory":null,
+"location":null,
+"ev":null,
+"distance":null,
+"spray":null
+},
+"ifAlign":null,
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/lowe-scores-on-error-after-caballero-steals-second",
+"pageUrl":"https://www.mlb.com/video/lowe-scores-on-error-after-caballero-steals-second",
+"title":"Lowe scores on error after Caballero steals second",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/yo74rr4frpyjf7kwpkxf.jpg",
+"playRepository":"../play-repository/#/play/mlb-745056-41-e7"
+},
+{
+"id":"mlb-746740-18",
+"families":[
+{
+"family":"send",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Single to the outfield with a runner on second"
+}
+],
+"title":"Nicky Lopez's two-run single",
+"description":"Nicky Lopez singles on a ground ball to center fielder JJ Bleday. Lenyn Sosa scores. Chuckie Robinson scores.",
+"event":"Single",
+"date":"2024-09-14",
+"season":2024,
+"gameType":"R",
+"venue":"Guaranteed Rate Field",
+"away":{
+"abbr":"OAK",
+"name":"Oakland Athletics"
+},
+"home":{
+"abbr":"CWS",
+"name":"Chicago White Sox"
+},
+"before":{
+"inning":2,
+"half":"bottom",
+"outs":2,
+"bases":"_23",
+"score":{
+"away":0,
+"home":0
+},
+"batting":"home"
+},
+"batter":"Nicky Lopez",
+"pitcher":"J.T. Ginn",
+"runners":{
+"2B":"Chuckie Robinson",
+"3B":"Lenyn Sosa"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":8,
+"ev":100.7,
+"distance":13.0,
+"spray":"center"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/j-t-ginn-in-play-run-s-to-nicky-lopez",
+"pageUrl":"https://www.mlb.com/video/j-t-ginn-in-play-run-s-to-nicky-lopez",
+"title":"Nicky Lopez's two-run single",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/rybsedqhrod5b4p5pfqq.jpg",
+"playRepository":"../play-repository/#/play/mlb-746740-18"
+},
+{
+"id":"mlb-744803-30-e1",
+"families":[
+{
+"family":"steal",
+"outcome":"safe",
+"outcomeLabel":"safe",
+"why":"Steal of second"
+}
+],
+"title":"Jos\u00e9 Tena steals second to set up scoring chance",
+"description":"Jos\u00e9 Tena steals (5) 2nd base.",
+"event":"Stolen Base 2B",
+"date":"2024-09-14",
+"season":2024,
+"gameType":"R",
+"venue":"Nationals Park",
+"away":{
+"abbr":"MIA",
+"name":"Miami Marlins"
+},
+"home":{
+"abbr":"WSH",
+"name":"Washington Nationals"
+},
+"before":{
+"inning":4,
+"half":"bottom",
+"outs":0,
+"bases":"12_",
+"score":{
+"away":1,
+"home":1
+},
+"batting":"home"
+},
+"batter":"Keibert Ruiz",
+"pitcher":"Valente Bellozo",
+"runners":{
+"1B":"Jos\u00e9 Tena",
+"2B":"Jos\u00e9 Tena"
+},
+"batted":{
+"trajectory":null,
+"location":null,
+"ev":null,
+"distance":null,
+"spray":null
+},
+"ifAlign":null,
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/valente-bellozo-ball-to-keibert-ruiz-8uxceu",
+"pageUrl":"https://www.mlb.com/video/valente-bellozo-ball-to-keibert-ruiz-8uxceu",
+"title":"Jos\u00e9 Tena steals second to set up scoring chance",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/s7hzjvk4lzwwlfertilu.jpg",
+"playRepository":"../play-repository/#/play/mlb-744803-30-e1"
+},
+{
+"id":"mlb-775337-53-e2",
+"families":[
+{
+"family":"steal3",
+"outcome":"safe",
+"outcomeLabel":"safe",
+"why":"Steal of third"
+}
+],
+"title":"Brice Turang, Blake Perkins execute double steal",
+"description":"Brice Turang steals (2) 3rd base. Blake Perkins steals (1) 2nd base.",
+"event":"Stolen Base 3B",
+"date":"2024-10-03",
+"season":2024,
+"gameType":"F",
+"venue":"American Family Field",
+"away":{
+"abbr":"NYM",
+"name":"New York Mets"
+},
+"home":{
+"abbr":"MIL",
+"name":"Milwaukee Brewers"
+},
+"before":{
+"inning":7,
+"half":"bottom",
+"outs":2,
+"bases":"12_",
+"score":{
+"away":0,
+"home":2
+},
+"batting":"home"
+},
+"batter":"William Contreras",
+"pitcher":"Edwin D\u00edaz",
+"runners":{
+"1B":"Blake Perkins",
+"2B":"Brice Turang"
+},
+"batted":{
+"trajectory":null,
+"location":null,
+"ev":null,
+"distance":null,
+"spray":null
+},
+"ifAlign":null,
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/edwin-diaz-ball-to-william-contreras-5g4avn",
+"pageUrl":"https://www.mlb.com/video/edwin-diaz-ball-to-william-contreras-5g4avn",
+"title":"Brice Turang, Blake Perkins execute double steal",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/nccpdk8adnk1cfumriyt.jpg",
+"playRepository":"../play-repository/#/play/mlb-775337-53-e2"
+},
+{
+"id":"mlb-775334-10",
+"families":[
+{
+"family":"send",
+"outcome":"out_home",
+"outcomeLabel":"runner thrown out at home",
+"why":"Single to the outfield with a runner on second"
+}
+],
+"title":"Juan Soto throws out Salvador Perez at home",
+"description":"MJ Melendez singles on a sharp line drive to right fielder Juan Soto. Salvador Perez out at home on the throw, right fielder Juan Soto to catcher Austin Wells. Yuli Gurriel to 3rd.",
+"event":"Single",
+"date":"2024-10-05",
+"season":2024,
+"gameType":"D",
+"venue":"Yankee Stadium",
+"away":{
+"abbr":"KC",
+"name":"Kansas City Royals"
+},
+"home":{
+"abbr":"NYY",
+"name":"New York Yankees"
+},
+"before":{
+"inning":2,
+"half":"top",
+"outs":0,
+"bases":"12_",
+"score":{
+"away":0,
+"home":0
+},
+"batting":"away"
+},
+"batter":"MJ Melendez",
+"pitcher":"Gerrit Cole",
+"runners":{
+"1B":"Yuli Gurriel",
+"2B":"Salvador Perez"
+},
+"batted":{
+"trajectory":"line_drive",
+"location":9,
+"ev":100.1,
+"distance":221.0,
+"spray":"pull"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/gerrit-cole-in-play-out-s-to-mj-melendez-xot6di",
+"pageUrl":"https://www.mlb.com/video/gerrit-cole-in-play-out-s-to-mj-melendez-xot6di",
+"title":"Juan Soto throws out Salvador Perez at home",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/bbgan7goai7ajmydhqor.jpg",
+"playRepository":"../play-repository/#/play/mlb-775334-10"
+},
+{
+"id":"mlb-775319-31",
+"families":[
+{
+"family":"steal",
+"outcome":"caught",
+"outcomeLabel":"caught stealing",
+"why":"Steal of second"
+}
+],
+"title":"Francisco Alvarez nabs Bryson Stott at second",
+"description":"Bryson Stott caught stealing 2nd base, catcher Francisco Alvarez to second baseman Jose Iglesias.",
+"event":"Caught Stealing 2B",
+"date":"2024-10-06",
+"season":2024,
+"gameType":"D",
+"venue":"Citizens Bank Park",
+"away":{
+"abbr":"NYM",
+"name":"New York Mets"
+},
+"home":{
+"abbr":"PHI",
+"name":"Philadelphia Phillies"
+},
+"before":{
+"inning":4,
+"half":"bottom",
+"outs":2,
+"bases":"1__",
+"score":{
+"away":2,
+"home":0
+},
+"batting":"home"
+},
+"batter":"J.T. Realmuto",
+"pitcher":"Luis Severino",
+"runners":{
+"1B":"Bryson Stott"
+},
+"batted":{
+"trajectory":null,
+"location":null,
+"ev":null,
+"distance":null,
+"spray":null
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/luis-severino-called-strike-to-j-t-realmuto-aadxcb",
+"pageUrl":"https://www.mlb.com/video/luis-severino-called-strike-to-j-t-realmuto-aadxcb",
+"title":"Francisco Alvarez nabs Bryson Stott at second",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/zfrqf1ocvrgeaxqhjp1a.jpg",
+"playRepository":"../play-repository/#/play/mlb-775319-31"
+},
+{
+"id":"mlb-775327-48",
+"families":[
+{
+"family":"send",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Single to the outfield with a runner on second"
+}
+],
+"title":"Wenceel P\u00e9rez's RBI knock",
+"description":"Wenceel P\u00e9rez singles on a fly ball to left fielder Steven Kwan. Kerry Carpenter scores. Riley Greene to 3rd.",
+"event":"Single",
+"date":"2024-10-10",
+"season":2024,
+"gameType":"D",
+"venue":"Comerica Park",
+"away":{
+"abbr":"CLE",
+"name":"Cleveland Guardians"
+},
+"home":{
+"abbr":"DET",
+"name":"Detroit Tigers"
+},
+"before":{
+"inning":6,
+"half":"bottom",
+"outs":2,
+"bases":"12_",
+"score":{
+"away":2,
+"home":2
+},
+"batting":"home"
+},
+"batter":"Wenceel P\u00e9rez",
+"pitcher":"Hunter Gaddis",
+"runners":{
+"1B":"Riley Greene",
+"2B":"Kerry Carpenter"
+},
+"batted":{
+"trajectory":"fly_ball",
+"location":7,
+"ev":71.0,
+"distance":226.0,
+"spray":"opposite"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/wenceel-perez-s-rbi-knock",
+"pageUrl":"https://www.mlb.com/video/wenceel-perez-s-rbi-knock",
+"title":"Wenceel P\u00e9rez's RBI knock",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/nrecb3djnjrmxxxid9l6.jpg",
+"playRepository":"../play-repository/#/play/mlb-775327-48"
+},
+{
+"id":"mlb-778159-21-e1",
+"families":[
+{
+"family":"steal3",
+"outcome":"safe",
+"outcomeLabel":"safe",
+"why":"Steal of third"
+}
+],
+"title":"Josh Jung safe at second after review",
+"description":"Rangers challenged (tag play), call on the field was overturned: Kevin Pillar steals (3) 3rd base. Josh Jung steals (2) 2nd base.",
+"event":"Stolen Base 3B",
+"date":"2025-04-26",
+"season":2025,
+"gameType":"R",
+"venue":"Oracle Park",
+"away":{
+"abbr":"TEX",
+"name":"Texas Rangers"
+},
+"home":{
+"abbr":"SF",
+"name":"San Francisco Giants"
+},
+"before":{
+"inning":3,
+"half":"top",
+"outs":1,
+"bases":"123",
+"score":{
+"away":1,
+"home":0
+},
+"batting":"away"
+},
+"batter":"Jake Burger",
+"pitcher":"Robbie Ray",
+"runners":{
+"1B":"Josh Jung",
+"2B":"Kevin Pillar",
+"3B":"Kevin Pillar"
+},
+"batted":{
+"trajectory":null,
+"location":null,
+"ev":null,
+"distance":null,
+"spray":null
+},
+"ifAlign":null,
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/robbie-ray-called-strike-to-jake-burger-c4kdci",
+"pageUrl":"https://www.mlb.com/video/robbie-ray-called-strike-to-jake-burger-c4kdci",
+"title":"Josh Jung safe at second after review",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/m2bfzy7xybngqt6uigmj.jpg",
+"playRepository":"../play-repository/#/play/mlb-778159-21-e1"
+},
+{
+"id":"mlb-777513-37-e3",
+"families":[
+{
+"family":"steal",
+"outcome":"caught",
+"outcomeLabel":"caught stealing",
+"why":"Steal of second"
+}
+],
+"title":"Tommy Pham picked off and caught stealing 2nd base",
+"description":"With Isiah Kiner-Falefa batting, Tommy Pham picked off and caught stealing 2nd base, first baseman Michael Busch.",
+"event":"Pickoff Caught Stealing 2B",
+"date":"2025-06-14",
+"season":2025,
+"gameType":"R",
+"venue":"Wrigley Field",
+"away":{
+"abbr":"PIT",
+"name":"Pittsburgh Pirates"
+},
+"home":{
+"abbr":"CHC",
+"name":"Chicago Cubs"
+},
+"before":{
+"inning":6,
+"half":"top",
+"outs":0,
+"bases":"1__",
+"score":{
+"away":1,
+"home":1
+},
+"batting":"away"
+},
+"batter":"Isiah Kiner-Falefa",
+"pitcher":"Matthew Boyd",
+"runners":{
+"1B":"Tommy Pham"
+},
+"batted":{
+"trajectory":null,
+"location":null,
+"ev":null,
+"distance":null,
+"spray":null
+},
+"ifAlign":null,
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/matthew-boyd-foul-tip-to-isiah-kiner-falefa",
+"pageUrl":"https://www.mlb.com/video/matthew-boyd-foul-tip-to-isiah-kiner-falefa",
+"title":"Matthew Boyd Foul Tip to Isiah Kiner-Falefa",
+"label":"Home TV broadcast"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/12963bb0-4f82-3252-944e-e6fc256c2b93_home.jpg",
+"playRepository":"../play-repository/#/play/mlb-777513-37-e3"
+},
+{
+"id":"mlb-776720-31",
+"families":[
+{
+"family":"tag",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Fly ball caught by an outfielder with a runner on third"
+}
+],
+"title":"Matt Olson's sacrifice fly",
+"description":"Matt Olson flies into a sacrifice double play, left fielder Steven Kwan to third baseman Jos\u00e9 Ram\u00edrez. Nick Allen scores. Jurickson Profar out at 3rd.",
+"event":"Sac Fly Double Play",
+"date":"2025-08-16",
+"season":2025,
+"gameType":"R",
+"venue":"Progressive Field",
+"away":{
+"abbr":"ATL",
+"name":"Atlanta Braves"
+},
+"home":{
+"abbr":"CLE",
+"name":"Cleveland Guardians"
+},
+"before":{
+"inning":4,
+"half":"top",
+"outs":1,
+"bases":"_23",
+"score":{
+"away":4,
+"home":1
+},
+"batting":"away"
+},
+"batter":"Matt Olson",
+"pitcher":"Slade Cecconi",
+"runners":{
+"2B":"Jurickson Profar",
+"3B":"Nick Allen"
+},
+"batted":{
+"trajectory":"fly_ball",
+"location":7,
+"ev":95.2,
+"distance":337.0,
+"spray":"opposite"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/slade-cecconi-in-play-run-s-to-matt-olson-lzeqva",
+"pageUrl":"https://www.mlb.com/video/slade-cecconi-in-play-run-s-to-matt-olson-lzeqva",
+"title":"Matt Olson's sacrifice fly",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/dkzkpdxr5tt4wdbogys2.jpg",
+"playRepository":"../play-repository/#/play/mlb-776720-31"
+},
+{
+"id":"mlb-776719-59-e1",
+"families":[
+{
+"family":"steal",
+"outcome":"safe",
+"outcomeLabel":"safe",
+"why":"Steal of second"
+}
+],
+"title":"Kyle Tucker steals second in the 8th inning",
+"description":"Kyle Tucker steals (25) 2nd base.",
+"event":"Stolen Base 2B",
+"date":"2025-08-16",
+"season":2025,
+"gameType":"R",
+"venue":"Wrigley Field",
+"away":{
+"abbr":"PIT",
+"name":"Pittsburgh Pirates"
+},
+"home":{
+"abbr":"CHC",
+"name":"Chicago Cubs"
+},
+"before":{
+"inning":8,
+"half":"bottom",
+"outs":0,
+"bases":"12_",
+"score":{
+"away":1,
+"home":1
+},
+"batting":"home"
+},
+"batter":"Seiya Suzuki",
+"pitcher":"Evan Sisk",
+"runners":{
+"1B":"Kyle Tucker",
+"2B":"Kyle Tucker"
+},
+"batted":{
+"trajectory":null,
+"location":null,
+"ev":null,
+"distance":null,
+"spray":null
+},
+"ifAlign":null,
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/evan-sisk-ball-to-seiya-suzuki-04e1cb",
+"pageUrl":"https://www.mlb.com/video/evan-sisk-ball-to-seiya-suzuki-04e1cb",
+"title":"Kyle Tucker steals second in the 8th inning\u00a0",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/rn8ha0ajtojnlcmgmsgz.jpg",
+"playRepository":"../play-repository/#/play/mlb-776719-59-e1"
+},
+{
+"id":"mlb-776539-37",
+"families":[
+{
+"family":"send",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Single to the outfield with a runner on second"
+}
+],
+"title":"Bryan Reynolds' two-run single",
+"description":"Bryan Reynolds singles on a sharp line drive to right fielder Roman Anthony. Isiah Kiner-Falefa scores. Jared Triolo scores. Spencer Horwitz to 3rd.",
+"event":"Single",
+"date":"2025-08-30",
+"season":2025,
+"gameType":"R",
+"venue":"Fenway Park",
+"away":{
+"abbr":"PIT",
+"name":"Pittsburgh Pirates"
+},
+"home":{
+"abbr":"BOS",
+"name":"Boston Red Sox"
+},
+"before":{
+"inning":5,
+"half":"top",
+"outs":0,
+"bases":"123",
+"score":{
+"away":1,
+"home":2
+},
+"batting":"away"
+},
+"batter":"Bryan Reynolds",
+"pitcher":"Dustin May",
+"runners":{
+"1B":"Spencer Horwitz",
+"2B":"Jared Triolo",
+"3B":"Isiah Kiner-Falefa"
+},
+"batted":{
+"trajectory":"line_drive",
+"location":9,
+"ev":107.8,
+"distance":206.0,
+"spray":"pull"
+},
+"ifAlign":"Infield shade",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/dustin-may-in-play-run-s-to-bryan-reynolds",
+"pageUrl":"https://www.mlb.com/video/dustin-may-in-play-run-s-to-bryan-reynolds",
+"title":"Bryan Reynolds' two-run single",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/ma7dne2usts2zyfqhs4y.jpg",
+"playRepository":"../play-repository/#/play/mlb-776539-37"
+},
+{
+"id":"mlb-813071-28",
+"families":[
+{
+"family":"send",
+"outcome":"held",
+"outcomeLabel":"runner held at third",
+"why":"Single to the outfield with a runner on second"
+}
+],
+"title":"Javier B\u00e1ez's RBI single",
+"description":"Guardians challenged (tag play), call on the field was overturned: Javier B\u00e1ez singles on a ground ball to center fielder Chase DeLauter. Riley Greene scores. Zach McKinstry out at 3rd on the throw, center fielder Chase DeLauter to third baseman Jos\u00e9 Ram\u00edrez. Dillon Dingler to 3rd.",
+"event":"Single",
+"date":"2025-10-01",
+"season":2025,
+"gameType":"F",
+"venue":"Progressive Field",
+"away":{
+"abbr":"DET",
+"name":"Detroit Tigers"
+},
+"home":{
+"abbr":"CLE",
+"name":"Cleveland Guardians"
+},
+"before":{
+"inning":4,
+"half":"top",
+"outs":2,
+"bases":"123",
+"score":{
+"away":0,
+"home":1
+},
+"batting":"away"
+},
+"batter":"Javier B\u00e1ez",
+"pitcher":"Tanner Bibee",
+"runners":{
+"1B":"Zach McKinstry",
+"2B":"Dillon Dingler",
+"3B":"Riley Greene"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":8,
+"ev":103.1,
+"distance":49.0,
+"spray":"center"
+},
+"ifAlign":"Infield shade",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/javier-baez-singles-on-a-ground-ball-to-center-fielder-chase-delauter-ril",
+"pageUrl":"https://www.mlb.com/video/javier-baez-singles-on-a-ground-ball-to-center-fielder-chase-delauter-ril",
+"title":"Javier B\u00e1ez's RBI single",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/paixlgoj68ztrnozsz5f.jpg",
+"playRepository":"../play-repository/#/play/mlb-813071-28"
+},
+{
+"id":"mlb-813052-71",
+"families":[
+{
+"family":"bunt",
+"outcome":"lead_out",
+"outcomeLabel":"lead runner forced out",
+"why":"Bunt with nobody out and a runner on"
+}
+],
+"title":"Max Muncy nabs lead runner on bunt attempt",
+"description":"Bryson Stott reaches on a fielder's choice out, third baseman Max Muncy to shortstop Mookie Betts. Nick Castellanos out at 3rd.",
+"event":"Fielders Choice Out",
+"date":"2025-10-06",
+"season":2025,
+"gameType":"D",
+"venue":"Citizens Bank Park",
+"away":{
+"abbr":"LAD",
+"name":"Los Angeles Dodgers"
+},
+"home":{
+"abbr":"PHI",
+"name":"Philadelphia Phillies"
+},
+"before":{
+"inning":9,
+"half":"bottom",
+"outs":0,
+"bases":"_2_",
+"score":{
+"away":4,
+"home":3
+},
+"batting":"home"
+},
+"batter":"Bryson Stott",
+"pitcher":"Alex Vesia",
+"runners":{
+"2B":"Nick Castellanos"
+},
+"batted":{
+"trajectory":"bunt_grounder",
+"location":5,
+"ev":28.3,
+"distance":3.0,
+"spray":"opposite"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/alex-vesia-in-play-out-s-to-bryson-stott",
+"pageUrl":"https://www.mlb.com/video/alex-vesia-in-play-out-s-to-bryson-stott",
+"title":"Max Muncy nabs lead runner on bunt attempt",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/woelwvuiuojb2y0iffcu.jpg",
+"playRepository":"../play-repository/#/play/mlb-813052-71"
+},
+{
+"id":"mlb-813056-62",
+"families":[
+{
+"family":"steal3",
+"outcome":"caught",
+"outcomeLabel":"caught stealing",
+"why":"Steal of third"
+}
+],
+"title":"Dillon Dingler throws out Victor Robles at third",
+"description":"Victor Robles caught stealing 3rd base, catcher Dillon Dingler to third baseman Zach McKinstry.",
+"event":"Caught Stealing 3B",
+"date":"2025-10-07",
+"season":2025,
+"gameType":"D",
+"venue":"Comerica Park",
+"away":{
+"abbr":"SEA",
+"name":"Seattle Mariners"
+},
+"home":{
+"abbr":"DET",
+"name":"Detroit Tigers"
+},
+"before":{
+"inning":8,
+"half":"top",
+"outs":2,
+"bases":"_2_",
+"score":{
+"away":6,
+"home":1
+},
+"batting":"away"
+},
+"batter":"Randy Arozarena",
+"pitcher":"Keider Montero",
+"runners":{
+"2B":"Victor Robles"
+},
+"batted":{
+"trajectory":null,
+"location":null,
+"ev":null,
+"distance":null,
+"spray":null
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/keider-montero-called-strike-to-randy-arozarena-dk4gxb",
+"pageUrl":"https://www.mlb.com/video/keider-montero-called-strike-to-randy-arozarena-dk4gxb",
+"title":"Dillon Dingler throws out Victor Robles at third",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/o6bguxgxkhtsawl3l6xv.jpg",
+"playRepository":"../play-repository/#/play/mlb-813056-62"
+},
+{
+"id":"mlb-813061-30",
+"families":[
+{
+"family":"infield",
+"outcome":"out_home",
+"outcomeLabel":"runner thrown out at home",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Blue Jays nab Aaron Judge in rundown",
+"description":"Ben Rice reaches on a fielder's choice out, first baseman Vladimir Guerrero Jr. to catcher Alejandro Kirk to third baseman Addison Barger to first baseman Vladimir Guerrero Jr. Aaron Judge out at home. Cody Bellinger to 3rd.",
+"event":"Fielders Choice Out",
+"date":"2025-10-07",
+"season":2025,
+"gameType":"D",
+"venue":"Yankee Stadium",
+"away":{
+"abbr":"TOR",
+"name":"Toronto Blue Jays"
+},
+"home":{
+"abbr":"NYY",
+"name":"New York Yankees"
+},
+"before":{
+"inning":3,
+"half":"bottom",
+"outs":0,
+"bases":"1_3",
+"score":{
+"away":6,
+"home":2
+},
+"batting":"home"
+},
+"batter":"Ben Rice",
+"pitcher":"Shane Bieber",
+"runners":{
+"1B":"Cody Bellinger",
+"3B":"Aaron Judge"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":3,
+"ev":103.6,
+"distance":11.0,
+"spray":"pull"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/ben-rice-reaches-on-a-fielder-s-choice-out-first-baseman-vladimir-guerrer",
+"pageUrl":"https://www.mlb.com/video/ben-rice-reaches-on-a-fielder-s-choice-out-first-baseman-vladimir-guerrer",
+"title":"Blue Jays nab Aaron Judge in rundown",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/eoniwu2zmdswhb1tozzo.jpg",
+"playRepository":"../play-repository/#/play/mlb-813061-30"
+},
+{
+"id":"mlb-813041-36-e5",
+"families":[
+{
+"family":"steal3",
+"outcome":"safe",
+"outcomeLabel":"safe",
+"why":"Steal of third"
+}
+],
+"title":"Bryson Stott, Trea Turner execute a double steal",
+"description":"Bryson Stott steals (1) 3rd base. Trea Turner steals (2) 2nd base.",
+"event":"Stolen Base 3B",
+"date":"2025-10-08",
+"season":2025,
+"gameType":"D",
+"venue":"Dodger Stadium",
+"away":{
+"abbr":"PHI",
+"name":"Philadelphia Phillies"
+},
+"home":{
+"abbr":"LAD",
+"name":"Los Angeles Dodgers"
+},
+"before":{
+"inning":5,
+"half":"top",
+"outs":0,
+"bases":"12_",
+"score":{
+"away":3,
+"home":1
+},
+"batting":"away"
+},
+"batter":"Kyle Schwarber",
+"pitcher":"Anthony Banda",
+"runners":{
+"1B":"Trea Turner",
+"2B":"Bryson Stott"
+},
+"batted":{
+"trajectory":null,
+"location":null,
+"ev":null,
+"distance":null,
+"spray":null
+},
+"ifAlign":null,
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/anthony-banda-ball-to-kyle-schwarber-j6cde3",
+"pageUrl":"https://www.mlb.com/video/anthony-banda-ball-to-kyle-schwarber-j6cde3",
+"title":"Bryson Stott, Trea Turner execute a double steal",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/yoo4celh0p4fd3p7qs5r.jpg",
+"playRepository":"../play-repository/#/play/mlb-813041-36-e5"
+},
+{
+"id":"mlb-813054-108",
+"families":[
+{
+"family":"steal",
+"outcome":"caught",
+"outcomeLabel":"caught stealing",
+"why":"Steal of second"
+}
+],
+"title":"Dillon Dingler nabs Victor Robles to end the 14th",
+"description":"Victor Robles caught stealing 2nd base, catcher Dillon Dingler to shortstop Javier B\u00e1ez.",
+"event":"Caught Stealing 2B",
+"date":"2025-10-10",
+"season":2025,
+"gameType":"D",
+"venue":"T-Mobile Park",
+"away":{
+"abbr":"DET",
+"name":"Detroit Tigers"
+},
+"home":{
+"abbr":"SEA",
+"name":"Seattle Mariners"
+},
+"before":{
+"inning":14,
+"half":"bottom",
+"outs":2,
+"bases":"1__",
+"score":{
+"away":2,
+"home":2
+},
+"batting":"home"
+},
+"batter":"J.P. Crawford",
+"pitcher":"Jack Flaherty",
+"runners":{
+"1B":"Victor Robles"
+},
+"batted":{
+"trajectory":null,
+"location":null,
+"ev":null,
+"distance":null,
+"spray":null
+},
+"ifAlign":"Infield shade",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/jack-flaherty-ball-to-j-p-crawford-vx0kf5",
+"pageUrl":"https://www.mlb.com/video/jack-flaherty-ball-to-j-p-crawford-vx0kf5",
+"title":"Dillon Dingler nabs Victor Robles to end the 14th",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/frqantzi7amhk4bzrbfa.jpg",
+"playRepository":"../play-repository/#/play/mlb-813054-108"
+},
+{
+"id":"mlb-746893-50",
+"families":[
+{
+"family":"steal",
+"outcome":"caught",
+"outcomeLabel":"caught stealing",
+"why":"Steal of second"
+}
+],
+"title":"Nick Fortes catches Dansby Swanson stealing",
+"description":"Dansby Swanson caught stealing 2nd base, catcher Nick Fortes to second baseman Luis Arraez.",
+"event":"Caught Stealing 2B",
+"date":"2024-04-20",
+"season":2024,
+"gameType":"R",
+"venue":"Wrigley Field",
+"away":{
+"abbr":"MIA",
+"name":"Miami Marlins"
+},
+"home":{
+"abbr":"CHC",
+"name":"Chicago Cubs"
+},
+"before":{
+"inning":6,
+"half":"bottom",
+"outs":2,
+"bases":"1__",
+"score":{
+"away":1,
+"home":2
+},
+"batting":"home"
+},
+"batter":"Nick Madrigal",
+"pitcher":"Jes\u00fas Luzardo",
+"runners":{
+"1B":"Dansby Swanson"
+},
+"batted":{
+"trajectory":null,
+"location":null,
+"ev":null,
+"distance":null,
+"spray":null
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/dansby-swanson-caught-stealing-2nd-base-catcher-nick-fortes-to-second-bas",
+"pageUrl":"https://www.mlb.com/video/dansby-swanson-caught-stealing-2nd-base-catcher-nick-fortes-to-second-bas",
+"title":"Nick Fortes catches Dansby Swanson stealing",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/sva8gzgjlrsuceuak7yx.jpg",
+"playRepository":"../play-repository/#/play/mlb-746893-50"
+},
+{
+"id":"mlb-744865-79",
+"families":[
+{
+"family":"tag",
+"outcome":"out_home",
+"outcomeLabel":"runner thrown out at home",
+"why":"Fly ball caught by an outfielder with a runner on third"
+}
+],
+"title":"Lane Thomas throws out Altuve and completes DP",
+"description":"Alex Bregman flies into a double play in foul territory, right fielder Lane Thomas to catcher Riley Adams.",
+"event":"Double Play",
+"date":"2024-04-20",
+"season":2024,
+"gameType":"R",
+"venue":"Nationals Park",
+"away":{
+"abbr":"HOU",
+"name":"Houston Astros"
+},
+"home":{
+"abbr":"WSH",
+"name":"Washington Nationals"
+},
+"before":{
+"inning":10,
+"half":"top",
+"outs":1,
+"bases":"__3",
+"score":{
+"away":4,
+"home":4
+},
+"batting":"away"
+},
+"batter":"Alex Bregman",
+"pitcher":"Kyle Finnegan",
+"runners":{
+"3B":"Jose Altuve"
+},
+"batted":{
+"trajectory":"fly_ball",
+"location":9,
+"ev":86.6,
+"distance":217.0,
+"spray":"opposite"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/kyle-finnegan-in-play-out-s-to-alex-bregman",
+"pageUrl":"https://www.mlb.com/video/kyle-finnegan-in-play-out-s-to-alex-bregman",
+"title":"Lane Thomas throws out Altuve and completes DP\u00a0",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/rfj0xw6qrpxdwvjekih7.jpg",
+"playRepository":"../play-repository/#/play/mlb-744865-79"
+},
+{
+"id":"mlb-744943-28",
+"families":[
+{
+"family":"send",
+"outcome":"out_home",
+"outcomeLabel":"runner thrown out at home",
+"why":"Single to the outfield with a runner on second"
+}
+],
+"title":"Davis Schneider nabs Edouard Julien at home",
+"description":"Trevor Larnach singles on a ground ball to left fielder Davis Schneider. Edouard Julien out at home on the throw, left fielder Davis Schneider to catcher Danny Jansen.",
+"event":"Single",
+"date":"2024-05-11",
+"season":2024,
+"gameType":"R",
+"venue":"Rogers Centre",
+"away":{
+"abbr":"MIN",
+"name":"Minnesota Twins"
+},
+"home":{
+"abbr":"TOR",
+"name":"Toronto Blue Jays"
+},
+"before":{
+"inning":3,
+"half":"top",
+"outs":2,
+"bases":"_2_",
+"score":{
+"away":7,
+"home":1
+},
+"batting":"away"
+},
+"batter":"Trevor Larnach",
+"pitcher":"Kevin Gausman",
+"runners":{
+"2B":"Edouard Julien"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":7,
+"ev":92.2,
+"distance":83.0,
+"spray":"opposite"
+},
+"ifAlign":"Infield shade",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/kevin-gausman-in-play-out-s-to-trevor-larnach",
+"pageUrl":"https://www.mlb.com/video/kevin-gausman-in-play-out-s-to-trevor-larnach",
+"title":"Davis Schneider nabs Edouard Julien at home",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/iifjrtlvrtsdfm8vyrlo.jpg",
+"playRepository":"../play-repository/#/play/mlb-744943-28"
+},
+{
+"id":"mlb-745478-15",
+"families":[
+{
+"family":"steal",
+"outcome":"caught",
+"outcomeLabel":"caught stealing",
+"why":"Steal of second"
+}
+],
+"title":"J.T. Realmuto throws out Hayes in return from IL",
+"description":"Ke'Bryan Hayes caught stealing 2nd base, catcher J. T. Realmuto to shortstop Trea Turner.",
+"event":"Caught Stealing 2B",
+"date":"2024-07-20",
+"season":2024,
+"gameType":"R",
+"venue":"PNC Park",
+"away":{
+"abbr":"PHI",
+"name":"Philadelphia Phillies"
+},
+"home":{
+"abbr":"PIT",
+"name":"Pittsburgh Pirates"
+},
+"before":{
+"inning":2,
+"half":"bottom",
+"outs":2,
+"bases":"1__",
+"score":{
+"away":0,
+"home":0
+},
+"batting":"home"
+},
+"batter":"Joshua Palacios",
+"pitcher":"Cristopher S\u00e1nchez",
+"runners":{
+"1B":"Ke'Bryan Hayes"
+},
+"batted":{
+"trajectory":null,
+"location":null,
+"ev":null,
+"distance":null,
+"spray":null
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/cristopher-sanchez-ball-to-joshua-palacios-naiukm",
+"pageUrl":"https://www.mlb.com/video/cristopher-sanchez-ball-to-joshua-palacios-naiukm",
+"title":"J.T. Realmuto throws out Hayes in return from IL",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/l3d73fjg9xbhgblsx8rw.jpg",
+"playRepository":"../play-repository/#/play/mlb-745478-15"
+},
+{
+"id":"mlb-747093-73",
+"families":[
+{
+"family":"bunt",
+"outcome":"sacrifice",
+"outcomeLabel":"bunt moves the runner up",
+"why":"Bunt with nobody out and a runner on"
+}
+],
+"title":"Zack Short out on a sacrifice bunt",
+"description":"Zack Short out on a sacrifice bunt, pitcher Chris Roycroft to second baseman Brendan Donovan. Adam Duvall to 3rd.",
+"event":"Sac Bunt",
+"date":"2024-07-20",
+"season":2024,
+"gameType":"R",
+"venue":"Truist Park",
+"away":{
+"abbr":"STL",
+"name":"St. Louis Cardinals"
+},
+"home":{
+"abbr":"ATL",
+"name":"Atlanta Braves"
+},
+"before":{
+"inning":10,
+"half":"bottom",
+"outs":0,
+"bases":"_2_",
+"score":{
+"away":2,
+"home":2
+},
+"batting":"home"
+},
+"batter":"Zack Short",
+"pitcher":"Chris Roycroft",
+"runners":{
+"2B":"Adam Duvall"
+},
+"batted":{
+"trajectory":"bunt_grounder",
+"location":1,
+"ev":35.1,
+"distance":5.0,
+"spray":"center"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/chris-roycroft-in-play-out-s-to-zack-short",
+"pageUrl":"https://www.mlb.com/video/chris-roycroft-in-play-out-s-to-zack-short",
+"title":"Zack Short out on a sacrifice bunt, pitcher Chris Roycroft to second baseman Brendan Donovan.   Adam Duvall to 3rd.",
+"label":"Home TV broadcast"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/f0c64962-46fa-496f-b79c-18de9d29c414_home.jpg",
+"playRepository":"../play-repository/#/play/mlb-747093-73"
+},
+{
+"id":"mlb-746527-8",
+"families":[
+{
+"family":"steal",
+"outcome":"caught",
+"outcomeLabel":"caught stealing",
+"why":"Steal of second"
+}
+],
+"title":"Curt Casali nabs Brenton Doyle stealing second",
+"description":"Brenton Doyle caught stealing 2nd base, catcher Curt Casali to shortstop Tyler Fitzgerald.",
+"event":"Caught Stealing 2B",
+"date":"2024-07-20",
+"season":2024,
+"gameType":"R",
+"venue":"Coors Field",
+"away":{
+"abbr":"SF",
+"name":"San Francisco Giants"
+},
+"home":{
+"abbr":"COL",
+"name":"Colorado Rockies"
+},
+"before":{
+"inning":1,
+"half":"bottom",
+"outs":2,
+"bases":"1__",
+"score":{
+"away":0,
+"home":2
+},
+"batting":"home"
+},
+"batter":"Jake Cave",
+"pitcher":"Logan Webb",
+"runners":{
+"1B":"Brenton Doyle"
+},
+"batted":{
+"trajectory":null,
+"location":null,
+"ev":null,
+"distance":null,
+"spray":null
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/logan-webb-ball-to-jake-cave-mid5qn",
+"pageUrl":"https://www.mlb.com/video/logan-webb-ball-to-jake-cave-mid5qn",
+"title":"Curt Casali nabs Brenton Doyle stealing second",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/wftgcvryzgpe1kmhmgzw.jpg",
+"playRepository":"../play-repository/#/play/mlb-746527-8"
+},
+{
+"id":"mlb-777892-18",
+"families":[
+{
+"family":"steal",
+"outcome":"caught",
+"outcomeLabel":"caught stealing",
+"why":"Steal of second"
+}
+],
+"title":"Jose Trevino catches Jos\u00e9 Ram\u00edrez stealing",
+"description":"Jos\u00e9 Ram\u00edrez caught stealing 2nd base, catcher Jose Trevino to shortstop Elly De La Cruz.",
+"event":"Caught Stealing 2B",
+"date":"2025-05-17",
+"season":2025,
+"gameType":"R",
+"venue":"Great American Ball Park",
+"away":{
+"abbr":"CLE",
+"name":"Cleveland Guardians"
+},
+"home":{
+"abbr":"CIN",
+"name":"Cincinnati Reds"
+},
+"before":{
+"inning":3,
+"half":"top",
+"outs":2,
+"bases":"1__",
+"score":{
+"away":0,
+"home":0
+},
+"batting":"away"
+},
+"batter":"Kyle Manzardo",
+"pitcher":"Brent Suter",
+"runners":{
+"1B":"Jos\u00e9 Ram\u00edrez"
+},
+"batted":{
+"trajectory":null,
+"location":null,
+"ev":null,
+"distance":null,
+"spray":null
+},
+"ifAlign":"Infield shade",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/brent-suter-ball-to-kyle-manzardo-n3y1dr",
+"pageUrl":"https://www.mlb.com/video/brent-suter-ball-to-kyle-manzardo-n3y1dr",
+"title":"Jose Trevino catches Jos\u00e9 Ram\u00edrez stealing",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/hjn9zlmbrge7jzk7uoou.jpg",
+"playRepository":"../play-repository/#/play/mlb-777892-18"
+},
+{
+"id":"mlb-777516-54",
+"families":[
+{
+"family":"steal3",
+"outcome":"caught",
+"outcomeLabel":"caught stealing",
+"why":"Steal of third"
+}
+],
+"title":"Jasson Dom\u00ednguez picked off and caught stealing 3rd base",
+"description":"Jasson Dom\u00ednguez picked off and caught stealing 3rd base, catcher Carlos Narv\u00e1ez to shortstop Trevor Story to third baseman Marcelo Mayer.",
+"event":"Pickoff Caught Stealing 3B",
+"date":"2025-06-14",
+"season":2025,
+"gameType":"R",
+"venue":"Fenway Park",
+"away":{
+"abbr":"NYY",
+"name":"New York Yankees"
+},
+"home":{
+"abbr":"BOS",
+"name":"Boston Red Sox"
+},
+"before":{
+"inning":7,
+"half":"top",
+"outs":2,
+"bases":"12_",
+"score":{
+"away":2,
+"home":4
+},
+"batting":"away"
+},
+"batter":"Trent Grisham",
+"pitcher":"Justin Wilson",
+"runners":{
+"1B":"Austin Wells",
+"2B":"Jasson Dom\u00ednguez"
+},
+"batted":{
+"trajectory":null,
+"location":null,
+"ev":null,
+"distance":null,
+"spray":null
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/justin-wilson-swinging-strike-to-trent-grisham-91f0gg",
+"pageUrl":"https://www.mlb.com/video/justin-wilson-swinging-strike-to-trent-grisham-91f0gg",
+"title":"Jasson Dom\u00ednguez picked off and caught stealing 3rd base, catcher Carlos Narv\u00e1ez to shortstop Trevor Story to third baseman Marcelo Mayer.",
+"label":"National TV broadcast"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/e020b6bf-6bdb-3a2a-a187-47daa3b6704e_network.jpg",
+"playRepository":"../play-repository/#/play/mlb-777516-54"
+},
+{
+"id":"mlb-777080-48",
+"families":[
+{
+"family":"bunt",
+"outcome":"sacrifice",
+"outcomeLabel":"bunt moves the runner up",
+"why":"Bunt with nobody out and a runner on"
+}
+],
+"title":"Ryan Ritter bunts, is removed due to sore finger",
+"description":"Ryan Ritter out on a sacrifice bunt, catcher Ryan Jeffers to first baseman Kody Clemens. Brenton Doyle to 3rd.",
+"event":"Sac Bunt",
+"date":"2025-07-19",
+"season":2025,
+"gameType":"R",
+"venue":"Coors Field",
+"away":{
+"abbr":"MIN",
+"name":"Minnesota Twins"
+},
+"home":{
+"abbr":"COL",
+"name":"Colorado Rockies"
+},
+"before":{
+"inning":6,
+"half":"bottom",
+"outs":0,
+"bases":"_2_",
+"score":{
+"away":3,
+"home":6
+},
+"batting":"home"
+},
+"batter":"Ryan Ritter",
+"pitcher":"Justin Topa",
+"runners":{
+"2B":"Brenton Doyle"
+},
+"batted":{
+"trajectory":"bunt_grounder",
+"location":2,
+"ev":9.8,
+"distance":3.0,
+"spray":null
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/justin-topa-in-play-out-s-to-ryan-ritter",
+"pageUrl":"https://www.mlb.com/video/justin-topa-in-play-out-s-to-ryan-ritter",
+"title":"Ryan Ritter bunts, is removed due to sore finger",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/fn0g2wr6s6ndavocp6nf.jpg",
+"playRepository":"../play-repository/#/play/mlb-777080-48"
+},
+{
+"id":"mlb-776712-67-e4",
+"families":[
+{
+"family":"steal",
+"outcome":"caught",
+"outcomeLabel":"caught stealing",
+"why":"Steal of second"
+}
+],
+"title":"Kyle Teel nabs Tyler Tolbert trying to steal second",
+"description":"Tyler Tolbert caught stealing 2nd base, catcher Kyle Teel to second baseman Chase Meidroth.",
+"event":"Caught Stealing 2B",
+"date":"2025-08-16",
+"season":2025,
+"gameType":"R",
+"venue":"Kauffman Stadium",
+"away":{
+"abbr":"CWS",
+"name":"Chicago White Sox"
+},
+"home":{
+"abbr":"KC",
+"name":"Kansas City Royals"
+},
+"before":{
+"inning":8,
+"half":"bottom",
+"outs":1,
+"bases":"1__",
+"score":{
+"away":2,
+"home":6
+},
+"batting":"home"
+},
+"batter":"Nick Loftin",
+"pitcher":"Mike Vasil",
+"runners":{
+"1B":"Randal Grichuk"
+},
+"batted":{
+"trajectory":null,
+"location":null,
+"ev":null,
+"distance":null,
+"spray":null
+},
+"ifAlign":null,
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/mike-vasil-called-strike-to-nick-loftin",
+"pageUrl":"https://www.mlb.com/video/mike-vasil-called-strike-to-nick-loftin",
+"title":"Kyle Teel nabs Tyler Tolbert trying to steal second",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/zglkykn8mxkfbcxd0mip.jpg",
+"playRepository":"../play-repository/#/play/mlb-776712-67-e4"
+},
+{
+"id":"mlb-776529-71",
+"families":[
+{
+"family":"infield",
+"outcome":"out_home",
+"outcomeLabel":"runner thrown out at home",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Chase Meidroth nabs Austin Wells at home",
+"description":"Ryan McMahon reaches on a fielder's choice out, second baseman Chase Meidroth to catcher Kyle Teel. Austin Wells out at home.",
+"event":"Fielders Choice Out",
+"date":"2025-08-30",
+"season":2025,
+"gameType":"R",
+"venue":"Rate Field",
+"away":{
+"abbr":"NYY",
+"name":"New York Yankees"
+},
+"home":{
+"abbr":"CWS",
+"name":"Chicago White Sox"
+},
+"before":{
+"inning":10,
+"half":"top",
+"outs":1,
+"bases":"__3",
+"score":{
+"away":2,
+"home":2
+},
+"batting":"away"
+},
+"batter":"Ryan McMahon",
+"pitcher":"Grant Taylor",
+"runners":{
+"3B":"Austin Wells"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":4,
+"ev":79.0,
+"distance":3.0,
+"spray":"pull"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/grant-taylor-in-play-out-s-to-ryan-mcmahon",
+"pageUrl":"https://www.mlb.com/video/grant-taylor-in-play-out-s-to-ryan-mcmahon",
+"title":"Chase Meidroth nabs Austin Wells at home",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/b4bfnizjfsfu0cq6fzqb.jpg",
+"playRepository":"../play-repository/#/play/mlb-776529-71"
+},
+{
+"id":"mlb-776532-43",
+"families":[
+{
+"family":"infield",
+"outcome":"out_home",
+"outcomeLabel":"runner thrown out at home",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Matt Olson turns a clutch double play",
+"description":"Bryce Harper grounds into a double play, first baseman Matt Olson to catcher Drake Baldwin. Trea Turner out at home. Bryce Harper out at 1st.",
+"event":"Double Play",
+"date":"2025-08-30",
+"season":2025,
+"gameType":"R",
+"venue":"Citizens Bank Park",
+"away":{
+"abbr":"ATL",
+"name":"Atlanta Braves"
+},
+"home":{
+"abbr":"PHI",
+"name":"Philadelphia Phillies"
+},
+"before":{
+"inning":6,
+"half":"bottom",
+"outs":1,
+"bases":"__3",
+"score":{
+"away":1,
+"home":1
+},
+"batting":"home"
+},
+"batter":"Bryce Harper",
+"pitcher":"Chris Sale",
+"runners":{
+"3B":"Trea Turner"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":3,
+"ev":86.0,
+"distance":16.0,
+"spray":"pull"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/chris-sale-in-play-out-s-to-bryce-harper-vrv2ft-x8301",
+"pageUrl":"https://www.mlb.com/video/chris-sale-in-play-out-s-to-bryce-harper-vrv2ft-x8301",
+"title":"Matt Olson turns a clutch double play",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/cbqugpere93cwkchgitw.jpg",
+"playRepository":"../play-repository/#/play/mlb-776532-43"
+},
+{
+"id":"mlb-776347-75",
+"families":[
+{
+"family":"bunt",
+"outcome":"bunt_dp",
+"outcomeLabel":"double play on the bunt",
+"why":"Bunt with nobody out and a runner on"
+}
+],
+"title":"Tigers turn clutch double play in the 10th",
+"description":"Javier Sanoja bunt lines into a double play, pitcher Will Vest to shortstop Trey Sweeney. Xavier Edwards out at 2nd.",
+"event":"Double Play",
+"date":"2025-09-13",
+"season":2025,
+"gameType":"R",
+"venue":"loanDepot park",
+"away":{
+"abbr":"DET",
+"name":"Detroit Tigers"
+},
+"home":{
+"abbr":"MIA",
+"name":"Miami Marlins"
+},
+"before":{
+"inning":10,
+"half":"bottom",
+"outs":0,
+"bases":"_2_",
+"score":{
+"away":3,
+"home":3
+},
+"batting":"home"
+},
+"batter":"Javier Sanoja",
+"pitcher":"Will Vest",
+"runners":{
+"2B":"Xavier Edwards"
+},
+"batted":{
+"trajectory":"bunt_line_drive",
+"location":1,
+"ev":27.1,
+"distance":50.0,
+"spray":"opposite"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/will-vest-in-play-out-s-to-javier-sanoja",
+"pageUrl":"https://www.mlb.com/video/will-vest-in-play-out-s-to-javier-sanoja",
+"title":"Tigers turn clutch double play in the 10th",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/prk5hlrlmfv3bq4eytpj.jpg",
+"playRepository":"../play-repository/#/play/mlb-776347-75"
+},
+{
+"id":"mlb-746026-88",
+"families":[
+{
+"family":"infield",
+"outcome":"scored_on_out",
+"outcomeLabel":"runner scores on the ground-ball out",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Luis Arraez's go-ahead groundout",
+"description":"Luis Arraez grounds out to first baseman Jonah Bride. Tyler Wade scores. Ha-Seong Kim to 3rd.",
+"event":"Groundout",
+"date":"2024-08-10",
+"season":2024,
+"gameType":"R",
+"venue":"loanDepot park",
+"away":{
+"abbr":"SD",
+"name":"San Diego Padres"
+},
+"home":{
+"abbr":"MIA",
+"name":"Miami Marlins"
+},
+"before":{
+"inning":10,
+"half":"top",
+"outs":1,
+"bases":"_23",
+"score":{
+"away":8,
+"home":8
+},
+"batting":"away"
+},
+"batter":"Luis Arraez",
+"pitcher":"John McMillon",
+"runners":{
+"2B":"Ha-Seong Kim",
+"3B":"Tyler Wade"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":3,
+"ev":73.9,
+"distance":5.0,
+"spray":"pull"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/john-mcmillon-in-play-run-s-to-luis-arraez",
+"pageUrl":"https://www.mlb.com/video/john-mcmillon-in-play-run-s-to-luis-arraez",
+"title":"Luis Arraez's go-ahead groundout",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/pevo5ouefnlpviskmln4.jpg",
+"playRepository":"../play-repository/#/play/mlb-746026-88"
+},
+{
+"id":"mlb-775311-75",
+"families":[
+{
+"family":"infield",
+"outcome":"scored_on_out",
+"outcomeLabel":"runner scores on the ground-ball out",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Jon Berti scores the go-ahead run in the 9th",
+"description":"Alex Verdugo reaches on a fielding error by shortstop Brayan Rocchio. Jon Berti scores. Anthony Volpe to 3rd.",
+"event":"Field Error",
+"date":"2024-10-18",
+"season":2024,
+"gameType":"L",
+"venue":"Progressive Field",
+"away":{
+"abbr":"NYY",
+"name":"New York Yankees"
+},
+"home":{
+"abbr":"CLE",
+"name":"Cleveland Guardians"
+},
+"before":{
+"inning":9,
+"half":"top",
+"outs":1,
+"bases":"_23",
+"score":{
+"away":6,
+"home":6
+},
+"batting":"away"
+},
+"batter":"Alex Verdugo",
+"pitcher":"Emmanuel Clase",
+"runners":{
+"2B":"Anthony Volpe",
+"3B":"Jon Berti"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":6,
+"ev":44.0,
+"distance":13.0,
+"spray":"center"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/jon-berti-scores-the-go-ahead-run-in-the-9th",
+"pageUrl":"https://www.mlb.com/video/jon-berti-scores-the-go-ahead-run-in-the-9th",
+"title":"Jon Berti scores the go-ahead run in the 9th",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/xcuk4osbuwddyphyxejq.jpg",
+"playRepository":"../play-repository/#/play/mlb-775311-75"
+},
+{
+"id":"mlb-777515-82",
+"families":[
+{
+"family":"infield",
+"outcome":"scored_on_out",
+"outcomeLabel":"runner scores on the ground-ball out",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Josh Naylor reaches on a fielder's choice",
+"description":"Padres challenged (tag play), call on the field was upheld: Josh Naylor reaches on a fielder's choice, fielded by first baseman Luis Arraez. Geraldo Perdomo scores.",
+"event":"Fielders Choice",
+"date":"2025-06-14",
+"season":2025,
+"gameType":"R",
+"venue":"Chase Field",
+"away":{
+"abbr":"SD",
+"name":"San Diego Padres"
+},
+"home":{
+"abbr":"AZ",
+"name":"Arizona Diamondbacks"
+},
+"before":{
+"inning":9,
+"half":"bottom",
+"outs":1,
+"bases":"__3",
+"score":{
+"away":7,
+"home":7
+},
+"batting":"home"
+},
+"batter":"Josh Naylor",
+"pitcher":"Adrian Morejon",
+"runners":{
+"3B":"Geraldo Perdomo"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":3,
+"ev":67.1,
+"distance":2.0,
+"spray":"pull"
+},
+"ifAlign":"Infield shade",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/padres-challenged-tag-play-call-on-the-field-was-upheld-josh-naylor-reach",
+"pageUrl":"https://www.mlb.com/video/padres-challenged-tag-play-call-on-the-field-was-upheld-josh-naylor-reach",
+"title":"Padres challenged (tag play), call on the field was upheld: Josh Naylor reaches on a fielder's choice, fielded by first baseman Luis Arraez. Geraldo Perdomo scores.",
+"label":"National TV broadcast"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/3c0a5029-6286-30c6-b971-aa32285d895e_network.jpg",
+"playRepository":"../play-repository/#/play/mlb-777515-82"
+},
+{
+"id":"mlb-777514-74",
+"families":[
+{
+"family":"infield",
+"outcome":"scored_on_out",
+"outcomeLabel":"runner scores on the ground-ball out",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Josh Bell comes in to score on an error",
+"description":"Robert Hassell III reaches on a fielding error by first baseman Eric Wagaman. Josh Bell scores. Luis Garc\u00eda Jr. to 3rd.",
+"event":"Field Error",
+"date":"2025-06-14",
+"season":2025,
+"gameType":"R",
+"venue":"Nationals Park",
+"away":{
+"abbr":"MIA",
+"name":"Miami Marlins"
+},
+"home":{
+"abbr":"WSH",
+"name":"Washington Nationals"
+},
+"before":{
+"inning":9,
+"half":"bottom",
+"outs":0,
+"bases":"_23",
+"score":{
+"away":4,
+"home":2
+},
+"batting":"home"
+},
+"batter":"Robert Hassell III",
+"pitcher":"Anthony Bender",
+"runners":{
+"2B":"Luis Garc\u00eda Jr.",
+"3B":"Josh Bell"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":3,
+"ev":95.8,
+"distance":65.0,
+"spray":"pull"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/anthony-bender-in-play-run-s-to-robert-hassell-iii",
+"pageUrl":"https://www.mlb.com/video/anthony-bender-in-play-run-s-to-robert-hassell-iii",
+"title":"Josh Bell comes in to score on an error",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/ix90nknq9lnwubkzn3yp.jpg",
+"playRepository":"../play-repository/#/play/mlb-777514-74"
+},
+{
+"id":"mlb-776722-95",
+"families":[
+{
+"family":"infield",
+"outcome":"scored_on_out",
+"outcomeLabel":"runner scores on the ground-ball out",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Ram\u00f3n Ur\u00edas' walk-off fielder's choice",
+"description":"Ram\u00f3n Ur\u00edas grounds into a force out, third baseman Jordan Westburg to second baseman Jackson Holliday. Carlos Correa scores. Jose Altuve to 3rd. Christian Walker out at 2nd. Ram\u00f3n Ur\u00edas to 1st.",
+"event":"Forceout",
+"date":"2025-08-16",
+"season":2025,
+"gameType":"R",
+"venue":"Daikin Park",
+"away":{
+"abbr":"BAL",
+"name":"Baltimore Orioles"
+},
+"home":{
+"abbr":"HOU",
+"name":"Houston Astros"
+},
+"before":{
+"inning":12,
+"half":"bottom",
+"outs":1,
+"bases":"123",
+"score":{
+"away":4,
+"home":4
+},
+"batting":"home"
+},
+"batter":"Ram\u00f3n Ur\u00edas",
+"pitcher":"Keegan Akin",
+"runners":{
+"1B":"Christian Walker",
+"2B":"Jose Altuve",
+"3B":"Carlos Correa"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":5,
+"ev":60.3,
+"distance":4.0,
+"spray":"pull"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/keegan-akin-in-play-run-s-to-ramon-urias",
+"pageUrl":"https://www.mlb.com/video/keegan-akin-in-play-run-s-to-ramon-urias",
+"title":"Ram\u00f3n Ur\u00edas' walk-off fielder's choice",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/risi7hbou1usacgmsthb.jpg",
+"playRepository":"../play-repository/#/play/mlb-776722-95"
+},
+{
+"id":"mlb-776341-9",
+"families":[
+{
+"family":"tag",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Fly ball caught by an outfielder with a runner on third"
+}
+],
+"title":"Ram\u00f3n Laureano's sac fly",
+"description":"Ram\u00f3n Laureano out on a sacrifice fly to center fielder Mickey Moniak. Luis Arraez scores. Manny Machado to 3rd. Throwing error by center fielder Mickey Moniak.",
+"event":"Sac Fly",
+"date":"2025-09-13",
+"season":2025,
+"gameType":"R",
+"venue":"Petco Park",
+"away":{
+"abbr":"COL",
+"name":"Colorado Rockies"
+},
+"home":{
+"abbr":"SD",
+"name":"San Diego Padres"
+},
+"before":{
+"inning":1,
+"half":"bottom",
+"outs":1,
+"bases":"123",
+"score":{
+"away":1,
+"home":0
+},
+"batting":"home"
+},
+"batter":"Ram\u00f3n Laureano",
+"pitcher":"Bradley Blalock",
+"runners":{
+"1B":"Gavin Sheets",
+"2B":"Manny Machado",
+"3B":"Luis Arraez"
+},
+"batted":{
+"trajectory":"fly_ball",
+"location":8,
+"ev":83.9,
+"distance":271.0,
+"spray":"center"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/bradley-blalock-in-play-run-s-to-ramon-laureano",
+"pageUrl":"https://www.mlb.com/video/bradley-blalock-in-play-run-s-to-ramon-laureano",
+"title":"Ram\u00f3n Laureano's sac fly",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/xhphfrmbpbzcm6ostrj8.jpg",
+"playRepository":"../play-repository/#/play/mlb-776341-9"
+},
+{
+"id":"mlb-776338-75-e3",
+"families":[
+{
+"family":"steal",
+"outcome":"safe",
+"outcomeLabel":"safe",
+"why":"Steal of second"
+}
+],
+"title":"Dansby Swanson steals second in the 9th",
+"description":"Dansby Swanson steals (16) 2nd base.",
+"event":"Stolen Base 2B",
+"date":"2025-09-13",
+"season":2025,
+"gameType":"R",
+"venue":"Wrigley Field",
+"away":{
+"abbr":"TB",
+"name":"Tampa Bay Rays"
+},
+"home":{
+"abbr":"CHC",
+"name":"Chicago Cubs"
+},
+"before":{
+"inning":9,
+"half":"bottom",
+"outs":0,
+"bases":"12_",
+"score":{
+"away":5,
+"home":4
+},
+"batting":"home"
+},
+"batter":"Willi Castro",
+"pitcher":"Pete Fairbanks",
+"runners":{
+"1B":"Dansby Swanson",
+"2B":"Dansby Swanson"
+},
+"batted":{
+"trajectory":null,
+"location":null,
+"ev":null,
+"distance":null,
+"spray":null
+},
+"ifAlign":null,
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/pete-fairbanks-ball-to-willi-castro-jk0hnb",
+"pageUrl":"https://www.mlb.com/video/pete-fairbanks-ball-to-willi-castro-jk0hnb",
+"title":"Dansby Swanson steals second in the 9th",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/kalxsaf3b09vsqgqmpjz.jpg",
+"playRepository":"../play-repository/#/play/mlb-776338-75-e3"
+},
+{
+"id":"mlb-776343-75",
+"families":[
+{
+"family":"tag",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Fly ball caught by an outfielder with a runner on third"
+}
+],
+"title":"Alejandro Kirk's walk-off sacrifice fly",
+"description":"Alejandro Kirk out on a sacrifice fly to center fielder Colton Cowser. Joey Loperfido scores.",
+"event":"Sac Fly",
+"date":"2025-09-13",
+"season":2025,
+"gameType":"R",
+"venue":"Rogers Centre",
+"away":{
+"abbr":"BAL",
+"name":"Baltimore Orioles"
+},
+"home":{
+"abbr":"TOR",
+"name":"Toronto Blue Jays"
+},
+"before":{
+"inning":9,
+"half":"bottom",
+"outs":1,
+"bases":"123",
+"score":{
+"away":4,
+"home":4
+},
+"batting":"home"
+},
+"batter":"Alejandro Kirk",
+"pitcher":"Yennier Cano",
+"runners":{
+"1B":"George Springer",
+"2B":"Andr\u00e9s Gim\u00e9nez",
+"3B":"Joey Loperfido"
+},
+"batted":{
+"trajectory":"fly_ball",
+"location":8,
+"ev":100.7,
+"distance":321.0,
+"spray":"center"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/alejandro-kirk-out-on-a-sacrifice-fly-to-center-fielder-colton-cowser-joe",
+"pageUrl":"https://www.mlb.com/video/alejandro-kirk-out-on-a-sacrifice-fly-to-center-fielder-colton-cowser-joe",
+"title":"Alejandro Kirk's walk-off sacrifice fly\u00a0",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/lucnovvjkjk2qtyep9ee.jpg",
+"playRepository":"../play-repository/#/play/mlb-776343-75"
+},
+{
+"id":"mlb-745190-13",
+"families":[
+{
+"family":"bunt",
+"outcome":"lead_out",
+"outcomeLabel":"lead runner forced out",
+"why":"Bunt with nobody out and a runner on"
+}
+],
+"title":"Brice Turang ground bunts into a force out",
+"description":"Brice Turang ground bunts into a force out, catcher Iv\u00e1n Herrera to third baseman Nolan Arenado. Gary S\u00e1nchez out at 3rd. Blake Perkins to 2nd. Brice Turang to 1st.",
+"event":"Forceout",
+"date":"2024-04-20",
+"season":2024,
+"gameType":"R",
+"venue":"Busch Stadium",
+"away":{
+"abbr":"MIL",
+"name":"Milwaukee Brewers"
+},
+"home":{
+"abbr":"STL",
+"name":"St. Louis Cardinals"
+},
+"before":{
+"inning":2,
+"half":"top",
+"outs":0,
+"bases":"12_",
+"score":{
+"away":2,
+"home":1
+},
+"batting":"away"
+},
+"batter":"Brice Turang",
+"pitcher":"Miles Mikolas",
+"runners":{
+"1B":"Blake Perkins",
+"2B":"Gary S\u00e1nchez"
+},
+"batted":{
+"trajectory":"bunt_grounder",
+"location":2,
+"ev":33.9,
+"distance":2.0,
+"spray":null
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/miles-mikolas-in-play-out-s-to-brice-turang-gs2y2e",
+"pageUrl":"https://www.mlb.com/video/miles-mikolas-in-play-out-s-to-brice-turang-gs2y2e",
+"title":"Brice Turang ground bunts into a force out, catcher Iv\u00e1n Herrera to third baseman Nolan Arenado.   Gary S\u00e1nchez out at 3rd.    Blake Perkins to 2nd.    Brice Turang to 1st.",
+"label":"Home TV broadcast"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/15bf1c3e-8215-4751-9364-fe3fa1cbcf46_home.jpg",
+"playRepository":"../play-repository/#/play/mlb-745190-13"
+},
+{
+"id":"mlb-747041-79",
+"families":[
+{
+"family":"infield",
+"outcome":"held_on_out",
+"outcomeLabel":"runner holds on the ground-ball out",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Bryce Jarvis induces double play, escapes jam",
+"description":"Colton Cowser grounds into a double play, second baseman Blaze Alexander to shortstop Kevin Newman to first baseman Christian Walker. Anthony Santander out at 2nd. Colton Cowser out at 1st.",
+"event":"Grounded Into DP",
+"date":"2024-05-11",
+"season":2024,
+"gameType":"R",
+"venue":"Oriole Park at Camden Yards",
+"away":{
+"abbr":"AZ",
+"name":"Arizona Diamondbacks"
+},
+"home":{
+"abbr":"BAL",
+"name":"Baltimore Orioles"
+},
+"before":{
+"inning":10,
+"half":"bottom",
+"outs":1,
+"bases":"123",
+"score":{
+"away":4,
+"home":4
+},
+"batting":"home"
+},
+"batter":"Colton Cowser",
+"pitcher":"Bryce Jarvis",
+"runners":{
+"1B":"Anthony Santander",
+"2B":"Ryan O'Hearn",
+"3B":"Ryan McKenna"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":4,
+"ev":101.6,
+"distance":15.0,
+"spray":"pull"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/bryce-jarvis-in-play-out-s-to-colton-cowser",
+"pageUrl":"https://www.mlb.com/video/bryce-jarvis-in-play-out-s-to-colton-cowser",
+"title":"Bryce Jarvis induces double play, escapes jam",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/rccyo1yriu5qf5fze3t2.jpg",
+"playRepository":"../play-repository/#/play/mlb-747041-79"
+},
+{
+"id":"mlb-745880-58",
+"families":[
+{
+"family":"infield",
+"outcome":"scored_on_out",
+"outcomeLabel":"runner scores on the ground-ball out",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Willi Castro scores game-tying run, call confirmed",
+"description":"Brewers challenged (tag play), call on the field was upheld: Diego A. Castillo reaches on a fielder's choice, fielded by second baseman Brice Turang. Willi Castro scores.",
+"event":"Fielders Choice",
+"date":"2024-07-20",
+"season":2024,
+"gameType":"R",
+"venue":"Target Field",
+"away":{
+"abbr":"MIL",
+"name":"Milwaukee Brewers"
+},
+"home":{
+"abbr":"MIN",
+"name":"Minnesota Twins"
+},
+"before":{
+"inning":8,
+"half":"bottom",
+"outs":1,
+"bases":"__3",
+"score":{
+"away":1,
+"home":0
+},
+"batting":"home"
+},
+"batter":"Diego Castillo",
+"pitcher":"Elvis Peguero",
+"runners":{
+"3B":"Willi Castro"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":4,
+"ev":101.6,
+"distance":5.0,
+"spray":"opposite"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/elvis-peguero-in-play-run-s-to-diego-a-castillo",
+"pageUrl":"https://www.mlb.com/video/elvis-peguero-in-play-run-s-to-diego-a-castillo",
+"title":"Willi Castro scores game-tying run, call confirmed",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/jk5dz6s4zfurj2oovwtm.jpg",
+"playRepository":"../play-repository/#/play/mlb-745880-58"
+},
+{
+"id":"mlb-746026-93",
+"families":[
+{
+"family":"infield",
+"outcome":"out_home",
+"outcomeLabel":"runner thrown out at home",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Manny Machado nabs Vidal Bruj\u00e1n at home",
+"description":"Xavier Edwards reaches on a fielder's choice out, third baseman Manny Machado to catcher Kyle Higashioka. Vidal Bruj\u00e1n out at home.",
+"event":"Fielders Choice Out",
+"date":"2024-08-10",
+"season":2024,
+"gameType":"R",
+"venue":"loanDepot park",
+"away":{
+"abbr":"SD",
+"name":"San Diego Padres"
+},
+"home":{
+"abbr":"MIA",
+"name":"Miami Marlins"
+},
+"before":{
+"inning":10,
+"half":"bottom",
+"outs":1,
+"bases":"_23",
+"score":{
+"away":9,
+"home":8
+},
+"batting":"home"
+},
+"batter":"Xavier Edwards",
+"pitcher":"Tanner Scott",
+"runners":{
+"2B":"Derek Hill",
+"3B":"Vidal Bruj\u00e1n"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":5,
+"ev":86.5,
+"distance":9.0,
+"spray":"pull"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/tanner-scott-in-play-out-s-to-xavier-edwards",
+"pageUrl":"https://www.mlb.com/video/tanner-scott-in-play-out-s-to-xavier-edwards",
+"title":"Manny Machado nabs Vidal Bruj\u00e1n at home",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/krbuicqktakerqttmhnn.jpg",
+"playRepository":"../play-repository/#/play/mlb-746026-93"
+},
+{
+"id":"mlb-745304-30",
+"families":[
+{
+"family":"infield",
+"outcome":"scored_on_out",
+"outcomeLabel":"runner scores on the ground-ball out",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Dillon Dingler plates run on fielder's choice",
+"description":"Dillon Dingler reaches on a fielder's choice, fielded by shortstop Tyler Fitzgerald. Parker Meadows scores.",
+"event":"Fielders Choice",
+"date":"2024-08-10",
+"season":2024,
+"gameType":"R",
+"venue":"Oracle Park",
+"away":{
+"abbr":"DET",
+"name":"Detroit Tigers"
+},
+"home":{
+"abbr":"SF",
+"name":"San Francisco Giants"
+},
+"before":{
+"inning":5,
+"half":"top",
+"outs":1,
+"bases":"__3",
+"score":{
+"away":0,
+"home":0
+},
+"batting":"away"
+},
+"batter":"Dillon Dingler",
+"pitcher":"Logan Webb",
+"runners":{
+"3B":"Parker Meadows"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":6,
+"ev":91.7,
+"distance":3.0,
+"spray":"center"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/logan-webb-in-play-run-s-to-dillon-dingler",
+"pageUrl":"https://www.mlb.com/video/logan-webb-in-play-run-s-to-dillon-dingler",
+"title":"Dillon Dingler plates run on fielder's choice",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/b14mi6l1ykv6nzklcz3y.jpg",
+"playRepository":"../play-repository/#/play/mlb-745304-30"
+},
+{
+"id":"mlb-775323-40",
+"families":[
+{
+"family":"infield",
+"outcome":"out_home",
+"outcomeLabel":"runner thrown out at home",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Donovan Solano's run-saving play upheld after review",
+"description":"Dodgers challenged (force play), call on the field was upheld: Freddie Freeman grounds into a force out, first baseman Donovan Solano to catcher Kyle Higashioka. Miguel Rojas out at home. Shohei Ohtani to 3rd. Mookie Betts to 2nd. Freddie Freeman to 1st.",
+"event":"Forceout",
+"date":"2024-10-05",
+"season":2024,
+"gameType":"D",
+"venue":"Dodger Stadium",
+"away":{
+"abbr":"SD",
+"name":"San Diego Padres"
+},
+"home":{
+"abbr":"LAD",
+"name":"Los Angeles Dodgers"
+},
+"before":{
+"inning":4,
+"half":"bottom",
+"outs":1,
+"bases":"123",
+"score":{
+"away":5,
+"home":4
+},
+"batting":"home"
+},
+"batter":"Freddie Freeman",
+"pitcher":"Adrian Morejon",
+"runners":{
+"1B":"Mookie Betts",
+"2B":"Shohei Ohtani",
+"3B":"Miguel Rojas"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":3,
+"ev":70.6,
+"distance":41.0,
+"spray":"pull"
+},
+"ifAlign":"Infield shade",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/adrian-morejon-in-play-out-s-to-freddie-freeman-njh2q5",
+"pageUrl":"https://www.mlb.com/video/adrian-morejon-in-play-out-s-to-freddie-freeman-njh2q5",
+"title":"Donovan Solano's run-saving play upheld after review",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/hgpfvicigk5ar96gest4.jpg",
+"playRepository":"../play-repository/#/play/mlb-775323-40"
+},
+{
+"id":"mlb-778256-32",
+"families":[
+{
+"family":"infield",
+"outcome":"out_home",
+"outcomeLabel":"runner thrown out at home",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Brett Baty nabs Thomas Saggese at the plate",
+"description":"Yohel Pozo reaches on a fielder's choice out, third baseman Brett Baty to catcher Luis Torrens. Thomas Saggese out at home.",
+"event":"Fielders Choice Out",
+"date":"2025-04-19",
+"season":2025,
+"gameType":"R",
+"venue":"Citi Field",
+"away":{
+"abbr":"STL",
+"name":"St. Louis Cardinals"
+},
+"home":{
+"abbr":"NYM",
+"name":"New York Mets"
+},
+"before":{
+"inning":5,
+"half":"top",
+"outs":1,
+"bases":"__3",
+"score":{
+"away":0,
+"home":2
+},
+"batting":"away"
+},
+"batter":"Yohel Pozo",
+"pitcher":"Kodai Senga",
+"runners":{
+"3B":"Thomas Saggese"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":5,
+"ev":88.9,
+"distance":47.0,
+"spray":"pull"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/yohel-pozo-reaches-on-a-fielder-s-choice-out-third-baseman-brett-baty-to",
+"pageUrl":"https://www.mlb.com/video/yohel-pozo-reaches-on-a-fielder-s-choice-out-third-baseman-brett-baty-to",
+"title":"Brett Baty nabs Thomas Saggese at the plate",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/sy7hrqmp4cxnea1nz7jl.jpg",
+"playRepository":"../play-repository/#/play/mlb-778256-32"
+},
+{
+"id":"mlb-778247-28",
+"families":[
+{
+"family":"infield",
+"outcome":"scored_on_out",
+"outcomeLabel":"runner scores on the ground-ball out",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Jos\u00e9 Tena's RBI fielder's choice",
+"description":"Jos\u00e9 Tena reaches on a fielder's choice, fielded by shortstop Aaron Schunk. Luis Garc\u00eda Jr. scores. Dylan Crews to 2nd.",
+"event":"Fielders Choice",
+"date":"2025-04-19",
+"season":2025,
+"gameType":"R",
+"venue":"Coors Field",
+"away":{
+"abbr":"WSH",
+"name":"Washington Nationals"
+},
+"home":{
+"abbr":"COL",
+"name":"Colorado Rockies"
+},
+"before":{
+"inning":4,
+"half":"top",
+"outs":0,
+"bases":"1_3",
+"score":{
+"away":3,
+"home":2
+},
+"batting":"away"
+},
+"batter":"Jos\u00e9 Tena",
+"pitcher":"Chase Dollander",
+"runners":{
+"1B":"Dylan Crews",
+"3B":"Luis Garc\u00eda Jr."
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":6,
+"ev":100.5,
+"distance":4.0,
+"spray":"center"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/chase-dollander-in-play-run-s-to-jose-tena",
+"pageUrl":"https://www.mlb.com/video/chase-dollander-in-play-run-s-to-jose-tena",
+"title":"Jos\u00e9 Tena's RBI fielder's choice",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/tkolsxfz38jbp4dnbz0z.jpg",
+"playRepository":"../play-repository/#/play/mlb-778247-28"
+},
+{
+"id":"mlb-778252-31",
+"families":[
+{
+"family":"infield",
+"outcome":"scored_on_out",
+"outcomeLabel":"runner scores on the ground-ball out",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Griffin Conine's RBI groundout",
+"description":"Griffin Conine grounds out, second baseman Bryson Stott to first baseman Bryce Harper. Kyle Stowers scores. Otto Lopez to 2nd.",
+"event":"Groundout",
+"date":"2025-04-19",
+"season":2025,
+"gameType":"R",
+"venue":"Citizens Bank Park",
+"away":{
+"abbr":"MIA",
+"name":"Miami Marlins"
+},
+"home":{
+"abbr":"PHI",
+"name":"Philadelphia Phillies"
+},
+"before":{
+"inning":4,
+"half":"top",
+"outs":1,
+"bases":"1_3",
+"score":{
+"away":0,
+"home":4
+},
+"batting":"away"
+},
+"batter":"Griffin Conine",
+"pitcher":"Taijuan Walker",
+"runners":{
+"1B":"Otto Lopez",
+"3B":"Kyle Stowers"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":4,
+"ev":83.7,
+"distance":16.0,
+"spray":"pull"
+},
+"ifAlign":"Infield shade",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/taijuan-walker-in-play-run-s-to-griffin-conine",
+"pageUrl":"https://www.mlb.com/video/taijuan-walker-in-play-run-s-to-griffin-conine",
+"title":"Griffin Conine's RBI groundout\u00a0",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/ax01s4lztqepeoiquhds.jpg",
+"playRepository":"../play-repository/#/play/mlb-778252-31"
+},
+{
+"id":"mlb-777882-23",
+"families":[
+{
+"family":"infield",
+"outcome":"hit_through",
+"outcomeLabel":"ground ball gets through",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Wyatt Langford's RBI single",
+"description":"Wyatt Langford singles on a ground ball to shortstop Jeremy Pe\u00f1a. Kyle Higashioka scores. Sam Haggerty to 3rd. Throwing error by shortstop Jeremy Pe\u00f1a.",
+"event":"Single",
+"date":"2025-05-17",
+"season":2025,
+"gameType":"R",
+"venue":"Globe Life Field",
+"away":{
+"abbr":"HOU",
+"name":"Houston Astros"
+},
+"home":{
+"abbr":"TEX",
+"name":"Texas Rangers"
+},
+"before":{
+"inning":3,
+"half":"bottom",
+"outs":1,
+"bases":"_23",
+"score":{
+"away":1,
+"home":0
+},
+"batting":"home"
+},
+"batter":"Wyatt Langford",
+"pitcher":"Ronel Blanco",
+"runners":{
+"2B":"Sam Haggerty",
+"3B":"Kyle Higashioka"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":6,
+"ev":93.5,
+"distance":64.0,
+"spray":"pull"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/ronel-blanco-in-play-run-s-to-wyatt-langford-b9eozl",
+"pageUrl":"https://www.mlb.com/video/ronel-blanco-in-play-run-s-to-wyatt-langford-b9eozl",
+"title":"Wyatt Langford's RBI single",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/spacfldr9d7m9bmgmxft.jpg",
+"playRepository":"../play-repository/#/play/mlb-777882-23"
+},
+{
+"id":"mlb-777514-27",
+"families":[
+{
+"family":"infield",
+"outcome":"held_on_out",
+"outcomeLabel":"runner holds on the ground-ball out",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Janson Junk induces a double play to end the 3rd inning",
+"description":"Alex Call grounds into a double play, shortstop Otto Lopez to second baseman Javier Sanoja to first baseman Eric Wagaman. Nathaniel Lowe out at 2nd. Alex Call out at 1st.",
+"event":"Grounded Into DP",
+"date":"2025-06-14",
+"season":2025,
+"gameType":"R",
+"venue":"Nationals Park",
+"away":{
+"abbr":"MIA",
+"name":"Miami Marlins"
+},
+"home":{
+"abbr":"WSH",
+"name":"Washington Nationals"
+},
+"before":{
+"inning":3,
+"half":"bottom",
+"outs":1,
+"bases":"1_3",
+"score":{
+"away":1,
+"home":1
+},
+"batting":"home"
+},
+"batter":"Alex Call",
+"pitcher":"Janson Junk",
+"runners":{
+"1B":"Nathaniel Lowe",
+"3B":"Amed Rosario"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":6,
+"ev":87.6,
+"distance":11.0,
+"spray":"pull"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/janson-junk-in-play-out-s-to-alex-call",
+"pageUrl":"https://www.mlb.com/video/janson-junk-in-play-out-s-to-alex-call",
+"title":"Janson Junk induces a double play to end the 3rd inning",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/tnsoczdrqrjvgbtj48o3.jpg",
+"playRepository":"../play-repository/#/play/mlb-777514-27"
+},
+{
+"id":"mlb-777091-39",
+"families":[
+{
+"family":"infield",
+"outcome":"scored_on_out",
+"outcomeLabel":"runner scores on the ground-ball out",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Daylen Lile scores on CJ Abrams' groundout",
+"description":"CJ Abrams grounds out, second baseman Jake Cronenworth to first baseman Luis Arraez. Daylen Lile scores. Jacob Young to 2nd.",
+"event":"Groundout",
+"date":"2025-07-19",
+"season":2025,
+"gameType":"R",
+"venue":"Nationals Park",
+"away":{
+"abbr":"SD",
+"name":"San Diego Padres"
+},
+"home":{
+"abbr":"WSH",
+"name":"Washington Nationals"
+},
+"before":{
+"inning":5,
+"half":"bottom",
+"outs":1,
+"bases":"1_3",
+"score":{
+"away":2,
+"home":2
+},
+"batting":"home"
+},
+"batter":"CJ Abrams",
+"pitcher":"Yu Darvish",
+"runners":{
+"1B":"Jacob Young",
+"3B":"Daylen Lile"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":4,
+"ev":77.4,
+"distance":3.0,
+"spray":"pull"
+},
+"ifAlign":"Infield shade",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/yu-darvish-in-play-run-s-to-cj-abrams-8vdrfn",
+"pageUrl":"https://www.mlb.com/video/yu-darvish-in-play-run-s-to-cj-abrams-8vdrfn",
+"title":"Daylen Lile scores on CJ Abrams' groundout",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/iwvdhj9thabcdv8hoyfc.jpg",
+"playRepository":"../play-repository/#/play/mlb-777091-39"
+},
+{
+"id":"mlb-777089-6",
+"families":[
+{
+"family":"infield",
+"outcome":"out_home",
+"outcomeLabel":"runner thrown out at home",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Angels catch Turner, Schwarber in a rundown",
+"description":"Bryce Harper hit into a fielder's choice double play, second baseman Luis Rengifo to catcher Travis d'Arnaud to shortstop Zach Neto to catcher Travis d'Arnaud to third baseman Yo\u00e1n Moncada. Trea Turner out at home. Kyle Schwarber out at 3rd. Bryce Harper to 2nd.",
+"event":"Double Play",
+"date":"2025-07-19",
+"season":2025,
+"gameType":"R",
+"venue":"Citizens Bank Park",
+"away":{
+"abbr":"LAA",
+"name":"Los Angeles Angels"
+},
+"home":{
+"abbr":"PHI",
+"name":"Philadelphia Phillies"
+},
+"before":{
+"inning":1,
+"half":"bottom",
+"outs":0,
+"bases":"_23",
+"score":{
+"away":0,
+"home":0
+},
+"batting":"home"
+},
+"batter":"Bryce Harper",
+"pitcher":"Yusei Kikuchi",
+"runners":{
+"2B":"Kyle Schwarber",
+"3B":"Trea Turner"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":4,
+"ev":63.5,
+"distance":8.0,
+"spray":"pull"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/yusei-kikuchi-in-play-out-s-to-bryce-harper",
+"pageUrl":"https://www.mlb.com/video/yusei-kikuchi-in-play-out-s-to-bryce-harper",
+"title":"Angels catch Turner, Schwarber in a rundown",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/ai2m5ajuezwesydjs7gv.jpg",
+"playRepository":"../play-repository/#/play/mlb-777089-6"
+},
+{
+"id":"mlb-777095-63",
+"families":[
+{
+"family":"infield",
+"outcome":"scored_on_out",
+"outcomeLabel":"runner scores on the ground-ball out",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Jonathan Aranda gives the Rays the lead",
+"description":"Jonathan Aranda reaches on a fielder's choice, fielded by first baseman Ryan O'Hearn. Chandler Simpson scores. Jos\u00e9 Caballero scores. Yandy D\u00edaz to 3rd. Throwing error by first baseman Ryan O'Hearn.",
+"event":"Fielders Choice",
+"date":"2025-07-19",
+"season":2025,
+"gameType":"R",
+"venue":"George M. Steinbrenner Field",
+"away":{
+"abbr":"BAL",
+"name":"Baltimore Orioles"
+},
+"home":{
+"abbr":"TB",
+"name":"Tampa Bay Rays"
+},
+"before":{
+"inning":8,
+"half":"bottom",
+"outs":1,
+"bases":"123",
+"score":{
+"away":2,
+"home":2
+},
+"batting":"home"
+},
+"batter":"Jonathan Aranda",
+"pitcher":"Gregory Soto",
+"runners":{
+"1B":"Yandy D\u00edaz",
+"2B":"Jos\u00e9 Caballero",
+"3B":"Chandler Simpson"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":3,
+"ev":69.9,
+"distance":14.0,
+"spray":"pull"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/gregory-soto-in-play-run-s-to-jonathan-aranda",
+"pageUrl":"https://www.mlb.com/video/gregory-soto-in-play-run-s-to-jonathan-aranda",
+"title":"Jonathan Aranda gives the Rays the lead",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/e6mydojqvolfemktngme.jpg",
+"playRepository":"../play-repository/#/play/mlb-777095-63"
+},
+{
+"id":"mlb-777092-47",
+"families":[
+{
+"family":"infield",
+"outcome":"scored_on_out",
+"outcomeLabel":"runner scores on the ground-ball out",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Tyler Stephenson's RBI forceout",
+"description":"Tyler Stephenson grounds into a force out, third baseman Ronny Mauricio to second baseman Brett Baty. Austin Hays scores. Spencer Steer out at 2nd. Tyler Stephenson to 1st.",
+"event":"Forceout",
+"date":"2025-07-19",
+"season":2025,
+"gameType":"R",
+"venue":"Citi Field",
+"away":{
+"abbr":"CIN",
+"name":"Cincinnati Reds"
+},
+"home":{
+"abbr":"NYM",
+"name":"New York Mets"
+},
+"before":{
+"inning":6,
+"half":"top",
+"outs":1,
+"bases":"1_3",
+"score":{
+"away":3,
+"home":2
+},
+"batting":"away"
+},
+"batter":"Tyler Stephenson",
+"pitcher":"Reed Garrett",
+"runners":{
+"1B":"Spencer Steer",
+"3B":"Austin Hays"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":5,
+"ev":73.2,
+"distance":19.0,
+"spray":"pull"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/reed-garrett-in-play-out-s-to-tyler-stephenson",
+"pageUrl":"https://www.mlb.com/video/reed-garrett-in-play-out-s-to-tyler-stephenson",
+"title":"Tyler Stephenson's RBI forceout",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/ud2jxn7f7rupygg18vql.jpg",
+"playRepository":"../play-repository/#/play/mlb-777092-47"
+},
+{
+"id":"mlb-813059-57",
+"families":[
+{
+"family":"infield",
+"outcome":"out_home",
+"outcomeLabel":"runner thrown out at home",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Nico Hoerner is thrown out at home after review",
+"description":"Cubs challenged (tag play), call on the field was upheld: Kyle Tucker reaches on a fielder's choice out, first baseman Luis Arraez to catcher Freddy Fermin. Nico Hoerner out at home.",
+"event":"Fielders Choice Out",
+"date":"2025-10-02",
+"season":2025,
+"gameType":"F",
+"venue":"Wrigley Field",
+"away":{
+"abbr":"SD",
+"name":"San Diego Padres"
+},
+"home":{
+"abbr":"CHC",
+"name":"Chicago Cubs"
+},
+"before":{
+"inning":7,
+"half":"bottom",
+"outs":1,
+"bases":"__3",
+"score":{
+"away":0,
+"home":3
+},
+"batting":"home"
+},
+"batter":"Kyle Tucker",
+"pitcher":"Adrian Morejon",
+"runners":{
+"3B":"Nico Hoerner"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":3,
+"ev":60.7,
+"distance":11.0,
+"spray":"pull"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/adrian-morejon-in-play-out-s-to-kyle-tucker",
+"pageUrl":"https://www.mlb.com/video/adrian-morejon-in-play-out-s-to-kyle-tucker",
+"title":"Nico Hoerner is thrown out at home after review",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/gjqflr6xeqiisjxaodsw.jpg",
+"playRepository":"../play-repository/#/play/mlb-813059-57"
+},
+{
+"id":"mlb-813024-86",
+"families":[
+{
+"family":"infield",
+"outcome":"out_home",
+"outcomeLabel":"runner thrown out at home",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Gim\u00e9nez throws out Betts at home in the 10th inning",
+"description":"Andy Pages grounds into a force out, shortstop Andr\u00e9s Gim\u00e9nez to catcher Alejandro Kirk. Mookie Betts out at home. Max Muncy to 3rd. Teoscar Hern\u00e1ndez to 2nd. Andy Pages to 1st.",
+"event":"Forceout",
+"date":"2025-11-01",
+"season":2025,
+"gameType":"W",
+"venue":"Rogers Centre",
+"away":{
+"abbr":"LAD",
+"name":"Los Angeles Dodgers"
+},
+"home":{
+"abbr":"TOR",
+"name":"Toronto Blue Jays"
+},
+"before":{
+"inning":10,
+"half":"top",
+"outs":1,
+"bases":"123",
+"score":{
+"away":4,
+"home":4
+},
+"batting":"away"
+},
+"batter":"Andy Pages",
+"pitcher":"Seranthony Dom\u00ednguez",
+"runners":{
+"1B":"Teoscar Hern\u00e1ndez",
+"2B":"Max Muncy",
+"3B":"Mookie Betts"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":6,
+"ev":67.0,
+"distance":14.0,
+"spray":"center"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/seranthony-dominguez-in-play-out-s-to-andy-pages-nucgmq",
+"pageUrl":"https://www.mlb.com/video/seranthony-dominguez-in-play-out-s-to-andy-pages-nucgmq",
+"title":"Gim\u00e9nez throws out Betts at home in the 10th inning",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/zki52vc4no0ipdrpkd22.jpg",
+"playRepository":"../play-repository/#/play/mlb-813024-86"
+},
+{
+"id":"mlb-776333-43",
+"families":[
+{
+"family":"tag",
+"outcome":"held",
+"outcomeLabel":"runner held at third",
+"why":"Fly ball caught by an outfielder with a runner on third"
+}
+],
+"title":"Jo Adell nabs Josh Naylor to complete double play",
+"description":"Mitch Garver flies into a double play, right fielder Jo Adell to first baseman Logan Davidson. Josh Naylor out at 1st.",
+"event":"Double Play",
+"date":"2025-09-13",
+"season":2025,
+"gameType":"R",
+"venue":"T-Mobile Park",
+"away":{
+"abbr":"LAA",
+"name":"Los Angeles Angels"
+},
+"home":{
+"abbr":"SEA",
+"name":"Seattle Mariners"
+},
+"before":{
+"inning":5,
+"half":"bottom",
+"outs":1,
+"bases":"1_3",
+"score":{
+"away":2,
+"home":5
+},
+"batting":"home"
+},
+"batter":"Mitch Garver",
+"pitcher":"Chase Silseth",
+"runners":{
+"1B":"Josh Naylor",
+"3B":"Jorge Polanco"
+},
+"batted":{
+"trajectory":"fly_ball",
+"location":9,
+"ev":88.5,
+"distance":177.0,
+"spray":"opposite"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/chase-silseth-in-play-out-s-to-mitch-garver",
+"pageUrl":"https://www.mlb.com/video/chase-silseth-in-play-out-s-to-mitch-garver",
+"title":"Jo Adell nabs Josh Naylor to complete double play",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/brn12sdfcy5cmp9f97ys.jpg",
+"playRepository":"../play-repository/#/play/mlb-776333-43"
+},
+{
+"id":"mlb-747113-3",
+"families":[
+{
+"family":"tag",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Fly ball caught by an outfielder with a runner on third"
+}
+],
+"title":"Josh Lowe's sac fly",
+"description":"Josh Lowe out on a sacrifice fly to center fielder Jarred Kelenic. Brandon Lowe scores. Isaac Paredes to 3rd.",
+"event":"Sac Fly",
+"date":"2024-06-15",
+"season":2024,
+"gameType":"R",
+"venue":"Truist Park",
+"away":{
+"abbr":"TB",
+"name":"Tampa Bay Rays"
+},
+"home":{
+"abbr":"ATL",
+"name":"Atlanta Braves"
+},
+"before":{
+"inning":1,
+"half":"top",
+"outs":1,
+"bases":"_23",
+"score":{
+"away":0,
+"home":0
+},
+"batting":"away"
+},
+"batter":"Josh Lowe",
+"pitcher":"Charlie Morton",
+"runners":{
+"2B":"Isaac Paredes",
+"3B":"Brandon Lowe"
+},
+"batted":{
+"trajectory":"fly_ball",
+"location":8,
+"ev":97.9,
+"distance":377.0,
+"spray":"opposite"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/charlie-morton-in-play-run-s-to-josh-lowe",
+"pageUrl":"https://www.mlb.com/video/charlie-morton-in-play-run-s-to-josh-lowe",
+"title":"Josh Lowe's sac fly\u00a0",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/ugqgr13rxgbirpa9xrqq.jpg",
+"playRepository":"../play-repository/#/play/mlb-747113-3"
+},
+{
+"id":"mlb-746865-23",
+"families":[
+{
+"family":"tag",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Fly ball caught by an outfielder with a runner on third"
+}
+],
+"title":"Nolan Arenado's sacrifice fly",
+"description":"Nolan Arenado out on a sacrifice fly to center fielder Pete Crow-Armstrong. Alec Burleson scores.",
+"event":"Sac Fly",
+"date":"2024-06-15",
+"season":2024,
+"gameType":"R",
+"venue":"Wrigley Field",
+"away":{
+"abbr":"STL",
+"name":"St. Louis Cardinals"
+},
+"home":{
+"abbr":"CHC",
+"name":"Chicago Cubs"
+},
+"before":{
+"inning":4,
+"half":"top",
+"outs":1,
+"bases":"__3",
+"score":{
+"away":0,
+"home":0
+},
+"batting":"away"
+},
+"batter":"Nolan Arenado",
+"pitcher":"Shota Imanaga",
+"runners":{
+"3B":"Alec Burleson"
+},
+"batted":{
+"trajectory":"fly_ball",
+"location":8,
+"ev":92.2,
+"distance":298.0,
+"spray":"center"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/shota-imanaga-in-play-run-s-to-nolan-arenado",
+"pageUrl":"https://www.mlb.com/video/shota-imanaga-in-play-run-s-to-nolan-arenado",
+"title":"Nolan Arenado's sacrifice fly",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/ztupfo2fy7ex43prrlre.jpg",
+"playRepository":"../play-repository/#/play/mlb-746865-23"
+},
+{
+"id":"mlb-746761-65",
+"families":[
+{
+"family":"send",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Single to the outfield with a runner on second"
+}
+],
+"title":"Miguel Amaya's go-ahead two-run single",
+"description":"Miguel Amaya singles on a line drive to left fielder Andrew Benintendi. Nico Hoerner scores. Dansby Swanson scores.",
+"event":"Single",
+"date":"2024-08-10",
+"season":2024,
+"gameType":"R",
+"venue":"Guaranteed Rate Field",
+"away":{
+"abbr":"CHC",
+"name":"Chicago Cubs"
+},
+"home":{
+"abbr":"CWS",
+"name":"Chicago White Sox"
+},
+"before":{
+"inning":8,
+"half":"top",
+"outs":1,
+"bases":"_23",
+"score":{
+"away":1,
+"home":1
+},
+"batting":"away"
+},
+"batter":"Miguel Amaya",
+"pitcher":"Chad Kuhl",
+"runners":{
+"2B":"Dansby Swanson",
+"3B":"Nico Hoerner"
+},
+"batted":{
+"trajectory":"line_drive",
+"location":7,
+"ev":76.9,
+"distance":193.0,
+"spray":"pull"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/miguel-amaya-s-go-ahead-two-run-single",
+"pageUrl":"https://www.mlb.com/video/miguel-amaya-s-go-ahead-two-run-single",
+"title":"Miguel Amaya's go-ahead two-run single",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/sjx6qdshhehlf1iemveg.jpg",
+"playRepository":"../play-repository/#/play/mlb-746761-65"
+},
+{
+"id":"mlb-746508-63",
+"families":[
+{
+"family":"tag",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Fly ball caught by an outfielder with a runner on third"
+}
+],
+"title":"Brenton Doyle's second sac fly",
+"description":"Brenton Doyle out on a sacrifice fly to center fielder Pete Crow-Armstrong. Charlie Blackmon scores.",
+"event":"Sac Fly",
+"date":"2024-09-14",
+"season":2024,
+"gameType":"R",
+"venue":"Coors Field",
+"away":{
+"abbr":"CHC",
+"name":"Chicago Cubs"
+},
+"home":{
+"abbr":"COL",
+"name":"Colorado Rockies"
+},
+"before":{
+"inning":8,
+"half":"bottom",
+"outs":1,
+"bases":"__3",
+"score":{
+"away":4,
+"home":2
+},
+"batting":"home"
+},
+"batter":"Brenton Doyle",
+"pitcher":"Nate Pearson",
+"runners":{
+"3B":"Charlie Blackmon"
+},
+"batted":{
+"trajectory":"fly_ball",
+"location":8,
+"ev":95.4,
+"distance":373.0,
+"spray":"center"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/brenton-doyle-out-on-a-sacrifice-fly-to-center-fielder-pete-crow-armstron",
+"pageUrl":"https://www.mlb.com/video/brenton-doyle-out-on-a-sacrifice-fly-to-center-fielder-pete-crow-armstron",
+"title":"Brenton Doyle's second sac fly",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/uqom28wdzlqrepwziwsf.jpg",
+"playRepository":"../play-repository/#/play/mlb-746508-63"
+},
+{
+"id":"mlb-745209-15",
+"families":[
+{
+"family":"tag",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Fly ball caught by an outfielder with a runner on third"
+}
+],
+"title":"Josh Rojas opens scoring with a sacrifice fly",
+"description":"Josh Rojas out on a sacrifice fly to left fielder Wyatt Langford. Justin Turner scores. Jorge Polanco to 3rd.",
+"event":"Sac Fly",
+"date":"2024-09-14",
+"season":2024,
+"gameType":"R",
+"venue":"T-Mobile Park",
+"away":{
+"abbr":"TEX",
+"name":"Texas Rangers"
+},
+"home":{
+"abbr":"SEA",
+"name":"Seattle Mariners"
+},
+"before":{
+"inning":2,
+"half":"bottom",
+"outs":1,
+"bases":"123",
+"score":{
+"away":0,
+"home":0
+},
+"batting":"home"
+},
+"batter":"Josh Rojas",
+"pitcher":"Max Scherzer",
+"runners":{
+"1B":"J.P. Crawford",
+"2B":"Jorge Polanco",
+"3B":"Justin Turner"
+},
+"batted":{
+"trajectory":"fly_ball",
+"location":7,
+"ev":98.5,
+"distance":371.0,
+"spray":"opposite"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/max-scherzer-in-play-run-s-to-josh-rojas",
+"pageUrl":"https://www.mlb.com/video/max-scherzer-in-play-run-s-to-josh-rojas",
+"title":"Josh Rojas opens scoring with a sacrifice fly",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/i0dnfxzc5i8mqkxwpvsg.jpg",
+"playRepository":"../play-repository/#/play/mlb-745209-15"
+},
+{
+"id":"mlb-775309-1",
+"families":[
+{
+"family":"send1",
+"outcome":"out_home",
+"outcomeLabel":"runner thrown out at home",
+"why":"Double to the outfield with a runner on first"
+}
+],
+"title":"Guardians nab Gleyber Torres at home",
+"description":"Juan Soto doubles (2) on a sharp line drive to right fielder Jhonkensy Noel. Gleyber Torres out at home on the throw, right fielder Jhonkensy Noel to second baseman Andr\u00e9s Gim\u00e9nez to catcher Bo Naylor.",
+"event":"Double",
+"date":"2024-10-19",
+"season":2024,
+"gameType":"L",
+"venue":"Progressive Field",
+"away":{
+"abbr":"NYY",
+"name":"New York Yankees"
+},
+"home":{
+"abbr":"CLE",
+"name":"Cleveland Guardians"
+},
+"before":{
+"inning":1,
+"half":"top",
+"outs":0,
+"bases":"1__",
+"score":{
+"away":0,
+"home":0
+},
+"batting":"away"
+},
+"batter":"Juan Soto",
+"pitcher":"Tanner Bibee",
+"runners":{
+"1B":"Gleyber Torres"
+},
+"batted":{
+"trajectory":"line_drive",
+"location":9,
+"ev":114.3,
+"distance":220.0,
+"spray":"pull"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/tanner-bibee-in-play-out-s-to-juan-soto-lbaaqy",
+"pageUrl":"https://www.mlb.com/video/tanner-bibee-in-play-out-s-to-juan-soto-lbaaqy",
+"title":"Guardians nab Gleyber Torres at home",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/e6tvlxs8moitf9vtzkv6.jpg",
+"playRepository":"../play-repository/#/play/mlb-775309-1"
+},
+{
+"id":"mlb-778262-5",
+"families":[
+{
+"family":"send",
+"outcome":"out_home",
+"outcomeLabel":"runner thrown out at home",
+"why":"Single to the outfield with a runner on second"
+}
+],
+"title":"Tyler O'Neill throws out Austin Hays at home",
+"description":"Santiago Espinal singles on a ground ball to right fielder Tyler O'Neill. Austin Hays out at home on the throw, right fielder Tyler O'Neill to catcher Adley Rutschman. Gavin Lux to 2nd.",
+"event":"Single",
+"date":"2025-04-19",
+"season":2025,
+"gameType":"R",
+"venue":"Oriole Park at Camden Yards",
+"away":{
+"abbr":"CIN",
+"name":"Cincinnati Reds"
+},
+"home":{
+"abbr":"BAL",
+"name":"Baltimore Orioles"
+},
+"before":{
+"inning":1,
+"half":"top",
+"outs":2,
+"bases":"12_",
+"score":{
+"away":1,
+"home":0
+},
+"batting":"away"
+},
+"batter":"Santiago Espinal",
+"pitcher":"Brandon Young",
+"runners":{
+"1B":"Gavin Lux",
+"2B":"Austin Hays"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":9,
+"ev":98.2,
+"distance":20.0,
+"spray":"opposite"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/brandon-young-in-play-out-s-to-santiago-espinal",
+"pageUrl":"https://www.mlb.com/video/brandon-young-in-play-out-s-to-santiago-espinal",
+"title":"Tyler O'Neill throws out Austin Hays at home",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/zgsusnbd7cax2wuvqjm6.jpg",
+"playRepository":"../play-repository/#/play/mlb-778262-5"
+},
+{
+"id":"mlb-778243-17",
+"families":[
+{
+"family":"send",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Single to the outfield with a runner on second"
+}
+],
+"title":"Willy Adames' RBI single",
+"description":"Willy Adames singles on a line drive to right fielder Jorge Soler. Mike Yastrzemski scores. Willy Adames out at 2nd on the throw, right fielder Jorge Soler to first baseman Nolan Schanuel to shortstop Zach Neto to second baseman Kyren Paris to shortstop Zach Neto.",
+"event":"Single",
+"date":"2025-04-19",
+"season":2025,
+"gameType":"R",
+"venue":"Angel Stadium",
+"away":{
+"abbr":"SF",
+"name":"San Francisco Giants"
+},
+"home":{
+"abbr":"LAA",
+"name":"Los Angeles Angels"
+},
+"before":{
+"inning":3,
+"half":"top",
+"outs":1,
+"bases":"_2_",
+"score":{
+"away":2,
+"home":0
+},
+"batting":"away"
+},
+"batter":"Willy Adames",
+"pitcher":"Kyle Hendricks",
+"runners":{
+"2B":"Mike Yastrzemski"
+},
+"batted":{
+"trajectory":"line_drive",
+"location":9,
+"ev":77.2,
+"distance":185.0,
+"spray":"opposite"
+},
+"ifAlign":"Infield shade",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/kyle-hendricks-in-play-run-s-to-willy-adames",
+"pageUrl":"https://www.mlb.com/video/kyle-hendricks-in-play-run-s-to-willy-adames",
+"title":"Willy Adames' RBI single",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/funqy02sfqauktyub7is.jpg",
+"playRepository":"../play-repository/#/play/mlb-778243-17"
+},
+{
+"id":"mlb-777888-71",
+"families":[
+{
+"family":"tag",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Fly ball caught by an outfielder with a runner on third"
+}
+],
+"title":"Francisco Lindor's go-ahead sac fly",
+"description":"Francisco Lindor out on a sacrifice fly to center fielder Cody Bellinger. Luisangel Acu\u00f1a scores.",
+"event":"Sac Fly",
+"date":"2025-05-17",
+"season":2025,
+"gameType":"R",
+"venue":"Yankee Stadium",
+"away":{
+"abbr":"NYM",
+"name":"New York Mets"
+},
+"home":{
+"abbr":"NYY",
+"name":"New York Yankees"
+},
+"before":{
+"inning":9,
+"half":"top",
+"outs":1,
+"bases":"123",
+"score":{
+"away":2,
+"home":2
+},
+"batting":"away"
+},
+"batter":"Francisco Lindor",
+"pitcher":"Fernando Cruz",
+"runners":{
+"1B":"Tyrone Taylor",
+"2B":"Brett Baty",
+"3B":"Luisangel Acu\u00f1a"
+},
+"batted":{
+"trajectory":"fly_ball",
+"location":8,
+"ev":94.8,
+"distance":293.0,
+"spray":"opposite"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/fernando-cruz-in-play-run-s-to-francisco-lindor",
+"pageUrl":"https://www.mlb.com/video/fernando-cruz-in-play-run-s-to-francisco-lindor",
+"title":"Francisco Lindor's go-ahead sac fly",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/vuqonthwvmabjkwzuadv.jpg",
+"playRepository":"../play-repository/#/play/mlb-777888-71"
+},
+{
+"id":"mlb-777889-67",
+"families":[
+{
+"family":"send",
+"outcome":"out_home",
+"outcomeLabel":"runner thrown out at home",
+"why":"Single to the outfield with a runner on second"
+}
+],
+"title":"Chandler Simpson exits the game with hand injury",
+"description":"Brandon Lowe singles on a line drive to center fielder Derek Hill. Chandler Simpson out at home on the throw, center fielder Derek Hill to catcher Nick Fortes.",
+"event":"Single",
+"date":"2025-05-17",
+"season":2025,
+"gameType":"R",
+"venue":"loanDepot park",
+"away":{
+"abbr":"TB",
+"name":"Tampa Bay Rays"
+},
+"home":{
+"abbr":"MIA",
+"name":"Miami Marlins"
+},
+"before":{
+"inning":9,
+"half":"top",
+"outs":1,
+"bases":"_2_",
+"score":{
+"away":4,
+"home":0
+},
+"batting":"away"
+},
+"batter":"Brandon Lowe",
+"pitcher":"Cade Gibson",
+"runners":{
+"2B":"Chandler Simpson"
+},
+"batted":{
+"trajectory":"line_drive",
+"location":8,
+"ev":78.4,
+"distance":219.0,
+"spray":"center"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/cade-gibson-in-play-out-s-to-brandon-lowe",
+"pageUrl":"https://www.mlb.com/video/cade-gibson-in-play-out-s-to-brandon-lowe",
+"title":"Chandler Simpson exits the game with hand injury",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/nsacbveftiyfdal20m4k.jpg",
+"playRepository":"../play-repository/#/play/mlb-777889-67"
+},
+{
+"id":"mlb-777883-21",
+"families":[
+{
+"family":"send",
+"outcome":"out_home",
+"outcomeLabel":"runner thrown out at home",
+"why":"Single to the outfield with a runner on second"
+}
+],
+"title":"Sal Frelick nabs Brooks Lee",
+"description":"Kody Clemens singles on a line drive to right fielder Sal Frelick. Brooks Lee out at home on the throw, right fielder Sal Frelick to catcher William Contreras. Ty France to 2nd.",
+"event":"Single",
+"date":"2025-05-17",
+"season":2025,
+"gameType":"R",
+"venue":"American Family Field",
+"away":{
+"abbr":"MIN",
+"name":"Minnesota Twins"
+},
+"home":{
+"abbr":"MIL",
+"name":"Milwaukee Brewers"
+},
+"before":{
+"inning":3,
+"half":"top",
+"outs":0,
+"bases":"12_",
+"score":{
+"away":3,
+"home":0
+},
+"batting":"away"
+},
+"batter":"Kody Clemens",
+"pitcher":"Tobias Myers",
+"runners":{
+"1B":"Ty France",
+"2B":"Brooks Lee"
+},
+"batted":{
+"trajectory":"line_drive",
+"location":9,
+"ev":106.0,
+"distance":81.0,
+"spray":"pull"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/tobias-myers-in-play-out-s-to-kody-clemens",
+"pageUrl":"https://www.mlb.com/video/tobias-myers-in-play-out-s-to-kody-clemens",
+"title":"Sal Frelick nabs Brooks Lee",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/e1ecvxsxsielfirnwrt6.jpg",
+"playRepository":"../play-repository/#/play/mlb-777883-21"
+},
+{
+"id":"mlb-777517-19",
+"families":[
+{
+"family":"send1",
+"outcome":"out_home",
+"outcomeLabel":"runner thrown out at home",
+"why":"Double to the outfield with a runner on first"
+}
+],
+"title":"The Reds execute perfect relay to nab Javier B\u00e1ez",
+"description":"Trey Sweeney doubles (4) on a sharp line drive to right fielder Jake Fraley. Javier B\u00e1ez out at home on the throw, right fielder Jake Fraley to shortstop Elly De La Cruz to catcher Jose Trevino.",
+"event":"Double",
+"date":"2025-06-14",
+"season":2025,
+"gameType":"R",
+"venue":"Comerica Park",
+"away":{
+"abbr":"CIN",
+"name":"Cincinnati Reds"
+},
+"home":{
+"abbr":"DET",
+"name":"Detroit Tigers"
+},
+"before":{
+"inning":3,
+"half":"bottom",
+"outs":0,
+"bases":"1__",
+"score":{
+"away":0,
+"home":0
+},
+"batting":"home"
+},
+"batter":"Trey Sweeney",
+"pitcher":"Brady Singer",
+"runners":{
+"1B":"Javier B\u00e1ez"
+},
+"batted":{
+"trajectory":"line_drive",
+"location":9,
+"ev":106.4,
+"distance":379.0,
+"spray":"pull"
+},
+"ifAlign":"Infield shade",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/brady-singer-in-play-out-s-to-trey-sweeney",
+"pageUrl":"https://www.mlb.com/video/brady-singer-in-play-out-s-to-trey-sweeney",
+"title":"The Reds execute perfect relay to nab Javier B\u00e1ez",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/yrg0rxaqtsui2po6s1c2.jpg",
+"playRepository":"../play-repository/#/play/mlb-777517-19"
+},
+{
+"id":"mlb-776726-55",
+"families":[
+{
+"family":"send",
+"outcome":"out_home",
+"outcomeLabel":"runner thrown out at home",
+"why":"Single to the outfield with a runner on second"
+}
+],
+"title":"Randy Arozarena nabs Francisco Lindor at home",
+"description":"Brandon Nimmo singles on a line drive to left fielder Randy Arozarena. Francisco Lindor out at home on the throw, left fielder Randy Arozarena to catcher Cal Raleigh. Brandon Nimmo to 2nd.",
+"event":"Single",
+"date":"2025-08-16",
+"season":2025,
+"gameType":"R",
+"venue":"Citi Field",
+"away":{
+"abbr":"SEA",
+"name":"Seattle Mariners"
+},
+"home":{
+"abbr":"NYM",
+"name":"New York Mets"
+},
+"before":{
+"inning":7,
+"half":"bottom",
+"outs":1,
+"bases":"_2_",
+"score":{
+"away":0,
+"home":2
+},
+"batting":"home"
+},
+"batter":"Brandon Nimmo",
+"pitcher":"Caleb Ferguson",
+"runners":{
+"2B":"Francisco Lindor"
+},
+"batted":{
+"trajectory":"line_drive",
+"location":7,
+"ev":96.0,
+"distance":164.0,
+"spray":"opposite"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/caleb-ferguson-in-play-out-s-to-brandon-nimmo-kgbbgx",
+"pageUrl":"https://www.mlb.com/video/caleb-ferguson-in-play-out-s-to-brandon-nimmo-kgbbgx",
+"title":"Randy Arozarena nabs Francisco Lindor at home",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/lmt2act8gusifnszt5gl.jpg",
+"playRepository":"../play-repository/#/play/mlb-776726-55"
+},
+{
+"id":"mlb-776718-15",
+"families":[
+{
+"family":"send",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Single to the outfield with a runner on second"
+}
+],
+"title":"Zach Neto's RBI single",
+"description":"Zach Neto singles on a ground ball to left fielder Tyler Soderstrom. Luis Rengifo scores. Zach Neto out at 2nd on the throw, left fielder Tyler Soderstrom to second baseman Max Schuemann.",
+"event":"Single",
+"date":"2025-08-16",
+"season":2025,
+"gameType":"R",
+"venue":"Sutter Health Park",
+"away":{
+"abbr":"LAA",
+"name":"Los Angeles Angels"
+},
+"home":{
+"abbr":"ATH",
+"name":"Athletics"
+},
+"before":{
+"inning":2,
+"half":"top",
+"outs":2,
+"bases":"_2_",
+"score":{
+"away":0,
+"home":2
+},
+"batting":"away"
+},
+"batter":"Zach Neto",
+"pitcher":"Luis Morales",
+"runners":{
+"2B":"Luis Rengifo"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":7,
+"ev":94.0,
+"distance":50.0,
+"spray":"pull"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/luis-morales-in-play-run-s-to-zach-neto",
+"pageUrl":"https://www.mlb.com/video/luis-morales-in-play-run-s-to-zach-neto",
+"title":"Zach Neto's RBI single",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/bh56k75rcrx1vgsdycly.jpg",
+"playRepository":"../play-repository/#/play/mlb-776718-15"
+},
+{
+"id":"mlb-776715-70",
+"families":[
+{
+"family":"send",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Single to the outfield with a runner on second"
+}
+],
+"title":"Kyle Farmer's clutch single",
+"description":"Kyle Farmer singles on a line drive to left fielder Lourdes Gurriel Jr. Kyle Karros scores. Brenton Doyle scores. Fielding error by left fielder Lourdes Gurriel Jr.",
+"event":"Single",
+"date":"2025-08-16",
+"season":2025,
+"gameType":"R",
+"venue":"Coors Field",
+"away":{
+"abbr":"AZ",
+"name":"Arizona Diamondbacks"
+},
+"home":{
+"abbr":"COL",
+"name":"Colorado Rockies"
+},
+"before":{
+"inning":8,
+"half":"bottom",
+"outs":1,
+"bases":"_23",
+"score":{
+"away":7,
+"home":6
+},
+"batting":"home"
+},
+"batter":"Kyle Farmer",
+"pitcher":"Andrew Saalfrank",
+"runners":{
+"2B":"Brenton Doyle",
+"3B":"Kyle Karros"
+},
+"batted":{
+"trajectory":"line_drive",
+"location":7,
+"ev":87.6,
+"distance":264.0,
+"spray":"pull"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/kyle-farmer-singles-on-a-line-drive-to-left-fielder-lourdes-gurriel-jr-ky",
+"pageUrl":"https://www.mlb.com/video/kyle-farmer-singles-on-a-line-drive-to-left-fielder-lourdes-gurriel-jr-ky",
+"title":"Kyle Farmer's clutch single",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/l4zjwuvs7dbqmhl8wova.jpg",
+"playRepository":"../play-repository/#/play/mlb-776715-70"
+},
+{
+"id":"mlb-813043-41",
+"families":[
+{
+"family":"send",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Single to the outfield with a runner on second"
+}
+],
+"title":"Ernie Clement's RBI single",
+"description":"Ernie Clement singles on a line drive to right fielder Victor Robles. Anthony Santander scores. Alejandro Kirk out at 3rd on the throw, right fielder Victor Robles to first baseman Josh Naylor to third baseman Eugenio Su\u00e1rez.",
+"event":"Single",
+"date":"2025-10-15",
+"season":2025,
+"gameType":"L",
+"venue":"T-Mobile Park",
+"away":{
+"abbr":"TOR",
+"name":"Toronto Blue Jays"
+},
+"home":{
+"abbr":"SEA",
+"name":"Seattle Mariners"
+},
+"before":{
+"inning":5,
+"half":"top",
+"outs":2,
+"bases":"12_",
+"score":{
+"away":7,
+"home":2
+},
+"batting":"away"
+},
+"batter":"Ernie Clement",
+"pitcher":"Carlos Vargas",
+"runners":{
+"1B":"Alejandro Kirk",
+"2B":"Anthony Santander"
+},
+"batted":{
+"trajectory":"line_drive",
+"location":9,
+"ev":97.9,
+"distance":211.0,
+"spray":"opposite"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/carlos-vargas-in-play-run-s-to-ernie-clement-101525",
+"pageUrl":"https://www.mlb.com/video/carlos-vargas-in-play-run-s-to-ernie-clement-101525",
+"title":"Ernie Clement's RBI single",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/itmusbmqlx5uliyzaoqh.jpg",
+"playRepository":"../play-repository/#/play/mlb-813043-41"
+},
+{
+"id":"mlb-746797-60",
+"families":[
+{
+"family":"tag",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Fly ball caught by an outfielder with a runner on third"
+}
+],
+"title":"Andrew Benintendi's sacrifice fly",
+"description":"Andrew Benintendi out on a sacrifice fly to left fielder David Fry. Andrew Vaughn scores.",
+"event":"Sac Fly",
+"date":"2024-05-11",
+"season":2024,
+"gameType":"R",
+"venue":"Guaranteed Rate Field",
+"away":{
+"abbr":"CLE",
+"name":"Cleveland Guardians"
+},
+"home":{
+"abbr":"CWS",
+"name":"Chicago White Sox"
+},
+"before":{
+"inning":8,
+"half":"bottom",
+"outs":0,
+"bases":"_23",
+"score":{
+"away":1,
+"home":2
+},
+"batting":"home"
+},
+"batter":"Andrew Benintendi",
+"pitcher":"Scott Barlow",
+"runners":{
+"2B":"Eloy Jim\u00e9nez",
+"3B":"Andrew Vaughn"
+},
+"batted":{
+"trajectory":"fly_ball",
+"location":7,
+"ev":87.2,
+"distance":291.0,
+"spray":"opposite"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/andrew-benintendi-out-on-a-sacrifice-fly-to-left-fielder-david-fry-andrew",
+"pageUrl":"https://www.mlb.com/video/andrew-benintendi-out-on-a-sacrifice-fly-to-left-fielder-david-fry-andrew",
+"title":"Andrew Benintendi's sacrifice fly",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/z1mx2tnjameqem2kygxj.jpg",
+"playRepository":"../play-repository/#/play/mlb-746797-60"
+},
+{
+"id":"mlb-746946-70",
+"families":[
+{
+"family":"infield",
+"outcome":"scored_on_out",
+"outcomeLabel":"runner scores on the ground-ball out",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"DJ LeMahieu's RBI forceout",
+"description":"Umpire reviewed (force play), call on the field was upheld: DJ LeMahieu grounds into a force out, shortstop Ceddanne Rafaela to second baseman Enmanuel Valdez. Anthony Rizzo scores. Gleyber Torres to 3rd. Jahmai Jones out at 2nd. DJ LeMahieu to 1st.",
+"event":"Forceout",
+"date":"2024-06-15",
+"season":2024,
+"gameType":"R",
+"venue":"Fenway Park",
+"away":{
+"abbr":"NYY",
+"name":"New York Yankees"
+},
+"home":{
+"abbr":"BOS",
+"name":"Boston Red Sox"
+},
+"before":{
+"inning":8,
+"half":"top",
+"outs":1,
+"bases":"123",
+"score":{
+"away":3,
+"home":6
+},
+"batting":"away"
+},
+"batter":"DJ LeMahieu",
+"pitcher":"Greg Weissert",
+"runners":{
+"1B":"Austin Wells",
+"2B":"Gleyber Torres",
+"3B":"Anthony Rizzo"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":6,
+"ev":65.8,
+"distance":7.0,
+"spray":"pull"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/dj-lemahieu-grounds-into-a-force-out-shortstop-ceddanne-rafaela-to-second",
+"pageUrl":"https://www.mlb.com/video/dj-lemahieu-grounds-into-a-force-out-shortstop-ceddanne-rafaela-to-second",
+"title":"DJ LeMahieu's RBI forceout",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/mumb9mtsyilxf7mxjql3.jpg",
+"playRepository":"../play-repository/#/play/mlb-746946-70"
+},
+{
+"id":"mlb-744994-77",
+"families":[
+{
+"family":"infield",
+"outcome":"scored_on_out",
+"outcomeLabel":"runner scores on the ground-ball out",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Adolis Garc\u00eda's RBI groundout",
+"description":"Adolis Garc\u00eda grounds out, shortstop Gunnar Henderson to first baseman Ryan O'Hearn. Corey Seager scores.",
+"event":"Groundout",
+"date":"2024-07-20",
+"season":2024,
+"gameType":"R",
+"venue":"Globe Life Field",
+"away":{
+"abbr":"BAL",
+"name":"Baltimore Orioles"
+},
+"home":{
+"abbr":"TEX",
+"name":"Texas Rangers"
+},
+"before":{
+"inning":8,
+"half":"bottom",
+"outs":1,
+"bases":"_23",
+"score":{
+"away":7,
+"home":3
+},
+"batting":"home"
+},
+"batter":"Adolis Garc\u00eda",
+"pitcher":"Yennier Cano",
+"runners":{
+"2B":"Wyatt Langford",
+"3B":"Corey Seager"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":6,
+"ev":82.9,
+"distance":133.0,
+"spray":"pull"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/yennier-cano-in-play-run-s-to-adolis-garcia",
+"pageUrl":"https://www.mlb.com/video/yennier-cano-in-play-run-s-to-adolis-garcia",
+"title":"Adolis Garc\u00eda's RBI groundout",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/talfqqnim9znk4lgwu4p.jpg",
+"playRepository":"../play-repository/#/play/mlb-744994-77"
+},
+{
+"id":"mlb-746286-6",
+"families":[
+{
+"family":"send",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Single to the outfield with a runner on second"
+}
+],
+"title":"Salvador Perez's RBI single",
+"description":"Salvador Perez singles on a sharp line drive to right fielder Tommy Pham. Vinnie Pasquantino scores.",
+"event":"Single",
+"date":"2024-07-20",
+"season":2024,
+"gameType":"R",
+"venue":"Kauffman Stadium",
+"away":{
+"abbr":"CWS",
+"name":"Chicago White Sox"
+},
+"home":{
+"abbr":"KC",
+"name":"Kansas City Royals"
+},
+"before":{
+"inning":1,
+"half":"bottom",
+"outs":2,
+"bases":"_2_",
+"score":{
+"away":0,
+"home":0
+},
+"batting":"home"
+},
+"batter":"Salvador Perez",
+"pitcher":"Jonathan Cannon",
+"runners":{
+"2B":"Vinnie Pasquantino"
+},
+"batted":{
+"trajectory":"line_drive",
+"location":9,
+"ev":107.5,
+"distance":305.0,
+"spray":"opposite"
+},
+"ifAlign":"Infield shade",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/jonathan-cannon-in-play-run-s-to-salvador-perez",
+"pageUrl":"https://www.mlb.com/video/jonathan-cannon-in-play-run-s-to-salvador-perez",
+"title":"Salvador Perez's RBI single",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/lv5bf1xdm3kfi0ogjo9v.jpg",
+"playRepository":"../play-repository/#/play/mlb-746286-6"
+},
+{
+"id":"mlb-746041-55",
+"families":[
+{
+"family":"bunt",
+"outcome":"sacrifice",
+"outcomeLabel":"bunt moves the runner up",
+"why":"Bunt with nobody out and a runner on"
+}
+],
+"title":"Nick Fortes out on a sacrifice bunt",
+"description":"Nick Fortes out on a sacrifice bunt, first baseman Pete Alonso to second baseman Jose Iglesias. Xavier Edwards to 2nd.",
+"event":"Sac Bunt",
+"date":"2024-07-20",
+"season":2024,
+"gameType":"R",
+"venue":"loanDepot park",
+"away":{
+"abbr":"NYM",
+"name":"New York Mets"
+},
+"home":{
+"abbr":"MIA",
+"name":"Miami Marlins"
+},
+"before":{
+"inning":7,
+"half":"bottom",
+"outs":0,
+"bases":"1__",
+"score":{
+"away":1,
+"home":0
+},
+"batting":"home"
+},
+"batter":"Nick Fortes",
+"pitcher":"Jos\u00e9 Butt\u00f3",
+"runners":{
+"1B":"Xavier Edwards"
+},
+"batted":{
+"trajectory":"bunt_grounder",
+"location":3,
+"ev":48.2,
+"distance":6.0,
+"spray":"opposite"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/jose-butto-in-play-out-s-to-nick-fortes",
+"pageUrl":"https://www.mlb.com/video/jose-butto-in-play-out-s-to-nick-fortes",
+"title":"Nick Fortes out on a sacrifice bunt, first baseman Pete Alonso to second baseman Jose Iglesias.   Xavier Edwards to 2nd.",
+"label":"Home TV broadcast"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/8b88725b-e614-4a65-bfe5-b098aad7d001_home.jpg",
+"playRepository":"../play-repository/#/play/mlb-746041-55"
+},
+{
+"id":"mlb-747096-1",
+"families":[
+{
+"family":"tag",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Fly ball caught by an outfielder with a runner on third"
+}
+],
+"title":"Alec Burleson's sacrifice fly",
+"description":"Alec Burleson out on a sacrifice fly to center fielder Jarred Kelenic. Masyn Winn scores.",
+"event":"Sac Fly",
+"date":"2024-07-20",
+"season":2024,
+"gameType":"R",
+"venue":"Truist Park",
+"away":{
+"abbr":"STL",
+"name":"St. Louis Cardinals"
+},
+"home":{
+"abbr":"ATL",
+"name":"Atlanta Braves"
+},
+"before":{
+"inning":1,
+"half":"top",
+"outs":0,
+"bases":"__3",
+"score":{
+"away":0,
+"home":0
+},
+"batting":"away"
+},
+"batter":"Alec Burleson",
+"pitcher":"Bryce Elder",
+"runners":{
+"3B":"Masyn Winn"
+},
+"batted":{
+"trajectory":"fly_ball",
+"location":8,
+"ev":86.3,
+"distance":309.0,
+"spray":"center"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/bryce-elder-in-play-run-s-to-alec-burleson-4wvmdq",
+"pageUrl":"https://www.mlb.com/video/bryce-elder-in-play-run-s-to-alec-burleson-4wvmdq",
+"title":"Alec Burleson's sacrifice fly",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/mdtnd3ug0een2rr208oc.jpg",
+"playRepository":"../play-repository/#/play/mlb-747096-1"
+},
+{
+"id":"mlb-747148-51",
+"families":[
+{
+"family":"tag",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Fly ball caught by an outfielder with a runner on third"
+}
+],
+"title":"Blake Perkins' sac fly",
+"description":"Blake Perkins out on a sacrifice fly to center fielder Jake McCarthy. Garrett Mitchell scores. Willy Adames to 3rd.",
+"event":"Sac Fly",
+"date":"2024-09-14",
+"season":2024,
+"gameType":"R",
+"venue":"Chase Field",
+"away":{
+"abbr":"MIL",
+"name":"Milwaukee Brewers"
+},
+"home":{
+"abbr":"AZ",
+"name":"Arizona Diamondbacks"
+},
+"before":{
+"inning":6,
+"half":"top",
+"outs":0,
+"bases":"123",
+"score":{
+"away":12,
+"home":0
+},
+"batting":"away"
+},
+"batter":"Blake Perkins",
+"pitcher":"Yilber D\u00edaz",
+"runners":{
+"1B":"Jake Bauers",
+"2B":"Willy Adames",
+"3B":"Garrett Mitchell"
+},
+"batted":{
+"trajectory":"fly_ball",
+"location":8,
+"ev":96.0,
+"distance":384.0,
+"spray":"center"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/blake-perkins-out-on-a-sacrifice-fly-to-center-fielder-jake-mccarthy-garr",
+"pageUrl":"https://www.mlb.com/video/blake-perkins-out-on-a-sacrifice-fly-to-center-fielder-jake-mccarthy-garr",
+"title":"Blake Perkins' sac fly",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/d4avkqq7uutcqokkzpez.jpg",
+"playRepository":"../play-repository/#/play/mlb-747148-51"
+},
+{
+"id":"mlb-775345-74",
+"families":[
+{
+"family":"bunt",
+"outcome":"sacrifice",
+"outcomeLabel":"bunt moves the runner up",
+"why":"Bunt with nobody out and a runner on"
+}
+],
+"title":"Jake Rogers nabs Jeremy Pe\u00f1a at first",
+"description":"Jeremy Pe\u00f1a out on a sacrifice bunt, catcher Jake Rogers to first baseman Spencer Torkelson. Alex Bregman to 3rd. Yainer Diaz to 2nd.",
+"event":"Sac Bunt",
+"date":"2024-10-01",
+"season":2024,
+"gameType":"F",
+"venue":"Minute Maid Park",
+"away":{
+"abbr":"DET",
+"name":"Detroit Tigers"
+},
+"home":{
+"abbr":"HOU",
+"name":"Houston Astros"
+},
+"before":{
+"inning":9,
+"half":"bottom",
+"outs":0,
+"bases":"12_",
+"score":{
+"away":3,
+"home":1
+},
+"batting":"home"
+},
+"batter":"Jeremy Pe\u00f1a",
+"pitcher":"Jason Foley",
+"runners":{
+"1B":"Yainer Diaz",
+"2B":"Alex Bregman"
+},
+"batted":{
+"trajectory":"bunt_grounder",
+"location":2,
+"ev":42.7,
+"distance":2.0,
+"spray":"pull"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/jason-foley-in-play-out-s-to-jeremy-pena-wcmin4",
+"pageUrl":"https://www.mlb.com/video/jason-foley-in-play-out-s-to-jeremy-pena-wcmin4",
+"title":"Jake Rogers nabs Jeremy Pe\u00f1a at first",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/dkh3dyb3rx6ceryji1l4.jpg",
+"playRepository":"../play-repository/#/play/mlb-775345-74"
+},
+{
+"id":"mlb-775333-16",
+"families":[
+{
+"family":"tag",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Fly ball caught by an outfielder with a runner on third"
+}
+],
+"title":"Kyle Higashioka's sacrifice fly",
+"description":"Kyle Higashioka out on a sacrifice fly to center fielder Michael Harris II. Jake Cronenworth scores.",
+"event":"Sac Fly",
+"date":"2024-10-01",
+"season":2024,
+"gameType":"F",
+"venue":"Petco Park",
+"away":{
+"abbr":"ATL",
+"name":"Atlanta Braves"
+},
+"home":{
+"abbr":"SD",
+"name":"San Diego Padres"
+},
+"before":{
+"inning":2,
+"half":"bottom",
+"outs":0,
+"bases":"1_3",
+"score":{
+"away":0,
+"home":2
+},
+"batting":"home"
+},
+"batter":"Kyle Higashioka",
+"pitcher":"AJ Smith-Shawver",
+"runners":{
+"1B":"Donovan Solano",
+"3B":"Jake Cronenworth"
+},
+"batted":{
+"trajectory":"fly_ball",
+"location":8,
+"ev":94.3,
+"distance":307.0,
+"spray":"opposite"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/kyle-higashioka-s-sacrifice-fly-x7667",
+"pageUrl":"https://www.mlb.com/video/kyle-higashioka-s-sacrifice-fly-x7667",
+"title":"Kyle Higashioka's sacrifice fly",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/q4yg9y8zjw0obxeaxqd8.jpg",
+"playRepository":"../play-repository/#/play/mlb-775333-16"
+},
+{
+"id":"mlb-778253-18",
+"families":[
+{
+"family":"infield",
+"outcome":"scored_on_out",
+"outcomeLabel":"runner scores on the ground-ball out",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Garrett Mitchell scores on a groundout",
+"description":"Caleb Durbin grounds out, shortstop Jacob Wilson to first baseman Tyler Soderstrom. Garrett Mitchell scores.",
+"event":"Groundout",
+"date":"2025-04-19",
+"season":2025,
+"gameType":"R",
+"venue":"American Family Field",
+"away":{
+"abbr":"ATH",
+"name":"Athletics"
+},
+"home":{
+"abbr":"MIL",
+"name":"Milwaukee Brewers"
+},
+"before":{
+"inning":3,
+"half":"bottom",
+"outs":1,
+"bases":"__3",
+"score":{
+"away":0,
+"home":0
+},
+"batting":"home"
+},
+"batter":"Caleb Durbin",
+"pitcher":"Luis Severino",
+"runners":{
+"3B":"Garrett Mitchell"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":6,
+"ev":72.7,
+"distance":22.0,
+"spray":"center"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/luis-severino-in-play-run-s-to-caleb-durbin",
+"pageUrl":"https://www.mlb.com/video/luis-severino-in-play-run-s-to-caleb-durbin",
+"title":"Garrett Mitchell scores on a groundout",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/qgtjvgaltecqgodarkck.jpg",
+"playRepository":"../play-repository/#/play/mlb-778253-18"
+},
+{
+"id":"mlb-777879-72",
+"families":[
+{
+"family":"bunt",
+"outcome":"sacrifice",
+"outcomeLabel":"bunt moves the runner up",
+"why":"Bunt with nobody out and a runner on"
+}
+],
+"title":"Patrick Bailey out on a sacrifice bunt",
+"description":"Patrick Bailey out on a sacrifice bunt, pitcher Mason Miller to second baseman Max Schuemann. Willy Adames to 3rd. LaMonte Wade Jr. to 2nd.",
+"event":"Sac Bunt",
+"date":"2025-05-17",
+"season":2025,
+"gameType":"R",
+"venue":"Oracle Park",
+"away":{
+"abbr":"ATH",
+"name":"Athletics"
+},
+"home":{
+"abbr":"SF",
+"name":"San Francisco Giants"
+},
+"before":{
+"inning":10,
+"half":"bottom",
+"outs":0,
+"bases":"12_",
+"score":{
+"away":0,
+"home":0
+},
+"batting":"home"
+},
+"batter":"Patrick Bailey",
+"pitcher":"Mason Miller",
+"runners":{
+"1B":"LaMonte Wade Jr.",
+"2B":"Willy Adames"
+},
+"batted":{
+"trajectory":"bunt_grounder",
+"location":1,
+"ev":43.7,
+"distance":3.0,
+"spray":"center"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/patrick-bailey-out-on-a-sacrifice-bunt-pitcher-mason-miller-to-second-bas",
+"pageUrl":"https://www.mlb.com/video/patrick-bailey-out-on-a-sacrifice-bunt-pitcher-mason-miller-to-second-bas",
+"title":"Patrick Bailey out on a sacrifice bunt, pitcher Mason Miller to second baseman Max Schuemann. Willy Adames to 3rd. LaMonte Wade Jr. to 2nd.",
+"label":"Home TV broadcast"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-photos/image/upload/ar_16:9,g_auto,q_auto:good,w_372,c_fill,f_jpg/fastball/3d59f0aa-8a30-33c3-b0d7-c3829b1358af_home.jpg",
+"playRepository":"../play-repository/#/play/mlb-777879-72"
+},
+{
+"id":"mlb-777096-17",
+"families":[
+{
+"family":"tag",
+"outcome":"scored",
+"outcomeLabel":"runner scores",
+"why":"Fly ball caught by an outfielder with a runner on third"
+}
+],
+"title":"Vidal Bruj\u00e1n's sacrifice fly",
+"description":"Vidal Bruj\u00e1n out on a sacrifice fly to left fielder Rob Refsnyder. Dansby Swanson scores.",
+"event":"Sac Fly",
+"date":"2025-07-19",
+"season":2025,
+"gameType":"R",
+"venue":"Wrigley Field",
+"away":{
+"abbr":"BOS",
+"name":"Boston Red Sox"
+},
+"home":{
+"abbr":"CHC",
+"name":"Chicago Cubs"
+},
+"before":{
+"inning":2,
+"half":"bottom",
+"outs":1,
+"bases":"1_3",
+"score":{
+"away":0,
+"home":2
+},
+"batting":"home"
+},
+"batter":"Vidal Bruj\u00e1n",
+"pitcher":"Brayan Bello",
+"runners":{
+"1B":"Reese McGuire",
+"3B":"Dansby Swanson"
+},
+"batted":{
+"trajectory":"fly_ball",
+"location":7,
+"ev":87.8,
+"distance":251.0,
+"spray":"opposite"
+},
+"ifAlign":"Strategic",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/vidal-brujan-s-sacrifice-fly",
+"pageUrl":"https://www.mlb.com/video/vidal-brujan-s-sacrifice-fly",
+"title":"Vidal Bruj\u00e1n's sacrifice fly",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/a2xwefmrkst9zahqw4so.jpg",
+"playRepository":"../play-repository/#/play/mlb-777096-17"
+},
+{
+"id":"mlb-777081-67",
+"families":[
+{
+"family":"infield",
+"outcome":"scored_on_out",
+"outcomeLabel":"runner scores on the ground-ball out",
+"why":"Infield ground ball with a runner on third and fewer than two outs"
+}
+],
+"title":"Geraldo Perdomo's RBI groundout",
+"description":"Geraldo Perdomo grounds out, shortstop Masyn Winn to first baseman Alec Burleson. Blaze Alexander scores. Corbin Carroll to 3rd.",
+"event":"Groundout",
+"date":"2025-07-19",
+"season":2025,
+"gameType":"R",
+"venue":"Chase Field",
+"away":{
+"abbr":"STL",
+"name":"St. Louis Cardinals"
+},
+"home":{
+"abbr":"AZ",
+"name":"Arizona Diamondbacks"
+},
+"before":{
+"inning":8,
+"half":"bottom",
+"outs":1,
+"bases":"_23",
+"score":{
+"away":1,
+"home":9
+},
+"batting":"home"
+},
+"batter":"Geraldo Perdomo",
+"pitcher":"John King",
+"runners":{
+"2B":"Corbin Carroll",
+"3B":"Blaze Alexander"
+},
+"batted":{
+"trajectory":"ground_ball",
+"location":6,
+"ev":71.3,
+"distance":15.0,
+"spray":"center"
+},
+"ifAlign":"Standard",
+"video":{
+"broadcast":{
+"embedUrl":"https://streamable.com/m/geraldo-perdomo-s-rbi-groundout-x3676",
+"pageUrl":"https://www.mlb.com/video/geraldo-perdomo-s-rbi-groundout-x3676",
+"title":"Geraldo Perdomo's RBI groundout",
+"label":"MLB.com highlight \u2014 broadcast footage, edited (may include replays)"
+},
+"highHome":null
+},
+"thumb":"https://img.mlbstatic.com/mlb-images/image/upload/w_640,h_360,f_jpg,c_fill,g_auto/mlb/ffre0e5ffeozobbluqqj.jpg",
+"playRepository":"../play-repository/#/play/mlb-777081-67"
+}
+]
+}

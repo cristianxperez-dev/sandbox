@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Decision Lab — Baseball Decision Simulator</title>
+<meta name="description" content="Decision Lab: make baseball managing and third-base coaching decisions, see the consequences, and learn the probabilities behind them. Built on Retrosheet and Statcast data.">
+<meta name="theme-color" content="#252525">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&display=swap">
+<link rel="stylesheet" href="app.css?v=1">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#/home" aria-label="Decision Lab — home"><span class="mark" aria-hidden="true"></span><span class="wm">Decision <b>Lab</b></span></a>
+  <nav class="nav" aria-label="Main">
+    <a href="#/manager" data-nav="manager">Manager’s Seat</a>
+    <a href="#/coach" data-nav="coach">3B Coach</a>
+    <a href="#/quick" data-nav="quick">Quick</a>
+    <a href="#/matrix" data-nav="matrix">Decision Matrix</a>
+    <a href="#/film" data-nav="film">Film Room</a>
+    <a href="#/performance" data-nav="performance">Performance</a>
+  </nav>
+  <a class="sbx" href="../../">‹ Sandbox</a>
+</header>
+<main id="app" tabindex="-1"><p class="loading">Loading the model…</p></main>
+<footer class="foot"><a href="#/model">How the model works</a><span>Data: Retrosheet · Baseball Savant · MLB Stats API</span><span>Video: MLB.com via Play Repository</span></footer>
+<div class="scrim" id="scrim" hidden><div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script type="module" src="app.js?v=1"></script>
+</body>
+</html>
