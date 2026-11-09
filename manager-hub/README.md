@@ -38,6 +38,34 @@ manager-hub/
 
 The baseline differs from the upload only in the sample data. The seed schedule, the seed coach list, two placeholder examples and the classic builder's example now use fictional names; the initials are unchanged so the sample rows still line up. The unmodified upload is not committed, because this repository is public. Every module, feature and storage key (`cs.*`, per-affiliate) is unchanged.
 
+## Affiliate branding
+
+Fixed, not editable in the app. One config, `AFFILIATES` in `apps/manager-hub/index.html`, holds each club's name, level, logo and colours; `Brand.apply` paints them as `--aff-*` CSS variables.
+
+| Club | Level | Logo | Primary | Secondary | Accent | On the navy masthead |
+|---|---|---|---|---|---|---|
+| Sugar Land Space Cowboys | Triple-A | `brand/sl.png` | `#0E253A` navy | `#25C9D1` teal | `#E47D3C` orange | teal |
+| Corpus Christi Hooks | Double-A | `brand/cc.png` | `#002A5B` navy | `#4F91CD` light blue | `#E01938` red | light blue |
+| Asheville Tourists | High-A | `brand/ash.png` | `#002B5C` navy | `#86CEBC` jade | `#005695` blue | jade |
+| Fayetteville Woodpeckers | Single-A | `brand/fay.png` | `#D31245` red | `#000000` black | `#5F6062` gray | red |
+| FCL Astros | Rookie · Florida Complex League | `brand/fcl.svg` | `#002D62` navy | `#EB6E1F` orange | — | orange |
+
+- **Logos** are the supplied files. The Hooks' primary mark was cut from the supplied logo sheet, and the Woodpeckers' white page was removed. Both use a flood fill from the edge with the outline colour unmixed, so the artwork itself is unchanged. The Space Cowboys and Tourists files were already transparent and are only trimmed. The FCL Astros use the supplied Astros SVG as-is.
+- **Colours** are the exact values in those files. Hooks, Tourists, Woodpeckers and Astros are flat-colour artwork. Sugar Land's teal and orange are the most common values in its logo, whose edges are antialiased.
+- **Tourists caveat:** the supplied alternate (cap) logo uses slightly different values (`#0C2340`, `#6ECEB2`, `#236192`). The primary logo's colours are used so the interface matches the logo it shows. No club publishes hex values I could verify online.
+- **Where they appear:**
+  - affiliate selector;
+  - header switcher and its menu;
+  - hub masthead and module tiles;
+  - roster header;
+  - masthead stripe and active module tab;
+  - Build / Lineup / Print tabs, roster tabs, and the calendar's selected day and today marker;
+  - the printed schedule header (club logo + Astros; MiLB for the FCL Astros), lineup card and dugout card.
+
+  The Astros orange stays on the main actions.
+- **Removed:** the Affiliate Branding editor (name, level, colour pickers, logo upload, restore defaults), its hub tile and menu entry, and the sheet's Left logo / Right logo upload. The old overrides in `cs.brand` and any logo uploaded into a schedule (`meta.logoL/logoR`) are ignored but left in storage. Nothing is deleted.
+- Tests: `tests/branding.e2e.cjs`.
+
 ## How the Schedule Assistant works
 
 Request → **interpretation** → structured intent → **deterministic engine** (plan, rotate, validate, diff) → review → publish.
@@ -56,6 +84,8 @@ node scripts/build.mjs && node scripts/serve.mjs &     # http://127.0.0.1:4173/
 node --test manager-hub/tests/*.test.mjs                 # unit + proxy contract
 node manager-hub/tests/app.e2e.cjs                       # real app, Playwright (BASE=… to target another host)
 node manager-hub/tests/roster-import.e2e.cjs             # roster import (fictional players)
+node manager-hub/tests/branding.e2e.cjs                  # fixed affiliate logos and colours
+node manager-hub/tests/org-roster.e2e.cjs                # shipped organisation roster (needs the gate: MH_ACCESS_CODE, BASE)
 ```
 
 ## Optional AI interpreter

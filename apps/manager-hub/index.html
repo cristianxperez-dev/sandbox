@@ -1837,99 +1837,72 @@ body.gated{overflow:hidden}
 
 /* ============================================================
    AFFILIATE BRANDING
-   The Astros shell stays navy/orange; affiliate colours
-   personalise the workspace as accents on top of it.
+   The Astros shell stays navy/orange and its main actions stay orange;
+   each club marks its own workspace with its logo and colours
+   (values from AFFILIATES, painted by Brand.apply).
    ============================================================ */
 :root{
   --aff-primary:var(--astros-navy);
   --aff-secondary:var(--astros-orange);
+  --aff-accent:var(--astros-orange);
+  --aff-masthead:var(--astros-orange);
   --aff-primary-ink:#fff;
-  --aff-primary-soft:rgba(0,45,98,.10);
-  --aff-secondary-soft:rgba(235,110,31,.14);
+  --aff-primary-soft:rgba(0,45,98,.07);
+  --aff-secondary-soft:rgba(235,110,31,.16);
 }
-.aff-logo{object-fit:contain;display:block;flex:none;border-radius:2px}
-.aff-logo.mono{
-  display:grid;place-items:center;border-radius:3px;
-  font-weight:800;letter-spacing:.04em;
-}
-.aff-logo.tiny{border-radius:2px}
+.aff-logo{object-fit:contain;display:block;flex:none}
 
-/* the active module rail picks up the affiliate's secondary colour */
-.seg button[aria-selected="true"]{border-bottom-color:var(--aff-secondary)}
-.aff-chip{
-  background:var(--aff-primary-soft);border-color:rgba(255,255,255,.28);
-  gap:7px;padding:3px 9px 3px 4px;
-}
+/* the masthead's closing rule and the active module carry the club colour */
+.appbar{border-bottom-color:var(--aff-masthead)}
+.seg button[aria-selected="true"]{border-bottom-color:var(--aff-masthead)}
+#menu .mn-on{color:var(--aff-primary)}
+.aff-chip{gap:8px;padding:3px 10px 3px 4px}
 .aff-chip .aff-lvl{
   font-size:9px;font-weight:700;letter-spacing:.06em;opacity:.75;
-  padding-left:7px;border-left:1px solid rgba(255,255,255,.24);
+  padding-left:8px;border-left:1px solid rgba(255,255,255,.24);
 }
+.aff-chip .aff-logo{filter:drop-shadow(0 0 1px rgba(255,255,255,.35))}
 @media (max-width:1320px){ .aff-chip .aff-lvl{display:none} }
+#menu .mn-logo{display:inline-grid;place-items:center;width:24px;height:22px;margin-right:9px;vertical-align:middle}
 
-/* hub masthead: affiliate identity beneath the Astros product name */
+/* hub masthead: the club's identity beside the Astros product name */
 .hub-head{display:flex;align-items:center;gap:16px}
-.hub-id{display:flex;align-items:center;gap:11px;flex:none;
-  padding-right:16px;border-right:1px solid var(--line-2)}
-.hub-id-txt b{display:block;font-size:15px;font-weight:800;color:var(--aff-primary)}
-.hub-id-txt span{display:block;font-size:11.5px;color:var(--text-secondary);margin-top:1px}
-.hub-tile:hover{border-color:var(--aff-secondary)}
-.hub-tile:hover .hub-ico{background:var(--aff-secondary-soft);color:var(--aff-secondary)}
+.hub-id{display:flex;align-items:center;gap:12px;flex:none;
+  padding:6px 18px 6px 0;border-right:1px solid var(--line-2)}
+.hub-id-txt b{display:block;font-size:15px;font-weight:800;color:var(--aff-primary);line-height:1.25}
+.hub-id-txt span{display:block;font-size:11.5px;color:var(--text-secondary);margin-top:2px}
+@media (max-width:640px){
+  .hub-head{flex-direction:column;align-items:flex-start;gap:12px}
+  .hub-id{padding:0 0 12px;border-right:0;border-bottom:1px solid var(--line-2);align-self:stretch}
+  .hub-id .aff-logo{width:48px!important;height:48px!important}
+}
+.hub-tile{border-top:3px solid var(--aff-masthead)}
+.hub-ico{background:var(--aff-primary-soft);color:var(--aff-primary)}
+.hub-tile:hover{border-color:var(--aff-primary);border-top-color:var(--aff-masthead)}
+.hub-tile:hover .hub-ico{background:var(--aff-secondary-soft);color:var(--aff-primary)}
 
-/* gate cards carry each affiliate's own identity */
-.affgate-card{max-width:460px}
-.affgate-badge{background:transparent;width:auto;height:auto;padding:0}
-.affgate-opt:hover{border-color:var(--ap);background:var(--gray-light)}
+/* light-surface tabs and the calendar's day marker use the club's primary colour */
+.subnav button[aria-selected="true"]{color:var(--aff-primary);box-shadow:inset 0 -2px 0 var(--aff-masthead),var(--shadow-1)}
+.ros-tabs button[aria-selected="true"]{color:var(--aff-primary);border-bottom-color:var(--aff-masthead)}
+.cal-cell.today .cal-n{background:var(--aff-primary);color:var(--aff-primary-ink)}
+.cal-cell.active{box-shadow:inset 0 0 0 2px var(--aff-primary)}
+
+/* the selector shows every club as itself */
+.affgate-card{max-width:480px}
+.affgate-badge{background:transparent;width:52px;height:46px;padding:0;border-radius:0}
+.affgate-opt{border-left:3px solid var(--as)}
+.affgate-opt:hover{border-color:var(--ap);border-left-color:var(--as);background:var(--gray-light)}
+.affgate-opt:hover .affgate-go{color:var(--ap)}
+.affgate-opt .affgate-txt b{color:var(--ap)}
 .affgate-swatch{display:flex;gap:3px;flex:none}
-.affgate-swatch i{width:9px;height:16px;border-radius:2px;display:block}
-
-/* branding editor */
-.br-tabs{display:flex;gap:4px;flex-wrap:wrap;border-bottom:1px solid var(--line-2);margin-bottom:14px}
-.br-tabs button{
-  display:flex;align-items:center;gap:7px;border:0;background:transparent;
-  padding:8px 10px;font-size:12.5px;font-weight:700;color:var(--gray-medium);
-  cursor:pointer;border-bottom:2px solid transparent;
-}
-.br-tabs button[aria-selected="true"]{color:var(--astros-navy);border-bottom-color:var(--astros-orange)}
-.br-tabs button:hover{color:var(--astros-navy)}
-.br-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
-.br-f{display:flex;flex-direction:column;gap:4px;min-width:0}
-.br-f.br-wide{grid-column:1/-1}
-.br-f > span{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--faint)}
-.br-f input[type=text],.br-f input:not([type]){
-  border:1px solid var(--line-2);border-radius:4px;padding:7px 9px;font-size:13px;width:100%;
-}
-.br-f input:focus{outline:none;border-color:var(--astros-orange);box-shadow:0 0 0 3px var(--orange-100)}
-.br-color{display:flex;gap:7px;align-items:center}
-.br-color input[type=color]{
-  width:38px;height:34px;padding:2px;border:1px solid var(--line-2);
-  border-radius:4px;background:#fff;cursor:pointer;flex:none;
-}
-.br-color input[type=text]{flex:1;font-variant-numeric:tabular-nums;text-transform:uppercase}
-.br-err{display:block;font-style:normal;font-size:11px;color:var(--danger);margin-top:2px}
-.br-logo{display:flex;gap:14px;align-items:flex-start}
-.br-logo-prev{
-  width:88px;height:88px;flex:none;display:grid;place-items:center;
-  border:1px solid var(--line-2);border-radius:6px;background:var(--bg-secondary);
-  background-image:linear-gradient(45deg,#EEF1F5 25%,transparent 25%,transparent 75%,#EEF1F5 75%),
-                   linear-gradient(45deg,#EEF1F5 25%,transparent 25%,transparent 75%,#EEF1F5 75%);
-  background-size:12px 12px;background-position:0 0,6px 6px;   /* shows transparency honestly */
-}
-.br-logo-ops{flex:1;min-width:0;display:flex;flex-wrap:wrap;gap:7px;align-items:flex-start}
-.br-preview{
-  margin-top:16px;border:1px solid var(--line-2);border-radius:6px;overflow:hidden;
-}
-.br-prev-label{
-  display:block;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
-  color:var(--faint);padding:8px 11px 0;
-}
-.br-prev-bar{
-  display:flex;align-items:center;gap:9px;padding:10px 11px 12px;position:relative;
-}
-.br-prev-bar b{font-size:14px;font-weight:800;color:var(--ap)}
-.br-prev-bar span{font-size:11.5px;color:var(--text-secondary)}
-.br-prev-accent{position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--as)}
+.affgate-swatch i{width:9px;height:16px;border-radius:2px;display:block;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}
 #menu .mn-lvl{font-weight:600;color:var(--gray-medium);font-size:11px;margin-left:6px}
-@media (max-width:560px){ .br-grid{grid-template-columns:1fr} }
+
+/* inline validation message (section header colour) */
+.br-err{display:block;font-style:normal;font-size:11px;color:var(--danger);margin-top:2px}
+
+/* roster: whose roster this is */
+.ros-headid{display:flex;align-items:center;gap:14px;min-width:0}
 
 /* roster import: destinations, level fixes, summary */
 .imp-lvl{display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding:5px 0}
@@ -3106,8 +3079,6 @@ body.gated{overflow:hidden}
           </select>
         </label>
         <div class="sp"></div>
-        <button class="btn sm" id="btnLogoL">Left logo</button>
-        <button class="btn sm" id="btnLogoR">Right logo</button>
         <span class="fitnote" id="fitNote"></span>
       </div>
       <div class="sheet" id="sheet"><div class="sheetBox" id="sheetBox"><div class="sheetInner" id="sheetInner"></div></div></div>
@@ -3159,15 +3130,35 @@ const uniq = a => Array.from(new Set(a.filter(Boolean)));
    schedules, lineups, grids and games — without touching a single module.
    Adding an affiliate later is one line in AFFILIATES.
    ========================================================================== */
+/* AFFILIATE IDENTITY — the one place each club's name, level, logo and colours live.
+   Logos are the clubs' own artwork in brand/, cut onto a transparent background and
+   otherwise unchanged. Colours are the exact values in that artwork (manager-hub/README.md → Affiliate branding).
+   primary   identity colour: affiliate names and indicators on light surfaces (≥ 4.5:1 on white)
+   secondary second club colour: swatches and soft tints
+   accent    third club colour where the club has one
+   masthead  the club colour drawn on the navy Astros masthead (stripe and active tab)
+   onPrimary / onSecondary  text colour on a fill of that colour (≥ 4.5:1)
+   Branding is fixed: nothing here can be edited in the app. */
 const AFFILIATES=[
-  {id:"sl",  name:"Sugar Land",     short:"SL",  level:"Triple-A",              primary:"#1E4272", secondary:"#EB6E1F"},
-  {id:"cc",  name:"Corpus Christi", short:"CC",  level:"Double-A",              primary:"#4FA8DB", secondary:"#002D62"},
-  {id:"ash", name:"Asheville",      short:"ASH", level:"High-A",                primary:"#2F7A78", secondary:"#F4911E"},
-  {id:"fay", name:"Fayetteville",   short:"FAY", level:"Low-A",                 primary:"#C8102E", secondary:"#002D62"},
-  {id:"fcl", name:"FCL Astros",     short:"FCL", level:"Florida Complex League",primary:"#002D62", secondary:"#EB6E1F"}
+  {id:"sl",  name:"Sugar Land",     team:"Sugar Land Space Cowboys", short:"SL",  level:"Triple-A",
+   logo:"brand/sl.png",  logoW:316, logoH:316,
+   primary:"#0E253A", secondary:"#25C9D1", accent:"#E47D3C", masthead:"#25C9D1", onPrimary:"#FFFFFF", onSecondary:"#0E253A"},
+  {id:"cc",  name:"Corpus Christi", team:"Corpus Christi Hooks",     short:"CC",  level:"Double-A",
+   logo:"brand/cc.png",  logoW:404, logoH:340,
+   primary:"#002A5B", secondary:"#4F91CD", accent:"#E01938", masthead:"#4F91CD", onPrimary:"#FFFFFF", onSecondary:"#000000"},
+  {id:"ash", name:"Asheville",      team:"Asheville Tourists",       short:"ASH", level:"High-A",
+   logo:"brand/ash.png", logoW:300, logoH:245,
+   primary:"#002B5C", secondary:"#86CEBC", accent:"#005695", masthead:"#86CEBC", onPrimary:"#FFFFFF", onSecondary:"#002B5C"},
+  {id:"fay", name:"Fayetteville",   team:"Fayetteville Woodpeckers", short:"FAY", level:"Single-A",
+   logo:"brand/fay.png", logoW:599, logoH:477,
+   primary:"#D31245", secondary:"#000000", accent:"#5F6062", masthead:"#D31245", onPrimary:"#FFFFFF", onSecondary:"#FFFFFF"},
+  {id:"fcl", name:"FCL Astros",     team:"FCL Astros",               short:"FCL", level:"Rookie · Florida Complex League",
+   logo:"brand/fcl.svg", logoW:236, logoH:237,
+   primary:"#002D62", secondary:"#EB6E1F", accent:null,      masthead:"#EB6E1F", onPrimary:"#FFFFFF", onSecondary:"#000000"}
 ];
 const AFF_KEY="cs.affiliate";                    // deliberately outside the scope
-const BRAND_KEY="cs.brand";                      // branding is per affiliate but read before one is chosen
+/* "cs.brand" held the old editable branding. It is no longer read — the fixed identities above
+   take precedence — and is left untouched in storage. */
 const LEVELMAP_KEY="cs.levelmap";                // level aliases, shared across affiliates
 
 const store = (()=>{
@@ -3184,7 +3175,7 @@ const store = (()=>{
   try{ aff=raw.get(AFF_KEY); }catch(e){ aff=null; }
   if(aff && !AFFILIATES.some(a=>a.id===aff)) aff=null;
 
-  const GLOBAL=new Set([AFF_KEY,BRAND_KEY,LEVELMAP_KEY]);
+  const GLOBAL=new Set([AFF_KEY,LEVELMAP_KEY]);
   const scope=k=>(GLOBAL.has(k)||!aff)?k:`cs.${aff}.${k.replace(/^cs\./,"")}`;
   const prefix=()=>aff?`cs.${aff}.`:"cs.";
 
@@ -4557,7 +4548,8 @@ function rosterModal(){
   };
   openModal(`
     <div class="mhead">
-      <div><h2>Player Roster</h2><p id="rosSub">Position players and pitchers are kept as separate rosters.</p></div>
+      <div class="ros-headid">${(()=>{ const b=Brand.get(store.affiliate()); return b?affLogoHTML(b,44):""; })()}
+        <div><h2>Player Roster</h2><p id="rosSub">Position players and pitchers are kept as separate rosters.</p></div></div>
       <button class="x" data-close>×</button>
     </div>
     <div class="mbody">
@@ -7789,8 +7781,6 @@ document.addEventListener("click",e=>{
   if(el.id==="btnNew") return newDayModal();
   if(el.id==="btnOpen") return openModalLibrary();
   if(el.id==="btnSave") return saveSchedule();
-  if(el.id==="btnLogoL") return pickLogo("logoL");
-  if(el.id==="btnLogoR") return pickLogo("logoR");
 
   /* rows */
   const ar=hit("[data-addrow]"); if(ar) return addRow(ar.dataset.addrow);
@@ -8416,15 +8406,12 @@ function openModalLibrary(){
     };
   });
 }
-function pickLogo(which){
-  const f=$("#filePick"); f.accept="image/*";
-  f.onchange=()=>{
-    const file=f.files[0]; if(!file) return;
-    const rd=new FileReader();
-    rd.onload=()=>{ S.meta[which]=rd.result; dirty=true; saveDraft(); renderSheet(); toast("Logo added — it prints on the sheet"); };
-    rd.readAsDataURL(file); f.value="";
-  };
-  f.click();
+/** Logos printed on the sheets: the affiliate's own, and the Astros mark beside it
+    (the FCL Astros already wear the Astros logo, so their second mark is MiLB's).
+    Fixed — any logo once uploaded into a schedule (S.meta.logoL / logoR) is ignored. */
+function printLogos(){
+  const b=Brand.get(store.affiliate());
+  return { aff: b ? b.logo : LOGO_ASTROS, org: (b && b.id==="fcl") ? LOGO_MILB : LOGO_ASTROS };
 }
 function saveDraft(){
   store.set(K.draft, JSON.stringify(S));
@@ -11204,7 +11191,7 @@ const GDD = (()=>{
     const blanks=3;                                   // spare substitution lines
     const N=rows.length+blanks;
     const elig=eligCells(N*2);
-    const logo=`<img src="${esc((S.meta&&S.meta.logoL)||LOGO_ASTROS)}" alt="">`;
+    const logo=`<img src="${esc(printLogos().aff)}" alt="">`;
     return `<div class="lc ${isHome()?"home":"away"}">
       <div class="lc-head">
         <div class="lc-logo">${logo}</div>
@@ -11293,7 +11280,7 @@ const GDD = (()=>{
   function dugoutHTML(){
     const o=opp();
     const oppName=(o&&o.team)||opponent()||"OPPONENT";
-    const logo=`<img src="${esc((S.meta&&S.meta.logoR)||LOGO_MILB)}" alt="">`;
+    const logo=`<img src="${esc(printLogos().aff)}" alt="">`;
     return `<div class="dg">
       <div class="dg-top">${mvBox()}<div class="dg-logo">${logo}</div>${mvBox()}</div>
       <div class="dg-title">${esc(teamName().toUpperCase())} ${isHome()?"vs.":"@"} ${esc(oppName.toUpperCase())}</div>
@@ -11314,7 +11301,7 @@ const GDD = (()=>{
       </div>
       <div class="dg-pair">
         <div class="dg-half dg-watermarked">
-          <div class="dg-wm" style="background-image:url('${esc((S.meta&&S.meta.logoL)||LOGO_ASTROS)}')"></div>
+          <div class="dg-wm" style="background-image:url('${esc(printLogos().aff)}')"></div>
           ${dugoutTable(starters(),3,teamName().toUpperCase())}
         </div>
         <div class="dg-half">
@@ -11712,10 +11699,6 @@ function hubTiles(){
      desc:"Plan pitcher usage day by day — games, sides and availability.",
      meta:(typeof Pitch!=="undefined"&&Pitch.pitchers().length)?`${Pitch.pitchers().length} pitchers`:"Import the roster first",
      tag:""},
-    {k:"res",go:()=>brandingModal(),title:"Affiliate Branding",
-     desc:"Name, level, logo and the two colours used across this workspace.",
-     meta:(()=>{const b=store.affiliate()?Brand.get(store.affiliate()):null;
-       return b?`${b.name} · ${b.level}`:"—";})(), tag:""},
     {k:"roster",go:()=>rosterModal(),title:"Roster",
      desc:"Position players and pitchers, kept as two separate rosters.",
      meta:rosterN?`${posN} position · ${pitN} pitchers`:"Empty", tag:""},
@@ -11733,7 +11716,7 @@ function renderHub(){
   if(idEl){
     const b=store.affiliate()?Brand.get(store.affiliate()):null;
     idEl.innerHTML = b
-      ? `${affLogoHTML(b,46)}<span class="hub-id-txt"><b>${esc(b.name)}</b><span>${esc(b.level)}</span></span>`
+      ? `${affLogoHTML(b,58)}<span class="hub-id-txt"><b>${esc(b.team)}</b><span>${esc(b.level)}</span></span>`
       : "";
   }
   HUB_ACTIONS=hubTiles();
@@ -13359,269 +13342,49 @@ window.Levels=Levels;
 
 /* ==========================================================================
    AFFILIATE BRANDING
-   Name, level, logo and two colours per affiliate. Stored outside the
-   workspace scope so the selector can render every affiliate's identity
-   before one has been chosen. Adding a sixth affiliate needs only an entry
-   in AFFILIATES — the branding record is created from it on demand.
+   Read-only view of the fixed identities in AFFILIATES. Brand.apply paints the
+   current club's colours onto the document as --aff-* custom properties.
    ========================================================================== */
 const Brand = (()=>{
-  let d=null;
-  const load=()=>{
-    try{ d=JSON.parse(store.get(BRAND_KEY)||"null"); }catch(e){ d=null; }
-    if(!d||typeof d!=="object") d={};
-    return d;
-  };
-  const data=()=>{ if(!d) load(); return d; };
-  const save=()=>store.set(BRAND_KEY,JSON.stringify(data()));
-
-  const HEX=/^#?([0-9a-f]{3}|[0-9a-f]{6})$/i;
-  const normHex=v=>{
-    const t=String(v||"").trim();
-    if(!HEX.test(t)) return null;
-    let h=t.replace(/^#/,"");
-    if(h.length===3) h=h.split("").map(c=>c+c).join("");
-    return "#"+h.toUpperCase();
-  };
-  const base=id=>AFFILIATES.find(a=>a.id===id)||null;
-
-  /** defaults merged with whatever the user has overridden */
-  function get(id){
-    const b=base(id); if(!b) return null;
-    const o=data()[id]||{};
-    return {
-      id,
-      short:b.short,
-      name:o.name||b.name,
-      level:o.level||b.level,
-      primary:normHex(o.primary)||b.primary,
-      secondary:normHex(o.secondary)||b.secondary,
-      logo:o.logo||null,
-      custom:{name:!!o.name,level:!!o.level,primary:!!o.primary,secondary:!!o.secondary,logo:!!o.logo}
-    };
-  }
+  const get=id=>{ const a=AFFILIATES.find(x=>x.id===id); return a?Object.assign({},a):null; };
   const all=()=>AFFILIATES.map(a=>get(a.id));
-  function set(id,patch){
-    if(!base(id)) return null;
-    const D=data();
-    const o=D[id]=D[id]||{};
-    if("name" in patch){ const v=String(patch.name||"").trim(); v?o.name=v:delete o.name; }
-    if("level" in patch){ const v=String(patch.level||"").trim(); v?o.level=v:delete o.level; }
-    ["primary","secondary"].forEach(k=>{
-      if(!(k in patch)) return;
-      const v=normHex(patch[k]);
-      if(v) o[k]=v; else delete o[k];
-    });
-    if("logo" in patch){ patch.logo?o.logo=patch.logo:delete o.logo; }
-    if(!Object.keys(o).length) delete D[id];
-    save(); return get(id);
-  }
-  const clearLogo=id=>set(id,{logo:null});
-  function reset(id){ const D=data(); delete D[id]; save(); return get(id); }
-
-  /** readable text on a given fill — keeps affiliate colours legible */
-  function ink(hex){
-    const h=normHex(hex)||"#000000";
-    const r=parseInt(h.slice(1,3),16), g=parseInt(h.slice(3,5),16), b=parseInt(h.slice(5,7),16);
-    return (0.299*r+0.587*g+0.114*b)>150 ? "#0B1B33" : "#FFFFFF";
-  }
-  const mix=(hex,alpha)=>{
-    const h=normHex(hex)||"#000000";
-    return `rgba(${parseInt(h.slice(1,3),16)},${parseInt(h.slice(3,5),16)},${parseInt(h.slice(5,7),16)},${alpha})`;
-  };
-
-  /** paint the current affiliate's colours onto the document */
+  const mix=(hex,alpha)=>`rgba(${parseInt(hex.slice(1,3),16)},${parseInt(hex.slice(3,5),16)},${parseInt(hex.slice(5,7),16)},${alpha})`;
   function apply(id){
     const b=get(id); if(!b) return;
     const r=document.documentElement.style;
     r.setProperty("--aff-primary",b.primary);
     r.setProperty("--aff-secondary",b.secondary);
-    r.setProperty("--aff-primary-ink",ink(b.primary));
-    r.setProperty("--aff-secondary-ink",ink(b.secondary));
-    r.setProperty("--aff-primary-soft",mix(b.primary,.10));
-    r.setProperty("--aff-secondary-soft",mix(b.secondary,.14));
+    r.setProperty("--aff-accent",b.accent||b.secondary);
+    r.setProperty("--aff-masthead",b.masthead);
+    r.setProperty("--aff-primary-ink",b.onPrimary);
+    r.setProperty("--aff-secondary-ink",b.onSecondary);
+    r.setProperty("--aff-primary-soft",mix(b.primary,.07));
+    r.setProperty("--aff-secondary-soft",mix(b.secondary,.16));
   }
-
-  /* ---- logo intake ----
-     Everything is rasterised through a canvas before storage: it normalises
-     PNG/JPG/WEBP/SVG to one small transparent PNG, keeps the aspect ratio,
-     and strips anything executable out of an SVG in the process. */
-  const MAX=320;
-  function readLogo(file){
-    return new Promise((res,rej)=>{
-      if(!file) return rej(new Error("no file"));
-      if(!/^image\//.test(file.type||"")) return rej(new Error("type"));
-      const fr=new FileReader();
-      fr.onerror=()=>rej(new Error("read"));
-      fr.onload=()=>{
-        const img=new Image();
-        img.onerror=()=>rej(new Error("decode"));
-        img.onload=()=>{
-          const w=img.naturalWidth||MAX, h=img.naturalHeight||MAX;
-          if(!w||!h) return rej(new Error("decode"));
-          const f=Math.min(1,MAX/Math.max(w,h));
-          const cw=Math.max(1,Math.round(w*f)), ch=Math.max(1,Math.round(h*f));
-          const cv=document.createElement("canvas");
-          cv.width=cw; cv.height=ch;
-          const ctx=cv.getContext("2d");
-          ctx.clearRect(0,0,cw,ch);                 // transparency survives
-          ctx.drawImage(img,0,0,cw,ch);
-          try{ res(cv.toDataURL("image/png")); }catch(e){ rej(new Error("encode")); }
-        };
-        img.src=fr.result;
-      };
-      fr.readAsDataURL(file);
-    });
-  }
-  return {load,get,all,set,clearLogo,reset,apply,ink,mix,normHex,readLogo,MAX};
+  return {get,all,apply,mix};
 })();
 window.Brand=Brand;
 
-/** the affiliate's mark, or its initials when no logo has been uploaded */
+/** the club's own logo, fitted inside a size×size box without changing its proportions */
 function affLogoHTML(b,size,cls){
   const px=size||28;
-  if(b&&b.logo){
-    return `<img class="aff-logo ${cls||""}" src="${esc(b.logo)}" alt="${esc(b.name)}"
-      style="width:${px}px;height:${px}px">`;
-  }
-  return `<span class="aff-logo mono ${cls||""}" aria-hidden="true"
-    style="width:${px}px;height:${px}px;background:${b?b.primary:"var(--astros-navy)"};
-    color:${b?Brand.ink(b.primary):"#fff"};font-size:${Math.round(px*0.34)}px">${esc(b?b.short:"—")}</span>`;
-}
-
-/* ---------- affiliate branding editor ---------- */
-let BRAND_EDIT=null;
-function brandingModal(id){
-  BRAND_EDIT = id || store.affiliate() || AFFILIATES[0].id;
-  const draw=()=>{
-    const b=Brand.get(BRAND_EDIT);
-    const body=$("#brBody"); if(!body||!b) return;
-    body.innerHTML=`
-      <div class="br-tabs">
-        ${Brand.all().map(x=>`<button data-brtab="${x.id}" aria-selected="${x.id===BRAND_EDIT}">
-          ${affLogoHTML(x,18,"tiny")}<span>${esc(x.name)}</span></button>`).join("")}
-      </div>
-      <div class="br-grid">
-        <label class="br-f"><span>Affiliate name</span>
-          <input id="brName" value="${esc(b.name)}" maxlength="40"></label>
-        <label class="br-f"><span>Level</span>
-          <input id="brLevel" value="${esc(b.level)}" maxlength="40"></label>
-
-        <div class="br-f"><span>Primary colour</span>
-          <div class="br-color">
-            <input type="color" id="brPrimaryPick" value="${b.primary}">
-            <input type="text" id="brPrimary" value="${b.primary}" maxlength="7" spellcheck="false">
-          </div>
-          <i class="br-err" id="brPrimaryErr" hidden>Enter a hex value like #002D62</i>
-        </div>
-        <div class="br-f"><span>Secondary colour</span>
-          <div class="br-color">
-            <input type="color" id="brSecondaryPick" value="${b.secondary}">
-            <input type="text" id="brSecondary" value="${b.secondary}" maxlength="7" spellcheck="false">
-          </div>
-          <i class="br-err" id="brSecondaryErr" hidden>Enter a hex value like #EB6E1F</i>
-        </div>
-
-        <div class="br-f br-wide"><span>Logo</span>
-          <div class="br-logo">
-            <div class="br-logo-prev" style="--ap:${b.primary}">${affLogoHTML(b,72)}</div>
-            <div class="br-logo-ops">
-              <button class="btn sm" id="brUpload">${b.logo?"Replace logo":"Upload logo"}</button>
-              ${b.logo?`<button class="btn sm quiet" id="brRemove">Remove logo</button>`:""}
-              <p class="note" style="margin:6px 0 0">
-                PNG, JPG or SVG. Scaled to ${Brand.MAX}px on its long edge, aspect ratio and
-                transparency preserved. Stored with the affiliate, so it survives a reload.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="br-preview" style="--ap:${b.primary};--as:${b.secondary}">
-        <span class="br-prev-label">Workspace preview</span>
-        <div class="br-prev-bar">
-          ${affLogoHTML(b,22,"tiny")}<b>${esc(b.name)}</b><span>${esc(b.level)}</span>
-          <em class="br-prev-accent"></em>
-        </div>
-      </div>`;
-
-    $$("[data-brtab]").forEach(t=>t.onclick=()=>{ BRAND_EDIT=t.dataset.brtab; draw(); });
-
-    const commit=(k,v)=>{ Brand.set(BRAND_EDIT,{[k]:v}); if(BRAND_EDIT===store.affiliate()){ Brand.apply(BRAND_EDIT); renderAffChip(); if(VIEW==="hub") renderHub(); } };
-    $("#brName").oninput=e=>commit("name",e.target.value);
-    $("#brLevel").oninput=e=>commit("level",e.target.value);
-
-    [["Primary","primary"],["Secondary","secondary"]].forEach(([Cap,key])=>{
-      const pick=$("#br"+Cap+"Pick"), text=$("#br"+key.charAt(0).toUpperCase()+key.slice(1));
-      const err=$("#br"+Cap+"Err");
-      pick.oninput=()=>{ text.value=pick.value.toUpperCase(); err.hidden=true; commit(key,pick.value); draw(); };
-      text.oninput=()=>{
-        const v=Brand.normHex(text.value);
-        err.hidden=!!v || text.value.trim()==="";
-        if(v){ pick.value=v; commit(key,v); }
-      };
-      text.onblur=()=>{ const v=Brand.normHex(text.value); if(v){ text.value=v; err.hidden=true; } else draw(); };
-    });
-
-    $("#brUpload").onclick=()=>{
-      const f=$("#filePick");
-      f.accept="image/png,image/jpeg,image/jpg,image/webp,image/svg+xml";
-      f.onchange=async ()=>{
-        const file=f.files[0]; f.value=""; if(!file) return;
-        try{
-          const url=await Brand.readLogo(file);
-          Brand.set(BRAND_EDIT,{logo:url});
-          if(BRAND_EDIT===store.affiliate()){ renderAffChip(); if(VIEW==="hub") renderHub(); }
-          draw(); toast("Logo saved");
-        }catch(err){
-          toast(err && err.message==="type" ? "That file isn't an image" : "That image couldn't be read");
-        }
-      };
-      f.click();
-    };
-    const rm=$("#brRemove");
-    if(rm) rm.onclick=()=>{
-      Brand.clearLogo(BRAND_EDIT);
-      if(BRAND_EDIT===store.affiliate()){ renderAffChip(); if(VIEW==="hub") renderHub(); }
-      draw(); toast("Logo removed");
-    };
-  };
-
-  openModal(`
-    <div class="mhead">
-      <div><h2>Affiliate branding</h2><p>Each affiliate keeps its own name, level, logo and colours.</p></div>
-      <button class="x" data-close>×</button>
-    </div>
-    <div class="mbody"><div id="brBody"></div></div>
-    <div class="mfoot">
-      <button class="btn" id="brReset" style="margin-right:auto">Restore defaults</button>
-      <button class="btn primary" data-close>Done</button>
-    </div>`,
-  ()=>{
-    $("#modal").classList.add("wide");
-    draw();
-    $("#brReset").onclick=()=>{
-      const b=Brand.get(BRAND_EDIT);
-      if(!confirm(`Restore ${b.name} to its default name, level, colours and logo?`)) return;
-      Brand.reset(BRAND_EDIT);
-      if(BRAND_EDIT===store.affiliate()){ Brand.apply(BRAND_EDIT); renderAffChip(); if(VIEW==="hub") renderHub(); }
-      draw(); toast("Defaults restored");
-    };
-  });
+  if(!b) return `<span class="aff-logo ${cls||""}" style="width:${px}px;height:${px}px"></span>`;
+  return `<img class="aff-logo ${cls||""}" src="${esc(b.logo)}" alt="${esc(b.team)}" width="${px}" height="${px}"
+    style="width:${px}px;height:${px}px" decoding="async">`;
 }
 
 /* ---------- affiliate gate + switcher ---------- */
 function renderAffGate(){
   const list=$("#affGateList"); if(!list) return;
   list.innerHTML=Brand.all().map(b=>`
-    <button class="affgate-opt" data-aff="${b.id}" style="--ap:${b.primary};--as:${b.secondary}">
-      <span class="affgate-badge">${affLogoHTML(b,40)}</span>
-      <span class="affgate-txt"><b>${esc(b.name)}</b><span>${esc(b.level)}</span></span>
-      <span class="affgate-swatch"><i style="background:${b.primary}"></i><i style="background:${b.secondary}"></i></span>
+    <button class="affgate-opt" data-aff="${b.id}" style="--ap:${b.primary};--as:${b.masthead}">
+      <span class="affgate-badge">${affLogoHTML(b,46)}</span>
+      <span class="affgate-txt"><b>${esc(b.team)}</b><span>${esc(b.level)}</span></span>
+      <span class="affgate-swatch" aria-hidden="true">${[b.primary,b.secondary,b.accent].filter(Boolean).map(c=>`<i style="background:${c}"></i>`).join("")}</span>
       <span class="affgate-go">→</span>
     </button>`).join("");
 }
 function showAffGate(){
-  Brand.load();
   renderAffGate();
   const g=$("#affGate"); if(g) g.hidden=false;
   document.body.classList.add("gated");
@@ -13635,20 +13398,19 @@ function renderAffChip(){
   const b=id?Brand.get(id):null;
   if(b) Brand.apply(id);
   const nm=$("#affChipName"); if(nm) nm.textContent=b?b.name:"—";
-  const lv=$("#affChipLevel"); if(lv) lv.textContent=b?b.level:"";
-  const mk=$("#affChipMark"); if(mk) mk.innerHTML=b?affLogoHTML(b,18,"tiny"):"";
-  const chip=$("#affChip"); if(chip) chip.title=b?`${b.name} — ${b.level} · click to switch`:"Select affiliate";
+  const lv=$("#affChipLevel"); if(lv) lv.textContent=b?b.level.split(" · ")[0]:"";
+  const mk=$("#affChipMark"); if(mk) mk.innerHTML=b?affLogoHTML(b,24,"tiny"):"";
+  const chip=$("#affChip"); if(chip) chip.title=b?`${b.team} — ${b.level} · click to switch`:"Select affiliate";
 }
 function affSwitchMenu(anchor){
   const cur=store.affiliate();
   showMenu(anchor, Brand.all().map(b=>({
-    label:`<span class="mn-sw" style="background:${b.primary};border-color:${b.secondary}"></span>`+
-          `${esc(b.name)} <b class="mn-lvl">${esc(b.level)}</b>${b.id===cur?' <b class="mn-on">✓</b>':""}`,
+    label:`<span class="mn-logo">${affLogoHTML(b,22,"tiny")}</span>`+
+          `${esc(b.name)} <b class="mn-lvl">${esc(b.level.split(" · ")[0])}</b>${b.id===cur?' <b class="mn-on">✓</b>':""}`,
     html:true,
     fn:()=>{ if(b.id!==cur) chooseAffiliate(b.id); }
   })).concat([
     {sep:true},
-    {label:"Affiliate branding…",fn:()=>brandingModal()},
     {label:"Choose a different affiliate…",fn:()=>{ store.clearAffiliate(); location.reload(); }}
   ]));
 }
@@ -14137,6 +13899,26 @@ function sheetFileBase(){
   return `${who}-${when}-${view}`.toLowerCase().replace(/-+/g,"-");
 }
 
+const INLINED={};
+async function toDataURL(url){
+  if(!url || /^data:/.test(url)) return url;
+  if(!INLINED[url]){
+    INLINED[url]=fetch(url).then(r=>{ if(!r.ok) throw new Error(r.status); return r.blob(); })
+      .then(bl=>new Promise((res,rej)=>{ const fr=new FileReader(); fr.onload=()=>res(fr.result); fr.onerror=rej; fr.readAsDataURL(bl); }))
+      .catch(()=>{ delete INLINED[url]; return url; });
+  }
+  return INLINED[url];
+}
+async function inlineImages(root){
+  const jobs=[];
+  root.querySelectorAll("img[src]").forEach(img=>jobs.push(toDataURL(img.getAttribute("src")).then(d=>img.setAttribute("src",d))));
+  root.querySelectorAll("[style*='url(']").forEach(el=>{
+    const m=el.getAttribute("style").match(/url\(['"]?([^'")]+)['"]?\)/); if(!m) return;
+    jobs.push(toDataURL(m[1]).then(d=>el.setAttribute("style",el.getAttribute("style").replace(m[1],d))));
+  });
+  await Promise.all(jobs);
+}
+
 /** Paint the current sheet to a PNG blob at the given pixel scale. */
 async function sheetPNGBlob(scale){
   scale=scale||PNG_SCALE;
@@ -14154,6 +13936,8 @@ async function sheetPNGBlob(scale){
   clone.style.margin="0";
   // strip preview-only chrome that never belongs in an exported image
   clone.querySelectorAll(".secgap").forEach(n=>n.remove());
+  // an SVG image can't load files: the affiliate logos go in as data URLs
+  await inlineImages(clone);
 
   /* foreignObject content must be well-formed XML. innerHTML is HTML, where
      void elements like <col> come back unclosed — that parsed fine for the
@@ -14247,17 +14031,16 @@ async function shareSheetWhatsApp(){
 function sheetHead(suffix){
   const m=S.meta;
   const sub=[m.opponent?"vs "+m.opponent:"", m.gameLocation].filter(Boolean).join(" · ");
-  const logo=(src,fallback)=>src
-    ? `<div class="logo"><img src="${esc(src)}" alt=""></div>`
-    : `<div class="logo"><div class="badge">${fallback}</div></div>`;
+  const L=printLogos();
+  const logo=src=>`<div class="logo"><img src="${esc(src)}" alt=""></div>`;
   return `<div class="s-head">
-    ${logo(m.logoL,"H")}
+    ${logo(L.aff)}
     <div class="mid">
       <h1>${esc(m.title||"Daily Schedule")}${suffix?esc(suffix):""}</h1>
       <div class="date">${esc((longDate(m.date)||"").toUpperCase())}</div>
       ${sub?`<div class="sub">${esc(sub)}</div>`:""}
     </div>
-    ${logo(m.logoR,"PD")}
+    ${logo(L.org)}
   </div>`;
 }
 /** How much of a row is unused. Build draws a placeholder in it and print
@@ -14610,7 +14393,7 @@ function boot(){
   migrateGroupTypes();
   migrateRowTimes();
   if(!S.meta.title) S.meta.title="Daily Schedule";
-  Brand.load(); Brand.apply(store.affiliate());
+  Brand.apply(store.affiliate());
   renderAffChip();
   renderMeta(); renderSections(); go("hub");
   $("#saveState").textContent = store.ok ? "Draft saved automatically" : "Session only — export a file to keep it";
