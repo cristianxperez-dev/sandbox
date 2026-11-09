@@ -2724,6 +2724,7 @@ body.gated{overflow:hidden}
 @media (max-width:900px){ .keys{display:none} }
 </style>
 <link rel="stylesheet" href="assistant/assistant.css">
+<link rel="stylesheet" href="assistant/day-ui.css">
 </head>
 <body>
 <div class="affgate" id="affGate" hidden>
@@ -7698,7 +7699,7 @@ document.addEventListener("click",e=>{
   if(hit("#affChip")) return affSwitchMenu(el.closest("#affChip"));
   if(hit("#brandHome")) return go("hub");
   if(hit("#btnHelp")) return window.MHAssistUI&&MHAssistUI.help();
-  if(hit("#btnAI")) return window.MHAssistUI?MHAssistUI.open():aiBuilderModal("","plan");
+  if(hit("#btnAI")) return window.DayUI?DayUI.open():window.MHAssistUI?MHAssistUI.open():aiBuilderModal("","plan");
   if(el.id==="btnRoster") return rosterModal();
   if(hit("#btnResources")||el.id==="moResources") return resourcesModal();
   if(hit("#btnGames")||el.id==="moGames") return gamesModal();
@@ -8323,7 +8324,7 @@ function newDayModal(){
       const date=$("#ndDate").value;
       const k=b.dataset.new;
       let next;
-      if(k==="ai"){ closeModal(); return window.MHAssistUI?MHAssistUI.open():aiBuilderModal(); }
+      if(k==="ai"){ closeModal(); return window.DayUI?DayUI.open():window.MHAssistUI?MHAssistUI.open():aiBuilderModal(); }
       if(k==="last"){ next=loadById(last.id); }
       else if(k==="current"){ next=clone(S); }
       else if(k.startsWith("tpl:")){ next=clone(S); next.sections=BUILTIN_TEMPLATES[k.slice(4)](); }
@@ -14412,5 +14413,10 @@ boot();
 <script src="assistant/engine.js"></script>
 <script src="assistant/commands.js"></script>
 <script src="assistant/assistant.js"></script>
+<script src="assistant/day-kb.js"></script>
+<script src="assistant/day-read.js"></script>
+<script src="assistant/day-solve.js"></script>
+<script src="assistant/day-engine.js"></script>
+<script src="assistant/day-ui.js"></script>
 </body>
 </html>

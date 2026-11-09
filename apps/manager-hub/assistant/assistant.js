@@ -328,7 +328,7 @@
       const d = new Date(date + "T12:00:00"); d.setDate(d.getDate() - 1);
       const iso = d.toISOString().slice(0, 10);
       const e = idx.find((x) => x.date === iso); const s = e && loadById(e.id);
-      return s ? { sections: s.sections, label: `the saved schedule for ${longDate(iso)}` } : null;
+      return s ? { sections: s.sections, meta: s.meta, label: `the saved schedule for ${longDate(iso)}` } : null;
     }
     if (ref.kind === "weekday" && ref.weekday) {
       const dow = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"].indexOf(ref.weekday.toLowerCase());
@@ -748,7 +748,7 @@
   function publish(o) {
     const secs = proposedSections();
     if (o.tpl === "" && q("#mhaTpl", panel)?.checked) { toast("Name the template, or untick “save as a day template”"); return; }
-    mutate(() => { S.sections = secs; });
+    mutate(() => { S.sections = secs; if (draft.dayRequest) S.meta.dayRequest = draft.dayRequest; });
     secs.forEach((s) => (s.rows || []).forEach((r) => { learn("activities", String(r.activity || "").replace(/:$/, "")); learn("locations", r.location); }));
     if (o.tpl) ScheduleActions.save(o.tpl, o.structure ? "structure" : "full");
     const n = draft.events.length;
@@ -757,6 +757,22 @@
     go(o.thenPrint ? "print" : "schedule");
     toast(`Published ${A.plural(n, "block")}${o.tpl ? ` · saved “${o.tpl}”` : ""}`, { label: "Undo", fn: undo });
   }
+
+  /** Describe Your Day hands its accepted plan to the same review → publish path:
+      the diff against today's rows, the removal warning and the app's Undo all apply. */
+  function adopt(d) {
+    const ectx = engineCtx();
+    const cur = A.fromSections(S.sections || [], ectx);
+    const touched = new Set(d.events.map((e) => A.norm(e.group)));
+    newDraft({ events: d.events, kept: cur.filter((e) => !touched.has(A.norm(e.group))), base: S.sections,
+      notes: d.notes || [], assumptions: d.assumptions || [], vctx: validationCtx({ firstPitch: d.firstPitch != null ? d.firstPitch : undefined }) }, d.text || "", {});
+    draft.dayRequest = d.request || null;
+    draft.log.push({ who: "assistant", text: summaryLine() });
+    ensurePanel(); panel.hidden = false; document.body.classList.add("mha-open");
+    step = "publish"; render();
+  }
+  /** the structure behind yesterday's saved schedule, when it was built by Describe Your Day */
+  function yesterdayRequest() { const r = loadReference({ kind: "yesterday" }); return (r && r.meta && r.meta.dayRequest) || null; }
 
   /* =====================================================================
      MONTHLY PLANNER — describe → preview → apply
@@ -894,11 +910,11 @@
     if (store.get(KEY_INTRO)) { if (card) card.remove(); return; }
     if (!card) { card = document.createElement("div"); card.id = "mhaIntro"; card.className = "mha-intro"; host.querySelector(".hub-head").after(card); }
     card.innerHTML = `<div><b>Build a day by describing it</b>
-        <ol><li>Open <b>✦ Assistant</b> and say what has to happen — groups, work, fixed times, first pitch.</li>
-        <li>Review the timeline and conflicts; adjust in plain language (“push BP back 15”).</li>
-        <li>Publish, then print the Player sheet or Leadership view.</li></ol></div>
+        <ol><li>Open <b>✦ Assistant</b> and say what has to happen — “10 AM stretch, 1 PM game, team fundy, indy defense, 30-minute BP rounds, 30 off pregame”.</li>
+        <li>Check the timeline, what it assumed and anything that won't fit; adjust in plain language (“shorten fundy to 20”).</li>
+        <li>Review &amp; save, then print the Player sheet or Leadership view.</li></ol></div>
       <div class="mha-intro-a"><button class="btn primary" id="mhaIntroGo">✦ Try the Assistant</button><button class="btn" id="mhaIntroHelp">How it works</button><button class="btn quiet" id="mhaIntroX">Got it</button></div>`;
-    q("#mhaIntroGo", card).onclick = () => { store.set(KEY_INTRO, "1"); card.remove(); go("schedule"); open(); };
+    q("#mhaIntroGo", card).onclick = () => { store.set(KEY_INTRO, "1"); card.remove(); go("schedule"); window.DayUI ? DayUI.open() : open(); };
     q("#mhaIntroHelp", card).onclick = () => help();
     q("#mhaIntroX", card).onclick = () => { store.set(KEY_INTRO, "1"); card.remove(); };
   }
@@ -914,6 +930,6 @@
     const ai = document.getElementById("btnAI"); if (ai) ai.title = "Schedule Assistant — describe the day, review, publish";
     hub();
   }
-  window.MHAssistUI = { open, close, openMonth, help, hub, buildDraft, engineCtx, validationCtx, currentEvents, proposedSections, publish: (o) => publish(o || {}), get draft() { return draft; }, adjust: (t) => doAdjust(t), interpret, paramsToBrief };
+  window.MHAssistUI = { adopt, yesterdayRequest, open, close, openMonth, help, hub, buildDraft, engineCtx, validationCtx, currentEvents, proposedSections, publish: (o) => publish(o || {}), get draft() { return draft; }, adjust: (t) => doAdjust(t), interpret, paramsToBrief };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
 })();
