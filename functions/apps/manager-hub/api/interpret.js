@@ -109,13 +109,13 @@ export async function onRequestPost({ request, env }) {
   if (res.error) return reply(res.status, { error: res.error });
   // the model's output is checked here and again in the page; anything malformed is refused, never repaired
   if (mode === "build") {
-    const ir = res.out && res.out.request;
-    const v = ir ? DaySolve.validate(Object.assign({}, ir, { source: "ai" }), { strict: true }) : { ok: false, errors: ["missing request"] };
+    const ir = res.out && res.out.request ? DaySolve.normalize(Object.assign({}, res.out.request, { source: "ai" })) : null;
+    const v = ir ? DaySolve.validate(ir, { strict: true }) : { ok: false, errors: ["missing request"] };
     if (!v.ok) return reply(502, { error: "invalid-output", details: v.errors.slice(0, 5) });
-    return reply(200, { request: Object.assign({}, ir, { source: "ai" }), model: res.model });
+    return reply(200, { request: ir, model: res.model });
   }
-  const ops = res.out && Array.isArray(res.out.ops) ? res.out.ops : null;
-  if (!ops) return reply(502, { error: "invalid-output" });
+  const ops = res.out && Array.isArray(res.out.ops) ? DaySolve.normalizeEdits(res.out.ops) : null;
+  if (!ops || !DaySolve.validateEdits(ops, { strict: true }).ok) return reply(502, { error: "invalid-output" });
   const applied = DaySolve.applyEdits(body.request, ops);
   const v = DaySolve.validate(applied);
   if (!v.ok) return reply(502, { error: "invalid-output", details: v.errors.slice(0, 5) });

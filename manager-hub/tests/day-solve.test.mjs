@@ -11,8 +11,9 @@ import { dirname, join } from "node:path";
 const DIR = join(dirname(fileURLToPath(import.meta.url)), "../../apps/manager-hub/assistant");
 const vmctx = { self: {}, console };
 vm.createContext(vmctx);
-for (const f of ["day-kb.js", "day-solve.js"]) vm.runInContext(readFileSync(join(DIR, f), "utf8"), vmctx, { filename: f });
-const S = vmctx.self.DaySolve, KB = vmctx.self.DayKB;
+for (const f of ["day-kb.js", "day-read.js", "day-solve.js"]) vm.runInContext(readFileSync(join(DIR, f), "utf8"), vmctx, { filename: f });
+const S = vmctx.self.DaySolve, KB = vmctx.self.DayKB, READ = vmctx.self.DayRead;
+const { SCENARIOS } = await import("./day-eval-scenarios.mjs");
 const J = (x) => (x === undefined ? undefined : JSON.parse(JSON.stringify(x)));
 
 /* ---------------------------------------------------------------- helpers */
@@ -423,4 +424,96 @@ test("fmt / fmtAP / KB contract", () => {
   assert.equal(KB.label("teamDefense"), "Team Fundamentals");
   assert.equal(KB.label("pregamePrep"), "Transition / Pregame Preparation");
   assert.equal(KB.PREGAME_FREE_LABEL, "Pregame Free Time");
+});
+
+/* ============================================= resources and overflow */
+test("rotation respects capacity: 4 groups, 1 field + 2 cages — every group gets field and cage", () => {
+  const ctx = { hittingGroups: ["Blue", "Orange", "Gray", "Red"], resources: { fields: 1, cages: 2 } };
+  const p = S.solve(req({ dayType: "game", anchors: { start: null, end: null, firstPitch: 1110, offBeforeGame: 30 }, parallel: [["a1", "a2"]], activities: [
+    act("a1", "bp", { rounds: { each: 20, count: 4, atOnce: null } }), act("a2", "cage", { rounds: { each: 20, count: null, atOnce: null } }), act("a3", "stretch", { at: 900 })] }), ctx);
+  assert.equal(p.ok, true, JSON.stringify(p.conflicts));
+  const bp = of(p, "bp"), cage = of(p, "cage");
+  const maxAt = (list) => Math.max(...list.map((x) => list.filter((y) => y.start <= x.start && x.start < y.end).length));
+  assert.equal(maxAt(bp), 1, "one group on the single field");
+  assert.ok(maxAt(cage) <= 2, "never more than the two cages");
+  ctx.hittingGroups.forEach((g) => {
+    const f = bp.find((i) => i.group === g), c = cage.find((i) => i.group === g);
+    assert.ok(f && c, `${g} gets BP and cage`);
+    assert.ok(f.end <= c.start || c.end <= f.start, `${g} not in two places`);
+  });
+  assert.ok(bp.some((b) => cage.some((c) => c.start < b.end && b.start < c.end)), "cage runs during BP");
+});
+
+test("more groups at once than field + cage hold → resource conflict, laid out in waves", () => {
+  const ctx = { hittingGroups: ["Blue", "Orange", "Gray"], resources: { fields: 1, cages: 1 } };
+  const ir = req({ dayType: "game", anchors: { start: 900, end: null, firstPitch: 1140, offBeforeGame: 30 }, parallel: [["a2"]], activities: [
+    act("a1", "stretch", { at: 900 }), act("a2", "bp", { at: 930, rounds: { each: 30, count: 3, atOnce: null } })] });
+  const p = S.solve(ir, ctx);
+  const c = p.conflicts.find((x) => x.code === "resource");
+  assert.ok(c, "resource conflict"); assert.equal(c.severity, "error");
+  assert.match(c.message, /3 BP groups .* 3:30 PM.* only 2 at a time/);
+  assert.equal(p.ok, false);
+  const bp = of(p, "bp");
+  assert.ok(bp.every((x) => !bp.some((y) => y !== x && y.start < x.end && x.start < y.end)), "one group on the field at a time");
+  assertNoOverlap(p);
+  assert.ok(c.alternatives.length >= 2);
+  c.alternatives.forEach((a) => {
+    const q = S.solve(S.applyEdits(ir, J(a.ops), ctx), ctx);
+    assert.ok(!q.conflicts.some((x) => x.code === "resource"), `${a.label} resolves it`);
+  });
+});
+
+test("overfull with lunch and a hard stop: work flows around lunch, never past the stop; what's left out is named", () => {
+  const ir = req({ anchors: { start: 480, end: 780, firstPitch: null, offBeforeGame: null }, activities: [
+    act("a1", "teamDefense", { dur: 120 }), act("a2", "bp", { dur: 180 }), act("a3", "conditioning", { dur: 60 }), act("a4", "meal", { at: 720, label: "Lunch" })] });
+  const p = S.solve(ir, CTX);
+  assert.equal(p.ok, false);
+  const lunch = one(p, "meal");
+  work(p).filter((i) => i !== lunch).forEach((i) => {
+    assert.ok(i.end <= 720 || i.start >= 750, `${i.label} avoids lunch`);
+    assert.ok(i.end <= 780, `${i.label} done by 1:00`);
+  });
+  assert.equal(len(one(p, "teamDefense")), 120, "stated length kept");
+  of(p, "bp").forEach((b) => assert.equal(len(b), 90, "stated BP length kept"));
+  const c = p.conflicts.find((x) => x.code === "overfull");
+  assert.match(c.message, /Left out: .*Conditioning/);
+  assert.ok(c.alternatives.length >= 1);
+  c.alternatives.forEach((a) => {
+    const q = S.solve(S.applyEdits(ir, J(a.ops), CTX), CTX);
+    assert.ok(!q.conflicts.some((x) => x.code === "overfull"), `${a.label} resolves it`);
+  });
+});
+
+test("stated rounds.each is never lengthened or shortened", () => {
+  const p = S.solve(req({ dayType: "game", anchors: { start: 840, end: null, firstPitch: 1080, offBeforeGame: 30 }, activities: [act("a1", "stretch"), act("a2", "bp", { rounds: { each: 15, count: 4, atOnce: null } })] }), CTX);
+  assert.deepEqual(J(of(p, "bp").map(len)), [15, 15, 15, 15]);
+  const q = S.solve(req({ anchors: { start: 600, end: 660, firstPitch: null, offBeforeGame: null }, activities: [act("a1", "bp", { rounds: { each: 20, count: 4, atOnce: null } })] }), CTX);
+  of(q, "bp").forEach((b) => assert.equal(len(b), 20));
+  assert.equal(q.ok, false);
+});
+
+/* ============================================================ normalize */
+test("normalize: every reader request passes strict validation", () => {
+  let n = 0;
+  for (const sc of SCENARIOS) {
+    const prompt = sc.prompt || sc.text;
+    if (!prompt) continue;
+    const ctx = sc.ctx || {};
+    const ir = READ.read(prompt, ctx);
+    const before = JSON.stringify(ir);
+    const v = S.validate(S.normalize(ir), { strict: true });
+    assert.ok(v.ok, `${sc.id}: ${v.errors.join("; ")}`);
+    assert.equal(JSON.stringify(ir), before, "normalize doesn't mutate");
+    // same plan before and after normalising: meaning unchanged
+    assert.deepEqual(J(S.solve(S.normalize(ir), ctx).items), J(S.solve(ir, ctx).items), sc.id);
+    for (const st of sc.steps || []) {
+      const ops = READ.readEdit(st.text, ir, S.solve(ir, ctx), ctx);
+      const ve = S.validateEdits(S.normalizeEdits(ops), { strict: true });
+      assert.ok(ve.ok, `${sc.id} / ${st.text}: ${ve.errors.join("; ")}`);
+    }
+    n++;
+  }
+  assert.ok(n >= 60, `${n} prompts checked`);
+  assert.equal(S.validate(S.normalize({ activities: [{ id: "a1", kind: "stretch" }] }), { strict: true }).ok, true);
+  assert.equal(S.validate(S.normalize({ activities: [{ kind: "stretch" }] }), { strict: true }).ok, false, "a missing id is not invented");
 });

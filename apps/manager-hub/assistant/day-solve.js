@@ -212,7 +212,8 @@
         if (a.rounds.atOnce != null && (a.rounds.atOnce < 1 || a.rounds.atOnce > 12)) errors.push(`${p}.rounds.atOnce: must be 1–12`);
       }
     });
-    acts.forEach((a, i) => ["after", "before"].forEach((k) => (a[k] || []).forEach((r) => { if (!ids.has(r)) errors.push(`request.activities[${i}].${k}: unknown activity "${r}"`); })));
+    // "game" is accepted as a pseudo-id in edges, as in offBefore (the game is an anchor, not an activity)
+    acts.forEach((a, i) => ["after", "before"].forEach((k) => (a[k] || []).forEach((r) => { if (!ids.has(r) && r !== "game") errors.push(`request.activities[${i}].${k}: unknown activity "${r}"`); })));
     const an = ir.anchors || {};
     ["start", "end", "firstPitch"].forEach((k) => { if (!inDay(an[k])) errors.push(`request.anchors.${k}: must be minutes after midnight (0–1439)`); });
     if (an.offBeforeGame != null && (an.offBeforeGame < 0 || an.offBeforeGame > 240)) errors.push("request.anchors.offBeforeGame: must be 0–240 minutes");
@@ -230,6 +231,54 @@
     if (!Array.isArray(ops)) return { ok: false, errors: ["ops: expected an array"] };
     check(ops, EDIT_SCHEMA, EDIT_SCHEMA, "ops", errors, !!opts.strict);
     return { ok: !errors.length, errors };
+  }
+
+  /* ============================================================ normalize
+     Fill every schema property so strict validation (the model's schema) passes for IR from
+     the built-in reader or hand-built requests. Missing nullable values become null, missing
+     arrays [], missing objects are filled recursively, version defaults to 1. Properties the
+     schema doesn't know are dropped (the solver ignores them). Present values are never
+     changed, so the meaning of the request is unchanged.                                   */
+  function fill(v, sch, rootS) {
+    sch = deref(sch, rootS);
+    if (!sch) return v;
+    if (sch.anyOf) {
+      const branches = sch.anyOf.map((b) => deref(b, rootS));
+      if (v === null && branches.some((b) => [].concat(b.type).includes("null"))) return null;
+      if (v && typeof v === "object" && !Array.isArray(v)) {
+        const ops = branches.filter((b) => b.properties && b.properties.op);
+        if (ops.length && typeof v.op === "string") { const br = ops.find((b) => b.properties.op.enum.includes(v.op)); return br ? fill(v, br, rootS) : v; }
+        const ob = branches.find((b) => [].concat(b.type).includes("object"));
+        return ob ? fill(v, ob, rootS) : v;
+      }
+      return v;
+    }
+    if (Array.isArray(v)) return sch.items ? v.map((x) => fill(x, sch.items, rootS)) : v;
+    if (v && typeof v === "object" && sch.properties) {
+      const out = {};
+      Object.keys(sch.properties).forEach((k) => {
+        const ps = deref(sch.properties[k], rootS);
+        if (v[k] !== undefined) { out[k] = fill(v[k], ps, rootS); return; }
+        const pt = [].concat((ps && ps.type) || []);
+        if (ps && ps.anyOf) out[k] = ps.anyOf.some((b) => [].concat(deref(b, rootS).type).includes("null")) ? null : undefined;
+        else if (pt.includes("null")) out[k] = null;
+        else if (pt.includes("array")) out[k] = [];
+        else if (pt.includes("object")) out[k] = fill({}, ps, rootS);
+        else if (ps && ps.enum && ps.enum.length === 1) out[k] = ps.enum[0];
+        if (out[k] === undefined) delete out[k]; // a required value (id, kind, op…) stays missing: validate reports it
+      });
+      return out;
+    }
+    return v;
+  }
+  /** IR → a new IR with every schema property present (see above). */
+  function normalize(ir) {
+    if (!ir || typeof ir !== "object" || Array.isArray(ir)) return ir;
+    return fill(clone(ir), SCHEMA, SCHEMA);
+  }
+  /** EditOp[] → new ops with every schema property present. */
+  function normalizeEdits(ops) {
+    return Array.isArray(ops) ? fill(clone(ops), EDIT_SCHEMA, EDIT_SCHEMA) : ops;
   }
 
   /* ======================================================= target lookup */
@@ -1270,5 +1319,5 @@
   }
 
   return { SCHEMA, EDIT_SCHEMA, BUILD_RESPONSE_SCHEMA, REFINE_RESPONSE_SCHEMA, DEFS, OPS,
-    validate, validateEdits, solve, applyEdits, resolveTarget, fmt, fmtAP, mins, KB };
+    validate, validateEdits, normalize, normalizeEdits, solve, applyEdits, resolveTarget, fmt, fmtAP, mins, KB };
 });

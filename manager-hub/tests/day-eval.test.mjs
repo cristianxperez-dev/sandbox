@@ -35,6 +35,30 @@ try {
   }
 }
 
+// MH_EVAL_INTERPRETER=ai (with ANTHROPIC_API_KEY) sends every prompt through the real AI interpreter
+// endpoint instead of the built-in reader; the solver and every check are identical.
+const AI = process.env.MH_EVAL_INTERPRETER === "ai";
+let endpoint = null;
+async function viaEndpoint(body) {
+  if (!endpoint) endpoint = await import("../../functions/apps/manager-hub/api/interpret.js");
+  const res = await endpoint.onRequestPost({ env: { ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY, MH_AI_MODEL: process.env.MH_AI_MODEL },
+    request: new Request("https://cperez.app/apps/manager-hub/api/interpret", { method: "POST", headers: { "Content-Type": "application/json", Origin: "https://cperez.app" }, body: JSON.stringify(body) }) });
+  const d = await res.json();
+  if (!res.ok) throw new Error(`AI interpreter ${res.status}: ${JSON.stringify(d)}`);
+  return d;
+}
+const wire = (ctx) => ({ date: ctx.date, affiliate: ctx.affiliate, hittingGroups: ctx.hittingGroups, pitcherGroups: ctx.pitcherGroups, resources: ctx.resources, game: ctx.game });
+async function PLAN(text, ctx) {
+  if (!AI) return E.plan(text, ctx);
+  const d = await viaEndpoint({ mode: "build", text, ctx: wire(ctx) });
+  return E.plan(text, ctx, { request: d.request });
+}
+async function REFINE(state, text, ctx) {
+  if (!AI) return E.refine(state, text, ctx);
+  const d = await viaEndpoint({ mode: "refine", text, ctx: wire(ctx), request: state.request });
+  return E.refine(state, text, ctx, { ops: d.ops });
+}
+
 // values built inside a VM realm have their own prototypes: compare by value
 const J = (x) => (x === undefined ? undefined : JSON.parse(JSON.stringify(x)));
 
@@ -84,7 +108,7 @@ function runChecks(checks, r) {
 const results = []; // { cat, id, pass }
 
 for (const sc of SCENARIOS) {
-  test(`[${sc.cat}] ${sc.id}`, () => {
+  test(`[${sc.cat}] ${sc.id}`, async () => {
     let pass = false;
     try {
       if (loadError) throw loadError;
@@ -92,20 +116,21 @@ for (const sc of SCENARIOS) {
       const report = [`  prompt: "${sc.prompt}"`];
       const fails = [];
 
-      let state = E.plan(sc.prompt, ctx);
+      let state = await PLAN(sc.prompt, ctx);
+      if (AI && state.interpreter !== "ai") throw new Error("the AI interpreter's request was rejected by validation");
       const r0 = { plan: J(state.plan), request: J(state.request), state, ctx };
       const f0 = runChecks([...baseChecks(sc.expect), ...(sc.checks || [])], r0);
       report.push(describe(state, "generated day:"));
       if (f0.length) fails.push("  initial plan:", ...f0.map((f) => "    " + f));
 
-      (sc.steps || []).forEach((step, n) => {
+      for (const [n, step] of (sc.steps || []).entries()) {
         const before = state;
         let next;
         try {
-          next = E.refine(before, step.text, ctx);
+          next = await REFINE(before, step.text, ctx);
         } catch (err) {
           fails.push(`  step ${n + 1} "${step.text}": refine threw ${err && err.stack}`);
-          return;
+          continue;
         }
         const r = { plan: J(next.plan), request: J(next.request), state: next, prev: J(before.plan), prevRequest: J(before.request), ctx };
         const fs = runChecks([...baseChecks(step.expect), ...(step.checks || [])], r);
@@ -123,7 +148,7 @@ for (const sc of SCENARIOS) {
         report.push(describe(next, `after refine ${n + 1}: "${step.text}"`));
         if (fs.length) fails.push(`  step ${n + 1} "${step.text}":`, ...fs.map((f) => "    " + f));
         state = next;
-      });
+      }
 
       if (fails.length) assert.fail(`\n${fails.join("\n")}\n${report.join("\n")}\n`);
       pass = true;
@@ -142,7 +167,7 @@ test("scoring summary (pass/fail per category)", () => {
   const tot = { n: results.length, pass: results.filter((x) => x.pass).length };
   const w = Math.max(...rows.map((r) => r.cat.length), 10);
   const line = (a, b, c, d) => `  ${a.padEnd(w)}  ${String(b).padStart(5)}  ${String(c).padStart(5)}  ${String(d).padStart(5)}`;
-  const out = ["", "Describe Your Day — evaluation summary", line("category", "total", "pass", "fail"), "  " + "─".repeat(w + 21)];
+  const out = ["", `Describe Your Day — evaluation summary (${AI ? "AI interpreter: " + (process.env.MH_AI_MODEL || "default model") : "built-in reader"})`, line("category", "total", "pass", "fail"), "  " + "─".repeat(w + 21)];
   rows.forEach((r) => out.push(line(r.cat, r.n, r.pass, r.n - r.pass)));
   out.push("  " + "─".repeat(w + 21), line("TOTAL", tot.n, tot.pass, tot.n - tot.pass), `  pass rate ${tot.n ? Math.round((100 * tot.pass) / tot.n) : 0}%`);
   const failed = results.filter((x) => !x.pass);

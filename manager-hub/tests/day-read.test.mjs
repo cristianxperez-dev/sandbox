@@ -649,6 +649,19 @@ test("class 8: readEdit rounds deltas, at and swap", () => {
   }
 });
 
+test("fresh wordings across classes: groups of 20, lunch spread, goes from, for the starters", () => {
+  deq(one(read("then BP for the hitters, 3 groups of 20"), "bp").rounds, { each: 20, count: 3 });
+  const g = read("4 groups of 5 hitters for BP");
+  assert.equal(one(g, "bp").rounds.count, 4, "groups of 5 hitters are people, not minutes");
+  const l = read("lunch spread 11:15");
+  deq(kinds(l), ["meal"]); assert.equal(l.activities[0].at, 675);
+  const b = read("BP goes from 4 to 5. pens at 3 for the starters");
+  deq([one(b, "bp").at, one(b, "bp").dur], [960, 60]);
+  assert.equal(one(b, "bullpen").at, 900); deq(b.unknown, []);
+  const k = read("cage work should kick off at 2:15");
+  assert.equal(one(k, "cage").at, 855); assert.equal(k.anchors.end, null);
+});
+
 /* ================================================================ unknowns */
 test("phrases not understood are reported, never dropped", () => {
   const r = read("we have a scrimmage vs the cubs at 1, stretch at 10, juggling practice");

@@ -19,12 +19,12 @@
 
   /** Build a day from a description. `request` may be supplied by the AI interpreter instead of the reader. */
   function plan(text, ctx = {}, opts = {}) {
-    let request = opts.request || null, interpreter = opts.request ? "ai" : "reader";
+    let request = opts.request ? Solve.normalize(opts.request) : null, interpreter = opts.request ? "ai" : "reader";
     if (request) {
       const v = Solve.validate(request, { strict: true });
       if (!v.ok) { request = null; interpreter = "reader"; }
     }
-    if (!request) request = Read.read(text, ctx);
+    if (!request) request = Solve.normalize(Read.read(text, ctx));
     request = resolveBase(request, ctx);
     const p = Solve.solve(request, ctx);
     return { text, request, plan: p, interpreter, history: [] };
@@ -56,7 +56,8 @@
   }
   function applyOps(state, ops, ctx = {}, text = "") {
     const before = clone(state.request);
-    const request = Solve.applyEdits(clone(state.request), ops || [], ctx);
+    ops = Solve.normalizeEdits ? Solve.normalizeEdits(ops || []) : ops || [];
+    const request = Solve.applyEdits(clone(state.request), ops, ctx);
     const p = Solve.solve(request, ctx);
     return Object.assign({}, state, { request, plan: p, ops, history: (state.history || []).concat([{ text, request: before, plan: state.plan }]) });
   }
