@@ -14546,7 +14546,42 @@ function migrateToMasterLists(){
   }));
   if(addedL||addedC) saveDraft();
 }
+/* ==========================================================================
+   ORGANISATION ROSTER (rosters/org-roster.csv)
+   The affiliate rosters ship with the app. On open, the file is merged into every
+   affiliate exactly like Roster → Import CSV: matched players are filled in, never
+   duplicated, nobody is removed, nothing a coach edited is overwritten. It runs again
+   only when the file changes. Behind the cperez.app access code; not in the public mirror.
+   ========================================================================== */
+const OrgRoster = (()=>{
+  const KEY="cs.orgroster.applied";            // global (not per affiliate): which version of the file was merged
+  const hash=t=>{ let h=2166136261; for(let i=0;i<t.length;i++){ h^=t.charCodeAt(i); h=Math.imul(h,16777619); } return (h>>>0).toString(36)+"-"+t.length; };
+  const rawGet=k=>{ try{ return localStorage.getItem(k); }catch(e){ return null; } };
+  const rawSet=(k,v)=>{ try{ localStorage.setItem(k,v); }catch(e){} };
+  async function apply(){
+    let text;
+    try{ const r=await fetch("rosters/org-roster.csv",{cache:"no-cache"}); if(!r.ok) return null; text=await r.text(); }catch(e){ return null; }
+    const v=hash(text);
+    if(rawGet(KEY)===v) return null;
+    const parsed=RosterImport.read(text); if(!parsed.ok) return null;
+    const {errors,players}=RosterImport.validate(parsed,parsed.map);
+    if(errors.some(e=>e.kind==="column")) return null;
+    const planned=RosterRoute.plan(players,"position",{},parsed.map.level==null);
+    const summary=RosterRoute.commit(planned,{});   // defaults: fill blanks only, keep anyone already elsewhere
+    rawSet(KEY,v);
+    return summary;
+  }
+  return {apply};
+})();
+window.OrgRoster=OrgRoster;
+
 function boot(){
+  OrgRoster.apply().then(sum=>{
+    if(!sum || !store.affiliate()) return;
+    Roster.load();
+    try{ renderSections(); if(VIEW==="hub") go("hub"); }catch(e){}
+    const t=sum.totals; if(t.added||t.updated) toast(`Affiliate rosters loaded — ${t.added} added${t.updated?`, ${t.updated} updated`:""}`);
+  });
   // nothing loads until we know whose workspace we're in
   if(!store.affiliate()){ showAffGate(); return; }
   loadLib();

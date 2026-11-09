@@ -29,6 +29,8 @@ const rosters = (p) => p.evaluate(() => Object.fromEntries(AFFILIATES.map((a) =>
   for (const vp of [{ width: 1440, height: 900 }, { width: 390, height: 844, mobile: true }]) {
     const ctx = await b.newContext({ viewport: { width: vp.width, height: vp.height }, isMobile: !!vp.mobile, hasTouch: !!vp.mobile });
     await signIn(ctx, BASE);
+    // these checks control the roster themselves: the shipped organisation roster is tested separately
+    await ctx.route("**/rosters/org-roster.csv", (r) => r.fulfill({ status: 200, contentType: "text/csv", body: "" }));
     const p = await ctx.newPage(), errs = [], W = vp.width;
     p.on("pageerror", (e) => errs.push(e.message));
     await p.goto(BASE); await p.evaluate(() => { localStorage.clear(); localStorage.setItem("cs.affiliate", "sl"); }); await p.reload(); await p.waitForTimeout(800);

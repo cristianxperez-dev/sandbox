@@ -22,6 +22,8 @@ const DAY = "Report at 8:00. Two position player groups and two pitcher groups. 
 async function fresh(b, opts = {}) {
   const ctx = await b.newContext(Object.assign({ viewport: { width: 1366, height: 900 }, acceptDownloads: true }, opts.ctx || {}));
   await signIn(ctx, BASE);
+  // these checks control the roster themselves: the shipped organisation roster is tested separately
+  await ctx.route("**/rosters/org-roster.csv", (r) => r.fulfill({ status: 200, contentType: "text/csv", body: "" }));
   if (opts.init) await ctx.addInitScript(opts.init);
   const p = await ctx.newPage();
   p.setDefaultTimeout(8000);
