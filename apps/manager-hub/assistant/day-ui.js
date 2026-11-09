@@ -271,7 +271,7 @@
       if (i.kind === "game") return `<button class="dy-game" data-item="${h(key)}" style="grid-row:${row(i.start)};grid-column:2/${lanes.length + 2}"><b>${fmtAP(i.start)}</b> ${h(i.label)}</button>`;
       const [c0, c1] = laneOf(i) || [0, lanes.length];
       const len = Math.max(1, row(i.end) - row(i.start));
-      const cls = ["dy-blk", i.kind === "free" ? "free" : i.fixed ? "fixed" : "flex", i.source === "inferred" || i.source === "default" ? "inf" : "", sel === key ? "sel" : "", len < 3 ? "tiny" : ""].join(" ");
+      const cls = ["dy-blk", i.kind === "free" ? "free" : i.fixed ? "fixed" : "flex", i.source === "inferred" ? "inf" : "", sel === key ? "sel" : "", len < 3 ? "tiny" : ""].join(" ");
       return `<button class="${cls}" data-item="${h(key)}" data-kind="${h(i.kind)}" style="grid-row:${row(i.start)}/span ${len};grid-column:${c0 + 2}/${c1 + 2}" title="${h(`${fmtAP(i.start)}–${fmtAP(i.end)} · ${i.label}`)}">
         <span class="t">${fmt(i.start)}–${fmt(i.end)}</span><span class="l">${i.fixed ? '<i class="pin" aria-label="fixed"></i>' : ""}${h(i.label)}${i.group && !lanes.some((l) => l.group === i.group) ? ` <em>${h(i.group)}</em>` : ""}</span><span class="d">${i.end - i.start ? mins(i.end - i.start) : ""}</span></button>`;
     }).join("");

@@ -75,7 +75,8 @@
       label: N("string"),
       id: N("string")
     }),
-    rounds: obj({ each: N("integer"), count: N("integer") }),
+    // atOnce: how many groups hit at the same time (null = one at a time, or all when the activity is in a parallel group)
+    rounds: obj({ each: N("integer"), count: N("integer"), atOnce: N("integer") }),
     activity: obj({
       id: { type: "string" },
       kind: { type: "string", enum: KB.IDS.slice() },
@@ -103,7 +104,7 @@
     opShape("add", { activity: ref("activity") }),
     opShape("remove", { target: ref("target") }),
     opShape("anchor", { key: { type: "string", enum: ["start", "end", "firstPitch", "offBeforeGame"] }, value: N("integer") }),
-    opShape("rounds", { target: nTarget, count: N("integer"), each: N("integer"), groups: N("integer") }),
+    opShape("rounds", { target: nTarget, count: N("integer"), each: N("integer"), groups: N("integer"), atOnce: N("integer") }),
     opShape("parallel", { targets: { type: "array", items: ref("target") } }),
     opShape("lock", { target: ref("target") }),
     opShape("indoor", { target: { anyOf: [ref("target"), { type: "string", enum: ["all-hitting"] }] } })
@@ -208,6 +209,7 @@
       if (a.rounds) {
         if (a.rounds.count != null && (a.rounds.count < 1 || a.rounds.count > 12)) errors.push(`${p}.rounds.count: must be 1–12`);
         if (a.rounds.each != null && (a.rounds.each < 5 || a.rounds.each > 120)) errors.push(`${p}.rounds.each: must be 5–120 minutes`);
+        if (a.rounds.atOnce != null && (a.rounds.atOnce < 1 || a.rounds.atOnce > 12)) errors.push(`${p}.rounds.atOnce: must be 1–12`);
       }
     });
     acts.forEach((a, i) => ["after", "before"].forEach((k) => (a[k] || []).forEach((r) => { if (!ids.has(r)) errors.push(`request.activities[${i}].${k}: unknown activity "${r}"`); })));
@@ -387,8 +389,16 @@
       if (hit) ids.forEach((x) => { if (!hit.includes(x)) hit.push(x); });
       else parGroups.push(ids);
     });
+    // rounds.atOnce > 1 runs that activity's rounds side by side; atOnce 1 takes a lone
+    // activity back out of its parallel group ("one group at a time")
+    acts.forEach((a) => {
+      const k = a.rounds && a.rounds.atOnce;
+      if (k > 1 && !parGroups.some((g) => g.includes(a.id))) parGroups.push([a.id]);
+      if (k === 1) { const gi = parGroups.findIndex((g) => g.length === 1 && g[0] === a.id); if (gi >= 0) parGroups.splice(gi, 1); }
+    });
     const parOf = new Map();
     parGroups.forEach((g, i) => g.forEach((x) => parOf.set(x, i)));
+    const parIssues = []; // capacity problems found while building parallel blocks, raised once times are known
 
     const fields = res.fields != null ? res.fields : 1, cagesKnown = res.cages != null, cages = cagesKnown ? res.cages : 1;
     /** a parallel group → rigid template of items relative to the block start */
@@ -396,28 +406,65 @@
       const all = members.map((a) => ({ a, units: unitsOf(a) }));
       const bp = all.find((m) => (m.a.kind === "bp" || m.a.kind === "cage") && m.units.length > 1);
       const out = [];
+      const plural2 = (n, w) => `${n} ${w}${n === 1 ? "" : "s"}`;
       if (all.length === 1 && bp) {
-        // rounds side by side: on the field and in the cage at the same time
+        // rounds side by side, never more at once than the field(s) + cage(s) hold:
+        // on-field lanes first (kind bp), the rest hit in a cage (kind cage)
         const units = bp.units, n = units.length, each = units[0].def;
-        const lanes = Math.min(n, Math.max(2, fields + cages));
-        if (!cagesKnown) say("cage", "Assumed one cage for the second BP group.");
+        const F = bp.a.kind === "bp" && !bp.a.indoor ? fields : 0;
+        const cap = Math.max(1, F + cages);
+        const want = Math.min(n, bp.a.rounds && bp.a.rounds.atOnce ? bp.a.rounds.atOnce : n);
+        const lanes = Math.max(1, Math.min(want, cap));
+        if (!cagesKnown && want > F) say("cage", "Assumed one cage for the group hitting off the field.");
         units.forEach((u, i) => {
-          const lane = i % lanes, slot = Math.floor(i / lanes), onField = lane < fields && bp.a.kind === "bp" && !u.location;
-          out.push(Object.assign({}, u, { off: slot * each, dur: each, resource: onField ? "field" : "cage", location: onField ? u.location || "Field" : "Cage",
-            exclusive: onField && u.exclusive, label: onField ? u.label : `${u.label} (Cage)` }));
+          const lane = i % lanes, slot = Math.floor(i / lanes), onField = lane < F;
+          out.push(Object.assign({}, u, { off: slot * each, dur: each, kind: onField ? u.kind : "cage", resource: onField ? "field" : "cage",
+            location: onField ? u.location || "Field" : "Cage", exclusive: onField && u.exclusive, label: onField ? u.label : `${u.label} (Cage)` }));
         });
+        if (want > cap) {
+          const waves = [];
+          for (let i = 0; i < n; i += lanes) waves.push(units.slice(i, i + lanes).map((u) => u.group).join(" + "));
+          parIssues.push({ actId: bp.a.id, known: cagesKnown && res.fields != null, each, n, want, cap,
+            text: (at) => `${want} BP groups are set to hit at once at ${fmtAP(at)}, but ${plural2(F, "field")} + ${plural2(cages, "cage")} fit only ${cap} at a time — shown as ${waves.join(", then ")} (${mins(Math.ceil(n / lanes) * each)}).`,
+            alts: [
+              { label: `Hit ${cap} at a time (${waves.join(", then ")})`, ops: [{ op: "rounds", target: { kind: null, who: null, label: null, id: bp.a.id }, count: null, each: null, groups: null, atOnce: cap }] },
+              { label: `One group at a time (${mins(n * each)})`, ops: [{ op: "rounds", target: { kind: null, who: null, label: null, id: bp.a.id }, count: null, each: null, groups: null, atOnce: 1 }] }
+            ] });
+        }
         return { items: out, len: Math.ceil(n / lanes) * each };
       }
-      const cageM = all.find((m) => m.a.kind === "cage");
-      if (bp && bp.a.kind === "bp" && cageM && all.length === 2) {
-        // rotation: one group hits on the field while the others work in the cage, then swap
-        const units = bp.units, each = units[0].def;
-        units.forEach((u, k) => {
-          out.push(Object.assign({}, u, { off: k * each, dur: each, location: u.location || "Field" }));
-          units.forEach((o, g) => { if (g !== k) out.push(Object.assign({}, cageM.units[0], { off: k * each, dur: each, group: o.group, round: k + 1, label: `${cageM.units[0].label.replace(/ — Round \d+$/, "")} — ${o.group}`, location: cageM.units[0].location || "Cage", resource: "cage" })); });
+      const bpM = all.find((m) => m.a.kind === "bp"), cageM = all.find((m) => m.a.kind === "cage");
+      if (bpM && cageM && all.length === 2) {
+        // Rotation: every group takes one on-field BP slot and one cage slot, never more groups
+        // per slot than fields / cages. Field slots go in group order; each group's cage slot is
+        // the least-loaded other slot, nearest after its field slot (Latin-square-like).
+        const units = bpM.units, G = units.length;
+        const slotLen = units[0].def; // the BP round sets the pace; cage time is matched to it
+        const F = Math.max(1, fields), C = cages;
+        if (!cagesKnown) say("cage", "Assumed one cage for the rotation.");
+        const Cc = Math.max(1, C);
+        const S = Math.max(Math.ceil(G / F), Math.ceil(G / Cc), 2);
+        const fieldSlot = (g) => Math.floor(g / F);
+        const load = new Array(S).fill(0), cageSlot = [];
+        units.forEach((u, g) => {
+          const fs = fieldSlot(g);
+          const c = [...Array(S).keys()].filter((k) => k !== fs && load[k] < Cc).sort((x, y) => load[x] - load[y] || ((x - fs + S) % S) - ((y - fs + S) % S))[0];
+          cageSlot[g] = c == null ? -1 : c;
+          if (c != null) load[c]++;
         });
-        if (cageM.a.dur && cageM.a.dur !== each) say(`par:${cageM.a.id}`, `Cage time matched to the ${each}-min BP rounds so groups can swap.`);
-        return { items: out, len: units.length * each };
+        const cageLabel = cageM.units[0].label.replace(/ — Round \d+$/, "");
+        units.forEach((u, g) => {
+          out.push(Object.assign({}, u, { off: fieldSlot(g) * slotLen, dur: slotLen, location: u.location || "Field", resource: "field" }));
+          const cs = cageSlot[g] >= 0 ? cageSlot[g] : S; // no room: after the rotation (flagged below)
+          out.push(Object.assign({}, cageM.units[0], { off: cs * slotLen, dur: slotLen, group: u.group, round: g + 1, label: `${cageLabel} — ${u.group}`,
+            location: cageM.units[0].location || "Cage", resource: "cage", exclusive: false }));
+        });
+        const len = (cageSlot.some((c) => c < 0) ? S + 1 : S) * slotLen;
+        say(`rot:${bpM.a.id}`, `Rotation: ${F === 1 ? "one group" : `${F} groups`} on the field per ${slotLen}-min slot, ${Cc === 1 ? "one" : `up to ${Cc}`} in the cage${Cc === 1 ? "" : "s"}; each group gets both.`);
+        if ([cageM.a.dur, cageM.a.rounds && cageM.a.rounds.each].some((x) => x && x !== slotLen)) say(`par:${cageM.a.id}`, `Cage time matched to the ${slotLen}-min rotation slots.`);
+        if (C === 0 && cagesKnown) parIssues.push({ actId: bpM.a.id, known: true, text: (at) => `The BP / cage rotation at ${fmtAP(at)} needs a cage, but none is available.`,
+          alts: [{ label: "Hit on the field one group at a time", ops: [{ op: "remove", target: { kind: null, who: null, label: null, id: cageM.a.id } }] }] });
+        return { items: out, len };
       }
       // generic: members start together; same-track members become separate groups
       const seen = {};
@@ -803,14 +850,38 @@
       return k;
     }
     // ---- lay out the main flow
-    const notes = { compressed: [], expanded: [], open: [] };
+    // Flexible work never overlaps a fixed item, even when the day is overfull: a block that
+    // can't fit a segment at its minimum length moves on to the next segment (it flows around
+    // lunch), and whatever still doesn't fit before the window ends is left out of the plan and
+    // named in the overfull conflict. Stated lengths (dur, rounds.each) are never changed.
+    const notes = { compressed: [], expanded: [], open: [], dropped: [] };
+    const minFoot = (bl) => sum(bl.map((b) => b.lead + (b.tpl ? b.len : minLen(b))));
     function layoutMain(list) {
       const ord = order(list);
       const segOf = assign(ord, segs);
+      let carry = [];
       segs.forEach((sg, j) => {
-        const bl = ord.filter((_, i) => segOf[i] === j);
+        const bl = carry.concat(ord.filter((_, i) => segOf[i] === j));
+        carry = [];
         const open = sg.e === Infinity;
         const cap = open ? Infinity : sg.e - sg.s;
+        if (!open) {
+          const last = j === segs.length - 1;
+          while (bl.length && minFoot(bl) > cap) {
+            if (!last) {
+              // move work on, a round at a time, so what fits stays (BP Round 1 before lunch, Round 2 after)
+              const b = bl[bl.length - 1];
+              if (b.units && b.units.length > 1) {
+                carry.unshift(Object.assign({}, b, { key: `${b.key}#${b.units.length}`, lead: 0, units: b.units.slice(-1) }));
+                bl[bl.length - 1] = Object.assign({}, b, { units: b.units.slice(0, -1) });
+              } else carry.unshift(bl.pop());
+              continue;
+            }
+            const b = bl[bl.length - 1];
+            if (b.units && b.units.length > 1) { notes.dropped.push(b.units[b.units.length - 1]); bl[bl.length - 1] = Object.assign({}, b, { units: b.units.slice(0, -1) }); }
+            else { bl.pop(); notes.dropped.push((b.units || b.tpl.items)[0]); }
+          }
+        }
         // fit units: [lead free] + units (or a rigid parallel block)
         const fu = [];
         bl.forEach((b) => {
@@ -824,12 +895,10 @@
           else b.units.forEach((u, ui) => fu.push({ b, u, ui, def: u.def, min: u.min, max: u.max, rigid: u.rigid, tier: u.tier, weight: u.weight }));
         });
         const withPrep = sg.endKind === "game" && !statedPrep && !open;
-        // transition goes before a trailing run of free time ("…, 45 off, stretch" keeps stretch last)
-        let prepAt = fu.length;
+        // the transition goes at the end, before any stated trailing free time
         if (withPrep) {
-          prepAt = tailAt(fu);
           const pk = KB.kind("pregamePrep").dur;
-          fu.splice(prepAt, 0, { prep: true, def: pk.def, min: 0, max: Math.max(pk.max, 45), rigid: false, tier: -1, weight: 1 });
+          fu.splice(tailAt(fu), 0, { prep: true, def: pk.def, min: 0, max: Math.max(pk.max, 45), rigid: false, tier: -1, weight: 1 });
         }
         let r = open ? { d: fu.map((x) => x.def), over: 0, open: 0 } : fit(fu, cap, sg.endKind !== "open");
         if (withPrep) {
@@ -862,48 +931,64 @@
           t += dd;
         });
         if (gapAt >= fu.length && r.open >= 5) notes.open.push([t, t + r.open]);
-        if (r.over > 0) overfull(sg, bl, fu, r, cap);
       });
+      if (notes.dropped.length) overfull(ord);
       return ord;
     }
 
-    function overfull(sg, bl, fu, r, cap) {
-      const reqDefSeg = sum(fu.filter((x) => !x.prep).map((x) => x.def));
-      const over = c5(r.over);
-      const where = sg.endKind === "game" ? "before pregame" : sg.endKind === "end" ? `before the ${fmtAP(sg.e)} finish` : sg.endKind === "fixed" ? `before ${sg.endLabel} at ${fmtAP(sg.e)}` : "";
+    /** one conflict for the whole window: what was requested, what fits, what was left out */
+    function overfull(ord) {
+      const capSegs = segs.filter((sg) => sg.e !== Infinity);
+      const avail = sum(capSegs.map((sg) => sg.e - sg.s));
+      const reqAll = sum(ord.map((b) => b.lead + defLen(b)));
+      const over = Math.max(5, c5(minFoot(ord) - avail));
+      const lastSeg = segs[segs.length - 1];
+      const where = lastSeg.endKind === "game" ? "before pregame" : lastSeg.endKind === "end" ? `before the ${fmtAP(lastSeg.e)} finish` : `between ${fmtAP(start)} and ${fmtAP(lastSeg.e)}`;
+      const dropped = uniq(notes.dropped.map((u) => u.label));
+      const shortened = uniq(notes.compressed);
+      // Each alternative is checked by solving the edited request: an amount that only covers the
+      // total overage can still leave work out when lunch splits the day, so it grows in 15-min
+      // steps until nothing is left out (alternatives that never get there are not offered).
       const alts = [];
-      // 1. shorten the largest flexible activity (or its rounds) by the overage
-      const byAct = new Map();
-      fu.forEach((x, i) => { if (x.u) { const a = x.u.actId; byAct.set(a, (byAct.get(a) || 0) + r.d[i]); } });
-      const sorted = [...byAct.entries()].sort((a, b) => b[1] - a[1]);
-      if (sorted.length) {
-        const [aid, tot] = sorted[0], a = actById.get(aid), tgt = { kind: null, who: null, label: null, id: aid };
-        const nr = bl.find((b) => b.key === aid);
-        const n = nr && nr.units ? nr.units.length : 1;
-        if (n > 1) {
-          const each = nr.units[0].def, cut = c5(over / n);
-          if (each - cut >= 10) alts.push({ label: `Shorten each ${KB.label(a.kind)} round to ${each - cut} min`, ops: [{ op: "rounds", target: tgt, count: null, each: each - cut, groups: null }] });
-        } else if (tot - over >= 10) alts.push({ label: `Shorten ${nr ? nr.units[0].label : KB.label(a.kind)} to ${tot - over} min`, ops: [{ op: "duration", target: tgt, set: tot - over, delta: null }] });
-        else if (sorted.length > 1) {
-          const half = c5(over / 2), [bid, btot] = sorted[1];
-          if (tot - half >= 10 && btot - half >= 10) alts.push({ label: `Shorten ${KB.label(a.kind)} and ${KB.label(actById.get(bid).kind)} by ${half} min each`, ops: [
-            { op: "duration", target: tgt, set: tot - half, delta: null }, { op: "duration", target: { kind: null, who: null, label: null, id: bid }, set: btot - half, delta: null }] });
+      const T = (id) => ({ kind: null, who: null, label: null, id });
+      const fits = (ops) => { try { const q = solve(applyEdits(irIn, ops, ctx), Object.assign({}, ctx, { _noAlts: true })); return !q.conflicts.some((c) => c.code === "overfull" || c.code === "impossible"); } catch (e) { return false; } };
+      const offer = (make) => { for (let k = 0; k <= 16; k++) { const alt = make(over + 15 * k); if (!alt) return; if (fits(alt.ops)) { alts.push(alt); return; } } };
+      if (!ctx._noAlts) {
+        // 1. shorten the largest activity (or each of its rounds), from its minimum length
+        const byAct = new Map();
+        ord.forEach((b) => { if (b.units) b.units.forEach((u) => byAct.set(u.actId, (byAct.get(u.actId) || 0) + u.min)); });
+        const sorted = [...byAct.entries()].sort((a, b) => b[1] - a[1]);
+        if (sorted.length) {
+          const [aid, tot] = sorted[0], a = actById.get(aid);
+          const n = sum(ord.filter((b) => b.units && b.units[0].actId === aid).map((b) => b.units.length));
+          const label0 = (ord.find((b) => b.units && b.units[0].actId === aid).units[0].label || "").replace(/ — Round \d+$/, "");
+          if (n > 1) {
+            const each = tot / n;
+            offer((cut) => { const e = each - c5(cut / n); return e >= 10 ? { label: `Shorten each ${label0} round to ${e} min`, ops: [{ op: "rounds", target: T(aid), count: null, each: e, groups: null, atOnce: null }] } : null; });
+          } else offer((cut) => (tot - cut >= 10 ? { label: `Shorten ${label0} to ${tot - cut} min`, ops: [{ op: "duration", target: T(aid), set: tot - cut, delta: null }] } : null));
+          if (!alts.length && sorted.length > 1) {
+            const [bid, btot] = sorted[1];
+            offer((cut) => { const h = c5(cut / 2); return tot - h >= 10 && btot - h >= 10 ? { label: `Shorten ${KB.label(a.kind)} and ${KB.label(actById.get(bid).kind)} by ${h} min each`, ops: [
+              { op: "duration", target: T(aid), set: tot - h, delta: null }, { op: "duration", target: T(bid), set: btot - h, delta: null }] } : null; });
+          }
         }
+        // 2. run BP rounds side by side (field + cage), or BP and cage groups as a rotation
+        const bpB = ord.find((b) => b.units && b.units.length >= 2 && b.acts[0].kind === "bp");
+        if (bpB && (res.cages == null || res.cages >= 1)) {
+          const cageB = ord.find((b) => b.units && b.acts[0].kind === "cage");
+          const lanes = Math.min(bpB.units.length, Math.max(1, fields + cages));
+          const save = defLen(bpB) - Math.ceil(bpB.units.length / lanes) * bpB.units[0].def;
+          const ops = [{ op: "parallel", targets: [T(bpB.key)].concat(cageB ? [T(cageB.key)] : []) }];
+          if ((cageB || save > 0) && fits(ops)) alts.push({ label: cageB ? "Run BP and cage groups as a rotation (field + cage), then swap" : `Run BP rounds at the same time (field + cage) — saves ${mins(save)}`, ops });
+        }
+        // 3. start earlier / finish later / a shorter free window
+        if (segs[0].s === start) offer((m) => ({ label: `Start ${mins(m)} earlier (${fmtAP(start - m)})`, ops: [{ op: "anchor", key: "start", value: start - m }] }));
+        if (lastSeg.endKind === "end") offer((m) => ({ label: `Finish ${mins(m)} later (${fmtAP(lastSeg.e + m)})`, ops: [{ op: "anchor", key: "end", value: lastSeg.e + m }] }));
+        if (lastSeg.endKind === "game") offer((m) => (offGame > m ? { label: `Cut the pregame free time to ${offGame - m} min`, ops: [{ op: "anchor", key: "offBeforeGame", value: offGame - m }] } : null));
       }
-      // 2. run BP rounds side by side (field + cage)
-      const bpB = bl.find((b) => b.units && b.units.length >= 2 && b.acts[0].kind === "bp");
-      if (bpB && (res.cages == null || res.cages >= 1)) {
-        const cageB = bl.find((b) => b.units && b.acts[0].kind === "cage");
-        const save = defLen(bpB) - Math.ceil(bpB.units.length / Math.max(2, fields + cages)) * bpB.units[0].def;
-        const tg = [{ kind: null, who: null, label: null, id: bpB.key }].concat(cageB ? [{ kind: null, who: null, label: null, id: cageB.key }] : []);
-        alts.push({ label: cageB ? "Run BP and cage groups at the same time, then swap" : `Run BP rounds at the same time (field + cage) — saves ${mins(save)}`, ops: [{ op: "parallel", targets: tg }] });
-      }
-      // 3. start earlier (first segment only) / finish later / shorter free window
-      // starting earlier only helps when this segment opens the day
-      if (sg.s === start) alts.push({ label: `Start ${over} min earlier (${fmtAP(start - over)})`, ops: [{ op: "anchor", key: "start", value: start - over }] });
-      if (sg.endKind === "end") alts.push({ label: `Finish ${over} min later (${fmtAP(sg.e + over)})`, ops: [{ op: "anchor", key: "end", value: sg.e + over }] });
-      if (sg.endKind === "game" && offGame > over) alts.push({ label: `Cut the pregame free time to ${offGame - over} min`, ops: [{ op: "anchor", key: "offBeforeGame", value: offGame - over }] });
-      conflict("overfull", "error", `Your requested activities need about ${mins(reqDefSeg)}, but only ${mins(cap)} ${cap === 1 ? "is" : "are"} available ${where}.`.replace(/\s+\./, "."), alts);
+      const msg = `Your requested activities need about ${mins(reqAll)}, but only ${mins(avail)} ${avail === 1 ? "is" : "are"} available ${where}.`
+        + ` Left out: ${dropped.join(", ")}.` + (shortened.length ? ` Shortened: ${shortened.join(", ")}.` : "");
+      conflict("overfull", "error", msg, alts);
     }
 
     let mainList = flexMain.slice();
@@ -945,7 +1030,7 @@
     if (misfit.length) {
       // no room beside position work: run it on its own in the main sequence
       items.splice(snapshot);
-      notes.compressed.length = 0; notes.expanded.length = 0; notes.open.length = 0;
+      notes.compressed.length = 0; notes.expanded.length = 0; notes.open.length = 0; notes.dropped.length = 0;
       conflicts.splice(0, conflicts.length, ...conflicts.filter((c) => c.code !== "overfull"));
       mainList = flexMain.concat(misfit);
       misfit.forEach((b) => say(`alone:${b.key}`, `${(b.units || b.tpl.items)[0].label.replace(/ — Round \d+$/, "")} has no position-player work to run beside, so it gets its own time.`));
@@ -967,6 +1052,11 @@
       }
     });
 
+    parIssues.forEach((pi) => {
+      const its = items.filter((i) => i.actId === pi.actId);
+      const at = its.length ? Math.min(...its.map((i) => i.start)) : start;
+      conflict("resource", pi.known ? "error" : "warn", pi.text(at), pi.alts);
+    });
     // ---- resources: cages and the field
     const sweep = (list) => { const ev = []; list.forEach((i) => { ev.push([i.start, 1]); ev.push([i.end, -1]); }); ev.sort((a, b) => a[0] - b[0] || a[1] - b[1]); let c = 0, mx = 0, at = null; ev.forEach(([t, d]) => { c += d; if (c > mx) { mx = c; at = t; } }); return { mx, at }; };
     const cageU = sweep(items.filter((i) => i.resource === "cage" && i.end > i.start));
@@ -1121,14 +1211,15 @@
         case "rounds": {
           const t = op.target || { kind: "bp" };
           let T = resolveTarget(ir, t);
-          if (!T.length && (!t.kind || t.kind === "bp") && (op.count || op.groups)) {
+          if (!T.length && (!t.kind || t.kind === "bp") && (op.count || op.groups) && !op.target) {
             const a = blankAct({ kind: "bp" }, ir); ir.activities.push(a); T = [a.id];
           }
           if (!T.length) note(`couldn't find ${tdesc(t)} in the day.`);
           if (op.groups != null) ir.groups = Object.assign({ hitting: null, pitchers: null }, ir.groups || {}, { hitting: op.groups });
           T.filter((x) => x !== "game").forEach((id) => {
-            const a = byId(id), cur = a.rounds || { each: null, count: null };
-            a.rounds = { each: op.each != null ? op.each : cur.each, count: op.count != null ? op.count : op.groups != null ? op.groups : cur.count };
+            const a = byId(id), cur = a.rounds || { each: null, count: null, atOnce: null };
+            a.rounds = { each: op.each != null ? op.each : cur.each, count: op.count != null ? op.count : op.groups != null ? op.groups : cur.count,
+              atOnce: op.atOnce != null ? op.atOnce : cur.atOnce != null ? cur.atOnce : null };
             if (op.each != null) a.dur = null;
           });
           dirty();

@@ -70,14 +70,20 @@
 .dy-legend .lg.inf{background:#fff;border-style:dashed}
 .dy-footnote{margin-right:8px}
 @media (max-width:860px){
-  .dy-body{grid-template-columns:1fr;overflow:auto;padding:12px}
-  .dy-left,.dy-right{overflow:visible}
-  .dy-log{max-height:260px}
+  .dy-body{display:flex;flex-direction:column;overflow:auto;padding:12px}
+  .dy-left,.dy-right{overflow:visible;flex:none}
+  .dy-right{order:-1}
+  .dy-log{flex:none;min-height:0;max-height:none;overflow:visible}
   .dy-footnote{display:none}
 }
 @media (max-width:520px){
   .dy-right{padding:10px}
   .dy-blk .l{font-size:12px}
-  .dy-blk .d{display:none}
-  .dy-classic{display:none}
+  .dy-blk .d{position:static;display:inline;font-size:10.5px}
+  .dy-blk .t{display:inline}
+  .dayui .mha-head{gap:8px}
+  .dayui .mha-hr{width:100%;justify-content:flex-start;gap:6px}
+  .dayui .mha-hr .mha-x{margin-left:auto}
+  .dy-classic{padding:3px 9px;font-size:11.5px}
+  .dayui .mha-chip{display:inline-block}
 }

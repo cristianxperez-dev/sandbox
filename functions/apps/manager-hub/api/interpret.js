@@ -103,6 +103,7 @@ export async function onRequestPost({ request, env }) {
   const ctx = body.ctx && typeof body.ctx === "object" ? body.ctx : {};
   if (JSON.stringify(ctx).length > MAX_CTX) return reply(413, { error: "context-too-large" });
   if (mode === "refine" && !(body.request && DaySolve.validate(body.request).ok)) return reply(400, { error: "bad-request-state" });
+  if (mode === "refine") body.request = DaySolve.normalize(body.request);
 
   const res = await callModel(env, { mode, text, ctx, request: body.request });
   if (res.error) return reply(res.status, { error: res.error });

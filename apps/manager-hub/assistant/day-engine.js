@@ -43,6 +43,8 @@
     const merged = Solve.applyEdits(clone(src), request.edits || [], ctx);
     merged.activities = merged.activities.concat((request.activities || []).filter((a) => !merged.activities.some((m) => m.kind === a.kind && m.who === a.who)));
     merged.notes = (merged.notes || []).concat(request.notes || [], [`Started from ${request.base.ref === "yesterday" ? "yesterday's" : "the current"} schedule.`]);
+    ["weather", "dayType", "level"].forEach((k) => { if (request[k] != null) merged[k] = request[k]; });
+    Object.keys(request.anchors || {}).forEach((k) => { if (request.anchors[k] != null) merged.anchors[k] = request.anchors[k]; });
     merged.base = null; merged.edits = [];
     return merged;
   }

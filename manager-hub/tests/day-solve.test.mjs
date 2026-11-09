@@ -47,7 +47,7 @@ const ACCEPT = () => req({
     act("a1", "stretch", { at: 600, who: "all", label: "Team Stretch", text: "10 AM stretch" }),
     act("a2", "teamDefense", { who: "all", label: "Team Fundamentals", text: "Team fundy" }),
     act("a3", "indDefense", { who: "position", label: "Individual Defense", text: "indy defense" }),
-    act("a4", "bp", { who: "position", label: "Batting Practice", rounds: { each: 30, count: null }, text: "30-minute BP rounds" })
+    act("a4", "bp", { who: "position", label: "Batting Practice", rounds: { each: 30, count: null, atOnce: null }, text: "30-minute BP rounds" })
   ]
 });
 const CTX = { hittingGroups: [], resources: { fields: 1, cages: 1 } };
@@ -94,7 +94,7 @@ test("overfull: exact numbers and EditOp alternatives", () => {
   assert.ok(c, "overfull raised");
   assert.equal(c.severity, "error");
   // requested: 15 + 25 + 30 + 2×30 + 45 = 175 min; available 10:00–12:00 = 120 min
-  assert.equal(c.message, "Your requested activities need about 2 h 55 min, but only 2 h are available before pregame.");
+  assert.match(c.message, /^Your requested activities need about 2 h 55 min, but only 2 h are available before pregame\. Left out: [^.]+\./);
   const labels = c.alternatives.map((a) => a.label).join(" | ");
   assert.ok(c.alternatives.some((a) => a.ops.some((o) => o.op === "parallel")), labels);
   const earlier = c.alternatives.find((a) => a.ops.some((o) => o.op === "anchor" && o.key === "start"));
@@ -147,9 +147,10 @@ test("resource: BP rounds side by side with no cage", () => {
   assert.ok(p.conflicts.some((c) => c.code === "resource" && c.severity === "error"));
   const ok = S.solve(ir, { resources: { fields: 1, cages: 1 } });
   assert.ok(!ok.conflicts.some((c) => c.code === "resource"));
-  const bp = of(ok, "bp");
-  assert.equal(bp[0].start, bp[1].start, "rounds run together");
-  assert.equal(bp[1].location, "Cage");
+  const bp = of(ok, "bp"), cage = of(ok, "cage");
+  assert.equal(bp.length, 1); assert.equal(cage.length, 1);
+  assert.equal(bp[0].start, cage[0].start, "rounds run together: one on the field, one in the cage");
+  assert.equal(cage[0].location, "Cage");
 });
 
 /* ============================================================ day shapes */
@@ -292,7 +293,8 @@ test("edit rounds: a third BP group", () => {
 
 test("edit parallel: run the BP rounds simultaneously halves the hitting block", () => {
   const p = S.solve(S.applyEdits(ACCEPT(), [{ op: "parallel", targets: [{ kind: "bp", who: null, label: null, id: null }] }], CTX), CTX);
-  const bp = of(p, "bp");
+  const bp = of(p, "bp").concat(of(p, "cage"));
+  assert.equal(bp.length, 2);
   assert.equal(bp[0].start, bp[1].start);
   assert.equal(Math.max(...bp.map((b) => b.end)) - bp[0].start, 30);
   assert.equal(p.ok, true);

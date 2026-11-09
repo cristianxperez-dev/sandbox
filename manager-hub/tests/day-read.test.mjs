@@ -478,6 +478,177 @@ test("ranges: practice from 9 to 12, BP from 10:30 to 11:15", () => {
   assert.equal(bp.dur, 45);
 });
 
+test("'No BP.' removes BP and says so; getaway day with a bus after the game", () => {
+  const r = read("Getaway day, game 12:05 then bus. No BP. Stretch 10:30, throw, indy, 30 off");
+  assert.equal(acts(r, "bp").length, 0);
+  assert.ok(r.notes.some((n) => /No BP/.test(n)));
+  assert.equal(r.anchors.firstPitch, 725);
+  assert.equal(one(r, "stretch").at, 630);
+  deq(one(r, "custom").after, ["game"]);
+  deq(r.unknown, []);
+});
+
+test("shorthand: gm, LT, grps, 20s, CR", () => {
+  const r = read("stretch 3:30, LT pitchers 3:45, bp 3 grps 20s, gm 7, 30 off");
+  assert.equal(r.anchors.firstPitch, 1140);
+  const lt = one(r, "pitcherWork"); assert.equal(lt.at, 945);
+  deq(one(r, "bp").rounds, { each: 20, count: 3 });
+  const c = read("cr and bunt d after stretch at 3, bp, gm 6:05 30 off");
+  assert.ok(acts(c, "teamDefense").some((a) => a.label === "Cuts & Relays"));
+  assert.ok(c.notes.some((n) => /CR/.test(n)));
+  assert.equal(c.anchors.firstPitch, 1085);
+  assert.equal(c.anchors.offBeforeGame, 30);
+});
+
+test("leading bare hours and ranges: '9 stretch', 'done 11:30', '10 to 12', 'stretch 9 bp 10 done 11'", () => {
+  const a = read("FCL. 7:45 report, 8 meeting, 8:15 stretch, pens, indy, BP 3 groups, done 11:30");
+  assert.equal(one(a, "meeting").at, 480);
+  assert.equal(one(a, "stretch").at, 495);
+  assert.equal(a.anchors.end, 690);
+  const b = read("Off day workout. 10 to 12. stretch, throw, cage work, done");
+  deq([b.anchors.start, b.anchors.end], [600, 720]);
+  deq(b.unknown, []);
+  const c = read("stretch 9 bp 10 done 11");
+  deq([one(c, "stretch").at, one(c, "bp").at, c.anchors.end], [540, 600, 660]);
+});
+
+test("slash lists are an ordered sequence per track", () => {
+  const r = read("stretch 9 / indy / cage / pfp + pens / lift / done by 12");
+  const id = (k) => one(r, k).id;
+  assert.equal(one(r, "stretch").at, 540);
+  deq(one(r, "indDefense").after, [id("stretch")]);
+  deq(one(r, "cage").after, [id("indDefense")]);
+  deq(one(r, "conditioning").after.slice().sort(), [id("cage"), id("bullpen")].sort(), "lift (whole team) follows both tracks");
+  assert.equal(r.anchors.end, 720);
+  deq(r.unknown, []);
+});
+
+test("group names from ctx, 'at the same time' and field/cage swap become parallel", () => {
+  const r = read("Stretch 3. BP Blue and Orange groups 25 min each, game at 6:35, 30 off", { hittingGroups: ["Blue", "Orange"] });
+  deq(one(r, "bp").rounds, { each: 25, count: 2 });
+  assert.equal(r.groups.hitting, 2);
+  const s = read("Stretch at 3. All 3 BP groups hit at the same time at 3:30. Game at 7, 30 off.", { hittingGroups: ["Blue", "Orange", "Gray"] });
+  const bp = one(s, "bp");
+  assert.equal(bp.at, 930);
+  deq(s.parallel, [[bp.id]]);
+  const w = read("Blue and Orange hit on the field while Gray and Red are in the cage, then swap. 20 minute rounds. Stretch at 3, game 6:30, 30 off.", { hittingGroups: ["Blue", "Orange", "Gray", "Red"] });
+  deq(w.parallel, [[one(w, "bp").id, one(w, "cage").id]]);
+  assert.equal(one(w, "bp").rounds.each, 20);
+  deq(w.unknown, []);
+});
+
+test("who carries across 'and': pitchers stretch at 3:30 and throw", () => {
+  const r = read("Night game 7:05. Pitchers stretch at 3:30 and throw, position players stretch at 4, BP 4:30, 30 off before first pitch.");
+  assert.equal(one(r, "pitcherWork").who, "pitchers");
+  deq(acts(r, "stretch").map((a) => [a.who, a.at]), [["pitchers", 930], ["position", 960]]);
+  deq(r.unknown, []);
+});
+
+test("'Stretch at 10. 30 off' is not 10:30; 'between 9 and 11' is the day's window", () => {
+  const r = read("Game's at 1. Stretch at 10. 30 off before the game.");
+  assert.equal(one(r, "stretch").at, 600);
+  assert.equal(r.anchors.offBeforeGame, 30);
+  const w = read("2 hour defensive session and 2 hours of BP between 9 and 11");
+  deq([w.anchors.start, w.anchors.end], [540, 660]);
+  assert.equal(one(w, "bp").at, null);
+  assert.equal(one(w, "teamDefense").dur, 120);
+});
+
+test("edit: make it 3 rounds of BP", () => deq(edit("Make it 3 rounds of BP.", BASE), [{ op: "rounds", target: { kind: "bp" }, count: 3 }]));
+
+/* ================================================ generalisation classes */
+test("class 1: a time attaches through verbs and filler within its clause", () => {
+  const cases = [
+    ["bp starts 4:30", "bp", 990], ["BP begins at 4:30", "bp", 990], ["stretch is at 9", "stretch", 540],
+    ["we'll do defense around 10", "teamDefense", 600], ["scrimmage vs the cubs at 1", "custom", 780],
+    ["cage work should kick off at 2:15", "cage", 855], ["the meeting is going to be 9:30", "meeting", 570],
+    ["PFP for the pitchers happens at 3:10", "pfp", 910]
+  ];
+  for (const [t, k, at] of cases) { const r = read(t); assert.equal(one(r, k).at, at, t); assert.ok(!r.unknown.some((u) => /\d/.test(u)), `${t}: ${r.unknown}`); }
+  const r = read("stretch at 3, BP, game at 7");
+  assert.equal(one(r, "bp").at, null, "a clause with no time leaves the item flexible");
+});
+
+test("class 2: hard stops without 'by' set anchors.end", () => {
+  const cases = [["off by 6:30", 1110], ["done 11:15", 675], ["wrap 12", 720], ["out of there by 1", 780], ["off the field at noon", 720],
+    ["need to be done 11:30", 690], ["gotta be finished at 12:45", 765], ["clear the field by 2", 840], ["stretch at 9, we leave at 11:30", 690]];
+  for (const [t, end] of cases) { const r = read(t); assert.equal(r.anchors.end, end, t); deq(r.unknown, [], t); }
+});
+
+test("class 3: counts and round lengths in odd positions", () => {
+  const cases = [
+    ["BP x3 groups", { count: 3 }], ["bp, 3 groups", { count: 3 }], ["3 bp groups", { count: 3 }], ["BP x2", { count: 2 }],
+    ["BP 4 rounds 15 each", { count: 4, each: 15 }], ["two rounds of 20", { count: 2, each: 20 }], ["bp: 3 rounds, 25 apiece", { count: 3, each: 25 }]
+  ];
+  for (const [t, want] of cases) {
+    const r = read(t), b = one(r, "bp");
+    for (const [k, v] of Object.entries(want)) assert.equal(b.rounds[k], v, `${t} ${k}`);
+    deq(r.unknown, [], t);
+  }
+  const c = read("cage 2 groups 30 each");
+  deq(one(c, "cage").rounds, { each: 30, count: 2 });
+  deq(c.unknown, []);
+});
+
+test("class 4: adjacent words describing one thing make one activity", () => {
+  const a = read("8:20 defense stations 40 min");
+  deq(kinds(a), ["indDefense"]);
+  deq([a.activities[0].at, a.activities[0].dur, a.activities[0].label], [500, 40, "Defensive Stations"]);
+  for (const t of ["defensive stations at 8:20 for 40", "8:20 stations defense, 40 minutes"]) {
+    const r = read(t); deq(kinds(r), ["indDefense"], t); assert.equal(r.activities[0].at, 500, t); assert.equal(r.activities[0].dur, 40, t);
+  }
+  const h = read("hitting cage at 2");
+  deq(kinds(h), ["cage"]); assert.equal(h.activities[0].at, 840);
+  const d = read("defense indy 30 min");
+  deq(kinds(d), ["indDefense"]);
+});
+
+test("class 5: vague pitcher phrases are pitchers' work", () => {
+  for (const t of ["pitchers do their thing", "pitchers on their program", "arms get their work in", "pitchers handle their stuff",
+    "the pitching staff will go through their routine", "pitchers take care of their throwing"]) {
+    const r = read(t);
+    assert.equal(one(r, "pitcherWork").who, "pitchers", t);
+    deq(r.unknown, [], t);
+  }
+});
+
+test("class 6: size words weight one activity", () => {
+  const cases = [["short bp", "bp", "light"], ["quick fundy", "teamDefense", "light"], ["light defense", "teamDefense", "light"], ["mini cage session", "cage", "light"],
+    ["extra cage", "cage", "heavy"], ["long bp", "bp", "heavy"], ["a lot of PFP", "pfp", "heavy"], ["indy, keep it short", "indDefense", null]];
+  for (const [t, k, e] of cases.slice(0, 7)) { const r = read(t); assert.equal(one(r, k).emphasis, e, t); }
+  const r = read("BP short today, stretch long");
+  assert.equal(one(r, "bp").emphasis, "light");
+  assert.equal(one(r, "stretch").emphasis, "heavy");
+});
+
+test("class 7: global indoor marks every outdoor activity", () => {
+  for (const t of ["everything indoors. stretch, bp, fundy", "all inside today: stretch, bp, fundy", "Indoor day — stretch, bp, fundy", "we're inside, stretch then bp then fundy"]) {
+    const r = read(t);
+    assert.ok(r.activities.length === 3 && r.activities.every((a) => a.indoor === true), t);
+    deq(r.unknown, [], t);
+  }
+  assert.equal(one(read("everything indoors, lunch at noon, bp"), "meal").indoor, null, "a meal isn't an outdoor item");
+});
+
+test("class 8: readEdit rounds deltas, at and swap", () => {
+  const req = read("Stretch at 10, team fundy, 3 BP groups, game at 1");
+  const R3 = (t) => edit(t, req)[0];
+  for (const t of ["give BP another round", "one more BP round", "add a round", "add another bp round"]) deq(R3(t), { op: "rounds", target: { kind: "bp" }, count: 4 }, t);
+  for (const t of ["cut a round of BP", "drop a round", "one less BP round", "take a round off bp"]) deq(R3(t), { op: "rounds", target: { kind: "bp" }, count: 2 }, t);
+  deq(R3("make it 3 groups"), { op: "rounds", target: { kind: "bp" }, count: 3, groups: 3 });
+  deq(R3("add 2 more rounds"), { op: "rounds", target: { kind: "bp" }, count: 5 });
+  const noCount = edit("give BP another round", read("BP, stretch"), null, {});
+  deq(noCount, [{ op: "rounds", target: { kind: "bp" }, count: 3 }], "no count known → assumes 2 (noted)");
+  for (const t of ["move bp to 11", "start bp at 11", "bp at 11 instead", "put BP at 11"]) deq(R3(t), { op: "at", target: { kind: "bp" }, at: 660 }, t);
+  for (const t of ["swap BP and defense", "switch fundy with bp", "flip bp and team fundy"]) {
+    const ops = edit(t, req);
+    assert.equal(ops.length, 2, t);
+    assert.ok(ops.every((o) => o.op === "move"), t);
+    const bpOp = ops.find((o) => o.target.kind === "bp");
+    deq(bpOp.before, { kind: "teamDefense" }, `${t}: BP (now after fundy) moves before it`);
+  }
+});
+
 /* ================================================================ unknowns */
 test("phrases not understood are reported, never dropped", () => {
   const r = read("we have a scrimmage vs the cubs at 1, stretch at 10, juggling practice");
