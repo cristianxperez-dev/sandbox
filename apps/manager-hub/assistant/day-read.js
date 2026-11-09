@@ -295,7 +295,7 @@
     rep(/\b(\d{1,3})(?=\s+(?:off|free)\b)/g, (m, n) => +n >= 5 ? tok("d", { min: +n, adj: false, raw: m + " off" }) : m);
     rep(/\bfor\s+(\d{1,3})\b(?!\s*(?:am|pm|a|p|:|groups?|rounds?|guys|players|hitters|pitchers|innings?|reps|pitches|swings|throws))/g, (m, n) => +n >= 5 ? "for" + tok("d", { min: +n, adj: false, raw: m }) : m);
     rep(/\b(\d{1,3})(?=\s+(?:each|apiece|a round|per round|per group|a group|a piece)\b)/g, (m, n) => +n >= 5 ? tok("d", { min: +n, adj: false, raw: m + " each" }) : m);
-    rep(/\b(groups?\s+(?:of|at)\s+)(\d{2,3})\b(?!\s*(?:hitters|guys|players|kids|:|am|pm))/g, (m, w, n) => " " + tok("d", { min: +n, adj: false, raw: m }) + " each ");
+    rep(/\b(groups?\s+(?:of|at)\s+)(\d{2,3})\b(?!\s*(?:hitters|guys|players|kids|:|am|pm))/g, (m, w, n) => " groups " + tok("d", { min: +n, adj: false, raw: m }) + " each ");
     rep(/\b(rounds?\s+(?:of|at)\s+)(\d{1,3})\b(?!\s*(?::|am|pm))/g, (m, w, n) => w + tok("d", { min: +n, adj: false, raw: m }));
     rep(/\b(another|extra)\s+(\d{1,3})\b(?!\s*(?::|am|pm))/g, (m, w, n) => w + tok("d", { min: +n, adj: false, raw: m }));
     rep(/\b(\d{1,3})\s+(more|earlier|later|sooner)\b/g, (m, n, w) => tok("d", { min: +n, adj: false, raw: m }) + w);
@@ -418,10 +418,10 @@
       if (!["meeting", "meal", "game"].includes(act(i).kind)) act(i).who = /every|all|whole/.test(w) ? "all" : whoWord(w);
       return ` ⟨a${i}⟩ `;
     });
-    rep(new RegExp(`${A}\\s+(?:for\\s+)?(?:the\\s+)?(pitchers|catchers|position players|hitters|starters|relievers|bullpen guys|arms)\\b`, "g"), (m, i, w) => {
+    rep(new RegExp(`${A}\\s+((?:(?:at|@)\\s*⟨c\\d+⟩\\s+)?)(?:for\\s+)?(?:the\\s+)?(pitchers|catchers|position players|hitters|starters|relievers|bullpen guys|arms)\\b`, "g"), (m, i, keep, w) => {
       if (/starters|relievers|bullpen guys|arms/.test(w)) w = "pitchers";
       if (!["meeting", "meal", "game"].includes(act(i).kind)) act(i).who = whoWord(w);
-      return ` ⟨a${i}⟩ `;
+      return ` ⟨a${i}⟩ ${keep} `;
     });
 
     /* ---- game time */

@@ -952,7 +952,7 @@
       const alts = [];
       const T = (id) => ({ kind: null, who: null, label: null, id });
       const fits = (ops) => { try { const q = solve(applyEdits(irIn, ops, ctx), Object.assign({}, ctx, { _noAlts: true })); return !q.conflicts.some((c) => c.code === "overfull" || c.code === "impossible"); } catch (e) { return false; } };
-      const offer = (make) => { for (let k = 0; k <= 16; k++) { const alt = make(over + 15 * k); if (!alt) return; if (fits(alt.ops)) { alts.push(alt); return; } } };
+      const offer = (make) => { for (let k = 0; k <= 24; k++) { const alt = make(over + 15 * k); if (!alt) return; if (fits(alt.ops)) { alts.push(alt); return; } } };
       if (!ctx._noAlts) {
         // 1. shorten the largest activity (or each of its rounds), from its minimum length
         const byAct = new Map();
@@ -982,9 +982,18 @@
           if ((cageB || save > 0) && fits(ops)) alts.push({ label: cageB ? "Run BP and cage groups as a rotation (field + cage), then swap" : `Run BP rounds at the same time (field + cage) — saves ${mins(save)}`, ops });
         }
         // 3. start earlier / finish later / a shorter free window
-        if (segs[0].s === start) offer((m) => ({ label: `Start ${mins(m)} earlier (${fmtAP(start - m)})`, ops: [{ op: "anchor", key: "start", value: start - m }] }));
+        // a stated stretch that opens the day moves with the start (work can't go before it)
+        const opener = fixedBlocks.find((fb) => fb.track === "main" && fb.span && fb.span[0] === start && isWarm(fb));
+        if (segs[0].s === start || opener) offer((m) => ({ label: opener ? `Start ${mins(m)} earlier, with ${(opener.units || opener.tpl.items)[0].label} at ${fmtAP(start - m)}` : `Start ${mins(m)} earlier (${fmtAP(start - m)})`,
+          ops: [{ op: "anchor", key: "start", value: start - m }].concat(opener ? [{ op: "at", target: T(opener.key), at: opener.at - m }] : []) }));
         if (lastSeg.endKind === "end") offer((m) => ({ label: `Finish ${mins(m)} later (${fmtAP(lastSeg.e + m)})`, ops: [{ op: "anchor", key: "end", value: lastSeg.e + m }] }));
         if (lastSeg.endKind === "game") offer((m) => (offGame > m ? { label: `Cut the pregame free time to ${offGame - m} min`, ops: [{ op: "anchor", key: "offBeforeGame", value: offGame - m }] } : null));
+        // 4. accept the cut: take the left-out activities off the request
+        const goneIds = uniq(notes.dropped.map((u) => u.actId)).filter((id) => id && !items.some((i) => i.actId === id));
+        if (goneIds.length && goneIds.length <= 3) {
+          const ops = goneIds.map((id) => ({ op: "remove", target: T(id) }));
+          if (fits(ops)) alts.push({ label: `Leave out ${goneIds.map((id) => (actById.get(id).label || KB.label(actById.get(id).kind))).join(", ")}`, ops });
+        }
       }
       const msg = `Your requested activities need about ${mins(reqAll)}, but only ${mins(avail)} ${avail === 1 ? "is" : "are"} available ${where}.`
         + ` Left out: ${dropped.join(", ")}.` + (shortened.length ? ` Shortened: ${shortened.join(", ")}.` : "");
