@@ -12,8 +12,9 @@
   const api = factory(deps);
   if (typeof module === "object" && module.exports) module.exports = api;
   else root.DayEngine = api;
-})(typeof self !== "undefined" ? self : this, function ({ KB, Read, Solve }) {
+})(typeof self !== "undefined" ? self : this, function (deps) {
   "use strict";
+  const { KB, Read, Solve } = deps;
   const clone = (x) => JSON.parse(JSON.stringify(x));
 
   /** Build a day from a description. `request` may be supplied by the AI interpreter instead of the reader. */
