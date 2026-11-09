@@ -662,6 +662,110 @@ test("fresh wordings across classes: groups of 20, lunch spread, goes from, for 
   assert.equal(one(k, "cage").at, 855); assert.equal(k.anchors.end, null);
 });
 
+/* ===================================== generalisation classes, second set */
+test("set2 class 1a: catch / play catch / throw are throwing", () => {
+  for (const t of ["catch", "play catch at 3", "catch play then bp", "everybody throws", "throw at 2:30"]) { const r = read(t); one(r, "throwing"); deq(r.unknown, [], t); }
+  assert.equal(acts(read("catchers' work"), "throwing").length, 0, "catchers is not catch");
+});
+
+test("set2 class 1b: down / downtime / chill / rest are time off", () => {
+  const g = [["game at 7, 30 down", 30], ["game at 7. 40 minutes down before the game", 40], ["game at 7, chill 30 before the game", 30],
+    ["first pitch 6:05, 25 of downtime before the game", 25], ["game at 7, rest 30 before first pitch", 30]];
+  for (const [t, v] of g) { const r = read(t); assert.equal(r.anchors.offBeforeGame, v, t); deq(r.unknown, [], t); }
+  const w = read("no game. stretch at 9, bp, 20 down, lift");
+  assert.equal(one(w, "free").dur, 20);
+});
+
+test("set2 class 1c: running the bases is baserunning, never conditioning", () => {
+  for (const t of ["run the bases", "running bases at 11", "baserunning work for 20", "we'll run bases after BP", "base running drills"]) {
+    const r = read(t); one(r, "baserunning"); assert.equal(acts(r, "conditioning").length, 0, t); deq(r.unknown, [], t);
+  }
+});
+
+test("set2 class 1d: IF/OF work is individual defense; 'in the outfield' stays a location", () => {
+  for (const t of ["IF/OF work", "infield-outfield at 4:40", "IF and OF", "infield/outfield", "outfield work"]) { const r = read(t); assert.equal(one(r, "indDefense").who, "position", t); deq(r.unknown, [], t); }
+  const loc = read("stretch at 3:40 in the outfield");
+  deq(kinds(loc), ["stretch"]); assert.equal(loc.activities[0].location, "Outfield");
+});
+
+test("set2 class 1e: starters / relievers / bullpen guys are pitchers", () => {
+  for (const t of ["starters and relievers do their thing", "starters long toss", "relievers throw at 3", "the bullpen guys do pens", "bp for hitters, pens for the starters"]) {
+    const r = read(t);
+    assert.ok(r.activities.some((a) => a.who === "pitchers"), t);
+    deq(r.unknown, [], t);
+  }
+  assert.equal(one(read("starters long toss"), "pitcherWork").label, "Long Toss");
+});
+
+test("set2 class 2: 'N of X' is a length", () => {
+  const cases = [["45 of team defense", "teamDefense", 45], ["20 of baserunning", "baserunning", 20], ["an hour of cage", "cage", 60], ["30 of PFPs", "pfp", 30], ["then 25 of indy", "indDefense", 25]];
+  for (const [t, k, v] of cases) { const r = read(t); assert.equal(one(r, k).dur, v, t); deq(r.unknown, [], t); }
+  assert.equal(one(read("2 of the groups hit first, BP"), "bp").dur, null, "'2 of the groups' is not a length");
+});
+
+test("set2 class 3: sub-items fold into one parent block", () => {
+  const a = read("team defense with bunt coverage and pickoffs");
+  deq(kinds(a), ["teamDefense"]); assert.equal(a.activities[0].label, "Team Defense — bunt coverage, pickoffs");
+  const b = read("indy with double-play feeds");
+  deq(kinds(b), ["indDefense"]); assert.match(b.activities[0].label, /double-play feeds/);
+  const c = read("BP with situational rounds, then lift");
+  assert.match(one(c, "bp").label, /situational rounds/); deq(one(c, "conditioning").after, [one(c, "bp").id]);
+  const d = read("team d including cuts, relays and rundowns, then bp");
+  deq(kinds(d), ["teamDefense", "bp"]);
+  for (const r of [a, b, c, d]) deq(r.unknown, []);
+  deq(kinds(read("stretch with everyone, bp")), ["stretch", "bp"], "'with everyone' is not a sub-item");
+});
+
+test("set2 class 4: a length after the verb, and 'after defense' means every defense item", () => {
+  const r = read("team defense, indy, run the bases today for 20 minutes after defense");
+  const b = one(r, "baserunning");
+  assert.equal(b.dur, 20);
+  deq(b.after.slice().sort(), [one(r, "teamDefense").id, one(r, "indDefense").id].sort());
+  assert.equal(one(read("we'll do cage again for 30"), "cage").dur, 30);
+  assert.equal(one(read("pfp tomorrow about 15 minutes"), "pfp").dur, 15);
+});
+
+test("set2 class 6: whole-day 'keep it short' / getaway → light", () => {
+  for (const t of ["keep it short. stretch, bp", "keep things light today: stretch, bp", "quick day, stretch then bp", "getaway day, game at 1, stretch, bp"]) {
+    const r = read(t); assert.ok(r.activities.every((a) => a.emphasis === "light"), t); deq(r.unknown, [], t);
+  }
+});
+
+test("set2: a stated number never lands in unknown when an activity shares its clause", () => {
+  for (const t of ["45 team defense", "cage 30", "then 45 of team defense", "pens 25 for the starters", "bp 4 groups, 15"]) {
+    const r = read(t); assert.ok(!r.unknown.some((u) => /\d/.test(u)), `${t}: ${r.unknown}`);
+  }
+});
+
+test("set2 IR: practice-only day with folded team defense", () => {
+  const r = read("Practice only today. 9:15 meeting in the clubhouse, stretch right after, then 45 of team defense with bunt coverage and pickoffs, indy after that, hitting in the cages to finish. Gotta be off the field by 12:30.");
+  wellFormed(r);
+  assert.equal(r.dayType, "workout");
+  deq([r.anchors.start, r.anchors.end], [555, 750]);
+  deq(kinds(r), ["meeting", "stretch", "teamDefense", "indDefense", "cage"]);
+  const [m, st, td, ind, cg] = r.activities;
+  assert.equal(m.at, 555); assert.equal(m.location, "Clubhouse");
+  deq(st.after, [m.id]); assert.equal(td.dur, 45); deq(td.after, [st.id]);
+  assert.match(td.label, /bunt coverage, pickoffs/);
+  deq(ind.after, [td.id]); deq(cg.after, [ind.id]);
+  deq(r.unknown, []);
+});
+
+test("set2 class 5: readEdit 'X during / while Y' adds and runs them side by side", () => {
+  const ops = edit("pitchers need 45 minutes of PFP and catch play during defense", BASE);
+  const adds = ops.filter((o) => o.op === "add");
+  deq(adds.map((o) => [o.activity.kind, o.activity.who]), [["pfp", "pitchers"], ["pitcherWork", "pitchers"]]);
+  assert.equal(adds.reduce((n, o) => n + o.activity.dur, 0), 45, "the stated total is kept");
+  const par = ops.find((o) => o.op === "parallel");
+  deq(par.targets, [{ id: adds[0].activity.id }, { id: adds[1].activity.id }, { kind: "teamDefense" }, { kind: "indDefense" }]);
+  for (const [t, k, y] of [["add PFP while BP is going", "pfp", "bp"], ["catchers get 20 of blocking during indy", "indDefense", "indDefense"], ["have the pitchers do pens at the same time as cage", "bullpen", "cage"]]) {
+    const o = edit(t, BASE);
+    assert.equal(o[0].op, "add", t); assert.equal(o[0].activity.kind, k, t);
+    deq(o[o.length - 1].targets.slice(-1), [{ kind: y }], t);
+  }
+  deq(edit("add BP with 3 groups", BASE), [{ op: "rounds", target: { kind: "bp" }, count: 3, groups: 3 }]);
+});
+
 /* ================================================================ unknowns */
 test("phrases not understood are reported, never dropped", () => {
   const r = read("we have a scrimmage vs the cubs at 1, stretch at 10, juggling practice");
