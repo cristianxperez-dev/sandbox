@@ -19,9 +19,9 @@ const JSON_HEADERS = { "Content-Type": "application/json", "Cache-Control": "pri
 const reply = (status, body) => new Response(JSON.stringify(body), { status, headers: JSON_HEADERS });
 
 function kindTable() {
-  return DayKB.kinds.map((k) => {
-    const d = k.dur || {};
-    return `- ${k.id} — ${k.label}; who: ${k.who}; minutes default ${d.def ?? "–"} (min ${d.min ?? "–"}, max ${d.max ?? "–"})${k.phrases ? `; e.g. ${k.phrases.slice(0, 8).join(", ")}` : ""}`;
+  return DayKB.IDS.map((id) => {
+    const k = DayKB.kind(id), d = k.dur || {};
+    return `- ${id} — ${k.label}; who: ${k.who}; minutes default ${d.def ?? "–"} (min ${d.min ?? "–"}, max ${d.max ?? "–"})`;
   }).join("\n");
 }
 
@@ -109,7 +109,7 @@ export async function onRequestPost({ request, env }) {
   // the model's output is checked here and again in the page; anything malformed is refused, never repaired
   if (mode === "build") {
     const ir = res.out && res.out.request;
-    const v = ir ? DaySolve.validate(Object.assign({}, ir, { source: "ai" })) : { ok: false, errors: ["missing request"] };
+    const v = ir ? DaySolve.validate(Object.assign({}, ir, { source: "ai" }), { strict: true }) : { ok: false, errors: ["missing request"] };
     if (!v.ok) return reply(502, { error: "invalid-output", details: v.errors.slice(0, 5) });
     return reply(200, { request: Object.assign({}, ir, { source: "ai" }), model: res.model });
   }

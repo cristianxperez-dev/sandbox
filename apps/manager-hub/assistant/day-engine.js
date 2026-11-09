@@ -21,7 +21,7 @@
   function plan(text, ctx = {}, opts = {}) {
     let request = opts.request || null, interpreter = opts.request ? "ai" : "reader";
     if (request) {
-      const v = Solve.validate(request);
+      const v = Solve.validate(request, { strict: true });
       if (!v.ok) { request = null; interpreter = "reader"; }
     }
     if (!request) request = Read.read(text, ctx);
@@ -40,7 +40,7 @@
       r.base = null;
       return r;
     }
-    const merged = Solve.applyEdits(clone(src), request.edits || []);
+    const merged = Solve.applyEdits(clone(src), request.edits || [], ctx);
     merged.activities = merged.activities.concat((request.activities || []).filter((a) => !merged.activities.some((m) => m.kind === a.kind && m.who === a.who)));
     merged.notes = (merged.notes || []).concat(request.notes || [], [`Started from ${request.base.ref === "yesterday" ? "yesterday's" : "the current"} schedule.`]);
     merged.base = null; merged.edits = [];
@@ -54,7 +54,7 @@
   }
   function applyOps(state, ops, ctx = {}, text = "") {
     const before = clone(state.request);
-    const request = Solve.applyEdits(clone(state.request), ops || []);
+    const request = Solve.applyEdits(clone(state.request), ops || [], ctx);
     const p = Solve.solve(request, ctx);
     return Object.assign({}, state, { request, plan: p, ops, history: (state.history || []).concat([{ text, request: before, plan: state.plan }]) });
   }

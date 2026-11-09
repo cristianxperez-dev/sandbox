@@ -1,0 +1,5 @@
+{
+  "type": "commonjs",
+  "private": true,
+  "description": "Browser scripts written as UMD (global in the page, require() in Node and in the Pages Function bundle)."
+}
