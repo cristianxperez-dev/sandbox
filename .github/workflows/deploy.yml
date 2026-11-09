@@ -57,6 +57,11 @@ jobs:
           SITE_URL: ${{ steps.pages.outputs.base_url }}
           BASE_PATH: ${{ steps.pages.outputs.base_path }}/
 
+      # Apps behind an access code (access-gate/apps.js) are served only by Cloudflare Pages, where the
+      # gate runs. This public mirror gets a pointer page in their place (homepage card logo kept).
+      - name: Leave access-code apps out of the GitHub Pages copy
+        run: node scripts/strip-protected.mjs _site https://cperez.app
+
       # Only _site/ is published — sources, scripts and docs stay out.
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -6,6 +6,14 @@ const fs = require("fs");
 const path = require("path");
 const os = require("os");
 const BASE = process.env.BASE || "http://127.0.0.1:4173/apps/manager-hub/";
+
+/* behind the Sandbox access gate: sign the browser context in first (MH_ACCESS_CODE; never stored in the repo) */
+async function signIn(ctx, base) {
+  if (!process.env.MH_ACCESS_CODE) return;
+  const u = new URL(base), app = u.pathname.replace(/[^/]*$/, "");
+  const r = await ctx.request.post(u.origin + app + "access/login", { form: { code: process.env.MH_ACCESS_CODE }, headers: { Origin: u.origin }, maxRedirects: 0 });
+  if (r.status() !== 303) throw new Error("access gate sign-in failed: " + r.status());
+}
 let pass = 0, fail = 0;
 const ok = (c, m) => { console.log((c ? "PASS " : "FAIL ") + m); c ? pass++ : fail++; if (!c) process.exitCode = 1; };
 const wait = (p, ms) => p.waitForTimeout(ms);
@@ -13,6 +21,7 @@ const DAY = "Report at 8:00. Two position player groups and two pitcher groups. 
 
 async function fresh(b, opts = {}) {
   const ctx = await b.newContext(Object.assign({ viewport: { width: 1366, height: 900 }, acceptDownloads: true }, opts.ctx || {}));
+  await signIn(ctx, BASE);
   if (opts.init) await ctx.addInitScript(opts.init);
   const p = await ctx.newPage();
   p.setDefaultTimeout(8000);

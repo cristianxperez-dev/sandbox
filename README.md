@@ -207,7 +207,7 @@ GitHub Pages sites are **public**. Every file in `apps/` is downloadable by anyo
 
 ## Recollect: cloud storage
 
-Recollect (`apps/recollect/`) is a static page plus a small API in `functions/apps/recollect/api/[[path]].js`, a Cloudflare Pages Function that stores memories in a Cloudflare D1 database. `site/_routes.json` limits Functions to `/apps/recollect/api/*`, so the rest of the site stays fully static. The GitHub Pages copy has no Functions, so Recollect runs there in its original on-this-device-only mode.
+Recollect (`apps/recollect/`) is a static page plus a small API in `functions/apps/recollect/api/[[path]].js`, a Cloudflare Pages Function that stores memories in a Cloudflare D1 database. `site/_routes.json` sends every request through Functions because of the access gate (below); everything outside a protected app passes straight through to the static files. The GitHub Pages copy has no Functions, so Recollect runs there in its original on-this-device-only mode.
 
 **How it's protected.** Cloudflare Access signs the owner in. The API does not rely on Access being in front of it: on every request it verifies the Access token itself (signature, issuer, audience, expiry) and checks the email against an allowlist. A request without a valid token is refused on any hostname, including `*.pages.dev` and preview URLs. Missing configuration means every request is refused. Queries are parameterized and filtered by the signed-in email. Requests must be same-origin with an `X-Recollect` header. The page sets a strict Content-Security-Policy. No secret is stored in this repository.
 
@@ -237,3 +237,10 @@ The tables are created on first use. Deploys never touch the database, so memori
 
 - **Shared storage:** all apps share one web origin, so `localStorage`, `sessionStorage`, IndexedDB and cookies are shared between them. Use app-specific key names (e.g. `recollect:people`, not `data`). Claude checks for this when integrating an app.
 - **Styles and scripts are isolated:** each app is its own page, so its CSS and JS never touch the homepage or other apps. The injected "back to Sandbox" button lives in a shadow DOM, so it can't affect an app's styles either.
+
+## Access codes for individual apps
+
+Manager Hub needs its own access code on cperez.app. A Cloudflare Pages Function in front of every request
+(`functions/_middleware.js`, `access-gate/`) handles the login page, a 15-day session cookie and rate limiting; other
+apps pass through untouched. The GitHub Pages mirror leaves protected apps out (`scripts/strip-protected.mjs`).
+Secrets, behaviour and how to protect another app: `access-gate/README.md`.

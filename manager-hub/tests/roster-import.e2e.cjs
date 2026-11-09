@@ -4,6 +4,14 @@
 const { chromium } = require("playwright");
 const path = require("path");
 const BASE = process.env.BASE || "http://127.0.0.1:4173/apps/manager-hub/";
+
+/* behind the Sandbox access gate: sign the browser context in first (MH_ACCESS_CODE; never stored in the repo) */
+async function signIn(ctx, base) {
+  if (!process.env.MH_ACCESS_CODE) return;
+  const u = new URL(base), app = u.pathname.replace(/[^/]*$/, "");
+  const r = await ctx.request.post(u.origin + app + "access/login", { form: { code: process.env.MH_ACCESS_CODE }, headers: { Origin: u.origin }, maxRedirects: 0 });
+  if (r.status() !== 303) throw new Error("access gate sign-in failed: " + r.status());
+}
 const CSV = path.join(__dirname, "fixtures", "org-roster-sample.csv");
 let pass = 0, fail = 0;
 const ok = (c, m) => { console.log((c ? "PASS " : "FAIL ") + m); c ? pass++ : fail++; if (!c) process.exitCode = 1; };
@@ -20,6 +28,7 @@ const rosters = (p) => p.evaluate(() => Object.fromEntries(AFFILIATES.map((a) =>
   const b = await chromium.launch();
   for (const vp of [{ width: 1440, height: 900 }, { width: 390, height: 844, mobile: true }]) {
     const ctx = await b.newContext({ viewport: { width: vp.width, height: vp.height }, isMobile: !!vp.mobile, hasTouch: !!vp.mobile });
+    await signIn(ctx, BASE);
     const p = await ctx.newPage(), errs = [], W = vp.width;
     p.on("pageerror", (e) => errs.push(e.message));
     await p.goto(BASE); await p.evaluate(() => { localStorage.clear(); localStorage.setItem("cs.affiliate", "sl"); }); await p.reload(); await p.waitForTimeout(800);
