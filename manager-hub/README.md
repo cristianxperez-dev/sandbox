@@ -38,6 +38,61 @@ manager-hub/
 
 The baseline differs from the upload only in the sample data. The seed schedule, the seed coach list, two placeholder examples and the classic builder's example now use fictional names; the initials are unchanged so the sample rows still line up. The unmodified upload is not committed, because this repository is public. Every module, feature and storage key (`cs.*`, per-affiliate) is unchanged.
 
+## Describe Your Day
+
+The **✦ Assistant** button opens it. You describe the day in a few sentences ("10 AM stretch, 1 PM game. Team fundy, indy defense. 30-minute BP rounds and 30 minutes off pregame."), then:
+
+1. You get a timeline by track: team, position players, pitchers. Fixed times are solid, flexible blocks outlined, time off shaded, and blocks Manager Hub added are dashed.
+2. It shows what it assumed and anything that won't fit. A day that won't fit comes with numbers and one-click alternatives.
+3. You refine in plain language ("shorten fundy to 20", "add a second BP group"), or use −5 / +5 / Earlier / Later / Pin on any block. Undo and redo are available.
+4. **Review & save** goes through the Schedule Assistant's publish step, so you see the diff and any removal warnings, and the app's Undo works. The day's structure is saved with it (`meta.dayRequest`), so "same as yesterday but…" can build on it.
+
+The classic assistant (groups, rotations, templates, monthly planning) is one click away and unchanged.
+
+Design and audit: [`DAY-ENGINE.md`](DAY-ENGINE.md). Code: `apps/manager-hub/assistant/day-*.js`.
+
+- **Reading the request.** Two interpreters produce the same structured request, which is schema-validated:
+  - **Built-in reader** (`day-read.js`): a deterministic baseball lexicon. Offline, always available, and labelled as such in the panel.
+  - **AI interpreter** (`functions/apps/manager-hub/api/interpret.js`): a server-side model call with a structured-output schema, behind the Manager Hub access code. It reads language only and never sets times. Its output is validated on the server and again in the page. If anything is malformed, or the service is off, the built-in reader runs and the panel says so.
+- **Scheduling** (`day-solve.js`, `day-kb.js`) is deterministic and needs no model:
+  - anchors, buffers and hard stops;
+  - phase ordering (warm-up before throwing, defense and hitting; BP before the pregame break);
+  - parallel pitcher and position tracks, with field and cage capacity;
+  - fill and compress within the window;
+  - conflicts with tested alternatives.
+- **Refinements** become edit operations on the request, never on rows, so unaffected items keep their constraints.
+
+### Switching on the AI interpreter
+
+It is **off** until both are set in Cloudflare Pages (Settings → Variables and Secrets, Production and Preview):
+
+- `ANTHROPIC_API_KEY` (secret)
+- `MH_AI_ENABLED` = `1` (variable)
+
+Optional: `MH_AI_MODEL` (default `claude-opus-5-5` at low effort, with automatic server-side fallback if a request is declined).
+
+Before setting `MH_AI_ENABLED`, run the evaluation through the real model:
+
+```bash
+ANTHROPIC_API_KEY=… MH_EVAL_INTERPRETER=ai node --test --test-concurrency=1 manager-hub/tests/day-eval.test.mjs
+```
+
+- **Cost:** a build is about 4–6 K input tokens (the instructions are prompt-cached) and 1–2 K output. At $4 / $20 per million, that is roughly **$0.02–0.05 per request**, or about $1–1.50 a day at 30 requests. A full evaluation run is roughly $3–5. These are estimates; nothing has been measured, because no key was available here.
+- **Security:** the key stays in the Pages secret. The page sends only the request text plus group names, resource counts and the game time, never the roster.
+
+### Evaluation
+
+- `tests/day-eval.test.mjs`: 103 realistic scenarios in 15 categories, written independently of the implementation. It judges baseball usefulness, not just shape:
+  - stated times kept, buffers exact, hard stops respected;
+  - stretch first, BP before the pregame break;
+  - no overlaps, nothing invented;
+  - conflicts explained in numbers;
+  - refinements leave everything else alone;
+  - undo/redo restores exactly.
+- Built-in reader: **103 / 103**. AI interpreter: not yet measured.
+- Also: `tests/day-read.test.mjs`, `tests/day-solve.test.mjs`, `tests/interpret.test.mjs` (endpoint contract, model mocked) and `tests/day-ui.e2e.cjs` (the panel in the app, desktop and phone).
+- **Limits of the built-in reader.** It handles common coaching shorthand and phrasing. Unusual wording can still land in "Not understood", which the panel always lists rather than dropping. That long tail is what the AI interpreter is for.
+
 ## Affiliate branding
 
 Fixed, not editable in the app. One config, `AFFILIATES` in `apps/manager-hub/index.html`, holds each club's name, level, logo and colours; `Brand.apply` paints them as `--aff-*` CSS variables.
@@ -85,6 +140,8 @@ node --test manager-hub/tests/*.test.mjs                 # unit + proxy contract
 node manager-hub/tests/app.e2e.cjs                       # real app, Playwright (BASE=… to target another host)
 node manager-hub/tests/roster-import.e2e.cjs             # roster import (fictional players)
 node manager-hub/tests/branding.e2e.cjs                  # fixed affiliate logos and colours
+node --test manager-hub/tests/day-*.test.mjs manager-hub/tests/interpret.test.mjs   # Describe Your Day: reader, solver, 103-scenario evaluation, AI endpoint
+node manager-hub/tests/day-ui.e2e.cjs                    # Describe Your Day panel in the app
 node manager-hub/tests/org-roster.e2e.cjs                # shipped organisation roster (needs the gate: MH_ACCESS_CODE, BASE)
 ```
 

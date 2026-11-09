@@ -7,6 +7,7 @@
 
    Secrets (Cloudflare Pages → Settings → Variables and Secrets, Production and Preview):
      ANTHROPIC_API_KEY  required. Without it this answers 503 and the page uses its built-in reader.
+     MH_AI_ENABLED      "1" to switch the AI interpreter on — only after it passes the evaluation suite.
      MH_AI_MODEL        optional model id (default below).
    The key never leaves this function. Only the request text and a compact context are sent
    (group names, resource counts, game time, the current day's structure) — no roster names. */
@@ -94,7 +95,9 @@ export async function onRequestPost({ request, env }) {
   const url = new URL(request.url);
   const origin = request.headers.get("Origin");
   if ((origin && origin !== url.origin) || request.headers.get("Sec-Fetch-Site") === "cross-site") return reply(403, { error: "cross-origin" });
-  if (!env.ANTHROPIC_API_KEY) return reply(503, { error: "not-configured" });
+  // two switches: the key, and an explicit go-ahead once the AI path has passed the evaluation
+  // (MH_EVAL_INTERPRETER=ai node --test manager-hub/tests/day-eval.test.mjs)
+  if (!env.ANTHROPIC_API_KEY || env.MH_AI_ENABLED !== "1") return reply(503, { error: "not-configured" });
   let body; try { body = await request.json(); } catch (e) { return reply(400, { error: "bad-json" }); }
   const mode = body && body.mode === "refine" ? "refine" : "build";
   const text = String((body && body.text) || "").trim();

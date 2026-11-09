@@ -41,7 +41,7 @@ const AI = process.env.MH_EVAL_INTERPRETER === "ai";
 let endpoint = null;
 async function viaEndpoint(body) {
   if (!endpoint) endpoint = await import("../../functions/apps/manager-hub/api/interpret.js");
-  const res = await endpoint.onRequestPost({ env: { ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY, MH_AI_MODEL: process.env.MH_AI_MODEL },
+  const res = await endpoint.onRequestPost({ env: { ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY, MH_AI_ENABLED: "1", MH_AI_MODEL: process.env.MH_AI_MODEL },
     request: new Request("https://cperez.app/apps/manager-hub/api/interpret", { method: "POST", headers: { "Content-Type": "application/json", Origin: "https://cperez.app" }, body: JSON.stringify(body) }) });
   const d = await res.json();
   if (!res.ok) throw new Error(`AI interpreter ${res.status}: ${JSON.stringify(d)}`);

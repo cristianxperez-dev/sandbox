@@ -10,7 +10,7 @@ const DaySolve = require("../../apps/manager-hub/assistant/day-solve.js");
 
 const ORIGIN = "https://cperez.app";
 const PRIMARY = "10 AM stretch, 1 PM game. Team fundy, indy defense. Make a schedule with 30-minute BP rounds and 30 minutes off pregame.";
-const ENV = { ANTHROPIC_API_KEY: "test-key-not-real" };
+const ENV = { ANTHROPIC_API_KEY: "test-key-not-real", MH_AI_ENABLED: "1" };
 const realFetch = globalThis.fetch;
 let calls = [];
 function mockModel(payload, { status = 200, stop = "end_turn" } = {}) {
@@ -26,6 +26,7 @@ const json = async (r) => [r.status, await r.json()];
 test("no key configured → 503, the page falls back to the built-in reader", async () => {
   const [s, b] = await json(await post({ mode: "build", text: PRIMARY }, { env: {} }));
   assert.equal(s, 503); assert.equal(b.error, "not-configured");
+  assert.equal((await post({ mode: "build", text: PRIMARY }, { env: { ANTHROPIC_API_KEY: "k" } })).status, 503, "a key alone does not switch it on");
 });
 test("cross-origin posts are refused; GET is not allowed; empty and oversized text refused", async () => {
   assert.equal((await post({ mode: "build", text: PRIMARY }, { origin: "https://evil.example" })).status, 403);
