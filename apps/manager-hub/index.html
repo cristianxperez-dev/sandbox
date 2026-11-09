@@ -3955,11 +3955,21 @@ const RosterImport = (()=>{
   const OPTIONAL=[
     /* Level is optional so older files still import, but it's surfaced with the
        required columns because it's what routes players to an affiliate. */
-    {key:"level",  label:"Level",         aliases:["level","lvl","affiliate","team","club","org level","classification"]},
+    {key:"level",  label:"Level",         aliases:["level","lvl","affiliate","team","club","org level","classification","levelofplay lk","levelofplay","level of play"]},
     {key:"number", label:"Jersey Number", aliases:["jersey","jersey number","number","#","uniform","uni"]},
-    {key:"status", label:"Status",        aliases:["status","injury status","il","injury"]},
-    {key:"notes",  label:"Notes",         aliases:["notes","note","comment","comments"]}
+    {key:"status", label:"Status",        aliases:["status","injury status","il","injury","mnrosterstatus lk","mnrosterstatus","roster status","rosterstatus"]},
+    {key:"notes",  label:"Notes",         aliases:["notes","note","comment","comments"]},
+    /* Organisational exports carry one "Last, First" column and one Handedness column
+       (throwing hand for pitchers, batting side for position players). Either stands in
+       for the separate required columns; nothing missing from the file is guessed. */
+    {key:"name",   label:"Name (Last, First)", aliases:["last first","name","player","player name","full name"]},
+    {key:"hand",   label:"Handedness",    aliases:["handedness","hand","handed"]},
+    {key:"age",    label:"Age",           aliases:["age"]}
   ];
+  /** a required column is covered by its stand-in (Name for Last/First, Handedness for Bats/Throws) */
+  const covered=(map,key)=>map[key]!=null
+    || ((key==="last"||key==="first") && map.name!=null)
+    || ((key==="bats"||key==="throws") && map.hand!=null);
   const ALL=[...REQUIRED,...OPTIONAL];
   const BATS_OK=["R","L","S"], THROWS_OK=["R","L"];
 
@@ -4038,18 +4048,31 @@ LHP,Ortiz,Manny,L,L,FCL`;
   const cleanHand=v=>String(v||"").trim().toUpperCase().replace(/[^A-Z]/g,"");
   function validate(read,map){
     const errors=[], players=[];
-    const missing=REQUIRED.filter(f=>map[f.key]==null);
+    const missing=REQUIRED.filter(f=>!covered(map,f.key));
     missing.forEach(f=>errors.push({kind:"column",msg:`Missing required column: ${f.label}`}));
     if(missing.length) return {errors,players};
 
     read.body.forEach((r,i)=>{
       const rowNo=i+1;                                   // as the coach counts them: data rows
-      const at=k=>String(r[map[k]]??"").trim();
-      const last=at("last"), first=at("first");
+      const at=k=>map[k]==null?"":String(r[map[k]]??"").trim();
+      let last=at("last"), first=at("first");
+      if(map.last==null && map.name!=null){              // "Last, First" in one column
+        const full=at("name");
+        if(!full) return;                                // a blank line, not an error
+        const c=full.indexOf(",");
+        if(c<0){ errors.push({kind:"row",row:rowNo,msg:`Row ${rowNo}: "${full}" isn't written as Last, First.`}); return; }
+        last=full.slice(0,c).trim(); first=full.slice(c+1).trim();
+      }
       if(!last && !first) return;                        // a blank line, not an error
       if(!last){ errors.push({kind:"row",row:rowNo,msg:`Row ${rowNo} has no Last Name.`}); return; }
 
       let bats=cleanHand(at("bats")), throws=cleanHand(at("throws"));
+      const handOnly = map.bats==null && map.throws==null && map.hand!=null;
+      const isPitcher = /^(P|RHP|LHP|SP|RP|PITCHER)$/i.test(at("position"));
+      if(handOnly){                                      // one Handedness column: throws for pitchers, bats for everyone else
+        const h=cleanHand(at("hand"));
+        if(isPitcher) throws=h; else bats=h;
+      }
       if(bats==="B") bats="S";                           // switch-hitter, written the other way
       if(bats && !BATS_OK.includes(bats))
         errors.push({kind:"row",row:rowNo,
@@ -4057,8 +4080,12 @@ LHP,Ortiz,Manny,L,L,FCL`;
       if(throws && !THROWS_OK.includes(throws))
         errors.push({kind:"row",row:rowNo,
           msg:`Row ${rowNo} has an invalid Throws value ("${at("throws")}"). Valid Throws values are R, L.`});
-      if(!bats) errors.push({kind:"row",row:rowNo,msg:`Row ${rowNo} is missing a Bats value.`});
-      if(!throws) errors.push({kind:"row",row:rowNo,msg:`Row ${rowNo} is missing a Throws value.`});
+      if(handOnly){
+        if((isPitcher && !throws) || (!isPitcher && !bats)) errors.push({kind:"row",row:rowNo,msg:`Row ${rowNo} is missing a Handedness value.`});
+      }else{
+        if(!bats) errors.push({kind:"row",row:rowNo,msg:`Row ${rowNo} is missing a Bats value.`});
+        if(!throws) errors.push({kind:"row",row:rowNo,msg:`Row ${rowNo} is missing a Throws value.`});
+      }
 
       players.push({
         first, last,
@@ -4068,7 +4095,8 @@ LHP,Ortiz,Manny,L,L,FCL`;
         number:map.number!=null?at("number"):"",
         level:map.level!=null?at("level"):"",
         status:map.status!=null?at("status"):"",
-        notes:map.notes!=null?at("notes"):""
+        notes:map.notes!=null?at("notes"):"",
+        age:map.age!=null && at("age")!=="" && isFinite(+at("age")) ? String(+at("age")) : ""
       });
     });
     if(!players.length && !errors.length) errors.push({kind:"column",msg:"No player rows were found in that file."});
@@ -4088,7 +4116,7 @@ LHP,Ortiz,Manny,L,L,FCL`;
     return {pitchers,position};
   }
 
-  return {REQUIRED,OPTIONAL,ALL,SAMPLE,downloadSample,read,validate,describe,autoMap,routeByPosition};
+  return {REQUIRED,OPTIONAL,ALL,SAMPLE,downloadSample,read,validate,describe,autoMap,routeByPosition,covered};
 })();
 window.RosterImport=RosterImport;
 
@@ -4132,7 +4160,7 @@ const RosterRoute = (()=>{
     ? "id:"+String(p.sourceId).trim().toLowerCase()
     : `n:${norm(p.last)}|${norm(p.first)}|${group}`;
 
-  const FIELDS=["position","pos2","bats","throws","number","level","status","notes"];
+  const FIELDS=["position","pos2","bats","throws","number","level","status","notes","age"];
   /* The tab you import from sets the default roster, but a row whose Position
      says RHP is a pitcher wherever it came from — that keeps a combined
      organisational file from filing pitchers as position players. */
@@ -4208,7 +4236,7 @@ const RosterRoute = (()=>{
     Object.values(planned.byAff).forEach(b=>{
       const list=readRoster(b.aff).slice();
       const seen=new Set(list.map(p=>p.id));
-      const stat={aff:b.aff,added:0,updated:0,unchanged:b.same.length,skipped:b.dupe.length,moved:0};
+      const stat={aff:b.aff,added:0,updated:0,unchanged:b.same.length,skipped:b.dupe.length,moved:0,addedP:0};
 
       const makeId=r=>newId(r,seen,list.length);
 
@@ -4217,7 +4245,7 @@ const RosterRoute = (()=>{
                                number:"",level:"",status:"",notes:"",extra:{}},r);
         p.group=r.__group||group; p.id=makeId(r);
         delete p.__group;
-        list.push(p); stat.added++;
+        list.push(p); stat.added++; if(p.group==="pitcher") stat.addedP++;
       });
 
       b.update.forEach(u=>{
@@ -4300,11 +4328,11 @@ function rosterImportModal(text,after,group){
     planned = colErr.length ? null : RosterRoute.plan(players,group,levelFix,map.level==null);
     const body=$("#impBody"); if(!body) return;
 
-    const mapRow=f=>`<div class="imp-map${map[f.key]==null&&f.req?" bad":""}">
+    const mapRow=f=>`<div class="imp-map${!RosterImport.covered(map,f.key)&&f.req?" bad":""}">
         <span class="imp-field">${esc(f.label)}${f.req?"<i>required</i>":""}</span>
         <span class="imp-arrow">←</span>
         <select data-mapfield="${f.key}">
-          <option value="">— not in this file —</option>
+          <option value="">${map[f.key]==null&&RosterImport.covered(map,f.key)?(f.key==="last"||f.key==="first"?"— from Name (Last, First) —":"— from Handedness —"):"— not in this file —"}</option>
           ${parsed.headers.map((h,i)=>`<option value="${i}" ${map[f.key]===i?"selected":""}>${esc(h)}</option>`).join("")}
         </select></div>`;
     const REQ=RosterImport.REQUIRED.map(f=>Object.assign({req:true},f));
@@ -4317,7 +4345,7 @@ function rosterImportModal(text,after,group){
       <div class="imp-cols">
         <b>Expected columns</b>
         <div class="imp-chips">${REQ.concat([LEV]).map(f=>
-          `<span class="imp-chip${map[f.key]!=null?" ok":""}">${esc(f.label)}</span>`).join("")}</div>
+          `<span class="imp-chip${RosterImport.covered(map,f.key)?" ok":""}">${esc(f.label)}</span>`).join("")}</div>
         <p class="note" style="margin:8px 0 0">
           <b>Level</b> decides which affiliate each player joins, so one organisational file
           can fill every roster at once. This import <b>adds and updates</b> — it never deletes
@@ -4326,7 +4354,9 @@ function rosterImportModal(text,after,group){
       </div>
 
       <div class="imp-section"><b>Column mapping</b>
-        ${REQ.map(mapRow).join("")}${mapRow(LEV)}</div>
+        ${REQ.map(mapRow).join("")}${mapRow(LEV)}${RosterImport.OPTIONAL.filter(f=>["name","hand","status","age"].includes(f.key) && map[f.key]!=null).map(f=>mapRow(Object.assign({req:false},f))).join("")}
+        ${map.name!=null&&map.last==null?`<p class="note" style="margin:6px 0 0">Names are split at the comma: “Last, First”.</p>`:""}
+        ${map.hand!=null&&map.bats==null&&map.throws==null?`<p class="note" style="margin:6px 0 0">One Handedness column: it's read as <b>Throws</b> for pitchers and <b>Bats</b> for position players. The other side is left blank — the file doesn't say.</p>`:""}</div>
 
       ${colErr.length?`<div class="imp-err">${colErr.map(e=>`<div><b>${esc(e.msg)}</b></div>`).join("")}</div>`:""}
 
@@ -4463,7 +4493,9 @@ function importSummaryModal(summary,group,after){
   const rows=summary.affiliates.filter(a=>a.added||a.updated||a.unchanged||a.skipped||a.moved).map(a=>{
     const b=Brand.get(a.aff);
     const bits=[];
-    if(a.added) bits.push(`${a.added} new ${rosterLabel}`);
+    if(a.added) bits.push(a.addedP && a.addedP<a.added            // a mixed file: say what went where
+      ? `${a.added} new (${a.addedP} pitcher${a.addedP===1?"":"s"}, ${a.added-a.addedP} position player${a.added-a.addedP===1?"":"s"})`
+      : `${a.added} new ${a.addedP===a.added?"pitchers":"position players"}`);
     if(a.updated) bits.push(`${a.updated} updated`);
     if(a.moved) bits.push(`${a.moved} moved in`);
     if(a.unchanged) bits.push(`${a.unchanged} unchanged`);
@@ -4502,7 +4534,7 @@ function rosterModal(){
       ? "Pitchers feed the Pitching Grid, pitcher groups, starting-pitcher and available-arms selection."
       : "Position players feed the Lineup Builder, player groups, BP groups and the Playing Matrix.";
     const q=($("#rosSearch")?.value||"").toLowerCase();
-    const rows=list.filter(p=>!q||Roster.display(p).toLowerCase().includes(q)||String(p.position).toLowerCase().includes(q));
+    const rows=list.filter(p=>!q||Roster.display(p).toLowerCase().includes(q)||String(p.position).toLowerCase().includes(q)||String(p.status||"").toLowerCase()===q);
     const body=$("#rosBody");
     if(!body) return;
     body.innerHTML = list.length
@@ -4510,7 +4542,7 @@ function rosterModal(){
         rows.map(p=>`<div class="ros-row" data-pedit="${p.id}">
             <span class="ros-pos">${esc(p.position||"—")}</span>
             <span class="ros-name h${p.bats||"R"}">${esc(Roster.display(p))}
-              <span class="ros-short">prints as ${esc(Roster.short(p))}</span></span>
+              <span class="ros-short">prints as ${esc(Roster.short(p))}${p.status?` · <b title="Roster status, as imported">${esc(p.status)}</b>`:""}${p.age?` · age ${esc(p.age)}`:""}</span></span>
             <span class="h${p.bats||"R"}">${esc(p.bats||"—")}</span>
             <span>${esc(p.throws||"—")}</span>
             <span class="ros-ops"><button class="btn sm" data-pgo="${p.id}">Edit</button></span>
@@ -4554,6 +4586,8 @@ function rosterModal(){
           Common variations are understood — <b>Last</b> / <b>LastName</b> / <b>Surname</b>,
           <b>Bat</b> / <b>Bat Side</b>, <b>Throw</b> / <b>Throw Side</b>. Anything unclear gets a mapping screen.
           Bats accepts <b>R</b>, <b>L</b>, <b>S</b>; Throws accepts <b>R</b>, <b>L</b>. Spacing and case don't matter.
+          An organisational export with <b>Last_First</b>, <b>Handedness</b> and <b>LEVELOFPLAY_LK</b> imports as-is:
+          every player goes to the affiliate for their level, pitchers and position players to their own rosters.
         </p>
       </div>
     </div>
@@ -13263,7 +13297,7 @@ function pitchHistoryModal(text){
 const Levels = (()=>{
   const DEFAULTS={
     sl: ["AAA","Triple A","Triple-A","3A"],
-    cc: ["AA","Double A","Double-A","AAX"],
+    cc: ["AA","Double A","Double-A","AAX","2A"],
     ash:["High A","High-A","A+","AFA","1A"],
     fay:["Low A","Low-A","Single A","Single-A","A","AFX","1F"],
     fcl:["FCL","ROK","R-O-K","Rookie","R"]

@@ -17,6 +17,7 @@ manager-hub/
   tests/engine.test.mjs      40 unit tests (node --test)
   tests/proxy.test.mjs       5 proxy contract tests (no network)
   tests/app.e2e.cjs          80 end-to-end checks against the real app (Playwright)
+  tests/roster-import.e2e.cjs  organisational roster import, fictional fixture (Playwright)
 ```
 
 ## What changed from the supplied file
@@ -28,6 +29,12 @@ manager-hub/
 - A **?** help button in the header, and the hub calls `MHAssistUI.hub()` to show the first-use card.
 - The sample day's note says its names are fictional.
 - The `@font-face` for the licensed Hudson NY Pro font uses `local()` instead of file URLs that 404'd. Its fallback stack was already in use.
+- **Organisational roster export (Nov 2026).** The roster import also reads the club's export format: `LEVELOFPLAY_LK`, `Last_First` ("Last, First"), `Last_F`, `Handedness`, `Age`, `Position`, `MNROSTERSTATUS_LK`.
+  - Level codes `R` FCL · `1F` Fayetteville · `1A` Asheville · `2A` Corpus Christi (new alias) · `3A` Sugar Land (checked against MLB's 2026 affiliate rosters). An unknown code is flagged and blocks the import until someone assigns it.
+  - One Handedness column is read as **Throws** for pitchers and **Bats** for position players; the other side stays blank (the file doesn't give it).
+  - Roster status codes (`ACT`, `60D`, `FSIL`, `RES`) and age are kept as written; status shows on the roster row and is searchable.
+  - Same additive merge as before: matches existing players by name and roster type, skips repeated rows, never deletes anyone missing from the file; re-importing the same file changes nothing.
+  - The real roster file is **not** in this repository (it's public). Rosters live in each browser's storage: import the file once per browser via **Roster → Import CSV**. `tests/roster-import.e2e.cjs` checks the format with fictional players (`tests/fixtures/org-roster-sample.csv`).
 
 The baseline differs from the upload only in the sample data. The seed schedule, the seed coach list, two placeholder examples and the classic builder's example now use fictional names; the initials are unchanged so the sample rows still line up. The unmodified upload is not committed, because this repository is public. Every module, feature and storage key (`cs.*`, per-affiliate) is unchanged.
 
@@ -48,6 +55,7 @@ Request → **interpretation** → structured intent → **deterministic engine*
 node scripts/build.mjs && node scripts/serve.mjs &     # http://127.0.0.1:4173/
 node --test manager-hub/tests/*.test.mjs                 # unit + proxy contract
 node manager-hub/tests/app.e2e.cjs                       # real app, Playwright (BASE=… to target another host)
+node manager-hub/tests/roster-import.e2e.cjs             # roster import (fictional players)
 ```
 
 ## Optional AI interpreter
