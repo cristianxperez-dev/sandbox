@@ -249,3 +249,40 @@ The **Describe Your Day** panel replaces the Assistant's describe step. The manu
 - refinements preserve unaffected items.
 
 The Section 1 prompt is the primary acceptance test.
+
+## 9. Results (Nov 9 2026, built-in reader)
+
+| Suite | Result |
+|---|---|
+| `day-eval.test.mjs`: 103 scenarios, 15 categories, written independently of the implementation | **103 / 103** |
+| `day-read.test.mjs` (reader) | 110 / 110 |
+| `day-solve.test.mjs` (solver, schemas, normalize) | 31 / 31 |
+| `interpret.test.mjs` (AI endpoint contract, model mocked) | 8 / 8 |
+| `day-ui.e2e.cjs` (panel in the app, desktop + phone, behind the access gate) | 40 / 40 |
+| Existing suites: app e2e, roster import, org roster, branding, engine, proxy, gate | all pass |
+
+### Held-out prompts
+
+**What was done.** The reader was tuned against the evaluation suite, so 103/103 overstates it. Four private sets of fresh prompts were run during development, and the generalisable failures were fixed as classes after each set.
+
+**Last set.** On the final set (8 unseen prompts):
+
+- 4 came out fully right;
+- 1 was mostly right;
+- 3 had a significant miss: a game time written before the words "game day", a "rotate through" station rotation, and "till 11" read as a start time.
+
+All three follow-up refinements in that set were correct.
+
+**Conclusion.** The built-in reader handles common coaching phrasing well. Its long tail of unusual wording is real and is what the AI interpreter is for. Anything the reader can't read is shown under "Not understood", never dropped.
+
+### The AI interpreter: not yet measured
+
+- **Status.** The endpoint, its schemas, validation and fallbacks are built and contract-tested. No live model call could be made from the development environment, so its quality is unmeasured.
+- **Switching it on** needs both `ANTHROPIC_API_KEY` and `MH_AI_ENABLED=1`. Run `MH_EVAL_INTERPRETER=ai node --test --test-concurrency=1 manager-hub/tests/day-eval.test.mjs` first, then add the held-out style prompts.
+
+### Known limits
+
+- **Rotations.** Station rotations described in free text ("3 groups rotate through cage, defense and baserunning, 25 each") are built by the classic assistant, not yet by the day engine.
+- **Transitions.** Five-minute field↔cage transitions on request (§5.6) aren't built yet.
+- **Mounds.** Mound capacity isn't checked.
+- **Rounds.** With 3+ BP rounds and only 2 named groups, the third is "Group 3".

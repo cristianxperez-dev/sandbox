@@ -766,10 +766,83 @@ test("set2 class 5: readEdit 'X during / while Y' adds and runs them side by sid
   deq(edit("add BP with 3 groups", BASE), [{ op: "rounds", target: { kind: "bp" }, count: 3, groups: 3 }]);
 });
 
+/* ====================================== mechanisms, third held-out set */
+test("set3 m1: any game word with a time in its clause sets first pitch", () => {
+  const cases = [["FCL game at 10 am", 600], ["Home game 6:35", 1115], ["day game 1:10", 790], ["doubleheader game 1 at 4", 960], ["7:10 game tonight", 1150],
+    ["game's at 12:05", 725], ["road game tomorrow, first pitch is 7:05", 1145], ["we play at 6:35, stretch at 3", null], ["exhibition game vs the big club 1 pm", 780],
+    ["the game tonight starts around 7", 1140]];
+  for (const [t, fp] of cases) {
+    const r = read(t);
+    if (fp != null) { assert.equal(r.anchors.firstPitch, fp, t); assert.equal(r.dayType, "game", t); }
+    assert.ok(!r.unknown.some((u) => /\d/.test(u)), `${t}: ${r.unknown}`);
+  }
+  assert.equal(read("stretch at 10 am, bp").activities[0].at, 600, "'10 am' with a space");
+  assert.equal(read("stretch 10am").activities[0].at, 600);
+});
+
+test("set3 m2: a clock time in a clause always binds to the nearest activity or anchor", () => {
+  const cases = [["infield 8:30", "indDefense", 510], ["live at-bats at 10:15", "liveBp", 615], ["8:45 for the cage", "cage", 525],
+    ["at 3:15 the pitchers go to the pens", "bullpen", 915], ["bp, which we'll start right around 4:10", "bp", 970]];
+  for (const [t, k, at] of cases) { const r = read(t); assert.equal(one(r, k).at, at, t); assert.ok(!r.unknown.some((u) => /\d/.test(u)), `${t}: ${r.unknown}`); }
+  for (const [t, v] of [["guys in by 2", 840], ["everyone in at 8:15", 495], ["report 12:30", 750]]) assert.equal(read(t).anchors.start, v, t);
+});
+
+test("set3 m3: an unrecognised phrase with a time or length becomes an activity, never unknown", () => {
+  const cases = [["20 minute speed session", "baserunning", null, 20], ["15 minute walkthrough at 2:15", "custom", 855, 15], ["film room 9:30", "custom", 570, null],
+    ["ground balls 30 min", "indDefense", null, 30], ["sim at bats at 1", "liveBp", 780, null], ["mental skills 20", "custom", null, 20]];
+  for (const [t, k, at, dur] of cases) {
+    const r = read(t);
+    const a = one(r, k);
+    if (at != null) assert.equal(a.at, at, t);
+    if (dur != null) assert.equal(a.dur, dur, t);
+    deq(r.unknown, [], t);
+  }
+  assert.equal(one(read("15 minute walkthrough at 2:15"), "custom").label, "Walkthrough", "coach's words kept as the label");
+});
+
+test("set3 m4: 'N before first pitch' (any purpose) is the pregame buffer", () => {
+  const cases = [["game at 7, 30 minutes before first pitch to eat", 30], ["game at 7. 40 min before the game to get dressed", 40],
+    ["first pitch 6:05; we want 45 before the game for the guys", 45], ["game time 1:05, 20 minutes before game time to change", 20]];
+  for (const [t, v] of cases) { const r = read(t); assert.equal(r.anchors.offBeforeGame, v, t); deq(r.unknown, [], t); }
+  assert.ok(read("game at 7, 30 minutes before first pitch to eat").notes.some((n) => /eat/.test(n)), "purpose kept in notes");
+});
+
+test("set3 m5: each listed item is exactly one activity", () => {
+  const r = read("tee, flips, machine, then live BP");
+  deq(r.activities.map((a) => a.label), ["Tee", "Flips", "Machine", "Live BP"]);
+  deq(read("tee and flips, machine").activities.map((a) => a.label), ["Tee & Flips", "Machine"]);
+  const c = read("cuts, relays, rundowns");
+  assert.equal(new Set(c.activities.map((a) => a.label)).size, c.activities.length, "no duplicate labels");
+  deq(read("bp, BP at 4, bp rounds of 20").activities.map((a) => a.kind), ["bp"], "repeats of one item merge");
+});
+
+test("set3 m6: readEdit start forms and 'we need N of X after Y'", () => {
+  for (const t of ["actually start at 9:30", "let's start 9:30 instead", "push the start to 9:30", "start time is 9:30", "ok so start at 9:30"])
+    deq(edit(t, BASE), [{ op: "anchor", key: "start", value: 570 }], t);
+  for (const t of ["we need 15 minutes of bunting after defense", "add 15 of bunt plays after defense", "need 15 of bunt work after defense"]) {
+    const [op] = edit(t, BASE);
+    assert.equal(op.op, "add", t); assert.equal(op.activity.dur, 15, t);
+    deq(op.activity.after.slice().sort(), [id("teamDefense"), id("indDefense")].sort(), t);
+  }
+  deq(edit("we need another 10 of cage", BASE), [{ op: "duration", target: { kind: "cage" }, delta: 10 }], "more of an existing item extends it");
+});
+
+test("set3 m7: speed work is baserunning and keeps its before/after edge", () => {
+  for (const t of ["20 minute speed session before stretch, stretch at 3", "speed work before stretch at 3", "do speed drills before stretch. stretch 3:00"]) {
+    const r = read(t);
+    const b = one(r, "baserunning");
+    deq(b.before, [one(r, "stretch").id], t);
+    assert.equal(acts(r, "conditioning").length, 0, t);
+    deq(r.unknown, [], t);
+  }
+  assert.equal(kinds(read("sprints"))[0], "conditioning", "plain sprints stay conditioning");
+});
+
 /* ================================================================ unknowns */
 test("phrases not understood are reported, never dropped", () => {
   const r = read("we have a scrimmage vs the cubs at 1, stretch at 10, juggling practice");
-  assert.ok(r.unknown.some((u) => /cubs/.test(u)));
+  assert.ok(r.notes.some((n) => /Opponent: Cubs/.test(n)), "the opponent is noted, not dropped");
+  assert.equal(one(r, "custom").at, 780);
   assert.ok(r.unknown.some((u) => /juggling/.test(u)));
   assert.equal(one(r, "stretch").at, 600);
   one(r, "custom");

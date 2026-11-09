@@ -84,6 +84,8 @@
     [/\bon[- ]field (?=bp|hitting|batting)/g, "onfield "],
     [/\bfirst pitches\b/g, "first pitch"],
     [/\bgms?\b/g, "game"],
+    [/\b(game) (?:#\s?)?(?:1|2|one|two)\b(?=\s*(?:at|@|is|starts)\b)/g, "$1"],
+    [/\bat[- ]bats?\b/g, "at bats"],
     [/\bx\s?(\d)\b(?!\s*(?:groups?|rounds?))/g, " $1 groups"],
     [/\bx\s?(\d)\b/g, " $1"],
     [/\b(\d)\s?x\b(?!\s*(?:a|per)\s+week)(?!\s*(?:groups?|rounds?))/g, "$1 groups"],
@@ -164,7 +166,7 @@
      when one was named, and otherwise stand with a note. */
   const L = (re, kind, label, extra = {}) => Object.assign({ re, kind, label, who: null }, extra);
   const LEX = [
-    L("live (?:bp|batting practice|abs?|at ?bats?)", "liveBp", "Live BP", { ex: ["live BP", "live ABs", "live at-bats"] }),
+    L("(?:live|sim(?:ulated)?) (?:bp|batting practice|abs?|at ?bats?)", "liveBp", (m) => /^sim/.test(m) ? "Sim ABs" : "Live BP", { ex: ["live BP", "live ABs", "live at-bats"] }),
     L("early (?:defense|d)\\b", "earlyWork", "Early Defense", { ex: ["early defense"] }),
     L("early (?:work|hitting|cage|bp|swings)", "earlyWork", "Early Work", { ex: ["early work", "early hitting"] }),
     L("extra (?:work|hitting|defense|swings)", "earlyWork", "Extra Work", { ex: ["extra work"] }),
@@ -178,7 +180,7 @@
     L("stretch and throw(?:ing)?", null, null, { multi: [["stretch", "Stretch"], ["throwing", "Throwing"]], ex: ["stretch and throw"] }),
     L("(?:onfield |team )?bp|batting practice|onfield hitting|hits? on the field|hitting on the field", "bp", "BP", { ex: ["BP", "batting practice", "on-field BP"] }),
     L("(?:hitting|cage) stations|stations? hitting|indoor hitting|hitting indoors|cage (?:work|hitting|rounds|time|groups?)|cages?|tunnels?", "cage", (m) => /station/.test(m) ? "Hitting Stations" : /indoor/.test(m) ? "Indoor Hitting" : "Cage", { ex: ["cage", "cage work", "hitting stations", "indoor hitting"] }),
-    L("tees? (?:and )?flips|tee work|flips|tees?|front toss|soft toss", "cage", (m) => /flip/.test(m) ? "Tee & Flips" : cap(m), { ex: ["tee/flips", "tee work", "front toss"] }),
+    L("tees? (?:and )?flips|tee work|flips|tees?|front toss|soft toss", "cage", (m) => /tee/.test(m) && /flip/.test(m) ? "Tee & Flips" : cap(m), { ex: ["tee/flips", "tee work", "front toss"] }),
     L("machine(?: work| hitting| rounds)?", "cage", "Machine", { ex: ["machine"] }),
     L("catch(?:ers|er) (?:work|drills|defense|d|blocking|receiving)|catching (?:work|drills)|blocking and receiving|blocking|receiving", "indDefense", "Catchers' Work", { who: "catchers", ex: ["catchers' work"] }),
     L("defen[cs]e stations|defensive stations", "indDefense", "Defensive Stations", { ex: ["defensive stations", "defense stations"] }),
@@ -200,7 +202,7 @@
     L("catch play|play catch|catch", "throwing", "Catch Play", { ex: ["catch play", "play catch", "catch"] }),
     L("throwing (?:progression|program)", "throwing", "Throwing Program", { ex: ["throwing progression"] }),
     L("throw(?:s|ing)?", "throwing", "Throwing", { ex: ["throw", "everybody throws"] }),
-    L("baserunning|speed work|jumps|secondary leads|leads(?: and (?:jumps|secondaries))?|base ?stealing|steals", "baserunning", (m) => /speed/.test(m) ? "Speed Work" : "Baserunning", { ex: ["baserunning", "speed work", "jumps"] }),
+    L("baserunning|speed(?: work| session| drills?| day| training)?|jumps|secondary leads|leads(?: and (?:jumps|secondaries))?|base ?stealing|steals", "baserunning", (m) => /speed/.test(m) ? cap(m.replace(/^speed$/, "speed work")) : "Baserunning", { ex: ["baserunning", "speed work", "jumps"] }),
     L("(?:team )?stretch(?:ing)?", "stretch", "Stretch", { ex: ["stretch", "team stretch"] }),
     L("activation|movement prep|dynamics?(?: warmup)?|warmup|band work|prehab", "activation", (m) => /dynamic/.test(m) ? "Dynamic Warm-up" : /warmup/.test(m) ? "Warm-up" : cap(m), { ex: ["activation", "dynamic", "movement prep"] }),
     L("pitch(?:ers|er) (?:run|running)", "conditioning", "Running", { who: "pitchers", ex: ["pitchers run"] }),
@@ -244,7 +246,8 @@
     "into than ok okay yeah all everyone everybody guys players team club squad morning afternoon evening practice workout session sessions keep " +
     "move both each while during like give us good full normal regular usual our typical standard expected forecast quick hey thanks thank " +
     "night road home matinee travel oh everything done first last somewhere anywhere together need tomorrow tonight then hit hits are field " +
-    "starts begins goes runs happens kicks kick well we'll were rounds groups round group gotta gonna going should has got go only just").split(" "));
+    "starts begins goes runs happens kicks kick well we'll were rounds groups round group gotta gonna going should has got go only just " +
+    "which right start want play exhibition home road").split(" "));
   const EDIT_START = /^(?:add|move|push|pull|drop|remove|delete|skip|shorten|lengthen|extend|give|start|keep|lock|run|swap|switch|bump|slide|shift|delay|finish|set|change|scratch|hold|include|squeeze|trim|reduce|increase|make everything|cut|take)\b/;
 
   function emptyRequest() {
@@ -295,6 +298,7 @@
     rep(/\b(\d{1,3})m\b/g, (m, n) => tok("d", { min: +n, adj: false, raw: m }));
     rep(/\b(off|free|down|chill|rest|downtime)\s+(?:for\s+)?(\d{1,3})\b(?!\s*(?::|am|pm))/g, (m, w, n) => +n >= 5 ? tok("d", { min: +n, adj: false, raw: m }) + w : m);
     rep(/\b(\d{1,3})(?=\s+(?:off|free|down|chill|rest|downtime)\b)/g, (m, n) => +n >= 5 ? tok("d", { min: +n, adj: false, raw: m + " off" }) : m);
+    rep(/(?<!\b(?:at|by|@|until|till)\s)\b(\d{1,3})(?=\s+(?:minutes?\s+)?(?:before|prior to|ahead of)\s+(?:the\s+)?(?:game|first pitch|gametime|pregame)\b)/g, (m, n) => +n >= 5 && +n <= 120 ? tok("d", { min: +n, adj: false, raw: m }) : m);
     rep(/\b(\d{1,3})\s+of\s+(?!(?:them|us|the guys|the groups?|those|these|hitters|pitchers|players|guys|\d))(?=[a-z])/g, (m, n) => +n >= 5 && +n <= 180 ? tok("d", { min: +n, adj: false, raw: m.trim() }) + " of " : m);
     rep(/\bfor\s+(\d{1,3})\b(?!\s*(?:am|pm|a|p|:|groups?|rounds?|guys|players|hitters|pitchers|innings?|reps|pitches|swings|throws))/g, (m, n) => +n >= 5 ? "for" + tok("d", { min: +n, adj: false, raw: m }) : m);
     rep(/\b(\d{1,3})(?=\s+(?:each|apiece|a round|per round|per group|a group|a piece)\b)/g, (m, n) => +n >= 5 ? tok("d", { min: +n, adj: false, raw: m + " each" }) : m);
@@ -321,11 +325,12 @@
     /* ---- day-level phrases */
     rep(/\b(?:no games?(?:\s+(?:today|tomorrow|tonight))?|off ?day|day off|workout day|practice day|no game day|optional day|practice only|just (?:a )?practice|only (?:a )?practice)\b/g, () => { st.dayType = "workout"; return " "; });
     rep(/\bgame ?day\b/g, () => { st.gameDay = true; return " "; });
+    rep(/\b(?:double ?header|twin ?bill|dh day)\b/g, () => { st.gameDay = true; note("Doubleheader: the day is planned to the first game."); return " "; });
     rep(/\b(?:(?:everything|all|all work|the whole (?:day|practice|workout)|whole day|it all|we|were|we are|well be|we will be|practice|the workout|workout)\s+(?:is\s+|will be\s+|goes\s+|moves\s+|stays\s+|go\s+|move\s+|be\s+)?(?:indoors?|inside|under cover|undercover)|(?:indoor|inside) (?:day|practice|workout|only))\b(?:\s+(?:today|tomorrow))?/g, () => { st.allIndoor = true; return " "; });
     rep(/\bgetaway(?: day)?\b/g, () => { st.gameDay = true; st.light = true; note("Getaway day."); return " "; });
     rep(/\bpitch(?:er|ers)[- ]only(?: day)?\b|\bonly (?:the )?pitchers\b/g, () => { st.pitcherOnly = true; return " "; });
     rep(/\b(?:then\s+)?swap(?:s)?(?: groups)?\b/g, () => { st.swap = true; return " "; });
-    rep(/\b(?:fcl|gcl|azl|dsl|complex(?: league)?|extended(?: spring)?|backfields?)(?: day| schedule| game)?\b/g, (m) => { out.level = "fcl"; if (/game/.test(m)) st.gameDay = true; return " "; });
+    rep(/\b(?:fcl|gcl|azl|dsl|complex(?: league)?|extended(?: spring)?|backfields?)(?: day| schedule)?\b/g, () => { out.level = "fcl"; return " "; });
     rep(/\bfull[- ]season(?: day| schedule)?\b/g, () => { out.level = "full-season"; return " "; });
     rep(/\b(?:rain(?:y|ing|s)?(?:\s+(?:expected|coming|in the forecast|later|this afternoon|this morning|today|tomorrow|day))?|storms?(?:\s+(?:expected|coming))?|thunderstorms?|lightning|bad weather|weather(?:\s+(?:expected|coming))?|wet field)\b/g, () => { out.weather = "rain"; return " "; });
     const EMPH = { defense: "defen[cs]e|defensive|fundamentals|fundy", hitting: "hitting|offensive|offense|bp", pitching: "pitching|pitchers?", conditioning: "conditioning|running" };
@@ -370,7 +375,8 @@
       }
     };
     lexPass(1);
-    rep(/\b(?:first pitch|gametime|games?)\b/g, (m) => tok("g", { raw: m }));
+    rep(/\b(?:first pitch|gametime|games?|(?:we|they|were|we are|club|team) play(?:ing)?|we take the field|we go at)\b/g, (m) => tok("g", { raw: m }));
+    rep(/\b(?:vs\.?|versus|against|v\.)\s+(?:the\s+)?([a-z][a-z' ]{1,30}?)(?=\s*(?:⟨|[.,;]|$|\bat\b|@|\btonight\b|\btoday\b|\btomorrow\b))/g, (m, who) => { note(`Opponent: ${cap(who.trim())}.`); return " "; });
     W = W.replace(/\s+/g, " ");
 
     const A = "⟨a(\\d+)⟩", C = "⟨c(\\d+)⟩", D = "⟨d(\\d+)⟩", G = "⟨g(\\d+)⟩";
@@ -392,7 +398,10 @@
     };
 
     /* ---- "baserunning work", "cage session": the trailing noun belongs to the activity */
-    rep(new RegExp(`${A}\\s+(?:work|drills?|session|block|time|stuff|period|portion)\\b`, "g"), (m, i) => ` ⟨a${i}⟩ `);
+    rep(new RegExp(`${A}\\s+(work|drills?|sessions?|block|time|stuff|period|portion|room|review|series|circuit)\\b`, "g"), (m, i, w) => {
+      if (act(i).kind === "custom" && /room|review|series|circuit/.test(w)) act(i).label = `${act(i).label} ${cap(w)}`;
+      return ` ⟨a${i}⟩ `;
+    });
 
     /* ---- sub-items fold into their parent: "team defense with bunt coverage and pickoffs", "indy with double-play feeds" */
     const subOf = (p, c) => p.kind === c.kind || (famOf(p) && famOf(p) === famOf(c)) || (c.alias && famOf(c) === famOf(p));
@@ -460,6 +469,16 @@
     rep(new RegExp(`${G}\\s*(?:is\\s+|will be\\s+|starts?\\s+|starting\\s+|begins?\\s+|time\\s+)*(?:at\\s+|@\\s*|of\\s+)?${C}`, "g"), (m, g, c) => { setGame(c); return ` ⟨g${g}⟩ `; });
     rep(new RegExp(`${C}\\s*(?:(?:day|night|home|road|afternoon|evening|matinee|doubleheader|getaway|exhibition)\\s+)?(?:start\\s+)?${G}`, "g"), (m, c, g) => { if (st.gameClock != null) return m; setGame(c); return ` ⟨g${g}⟩ `; });
 
+    if (st.gameClock == null) W = W.replace(/[^.,;]+/g, (cl) => {
+      if (st.gameClock != null || !/⟨g\d+⟩/.test(cl)) return cl;
+      const gi = cl.search(/⟨g\d+⟩/);
+      const cs = [...cl.matchAll(/⟨c(\d+)⟩/g)].filter((x) => !st.c[+x[1]].used && !/⟨a\d+⟩\s*(?:at\s+|@\s*)?$/.test(cl.slice(0, x.index)));
+      if (!cs.length) return cl;
+      cs.sort((a, b) => Math.abs(a.index - gi) - Math.abs(b.index - gi));
+      setGame(cs[0][1]);
+      return cl.replace(cs[0][0], " ");
+    });
+
     /* ---- start / end anchors */
     const START = "(?:start(?:ing|s)?(?: time)?|begin(?:ning|s)?|kick ?off|get going|on the field|everyone in|guys in|be in|in by|be here|be at the (?:park|field|complex|facility)|(?:the )?day starts)";
     rep(new RegExp(`(?<!⟩\\s{0,3}(?:[a-z]+\\s+){0,4})\\b${START}(?:\\s+(?:the day|practice|the workout|everything|things|us|work|today|tomorrow))?\\s*(?:at|by|around|@|is)?\\s*${C}(?:\\s+with\\s+(?:the\\s+|a\\s+)?${A})?`, "g"), (m, c, i) => {
@@ -477,8 +496,12 @@
     const OFFW = "(?:off|free(?: time)?|down ?time|down|chill(?: time)?|break|rest|buffer|open time)";
     const BEF = "(?:before|pre|prior to|ahead of|until|till|leading (?:up to|into)|in front of)";
     const offGame = (d) => { const v = useD(d); if (st.offBeforeGame == null) st.offBeforeGame = v; st.gameDay = true; return " "; };
-    rep(new RegExp(`${D}\\s+(?:of\\s+)?${OFFW}(?:\\s+time)?\\s*(?:${BEF}\\s*)?(?:the\\s+)?(?:${G}|pregame)`, "g"), (m, d) => offGame(d));
+    rep(new RegExp(`${D}\\s+(?:of\\s+)?${OFFW}(?:\\s+time)?\\s*(?:${BEF}\\s*)?(?:the\\s+)?(?:${G}|pregame)(?:\\s+(?:to|for)\\s+([^.,;⟨]+))?`, "g"), (m, d, g, why) => { if (why) note(`${st.d[+d].min} minutes before the game: ${why.trim()}.`); return offGame(d); });
     rep(new RegExp(`${OFFW}\\s+(?:for\\s+)?${D}\\s+${BEF}\\s+(?:the\\s+)?(?:${G}|pregame)`, "g"), (m, d) => offGame(d));
+    rep(new RegExp(`${D}\\s+(?:${BEF})\\s+(?:the\\s+)?(?:${G})(?:\\s+(?:to|for)\\s+([^.,;⟨]+))?`, "g"), (m, d, g, why) => {
+      if (why) note(`${st.d[+d].min} minutes before the game: ${why.trim()}.`);
+      return offGame(d);
+    });
     const offAct = (d, i) => { st.offBefore.push({ min: useD(d), before: +i }); return ` ⟨a${i}⟩ `; };
     rep(new RegExp(`${D}\\s+(?:of\\s+)?${OFFW}(?:\\s+time)?\\s+${BEF}\\s+(?:the\\s+)?${A}`, "g"), (m, d, i) => offAct(d, i));
     rep(new RegExp(`${OFFW}\\s+(?:for\\s+)?${D}\\s+${BEF}\\s+(?:the\\s+)?${A}`, "g"), (m, d, i) => offAct(d, i));
@@ -667,6 +690,43 @@
       });
       W = W.replace(/ \/ /g, " , ");
     }
+
+    /* ---- every time or length in a clause belongs to something */
+    const HINTS = [[/\bspeed\b|\bsteal|\bleads?\b|\bbases?\b/, "baserunning"], [/\blive\b.*\b(?:abs?|at bats?|hitting)\b|\bsim(?:ulated)? (?:abs?|at bats?)/, "liveBp"],
+      [/\binfield|\boutfield|\bground ?balls|\bfly ?balls|\bfeeds\b|\bfielding\b|\bpositional\b/, "indDefense"], [/\bbunt/, "teamDefense"],
+      [/\bswings?\b|\btoss\b|\btee\b|\bhitting\b/, "cage"], [/\bmound\b|\bsides?\b/, "bullpen"], [/\bsprints?\b|\bconditioning\b|\blift\b|\bagility\b/, "conditioning"],
+      [/\bmeeting\b|\btalk\b|\bchalk\b/, "meeting"]];
+    W = W.replace(/[^.,;]+/g, (cl, offset, str) => {
+      // "bp, which we'll start around 4:10": a pronoun clause refers to the activity just named
+      if (/^\s*(?:which|that|it|and it|and that|this|those)\b/.test(cl) && !/⟨a\d+⟩/.test(cl)) {
+        const prevA = [...str.slice(0, offset).matchAll(/⟨a(\d+)⟩/g)].pop();
+        if (prevA) {
+          cl = cl.replace(/⟨c(\d+)⟩/g, (t, c) => (!st.c[+c].used && setAt(prevA[1], c) ? " " : t));
+          cl = cl.replace(/⟨d(\d+)⟩/g, (t, d) => (!st.d[+d].used && act(prevA[1]).dur == null ? ((act(prevA[1]).dur = useD(d)), " ") : t));
+          return cl.replace(/\b(?:which|that|it|this|those)\b/g, " ");
+        }
+      }
+      if (!/⟨a\d+⟩/.test(cl) && /[a-z]{3}/.test(cl.replace(/⟨[a-z]\d+⟩/g, ""))) cl = cl.replace(/(^|\s)(\d{1,3})(?=\s|$)/g, (t, sp, n) => (+n >= 5 && +n <= 180 ? sp + tok("d", { min: +n, adj: false, raw: n }) : t));
+      const cs = [...cl.matchAll(/⟨c(\d+)⟩/g)].filter((x) => !st.c[+x[1]].used);
+      const ds = [...cl.matchAll(/⟨d(\d+)⟩/g)].filter((x) => !st.d[+x[1]].used);
+      if (!cs.length && !ds.length) return cl;
+      const as = [...cl.matchAll(/⟨a(\d+)⟩/g)].filter((x) => !act(x[1]).dead);
+      const near = (x, ok) => as.filter((a) => ok(act(a[1]))).sort((a, b) => Math.abs(a.index - x.index) - Math.abs(b.index - x.index))[0];
+      const left = [];
+      cs.forEach((c) => { const a = near(c, (q) => q.at == null); if (a) { setAt(a[1], c[1]); cl = cl.replace(c[0], " "); } else left.push(c); });
+      ds.forEach((d) => { const a = near(d, (q) => q.dur == null); if (a) { act(a[1]).dur = useD(d[1]); cl = cl.replace(d[0], " "); } else left.push(d); });
+      if (!left.length) return cl;
+      const words = cl.replace(/⟨[a-z]\d+⟩/g, " ").replace(/\b(?:minutes?|mins?|min)\b/g, " ").split(/\s+/).filter((w) => w && !FILLER.has(w) && !/^\d+$/.test(w));
+      if (!words.length) return cl;
+      const phrase = words.join(" ");
+      const hit = HINTS.find(([re]) => re.test(phrase));
+      const kind = hit ? hit[1] : "custom";
+      const i = mkAct(kind, cap(phrase), { text: phrase });
+      left.forEach((x) => { if (x[0].startsWith("⟨c")) setAt(i, x[1]); else act(i).dur = useD(x[1]); });
+      if (kind !== "custom") note(`“${phrase}” read as ${kind === "liveBp" ? "live BP" : kind === "indDefense" ? "individual defense" : kind}.`);
+      const re = new RegExp(`\\b${words[0].replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`);
+      return cl.replace(/⟨[cd]\d+⟩/g, (t) => (left.some((x) => x[0] === t) ? " " : t)).replace(re, ` ⟨a${i}⟩ `).replace(new RegExp(words.slice(1).map((w) => `\\b${w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`).join("|") || "$^", "g"), " ");
+    });
 
     /* ---- leftovers: unused times, then words that aren't filler */
     W = W.replace(/\bkick(?:s|ing)? off\b|\bget (?:it )?going\b/g, " ");
@@ -921,7 +981,7 @@
   function splitInstructions(t) {
     const V = "(?:add|move|push|pull|drop|remove|delete|skip|shorten|lengthen|extend|give|make|start|keep|lock|run|put|swap|switch|bump|slide|shift|delay|finish|set|change|scratch|hold|leave|include|squeeze|trim|reduce|increase|reorganize|reorganise|rearrange|reshuffle|rework|redo|re-solve|resolve|take|cut|lunch|first pitch|end|wrap|no|have|let|lets|do|go|then)\\b";
     return t.split(new RegExp(`[.;!?]+|\\n|,\\s*(?:and\\s+|then\\s+)?(?=${V})|\\s+(?:and then|and|then|also|plus)\\s+(?=${V})`))
-      .map((s) => s && s.trim().replace(/^(?:and|then|also|plus|but|so|ok|okay)\s+/, "").replace(/^(?:can you|could you|please|lets|let us|i want to|we need to|go ahead and|i need you to)\s+/, "").trim())
+      .map((s) => s && s.trim().replace(/^(?:and|then|also|plus|but|so|ok|okay)\s+/, "").replace(/^(?:actually|instead|ok so|so|alright|scratch that|change of plans?|on second thought)[, ]+/, "").replace(/^(?:can you|could you|please|lets|let us|i want to|we need to|go ahead and|i need you to|we should|we want to|lets just)\s+/, "").trim())
       .filter(Boolean);
   }
 
@@ -1038,15 +1098,22 @@
       // "add 15 minutes to BP"
       if ((m = s.match(new RegExp(`^(?:add|give)\\s+${NUM}\\s+(?:more\\s+)?(?:to|for)\\s+(.+)$`)))) { each(T(m[2]), (t) => ({ op: "duration", target: t, delta: +m[1] })); continue; }
       // "add 15 minutes of PFPs after stretch", "add baserunning", "add a meeting at 9:30"
-      if ((m = s.match(/^(?:add|include|put in|throw in|squeeze in|also do|let's add|we need|need)\s+(.+)$/))) {
+      if ((m = s.match(/^(?:add|include|put in|throw in|squeeze in|also do|let's add|we need|need|we want|give us|get|do|i want)\s+(?:(?:the\s+)?(?:pitchers?|hitters|catchers?|position players?)\s+)?(.+)$/)) && /\b(?:after|before|at|of|for)\b|^(?:a|an|some)?\s*\d/.test(m[1]) || (m && /^(?:add|include|put in|throw in|squeeze in|also do|let's add)\b/.test(s))) {
         let rest = m[1], dur = null, at = null, rel = null, relT = null;
         let q;
-        if ((q = rest.match(/^(?:a|an|some)?\s*(\d{1,3})\s*(?:-\s*)?(?:minutes?|mins?|min)\s+(?:of\s+)?(.+)$/))) { dur = +q[1]; rest = q[2]; }
+        if ((q = rest.match(/^(?:a|an|some|another)?\s*(\d{1,3})\s*(?:-\s*)?(?:(?:more\s+)?(?:minutes?|mins?|min)\s+(?:of\s+)?|(?:more\s+)?of\s+)(.+)$/))) { dur = +q[1]; rest = q[2]; }
         if ((q = rest.match(/^(.+?)\s+for\s+(\d{1,3})\s*(?:minutes?|mins?|min)?$/))) { dur = +q[2]; rest = q[1]; }
         if ((q = rest.match(new RegExp(`^(.+?)\\s+(?:at|@)\\s+${TIME}$`)))) { at = clk(q[2], "practice"); rest = q[1]; }
         if ((q = rest.match(/^(.+?)\s+(right after|after|following|right before|before|ahead of)\s+(.+)$/))) { rel = /after|following/.test(q[2]) ? "after" : "before"; relT = q[3]; rest = q[1]; }
-        rest = rest.replace(/^(?:a|an|some|the|another|more)\s+/, "");
-        const a = matchActivity(rest);
+        const more = /^(?:another|more|extra|an extra|a few more)\b/.test(m[1].replace(/^(?:a|an)\s+/, "")) || /\b\d+\s+more\b/.test(m[1]);
+        rest = rest.replace(/^(?:a|an|some|the|another|more|extra)\s+/, "");
+        let a = matchActivity(rest);
+        if (a && more && dur != null && (req.activities || []).some((x) => x.kind === a.kind)) { ops.push({ op: "duration", target: { kind: a.kind }, delta: dur }); continue; }
+        if (!a && /^[a-z][a-z' -]*$/.test(rest) && rest.split(/\s+/).length <= 4) {
+          const hint = /\bbunt/.test(rest) ? "teamDefense" : /\bspeed\b/.test(rest) ? "baserunning" : /\binfield|\boutfield/.test(rest) ? "indDefense" : "custom";
+          a = { kind: hint, who: DEFAULT_WHO[hint], label: cap(rest) };
+          if (hint === "custom") note(`“${rest}” added as its own block.`);
+        }
         if (!a || a.kind === "game") { unknown.push(raw); continue; }
         let who = a.who;
         if (/\bpitchers?\b/.test(rest) && !["meeting"].includes(a.kind)) who = "pitchers";
@@ -1083,7 +1150,9 @@
         if (!isFinite(cur)) { unknown.push(raw); note("No start time to move from."); continue; }
         ops.push({ op: "anchor", key: "start", value: cur + dir * +m[1] }); continue;
       }
-      if ((m = s.match(new RegExp(`^(?:start|begin|report|be in|everyone in)(?:\\s+(?:the day|everything|practice|the workout))?\\s+(?:at|by|@)\\s*${TIME}$`)))) {
+      if ((m = s.match(new RegExp(`^(?:start|begin|report|be in|everyone in|guys in)(?:\\s+(?:the day|everything|practice|the workout|things))?\\s+(?:at\\s+|by\\s+|@\\s*)?${TIME}$`))) ||
+          (m = s.match(new RegExp(`^(?:push|move|change|make|set|bump|slide|pull)\\s+(?:the\\s+)?(?:start|start time|report time|report|first activity)\\s+(?:back\\s+|up\\s+)?(?:to|at|for)\\s+${TIME}$`))) ||
+          (m = s.match(new RegExp(`^(?:the\\s+)?(?:start|start time|report time)\\s+(?:is\\s+|at\\s+|now\\s+|will be\\s+)+${TIME}$`)))) {
         const v = clk(m[1], "practice"); if (v == null) { unknown.push(raw); continue; }
         ops.push({ op: "anchor", key: "start", value: v }); continue;
       }

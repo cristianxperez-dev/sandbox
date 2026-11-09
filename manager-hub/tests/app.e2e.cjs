@@ -22,6 +22,7 @@ const DAY = "Report at 8:00. Two position player groups and two pitcher groups. 
 async function fresh(b, opts = {}) {
   const ctx = await b.newContext(Object.assign({ viewport: { width: 1366, height: 900 }, acceptDownloads: true }, opts.ctx || {}));
   await signIn(ctx, BASE);
+  // the classic Schedule Assistant is opened directly: the ✦ Assistant button now opens Describe Your Day (tests/day-ui.e2e.cjs)
   // these checks control the roster themselves: the shipped organisation roster is tested separately
   await ctx.route("**/rosters/org-roster.csv", (r) => r.fulfill({ status: 200, contentType: "text/csv", body: "" }));
   if (opts.init) await ctx.addInitScript(opts.init);
@@ -41,7 +42,7 @@ const draft = (p, mine) => p.evaluate((mine) => { const d = MHAssistUI.draft; re
 const minOf = (list, re) => Math.min(...list.filter((x) => re.test(x.a)).map((x) => x.s));
 const maxEnd = (list, re) => Math.max(...list.filter((x) => re.test(x.a)).map((x) => x.e));
 async function describe(p, text) {
-  if (!(await p.locator("#mha").isVisible())) { await p.click("#btnAI"); await wait(p, 300); }
+  if (!(await p.locator("#mha").isVisible())) { await p.evaluate(() => MHAssistUI.open()); await wait(p, 300); }
   if (!(await p.locator("#mhaText").count())) { await p.click('[data-mstep="describe"]'); await wait(p, 200); }
   await p.fill("#mhaText", text); await p.click("#mhaBuild"); await wait(p, 700);
 }
@@ -205,7 +206,7 @@ const lastMsg = (p) => p.evaluate(() => { const l = MHAssistUI.draft.log; return
   /* ---------------- J. voice: honest fallback and a dictated transcript ---------------- */
   await safe(async () => {
     const { ctx, p, errs } = await fresh(b, { init: () => { delete window.SpeechRecognition; delete window.webkitSpeechRecognition; } });
-    await p.click("#btnAI"); await wait(p, 250);
+    await p.evaluate(() => MHAssistUI.open()); await wait(p, 250);
     ok(await p.locator("#mhaMic").isDisabled() && /isn't available in this browser/.test(await p.locator("#mhaMic").getAttribute("title")), "no Web Speech API: mic disabled with an honest explanation");
     await ctx.close();
     const fake = () => {
@@ -214,7 +215,7 @@ const lastMsg = (p) => p.evaluate(() => { const l = MHAssistUI.draft.log; return
       window.SpeechRecognition = FakeRec; window.webkitSpeechRecognition = FakeRec;
     };
     const v = await fresh(b, { init: fake });
-    await v.p.click("#btnAI"); await wait(v.p, 250);
+    await v.p.evaluate(() => MHAssistUI.open()); await wait(v.p, 250);
     await v.p.click("#mhaMic"); await wait(v.p, 300); await v.p.click("#mhaMic"); await wait(v.p, 150);
     const tr = await v.p.inputValue("#mhaText");
     ok(/eight thirty/.test(tr), "dictation lands in an editable transcript first");
@@ -287,7 +288,7 @@ const lastMsg = (p) => p.evaluate(() => { const l = MHAssistUI.draft.log; return
   /* ---------------- M. phone layout ---------------- */
   await safe(async () => {
     const { ctx, p, errs } = await fresh(b, { ctx: { viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true } });
-    await p.click("#btnAI"); await wait(p, 250);
+    await p.evaluate(() => MHAssistUI.open()); await wait(p, 250);
     await p.fill("#mhaText", DAY); await p.click("#mhaBuild"); await wait(p, 700);
     ok((await p.locator(".mha-blk").count()) > 10, "phone: draft renders");
     ok(await p.evaluate(() => document.documentElement.scrollWidth - innerWidth) <= 1, "phone: no horizontal page scroll");

@@ -87,3 +87,6 @@
   .dy-classic{padding:3px 9px;font-size:11.5px}
   .dayui .mha-chip{display:inline-block}
 }
+
+/* the access gate's floating Sign out link sits over full-screen panels' footers; hide it while one is open */
+body.mha-open .sbx-signout{display:none!important}
