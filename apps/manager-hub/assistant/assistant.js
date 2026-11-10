@@ -883,6 +883,7 @@
     openModal(`
       <div class="mhead"><div><h2>How the Manager Hub works</h2><p>Quick reference. Everything stays in this browser, per affiliate.</p></div><button class="x" data-close>×</button></div>
       <div class="mbody mha-help">
+        <a class="mha-guide" href="guide/Manager_Hub_Quick_Start_Guide.pdf" target="_blank" rel="noopener"><b>Quick Start Guide</b><span>One page: build, customize and publish a daily schedule (PDF)</span></a>
         <section><h4>1 · Pick the affiliate and the date</h4><p>The chip in the header switches affiliate — each has its own rosters, schedules and plans. Set the date in the Daily Schedule.</p></section>
         <section><h4>2 · Describe the day</h4><p>Press <b>✦ Assistant</b> and write or dictate the day the way you'd say it: groups, what each needs, fixed times, first pitch, rotations, what has to finish before what. Review the draft on the timeline, then publish it.</p></section>
         <section><h4>3 · Adjust in plain language</h4><p>“move hitting back 15” · “swap Blue and Orange” · “make lift 30 minutes” · “move BP to the cage” · “add bunt defense at 11 for Blue” · “rain — move everything indoors” · “undo”. Every change shows what moved before you publish.</p></section>

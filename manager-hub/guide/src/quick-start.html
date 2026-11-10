@@ -1,0 +1,231 @@
+<!doctype html>
+<!-- Manager Hub — Daily Scheduling Quick Start (one page, US Letter portrait).
+     Editable source of guide/Manager_Hub_Quick_Start_Guide.pdf. Rebuild the PDF with:
+       node manager-hub/guide/src/build-pdf.cjs
+     Screenshots are real (cperez.app, Fayetteville, Apr 8 2027, 6:30 PM vs. Augusta). Fonts: Oswald (SIL OFL, in fonts/)
+     for headings, Inter for text. Labels match the live app: Build Daily Schedule, Build manually, Describe your day,
+     Describe by voice, Start empty instead, Save draft, Publish →, Publish schedule, Game Day Defaults. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Manager Hub — Daily Scheduling Quick Start</title>
+<style>
+@font-face{font-family:"Oswald";src:url("fonts/Oswald-latin.woff2") format("woff2");font-weight:200 700;font-style:normal}
+@page{size:Letter portrait;margin:0}
+:root{
+  --navy:#002D62;--navy-800:#012A57;--navy-600:#123E7C;--navy-100:#E7EDF6;--navy-50:#F3F6FB;
+  --orange:#EB6E1F;--orange-100:#FDEBDD;
+  --ink:#16233A;--text:#3A4658;--muted:#6B7685;--line:#DCE3EC;--paper:#FFFFFF;
+  --f-display:"Oswald","Archivo Narrow","Arial Narrow",sans-serif;
+  --f-ui:"Inter","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#E9EDF2}
+body{font-family:var(--f-ui);color:var(--text);-webkit-print-color-adjust:exact;print-color-adjust:exact;font-feature-settings:"tnum" 1,"cv11" 1}
+.page{width:8.5in;height:11in;margin:0 auto;background:var(--paper);position:relative;overflow:hidden;display:flex;flex-direction:column}
+.page>*{flex-shrink:0}
+
+/* ---------- header ---------- */
+.hd{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-800) 100%);color:#fff;padding:.3in .5in .26in;position:relative}
+.hd::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--orange)}
+.hd-row{display:flex;align-items:flex-end;justify-content:space-between;gap:.3in}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .tile{width:40px;height:40px;border-radius:7px;background:var(--orange);display:grid;place-items:center;font-family:var(--f-display);font-weight:700;font-size:25px;color:#fff;letter-spacing:0}
+.brand .wm{display:flex;flex-direction:column;line-height:1}
+.brand .wm small{font-family:var(--f-display);font-weight:500;font-size:9.5px;letter-spacing:.32em;color:#C9D6EA}
+.brand .wm b{font-family:var(--f-display);font-weight:700;font-size:27px;letter-spacing:.06em;margin-top:3px}
+.brand .wm b span{color:var(--orange)}
+.hd-r{text-align:right}
+.hd-r .kick{font-family:var(--f-display);font-weight:600;font-size:21px;letter-spacing:.04em;text-transform:uppercase}
+.hd-r .sub{font-size:11.5px;color:#D7E1EF;margin-top:4px}
+.url{display:inline-flex;align-items:center;gap:6px;margin-top:9px;font-size:11px;font-weight:600;color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:4px 11px}
+.url svg{width:12px;height:12px}
+
+/* ---------- three ideas ---------- */
+.ideas{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:.17in .5in 0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.idea{display:flex;align-items:center;gap:10px;padding:8px 14px;background:var(--navy-50)}
+.idea+.idea{border-left:1px solid var(--line)}
+.idea i{flex:none;width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;font-style:normal;font-family:var(--f-display);font-weight:600;font-size:13px;display:grid;place-items:center}
+.idea b{font-size:12px;color:var(--ink);line-height:1.25;font-weight:700}
+
+/* ---------- body grid ---------- */
+.body{display:grid;grid-template-columns:1.12fr 1fr;gap:.26in;padding:.17in .5in 0}
+h2{font-family:var(--f-display);font-weight:600;font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);margin:0 0 10px;display:flex;align-items:center;gap:8px}
+h2 .k{font-family:var(--f-ui);font-size:9.5px;font-weight:800;letter-spacing:.12em;color:#fff;background:var(--orange);border-radius:4px;padding:2px 6px}
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.step{display:grid;grid-template-columns:30px 1fr;gap:10px}
+.num{width:30px;height:30px;border-radius:9px;background:var(--navy);color:#fff;font-family:var(--f-display);font-weight:600;font-size:16px;display:grid;place-items:center}
+.step h3{margin:0 0 2px;font-size:13px;color:var(--ink);font-weight:800;letter-spacing:-.005em;display:flex;align-items:center;gap:6px}
+.step p{margin:0;font-size:10.5px;line-height:1.45}
+.step b{color:var(--ink)}
+.btnlbl{display:inline-block;font-size:9.5px;font-weight:700;color:#fff;background:var(--orange);border-radius:4px;padding:1px 6px;white-space:nowrap}
+.ui{display:inline-block;font-size:9.5px;font-weight:700;color:var(--navy);background:var(--navy-100);border-radius:4px;padding:1px 5px;white-space:nowrap}
+.levels{display:flex;flex-wrap:wrap;gap:4px;margin:5px 0 3px}
+.levels span{font-size:9.5px;font-weight:700;color:var(--navy);border:1px solid #C7D3E4;border-radius:20px;padding:1px 8px;background:#fff}
+.levels span.cx{background:var(--navy);color:#fff;border-color:var(--navy)}
+.opts{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin:6px 0 2px}
+.opt{border:1px solid var(--line);border-radius:8px;padding:6px 7px;background:#fff}
+.opt:first-child{border-color:var(--navy);background:var(--navy-50)}
+.opt b{display:flex;align-items:center;gap:4px;font-size:10px;color:var(--navy);margin-bottom:2px}
+.opt b svg{width:11px;height:11px;flex:none}
+.opt span{display:block;font-size:9px;line-height:1.35;color:var(--text)}
+.shot{margin:7px 0 0;border-radius:9px;overflow:hidden;border:1px solid var(--line);box-shadow:0 1px 4px rgba(0,30,70,.08)}
+.shot img{display:block;width:100%}
+.cap{font-size:9px;color:var(--muted);margin-top:3px}
+
+/* ---------- game-day times ---------- */
+.card{border:1px solid var(--line);border-radius:12px;padding:13px 14px;background:#fff}
+.lead{font-size:10.5px;line-height:1.4;margin:0 0 7px}
+table{width:100%;border-collapse:collapse;font-size:10.5px}
+th{font-size:8.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:left;padding:0 0 5px;border-bottom:1.5px solid var(--navy)}
+td{padding:5px 0;border-bottom:1px solid var(--line);vertical-align:top}
+td:first-child{font-weight:700;color:var(--ink);padding-right:8px}
+td:first-child em{display:block;font-style:normal;font-weight:500;font-size:9px;color:var(--muted)}
+td.t{white-space:nowrap}
+td.t b{color:var(--navy)}
+td.d{text-align:right;color:var(--muted);white-space:nowrap}
+.ex{margin-top:9px;background:var(--navy-50);border-radius:10px;padding:9px 12px}
+.ex-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px}
+.ex-h b{font-family:var(--f-display);font-weight:600;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--navy)}
+.ex-h span{font-size:9px;color:var(--muted)}
+.tl{display:flex;flex-direction:column;gap:3px}
+.tl div{display:grid;grid-template-columns:84px 1fr;align-items:center;gap:8px}
+.tl time{font-size:10.5px;font-weight:700;color:var(--navy);font-variant-numeric:tabular-nums}
+.tl span{font-size:10.5px;color:var(--ink);font-weight:600;border-left:3px solid var(--navy);background:#fff;border-radius:4px;padding:3px 8px}
+.tl .gap span{border:0;background:none;color:var(--muted);font-weight:500;font-style:italic;font-size:9.5px;padding:0 8px}
+.tl .fp span{border-left-color:var(--orange);background:var(--orange-100);color:#7A3507}
+.notes{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:3px}
+.notes li{font-size:9.5px;line-height:1.4;display:grid;grid-template-columns:12px 1fr;gap:5px}
+.notes li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--orange);margin-top:4px}
+
+/* ---------- AI ---------- */
+.ai{margin:.14in .5in 0;display:grid;grid-template-columns:1.12fr 1fr;gap:.26in;align-items:start}
+.quote{position:relative;background:var(--navy);color:#fff;border-radius:12px;padding:13px 16px 13px 40px;font-size:11.5px;line-height:1.5;font-weight:500}
+.quote svg{position:absolute;left:13px;top:14px;width:17px;height:17px;opacity:.9}
+.quote small{display:block;font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;color:#AFC0DA;font-weight:700;margin-bottom:3px}
+.flow{display:flex;align-items:center;gap:6px;margin:9px 0 0}
+.flow span{font-family:var(--f-display);font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);background:var(--navy-100);border-radius:6px;padding:4px 10px}
+.flow span.p{background:var(--orange);color:#fff}
+.flow i{color:var(--muted);font-style:normal;font-size:12px}
+.ai ul{list-style:none;margin:30px 0 0;padding:0;display:grid;grid-template-columns:1fr;gap:5px}
+.ai li{font-size:10.2px;line-height:1.4;display:grid;grid-template-columns:15px 1fr;gap:5px}
+.ai li svg{width:13px;height:13px;margin-top:1px;color:var(--navy)}
+
+/* ---------- tips footer ---------- */
+.tips{margin:.14in .5in 0;padding:10px 0 0;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.tip{display:flex;gap:7px}
+.tip svg{flex:none;width:15px;height:15px;color:var(--orange);margin-top:1px}
+.tip p{margin:0;font-size:9.2px;line-height:1.4}
+.tip b{display:block;color:var(--ink);font-size:9.6px;margin-bottom:1px}
+.ft{margin:auto .5in .24in;padding-top:6px;display:flex;justify-content:space-between;align-items:center;font-size:9px;color:var(--muted)}
+.ft b{color:var(--navy)}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hd">
+    <div class="hd-row">
+      <div class="brand"><div class="tile">H</div><div class="wm"><small>HOUSTON ASTROS</small><b>MANAGER <span>HUB</span></b></div></div>
+      <div class="hd-r">
+        <div class="kick">Daily Scheduling — Quick Start Guide</div>
+        <div class="sub">Build, customize and publish your team's daily schedule in minutes.</div>
+        <div class="url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>cperez.app/apps/manager-hub</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="ideas">
+    <div class="idea"><i>1</i><b>Select your team<br>and date</b></div>
+    <div class="idea"><i>2</i><b>Build manually<br>or with AI</b></div>
+    <div class="idea"><i>3</i><b>Review<br>and publish</b></div>
+  </div>
+
+  <div class="body">
+    <!-- ================= A ================= -->
+    <section>
+      <h2><span class="k">A</span>Build your daily schedule</h2>
+      <ol class="steps">
+        <li class="step"><div class="num">1</div><div>
+          <h3>Choose your affiliate</h3>
+          <p>Click the team name at the top left to switch workspaces.</p>
+          <div class="levels"><span>Triple-A</span><span>Double-A</span><span>High-A</span><span>Single-A</span><span class="cx">Complex</span></div>
+          <p><b>Complex</b> covers workouts and camps with players from every affiliate (the <span class="ui">Camps</span> tab).</p>
+        </div></li>
+        <li class="step"><div class="num">2</div><div>
+          <h3>Select a date</h3>
+          <p>The calendar opens on <b>today</b>. Tap any date. Games are already there — <b>vs</b> for home, <b>@</b> for road — and the selected day shows the opponent and first pitch.</p>
+        </div></li>
+        <li class="step"><div class="num">3</div><div>
+          <h3>Click <span class="btnlbl">Build Daily Schedule</span></h3>
+          <p>Pick how you want to build — the real screen looks like this:</p>
+          <div class="shot"><img src="shot-build.png" alt="The selected day in Manager Hub with its game and the three ways to build"></div>
+          <div class="cap"><b>Build manually</b> places the standard game-day activities; <b>Describe your day</b> and <b>Describe by voice</b> use AI. <b>Start empty instead</b> gives a blank day.</div>
+        </div></li>
+        <li class="step"><div class="num">4</div><div>
+          <h3>Review &amp; publish</h3>
+          <p>Click any block to change its time, length, group or facility, or drag it. <span class="ui">Save draft</span> keeps it as a draft; <span class="btnlbl">Publish →</span> shows every change, then <b>Publish schedule</b> makes it official. Nothing is published until you approve it.</p>
+        </div></li>
+      </ol>
+    </section>
+
+    <!-- ================= B ================= -->
+    <section>
+      <h2><span class="k">B</span>Standard game-day times</h2>
+      <div class="card">
+        <p class="lead">Manager Hub reads first pitch from the imported game schedule and places these for you:</p>
+        <table>
+          <thead><tr><th>Activity</th><th>Starts</th><th style="text-align:right">Length</th></tr></thead>
+          <tbody>
+            <tr><td>Home BP<em>Home batting practice</em></td><td class="t"><b>2 h 30 min</b> before</td><td class="d">45 min</td></tr>
+            <tr><td>Visitor BP<em>Visitors' batting practice</em></td><td class="t"><b>1 h 45 min</b> before</td><td class="d">45 min</td></tr>
+            <tr><td>Pregame Warmup</td><td class="t"><b>20 min</b> before</td><td class="d">10 min</td></tr>
+            <tr><td>Anthem<em>National anthem</em></td><td class="t"><b>10 min</b> before</td><td class="d">10 min</td></tr>
+          </tbody>
+        </table>
+        <div class="ex">
+          <div class="ex-h"><b>Example — 6:30 PM game</b><span>placed automatically</span></div>
+          <div class="tl">
+            <div><time>4:00–4:45</time><span>Home BP</span></div>
+            <div><time>4:45–5:30</time><span>Visitor BP</span></div>
+            <div class="gap"><time></time><span>open time for your own work</span></div>
+            <div><time>6:10–6:20</time><span>Pregame Warmup</span></div>
+            <div><time>6:20–6:30</time><span>Anthem</span></div>
+            <div class="fp"><time>6:30 PM</time><span>First pitch</span></div>
+          </div>
+        </div>
+        <ul class="notes">
+          <li><span><b>Every time is editable</b> on the day; defaults can be changed under <b>Game Day Defaults</b>.</span></li>
+          <li><span>Game times come from the affiliate schedules, in the ballpark's local time. Check for postponements and time changes — if a game moves, Manager Hub offers to recalculate.</span></li>
+          <li><span>First pitch TBD? You'll be asked for it first. Doubleheader? Choose which game to build around.</span></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <!-- ================= C ================= -->
+  <section class="ai">
+    <div>
+      <h2><span class="k">C</span>Using the AI schedule builder</h2>
+      <div class="quote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.8L19 9.5l-4 3.4 1.2 5.1L12 15.3 7.8 18l1.2-5.1-4-3.4 5.1-1.7z"/></svg><small>Example — type or say</small>“Catchers report at 1:30 PM. Early hitting starts at 2:00. Pitchers stretch at 3:00. Add a defensive meeting before BP.”</div>
+      <div class="flow"><span>Describe</span><i>→</i><span>Review</span><i>→</i><span class="p">Publish</span></div>
+    </div>
+    <ul>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span><b>Use ordinary language</b> — say the times, groups and activities you know.</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span>It knows the selected date and that day's game; the standard game-day times stay unless you change them.</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span><b>It only proposes.</b> Edit anything, ask for changes (“move BP 15 minutes later”), then publish.</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg><span>Voice works in Chrome, Edge and Safari. If AI is unavailable, the built-in reader and manual building still work.</span></li>
+    </ul>
+  </section>
+
+  <!-- ================= tips ================= -->
+  <div class="tips">
+    <div class="tip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M8 5.5c1.6 2 2.4 4.1 2.4 6.5s-.8 4.5-2.4 6.5M16 5.5c-1.6 2-2.4 4.1-2.4 6.5s.8 4.5 2.4 6.5"/></svg><p><b>Games are already loaded</b>No need to enter opponents or first pitch.</p></div>
+    <div class="tip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1 11-11-3-3L5 16z"/></svg><p><b>Everything is adjustable</b>Add, move, resize or remove any activity. Undo is always there.</p></div>
+    <div class="tip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 0 3-6.2"/><path d="M4 4v4h4"/></svg><p><b>Reopen any time</b>A day with a schedule shows <b>Edit Daily Schedule</b> and its Draft or Published status.</p></div>
+    <div class="tip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M5 20V9l7-5 7 5v11M10 20v-5h4v5"/></svg><p><b>Complex days</b>Without a game, Complex starts from a standard workout day, not game-day times.</p></div>
+  </div>
+
+  <div class="ft"><span><b>Manager Hub</b> · Daily Scheduling Quick Start · sign in with your organization's access code</span><span>cperez.app/apps/manager-hub</span></div>
+</div>
+</body>
+</html>
