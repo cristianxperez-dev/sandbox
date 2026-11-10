@@ -133,7 +133,20 @@
   /** an interpreted description + the day's standard activities: keep every standard activity unless the
       description names it; our own BP takes the BP slot (Home BP at home, Visitor BP on the road) instead of
       appearing twice */
-  function mergeStandard(described, stdActs, home) {
+  /** copy "before / after" edges the AI dropped from the built-in reader's draft of the same words (matched by kind) */
+  function adoptEdges(aiReq, draftReq) {
+    const r = clone(aiReq), A = r.activities || [], Dr = (draftReq && draftReq.activities) || [];
+    const map = {};                                           // draft id → ai id, by kind (+ who when both say)
+    Dr.forEach((d) => { const m = A.find((a) => a.kind === d.kind && (!a.who || !d.who || a.who === d.who)); if (m) map[d.id] = m.id; });
+    A.forEach((a) => {
+      if ((a.before || []).length || (a.after || []).length) return;
+      const d = Dr.find((x) => map[x.id] === a.id); if (!d) return;
+      a.before = (d.before || []).map((x) => map[x]).filter((x) => x && x !== a.id);
+      a.after = (d.after || []).map((x) => map[x]).filter((x) => x && x !== a.id);
+    });
+    return r;
+  }
+  function mergeStandard(described, stdActs, home, durOf) {
     const r = clone(described);
     const names = (r.activities || []).map((a) => String(a.label || a.text || "").toLowerCase());
     const ownKey = home ? "std-home-bp" : "std-visitor-bp";
@@ -143,7 +156,13 @@
       const nm = s.label.toLowerCase();
       if (names.some((n) => n && (n === nm || n.includes(nm)))) return;            // the coach mentioned it: theirs wins
       if (s.id === ownKey && ownBp) {                                            // "BP" = our standard BP slot
-        if (ownBp.at == null) { ownBp.at = s.at; if (ownBp.dur == null && !(ownBp.rounds && (ownBp.rounds.each || ownBp.rounds.count))) ownBp.dur = s.dur; }
+        if (ownBp.at == null) {
+          ownBp.at = s.at; if (ownBp.dur == null && !(ownBp.rounds && (ownBp.rounds.each || ownBp.rounds.count))) ownBp.dur = s.dur;
+          // "a meeting before BP": right before it, not anywhere earlier in the day
+          (r.activities || []).filter((a) => a.at == null && (a.before || []).includes(ownBp.id)).forEach((a) => {
+            const d = a.dur || (durOf ? durOf(a.kind) : 15) || 15; a.at = ownBp.at - d; if (a.dur == null) a.dur = d;
+          });
+        }
         return;
       }
       add.push(Object.assign(clone(s), { order: 900 + add.length }));
@@ -152,5 +171,5 @@
     return r;
   }
 
-  return { ORG_DEFAULTS, resolve, sanitize, gameDayActivities, workoutActivities, startRequest, customized, recalc, mergeStandard, toMin };
+  return { ORG_DEFAULTS, resolve, sanitize, gameDayActivities, workoutActivities, startRequest, customized, recalc, mergeStandard, adoptEdges, toMin };
 });

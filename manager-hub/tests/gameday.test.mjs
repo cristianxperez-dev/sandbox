@@ -94,3 +94,12 @@ test("DateCore: today in a time zone, across midnight", () => {
   const ms = D.msToMidnight("America/Chicago", t); assert.ok(Math.abs(ms - 90 * 60e3) < 2000, "90 minutes to Chicago midnight: " + ms);
   assert.equal(D.addDays("2027-02-28", 1), "2027-03-01");
 });
+test("'a defensive meeting before BP': right before the BP slot, even when the AI dropped the 'before' (taken from the reader's draft)", () => {
+  const t = "Catchers report at 1:30, hitters have early work at 2:00, pitchers stretch at 3:00, and add a defensive meeting before BP.";
+  const draft = E.Solve.normalize(E.Read.read(t, {}));
+  const ai = JSON.parse(JSON.stringify(draft)); ai.activities.forEach((a) => { a.before = []; a.after = []; });
+  const std = G.startRequest({ game: true, gameTime: "18:30", settings: G.resolve(null, "fay") }).request.activities;
+  const m = G.mergeStandard(G.adoptEdges(ai, draft), std, true, (k) => E.KB.kind(k).dur.def);
+  const p = solve(m), meet = p.items.find((i) => i.kind === "meeting"), bp = p.items.find((i) => i.kind === "bp");
+  assert.equal(bp.start, 960); assert.equal(meet.end, 960, "the meeting ends as BP starts");
+});

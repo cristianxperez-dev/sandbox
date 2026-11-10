@@ -119,10 +119,13 @@ async function pickAndBuild(p, iso, how) {
     await pickAndBuild(p, game.date, "describe");
     ok(await p.isVisible("#dyText") && /stay unless you say otherwise/.test(await p.locator(".dy-keep").innerText()), "Describe your day: the standard activities are already on the timeline and stay");
     await p.fill("#dyText", "Catchers report at 1:30, hitters have early work at 2:00, pitchers stretch at 3:00, and add a defensive meeting before BP.");
-    await p.click("[data-build]"); await wait(p, 900);
+    await p.click("[data-build]");
+    await p.waitForFunction(() => DayUI.state && DayUI.state.text, null, { timeout: 45000 }); await wait(p, 300);   // the AI interpreter takes a few seconds
     const it = await items(p);
     ok(it.some((i) => i.s === 810) && it.some((i) => /Early Work/i.test(i.l) && i.s === 840) && it.some((i) => /Stretch/.test(i.l) && i.s === 900), "10. typed instructions → proposal with the catchers' report (1:30), early work (2:00), pitchers' stretch (3:00)");
     ok(it.some((i) => i.l === "Visitor BP") && it.some((i) => i.l === "Anthem") && it.some((i) => i.l === "Pregame Warmup"), "the standard game-day activities are kept");
+    const meet = it.find((i) => /Meeting/.test(i.l)), bp1 = it.filter((i) => /Batting Practice|^BP/.test(i.l)).sort((x, y) => x.s - y.s)[0];
+    ok(meet && bp1 && meet.e === bp1.s, `the defensive meeting sits right before BP (${meet && f(meet.s)}–${meet && f(meet.e)}, BP ${bp1 && f(bp1.s)}) · interpreter: ${await p.evaluate(() => DayUI.state.interpreter)}`);
     ok(it.filter((i) => /BP|Batting Practice/.test(i.l)).length >= 2 && !it.some((i) => i.l === "Home BP" && it.some((j) => /Batting Practice/.test(j.l) && j.s !== 960)), "our BP took the Home BP slot instead of a second BP");
     ok(await p.evaluate((b0) => JSON.stringify(S.sections) === b0, before), "12. the proposal changes nothing until it's published");
     await p.click("#dayui [data-close]");
@@ -131,7 +134,7 @@ async function pickAndBuild(p, iso, how) {
     await p.click('#hubPlan [data-plb="build"]'); await wait(p, 100); await p.click('#hubPlan [data-plb="voice"]'); await wait(p, 700);
     const tr = await p.inputValue("#dyText");
     ok(/catchers report at/.test(tr), `11. voice: dictation lands in the editable text first (“${tr.slice(0, 60)}…”)`);
-    await p.click("[data-build]"); await wait(p, 800);
+    await p.click("[data-build]"); await p.waitForFunction(() => DayUI.state && DayUI.state.text, null, { timeout: 45000 }); await wait(p, 300);
     ok((await items(p)).some((i) => i.s === 840) && (await p.evaluate((b0) => JSON.stringify(S.sections) === b0, before)), "the dictated day is built as a proposal; nothing published");
     ok(errs.length === 0, "no page errors " + errs.join(" | ").slice(0, 300));
     await ctx.close();

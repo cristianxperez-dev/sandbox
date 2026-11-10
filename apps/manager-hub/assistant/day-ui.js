@@ -96,7 +96,9 @@
     s.fallback = s.interpreter === "reader" ? lastReason : "";
     // Build Daily Schedule on a game / workout day: the standard activities stay unless the description names them
     if (B && B.std && B.std.length && window.GameDay) {
-      const merged = GameDay.mergeStandard(s.request, B.std, B.home);
+      let req = s.request;
+      if (s.interpreter === "ai") { try { req = GameDay.adoptEdges(req, E.Solve.normalize(E.Read.read(text, ctx))); } catch (e) {} }
+      const merged = GameDay.mergeStandard(req, B.std, B.home, (k) => { try { return E.KB.kind(k).dur.def; } catch (e) { return 15; } });
       if (B.game && B.game.time && merged.anchors && merged.anchors.firstPitch == null) merged.anchors.firstPitch = GameDay.toMin(B.game.time);
       s = Object.assign(E.fromRequest(merged, ctx), { text, interpreter: s.interpreter, fallback: s.fallback });
     }
