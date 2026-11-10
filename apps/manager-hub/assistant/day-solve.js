@@ -559,7 +559,13 @@
           alts: [{ label: "Hit on the field one group at a time", ops: [{ op: "remove", target: { kind: null, who: null, label: null, id: cageM.a.id } }] }] });
         return { items: out, len };
       }
-      // generic: members start together; same-track members become separate groups
+      // generic: members start together; same-track members become separate groups.
+      // A team-wide member can't run while others work: in a "while" group it is position-player work.
+      if (all.length > 1 && all.some((m) => m.units[0].track !== "all")) all.forEach((m) => {
+        if (m.units[0].track !== "all") return;
+        m.units = m.units.map((u) => Object.assign({}, u, { track: "position" }));
+        say(`parwho:${m.a.id}`, `${m.units[0].label.replace(/ — Round \d+$/, "")} runs alongside ${all.filter((x) => x !== m).map((x) => x.units[0].label.replace(/ — Round \d+$/, "")).join(" and ")}, so it is scheduled for position players.`);
+      });
       const seen = {};
       let len = 0;
       all.forEach((m, mi) => {
@@ -1187,6 +1193,20 @@
     if (cageU.mx > cages) conflict("resource", cagesKnown ? "error" : "warn", `${cageU.mx} groups need a cage at ${fmtAP(cageU.at)}, but ${cagesKnown ? `only ${cages} ${cages === 1 ? "cage is" : "cages are"} available` : "one cage was assumed"}.`, []);
     const fieldU = sweep(items.filter((i) => i.exclusive && i.end > i.start));
     if (fieldU.mx > fields) conflict("resource", res.fields != null ? "error" : "warn", `${fieldU.mx} groups need the whole field at ${fmtAP(fieldU.at)}, but ${res.fields != null ? `only ${fields} ${fields === 1 ? "field is" : "fields are"} available` : "one field was assumed"}.`, []);
+
+    // ---- safety net: a team-wide item overlapping anything, or one group double-booked, is never silent
+    if (!conflicts.some((c) => c.severity === "error")) {
+      const real = items.filter((i) => i.end > i.start && i.kind !== "game");
+      outer: for (let i = 0; i < real.length; i++) for (let j = i + 1; j < real.length; j++) {
+        const A = real[i], B = real[j];
+        if (A.actId && A.actId === B.actId) continue;
+        if (!(A.start < B.end && B.start < A.end)) continue;
+        if (!(A.track === "all" || B.track === "all" || (A.track === B.track && (A.group || null) === (B.group || null)))) continue;
+        const [X, Y] = A.start <= B.start ? [A, B] : [B, A];
+        conflict("overlap", "error", `${X.label} (${fmt(X.start)}–${fmt(X.end)}) overlaps ${Y.label} (${fmt(Y.start)}–${fmt(Y.end)}).`, []);
+        break outer;
+      }
+    }
 
     // ---- assumptions
     if (notes.compressed.length) say("compressed", `Shortened ${uniq(notes.compressed).join(", ")} to fit.`);

@@ -623,3 +623,16 @@ test("every block timed: a block with a stated start and no length runs to the n
   const p3 = S.solve(S.normalize(READ.read("Start at 9, done at noon. Hitting, then defense.", ctx)), ctx);
   assert.ok(p3.assumptions.some((a) => a.key === "open"));
 });
+
+test("a team-wide item in a 'while' group becomes position-player work; a team-wide overlap is never silent (Luna Production run, Nov 10)", () => {
+  const ir = S.normalize({ dayType: "workout", anchors: { start: 570 }, activities: [
+    act("a1", "stretch", { at: 570, who: "all", order: 1 }), act("a2", "throwing", { who: "all", order: 2 }),
+    act("a3", "bullpen", { who: "pitchers", after: ["a2"], order: 3 }), act("a4", "indDefense", { label: "Blocking", who: "all", order: 4 }),
+    act("a5", "bp", { who: "position", after: ["a3"], order: 5 })], parallel: [["a3", "a4"]] });
+  const p = S.solve(ir, {});
+  const blk = p.items.find((i) => i.label === "Blocking"), pen = p.items.find((i) => i.kind === "bullpen");
+  assert.equal(blk.track, "position"); assert.equal(blk.start, pen.start);
+  assert.ok(p.ok && p.assumptions.some((a) => /scheduled for position players/.test(a.text)));
+  const bad = p.items.filter((i) => i.end > i.start).some((A) => p.items.some((B) => B !== A && B.end > B.start && A.start < B.end && B.start < A.end && (A.track === "all" || B.track === "all")));
+  assert.ok(!bad, "no team-wide overlap left");
+});

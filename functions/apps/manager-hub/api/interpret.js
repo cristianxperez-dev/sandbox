@@ -179,7 +179,13 @@ async function paidCall(env, model, job) {
 const usageOf = (u) => (u ? { input_tokens: u.input_tokens || 0, output_tokens: u.output_tokens || 0, cached_input_tokens: (u.input_tokens_details && u.input_tokens_details.cached_tokens) || 0, reasoning_tokens: (u.output_tokens_details && u.output_tokens_details.reasoning_tokens) || 0 } : null);
 function log(env, o) { if (env.MH_AI_LOG !== "0") console.log(JSON.stringify(Object.assign({ evt: "mh-ai" }, o))); }
 
-export async function onRequestPost({ request, env }) {
+/* Any unexpected failure answers in JSON (the page then uses the built-in reader) instead of a platform error page. */
+export async function onRequestPost(ctx) {
+  try { return await handle(ctx); }
+  catch (e) { log(ctx.env || {}, { status: "internal-error", detail: String((e && e.message) || e).slice(0, 160) }); return reply(500, { error: "internal-error" }); }
+}
+
+async function handle({ request, env }) {
   const url = new URL(request.url);
   const origin = request.headers.get("Origin");
   if ((origin && origin !== url.origin) || request.headers.get("Sec-Fetch-Site") === "cross-site") return reply(403, { error: "cross-origin" });
