@@ -47,7 +47,36 @@ try {
 // endpoint instead of the built-in reader; the solver and every check are identical.
 const AI = process.env.MH_EVAL_INTERPRETER === "ai";
 let endpoint = null;
+// MH_EVAL_BASE=https://<preview>/apps/manager-hub/ calls the DEPLOYED endpoint over HTTPS instead
+// (the preview access code reaches the gate as the X-MH-Access-Key header, injected by the egress proxy
+// or given in MH_EVAL_ACCESS_KEY). MH_AI_MODEL / MH_AI_EFFORT pick the model per request (preview allowlist).
+const BASE_URL = process.env.MH_EVAL_BASE || "";
+async function viaHttp(body) {
+  const headers = { "Content-Type": "application/json", Origin: new URL(BASE_URL).origin, "X-MH-Access-Key": process.env.MH_EVAL_ACCESS_KEY || "proxy-injected" };
+  const payload = Object.assign({}, body, process.env.MH_AI_MODEL ? { model: process.env.MH_AI_MODEL } : {}, process.env.MH_AI_EFFORT ? { effort: process.env.MH_AI_EFFORT } : {});
+  for (let attempt = 0; ; attempt++) {
+    const t0 = Date.now();
+    let res;
+    try { res = await fetch(new URL("api/interpret", BASE_URL), { method: "POST", headers, body: JSON.stringify(payload) }); }
+    catch (e) { if (attempt < 1) continue; return { res: { ok: false, status: 0 }, d: { error: "network" } }; }
+    const d = await res.json().catch(() => ({ error: "non-json-" + res.status }));
+    if (d && d.ms == null) d.ms = Date.now() - t0;
+    d.wall = Date.now() - t0;
+    if ((res.status === 429 || res.status >= 500 && d.error === "model-service-503") && attempt < 2) { await new Promise((r) => setTimeout(r, 4000 * (attempt + 1))); continue; }
+    return { res, d };
+  }
+}
 async function viaEndpoint(body) {
+  if (BASE_URL) {
+    const { res, d } = await viaHttp(body);
+    USAGE.calls++;
+    if (d.usage) { USAGE.input += d.usage.input_tokens || 0; USAGE.output += d.usage.output_tokens || 0; USAGE.cacheRead += d.usage.cached_input_tokens || 0; USAGE.reasoning += d.usage.reasoning_tokens || 0; }
+    if (d.ms) { USAGE.ms += d.ms; USAGE.lat.push(d.ms); }
+    if (d.wall) USAGE.wall.push(d.wall);
+    if (d.model) USAGE.model = d.model;
+    if (!res.ok) { USAGE.errors++; USAGE.errorKinds[d.error] = (USAGE.errorKinds[d.error] || 0) + 1; throw new Error(`AI interpreter ${res.status}: ${JSON.stringify(d)}`); }
+    return d;
+  }
   if (!endpoint) endpoint = await import("../../functions/apps/manager-hub/api/interpret.js");
   const env = { OPENAI_API_KEY: process.env.OPENAI_API_KEY, MH_AI_ENABLED: "1", MH_AI_MODEL: process.env.MH_AI_MODEL, MH_AI_EFFORT: process.env.MH_AI_EFFORT, MH_AI_RATE: "1000000", MH_AI_DAILY: "1000000", MH_AI_LOG: "0" };
   const origin = "https://eval.sandbox-34x.pages.dev";   // evaluated as a preview host — production stays locked
@@ -120,7 +149,7 @@ function runChecks(checks, r) {
 // ─────────────── scenarios ───────────────
 const results = []; // { cat, id, pass, fails }
 let lastFails = [];
-const USAGE = { calls: 0, input: 0, output: 0, cacheRead: 0, reasoning: 0, ms: 0, lat: [], errors: 0, errorKinds: {}, model: null };
+const USAGE = { calls: 0, input: 0, output: 0, cacheRead: 0, reasoning: 0, ms: 0, lat: [], wall: [], errors: 0, errorKinds: {}, model: null };
 
 for (const sc of SCENARIOS) {
   test(`[${sc.cat}] ${sc.id}`, async () => {

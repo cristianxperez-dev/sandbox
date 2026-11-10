@@ -1,6 +1,8 @@
 # Manager Hub — Describe Your Day: evaluate the AI interpreter with REAL model calls.
 # Manual only (Actions → "Describe Your Day — AI evaluation" → Run workflow). Never runs on push.
-# Needs the repository secret ANTHROPIC_API_KEY (Settings → Secrets and variables → Actions).
+# OPTIONAL — the evaluation normally runs against a Cloudflare preview (MH_EVAL_BASE), where the key
+# already lives. This workflow only runs the endpoint code directly on a runner, and then needs the
+# repository secret OPENAI_API_KEY (Settings → Secrets and variables → Actions).
 # The key is only exposed to this job's eval step; nothing is deployed and no site setting changes.
 name: Describe Your Day — AI evaluation
 
@@ -20,7 +22,7 @@ on:
         description: "Effort"
         default: low
         type: choice
-        options: [low, medium, high]
+        options: [low, medium, high, none]
       preview_url:
         description: "Optional: a Cloudflare preview's Manager Hub URL (…pages.dev/apps/manager-hub/) to test the real panel there with AI on"
         default: ""
@@ -48,7 +50,7 @@ jobs:
 
       - name: AI interpreter (real model calls)
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           MH_EVAL_INTERPRETER: ai
           MH_EVAL_SET: ${{ inputs.set }}
           MH_EVAL_REPORT: ai.json
@@ -58,7 +60,7 @@ jobs:
           MH_AI_DAILY: "100000"
           MH_AI_LOG: "0"
         run: |
-          if [ -z "$ANTHROPIC_API_KEY" ]; then echo "::error::Repository secret ANTHROPIC_API_KEY is not set"; exit 1; fi
+          if [ -z "$OPENAI_API_KEY" ]; then echo "::error::Repository secret OPENAI_API_KEY is not set"; exit 1; fi
           node --test --test-concurrency=1 manager-hub/tests/day-eval.test.mjs > ai.txt 2>&1 || true
 
       - name: Compare

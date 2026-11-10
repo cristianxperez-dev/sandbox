@@ -62,43 +62,49 @@ Design and audit: [`DAY-ENGINE.md`](DAY-ENGINE.md). Code: `apps/manager-hub/assi
   - conflicts with tested alternatives.
 - **Refinements** become edit operations on the request, never on rows, so unaffected items keep their constraints.
 
-### Switching on the AI interpreter
+### Switching on the AI interpreter (OpenAI)
 
-The interpreter is **off** until `MH_AI_ENABLED=1` is set for an environment. It stays off in Production until the real-model evaluation passes and the owner approves.
+The interpreter uses the OpenAI **Responses API** with strict Structured Outputs. It runs only server-side, in `functions/apps/manager-hub/api/interpret.js`, behind the Manager Hub access code. It is on only when:
 
-1. **Anthropic API account.** API usage is billed separately from any Claude.ai subscription.
-   - In the Claude Console, add billing (prepaid credits).
-   - Create a workspace for Manager Hub, set a monthly **spend limit** on it, and create an API key there.
-2. **GitHub, for the evaluation.** Repository → Settings → Secrets and variables → Actions → New repository secret:
-   - `ANTHROPIC_API_KEY`. Ideally use a separate key with its own small spend limit.
-   - Optional: `MH_PREVIEW_ACCESS_CODE`, the Preview-only access code, so the panel can be tested on a preview.
-3. **Cloudflare Pages, Preview environment only.** Workers & Pages → the Sandbox project → Settings → Variables and Secrets:
-   - `ANTHROPIC_API_KEY`: type **Secret**.
-   - `MH_AI_ENABLED` = `1`: plain variable.
-   - Previews are behind the gate too, so Preview also needs `MANAGER_HUB_ACCESS_CODE` and `SANDBOX_SESSION_SECRET`. A different code from Production is fine.
-   - Production gets `ANTHROPIC_API_KEY` only. Its `MH_AI_ENABLED` stays unset until approved.
-4. **Evaluate.** Actions → *Describe Your Day — AI evaluation* → Run workflow.
-   - It runs the core and fresh sets through the built-in reader and the real model, and posts a side-by-side table with tokens and cost to the run summary.
-   - With `preview_url` set, it also drives the panel on the preview with the real AI.
-5. **Approve.** After review, set `MH_AI_ENABLED=1` in Production and redeploy (Deployments → Retry deployment, or push).
+- `OPENAI_API_KEY` (Cloudflare **Secret**) is present, and
+- `MH_AI_ENABLED` = `1`, and
+- **on production hosts** (cperez.app, the project's main `pages.dev` address, or any host not recognised as a preview), also `MH_AI_PRODUCTION` = `approved`. This is the owner's explicit go-ahead.
 
-**Optional variables:**
-- `MH_AI_MODEL`: default `claude-opus-5-5`.
-- `MH_AI_EFFORT`: `low` (default), `medium` or `high`.
+So `MH_AI_ENABLED=1` in Production cannot switch AI on for cperez.app by itself. The rule lives in `manager-hub/server/ai-config.js`.
+
+**Check any deployment.** `GET /apps/manager-hub/access/status` reports which settings are present (booleans only, never values), plus whether AI is active and why. Examples: `https://cperez.app/apps/manager-hub/access/status` for Production, `https://<branch-alias>.sandbox-34x.pages.dev/apps/manager-hub/access/status` for a preview.
+
+**Preview testing.**
+- Cloudflare → Workers & Pages → sandbox → Settings → Variables and Secrets → **Preview** needs:
+  - `MANAGER_HUB_ACCESS_CODE` and `SANDBOX_SESSION_SECRET` (the gate fails closed without them);
+  - `OPENAI_API_KEY`;
+  - `MH_AI_ENABLED=1`.
+- Redeploy the preview after changing variables.
+- On preview hosts only:
+  - the gate also accepts the access code in an `X-MH-Access-Key` header, so an egress proxy can inject it for automated runs;
+  - the endpoint accepts a per-request `model` / `effort` from `MH_AI_MODELS` (default `gpt-6-luna,gpt-6.1-sol`).
+
+**Evaluation against a preview:**
+```bash
+MH_EVAL_BASE=https://<branch-alias>.sandbox-34x.pages.dev/apps/manager-hub/ MH_EVAL_INTERPRETER=ai \
+  MH_EVAL_SET=all MH_AI_MODEL=gpt-6-luna MH_EVAL_REPORT=luna.json node --test --test-concurrency=1 manager-hub/tests/day-eval.test.mjs
+node manager-hub/tests/eval-compare.mjs reader.json luna.json
+```
+The GitHub workflow *Describe Your Day — AI evaluation* is optional. It runs the endpoint code on a runner and only then needs a repository secret `OPENAI_API_KEY`.
+
+**Variables:**
+- `MH_AI_MODEL`: the production model.
+- `MH_AI_EFFORT`: `low` (default), `medium`, `high` or `none`.
 - `MH_AI_RATE`: requests per IP per 10 minutes, default 20.
 - `MH_AI_DAILY`: requests per IP per day, default 150.
 
-**Cost controls:**
+**Cost controls and safety:**
 - Output is capped at 6,000 tokens for a build and 3,000 for a refinement.
 - Request text is at most 1,500 characters, and each call has a 25 s timeout.
-- Per-IP rate limits apply. They are per edge isolate, so best effort.
-- The instructions are prompt-cached.
-- The hard cap is the workspace spend limit in the Console.
-
-**Failure handling:** any failure (timeout, rate limit, refusal, invalid output) falls back to the built-in reader. The panel then shows **Built-in reader · AI unavailable** with the reason. When the AI is switched off it shows plain **Built-in reader**, and **✦ AI interpreter** only when the model's reading was used.
-
-- **Cost:** a build is roughly 4–6 K input tokens and 1–2 K output. At $4 / $20 per million (Opus 5.5 list price), that is about **$0.02–0.05 per request**. The evaluation run reports measured tokens and cost.
-- **Security:** the key stays in the Pages secret. The page sends only the request text plus group names, resource counts, the game time and, for follow-ups, the day's structure — never the roster. Logs hold token counts and latency, not the text.
+- Per-IP limits are best effort. `store: false` is set, and the stable instructions come first so OpenAI's prompt caching applies.
+- The hard cap is the OpenAI **project budget / usage limit**.
+- A failed or invalid AI answer never touches the schedule. The panel falls back to the built-in reader and says so (**Built-in reader · AI unavailable**). Nothing is written until **Review & save**.
+- The key is never sent to the browser, logged or returned. Logs hold mode, status, model, tokens and latency only.
 
 ### Evaluation
 
@@ -111,7 +117,7 @@ The interpreter is **off** until `MH_AI_ENABLED=1` is set for an environment. It
   - undo/redo restores exactly.
 - Built-in reader: **103 / 103** on the core set.
 - `tests/day-fresh-scenarios.mjs` is a *fresh* benchmark of 32 unfamiliar conversational prompts the reader was never tuned on (run with `MH_EVAL_SET=fresh`). The built-in reader scores about 56% there; it is the benchmark the AI interpreter must beat.
-- AI interpreter: measured by the workflow above.
+- AI interpreter: measured against a preview (see above); results in `DAY-ENGINE.md`.
 - Also: `tests/day-read.test.mjs`, `tests/day-solve.test.mjs`, `tests/interpret.test.mjs` (endpoint contract, model mocked) and `tests/day-ui.e2e.cjs` (the panel in the app, desktop and phone).
 - **Limits of the built-in reader.** It handles common coaching shorthand and phrasing. Unusual wording can still land in "Not understood", which the panel always lists rather than dropping. That long tail is what the AI interpreter is for.
 

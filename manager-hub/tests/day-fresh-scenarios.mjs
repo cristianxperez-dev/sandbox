@@ -7,7 +7,7 @@
 import {
   has, hasLabel, lacks, noPitcherWork, fixedAt, gameAt, mealAt, endsBy, notBefore, dayStartsAt, freeWindow, offBefore,
   order, stretchFirst, parallel, overlapsKinds, concurrentAtMost, durTotal, bpRounds, conflict, either, unchanged,
-  startSame, durDelta, startDelta, keepsKinds, DEF, HIT, PITCH,
+  startSame, durDelta, durShrinks, startDelta, keepsKinds, anyConflict, DEF, HIT, PITCH,
 } from "./day-eval-scenarios.mjs";
 
 const G2 = { hittingGroups: ["Blue Position Players", "Orange Position Players"], pitcherGroups: ["Group 1 Pitchers"], resources: { fields: 1, cages: 2, mounds: 2 } };
@@ -139,4 +139,44 @@ export const FRESH = [
       { text: "and make the BP rounds 25 instead", expect: "any", checks: [bpRounds({ count: 2, each: 25 })] },
       { text: "push everything back half an hour except the game", expect: "any", checks: [startDelta("stretch", 30), unchanged("game")] },
     ] },
+  // ───────── the owner's own examples (Nov 10 brief) ─────────
+  { id: "OWNER: §1 day in one line, then the five requested revisions", cat: "freshEdit", ctx: G2,
+    prompt: "10 AM stretch, 1 PM game. Team fundy, indy defense, 30-minute BP rounds, 30 minutes off pregame. Pitchers throw during indy.",
+    checks: [fixedAt("stretch", "10:00"), gameAt("13:00"), has("teamDefense"), has("indDefense"), bpRounds({ min: 2, each: 30 }), freeWindow(30, "13:00"), either("pitcher throwing", has("pitcherWork"), has("throwing", { who: "pitchers" })), order("stretch", "bp")],
+    steps: [
+      { text: "Move defense before BP.", expect: "any", checks: [order(DEF, "bp"), unchanged("stretch"), unchanged("game")] },
+      { text: "Give pitchers 15 more minutes.", expect: "any", checks: [either("pitcher work +15", durDelta("pitcherWork", 15), durDelta("throwing", 15, { who: "pitchers" })), unchanged("stretch")] },
+      { text: "Make BP three groups instead.", expect: "any", checks: [bpRounds({ count: 3 }), unchanged("game")] },
+      { text: "Shorten team fundy.", expect: "any", checks: [durShrinks("teamDefense"), unchanged("stretch")] },
+      { text: "Keep first pitch fixed and rearrange everything else.", expect: "any", checks: [gameAt("13:00"), freeWindow(30, "13:00"), has("bp"), has("teamDefense")] },
+    ] },
+
+  // ───────── more unseen conversational prompts ─────────
+  { id: "NEW2: text message style, abbreviations everywhere", cat: "fresh", ctx: G2,
+    prompt: "gm 705. stretch 330 then catch. ifd/ofd 20. bp 2 grps x 25. pens for 2 SPs during bp. 35 off b4 game",
+    checks: [gameAt("19:05"), fixedAt("stretch", "15:30"), has("throwing"), bpRounds({ count: 2, each: 25 }), has("bullpen", { who: "pitchers" }), freeWindow(35, "19:05")] },
+  { id: "NEW2: coach thinking out loud with a self-correction", cat: "fresh", ctx: G2,
+    prompt: "Let's stretch at 9:30 — actually make it 9:45 — then catch, then I want a good 30 of PFP for the pitchers while the position guys do indy, then BP, lunch at noon, done at 1",
+    checks: [fixedAt("stretch", "09:45"), has("throwing"), durTotal("pfp", 30, 30), has("indDefense"), overlapsKinds("pfp", "indDefense"), has("bp"), mealAt("12:00"), endsBy("13:00")] },
+  { id: "NEW2: series opener with travel and late report", cat: "fresh", ctx: G2,
+    prompt: "We get in late from the bus so no early work. Report 4, stretch 4:45, short BP 2 groups, 7:05 first pitch, give em 40 before the game.",
+    checks: [gameAt("19:05"), fixedAt("stretch", "16:45"), bpRounds({ count: 2 }), freeWindow(40, "19:05"), lacks("earlyWork")] },
+  { id: "NEW2: defensive emphasis day with explicit minutes", cat: "fresh", ctx: G2,
+    prompt: "No game. 9 stretch. 40 min team defense — cuts, relays, rundowns. 30 min indy. 20 baserunning. Cage 2 groups 25 each. Done by 12:30.",
+    checks: [fixedAt("stretch", "09:00"), durTotal("teamDefense", 40, 40), durTotal("indDefense", 30, 30), durTotal("baserunning", 20, 20), has("cage", { min: 2 }), endsBy("12:30"), lacks("game")] },
+  { id: "NEW2: weather delay compresses the day", cat: "fresh", ctx: G2,
+    prompt: "Field's wet till 2:30 so nothing outside before then. Cage work for hitters 1:30-2:30, stretch 2:30, quick BP, first pitch 4:05, 30 off",
+    checks: [gameAt("16:05"), fixedAt("cage", "13:30"), fixedAt("stretch", "14:30"), has("bp"), freeWindow(30, "16:05")] },
+  { id: "NEW2: getaway day, pitchers only light catch", cat: "fresh", ctx: G2,
+    prompt: "Getaway day, game at 12:10. Optional BP, everyone else stretch at 10:45 and play catch. Pitchers just light catch, no pens. 30 off.",
+    checks: [gameAt("12:10"), fixedAt("stretch", "10:45"), has("throwing"), lacks("bullpen"), freeWindow(30, "12:10")] },
+  { id: "NEW2: three hitting groups rotating cage and field", cat: "fresh", ctx: G0,
+    prompt: "Three hitting groups, 20 minutes each on the field for BP while the others are in the cages, starting right after a 1:30 stretch. Game at 6.",
+    checks: [gameAt("18:00"), fixedAt("stretch", "13:30"), bpRounds({ count: 3, each: 20 }), order("stretch", "bp")] },
+  { id: "NEW2: impossible stack before a noon game", cat: "freshConflict", ctx: G2, expect: "conflict",
+    prompt: "Game at noon, we can't get on the field till 10:30. Need stretch, throw, 30 of fundies, 30 indy, 4 rounds of BP 15 each and 30 off.",
+    checks: [gameAt("12:00"), conflict(["overfull"], { numeric: "dur" })] },
+  { id: "NEW2: conflicting stated times", cat: "freshConflict", ctx: G2, expect: "conflict",
+    prompt: "Meeting at 9, stretch at 9 too, BP 9:30-10:30, team defense at 10.",
+    checks: [anyConflict()] },
 ];

@@ -6,7 +6,7 @@ const [aPath, bPath] = process.argv.slice(2);
 const load = (p) => (p && existsSync(p) ? JSON.parse(readFileSync(p, "utf8")) : null);
 const A = load(aPath), B = load(bPath);
 const out = [];
-const name = (r) => (r ? (r.interpreter === "ai" ? `AI interpreter (${r.model || "default model"})` : "Built-in reader") : "—");
+const name = (r) => (r ? (r.interpreter === "ai" ? `AI (${(r.usage && r.usage.model) || r.model || "default model"})` : "Built-in reader") : "—");
 const rate = (r, cat) => {
   if (!r) return "—";
   const xs = r.results.filter((x) => !cat || x.cat === cat);
@@ -19,11 +19,16 @@ const cats = [...new Set([...(A ? A.results : []), ...(B ? B.results : [])].map(
 out.push(`| category | ${name(A)} | ${name(B)} |`, "|---|---|---|");
 cats.forEach((c) => out.push(`| ${c} | ${rate(A, c)} | ${rate(B, c)} |`));
 out.push(`| **total** | **${rate(A)}** | **${rate(B)}** |`, "");
-if (B && B.usage) {
-  const u = B.usage;
-  // list prices for the default model ($ per million tokens); cache reads at 0.05× input, writes at 1.25×
-  const cost = (u.input * 4 + u.cacheRead * 0.2 + u.cacheWrite * 5 + u.output * 20) / 1e6;
-  out.push(`AI calls: ${u.calls} (${u.errors} errors) · input ${u.input} tokens (+${u.cacheRead} cache read, ${u.cacheWrite} cache write) · output ${u.output} · avg latency ${u.calls ? Math.round(u.ms / u.calls) : 0} ms · est. cost $${cost.toFixed(2)} (≈ $${u.calls ? (cost / u.calls).toFixed(3) : "0"} per call, at the default model's list price)`, "");
+// $ per 1M tokens (input, cached input, output). Third-party listings, Nov 2026 — not verified against
+// OpenAI's own page; override with MH_PRICE="in,cached,out". Output tokens include reasoning tokens.
+const PRICES = { "gpt-6-luna": [0.10, 0.01, 0.50], "gpt-6.1-sol": [2.00, 0.10, 10.00] };
+const priceFor = (m) => (process.env.MH_PRICE ? process.env.MH_PRICE.split(",").map(Number) : PRICES[Object.keys(PRICES).find((k) => String(m || "").startsWith(k))] || null);
+const pct = (xs, q) => { if (!xs || !xs.length) return 0; const s = xs.slice().sort((a, b) => a - b); return s[Math.min(s.length - 1, Math.floor(q * s.length))]; };
+for (const R of [A, B].filter((r) => r && r.interpreter === "ai" && r.usage)) {
+  const u = R.usage, pr = priceFor(u.model || R.model);
+  const cost = pr ? ((u.input - u.cacheRead) * pr[0] + u.cacheRead * pr[1] + u.output * pr[2]) / 1e6 : null;
+  out.push(`**${name(R)}** — calls ${u.calls}, errors ${u.errors} ${JSON.stringify(u.errorKinds || {})} · latency p50 ${pct(u.lat, 0.5)} ms, p90 ${pct(u.lat, 0.9)} ms, avg ${u.calls ? Math.round(u.ms / u.calls) : 0} ms · tokens/call in ${u.calls ? Math.round(u.input / u.calls) : 0} (${u.calls ? Math.round(u.cacheRead / u.calls) : 0} cached), out ${u.calls ? Math.round(u.output / u.calls) : 0} (${u.calls ? Math.round(u.reasoning / u.calls) : 0} reasoning)` +
+    (cost != null ? ` · est. $${cost.toFixed(3)} total, $${(cost / Math.max(1, u.calls)).toFixed(4)}/call` : " · price unknown"), "");
 }
 if (A && B) {
   const byId = new Map(A.results.map((x) => [x.id, x]));
