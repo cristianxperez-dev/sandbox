@@ -906,6 +906,7 @@
   }
   function hub() {
     const host = document.getElementById("viewHub"); if (!host) return;
+    if (window.Dashboard) return;                    // the dashboard's "Describe your day" widget replaces this card
     let card = document.getElementById("mhaIntro");
     if (store.get(KEY_INTRO)) { if (card) card.remove(); return; }
     if (!card) { card = document.createElement("div"); card.id = "mhaIntro"; card.className = "mha-intro"; host.querySelector(".hub-head").after(card); }

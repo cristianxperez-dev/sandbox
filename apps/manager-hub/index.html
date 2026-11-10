@@ -2722,9 +2722,36 @@ body.gated{overflow:hidden}
 .keys .close{position:absolute;top:4px;right:6px;border:0;background:transparent;color:#C3CAD6;font-size:14px}
 @media print{ .keys{display:none} }
 @media (max-width:900px){ .keys{display:none} }
+body:not([data-view="schedule"]) .keys{display:none}
+/* ============================================================
+   Manager Hub 2.0 — audit fixes (manager-hub/UX-AUDIT.md)
+   ============================================================ */
+/* #6 the day's actions belong to the day: hidden where they don't apply */
+body[data-view="camp"] #btnNew,body[data-view="camp"] #btnOpen,body[data-view="camp"] #btnSave,body[data-view="camp"] #btnGenerate,
+body[data-view="matrix"] #btnNew,body[data-view="matrix"] #btnOpen,body[data-view="matrix"] #btnSave,body[data-view="matrix"] #btnGenerate,
+body[data-view="pitch"] #btnNew,body[data-view="pitch"] #btnOpen,body[data-view="pitch"] #btnSave,body[data-view="pitch"] #btnGenerate,
+body[data-view="month"] #btnNew,body[data-view="month"] #btnOpen,body[data-view="month"] #btnSave,body[data-view="month"] #btnGenerate{display:none}
+@media (max-width:700px){
+  /* #3 more modules than fit: fade the edge so the strip reads as scrollable */
+  .seg{-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 36px),transparent);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 36px),transparent);scroll-padding-inline:24px}
+}
+@media (max-width:600px){
+  /* #1 roster rows: name gets the room, the "prints as" line moves under it */
+  .ros-head,.ros-row{grid-template-columns:38px minmax(0,1fr) 30px 30px 50px;gap:6px;padding:7px 8px}
+  .ros-short{display:block;margin-left:0;margin-top:1px}
+  .ros-ops .btn{opacity:1;padding:5px 8px}
+  /* #2 location names get the full width; the type label moves under the name */
+  .res-loc{grid-template-columns:10px minmax(0,1fr) auto;row-gap:0}
+  .res-loc .lib-meta{grid-column:2;grid-row:2;padding-left:8px;font-size:11px}
+  .res-loc .lib-ops{grid-column:3;grid-row:1/span 2}
+  .res-loc .lib-ops .btn.quiet{padding:4px 6px}
+}
+
 </style>
 <link rel="stylesheet" href="assistant/assistant.css">
 <link rel="stylesheet" href="assistant/day-ui.css">
+<link rel="stylesheet" href="camp/camp.css">
+<link rel="stylesheet" href="hub/dashboard.css">
 </head>
 <body>
 <div class="affgate" id="affGate" hidden>
@@ -2775,6 +2802,7 @@ body.gated{overflow:hidden}
     <button role="tab" data-view="docs" aria-selected="false"><svg class="t-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3h7l4.5 4.5V21h-11.5z"/><path d="M13.5 3v4.5H18M9.5 12h5M9.5 16h5"/></svg><span class="t-long">Game Day Docs</span><span class="t-short">Documents</span></button>
     <button role="tab" data-view="matrix" aria-selected="false"><svg class="t-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="15" rx="1.6"/><path d="M3.5 9.5h17M3.5 14.5h17M9.5 4.5v15M15 4.5v15"/></svg><span class="t-long">Playing Matrix</span><span class="t-short">Matrix</span></button>
     <button role="tab" data-view="pitch" aria-selected="false"><svg class="t-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.4"/><path d="M6.4 6.4c2.3 1.9 3.4 4 3.4 5.6s-1.1 3.7-3.4 5.6M17.6 6.4c-2.3 1.9-3.4 4-3.4 5.6s1.1 3.7 3.4 5.6"/></svg><span class="t-long">Pitching Grid</span><span class="t-short">Pitching</span></button>
+    <button role="tab" data-view="camp" aria-selected="false" title="Organization-wide camps and workouts"><svg class="t-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 20h17"/><path d="M5.5 20V9.5L12 4l6.5 5.5V20"/><path d="M10 20v-5h4v5"/></svg><span class="t-long">Camp</span><span class="t-short">Camp</span></button>
     <span class="seg-div" aria-hidden="true"></span>
     <button class="seg-link" id="btnRoster"><svg class="t-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9.5" cy="8.5" r="3.1"/><path d="M4 20c.6-3.3 2.9-5.1 5.5-5.1S14.4 16.7 15 20"/><circle cx="17" cy="10" r="2.3"/><path d="M15.6 20c.4-2.4 1.8-3.7 3.1-3.7 1.4 0 2.4 1.1 2.8 2.8"/></svg>Roster</button>
     <button class="seg-link" id="btnResources"><svg class="t-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20.5V9.5L12 4l8 5.5v11z"/><path d="M9.5 20.5v-6h5v6"/></svg>Resources</button>
@@ -2792,6 +2820,7 @@ body.gated{overflow:hidden}
         <h1 class="hub-title">Astros Manager Hub</h1>
         <p class="hub-sub" id="hubSub"></p>
       </div>
+      <button class="btn sm hub-cust" id="dashCustomize" aria-pressed="false" title="Rearrange, resize, hide or add dashboard widgets">Customize</button>
     </div>
     <div class="hub-grid" id="hubGrid"></div>
   </section>
@@ -3003,6 +3032,7 @@ body.gated{overflow:hidden}
   </section>
 
   <!-- ============ PITCHING GRID ============ -->
+  <section class="view" id="viewCamp" aria-label="Camp"><div id="campRoot"></div></section>
   <section class="view" id="viewPitch">
     <div class="pm-bar">
       <div class="pm-ctl"><label for="pg_start">Start</label><input id="pg_start" type="date" data-pg="start"></div>
@@ -7285,7 +7315,7 @@ function renderMetaLight(){
   refreshPlanned();
 }
 const APP_NAME="Astros Manager Hub";
-const VIEW_NAME={hub:"Hub",pitch:"Pitching Grid",schedule:"Daily Schedule",lineup:"Lineup Builder",month:"Monthly Planner",
+const VIEW_NAME={hub:"Hub",camp:"Camp — organization-wide",pitch:"Pitching Grid",schedule:"Daily Schedule",lineup:"Lineup Builder",month:"Monthly Planner",
   docs:"Game Day Documents",matrix:"Playing Matrix",print:"Printable Schedule"};
 /** the bar always names the product; the line beneath says where you are */
 function updateBrand(){
@@ -7653,8 +7683,11 @@ document.addEventListener("click",e=>{ if(e.target.closest("[data-close]")) clos
    ========================================================================== */
 function go(v){
   VIEW=v;
-  const TOP=["hub","month","docs","matrix","pitch"];
+  const TOP=["hub","month","docs","matrix","pitch","camp"];
   const workspace = TOP.includes(v) ? v : "schedule";
+  document.body.dataset.view = workspace;
+  { const t=document.querySelector(`.seg button[data-view="${workspace}"]`); if(t && t.scrollIntoView && window.innerWidth<900) t.scrollIntoView({block:"nearest",inline:"center"}); }
+  if(workspace==="schedule" && window.__keysArm) window.__keysArm();
   $$(".seg button").forEach(b=>b.setAttribute("aria-selected",String(b.dataset.view===workspace)));
   $$("#dailyNav button").forEach(b=>b.setAttribute("aria-selected",String(b.dataset.view===v)));
   $("#dailyNav").hidden = !["schedule","lineup","print"].includes(v);
@@ -7667,6 +7700,7 @@ function go(v){
   if(v==="docs") setDocTab(DTAB);
   if(v==="schedule") bindStartBar();
   if(v==="hub") renderHub();
+  if(v==="camp" && window.CampUI) CampUI.show(document.getElementById("campRoot"));
   if(v==="matrix"){ renderMatrix(); pmBind(); }
   if(v==="pitch"){
     renderPitch(); pgBind();
@@ -11730,6 +11764,11 @@ function renderHub(){
           :""}`
       : "Pick a date in the Daily Schedule to get started";
   }
+  window.HUB_ACTIONS_LIST=HUB_ACTIONS.concat([{k:"camp",go:()=>go("camp"),title:"Camp",desc:"Organization-wide camps and workouts.",meta:"Players from every affiliate",tag:""}]);
+  if(window.Dashboard){
+    const cb=$("#dashCustomize"); if(cb && !cb.dataset.bound){ cb.dataset.bound="1"; cb.onclick=()=>Dashboard.setEditing(!Dashboard.editing,host); }
+    return Dashboard.render(host);
+  }
   host.innerHTML=HUB_ACTIONS.map((t,i)=>`
     <button class="hub-tile" data-hub="${i}">
       <span class="hub-ico">${hubIcon(t.k)}</span>
@@ -14405,9 +14444,13 @@ boot();
 (function(){
   const k=$("#keys"); if(!k) return;
   if(store.get("cs.keysSeen")){ k.remove(); return; }
-  let t=setTimeout(()=>{ k.style.transition="opacity .5s"; k.style.opacity="0";
-    setTimeout(()=>{ k.remove(); store.set("cs.keysSeen","1"); },600); }, 16000);
-  k.addEventListener("mouseenter",()=>clearTimeout(t));
+  // the shortcuts belong to the Daily builder: show the card there only, and start its clock when it's seen
+  let t=null;
+  window.__keysArm=()=>{ if(t||!document.body.contains(k)) return;
+    t=setTimeout(()=>{ k.style.transition="opacity .5s"; k.style.opacity="0";
+      setTimeout(()=>{ k.remove(); store.set("cs.keysSeen","1"); },600); }, 16000); };
+  k.addEventListener("mouseenter",()=>{ clearTimeout(t); t=-1; });
+  if(document.body.dataset.view==="schedule") window.__keysArm();
 })();
 </script>
 <script src="assistant/engine.js"></script>
@@ -14418,5 +14461,8 @@ boot();
 <script src="assistant/day-solve.js"></script>
 <script src="assistant/day-engine.js"></script>
 <script src="assistant/day-ui.js"></script>
+<script src="hub/dashboard.js"></script>
+<script src="camp/camp-core.js"></script>
+<script src="camp/camp.js"></script>
 </body>
 </html>
