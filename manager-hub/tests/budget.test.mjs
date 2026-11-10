@@ -24,7 +24,7 @@ function mock(kind = "ok") {
     assert.equal(url, "https://api.openai.com/v1/responses");
     if (kind === "timeout") { const e = new Error("aborted"); e.name = "AbortError"; throw e; }
     if (kind === "credit") return new Response(JSON.stringify({ error: { code: "insufficient_quota", message: "no credit" } }), { status: 429 });
-    return new Response(JSON.stringify({ model: "gpt-6.1-sol-2026-09-01", status: "completed", output: [{ type: "message", content: [{ type: "output_text", text: JSON.stringify({ request: IR }) }] }], usage: USAGE }), { status: 200 });
+    return new Response(JSON.stringify({ model: "gpt-6-luna-2026-09-01", status: "completed", output: [{ type: "message", content: [{ type: "output_text", text: JSON.stringify({ request: IR }) }] }], usage: USAGE }), { status: 200 });
   };
 }
 const env = (extra = {}) => ({ OPENAI_API_KEY: KEY, MH_AI_ENABLED: "1", MH_AI_PRODUCTION: "approved", MH_AI_USAGE: fakeD1(), ...extra });
@@ -45,8 +45,8 @@ test("a successful call is charged its actual cost from OpenAI's usage (cached i
   const e = env();
   const r = await post(e); const d = await r.json();
   assert.equal(r.status, 200, JSON.stringify(d)); assert.equal(fetches, 1);
-  const expected = (1000 * 2 + 4000 * 0.1 + 1000 * 10) / 1e6;    // $0.0124
-  assert.equal(d.costUsd, Math.round(expected * 100) / 100);
+  const expected = (1000 * 0.125 + 4000 * 0.01 + 1000 * 0.5) / 1e6;    // Luna: $0.000665 (uncached input at the cache-write price)
+  assert.equal(d.costUsd, expected);
   const s = await B.status(e);
   assert.equal(s.configured, true); assert.equal(s.calls, 1); assert.equal(s.pendingUsd, 0, "the reservation is released");
   const row = e.MH_AI_USAGE._db.prepare("SELECT spent, reserved FROM mh_ai_usage").get();
@@ -56,13 +56,13 @@ test("a successful call is charged its actual cost from OpenAI's usage (cached i
 
 test("the cap stops calls before they are made: once the worst case doesn't fit, 402 and no OpenAI call", async () => {
   mock(); _resetLimits();
-  const e = env({ MH_AI_BUDGET_USD: "0.10" });                    // a lower cap so the test reaches it quickly
+  const e = env({ MH_AI_BUDGET_USD: "0.006" });                   // a lower cap so the test reaches it quickly
   let ok = 0, refused = 0;
   for (let i = 0; i < 20; i++) { const r = await post(e); if (r.status === 200) ok++; else { assert.equal(r.status, 402); assert.equal((await r.json()).error, "budget-reached"); refused++; } }
   assert.ok(ok >= 1 && refused >= 1, `${ok} ok, ${refused} refused`);
   assert.equal(fetches, ok, "refused requests never reach OpenAI");
   const row = e.MH_AI_USAGE._db.prepare("SELECT spent, reserved, refused FROM mh_ai_usage").get();
-  assert.ok(row.spent + row.reserved <= 100000, "never above the cap"); assert.equal(row.refused, refused);
+  assert.ok(row.spent + row.reserved <= 6000, "never above the cap"); assert.equal(row.refused, refused);
 });
 
 test("the cap can be lowered by configuration, never raised above $9", () => {
@@ -92,7 +92,7 @@ test("a timeout is charged the full reservation; an error with no usage (e.g. no
   mock("timeout"); _resetLimits();
   let e = env(); let r = await post(e); assert.equal(r.status, 504);
   let row = e.MH_AI_USAGE._db.prepare("SELECT spent, reserved FROM mh_ai_usage").get();
-  assert.ok(row.spent > 50000 && row.reserved === 0, "worst case charged: " + row.spent);
+  assert.ok(row.spent > 3000 && row.reserved === 0, "worst case charged: " + row.spent);
   mock("credit"); e = env(); r = await post(e); assert.equal(r.status, 429);
   row = e.MH_AI_USAGE._db.prepare("SELECT spent, reserved FROM mh_ai_usage").get();
   assert.equal(row.spent, 0); assert.equal(row.reserved, 0);
@@ -103,7 +103,7 @@ test("the browser cannot choose an unpriced or more expensive path: production i
   const e = env();
   let sent = null; const f = globalThis.fetch; globalThis.fetch = async (u, i) => { sent = JSON.parse(i.body); return f(u, i); };
   const r = await post(e, { mode: "build", text: TEXT, model: "o9-pro-unpriced", effort: "high" });
-  assert.equal(r.status, 200); assert.equal(sent.model, "gpt-6.1-sol"); assert.deepEqual(sent.reasoning, { effort: "low" });
+  assert.equal(r.status, 200); assert.equal(sent.model, "gpt-6-luna"); assert.deepEqual(sent.reasoning, { effort: "low" });
 });
 
 test("usage endpoint: this month's estimate, no secrets", async () => {
@@ -117,9 +117,11 @@ test("usage endpoint: this month's estimate, no secrets", async () => {
 
 test("cost arithmetic", () => {
   const p = B.priceOf({}, "gpt-6.1-sol");
-  assert.deepEqual(p, [2, 0.1, 10]); assert.deepEqual(B.priceOf({}, "gpt-6-luna-2026-01-01"), [0.1, 0.01, 0.5]);
+  assert.deepEqual(p, [2, 0.1, 10, 2.5]); assert.deepEqual(B.priceOf({}, "gpt-6-luna-2026-01-01"), [0.1, 0.01, 0.5, 0.125], "OpenAI list prices, Nov 10 2026");
   assert.equal(B.priceOf({}, "gpt-6.1-sol-mini"), p, "dated / suffixed ids match their family"); assert.equal(B.priceOf({}, "gpt-7"), null);
-  assert.equal(B.costMicro(p, { input_tokens: 1e6, cached_input_tokens: 0, output_tokens: 0 }), 2e6);
+  assert.equal(B.costMicro(p, { input_tokens: 1e6, cached_input_tokens: 0, output_tokens: 0 }), 2.5e6, "uncached input at the cache-write price");
+  const luna = B.priceOf({}, "gpt-6-luna");
+  assert.equal(B.costMicro(luna, { input_tokens: 1e6, cached_input_tokens: 1e6, output_tokens: 1e6 }), 0.01e6 + 0.5e6);
   assert.ok(B.worstCaseMicro(p, 30000, 6000) >= B.costMicro(p, { input_tokens: 10000, cached_input_tokens: 0, output_tokens: 6000 }));
   assert.deepEqual(B.priceOf({ MH_AI_PRICES: '{"gpt-6.1-sol":[3,0.3,12]}' }, "gpt-6.1-sol"), [3, 0.3, 12]);
 });

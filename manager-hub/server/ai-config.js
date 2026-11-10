@@ -9,8 +9,8 @@
      MH_AI_USAGE      a D1 database binding: the server-side monthly spending limit (ai-budget.js).
                       Without it the spend can't be tracked, so AI stays off (fails safe).
    So MH_AI_ENABLED=1 set in Production by mistake cannot switch AI on for cperez.app. */
-export const DEFAULT_MODEL = "gpt-6.1-sol";      // launch model (owner-approved Nov 10 2026)
-export const FALLBACK_MODEL = "gpt-6-luna";      // used when the main model is unavailable to the project
+export const DEFAULT_MODEL = "gpt-6-luna";       // the least expensive model (owner's decision, Nov 10 2026)
+export const FALLBACK_MODEL = null;              // none: never switch to another (more expensive) model on its own
 export const PRODUCTION_HOSTS = ["cperez.app", "www.cperez.app", "sandbox-34x.pages.dev"];
 
 export function deploymentOf(host) {

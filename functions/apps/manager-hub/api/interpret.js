@@ -154,12 +154,18 @@ async function callModel(env, body) {
   } finally { clearTimeout(timer); }
 }
 
+/** true when model a's list price is higher than model b's (or a has no known price) */
+function costlier(env, a, b) {
+  const pa = Budget.priceOf(env, a), pb = Budget.priceOf(env, b);
+  return !pa || (pb && (pa[0] > pb[0] || pa[2] > pb[2]));
+}
+
 /** One paid call: reserve the worst case, call, settle the actual cost. No reservation → no call. */
 async function paidCall(env, model, job) {
   const price = Budget.priceOf(env, model);
   if (!price) return { error: "budget-unknown-cost", status: 503, ms: 0 };
   const body = makeBody(env, model, job);
-  const worst = Budget.worstCaseMicro(price, body.instructions.length + body.input[0].content.length, body.max_output_tokens);
+  const worst = Budget.worstCaseMicro(price, body.instructions.length + body.input[0].content.length + JSON.stringify(body.text.format.schema).length, body.max_output_tokens);   // the output schema is billed as input too
   const r = await Budget.reserve(env, worst);
   if (!r.ok) return { error: r.error, status: r.status, ms: 0 };
   const res = await callModel(env, body);
@@ -205,8 +211,9 @@ export async function onRequestPost({ request, env }) {
   const job = { mode, text, ctx, request: mode === "refine" ? DaySolve.normalize(body.request) : null, plan: body.plan };
   const envE = Object.assign({}, env, { MH_AI_EFFORT: effort });
   let res = await paidCall(envE, model, job);
-  // the main model isn't available to this OpenAI project (or rejects a parameter): try the fallback model once
-  if (res.error === "model-unavailable" && state.fallbackModel && state.fallbackModel !== model) {
+  // the main model isn't available to this OpenAI project: try a configured fallback once, but never one
+  // that costs more (the owner's rule: no automatic upgrade to a more expensive model)
+  if (res.error === "model-unavailable" && state.fallbackModel && state.fallbackModel !== model && !costlier(env, state.fallbackModel, model)) {
     log(env, { mode, status: "model-unavailable", detail: res.detail || undefined, model, retry: state.fallbackModel });
     model = state.fallbackModel;
     res = await paidCall(envE, model, job);

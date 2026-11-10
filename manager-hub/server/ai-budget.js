@@ -17,15 +17,19 @@
    uses the built-in reader). The cap is $9.00 per UTC calendar month (OpenAI bills by calendar month);
    MH_AI_BUDGET_USD may LOWER it, never raise it.
 
-   Amounts are integers in micro-dollars (1 USD = 1,000,000). Prices are estimates in USD per 1M tokens
-   [input, cached input, output]; MH_AI_PRICES (JSON, same shape) can update them without a code change.
+   Amounts are integers in micro-dollars (1 USD = 1,000,000). Prices are USD per 1M tokens
+   [input, cached input, output, 30-minute cache write], OpenAI's official Standard-tier list prices
+   (developers.openai.com/api/docs/pricing, read Nov 10 2026). Uncached input is charged at the higher of
+   the input and cache-write prices, because a request's uncached prefix may be written to the prompt
+   cache. Regional / FedRAMP endpoints (+10%) aren't used. MH_AI_PRICES (JSON, same shape; the 4th value
+   optional) can update prices without a code change.
 
    Binding: a D1 database bound as MH_AI_USAGE (Pages → Settings → Bindings), in Production and Preview.
    The table is created on first use. */
 export const CAP_USD = 9;
 export const PRICES = {
-  "gpt-6.1-sol": [2.0, 0.1, 10.0],
-  "gpt-6-luna": [0.1, 0.01, 0.5],
+  "gpt-6-luna": [0.10, 0.01, 0.50, 0.125],     // the production model (Nov 10 2026)
+  "gpt-6.1-sol": [2.00, 0.10, 10.00, 2.50],
 };
 const M = 1e6;
 
@@ -38,7 +42,7 @@ function priceTable(env) {
   let extra = {};
   try { extra = env && env.MH_AI_PRICES ? JSON.parse(env.MH_AI_PRICES) : {}; } catch (e) { extra = {}; }
   const t = Object.assign({}, PRICES);
-  for (const [k, v] of Object.entries(extra || {})) if (Array.isArray(v) && v.length === 3 && v.every((x) => Number.isFinite(+x) && +x >= 0)) t[k] = v.map(Number);
+  for (const [k, v] of Object.entries(extra || {})) if (Array.isArray(v) && (v.length === 3 || v.length === 4) && v.every((x) => Number.isFinite(+x) && +x >= 0)) t[k] = v.map(Number);
   return t;
 }
 /** price row for a model id (dated snapshots like "gpt-6.1-sol-2026-09-01" match their family) or null */
@@ -47,19 +51,20 @@ export function priceOf(env, model) {
   const key = Object.keys(t).filter((k) => m === k || m.startsWith(k + "-")).sort((a, b) => b.length - a.length)[0];
   return key ? t[key] : null;
 }
+const uncachedRate = (price) => Math.max(price[0], price[3] || 0);
 /** worst case in micro-dollars: every prompt token uncached (~3 characters per token, generous) + all output */
 export function worstCaseMicro(price, promptChars, maxOutputTokens) {
   const inTok = Math.ceil(promptChars / 3) + 200;
-  return Math.ceil(inTok * price[0] + maxOutputTokens * price[2]);
+  return Math.ceil(inTok * uncachedRate(price) + maxOutputTokens * price[2]);
 }
 /** actual cost in micro-dollars from the usage OpenAI reports */
 export function costMicro(price, u) {
   const input = Math.max(0, +u.input_tokens || 0), cached = Math.min(input, Math.max(0, +u.cached_input_tokens || 0));
   const out = Math.max(0, +u.output_tokens || 0);
-  return Math.ceil((input - cached) * price[0] + cached * price[1] + out * price[2]);
+  return Math.ceil((input - cached) * uncachedRate(price) + cached * price[1] + out * price[2]);
 }
 export const monthOf = (now = Date.now()) => new Date(now).toISOString().slice(0, 7);
-export const usd = (micro) => Math.round(micro / 10000) / 100;
+export const usd = (micro) => Math.round(micro) / 1e6;    // exact; the page rounds for display
 
 export const budgetConfigured = (env) => !!(env && env.MH_AI_USAGE && typeof env.MH_AI_USAGE.prepare === "function");
 

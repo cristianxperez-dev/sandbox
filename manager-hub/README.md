@@ -130,8 +130,10 @@ node manager-hub/tests/eval-compare.mjs reader.json luna.json
 ```
 The GitHub workflow *Describe Your Day — AI evaluation* is optional. It runs the endpoint code on a runner and only then needs a repository secret `OPENAI_API_KEY`.
 
+**Model:** `gpt-6-luna`, the least expensive OpenAI model, is the default everywhere (owner's decision, Nov 10 2026). There is no automatic fallback: if Luna is unavailable, the panel uses the free built-in reader. A fallback set in `MH_AI_FALLBACK_MODEL` is used only when it costs no more than the main model.
+
 **Variables:**
-- `MH_AI_MODEL`: the production model.
+- `MH_AI_MODEL`: overrides the model. Leave it unset to use Luna; setting it to a more expensive model is a manual upgrade.
 - `MH_AI_EFFORT`: `low` (default), `medium`, `high` or `none`.
 - `MH_AI_RATE`: requests per IP per 10 minutes, default 20.
 - `MH_AI_DAILY`: requests per IP per day, default 150.
@@ -147,7 +149,8 @@ The GitHub workflow *Describe Your Day — AI evaluation* is optional. It runs t
   - `MH_AI_BUDGET_USD` can lower the cap, never raise it. `MH_AI_PRICES` (JSON, `{"model":[input, cached, output]}` in USD per 1M tokens) updates prices without a code change.
   - The Describe Your Day panel shows **AI this month: $x of $9.00 (est.)**; `GET /apps/manager-hub/api/usage` (behind the access code) returns the figures.
   - **Setup:** Cloudflare → Storage & Databases → D1 → create a database (e.g. `manager-hub-ai-usage`). Then Workers & Pages → sandbox → Settings → Bindings → add D1 binding `MH_AI_USAGE` → that database, in **Production** and **Preview** (the same database, so both count against one limit). Redeploy. The table is created on first use.
-  - **Limits of the estimate.** The figures are estimates from token counts × list prices kept in the code; OpenAI's invoice is the authority. Usage of the same OpenAI key outside Manager Hub isn't counted. The OpenAI **project budget / usage limit** remains the final backstop.
+  - **Prices** (OpenAI Standard tier, per 1M tokens, from developers.openai.com/api/docs/pricing on Nov 10 2026): `gpt-6-luna` $0.10 input, $0.01 cached input, $0.50 output, $0.125 30-minute cache write; `gpt-6.1-sol` $2.00 / $0.10 / $10.00 / $2.50. Uncached input is counted at the cache-write price (the higher one), so the estimate errs high.
+  - **Limits of the estimate.** The figures are estimates from token counts × the list prices above; OpenAI's invoice is the authority. Usage of the same OpenAI key outside Manager Hub isn't counted. The OpenAI **project budget / usage limit** remains the final backstop.
 - A failed or invalid AI answer never touches the schedule. The panel falls back to the built-in reader and says so (**Built-in reader · AI unavailable**). Nothing is written until **Review & save**.
 - The key is never sent to the browser, logged or returned. Logs hold mode, status, model, tokens and latency only.
 

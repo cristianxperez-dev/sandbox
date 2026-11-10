@@ -12,7 +12,7 @@ const E = require("../../apps/manager-hub/assistant/day-engine.js");
 
 const BASE = process.env.MH_EVAL_BASE || "https://cperez.app/apps/manager-hub/";
 const KEY = process.env.MH_EVAL_ACCESS_KEY || "proxy-injected";
-const PRICES = { "gpt-6.1-sol": [2.0, 0.1, 10.0], "gpt-6-luna": [0.1, 0.01, 0.5] };   // $/1M in, cached in, out — third-party listings
+const PRICES = { "gpt-6-luna": [0.125, 0.01, 0.5], "gpt-6.1-sol": [2.5, 0.1, 10.0] };   // $/1M uncached in (incl. cache write), cached in, out — OpenAI list prices, Nov 10 2026
 const J = (x) => JSON.parse(JSON.stringify(x));
 const stats = { calls: 0, ok: 0, fail: 0, kinds: {}, ms: [], cost: 0, models: {} };
 
