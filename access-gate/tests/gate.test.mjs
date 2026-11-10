@@ -157,12 +157,13 @@ test("status route: presence of settings only, never values; production locked w
   assert.equal(other.status, 401);
 });
 
-test("X-MH-Access-Key header admits requests on preview hosts only; wrong keys count toward the lockout", async () => {
+test("X-MH-Access-Key header: the right code admits a request (any host); wrong keys count toward the lockout", async () => {
   const call = (origin, key, ip = "198.51.100.200") => { let n = false; return gate({ request: new Request(origin + "/apps/manager-hub/api/x", { method: "POST", headers: { "X-MH-Access-Key": key, "CF-Connecting-IP": ip } }), env: ENV, next: async () => { n = true; return new Response("ok"); } }).then((r) => [r.status, n]); };
   assert.deepEqual(await call("https://claude-x.sandbox-34x.pages.dev", CODE), [200, true], "preview + right code → through");
-  assert.deepEqual(await call("https://cperez.app", CODE), [401, false], "production ignores the header");
-  assert.deepEqual(await call("https://sandbox-34x.pages.dev", CODE), [401, false], "the production pages.dev address ignores it too");
-  assert.deepEqual(await call("https://claude-x.sandbox-34x.pages.dev", "wrong"), [401, false]);
-  for (let i = 0; i < 6; i++) await call("https://claude-x.sandbox-34x.pages.dev", "wrong" + i, "198.51.100.201");
-  assert.equal((await call("https://claude-x.sandbox-34x.pages.dev", CODE, "198.51.100.201"))[0], 429, "locked out after repeated wrong keys");
+  assert.deepEqual(await call("https://cperez.app", CODE), [200, true], "production + right code → through");
+  assert.deepEqual(await call("https://cperez.app", "wrong"), [401, false]);
+  assert.deepEqual(await call("https://cperez.app", ""), [401, false], "empty header is no access");
+  for (let i = 0; i < 6; i++) await call("https://cperez.app", "wrong" + i, "198.51.100.201");
+  assert.equal((await call("https://cperez.app", CODE, "198.51.100.201"))[0], 429, "locked out after repeated wrong keys, even with the right one");
+  assert.deepEqual(await call("https://cperez.app", CODE, "198.51.100.202"), [200, true], "other clients unaffected");
 });

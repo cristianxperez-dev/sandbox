@@ -172,11 +172,11 @@ export function createGate(apps, opts = {}) {
 
     const tok = readCookie(request, name);
     let ok = tok && (await verifyToken(secret, app.id, code, tok, nowSec));
-    // Preview and local deployments only (never production hosts): the access code in an
-    // X-MH-Access-Key header also admits a request — for automated testing through an egress proxy
-    // that injects it. Same constant-time check and lockout as the login form.
+    // The access code in an X-MH-Access-Key header also admits a request — for smoke tests run through
+    // an egress proxy that injects it (the tester never sees the code). Same constant-time check and
+    // lockout as the login form; it grants nothing the code itself doesn't.
     const headerKey = request.headers.get("X-MH-Access-Key");
-    if (!ok && headerKey && deploymentOf(url.hostname) !== "production") {
+    if (!ok && headerKey) {
       const ip = request.headers.get("CF-Connecting-IP") || "unknown", id = `${app.id}|${ip}`;
       if (lockedFor(id, nowMs)) return new Response("Too many attempts", { status: 429, headers: PRIVATE });
       if (await codeMatches(secret, code, headerKey)) ok = true;

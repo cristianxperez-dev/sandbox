@@ -129,7 +129,9 @@ async function callModel(env, model, { mode, text, ctx, request, plan }) {
     const data = await r.json().catch(() => null);
     if (!r.ok || !data) {
       const code = data && data.error && (data.error.code || data.error.type) || "";
-      return { error: r.status === 429 ? "model-rate-limited" : r.status === 404 || /model/.test(code) ? "model-unavailable" : `model-service-${r.status}`, detail: code, status: r.status === 429 ? 429 : 502, ms };
+      const msg = data && data.error && data.error.message || "";
+      const unavailable = r.status === 404 || /model/i.test(code) || (r.status === 400 && /model/i.test(msg));
+      return { error: r.status === 429 ? "model-rate-limited" : unavailable ? "model-unavailable" : `model-service-${r.status}`, detail: code || String(msg).slice(0, 120), status: r.status === 429 ? 429 : 502, ms };
     }
     const usage = data.usage;
     if (data.status === "incomplete") return { error: (data.incomplete_details && data.incomplete_details.reason) === "content_filter" ? "declined" : "incomplete", status: 502, ms, usage, model: data.model };
@@ -176,7 +178,15 @@ export async function onRequestPost({ request, env }) {
   const lim = evalRun ? null : limited(ip, env);
   if (lim) return reply(429, { error: "rate-limited", retryAfter: lim.retry }, { "Retry-After": String(lim.retry) });
 
-  const res = await callModel(Object.assign({}, env, { MH_AI_EFFORT: effort }), model, { mode, text, ctx, request: mode === "refine" ? DaySolve.normalize(body.request) : null, plan: body.plan });
+  const job = { mode, text, ctx, request: mode === "refine" ? DaySolve.normalize(body.request) : null, plan: body.plan };
+  const envE = Object.assign({}, env, { MH_AI_EFFORT: effort });
+  let res = await callModel(envE, model, job);
+  // the main model isn't available to this OpenAI project (or rejects a parameter): try the fallback model once
+  if (res.error === "model-unavailable" && state.fallbackModel && state.fallbackModel !== model) {
+    log(env, { mode, status: "model-unavailable", detail: res.detail || undefined, model, retry: state.fallbackModel });
+    model = state.fallbackModel;
+    res = await callModel(envE, model, job);
+  }
   const usage = usageOf(res.usage);
   log(env, { mode, status: res.error || "ok", detail: res.detail || undefined, ms: res.ms, model: res.model || model, usage });
   if (res.error) return reply(res.status, { error: res.error, ms: res.ms, usage, model: res.model || model });

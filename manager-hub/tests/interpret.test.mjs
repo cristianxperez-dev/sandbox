@@ -124,11 +124,24 @@ test("rate limits per client: a burst is refused with Retry-After, other clients
 
 test("preview: model/effort chosen per request from the allowlist only; production ignores overrides", async () => {
   mockModel({ request: DaySolve.normalize(DayRead.read(PRIMARY, {})) });
-  await post({ mode: "build", text: PRIMARY, model: "gpt-6.1-sol", effort: "medium" });
-  assert.equal(calls[0].body.model, "gpt-6.1-sol"); assert.equal(calls[0].body.reasoning.effort, "medium");
+  await post({ mode: "build", text: PRIMARY, model: "gpt-6-luna", effort: "medium" });
+  assert.equal(calls[0].body.model, "gpt-6-luna"); assert.equal(calls[0].body.reasoning.effort, "medium");
   await post({ mode: "build", text: PRIMARY, model: "some-expensive-model" });
-  assert.equal(calls[1].body.model, "gpt-6-luna", "a model outside the allowlist falls back to the configured one");
+  assert.equal(calls[1].body.model, "gpt-6.1-sol", "a model outside the allowlist falls back to the configured one");
   const prod = onRequestPost({ env: { ...ENV, MH_AI_PRODUCTION: "approved" }, request: new Request("https://cperez.app/apps/manager-hub/api/interpret", { method: "POST", headers: { "Content-Type": "application/json", Origin: "https://cperez.app", "CF-Connecting-IP": "192.0.2.90" }, body: JSON.stringify({ mode: "build", text: PRIMARY, model: "gpt-6.1-sol" }) }) });
-  await prod; assert.equal(calls[2].body.model, "gpt-6-luna", "production uses only the configured model");
+  await prod; assert.equal(calls[2].body.model, "gpt-6.1-sol", "production uses only the configured model");
+  globalThis.fetch = realFetch;
+});
+
+test("launch model unavailable to the project → one retry on the fallback model, then success", async () => {
+  calls = [];
+  const ok = { id: "r", model: "gpt-6-luna", status: "completed", output: [{ type: "message", content: [{ type: "output_text", text: JSON.stringify({ request: DaySolve.normalize(DayRead.read(PRIMARY, {})) }) }] }], usage: { input_tokens: 10, output_tokens: 5 } };
+  globalThis.fetch = async (url, init) => {
+    const body = JSON.parse(init.body); calls.push({ body });
+    if (body.model === "gpt-6.1-sol") return new Response(JSON.stringify({ error: { type: "invalid_request_error", code: "model_not_found", message: "The model gpt-6.1-sol does not exist or you do not have access to it." } }), { status: 404 });
+    return new Response(JSON.stringify(ok), { status: 200 });
+  };
+  const [s, b] = await json(await post({ mode: "build", text: PRIMARY }));
+  assert.equal(s, 200); assert.deepEqual(calls.map((c) => c.body.model), ["gpt-6.1-sol", "gpt-6-luna"]); assert.equal(b.model, "gpt-6-luna");
   globalThis.fetch = realFetch;
 });
