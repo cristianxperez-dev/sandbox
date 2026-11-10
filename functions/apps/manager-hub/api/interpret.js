@@ -163,14 +163,23 @@ export async function onRequestPost({ request, env }) {
   if (JSON.stringify(ctx).length > MAX_CTX) return reply(413, { error: "context-too-large" });
   if (mode === "refine" && !(body.request && DaySolve.validate(body.request).ok)) return reply(400, { error: "bad-request-state" });
   if (mode === "refine" && JSON.stringify(body.request).length + JSON.stringify(body.plan || {}).length > 60000) return reply(413, { error: "state-too-large" });
+  // Preview-only evaluation: a model/effort from the allowlist may be chosen per request, and requests
+  // that came through the gate with the preview access-code header skip the per-IP limits.
+  const evalRun = state.deployment !== "production" && !!request.headers.get("X-MH-Access-Key");
+  let model = state.model, effort = env.MH_AI_EFFORT || "low";
+  if (state.deployment !== "production") {
+    const allowed = String(env.MH_AI_MODELS || "gpt-6-luna,gpt-6.1-sol").split(",").map((x) => x.trim()).filter(Boolean);
+    if (body.model && allowed.includes(body.model)) model = body.model;
+    if (body.effort && ["none", "minimal", "low", "medium", "high"].includes(body.effort)) effort = body.effort;
+  }
   const ip = request.headers.get("CF-Connecting-IP") || "local";
-  const lim = limited(ip, env);
+  const lim = evalRun ? null : limited(ip, env);
   if (lim) return reply(429, { error: "rate-limited", retryAfter: lim.retry }, { "Retry-After": String(lim.retry) });
 
-  const res = await callModel(env, state.model, { mode, text, ctx, request: mode === "refine" ? DaySolve.normalize(body.request) : null, plan: body.plan });
+  const res = await callModel(Object.assign({}, env, { MH_AI_EFFORT: effort }), model, { mode, text, ctx, request: mode === "refine" ? DaySolve.normalize(body.request) : null, plan: body.plan });
   const usage = usageOf(res.usage);
-  log(env, { mode, status: res.error || "ok", detail: res.detail || undefined, ms: res.ms, model: res.model || state.model, usage });
-  if (res.error) return reply(res.status, { error: res.error, ms: res.ms, usage, model: res.model || state.model });
+  log(env, { mode, status: res.error || "ok", detail: res.detail || undefined, ms: res.ms, model: res.model || model, usage });
+  if (res.error) return reply(res.status, { error: res.error, ms: res.ms, usage, model: res.model || model });
   // the model's output is checked here and again in the page; anything malformed is refused, never repaired
   if (mode === "build") {
     const ir = res.out && res.out.request ? DaySolve.normalize(Object.assign({}, res.out.request, { source: "ai" })) : null;

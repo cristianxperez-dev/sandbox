@@ -121,3 +121,14 @@ test("rate limits per client: a burst is refused with Retry-After, other clients
   assert.equal((await post({ mode: "build", text: PRIMARY }, { env, ip: "203.0.113.10" })).status, 200);
   globalThis.fetch = realFetch;
 });
+
+test("preview: model/effort chosen per request from the allowlist only; production ignores overrides", async () => {
+  mockModel({ request: DaySolve.normalize(DayRead.read(PRIMARY, {})) });
+  await post({ mode: "build", text: PRIMARY, model: "gpt-6.1-sol", effort: "medium" });
+  assert.equal(calls[0].body.model, "gpt-6.1-sol"); assert.equal(calls[0].body.reasoning.effort, "medium");
+  await post({ mode: "build", text: PRIMARY, model: "some-expensive-model" });
+  assert.equal(calls[1].body.model, "gpt-6-luna", "a model outside the allowlist falls back to the configured one");
+  const prod = onRequestPost({ env: { ...ENV, MH_AI_PRODUCTION: "approved" }, request: new Request("https://cperez.app/apps/manager-hub/api/interpret", { method: "POST", headers: { "Content-Type": "application/json", Origin: "https://cperez.app", "CF-Connecting-IP": "192.0.2.90" }, body: JSON.stringify({ mode: "build", text: PRIMARY, model: "gpt-6.1-sol" }) }) });
+  await prod; assert.equal(calls[2].body.model, "gpt-6-luna", "production uses only the configured model");
+  globalThis.fetch = realFetch;
+});
