@@ -14,8 +14,9 @@
   const SIZE_NAME = { s: "Small", m: "Medium", l: "Large", xl: "Full width" };
   const h = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const q = (s, r = document) => r.querySelector(s), qa = (s, r = document) => [...r.querySelectorAll(s)];
-  const isoToday = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; };
-  const addDays = (iso, n) => { const d = new Date(iso + "T12:00:00"); d.setDate(d.getDate() + n); return d.toISOString().slice(0, 10); };
+  // "today" in the affiliate's time zone (index.html Today / games/games-core.js DateCore)
+  const isoToday = () => (typeof Today !== "undefined" ? Today.iso() : window.DateCore.todayIn(null));
+  const addDays = (iso, n) => window.DateCore.addDays(iso, n);
   const shortDate = (iso) => { try { return new Date(iso + "T12:00:00").toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" }); } catch (e) { return iso; } };
   // the app's state lives in top-level bindings of the main script (not window properties)
   const SCHED = () => (typeof S !== "undefined" && S ? S : null);
@@ -37,19 +38,21 @@
     today: { title: "Day schedule", size: "l", render: wToday },
     describe: { title: "Describe your day", size: "s", render: wDescribe },
     roster: { title: "Roster & availability", size: "s", render: wRoster },
-    games: { title: "Upcoming games", size: "s", render: wGames },
+    games: { title: "Games", size: "s", render: wGames },
+    orggames: { title: "Around the organization", size: "m", render: wOrgGames, optIn: true },
     month: { title: "Next 7 days", size: "s", render: wMonth },
     camp: { title: "Camp", size: "s", render: wCamp },
     modules: { title: "Modules", size: "xl", render: wModules }
   };
-  const DEFAULT = { order: ["today", "describe", "roster", "games", "month", "camp", "modules"], hidden: [], size: {} };
+  const DEFAULT = { order: ["today", "describe", "roster", "games", "month", "camp", "modules", "orggames"], hidden: ["orggames"], size: {} };
 
   function load() {
     let d = null;
     try { d = JSON.parse(localStorage.getItem(KEY) || "null"); } catch (e) { d = null; }
     if (!d || !Array.isArray(d.order)) d = JSON.parse(JSON.stringify(DEFAULT));
     d.order = d.order.filter((id) => W[id]);
-    Object.keys(W).forEach((id) => { if (!d.order.includes(id)) d.order.push(id); });      // new widgets appear for existing users
+    // new widgets appear for existing users — except opt-in ones, which wait in "Add widget"
+    Object.keys(W).forEach((id) => { if (!d.order.includes(id)) { d.order.push(id); if (W[id].optIn && !(d.hidden || []).includes(id)) (d.hidden = d.hidden || []).push(id); } });
     d.hidden = (d.hidden || []).filter((id) => W[id]);
     d.size = d.size || {};
     return d;
@@ -102,7 +105,7 @@
 
   /* ---------------------------------------------------------- bindings */
   function bind(host) {
-    qa("[data-go]", host).forEach((b) => (b.onclick = () => { const v = b.dataset.go; if (v === "roster") return rosterModal(); if (v === "games") return gamesModal(); if (v === "resources") return resourcesModal(); go(v); }));
+    qa("[data-go]", host).forEach((b) => (b.onclick = () => { const v = b.dataset.go; if (v === "roster") return rosterModal(); if (v === "games") return gamesModal(); if (v === "orggames") return gamesModal("org"); if (v === "resources") return resourcesModal(); go(v); }));
     qa("[data-hubi]", host).forEach((b) => (b.onclick = () => { const t = (window.HUB_ACTIONS_LIST || [])[+b.dataset.hubi]; if (t) t.go(); }));
     const dy = q("#dashDescribe", host);
     if (dy) {
@@ -222,12 +225,24 @@
       <div class="dash-actions">${btn("roster", "Open roster")}</div>`;
   }
   function wGames() {
-    const G = typeof Games !== "undefined" ? Games : null;
+    const G = typeof Games !== "undefined" ? Games : null, U = window.GamesUI;
     const today = isoToday();
-    const up = safe(() => G.all().filter((g) => g.date >= today).slice(0, 5), []);
-    if (!up.length) return `<div class="dash-empty-in"><span>No upcoming games on file.</span></div><div class="dash-actions">${btn("games", "Import game schedule")}</div>`;
-    return `<ul class="dash-list games">${up.map((g) => `<li><b>${h(shortDate(g.date))}</b><span>${g.homeAway === "away" ? "@" : "vs"} ${h(g.opponent || "TBD")}</span><em>${h(g.time ? (typeof prettyTime === "function" ? prettyTime(g.time) : g.time) : "")}</em></li>`).join("")}</ul>
-      <div class="dash-actions">${btn("games", "All games")}</div>`;
+    const todays = safe(() => G.listForDate(today), []);
+    const up = safe(() => G.all().filter((g) => g.date > today && g.status !== "canceled").slice(0, 4), []);
+    if (!todays.length && !up.length) return `<div class="dash-empty-in"><span>No upcoming games on file.</span></div><div class="dash-actions">${btn("games", "Games")}</div>`;
+    const card = (g) => (U ? U.card(g, { compact: true }) : h(g.opponent));
+    return `${todays.length ? `<p class="dash-k">Today</p><div class="dash-gtoday">${todays.map(card).join("")}</div>` : `<p class="dash-muted">No game today.</p>`}
+      ${up.length ? `<p class="dash-k">${todays.length ? "Next" : "Next game"}</p><ul class="dash-glist">${up.map((g, i) => `<li${!todays.length && i === 0 ? ' class="next"' : ""}><b>${h(shortDate(g.date))}</b>${card(g)}</li>`).join("")}</ul>` : ""}
+      <div class="dash-actions">${btn("games", "All games")}${btn("orggames", "Organization")}</div>`;
+  }
+  /* opt-in: every affiliate's game today — who's home, who's on the road, who's off */
+  function wOrgGames() {
+    const U = window.GamesUI, C = window.GamesCore;
+    if (!U || !C || typeof AFFILIATES === "undefined") return "";
+    const today = isoToday();
+    const rows = AFFILIATES.map((a) => ({ a, games: safe(() => C.forDate(C.migrate(localStorage.getItem(`cs.${a.id}.games`)), today), []) }));
+    return `<ul class="dash-org">${rows.map((r) => `<li><span class="dash-org-t"><b>${h(r.a.short)}</b><em>${h(r.a.level.split(" ")[0])}</em></span>${r.games.length ? r.games.map((g) => U.card(g, { compact: true, tz: r.a.tz, aff: r.a.id })).join("") : '<span class="dash-muted">Off</span>'}</li>`).join("")}</ul>
+      <div class="dash-actions">${btn("orggames", "Organization board")}</div>`;
   }
   function wMonth() {
     const M = typeof Month !== "undefined" ? Month : null;

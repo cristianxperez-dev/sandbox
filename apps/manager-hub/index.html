@@ -2753,6 +2753,7 @@ body[data-mhview="month"] #btnNew,body[data-mhview="month"] #btnOpen,body[data-m
 <link rel="stylesheet" href="assistant/day-ui.css">
 <link rel="stylesheet" href="camp/camp.css">
 <link rel="stylesheet" href="hub/dashboard.css">
+<link rel="stylesheet" href="games/games.css">
 </head>
 <body>
 <div class="affgate" id="affGate" hidden>
@@ -2876,7 +2877,12 @@ body[data-mhview="month"] #btnNew,body[data-mhview="month"] #btnOpen,body[data-m
             <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2.5"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>
             Date
           </label>
-          <input id="fDate" type="date" data-meta="date">
+          <div class="daynav">
+            <button class="btn sm quiet" id="dayPrev" type="button" aria-label="Previous day" title="Previous day">‹</button>
+            <input id="fDate" type="date" data-meta="date">
+            <button class="btn sm quiet" id="dayNext" type="button" aria-label="Next day" title="Next day">›</button>
+            <button class="btn sm" id="dayToday" type="button" title="Go to today">Today</button>
+          </div>
         </div>
         <div class="fld">
           <label for="fOpp">
@@ -3139,6 +3145,7 @@ body[data-mhview="month"] #btnNew,body[data-mhview="month"] #btnOpen,body[data-m
 <div class="scrim" id="scrim"><div class="modal" id="modal"></div></div>
 <input type="file" id="filePick" accept="image/*,application/json" style="display:none">
 
+<script src="games/games-core.js"></script>
 <script>
 /* ==========================================================================
    Astros Manager Hub — single file app
@@ -3172,19 +3179,19 @@ const uniq = a => Array.from(new Set(a.filter(Boolean)));
    onPrimary / onSecondary  text colour on a fill of that colour (≥ 4.5:1)
    Branding is fixed: nothing here can be edited in the app. */
 const AFFILIATES=[
-  {id:"sl",  name:"Sugar Land",     team:"Sugar Land Space Cowboys", short:"SL",  level:"Triple-A",
+  {id:"sl", tz:"America/Chicago", name:"Sugar Land",     team:"Sugar Land Space Cowboys", short:"SL",  level:"Triple-A",
    logo:"brand/sl.png",  logoW:316, logoH:316,
    primary:"#0E253A", secondary:"#25C9D1", accent:"#E47D3C", masthead:"#25C9D1", onPrimary:"#FFFFFF", onSecondary:"#0E253A"},
-  {id:"cc",  name:"Corpus Christi", team:"Corpus Christi Hooks",     short:"CC",  level:"Double-A",
+  {id:"cc", tz:"America/Chicago", name:"Corpus Christi", team:"Corpus Christi Hooks",     short:"CC",  level:"Double-A",
    logo:"brand/cc.png",  logoW:404, logoH:340,
    primary:"#002A5B", secondary:"#4F91CD", accent:"#E01938", masthead:"#4F91CD", onPrimary:"#FFFFFF", onSecondary:"#000000"},
-  {id:"ash", name:"Asheville",      team:"Asheville Tourists",       short:"ASH", level:"High-A",
+  {id:"ash", tz:"America/New_York", name:"Asheville",      team:"Asheville Tourists",       short:"ASH", level:"High-A",
    logo:"brand/ash.png", logoW:300, logoH:245,
    primary:"#002B5C", secondary:"#86CEBC", accent:"#005695", masthead:"#86CEBC", onPrimary:"#FFFFFF", onSecondary:"#002B5C"},
-  {id:"fay", name:"Fayetteville",   team:"Fayetteville Woodpeckers", short:"FAY", level:"Single-A",
+  {id:"fay", tz:"America/New_York", name:"Fayetteville",   team:"Fayetteville Woodpeckers", short:"FAY", level:"Single-A",
    logo:"brand/fay.png", logoW:599, logoH:477,
    primary:"#D31245", secondary:"#000000", accent:"#5F6062", masthead:"#D31245", onPrimary:"#FFFFFF", onSecondary:"#FFFFFF"},
-  {id:"fcl", name:"FCL Astros",     team:"FCL Astros",               short:"FCL", level:"Rookie · Florida Complex League",
+  {id:"fcl", tz:"America/New_York", name:"FCL Astros",     team:"FCL Astros",               short:"FCL", level:"Rookie · Florida Complex League",
    logo:"brand/fcl.svg", logoW:236, logoH:237,
    primary:"#002D62", secondary:"#EB6E1F", accent:null,      masthead:"#EB6E1F", onPrimary:"#FFFFFF", onSecondary:"#000000"}
 ];
@@ -3240,6 +3247,17 @@ const store = (()=>{
   };
 })();
 const K = { index:"cs.index", draft:"cs.draft", lib:"cs.library", tpl:"cs.templates", sched:id=>"cs.sched."+id };
+
+/* ==========================================================================
+   TODAY — always computed, never stored: the date in the affiliate's own time zone (its ballpark's), so
+   a Sugar Land coach on the road in Sacramento still gets Sugar Land's "today". games/games-core.js.
+   ========================================================================== */
+const Today = {
+  tz(){ const m=store.affiliateMeta(); return (m&&m.tz)||null; },
+  iso(){ return DateCore.todayIn(Today.tz()); },
+  /** re-render "today" markers when the date rolls over while the app is open (the selected date never moves) */
+  watch(fn){ clearTimeout(Today._t); Today._t=setTimeout(()=>{ try{ fn(); }catch(e){} Today.watch(fn); }, Math.min(DateCore.msToMidnight(Today.tz())+500, 6*3600e3)); }
+};
 
 /* ==========================================================================
    TIME
@@ -5306,7 +5324,7 @@ function renderSections(){
   captureFocus();
   refreshPlanned();
   const host=$("#sections");
-  host.innerHTML = packSections().map(b=>
+  host.innerHTML = (window.GamesUI?GamesUI.banner():"") + packSections().map(b=>
     (b.band?`<div class="sec-bandhead">${esc(b.band)}</div>`:"") +
     b.rows.map(row=>{
       const afterId = row.length ? row[row.length-1].id : "";
@@ -7804,7 +7822,10 @@ document.addEventListener("click",e=>{
   }
   if(el.id==="calPrev") return goMonth(-1);
   if(el.id==="calNext") return goMonth(1);
-  if(el.id==="calToday"){ const n=new Date(); calY=n.getFullYear(); calM=n.getMonth(); return renderMonth(); }
+  if(el.id==="calToday"){ const t=Today.iso(); calY=+t.slice(0,4); calM=+t.slice(5,7)-1; return renderMonth(); }
+  if(el.id==="dayToday") return openDate(Today.iso());
+  if(el.id==="dayPrev") return openDate(DateCore.addDays(S?.meta?.date||Today.iso(),-1));
+  if(el.id==="dayNext") return openDate(DateCore.addDays(S?.meta?.date||Today.iso(),1));
   if(el.id==="calPattern") return patternModal();
   if(el.id==="calCopy") return copyPlanModal();
   if(el.id==="calClear"){
@@ -8341,7 +8362,7 @@ function newDayModal(){
   openModal(`
     <div class="mhead"><div><h2>New day</h2><p>Most days are yesterday with three things moved. Start there.</p></div><button class="x" data-close>×</button></div>
     <div class="mbody">
-      <div class="field" style="max-width:260px"><label for="ndDate">Date</label><input id="ndDate" type="date" value="${esc(nextDate())}"></div>
+      <div class="field" style="max-width:260px"><label for="ndDate">Date</label><input id="ndDate" type="date" value="${esc(hasRows(S)?nextDate():S.meta.date)}"></div>
       <div class="tiles">
         ${last?`<button class="tile hero" data-new="last"><b>Duplicate ${esc(last.title||"last schedule")}</b>
           <span>${esc(longDate(last.date)||"")} — every group, roster and time carried over</span></button>`:""}
@@ -8373,10 +8394,40 @@ function newDayModal(){
   });
 }
 function nextDate(){
-  const base=S?.meta?.date?new Date(S.meta.date+"T12:00:00"):new Date();
-  base.setDate(base.getDate()+1);
-  return base.toISOString().slice(0,10);
+  return DateCore.addDays(S?.meta?.date||Today.iso(),1);
 }
+/** an empty day for a date — the workspace's own name, no sample rows */
+function blankDay(iso){
+  const d=seedSchedule(), m=store.affiliateMeta();
+  d.meta=Object.assign(d.meta,{date:iso,opponent:"",gameLocation:"",notes:"",firstPitch:"",homeAway:"",gameId:"",
+    teamName:m?m.name:d.meta.teamName, title:m?(m.id==="fcl"?"Florida Complex Schedule":`${m.name} Daily Schedule`):"Daily Schedule"});
+  d.lineup.title="Lineup"; d.lineup.slots.forEach(x=>{ x.player=""; }); d.lineup.bench=[]; d.lineup.arms=[];
+  d.sections=[];
+  return d;
+}
+const hasRows=day=>!!(day&&day.sections&&day.sections.some(sec=>(sec.rows||[]).some(r=>r.activity||r.time)));
+/** keep the day on screen before leaving it: into the saved list when it has content (nothing is ever dropped) */
+function stashCurrentDay(){
+  if(!S||!hasRows(S)) return;
+  const saved=loadById(S.id);
+  if(saved && JSON.stringify(saved)===JSON.stringify(S)) return;
+  const entry={id:S.id,date:S.meta.date,title:S.meta.title,opponent:S.meta.opponent,saved:Date.now(),auto:true};
+  setIndex([entry,...index().filter(x=>x.id!==S.id)].slice(0,120));
+  store.set(K.sched(S.id), JSON.stringify(S));
+}
+/** go to a date: that date's saved day if there is one, else a clean empty day (with its game, if any) */
+function openDate(iso){
+  if(!iso || (S&&S.meta.date===iso)) return;
+  stashCurrentDay();
+  const hit=index().filter(x=>x.date===iso).sort((a,b)=>b.saved-a.saved)[0];
+  const day=hit&&loadById(hit.id);
+  S=day||blankDay(iso);
+  if(!day) S.id=uid();
+  undoStack=[]; syncGameToDay(iso); dirty=false; saveDraft();
+  try{ sessionStorage.setItem("cs.day."+store.affiliate(),iso); }catch(e){}
+  renderMeta(); renderSections(); if(typeof renderHub==="function"&&VIEW==="hub") renderHub();
+}
+window.openDate=openDate;
 function index(){ try{ return JSON.parse(store.get(K.index)||"[]"); }catch(e){ return []; } }
 function setIndex(a){ store.set(K.index, JSON.stringify(a)); }
 function saveSchedule(){
@@ -9913,30 +9964,42 @@ window.SchedulePlanner=SchedulePlanner;
    ========================================================================== */
 /* ==========================================================================
    GAME SCHEDULE
-   Imported once, keyed by date. The Monthly Planner shows games as anchor
-   events; the Daily Schedule reads opponent/time/location/home-away straight
-   from here the moment a game date is selected.
+   One store per affiliate workspace ("cs.games", v2: games by id — a date can hold a doubleheader).
+   The organisation's schedules ship in schedules/games.json (made by manager-hub/tools/import_schedules.py)
+   and are merged in by OrgSchedule below; games added by hand or from a CSV live beside them. Logic and
+   merge rules: games/games-core.js. The Monthly Planner, Daily Schedule and dashboard all read from here.
    ========================================================================== */
 const Games = (()=>{
   const KEY="cs.games";
-  let games=null;
-  const uidG=()=>"gm"+Math.random().toString(36).slice(2,8);
-
-  function load(){ try{ games=JSON.parse(store.get(KEY)||"{}")||{}; }catch(e){ games={}; } }
-  function save(){ store.set(KEY,JSON.stringify(games)); }
-  const ready=()=>{ if(!games) load(); };
-  const all=()=>{ ready(); return Object.values(games).sort((a,b)=>a.date.localeCompare(b.date)); };
-  const forDate=iso=>{ ready(); return games[iso]||null; };
+  let st=null;
+  const G=()=>window.GamesCore;
+  function load(){ st=G().migrate(store.get(KEY)); }
+  function save(){ store.set(KEY,JSON.stringify(st)); }
+  const ready=()=>{ if(!st) load(); return st; };
+  const all=()=>G().all(ready());
+  const listForDate=iso=>G().forDate(ready(),iso);
+  /** the day's game (game 1 of a doubleheader; a postponed / canceled game only when nothing else is on) */
+  const forDate=iso=>{ const l=listForDate(iso); return l.find(G().playable)||l[0]||null; };
+  const byId=id=>{ const g=ready().games[id]; return g&&!g.deleted?g:null; };
+  /** save a game: by id (edits are recorded so a later import never overwrites them), else the date's first game, else a new one */
   function upsert(g){
     ready();
-    if(!g||!g.date) return null;
-    const existing=games[g.date];
-    const rec=Object.assign({id:existing?existing.id:uidG(),date:g.date,opponent:"",homeAway:"home",
-      time:"",location:"",notes:"",source:"manual"}, existing||{}, g);
-    games[g.date]=rec; save(); return rec;
+    if(!g) return null;
+    const target=g.id?byId(g.id):(g.date?forDate(g.date):null);
+    const rec=target?G().edit(st,target.id,Object.assign({},g,{id:target.id})):G().add(st,Object.assign({source:"manual"},g));
+    save(); return rec;
   }
-  function remove(iso){ ready(); delete games[iso]; save(); }
-  function clearAll(){ games={}; save(); }
+  function remove(idOrIso){ ready(); const g=byId(idOrIso)||forDate(idOrIso); if(g){ G().remove(st,g.id); save(); } }
+  function clearAll(){ ready(); Object.keys(st.games).forEach(id=>G().remove(st,id)); save(); }
+  function acceptChange(id){ ready(); const g=G().acceptChange(st,id); save(); return g; }
+  const affTz=()=>{ const m=store.affiliateMeta&&store.affiliateMeta(); return m&&m.tz||null; };
+  const label=g=>G().label(g), timeText=g=>G().timeText(g,affTz()), homeTimeText=g=>G().homeTimeText(g,affTz()), statusText=g=>G().statusText(g);
+  /** the next game from now on (today's included until it has started) */
+  function next(n=1, fromIso){
+    const now=Date.now(), today=fromIso||Today.iso();
+    const l=all().filter(g=>G().playable(g)&&g.date>=today&&!(g.date===today&&g.startUTC&&Date.parse(g.startUTC)+3*3600e3<now));
+    return n===1?l[0]||null:l.slice(0,n);
+  }
 
   /* ---- CSV ---- */
   function splitCSV(text){
@@ -10012,137 +10075,43 @@ const Games = (()=>{
       };
     }).filter(g=>g.opponent||g.date);
   }
-  /** re-importing the same file is safe — games are keyed and replaced by date */
+  /** re-importing the same file is safe — a CSV game updates the game on its date instead of adding a second one */
   function importCSV(text){
     const rows=parseCSV(text);
     let added=0, updated=0, invalid=0;
     rows.forEach(g=>{
       if(!g.date){ invalid++; return; }
       const existed=!!forDate(g.date);
-      upsert(Object.assign({source:"csv"},g));
+      upsert(Object.assign(existed?{}:{source:"csv"},g));
       existed?updated++:added++;
     });
     return {added,updated,invalid,total:rows.length};
   }
-  return {load,save,all,forDate,upsert,remove,clearAll,parseCSV,importCSV,parseDate,parseTime};
+  return {load,save,all,forDate,listForDate,byId,upsert,remove,clearAll,acceptChange,next,label,timeText,homeTimeText,statusText,parseCSV,importCSV,parseDate,parseTime,state:()=>ready()};
 })();
 window.Games=Games;
 
 /** the Daily Schedule's game fields follow the selected date — called on every date change */
 function syncGameToDay(iso){
   if(typeof Games==="undefined"||!S) return false;
-  const g=Games.forDate(iso); if(!g) return false;
+  const g=Games.forDate(iso);
+  if(!g){
+    // the previous date's game details came from the schedule: don't carry them onto a day without a game
+    if(S.meta.gameId){ S.meta.opponent=""; S.meta.gameLocation=""; S.meta.firstPitch=""; S.meta.homeAway=""; S.meta.gameId=""; dirty=true; saveDraft(); }
+    return false;
+  }
   S.meta.opponent=g.opponent||S.meta.opponent;
   S.meta.gameLocation=g.location||S.meta.gameLocation;
-  S.meta.firstPitch=g.time||S.meta.firstPitch;
+  S.meta.firstPitch=g.timeTBD?"":(g.time||S.meta.firstPitch);
   S.meta.homeAway=g.homeAway||S.meta.homeAway||"";
   S.meta.gameId=g.id;
   dirty=true; saveDraft();
   return true;
 }
 
-/* ---------- one game, edited inline from the calendar or standalone ---------- */
-function gameFormModal(iso,after){
-  const g=Games.forDate(iso);
-  const pretty=new Date(iso+"T12:00:00").toLocaleDateString(undefined,{weekday:"long",month:"long",day:"numeric",year:"numeric"});
-  openModal(`
-    <div class="mhead"><div><h2>${g?"Edit game":"Add game"}</h2><p>${esc(pretty)}</p></div>
-      <button class="x" data-close>×</button></div>
-    <div class="mbody">
-      <div class="grid2">
-        <div class="field"><label for="gmOpp">Opponent</label>
-          <input id="gmOpp" type="text" value="${esc(g?g.opponent:"")}" placeholder="FCL Nationals"></div>
-        <div class="field"><label for="gmHA">Home / Away</label>
-          <select id="gmHA"><option value="home" ${!g||g.homeAway!=="away"?"selected":""}>Home</option>
-            <option value="away" ${g&&g.homeAway==="away"?"selected":""}>Away</option></select></div>
-      </div>
-      <div class="grid2">
-        <div class="field"><label for="gmTime">Game time</label><input id="gmTime" type="time" value="${esc(g?g.time:"")}"></div>
-        <div class="field"><label for="gmLoc">Location</label>
-          <input id="gmLoc" type="text" value="${esc(g?g.location:"")}" placeholder="Nationals Complex"></div>
-      </div>
-      <div class="field"><label for="gmNotes">Notes</label>
-        <input id="gmNotes" type="text" value="${esc(g?g.notes:"")}" placeholder="Optional"></div>
-    </div>
-    <div class="mfoot">
-      ${g?`<button class="btn danger" id="gmDel" style="margin-right:auto">Remove game</button>`:""}
-      <button class="btn" data-close>Cancel</button>
-      <button class="btn primary" id="gmSave">${g?"Save":"Add game"}</button>
-    </div>`,
-  ()=>{
-    $("#gmSave").onclick=()=>{
-      const opp=$("#gmOpp").value.trim();
-      if(!opp) return toast("Give the opponent a name");
-      Games.upsert({date:iso,opponent:opp,homeAway:$("#gmHA").value,time:$("#gmTime").value,
-        location:$("#gmLoc").value.trim(),notes:$("#gmNotes").value.trim(),source:g?g.source:"manual"});
-      if(S?.meta?.date===iso){ syncGameToDay(iso); renderMeta(); }
-      closeModal(); after&&after(); toast(g?"Game updated":"Game added");
-    };
-    if($("#gmDel")) $("#gmDel").onclick=()=>{
-      Games.remove(iso); closeModal(); after&&after(); toast("Game removed");
-    };
-  });
-}
-
-/* ---------- the full game list ---------- */
-function gamesModal(){
-  const draw=()=>{
-    const list=Games.all();
-    const body=$("#gmBody"); if(!body) return;
-    body.innerHTML=list.length
-      ? `<div class="ros-head"><span>Date</span><span>Opponent</span><span>H/A</span><span>Time</span><span></span></div>`+
-        list.map(g=>`<div class="ros-row">
-            <span class="ros-pos">${esc(new Date(g.date+"T12:00:00").toLocaleDateString(undefined,{month:"short",day:"numeric"}))}</span>
-            <span class="ros-name">${esc(g.opponent||"TBD")}
-              <span class="ros-short">${g.homeAway==="away"?"@":"vs"} ${esc(g.location||"location TBD")}</span></span>
-            <span>${g.homeAway==="away"?"Away":"Home"}</span>
-            <span>${g.time?esc(prettyTime(g.time)):"—"}</span>
-            <span class="ros-ops"><button class="btn sm" data-ggo="${g.date}">Edit</button></span>
-          </div>`).join("")
-      : `<div class="ai-empty">No games yet. Import a CSV, or add one manually.<br>
-         Once a game is on the calendar, its date automatically anchors the Daily Schedule.</div>`;
-    const c=$("#gmCount"); if(c) c.textContent=list.length?`${list.length} games`:"";
-  };
-  openModal(`
-    <div class="mhead"><div><h2>Game Schedule</h2>
-      <p>Imported once — the Monthly Planner and Daily Schedule both read from here.</p></div>
-      <button class="x" data-close>×</button></div>
-    <div class="mbody">
-      <div class="ai-bar" style="margin:0 0 12px">
-        <button class="btn primary sm" id="gmAdd">Add game</button>
-        <button class="btn sm" id="gmImport">Import CSV</button>
-        <button class="btn sm quiet" id="gmClear">Clear all</button>
-        <span class="ai-hint" id="gmCount"></span>
-      </div>
-      <div id="gmBody"></div>
-      <p class="note" style="margin-top:12px">Columns read: <b>Date, Opponent, Home/Away, Time, Location, Notes</b> —
-      with or without a header row. Re-importing the same file is safe; games are matched and updated by date, never duplicated.</p>
-    </div>
-    <div class="mfoot"><button class="btn primary" data-close>Done</button></div>`,
-  ()=>{
-    $("#modal").classList.add("wide");
-    draw();
-    $("#gmBody").addEventListener("click",e=>{ const b=e.target.closest("[data-ggo]"); if(b) gameFormModal(b.dataset.ggo,draw); });
-    $("#gmAdd").onclick=()=>gameFormModal(S?.meta?.date||isoOf(new Date()),draw);
-    $("#gmClear").onclick=()=>{ if(confirm("Remove every imported or added game?")){ Games.clearAll(); draw(); renderMonth(); } };
-    $("#gmImport").onclick=()=>{
-      const f=$("#filePick"); f.accept=".csv,text/csv";
-      f.onchange=()=>{
-        const file=f.files[0]; if(!file) return;
-        const rd=new FileReader();
-        rd.onload=()=>{
-          const r=Games.importCSV(rd.result);
-          if(!r.total){ toast("Couldn't read any games out of that file"); return; }
-          draw(); renderMonth(); refreshPlanned();
-          if(S?.meta?.date && Games.forDate(S.meta.date)){ syncGameToDay(S.meta.date); renderMeta(); }
-          toast(`${r.added} added, ${r.updated} updated${r.invalid?`, ${r.invalid} skipped (no date)`:""}`);
-        };
-        rd.readAsText(file); f.value="";
-      };
-      f.click();
-    };
-  });
-}
+/* ---------- add / edit a game, and the game list (games/games-ui.js) ---------- */
+function gameFormModal(iso,after){ const g=Games.forDate(iso); return window.GamesUI&&GamesUI.form(iso,g?g.id:null,after); }
+function gamesModal(tab){ return window.GamesUI&&GamesUI.listModal(tab); }
 
 const Month = (()=>{
   const KEY="cs.month";
@@ -10217,13 +10186,11 @@ const DOW=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday
 let calY=null, calM=null, calPick=null;
 
 function renderMonth(){
-  if(calY==null){
-    const base=S?.meta?.date?new Date(S.meta.date+"T12:00:00"):new Date();
-    calY=base.getFullYear(); calM=base.getMonth();
-  }
+  // opens on the open day's month: today at startup, or the date the user moved to in the Daily view
+  if(calY==null){ const t=S?.meta?.date||Today.iso(); calY=+t.slice(0,4); calM=+t.slice(5,7)-1; }
   const first=new Date(calY,calM,1), lead=first.getDay();
   const last=new Date(calY,calM+1,0).getDate();
-  const today=isoOf(new Date());
+  const today=Today.iso();
   const cells=[];
   for(let i=0;i<lead;i++) cells.push(null);
   for(let d=1;d<=last;d++) cells.push(new Date(calY,calM,d));
@@ -10245,11 +10212,7 @@ function renderMonth(){
                 data-day="${iso}">
         <span class="cal-top">
           <span class="cal-n">${dt.getDate()}</span>
-          ${game?`<span class="cal-gm ${game.homeAway==="away"?"away":"home"}"
-              title="${game.homeAway==="away"?"at":"vs"} ${esc(game.opponent||"TBD")}${game.time?" · "+esc(prettyTime(game.time)):""}">
-              <span class="cal-gm-o">${game.homeAway==="away"?"at":"vs"} ${esc(game.opponent||"TBD")}</span>
-              ${game.time?`<span class="cal-gm-t">${esc(prettyTime(game.time))}</span>`:""}
-            </span>`:""}
+          ${window.GamesUI?`<span class="cal-gms">${GamesUI.chips(iso)}</span>`:""}
         </span>
         <span class="cal-acts">${acts.slice(0,cap).map(k=>{
             const c=Month.color(k);
@@ -10316,33 +10279,8 @@ function dayModal(iso){
   const dt=new Date(iso+"T12:00:00");
   const pretty=dt.toLocaleDateString(undefined,{weekday:"long",month:"long",day:"numeric"});
   const drawGame=()=>{
-    const g=Games.forDate(iso), panel=$("#gamePanel"); if(!panel) return;
-    panel.innerHTML = g
-      ? `<div class="gp-on">
-          <span class="gp-badge">GAME</span>
-          <input class="gp-f gp-opp" id="gpOpp" value="${esc(g.opponent)}" placeholder="Opponent">
-          <select class="gp-f gp-ha" id="gpHA">
-            <option value="home" ${g.homeAway!=="away"?"selected":""}>Home</option>
-            <option value="away" ${g.homeAway==="away"?"selected":""}>Away</option>
-          </select>
-          <input class="gp-f gp-time" id="gpTime" type="time" value="${esc(g.time)}">
-          <input class="gp-f gp-loc" id="gpLoc" value="${esc(g.location)}" placeholder="Location">
-          <button class="btn sm danger" id="gpDel">Remove</button>
-        </div>`
-      : `<button class="btn sm" id="gpAdd">⚾ Add a game for this day</button>`;
-    if($("#gpAdd")) $("#gpAdd").onclick=()=>{
-      Games.upsert({date:iso,opponent:"",homeAway:"home",time:"",location:"",notes:""});
-      drawGame(); renderMonth(); $("#gpOpp")?.focus();
-    };
-    if($("#gpDel")) $("#gpDel").onclick=()=>{ Games.remove(iso); drawGame(); renderMonth(); };
-    const saveGame=()=>{
-      if(!$("#gpOpp")) return;
-      Games.upsert({date:iso,opponent:$("#gpOpp").value.trim(),homeAway:$("#gpHA").value,
-        time:$("#gpTime").value,location:$("#gpLoc").value.trim(),notes:(Games.forDate(iso)||{}).notes||""});
-      if(S?.meta?.date===iso){ syncGameToDay(iso); renderMeta(); }
-      renderMonth();
-    };
-    panel.querySelectorAll(".gp-f").forEach(el=>{ el.oninput=saveGame; el.onchange=saveGame; });
+    const panel=$("#gamePanel"); if(!panel||!window.GamesUI) return;
+    GamesUI.dayPanel(iso,panel,()=>{ drawGame(); renderMonth(); if(S?.meta?.date===iso){ syncGameToDay(iso); renderMeta(); renderSections(); } });
   };
   const draw=()=>{
     const acts=Month.forDate(iso);
@@ -11431,9 +11369,8 @@ const Matrix = (()=>{
   let d=null;
 
   const blank=()=>{
-    const today=new Date();
-    const back=new Date(today); back.setDate(back.getDate()-30);
-    return {start:isoOf(back), end:isoOf(today), blockStart:isoOf(today),
+    const t=Today.iso();
+    return {start:DateCore.addDays(t,-30), end:t, blockStart:t,
             games:6, plan:{}, hist:{}, log:{}};
   };
   function load(){
@@ -12279,9 +12216,8 @@ const Pitch = (()=>{
   ];
   let d=null;
   const blank=()=>{
-    const today=new Date(), end=new Date(today);
-    end.setDate(end.getDate()+20);
-    return {start:isoOf(today), end:isoOf(end),
+    const t=Today.iso();
+    return {start:t, end:DateCore.addDays(t,20),
             sections:DEFAULT_SECTIONS.map(s=>({...s})), assign:{}, cells:{}};
   };
   function load(){
@@ -12301,8 +12237,8 @@ const Pitch = (()=>{
      A date decides what an entry means: on or after today it is a plan, before
      today it is what actually happened. Stored explicitly as `mode` so planned
      and actual workload can be compared later rather than inferred from text. */
-  const isPast=iso=>iso<isoOf(new Date());
-  const isToday=iso=>iso===isoOf(new Date());
+  const isPast=iso=>iso<Today.iso();
+  const isToday=iso=>iso===Today.iso();
   const modeFor=iso=>isPast(iso)?"actual":"planned";
   /** AVA and EME are availability planning, never a historical result */
   const FUTURE_ONLY=new Set(["ava","eme"]);
@@ -12555,7 +12491,7 @@ const PitchLog = (()=>{
   /** filtered view for the feed */
   function query(opts){
     opts=opts||{};
-    const today=isoOf(new Date());
+    const today=Today.iso();
     return all().filter(e=>{
       if(opts.todayOnly && isoOf(new Date(e.at))!==today) return false;
       if(opts.pid && e.pid!==opts.pid) return false;
@@ -12589,7 +12525,7 @@ function renderPitch(){
   const dates=Pitch.dates();
   const short=iso=>{ const [y,m,dd]=iso.split("-").map(Number); return `${m}/${dd}`; };
   const dow=iso=>["SUN","MON","TUE","WED","THU","FRI","SAT"][new Date(iso+"T12:00:00").getDay()];
-  const today=isoOf(new Date());
+  const today=Today.iso();
 
   const head=dates.map(iso=>{
     const g=(typeof Games!=="undefined")?Games.forDate(iso):null;
@@ -12657,7 +12593,7 @@ function renderFeed(){
   const day=ts=>new Date(ts).toLocaleDateString(undefined,{month:"short",day:"numeric"});
   const gridDate=iso=>{ if(!iso) return ""; const [y,m,d]=iso.split("-").map(Number);
     return new Date(y,m-1,d).toLocaleDateString(undefined,{month:"short",day:"numeric"}); };
-  const todayStr=isoOf(new Date());
+  const todayStr=Today.iso();
 
   list.innerHTML = shown.length ? shown.map(e=>{
     const p=e.pid?Roster.get(e.pid):null;
@@ -13152,7 +13088,7 @@ window.PitchHist=PitchHist;
 function pitchOutingModal(){
   const list=Pitch.pitchers();
   if(!list.length) return toast("Import the roster first — pitchers come from there");
-  const today=isoOf(new Date());
+  const today=Today.iso();
   openModal(`
     <div class="mhead"><div><h2>Add outing</h2>
       <p>Records a game, side, availability or emergency day for one pitcher.</p></div>
@@ -14399,7 +14335,59 @@ const OrgRoster = (()=>{
 })();
 window.OrgRoster=OrgRoster;
 
+/* ==========================================================================
+   ORG SCHEDULE — the organisation's affiliate game schedules (schedules/games.json, made by
+   manager-hub/tools/import_schedules.py) merged into every affiliate's game store, once per version of
+   the file. Merge rules (games/games-core.js): no duplicates, corrections update untouched games, edited
+   games keep the user's values (the change is shown for review), deleted games stay deleted.
+   ========================================================================== */
+const OrgSchedule = (()=>{
+  const KEY="cs.orgschedule.applied";           // global: { affiliate: version merged }
+  const rawGet=k=>{ try{ return localStorage.getItem(k); }catch(e){ return null; } };
+  const rawSet=(k,v)=>{ try{ localStorage.setItem(k,v); }catch(e){} };
+  let doc=null;
+  async function fetchDoc(){
+    if(doc) return doc;
+    try{ const r=await fetch("schedules/games.json",{cache:"no-cache"}); if(!r.ok) return null; doc=await r.json(); }catch(e){ return null; }
+    return doc;
+  }
+  async function apply(){
+    const d=await fetchDoc(); if(!d||!Array.isArray(d.games)) return null;
+    let applied={}; try{ applied=JSON.parse(rawGet(KEY)||"{}")||{}; }catch(e){ applied={}; }
+    const out={};
+    AFFILIATES.forEach(a=>{
+      const mine=d.games.filter(g=>g.affiliate===a.id);
+      if(!mine.length || applied[a.id]===d.version) return;
+      const r=GamesCore.merge(store.getFor(a.id,"cs.games"),mine,d.version);
+      store.setFor(a.id,"cs.games",JSON.stringify(r.state));
+      store.setFor(a.id,"cs.games.import",JSON.stringify(Object.assign({file:d.source&&d.source.file,generated:d.generated,at:new Date().toISOString()},r.summary)));
+      applied[a.id]=d.version; out[a.id]=r.summary;
+    });
+    rawSet(KEY,JSON.stringify(applied));
+    return Object.keys(out).length?out:null;
+  }
+  /** every affiliate's games on a date, straight from the shipped file plus this browser's own edits */
+  async function orgDay(iso){
+    const d=await fetchDoc();
+    return AFFILIATES.map(a=>{
+      const st=GamesCore.migrate(store.getFor(a.id,"cs.games"));
+      return {aff:a, games:GamesCore.forDate(st,iso)};
+    });
+  }
+  const lastSummary=id=>{ try{ return JSON.parse(store.getFor(id,"cs.games.import")||"null"); }catch(e){ return null; } };
+  return {apply,orgDay,fetchDoc,lastSummary};
+})();
+window.OrgSchedule=OrgSchedule;
+
 function boot(){
+  OrgSchedule.apply().then(sum=>{
+    if(!sum || !store.affiliate()) return;
+    Games.load();
+    try{ if(S?.meta?.date && !S.meta.opponent && Games.forDate(S.meta.date)){ syncGameToDay(S.meta.date); renderMeta(); } }catch(e){}
+    try{ if(VIEW==="month") renderMonth(); if(VIEW==="hub") renderHub(); }catch(e){}
+    const mine=sum[store.affiliate()];
+    if(mine&&(mine.added||mine.updated)) toast(`Game schedule loaded — ${mine.added} added${mine.updated?`, ${mine.updated} updated`:""}`);
+  });
   OrgRoster.apply().then(sum=>{
     if(!sum || !store.affiliate()) return;
     Roster.load();
@@ -14421,19 +14409,20 @@ function boot(){
   let draft=null;
   try{ const raw=store.get(K.draft); if(raw) draft=JSON.parse(raw); }catch(e){}
   const fresh = !(draft && draft.sections);
-  S = fresh ? seedSchedule() : draft;
-  if(fresh){
-    // a brand-new workspace is named for its own affiliate, not the seed's
-    const m=store.affiliateMeta();
-    if(m){
-      S.meta.teamName = m.name;
-      S.meta.title = m.id==="fcl" ? "Florida Complex Schedule" : `${m.name} Daily Schedule`;
-    }
-  }
+  // Manager Hub opens on today (the affiliate's time zone). A brand-new workspace starts on an empty day —
+  // never the old sample. A new session moves to today and keeps the previous day in the saved list; a
+  // refresh in the same tab (sessionStorage) keeps whatever date the user picked.
+  const today = Today.iso();
+  let sameSession=false;
+  try{ sameSession=!!sessionStorage.getItem("cs.day."+store.affiliate()); sessionStorage.setItem("cs.day."+store.affiliate(),"1"); }catch(e){}
+  S = fresh ? blankDay(today) : draft;
   migrateToMasterLists();
   migrateGroupTypes();
   migrateRowTimes();
   if(!S.meta.title) S.meta.title="Daily Schedule";
+  if(!fresh && !sameSession && S.meta.date!==today) openDate(today);
+  else if(fresh) syncGameToDay(today);
+  Today.watch(()=>{ try{ if(VIEW==="month") renderMonth(); if(VIEW==="hub") renderHub(); renderMeta(); }catch(e){} });
   Brand.apply(store.affiliate());
   renderAffChip();
   renderMeta(); renderSections(); go("hub");
@@ -14463,6 +14452,7 @@ boot();
 <script src="assistant/day-engine.js"></script>
 <script src="assistant/day-ui.js"></script>
 <script src="hub/dashboard.js"></script>
+<script src="games/games-ui.js"></script>
 <script src="camp/camp-core.js"></script>
 <script src="camp/camp.js"></script>
 <script>

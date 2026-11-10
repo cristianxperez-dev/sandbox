@@ -36,6 +36,8 @@ async function fresh(b, opts = {}) {
   p.on("dialog", (d) => d.accept(opts.prompt || "Test"));
   await p.goto(BASE); await wait(p, 600);
   if (await p.locator("#affGate").isVisible()) { await p.locator("#affGateList button", { hasText: "FCL" }).first().click(); await wait(p, 700); }
+  // a new workspace opens on an empty day for today; these checks work on the built-in sample day (groups Blue / Orange …)
+  if (!opts.blank) await p.evaluate(() => { const t = S.meta.date; S = seedSchedule(); S.meta.date = t; saveDraft(); renderMeta(); renderSections(); });
   return { ctx, p, errs };
 }
 const draft = (p, mine) => p.evaluate((mine) => { const d = MHAssistUI.draft; return d ? d.events.concat(d.keepOthers && !mine ? d.kept : []).map((e) => ({ id: e.id, g: e.group, a: e.activity, s: e.start, e: e.end, d: e.dur, l: e.location, st: e.staff })) : null; }, !!mine);

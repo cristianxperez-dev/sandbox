@@ -1,0 +1,97 @@
+/* Manager Hub — games (games/games-ui.js). Restrained: navy edge for home, outlined for road, nothing louder
+   than the activity chips around it. Home / away read from the edge and the "GAME" / "AWAY" label, not colour alone. */
+.gcard{
+  display:flex;flex-direction:column;align-items:flex-start;gap:1px;min-width:0;text-align:left;
+  border:1px solid var(--line-2,#D5DBE5);border-left:4px solid var(--navy,#002D62);border-radius:9px;
+  background:#fff;padding:7px 11px;cursor:pointer;font:inherit;color:var(--ink,#1B2433);
+  transition:border-color .15s,box-shadow .15s;
+}
+.gcard:hover{box-shadow:0 1px 6px rgba(0,30,70,.10);border-color:var(--navy-600,#123E7C)}
+.gcard:focus-visible{outline:2px solid var(--orange,#EB6E1F);outline-offset:2px}
+.gcard.away{border-left-style:solid;border-left-color:var(--muted,#6B7280);background:var(--bg-secondary,#F6F7F9)}
+.gc-k{font-size:12px;font-weight:800;letter-spacing:.03em;color:var(--navy,#002D62);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
+.gcard.away .gc-k{color:#3A4352}
+.gc-s{font-size:12.5px;color:var(--text-secondary,#4B5565);font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.gcard.compact{padding:5px 10px}
+.gcard.compact .gc-k{font-size:11.5px}
+.gcard.compact .gc-s{font-size:12px}
+.gc-st,.gc-rev{font-style:normal;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border-radius:4px;padding:0 5px;margin-left:4px}
+.gc-st{background:#FDECEC;color:#9B1C1C}
+.gc-rev{background:#FFF4E5;color:#8A4B00}
+.gcard.st-postponed .gc-s,.gcard.st-canceled .gc-s{text-decoration:line-through}
+
+/* calendar chips (several per day for a doubleheader) */
+.cal-gms{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}
+.cal-gm{cursor:pointer;border-left:3px solid var(--navy,#002D62)}
+.cal-gm.away{border-left-color:var(--muted,#6B7280)}
+.cal-gm.st-postponed,.cal-gm.st-canceled{opacity:.6;text-decoration:line-through}
+.cal-gm:focus-visible{outline:2px solid var(--orange,#EB6E1F);outline-offset:1px}
+
+/* Daily view: the day's game, fixed above the schedule */
+.dgame{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 10px}
+.dgame .gcard{flex:0 1 auto;max-width:100%}
+.dgame-n{font-size:12px;color:var(--muted,#6B7280)}
+.day-empty{grid-column:1/-1;border:1.5px dashed var(--line-2,#D5DBE5);border-radius:14px;padding:26px 20px;text-align:center;background:rgba(255,255,255,.6);margin:0 0 12px}
+.day-empty h3{font-family:var(--f-display);letter-spacing:.05em;text-transform:uppercase;color:var(--navy,#002D62);margin:0 0 6px;font-size:16px}
+.day-empty p{margin:0 0 14px;color:var(--muted,#6B7280);font-size:13.5px}
+.day-empty-a{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+
+/* date navigation beside the Daily date */
+.daynav{display:flex;align-items:center;gap:4px}
+.daynav input{min-width:0;flex:1}
+.daynav .btn{flex:none}
+
+/* calendar day panel */
+.gp-list{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+
+/* detail panel */
+.gdl{display:grid;grid-template-columns:max-content 1fr;gap:7px 16px;margin:0 0 12px;font-size:14px}
+.gdl dt{color:var(--muted,#6B7280);font-weight:600}
+.gdl dd{margin:0;color:var(--ink,#1B2433);font-variant-numeric:tabular-nums}
+.gnote{border:1px solid #F2D6C0;background:#FFF7F0;border-radius:10px;padding:10px 12px;font-size:13.5px;margin:0 0 10px}
+.gnote-a{margin-top:8px}
+.gfoot{margin-top:6px}
+
+/* game list / organisation board */
+.gtabs{padding:0 20px;border-bottom:1px solid var(--line,#E5E9F0)}
+.gseg{display:inline-flex;border:1px solid var(--line-2,#D5DBE5);border-radius:8px;overflow:hidden;margin-left:auto}
+.gseg button{border:0;background:#fff;font:inherit;font-size:12.5px;padding:5px 10px;cursor:pointer;color:var(--text-secondary,#4B5565)}
+.gseg button+button{border-left:1px solid var(--line-2,#D5DBE5)}
+.gseg button.on{background:var(--navy,#002D62);color:#fff}
+.gmonth{font-family:var(--f-display);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--navy,#002D62);margin:14px 0 6px}
+.gmonth span{color:var(--muted,#6B7280);font-weight:600;margin-left:4px}
+.glist{display:flex;flex-direction:column;gap:5px}
+.glist-r{display:grid;grid-template-columns:118px 1fr;gap:10px;align-items:center}
+.glist-r.is-today .glist-d{color:var(--orange,#EB6E1F);font-weight:800}
+.glist-d{font-size:12.5px;font-weight:600;color:var(--text-secondary,#4B5565);font-variant-numeric:tabular-nums}
+.glist-r .gcard{width:100%}
+.gorg-nav{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:0 0 10px}
+.gorg-nav input{border:1px solid var(--line-2,#D5DBE5);border-radius:8px;padding:5px 8px;font:inherit}
+.gorg-day{margin-left:6px;color:var(--navy,#002D62)}
+.gorg-f{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 12px}
+.gorg-f .gseg{margin-left:0}
+.gaffs{display:inline-flex;flex-wrap:wrap;gap:4px}
+.gaff{border:1px solid var(--line-2,#D5DBE5);background:#fff;border-radius:20px;padding:3px 10px;font:inherit;font-size:12px;font-weight:700;color:var(--muted,#6B7280);cursor:pointer}
+.gaff.on{border-color:var(--navy,#002D62);color:var(--navy,#002D62);background:var(--navy-100,#E7EDF6)}
+.gorg{display:flex;flex-direction:column;gap:6px}
+.gorg-r{display:grid;grid-template-columns:200px 1fr;gap:12px;align-items:center;padding:8px 10px;border:1px solid var(--line,#E5E9F0);border-radius:10px;background:#fff}
+.gorg-r.off{background:var(--bg-secondary,#F6F7F9)}
+.gorg-t{display:flex;align-items:center;gap:9px;min-width:0}
+.gorg-t img{object-fit:contain;flex:none}
+.gorg-t span{display:flex;flex-direction:column;min-width:0}
+.gorg-t b{font-size:13.5px;color:var(--ink,#1B2433)}
+.gorg-t i{font-style:normal;font-size:11.5px;color:var(--muted,#6B7280)}
+.gorg-g{display:flex;flex-wrap:wrap;gap:6px;min-width:0}
+.gorg-off{font-size:13px;color:var(--muted,#6B7280);font-weight:600}
+.gimp{width:100%;border-collapse:collapse;font-size:13.5px;margin:10px 0}
+.gimp th,.gimp td{border-bottom:1px solid var(--line,#E5E9F0);padding:7px 6px;text-align:left;vertical-align:top}
+.gimp th{font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted,#6B7280)}
+
+@media (max-width:640px){
+  .glist-r{grid-template-columns:1fr;gap:3px}
+  .gorg-r{grid-template-columns:1fr;gap:6px}
+  .gdl{grid-template-columns:1fr;gap:2px}
+  .gdl dd{margin-bottom:6px}
+  .daynav{flex-wrap:nowrap}
+  .dgame .gcard{flex:1 1 100%}
+}

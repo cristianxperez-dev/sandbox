@@ -103,7 +103,7 @@ const RED_DOT = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfF
     const lost = Object.keys(before).filter((k) => !(k in after));
     ok(lost.length === 0 && after["cs.brand"] === before["cs.brand"], `no stored data deleted (old branding left in place)${lost.length ? ": lost " + lost.join(",") : ""}`);
     const d = JSON.parse(after["cs.sl.draft"]);
-    ok(d.meta.logoL === RED_DOT && Array.isArray(d.sections) && d.sections.length > 0, "the schedule itself is untouched");
+    ok(d.meta.logoL === RED_DOT && Array.isArray(d.sections) && JSON.stringify(d.sections) === JSON.stringify(JSON.parse(before["cs.sl.draft"]).sections), "the schedule itself is untouched");
     // PNG export inlines the logos so they appear in the image
     const png = await p.evaluate(async () => { const bl = await sheetPNGBlob(1); const t = document.createElement("div"); t.innerHTML = '<img src="brand/sl.png"><i style="background-image:url(\'brand/fcl.svg\')"></i>'; await inlineImages(t); return { size: bl ? bl.size : 0, img: t.querySelector("img").getAttribute("src").slice(0, 22), bg: t.querySelector("i").getAttribute("style").slice(0, 40) }; });
     ok(png.size > 20000 && png.img === "data:image/png;base64," && /url\('data:image\/svg\+xml/.test(png.bg), `PNG export works and embeds the logos (${png.size} bytes)`);

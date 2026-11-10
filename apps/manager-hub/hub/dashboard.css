@@ -81,3 +81,19 @@
   .dash-tool.wide{display:none}
 }
 @media print{.dash-editbar,.hub-cust{display:none!important}}
+
+/* games widgets (cards: games/games.css) */
+.dash-k{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted,#6B7280);margin:2px 0 5px}
+.dash-gtoday{display:flex;flex-direction:column;gap:5px;margin-bottom:8px}
+.dash-gtoday .gcard{width:100%}
+.dash-glist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:5px}
+.dash-glist li{display:grid;grid-template-columns:86px 1fr;gap:8px;align-items:center;min-width:0}
+.dash-glist li b{font-size:12px;color:var(--text-secondary,#4B5565);font-variant-numeric:tabular-nums}
+.dash-glist .gcard{width:100%;min-width:0}
+.dash-glist li.next .gcard{border-color:var(--navy,#002D62)}
+.dash-org{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:5px}
+.dash-org li{display:grid;grid-template-columns:70px 1fr;gap:8px;align-items:center;min-width:0}
+.dash-org-t{display:flex;flex-direction:column}
+.dash-org-t b{font-size:13px;color:var(--navy,#002D62)}
+.dash-org-t em{font-style:normal;font-size:11px;color:var(--muted,#6B7280)}
+.dash-org .gcard{width:100%;min-width:0}
