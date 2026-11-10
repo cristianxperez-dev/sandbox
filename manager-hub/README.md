@@ -60,10 +60,20 @@ Audit and priorities: [`UX-AUDIT.md`](UX-AUDIT.md).
   - a scroll hint and active-tab scrolling for the module strip on phones;
   - day actions (New day / Open / Save / Generate) hidden where they don't apply;
   - the Fast keys card limited to the Daily builder.
-- **Camp.** A top-level tab, `apps/manager-hub/camp/`, for organisation-wide camps and workouts.
-  - It is hidden until the module is complete: the tab, its dashboard widget and its module entry appear only when `camp.js` sets `CampUI.ready`.
-  - Its data lives in `localStorage["cs.camp.v1"]`. It reads the affiliate rosters and never writes them.
-- Tests: `tests/dashboard.e2e.cjs`.
+- **Camp** (top-level tab; `apps/manager-hub/camp/`: `camp-core.js` pure logic, `camp.js` view, `camp.css`). Organisation-wide camps and workouts:
+  - **Camps.** Each camp has a name, location, timezone, dates, notes and a day window. There is a Florida-complex facility preset; facilities are fully editable, each with a type, a player capacity and how many activities may share it at once. Staff can be free text or picked from the affiliates' coach lists.
+  - **Players.** The pool is every affiliate roster, read-only through `RosterRoute.readRoster`. Players are never copied, and their affiliate assignment never changes. Search and filters cover level, role, catcher, position, throws, bats, status and camp group, with multi-select (shift-click, select all filtered). Temporary camp groups can overlap.
+  - **Schedule.** Three views:
+    - a facility grid (drag to move or change facility, drag the edge to resize, keyboard alternatives);
+    - an agenda, which is the default on phones;
+    - a week overview.
+  - **Reuse.** Duplicate an activity or a day, copy a day to a date or range, and save or apply templates.
+  - **Conflicts.** Errors: a player or staff member double-booked (groups are expanded to players), a facility double-booked or over capacity. Separate informational warnings. Nothing blocks saving.
+  - **Draft and publish.** Publish shows a diff first. Printouts (daily grid, coach, player itinerary, facility) and CSV use the published version; a printed draft is watermarked DRAFT. Undo covers the last 40 edits.
+  - **Storage.** Data lives in `localStorage["cs.camp.v1"]` (org-wide, per browser). Times are minutes in the camp's own timezone. Unreadable data is backed up before recovery.
+  - No AI calls. The Camp tab, its dashboard widget and its module entry appear only when `camp.js` sets `CampUI.ready`.
+  - Only the five affiliates' rosters exist in Manager Hub (no MLB or DSL data). Camp lists what is there and invents nothing.
+- Tests: `tests/dashboard.e2e.cjs`, `tests/camp-core.test.mjs`, `tests/camp.e2e.cjs`.
 
 ## Describe Your Day
 

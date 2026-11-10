@@ -58,4 +58,11 @@ The audit covers every top-level view and modal at 1440 px and 390 px on a fresh
 
 ## 3. Changes in this round
 
-See `manager-hub/README.md` → Manager Hub 2.0.
+See `manager-hub/README.md` → Manager Hub 2.0. In short:
+
+- the customizable dashboard (#4, #8);
+- the phone fixes #1–#3;
+- contextual header actions (#6) and the Fast keys card limited to the Daily builder (#7);
+- the new Camp module.
+
+Open items: #5, #10–#12, #14 and #15. The Daily builder doesn't use category colours yet (#13).

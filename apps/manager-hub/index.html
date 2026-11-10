@@ -7329,7 +7329,7 @@ function updateBrand(){
   }
   if(sub){
     const where=VIEW_NAME[VIEW]||VIEW_NAME.schedule;
-    const when=S?.meta?.date?longDate(S.meta.date):"";
+    const when=(VIEW!=="camp"&&S?.meta?.date)?longDate(S.meta.date):"";   // Camp is org-wide: the Daily date doesn't apply
     sub.textContent = when? `${where} · ${when}` : where;
   }
   document.title = S?.meta?.date

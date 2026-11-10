@@ -227,7 +227,7 @@
       <div class="c-title">
         <div class="c-eyebrow">Camp · Organization-wide</div>
         <div class="c-namerow"><h2 class="c-h1">${h(camp.name)}</h2>
-          <label class="c-switch"><span class="c-sr">Switch camp</span><select data-cf="camp-switch" aria-label="Switch camp">${state.camps.map((c) => `<option value="${h(c.id)}" ${c.id === camp.id ? "selected" : ""}>${h(c.name)}</option>`).join("")}<option value="__new">+ New camp…</option></select></label>
+          ${state.camps.length > 1 ? `<label class="c-switch"><span class="c-sr">Switch camp</span><select data-cf="camp-switch" aria-label="Switch camp">${state.camps.map((c) => `<option value="${h(c.id)}" ${c.id === camp.id ? "selected" : ""}>${h(c.name)}</option>`).join("")}<option value="__new">+ New camp…</option></select></label>` : `<button class="btn sm quiet" data-ca="new-camp">${ICON.plus} New camp</button>`}
         </div>
         <div class="c-meta">${camp.location ? `<span>${h(camp.location)}</span>` : ""}<span>${h(C.fmtRange(camp.start, camp.end))} · ${plural(days, "day")}</span><span class="c-tz" title="${h(camp.tz)}">${ICON.clock} Times in ${h(C.tzAbbr(camp.tz, ui.date || camp.start))} · ${h(C.tzCity(camp.tz))}</span></div>
       </div>
@@ -1058,6 +1058,7 @@
     switch (a) {
       case "banner-x": storageNote = ""; render(); return;
       case "create-camp": return; // handled by submit
+      case "new-camp": return newCampDialog();
       case "tab": ui.tab = k; if (k !== "schedule") ui.sel = null; render(); return;
       case "undo": return undo();
       case "publish": return publishDialog();
@@ -1398,5 +1399,5 @@
     render();
   }
 
-  window.CampUI = { show, _debug: { state: () => state, ui, pool: () => pool } };
+  window.CampUI = { show, ready: true, _debug: { state: () => state, ui, pool: () => pool } };
 })();
