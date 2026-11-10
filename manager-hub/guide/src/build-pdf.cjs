@@ -3,7 +3,7 @@
 const { chromium } = require("playwright");
 const path = require("path"), fs = require("fs");
 const SRC = path.join(__dirname, "quick-start.html");
-const OUT = path.join(__dirname, "..", "..", "..", "apps", "manager-hub", "guide", "Manager_Hub_Quick_Start_Guide.pdf");   // served with the app (behind the access code)
+const OUT = path.join(__dirname, "..", "..", "..", "apps", "manager-hub", "guide", "manager-hub-quick-start-guide.pdf");   // served with the app (behind the access code; the gate serves lowercase paths only)
 (async () => {
   const b = await chromium.launch();
   const p = await b.newPage({ viewport: { width: 816, height: 1056 }, deviceScaleFactor: 2 });
