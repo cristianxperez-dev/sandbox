@@ -17,6 +17,7 @@
    Login: same-origin POST only, constant-time comparison (trimmed, case-insensitive), 0.7 s delay on every
    failure, 5 failures in 10 minutes from one IP → 15-minute lockout (per edge isolate; pair it with a
    Cloudflare WAF rate-limiting rule). Missing secrets → 503 for the protected app only (fails closed). */
+import { deploymentOf } from "../manager-hub/server/ai-config.js";
 
 const SESSION_SECONDS = 15 * 24 * 60 * 60;
 const MAX_FAILURES = 5, FAILURE_WINDOW_MS = 10 * 60 * 1000, LOCKOUT_MS = 15 * 60 * 1000, FAILURE_DELAY_MS = 700;
@@ -144,6 +145,11 @@ export function createGate(apps, opts = {}) {
     const clear = `${name}=; Path=${app.base}; Max-Age=0; HttpOnly; Secure; SameSite=Lax`;
 
     if (raw === logoutPath) return redirect(accessPath, { "Set-Cookie": clear });
+    // configuration check: which settings are present in this deployment (booleans only, never values)
+    if (raw === accessPath + "status" && request.method === "GET") {
+      const body = Object.assign({ app: app.id, host: url.hostname, deployment: deploymentOf(url.hostname), gate: { accessCodePresent: typeof code === "string" && code.trim().length > 0, sessionSecretPresent: typeof secret === "string" && secret.length >= 32 } }, app.status ? app.status(env, url.hostname) : {});
+      return new Response(JSON.stringify(body, null, 2), { status: 200, headers: { ...PRIVATE, "Content-Type": "application/json" } });
+    }
     if (!configured) return accessPage(app, { error: "config", status: 503 });
 
     if (raw === loginPath) {

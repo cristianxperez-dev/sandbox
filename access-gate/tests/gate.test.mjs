@@ -132,3 +132,27 @@ test("sign-out clears the cookie and returns to the access page", async () => {
   assert.equal(r.res.status, 303); assert.equal(r.res.headers.get("Location"), "/apps/manager-hub/access/");
   assert.match(r.res.headers.get("Set-Cookie"), /^sbx_manager_hub=; Path=\/apps\/manager-hub\/; Max-Age=0; HttpOnly; Secure; SameSite=Lax$/);
 });
+
+test("status route: presence of settings only, never values; production locked without explicit approval", async () => {
+  const KEY = "sk-test-0123456789abcdefghijklmnopqrstuvwxyz";
+  const env = { ...ENV, OPENAI_API_KEY: KEY, MH_AI_ENABLED: "1" };
+  const statusAt = async (origin, e = env) => {
+    const res = await gate({ request: new Request(origin + "/apps/manager-hub/access/status"), env: e, next: async () => new Response("x") });
+    return [res.status, await res.text(), res.headers.get("Cache-Control")];
+  };
+  let [s, t, cc] = await statusAt("https://cperez.app");
+  let b = JSON.parse(t);
+  assert.equal(s, 200); assert.equal(cc, "private, no-store");
+  assert.equal(b.deployment, "production"); assert.equal(b.ai.openaiKeyPresent, true); assert.equal(b.ai.enabledFlag, true);
+  assert.equal(b.ai.active, false, "MH_AI_ENABLED=1 alone never switches AI on in production"); assert.equal(b.ai.reason, "production-not-approved");
+  assert.ok(!t.includes(KEY) && !t.includes(CODE) && !t.includes(SECRET), "no secret values in the output");
+  [s, t] = await statusAt("https://claude-youthful-mayer-58ydbz.sandbox-34x.pages.dev"); b = JSON.parse(t);
+  assert.equal(b.deployment, "preview"); assert.equal(b.ai.active, true);
+  [s, t] = await statusAt("https://cperez.app", { ...env, MH_AI_PRODUCTION: "approved" }); assert.equal(JSON.parse(t).ai.active, true, "explicit approval switches production on");
+  [s, t] = await statusAt("https://evil.example"); assert.equal(JSON.parse(t).deployment, "production", "unknown hosts are treated as production");
+  [s, t] = await statusAt("https://cperez.app", {}); b = JSON.parse(t);
+  assert.equal(b.gate.accessCodePresent, false); assert.equal(b.ai.openaiKeyPresent, false); assert.equal(b.ai.reason, "no-key");
+  // nothing else under the app is reachable without a session
+  const other = await gate({ request: new Request("https://cperez.app/apps/manager-hub/api/interpret", { method: "POST" }), env, next: async () => new Response("x") });
+  assert.equal(other.status, 401);
+});

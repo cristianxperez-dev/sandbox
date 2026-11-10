@@ -43,19 +43,21 @@ try {
   }
 }
 
-// MH_EVAL_INTERPRETER=ai (with ANTHROPIC_API_KEY) sends every prompt through the real AI interpreter
+// MH_EVAL_INTERPRETER=ai (with OPENAI_API_KEY, MH_AI_MODEL) sends every prompt through the real AI interpreter
 // endpoint instead of the built-in reader; the solver and every check are identical.
 const AI = process.env.MH_EVAL_INTERPRETER === "ai";
 let endpoint = null;
 async function viaEndpoint(body) {
   if (!endpoint) endpoint = await import("../../functions/apps/manager-hub/api/interpret.js");
-  const res = await endpoint.onRequestPost({ env: { ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY, MH_AI_ENABLED: "1", MH_AI_MODEL: process.env.MH_AI_MODEL },
-    request: new Request("https://cperez.app/apps/manager-hub/api/interpret", { method: "POST", headers: { "Content-Type": "application/json", Origin: "https://cperez.app" }, body: JSON.stringify(body) }) });
+  const env = { OPENAI_API_KEY: process.env.OPENAI_API_KEY, MH_AI_ENABLED: "1", MH_AI_MODEL: process.env.MH_AI_MODEL, MH_AI_EFFORT: process.env.MH_AI_EFFORT, MH_AI_RATE: "1000000", MH_AI_DAILY: "1000000", MH_AI_LOG: "0" };
+  const origin = "https://eval.sandbox-34x.pages.dev";   // evaluated as a preview host — production stays locked
+  const res = await endpoint.onRequestPost({ env, request: new Request(origin + "/apps/manager-hub/api/interpret", { method: "POST", headers: { "Content-Type": "application/json", Origin: origin }, body: JSON.stringify(body) }) });
   const d = await res.json();
   USAGE.calls++;
-  if (d.usage) { USAGE.input += d.usage.input_tokens || 0; USAGE.output += d.usage.output_tokens || 0; USAGE.cacheRead += d.usage.cache_read_input_tokens || 0; USAGE.cacheWrite += d.usage.cache_creation_input_tokens || 0; }
-  if (d.ms) USAGE.ms += d.ms;
-  if (!res.ok) { USAGE.errors++; throw new Error(`AI interpreter ${res.status}: ${JSON.stringify(d)}`); }
+  if (d.usage) { USAGE.input += d.usage.input_tokens || 0; USAGE.output += d.usage.output_tokens || 0; USAGE.cacheRead += d.usage.cached_input_tokens || 0; USAGE.reasoning += d.usage.reasoning_tokens || 0; }
+  if (d.ms) { USAGE.ms += d.ms; USAGE.lat.push(d.ms); }
+  if (d.model) USAGE.model = d.model;
+  if (!res.ok) { USAGE.errors++; USAGE.errorKinds[d.error] = (USAGE.errorKinds[d.error] || 0) + 1; throw new Error(`AI interpreter ${res.status}: ${JSON.stringify(d)}`); }
   return d;
 }
 const wire = (ctx) => ({ date: ctx.date, affiliate: ctx.affiliate, hittingGroups: ctx.hittingGroups, pitcherGroups: ctx.pitcherGroups, resources: ctx.resources, game: ctx.game });
@@ -118,7 +120,7 @@ function runChecks(checks, r) {
 // ─────────────── scenarios ───────────────
 const results = []; // { cat, id, pass, fails }
 let lastFails = [];
-const USAGE = { calls: 0, input: 0, output: 0, cacheRead: 0, cacheWrite: 0, ms: 0, errors: 0 };
+const USAGE = { calls: 0, input: 0, output: 0, cacheRead: 0, reasoning: 0, ms: 0, lat: [], errors: 0, errorKinds: {}, model: null };
 
 for (const sc of SCENARIOS) {
   test(`[${sc.cat}] ${sc.id}`, async () => {
@@ -188,7 +190,7 @@ test("scoring summary (pass/fail per category)", async () => {
   const out = ["", `Describe Your Day — evaluation summary (${AI ? "AI interpreter: " + (process.env.MH_AI_MODEL || "default model") : "built-in reader"})`, line("category", "total", "pass", "fail"), "  " + "─".repeat(w + 21)];
   rows.forEach((r) => out.push(line(r.cat, r.n, r.pass, r.n - r.pass)));
   out.push("  " + "─".repeat(w + 21), line("TOTAL", tot.n, tot.pass, tot.n - tot.pass), `  pass rate ${tot.n ? Math.round((100 * tot.pass) / tot.n) : 0}%`);
-  if (AI) out.push(`  model calls ${USAGE.calls} (${USAGE.errors} errors) · tokens in ${USAGE.input} (+${USAGE.cacheRead} cached read, ${USAGE.cacheWrite} cache write) · out ${USAGE.output} · avg ${USAGE.calls ? Math.round(USAGE.ms / USAGE.calls) : 0} ms`);
+  if (AI) out.push(`  model ${USAGE.model || process.env.MH_AI_MODEL} · calls ${USAGE.calls} (${USAGE.errors} errors ${JSON.stringify(USAGE.errorKinds)}) · tokens in ${USAGE.input} (${USAGE.cacheRead} cached) · out ${USAGE.output} (${USAGE.reasoning} reasoning) · avg ${USAGE.calls ? Math.round(USAGE.ms / USAGE.calls) : 0} ms`);
   const failed = results.filter((x) => !x.pass);
   if (failed.length) {
     out.push("", "  failing scenarios:");

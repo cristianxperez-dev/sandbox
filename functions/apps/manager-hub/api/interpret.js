@@ -1,4 +1,4 @@
-/* Manager Hub — AI interpreter for "Describe Your Day".
+/* Manager Hub — AI interpreter for "Describe Your Day" (OpenAI Responses API, strict Structured Outputs).
    POST /apps/manager-hub/api/interpret   (behind the Manager Hub access code: functions/_middleware.js)
    body: { mode: "build" | "refine", text, ctx, request?, plan? }
 
@@ -7,30 +7,32 @@
    conflict work, and the coach reviews before anything is saved. The built-in reader's parse is sent
    along as a draft for the model to correct.
 
-   Configuration (Cloudflare Pages → Settings → Variables and Secrets; set per environment):
-     ANTHROPIC_API_KEY  secret, required.
-     MH_AI_ENABLED      "1" switches the interpreter on. Leave unset in Production until the real-model
-                        evaluation passes and the owner approves (manager-hub/README.md → Describe Your Day).
-     MH_AI_MODEL        optional model id (default below).
-     MH_AI_EFFORT       optional: low (default) | medium | high.
-     MH_AI_RATE         optional: requests per client IP per 10 minutes (default 20).
-     MH_AI_DAILY        optional: requests per client IP per day (default 150).
-   Hard spend limits belong in the Anthropic Console (workspace spend limit); the limits here only
+   Configuration (Cloudflare Pages → Settings → Variables and Secrets; per environment):
+     OPENAI_API_KEY      secret, required.
+     MH_AI_ENABLED       "1" switches the interpreter on.
+     MH_AI_PRODUCTION    "approved" is ALSO required on production hosts (cperez.app) — the owner's explicit
+                         go-ahead. See manager-hub/server/ai-config.js. Check any deployment's state at
+                         GET /apps/manager-hub/access/status (presence only, never values).
+     MH_AI_MODEL         model id (default in ai-config.js).
+     MH_AI_EFFORT        reasoning effort: low (default) | medium | high | none (omit the parameter).
+     MH_AI_RATE          requests per client IP per 10 minutes (default 20).
+     MH_AI_DAILY         requests per client IP per day (default 150).
+   Hard spend limits belong in the OpenAI dashboard (project budget / usage limits); the limits here only
    stop runaway use from one browser. The key never leaves this function. Only the request text and a
    compact context are sent (group names, resource counts, game time, the day's structure) — no roster.
-   Logs record mode, status, tokens and latency only — never the coach's text. */
+   Logs record mode, status, model, tokens and latency only — never the coach's text or the key. */
 import DaySolve from "../../../../apps/manager-hub/assistant/day-solve.js";
 import DayKB from "../../../../apps/manager-hub/assistant/day-kb.js";
 import DayRead from "../../../../apps/manager-hub/assistant/day-read.js";
+import { aiState } from "../../../../manager-hub/server/ai-config.js";
 
-const DEFAULT_MODEL = "claude-opus-5-5";
 const MAX_TEXT = 1500, MAX_CTX = 16000, TIMEOUT_MS = 25000;
 const MAX_TOKENS = { build: 6000, refine: 3000 };
 const JSON_HEADERS = { "Content-Type": "application/json", "Cache-Control": "private, no-store" };
 const reply = (status, body, extra = {}) => new Response(JSON.stringify(body), { status, headers: { ...JSON_HEADERS, ...extra } });
 
 /* ---------------------------------------------------------- rate limits
-   Per edge isolate (best effort, like the access gate's lockout). Real spend caps: Anthropic Console. */
+   Per edge isolate (best effort, like the access gate's lockout). Real spend caps: the OpenAI project budget. */
 const hits = new Map();   // ip -> {short:[ts…], day:{d, n}}
 function limited(ip, env, now = Date.now()) {
   const perTen = +env.MH_AI_RATE || 20, perDay = +env.MH_AI_DAILY || 150;
@@ -93,7 +95,8 @@ function planLines(plan) {
   return plan.items.slice(0, 60).map((i) => `${f(i.start)}–${f(i.end)} [${i.track}${i.group ? "/" + i.group : ""}] ${i.label} (activity ${i.actId || "-"}${i.fixed ? ", fixed" : ""})`).join("\n");
 }
 
-async function callModel(env, { mode, text, ctx, request, plan }) {
+/** OpenAI Responses API call with a strict JSON-schema output. Returns {out, model, usage, ms} or {error, status, ms}. */
+async function callModel(env, model, { mode, text, ctx, request, plan }) {
   const schema = mode === "refine" ? DaySolve.REFINE_RESPONSE_SCHEMA : DaySolve.BUILD_RESPONSE_SCHEMA;
   let user;
   if (mode === "refine") {
@@ -102,49 +105,55 @@ async function callModel(env, { mode, text, ctx, request, plan }) {
     let draft = null; try { draft = DaySolve.normalize(DayRead.read(text, ctx)); } catch (e) { draft = null; }
     user = `Context: ${JSON.stringify(ctx)}\n\nDraft parse from the rule-based reader (may be wrong or incomplete):\n${draft ? JSON.stringify(draft) : "(none)"}\n\nCoach: ${text}`;
   }
+  const effort = env.MH_AI_EFFORT || "low";
+  const body = {
+    model,
+    instructions: SYSTEM(),                     // stable prefix: cached automatically by the API
+    input: [{ role: "user", content: user }],
+    text: { format: { type: "json_schema", name: mode === "refine" ? "day_edits" : "day_request", strict: true, schema } },
+    max_output_tokens: MAX_TOKENS[mode],
+    store: false,
+    prompt_cache_key: "manager-hub-day-" + mode
+  };
+  if (effort !== "none") body.reasoning = { effort };
   const ac = new AbortController();
   const timer = setTimeout(() => ac.abort(), TIMEOUT_MS);
   const t0 = Date.now();
   try {
-    const r = await fetch("https://api.anthropic.com/v1/messages", {
+    const r = await fetch("https://api.openai.com/v1/responses", {
       method: "POST", signal: ac.signal,
-      headers: {
-        "content-type": "application/json",
-        "x-api-key": env.ANTHROPIC_API_KEY,
-        "anthropic-version": "2026-10-21",
-        "anthropic-beta": "server-side-fallback-2026-07-01"
-      },
-      body: JSON.stringify({
-        model: env.MH_AI_MODEL || DEFAULT_MODEL,
-        max_tokens: MAX_TOKENS[mode],
-        output_config: { effort: env.MH_AI_EFFORT || "low", format: { type: "json_schema", schema } },
-        fallbacks: "default",
-        system: [{ type: "text", text: SYSTEM(), cache_control: { type: "ephemeral" } }],
-        messages: [{ role: "user", content: user }]
-      })
+      headers: { "Content-Type": "application/json", Authorization: `Bearer ${env.OPENAI_API_KEY}` },
+      body: JSON.stringify(body)
     });
     const ms = Date.now() - t0;
     const data = await r.json().catch(() => null);
-    if (!r.ok || !data) return { error: `model-service-${r.status}`, status: r.status === 429 ? 429 : r.status === 401 || r.status === 403 ? 502 : 502, ms };
-    if (data.stop_reason === "refusal") return { error: "declined", status: 422, ms, usage: data.usage };
-    if (data.stop_reason === "max_tokens") return { error: "incomplete", status: 502, ms, usage: data.usage };
-    const block = (data.content || []).find((b) => b.type === "text");
-    let out; try { out = JSON.parse(block ? block.text : ""); } catch (e) { return { error: "malformed", status: 502, ms, usage: data.usage }; }
-    return { out, model: data.model, usage: data.usage, ms };
+    if (!r.ok || !data) {
+      const code = data && data.error && (data.error.code || data.error.type) || "";
+      return { error: r.status === 429 ? "model-rate-limited" : r.status === 404 || /model/.test(code) ? "model-unavailable" : `model-service-${r.status}`, detail: code, status: r.status === 429 ? 429 : 502, ms };
+    }
+    const usage = data.usage;
+    if (data.status === "incomplete") return { error: (data.incomplete_details && data.incomplete_details.reason) === "content_filter" ? "declined" : "incomplete", status: 502, ms, usage, model: data.model };
+    if (data.status && data.status !== "completed") return { error: "model-failed", status: 502, ms, usage, model: data.model };
+    const parts = (data.output || []).filter((o) => o.type === "message").flatMap((o) => o.content || []);
+    if (parts.some((c) => c.type === "refusal")) return { error: "declined", status: 422, ms, usage, model: data.model };
+    const textOut = parts.filter((c) => c.type === "output_text").map((c) => c.text).join("");
+    let out; try { out = JSON.parse(textOut); } catch (e) { return { error: "malformed", status: 502, ms, usage, model: data.model }; }
+    return { out, model: data.model, usage, ms };
   } catch (e) {
     return { error: e.name === "AbortError" ? "timeout" : "network", status: 504, ms: Date.now() - t0 };
   } finally { clearTimeout(timer); }
 }
 
-const usageOf = (u) => (u ? { input_tokens: u.input_tokens || 0, output_tokens: u.output_tokens || 0, cache_read_input_tokens: u.cache_read_input_tokens || 0, cache_creation_input_tokens: u.cache_creation_input_tokens || 0 } : null);
+const usageOf = (u) => (u ? { input_tokens: u.input_tokens || 0, output_tokens: u.output_tokens || 0, cached_input_tokens: (u.input_tokens_details && u.input_tokens_details.cached_tokens) || 0, reasoning_tokens: (u.output_tokens_details && u.output_tokens_details.reasoning_tokens) || 0 } : null);
 function log(env, o) { if (env.MH_AI_LOG !== "0") console.log(JSON.stringify(Object.assign({ evt: "mh-ai" }, o))); }
 
 export async function onRequestPost({ request, env }) {
   const url = new URL(request.url);
   const origin = request.headers.get("Origin");
   if ((origin && origin !== url.origin) || request.headers.get("Sec-Fetch-Site") === "cross-site") return reply(403, { error: "cross-origin" });
-  // two switches: the key, and an explicit go-ahead once the AI path has passed the evaluation
-  if (!env.ANTHROPIC_API_KEY || env.MH_AI_ENABLED !== "1") return reply(503, { error: "not-configured" });
+  // key + MH_AI_ENABLED, and on production hosts the owner's explicit approval (ai-config.js)
+  const state = aiState(env, url.hostname);
+  if (!state.active) return reply(503, { error: "not-configured", reason: state.reason });
   let body; try { body = await request.json(); } catch (e) { return reply(400, { error: "bad-json" }); }
   const mode = body && body.mode === "refine" ? "refine" : "build";
   const text = String((body && body.text) || "").trim();
@@ -158,23 +167,23 @@ export async function onRequestPost({ request, env }) {
   const lim = limited(ip, env);
   if (lim) return reply(429, { error: "rate-limited", retryAfter: lim.retry }, { "Retry-After": String(lim.retry) });
 
-  const res = await callModel(env, { mode, text, ctx, request: mode === "refine" ? DaySolve.normalize(body.request) : null, plan: body.plan });
+  const res = await callModel(env, state.model, { mode, text, ctx, request: mode === "refine" ? DaySolve.normalize(body.request) : null, plan: body.plan });
   const usage = usageOf(res.usage);
-  log(env, { mode, status: res.error || "ok", ms: res.ms, model: res.model || env.MH_AI_MODEL || DEFAULT_MODEL, usage });
-  if (res.error) return reply(res.status, { error: res.error, ms: res.ms, usage });
+  log(env, { mode, status: res.error || "ok", detail: res.detail || undefined, ms: res.ms, model: res.model || state.model, usage });
+  if (res.error) return reply(res.status, { error: res.error, ms: res.ms, usage, model: res.model || state.model });
   // the model's output is checked here and again in the page; anything malformed is refused, never repaired
   if (mode === "build") {
     const ir = res.out && res.out.request ? DaySolve.normalize(Object.assign({}, res.out.request, { source: "ai" })) : null;
     const v = ir ? DaySolve.validate(ir, { strict: true }) : { ok: false, errors: ["missing request"] };
-    if (!v.ok) return reply(502, { error: "invalid-output", details: v.errors.slice(0, 5), ms: res.ms, usage });
-    return reply(200, { request: ir, model: res.model, ms: res.ms, usage });
+    if (!v.ok) return reply(502, { error: "invalid-output", details: v.errors.slice(0, 5), ms: res.ms, usage, model: res.model });
+    return reply(200, { request: ir, model: res.model, ms: res.ms, usage, model: res.model });
   }
   const ops = res.out && Array.isArray(res.out.ops) ? DaySolve.normalizeEdits(res.out.ops) : null;
-  if (!ops || !DaySolve.validateEdits(ops, { strict: true }).ok) return reply(502, { error: "invalid-output", ms: res.ms, usage });
+  if (!ops || !DaySolve.validateEdits(ops, { strict: true }).ok) return reply(502, { error: "invalid-output", ms: res.ms, usage, model: res.model });
   const applied = DaySolve.applyEdits(DaySolve.normalize(body.request), ops);
   const v = DaySolve.validate(applied);
-  if (!v.ok) return reply(502, { error: "invalid-output", details: v.errors.slice(0, 5), ms: res.ms, usage });
-  return reply(200, { ops, notes: (res.out.notes || []).slice(0, 3), model: res.model, ms: res.ms, usage });
+  if (!v.ok) return reply(502, { error: "invalid-output", details: v.errors.slice(0, 5), ms: res.ms, usage, model: res.model });
+  return reply(200, { ops, notes: (res.out.notes || []).slice(0, 3), model: res.model, ms: res.ms, usage, model: res.model });
 }
 
 export function onRequest() {
