@@ -189,7 +189,7 @@ export async function onRequestPost({ request, env }) {
   }
   const usage = usageOf(res.usage);
   log(env, { mode, status: res.error || "ok", detail: res.detail || undefined, ms: res.ms, model: res.model || model, usage });
-  if (res.error) return reply(res.status, { error: res.error, ms: res.ms, usage, model: res.model || model });
+  if (res.error) return reply(res.status, { error: res.error, detail: res.detail || undefined, ms: res.ms, usage, model: res.model || model });
   // the model's output is checked here and again in the page; anything malformed is refused, never repaired
   if (mode === "build") {
     const ir = res.out && res.out.request ? DaySolve.normalize(Object.assign({}, res.out.request, { source: "ai" })) : null;
