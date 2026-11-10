@@ -180,6 +180,25 @@ async function pickAndBuild(p, iso, how) {
     await ctx.close();
   }
 
+  /* ------------------------------------------------ Game Day Defaults: an affiliate override drives a new day */
+  {
+    const { ctx, p, errs } = await open(b, "ash");
+    await p.click('#hubPlan [data-plb="defaults"]'); await wait(p, 500);
+    ok(await p.isVisible("#modal .gds") && /Home BP/.test(await p.inputValue('#modal tr[data-i="0"] [data-k="label"]')), "Game Day Defaults lists the standard activities");
+    await p.click('[data-gds-scope="aff"]'); await wait(p, 150);
+    await p.click("[data-gds-override]"); await wait(p, 150);
+    await p.fill('#modal tr[data-i="0"] [data-k="before"]', "180"); await p.fill('#modal tr[data-i="0"] [data-k="label"]', "Early BP");
+    await p.uncheck('#modal tr[data-i="3"] [data-k="enabled"]');
+    await p.click("#gdsSave"); await wait(p, 600);
+    const game = await p.evaluate(() => Games.all().find((g) => g.time && g.date > Today.iso()));
+    await pickAndBuild(p, game.date, "manual");
+    const it = await items(p), fp = await p.evaluate((t) => GameDay.toMin(t), game.time);
+    ok(it.some((i) => i.l === "Early BP" && i.s === fp - 180) && !it.some((i) => i.l === "Anthem"), "the affiliate's own defaults (renamed, earlier, Anthem off) build the day");
+    await p.click("#dayui [data-close]");
+    ok(errs.length === 0, "no page errors " + errs.join(" | ").slice(0, 300));
+    await ctx.close();
+  }
+
   /* ------------------------------------------------ 14: phone */
   {
     const { ctx, p, errs } = await open(b, "fay", { ctx: { viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true } });

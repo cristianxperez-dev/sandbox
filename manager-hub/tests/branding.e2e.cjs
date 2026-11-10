@@ -30,7 +30,7 @@ const RED_DOT = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfF
     await ctx.route("**/rosters/org-roster.csv", (r) => r.fulfill({ status: 200, contentType: "text/csv", body: "" }));
     const p = await ctx.newPage(), errs = [];
     p.on("pageerror", (e) => errs.push(e.message));
-    p.on("requestfailed", (r) => errs.push("failed " + r.url()));
+    p.on("requestfailed", (r) => { if (!/cloudflareinsights\.com/.test(r.url())) errs.push("failed " + r.url()); });   // production analytics beacon, blocked on this test network
     p.on("response", (r) => { if (r.status() >= 400 && !/\/api\/(settings|usage)$/.test(r.url())) errs.push(r.status() + " " + r.url()); });   // server functions: 404 on the static test server
     await p.goto(BASE); await p.evaluate(() => localStorage.clear()); await p.reload(); await p.waitForTimeout(600);
 

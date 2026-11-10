@@ -31,7 +31,8 @@ async function fresh(b, opts = {}) {
   const errs = [];
   p.on("pageerror", (e) => errs.push("pageerror: " + e.message));
   p.on("console", (m) => m.type() === "error" && !/Failed to load resource/.test(m.text()) && errs.push("console: " + m.text()));   // failed requests are reported below, with their address
-  p.on("requestfailed", (r) => !r.url().startsWith("blob:") && !r.url().startsWith("data:") && errs.push("requestfailed: " + r.url()));
+  // Cloudflare's analytics beacon is added to production pages; this test network blocks it
+  p.on("requestfailed", (r) => !r.url().startsWith("blob:") && !r.url().startsWith("data:") && !/cloudflareinsights\.com/.test(r.url()) && errs.push("requestfailed: " + r.url()));
   // api/settings and api/usage are server functions: the static test server answers 404, and the page falls back to its defaults
   p.on("response", (r) => r.status() >= 400 && !r.url().includes("/__mha_ai") && !/\/api\/(settings|usage)$/.test(r.url()) && errs.push(`${r.status()} ${r.url()}`));
   p.on("dialog", (d) => d.accept(opts.prompt || "Test"));
@@ -60,6 +61,7 @@ const lastMsg = (p) => p.evaluate(() => { const l = MHAssistUI.draft.log; return
   await safe(async () => {
     const { ctx, p, errs } = await fresh(b);
     // Manager Hub 2.0: the dashboard's "Describe your day" widget replaces the first-use card
+    await p.waitForSelector("#hubPlan .pl-build", { timeout: 8000 }).catch(() => {});   // the planner script loads after the page
     ok(await p.locator("#hubPlan .pl-build").isVisible(), "hub leads with the day planner and its Build Daily Schedule button");
     ok(/today/i.test(await p.locator("#hubPlan .pl-card").innerText()) && !(await p.locator("#mhaIntro").count()), "the planner opens on today; the old first-use card is gone");
     await p.click("#btnHelp"); await wait(p, 250);
