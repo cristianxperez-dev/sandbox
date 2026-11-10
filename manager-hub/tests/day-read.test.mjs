@@ -942,3 +942,9 @@ test("end anchor: 'everyone finishes at noon' / 'practice ends at 1' / 'we wrap 
   assert.equal(read("practice ends at 1").anchors.end, 780);
   assert.equal(read("we wrap up at 12:30").anchors.end, 750);
 });
+
+test("unpunctuated speech: 'report at 2 pitchers stretch at 3' — the 2 is a time, not two pitchers", () => {
+  const r = read("catchers report at 2 pitchers stretch at 3 and everybody finishes early work before batting practice");
+  const arr = r.activities.find((a) => a.kind === "arrival"), str = r.activities.find((a) => a.kind === "stretch");
+  assert.equal(arr.at, 840); assert.equal(arr.who, "catchers"); assert.equal(str.at, 900); assert.equal(str.who, "pitchers");
+});

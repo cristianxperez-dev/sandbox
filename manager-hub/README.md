@@ -38,6 +38,34 @@ manager-hub/
 
 The baseline differs from the upload only in the sample data. The seed schedule, the seed coach list, two placeholder examples and the classic builder's example now use fictional names; the initials are unchanged so the sample rows still line up. The unmodified upload is not committed, because this repository is public. Every module, feature and storage key (`cs.*`, per-affiliate) is unchanged.
 
+## Daily scheduling: dates, games and Build Daily Schedule (Nov 2026)
+
+**The five workspaces** are Triple-A (Sugar Land), Double-A (Corpus Christi), High-A (Asheville), Single-A (Fayetteville) and **Complex**. Complex keeps the internal id `fcl`, so the FCL roster, saved days and data are unchanged and no player is reassigned. The organization-wide Camp module lives there as the **Camps** tab (players from every affiliate, temporary groups, fields / cages / bullpens, spring training and instructs, conflict checks); the four affiliates don't show it. Camp data (`cs.camp.v1`) is untouched.
+
+**Dates.** Manager Hub opens on today in the affiliate's own time zone (`Today` in `index.html`, `DateCore` in `games/games-core.js`; Central for Sugar Land / Corpus Christi, Eastern otherwise). Nothing hard-codes a year.
+- A new workspace starts on an empty day for today, never the old 2023 sample.
+- A new session moves to today; the day that was open goes into the saved list first, so nothing is lost. A refresh in the same tab keeps the date the user picked.
+- ‹ Today › beside the Daily date, Today on the Monthly calendar and the planner; "today" markers roll over at midnight.
+
+**Game schedules** (`manager-hub/tools/import_schedules.py`, standard-library Python):
+```bash
+python3 manager-hub/tools/import_schedules.py manager-hub/schedules/source/2027_Affiliate_Schedules.xlsx --verify-mlb
+```
+- Writes `apps/manager-hub/schedules/games.json` (shipped with the app) and `manager-hub/schedules/IMPORT-REPORT.md` (counts, mapping, skipped / ambiguous rows, changes, and a game-by-game check against MLB's published schedule).
+- The file's level codes map to workspaces (aaa→sl, aax→cc, afa→ash, afx→fay). Times in the file are US Eastern without AM/PM; they are stored as exact instants plus the ballpark's local time. Opponents, ballparks and time zones come from `manager-hub/tools/schedule-teams.json` (MLB's team directory; codes are resolved within the level because COL / WIL / FRE repeat across levels).
+- Re-running is safe: stable ids (affiliate · date · game number), so nothing is duplicated; a doubleheader is two games; TBD stays TBD; postponed / canceled / rescheduled are kept when a file says so.
+- The app merges the file into every affiliate (`OrgSchedule`, once per version; `games/games-core.js` `merge`): corrections update untouched games, a game a user edited keeps the user's values and shows the schedule's change for review, a deleted game stays deleted, a hand-entered game on the same date is linked instead of duplicated, a game dropped from the file is kept and marked.
+- Games show in the Monthly calendar, the Daily view (fixed strip above the schedule), the planner, the Games window (affiliate list · organization board with home / road / off filters · import summary) and the dashboard (Games widget; "Around the organization" is opt-in under Add widget). Moving workouts never changes a game.
+
+**Affiliate page → date → Build Daily Schedule** (`hub/planner.js`). The page leads with the selected date (today by default): its game, its schedule status (No schedule · Draft · Published) and one primary action: **Build Daily Schedule**, or **Edit Daily Schedule** once a schedule exists. The month calendar beside it marks games and schedule status, and every date is tappable. Building offers:
+- **Build manually** — the timeline opens with the standard game-day activities timed from first pitch (or, in the Complex on a day without a game, the workout day); **Start empty** opens only the game.
+- **Describe your day** — typed; the AI interpreter (or the built-in reader) builds a proposal; the standard activities stay unless the description names them, and the team's own BP takes the BP slot instead of appearing twice.
+- **Describe by voice** — the browser's own speech recognition into the same text box (editable before anything is built). No audio is recorded or sent anywhere; unsupported browsers just type.
+
+The builder (`openBuilder` in `assistant/day-ui.js`) is the Describe Your Day timeline — one scheduling engine (`day-solve.js`) for both. Click a block to edit its start, length, name, group and facility in place; drag it to move (5-minute steps) or drag its lower edge to resize; add, duplicate, remove; Undo / Redo; colours from the Activity Library. **Save draft** keeps the plan with the day (`S.meta.dayPlan`); **Publish** goes through the existing review step and writes the rows (re-publishing replaces them). Reopening a day never generates the standard activities again. If the game time changes, the builder offers to recalculate: activities nobody changed follow the new first pitch; customised ones move only if you choose "all". A TBD game asks for first pitch first; a doubleheader asks which game anchors the routine. Times are the ballpark's local time.
+
+**Game Day Defaults** (planner → Game Day Defaults; `games/gameday.js`, `games/gameday-ui.js`). Organization defaults: Home BP 2:30 before first pitch (45 min), Visitor BP 1:45 before (45), Pregame Warmup 0:20 before (10), Anthem 0:10 before (10); plus the Complex workout day (from the existing "Camp" template). Each activity's name, minutes before first pitch (or start time), length, facility and on / off can be changed, for the organization or as an override for one affiliate. Stored on the server — `functions/apps/manager-hub/api/settings.js`, table `mh_settings` in the D1 database bound as `MH_AI_USAGE` (created on first use), versioned so two people can't silently overwrite each other. Without the database the built-in defaults apply and edits stay in that browser (the window says so). There are no per-user roles (one shared access code), so anyone signed in can change them.
+
 ## Manager Hub 2.0
 
 Audit and priorities: [`UX-AUDIT.md`](UX-AUDIT.md).
@@ -217,6 +245,8 @@ node manager-hub/tests/app.e2e.cjs                       # real app, Playwright 
 node manager-hub/tests/roster-import.e2e.cjs             # roster import (fictional players)
 node manager-hub/tests/branding.e2e.cjs                  # fixed affiliate logos and colours
 node --test manager-hub/tests/day-*.test.mjs manager-hub/tests/interpret.test.mjs manager-hub/tests/budget.test.mjs   # Describe Your Day: reader, solver, 103-scenario evaluation, AI endpoint, spending limit
+node --test manager-hub/tests/gameday.test.mjs          # game-day defaults, settings endpoint, game merge rules, dates
+node manager-hub/tests/builder.e2e.cjs                   # affiliate page → date → Build Daily Schedule, drafts, recalculation, Complex, phone
 node manager-hub/tests/day-ui.e2e.cjs                    # Describe Your Day panel in the app
 node manager-hub/tests/org-roster.e2e.cjs                # shipped organisation roster (needs the gate: MH_ACCESS_CODE, BASE)
 ```

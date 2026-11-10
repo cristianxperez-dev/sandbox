@@ -318,6 +318,10 @@
     rep(/\b(\d{1,4})(a|p)\b/g, (m) => { const p = clockParts(m); return p ? tok("c", p) : m; });
     rep(/\b(?:noon|midday)\b/g, () => tok("c", { h: 12, m: 0, mer: "p", raw: "noon" }));
     const COUNT = "(?:(?:groups?|rounds?|guys|players|hitters|pitchers|fields?|cages?|mounds?|stations?|times|innings?|outs|pitches|throws|swings|reps|percent)\\b|%)";
+    // unpunctuated speech: "report at 2 pitchers stretch at 3" — a number after "at" followed by a group that
+    // starts the next clause (with its verb) is a time, not a count of pitchers
+    rep(/(\b(?:at|by)\s+|@\s*)(\d{1,2})(?=\s+(?:the\s+)?(?:pitchers|catchers|hitters|infielders|outfielders|position players|everybody|everyone|team|staff)\s+(?:stretch|throw|hit|report|do|have|go|start|take|work|run|lift|meet|need|will|are|get)\b)/g,
+      (m, kw, n) => { const p = clockParts(n); return p && +n <= 12 ? kw + tok("c", p) : m; });
     rep(new RegExp(`(\\b(?:at|by|until|till|til|around|from|starting|start|starts|begin|begins|report|reporting|finish|done|wrap|stop|pitch|game|games|gametime|before|after|is|to)\\s+|@\\s*)(\\d{1,4})\\b(?!\\s*${COUNT})(?!(?:st|nd|rd|th)\\b)(?![:\\d])`, "g"),
       (m, kw, n) => { const p = clockParts(n); return p && (n.length > 2 || +n <= 12 || (+n <= 23 && /at|by|@/.test(kw))) ? kw + tok("c", p) : m; });
     rep(new RegExp(`\\b(\\d{3,4})\\b(?!\\s*${COUNT})(?![:\\d])`, "g"), (m, n) => { const p = clockParts(n); return p && p.m % 5 === 0 ? tok("c", p) : m; });

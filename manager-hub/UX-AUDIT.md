@@ -42,7 +42,7 @@ The audit covers every top-level view and modal at 1440 px and 390 px on a fresh
 | 2 | P1 | Resources (phone) | Location names are cut to "Field" / "Cage", because the name input is squeezed by four controls. | **Fixed:** the name takes the full row on narrow screens. |
 | 3 | P1 | Navigation (phone) | Nine module tabs sit in a horizontal strip; only four are visible, with no hint that the rest exist (Matrix, Pitching, Camp, Roster…). | **Fixed:** edge fade + the active tab scrolled into view, and the Hub lists every module. |
 | 4 | P1 | Hub | The Hub is a second copy of the navigation: tiles linking to modules. It does not answer "what's happening today". | **Replaced** with a customizable dashboard: Today, upcoming games, roster availability, month ahead, camp, modules. |
-| 5 | P1 | Sample data | A fresh workspace opens on a 2023 sample day. Every affiliate shows "FCL Nationals / FCL Astros / Today's FCL Lineup" (e.g. Corpus Christi), and the Matrix and Pitching grids open in 2026. The notes say the sample is fictional, but it reads as wrong data. | Noted, not changed: replacing seeded content touches saved days. Recommend a "Start a blank day" first-run choice (P2). |
+| 5 | P1 | Sample data | A fresh workspace opens on a 2023 sample day. Every affiliate shows "FCL Nationals / FCL Astros / Today's FCL Lineup" (e.g. Corpus Christi), and the Matrix and Pitching grids open in 2026. The notes say the sample is fictional, but it reads as wrong data. | **Fixed (Nov 10):** opens on today in the affiliate's time zone; a new workspace starts on an empty day; the sample remains only as the "Game Day" template. |
 | 6 | P1 | Header | "New day / Open / Save / Generate schedule" appear on every view, including Hub, Monthly, Matrix, Pitching and Camp, where they don't apply. | **Fixed:** day actions show only on the Daily views. |
 | 7 | P2 | Desktop chrome | The "Fast keys" card covers the lower-right corner of every view until it is dismissed (e.g. the Lineup "Edit" column, calendar cells). | **Fixed:** it starts collapsed to a small "Keys" button. |
 | 8 | P2 | Hub ↔ intro | The "Build a day by describing it" intro card pushes the Hub content down permanently until "Got it". | Folded into a dashboard widget ("Describe your day") that can be hidden. |
@@ -65,4 +65,4 @@ See `manager-hub/README.md` → Manager Hub 2.0. In short:
 - contextual header actions (#6) and the Fast keys card limited to the Daily builder (#7);
 - the new Camp module.
 
-Open items: #5, #10–#12, #14 and #15. The Daily builder doesn't use category colours yet (#13).
+Open items: #10–#12, #14 and #15 (#5 fixed in the scheduling round — see README → Daily scheduling). The Daily builder doesn't use category colours yet (#13).
