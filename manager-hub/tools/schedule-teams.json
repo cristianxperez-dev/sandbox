@@ -1,0 +1,1211 @@
+{
+ "about": "Minor-league team directory used by import_schedules.py: names, home ballparks and time zones by MLB abbreviation and level (codes repeat across levels: COL is Columbus in Triple-A, Columbia in Single-A). Generated from the MLB Stats API teams endpoint (season 2027, sportIds 11-14) on 2026-11-10. Aliases map a code used in schedule files to the 2027 code.",
+ "season": 2027,
+ "aliases": {
+  "Double-A": {
+   "SPR": "OZK"
+  }
+ },
+ "teams": [
+  {
+   "code": "AKR",
+   "level": "Double-A",
+   "mlbId": 402,
+   "name": "Akron RubberDucks",
+   "short": "RubberDucks",
+   "venue": "7 17 Credit Union Park",
+   "venueCity": "Akron, OH",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "ALT",
+   "level": "Double-A",
+   "mlbId": 452,
+   "name": "Altoona Curve",
+   "short": "Curve",
+   "venue": "Peoples Natural Gas Field",
+   "venueCity": "Altoona, PA",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "AMA",
+   "level": "Double-A",
+   "mlbId": 5368,
+   "name": "Amarillo Sod Poodles",
+   "short": "Sod Poodles",
+   "venue": "Hodgetown",
+   "venueCity": "Amarillo, TX",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "ARK",
+   "level": "Double-A",
+   "mlbId": 574,
+   "name": "Arkansas Travelers",
+   "short": "Travelers",
+   "venue": "Dickey-Stephens Park",
+   "venueCity": "North Little Rock, AR",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "BIR",
+   "level": "Double-A",
+   "mlbId": 247,
+   "name": "Birmingham Barons",
+   "short": "Barons",
+   "venue": "Regions Field",
+   "venueCity": "Birmingham, AL",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "BLX",
+   "level": "Double-A",
+   "mlbId": 5015,
+   "name": "Biloxi Shuckers",
+   "short": "Shuckers",
+   "venue": "Keesler Federal Park",
+   "venueCity": "Biloxi, MS",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "BNG",
+   "level": "Double-A",
+   "mlbId": 505,
+   "name": "Binghamton Rumble Ponies",
+   "short": "Rumble Ponies",
+   "venue": "Mirabito Stadium",
+   "venueCity": "Binghamton, NY",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "CC",
+   "level": "Double-A",
+   "mlbId": 482,
+   "name": "Corpus Christi Hooks",
+   "short": "Hooks",
+   "venue": "Whataburger Field",
+   "venueCity": "Corpus Christi, TX",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "CHA",
+   "level": "Double-A",
+   "mlbId": 498,
+   "name": "Chattanooga Lookouts",
+   "short": "Lookouts",
+   "venue": "Erlanger Park",
+   "venueCity": "Chattanooga, TN",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "CHE",
+   "level": "Double-A",
+   "mlbId": 418,
+   "name": "Chesapeake Baysox",
+   "short": "Baysox",
+   "venue": "Prince George's Stadium",
+   "venueCity": "Bowie, MD",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "COL",
+   "level": "Double-A",
+   "mlbId": 6325,
+   "name": "Columbus Clingstones",
+   "short": "Clingstones",
+   "venue": "Synovus Park",
+   "venueCity": "Columbus, GA",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "ERI",
+   "level": "Double-A",
+   "mlbId": 106,
+   "name": "Erie SeaWolves",
+   "short": "SeaWolves",
+   "venue": "UPMC Park",
+   "venueCity": "Erie, PA",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "FRI",
+   "level": "Double-A",
+   "mlbId": 540,
+   "name": "Frisco RoughRiders",
+   "short": "RoughRiders",
+   "venue": "Riders Field",
+   "venueCity": "Frisco, TX",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "HBG",
+   "level": "Double-A",
+   "mlbId": 547,
+   "name": "Harrisburg Senators",
+   "short": "Senators",
+   "venue": "FNB Field",
+   "venueCity": "Harrisburg, PA",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "HFD",
+   "level": "Double-A",
+   "mlbId": 538,
+   "name": "Hartford Yard Goats",
+   "short": "Yard Goats",
+   "venue": "Dunkin' Park",
+   "venueCity": "Hartford, CT",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "KNX",
+   "level": "Double-A",
+   "mlbId": 553,
+   "name": "Knoxville Smokies",
+   "short": "Smokies",
+   "venue": "Covenant Health Park",
+   "venueCity": "Knoxville, TN",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "MID",
+   "level": "Double-A",
+   "mlbId": 237,
+   "name": "Midland RockHounds",
+   "short": "RockHounds",
+   "venue": "Momentum Bank Ballpark",
+   "venueCity": "Midland, TX",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "MTG",
+   "level": "Double-A",
+   "mlbId": 421,
+   "name": "Montgomery Biscuits",
+   "short": "Biscuits",
+   "venue": "DABOS Park",
+   "venueCity": "Montgomery, AL",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "NH",
+   "level": "Double-A",
+   "mlbId": 463,
+   "name": "New Hampshire Fisher Cats",
+   "short": "Fisher Cats",
+   "venue": "Delta Dental Stadium",
+   "venueCity": "Manchester, NH",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "NWA",
+   "level": "Double-A",
+   "mlbId": 1350,
+   "name": "Northwest Arkansas Naturals",
+   "short": "Naturals",
+   "venue": "Arvest Ballpark",
+   "venueCity": "Springdale, AR",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "OZK",
+   "level": "Double-A",
+   "mlbId": 440,
+   "name": "Ozarks Springbirds",
+   "short": "Springbirds",
+   "venue": "Route 66 Stadium",
+   "venueCity": "Springfield, MO",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "PNS",
+   "level": "Double-A",
+   "mlbId": 4124,
+   "name": "Pensacola Blue Wahoos",
+   "short": "Blue Wahoos",
+   "venue": "Blue Wahoos Stadium",
+   "venueCity": "Pensacola, FL",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "POR",
+   "level": "Double-A",
+   "mlbId": 546,
+   "name": "Portland Sea Dogs",
+   "short": "Sea Dogs",
+   "venue": "Delta Dental Park",
+   "venueCity": "Portland, ME",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "RCT",
+   "level": "Double-A",
+   "mlbId": 559,
+   "name": "Rocket City Trash Pandas",
+   "short": "Trash Pandas",
+   "venue": "Toyota Field",
+   "venueCity": "Madison, AL",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "REA",
+   "level": "Double-A",
+   "mlbId": 522,
+   "name": "Reading Fightin Phils",
+   "short": "Fightin Phils",
+   "venue": "FirstEnergy Stadium",
+   "venueCity": "Reading, PA",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "RIC",
+   "level": "Double-A",
+   "mlbId": 3410,
+   "name": "Richmond Flying Squirrels",
+   "short": "Flying Squirrels",
+   "venue": "CarMax Park",
+   "venueCity": "Richmond, VA",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "SA",
+   "level": "Double-A",
+   "mlbId": 510,
+   "name": "San Antonio Missions",
+   "short": "Missions",
+   "venue": "Nelson Wolff Stadium",
+   "venueCity": "San Antonio, TX",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "SOM",
+   "level": "Double-A",
+   "mlbId": 1956,
+   "name": "Somerset Patriots",
+   "short": "Patriots",
+   "venue": "TD Bank Ballpark",
+   "venueCity": "Bridgewater, NJ",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "TUL",
+   "level": "Double-A",
+   "mlbId": 260,
+   "name": "Tulsa Drillers",
+   "short": "Drillers",
+   "venue": "ONEOK Field",
+   "venueCity": "Tulsa, OK",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "WCH",
+   "level": "Double-A",
+   "mlbId": 3898,
+   "name": "Wichita Wind Surge",
+   "short": "Wind Surge",
+   "venue": "Equity Bank Park",
+   "venueCity": "Wichita, KS",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "ASH",
+   "level": "High-A",
+   "mlbId": 573,
+   "name": "Asheville Tourists",
+   "short": "Tourists",
+   "venue": "HomeTrust Park",
+   "venueCity": "Asheville, NC",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "BEL",
+   "level": "High-A",
+   "mlbId": 554,
+   "name": "Beloit Sky Carp",
+   "short": "Sky Carp",
+   "venue": "ABC Supply Stadium",
+   "venueCity": "Beloit, WI",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "BG",
+   "level": "High-A",
+   "mlbId": 2498,
+   "name": "Bowling Green Hot Rods",
+   "short": "Hot Rods",
+   "venue": "Bowling Green Ballpark",
+   "venueCity": "Bowling Green, KY",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "BRK",
+   "level": "High-A",
+   "mlbId": 453,
+   "name": "Brooklyn Cyclones",
+   "short": "Cyclones",
+   "venue": "Maimonides Park",
+   "venueCity": "Brooklyn, NY",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "CR",
+   "level": "High-A",
+   "mlbId": 492,
+   "name": "Cedar Rapids Kernels",
+   "short": "Kernels",
+   "venue": "Veterans Memorial Stadium",
+   "venueCity": "Cedar Rapids, IA",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "DAY",
+   "level": "High-A",
+   "mlbId": 459,
+   "name": "Dayton Dragons",
+   "short": "Dragons",
+   "venue": "Day Air Ballpark",
+   "venueCity": "Dayton, OH",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "EUG",
+   "level": "High-A",
+   "mlbId": 461,
+   "name": "Eugene Emeralds",
+   "short": "Emeralds",
+   "venue": "PK Park",
+   "venueCity": "Eugene, OR",
+   "tz": "America/Los_Angeles"
+  },
+  {
+   "code": "EVE",
+   "level": "High-A",
+   "mlbId": 403,
+   "name": "Everett AquaSox",
+   "short": "AquaSox",
+   "venue": "Everett Memorial Stadium",
+   "venueCity": "Everett, WA",
+   "tz": "America/Los_Angeles"
+  },
+  {
+   "code": "FRE",
+   "level": "High-A",
+   "mlbId": 493,
+   "name": "Frederick Keys",
+   "short": "Keys",
+   "venue": "Nymeo Field",
+   "venueCity": "Frederick, MD",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "FW",
+   "level": "High-A",
+   "mlbId": 584,
+   "name": "Fort Wayne TinCaps",
+   "short": "TinCaps",
+   "venue": "Parkview Field",
+   "venueCity": "Fort Wayne, IN",
+   "tz": "America/Indiana/Indianapolis"
+  },
+  {
+   "code": "GBO",
+   "level": "High-A",
+   "mlbId": 477,
+   "name": "Greensboro Grasshoppers",
+   "short": "Grasshoppers",
+   "venue": "First National Bank Field",
+   "venueCity": "Greensboro, NC",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "GL",
+   "level": "High-A",
+   "mlbId": 456,
+   "name": "Great Lakes Loons",
+   "short": "Loons",
+   "venue": "Dow Diamond",
+   "venueCity": "Midland, MI",
+   "tz": "America/Detroit"
+  },
+  {
+   "code": "GVL",
+   "level": "High-A",
+   "mlbId": 428,
+   "name": "Greenville Drive",
+   "short": "Drive",
+   "venue": "Fluor Field at the West End",
+   "venueCity": "Greenville, SC",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "HCS",
+   "level": "High-A",
+   "mlbId": 6324,
+   "name": "Hub City Spartanburgers",
+   "short": "Spartanburgers",
+   "venue": "Fifth Third Park",
+   "venueCity": "Spartanburg, SC",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "HIL",
+   "level": "High-A",
+   "mlbId": 419,
+   "name": "Hillsboro Hops",
+   "short": "Hops",
+   "venue": "Hops Ballpark",
+   "venueCity": "Hillsboro, OR",
+   "tz": "America/Los_Angeles"
+  },
+  {
+   "code": "HV",
+   "level": "High-A",
+   "mlbId": 537,
+   "name": "Hudson Valley Renegades",
+   "short": "Renegades",
+   "venue": "Heritage Financial Park",
+   "venueCity": "Wappingers Falls, NY",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "JS",
+   "level": "High-A",
+   "mlbId": 427,
+   "name": "Jersey Shore BlueClaws",
+   "short": "BlueClaws",
+   "venue": "ShoreTown Ballpark",
+   "venueCity": "Lakewood, NJ",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "LAN",
+   "level": "High-A",
+   "mlbId": 499,
+   "name": "Lansing Lugnuts",
+   "short": "Lugnuts",
+   "venue": "Jackson Field",
+   "venueCity": "Lansing, MI",
+   "tz": "America/Detroit"
+  },
+  {
+   "code": "LC",
+   "level": "High-A",
+   "mlbId": 437,
+   "name": "Lake County Captains",
+   "short": "Captains",
+   "venue": "Classic Auto Group Park",
+   "venueCity": "Eastlake, OH",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "PEO",
+   "level": "High-A",
+   "mlbId": 443,
+   "name": "Peoria Chiefs",
+   "short": "Chiefs",
+   "venue": "Dozer Park",
+   "venueCity": "Peoria, IL",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "QC",
+   "level": "High-A",
+   "mlbId": 565,
+   "name": "Quad Cities River Bandits",
+   "short": "River Bandits",
+   "venue": "Modern Woodmen Park",
+   "venueCity": "Davenport, IA",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "ROM",
+   "level": "High-A",
+   "mlbId": 432,
+   "name": "Rome Emperors",
+   "short": "Emperors",
+   "venue": "AdventHealth Stadium",
+   "venueCity": "Rome, GA",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "SB",
+   "level": "High-A",
+   "mlbId": 550,
+   "name": "South Bend Cubs",
+   "short": "Cubs",
+   "venue": "Four Winds Field",
+   "venueCity": "South Bend, IN",
+   "tz": "America/Indiana/Indianapolis"
+  },
+  {
+   "code": "SPO",
+   "level": "High-A",
+   "mlbId": 486,
+   "name": "Spokane Indians",
+   "short": "Indians",
+   "venue": "Avista Stadium",
+   "venueCity": "Spokane, WA",
+   "tz": "America/Los_Angeles"
+  },
+  {
+   "code": "TRI",
+   "level": "High-A",
+   "mlbId": 460,
+   "name": "Tri-City Dust Devils",
+   "short": "Dust Devils",
+   "venue": "Gesa Stadium",
+   "venueCity": "Pasco, WA",
+   "tz": "America/Los_Angeles"
+  },
+  {
+   "code": "VAN",
+   "level": "High-A",
+   "mlbId": 435,
+   "name": "Vancouver Canadians",
+   "short": "Canadians",
+   "venue": "Rogers Field at Nat Bailey Stadium",
+   "venueCity": "Vancouver, BC",
+   "tz": "America/Vancouver"
+  },
+  {
+   "code": "WIL",
+   "level": "High-A",
+   "mlbId": 426,
+   "name": "Wilmington Blue Rocks",
+   "short": "Blue Rocks",
+   "venue": "Frawley Stadium",
+   "venueCity": "Wilmington, DE",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "WIS",
+   "level": "High-A",
+   "mlbId": 572,
+   "name": "Wisconsin Timber Rattlers",
+   "short": "Timber Rattlers",
+   "venue": "Neuroscience Group Field",
+   "venueCity": "Appleton, WI",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "WM",
+   "level": "High-A",
+   "mlbId": 582,
+   "name": "West Michigan Whitecaps",
+   "short": "Whitecaps",
+   "venue": "LMCU Ballpark",
+   "venueCity": "Comstock Park, MI",
+   "tz": "America/Detroit"
+  },
+  {
+   "code": "WS",
+   "level": "High-A",
+   "mlbId": 580,
+   "name": "Winston-Salem Dash",
+   "short": "Dash",
+   "venue": "Truist Stadium",
+   "venueCity": "Winston-Salem, NC",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "AUG",
+   "level": "Single-A",
+   "mlbId": 478,
+   "name": "Augusta GreenJackets",
+   "short": "GreenJackets",
+   "venue": "SRP Park",
+   "venueCity": "North Augusta, SC",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "BRD",
+   "level": "Single-A",
+   "mlbId": 3390,
+   "name": "Bradenton Marauders",
+   "short": "Marauders",
+   "venue": "LECOM Park",
+   "venueCity": "Bradenton, FL",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "CHS",
+   "level": "Single-A",
+   "mlbId": 233,
+   "name": "Charleston RiverDogs",
+   "short": "RiverDogs",
+   "venue": "Joseph P. Riley, Jr. Ballpark",
+   "venueCity": "Charleston, SC",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "CLR",
+   "level": "Single-A",
+   "mlbId": 566,
+   "name": "Clearwater Threshers",
+   "short": "Threshers",
+   "venue": "BayCare Ballpark",
+   "venueCity": "Clearwater, FL",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "COL",
+   "level": "Single-A",
+   "mlbId": 3705,
+   "name": "Columbia Fireflies",
+   "short": "Fireflies",
+   "venue": "Prisma Health Park",
+   "venueCity": "Columbia, SC",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "DBT",
+   "level": "Single-A",
+   "mlbId": 450,
+   "name": "Daytona Tortugas",
+   "short": "Tortugas",
+   "venue": "Jackie Robinson Ballpark",
+   "venueCity": "Daytona Beach, FL",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "DEL",
+   "level": "Single-A",
+   "mlbId": 548,
+   "name": "Delmarva Shorebirds",
+   "short": "Shorebirds",
+   "venue": "Arthur W. Perdue Stadium",
+   "venueCity": "Salisbury, MD",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "DUN",
+   "level": "Single-A",
+   "mlbId": 424,
+   "name": "Dunedin Blue Jays",
+   "short": "Blue Jays",
+   "venue": "TD Ballpark",
+   "venueCity": "Dunedin, FL",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "FAY",
+   "level": "Single-A",
+   "mlbId": 3712,
+   "name": "Fayetteville Woodpeckers",
+   "short": "Woodpeckers",
+   "venue": "SEGRA Stadium",
+   "venueCity": "Fayetteville, NC",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "FBG",
+   "level": "Single-A",
+   "mlbId": 436,
+   "name": "Fredericksburg Nationals",
+   "short": "Nationals",
+   "venue": "Virginia Credit Union Stadium",
+   "venueCity": "Fredericksburg, VA",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "FRE",
+   "level": "Single-A",
+   "mlbId": 259,
+   "name": "Fresno Grizzlies",
+   "short": "Grizzlies",
+   "venue": "Chukchansi Park",
+   "venueCity": "Fresno, CA",
+   "tz": "America/Los_Angeles"
+  },
+  {
+   "code": "FTM",
+   "level": "Single-A",
+   "mlbId": 509,
+   "name": "Fort Myers Mighty Mussels",
+   "short": "Mighty Mussels",
+   "venue": "Lee Health Sports Complex",
+   "venueCity": "Fort Myers, FL",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "HC",
+   "level": "Single-A",
+   "mlbId": 481,
+   "name": "Hill City Howlers",
+   "short": "Howlers",
+   "venue": "City Stadium",
+   "venueCity": "Lynchburg, VA",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "HIC",
+   "level": "Single-A",
+   "mlbId": 448,
+   "name": "Hickory Crawdads",
+   "short": "Crawdads",
+   "venue": "L.P. Frans Stadium",
+   "venueCity": "Hickory, NC",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "IE",
+   "level": "Single-A",
+   "mlbId": 401,
+   "name": "Inland Empire 66ers",
+   "short": "66ers",
+   "venue": "San Manuel Stadium",
+   "venueCity": "San Bernardino, CA",
+   "tz": "America/Los_Angeles"
+  },
+  {
+   "code": "JUP",
+   "level": "Single-A",
+   "mlbId": 479,
+   "name": "Jupiter Hammerheads",
+   "short": "Hammerheads",
+   "venue": "Roger Dean Chevrolet Stadium",
+   "venueCity": "Jupiter, FL",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "KAN",
+   "level": "Single-A",
+   "mlbId": 487,
+   "name": "Kannapolis Cannon Ballers",
+   "short": "Cannon Ballers",
+   "venue": "Atrium Health Ballpark",
+   "venueCity": "Kannapolis, NC",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "LAK",
+   "level": "Single-A",
+   "mlbId": 570,
+   "name": "Lakeland Flying Tigers",
+   "short": "Flying Tigers",
+   "venue": "Publix Field at Joker Marchant Stadium",
+   "venueCity": "Lakeland, FL",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "LE",
+   "level": "Single-A",
+   "mlbId": 103,
+   "name": "Lake Elsinore Storm",
+   "short": "Storm",
+   "venue": "The Diamond",
+   "venueCity": "Lake Elsinore, CA",
+   "tz": "America/Los_Angeles"
+  },
+  {
+   "code": "MB",
+   "level": "Single-A",
+   "mlbId": 521,
+   "name": "Myrtle Beach Pelicans",
+   "short": "Pelicans",
+   "venue": "Pelicans Ballpark",
+   "venueCity": "Myrtle Beach, SC",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "ONT",
+   "level": "Single-A",
+   "mlbId": 6482,
+   "name": "Ontario Tower Buzzers",
+   "short": "Tower Buzzers",
+   "venue": "ONT Field",
+   "venueCity": "Ontario, CA",
+   "tz": "America/Los_Angeles"
+  },
+  {
+   "code": "PMB",
+   "level": "Single-A",
+   "mlbId": 279,
+   "name": "Palm Beach Cardinals",
+   "short": "Cardinals",
+   "venue": "Roger Dean Chevrolet Stadium",
+   "venueCity": "Jupiter, FL",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "RC",
+   "level": "Single-A",
+   "mlbId": 526,
+   "name": "Rancho Cucamonga Quakes",
+   "short": "Quakes",
+   "venue": "Morongo Field",
+   "venueCity": "Rancho Cucamonga, CA",
+   "tz": "America/Los_Angeles"
+  },
+  {
+   "code": "SAL",
+   "level": "Single-A",
+   "mlbId": 414,
+   "name": "Salem RidgeYaks",
+   "short": "RidgeYaks",
+   "venue": "Carilion Clinic Field",
+   "venueCity": "Salem, VA",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "SJ",
+   "level": "Single-A",
+   "mlbId": 476,
+   "name": "San Jose Giants",
+   "short": "Giants",
+   "venue": "Excite Ballpark",
+   "venueCity": "San Jose, CA",
+   "tz": "America/Los_Angeles"
+  },
+  {
+   "code": "SLU",
+   "level": "Single-A",
+   "mlbId": 507,
+   "name": "St. Lucie Mets",
+   "short": "Mets",
+   "venue": "Clover Park",
+   "venueCity": "Port St. Lucie, FL",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "STK",
+   "level": "Single-A",
+   "mlbId": 524,
+   "name": "Stockton Ports",
+   "short": "Ports",
+   "venue": "Banner Island Ballpark",
+   "venueCity": "Stockton, CA",
+   "tz": "America/Los_Angeles"
+  },
+  {
+   "code": "TAM",
+   "level": "Single-A",
+   "mlbId": 587,
+   "name": "Tampa Tarpons",
+   "short": "Tarpons",
+   "venue": "George M. Steinbrenner Field",
+   "venueCity": "Tampa, FL",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "VIS",
+   "level": "Single-A",
+   "mlbId": 516,
+   "name": "Visalia Rawhide",
+   "short": "Rawhide",
+   "venue": "Valley Strong Ballpark",
+   "venueCity": "Visalia, CA",
+   "tz": "America/Los_Angeles"
+  },
+  {
+   "code": "WIL",
+   "level": "Single-A",
+   "mlbId": 249,
+   "name": "Wilson Warbirds",
+   "short": "Warbirds",
+   "venue": "Wilson Ballpark",
+   "venueCity": "Wilson, NC",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "ABQ",
+   "level": "Triple-A",
+   "mlbId": 342,
+   "name": "Albuquerque Isotopes",
+   "short": "Isotopes",
+   "venue": "Isotopes Park",
+   "venueCity": "Albuquerque, NM",
+   "tz": "America/Denver"
+  },
+  {
+   "code": "BUF",
+   "level": "Triple-A",
+   "mlbId": 422,
+   "name": "Buffalo Bisons",
+   "short": "Bisons",
+   "venue": "Sahlen Field",
+   "venueCity": "Buffalo, NY",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "CLT",
+   "level": "Triple-A",
+   "mlbId": 494,
+   "name": "Charlotte Knights",
+   "short": "Knights",
+   "venue": "Truist Field",
+   "venueCity": "Charlotte, NC",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "COL",
+   "level": "Triple-A",
+   "mlbId": 445,
+   "name": "Columbus Clippers",
+   "short": "Clippers",
+   "venue": "Huntington Park",
+   "venueCity": "Columbus, OH",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "DUR",
+   "level": "Triple-A",
+   "mlbId": 234,
+   "name": "Durham Bulls",
+   "short": "Bulls",
+   "venue": "Durham Bulls Athletic Park",
+   "venueCity": "Durham, NC",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "ELP",
+   "level": "Triple-A",
+   "mlbId": 4904,
+   "name": "El Paso Chihuahuas",
+   "short": "Chihuahuas",
+   "venue": "Southwest University Park",
+   "venueCity": "El Paso, TX",
+   "tz": "America/Denver"
+  },
+  {
+   "code": "GWN",
+   "level": "Triple-A",
+   "mlbId": 431,
+   "name": "Gwinnett Stripers",
+   "short": "Stripers",
+   "venue": "Gwinnett Field",
+   "venueCity": "Lawrenceville, GA",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "IND",
+   "level": "Triple-A",
+   "mlbId": 484,
+   "name": "Indianapolis Indians",
+   "short": "Indians",
+   "venue": "Victory Field",
+   "venueCity": "Indianapolis, IN",
+   "tz": "America/Indiana/Indianapolis"
+  },
+  {
+   "code": "IOW",
+   "level": "Triple-A",
+   "mlbId": 451,
+   "name": "Iowa Cubs",
+   "short": "Cubs",
+   "venue": "Principal Park",
+   "venueCity": "Des Moines, IA",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "JAX",
+   "level": "Triple-A",
+   "mlbId": 564,
+   "name": "Jacksonville Jumbo Shrimp",
+   "short": "Jumbo Shrimp",
+   "venue": "Vystar Ballpark",
+   "venueCity": "Jacksonville, FL",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "LHV",
+   "level": "Triple-A",
+   "mlbId": 1410,
+   "name": "Lehigh Valley IronPigs",
+   "short": "IronPigs",
+   "venue": "Jefferson Park",
+   "venueCity": "Allentown, PA",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "LOU",
+   "level": "Triple-A",
+   "mlbId": 416,
+   "name": "Louisville Bats",
+   "short": "Bats",
+   "venue": "Louisville Slugger Field",
+   "venueCity": "Louisville, KY",
+   "tz": "America/Kentucky/Louisville"
+  },
+  {
+   "code": "LV",
+   "level": "Triple-A",
+   "mlbId": 400,
+   "name": "Las Vegas Aviators",
+   "short": "Aviators",
+   "venue": "Las Vegas Ballpark",
+   "venueCity": "Las Vegas, NV",
+   "tz": "America/Los_Angeles"
+  },
+  {
+   "code": "MEM",
+   "level": "Triple-A",
+   "mlbId": 235,
+   "name": "Memphis Redbirds",
+   "short": "Redbirds",
+   "venue": "AutoZone Park",
+   "venueCity": "Memphis, TN",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "NAS",
+   "level": "Triple-A",
+   "mlbId": 556,
+   "name": "Nashville Sounds",
+   "short": "Sounds",
+   "venue": "First Horizon Park",
+   "venueCity": "Nashville, TN",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "NOR",
+   "level": "Triple-A",
+   "mlbId": 568,
+   "name": "Norfolk Tides",
+   "short": "Tides",
+   "venue": "Harbor Park",
+   "venueCity": "Norfolk, VA",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "OKC",
+   "level": "Triple-A",
+   "mlbId": 238,
+   "name": "Oklahoma City Comets",
+   "short": "Comets",
+   "venue": "Chickasaw Bricktown Ballpark",
+   "venueCity": "Oklahoma City, OK",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "OMA",
+   "level": "Triple-A",
+   "mlbId": 541,
+   "name": "Omaha Storm Chasers",
+   "short": "Storm Chasers",
+   "venue": "Werner Park",
+   "venueCity": "Papillion, NE",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "RNO",
+   "level": "Triple-A",
+   "mlbId": 2310,
+   "name": "Reno Aces",
+   "short": "Aces",
+   "venue": "Greater Nevada Field",
+   "venueCity": "Reno, NV",
+   "tz": "America/Los_Angeles"
+  },
+  {
+   "code": "ROC",
+   "level": "Triple-A",
+   "mlbId": 534,
+   "name": "Rochester Red Wings",
+   "short": "Red Wings",
+   "venue": "ESL Ballpark",
+   "venueCity": "Rochester, NY",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "RR",
+   "level": "Triple-A",
+   "mlbId": 102,
+   "name": "Round Rock Express",
+   "short": "Express",
+   "venue": "Dell Diamond",
+   "venueCity": "Round Rock, TX",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "SAC",
+   "level": "Triple-A",
+   "mlbId": 105,
+   "name": "Sacramento River Cats",
+   "short": "River Cats",
+   "venue": "Sutter Health Park",
+   "venueCity": "Sacramento, CA",
+   "tz": "America/Los_Angeles"
+  },
+  {
+   "code": "SL",
+   "level": "Triple-A",
+   "mlbId": 561,
+   "name": "Salt Lake Bees",
+   "short": "Bees",
+   "venue": "The Ballpark at America First Square",
+   "venueCity": "South Jordan, UT",
+   "tz": "America/Denver"
+  },
+  {
+   "code": "STP",
+   "level": "Triple-A",
+   "mlbId": 1960,
+   "name": "St. Paul Saints",
+   "short": "Saints",
+   "venue": "CHS Field",
+   "venueCity": "St. Paul, MN",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "SUG",
+   "level": "Triple-A",
+   "mlbId": 5434,
+   "name": "Sugar Land Space Cowboys",
+   "short": "Space Cowboys",
+   "venue": "Constellation Field",
+   "venueCity": "Sugar Land, TX",
+   "tz": "America/Chicago"
+  },
+  {
+   "code": "SWB",
+   "level": "Triple-A",
+   "mlbId": 531,
+   "name": "Scranton/Wilkes-Barre Highlanders",
+   "short": "Highlanders",
+   "venue": "PNC Field",
+   "venueCity": "Moosic, PA",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "SYR",
+   "level": "Triple-A",
+   "mlbId": 552,
+   "name": "Syracuse Mets",
+   "short": "Mets",
+   "venue": "NBT Bank Stadium",
+   "venueCity": "Syracuse, NY",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "TAC",
+   "level": "Triple-A",
+   "mlbId": 529,
+   "name": "Tacoma Rainiers",
+   "short": "Rainiers",
+   "venue": "Cheney Stadium",
+   "venueCity": "Tacoma, WA",
+   "tz": "America/Los_Angeles"
+  },
+  {
+   "code": "TOL",
+   "level": "Triple-A",
+   "mlbId": 512,
+   "name": "Toledo Mud Hens",
+   "short": "Mud Hens",
+   "venue": "Fifth Third Field",
+   "venueCity": "Toledo, OH",
+   "tz": "America/New_York"
+  },
+  {
+   "code": "WOR",
+   "level": "Triple-A",
+   "mlbId": 533,
+   "name": "Worcester Red Sox",
+   "short": "Red Sox",
+   "venue": "Polar Park",
+   "venueCity": "Worcester, MA",
+   "tz": "America/New_York"
+  }
+ ]
+}
