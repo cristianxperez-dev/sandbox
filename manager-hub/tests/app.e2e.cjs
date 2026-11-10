@@ -56,18 +56,16 @@ const lastMsg = (p) => p.evaluate(() => { const l = MHAssistUI.draft.log; return
   /* ---------------- A. landing, first-use guidance, help ---------------- */
   await safe(async () => {
     const { ctx, p, errs } = await fresh(b);
-    ok(await p.locator("#mhaIntro").isVisible(), "hub shows the first-use card");
-    ok(/Build a day by describing it/.test(await p.locator("#mhaIntro").innerText()), "first-use card explains the three steps");
+    // Manager Hub 2.0: the dashboard's "Describe your day" widget replaces the first-use card
+    ok(await p.locator('.dash-w[data-w="describe"]').isVisible(), "hub shows the Describe your day widget");
+    ok(/Say what has to happen/.test(await p.locator('.dash-w[data-w="describe"]').innerText()) && !(await p.locator("#mhaIntro").count()), "the widget explains it; the old first-use card is gone");
     await p.click("#btnHelp"); await wait(p, 250);
     const help = await p.locator("#modal").innerText();
     ok(/Describe the day/.test(help) && /Plan the month/.test(help) && /no API key is ever stored/i.test(help), "top-right ? opens concise help, states the interpreter honestly");
     await p.click(".mha-help details summary"); await p.fill("#mhaEndpoint", "sk-ant-abc123"); await p.click("#mhaEndpointSave"); await wait(p, 150);
     ok(await p.evaluate(() => !JSON.parse(localStorage.getItem("cs.fcl.assistant") || "{}").endpoint), "help refuses to store an API key as the service address");
     await p.click("#modal [data-close]"); await wait(p, 150);
-    await p.click("#mhaIntroX"); await wait(p, 150);
-    ok(!(await p.locator("#mhaIntro").count()), "first-use card can be dismissed");
     await p.reload(); await wait(p, 600);
-    ok(!(await p.locator("#mhaIntro").count()), "dismissal persists");
     // preserved modules all still open without errors
     for (const v of ["schedule", "month", "docs", "matrix", "pitch", "hub"]) { await p.click(`.seg [data-view="${v}"]`); await wait(p, 250); }
     await p.click('.seg [data-view="schedule"]'); await wait(p, 250);

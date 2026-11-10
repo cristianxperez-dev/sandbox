@@ -38,6 +38,33 @@ manager-hub/
 
 The baseline differs from the upload only in the sample data. The seed schedule, the seed coach list, two placeholder examples and the classic builder's example now use fictional names; the initials are unchanged so the sample rows still line up. The unmodified upload is not committed, because this repository is public. Every module, feature and storage key (`cs.*`, per-affiliate) is unchanged.
 
+## Manager Hub 2.0
+
+Audit and priorities: [`UX-AUDIT.md`](UX-AUDIT.md).
+
+- **Dashboard (Hub).** `apps/manager-hub/hub/dashboard.js` + `dashboard.css` replace the Hub's tile grid with widgets built from existing data:
+  - Day schedule
+  - Describe your day
+  - Roster & availability
+  - Upcoming games
+  - Next 7 days
+  - Camp
+  - Modules
+
+  **Customize** turns on an editing mode: drag by the handle (pointer events, so mouse and touch), or use the ← / → buttons or arrow keys on a focused handle. You can also change the width (Small / Medium / Large / Full), hide a widget, add it back, or reset to the default. The controls disappear outside editing mode.
+  - The layout is saved per browser in `localStorage["cs.dashboard.v1"]`, shared across affiliates in that browser.
+  - Manager Hub has no user accounts (one shared access code), so a layout cannot follow a person to another device. That needs server storage plus individual sign-in (deferred).
+  - New widgets appear automatically for existing layouts. A corrupt preference falls back to the default.
+- **Audit fixes:**
+  - phone layouts for the roster and Resources;
+  - a scroll hint and active-tab scrolling for the module strip on phones;
+  - day actions (New day / Open / Save / Generate) hidden where they don't apply;
+  - the Fast keys card limited to the Daily builder.
+- **Camp.** A top-level tab, `apps/manager-hub/camp/`, for organisation-wide camps and workouts.
+  - It is hidden until the module is complete: the tab, its dashboard widget and its module entry appear only when `camp.js` sets `CampUI.ready`.
+  - Its data lives in `localStorage["cs.camp.v1"]`. It reads the affiliate rosters and never writes them.
+- Tests: `tests/dashboard.e2e.cjs`.
+
 ## Describe Your Day
 
 The **✦ Assistant** button opens it. You describe the day in a few sentences ("10 AM stretch, 1 PM game. Team fundy, indy defense. 30-minute BP rounds and 30 minutes off pregame."), then:

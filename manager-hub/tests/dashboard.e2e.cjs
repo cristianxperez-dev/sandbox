@@ -21,13 +21,16 @@ const order = (p) => p.$$eval("#hubGrid .dash-w", (ws) => ws.map((w) => w.datase
     p.on("pageerror", (e) => errs.push(e.message));
     await p.goto(BASE); await p.evaluate(() => { localStorage.clear(); localStorage.setItem("cs.affiliate", "sl"); }); await p.reload(); await p.waitForTimeout(1200);
     const def = await order(p);
-    ok(def.join() === "today,describe,roster,games,month,camp,modules", `default widgets in order (${def.join(", ")})`);
+    const campReady = await p.evaluate(() => !!(window.CampUI && CampUI.ready));
+    const N = campReady ? 7 : 6;
+    ok(def.join() === (campReady ? "today,describe,roster,games,month,camp,modules" : "today,describe,roster,games,month,modules"), `default widgets in order (${def.join(", ")})${campReady ? "" : " — Camp hidden until the module is complete"}`);
+    ok(campReady || !(await p.isVisible('.seg button[data-view="camp"]')), "Camp tab hidden until the module is complete");
     ok(!(await p.$("#mhaIntro")), "the old intro card is replaced by the Describe widget");
     ok(!(await p.$(".dash-grip")) && !(await p.$(".dash-editbar")), "no editing controls outside customize mode");
     ok((await p.locator(".dash-w[data-w=roster] .dash-stats").count()) === 1, "roster widget shows real roster counts");
 
     await p.click("#dashCustomize"); await p.waitForTimeout(200);
-    ok(await p.isVisible(".dash-editbar") && (await p.$$(".dash-grip")).length === 7, "customize mode: edit bar and a drag handle per widget");
+    ok(await p.isVisible(".dash-editbar") && (await p.$$(".dash-grip")).length === N, "customize mode: edit bar and a drag handle per widget");
     // hide, then add back
     await p.click('[data-hide="games"]'); await p.waitForTimeout(150);
     ok(!(await order(p)).includes("games"), "hide removes a widget");
@@ -72,7 +75,7 @@ const order = (p) => p.$$eval("#hubGrid .dash-w", (ws) => ws.map((w) => w.datase
     ok(await p.isVisible(".dash-empty"), "all widgets hidden → a useful empty state");
     // corrupt preference never breaks the hub
     await p.evaluate(() => { localStorage.setItem("cs.dashboard.v1", "{not json"); go("hub"); }); await p.waitForTimeout(200);
-    ok((await order(p)).length === 7, "corrupt preference falls back to the default layout");
+    ok((await order(p)).length === N, "corrupt preference falls back to the default layout");
     ok(errs.length === 0, "no page errors " + errs.join(" | "));
     await ctx.close();
   }

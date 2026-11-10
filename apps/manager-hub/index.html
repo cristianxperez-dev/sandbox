@@ -2722,15 +2722,16 @@ body.gated{overflow:hidden}
 .keys .close{position:absolute;top:4px;right:6px;border:0;background:transparent;color:#C3CAD6;font-size:14px}
 @media print{ .keys{display:none} }
 @media (max-width:900px){ .keys{display:none} }
-body:not([data-view="schedule"]) .keys{display:none}
+body:not([data-mhview="schedule"]) .keys{display:none}
+body.camp-off .seg button[data-view="camp"]{display:none}
 /* ============================================================
    Manager Hub 2.0 — audit fixes (manager-hub/UX-AUDIT.md)
    ============================================================ */
 /* #6 the day's actions belong to the day: hidden where they don't apply */
-body[data-view="camp"] #btnNew,body[data-view="camp"] #btnOpen,body[data-view="camp"] #btnSave,body[data-view="camp"] #btnGenerate,
-body[data-view="matrix"] #btnNew,body[data-view="matrix"] #btnOpen,body[data-view="matrix"] #btnSave,body[data-view="matrix"] #btnGenerate,
-body[data-view="pitch"] #btnNew,body[data-view="pitch"] #btnOpen,body[data-view="pitch"] #btnSave,body[data-view="pitch"] #btnGenerate,
-body[data-view="month"] #btnNew,body[data-view="month"] #btnOpen,body[data-view="month"] #btnSave,body[data-view="month"] #btnGenerate{display:none}
+body[data-mhview="camp"] #btnNew,body[data-mhview="camp"] #btnOpen,body[data-mhview="camp"] #btnSave,body[data-mhview="camp"] #btnGenerate,
+body[data-mhview="matrix"] #btnNew,body[data-mhview="matrix"] #btnOpen,body[data-mhview="matrix"] #btnSave,body[data-mhview="matrix"] #btnGenerate,
+body[data-mhview="pitch"] #btnNew,body[data-mhview="pitch"] #btnOpen,body[data-mhview="pitch"] #btnSave,body[data-mhview="pitch"] #btnGenerate,
+body[data-mhview="month"] #btnNew,body[data-mhview="month"] #btnOpen,body[data-mhview="month"] #btnSave,body[data-mhview="month"] #btnGenerate{display:none}
 @media (max-width:700px){
   /* #3 more modules than fit: fade the edge so the strip reads as scrollable */
   .seg{-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 36px),transparent);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 36px),transparent);scroll-padding-inline:24px}
@@ -7685,7 +7686,7 @@ function go(v){
   VIEW=v;
   const TOP=["hub","month","docs","matrix","pitch","camp"];
   const workspace = TOP.includes(v) ? v : "schedule";
-  document.body.dataset.view = workspace;
+  document.body.dataset.mhview = workspace;
   { const t=document.querySelector(`.seg button[data-view="${workspace}"]`); if(t && t.scrollIntoView && window.innerWidth<900) t.scrollIntoView({block:"nearest",inline:"center"}); }
   if(workspace==="schedule" && window.__keysArm) window.__keysArm();
   $$(".seg button").forEach(b=>b.setAttribute("aria-selected",String(b.dataset.view===workspace)));
@@ -7700,7 +7701,7 @@ function go(v){
   if(v==="docs") setDocTab(DTAB);
   if(v==="schedule") bindStartBar();
   if(v==="hub") renderHub();
-  if(v==="camp" && window.CampUI) CampUI.show(document.getElementById("campRoot"));
+  if(v==="camp" && window.CampUI && CampUI.ready) CampUI.show(document.getElementById("campRoot"));
   if(v==="matrix"){ renderMatrix(); pmBind(); }
   if(v==="pitch"){
     renderPitch(); pgBind();
@@ -11764,7 +11765,7 @@ function renderHub(){
           :""}`
       : "Pick a date in the Daily Schedule to get started";
   }
-  window.HUB_ACTIONS_LIST=HUB_ACTIONS.concat([{k:"camp",go:()=>go("camp"),title:"Camp",desc:"Organization-wide camps and workouts.",meta:"Players from every affiliate",tag:""}]);
+  window.HUB_ACTIONS_LIST=HUB_ACTIONS.concat(window.CampUI&&CampUI.ready?[{k:"camp",go:()=>go("camp"),title:"Camp",desc:"Organization-wide camps and workouts.",meta:"Players from every affiliate",tag:""}]:[]);
   if(window.Dashboard){
     const cb=$("#dashCustomize"); if(cb && !cb.dataset.bound){ cb.dataset.bound="1"; cb.onclick=()=>Dashboard.setEditing(!Dashboard.editing,host); }
     return Dashboard.render(host);
@@ -14450,7 +14451,7 @@ boot();
     t=setTimeout(()=>{ k.style.transition="opacity .5s"; k.style.opacity="0";
       setTimeout(()=>{ k.remove(); store.set("cs.keysSeen","1"); },600); }, 16000); };
   k.addEventListener("mouseenter",()=>{ clearTimeout(t); t=-1; });
-  if(document.body.dataset.view==="schedule") window.__keysArm();
+  if(document.body.dataset.mhview==="schedule") window.__keysArm();
 })();
 </script>
 <script src="assistant/engine.js"></script>
@@ -14464,5 +14465,14 @@ boot();
 <script src="hub/dashboard.js"></script>
 <script src="camp/camp-core.js"></script>
 <script src="camp/camp.js"></script>
+<script>
+/* Camp appears only once the module is complete (camp.js sets CampUI.ready) — never a half-built screen. */
+(function(){
+  const ready=!!(window.CampUI&&CampUI.ready);
+  document.body.classList.toggle("camp-off",!ready);
+  if(!ready && typeof VIEW!=="undefined" && VIEW==="camp") go("hub");
+  try{ if(typeof VIEW!=="undefined" && VIEW==="hub") renderHub(); }catch(e){}
+})();
+</script>
 </body>
 </html>

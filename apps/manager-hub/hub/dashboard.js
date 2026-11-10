@@ -56,13 +56,15 @@
   }
   function save(d) { try { localStorage.setItem(KEY, JSON.stringify(d)); } catch (e) {} }
   const sizeOf = (d, id) => d.size[id] || W[id].size;
+  // the Camp widget shows once the Camp module is complete (it sets CampUI.ready)
+  const available = (id) => id !== "camp" || !!(window.CampUI && window.CampUI.ready);
 
   let editing = false, layout = null;
 
   function render(host) {
     if (!host) return;
     layout = load();
-    const visible = layout.order.filter((id) => !layout.hidden.includes(id));
+    const visible = layout.order.filter((id) => !layout.hidden.includes(id) && available(id));
     host.classList.add("dash");
     host.classList.toggle("editing", editing);
     host.innerHTML = (editing ? editBar() : "") +
@@ -70,7 +72,7 @@
     bind(host);
   }
   function editBar() {
-    const hid = layout.hidden;
+    const hid = layout.hidden.filter(available);
     return `<div class="dash-editbar" role="toolbar" aria-label="Customize dashboard">
       <span class="dash-editbar-t"><b>Customizing</b> Drag widgets by their handle, or use the arrows. Changes save as you go.</span>
       <span class="sp"></span>
@@ -83,7 +85,7 @@
   function card(id) {
     const w = W[id], sz = sizeOf(layout, id);
     let body = ""; try { body = w.render(); } catch (e) { console.error(e); body = `<p class="dash-muted">This widget couldn't load.</p>`; }
-    const i = layout.order.filter((x) => !layout.hidden.includes(x)).indexOf(id);
+    const i = layout.order.filter((x) => !layout.hidden.includes(x) && available(x)).indexOf(id);
     return `<section class="dash-w size-${sz}" data-w="${id}" aria-label="${h(w.title)}">
       <header class="dash-wh">
         ${editing ? `<button class="dash-grip" data-grip="${id}" aria-label="Drag to move ${h(w.title)}" title="Drag to move">${I.grip}</button>` : ""}
@@ -130,11 +132,11 @@
     if (refocus) { const el = q(refocus, host); if (el) el.focus(); }
   }
   function move(id, dir, host, refocus) {
-    const vis = layout.order.filter((x) => !layout.hidden.includes(x));
+    const vis = layout.order.filter((x) => !layout.hidden.includes(x) && available(x));
     const i = vis.indexOf(id), j = i + dir;
     if (i < 0 || j < 0 || j >= vis.length) return;
     [vis[i], vis[j]] = [vis[j], vis[i]];
-    layout.order = vis.concat(layout.order.filter((x) => layout.hidden.includes(x)));
+    layout.order = vis.concat(layout.order.filter((x) => !vis.includes(x)));
     commit(host, null, refocus || `[data-move="${dir}"][data-id="${id}"]`);
   }
   function setEditing(on, host) {
@@ -176,7 +178,7 @@
       ghost.remove(); el.classList.remove("dash-placeholder");
       if (target) {
         const vis = qa(".dash-w", host).map((n) => n.dataset.w);
-        layout.order = vis.concat(layout.order.filter((x) => layout.hidden.includes(x)));
+        layout.order = vis.concat(layout.order.filter((x) => !vis.includes(x)));
         save(layout);
       }
       render(host);
