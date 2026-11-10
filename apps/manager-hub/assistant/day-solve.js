@@ -430,7 +430,11 @@
     const on5 = (m, what) => { const r = Math.max(5, r5(m)); if (r !== m) say(`round5:${what}`, `${what}: ${m} min rounded to ${r} to keep times on 5-minute marks.`); return r; };
     if (mergedDup.length) say("merged", `Combined duplicate ${uniq(mergedDup).join(", ")} into one item.`);
     // ---- units: one per printed row
+    // a BP / cage rotation gives every hitting group one turn at each, so its rounds = the groups
+    const inRotation = (a) => (a.kind === "bp" || a.kind === "cage") && (ir.parallel || []).some((g) => g.includes(a.id) && g.some((x) => (actById.get(x) || {}).kind === (a.kind === "bp" ? "cage" : "bp")));
     const roundsCount = (a) => {
+      const G = ir.groups && ir.groups.hitting;
+      if (a.rounds && a.rounds.count && G && G > a.rounds.count && inRotation(a)) { say(`rotgroups:${a.id}`, `${G} hitting groups in the rotation, so ${G} rounds each on the field and in the cage.`); return { n: G, why: "groups" }; }
       if (a.rounds && a.rounds.count) return { n: a.rounds.count, why: "stated" };
       if (ir.groups && ir.groups.hitting) return { n: ir.groups.hitting, why: "groups" };
       if (hitGroups.length >= 1) return { n: hitGroups.length, why: "ctx" };

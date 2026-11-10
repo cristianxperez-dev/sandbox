@@ -636,3 +636,14 @@ test("a team-wide item in a 'while' group becomes position-player work; a team-w
   const bad = p.items.filter((i) => i.end > i.start).some((A) => p.items.some((B) => B !== A && B.end > B.start && A.start < B.end && B.start < A.end && (A.track === "all" || B.track === "all")));
   assert.ok(!bad, "no team-wide overlap left");
 });
+
+test("a BP / cage rotation gives every hitting group a turn: rounds follow groups.hitting when a smaller count was given", () => {
+  const ctx = { hittingGroups: ["Blue", "Orange", "Gray", "Red"], resources: { fields: 1, cages: 2, mounds: 1 } };
+  const ir = S.normalize({ dayType: "game", groups: { hitting: 4, pitchers: null }, anchors: { firstPitch: 1110, offBeforeGame: 30 }, activities: [
+    act("a1", "bp", { who: "position", rounds: { each: 20, count: 2, atOnce: null }, order: 1 }), act("a2", "cage", { who: "position", rounds: { each: 20, count: 2, atOnce: null }, order: 2 }),
+    act("a3", "stretch", { who: "all", at: 900, order: 3 })], parallel: [["a1", "a2"]] });
+  const p = S.solve(ir, ctx);
+  const groups = (k) => p.items.filter((i) => i.kind === k).map((i) => i.group).sort().join();
+  assert.equal(groups("bp"), "Blue,Gray,Orange,Red"); assert.equal(groups("cage"), "Blue,Gray,Orange,Red");
+  assert.ok(p.ok);
+});
