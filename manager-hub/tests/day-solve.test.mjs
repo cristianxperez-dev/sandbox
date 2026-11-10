@@ -608,3 +608,18 @@ test("edits: a duplicate BP is merged, rounds count is the total, a 10-min trim 
   p = S.solve(ir, ctx);
   assert.ok(one(p, "baserunning").start >= one(p, "teamDefense").end);
 });
+
+test("every block timed: a block with a stated start and no length runs to the next stated time / the end (owner's Nov 10 sentence)", () => {
+  const ctx = { hittingGroups: ["Blue", "Orange"], resources: { fields: 2, cages: 2, mounds: 4 } };
+  const ir = S.normalize(READ.read("Tomorrow, catchers report at 8:30 AM, hitting starts at 9:00 AM, defensive work begins at 10:00 AM, and everyone finishes at noon.", ctx));
+  const p = S.solve(ir, ctx);
+  assert.ok(p.ok);
+  const def = p.items.find((i) => i.kind === "teamDefense");
+  assert.equal(def.start, 600); assert.equal(def.end, 720, "defense runs 10:00–12:00");
+  assert.ok(p.assumptions.some((a) => /until the next stated time/.test(a.text)), "and says so");
+  // a stated length is never changed; untimed days keep their open-time note
+  const p2 = S.solve(S.normalize(READ.read("Hitting at 9, defense at 10 for 30 minutes, done at noon.", ctx)), ctx);
+  assert.equal(p2.items.find((i) => i.kind === "teamDefense").end, 630);
+  const p3 = S.solve(S.normalize(READ.read("Start at 9, done at noon. Hitting, then defense.", ctx)), ctx);
+  assert.ok(p3.assumptions.some((a) => a.key === "open"));
+});

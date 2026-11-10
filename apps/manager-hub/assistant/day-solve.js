@@ -695,9 +695,26 @@
       return t;
     }
     const fixedSpans = []; // main-flow spans that split segments
+    /* When the coach timed every block ("hitting at 9, defense at 10, done at noon"), a block with a stated
+       start but no stated length runs until the next stated time (or the day's end), not its default length
+       followed by open time. Only when nothing flexible is left to place; stated lengths are never changed. */
+    const timeline = flexMain.length === 0 && flexEnd != null;
+    const allStarts = fixedBlocks.map((x) => x.at - x.lead);   // any track: never run into the pitchers' stated work
+    const spanDurs = (b) => {
+      if (!timeline || b.track !== "main" || !b.units || b.units.some((u) => u.rigid)) return null;
+      if (isWarm(b) || bandOfB(b) !== KB.BAND.work || kindsOf(b).some((k) => ["meal", "meeting", "earlyWork"].includes(k))) return null;   // work blocks only
+      const next = Math.min(flexEnd, ...allStarts.filter((t) => t > b.at));
+      const avail = next - b.at, n = b.units.length;
+      if (!(avail > defLen(b))) return null;
+      const each = Math.floor(avail / n / 5) * 5;
+      if (each < Math.min(...b.units.map((u) => u.def))) return null;
+      const durs = b.units.map(() => each); durs[n - 1] += avail - each * n;
+      say(`span:${b.key}`, `${b.units[0].label.replace(/ — Round \d+$/, "")} runs ${fmtAP(b.at)}–${fmtAP(next)} (until the next stated time) — give it a length if it should be shorter.`);
+      return durs;
+    };
     fixedBlocks.forEach((b) => {
       const s0 = b.at - b.lead;
-      const e = placeBlock(b, s0, null, { fixed: true, flexible: false, source: "stated" });
+      const e = placeBlock(b, s0, spanDurs(b), { fixed: true, flexible: false, source: "stated" });
       b.span = [s0, e];
       if (b.track === "main") fixedSpans.push({ s: s0, e, label: (b.units || b.tpl.items)[0].label, b });
     });
