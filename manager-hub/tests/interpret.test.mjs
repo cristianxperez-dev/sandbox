@@ -98,6 +98,7 @@ test("refine: valid ops are returned; ops that break the request are refused; a 
   mockModel({ ops: [{ op: "duration", target: { kind: "teamDefense", who: null, label: null, id: null }, set: 20, delta: null }], notes: [] });
   let [s, b] = await json(await post({ mode: "refine", text: "shorten team fundy to 20", request: ir, plan: { items: [{ start: 600, end: 615, track: "all", label: "Team Stretch", actId: "a1", fixed: true }] } }));
   assert.ok(/10:00–10:15 \[all\] Team Stretch/.test(calls[0].body.input[0].content), "the current timetable is sent with a follow-up");
+  assert.ok(/Draft edit operations from the rule-based reader[\s\S]*"op":"duration"/.test(calls[0].body.input[0].content), "the built-in reader's edit draft is sent with a follow-up");
   if (s !== 200) console.log(b);
   assert.equal(s, 200); assert.equal(b.ops.length, 1);
   assert.deepEqual(calls[0].body.text.format.schema, DaySolve.REFINE_RESPONSE_SCHEMA);

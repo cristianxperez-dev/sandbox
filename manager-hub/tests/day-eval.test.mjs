@@ -153,7 +153,9 @@ const results = []; // { cat, id, pass, fails }
 let lastFails = [];
 const USAGE = { calls: 0, input: 0, output: 0, cacheRead: 0, reasoning: 0, ms: 0, lat: [], wall: [], errors: 0, errorKinds: {}, model: null };
 
-for (const sc of SCENARIOS) {
+// MH_EVAL_ONLY=<regex>: run only the scenarios whose "[cat] id" matches (e.g. to re-check failures)
+const ONLY = process.env.MH_EVAL_ONLY ? new RegExp(process.env.MH_EVAL_ONLY) : null;
+for (const sc of SCENARIOS.filter((x) => !ONLY || ONLY.test(`[${x.cat}] ${x.id}`))) {
   test(`[${sc.cat}] ${sc.id}`, async () => {
     let pass = false;
     try {

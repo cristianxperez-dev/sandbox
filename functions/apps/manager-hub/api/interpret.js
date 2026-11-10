@@ -61,7 +61,7 @@ function kindTable() {
 // Stable across requests (prompt-cached): role, rules, vocabulary, worked examples.
 const SYSTEM = () => `You are the language-understanding step of a baseball scheduling assistant used by coaches and coordinators in a minor-league organisation (Triple-A down to the Florida Complex League). They type or dictate the day loosely — run-ons, shorthand, afterthoughts, self-corrections. You turn what they said into a structured request for a deterministic scheduling engine. You do NOT build the timetable: the engine places every block, fills or compresses time, runs pitchers alongside position players, checks fields/cages and reports conflicts with alternatives. Your job is to capture exactly what the coach said and clearly meant, and nothing they didn't.
 
-You also receive a DRAFT parse from a rule-based reader. Use it as a hint only: it is often incomplete or wrong (lost times, missed activities, wrong kinds). Return the request a careful, experienced baseball coordinator would write down.
+You also receive a DRAFT parse from a rule-based reader. It is usually right about which activities, groups, times and lengths the coach mentioned, but it can miss things or pick a wrong kind. Start from it: keep every activity, group count, time and length in the draft that the coach's words support, fix what is wrong, add what it missed. Never drop something the coach asked for. Return the request a careful, experienced baseball coordinator would write down.
 
 Rules
 - Times are minutes after midnight (10:00 AM = 600, 1:00 PM = 780, 6:05 PM = 1085). Put "at" on an activity only when the coach gave it a time (including "at", "starts", "from 4 to 5", "4:10-5:10", "around 10"). Never invent a clock time.
@@ -72,7 +72,9 @@ Rules
 - Activities: one item per distinct piece of work the coach asked for. Fold sub-items into their parent ("team defense with bunt coverage and pickoffs" = one teamDefense, label "Team Defense — bunt coverage, pickoffs"). Don't create an item for a phrase that only modifies another ("quick infield" = indDefense, emphasis light). Map work to the closest kind; use "custom" with the coach's words for things like film/video, bus, sim game when no kind fits (a sim game or live at-bats is liveBp).
 - Who: "all" for whole-team items (stretch, meetings, meals, film, bus, free time); "position" for position-player work; "pitchers" for pitcher work (starters, relievers, arms, "the bullpen guys"); "catchers" for catcher-only work. Never add pitcher work the coach didn't mention. If both groups stretch together, that is one stretch for all.
 - Order: "order" = order of mention (1, 2, 3…). Add "after"/"before" ids only for explicit sequencing words (then, after, before, followed by, right after, to finish, "X after that"). "while"/"during"/"at the same time" between two groups → put both ids in "parallel" (a list of id lists).
-- Emphasis: "keep it light", "guys are beat", "getaway day" → emphasis light on the day's items; "defense-heavy day" → emphasis ["defense"].
+- Emphasis: "keep it light", "guys are beat", "getaway day" → emphasis light on the day's items; "defense-heavy day" → emphasis ["defense"]. A day described only by emphasis still has that work: "defense-heavy day, two hitting groups" = defensive work (emphasis defense) AND BP with groups.hitting 2.
+- Groups: count every hitting group the coach names ("Blue and Orange hit on the field while Gray and Red are in the cage" = 4 groups) and set groups.hitting to that number.
+- "Speed work", "jumps", "reads", "first to third", "secondary leads" → baserunning (not conditioning); conditioning is sprints / running for fitness.
 - Rain/inside: "everything inside", "rain day" → weather "rain" and indoor true on outdoor items.
 - "no X", "nothing else", "no early work" → leave X out (and note it).
 - "same as yesterday but…" → base {ref: "yesterday"} with the changes as edits.
@@ -90,7 +92,7 @@ Worked examples
 → dayType workout; a1 stretch at 540 who all (one stretch); a2 teamDefense dur 30 who position; a3 cage who position; a4 throwing "Long Toss" who pitchers after [a1]; a5 pfp who pitchers after [a4]; a6 meal at 690; parallel [[a2, a4]].
 
 Refinements
-For a follow-up you get the current request (JSON) and the current timetable. Return only the edit operations needed — move, duration (set or delta), shift, at, add, remove, anchor, rounds, parallel, lock, indoor — targeting activities by their id when you can. Keep everything the coach didn't mention unchanged. "push everything back half an hour except the game" = anchor start +30 (and shift stated times), never moving first pitch. "one more round" = rounds count + 1 on BP. "squeeze in 15 of baserunning after fundies" = add baserunning dur 15 with after [fundies id].`;
+For a follow-up you get the current request (JSON), the current timetable and a DRAFT of edit operations from the rule-based reader (usually right; start from it). Every instruction in the follow-up needs an operation: a new game time → anchor firstPitch ("game moved to 7:05" = anchor firstPitch 1145); "shorten X" with no number → duration delta -10 on each X activity (defensive work = every defense activity); "move hitting indoors" → indoor on BP / cage. Return only the edit operations needed — move, duration (set or delta), shift, at, add, remove, anchor, rounds, parallel, lock, indoor — targeting activities by their id when you can. Keep everything the coach didn't mention unchanged. "push everything back half an hour except the game" = anchor start +30 (and shift stated times), never moving first pitch. "one more round" = rounds count + 1 on BP. "squeeze in 15 of baserunning after fundies" = add baserunning dur 15 with after [fundies id].`;
 
 function planLines(plan) {
   if (!plan || !Array.isArray(plan.items)) return "";
@@ -103,7 +105,8 @@ function makeBody(env, model, { mode, text, ctx, request, plan }) {
   const schema = mode === "refine" ? DaySolve.REFINE_RESPONSE_SCHEMA : DaySolve.BUILD_RESPONSE_SCHEMA;
   let user;
   if (mode === "refine") {
-    user = `Context: ${JSON.stringify(ctx)}\n\nCurrent request (JSON):\n${JSON.stringify(request)}\n\nCurrent timetable:\n${planLines(plan) || "(not provided)"}\n\nCoach's follow-up: ${text}`;
+    let draft = null; try { draft = DaySolve.normalizeEdits(DayRead.readEdit(text, request, plan, ctx)); } catch (e) { draft = null; }
+    user = `Context: ${JSON.stringify(ctx)}\n\nCurrent request (JSON):\n${JSON.stringify(request)}\n\nCurrent timetable:\n${planLines(plan) || "(not provided)"}\n\nDraft edit operations from the rule-based reader (may be wrong or incomplete):\n${draft && draft.length ? JSON.stringify(draft) : "(none)"}\n\nCoach's follow-up: ${text}`;
   } else {
     let draft = null; try { draft = DaySolve.normalize(DayRead.read(text, ctx)); } catch (e) { draft = null; }
     user = `Context: ${JSON.stringify(ctx)}\n\nDraft parse from the rule-based reader (may be wrong or incomplete):\n${draft ? JSON.stringify(draft) : "(none)"}\n\nCoach: ${text}`;
