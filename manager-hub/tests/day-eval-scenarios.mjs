@@ -99,7 +99,9 @@ export const honest = () =>
     const probs = [];
     overlaps(p).forEach(([x, y]) => probs.push(`overlap ${brief(x)} × ${brief(y)}`));
     if (Number.isInteger(a.end)) items(p).filter((i) => !["game", "postgame", "free"].includes(i.kind) && i.end > a.end).forEach((i) => probs.push(`past hard stop ${fmt(a.end)}: ${brief(i)}`));
-    if (Number.isInteger(a.start)) items(p).filter((i) => i.kind !== "arrival" && i.start < a.start).forEach((i) => probs.push(`before start ${fmt(a.start)}: ${brief(i)}`));
+    // the day may widen to include a stated earlier item (a bus, a meeting); the plan's window says where it starts
+    const st = Number.isInteger(a.start) ? Math.min(a.start, p && p.window && Number.isInteger(p.window.start) ? p.window.start : a.start) : null;
+    if (st != null) items(p).filter((i) => i.kind !== "arrival" && i.start < st).forEach((i) => probs.push(`before start ${fmt(st)}: ${brief(i)}`));
     if (!probs.length) return null;
     return p && Array.isArray(p.conflicts) && p.conflicts.length && p.ok === false ? null : `problems without a conflict / ok:false — ${probs.join("; ")}`;
   });
