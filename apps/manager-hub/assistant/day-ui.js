@@ -179,7 +179,7 @@
     return `<div class="dy-log" id="dyLog">${log.map((m) => `<div class="dy-msg ${m.who}">${m.who === "you" ? h(m.text) : m.html || h(m.text)}</div>`).join("")}</div>
       <div class="dy-refine">
         <label class="mha-lbl" for="dyRefine">Change something</label>
-        <div class="dy-refine-row"><textarea id="dyRefine" rows="2" class="mha-ta dy-rta" placeholder="e.g. Move defense before hitting"></textarea>${micBtn("dyMic2")}<button class="btn primary" data-refine>Apply</button></div>
+        <div class="dy-refine-row"><textarea id="dyRefine" rows="2" class="mha-ta dy-rta" placeholder="${B ? "e.g. Catchers report at 1:30, add a defensive meeting before BP" : "e.g. Move defense before hitting"}"></textarea>${micBtn("dyMic2")}<button class="btn primary" data-refine>Apply</button></div>
         <div class="dy-examples tight">${(B ? (B.game ? BUILD_EXAMPLES_GAME : BUILD_EXAMPLES_DAY) : REFINE_EXAMPLES).map((x) => `<button class="dy-ex sm" data-rex="${h(x)}">${h(x)}</button>`).join("")}</div>
       </div>`;
   }
