@@ -1604,6 +1604,7 @@ body.v-min .sit-strip{order:-1}
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script src="library/plays.js"></script>
+<script src="games/default-game.js"></script>
 <script>
 (() => {
 'use strict';
@@ -1865,7 +1866,41 @@ function seedPlays() {   // the first four Plays Library entries, as a ready-to-
     mlb: normMlb({ libId: p.id, embedUrl: p.video.embedUrl, pageUrl: p.video.pageUrl, title: p.video.title, angle: p.video.angle, situation: p.situationLine, sit: p.situation }),
     observations: p.answers.map(a => ({ id: uid(), text: a.text, points: 10, note: a.note })) }));
 }
+/* ----- the default game: games/default-game.js (made by games/make-default.mjs from an exported game file, which
+   stays unchanged next to it). Every visitor starts a session on it with a fresh game state; a refresh in the same
+   tab resumes whatever is open; opening or importing another game holds for the rest of that session. ----- */
+const DEFAULT_GAME = (() => { const g = window.BF2_DEFAULT_GAME; return g && typeof g.id === 'string' && g.id && g.data && Array.isArray(g.data.plays) && g.data.plays.length ? g : null; })();
+const TAB_KEY = 'baseballFeud2.tab';     // sessionStorage: this tab has already started (refresh = resume)
+const isDefaultGame = id => !!DEFAULT_GAME && id === DEFAULT_GAME.id;
+function defaultGameContent() {          // the export, read with the same normalisers as IMPORT GAME
+  const d = DEFAULT_GAME.data, seen = new Set();
+  return { sessionName: (str(d.sessionName) || 'Default game').slice(0, 80), settings: normSettings(d.settings), plays: d.plays.map(p => normPlay(p, seen)),
+    practice: d.practice ? normPractice(d.practice) : samplePractice(), fastMoney: d.fastMoney ? normFM(d.fastMoney) : sampleFastMoney() };
+}
+function defaultGameState() {
+  const c = defaultGameContent();
+  return { version: DATA_VERSION, gameId: DEFAULT_GAME.id, ...c, session: newSession(), ui: { mode: 'game', selected: c.plays[0].id, fmEdit: false, editPractice: false }, firstRun: true, defaultStart: true };
+}
+/* content only (no ids that change per load), to tell an edited copy of the default game from the original */
+function contentKey(c) {
+  c = obj(c); const pr = obj(obj(c.practice).play);
+  return JSON.stringify([str(c.sessionName), (c.plays || []).map(p => [p.id, p.title, p.prompt, p.videoName, p.mlb, (p.observations || []).map(o => [o.text, num(o.points), str(o.note)])]),
+    [obj(c.practice).enabled !== false, pr.title, pr.prompt, (pr.observations || []).map(o => [o.text, num(o.points)])],
+    [num(obj(c.fastMoney).seconds), (obj(c.fastMoney).questions || []).map(q => [q.q, q.answer, num(q.points)])]]);
+}
+function sessionStarted() { try { return !!sessionStorage.getItem(TAB_KEY); } catch (e) { return false; } }
+function markSession() { try { sessionStorage.setItem(TAB_KEY, '1'); } catch (e) {} }
+let carried = null;                      // the game a returning visitor had open, kept in GAMES at boot
+function initialState() {
+  const saved = load();
+  if (!DEFAULT_GAME || sessionStarted()) { markSession(); return saved; }
+  markSession();
+  if (!saved.firstRun) carried = saved;
+  return defaultGameState();
+}
+
 function defaultState() {
+  if (DEFAULT_GAME) return defaultGameState();
   const plays = seedPlays() || samplePlays();
   return { version: DATA_VERSION, gameId: 'g-' + uid(), sessionName: 'SAMPLE GAME — VOLUME 1', settings: defaultSettings(), plays,
     practice: samplePractice(), fastMoney: sampleFastMoney(), session: newSession(), ui: { mode: 'game', selected: plays[0].id, fmEdit: false, editPractice: false }, firstRun: true };
@@ -1899,13 +1934,13 @@ function load() {
   return defaultState();
 }
 
-let state = load();
+let state = initialState();
 let saveTimer = null;
 function save() { clearTimeout(saveTimer); saveTimer = setTimeout(saveNow, 200); }
 function saveNow() {
   clearTimeout(saveTimer);
   try {
-    const { firstRun, migrated, ...rest } = state;
+    const { firstRun, migrated, defaultStart, ...rest } = state;
     if (practice) { rest.plays = practice.livePlays; rest.session = practice.liveSession; }   // never persist the practice sandbox
     localStorage.setItem(LS_KEY, JSON.stringify(rest));
     storeCurrentGame();
@@ -4270,6 +4305,7 @@ function openGame(id, then) {
   state.sessionName = str(d.sessionName) || g.name;
   state.practice = normPractice(d.practice); state.fastMoney = normFM(d.fastMoney);
   state.session = newSession(); state.gameId = g.id; state.ui.selected = state.plays[0].id; state.ui.fmEdit = false; state.ui.editPractice = false;
+  if (isDefaultGame(g.id)) { state.settings = normSettings(DEFAULT_GAME.data.settings); applySettingsClasses(); }   // its own team names, host, rules
   saveNow(); closeAll(); initVideos().then(() => {
     if (then === 'play') { enterGame(); hideStart(); primaryStart(); }
     else enterSetup();
@@ -4296,15 +4332,22 @@ function closeOv(id) { const o = $('#' + id); if (o) { o.hidden = true; if (id =
 function closeAll() { ['bfLib', 'bfPrev', 'bfGames', 'bfVid'].forEach(closeOv); L.det = ''; const h = $('#bfDet'); if (h) h.innerHTML = ''; }
 
 /* Games */
+function ensureDefaultListed() {   // the default game is always in GAMES, whatever was deleted in this browser
+  if (!DEFAULT_GAME || games.some(g => g.id === DEFAULT_GAME.id)) return;
+  const c = defaultGameContent();
+  games.push({ id: DEFAULT_GAME.id, name: c.sessionName, savedAt: str(DEFAULT_GAME.data.exportedAt) || new Date().toISOString(), data: clone({ sessionName: c.sessionName, plays: c.plays, practice: c.practice, fastMoney: c.fastMoney }) });
+  gamesSave();
+}
 function openGames() {
   const o = ov('bfGames');
+  ensureDefaultListed();
   const rows = games.map(g => {
-    const pl = (g.data.plays || []), cur = g.id === state.gameId;
-    return `<div class="bf-game ${cur ? 'cur' : ''}"><div class="bf-gm"><div class="bf-gt">${esc(g.name)}${cur ? ' <span class="bf-tag">OPEN NOW</span>' : ''}</div>
+    const pl = (g.data.plays || []), cur = g.id === state.gameId, def = isDefaultGame(g.id);
+    return `<div class="bf-game ${cur ? 'cur' : ''}"><div class="bf-gm"><div class="bf-gt">${esc(g.name)}${def ? ' <span class="bf-tag">DEFAULT</span>' : ''}${cur ? ' <span class="bf-tag">OPEN NOW</span>' : ''}</div>
       <div class="bf-gs">${pl.length} play${pl.length === 1 ? '' : 's'} · saved ${esc(fmtDate(g.savedAt))}</div>
       <div class="bf-gp">${pl.map((p, i) => `<span>${i + 1}. ${esc(p.title || 'Untitled play')}${p.mlb && (p.mlb.embedUrl || p.mlb.pageUrl) ? ' ▶' : ''}</span>`).join('')}</div></div>
       <div class="bf-ga"><button class="sb primary" data-bf="gPlay" data-id="${esc(g.id)}">▶ PLAY</button><button class="sb" data-bf="gEdit" data-id="${esc(g.id)}">EDIT</button>
-      ${cur ? '' : `<button class="sb danger sm" data-bf="gDel" data-id="${esc(g.id)}">DELETE</button>`}</div></div>`;
+      ${cur || def ? '' : `<button class="sb danger sm" data-bf="gDel" data-id="${esc(g.id)}">DELETE</button>`}</div></div>`;
   }).join('') || '<p class="bf-empty">No saved games yet.</p>';
   o.innerHTML = `<div class="ov-inner bf-in"><div class="bf-hh"><div><div class="ov-k">BASEBALL FEUD 2.0</div><h2>YOUR <b>GAMES</b></h2></div>
     <div class="grp"><button class="sb ghost lg" data-bf="close">‹ BACK</button><button class="sb primary lg" data-bf="newGame">+ NEW GAME FROM THE LIBRARY</button></div></div>
@@ -4918,6 +4961,17 @@ $('#bAddLib').addEventListener('click', () => openLibrary('browse'));
 
 /* ================= BOOT ================= */
 (async function boot() {
+  if (carried && carried.plays.length) {
+    const snap = clone({ sessionName: carried.sessionName, plays: carried.plays, practice: carried.practice, fastMoney: carried.fastMoney });
+    const edited = isDefaultGame(carried.gameId) && contentKey(snap) !== contentKey(defaultGameContent());
+    if (!isDefaultGame(carried.gameId) || edited) {
+      const id = edited ? 'g-' + uid() : carried.gameId, name = (str(carried.sessionName).trim() || 'Untitled game') + (edited ? ' (your edits)' : '');
+      const i = games.findIndex(g => g.id === id), rec = { id, name, savedAt: new Date().toISOString(), data: { ...snap, sessionName: name } };
+      if (i >= 0) games[i] = rec; else games.unshift(rec);
+      gamesSave();
+    }
+  }
+  if (state.defaultStart) { const i = games.findIndex(g => g.id === state.gameId); if (i >= 0) games.splice(i, 1); }   // re-saved from the file below
   applySettingsClasses();
   applyMode();
   await idbOpen();
@@ -4928,7 +4982,7 @@ $('#bAddLib').addEventListener('click', () => openLibrary('browse'));
   if (!state.practice) state.practice = samplePractice();
   if (state.ui.mode === 'game') { renderGame(); showStart(); requestAnimationFrame(fitAll); }
   else renderSetup();
-  if (state.firstRun) { saveNow(); setTimeout(() => toast('Sample game loaded: four MLB plays from the Plays Library. Press ENTER to play, L for the library, G for your games.', 6500), 2300); }
+  if (state.firstRun) { saveNow(); setTimeout(() => toast(`${state.defaultStart ? `“${state.sessionName}” loaded` : 'Sample game loaded'}: ${state.plays.length} MLB plays. Press ENTER to play, L for the library, G for your games.`, 6500), 2300); }
   else if (state.migrated) { saveNow(); setTimeout(() => toast('Updated: Round Bank scoring with steals — revealed answers fill the bank, 3 strikes opens a steal. Earlier points are kept.', 7500), 1900); }
   else {
     const missing = state.plays.filter(p => p.videoName && !videos[p.id]).length;

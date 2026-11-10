@@ -57,6 +57,8 @@ async function choose(p, slot, file) {
   await fc.setFiles(file); await wait(p, 400);
 }
 const P1 = "wwgw-v1-01-high-home-chaos", P3 = "wwgw-v1-03-three-extra-outs", P4 = "wwgw-v1-04-little-league-walk-off", P8 = "wwgw-v1-08-rundown-that-wouldnt-end", P12 = "wwgw-v1-12-two-runners-one-base";
+/* the default game (apps/baseball-feud-2/games/default-game.js): its plays 3 and 4, both broadcast-only MLB embeds */
+const G3 = "wwgw-v1-04-little-league-walk-off", G4 = "wwgw-v1-05-throw-throw-throw-again";
 
 (async () => {
   const b = await chromium.launch();
@@ -65,27 +67,27 @@ const P1 = "wwgw-v1-01-high-home-chaos", P3 = "wwgw-v1-03-three-extra-outs", P4 
   await (async () => {
     const { ctx, p, errs } = await fresh(b);
     await startLive(p);
-    await nextPlay(p); await nextPlay(p);                              // play 3: Three Extra Outs (broadcast, MLB embed)
+    await nextPlay(p); await nextPlay(p);                              // play 3: The Little League Walk-Off (broadcast, MLB embed)
     const before = await video(p);
     ok(/streamable\.com\/m\//.test(before.emb), "W1 · play 3 starts on MLB's embedded broadcast clip");
     await libFromGame(p);
-    await p.click(`${cardSel(P3)} [data-bf="manage"]`); await wait(p, 400);
+    await p.click(`${cardSel(G3)} [data-bf="manage"]`); await wait(p, 400);
     ok(await p.isVisible("#bfVid .mv-slot[data-drop=broadcast]") && await p.isVisible("#bfVid .mv-slot[data-drop=high-home]"), "W1 · Manage Video shows a Broadcast and an iHome / High Home slot");
     ok(await p.isDisabled('#bfVid [data-bf="mvSave"]'), "W1 · Save is disabled until something changes");
     // cancel restores: stage a file, cancel, nothing changed
     await choose(p, "broadcast", BCAST);
     p.once("dialog", (d) => d.accept());       // “Discard these video changes?”
     await p.click('#bfVid [data-bf="mvCancel"]'); await wait(p, 300);
-    const stillMlb = await p.evaluate((id) => !JSON.parse(localStorage.getItem("baseballFeud2.library.v1")).plays.find((x) => x.id === id).media.files.broadcast, P3);
+    const stillMlb = await p.evaluate((id) => !JSON.parse(localStorage.getItem("baseballFeud2.library.v1")).plays.find((x) => x.id === id).media.files.broadcast, G3);
     ok(stillMlb && !(await p.isVisible("#bfVid")), "W1 · Cancel after choosing a file restores the play (nothing saved)");
     // replace: choose → preview → save
-    await p.click(`${cardSel(P3)} [data-bf="manage"]`); await wait(p, 300);
+    await p.click(`${cardSel(G3)} [data-bf="manage"]`); await wait(p, 300);
     await choose(p, "broadcast", BCAST);
     const pv = await p.evaluate(() => { const v = document.querySelector("#bfVid .mv-stage video"); return { src: v && v.src, txt: document.querySelector("#bfVid .mv-pvt").innerText, newRow: !!document.querySelector("#bfVid .mv-new") }; });
     ok(pv.src && pv.src.startsWith("blob:") && /not saved yet/i.test(pv.txt) && pv.newRow, "W1 · the new file previews before saving, marked unsaved");
     await shot(p, "manage-video-staged");
     await p.click('#bfVid [data-bf="mvSave"]'); await wait(p, 600);
-    const card = await p.locator(cardSel(P3)).innerText();
+    const card = await p.locator(cardSel(G3)).innerText();
     ok(/BROADCAST · YOURS/.test(card), "W1 · the library card shows the uploaded Broadcast clip");
     await backToGame(p);
     const after = await video(p);
@@ -106,10 +108,10 @@ const P1 = "wwgw-v1-01-high-home-chaos", P3 = "wwgw-v1-03-three-extra-outs", P4 
   await (async () => {
     const { ctx, p, errs } = await fresh(b);
     await startLive(p);
-    await nextPlay(p); await nextPlay(p); await nextPlay(p);          // play 4: Little League Walk-Off (broadcast only)
+    await nextPlay(p); await nextPlay(p); await nextPlay(p);          // play 4: Throw, Throw, Throw Again (broadcast only)
     ok(/streamable/.test((await video(p)).emb) && (await video(p)).angles.length === 0, "W2 · play 4 is broadcast-only (no angle switcher)");
     await libFromGame(p);
-    await p.click(`${cardSel(P4)} [data-bf="manage"]`); await wait(p, 300);
+    await p.click(`${cardSel(G4)} [data-bf="manage"]`); await wait(p, 300);
     await choose(p, "high-home", IHOME);
     const radios = await p.evaluate(() => [...document.querySelectorAll('#bfVid input[name="mvdef"]')].map((r) => r.value + (r.disabled ? ":off" : ":on")));
     ok(radios.join() === "broadcast:on,high-home:on", "W2 · both angles can be set as the game default once iHome is attached");
@@ -117,9 +119,9 @@ const P1 = "wwgw-v1-01-high-home-chaos", P3 = "wwgw-v1-03-three-extra-outs", P4 
     ok(/Games play HIGH HOME/i.test(await p.locator("#bfVid .mv-uses").innerText()), "W2 · the panel says games will play High Home");
     ok((await p.locator('#bfVid .mv-slot[data-drop="broadcast"]').innerText()).includes("MLB.COM"), "W2 · the Broadcast clip is still there (never overwritten)");
     await p.click('#bfVid [data-bf="mvSave"]'); await wait(p, 600);
-    const lib = await p.evaluate((id) => JSON.parse(localStorage.getItem("baseballFeud2.library.v1")).plays.filter((x) => x.id === id), P4);
+    const lib = await p.evaluate((id) => JSON.parse(localStorage.getItem("baseballFeud2.library.v1")).plays.filter((x) => x.id === id), G4);
     ok(lib.length === 1 && lib[0].media.def === "high-home" && lib[0].media.files["high-home"].name === "ihome-test.mp4" && lib[0].video.embedUrl, "W2 · one play record (no duplicate) holds both angles, default High Home");
-    ok(/BROADCAST/.test(await p.locator(cardSel(P4)).innerText()) && /HIGH HOME · YOURS/.test(await p.locator(cardSel(P4)).innerText()), "W2 · the card lists Broadcast + High Home");
+    ok(/BROADCAST/.test(await p.locator(cardSel(G4)).innerText()) && /HIGH HOME · YOURS/.test(await p.locator(cardSel(G4)).innerText()), "W2 · the card lists Broadcast + High Home");
     await shot(p, "library-desktop");
     await backToGame(p);
     let v = await video(p);
