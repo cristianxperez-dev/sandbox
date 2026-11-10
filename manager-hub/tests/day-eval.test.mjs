@@ -62,7 +62,9 @@ async function viaHttp(body) {
     const d = await res.json().catch(() => ({ error: "non-json-" + res.status }));
     if (d && d.ms == null) d.ms = Date.now() - t0;
     d.wall = Date.now() - t0;
-    if ((res.status === 429 || res.status >= 500 && d.error === "model-service-503") && attempt < 2) { await new Promise((r) => setTimeout(r, 4000 * (attempt + 1))); continue; }
+    // Production's per-client limit (20 per 10 min): wait it out instead of failing the scenario
+    if (res.status === 429 && d.error === "rate-limited" && attempt < 30) { await new Promise((r) => setTimeout(r, ((d.retryAfter || 60) + 2) * 1000)); continue; }
+    if ((res.status === 429 && d.error !== "rate-limited" || res.status >= 500 && d.error === "model-service-503") && attempt < 2) { await new Promise((r) => setTimeout(r, 4000 * (attempt + 1))); continue; }
     return { res, d };
   }
 }
