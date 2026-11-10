@@ -3,7 +3,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { createRequire } from "node:module";
-import { onRequestPost, onRequest } from "../../functions/apps/manager-hub/api/interpret.js";
+import { onRequestPost, onRequest, _resetLimits } from "../../functions/apps/manager-hub/api/interpret.js";
 const require = createRequire(import.meta.url);
 const DayRead = require("../../apps/manager-hub/assistant/day-read.js");
 const DaySolve = require("../../apps/manager-hub/assistant/day-solve.js");
@@ -17,10 +17,11 @@ function mockModel(payload, { status = 200, stop = "end_turn" } = {}) {
   calls = [];
   globalThis.fetch = async (url, init) => {
     calls.push({ url, init, body: JSON.parse(init.body) });
-    return new Response(JSON.stringify({ model: "claude-opus-5-5", stop_reason: stop, content: [{ type: "text", text: typeof payload === "string" ? payload : JSON.stringify(payload) }], usage: {} }), { status, headers: { "Content-Type": "application/json" } });
+    return new Response(JSON.stringify({ model: "claude-opus-5-5", stop_reason: stop, content: [{ type: "text", text: typeof payload === "string" ? payload : JSON.stringify(payload) }], usage: { input_tokens: 4200, output_tokens: 900, cache_read_input_tokens: 3000 } }), { status, headers: { "Content-Type": "application/json" } });
   };
 }
-const post = (body, { env = ENV, origin = ORIGIN } = {}) => onRequestPost({ env, request: new Request(ORIGIN + "/apps/manager-hub/api/interpret", { method: "POST", headers: { "Content-Type": "application/json", ...(origin ? { Origin: origin } : {}) }, body: JSON.stringify(body) }) });
+let ipN = 0;
+const post = (body, { env = ENV, origin = ORIGIN, ip = "198.51.100." + (++ipN % 250) } = {}) => onRequestPost({ env, request: new Request(ORIGIN + "/apps/manager-hub/api/interpret", { method: "POST", headers: { "Content-Type": "application/json", "CF-Connecting-IP": ip, ...(origin ? { Origin: origin } : {}) }, body: JSON.stringify(body) }) });
 const json = async (r) => [r.status, await r.json()];
 
 test("no key configured → 503, the page falls back to the built-in reader", async () => {
@@ -47,7 +48,10 @@ test("build: a valid model reply is returned as the request (source ai); the req
   assert.deepEqual(sent.body.output_config.format.schema, DaySolve.BUILD_RESPONSE_SCHEMA);
   assert.equal(sent.body.system[0].cache_control.type, "ephemeral");
   assert.ok(sent.body.messages[0].content.includes(PRIMARY));
-  assert.ok(/team fundamentals \(teamDefense\)/i.test(sent.body.system[0].text), "shorthand guidance in the system prompt");
+  assert.ok(/fundy|fundies/i.test(sent.body.system[0].text) && /indy/i.test(sent.body.system[0].text), "shorthand guidance in the system prompt");
+  assert.ok(/Draft parse from the rule-based reader/.test(sent.body.messages[0].content), "the built-in reader's draft is sent for correction");
+  assert.ok(sent.body.max_tokens <= 6000 && sent.body.output_config.effort === "low", "output capped; low effort by default");
+  assert.ok(b.usage && typeof b.usage.input_tokens === "number" && typeof b.ms === "number", "usage and latency reported");
 });
 test("the model never sees roster names — only what the page sends in ctx", async () => {
   mockModel({ request: DaySolve.normalize(DayRead.read(PRIMARY, {})) });
@@ -70,7 +74,8 @@ test("refusal, truncation and rate limits map to clear errors", async () => {
 test("refine: valid ops are returned; ops that break the request are refused; a bad current request is rejected", async () => {
   const ir = DaySolve.normalize(DayRead.read(PRIMARY, {}));
   mockModel({ ops: [{ op: "duration", target: { kind: "teamDefense", who: null, label: null, id: null }, set: 20, delta: null }], notes: [] });
-  let [s, b] = await json(await post({ mode: "refine", text: "shorten team fundy to 20", request: ir }));
+  let [s, b] = await json(await post({ mode: "refine", text: "shorten team fundy to 20", request: ir, plan: { items: [{ start: 600, end: 615, track: "all", label: "Team Stretch", actId: "a1", fixed: true }] } }));
+  assert.ok(/10:00–10:15 \[all\] Team Stretch/.test(calls[0].body.messages[0].content), "the current timetable is sent with a follow-up");
   if (s !== 200) console.log(b);
   assert.equal(s, 200); assert.equal(b.ops.length, 1);
   assert.deepEqual(calls[0].body.output_config.format.schema, DaySolve.REFINE_RESPONSE_SCHEMA);
@@ -81,5 +86,17 @@ test("refine: valid ops are returned; ops that break the request are refused; a 
 test("network timeout → 504", async () => {
   globalThis.fetch = async () => { const e = new Error("aborted"); e.name = "AbortError"; throw e; };
   assert.equal((await post({ mode: "build", text: PRIMARY })).status, 504);
+  globalThis.fetch = realFetch;
+});
+
+test("rate limits per client: a burst is refused with Retry-After, other clients unaffected", async () => {
+  _resetLimits();
+  mockModel({ request: DaySolve.normalize(DayRead.read(PRIMARY, {})) });
+  const env = Object.assign({}, ENV, { MH_AI_RATE: "3" });
+  for (let i = 0; i < 3; i++) assert.equal((await post({ mode: "build", text: PRIMARY }, { env, ip: "203.0.113.9" })).status, 200);
+  const r = await post({ mode: "build", text: PRIMARY }, { env, ip: "203.0.113.9" });
+  assert.equal(r.status, 429); assert.ok(+r.headers.get("Retry-After") > 0);
+  assert.equal(calls.length, 3, "the refused request never reached the model");
+  assert.equal((await post({ mode: "build", text: PRIMARY }, { env, ip: "203.0.113.10" })).status, 200);
   globalThis.fetch = realFetch;
 });

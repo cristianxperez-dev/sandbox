@@ -90,3 +90,4 @@
 
 /* the access gate's floating Sign out link sits over full-screen panels' footers; hide it while one is open */
 body.mha-open .sbx-signout{display:none!important}
+.dy-fallback{background:#FFFAEB;border:1px solid #FEC84B;border-radius:8px;padding:6px 9px;margin-bottom:6px;font-size:12.5px}

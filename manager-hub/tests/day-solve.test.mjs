@@ -130,13 +130,15 @@ test("impossible: start 2 PM, finish by 1 PM", () => {
   assert.ok(p.items.length >= 3, "best-effort items still returned");
 });
 
-test("fixed overlap, stated time after the hard stop, before the start", () => {
+test("fixed overlap and a stated time after the hard stop; an earlier stated time widens the day", () => {
   const p = S.solve(req({ anchors: { start: 540, end: 720, firstPitch: null, offBeforeGame: null }, activities: [
     act("a1", "meeting", { at: 540, dur: 30 }), act("a2", "stretch", { at: 555 }), act("a3", "bp", { at: 710 }), act("a4", "activation", { at: 520 })] }), CTX);
   const codes = p.conflicts.map((c) => c.code);
   assert.ok(codes.includes("fixedOverlap"), codes.join());
   assert.ok(codes.includes("afterEnd"), codes.join());
-  assert.ok(codes.includes("beforeStart"), codes.join());
+  assert.ok(!codes.includes("beforeStart"), "an earlier stated time is not a conflict");
+  assert.ok(p.assumptions.some((a) => /Day starts 8:40 AM/.test(a.text)));
+  assert.equal(p.window.start, 520);
   assert.equal(p.ok, false);
   const fo = p.conflicts.find((c) => c.code === "fixedOverlap");
   assert.ok(fo.alternatives.some((a) => a.ops[0].op === "at" && a.ops[0].at === 570));
@@ -516,4 +518,93 @@ test("normalize: every reader request passes strict validation", () => {
   assert.ok(n >= 60, `${n} prompts checked`);
   assert.equal(S.validate(S.normalize({ activities: [{ id: "a1", kind: "stretch" }] }), { strict: true }).ok, true);
   assert.equal(S.validate(S.normalize({ activities: [{ kind: "stretch" }] }), { strict: true }).ok, false, "a missing id is not invented");
+});
+
+/* ======================================================= honesty & hygiene */
+test("bus before the stated start: the day widens, on-field work still waits for the start", () => {
+  const p = S.solve(req({ dayType: "game", anchors: { start: 930, end: null, firstPitch: 1115, offBeforeGame: 40 }, activities: [
+    act("a1", "custom", { label: "Bus", at: 885, dur: 20 }), act("a2", "stretch"), act("a3", "bp", { at: 970, dur: 60, rounds: { each: null, count: 3, atOnce: null } })] }), CTX);
+  assert.equal(p.ok, true, JSON.stringify(p.conflicts));
+  assert.equal(p.conflicts.length, 0);
+  assert.equal(one(p, "custom").start, 885);
+  assert.equal(one(p, "stretch").start, 930, "stretch at the stated start, not right after the bus");
+  assert.equal(p.window.start, 885); assert.equal(p.window.workStart, 930);
+  assert.ok(p.assumptions.some((a) => /Bus/.test(a.text)));
+});
+
+test("a stated time after the hard stop raises afterEnd with numbers and alternatives", () => {
+  const ir = req({ anchors: { start: 540, end: 690, firstPitch: null, offBeforeGame: null }, activities: [
+    act("a1", "stretch", { at: 540 }), act("a2", "teamDefense", { at: 555, dur: 75 }), act("a3", "bp", { at: 705 })] });
+  const p = S.solve(ir, CTX);
+  assert.equal(p.ok, false);
+  const c = p.conflicts.find((x) => x.code === "afterEnd");
+  assert.ok(c); assert.equal(c.severity, "error");
+  assert.match(c.message, /11:45 AM.*11:30 AM/);
+  assert.ok(c.alternatives.length >= 1);
+  const fix = c.alternatives.find((a) => a.ops[0].op === "at");
+  assert.ok(fix);
+  const q = S.solve(S.applyEdits(ir, J(fix.ops), CTX), CTX);
+  assert.ok(!q.conflicts.some((x) => x.code === "afterEnd"));
+});
+
+test("stated lengths off the 5-minute grid are rounded, said once; every time stays on 5", () => {
+  const p = S.solve(req({ anchors: { start: 480, end: null, firstPitch: null, offBeforeGame: null }, activities: [
+    act("a1", "custom", { label: "Video Session", dur: 8 }), act("a2", "stretch", { at: 525 }), act("a3", "teamDefense"), act("a4", "indDefense", { dur: 33 }), act("a5", "custom", { label: "Sim Game", at: 600 })] }), CTX);
+  p.items.forEach((i) => { assert.equal(i.start % 5, 0, `${i.label} start`); assert.equal(i.end % 5, 0, `${i.label} end`); });
+  assert.equal(len(p.items.find((i) => i.label === "Video Session")), 10);
+  assert.ok(p.assumptions.some((a) => /8 min rounded to 10/.test(a.text)));
+});
+
+test("duplicates: the same stretch for position players and with everyone is one team item", () => {
+  const p = S.solve(req({ anchors: { start: 540, end: null, firstPitch: null, offBeforeGame: null }, activities: [
+    act("a1", "stretch", { at: 540, who: "position" }), act("a2", "teamDefense", { dur: 30 }), act("a3", "cage"),
+    act("a4", "stretch", { at: 540, who: "all" }), act("a5", "throwing", { label: "Long Toss", who: "pitchers", after: ["a4"] }), act("a6", "pfp"), act("a7", "meal", { at: 690 })] }), CTX);
+  assert.equal(of(p, "stretch").length, 1);
+  assert.equal(one(p, "stretch").track, "all");
+  assert.ok(!p.conflicts.some((c) => c.code === "fixedOverlap"));
+  assert.equal(p.ok, true);
+  assert.ok(one(p, "throwing").start >= one(p, "stretch").end, "edges to the merged item are kept");
+  assertNoOverlap(p);
+  // two different team-defense items are not duplicates
+  const q = S.solve(req({ anchors: { start: 600, end: 720, firstPitch: null, offBeforeGame: null }, activities: [
+    act("a1", "stretch"), act("a2", "teamDefense", { label: "Bunt Plays" }), act("a3", "teamDefense", { label: "Rundowns" })] }), CTX);
+  assert.equal(of(q, "teamDefense").length, 2);
+});
+
+test("transition never causes an overfull: day game with meal, meeting, stretch, flips, 3×20 BP", () => {
+  const p = S.solve(req({ dayType: "game", anchors: { start: 600, end: null, firstPitch: 755, offBeforeGame: 30 }, activities: [
+    act("a1", "meal", { at: 570, label: "Pregame Meal" }), act("a2", "meeting", { at: 600, who: "position", label: "Hitters' Meeting" }), act("a3", "stretch", { at: 615 }),
+    act("a4", "cage", { label: "Flips", who: "position" }), act("a5", "cage", { label: "Cage", who: "position" }),
+    act("a6", "bp", { rounds: { each: 20, count: 3, atOnce: null } })] }), CTX);
+  assert.equal(p.ok, true, JSON.stringify(p.conflicts));
+  assert.deepEqual(J(of(p, "bp").map(len)), [20, 20, 20]);
+  assert.equal(of(p, "cage").length, 1, "'flips in the cage' is one cage item");
+  assert.equal(one(p, "free").start, 725);
+  work(p).forEach((i) => assert.ok(i.end <= 725));
+  // an exact fit at minimum lengths has no transition and no conflict
+  const q = S.solve(req({ dayType: "game", anchors: { start: 600, end: null, firstPitch: 700, offBeforeGame: 30 }, activities: [
+    act("a1", "stretch", { at: 600, dur: 10 }), act("a2", "bp", { rounds: { each: 30, count: 2, atOnce: null } })] }), CTX);
+  assert.equal(q.ok, true, JSON.stringify(q.conflicts));
+  assert.equal(of(q, "pregamePrep").length, 0);
+});
+
+test("edits: a duplicate BP is merged, rounds count is the total, a 10-min trim never removes an activity", () => {
+  const ctx = { hittingGroups: ["Blue", "Orange"], resources: { fields: 1, cages: 2 } };
+  let ir = S.applyEdits(ACCEPT(), [{ op: "add", activity: act("a5", "bp", { label: "BP", order: 5, before: ["a2", "a3"] }) }], ctx);
+  assert.equal(ir.activities.filter((a) => a.kind === "bp").length, 1, "duplicate BP merged");
+  let p = S.solve(ir, ctx);
+  assert.ok(of(p, "bp")[1].end <= one(p, "teamDefense").start, "BP now before defense");
+  ir = S.applyEdits(ir, [{ op: "rounds", target: { kind: "bp" }, count: 3 }], ctx);
+  p = S.solve(ir, ctx);
+  assert.equal(of(p, "bp").length, 3);
+  assert.deepEqual(J(of(p, "bp").map((b) => b.group)), ["Blue", "Orange", "Group 3"]);
+  const was = len(one(p, "indDefense"));
+  ir = S.applyEdits(ir, [{ op: "duration", target: { kind: "indDefense" }, delta: -10 }], ctx);
+  p = S.solve(ir, ctx);
+  assert.equal(len(one(p, "indDefense")), was - 10, "10 off what was planned, still there");
+  assert.ok(!p.conflicts.some((c) => c.code === "overfull"), JSON.stringify(p.conflicts));
+  // "squeeze in baserunning after fundies" when there is none yet adds it
+  ir = S.applyEdits(ACCEPT(), [{ op: "move", target: { kind: "baserunning" }, after: { kind: "teamDefense" } }], ctx);
+  p = S.solve(ir, ctx);
+  assert.ok(one(p, "baserunning").start >= one(p, "teamDefense").end);
 });

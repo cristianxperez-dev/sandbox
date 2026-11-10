@@ -64,21 +64,41 @@ Design and audit: [`DAY-ENGINE.md`](DAY-ENGINE.md). Code: `apps/manager-hub/assi
 
 ### Switching on the AI interpreter
 
-It is **off** until both are set in Cloudflare Pages (Settings → Variables and Secrets, Production and Preview):
+The interpreter is **off** until `MH_AI_ENABLED=1` is set for an environment. It stays off in Production until the real-model evaluation passes and the owner approves.
 
-- `ANTHROPIC_API_KEY` (secret)
-- `MH_AI_ENABLED` = `1` (variable)
+1. **Anthropic API account.** API usage is billed separately from any Claude.ai subscription.
+   - In the Claude Console, add billing (prepaid credits).
+   - Create a workspace for Manager Hub, set a monthly **spend limit** on it, and create an API key there.
+2. **GitHub, for the evaluation.** Repository → Settings → Secrets and variables → Actions → New repository secret:
+   - `ANTHROPIC_API_KEY`. Ideally use a separate key with its own small spend limit.
+   - Optional: `MH_PREVIEW_ACCESS_CODE`, the Preview-only access code, so the panel can be tested on a preview.
+3. **Cloudflare Pages, Preview environment only.** Workers & Pages → the Sandbox project → Settings → Variables and Secrets:
+   - `ANTHROPIC_API_KEY`: type **Secret**.
+   - `MH_AI_ENABLED` = `1`: plain variable.
+   - Previews are behind the gate too, so Preview also needs `MANAGER_HUB_ACCESS_CODE` and `SANDBOX_SESSION_SECRET`. A different code from Production is fine.
+   - Production gets `ANTHROPIC_API_KEY` only. Its `MH_AI_ENABLED` stays unset until approved.
+4. **Evaluate.** Actions → *Describe Your Day — AI evaluation* → Run workflow.
+   - It runs the core and fresh sets through the built-in reader and the real model, and posts a side-by-side table with tokens and cost to the run summary.
+   - With `preview_url` set, it also drives the panel on the preview with the real AI.
+5. **Approve.** After review, set `MH_AI_ENABLED=1` in Production and redeploy (Deployments → Retry deployment, or push).
 
-Optional: `MH_AI_MODEL` (default `claude-opus-5-5` at low effort, with automatic server-side fallback if a request is declined).
+**Optional variables:**
+- `MH_AI_MODEL`: default `claude-opus-5-5`.
+- `MH_AI_EFFORT`: `low` (default), `medium` or `high`.
+- `MH_AI_RATE`: requests per IP per 10 minutes, default 20.
+- `MH_AI_DAILY`: requests per IP per day, default 150.
 
-Before setting `MH_AI_ENABLED`, run the evaluation through the real model:
+**Cost controls:**
+- Output is capped at 6,000 tokens for a build and 3,000 for a refinement.
+- Request text is at most 1,500 characters, and each call has a 25 s timeout.
+- Per-IP rate limits apply. They are per edge isolate, so best effort.
+- The instructions are prompt-cached.
+- The hard cap is the workspace spend limit in the Console.
 
-```bash
-ANTHROPIC_API_KEY=… MH_EVAL_INTERPRETER=ai node --test --test-concurrency=1 manager-hub/tests/day-eval.test.mjs
-```
+**Failure handling:** any failure (timeout, rate limit, refusal, invalid output) falls back to the built-in reader. The panel then shows **Built-in reader · AI unavailable** with the reason. When the AI is switched off it shows plain **Built-in reader**, and **✦ AI interpreter** only when the model's reading was used.
 
-- **Cost:** a build is about 4–6 K input tokens (the instructions are prompt-cached) and 1–2 K output. At $4 / $20 per million, that is roughly **$0.02–0.05 per request**, or about $1–1.50 a day at 30 requests. A full evaluation run is roughly $3–5. These are estimates; nothing has been measured, because no key was available here.
-- **Security:** the key stays in the Pages secret. The page sends only the request text plus group names, resource counts and the game time, never the roster.
+- **Cost:** a build is roughly 4–6 K input tokens and 1–2 K output. At $4 / $20 per million (Opus 5.5 list price), that is about **$0.02–0.05 per request**. The evaluation run reports measured tokens and cost.
+- **Security:** the key stays in the Pages secret. The page sends only the request text plus group names, resource counts, the game time and, for follow-ups, the day's structure — never the roster. Logs hold token counts and latency, not the text.
 
 ### Evaluation
 
@@ -89,7 +109,9 @@ ANTHROPIC_API_KEY=… MH_EVAL_INTERPRETER=ai node --test --test-concurrency=1 ma
   - conflicts explained in numbers;
   - refinements leave everything else alone;
   - undo/redo restores exactly.
-- Built-in reader: **103 / 103**. AI interpreter: not yet measured.
+- Built-in reader: **103 / 103** on the core set.
+- `tests/day-fresh-scenarios.mjs` is a *fresh* benchmark of 32 unfamiliar conversational prompts the reader was never tuned on (run with `MH_EVAL_SET=fresh`). The built-in reader scores about 56% there; it is the benchmark the AI interpreter must beat.
+- AI interpreter: measured by the workflow above.
 - Also: `tests/day-read.test.mjs`, `tests/day-solve.test.mjs`, `tests/interpret.test.mjs` (endpoint contract, model mocked) and `tests/day-ui.e2e.cjs` (the panel in the app, desktop and phone).
 - **Limits of the built-in reader.** It handles common coaching shorthand and phrasing. Unusual wording can still land in "Not understood", which the panel always lists rather than dropping. That long tail is what the AI interpreter is for.
 

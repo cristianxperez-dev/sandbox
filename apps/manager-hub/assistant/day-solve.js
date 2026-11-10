@@ -281,6 +281,45 @@
     return Array.isArray(ops) ? fill(clone(ops), EDIT_SCHEMA, EDIT_SCHEMA) : ops;
   }
 
+  /* ========================================================= duplicates
+     Two mentions of the same thing are one activity: same kind, overlapping who
+     ("stretch 9" for position players + "stretch 9 with everyone"), and either the same
+     stated time, or no time at all for a kind there's only one of in a day (BP, stretch,
+     activation) or where one mention is the generic name ("flips in the cage" → Flips +
+     Cage). The first mention is kept; who widens to "all" when they differ; stated values
+     fill gaps; edges / offBefore / parallel are remapped. Returns the labels merged.      */
+  const ONE_PER_DAY = ["bp", "stretch", "activation", "game", "arrival", "pregamePrep"];
+  const GENERIC = { bp: ["bp", "batting practice", "on field bp", "hitting"], cage: ["cage", "cages", "cage work", "hitting"], stretch: ["stretch", "team stretch"],
+    teamDefense: ["team defense", "team fundamentals", "fundamentals", "fundies", "defense"], indDefense: ["individual defense", "indy", "defense", "defensive work"],
+    throwing: ["throw", "throwing", "catch play", "throwing progression"], conditioning: ["conditioning"], meeting: ["meeting", "team meeting"], meal: ["meal", "lunch"] };
+  const generic = (a) => { const l = lc(a.label).replace(/[^a-z ]/g, " ").replace(/\s+/g, " ").trim(); return !l || l === lc(KB.label(a.kind)) || (GENERIC[a.kind] || []).includes(l); };
+  const whoOverlap = (x, y) => { const X = x || "all", Y = y || "all"; return X === "all" || Y === "all" || X === Y || (X === "catchers" && Y === "position") || (Y === "catchers" && X === "position"); };
+  function mergeDuplicates(ir) {
+    const acts = ir.activities || [];
+    const merged = [];
+    for (let i = 0; i < acts.length; i++) for (let j = i + 1; j < acts.length; j++) {
+      const a = acts[i], b = acts[j];
+      if (!a || !b || a.kind !== b.kind || a.kind === "custom" || !whoOverlap(a.who, b.who)) continue;
+      const sameTime = a.at != null && a.at === b.at;
+      const bothFlex = a.at == null && b.at == null && (ONE_PER_DAY.includes(a.kind) || generic(a) || generic(b));
+      if (!sameTime && !bothFlex) continue;
+      // keep the more specific label
+      if (generic(a) && !generic(b)) a.label = b.label;
+      if ((a.who || null) !== (b.who || null)) a.who = "all";
+      ["at", "dur", "indoor", "location", "emphasis"].forEach((k) => { if (a[k] == null && b[k] != null) a[k] = b[k]; });
+      if (b.rounds) a.rounds = Object.assign({}, b.rounds, Object.fromEntries(Object.entries(a.rounds || {}).filter(([, v]) => v != null)));
+      a.after = uniq((a.after || []).concat(b.after || [])).filter((x) => x !== a.id && x !== b.id);
+      a.before = uniq((a.before || []).concat(b.before || [])).filter((x) => x !== a.id && x !== b.id);
+      if (b.text && a.text !== b.text) a.text = [a.text, b.text].filter(Boolean).join(" / ");
+      acts.forEach((o) => { if (o && o !== a) ["after", "before"].forEach((k) => { if (o[k]) o[k] = uniq(o[k].map((x) => (x === b.id ? a.id : x))).filter((x) => x !== o.id); }); });
+      (ir.offBefore || []).forEach((o) => { if (o.before === b.id) o.before = a.id; });
+      if (ir.parallel) ir.parallel = ir.parallel.map((g) => uniq(g.map((x) => (x === b.id ? a.id : x))));
+      merged.push(a.label || KB.label(a.kind));
+      acts.splice(j, 1); j--;
+    }
+    return merged;
+  }
+
   /* ======================================================= target lookup */
   const WORD_STOP = new Set(["the", "a", "an", "and", "of", "to", "for", "with", "s", "practice"]);
   const words = (s) => lc(s).replace(/[^a-z0-9 ]/g, " ").split(/\s+/).filter((w) => w && !WORD_STOP.has(w)).map((w) => w.replace(/(ing|es|s)$/, ""));
@@ -329,6 +368,8 @@
   function solve(irIn, ctxIn) {
     const ir = clone(irIn || {}) || {};
     const ctx = ctxIn || {};
+    if (Array.isArray(ir.activities)) ir.activities = ir.activities.filter(Boolean);
+    const mergedDup = mergeDuplicates(ir);
     const res = ctx.resources || {};
     const asm = new Map();
     const say = (key, text) => { if (!asm.has(key)) asm.set(key, text); };
@@ -385,6 +426,9 @@
     };
     const WEIGHT = { 0: 0.5, 1: 1, 2: 2 };
 
+    // stated lengths off the 5-minute grid are rounded (said once), so every time stays on a 5-minute mark
+    const on5 = (m, what) => { const r = Math.max(5, r5(m)); if (r !== m) say(`round5:${what}`, `${what}: ${m} min rounded to ${r} to keep times on 5-minute marks.`); return r; };
+    if (mergedDup.length) say("merged", `Combined duplicate ${uniq(mergedDup).join(", ")} into one item.`);
     // ---- units: one per printed row
     const roundsCount = (a) => {
       if (a.rounds && a.rounds.count) return { n: a.rounds.count, why: "stated" };
@@ -408,10 +452,10 @@
       if (hasRounds(a)) {
         const rc = roundsCount(a), n = rc.n;
         let each, rigid;
-        if (a.rounds && a.rounds.each) { each = a.rounds.each; rigid = true; }
+        if (a.rounds && a.rounds.each) { each = on5(a.rounds.each, `${kb.label} rounds`); rigid = true; }
         // a stated length on a rounds activity is per round ("BP 2 groups, 30 min", "25 each"),
         // unless it is long enough to be the whole hitting block ("an hour of BP, 2 groups" → 30 each)
-        else if (a.dur) { each = a.dur >= 45 && a.dur / n >= 15 ? Math.max(5, r5(a.dur / n)) : a.dur; rigid = true; }
+        else if (a.dur) { each = a.dur >= 45 && a.dur / n >= 15 ? Math.max(5, r5(a.dur / n)) : on5(a.dur, `${kb.label} rounds`); rigid = true; }
         else { each = d.def; rigid = false; }
         if (a.kind === "bp" || a.kind === "cage") {
           const what = a.kind === "bp" ? "BP rounds" : "cage rounds";
@@ -425,7 +469,7 @@
           def: each, min: rigid ? each : d.min, max: rigid ? each : d.max, rigid
         }));
       }
-      if (a.dur != null) return [Object.assign({}, base, { label: baseLabel, round: null, def: a.dur, min: a.dur, max: a.dur, rigid: true })];
+      if (a.dur != null) { const dd = on5(a.dur, baseLabel); return [Object.assign({}, base, { label: baseLabel, round: null, def: dd, min: dd, max: dd, rigid: true })]; }
       return [Object.assign({}, base, { label: baseLabel, round: null, def: d.def, min: d.min, max: d.max, rigid: !kb.flex || kb.point })];
     }
 
@@ -686,12 +730,20 @@
         A.id === "free-game" || B.id === "free-game" ? { label: "Drop the pregame free window", ops: [{ op: "anchor", key: "offBeforeGame", value: 0 }] } : null
       ]);
     }
-    fixedItems.forEach((it) => {
-      if (!it.actId || it.kind === "game" || it.kind === "postgame") return;
+    // one check per stated activity, over its whole span (all its rounds)
+    const spans = [];
+    fixedItems.forEach((i) => {
+      if (!i.actId || i.kind === "game" || i.kind === "postgame") return;
+      const sp = spans.find((x) => x.actId === i.actId);
+      if (sp) { sp.start = Math.min(sp.start, i.start); sp.end = Math.max(sp.end, i.end); }
+      else spans.push({ actId: i.actId, label: i.label.replace(/ — Round \d+$/, "").replace(/ \(Cage\)$/, ""), start: i.start, end: i.end });
+    });
+    spans.forEach((it) => {
       if (hardEnd != null && it.end > hardEnd) {
         const tgt = { kind: null, who: null, label: null, id: it.actId };
         conflict("afterEnd", "error", `${it.label} at ${fmtAP(it.start)} runs past the ${fmtAP(hardEnd)} finish.`, [
           it.end - it.start <= hardEnd - start ? { label: `Move ${it.label} to ${fmtAP(hardEnd - (it.end - it.start))}`, ops: [{ op: "at", target: tgt, at: hardEnd - (it.end - it.start) }] } : null,
+          { label: `Take ${it.label} out of the time and let it fit before ${fmtAP(hardEnd)}`, ops: [{ op: "move", target: tgt, before: null, after: null }] },
           { label: `Finish at ${fmtAP(it.end)}`, ops: [{ op: "anchor", key: "end", value: it.end }] }
         ]);
       } else if (fp != null && it.start >= fp) {
@@ -699,12 +751,9 @@
           { label: `Move ${it.label} to ${fmtAP(Math.max(start, (bufStart || fp) - (it.end - it.start)))}`, ops: [{ op: "at", target: { kind: null, who: null, label: null, id: it.actId }, at: Math.max(start, (bufStart || fp) - (it.end - it.start)) }] }
         ]);
       }
-      if (startStated && it.start < start) {
-        conflict("beforeStart", "warn", `${it.label} at ${fmtAP(it.start)} is before the ${fmtAP(start)} start.`, [
-          { label: `Start the day at ${fmtAP(it.start)}`, ops: [{ op: "anchor", key: "start", value: it.start }] },
-          { label: `Move ${it.label} to ${fmtAP(start)}`, ops: [{ op: "at", target: { kind: null, who: null, label: null, id: it.actId }, at: start }] }
-        ]);
-      }
+      // a stated time before the stated start (bus at 2:45, "on the field at 3:30"): the day
+      // simply starts earlier to include it; flexible work still waits for the stated start
+      if (startStated && it.start < start) say(`early:${it.actId}`, `Day starts ${fmtAP(it.start)} to include ${it.label}; on-field work from ${fmtAP(start)}.`);
     });
 
     // ---- segments of the main flow between fixed spans
@@ -1145,7 +1194,7 @@
     const workEnd = flexEnd != null ? flexEnd : Math.max(start, ...items.filter((i) => i.kind !== "postgame").map((i) => i.end));
     return {
       items,
-      window: { start, end: workEnd, available: segs.some((sg) => sg.e === Infinity) ? null : avail, required: reqDef, firstPitch: fp, hardEnd: hardEnd != null ? hardEnd : null },
+      window: { start: Math.min(start, ...items.filter((i) => i.kind !== "postgame").map((i) => i.start)), workStart: start, end: workEnd, available: segs.some((sg) => sg.e === Infinity) ? null : avail, required: reqDef, firstPitch: fp, hardEnd: hardEnd != null ? hardEnd : null },
       assumptions: [...asm.entries()].map(([key, text]) => ({ key, text })),
       conflicts,
       ok: !conflicts.some((c) => c.severity === "error")
@@ -1159,7 +1208,8 @@
     let id = a && a.id && !ids.has(a.id) ? a.id : null;
     for (let n = (ir.activities || []).length + 1; !id; n++) if (!ids.has(`a${n}`)) id = `a${n}`;
     const order = Math.max(0, ...(ir.activities || []).map((x) => (isInt(x.order) ? x.order : 0))) + 1;
-    return Object.assign({ label: KB.label(kind), who: KB.kind(kind).who, at: null, dur: null, rounds: null, after: [], before: [], indoor: null, location: null, emphasis: null, text: null }, a || {}, { id, kind, order: a && isInt(a.order) ? a.order : order });
+    const given = Object.fromEntries(Object.entries(a || {}).filter(([, v]) => v !== undefined && v !== null));
+    return Object.assign({ label: KB.label(kind), who: KB.kind(kind).who, at: null, dur: null, rounds: null, after: [], before: [], indoor: null, location: null, emphasis: null, text: null }, given, { id, kind, order: a && isInt(a.order) ? a.order : order });
   };
   /**
    * Apply EditOps to a request → a new request (the input is never mutated).
@@ -1168,7 +1218,8 @@
    */
   function applyEdits(irIn, ops, ctx) {
     const ir = clone(irIn || {}) || {};
-    ir.activities = (ir.activities || []).map((a) => Object.assign({ after: [], before: [] }, a));
+    ir.activities = (ir.activities || []).filter(Boolean).map((a) => Object.assign({ after: [], before: [] }, a));
+    mergeDuplicates(ir); // so "the BP" is one activity: rounds counts stay totals
     ir.anchors = Object.assign({ start: null, end: null, firstPitch: null, offBeforeGame: null }, ir.anchors || {});
     ir.notes = (ir.notes || []).filter((n) => !/^Edit: /.test(n));
     let planCache = null;
@@ -1191,10 +1242,18 @@
       ir.offBefore = (ir.offBefore || []).filter((o) => o.before !== id);
       ir.parallel = (ir.parallel || []).map((g) => g.filter((x) => x !== id)).filter((g) => g.length);
     };
-    (ops || []).forEach((op) => {
+    (ops || []).forEach((op0) => {
+      let op = op0;
       if (!op || typeof op !== "object") return;
       switch (op.op) {
         case "move": {
+          // "squeeze in baserunning after fundies" when there is no baserunning yet: add it there
+          if (op.target && op.target.kind && KB.kind(op.target.kind) && !resolveTarget(ir, op.target).length) {
+            const na = blankAct({ kind: op.target.kind, who: op.target.who || undefined, label: op.target.label || undefined }, ir);
+            ir.activities.push(na);
+            note(`added ${na.label} (it wasn't in the day yet).`);
+            op = Object.assign({}, op, { target: { id: na.id } });
+          }
           const T = resolve(op.target).filter((x) => x !== "game");
           const B = op.before ? resolve(op.before).filter((x) => !T.includes(x)) : [];
           const A = op.after ? resolve(op.after).filter((x) => !T.includes(x)) : [];
@@ -1211,6 +1270,7 @@
             a.after = uniq(a.after.concat(A.filter((b) => b !== "game")));
           });
           if (B.includes("game")) note("everything already ends before the game.");
+          // a bare move (no before/after) frees a stated time so the solver can place it
           break;
         }
         case "duration": {
@@ -1315,6 +1375,7 @@
           note(`unknown change "${op.op}".`);
       }
     });
+    mergeDuplicates(ir); // an added activity can duplicate one already there
     return ir;
   }
 

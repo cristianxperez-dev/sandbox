@@ -35,6 +35,7 @@ const blocks = (p) => p.$$eval("#dyPreview .dy-blk, #dyPreview .dy-game", (bs) =
     ok(/1:00 PM Game/.test(txt), `${tag}: game marked at 1:00 PM`);
     ok(await p.isVisible(".dy-asm"), `${tag}: assumptions shown`);
     ok(/Built-in reader|AI interpreter/.test(await p.innerText("#dayui .mha-head")), `${tag}: says which interpreter read the request`);
+    if (process.env.MH_EXPECT_AI) ok(/AI interpreter/.test(await p.innerText("#dayui .mha-head")), `${tag}: the real AI interpreter answered (not the fallback)`);
     ok(!(await p.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1)), `${tag}: no horizontal overflow`);
 
     // conversational refinement keeps everything else
@@ -72,6 +73,28 @@ const blocks = (p) => p.$$eval("#dyPreview .dy-blk, #dyPreview .dy-game", (bs) =
     ok(saved.rows.some((r) => /^10:15 Team Fundamentals/.test(r)) && saved.rows.some((r) => /^10:00 .*Stretch/.test(r)) && saved.rows.some((r) => /^12:30 Pregame Free Time/.test(r)) && saved.req, `${tag}: rows written to the day and the request saved with it`);
     await p.evaluate(() => undo()); await p.waitForTimeout(300);
     ok(await p.evaluate((b) => JSON.stringify(S.sections) === b, before), `${tag}: the app's Undo restores the previous schedule`);
+
+    // interpreter states are told apart: AI answered / AI configured but failed (fallback) / AI not configured
+    if (tag === "desktop") {
+      const reqFor = await p.evaluate((t) => DayEngine.Solve.normalize(DayEngine.Read.read(t, {})), PRIMARY);
+      for (const [label, route, want] of [
+        ["AI answered", (r) => r.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify({ request: Object.assign({}, reqFor, { source: "ai" }), model: "test", ms: 900, usage: {} }) }), /AI interpreter/],
+        ["AI configured but timed out", (r) => r.fulfill({ status: 504, contentType: "application/json", body: JSON.stringify({ error: "timeout" }) }), /AI unavailable/],
+        ["AI not configured", (r) => r.fulfill({ status: 503, contentType: "application/json", body: JSON.stringify({ error: "not-configured" }) }), /^Built-in reader$/m]
+      ]) {
+        const c2 = await b.newContext({ viewport: { width: 1366, height: 900 } });
+        await signIn(c2);
+        await c2.route("**/rosters/org-roster.csv", (r) => r.fulfill({ status: 200, contentType: "text/csv", body: "" }));
+        await c2.route("**/api/interpret", route);
+        const q = await c2.newPage();
+        await q.goto(BASE); await q.evaluate(() => { localStorage.clear(); localStorage.setItem("cs.affiliate", "sl"); }); await q.reload(); await q.waitForTimeout(500);
+        await q.click("#btnAI"); await q.fill("#dyText", PRIMARY); await q.click("[data-build]"); await q.waitForTimeout(500);
+        const chip = (await q.locator("#dayui .mha-chip").innerText()).trim();
+        const fb = await q.locator(".dy-fallback").count();
+        ok(want.test(chip) && (label === "AI configured but timed out" ? fb === 1 : fb === 0) && (await q.locator("#dyPreview .dy-blk").count()) > 4, `${label}: shown as “${chip}”${fb ? " with a fallback notice" : ""}, day still built`);
+        await c2.close();
+      }
+    }
 
     // the classic assistant is still there
     await p.click("#btnAI"); await p.waitForTimeout(200); await p.click("[data-classic]").catch(() => {}); await p.waitForTimeout(300);

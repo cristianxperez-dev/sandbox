@@ -48,16 +48,17 @@
   const wireCtx = (c) => ({ date: c.date, affiliate: c.affiliate, hittingGroups: c.hittingGroups, pitcherGroups: c.pitcherGroups, resources: c.resources, game: c.game });
 
   /* ------------------------------------------------------- interpreters */
-  async function ai(mode, text, ctx, request) {
+  async function ai(mode, text, ctx, request, plan) {
     if (aiState === "off") return null;
     const ac = new AbortController(); const t = setTimeout(() => ac.abort(), 30000);
     try {
-      const r = await fetch("api/interpret", { method: "POST", signal: ac.signal, headers: { "Content-Type": "application/json" }, body: JSON.stringify({ mode, text, ctx: wireCtx(ctx), request }) });
-      if (r.status === 503 || r.status === 404 || r.status === 405) { aiState = "off"; lastReason = "No AI service is configured"; return null; }
+      const r = await fetch("api/interpret", { method: "POST", signal: ac.signal, headers: { "Content-Type": "application/json" }, body: JSON.stringify({ mode, text, ctx: wireCtx(ctx), request, plan: plan ? { items: plan.items.map((i) => ({ start: i.start, end: i.end, track: i.track, group: i.group || null, label: i.label, actId: i.actId || null, fixed: !!i.fixed })) } : undefined }) });
+      if (r.status === 503 || r.status === 404 || r.status === 405) { aiState = "off"; lastReason = ""; return null; }
       const d = await r.json().catch(() => null);
-      if (!r.ok || !d) { lastReason = `The AI interpreter didn't answer (${(d && d.error) || r.status})`; return null; }
+      if (r.status === 429) { aiState = "on"; lastReason = `AI request limit reached — try again in ${Math.max(1, Math.round(((d && d.retryAfter) || 600) / 60))} min`; return null; }
+      if (!r.ok || !d) { aiState = "on"; lastReason = { timeout: "The AI interpreter timed out", "invalid-output": "The AI's answer didn't pass validation", declined: "The AI declined this request" }[(d && d.error)] || `The AI interpreter is unavailable (${(d && d.error) || r.status})`; return null; }
       aiState = "on"; return d;
-    } catch (e) { lastReason = "The AI interpreter timed out"; return null; }
+    } catch (e) { aiState = aiState === "off" ? "off" : "on"; lastReason = "The AI interpreter timed out"; return null; }
     finally { clearTimeout(t); }
   }
   async function build(text) {
@@ -69,10 +70,11 @@
   }
   async function refine(text) {
     const ctx = appCtx();
-    const r = await ai("refine", text, ctx, st.request);
+    const r = await ai("refine", text, ctx, st.request, st.plan);
     const ops = r && Array.isArray(r.ops) ? r.ops : E.Read.readEdit(text, st.request, st.plan, ctx);
     const next = E.applyOps(st, ops, ctx, text);
     next.interpreter = r && r.ops ? "ai" : "reader";
+    next.fallback = next.interpreter === "reader" ? lastReason : "";
     return { next, ops, notes: (r && r.notes) || [] };
   }
 
@@ -100,8 +102,10 @@
   function head() {
     const b = typeof Brand !== "undefined" && store.affiliate ? Brand.get(store.affiliate()) : null;
     const chip = !st ? "" : st.interpreter === "ai"
-      ? `<span class="mha-chip on" title="Read by the AI interpreter, then scheduled and checked by the app">AI interpreter</span>`
-      : `<span class="mha-chip" title="${h(st.fallback || "Read by Manager Hub's built-in baseball reader")}">Built-in reader</span>`;
+      ? `<span class="mha-chip on" title="Read by the AI interpreter, then scheduled and checked by Manager Hub">✦ AI interpreter</span>`
+      : st.fallback
+        ? `<span class="mha-chip warn" title="${h(st.fallback)} — Manager Hub's built-in reader was used instead">Built-in reader · AI unavailable</span>`
+        : `<span class="mha-chip" title="Read by Manager Hub's built-in baseball reader (no AI service is switched on)">Built-in reader</span>`;
     return `<div class="mha-head">
       <div class="mha-title"><b>Describe your day</b><span>${h(S && S.meta && S.meta.date ? longDate(S.meta.date) : "No date set")}${b ? " · " + h(b.team) : ""}</span></div>
       <span class="sp"></span>
@@ -212,7 +216,8 @@
     const s = Math.min(...p.items.map((i) => i.start)), e = Math.max(...p.items.map((i) => i.end));
     const game = p.items.find((i) => i.kind === "game");
     const errs = p.conflicts.filter((c) => c.severity === "error").length;
-    return `Built <b>${its.length} blocks</b>, ${fmtAP(s)}–${fmtAP(game ? game.start : e)}${game ? ` · game at ${fmtAP(game.start)}` : ""}. ${errs ? `<b class="dy-bad">${errs} thing${errs > 1 ? "s" : ""} won't fit</b> — see the options on the right.` : "Everything fits."}${(st.request.unknown || []).length ? ` I didn't understand: ${st.request.unknown.map((u) => "“" + h(u) + "”").join(", ")}.` : ""}`;
+    const fb = st.interpreter !== "ai" && st.fallback ? `<div class="dy-fallback">${h(st.fallback)}. I used the built-in reader instead — check anything under “Not understood”.</div>` : "";
+    return fb + `Built <b>${its.length} blocks</b>, ${fmtAP(s)}–${fmtAP(game ? game.start : e)}${game ? ` · game at ${fmtAP(game.start)}` : ""}. ${errs ? `<b class="dy-bad">${errs} thing${errs > 1 ? "s" : ""} won't fit</b> — see the options on the right.` : "Everything fits."}${(st.request.unknown || []).length ? ` I didn't understand: ${st.request.unknown.map((u) => "“" + h(u) + "”").join(", ")}.` : ""}`;
   }
   function changeSummary(a, b, notes) {
     const key = (i) => i.label + "|" + (i.round || "") + "|" + i.track;

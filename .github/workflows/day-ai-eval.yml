@@ -1,0 +1,96 @@
+# Manager Hub — Describe Your Day: evaluate the AI interpreter with REAL model calls.
+# Manual only (Actions → "Describe Your Day — AI evaluation" → Run workflow). Never runs on push.
+# Needs the repository secret ANTHROPIC_API_KEY (Settings → Secrets and variables → Actions).
+# The key is only exposed to this job's eval step; nothing is deployed and no site setting changes.
+name: Describe Your Day — AI evaluation
+
+on:
+  workflow_dispatch:
+    inputs:
+      set:
+        description: "Scenario set: core (103), fresh (unfamiliar prompts) or all"
+        default: all
+        type: choice
+        options: [all, fresh, core]
+      model:
+        description: "Model id (blank = the endpoint default)"
+        default: ""
+        type: string
+      effort:
+        description: "Effort"
+        default: low
+        type: choice
+        options: [low, medium, high]
+      preview_url:
+        description: "Optional: a Cloudflare preview's Manager Hub URL (…pages.dev/apps/manager-hub/) to test the real panel there with AI on"
+        default: ""
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: day-ai-eval
+  cancel-in-progress: false
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Built-in reader (baseline, no API calls)
+        run: MH_EVAL_SET=${{ inputs.set }} MH_EVAL_REPORT=reader.json node --test manager-hub/tests/day-eval.test.mjs > reader.txt 2>&1 || true
+
+      - name: AI interpreter (real model calls)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MH_EVAL_INTERPRETER: ai
+          MH_EVAL_SET: ${{ inputs.set }}
+          MH_EVAL_REPORT: ai.json
+          MH_AI_MODEL: ${{ inputs.model }}
+          MH_AI_EFFORT: ${{ inputs.effort }}
+          MH_AI_RATE: "100000"
+          MH_AI_DAILY: "100000"
+          MH_AI_LOG: "0"
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then echo "::error::Repository secret ANTHROPIC_API_KEY is not set"; exit 1; fi
+          node --test --test-concurrency=1 manager-hub/tests/day-eval.test.mjs > ai.txt 2>&1 || true
+
+      - name: Compare
+        run: node manager-hub/tests/eval-compare.mjs reader.json ai.json | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: day-ai-eval
+          path: |
+            reader.json
+            ai.json
+            reader.txt
+            ai.txt
+          retention-days: 30
+
+  preview-ui:
+    # The real panel on a protected Cloudflare preview where MH_AI_ENABLED=1 (Preview environment only).
+    if: ${{ inputs.preview_url != '' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Playwright (test-only, not part of the site)
+        run: npm install --no-save --no-package-lock playwright@1.63.0 && npx playwright install --with-deps chromium
+      - name: Panel on the preview, real AI
+        env:
+          BASE: ${{ inputs.preview_url }}
+          MH_ACCESS_CODE: ${{ secrets.MH_PREVIEW_ACCESS_CODE }}
+          MH_EXPECT_AI: "1"
+        run: |
+          if [ -z "$MH_ACCESS_CODE" ]; then echo "::error::Repository secret MH_PREVIEW_ACCESS_CODE is not set"; exit 1; fi
+          node manager-hub/tests/day-ui.e2e.cjs | tee -a "$GITHUB_STEP_SUMMARY"

@@ -10,7 +10,15 @@ import { readFileSync } from "node:fs";
 import vm from "node:vm";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
-import { SCENARIOS, CATEGORIES, items, fmt, contractShape, on5, sane, honest, assumptionsMax, noOverlap, okIs, noErrors } from "./day-eval-scenarios.mjs";
+import { SCENARIOS as CORE, CATEGORIES as CORE_CATS, items, fmt, contractShape, on5, sane, honest, assumptionsMax, noOverlap, okIs, noErrors } from "./day-eval-scenarios.mjs";
+
+import { FRESH, FRESH_CATEGORIES } from "./day-fresh-scenarios.mjs";
+// MH_EVAL_SET: core (default, 103 scenarios) | fresh (unfamiliar conversational prompts) | all
+const SET = process.env.MH_EVAL_SET || "core";
+const SCENARIOS = SET === "fresh" ? FRESH : SET === "all" ? CORE.concat(FRESH) : CORE;
+const CATEGORIES = SET === "fresh" ? FRESH_CATEGORIES : SET === "all" ? Object.assign({}, CORE_CATS, FRESH_CATEGORIES) : CORE_CATS;
+// MH_EVAL_REPORT=file.json writes per-scenario results (pass, failures, interpreter, usage) for comparison runs
+const REPORT = process.env.MH_EVAL_REPORT || "";
 
 // ─────────────── load the facade ───────────────
 // Preferred: CommonJS require of the UMD facade. The sandbox root package.json is "type": "module",
@@ -44,7 +52,10 @@ async function viaEndpoint(body) {
   const res = await endpoint.onRequestPost({ env: { ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY, MH_AI_ENABLED: "1", MH_AI_MODEL: process.env.MH_AI_MODEL },
     request: new Request("https://cperez.app/apps/manager-hub/api/interpret", { method: "POST", headers: { "Content-Type": "application/json", Origin: "https://cperez.app" }, body: JSON.stringify(body) }) });
   const d = await res.json();
-  if (!res.ok) throw new Error(`AI interpreter ${res.status}: ${JSON.stringify(d)}`);
+  USAGE.calls++;
+  if (d.usage) { USAGE.input += d.usage.input_tokens || 0; USAGE.output += d.usage.output_tokens || 0; USAGE.cacheRead += d.usage.cache_read_input_tokens || 0; USAGE.cacheWrite += d.usage.cache_creation_input_tokens || 0; }
+  if (d.ms) USAGE.ms += d.ms;
+  if (!res.ok) { USAGE.errors++; throw new Error(`AI interpreter ${res.status}: ${JSON.stringify(d)}`); }
   return d;
 }
 const wire = (ctx) => ({ date: ctx.date, affiliate: ctx.affiliate, hittingGroups: ctx.hittingGroups, pitcherGroups: ctx.pitcherGroups, resources: ctx.resources, game: ctx.game });
@@ -55,7 +66,7 @@ async function PLAN(text, ctx) {
 }
 async function REFINE(state, text, ctx) {
   if (!AI) return E.refine(state, text, ctx);
-  const d = await viaEndpoint({ mode: "refine", text, ctx: wire(ctx), request: state.request });
+  const d = await viaEndpoint({ mode: "refine", text, ctx: wire(ctx), request: state.request, plan: { items: state.plan.items.map((i) => ({ start: i.start, end: i.end, track: i.track, group: i.group || null, label: i.label, actId: i.actId || null, fixed: !!i.fixed })) } });
   return E.refine(state, text, ctx, { ops: d.ops });
 }
 
@@ -87,7 +98,7 @@ function describe(state, title) {
 // Checks the runner adds to every plan it judges.
 function baseChecks(expect) {
   const b = [contractShape(), on5(), sane(), honest(), assumptionsMax(6)];
-  if (expect !== "conflict") b.push(okIs(true), noErrors(), noOverlap());
+  if (!["conflict", "conflict-ok", "any"].includes(expect)) b.push(okIs(true), noErrors(), noOverlap());
   return b;
 }
 function runChecks(checks, r) {
@@ -105,7 +116,9 @@ function runChecks(checks, r) {
 }
 
 // ─────────────── scenarios ───────────────
-const results = []; // { cat, id, pass }
+const results = []; // { cat, id, pass, fails }
+let lastFails = [];
+const USAGE = { calls: 0, input: 0, output: 0, cacheRead: 0, cacheWrite: 0, ms: 0, errors: 0 };
 
 for (const sc of SCENARIOS) {
   test(`[${sc.cat}] ${sc.id}`, async () => {
@@ -150,16 +163,21 @@ for (const sc of SCENARIOS) {
         state = next;
       }
 
+      lastFails = fails;
       if (fails.length) assert.fail(`\n${fails.join("\n")}\n${report.join("\n")}\n`);
       pass = true;
+    } catch (err) {
+      if (!lastFails.length) lastFails = [String(err && err.message).split("\n")[0]];
+      throw err;
     } finally {
-      results.push({ cat: sc.cat, id: sc.id, pass });
+      results.push({ cat: sc.cat, id: sc.id, pass, fails: pass ? [] : lastFails.slice(0, 12) });
+      lastFails = [];
     }
   });
 }
 
 // ─────────────── scoring summary ───────────────
-test("scoring summary (pass/fail per category)", () => {
+test("scoring summary (pass/fail per category)", async () => {
   const rows = Object.keys(CATEGORIES).map((cat) => {
     const r = results.filter((x) => x.cat === cat);
     return { cat: CATEGORIES[cat], n: r.length, pass: r.filter((x) => x.pass).length };
@@ -170,6 +188,7 @@ test("scoring summary (pass/fail per category)", () => {
   const out = ["", `Describe Your Day — evaluation summary (${AI ? "AI interpreter: " + (process.env.MH_AI_MODEL || "default model") : "built-in reader"})`, line("category", "total", "pass", "fail"), "  " + "─".repeat(w + 21)];
   rows.forEach((r) => out.push(line(r.cat, r.n, r.pass, r.n - r.pass)));
   out.push("  " + "─".repeat(w + 21), line("TOTAL", tot.n, tot.pass, tot.n - tot.pass), `  pass rate ${tot.n ? Math.round((100 * tot.pass) / tot.n) : 0}%`);
+  if (AI) out.push(`  model calls ${USAGE.calls} (${USAGE.errors} errors) · tokens in ${USAGE.input} (+${USAGE.cacheRead} cached read, ${USAGE.cacheWrite} cache write) · out ${USAGE.output} · avg ${USAGE.calls ? Math.round(USAGE.ms / USAGE.calls) : 0} ms`);
   const failed = results.filter((x) => !x.pass);
   if (failed.length) {
     out.push("", "  failing scenarios:");
@@ -178,5 +197,6 @@ test("scoring summary (pass/fail per category)", () => {
   if (loadError) out.push("", `  ${loadError.message}`);
   console.log(out.join("\n"));
   // Informational only: the per-scenario tests carry the verdicts.
-  assert.ok(results.length >= 60, `expected ≥ 60 scenarios, ran ${results.length}`);
+  if (REPORT) { const { writeFileSync } = await import("node:fs"); writeFileSync(REPORT, JSON.stringify({ set: SET, interpreter: AI ? "ai" : "reader", model: process.env.MH_AI_MODEL || null, usage: USAGE, results }, null, 2)); }
+  assert.ok(results.length >= (SET === "fresh" ? 20 : 60), `expected more scenarios, ran ${results.length}`);
 });
