@@ -2724,6 +2724,8 @@ body.gated{overflow:hidden}
 @media (max-width:900px){ .keys{display:none} }
 body:not([data-mhview="schedule"]) .keys{display:none}
 body.camp-off .seg button[data-view="camp"]{display:none}
+/* Camps live in the Complex workspace only */
+body:not(.ws-complex) .seg button[data-view="camp"]{display:none}
 /* ============================================================
    Manager Hub 2.0 — audit fixes (manager-hub/UX-AUDIT.md)
    ============================================================ */
@@ -2754,6 +2756,7 @@ body[data-mhview="month"] #btnNew,body[data-mhview="month"] #btnOpen,body[data-m
 <link rel="stylesheet" href="camp/camp.css">
 <link rel="stylesheet" href="hub/dashboard.css">
 <link rel="stylesheet" href="games/games.css">
+<link rel="stylesheet" href="hub/planner.css">
 </head>
 <body>
 <div class="affgate" id="affGate" hidden>
@@ -2804,7 +2807,7 @@ body[data-mhview="month"] #btnNew,body[data-mhview="month"] #btnOpen,body[data-m
     <button role="tab" data-view="docs" aria-selected="false"><svg class="t-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3h7l4.5 4.5V21h-11.5z"/><path d="M13.5 3v4.5H18M9.5 12h5M9.5 16h5"/></svg><span class="t-long">Game Day Docs</span><span class="t-short">Documents</span></button>
     <button role="tab" data-view="matrix" aria-selected="false"><svg class="t-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="15" rx="1.6"/><path d="M3.5 9.5h17M3.5 14.5h17M9.5 4.5v15M15 4.5v15"/></svg><span class="t-long">Playing Matrix</span><span class="t-short">Matrix</span></button>
     <button role="tab" data-view="pitch" aria-selected="false"><svg class="t-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.4"/><path d="M6.4 6.4c2.3 1.9 3.4 4 3.4 5.6s-1.1 3.7-3.4 5.6M17.6 6.4c-2.3 1.9-3.4 4-3.4 5.6s1.1 3.7 3.4 5.6"/></svg><span class="t-long">Pitching Grid</span><span class="t-short">Pitching</span></button>
-    <button role="tab" data-view="camp" aria-selected="false" title="Organization-wide camps and workouts"><svg class="t-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 20h17"/><path d="M5.5 20V9.5L12 4l6.5 5.5V20"/><path d="M10 20v-5h4v5"/></svg><span class="t-long">Camp</span><span class="t-short">Camp</span></button>
+    <button role="tab" data-view="camp" aria-selected="false" title="Camps, groups and workouts with players from every affiliate (Complex)"><svg class="t-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 20h17"/><path d="M5.5 20V9.5L12 4l6.5 5.5V20"/><path d="M10 20v-5h4v5"/></svg><span class="t-long">Camps</span><span class="t-short">Camps</span></button>
     <span class="seg-div" aria-hidden="true"></span>
     <button class="seg-link" id="btnRoster"><svg class="t-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9.5" cy="8.5" r="3.1"/><path d="M4 20c.6-3.3 2.9-5.1 5.5-5.1S14.4 16.7 15 20"/><circle cx="17" cy="10" r="2.3"/><path d="M15.6 20c.4-2.4 1.8-3.7 3.1-3.7 1.4 0 2.4 1.1 2.8 2.8"/></svg>Roster</button>
     <button class="seg-link" id="btnResources"><svg class="t-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20.5V9.5L12 4l8 5.5v11z"/><path d="M9.5 20.5v-6h5v6"/></svg>Resources</button>
@@ -2824,6 +2827,7 @@ body[data-mhview="month"] #btnNew,body[data-mhview="month"] #btnOpen,body[data-m
       </div>
       <button class="btn sm hub-cust" id="dashCustomize" aria-pressed="false" title="Rearrange, resize, hide or add dashboard widgets">Customize</button>
     </div>
+    <div id="hubPlan" class="hub-plan"></div>
     <div class="hub-grid" id="hubGrid"></div>
   </section>
 
@@ -3191,7 +3195,9 @@ const AFFILIATES=[
   {id:"fay", tz:"America/New_York", name:"Fayetteville",   team:"Fayetteville Woodpeckers", short:"FAY", level:"Single-A",
    logo:"brand/fay.png", logoW:599, logoH:477,
    primary:"#D31245", secondary:"#000000", accent:"#5F6062", masthead:"#D31245", onPrimary:"#FFFFFF", onSecondary:"#FFFFFF"},
-  {id:"fcl", tz:"America/New_York", name:"FCL Astros",     team:"FCL Astros",               short:"FCL", level:"Rookie · Florida Complex League",
+  /* the fifth workspace: the Complex — the FCL Astros' home and the organization's player-development and workout hub
+     (camps, groups across every affiliate). Its id stays "fcl" so rosters, days and saved data are unchanged. */
+  {id:"fcl", tz:"America/New_York", name:"Complex",        team:"Astros Complex",           short:"CPX", level:"Complex · FCL & player development",
    logo:"brand/fcl.svg", logoW:236, logoH:237,
    primary:"#002D62", secondary:"#EB6E1F", accent:null,      masthead:"#EB6E1F", onPrimary:"#FFFFFF", onSecondary:"#000000"}
 ];
@@ -7701,6 +7707,7 @@ document.addEventListener("click",e=>{ if(e.target.closest("[data-close]")) clos
    VIEW SWITCH
    ========================================================================== */
 function go(v){
+  if(v==="camp" && store.affiliate()!=="fcl") v="hub";        // Camps belong to the Complex workspace
   VIEW=v;
   const TOP=["hub","month","docs","matrix","pitch","camp"];
   const workspace = TOP.includes(v) ? v : "schedule";
@@ -8362,7 +8369,7 @@ function newDayModal(){
   openModal(`
     <div class="mhead"><div><h2>New day</h2><p>Most days are yesterday with three things moved. Start there.</p></div><button class="x" data-close>×</button></div>
     <div class="mbody">
-      <div class="field" style="max-width:260px"><label for="ndDate">Date</label><input id="ndDate" type="date" value="${esc(hasRows(S)?nextDate():S.meta.date)}"></div>
+      <div class="field" style="max-width:260px"><label for="ndDate">Date</label><input id="ndDate" type="date" value="${esc(hasContent(S)?nextDate():S.meta.date)}"></div>
       <div class="tiles">
         ${last?`<button class="tile hero" data-new="last"><b>Duplicate ${esc(last.title||"last schedule")}</b>
           <span>${esc(longDate(last.date)||"")} — every group, roster and time carried over</span></button>`:""}
@@ -8406,9 +8413,18 @@ function blankDay(iso){
   return d;
 }
 const hasRows=day=>!!(day&&day.sections&&day.sections.some(sec=>(sec.rows||[]).some(r=>r.activity||r.time)));
+/** a day worth keeping: rows, or a Build Daily Schedule plan (draft or published) */
+const hasContent=day=>hasRows(day)||!!(day&&day.meta&&day.meta.dayPlan);
+/** "none" | "draft" | "published" for a date (the open day, else the saved list) */
+function dayStatus(iso){
+  const of=d=>d&&d.meta&&d.meta.dayPlan?(d.meta.dayPlan.status==="published"?"published":"draft"):hasRows(d)?(index().some(x=>x.id===d.id&&!x.auto)?"published":"draft"):"none";
+  if(S&&S.meta&&S.meta.date===iso) return of(S);
+  const hit=index().filter(x=>x.date===iso).sort((a,b)=>b.saved-a.saved)[0];
+  return hit?of(loadById(hit.id)):"none";
+}
 /** keep the day on screen before leaving it: into the saved list when it has content (nothing is ever dropped) */
 function stashCurrentDay(){
-  if(!S||!hasRows(S)) return;
+  if(!S||!hasContent(S)) return;
   const saved=loadById(S.id);
   if(saved && JSON.stringify(saved)===JSON.stringify(S)) return;
   const entry={id:S.id,date:S.meta.date,title:S.meta.title,opponent:S.meta.opponent,saved:Date.now(),auto:true};
@@ -8430,13 +8446,13 @@ function openDate(iso){
 window.openDate=openDate;
 function index(){ try{ return JSON.parse(store.get(K.index)||"[]"); }catch(e){ return []; } }
 function setIndex(a){ store.set(K.index, JSON.stringify(a)); }
-function saveSchedule(){
+function saveSchedule(quiet){
   const entry={id:S.id,date:S.meta.date,title:S.meta.title,opponent:S.meta.opponent,saved:Date.now()};
   const idx=index().filter(x=>x.id!==S.id);
   idx.unshift(entry); setIndex(idx.slice(0,120));
   store.set(K.sched(S.id), JSON.stringify(S));
   dirty=false; $("#saveState").textContent="Saved "+new Date().toLocaleTimeString([], {hour:"numeric",minute:"2-digit"});
-  toast(store.ok?"Schedule saved on this computer":"Saved for this session — export a file to keep it");
+  if(!quiet) toast(store.ok?"Schedule saved on this computer":"Saved for this session — export a file to keep it");
 }
 function loadById(id){ try{ return JSON.parse(store.get(K.sched(id))); }catch(e){ return null; } }
 function openModalLibrary(){
@@ -11702,7 +11718,8 @@ function renderHub(){
           :""}`
       : "Pick a date in the Daily Schedule to get started";
   }
-  window.HUB_ACTIONS_LIST=HUB_ACTIONS.concat(window.CampUI&&CampUI.ready?[{k:"camp",go:()=>go("camp"),title:"Camp",desc:"Organization-wide camps and workouts.",meta:"Players from every affiliate",tag:""}]:[]);
+  if(window.HubPlanner) try{ HubPlanner.render($("#hubPlan")); }catch(e){ console.error(e); }
+  window.HUB_ACTIONS_LIST=HUB_ACTIONS.concat(window.CampUI&&CampUI.ready&&store.affiliate()==="fcl"?[{k:"camp",go:()=>go("camp"),title:"Camps",desc:"Spring training, instructs and workouts with players from every affiliate.",meta:"Groups · fields, cages, bullpens · conflicts",tag:""}]:[]);
   if(window.Dashboard){
     const cb=$("#dashCustomize"); if(cb && !cb.dataset.bound){ cb.dataset.bound="1"; cb.onclick=()=>Dashboard.setEditing(!Dashboard.editing,host); }
     return Dashboard.render(host);
@@ -13356,7 +13373,7 @@ function renderAffGate(){
   list.innerHTML=Brand.all().map(b=>`
     <button class="affgate-opt" data-aff="${b.id}" style="--ap:${b.primary};--as:${b.masthead}">
       <span class="affgate-badge">${affLogoHTML(b,46)}</span>
-      <span class="affgate-txt"><b>${esc(b.team)}</b><span>${esc(b.level)}</span></span>
+      <span class="affgate-txt"><b>${esc(b.level.split(" · ")[0])}</b><span>${esc(b.team)}${b.level.includes(" · ")?" · "+esc(b.level.split(" · ").slice(1).join(" · ")):""}</span></span>
       <span class="affgate-swatch" aria-hidden="true">${[b.primary,b.secondary,b.accent].filter(Boolean).map(c=>`<i style="background:${c}"></i>`).join("")}</span>
       <span class="affgate-go">→</span>
     </button>`).join("");
@@ -13372,10 +13389,11 @@ function chooseAffiliate(id){
 }
 function renderAffChip(){
   const id=store.affiliate();
+  document.body.classList.toggle("ws-complex",id==="fcl");
   const b=id?Brand.get(id):null;
   if(b) Brand.apply(id);
   const nm=$("#affChipName"); if(nm) nm.textContent=b?b.name:"—";
-  const lv=$("#affChipLevel"); if(lv) lv.textContent=b?b.level.split(" · ")[0]:"";
+  const lv=$("#affChipLevel"); if(lv) lv.textContent=b&&b.level.split(" · ")[0]!==b.name?b.level.split(" · ")[0]:"";
   const mk=$("#affChipMark"); if(mk) mk.innerHTML=b?affLogoHTML(b,24,"tiny"):"";
   const chip=$("#affChip"); if(chip) chip.title=b?`${b.team} — ${b.level} · click to switch`:"Select affiliate";
 }
@@ -14452,7 +14470,10 @@ boot();
 <script src="assistant/day-engine.js"></script>
 <script src="assistant/day-ui.js"></script>
 <script src="hub/dashboard.js"></script>
+<script src="games/gameday.js"></script>
+<script src="games/gameday-ui.js"></script>
 <script src="games/games-ui.js"></script>
+<script src="hub/planner.js"></script>
 <script src="camp/camp-core.js"></script>
 <script src="camp/camp.js"></script>
 <script>
@@ -14460,7 +14481,7 @@ boot();
 (function(){
   const ready=!!(window.CampUI&&CampUI.ready);
   document.body.classList.toggle("camp-off",!ready);
-  if(!ready && typeof VIEW!=="undefined" && VIEW==="camp") go("hub");
+  if((!ready || store.affiliate()!=="fcl") && typeof VIEW!=="undefined" && VIEW==="camp") go("hub");
   try{ if(typeof VIEW!=="undefined" && VIEW==="hub") renderHub(); }catch(e){}
 })();
 </script>

@@ -30,9 +30,10 @@ async function fresh(b, opts = {}) {
   p.setDefaultTimeout(8000);
   const errs = [];
   p.on("pageerror", (e) => errs.push("pageerror: " + e.message));
-  p.on("console", (m) => m.type() === "error" && errs.push("console: " + m.text()));
+  p.on("console", (m) => m.type() === "error" && !/Failed to load resource/.test(m.text()) && errs.push("console: " + m.text()));   // failed requests are reported below, with their address
   p.on("requestfailed", (r) => !r.url().startsWith("blob:") && !r.url().startsWith("data:") && errs.push("requestfailed: " + r.url()));
-  p.on("response", (r) => r.status() >= 400 && !r.url().includes("/__mha_ai") && errs.push(`${r.status()} ${r.url()}`));
+  // api/settings and api/usage are server functions: the static test server answers 404, and the page falls back to its defaults
+  p.on("response", (r) => r.status() >= 400 && !r.url().includes("/__mha_ai") && !/\/api\/(settings|usage)$/.test(r.url()) && errs.push(`${r.status()} ${r.url()}`));
   p.on("dialog", (d) => d.accept(opts.prompt || "Test"));
   await p.goto(BASE); await wait(p, 600);
   if (await p.locator("#affGate").isVisible()) { await p.locator("#affGateList button", { hasText: "FCL" }).first().click(); await wait(p, 700); }
@@ -59,8 +60,8 @@ const lastMsg = (p) => p.evaluate(() => { const l = MHAssistUI.draft.log; return
   await safe(async () => {
     const { ctx, p, errs } = await fresh(b);
     // Manager Hub 2.0: the dashboard's "Describe your day" widget replaces the first-use card
-    ok(await p.locator('.dash-w[data-w="describe"]').isVisible(), "hub shows the Describe your day widget");
-    ok(/Say what has to happen/.test(await p.locator('.dash-w[data-w="describe"]').innerText()) && !(await p.locator("#mhaIntro").count()), "the widget explains it; the old first-use card is gone");
+    ok(await p.locator("#hubPlan .pl-build").isVisible(), "hub leads with the day planner and its Build Daily Schedule button");
+    ok(/today/i.test(await p.locator("#hubPlan .pl-card").innerText()) && !(await p.locator("#mhaIntro").count()), "the planner opens on today; the old first-use card is gone");
     await p.click("#btnHelp"); await wait(p, 250);
     const help = await p.locator("#modal").innerText();
     ok(/Describe the day/.test(help) && /Plan the month/.test(help) && /no API key is ever stored/i.test(help), "top-right ? opens concise help, states the interpreter honestly");

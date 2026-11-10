@@ -22,10 +22,11 @@ const order = (p) => p.$$eval("#hubGrid .dash-w", (ws) => ws.map((w) => w.datase
     await p.goto(BASE); await p.evaluate(() => { localStorage.clear(); localStorage.setItem("cs.affiliate", "sl"); }); await p.reload(); await p.waitForTimeout(1200);
     const def = await order(p);
     const campReady = await p.evaluate(() => !!(window.CampUI && CampUI.ready));
-    const N = campReady ? 7 : 6;
-    ok(def.join() === (campReady ? "today,describe,roster,games,month,camp,modules" : "today,describe,roster,games,month,modules"), `default widgets in order (${def.join(", ")})${campReady ? "" : " — Camp hidden until the module is complete"}`);
-    ok(campReady || !(await p.isVisible('.seg button[data-view="camp"]')), "Camp tab hidden until the module is complete");
-    ok(!(await p.$("#mhaIntro")), "the old intro card is replaced by the Describe widget");
+    const N = 4;                                         // Camps appear in the Complex workspace only; Day schedule / Describe start hidden (the day planner covers them)
+    ok(def.join() === "games,roster,month,modules", `default widgets in order (${def.join(", ")})`);
+    ok(await p.isVisible("#hubPlan .pl-build"), "the day planner leads the page");
+    ok(!(await p.isVisible('.seg button[data-view="camp"]')), "Camps tab only in the Complex workspace");
+    ok(!(await p.$("#mhaIntro")), "no old intro card");
     ok(!(await p.$(".dash-grip")) && !(await p.$(".dash-editbar")), "no editing controls outside customize mode");
     ok((await p.locator(".dash-w[data-w=roster] .dash-stats").count()) === 1, "roster widget shows real roster counts");
 
@@ -43,23 +44,23 @@ const order = (p) => p.$$eval("#hubGrid .dash-w", (ws) => ws.map((w) => w.datase
     await p.focus('[data-grip="games"]'); await p.keyboard.press("ArrowLeft"); await p.waitForTimeout(150);
     o = await order(p); ok(o.indexOf("games") === o.length - 3 && (await p.evaluate(() => document.activeElement && document.activeElement.dataset.grip)) === "games", "arrow keys on the handle move it and keep focus");
     // resize
-    const before = await p.getAttribute('.dash-w[data-w="describe"]', "class");
-    await p.click('[data-size="describe"]'); await p.waitForTimeout(150);
-    const after = await p.getAttribute('.dash-w[data-w="describe"]', "class");
+    const before = await p.getAttribute('.dash-w[data-w="roster"]', "class");
+    await p.click('[data-size="roster"]'); await p.waitForTimeout(150);
+    const after = await p.getAttribute('.dash-w[data-w="roster"]', "class");
     ok(/size-s/.test(before) && /size-m/.test(after), "width cycles Small → Medium");
-    // drag the Roster widget (on screen) to the top
-    await p.evaluate(() => window.scrollTo(0, 0));
-    const grip = await p.locator('[data-grip="roster"]').boundingBox(), first = await p.locator(".dash-w").first().boundingBox();
+    // drag the Next 7 days widget to the top
+    await p.locator("#hubGrid").scrollIntoViewIfNeeded(); await p.evaluate(() => window.scrollBy(0, -40));
+    const grip = await p.locator('[data-grip="month"]').boundingBox(), first = await p.locator(".dash-w").first().boundingBox();
     await p.mouse.move(grip.x + 8, grip.y + 8); await p.mouse.down();
     await p.mouse.move(first.x + 40, first.y + 20, { steps: 12 }); await p.mouse.move(first.x + 30, first.y + 12, { steps: 4 }); await p.mouse.up(); await p.waitForTimeout(250);
-    o = await order(p); ok(o[0] === "roster", `drag and drop reorders (${o.slice(0, 3).join(", ")}…)`);
+    o = await order(p); ok(o[0] === "month", `drag and drop reorders (${o.slice(0, 3).join(", ")}…)`);
     await p.click('[data-dash="done"]'); await p.waitForTimeout(150);
     ok(!(await p.$(".dash-grip")) && (await p.evaluate(() => document.activeElement && document.activeElement.id)) === "dashCustomize", "Done leaves customize mode and returns focus");
 
     // persistence: reload and switch affiliate
     const saved = await order(p);
     await p.reload(); await p.waitForTimeout(900);
-    ok((await order(p)).join() === saved.join() && /size-m/.test(await p.getAttribute('.dash-w[data-w="describe"]', "class")), "layout and sizes survive a reload");
+    ok((await order(p)).join() === saved.join() && /size-m/.test(await p.getAttribute('.dash-w[data-w="roster"]', "class")), "layout and sizes survive a reload");
     await p.evaluate(() => localStorage.setItem("cs.affiliate", "fay")); await p.reload(); await p.waitForTimeout(900);
     ok((await order(p)).join() === saved.join(), "layout is a personal preference across affiliates in this browser");
     // reset
@@ -67,8 +68,9 @@ const order = (p) => p.$$eval("#hubGrid .dash-w", (ws) => ws.map((w) => w.datase
     ok((await order(p)).join() === def.join(), "Reset restores the default layout");
     await p.click('[data-dash="done"]');
     // widgets link into the app
-    await p.click('.dash-w[data-w="today"] [data-go="schedule"]'); await p.waitForTimeout(250);
-    ok(await p.isVisible("#viewSchedule"), "Day schedule widget opens the day");
+    await p.click('#hubPlan [data-plb="build"]'); await p.waitForTimeout(250);
+    ok(await p.isVisible('#hubPlan [data-plb="manual"]') && await p.isVisible('#hubPlan [data-plb="voice"]'), "Build Daily Schedule offers build manually / describe / voice");
+    await p.click('#hubPlan [data-plb="cancel"]');
     // empty dashboard state
     await p.evaluate(() => { localStorage.setItem("cs.dashboard.v1", JSON.stringify({ order: [], hidden: ["today", "describe", "roster", "games", "month", "camp", "modules"], size: {} })); go("hub"); });
     await p.waitForTimeout(200);
@@ -86,7 +88,7 @@ const order = (p) => p.$$eval("#hubGrid .dash-w", (ws) => ws.map((w) => w.datase
     await p.goto(BASE); await p.evaluate(() => { localStorage.clear(); localStorage.setItem("cs.affiliate", "sl"); }); await p.reload(); await p.waitForTimeout(1000);
     ok(!(await p.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1)), `${tag}: no horizontal overflow`);
     await p.click("#dashCustomize"); await p.waitForTimeout(150);
-    ok(!(await p.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1)) && await p.isVisible('[data-move="1"][data-id="today"]'), `${tag}: customize mode fits, move buttons usable`);
+    ok(!(await p.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1)) && await p.isVisible('[data-move="1"][data-id="games"]'), `${tag}: customize mode fits, move buttons usable`);
     await ctx.close();
   }
   await b.close();

@@ -749,6 +749,7 @@
     const secs = proposedSections();
     if (o.tpl === "" && q("#mhaTpl", panel)?.checked) { toast("Name the template, or untick “save as a day template”"); return; }
     mutate(() => { S.sections = secs; if (draft.dayRequest) S.meta.dayRequest = draft.dayRequest; });
+    try { if (draft.onPublished) draft.onPublished(); } catch (e) { console.error(e); }
     secs.forEach((s) => (s.rows || []).forEach((r) => { learn("activities", String(r.activity || "").replace(/:$/, "")); learn("locations", r.location); }));
     if (o.tpl) ScheduleActions.save(o.tpl, o.structure ? "structure" : "full");
     const n = draft.events.length;
@@ -767,6 +768,7 @@
     newDraft({ events: d.events, kept: cur.filter((e) => !touched.has(A.norm(e.group))), base: S.sections,
       notes: d.notes || [], assumptions: d.assumptions || [], vctx: validationCtx({ firstPitch: d.firstPitch != null ? d.firstPitch : undefined }) }, d.text || "", {});
     draft.dayRequest = d.request || null;
+    draft.onPublished = d.onPublished || null;
     draft.log.push({ who: "assistant", text: summaryLine() });
     ensurePanel(); panel.hidden = false; document.body.classList.add("mha-open");
     step = "publish"; render();

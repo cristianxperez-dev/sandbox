@@ -61,6 +61,18 @@
     const p = Solve.solve(request, ctx);
     return Object.assign({}, state, { request, plan: p, ops, history: (state.history || []).concat([{ text, request: before, plan: state.plan }]) });
   }
+  /** a state from a request built in the app (game-day defaults, a saved draft) — no text, no interpreter */
+  function fromRequest(request, ctx = {}, extra = {}) {
+    const r = Solve.normalize(request);
+    return Object.assign({ text: "", request: r, plan: Solve.solve(r, ctx), interpreter: "manual", history: [] }, extra);
+  }
+  /** a direct edit of the request (time, length, name, group, facility, add / duplicate / remove) — undoable */
+  function edit(state, fn, ctx = {}, text = "") {
+    const before = clone(state.request);
+    const request = Solve.normalize(fn(clone(state.request)) || before);
+    const p = Solve.solve(request, ctx);
+    return Object.assign({}, state, { request, plan: p, ops: [], redo: [], history: (state.history || []).concat([{ text, request: before, plan: state.plan }]) });
+  }
   function undo(state) {
     const h = state.history || [];
     if (!h.length) return state;
@@ -73,5 +85,5 @@
     const next = r[r.length - 1];
     return Object.assign({}, state, { request: next.request, plan: next.plan, redo: r.slice(0, -1), history: (state.history || []).concat([{ text: next.text, request: state.request, plan: state.plan }]) });
   }
-  return { plan, refine, applyOps, undo, redo, KB, Read, Solve };
+  return { plan, refine, applyOps, fromRequest, edit, undo, redo, KB, Read, Solve };
 });

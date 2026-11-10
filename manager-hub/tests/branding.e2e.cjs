@@ -8,7 +8,7 @@ const EXPECT = {
   cc:  { team: "Corpus Christi Hooks",     level: "Double-A", logo: "brand/cc.png",  primary: "#002A5B", secondary: "#4F91CD", accent: "#E01938" },
   ash: { team: "Asheville Tourists",       level: "High-A",   logo: "brand/ash.png", primary: "#002B5C", secondary: "#86CEBC", accent: "#005695" },
   fay: { team: "Fayetteville Woodpeckers", level: "Single-A", logo: "brand/fay.png", primary: "#D31245", secondary: "#000000", accent: "#5F6062" },
-  fcl: { team: "FCL Astros",               level: "Rookie · Florida Complex League", logo: "brand/fcl.svg", primary: "#002D62", secondary: "#EB6E1F", accent: null }
+  fcl: { team: "Astros Complex",           level: "Complex · FCL & player development", logo: "brand/fcl.svg", primary: "#002D62", secondary: "#EB6E1F", accent: null }
 };
 let pass = 0, fail = 0;
 const ok = (c, m) => { console.log((c ? "PASS " : "FAIL ") + m); c ? pass++ : fail++; if (!c) process.exitCode = 1; };
@@ -31,12 +31,12 @@ const RED_DOT = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfF
     const p = await ctx.newPage(), errs = [];
     p.on("pageerror", (e) => errs.push(e.message));
     p.on("requestfailed", (r) => errs.push("failed " + r.url()));
-    p.on("response", (r) => { if (r.status() >= 400) errs.push(r.status() + " " + r.url()); });
+    p.on("response", (r) => { if (r.status() >= 400 && !/\/api\/(settings|usage)$/.test(r.url())) errs.push(r.status() + " " + r.url()); });   // server functions: 404 on the static test server
     await p.goto(BASE); await p.evaluate(() => localStorage.clear()); await p.reload(); await p.waitForTimeout(600);
 
     // the selector: five clubs, each with its own logo, full name and level
     const gate = await p.$$eval("#affGateList .affgate-opt", (os) => os.map((o) => ({ id: o.dataset.aff, name: o.querySelector("b").textContent, lvl: o.querySelector(".affgate-txt span").textContent, img: o.querySelector("img").getAttribute("src"), loaded: o.querySelector("img").complete && o.querySelector("img").naturalWidth > 0 })));
-    ok(gate.length === 5 && gate.every((g) => EXPECT[g.id] && g.name === EXPECT[g.id].team && g.lvl === EXPECT[g.id].level && g.img === EXPECT[g.id].logo && g.loaded), `${tag}: selector shows all five clubs with their logos`);
+    ok(gate.length === 5 && gate.every((g) => EXPECT[g.id] && g.name === EXPECT[g.id].level.split(" · ")[0] && g.lvl.startsWith(EXPECT[g.id].team) && g.img === EXPECT[g.id].logo && g.loaded), `${tag}: selector shows all five clubs with their logos`);
     const sw = await p.$$eval(".affgate-opt", (os) => os.map((o) => o.scrollWidth <= o.clientWidth + 1));
     ok(sw.every(Boolean), `${tag}: selector rows fit without overflow`);
 

@@ -41,10 +41,12 @@
     games: { title: "Games", size: "s", render: wGames },
     orggames: { title: "Around the organization", size: "m", render: wOrgGames, optIn: true },
     month: { title: "Next 7 days", size: "s", render: wMonth },
-    camp: { title: "Camp", size: "s", render: wCamp },
+    camp: { title: "Camps", size: "s", render: wCamp },
     modules: { title: "Modules", size: "xl", render: wModules }
   };
-  const DEFAULT = { order: ["today", "describe", "roster", "games", "month", "camp", "modules", "orggames"], hidden: ["orggames"], size: {} };
+  // the day planner above the widgets (hub/planner.js) covers today's schedule and building a day, so those two
+  // widgets start hidden (still under "Add widget"); the Organization games widget is opt-in
+  const DEFAULT = { v: 2, order: ["games", "roster", "month", "camp", "modules", "today", "describe", "orggames"], hidden: ["today", "describe", "orggames"], size: { games: "m", roster: "s", month: "s" } };
 
   function load() {
     let d = null;
@@ -54,13 +56,16 @@
     // new widgets appear for existing users — except opt-in ones, which wait in "Add widget"
     Object.keys(W).forEach((id) => { if (!d.order.includes(id)) { d.order.push(id); if (W[id].optIn && !(d.hidden || []).includes(id)) (d.hidden = d.hidden || []).push(id); } });
     d.hidden = (d.hidden || []).filter((id) => W[id]);
+    // once: layouts from before the day planner hide the two widgets it replaces (a person can add them back)
+    if (!d.v || d.v < 2) { ["today", "describe"].forEach((id) => { if (!d.hidden.includes(id)) d.hidden.push(id); }); d.v = 2; save(d); }
     d.size = d.size || {};
     return d;
   }
   function save(d) { try { localStorage.setItem(KEY, JSON.stringify(d)); } catch (e) {} }
   const sizeOf = (d, id) => d.size[id] || W[id].size;
   // the Camp widget shows once the Camp module is complete (it sets CampUI.ready)
-  const available = (id) => id !== "camp" || !!(window.CampUI && window.CampUI.ready);
+  // Camps: the Complex workspace only, once the module is complete (it sets CampUI.ready)
+  const available = (id) => id !== "camp" || !!(window.CampUI && window.CampUI.ready && typeof store !== "undefined" && store.affiliate() === "fcl");
 
   let editing = false, layout = null;
 

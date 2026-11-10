@@ -459,7 +459,8 @@
         if (a.rounds && a.rounds.each) { each = on5(a.rounds.each, `${kb.label} rounds`); rigid = true; }
         // a stated length on a rounds activity is per round ("BP 2 groups, 30 min", "25 each"),
         // unless it is long enough to be the whole hitting block ("an hour of BP, 2 groups" → 30 each)
-        else if (a.dur) { each = a.dur >= 45 && a.dur / n >= 15 ? Math.max(5, r5(a.dur / n)) : on5(a.dur, `${kb.label} rounds`); rigid = true; }
+        // (the rounds never add up to more than the stated block: 45 min for 2 groups = 20 + 20)
+        else if (a.dur) { each = a.dur >= 45 && a.dur / n >= 15 ? Math.max(5, Math.floor(a.dur / n / 5) * 5) : on5(a.dur, `${kb.label} rounds`); rigid = true; }
         else { each = d.def; rigid = false; }
         if (a.kind === "bp" || a.kind === "cage") {
           const what = a.kind === "bp" ? "BP rounds" : "cage rounds";

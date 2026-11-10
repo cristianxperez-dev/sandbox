@@ -37,7 +37,7 @@ async function freshPage(b, w, hgt) {
   const p = await ctx.newPage(), errs = [];
   p.on("pageerror", (e) => errs.push(e.message));
   p.on("dialog", (d) => d.accept());
-  await p.goto(BASE); await p.evaluate(() => { localStorage.clear(); localStorage.setItem("cs.affiliate", "sl"); }); await p.reload(); await p.waitForTimeout(600);
+  await p.goto(BASE); await p.evaluate(() => { localStorage.clear(); localStorage.setItem("cs.affiliate", "fcl"); }); await p.reload(); await p.waitForTimeout(600);
   await p.evaluate(seedRosters);
   return { ctx, p, errs };
 }
