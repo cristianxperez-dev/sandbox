@@ -933,3 +933,12 @@ test("edit: not understood is reported in .unknown", () => {
   const d = J(R.readEditDetailed("do the flux capacitor", BASE, null, {}));
   deq(d.unknown, ["do the flux capacitor"]);
 });
+
+test("end anchor: 'everyone finishes at noon' / 'practice ends at 1' / 'we wrap up at 12:30' (owner's Nov 10 test sentence)", () => {
+  const r = read("Tomorrow, catchers report at 8:30 AM, hitting starts at 9:00 AM, defensive work begins at 10:00 AM, and everyone finishes at noon.");
+  assert.equal(r.anchors.start, 510); assert.equal(r.anchors.end, 720);
+  assert.ok(!r.activities.some((a) => /finish/i.test(a.label)), "'finishes' is the end of the day, not an activity");
+  assert.deepEqual(r.activities.map((a) => [a.kind, a.at, a.who]), [["arrival", 510, "catchers"], ["bp", 540, "position"], ["teamDefense", 600, "all"]]);
+  assert.equal(read("practice ends at 1").anchors.end, 780);
+  assert.equal(read("we wrap up at 12:30").anchors.end, 750);
+});

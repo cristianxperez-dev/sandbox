@@ -488,7 +488,7 @@
     });
     rep(new RegExp(`${C}\\s*(?:start|kickoff)\\b`, "g"), (m, c) => { if (st.startClock == null) st.startClock = useC(c); return " "; });
     rep(new RegExp(`(?<!\\bkick(?:s|ing)?\\s|⟩\\s)\\b(?:off|gone|leaving|leave|out of (?:there|here)|outta here|clear|cleared)\\s+(?:the field\\s+|the complex\\s+|the park\\s+)?(?:by|at|before|no later than)\\s*${C}`, "g"), (m, c) => { if (st.endClock == null) st.endClock = useC(c); return " "; });
-    const END = "(?:finish(?:ed)?|finishing|done|wrap(?:ped)?(?: (?:up|it up))?|end(?: the day)?|ending|hard stop|stop|out of here|out|off the field|over|clear the field|be done|all done|cut ?off)";
+    const END = "(?:finish(?:es|ed)?|finishing|done|wrap(?:s|ped)?(?: (?:up|it up))?|end(?:s)?(?: the day)?|ending|hard stop|stop|out of here|out|off the field|over|clear the field|be done|all done|cut ?off)";
     rep(new RegExp(`\\b${END}(?:\\s+(?:everything|practice|the day|the workout|it|up|things|today))?\\s*(?:by|at|around|before|no later than|@)?\\s*${C}`, "g"), (m, c) => { if (st.endClock == null) st.endClock = useC(c); return " "; });
     rep(new RegExp(`\\bhard stop\\s*${C}|${C}\\s*(?:hard stop|finish|stop)\\b`, "g"), (m, c1, c2) => { const c = c1 ?? c2; if (st.endClock == null) st.endClock = useC(c); return " "; });
 

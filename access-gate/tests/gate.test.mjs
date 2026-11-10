@@ -135,7 +135,7 @@ test("sign-out clears the cookie and returns to the access page", async () => {
 
 test("status route: presence of settings only, never values; production locked without explicit approval", async () => {
   const KEY = "sk-test-0123456789abcdefghijklmnopqrstuvwxyz";
-  const env = { ...ENV, OPENAI_API_KEY: KEY, MH_AI_ENABLED: "1" };
+  const env = { ...ENV, OPENAI_API_KEY: KEY, MH_AI_ENABLED: "1", MH_AI_USAGE: { prepare() {} } };
   const statusAt = async (origin, e = env) => {
     const res = await gate({ request: new Request(origin + "/apps/manager-hub/access/status"), env: e, next: async () => new Response("x") });
     return [res.status, await res.text(), res.headers.get("Cache-Control")];
@@ -149,12 +149,16 @@ test("status route: presence of settings only, never values; production locked w
   [s, t] = await statusAt("https://claude-youthful-mayer-58ydbz.sandbox-34x.pages.dev"); b = JSON.parse(t);
   assert.equal(b.deployment, "preview"); assert.equal(b.ai.active, true);
   [s, t] = await statusAt("https://cperez.app", { ...env, MH_AI_PRODUCTION: "approved" }); assert.equal(JSON.parse(t).ai.active, true, "explicit approval switches production on");
+  [s, t] = await statusAt("https://cperez.app", { ...env, MH_AI_PRODUCTION: "approved", MH_AI_USAGE: undefined }); b = JSON.parse(t);
+  assert.equal(b.ai.active, false, "no spending store → AI stays off"); assert.equal(b.ai.reason, "no-budget-store"); assert.equal(b.ai.budgetConfigured, false);
   [s, t] = await statusAt("https://evil.example"); assert.equal(JSON.parse(t).deployment, "production", "unknown hosts are treated as production");
   [s, t] = await statusAt("https://cperez.app", {}); b = JSON.parse(t);
   assert.equal(b.gate.accessCodePresent, false); assert.equal(b.ai.openaiKeyPresent, false); assert.equal(b.ai.reason, "no-key");
   // nothing else under the app is reachable without a session
   const other = await gate({ request: new Request("https://cperez.app/apps/manager-hub/api/interpret", { method: "POST" }), env, next: async () => new Response("x") });
   assert.equal(other.status, 401);
+  const usage = await gate({ request: new Request("https://cperez.app/apps/manager-hub/api/usage"), env, next: async () => new Response("x") });
+  assert.equal(usage.status, 401, "the usage figures need a session too");
 });
 
 test("X-MH-Access-Key header: the right code admits a request (any host); wrong keys count toward the lockout", async () => {

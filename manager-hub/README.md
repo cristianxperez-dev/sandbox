@@ -105,7 +105,8 @@ The interpreter uses the OpenAI **Responses API** with strict Structured Outputs
 
 - `OPENAI_API_KEY` (Cloudflare **Secret**) is present, and
 - `MH_AI_ENABLED` = `1`, and
-- **on production hosts** (cperez.app, the project's main `pages.dev` address, or any host not recognised as a preview), also `MH_AI_PRODUCTION` = `approved`. This is the owner's explicit go-ahead.
+- **on production hosts** (cperez.app, the project's main `pages.dev` address, or any host not recognised as a preview), also `MH_AI_PRODUCTION` = `approved`. This is the owner's explicit go-ahead, and
+- a **D1 database bound as `MH_AI_USAGE`** is present: the monthly spending limit below. Without it spending can't be tracked, so AI stays off (status reason `no-budget-store`).
 
 So `MH_AI_ENABLED=1` in Production cannot switch AI on for cperez.app by itself. The rule lives in `manager-hub/server/ai-config.js`.
 
@@ -139,7 +140,14 @@ The GitHub workflow *Describe Your Day — AI evaluation* is optional. It runs t
 - Output is capped at 6,000 tokens for a build and 3,000 for a refinement.
 - Request text is at most 1,500 characters, and each call has a 25 s timeout.
 - Per-IP limits are best effort. `store: false` is set, and the stable instructions come first so OpenAI's prompt caching applies.
-- The hard cap is the OpenAI **project budget / usage limit**.
+- **Monthly spending limit ($9.00 estimated, server-side; `manager-hub/server/ai-budget.js`).**
+  - Before every OpenAI call the server reserves the call's worst case: the whole prompt at the uncached price plus the full output allowance. It does this in one conditional D1 update, so concurrent requests can't overshoot. A call that would pass $9.00 for the UTC calendar month is refused (HTTP 402 `budget-reached`) and never reaches OpenAI.
+  - After the call, the reservation is replaced by the cost computed from the tokens OpenAI reports. A timeout or network failure is charged the full reservation; an error with no usage is charged nothing.
+  - Fails safe: no binding, a database error, or a model without a known price → no AI call. The panel uses the built-in reader and says why.
+  - `MH_AI_BUDGET_USD` can lower the cap, never raise it. `MH_AI_PRICES` (JSON, `{"model":[input, cached, output]}` in USD per 1M tokens) updates prices without a code change.
+  - The Describe Your Day panel shows **AI this month: $x of $9.00 (est.)**; `GET /apps/manager-hub/api/usage` (behind the access code) returns the figures.
+  - **Setup:** Cloudflare → Storage & Databases → D1 → create a database (e.g. `manager-hub-ai-usage`). Then Workers & Pages → sandbox → Settings → Bindings → add D1 binding `MH_AI_USAGE` → that database, in **Production** and **Preview** (the same database, so both count against one limit). Redeploy. The table is created on first use.
+  - **Limits of the estimate.** The figures are estimates from token counts × list prices kept in the code; OpenAI's invoice is the authority. Usage of the same OpenAI key outside Manager Hub isn't counted. The OpenAI **project budget / usage limit** remains the final backstop.
 - A failed or invalid AI answer never touches the schedule. The panel falls back to the built-in reader and says so (**Built-in reader · AI unavailable**). Nothing is written until **Review & save**.
 - The key is never sent to the browser, logged or returned. Logs hold mode, status, model, tokens and latency only.
 
@@ -205,7 +213,7 @@ node --test manager-hub/tests/*.test.mjs                 # unit + proxy contract
 node manager-hub/tests/app.e2e.cjs                       # real app, Playwright (BASE=… to target another host)
 node manager-hub/tests/roster-import.e2e.cjs             # roster import (fictional players)
 node manager-hub/tests/branding.e2e.cjs                  # fixed affiliate logos and colours
-node --test manager-hub/tests/day-*.test.mjs manager-hub/tests/interpret.test.mjs   # Describe Your Day: reader, solver, 103-scenario evaluation, AI endpoint
+node --test manager-hub/tests/day-*.test.mjs manager-hub/tests/interpret.test.mjs manager-hub/tests/budget.test.mjs   # Describe Your Day: reader, solver, 103-scenario evaluation, AI endpoint, spending limit
 node manager-hub/tests/day-ui.e2e.cjs                    # Describe Your Day panel in the app
 node manager-hub/tests/org-roster.e2e.cjs                # shipped organisation roster (needs the gate: MH_ACCESS_CODE, BASE)
 ```

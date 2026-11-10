@@ -17,14 +17,17 @@
      MH_AI_EFFORT        reasoning effort: low (default) | medium | high | none (omit the parameter).
      MH_AI_RATE          requests per client IP per 10 minutes (default 20).
      MH_AI_DAILY         requests per client IP per day (default 150).
-   Hard spend limits belong in the OpenAI dashboard (project budget / usage limits); the limits here only
-   stop runaway use from one browser. The key never leaves this function. Only the request text and a
+     MH_AI_USAGE         D1 database binding, required: the monthly spending limit ($9.00 estimated, enforced
+                         here before every call — manager-hub/server/ai-budget.js). Without it AI stays off.
+   The per-IP limits below only stop runaway use from one browser; the OpenAI project budget is the
+   final backstop. The key never leaves this function. Only the request text and a
    compact context are sent (group names, resource counts, game time, the day's structure) — no roster.
    Logs record mode, status, model, tokens and latency only — never the coach's text or the key. */
 import DaySolve from "../../../../apps/manager-hub/assistant/day-solve.js";
 import DayKB from "../../../../apps/manager-hub/assistant/day-kb.js";
 import DayRead from "../../../../apps/manager-hub/assistant/day-read.js";
 import { aiState } from "../../../../manager-hub/server/ai-config.js";
+import * as Budget from "../../../../manager-hub/server/ai-budget.js";
 
 const MAX_TEXT = 1500, MAX_CTX = 16000, TIMEOUT_MS = 25000;
 const MAX_TOKENS = { build: 6000, refine: 3000 };
@@ -95,8 +98,8 @@ function planLines(plan) {
   return plan.items.slice(0, 60).map((i) => `${f(i.start)}–${f(i.end)} [${i.track}${i.group ? "/" + i.group : ""}] ${i.label} (activity ${i.actId || "-"}${i.fixed ? ", fixed" : ""})`).join("\n");
 }
 
-/** OpenAI Responses API call with a strict JSON-schema output. Returns {out, model, usage, ms} or {error, status, ms}. */
-async function callModel(env, model, { mode, text, ctx, request, plan }) {
+/** OpenAI Responses API request body (strict JSON-schema output) */
+function makeBody(env, model, { mode, text, ctx, request, plan }) {
   const schema = mode === "refine" ? DaySolve.REFINE_RESPONSE_SCHEMA : DaySolve.BUILD_RESPONSE_SCHEMA;
   let user;
   if (mode === "refine") {
@@ -116,6 +119,11 @@ async function callModel(env, model, { mode, text, ctx, request, plan }) {
     prompt_cache_key: "manager-hub-day-" + mode
   };
   if (effort !== "none") body.reasoning = { effort };
+  return body;
+}
+
+/** Send one request. Returns {out, model, usage, ms} or {error, status, ms}. */
+async function callModel(env, body) {
   const ac = new AbortController();
   const timer = setTimeout(() => ac.abort(), TIMEOUT_MS);
   const t0 = Date.now();
@@ -144,6 +152,22 @@ async function callModel(env, model, { mode, text, ctx, request, plan }) {
   } catch (e) {
     return { error: e.name === "AbortError" ? "timeout" : "network", status: 504, ms: Date.now() - t0 };
   } finally { clearTimeout(timer); }
+}
+
+/** One paid call: reserve the worst case, call, settle the actual cost. No reservation → no call. */
+async function paidCall(env, model, job) {
+  const price = Budget.priceOf(env, model);
+  if (!price) return { error: "budget-unknown-cost", status: 503, ms: 0 };
+  const body = makeBody(env, model, job);
+  const worst = Budget.worstCaseMicro(price, body.instructions.length + body.input[0].content.length, body.max_output_tokens);
+  const r = await Budget.reserve(env, worst);
+  if (!r.ok) return { error: r.error, status: r.status, ms: 0 };
+  const res = await callModel(env, body);
+  const u = usageOf(res.usage);
+  const actual = u ? Budget.costMicro(Budget.priceOf(env, res.model) || price, u) : (res.error === "timeout" || res.error === "network") ? worst : 0;
+  await Budget.settle(env, r.ticket, actual);
+  res.costUsd = Budget.usd(actual);
+  return res;
 }
 
 const usageOf = (u) => (u ? { input_tokens: u.input_tokens || 0, output_tokens: u.output_tokens || 0, cached_input_tokens: (u.input_tokens_details && u.input_tokens_details.cached_tokens) || 0, reasoning_tokens: (u.output_tokens_details && u.output_tokens_details.reasoning_tokens) || 0 } : null);
@@ -180,29 +204,30 @@ export async function onRequestPost({ request, env }) {
 
   const job = { mode, text, ctx, request: mode === "refine" ? DaySolve.normalize(body.request) : null, plan: body.plan };
   const envE = Object.assign({}, env, { MH_AI_EFFORT: effort });
-  let res = await callModel(envE, model, job);
+  let res = await paidCall(envE, model, job);
   // the main model isn't available to this OpenAI project (or rejects a parameter): try the fallback model once
   if (res.error === "model-unavailable" && state.fallbackModel && state.fallbackModel !== model) {
     log(env, { mode, status: "model-unavailable", detail: res.detail || undefined, model, retry: state.fallbackModel });
     model = state.fallbackModel;
-    res = await callModel(envE, model, job);
+    res = await paidCall(envE, model, job);
   }
+  const budget = await Budget.status(env);
   const usage = usageOf(res.usage);
-  log(env, { mode, status: res.error || "ok", detail: res.detail || undefined, ms: res.ms, model: res.model || model, usage });
-  if (res.error) return reply(res.status, { error: res.error, detail: res.detail || undefined, ms: res.ms, usage, model: res.model || model });
+  log(env, { mode, status: res.error || "ok", detail: res.detail || undefined, ms: res.ms, model: res.model || model, usage, costUsd: res.costUsd });
+  if (res.error) return reply(res.status, { error: res.error, detail: res.detail || undefined, ms: res.ms, usage, model: res.model || model, budget });
   // the model's output is checked here and again in the page; anything malformed is refused, never repaired
   if (mode === "build") {
     const ir = res.out && res.out.request ? DaySolve.normalize(Object.assign({}, res.out.request, { source: "ai" })) : null;
     const v = ir ? DaySolve.validate(ir, { strict: true }) : { ok: false, errors: ["missing request"] };
-    if (!v.ok) return reply(502, { error: "invalid-output", details: v.errors.slice(0, 5), ms: res.ms, usage, model: res.model });
-    return reply(200, { request: ir, model: res.model, ms: res.ms, usage, model: res.model });
+    if (!v.ok) return reply(502, { error: "invalid-output", details: v.errors.slice(0, 5), ms: res.ms, usage, model: res.model, budget });
+    return reply(200, { request: ir, model: res.model, ms: res.ms, usage, costUsd: res.costUsd, budget });
   }
   const ops = res.out && Array.isArray(res.out.ops) ? DaySolve.normalizeEdits(res.out.ops) : null;
-  if (!ops || !DaySolve.validateEdits(ops, { strict: true }).ok) return reply(502, { error: "invalid-output", ms: res.ms, usage, model: res.model });
+  if (!ops || !DaySolve.validateEdits(ops, { strict: true }).ok) return reply(502, { error: "invalid-output", ms: res.ms, usage, model: res.model, budget });
   const applied = DaySolve.applyEdits(DaySolve.normalize(body.request), ops);
   const v = DaySolve.validate(applied);
-  if (!v.ok) return reply(502, { error: "invalid-output", details: v.errors.slice(0, 5), ms: res.ms, usage, model: res.model });
-  return reply(200, { ops, notes: (res.out.notes || []).slice(0, 3), model: res.model, ms: res.ms, usage, model: res.model });
+  if (!v.ok) return reply(502, { error: "invalid-output", details: v.errors.slice(0, 5), ms: res.ms, usage, model: res.model, budget });
+  return reply(200, { ops, notes: (res.out.notes || []).slice(0, 3), model: res.model, ms: res.ms, usage, costUsd: res.costUsd, budget });
 }
 
 export function onRequest() {

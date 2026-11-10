@@ -69,6 +69,7 @@
 .dy-legend .lg.free{background:repeating-linear-gradient(135deg,#F4F6F9 0 3px,#E0E5EC 3px 6px);border:1px dashed #B8C2CF}
 .dy-legend .lg.inf{background:#fff;border-style:dashed}
 .dy-footnote{margin-right:8px}
+.dy-budget{margin-right:12px;white-space:nowrap;font-variant-numeric:tabular-nums}
 @media (max-width:860px){
   .dy-body{display:flex;flex-direction:column;overflow:auto;padding:12px}
   .dy-left,.dy-right{overflow:visible;flex:none}

@@ -10,7 +10,8 @@ const DaySolve = require("../../apps/manager-hub/assistant/day-solve.js");
 
 const ORIGIN = "https://claude-test-branch.sandbox-34x.pages.dev";   // a preview host: production is locked (see the production test)
 const PRIMARY = "10 AM stretch, 1 PM game. Team fundy, indy defense. Make a schedule with 30-minute BP rounds and 30 minutes off pregame.";
-const ENV = { OPENAI_API_KEY: "sk-test-key-not-real-0123456789", MH_AI_ENABLED: "1" };
+import { fakeD1 } from "./fake-d1.mjs";
+const ENV = { OPENAI_API_KEY: "sk-test-key-not-real-0123456789", MH_AI_ENABLED: "1", MH_AI_USAGE: fakeD1() };
 const realFetch = globalThis.fetch;
 let calls = [];
 function mockModel(payload, { status = 200, stop = "end_turn" } = {}) {

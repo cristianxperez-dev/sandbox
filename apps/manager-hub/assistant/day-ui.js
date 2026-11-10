@@ -26,7 +26,7 @@
   const REFINE_EXAMPLES = ["Move defense before hitting", "Shorten team fundy to 20", "Add a second BP group", "Make everything finish by 12:15", "Run the cage groups simultaneously", "Give pitchers another 15 minutes"];
   const TRACK_LABEL = { all: "Team", position: "Position players", pitchers: "Pitchers", catchers: "Catchers" };
 
-  let panel = null, st = null, log = [], busy = false, sel = null, aiState = "unknown", lastReason = "";
+  let panel = null, st = null, log = [], busy = false, sel = null, aiState = "unknown", lastReason = "", budget = null;
 
   /* ------------------------------------------------------------- context */
   function appCtx() {
@@ -53,14 +53,37 @@
     const ac = new AbortController(); const t = setTimeout(() => ac.abort(), 30000);
     try {
       const r = await fetch("api/interpret", { method: "POST", signal: ac.signal, headers: { "Content-Type": "application/json" }, body: JSON.stringify({ mode, text, ctx: wireCtx(ctx), request, plan: plan ? { items: plan.items.map((i) => ({ start: i.start, end: i.end, track: i.track, group: i.group || null, label: i.label, actId: i.actId || null, fixed: !!i.fixed })) } : undefined }) });
-      if (r.status === 503 || r.status === 404 || r.status === 405) { aiState = "off"; lastReason = ""; return null; }
+      if (r.status === 404 || r.status === 405) { aiState = "off"; lastReason = ""; return null; }
       const d = await r.json().catch(() => null);
+      if (d && d.budget) setBudget(d.budget);
+      if (r.status === 402) { aiState = "off"; lastReason = `This month's AI limit is reached (${money(budget && budget.capUsd)}, estimated) — the built-in reader is used until next month`; return null; }
+      if (r.status === 503) { aiState = "off"; lastReason = d && /^budget/.test(d.error || "") ? "AI spending can't be tracked right now, so the AI is paused" : ""; return null; }
       if (r.status === 429) { aiState = "on"; lastReason = `AI request limit reached — try again in ${Math.max(1, Math.round(((d && d.retryAfter) || 600) / 60))} min`; return null; }
       if (!r.ok || !d) { aiState = "on"; lastReason = { timeout: "The AI interpreter timed out", "invalid-output": "The AI's answer didn't pass validation", declined: "The AI declined this request" }[(d && d.error)] || `The AI interpreter is unavailable (${(d && d.error) || r.status})`; return null; }
       aiState = "on"; return d;
     } catch (e) { aiState = aiState === "off" ? "off" : "on"; lastReason = "The AI interpreter timed out"; return null; }
     finally { clearTimeout(t); }
   }
+  /* ------------------------------------------- monthly AI spend (estimate) */
+  const money = (x) => "$" + (Number(x) || 0).toFixed(2);
+  function budgetText() {
+    if (!budget || !budget.configured || budget.error || budget.spentUsd == null) return "";
+    const used = (budget.spentUsd || 0) + (budget.pendingUsd || 0);
+    return budget.reached ? `AI limit reached this month (${money(budget.capUsd)}, est.)` : `AI this month: ${money(used)} of ${money(budget.capUsd)} (est.)`;
+  }
+  function setBudget(b) {
+    budget = b;
+    const el = panel && panel.querySelector("#dyBudget");
+    if (el) { el.textContent = budgetText(); el.hidden = !el.textContent; }
+  }
+  async function loadBudget() {
+    try {
+      const r = await fetch("api/usage", { headers: { Accept: "application/json" } });
+      const d = r.ok ? await r.json() : null;
+      if (d && d.ai && d.ai.active && d.budget) setBudget(d.budget);
+    } catch (e) { /* no figures: nothing shown */ }
+  }
+
   async function build(text) {
     const ctx = appCtx(); ctx.current = null;
     const r = await ai("build", text, ctx);
@@ -95,6 +118,7 @@
     ensure();
     panel.hidden = false; document.body.classList.add("mha-open");
     render();
+    loadBudget();
     if (opts.text) { q("#dyText", panel).value = opts.text; if (opts.run) doBuild(); }
   }
   function close() { if (!panel) return; panel.hidden = true; document.body.classList.remove("mha-open"); stopMic(); }
@@ -121,7 +145,7 @@
       <button class="btn sm" data-undo ${st && st.history && st.history.length ? "" : "disabled"} title="Undo (⌘Z)">Undo</button>
       <button class="btn sm" data-redo ${st && st.redo && st.redo.length ? "" : "disabled"} title="Redo (⇧⌘Z)">Redo</button>
       ${st ? `<button class="btn sm quiet" data-restart>Start over</button>` : ""}
-      <span class="sp"></span><span class="mha-note dy-footnote">${st ? "Nothing changes in the schedule until you save." : "Type or dictate — a few sentences is enough."}</span>
+      <span class="sp"></span><span class="mha-note dy-budget" id="dyBudget" title="Estimated from the tokens each request used. The limit is enforced by the server; OpenAI's own bill is the authority."${budgetText() ? "" : " hidden"}>${h(budgetText())}</span><span class="mha-note dy-footnote">${st ? "Nothing changes in the schedule until you save." : "Type or dictate — a few sentences is enough."}</span>
       <button class="btn primary" data-accept ${st && st.plan.items.length ? "" : "disabled"}>Review &amp; save →</button>
     </div>`;
     bind(); renderPreview();

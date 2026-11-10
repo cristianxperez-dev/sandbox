@@ -15,7 +15,7 @@ export const PROTECTED_APPS = [
     // GET /apps/manager-hub/access/status — presence of settings only, never values
     status: (env, host) => {
       const a = aiState(env, host);
-      return { ai: { active: a.active, reason: a.reason, openaiKeyPresent: a.keyPresent, enabledFlag: a.enabledFlag, productionApproved: a.productionApproved, model: a.model } };
+      return { ai: { active: a.active, reason: a.reason, openaiKeyPresent: a.keyPresent, enabledFlag: a.enabledFlag, productionApproved: a.productionApproved, budgetConfigured: a.budgetConfigured, model: a.model } };
     },
   },
 ];
