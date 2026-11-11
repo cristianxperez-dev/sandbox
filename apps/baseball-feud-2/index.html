@@ -158,8 +158,12 @@ body.idle .g-bar:hover, body.bar-hidden .g-bar:hover{opacity:1}
 .good-card .g1{font-family:var(--cond);font-weight:900;font-size:clamp(34px,10vh,170px);letter-spacing:.04em;line-height:.95}
 .good-card .g1 span{color:var(--sky)}
 .good-card .g2{font-family:var(--cond);font-weight:700;font-size:clamp(14px,3.2vh,54px);letter-spacing:.3em;color:var(--sky);margin-top:1.2vh}
-.fx-good.show{animation:xfade 2.5s ease-out}
-.fx-good.show .good-card{animation:goodin 2.5s cubic-bezier(.3,1.3,.5,1)}
+.fx-good.show{animation:xfade 2s ease-out}
+.fx-good.show .good-card{animation:goodin 2s cubic-bezier(.3,1.3,.5,1)}
+.good-card{display:flex;align-items:center;gap:2vw;text-align:left;padding:2.4vh 3vw}
+.good-card .g1{font-size:clamp(28px,7vh,120px)} .good-card .g2{font-size:clamp(12px,2.4vh,40px)}
+.good-card .gt-host{height:min(15vh,11vw);width:auto;flex:none;border-color:var(--sky);rotate:-2deg}
+body.host-off .gt-host{display:none}
 @keyframes goodin{0%{transform:translateY(4vh) scale(.92)}14%{transform:translateY(0) scale(1)}100%{transform:translateY(-.5vh)}}
 .fx-intro{background:radial-gradient(70% 45% at 50% 50%,rgba(4,9,20,.85),rgba(4,9,20,.2) 70%,transparent)}
 .intro-card{text-align:center}
@@ -443,6 +447,7 @@ body.team-on .tile.rev:hover .aw.float{opacity:1;pointer-events:auto}
 .cb.dim{opacity:.38}
 .cb-seg{display:flex;align-items:center;border:1px solid rgba(138,180,230,.18);border-radius:.9vh;overflow:hidden;background:rgba(14,31,61,.8)}
 .cb-seg .cb{border:0;border-radius:0;background:transparent}
+.kb{margin-left:.5em;font-size:.78em;padding:0 .35em;opacity:.75;vertical-align:.08em;color:inherit;border-color:currentColor}
 .cb-seg .cb.on0{background:var(--orange);color:#1c0d00}
 .cb-seg .cb.on1{background:var(--sky);color:var(--navy-900)}
 .cb-lab{font-family:var(--cond);font-weight:700;font-size:clamp(10px,1.35vh,20px);letter-spacing:.16em;color:var(--gray-dim);padding:0 .45vw 0 .6vw}
@@ -1361,8 +1366,8 @@ body.v-min .sit-strip{order:-1}
       <div class="steal team-only" id="gSteal" hidden>
         <div class="st-l"><div class="st-k">STEAL OPPORTUNITY</div><div class="st-t" id="stT"></div><div class="st-s" id="stS"></div></div>
         <div class="st-acts">
-          <button class="sb st-ok" data-g="stealOk" id="bStOk" title="Award the Round Bank to the stealing team (Enter after revealing)">✓ SUCCESSFUL STEAL</button>
-          <button class="sb st-no" data-g="stealNo" id="bStNo" title="Round Bank goes to the team in control (Enter after X)">✕ FAILED STEAL</button>
+          <button class="sb st-ok" data-g="stealOk" id="bStOk" title="Award the Round Bank to the stealing team (S)">✓ SUCCESSFUL STEAL<kbd class="kb">S</kbd></button>
+          <button class="sb st-no" data-g="stealNo" id="bStNo" title="Round Bank goes to the team in control (X)">✕ FAILED STEAL<kbd class="kb">X</kbd></button>
         </div>
       </div>
       <div class="found" id="gFound"><span class="pips" id="gPips"></span><span id="gFoundT">0 / 5 FOUND</span>
@@ -1377,7 +1382,7 @@ body.v-min .sit-strip{order:-1}
       <button class="cb" data-g="up1" id="bUp1" title="Make Team Navy active (N)">NAVY</button>
       <button class="cb" data-g="switch" title="Switch team (S)">⇄</button>
     </div>
-    <button class="cb cb-x" data-g="x" id="bX" title="Wrong answer (X)">✕ WRONG ANSWER</button>
+    <button class="cb cb-x" data-g="x" id="bX" title="Wrong answer (X)">✕ WRONG ANSWER<kbd class="kb">X</kbd></button>
     <button class="cb team-only" data-g="clearx" title="Clear strikes (C)">CLEAR ✕</button>
     <button class="cb team-only cb-steal" data-g="steal" id="bSteal" title="Start a steal now (Shift+S)">START STEAL</button>
     <button class="cb team-only cb-steal" data-g="cancelSteal" id="bCancelSteal" title="Cancel the steal and return control" hidden>CANCEL STEAL</button>
@@ -1385,7 +1390,7 @@ body.v-min .sit-strip{order:-1}
     <span class="sep"></span>
     <button class="cb" data-g="all" title="Reveal all answers (A)">REVEAL ALL</button>
     <button class="cb" data-g="reset" title="Reset this round (Shift+R)">RESET</button>
-    <button class="cb cb-good" data-g="good" id="bGood" title="Good thought — not on board (G)">GOOD THOUGHT</button>
+    <button class="cb cb-good" data-g="good" id="bGood" title="Good thought — not on board (G)">GOOD THOUGHT<kbd class="kb">G</kbd></button>
     <span class="sep"></span>
     <button class="cb" data-g="prev" title="Previous play (←)">‹ PREV</button>
     <button class="cb cb-tk" data-g="tk" id="bTk" title="Round summary / takeaways (T)">SUMMARY</button>
@@ -1485,12 +1490,14 @@ body.v-min .sit-strip{order:-1}
       <div class="ov-k">COACH CONTROLS</div>
       <h2>KEYBOARD <b>SHORTCUTS</b></h2>
       <div class="help-grid">
-        <div><b>Reveal / hide answer (adds to Round Bank)</b><span><kbd>1</kbd>–<kbd>9</kbd> <kbd>0</kbd></span></div>
+        <div><b>Correct — reveal that answer (ding + points). Click a tile to hide it</b><span><kbd>1</kbd>–<kbd>9</kbd> <kbd>0</kbd></span></div>
         <div><b>Wrong answer ✕ — strike; last strike opens the steal</b><span><kbd>X</kbd></span></div>
+        <div><b>Good thought — no points, no strike</b><span><kbd>G</kbd></span></div>
+        <div><b>During a steal: successful · failed</b><span><kbd>S</kbd> · <kbd>X</kbd></span></div>
         <div><b>Orange / Navy in control</b><span><kbd>O</kbd> <kbd>N</kbd></span></div>
-        <div><b>Switch team in control</b><span><kbd>S</kbd></span></div>
+        <div><b>Switch team in control (outside a steal)</b><span><kbd>S</kbd></span></div>
         <div><b>Start steal manually</b><span><kbd>Shift</kbd>+<kbd>S</kbd></span></div>
-        <div><b>Confirm steal (after reveal = success, after X = failed)</b><span><kbd>Enter</kbd></span></div>
+        <div><b>Confirm steal after revealing their answer (same as S)</b><span><kbd>Enter</kbd></span></div>
         <div><b>Award Round Bank to Orange / Navy</b><span><kbd>Shift</kbd>+<kbd>O</kbd> / <kbd>N</kbd></span></div>
         <div><b>Undo last action · Clear strikes</b><span><kbd>U</kbd> · <kbd>C</kbd></span></div>
         <div><b>Next / previous play</b><span><kbd>→</kbd> <kbd>←</kbd></span></div>
@@ -1515,7 +1522,7 @@ body.v-min .sit-strip{order:-1}
   <div class="fx fx-x" id="fxX"><div class="rx rx-bad" id="rxBad" aria-hidden="true"><img class="rx-img" alt="" width="676" height="542"><div class="rx-cap"><b>YOU’RE <i>WRONG.</i></b></div></div><div class="x-wrap"><div class="xrow" id="xRow"></div><div class="xlab" id="xLab">WRONG ANSWER</div></div></div>
   <div class="fx fx-big c0" id="fxBig"><img class="host-img fx-host" alt="" data-mood="surprised" width="676" height="542"><div class="big-card"><div class="bk" id="bigK"></div><div class="bt" id="bigT"></div><div class="bs" id="bigS"></div></div></div>
   <canvas id="fxConf"></canvas>
-  <div class="fx fx-good" id="fxGood"><div class="good-card"><div class="g1">GOOD <span>THOUGHT</span></div><div class="g2">NOT ON THE BOARD</div></div></div>
+  <div class="fx fx-good" id="fxGood"><div class="good-card"><img class="host-img gt-host host-on" alt="" data-mood="proud" width="676" height="542"><div class="gt-txt"><div class="g1">GOOD <span>THOUGHT</span></div><div class="g2">NOT ON THE BOARD</div></div></div></div>
 </main>
 
 <!-- ===================== SETUP ===================== -->
@@ -2234,6 +2241,39 @@ const board = $('#board');
 let lastRevealed = null;
 let speed = 1;
 let flowT = null;          // pending automatic transition (steal banner / summary)
+/* keyboard game actions (1–9, 0, X, G, S, Enter): held keys don't repeat, and nothing fires while the game is
+   mid-transition (round intro, steal banner starting, a round just settled, a failed steal playing out) */
+let keyLockUntil = 0, failStealT = null;
+const lastKeyAt = {};
+const lockKeys = ms => { keyLockUntil = Math.max(keyLockUntil, Date.now() + ms); };
+function keyBounce(k) { const now = performance.now(), hit = now - (lastKeyAt[k] || 0) < 250; lastKeyAt[k] = now; return hit; }
+function gameLocked() {
+  if (Date.now() < keyLockUntil) return true;
+  const r = teamOn() ? roundOf(curPlay()) : null;
+  return !!(r && r.phase === 'steal' && Date.now() - stealStartedAt < 2600);
+}
+const inSteal = () => teamOn() && roundOf(curPlay()).phase === 'steal';
+/* number key → reveal that answer (never hides it, never scores it twice; clicking the tile still toggles) */
+function keyReveal(i) {
+  const p = curPlay(), o = p.observations[i];
+  if (!o) { toast(`There's no answer ${i + 1} on this board`, 1600); return; }
+  if (revealedOf(p).includes(o.id)) { toast(`Answer ${i + 1} is already on the board`, 1600); return; }
+  toggleReveal(i, { forceShow: true });
+}
+/* X during a steal = the steal failed: the X and the frustrated host, then the existing failed-steal flow */
+function failSteal() {
+  const p = curPlay(), r = roundOf(p);
+  if (r.stealReveal) { toast('An answer is revealed for the steal — press S for a successful steal, or click the tile to hide it', 3600); return; }
+  if (!state.settings.showX || practice) { stealResult(false); return; }
+  strike();                                   // existing miss: undo point, X, buzz, frustrated host
+  const d = reactionsOn() ? 2200 : 1300, pid = p.id;
+  lockKeys(d + 300);
+  clearTimeout(failStealT);
+  failStealT = setTimeout(() => {
+    const rr = roundOf(curPlay());
+    if (curPlay().id === pid && rr.phase === 'steal' && rr.stealMissed && !rr.stealReveal) stealResult(false);
+  }, d);
+}
 let stealStartedAt = 0;    // guards against an accidental X while the steal banner is starting
 
 function renderGame() {
@@ -2339,6 +2379,7 @@ const HOST_POOLS = {
   wait:    ['thinking', 'curious', 'skeptical', 'confused'], // while the room thinks / the coach reviews
   stealWin: ['shocked', 'celebratory'],
   closing: ['grateful', 'proud'],
+  encourage: ['proud', 'grateful'],         // Good Thought
 };
 const hostLast = {};
 function hostPick(pool) {
@@ -2722,6 +2763,7 @@ function stealResult(ok) {
   const p = curPlay(), r = roundOf(p);
   if (r.phase !== 'steal') { toast(r.phase === 'done' ? 'Round already settled — press U to undo' : 'No steal in progress'); return; }
   const rr = ensureRound(p), st = rr.stealTeam, ctl = rr.control, winner = ok ? st : ctl;
+  clearTimeout(failStealT); lockKeys(1200);
   snap(ok ? `Successful steal (${shortName(st)})` : `Failed steal (${shortName(ctl)} holds)`);
   const bank = completeRound(p, winner, ok ? 'steal' : 'hold');
   save(); clearFlow();
@@ -2759,7 +2801,7 @@ function boardCleared(pid) {
   if (r.phase !== 'play' || !p.observations.every(x => revealedOf(p).includes(x.id))) return;
   const ctl = r.control;
   snap(`Board cleared (${shortName(ctl)})`);
-  const bank = completeRound(p, ctl, 'cleared'); save();
+  const bank = completeRound(p, ctl, 'cleared'); save(); lockKeys(1200);
   const delta = [0, 0]; delta[ctl] = bank;
   renderScores({ delta }); updateFound();
   showBig({ team: ctl, t: 'BOARD CLEARED', s: `${esc(teamName(ctl))} WINS <b>${bank}</b> POINTS`, celebrate: true, dur: 2700, mood: 'celebratory' });
@@ -2867,7 +2909,13 @@ function toggleSound() {
 }
 function updateSoundBtn() { const b = $('#bSound'); b.textContent = '♪ ' + (state.settings.sound ? 'ON' : 'OFF'); b.classList.toggle('off', !state.settings.sound); }
 function restartFx(el) { el.classList.remove('show'); void el.offsetWidth; el.classList.add('show'); }
-function goodThought() { if (!state.settings.showGood) return; restartFx($('#fxGood')); sfx.good(); }
+function goodThought() {   // a reasonable idea that isn't on the board: no points, no strike, nothing revealed
+  if (!state.settings.showGood) return;
+  const mood = hostPick('encourage');
+  setHostImg($('#fxGood .gt-host'), mood);
+  restartFx($('#fxGood')); sfx.good();
+  if (hostOn()) camMood(mood, { hold: 3000, pop: true });
+}
 function showIntro() {
   const p = curPlay(), i = curIndex(), n = state.plays.length;
   $('#inK').textContent = practice ? 'PRACTICE PLAY · DOESN’T COUNT' : `PLAY ${i + 1} OF ${n}`;
@@ -2875,6 +2923,7 @@ function showIntro() {
   $('#inU').textContent = teamOn() && roundOf(p).phase === 'play' ? `${teamName(roundOf(p).control)} STARTS` : '';
   const sv = sitView(sitOfPlay(p)); $('#inS').innerHTML = sv && sv.any ? sitIntroHTML(sv) : ''; $('#fxIntro').classList.toggle('sit', !!(sv && sv.any));
   $('#fxIntro').classList.toggle('has-host', hostOn());
+  lockKeys(1500);
   setHostImg($('#fxIntro .fx-host'), 'welcome');
   wrongStreak = 0;
   if (hostOn()) camMood('welcome', { hold: 3600, next: 'serious' });   // hosting the intro, then serious while the play is set up
@@ -3149,10 +3198,15 @@ window.addEventListener('keydown', e => {
   if (isOpen('prDone')) { if (k === 'Enter' || k === ' ') { e.preventDefault(); beginLive(); } else if (k === 'Escape') { e.preventDefault(); showStart(); } return; }
   if (!$('#help').hidden) { if (k !== 'Shift') { e.preventDefault(); closeOverlay('help'); } return; }
   if (k === 'Escape') { if (isOpen('tk')) closeOverlay('tk'); else if (isOpen('end')) closeOverlay('end'); return; }
+  const act = /^[0-9]$/.test(k) || ['x', 'g', 's'].includes(lk) || k === 'Enter';
+  if (act && !isOpen('tk') && !isOpen('end')) {
+    if (e.repeat || keyBounce(lk)) { e.preventDefault(); return; }       // one keypress = one action
+    if (gameLocked()) { e.preventDefault(); return; }                    // mid-transition: ignore
+  }
   if (/^[0-9]$/.test(k)) {
     e.preventDefault();
     if (isOpen('tk') || isOpen('end')) return;
-    toggleReveal(k === '0' ? 9 : +k - 1); return;
+    keyReveal(k === '0' ? 9 : +k - 1); return;
   }
   const onBoard = !isOpen('tk') && !isOpen('end');
   const map = {
@@ -3163,11 +3217,11 @@ window.addEventListener('keydown', e => {
     'l': () => skip(5), 'j': () => skip(-5),
     ',': () => step(-1), '.': () => step(1),
     'a': () => { if (onBoard) revealAll(); },
-    'x': () => { if (onBoard) strike(); },
+    'x': () => { if (onBoard) (inSteal() ? failSteal() : strike()); },   // steal: failed steal · otherwise: wrong answer
     'c': clearStrikes, 'u': undo,
     'o': () => e.shiftKey ? awardBank(0, isOpen('tk')) : setControl(0),
     'n': () => e.shiftKey ? awardBank(1, isOpen('tk')) : setControl(1),
-    's': () => e.shiftKey ? beginSteal(curPlay(), 'manual') : switchControl(),
+    's': () => e.shiftKey ? beginSteal(curPlay(), 'manual') : inSteal() ? (onBoard && stealResult(true)) : switchControl(),
     'Enter': () => { if (onBoard) confirmSteal(); },
     'g': goodThought, 't': toggleTakeaways, 'v': toggleVideoMin,
     'f': () => e.shiftKey ? videoFullscreen() : appFullscreen(),
