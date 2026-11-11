@@ -26,13 +26,16 @@ async function open(ctx, errs) {
   await p.evaluate(() => { const t = document.querySelector("#toast"); if (t) t.style.display = "none"; });
   return p;
 }
+/* the file's generic "WHAT WENT WRONG?" is read as the app's current default question; any other wording stays as written */
+const promptOf = (q) => (String(q || "").trim().toUpperCase() === "WHAT WENT WRONG?" ? "WHAT DO YOU SEE?" : q);
 const sameContent = (cur) => {
   const errs = [];
   if (cur.sessionName !== SRC.sessionName) errs.push("name");
   if (cur.plays.length !== SRC.plays.length) errs.push("play count");
   SRC.plays.forEach((s, i) => {
     const g = cur.plays[i] || {};
-    for (const k of ["id", "title", "prompt", "videoName"]) if (g[k] !== s[k]) errs.push(`play ${i + 1} ${k}`);
+    for (const k of ["id", "title", "videoName"]) if (g[k] !== s[k]) errs.push(`play ${i + 1} ${k}`);
+    if (g.prompt !== promptOf(s.prompt)) errs.push(`play ${i + 1} prompt`);
     for (const k of ["libId", "embedUrl", "pageUrl", "title", "situation"]) if ((g.mlb || {})[k] !== s.mlb[k]) errs.push(`play ${i + 1} mlb.${k}`);
     if (JSON.stringify(g.mlb.angle) !== JSON.stringify(s.mlb.angle)) errs.push(`play ${i + 1} angle`);
     if (s.mlb.sit === null ? g.mlb.sit !== null : false) errs.push(`play ${i + 1} sit`);
@@ -40,7 +43,7 @@ const sameContent = (cur) => {
     if (JSON.stringify(g.observations.map((o) => [o.text, o.points, o.note])) !== JSON.stringify(s.observations.map((o) => [o.text, o.points, o.note || ""]))) errs.push(`play ${i + 1} answers`);
   });
   const pp = cur.practice.play;
-  if (cur.practice.enabled !== SRC.practice.enabled || pp.title !== SRC.practice.play.title || pp.prompt !== SRC.practice.play.prompt ||
+  if (cur.practice.enabled !== SRC.practice.enabled || pp.title !== SRC.practice.play.title || pp.prompt !== promptOf(SRC.practice.play.prompt) ||
       JSON.stringify(pp.observations.map((o) => [o.text, o.points])) !== JSON.stringify(SRC.practice.play.observations.map((o) => [o.text, o.points]))) errs.push("practice");
   if (cur.fastMoney.seconds !== SRC.fastMoney.seconds || JSON.stringify(cur.fastMoney.questions.map((q) => [q.q, q.answer, q.points])) !== JSON.stringify(SRC.fastMoney.questions.map((q) => [q.q, q.answer, q.points]))) errs.push("fast money");
   return errs;
@@ -70,8 +73,24 @@ const sameContent = (cur) => {
   ok(g1.emb.startsWith(SRC.plays[0].mlb.embedUrl), "play 1 plays its MLB embed");
   ok(/4TH/.test(g1.sit) && /1 OUT/i.test(g1.sit), "situation strip shows the base-out state: " + g1.sit.slice(0, 80));
   // play a little: reveal an answer, add a strike
+  ok((await p.textContent("#gPrompt")).trim() === "WHAT DO YOU SEE?", "the default question reads WHAT DO YOU SEE?");
+  const cam = await p.evaluate(() => { const i = document.querySelector("#hImg"), r = i.getBoundingClientRect(), b = document.querySelector("#board").getBoundingClientRect();
+    return { mood: i.dataset.mood, ok: i.complete && i.naturalWidth > 0, w: r.width, clear: r.bottom <= b.top || r.left >= b.right }; });
+  ok(cam.ok && cam.w > 150 && cam.clear && ["serious", "thinking", "curious", "skeptical", "confused", "welcome"].includes(cam.mood), `the host cam is on screen, beside the board (${cam.mood}, ${Math.round(cam.w)}px)`);
+  // a right answer: ding + flip + a happy host
   await p.click("#board .tile >> nth=0"); await wait(p, 600);
-  await p.keyboard.press("x"); await wait(p, 900);
+  const good = await p.evaluate(() => ({ show: document.querySelector("#rxGood").classList.contains("show"), mood: document.querySelector("#rxGood .rx-img").dataset.mood, cam: document.querySelector("#hImg").dataset.mood }));
+  ok(good.show && ["laughing", "excited", "celebratory"].includes(good.mood) && good.cam === good.mood, `a right answer brings the happy host (${good.mood})`);
+  await wait(p, 2400);
+  // a wrong answer: the X, then the disappointed host, held on screen, then back to the game
+  await p.keyboard.press("x"); await wait(p, 400);
+  const bad = await p.evaluate(() => ({ x: document.querySelector("#fxX").classList.contains("show"), show: document.querySelector("#rxBad").classList.contains("show"), mood: document.querySelector("#rxBad .rx-img").dataset.mood,
+    loaded: document.querySelector("#rxBad .rx-img").naturalWidth > 0 }));
+  ok(bad.x && bad.show && bad.loaded && bad.mood === "disappointed", `a wrong answer shows the X and the disappointed host (${bad.mood})`);
+  await wait(p, 1800);
+  ok(await p.evaluate(() => document.querySelector("#rxBad").classList.contains("show")), "the wrong-answer host is still up after 2 seconds");
+  await wait(p, 900);
+  ok(await p.evaluate(() => !document.querySelector("#rxBad").classList.contains("show") && getComputedStyle(document.querySelector("#fxX")).opacity === "0"), "then the game is back");
   const mid = (await LS(p)).cur.session;
   ok(Object.values(mid.revealed).flat().length >= 1, "revealing an answer works");
   // 5a. refresh mid-game resumes (existing recovery)
