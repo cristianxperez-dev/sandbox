@@ -162,7 +162,7 @@ body.idle .g-bar:hover, body.bar-hidden .g-bar:hover{opacity:1}
 .fx-good.show .good-card{animation:goodin 2s cubic-bezier(.3,1.3,.5,1)}
 .good-card{display:flex;align-items:center;gap:2vw;text-align:left;padding:2.4vh 3vw}
 .good-card .g1{font-size:clamp(28px,7vh,120px)} .good-card .g2{font-size:clamp(12px,2.4vh,40px)}
-.good-card .gt-host{height:min(15vh,11vw);width:auto;flex:none;border-color:var(--sky);rotate:-2deg}
+.good-card .gt-host{height:min(19vh,14vw);width:auto;flex:none;align-self:flex-end;margin:-8vh -1vw -2.4vh -2vw;--host-glow:rgba(138,180,230,.55)}
 body.host-off .gt-host{display:none}
 @keyframes goodin{0%{transform:translateY(4vh) scale(.92)}14%{transform:translateY(0) scale(1)}100%{transform:translateY(-.5vh)}}
 .fx-intro{background:radial-gradient(70% 45% at 50% 50%,rgba(4,9,20,.85),rgba(4,9,20,.2) 70%,transparent)}
@@ -609,43 +609,43 @@ body.team-off .set-row{opacity:.4}
 /* ===== HOST ===== */
 /* The host images are stage photos (not cut-outs): each one is shown as a framed "host cam" card. */
 :root{--hw:min(40vw,78vh)}
-.host-img{display:block;height:auto;max-width:none;user-select:none;pointer-events:none;aspect-ratio:5/4;object-fit:cover;object-position:50% 28%;
-  border-radius:1.6vh;border:.45vh solid #ffc84a;background:#0b1a3a;
-  box-shadow:0 0 0 .3vh #0d2b6e,0 0 4vh rgba(255,180,60,.35),0 2vh 5vh rgba(0,0,0,.55)}
+/* Every host picture (start screen, host cam, intros, big moments, reactions, Good Thought, final score, Fast Money)
+   is a transparent cutout (host/<mood>.webp, 760×560, the host bottom-centred). One shared treatment: no frame, a soft
+   shadow and a glow in the moment's colour (--host-glow), and the cut-off body fades out at the bottom and sides. */
+.host-img,.rx-img{display:block;height:auto;max-width:none;user-select:none;pointer-events:none;aspect-ratio:760/560;object-fit:contain;object-position:50% 100%;
+  filter:drop-shadow(0 1vh 1.4vh rgba(0,0,0,.5)) drop-shadow(0 0 2.2vh var(--host-glow,rgba(90,150,255,.4)));
+  -webkit-mask-image:linear-gradient(to top,transparent 0,#000 14%),linear-gradient(to right,transparent 0,#000 6%,#000 94%,transparent 100%);-webkit-mask-composite:source-in;
+  mask-image:linear-gradient(to top,transparent 0,#000 14%),linear-gradient(to right,transparent 0,#000 6%,#000 94%,transparent 100%);mask-composite:intersect}
 body.host-off .host-on,body.host-off .fx-host,body.host-off .fin-host{display:none!important}
 .brand.home{cursor:pointer}
 
 /* host cam beside the question: always on during play, changes with the game */
 .b-head{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:1.4vw;margin-bottom:1vh}
 .b-q{min-width:0}
-.hcam{position:relative;height:min(22vh,16vw);aspect-ratio:5/4;flex:none;transition:transform .35s cubic-bezier(.3,1.4,.5,1)}
-.hcam::before{content:'';position:absolute;inset:-12%;border-radius:50%;pointer-events:none;z-index:-1;
-  background:radial-gradient(closest-side,var(--hglow,rgba(70,125,230,.45)),transparent);filter:blur(1.5vh);transition:background .4s}
-.hcam .host-img{width:100%;height:100%;border-width:.38vh;border-radius:1.4vh}
+.hcam{position:relative;height:min(24vh,17vw);aspect-ratio:760/560;flex:none;transition:transform .35s cubic-bezier(.3,1.4,.5,1)}
+.hcam::before{content:'';position:absolute;left:12%;right:12%;top:8%;bottom:0;border-radius:50% 50% 0 0;pointer-events:none;z-index:-1;
+  background:radial-gradient(60% 70% at 50% 60%,var(--hglow,rgba(70,125,230,.4)),transparent 72%);filter:blur(1.2vh);transition:background .4s}
+.hcam .host-img{width:100%;height:100%;--host-glow:var(--hglow,rgba(90,150,255,.4))}
 .hcam .host-img.swap{animation:hswap .45s cubic-bezier(.2,1.3,.4,1)}
 @keyframes hswap{0%{opacity:.3;transform:scale(.95)}100%{opacity:1;transform:none}}
 .hcam[data-tone="good"]{--hglow:rgba(255,190,60,.6)} .hcam[data-tone="bad"]{--hglow:rgba(255,60,60,.55)} .hcam[data-tone="wow"]{--hglow:rgba(120,200,255,.6)}
 .hcam.pop{animation:hcampop .55s cubic-bezier(.3,1.6,.5,1)}
 @keyframes hcampop{0%{transform:scale(.9) rotate(-2deg)}60%{transform:scale(1.06) rotate(1deg)}100%{transform:none}}
-.hcam-tag{position:absolute;left:.9vh;top:.9vh;display:flex;align-items:center;gap:.5vh;padding:.25vh .7vh;border-radius:.6vh;background:rgba(4,9,20,.72);
-  font-family:var(--cond);font-weight:800;font-size:clamp(8px,1.1vh,18px);letter-spacing:.2em;color:#fff}
-.hcam-tag i{width:.8vh;height:.8vh;border-radius:50%;background:#ff3b3b;box-shadow:0 0 .8vh #ff3b3b;animation:blink 1.6s steps(2) infinite}
-@keyframes blink{50%{opacity:.25}}
-/* the host's line: a lower third inside the cam, so it never covers the board or the question */
-.hbub{position:absolute;left:.38vh;right:.38vh;bottom:.38vh;padding:2.6vh .9vh .8vh;border-radius:0 0 1.1vh 1.1vh;
-  background:linear-gradient(180deg,transparent,rgba(5,12,28,.88) 34%,rgba(5,12,28,.96));
+/* the host's line: a caption across his chest, so it never covers the board or the question */
+.hbub{position:absolute;left:-4%;right:-4%;bottom:0;padding:.8vh 1vh .9vh;border-radius:1.1vh;
+  background:linear-gradient(180deg,rgba(21,45,90,.94),rgba(8,18,38,.96));border:1px solid rgba(255,200,74,.45);box-shadow:0 1vh 2.4vh rgba(0,0,0,.45);
   opacity:0;visibility:hidden;transform:translateY(1vh);transition:opacity .5s ease,transform .5s ease,visibility 0s linear .5s}
 .hbub.in{opacity:1;visibility:visible;transform:none;transition:opacity .25s ease,transform .4s cubic-bezier(.3,1.4,.5,1),visibility 0s}
 .hname{font-family:var(--cond);font-weight:700;font-size:clamp(8px,1.1vh,18px);letter-spacing:.24em;color:var(--orange-hi)}
 .hline{font-family:var(--cond);font-weight:800;font-size:clamp(11px,1.75vh,30px);line-height:1.08;letter-spacing:.02em;text-transform:uppercase;margin-top:.2vh;color:#fff}
 body.host-spot .hcam{z-index:76}
-body.host-spot .hcam .host-img{box-shadow:0 0 0 .3vh #0d2b6e,0 0 6vh rgba(255,190,60,.6),0 2vh 5vh rgba(0,0,0,.55)}
-@media (prefers-reduced-motion:reduce){.hcam .host-img.swap,.hcam.pop,.hcam-tag i{animation:none}}
+body.host-spot .hcam .host-img{--host-glow:rgba(255,190,60,.7)}
+@media (prefers-reduced-motion:reduce){.hcam .host-img.swap,.hcam.pop{animation:none}}
 @media (max-width:900px){.hcam{height:min(15vh,30vw)}.b-head{gap:3vw}}
 
 /* host in big moments (prominent) */
-.fx-host{position:absolute;left:3vw;bottom:9vh;width:calc(var(--hw) * .92);opacity:0;z-index:0;rotate:-1.5deg}
-.fx.has-host{padding-left:calc(var(--hw) * .95 + 3vw)}
+.fx-host{position:absolute;left:1vw;bottom:0;width:var(--hw);opacity:0;z-index:0}
+.fx.has-host{padding-left:calc(var(--hw) * .9)}
 .fx>.intro-card,.fx>.big-card{position:relative;z-index:1}
 .fx-intro.has-host .fx-host,.fx-big.has-host .fx-host{opacity:1}
 .fx-intro:not(.has-host) .fx-host,.fx-big:not(.has-host) .fx-host{display:none}
@@ -656,8 +656,8 @@ body.host-spot .hcam .host-img{box-shadow:0 0 0 .3vh #0d2b6e,0 0 6vh rgba(255,19
 /* portrait screens (phones, tablets on end): the host above the card instead of beside it */
 @media (max-aspect-ratio:1/1){
   :root{--hw:min(76vw,34vh)}
-  .fx.has-host{padding:calc(var(--hw) * .8 + 9vh) 4vw 0}
-  .fx-host{left:50%;bottom:auto;top:5vh;margin-left:calc(var(--hw) * -.46)}
+  .fx.has-host{padding:calc(var(--hw) * .74 + 7vh) 4vw 0}
+  .fx-host{left:50%;bottom:auto;top:5vh;margin-left:calc(var(--hw) * -.5)}
   .fx-intro.has-host::after,.fx-big.has-host::after{display:none}
   .fx-big.has-host .bt{max-width:92vw}
 }
@@ -671,9 +671,9 @@ body.host-spot .hcam .host-img{box-shadow:0 0 0 .3vh #0d2b6e,0 0 6vh rgba(255,19
 
 /* final screen */
 .fin.has-host{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:stretch;gap:1.5vw}
-.fin-host{align-self:center;width:min(30vw,58vh);margin:0;position:relative;animation:hostin 1.2s .2s cubic-bezier(.2,.9,.3,1) both}
+.fin-host{align-self:end;width:min(34vw,64vh);margin:0 0 0 -2vw;position:relative;animation:hostin 1.2s .2s cubic-bezier(.2,.9,.3,1) both}
 .fin-host::before{content:'';position:absolute;inset:10% 5% 0;border-radius:50%;background:radial-gradient(closest-side,rgba(70,125,230,.35),transparent);filter:blur(2vh)}
-.fin-host .host-img{position:relative;width:100%;rotate:-1.5deg}
+.fin-host .host-img{position:relative;width:100%}
 .fin-main{min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.4vh;text-align:center}
 .fin.has-host .end-team{min-width:19vw;padding:2vh 1.6vw}
 .fin.has-host .fin-teams{gap:2vw}
@@ -718,7 +718,7 @@ body.host-spot .hcam .host-img{box-shadow:0 0 0 .3vh #0d2b6e,0 0 6vh rgba(255,19
 .st-ring{position:absolute;left:-5%;width:110%;top:-26%;height:auto;overflow:visible;filter:drop-shadow(0 0 3vh rgba(255,150,40,.35))}
 .st-ring .bulbs{animation:chase 1.6s linear infinite;filter:drop-shadow(0 0 6px #ffd27a)}
 @keyframes chase{to{stroke-dashoffset:-62}}
-.st-host{position:relative;width:62%;margin:0 auto 19%;border-width:.6vh;border-radius:2.2vh}
+.st-host{position:relative;width:92%;margin:0 auto}
 .st-hwrap::after{content:'';position:absolute;left:10%;right:10%;bottom:0;height:70%;z-index:-1;border-radius:50%;background:radial-gradient(closest-side,rgba(90,150,255,.35),transparent);filter:blur(2vh)}
 .st-plate{position:absolute;right:1vw;bottom:5vh;z-index:3;text-align:center;padding:.9vh 1.6vw;border-radius:1vh;
   background:linear-gradient(180deg,rgba(21,45,90,.96),rgba(8,18,38,.96));border:2px solid;border-image:linear-gradient(180deg,#ffd27a,#ff7a1a) 1;box-shadow:0 1vh 3vh rgba(0,0,0,.5)}
@@ -744,9 +744,7 @@ body.host-off .st-btns,body.host-off .st-teams{justify-content:center}
 .v-frame{container-type:inline-size}
 .rx{position:absolute;pointer-events:none;visibility:hidden;opacity:0}
 .rx.show{visibility:visible;opacity:1}
-.rx-img{display:block;max-width:none;height:auto;user-select:none;aspect-ratio:5/4;object-fit:cover;object-position:50% 28%;
-  border-radius:1.6vh;border:.5vh solid #ffc84a;background:#0b1a3a;rotate:var(--rx-tilt,0deg);
-  box-shadow:0 0 0 .3vh #0d2b6e,0 0 5vh rgba(255,190,60,.45),0 2vh 5vh rgba(0,0,0,.6)}
+.rx-img{rotate:var(--rx-tilt,0deg);transform-origin:50% 100%}
 .rx-cap{position:absolute;text-align:center;font-family:var(--cond);font-weight:900;text-transform:uppercase;line-height:.9}
 .rx-cap b{display:block;font-weight:900}
 .rx-cap i{font-style:normal}
@@ -755,9 +753,9 @@ body.host-off .st-btns,body.host-off .st-teams{justify-content:center}
 .rx-good{inset:0;z-index:6;
   background:radial-gradient(60% 85% at 30% 100%,rgba(60,125,235,.55),transparent 65%),linear-gradient(0deg,rgba(4,9,20,.85),rgba(4,9,20,.45) 60%,rgba(4,9,20,.3))}
 .rx-good.show{animation:rxfade var(--rx-dur,2000ms) ease-out both}
-.rx-good .rx-img{position:absolute;left:4%;bottom:8%;height:76%;width:auto}
+.rx-good .rx-img{position:absolute;left:1%;bottom:0;height:90%;width:auto;--host-glow:rgba(255,190,60,.55)}
 /* now and then the reaction goes big: the host fills most of the panel */
-.rx-good.big .rx-img{left:2%;bottom:3%;height:92%;border-width:.7vh}
+.rx-good.big .rx-img{left:-2%;height:104%}
 .rx-good.big .rx-cap{right:2%;top:5%;width:44%}
 .rx-good.big .rx-rays{width:110cqw;height:110cqw;opacity:.75}
 .rx-good.show .rx-img{animation:rxrise var(--rx-dur,2000ms) cubic-bezier(.2,1,.3,1) both}
@@ -778,19 +776,19 @@ body.host-off .st-btns,body.host-off .st-teams{justify-content:center}
 
 /* wrong — inside the big-X overlay: the X stays centered and dominant, the host sits bottom-left */
 :root{--rxw:min(42vw,74vh)}
-.fx-x.has-rx{padding-left:calc(var(--rxw) + 3vw)}
+.fx-x.has-rx{padding-left:calc(var(--rxw) + 1vw)}
 .fx-x.has-rx svg{width:min(40vh,24vw);height:min(40vh,24vw)}
 .fx-x.has-rx.n2 svg{width:min(32vh,19vw);height:min(32vh,19vw)}
 .fx-x.has-rx.n3 svg{width:min(26vh,16vw);height:min(26vh,16vw)}
 .fx-x::before{content:'';position:absolute;left:0;bottom:0;width:calc(var(--rxw) * 1.3);height:90vh;pointer-events:none;opacity:0;
   background:radial-gradient(50% 50% at 45% 55%,rgba(255,60,60,.42),transparent 70%)}
 .fx-x.has-rx::before{opacity:1}
-.rx-bad{left:3vw;top:50%;margin-top:calc(var(--rxw) * -.4 + 3vh);width:var(--rxw);z-index:1}
-.rx-bad .rx-img{width:100%;border-color:#ff5a4a;box-shadow:0 0 0 .3vh #3a0000,0 0 6vh rgba(255,60,60,.5),0 2vh 5vh rgba(0,0,0,.6)}
+.rx-bad{left:1vw;bottom:0;width:var(--rxw);z-index:1}
+.rx-bad .rx-img{width:100%;--host-glow:rgba(255,70,60,.6)}
 .fx-x.show .rx-bad.show .rx-img{animation:rxslide var(--rx-dur,2600ms) cubic-bezier(.2,1,.3,1) both}
 .fx-x.show .rx-bad.show.frus .rx-img{animation:rxslide var(--rx-dur,2600ms) cubic-bezier(.2,1,.3,1) both,rxshake .5s .45s ease-in-out 2}
 @keyframes rxshake{0%,100%{translate:0}25%{translate:-1.2vh 0}75%{translate:1.2vh 0}}
-.rx-bad .rx-cap{left:52%;bottom:88%;width:max-content;padding:1.2vh 1.6vw 1.4vh;border-radius:2.4vh;background:#fff;border:.55vh solid #0b0f19;
+.rx-bad .rx-cap{left:56%;bottom:86%;width:max-content;padding:1.2vh 1.6vw 1.4vh;border-radius:2.4vh;background:#fff;border:.55vh solid #0b0f19;
   box-shadow:.7vh .8vh 0 #ffb52e,0 1.6vh 4vh rgba(0,0,0,.5);transform-origin:10% 100%}
 .rx-bad .rx-cap::after{content:'';position:absolute;left:14%;bottom:-2.2vh;width:2.6vh;height:2.6vh;background:#fff;border-right:.55vh solid #0b0f19;border-bottom:.55vh solid #0b0f19;transform:rotate(45deg) skew(12deg,12deg)}
 .rx-bad .rx-cap b{font-size:min(4.6vh,2.9vw);color:#0b0f19;letter-spacing:.01em}
@@ -799,8 +797,8 @@ body.host-off .st-btns,body.host-off .st-teams{justify-content:center}
 /* tall screens and phones: the host above, the X below */
 @media (max-aspect-ratio:1/1){
   :root{--rxw:min(80vw,40vh)}
-  .fx-x.has-rx{padding:calc(var(--rxw) * .8 + 12vh) 0 0}
-  .rx-bad{left:50%;top:7vh;margin:0 0 0 calc(var(--rxw) * -.5)}
+  .fx-x.has-rx{padding:calc(var(--rxw) * .74 + 12vh) 0 0}
+  .rx-bad{left:50%;top:9vh;bottom:auto;margin:0 0 0 calc(var(--rxw) * -.5)}
   .rx-bad .rx-cap{left:40%;bottom:84%}
   .fx-x.has-rx svg,.fx-x.has-rx.n2 svg,.fx-x.has-rx.n3 svg{width:min(26vh,40vw);height:min(26vh,40vw)}
 }
@@ -857,7 +855,7 @@ body.host-off .st-btns,body.host-off .st-teams{justify-content:center}
 .fm-intro p{font-size:clamp(12px,2.1vh,32px);color:var(--gray);line-height:1.45;margin:2vh 0 2.6vh}
 .fm-intro p b{color:var(--white)}
 .fm-hint{margin-top:2vh;font-size:clamp(11px,1.6vh,24px);color:var(--gray-dim)}
-.fm-host{position:absolute;right:2cqw;bottom:6cqh;height:min(56cqh,42cqw);width:auto;aspect-ratio:4/5;object-position:50% 25%;pointer-events:none;rotate:1.5deg;animation:hostin .9s .1s cubic-bezier(.2,.9,.3,1) both}
+.fm-host{position:absolute;right:0;bottom:0;height:min(60cqh,30cqw);width:auto;pointer-events:none;animation:hostin .9s .1s cubic-bezier(.2,.9,.3,1) both}
 .fm-tu{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-family:var(--cond);font-weight:900;text-transform:uppercase;animation:tuin .6s cubic-bezier(.2,1.4,.4,1)}
 .fm-tu div{font-size:clamp(30px,10vh,170px);line-height:.9}
 .fm-tu b{font-size:clamp(50px,22vh,360px);line-height:.85;color:var(--red);text-shadow:0 0 5vh rgba(255,60,60,.6)}
@@ -869,7 +867,7 @@ body.host-off .st-btns,body.host-off .st-teams{justify-content:center}
 .fm-badge{align-self:flex-start;font-family:var(--cond);font-weight:800;font-size:clamp(11px,2vh,32px);letter-spacing:.24em;padding:.5vh 1.2vw;border-radius:999px;border:1.5px solid rgba(138,180,230,.5);color:var(--sky);margin-bottom:2vh}
 .fm-badge.gold{border-color:#ffc84a;color:#1c0d00;background:#ffc93f} .fm-badge.red{border-color:var(--red);color:#ff9d9d}
 .fm-acts{display:flex;gap:1vw;flex-wrap:wrap;margin-top:3.4vh}
-.fm-host.r{right:2cqw;height:min(60cqh,42cqw)}
+.fm-host.r{right:0;height:min(62cqh,30cqw);--host-glow:rgba(255,190,60,.5)}
 .fm-board{display:flex;flex-direction:column;gap:1.2vh;min-height:0}
 .fm-rows{flex:1;min-height:0;display:grid;grid-template-rows:repeat(var(--n,5),minmax(0,1fr));gap:1vh;max-height:calc(var(--n,5) * 12.5vh)}
 .fm-row{display:grid;grid-template-columns:min(6vh,4vw) minmax(0,1fr) min(12vh,8vw);border-radius:1.1vh;overflow:hidden;min-height:0;
@@ -905,7 +903,7 @@ body.idle .fm-bar{opacity:.25;transition:opacity .45s} body.idle .fm-bar:hover{o
 .fm-hr{display:flex;align-items:center;justify-content:flex-end;gap:1vw;align-self:stretch;min-width:0}
 .fm-rxslot{position:relative;flex:1;align-self:stretch;min-width:0}
 .rx-fm{inset:0;background:radial-gradient(40% 70% at 35% 100%,rgba(60,125,235,.4),transparent 70%)}
-.rx-fm .rx-img{position:absolute;left:0;bottom:-.6vh;height:min(22vh,17vw);width:auto}
+.rx-fm .rx-img{position:absolute;left:-2%;bottom:-1.6vh;height:min(24vh,18vw);width:auto}
 .rx-fm .rx-cap{left:auto;right:0;top:.4vh;bottom:auto;width:auto;min-width:0;padding:1.4vh 1.3vw 1.5vh;border-width:.45vh;box-shadow:0 0 0 .25vh #0d2b6e,0 0 3vh rgba(255,190,60,.5),0 1vh 3vh rgba(0,0,0,.5)}
 .rx-fm .rx-cap::after{left:14%;bottom:-1.3vh;width:2.2vh;height:2.2vh;border-width:.45vh}
 .rx-fm .rx-cap b{font-size:min(3.1vh,2.3vw);white-space:nowrap}
@@ -1284,7 +1282,7 @@ body.v-min .sit-strip{order:-1}
         <ellipse class="bulbs" cx="500" cy="330" rx="438" ry="270" fill="none" stroke="#fff2c9" stroke-width="11" stroke-linecap="round" stroke-dasharray="0 31"/>
         <ellipse cx="500" cy="330" rx="410" ry="244" fill="none" stroke="rgba(138,180,230,.35)" stroke-width="3"/>
       </svg>
-      <img class="host-img st-host" alt="Game host" data-mood="welcome" width="676" height="542">
+      <img class="host-img st-host" alt="Game host" data-mood="welcome" width="760" height="560">
     </div>
     <div class="st-plate host-on" id="stPlate"><span>HOSTED BY</span><b id="stPlateN">YOUR HOST</b></div>
   </div>
@@ -1328,7 +1326,7 @@ body.v-min .sit-strip{order:-1}
         <video id="gv" controls playsinline preload="auto" tabindex="-1"></video>
         <div class="rx rx-good" id="rxGood" aria-hidden="true">
           <div class="rx-rays"></div>
-          <img class="rx-img" alt="" width="676" height="542">
+          <img class="rx-img" alt="" width="760" height="560">
           <div class="rx-cap"><b><i>GOOD</i> ANSWER!</b><span class="rx-sub" id="rxGoodSub"></span></div>
         </div>
         <div class="v-empty" id="vEmpty">
@@ -1358,8 +1356,7 @@ body.v-min .sit-strip{order:-1}
       <div class="b-head">
         <div class="b-q"><h1 class="prompt" id="gPrompt">WHAT DO YOU SEE?</h1><div class="prompt-bar"></div></div>
         <div class="hcam host-on" id="hCam" aria-live="polite">
-          <img class="host-img" id="hImg" alt="Game host" data-mood="welcome" width="676" height="542">
-          <div class="hcam-tag" aria-hidden="true"><i></i>HOST CAM</div>
+          <img class="host-img" id="hImg" alt="Game host" data-mood="welcome" width="760" height="560">
           <div class="hbub" id="hBub"><div class="hname" id="hName">YOUR HOST</div><div class="hline" id="hLine"></div></div>
         </div>
       </div>
@@ -1460,7 +1457,7 @@ body.v-min .sit-strip{order:-1}
           <b id="fmTime">60</b><small id="fmTimeL">SECONDS</small>
         </div>
         <div class="fm-hr">
-          <div class="fm-rxslot"><div class="rx rx-good rx-fm" id="fmRx" aria-hidden="true"><img class="rx-img" alt="" width="676" height="542"><div class="rx-cap"><b><i>GOOD</i> ANSWER!</b><span class="rx-sub"></span></div></div></div>
+          <div class="fm-rxslot"><div class="rx rx-good rx-fm" id="fmRx" aria-hidden="true"><img class="rx-img" alt="" width="760" height="560"><div class="rx-cap"><b><i>GOOD</i> ANSWER!</b><span class="rx-sub"></span></div></div></div>
           <div class="fm-total" id="fmTotalBox"><span>FAST MONEY TOTAL</span><b id="fmTotalV">0</b></div>
         </div>
       </header>
@@ -1518,11 +1515,11 @@ body.v-min .sit-strip{order:-1}
     </div>
   </div>
 
-  <div class="fx fx-intro" id="fxIntro"><img class="host-img fx-host" alt="" data-mood="welcome" width="676" height="542"><div class="intro-card"><div class="ik" id="inK">PLAY 1 OF 3</div><div class="it" id="inT"></div><div class="il"></div><div class="is" id="inS"></div><div class="iu" id="inU"></div></div></div>
-  <div class="fx fx-x" id="fxX"><div class="rx rx-bad" id="rxBad" aria-hidden="true"><img class="rx-img" alt="" width="676" height="542"><div class="rx-cap"><b>YOU’RE <i>WRONG.</i></b></div></div><div class="x-wrap"><div class="xrow" id="xRow"></div><div class="xlab" id="xLab">WRONG ANSWER</div></div></div>
-  <div class="fx fx-big c0" id="fxBig"><img class="host-img fx-host" alt="" data-mood="surprised" width="676" height="542"><div class="big-card"><div class="bk" id="bigK"></div><div class="bt" id="bigT"></div><div class="bs" id="bigS"></div></div></div>
+  <div class="fx fx-intro" id="fxIntro"><img class="host-img fx-host" alt="" data-mood="welcome" width="760" height="560"><div class="intro-card"><div class="ik" id="inK">PLAY 1 OF 3</div><div class="it" id="inT"></div><div class="il"></div><div class="is" id="inS"></div><div class="iu" id="inU"></div></div></div>
+  <div class="fx fx-x" id="fxX"><div class="rx rx-bad" id="rxBad" aria-hidden="true"><img class="rx-img" alt="" width="760" height="560"><div class="rx-cap"><b>YOU’RE <i>WRONG.</i></b></div></div><div class="x-wrap"><div class="xrow" id="xRow"></div><div class="xlab" id="xLab">WRONG ANSWER</div></div></div>
+  <div class="fx fx-big c0" id="fxBig"><img class="host-img fx-host" alt="" data-mood="surprised" width="760" height="560"><div class="big-card"><div class="bk" id="bigK"></div><div class="bt" id="bigT"></div><div class="bs" id="bigS"></div></div></div>
   <canvas id="fxConf"></canvas>
-  <div class="fx fx-good" id="fxGood"><div class="good-card"><img class="host-img gt-host host-on" alt="" data-mood="proud" width="676" height="542"><div class="gt-txt"><div class="g1">GOOD <span>THOUGHT</span></div><div class="g2">NOT ON THE BOARD</div></div></div></div>
+  <div class="fx fx-good" id="fxGood"><div class="good-card"><img class="host-img gt-host host-on" alt="" data-mood="proud" width="760" height="560"><div class="gt-txt"><div class="g1">GOOD <span>THOUGHT</span></div><div class="g2">NOT ON THE BOARD</div></div></div></div>
 </main>
 
 <!-- ===================== SETUP ===================== -->
@@ -3000,7 +2997,7 @@ function wrapHost(html) {
   const f = $('#fin'); f.classList.toggle('has-host', hostOn());
   if (!hostOn()) return html;
   setTimeout(() => setHostImgs(f));
-  return `<div class="fin-host"><img class="host-img" alt="Game host" data-mood="${hostPick('closing')}" width="676" height="542"></div><div class="fin-main">${html}</div>`;
+  return `<div class="fin-host"><img class="host-img" alt="Game host" data-mood="${hostPick('closing')}" width="760" height="560"></div><div class="fin-main">${html}</div>`;
 }
 function openEnd() {
   hostSilence();
