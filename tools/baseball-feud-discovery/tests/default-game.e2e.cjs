@@ -134,17 +134,72 @@ const sameContent = (cur) => {
   ({ cur, games } = await LS(p));
   ok(cur.gameId === DEF_ID && Object.values(cur.session.revealed).flat().length === 0 && Object.keys(cur.session.rounds).length === 0, "a returning visitor's new session starts on the default game, fresh (no strikes, reveals or scores carried over)");
   ok(games.some((g) => g.id === otherId && g.data.plays.length === 2), "the game they had open is kept in GAMES");
-  // an edited default game is kept as its own game, never lost
-  await p.evaluate(() => { const s = JSON.parse(localStorage.getItem("baseballFeud2.v1")); s.plays[0].title = "My edited title"; localStorage.setItem("baseballFeud2.v1", JSON.stringify(s)); });
+  // edits made to the default game stay on it (no separate “(your edits)” game), session after session
+  await p.evaluate(() => { const s = JSON.parse(localStorage.getItem("baseballFeud2.v1")); s.plays[0].observations[0].text = "Short edited answer"; localStorage.setItem("baseballFeud2.v1", JSON.stringify(s)); });
   await p.close(); p = await open(ctx, errs);
   ({ cur, games } = await LS(p));
-  ok(cur.plays[0].title === SRC.plays[0].title, "the default game comes back from the file (authoritative)");
-  ok(games.some((g) => /your edits/.test(g.name) && g.data.plays[0].title === "My edited title"), "edits to the default game are kept as a separate saved game");
+  ok(cur.gameId === DEF_ID && cur.plays[0].observations[0].text === "Short edited answer" && cur.plays[0].observations.length === SRC.plays[0].observations.length, "an edited answer on the default game is kept in the next session");
+  ok(!games.some((g) => /your edits/.test(g.name)), "…on the default itself, not as a separate “(your edits)” game");
+  await p.close(); p = await open(ctx, errs);
+  ok((await LS(p)).cur.plays[0].observations[0].text === "Short edited answer", "…and again in the session after that (never overwritten from the file)");
+  ({ cur, games } = await LS(p));
   ok(games.filter((g) => g.id === DEF_ID).length === 1, "exactly one default record");
   // Fast Money + practice still on
   ok(cur.settings.fastMoneyOn === true && cur.practice.enabled === true, "practice round and Fast Money enabled as in the file");
   ok(errs.length === 0, "no page errors " + errs.join(" | ").slice(0, 300));
   await ctx.close();
+
+  // 8. a tab still open on an earlier default (same tab session) switches to the new default once; the old game is kept
+  {
+    const c2 = await b.newContext({ viewport: { width: 1440, height: 900 } });
+    let q = await open(c2, errs);
+    // what a browser that last saw the old sample game has stored (written as the reloaded page starts, after its own save-on-exit)
+    await q.addInitScript(() => {
+      if (sessionStorage.getItem("planted")) return; sessionStorage.setItem("planted", "1");
+      const s = JSON.parse(localStorage.getItem("baseballFeud2.v1")); s.gameId = "g-sample-game-volume-1"; s.sessionName = "SAMPLE GAME — VOLUME 1"; s.plays = s.plays.slice(0, 2).map((x, i) => ({ ...x, id: "old" + i, title: "Old sample play " + (i + 1) }));
+      localStorage.setItem("baseballFeud2.v1", JSON.stringify(s)); localStorage.setItem("baseballFeud2.defaultSeen", "g-sample-game-volume-1");
+    });
+    await q.reload(); await wait(q, 1500);
+    const r = await LS(q);
+    ok(r.cur.gameId === DEF_ID && r.cur.plays.length === 4, "a tab that still had the old sample game open loads the new default after the update");
+    ok(r.games.some((g) => g.id === "g-sample-game-volume-1" && /Old sample play 1/.test(g.data.plays[0].title)), "…and the old game is kept in GAMES");
+    await q.reload(); await wait(q, 1200);
+    ok((await LS(q)).cur.gameId === DEF_ID, "…after that, a refresh resumes as usual");
+    await c2.close();
+  }
+  // 9. today's game, exactly as specified: plays, order, library clips, question, answers and teaching notes
+  {
+    const SPEC = [
+      ["wwgw-v1-06-wheres-the-cutoff", "2025-05-25", "Ryan O'Hearn", "Zack Kelly", ["Poor OF communication", "Airmailing the cut guy(s)", "Batter runner keeps moving", "LF hanging out most of the play", "1B nice job staying engaged"]],
+      ["wwgw-v1-07-bunt-chaos", "2025-06-09", "Ke'Bryan Hayes", "Janson Junk", ["Pitcher nowhere close to the correct spot backing the plate", "Catcher does not clear bat from home plate area", "Catcher does not secure the baseball", "2B and SS both break to the bag to cover", "2B standing in no man's land as the play is happening", "RF immediately drifted toward backing up 1B on the bunt", "No one backs up the plate following the error"]],
+      ["wwgw-v1-08-rundown-that-wouldnt-end", "2025-09-10", "Casey Schmitt", "Jake Woodford", ["2B secured the baseball on the throw from the C", "2B made the runner at 3B commit to go to HP", "Good throw from 2B to 3B", "BR at 3B did a good job initially running inside the lane to block the throw attempt", "Runner at 3B did a good job trying to run through the catcher to draw contact", "Catcher secured the ball and recorded the out", "C could've delayed the throw to 3B longer in the rundown"]],
+      ["wwgw-v1-12-two-runners-one-base", "2026-06-01", "Kody Clemens", "David Sandlin", ["Good feed from 1B to SS for 1st out", "Poor high throw to 1B from SS", "Batter runner did not break down quickly", "Good tag from SS on 2nd out", "1B coach gave no input", "Catcher could begin drifting down the 1B line earlier"]],
+    ];
+    const NOTES = { "1:6": /3B backing up the plate because the pitcher rotated around to 3B/, "2:6": /so the 3B could catch and tag/, "3:2": /turning an opportunity to advance to 2B into a bang-bang play/, "3:5": /begin running harder to back up the base/ };
+    const c3 = await b.newContext({ viewport: { width: 1440, height: 900 } });
+    const q = await open(c3, errs), r = await LS(q);
+    const lib = await q.evaluate(() => JSON.parse(localStorage.getItem("baseballFeud2.library.v1")));
+    const libPlays = lib.plays.concat(lib.queue || []);
+    const errsSpec = [];
+    if (r.cur.plays.length !== 4) errsSpec.push("play count " + r.cur.plays.length);
+    SPEC.forEach(([libId, date, bat, pit, answers], i) => {
+      const g = r.cur.plays[i] || {}, m = g.mlb || {};
+      if (m.libId !== libId) errsSpec.push(`play ${i + 1} is ${m.libId}`);
+      if (!m.sit || m.sit.date !== date || m.sit.batter !== bat || m.sit.pitcher !== pit) errsSpec.push(`play ${i + 1} situation`);
+      const lp = libPlays.filter((x) => x.id === libId);
+      if (lp.length !== 1 || lp[0].video.embedUrl !== m.embedUrl) errsSpec.push(`play ${i + 1} library record / clip`);
+      if (g.prompt !== "WHAT DO YOU SEE?") errsSpec.push(`play ${i + 1} question ${g.prompt}`);
+      if (JSON.stringify((g.observations || []).map((o) => o.text)) !== JSON.stringify(answers)) errsSpec.push(`play ${i + 1} answers`);
+      (g.observations || []).forEach((o, j) => { const n = NOTES[i + ":" + j]; if (n && !n.test(o.note || "")) errsSpec.push(`play ${i + 1} note ${j + 1}`); });
+    });
+    ok(errsSpec.length === 0, "today's default: BAL@BOS, MIA@PIT, AZ@SF, CWS@MIN from their library records, WHAT DO YOU SEE?, answers 5/7/7/6 exactly as given, teaching notes kept " + errsSpec.join(", "));
+    ok(libPlays.length === new Set(libPlays.map((x) => x.id)).size, "no duplicate library records");
+    if (await q.isVisible("#stLive")) await q.click("#stLive"); else await q.click("#stGo");
+    await wait(q, 4300);
+    const shown = await q.evaluate(() => ({ prompt: document.querySelector("#gPrompt").textContent.trim(), tiles: document.querySelectorAll("#board .tile").length, title: document.querySelector("#gTitle").textContent }));
+    ok(shown.prompt === "WHAT DO YOU SEE?" && shown.tiles === 5 && /cutoff/i.test(shown.title), `the game opens on BAL@BOS with 5 answer tiles and WHAT DO YOU SEE? (${shown.title})`);
+    await c3.close();
+  }
 
   // 7. phone
   const m = await b.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });

@@ -18,7 +18,7 @@ How it behaves (code: `DEFAULT_GAME` in `index.html`):
 - Every visitor starts a session (a browser tab) on the default game, with a fresh game state. Its settings (team names, host, strikes, Fast Money) come from the file.
 - A refresh in the same tab resumes whatever game is open, as before.
 - Opening another game from GAMES, importing one or building one from the Library holds for the rest of that session.
-- The game a returning visitor had open is kept in GAMES. Edits made to the default game are kept there as "… (your edits)", and the default itself always comes back from the file.
+- The game a returning visitor had open is kept in GAMES. Edits made to the default game (Setup: answers, points, wording) stay on the default in that browser until a default with a different id ships; then the new default starts clean and the edited one is kept in GAMES.
 - The default game is always listed in GAMES (tagged DEFAULT) and can't be deleted.
 
-Stable id: `g-game-day-2026-11-12` (earlier: `g-sample-game-volume-1`). Tests: `tools/baseball-feud-discovery/tests/default-game.e2e.cjs`.
+Stable id: `g-game-day-2026-11-12-v2` (earlier: `g-game-day-2026-11-12`, `g-sample-game-volume-1`). A new id makes every browser switch to the new default once, keeping the game it had open in GAMES. Tests: `tools/baseball-feud-discovery/tests/default-game.e2e.cjs`.

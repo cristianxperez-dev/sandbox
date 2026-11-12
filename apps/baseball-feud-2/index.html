@@ -1942,8 +1942,16 @@ function defaultGameContent() {          // the export, read with the same norma
   return { sessionName: (str(d.sessionName) || 'Default game').slice(0, 80), settings: normSettings(d.settings), plays,
     practice, fastMoney: d.fastMoney ? normFM(d.fastMoney) : sampleFastMoney() };
 }
+/* Edits made to the default game stay on it in this browser (Setup → answers, points, wording) until a different
+   default ships: then the new default starts clean and the old edited game is kept in GAMES. */
+const DEF_EDITS_KEY = 'baseballFeud2.defaultEdits', DEF_SEEN_KEY = 'baseballFeud2.defaultSeen';
+function defaultEdits() {
+  try { const e = JSON.parse(localStorage.getItem(DEF_EDITS_KEY) || 'null'); return e && DEFAULT_GAME && e.id === DEFAULT_GAME.id && e.content && Array.isArray(e.content.plays) && e.content.plays.length ? e.content : null; } catch (x) { return null; }
+}
+function keepDefaultEdits(c) { try { if (c) localStorage.setItem(DEF_EDITS_KEY, JSON.stringify({ id: DEFAULT_GAME.id, savedAt: new Date().toISOString(), content: c })); else localStorage.removeItem(DEF_EDITS_KEY); } catch (x) {} }
 function defaultGameState() {
-  const c = defaultGameContent();
+  const file = defaultGameContent(), e = defaultEdits();
+  const c = e ? { ...file, sessionName: str(e.sessionName) || file.sessionName, settings: e.settings ? normSettings(e.settings) : file.settings, plays: e.plays, practice: e.practice || file.practice, fastMoney: e.fastMoney || file.fastMoney } : file;
   return { version: DATA_VERSION, gameId: DEFAULT_GAME.id, ...c, session: newSession(), ui: { mode: 'game', selected: c.plays[0].id, fmEdit: false, editPractice: false }, firstRun: true, defaultStart: true };
 }
 /* content only (no ids that change per load), to tell an edited copy of the default game from the original */
@@ -1958,9 +1966,17 @@ function markSession() { try { sessionStorage.setItem(TAB_KEY, '1'); } catch (e)
 let carried = null;                      // the game a returning visitor had open, kept in GAMES at boot
 function initialState() {
   const saved = load();
-  if (!DEFAULT_GAME || sessionStarted()) { markSession(); return saved; }
+  let seen = ''; try { seen = localStorage.getItem(DEF_SEEN_KEY) || ''; } catch (e) {}
+  const newDefault = !!DEFAULT_GAME && seen !== DEFAULT_GAME.id;      // a different default shipped since this browser last looked
+  if (DEFAULT_GAME) try { localStorage.setItem(DEF_SEEN_KEY, DEFAULT_GAME.id); } catch (e) {}
+  if (!DEFAULT_GAME || (sessionStarted() && !newDefault)) { markSession(); return saved; }   // a refresh resumes the open game
   markSession();
   if (!saved.firstRun) carried = saved;
+  if (carried && isDefaultGame(carried.gameId)) {                    // the default itself was open: keep its edits on it
+    const snap = clone({ sessionName: carried.sessionName, settings: carried.settings, plays: carried.plays, practice: carried.practice, fastMoney: carried.fastMoney });
+    keepDefaultEdits(contentKey(snap) !== contentKey(defaultGameContent()) || JSON.stringify(normSettings(snap.settings)) !== JSON.stringify(defaultGameContent().settings) ? snap : null);
+    carried = null;
+  }
   return defaultGameState();
 }
 
@@ -4611,6 +4627,10 @@ function storeCurrentGame() {      // called from saveNow: the current game is a
   const rec = { id: state.gameId, name: str(state.sessionName).trim() || 'Untitled game', savedAt: new Date().toISOString(), data };
   if (i >= 0) games[i] = rec; else games.unshift(rec);
   gamesSave();
+  if (isDefaultGame(state.gameId)) {   // the default keeps your edits in this browser (or none, if it matches the file again)
+    const snap = { ...clone(data), sessionName: rec.name, settings: clone(state.settings) }, file = defaultGameContent();
+    keepDefaultEdits(contentKey(snap) !== contentKey(file) || JSON.stringify(normSettings(snap.settings)) !== JSON.stringify(file.settings) ? snap : null);
+  }
 }
 function openGame(id, then) {
   const g = games.find(x => x.id === id); if (!g) return;
@@ -4622,7 +4642,7 @@ function openGame(id, then) {
   state.sessionName = str(d.sessionName) || g.name;
   state.practice = normPractice(d.practice); state.fastMoney = normFM(d.fastMoney);
   state.session = newSession(); state.gameId = g.id; state.ui.selected = state.plays[0].id; state.ui.fmEdit = false; state.ui.editPractice = false;
-  if (isDefaultGame(g.id)) { state.settings = normSettings(DEFAULT_GAME.data.settings); applySettingsClasses(); }   // its own team names, host, rules
+  if (isDefaultGame(g.id)) { const e = defaultEdits(); state.settings = normSettings(e && e.settings ? e.settings : DEFAULT_GAME.data.settings); applySettingsClasses(); }   // its own team names, host, rules
   saveNow(); closeAll(); initVideos().then(() => {
     if (then === 'play') { enterGame(); hideStart(); primaryStart(); }
     else enterSetup();
@@ -4651,14 +4671,14 @@ function closeAll() { ['bfLib', 'bfPrev', 'bfGames', 'bfVid'].forEach(closeOv); 
 /* Games */
 function ensureDefaultListed() {   // the default game is always in GAMES, whatever was deleted in this browser
   if (!DEFAULT_GAME || games.some(g => g.id === DEFAULT_GAME.id)) return;
-  const c = defaultGameContent();
+  const c = { ...defaultGameContent(), ...(defaultEdits() || {}) };
   games.push({ id: DEFAULT_GAME.id, name: c.sessionName, savedAt: str(DEFAULT_GAME.data.exportedAt) || new Date().toISOString(), data: clone({ sessionName: c.sessionName, plays: c.plays, practice: c.practice, fastMoney: c.fastMoney }) });
   gamesSave();
 }
 function openGames() {
   const o = ov('bfGames');
   ensureDefaultListed();
-  const rows = games.map(g => {
+  const rows = [...games].sort((a, b) => isDefaultGame(b.id) - isDefaultGame(a.id)).map(g => {
     const pl = (g.data.plays || []), cur = g.id === state.gameId, def = isDefaultGame(g.id);
     return `<div class="bf-game ${cur ? 'cur' : ''}"><div class="bf-gm"><div class="bf-gt">${esc(g.name)}${def ? ' <span class="bf-tag">DEFAULT</span>' : ''}${cur ? ' <span class="bf-tag">OPEN NOW</span>' : ''}</div>
       <div class="bf-gs">${pl.length} play${pl.length === 1 ? '' : 's'} · saved ${esc(fmtDate(g.savedAt))}</div>
@@ -5280,9 +5300,11 @@ $('#bAddLib').addEventListener('click', () => openLibrary('browse'));
 (async function boot() {
   if (carried && carried.plays.length) {
     const snap = clone({ sessionName: carried.sessionName, plays: carried.plays, practice: carried.practice, fastMoney: carried.fastMoney });
-    const edited = isDefaultGame(carried.gameId) && contentKey(snap) !== contentKey(defaultGameContent());
-    if (!isDefaultGame(carried.gameId) || edited) {
-      const id = edited ? 'g-' + uid() : carried.gameId, name = (str(carried.sessionName).trim() || 'Untitled game') + (edited ? ' (your edits)' : '');
+    const edited = false;                   // edits to the current default stay on it (initialState); this is another game
+    if (!isDefaultGame(carried.gameId)) {
+      const base = str(carried.sessionName).trim() || 'Untitled game';
+      const sameName = DEFAULT_GAME && base === str(DEFAULT_GAME.data.sessionName).trim();   // an earlier version of today's default
+      const id = edited ? 'g-' + uid() : carried.gameId, name = base + (edited ? ' (your edits)' : sameName ? ' (earlier version)' : '');
       const i = games.findIndex(g => g.id === id), rec = { id, name, savedAt: new Date().toISOString(), data: { ...snap, sessionName: name } };
       if (i >= 0) games[i] = rec; else games.unshift(rec);
       gamesSave();
