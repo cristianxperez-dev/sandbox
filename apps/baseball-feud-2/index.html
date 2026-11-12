@@ -539,6 +539,22 @@ body.team-off .set-row{opacity:.4}
 .upline.stealing.u1{background:rgba(138,180,230,.28);color:#fff}
 @keyframes stealpulse{50%{transform:scale(1.04)}}
 .bank{margin-left:auto;display:flex;align-items:baseline;gap:.8vw;white-space:nowrap}
+/* shot clock: one compact timer beside the board's FOUND line (20 after a judgment, 10 after a replay) */
+.shot{margin-left:auto;display:inline-flex;align-items:center;gap:.8vw;padding:.3vh 1vw .3vh 1.1vw;border-radius:999px;
+  border:2px solid rgba(255,200,74,.7);background:linear-gradient(180deg,rgba(21,45,90,.95),rgba(8,18,38,.95));box-shadow:0 0 2.4vh rgba(255,180,60,.25)}
+.shot+.bank{margin-left:2vw}
+.shot small{font-family:var(--cond);font-weight:700;font-size:clamp(9px,1.35vh,20px);letter-spacing:.24em;color:var(--sky)}
+.shot b{font-family:var(--cond);font-weight:900;font-size:clamp(22px,4.6vh,76px);line-height:1;min-width:1.25em;text-align:center;color:#ffc93f;font-variant-numeric:tabular-nums}
+.shot.warn{border-color:#ff9a2e;box-shadow:0 0 3vh rgba(255,140,40,.4)} .shot.warn b{color:#ffb347}
+.shot.urgent{border-color:#ff4b4b;box-shadow:0 0 3.6vh rgba(255,60,60,.55)} .shot.urgent b{color:#ff5a4a;animation:shotbeat 1s ease-in-out infinite}
+.shot.time{border-color:#ff4b4b;background:linear-gradient(180deg,#8f1010,#4a0606)} .shot.time b{color:#fff;font-size:clamp(18px,3.6vh,60px);letter-spacing:.06em}
+.shot.time small{color:#ffd0d0}
+.shot.paused{opacity:.6}
+@keyframes shotbeat{0%,100%{transform:none}50%{transform:scale(1.12)}}
+@media (prefers-reduced-motion:reduce){.shot.urgent b{animation:none}}
+body.shot-off .cb-shot{display:none!important}
+.rp-n{margin-left:.6em;font-size:.72em;letter-spacing:.08em;opacity:.85}
+.btn-replay.spent{opacity:.45;filter:grayscale(.6);cursor:not-allowed}
 .bank span{color:var(--gray)}
 .bank b{font-family:var(--cond);font-weight:900;font-size:clamp(22px,4.8vh,80px);line-height:.85;letter-spacing:.02em;color:var(--orange);font-variant-numeric:tabular-nums;display:inline-block;text-shadow:0 0 2.5vh rgba(255,122,26,.45)}
 .bank.w1 b,.bank.st1 b{color:#fff;text-shadow:0 0 2.5vh rgba(138,180,230,.6)}
@@ -610,10 +626,12 @@ body.team-off .set-row{opacity:.4}
 /* The host images are stage photos (not cut-outs): each one is shown as a framed "host cam" card. */
 :root{--hw:min(40vw,78vh)}
 /* Every host picture (start screen, host cam, intros, big moments, reactions, Good Thought, final score, Fast Money)
-   is a transparent cutout (host/<mood>.webp, 760×560, the host bottom-centred). One shared treatment: no frame, a soft
-   shadow and a glow in the moment's colour (--host-glow), and the cut-off body fades out at the bottom and sides. */
-.host-img,.rx-img{display:block;height:auto;max-width:none;user-select:none;pointer-events:none;aspect-ratio:760/560;object-fit:contain;object-position:50% 100%;
-  filter:drop-shadow(0 1vh 1.4vh rgba(0,0,0,.5)) drop-shadow(0 0 2.2vh var(--host-glow,rgba(90,150,255,.4)));
+   is a transparent cutout (host/<mood>.webp, 1520×1120, the host bottom-centred — 2× the largest on-screen size, so it
+   stays sharp on retina screens). One shared treatment: no frame, a light shadow and a soft glow in the moment's colour
+   (--host-glow) kept outside the cutout so it never softens it, and the cut-off body fades out at the bottom and sides.
+   No placement may draw it wider than its own pixels (max-width). */
+.host-img,.rx-img{display:block;height:auto;max-width:1520px;max-height:1120px;user-select:none;pointer-events:none;aspect-ratio:760/560;object-fit:contain;object-position:50% 100%;
+  filter:drop-shadow(0 .8vh 1vh rgba(0,0,0,.45)) drop-shadow(0 0 1.6vh var(--host-glow,rgba(90,150,255,.32)));
   -webkit-mask-image:linear-gradient(to top,transparent 0,#000 14%),linear-gradient(to right,transparent 0,#000 6%,#000 94%,transparent 100%);-webkit-mask-composite:source-in;
   mask-image:linear-gradient(to top,transparent 0,#000 14%),linear-gradient(to right,transparent 0,#000 6%,#000 94%,transparent 100%);mask-composite:intersect}
 body.host-off .host-on,body.host-off .fx-host,body.host-off .fin-host{display:none!important}
@@ -626,8 +644,12 @@ body.host-off .host-on,body.host-off .fx-host,body.host-off .fin-host{display:no
 .hcam::before{content:'';position:absolute;left:12%;right:12%;top:8%;bottom:0;border-radius:50% 50% 0 0;pointer-events:none;z-index:-1;
   background:radial-gradient(60% 70% at 50% 60%,var(--hglow,rgba(70,125,230,.4)),transparent 72%);filter:blur(1.2vh);transition:background .4s}
 .hcam .host-img{width:100%;height:100%;--host-glow:var(--hglow,rgba(90,150,255,.4))}
-.hcam .host-img.swap{animation:hswap .45s cubic-bezier(.2,1.3,.4,1)}
-@keyframes hswap{0%{opacity:.3;transform:scale(.95)}100%{opacity:1;transform:none}}
+/* passive rotation crossfades: the old expression fades out on top while the new one fades in */
+.hcam .hcam-prev{position:absolute;inset:0;width:100%;height:100%;opacity:0;z-index:1}
+.hcam .hcam-prev.out{animation:hfadeout .6s ease both}
+.hcam .host-img.swap{animation:hswap .6s ease}
+@keyframes hswap{0%{opacity:0;transform:scale(.985)}100%{opacity:1;transform:none}}
+@keyframes hfadeout{0%{opacity:1}100%{opacity:0}}
 .hcam[data-tone="good"]{--hglow:rgba(255,190,60,.6)} .hcam[data-tone="bad"]{--hglow:rgba(255,60,60,.55)} .hcam[data-tone="wow"]{--hglow:rgba(120,200,255,.6)}
 .hcam.pop{animation:hcampop .55s cubic-bezier(.3,1.6,.5,1)}
 @keyframes hcampop{0%{transform:scale(.9) rotate(-2deg)}60%{transform:scale(1.06) rotate(1deg)}100%{transform:none}}
@@ -640,7 +662,7 @@ body.host-off .host-on,body.host-off .fx-host,body.host-off .fin-host{display:no
 .hline{font-family:var(--cond);font-weight:800;font-size:clamp(11px,1.75vh,30px);line-height:1.08;letter-spacing:.02em;text-transform:uppercase;margin-top:.2vh;color:#fff}
 body.host-spot .hcam{z-index:76}
 body.host-spot .hcam .host-img{--host-glow:rgba(255,190,60,.7)}
-@media (prefers-reduced-motion:reduce){.hcam .host-img.swap,.hcam.pop{animation:none}}
+@media (prefers-reduced-motion:reduce){.hcam .host-img.swap,.hcam.pop,.hcam .hcam-prev.out{animation:none}}
 @media (max-width:900px){.hcam{height:min(15vh,30vw)}.b-head{gap:3vw}}
 
 /* host in big moments (prominent) */
@@ -1282,7 +1304,7 @@ body.v-min .sit-strip{order:-1}
         <ellipse class="bulbs" cx="500" cy="330" rx="438" ry="270" fill="none" stroke="#fff2c9" stroke-width="11" stroke-linecap="round" stroke-dasharray="0 31"/>
         <ellipse cx="500" cy="330" rx="410" ry="244" fill="none" stroke="rgba(138,180,230,.35)" stroke-width="3"/>
       </svg>
-      <img class="host-img st-host" alt="Game host" data-mood="welcome" width="760" height="560">
+      <img class="host-img st-host" alt="Game host" data-mood="welcome" width="1520" height="1120">
     </div>
     <div class="st-plate host-on" id="stPlate"><span>HOSTED BY</span><b id="stPlateN">YOUR HOST</b></div>
   </div>
@@ -1326,7 +1348,7 @@ body.v-min .sit-strip{order:-1}
         <video id="gv" controls playsinline preload="auto" tabindex="-1"></video>
         <div class="rx rx-good" id="rxGood" aria-hidden="true">
           <div class="rx-rays"></div>
-          <img class="rx-img" alt="" width="760" height="560">
+          <img class="rx-img" alt="" width="1520" height="1120">
           <div class="rx-cap"><b><i>GOOD</i> ANSWER!</b><span class="rx-sub" id="rxGoodSub"></span></div>
         </div>
         <div class="v-empty" id="vEmpty">
@@ -1337,7 +1359,7 @@ body.v-min .sit-strip{order:-1}
         </div>
       </div>
       <div class="v-ctrls">
-        <button class="btn-replay" data-g="replay" title="Replay (R)">↺ REPLAY PLAY</button>
+        <button class="btn-replay" data-g="replay" id="bReplay" title="Replay (R) — 3 per turn">↺ REPLAY PLAY<span class="rp-n" id="rpN"></span></button>
         <button class="vbtn" data-g="play" id="bPlay" title="Play / pause (Space)">▶ PLAY</button>
         <button class="vbtn" data-g="back5" title="Back 5 seconds (J)">−5s</button>
         <button class="vbtn" data-g="fwd5" title="Forward 5 seconds (L)">+5s</button>
@@ -1356,7 +1378,8 @@ body.v-min .sit-strip{order:-1}
       <div class="b-head">
         <div class="b-q"><h1 class="prompt" id="gPrompt">WHAT DO YOU SEE?</h1><div class="prompt-bar"></div></div>
         <div class="hcam host-on" id="hCam" aria-live="polite">
-          <img class="host-img" id="hImg" alt="Game host" data-mood="welcome" width="760" height="560">
+          <img class="host-img hcam-prev" id="hImgPrev" alt="" aria-hidden="true" width="1520" height="1120">
+          <img class="host-img" id="hImg" alt="Game host" data-mood="welcome" width="1520" height="1120">
           <div class="hbub" id="hBub"><div class="hname" id="hName">YOUR HOST</div><div class="hline" id="hLine"></div></div>
         </div>
       </div>
@@ -1368,6 +1391,7 @@ body.v-min .sit-strip{order:-1}
         </div>
       </div>
       <div class="found" id="gFound"><span class="pips" id="gPips"></span><span id="gFoundT">0 / 5 FOUND</span>
+        <span class="shot" id="shot" hidden aria-live="off"><small id="shotL">SHOT CLOCK</small><b id="shotV">20</b></span>
         <span class="bank team-only" id="gBank"><span id="gBankL">ROUND BANK</span><b id="gBankV">0</b></span></div>
       <div class="board-wrap"><div class="board" id="board"></div></div>
     </div>
@@ -1388,6 +1412,11 @@ body.v-min .sit-strip{order:-1}
     <button class="cb" data-g="all" title="Reveal all answers (A)">REVEAL ALL</button>
     <button class="cb" data-g="reset" title="Reset this round (Shift+R)">RESET</button>
     <button class="cb cb-good" data-g="good" id="bGood" title="Good thought — not on board (G)">GOOD THOUGHT<kbd class="kb">G</kbd></button>
+    <span class="cb-seg cb-shot" title="Shot clock">
+      <button class="cb" data-g="shotRestart" title="Restart the shot clock">⏱ RESTART</button>
+      <button class="cb" data-g="shotPause" id="bShotPause" title="Pause / resume the shot clock">❚❚</button>
+      <button class="cb" data-g="shotClear" title="Clear the shot clock">✕</button>
+    </span>
     <span class="sep"></span>
     <button class="cb" data-g="prev" title="Previous play (←)">‹ PREV</button>
     <button class="cb cb-tk" data-g="tk" id="bTk" title="Round summary / takeaways (T)">SUMMARY</button>
@@ -1457,7 +1486,7 @@ body.v-min .sit-strip{order:-1}
           <b id="fmTime">60</b><small id="fmTimeL">SECONDS</small>
         </div>
         <div class="fm-hr">
-          <div class="fm-rxslot"><div class="rx rx-good rx-fm" id="fmRx" aria-hidden="true"><img class="rx-img" alt="" width="760" height="560"><div class="rx-cap"><b><i>GOOD</i> ANSWER!</b><span class="rx-sub"></span></div></div></div>
+          <div class="fm-rxslot"><div class="rx rx-good rx-fm" id="fmRx" aria-hidden="true"><img class="rx-img" alt="" width="1520" height="1120"><div class="rx-cap"><b><i>GOOD</i> ANSWER!</b><span class="rx-sub"></span></div></div></div>
           <div class="fm-total" id="fmTotalBox"><span>FAST MONEY TOTAL</span><b id="fmTotalV">0</b></div>
         </div>
       </header>
@@ -1515,11 +1544,11 @@ body.v-min .sit-strip{order:-1}
     </div>
   </div>
 
-  <div class="fx fx-intro" id="fxIntro"><img class="host-img fx-host" alt="" data-mood="welcome" width="760" height="560"><div class="intro-card"><div class="ik" id="inK">PLAY 1 OF 3</div><div class="it" id="inT"></div><div class="il"></div><div class="is" id="inS"></div><div class="iu" id="inU"></div></div></div>
-  <div class="fx fx-x" id="fxX"><div class="rx rx-bad" id="rxBad" aria-hidden="true"><img class="rx-img" alt="" width="760" height="560"><div class="rx-cap"><b>YOU’RE <i>WRONG.</i></b></div></div><div class="x-wrap"><div class="xrow" id="xRow"></div><div class="xlab" id="xLab">WRONG ANSWER</div></div></div>
-  <div class="fx fx-big c0" id="fxBig"><img class="host-img fx-host" alt="" data-mood="surprised" width="760" height="560"><div class="big-card"><div class="bk" id="bigK"></div><div class="bt" id="bigT"></div><div class="bs" id="bigS"></div></div></div>
+  <div class="fx fx-intro" id="fxIntro"><img class="host-img fx-host" alt="" data-mood="welcome" width="1520" height="1120"><div class="intro-card"><div class="ik" id="inK">PLAY 1 OF 3</div><div class="it" id="inT"></div><div class="il"></div><div class="is" id="inS"></div><div class="iu" id="inU"></div></div></div>
+  <div class="fx fx-x" id="fxX"><div class="rx rx-bad" id="rxBad" aria-hidden="true"><img class="rx-img" alt="" width="1520" height="1120"><div class="rx-cap"><b>YOU’RE <i>WRONG.</i></b></div></div><div class="x-wrap"><div class="xrow" id="xRow"></div><div class="xlab" id="xLab">WRONG ANSWER</div></div></div>
+  <div class="fx fx-big c0" id="fxBig"><img class="host-img fx-host" alt="" data-mood="surprised" width="1520" height="1120"><div class="big-card"><div class="bk" id="bigK"></div><div class="bt" id="bigT"></div><div class="bs" id="bigS"></div></div></div>
   <canvas id="fxConf"></canvas>
-  <div class="fx fx-good" id="fxGood"><div class="good-card"><img class="host-img gt-host host-on" alt="" data-mood="proud" width="760" height="560"><div class="gt-txt"><div class="g1">GOOD <span>THOUGHT</span></div><div class="g2">NOT ON THE BOARD</div></div></div></div>
+  <div class="fx fx-good" id="fxGood"><div class="good-card"><img class="host-img gt-host host-on" alt="" data-mood="proud" width="1520" height="1120"><div class="gt-txt"><div class="g1">GOOD <span>THOUGHT</span></div><div class="g2">NOT ON THE BOARD</div></div></div></div>
 </main>
 
 <!-- ===================== SETUP ===================== -->
@@ -1573,6 +1602,7 @@ body.v-min .sit-strip{order:-1}
         <label class="tgl"><input type="checkbox" id="setAuto"><span class="sw"></span><span class="tl"><b>AUTO-HIDE COACH BAR</b><small>Controls fade after a few seconds; move the mouse to bring them back.</small></span></label>
         <label class="tgl"><input type="checkbox" id="setHost"><span class="sw"></span><span class="tl"><b>SHOW HOST</b><small>Host on the start screen, on the host cam beside the question, and in big moments — round start, steals, board cleared, final score, Fast Money.</small></span></label>
         <label class="tgl"><input type="checkbox" id="setReact"><span class="sw"></span><span class="tl"><b>HOST REACTIONS</b><small>A happy host with “Good answer!” on each reveal (sometimes extra big), and a disappointed or frustrated host with the big X.</small></span></label>
+        <label class="tgl"><input type="checkbox" id="setShot"><span class="sw"></span><span class="tl"><b>SHOT CLOCK</b><small>20 seconds after each answer is judged, 10 after a replay (3 replays per turn). A pacing aid only — nothing is scored when it runs out.</small></span></label>
         <div class="set-row always"><b>HOST NAME</b><input class="in wide" id="setHostName" placeholder="e.g. COACH PEREZ" maxlength="28"></div>
       </div>
 
@@ -1773,7 +1803,7 @@ function samplePlays() {
   ];
 }
 function defaultSettings() {
-  return { teamMode: true, teamNames: DEFAULT_TEAMS.slice(), showX: true, showGood: true, sound: true, autoHide: true, rememberVideos: true, maxStrikes: 3, roundSummary: true, showHost: true, hostName: '', reactions: true, fastMoneyOn: true };
+  return { teamMode: true, teamNames: DEFAULT_TEAMS.slice(), showX: true, showGood: true, sound: true, autoHide: true, rememberVideos: true, maxStrikes: 3, roundSummary: true, showHost: true, hostName: '', reactions: true, fastMoneyOn: true, shotClock: true };
 }
 function normSettings(s) {
   s = obj(s); const d = defaultSettings();
@@ -1785,7 +1815,7 @@ function normSettings(s) {
     showX: b('showX'), showGood: b('showGood'), sound: b('sound'), autoHide: b('autoHide'), rememberVideos: b('rememberVideos'),
     maxStrikes: Math.min(5, Math.max(1, Math.round(num(s.maxStrikes) || d.maxStrikes))),
     roundSummary: b('roundSummary'),
-    showHost: b('showHost'), hostName: str(s.hostName).slice(0, 28), reactions: b('reactions'), fastMoneyOn: b('fastMoneyOn'),
+    showHost: b('showHost'), hostName: str(s.hostName).slice(0, 28), reactions: b('reactions'), fastMoneyOn: b('fastMoneyOn'), shotClock: b('shotClock'),
   };
 }
 function normPlay(p, seen) {
@@ -1804,7 +1834,7 @@ function normPlay(p, seen) {
   };
 }
 function newSession() {
-  return { current: 0, revealed: {}, bulk: {}, found: {}, adjust: {}, rounds: {}, undo: [], summarized: {}, startedAt: null, fastMoney: null };
+  return { current: 0, revealed: {}, bulk: {}, found: {}, adjust: {}, rounds: {}, undo: [], summarized: {}, startedAt: null, fastMoney: null, turn: null };
 }
 function normPairs(a) { const out = {}; for (const [k, v] of Object.entries(obj(a))) if (Array.isArray(v)) out[k] = [num(v[0]), num(v[1])]; return out; }
 const tm = v => (v === 0 || v === 1) ? v : null;
@@ -1841,6 +1871,7 @@ function normSession(s, plays) {
     undo: Array.isArray(s.undo) ? s.undo.filter(u => u && u.rounds).slice(-60) : [],
     summarized: obj(s.summarized), startedAt: typeof s.startedAt === 'string' ? s.startedAt : null,
     fastMoney: normFmResult(s.fastMoney),
+    turn: s.turn && typeof s.turn.key === 'string' ? { key: s.turn.key, used: Math.min(9, Math.max(0, num(s.turn.used) | 0)) } : null,
   };
 }
 /* ================= FAST MONEY =================
@@ -2035,6 +2066,7 @@ function roundsWon() { const s = [0, 0]; for (const p of state.plays) { const r 
 function markStarted() { if (!state.session.startedAt) state.session.startedAt = new Date().toISOString(); }
 function beginRound(r) { if (r.start === null) r.start = r.control; markStarted(); }
 function completeRound(p, winner, outcome) {
+  shotStop(); replayRun = null;
   const r = ensureRound(p), bank = liveBank(p);
   beginRound(r);
   r.phase = 'done'; r.winner = winner; r.bank = bank; r.awarded = bank; r.outcome = outcome;
@@ -2050,6 +2082,7 @@ function snap(label) {
 function undo() {
   const s = state.session, u = s.undo.pop();
   if (!u) { toast('Nothing to undo'); return; }
+  shotStop(); replayRun = null;
   hostSilence();
   const p = curPlay(), wasDone = roundOf(p).phase === 'done';
   const before = gameScores();
@@ -2201,6 +2234,7 @@ const sfx = {
   award() { this.play(function () { this.tone(784, 0, .22, 'triangle', .12); this.tone(1175, .07, .3, 'triangle', .12); this.tone(1568, .14, .45, 'sine', .08); }); },
   undo() { this.play(function () { this.tone(660, 0, .18, 'triangle', .08); this.tone(440, .08, .25, 'triangle', .08); }); },
   tick() { this.play(function () { this.tone(1320, 0, .08, 'sine', .06); }); },
+  timeUp() { this.play(function () { this.tone(523.25, 0, .22, 'square', .05); this.tone(392, .2, .45, 'square', .055); }); },   // shot clock expired (short, unlike the wrong-answer buzz)
   steal() { this.play(function () {
     this.tone(98, 0, 1.4, 'sine', .14);
     [[392, 0], [466.2, .16], [523.25, .32], [698.5, .5]].forEach(([f, t]) => this.tone(f, t, .38, 'sawtooth', .045));
@@ -2247,7 +2281,7 @@ function keyBounce(k) { const now = performance.now(), hit = now - (lastKeyAt[k]
 function gameLocked() {
   if (Date.now() < keyLockUntil) return true;
   const r = teamOn() ? roundOf(curPlay()) : null;
-  return !!(r && r.phase === 'steal' && Date.now() - stealStartedAt < 2600);
+  return !!(r && r.phase === 'steal' && Date.now() - stealStartedAt < 2600) || replayPlaying();
 }
 const inSteal = () => teamOn() && roundOf(curPlay()).phase === 'steal';
 /* number key → reveal that answer (never hides it, never scores it twice; clicking the tile still toggles) */
@@ -2358,6 +2392,7 @@ function renderBoard(p) {
   updateFound();
 }
 function updateFound() {
+  renderReplay();
   const p = curPlay(); const rev = new Set(revealedOf(p));
   const n = p.observations.length, k = p.observations.filter(o => rev.has(o.id)).length;
   $('#gPips').innerHTML = p.observations.map(o => `<i class="${rev.has(o.id) ? 'on' : ''}"></i>`).join('');
@@ -2366,6 +2401,109 @@ function updateFound() {
   $('#gFound').classList.toggle('done', done);
   $('#bTk').classList.toggle('pulse', (done || roundOf(p).phase === 'done') && $('#tk').hidden);
 }
+/* ================= PACING =================
+   Every pacing value in one place. Host reaction lengths live in REACTIONS (correct / wrong) below. */
+const PACE = {
+  normalSeconds: 20,      // shot clock after each judged answer (correct reveal or X)
+  replaySeconds: 10,      // shot clock after a replay ends (every replay, never back to 20)
+  maxReplays: 3,          // counted replays per active turn (resets when control passes)
+  hostRotation: 4500,     // passive host-cam expression change (ms)
+  warnAt: 10, urgentAt: 5 // shot clock emphasis thresholds (seconds left)
+};
+/* ----- shot clock: one timer at most; a pacing aid only — expiring never scores, strikes or reveals ----- */
+const shot = { mode: null, total: 0, endAt: 0, remMs: 0, left: 0, paused: false, expired: false, t: null };
+const shotAllowed = () => state.settings.shotClock && state.ui.mode === 'game' && !fmOpen();
+function shotStart(mode) {
+  shotStop();
+  if (!shotAllowed()) return;
+  shot.mode = mode === 'replay' ? 'replay' : 'normal';
+  shot.total = shot.mode === 'replay' ? PACE.replaySeconds : PACE.normalSeconds;
+  shot.left = shot.total; shot.endAt = Date.now() + shot.total * 1000;
+  shot.t = setInterval(shotTick, 200);
+  shotRender();
+}
+function shotTick() {
+  if (shot.paused || !shot.mode) return;
+  const left = Math.max(0, Math.ceil((shot.endAt - Date.now()) / 1000));
+  if (left !== shot.left) { shot.left = left; shotRender(); }
+  if (left <= 0) { clearInterval(shot.t); shot.t = null; shot.expired = true; sfx.timeUp(); shotRender(); }
+}
+function shotStop() {
+  clearInterval(shot.t); clearTimeout(shotLaterT);
+  Object.assign(shot, { mode: null, t: null, paused: false, expired: false });
+  shotRender();
+}
+function shotPause() {
+  if (!shot.mode || shot.expired) { toast('No shot clock running'); return; }
+  if (shot.paused) { shot.endAt = Date.now() + shot.remMs; shot.paused = false; }
+  else { shot.remMs = Math.max(0, shot.endAt - Date.now()); shot.paused = true; }
+  shotRender();
+}
+function shotRestart() {
+  if (!state.settings.shotClock) { toast('The shot clock is off — switch it on in Setup'); return; }
+  shotStart(shot.mode || 'normal');
+}
+let shotLaterT = null;
+function shotRender() {
+  const el = $('#shot'); if (!el) return;
+  el.hidden = !shot.mode;
+  const pb = $('#bShotPause'); if (pb) pb.textContent = shot.paused ? '▶' : '❚❚';
+  if (!shot.mode) return;
+  $('#shotV').textContent = shot.expired ? 'TIME' : shot.left;
+  $('#shotL').textContent = shot.paused ? 'PAUSED' : shot.mode === 'replay' ? 'AFTER REPLAY' : 'SHOT CLOCK';
+  el.className = 'shot' + (shot.expired ? ' time' : shot.left <= PACE.urgentAt ? ' urgent' : shot.left <= PACE.warnAt ? ' warn' : '') + (shot.paused ? ' paused' : '');
+}
+function applyShotSetting() { document.body.classList.toggle('shot-off', !state.settings.shotClock); if (!state.settings.shotClock) shotStop(); }
+/* ----- replays: 3 counted replays per active turn (the team in control, or the stealing team) ----- */
+function turnKey() {
+  const p = curPlay(); if (!p) return '';
+  if (!teamOn()) return p.observations.every(o => revealedOf(p).includes(o.id)) ? '' : 'solo:' + p.id;
+  const r = roundOf(p);
+  if (r.phase === 'done') return '';
+  return p.id + (r.phase === 'steal' ? ':steal:' + r.stealTeam : ':team:' + r.control);
+}
+function turnState() {     // gameplay state, saved with the session: { key, used }
+  const k = turnKey(), s = state.session;
+  if (!k) return null;
+  if (!s.turn || s.turn.key !== k) s.turn = { key: k, used: 0 };   // control passed → a fresh allowance
+  return s.turn;
+}
+let replayRun = null, replayReqAt = 0, lastJudgeAt = 0;   // replayRun: the counted replay now playing
+const videoPlaying = () => embOn() ? emb.playing : !!gv.dataset.url && !gv.paused && !gv.ended;
+const replayPlaying = () => !!replayRun && videoPlaying();
+function requestReplay() {
+  if (!embOn() && !gv.dataset.url) { toast('No video loaded for this play'); return; }
+  const t = turnState();
+  if (!t) { replay(); return; }                         // no active turn (round settled): a free review replay, as before
+  const now = performance.now(); if (now - replayReqAt < 700) return;   // double click / key repeat: one replay
+  if (replayRun) { replayReqAt = now; replay(); return; }   // restart the replay already in progress (not counted again)
+  if (gameLocked() || Date.now() - lastJudgeAt < 900) return;           // mid-transition or mid-reveal
+  if (t.used >= PACE.maxReplays) { toast(`No replays left this turn — all ${PACE.maxReplays} used`, 2400); return; }
+  replayReqAt = now; t.used++; save();
+  shotStop();                                           // no clock while the play is on screen
+  replayRun = { key: t.key };
+  replay(); renderReplay();
+}
+function replayEnded() {                                // the video reached its end
+  if (!replayRun) return;
+  const same = turnKey() === replayRun.key;
+  replayRun = null; renderReplay();
+  if (same) shotStart('replay');                        // every replay → a fresh 10-second window
+}
+function renderReplay() {
+  const b = $('#bReplay'); if (!b) return;
+  const t = turnState(), left = t ? Math.max(0, PACE.maxReplays - t.used) : null;
+  $('#rpN').textContent = left === null ? '' : `· ${left} LEFT`;
+  b.classList.toggle('spent', left === 0);
+  b.setAttribute('aria-disabled', left === 0 ? 'true' : 'false');
+  b.title = left === null ? 'Replay (R)' : left ? `Replay (R) — ${left} of ${PACE.maxReplays} left this turn` : 'No replays left this turn';
+}
+/* a judged answer (correct reveal or X) starts a fresh 20 for the next response, while the turn goes on */
+function judged(turnContinues) {
+  lastJudgeAt = Date.now(); replayRun = null; renderReplay();
+  if (turnContinues) shotStart('normal'); else shotStop();
+}
+
 /* ================= HOST MOODS =================
    The host is one person with fifteen labelled expressions (host/<mood>.webp). Every host picture in the app —
    start screen, host cam, round intro, big moments, reactions, final screen, Fast Money — picks from these. */
@@ -2374,7 +2512,8 @@ const hostSrc = m => 'host/' + (HOST_MOODS.includes(m) ? m : 'welcome') + '.webp
 const HOST_POOLS = {
   correct: ['laughing', 'excited', 'celebratory'],          // right answers (varied, never the same twice in a row)
   wait:    ['thinking', 'curious', 'skeptical', 'confused'], // while the room thinks / the coach reviews
-  stealWin: ['shocked', 'celebratory'],
+  stealWin: ['excited', 'celebratory', 'surprised'],
+  stealFail: ['disappointed', 'skeptical'],
   closing: ['grateful', 'proud'],
   encourage: ['proud', 'grateful'],         // Good Thought
 };
@@ -2403,7 +2542,11 @@ const hostCam = { until: 0, t: null, idle: null };
 function camMood(mood, { hold = 4000, pop = false, next = null } = {}) {
   const cam = $('#hCam'), img = $('#hImg'); if (!cam || !img) return;
   clearTimeout(hostCam.t);
-  if (img.dataset.mood !== mood) { setHostImg(img, mood); img.classList.remove('swap'); void img.offsetWidth; img.classList.add('swap'); }
+  if (img.dataset.mood !== mood) {
+    const prev = $('#hImgPrev');
+    if (prev && img.getAttribute('src')) { prev.setAttribute('src', img.getAttribute('src')); prev.classList.remove('out'); void prev.offsetWidth; prev.classList.add('out'); }
+    setHostImg(img, mood); img.classList.remove('swap'); void img.offsetWidth; img.classList.add('swap');
+  }
   cam.dataset.tone = HOST_TONE[mood] || '';
   if (pop) { cam.classList.remove('pop'); void cam.offsetWidth; cam.classList.add('pop'); }
   hostCam.until = hold ? Date.now() + hold : 0;
@@ -2414,7 +2557,7 @@ function startCamIdle() {   // a new waiting expression every few seconds while 
   hostCam.idle = setInterval(() => {
     if (document.hidden || state.ui.mode !== 'game' || Date.now() < hostCam.until || !hostOn()) return;
     if (HOST_POOLS.wait.includes(($('#hImg') || {}).dataset?.mood)) camMood(hostPick('wait'), { hold: 0 });
-  }, 7000);
+  }, PACE.hostRotation);
 }
 let wrongStreak = 0;   // consecutive wrong answers (reset by a right one) — the second in a row gets FRUSTRATED
 
@@ -2485,6 +2628,7 @@ function floatPts(card, d) {
   card.appendChild(f); setTimeout(() => f.remove(), 1450);
 }
 function renderScores(opts = {}) {
+  renderReplay();
   if (!teamOn()) return;
   const g = gameScores(), p = curPlay(), r = roundOf(p), max = state.settings.maxStrikes, up = upTeam(p), bank = bankOf(p);
   [0, 1].forEach(t => {
@@ -2662,6 +2806,8 @@ function toggleReveal(i, { silent = false, forceShow = false, bulk = false } = {
     tile.classList.remove('pop'); void tile.offsetWidth; tile.classList.add('pop');
     countTo(tile.querySelector('.pv'), 0, num(o.points), 650, 300);
     if (!bulk) lastRevealed = o.id;
+    if (!bulk) { const rr = team ? roundOf(p) : null, all = p.observations.every(x => arr.includes(x.id));
+      judged(team ? rr.phase === 'play' && !all : !all); }
     if (!silent) { sfx.ding(); hostCorrect(o, p); if (practice) practiceNote(`✓ On the board — ${correctSub(o, p).toLowerCase()}`, 'good'); }
     if (team) {
       renderScores({ bankBump: true });
@@ -2683,6 +2829,7 @@ function revealAll() {
 }
 const needTeams = () => { if (!teamOn()) { toast('Turn on Team Mode in Setup'); return false; } return true; };
 function setControl(t) {
+  shotStop();
   if (!needTeams()) return;
   const p = curPlay(), r = roundOf(p);
   if (r.phase === 'steal') { toast('Steal in progress — use CANCEL STEAL to change teams'); return; }
@@ -2713,7 +2860,7 @@ function showXfx(n, label, { duration, mood } = {}) {
 }
 function strike() {
   if (!state.settings.showX) return;
-  if (!teamOn()) { showXfx(1, 'WRONG ANSWER'); return; }
+  if (!teamOn()) { showXfx(1, 'WRONG ANSWER'); judged(true); return; }
   const p = curPlay(), r = roundOf(p), max = state.settings.maxStrikes;
   if (r.phase === 'done') { showXfx(1, 'WRONG ANSWER'); toast('Round is settled — strikes no longer count'); return; }
   if (r.phase === 'steal') {
@@ -2721,7 +2868,7 @@ function strike() {
     const rr = ensureRound(p);
     if (rr.stealReveal) { toast('An answer is already revealed for the steal — hide it first, or confirm the result'); return; }
     if (!rr.stealMissed) { snap(`Steal attempt missed (${shortName(rr.stealTeam)})`); rr.stealMissed = true; save(); }
-    showXfx(1, `${teamName(rr.stealTeam)} · NOT ON THE BOARD`, { mood: 'frustrated' });
+    showXfx(1, `${teamName(rr.stealTeam)} · NOT ON THE BOARD`, { mood: 'frustrated' }); judged(false);
     renderScores(); return;
   }
   const rr = ensureRound(p); beginRound(rr);
@@ -2731,6 +2878,7 @@ function strike() {
   showXfx(Math.min(3, rr.strikes), out ? (max === 3 ? 'THREE STRIKES' : `${max} STRIKES`) : `${teamName(rr.control)} · STRIKE ${rr.strikes}`,
     { mood: out || rr.strikes > 1 || wrongStreak > 0 ? 'frustrated' : 'disappointed' });
   renderScores({ strikePop: rr.control });
+  judged(!out);
   if (!out) hostSay(rr.strikes === max - 1 ? `One more strike and ${shortName(1 - rr.control)} can steal.` : `Strike ${rr.strikes}. Stay sharp, ${shortName(rr.control)}.`, { delay: REACTIONS.wrong.duration });
   else hostSilence();
   if (out) beginSteal(p, 'auto');
@@ -2744,6 +2892,7 @@ function beginSteal(p, how) {
   const rr = ensureRound(p); beginRound(rr);
   rr.phase = 'steal'; rr.stealTeam = 1 - rr.control; rr.stealOffered = true; rr.stealReveal = null; rr.stealMissed = false;
   stealStartedAt = Date.now(); save();
+  shotStop(); replayRun = null;
   renderScores();
   clearTimeout(flowT);
   flowT = setTimeout(() => {
@@ -2753,6 +2902,8 @@ function beginSteal(p, how) {
     showBig({ team: cur.stealTeam, k: teamName(cur.stealTeam), t: 'STEAL OPPORTUNITY', s: `STEAL FOR <b>${bankOf(p)}</b>`, dur: 2700, mood: 'surprised' });
     sfx.steal();
     hostSay(`${shortName(cur.stealTeam)} — one answer. Steal for ${bankOf(p)}.`, { delay: 2700, hold: 3000 });
+    clearTimeout(shotLaterT);
+    shotLaterT = setTimeout(() => { if (curPlay().id === p.id && roundOf(p).phase === 'steal' && !roundOf(p).stealReveal && !roundOf(p).stealMissed) { lastJudgeAt = Date.now(); shotStart('normal'); } }, 2700);
   }, how === 'auto' ? 1500 : 50);
 }
 function stealResult(ok) {
@@ -2767,7 +2918,7 @@ function stealResult(ok) {
   const delta = [0, 0]; delta[winner] = bank;
   renderScores({ delta }); refreshTiles(); updateFound();
   if (ok) { showBig({ team: st, t: 'STEAL!', s: `${esc(teamName(st))} STEALS <b>${bank}</b> POINTS`, celebrate: true, dur: 2900, mood: hostPick('stealWin') }); sfx.stealWin(); }
-  else { showBig({ team: ctl, k: 'NO STEAL', t: `${teamName(ctl)} HOLDS`, s: `WINS THE ROUND BANK — <b>${bank}</b> POINTS`, dur: 2900, mood: 'proud' }); sfx.hold(); }
+  else { showBig({ team: ctl, k: 'NO STEAL', t: `${teamName(ctl)} HOLDS`, s: `WINS THE ROUND BANK — <b>${bank}</b> POINTS`, dur: 2900, mood: hostPick('stealFail') }); sfx.hold(); }
   hostSay(pickLine(ok ? 'steal' : 'hold'), { hold: 2400, spotlight: true });   // one random line, chosen once
   scheduleSummary(p.id);
 }
@@ -2779,6 +2930,7 @@ function confirmSteal() {
   else toast('Reveal their answer if it’s on the board, or press X if it isn’t');
 }
 function cancelSteal() {
+  shotStop();
   if (!needTeams()) return;
   const p = curPlay(), r = roundOf(p);
   if (r.phase !== 'steal') { toast('No steal in progress'); return; }
@@ -2818,6 +2970,7 @@ function awardBank(team, fromSummary) {
   else { showBig({ team, t: teamName(team), s: `WINS THE ROUND — <b>${bank}</b> POINTS`, dur: 2400, mood: 'proud' }); scheduleSummary(p.id); }
 }
 function reopenRound() {
+  shotStop();
   if (!needTeams()) return;
   const p = curPlay(), r = roundOf(p);
   if (r.phase !== 'done') { toast('This round isn’t settled yet'); return; }
@@ -2837,6 +2990,7 @@ function editTotal(t) {
   if (d) { renderScores({ delta: t === 0 ? [d, 0] : [0, d] }); toast(`${teamName(t)} total set to ${g[t] + d} · U to undo`); }
 }
 function resetPlay() {
+  shotStop();
   const p = curPlay();
   const had = resetRoundScores(p);
   lastRevealed = null; clearFlow();
@@ -2863,7 +3017,7 @@ function go(d) {
   const n = state.plays.length, i = curIndex(), j = i + d;
   if (j >= n) { closeOverlay('tk'); openEnd(); return; }
   if (j < 0) { toast('This is the first play'); return; }
-  closeOverlay('tk'); closeOverlay('end'); clearFlow(); stopReactions();
+  closeOverlay('tk'); closeOverlay('end'); clearFlow(); stopReactions(); shotStop(); replayRun = null;
   gv.pause();
   state.session.current = j; lastRevealed = null; save();
   renderGame(); showIntro();
@@ -2885,7 +3039,7 @@ function setSpeed(r) {
   $$('#speedSeg button').forEach(b => b.classList.toggle('on', +b.dataset.speed === r));
 }
 function updatePlayBtn() { if (embOn()) { $('#bPlay').textContent = emb.playing ? '❚❚ PAUSE' : '▶ PLAY'; return; } $('#bPlay').textContent = (!gv.dataset.url || gv.paused || gv.ended) ? '▶ PLAY' : '❚❚ PAUSE'; }
-gv.addEventListener('play', updatePlayBtn); gv.addEventListener('pause', updatePlayBtn); gv.addEventListener('ended', updatePlayBtn);
+gv.addEventListener('play', updatePlayBtn); gv.addEventListener('pause', updatePlayBtn); gv.addEventListener('ended', updatePlayBtn); gv.addEventListener('ended', replayEnded);
 gv.addEventListener('loadedmetadata', () => { gv.playbackRate = speed; });
 gv.addEventListener('error', () => { if (gv.dataset.url) toast('Chrome can’t play this video format. Try an MP4 (H.264).', 5000); });
 
@@ -2939,6 +3093,7 @@ function closeOverlay(id) {
   if (id === 'end') stopConfetti();
 }
 function openTakeaways() {
+  shotStop(); replayRun = null;
   if (embOn()) embSend('pause');
   hostSilence();
   const p = curPlay(), i = curIndex(), n = state.plays.length, s = state.session, team = teamOn();
@@ -2997,9 +3152,10 @@ function wrapHost(html) {
   const f = $('#fin'); f.classList.toggle('has-host', hostOn());
   if (!hostOn()) return html;
   setTimeout(() => setHostImgs(f));
-  return `<div class="fin-host"><img class="host-img" alt="Game host" data-mood="${hostPick('closing')}" width="760" height="560"></div><div class="fin-main">${html}</div>`;
+  return `<div class="fin-host"><img class="host-img" alt="Game host" data-mood="${hostPick('closing')}" width="1520" height="1120"></div><div class="fin-main">${html}</div>`;
 }
 function openEnd() {
+  shotStop();
   hostSilence();
   gv.pause(); closeOverlay('help'); clearFlow();
   const team = teamOn(), n = state.plays.length;
@@ -3101,7 +3257,10 @@ function toggleHelp() { $('#help').hidden = !$('#help').hidden; }
 
 function act(g) {
   switch (g) {
-    case 'replay': return replay();
+    case 'replay': return requestReplay();
+    case 'shotRestart': return shotRestart();
+    case 'shotPause': return shotPause();
+    case 'shotClear': return shotStop();
     case 'play': return togglePlay();
     case 'back5': return skip(-5);
     case 'fwd5': return skip(5);
@@ -3208,7 +3367,7 @@ window.addEventListener('keydown', e => {
   const onBoard = !isOpen('tk') && !isOpen('end');
   const map = {
     ' ': togglePlay, 'k': togglePlay,
-    'r': () => e.shiftKey ? resetPlay() : replay(),
+    'r': () => { if (e.repeat) return; e.shiftKey ? resetPlay() : requestReplay(); },
     'ArrowRight': () => next(e.shiftKey), 'PageDown': () => next(e.shiftKey),
     'ArrowLeft': () => go(-1), 'PageUp': () => go(-1), 'p': () => go(-1),
     'l': () => skip(5), 'j': () => skip(-5),
@@ -3266,7 +3425,7 @@ function applyMode() {
 function applySettingsClasses() {
   document.body.classList.toggle('team-on', teamOn());
   document.body.classList.toggle('team-off', !teamOn());
-  document.body.classList.toggle('host-off', !state.settings.showHost);
+  document.body.classList.toggle('host-off', !state.settings.showHost); applyShotSetting();
   document.body.classList.toggle('fm-off', !state.settings.fastMoneyOn);
 }
 function enterGame(fromIdx) {
@@ -3327,6 +3486,7 @@ function hasProgress() {
   return s.current > 0 || Object.keys(s.rounds).length > 0 || Object.keys(s.adjust).length > 0 || Object.values(s.revealed).some(a => a && a.length);
 }
 function showStart() {
+  shotStop();
   hostSilence();
   if (fm) closeFastMoney();
   restoreLive(); closeOverlay('prDone');
@@ -3370,6 +3530,7 @@ $('#stPr').addEventListener('click', startPractice);
 $('#stFm').addEventListener('click', () => openFastMoney());
 $('#stSetup').addEventListener('click', () => { hideStart(); enterSetup(); });
 function enterSetup() {
+  shotStop();
   embStop(); closeAll();
   hostSilence();
   if (fm) closeFastMoney();
@@ -3497,7 +3658,7 @@ function syncSettingsUI() {
   $('#setTeam').checked = s.teamMode; $('#setX').checked = s.showX; $('#setGood').checked = s.showGood;
   $('#setSound').checked = s.sound; $('#setAuto').checked = s.autoHide; $('#setRemember').checked = s.rememberVideos;
   $$('.tg-pr').forEach(c => c.checked = !!state.practice.enabled); $$('.tg-fm').forEach(c => c.checked = s.fastMoneyOn);
-  $('#setHost').checked = s.showHost; $('#setReact').checked = s.reactions; if (document.activeElement !== $('#setHostName')) $('#setHostName').value = s.hostName;
+  $('#setHost').checked = s.showHost; $('#setReact').checked = s.reactions; $('#setShot').checked = s.shotClock; if (document.activeElement !== $('#setHostName')) $('#setHostName').value = s.hostName;
   $('#setSummary').checked = s.roundSummary;
   if (document.activeElement !== $('#setStrikes')) $('#setStrikes').value = s.maxStrikes;
   if (document.activeElement !== $('#team0')) $('#team0').value = s.teamNames[0];
@@ -3690,7 +3851,7 @@ const fmTotal = () => fm ? fm.qs.reduce((a, q, i) => a + (fm.res[i] === 'right' 
 const fmQuestions = () => state.fastMoney.questions.filter(q => str(q.q).trim());
 
 function openFastMoney(fromEnd) {
-  hostSilence();
+  hostSilence(); shotStop(); replayRun = null;
   if (!state.settings.fastMoneyOn) { toast('Fast Money is turned off — switch on “Include Fast Money Round” in Setup'); return; }
   if (typeof fromEnd !== 'boolean') fromEnd = isOpen('end');
   if (practice) { restoreLive(); renderGame(); }
@@ -4058,6 +4219,7 @@ document.addEventListener('change', e => {
 });
 $('#setHost').addEventListener('change', e => { state.settings.showHost = e.target.checked; applySettingsClasses(); save(); });
 $('#setReact').addEventListener('change', e => { state.settings.reactions = e.target.checked; save(); });
+$('#setShot').addEventListener('change', e => { state.settings.shotClock = e.target.checked; save(); applyShotSetting(); });
 $('#setHostName').addEventListener('input', e => { state.settings.hostName = e.target.value; save(); });
 $('#setRemember').addEventListener('change', async e => {
   state.settings.rememberVideos = e.target.checked; save();
@@ -5017,7 +5179,7 @@ window.addEventListener('message', e => {
     emb.ready = true; ['play', 'pause', 'ended', 'timeupdate'].forEach(ev => embSend('addEventListener', ev)); embSend('setLoop', false);
     emb.q.splice(0).forEach(([m, v]) => embSend(m, v));
   } else if (d.event === 'play') { emb.playing = true; updatePlayBtn(); }
-  else if (d.event === 'pause' || d.event === 'ended') { emb.playing = false; updatePlayBtn(); }
+  else if (d.event === 'pause' || d.event === 'ended') { emb.playing = false; updatePlayBtn(); if (d.event === 'ended') replayEnded(); }
   else if (d.event === 'timeupdate' && d.value) { emb.t = num(d.value.seconds); emb.dur = num(d.value.duration) || emb.dur; }
 });
 /* the video area for a play that has an MLB video */
