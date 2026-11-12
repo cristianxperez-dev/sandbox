@@ -3,6 +3,7 @@
    This list is shared by the Cloudflare gate (functions/_middleware.js) and by the GitHub Pages build,
    which leaves these apps out of the public mirror (scripts/strip-protected.mjs). */
 import { aiState } from "../manager-hub/server/ai-config.js";
+import { aiState as enAiState } from "../english/server/config.js";
 
 export const PROTECTED_APPS = [
   {
@@ -16,6 +17,18 @@ export const PROTECTED_APPS = [
     status: (env, host) => {
       const a = aiState(env, host);
       return { ai: { active: a.active, reason: a.reason, openaiKeyPresent: a.keyPresent, enabledFlag: a.enabledFlag, productionApproved: a.productionApproved, budgetConfigured: a.budgetConfigured, model: a.model } };
+    },
+  },
+  {
+    id: "english",
+    name: "CP English",
+    base: "/apps/english/",
+    codeSecret: "ENGLISH_ACCESS_CODE",
+    publicFiles: [],
+    // GET /apps/english/access/status — presence of settings only, never values
+    status: (env, host) => {
+      const a = enAiState(env, host);
+      return { ai: { active: a.active, reason: a.reason, openaiKeyPresent: a.keyPresent, enabledFlag: a.enabledFlag, productionApproved: a.productionApproved, budgetConfigured: a.budgetConfigured } };
     },
   },
 ];

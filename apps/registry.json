@@ -18,6 +18,25 @@
     ]
   },
   {
+    "id": "english",
+    "name": "CP English",
+    "description": "Practical English for Spanish-speaking baseball coaches: a placement test, narrated lessons, and speaking practice with feedback.",
+    "discipline": "Baseball",
+    "alsoIn": [
+      "Other / Experimental"
+    ],
+    "status": "prototype",
+    "returnLink": false,
+    "tags": [
+      "english",
+      "language learning",
+      "coaching",
+      "dominican academy",
+      "speaking",
+      "placement test"
+    ]
+  },
+  {
     "id": "nutrition-macros",
     "name": "Nutrition & Macros",
     "description": "Nutrition, fitness, and macronutrient tracking, built around the way I actually eat and train.",

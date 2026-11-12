@@ -1,0 +1,1250 @@
+{
+  "id": "f03",
+  "minutes": 25,
+  "intro": {
+    "can": "Give a player clear, simple instructions during practice, check that he understands, correct one movement and encourage him.",
+    "can_es": "Dar instrucciones claras y sencillas a un jugador durante la práctica, verificar que entiende, corregir un movimiento y animarlo.",
+    "outcomes": [
+      {
+        "en": "Give short instructions with action verbs: keep, move, stay, watch, try.",
+        "es": "Dar instrucciones cortas con verbos de acción: keep, move, stay, watch, try."
+      },
+      {
+        "en": "Explain a short drill in two or three steps.",
+        "es": "Explicar un ejercicio corto en dos o tres pasos."
+      },
+      {
+        "en": "Check understanding: \"Do you understand what we're working on?\"",
+        "es": "Verificar que entiende: \"Do you understand what we're working on?\""
+      },
+      {
+        "en": "Correct one movement and encourage the player before the next rep.",
+        "es": "Corregir un movimiento y animar al jugador antes de la próxima repetición."
+      }
+    ]
+  },
+  "speakers": {
+    "coach": {
+      "name": "Coach Dave",
+      "role": "Infield coordinator",
+      "role_es": "Coordinador de cuadro",
+      "voice": "am_fenrir"
+    },
+    "player": {
+      "name": "Tyler",
+      "role": "Shortstop",
+      "role_es": "Campocorto",
+      "voice": "am_puck"
+    },
+    "emily": {
+      "name": "Emily",
+      "role": "Performance analyst",
+      "role_es": "Analista de rendimiento",
+      "voice": "af_bella"
+    }
+  },
+  "lecture": {
+    "title": "Keep your head still",
+    "title_es": "Mantén la cabeza quieta",
+    "scenes": [
+      {
+        "visual": {
+          "type": "title",
+          "kicker": "Lesson 2 · Lecture",
+          "title": "Keep your head still",
+          "sub": "Giving simple baseball instructions"
+        },
+        "cues": [
+          {
+            "text": "In this lesson, you will learn how to give a player simple instructions during practice: what to do, how to do it, and how to encourage him.",
+            "es": "En esta lección vas a aprender a darle a un jugador instrucciones sencillas durante la práctica: qué hacer, cómo hacerlo y cómo animarlo."
+          },
+          {
+            "text": "You already know the baseball. The goal is to say it clearly in English, with short sentences a player understands right away.",
+            "es": "Tú ya conoces el béisbol. La meta es decirlo claramente en inglés, con oraciones cortas que el jugador entienda de inmediato."
+          }
+        ]
+      },
+      {
+        "visual": {
+          "type": "pattern",
+          "title": "Instructions start with the verb",
+          "title_es": "Las instrucciones empiezan con el verbo",
+          "rows": [
+            {
+              "en": "Keep …",
+              "example": "Keep your head still.",
+              "es": "Mantén …"
+            },
+            {
+              "en": "Move …",
+              "example": "Move your feet.",
+              "es": "Mueve …"
+            },
+            {
+              "en": "Stay …",
+              "example": "Stay balanced.",
+              "es": "Mantente …"
+            },
+            {
+              "en": "Watch …",
+              "example": "Watch the ball.",
+              "es": "Mira …"
+            },
+            {
+              "en": "Take …",
+              "example": "Take your time.",
+              "es": "Tómate …"
+            },
+            {
+              "en": "Try …",
+              "example": "Try it again.",
+              "es": "Inténtalo …"
+            }
+          ],
+          "note_es": "Para dar una instrucción en inglés, empieza directamente con el verbo, sin \"you\": \"Move your feet\", no \"You move your feet\". No suena grosero: es la forma normal en el terreno."
+        },
+        "cues": [
+          {
+            "text": "In English, an instruction usually starts with the verb. There is no you at the beginning.",
+            "es": "En inglés, una instrucción normalmente empieza con el verbo. No hay you al principio."
+          },
+          {
+            "text": "Keep your head still.",
+            "es": "Mantén la cabeza quieta.",
+            "reveal": 1,
+            "repeat": true
+          },
+          {
+            "text": "Move your feet.",
+            "es": "Mueve los pies.",
+            "reveal": 2,
+            "repeat": true
+          },
+          {
+            "text": "Stay balanced.",
+            "es": "Mantente equilibrado.",
+            "reveal": 3,
+            "repeat": true
+          },
+          {
+            "text": "Watch the ball.",
+            "es": "Mira la pelota.",
+            "reveal": 4,
+            "repeat": true
+          },
+          {
+            "text": "Take your time.",
+            "es": "Tómate tu tiempo.",
+            "reveal": 5,
+            "repeat": true
+          },
+          {
+            "text": "Try it again.",
+            "es": "Inténtalo otra vez.",
+            "reveal": 6,
+            "repeat": true
+          },
+          {
+            "text": "These are not rude. On a baseball field, this is the normal, clear way to talk. Your tone does the rest.",
+            "es": "No son groseras. En un terreno de béisbol, esta es la forma normal y clara de hablar. Tu tono hace el resto."
+          }
+        ]
+      },
+      {
+        "visual": {
+          "type": "phrases",
+          "title": "Body, direction, equipment",
+          "title_es": "Cuerpo, dirección, equipo",
+          "items": [
+            {
+              "en": "head · eyes · hands · glove hand · feet · knees · chest",
+              "es": "cabeza · ojos · manos · mano del guante · pies · rodillas · pecho"
+            },
+            {
+              "en": "forward · back · left · right · low · through the ball",
+              "es": "hacia adelante · hacia atrás · izquierda · derecha · abajo · a través de la pelota"
+            },
+            {
+              "en": "glove · bat · ball · base · cone · bucket",
+              "es": "guante · bate · pelota · base · cono · cubeta"
+            }
+          ],
+          "note_es": "\"Stay low\" significa mantenerse bajo, con las rodillas dobladas. \"Through the ball\" significa atacar la pelota y seguir el movimiento hacia adelante."
+        },
+        "cues": [
+          {
+            "text": "Instructions often point to a part of the body. Hands. Feet. Knees. Chest. Glove hand.",
+            "es": "Las instrucciones a menudo señalan una parte del cuerpo. Manos. Pies. Rodillas. Pecho. Mano del guante.",
+            "reveal": 1
+          },
+          {
+            "text": "Or to a direction. Forward. Back. Left. Right. Stay low. Work through the ball.",
+            "es": "O a una dirección. Hacia adelante. Hacia atrás. Izquierda. Derecha. Mantente bajo. Ataca a través de la pelota.",
+            "reveal": 2
+          },
+          {
+            "text": "Or to equipment. Grab your glove. Put the balls in the bucket. Line up at the cone.",
+            "es": "O al equipo. Agarra tu guante. Pon las pelotas en la cubeta. Pónganse en fila en el cono.",
+            "reveal": 3,
+            "repeat": true,
+            "say": "Or to equipment. Grab your glove. Put the balls in the bucket. Line up at the cone."
+          }
+        ]
+      },
+      {
+        "visual": {
+          "type": "phrases",
+          "title": "Telling a player where to go",
+          "title_es": "Decirle a un jugador a dónde ir",
+          "items": [
+            {
+              "en": "Come in. / Back up.",
+              "es": "Ven hacia adelante. / Retrocede."
+            },
+            {
+              "en": "Go to second base.",
+              "es": "Ve a segunda base."
+            },
+            {
+              "en": "Line up behind the cone.",
+              "es": "Pónganse en fila detrás del cono."
+            },
+            {
+              "en": "Switch with Tyler.",
+              "es": "Cambia con Tyler."
+            }
+          ],
+          "note_es": "\"Come in\" y \"back up\" son muy comunes en el terreno: acercarse o alejarse."
+        },
+        "cues": [
+          {
+            "text": "You will also tell players where to go.",
+            "es": "También vas a decirles a los jugadores a dónde ir."
+          },
+          {
+            "text": "Come in, means move closer. Back up, means move back.",
+            "es": "Come in significa acércate. Back up significa retrocede.",
+            "reveal": 1,
+            "repeat": true,
+            "say": "Come in, means move closer. Back up, means move back."
+          },
+          {
+            "text": "Go to second base.",
+            "es": "Ve a segunda base.",
+            "reveal": 2,
+            "repeat": true
+          },
+          {
+            "text": "Line up behind the cone.",
+            "es": "Pónganse en fila detrás del cono.",
+            "reveal": 3,
+            "repeat": true
+          },
+          {
+            "text": "And when players change places: switch with Tyler.",
+            "es": "Y cuando los jugadores cambian de lugar: cambia con Tyler.",
+            "reveal": 4,
+            "repeat": true
+          }
+        ]
+      },
+      {
+        "visual": {
+          "type": "steps",
+          "title": "Explaining a drill: first, then, after that",
+          "title_es": "Explicar un ejercicio: first, then, after that",
+          "steps": [
+            {
+              "en": "First, field the ball in front of you.",
+              "es": "Primero, fildea la pelota frente a ti."
+            },
+            {
+              "en": "Then, move your feet toward first base.",
+              "es": "Luego, mueve los pies hacia primera base."
+            },
+            {
+              "en": "After that, make a good throw.",
+              "es": "Después, haz un buen tiro."
+            },
+            {
+              "en": "Let's do five more.",
+              "es": "Hagamos cinco más."
+            }
+          ],
+          "note_es": "Usa \"first\", \"then\" y \"after that\" para ordenar los pasos. \"Let's\" (let us) invita: \"Let's do five more\" = hagamos cinco más."
+        },
+        "cues": [
+          {
+            "text": "To explain a short drill, put the steps in order with three small words: first, then, and after that.",
+            "es": "Para explicar un ejercicio corto, ordena los pasos con tres palabras pequeñas: first, then y after that."
+          },
+          {
+            "text": "First, field the ball in front of you.",
+            "es": "Primero, fildea la pelota frente a ti.",
+            "reveal": 1,
+            "repeat": true
+          },
+          {
+            "text": "Then, move your feet toward first base.",
+            "es": "Luego, mueve los pies hacia primera base.",
+            "reveal": 2,
+            "repeat": true
+          },
+          {
+            "text": "After that, make a good throw.",
+            "es": "Después, haz un buen tiro.",
+            "reveal": 3,
+            "repeat": true
+          },
+          {
+            "text": "And to set the number of reps, use let's. Let's do five more.",
+            "es": "Y para decir el número de repeticiones, usa let's. Hagamos cinco más.",
+            "reveal": 4,
+            "repeat": true
+          }
+        ]
+      },
+      {
+        "visual": {
+          "type": "dialogue",
+          "title": "Listen to a coach",
+          "title_es": "Escucha a un coach"
+        },
+        "cues": [
+          {
+            "text": "Listen to Coach Dave working with Tyler, a young shortstop.",
+            "es": "Escucha al coach Dave trabajando con Tyler, un campocorto joven."
+          },
+          {
+            "speaker": "coach",
+            "text": "OK, Tyler, today we're working on your first step. Stay low, and watch the ball into your glove.",
+            "es": "OK, Tyler, hoy vamos a trabajar tu primer paso. Mantente bajo y mira la pelota hasta que entre al guante."
+          },
+          {
+            "speaker": "player",
+            "text": "Got it.",
+            "es": "Entendido."
+          },
+          {
+            "speaker": "coach",
+            "text": "Good. Your feet stopped on that one. Keep your feet moving through the ball. Try it again.",
+            "es": "Bien. En esa se te pararon los pies. Mantén los pies en movimiento a través de la pelota. Inténtalo otra vez."
+          },
+          {
+            "speaker": "coach",
+            "text": "That's it! Much better. Let's do five more.",
+            "es": "¡Eso es! Mucho mejor. Hagamos cinco más.",
+            "repeat": true
+          }
+        ]
+      },
+      {
+        "visual": {
+          "type": "phrases",
+          "title": "Check, correct, encourage",
+          "title_es": "Verificar, corregir, animar",
+          "items": [
+            {
+              "en": "Do you understand what we're working on?",
+              "es": "¿Entiendes lo que estamos trabajando?"
+            },
+            {
+              "en": "Show me.",
+              "es": "Muéstrame."
+            },
+            {
+              "en": "Good. Now keep your glove out in front.",
+              "es": "Bien. Ahora mantén el guante al frente."
+            },
+            {
+              "en": "Nice job! / That's it! / Much better!",
+              "es": "¡Buen trabajo! / ¡Eso es! / ¡Mucho mejor!"
+            }
+          ],
+          "note_es": "Un buen orden: primero algo positivo, después una sola corrección, y al final ánimo. Una corrección a la vez es más fácil de entender."
+        },
+        "cues": [
+          {
+            "text": "Notice what Coach Dave did. He said what they were working on. He gave one correction. And he encouraged the player.",
+            "es": "Fíjate en lo que hizo el coach Dave. Dijo qué estaban trabajando. Dio una sola corrección. Y animó al jugador."
+          },
+          {
+            "text": "To check understanding, ask: do you understand what we're working on? Or simply: show me.",
+            "es": "Para verificar que entiende, pregunta: do you understand what we're working on? O simplemente: show me (muéstrame).",
+            "reveal": 1,
+            "repeat": true,
+            "say": "To check understanding, ask: do you understand what we're working on? Or simply: show me."
+          },
+          {
+            "text": "To correct, start with something positive, then give one clear change. Good. Now keep your glove out in front.",
+            "es": "Para corregir, empieza con algo positivo y luego da un cambio claro. Bien. Ahora mantén el guante al frente.",
+            "reveal": 3,
+            "repeat": true
+          },
+          {
+            "text": "And to encourage: nice job. That's it. Much better.",
+            "es": "Y para animar: buen trabajo. Eso es. Mucho mejor.",
+            "reveal": 4,
+            "repeat": true
+          }
+        ]
+      },
+      {
+        "visual": {
+          "type": "phrases",
+          "title": "Saying what not to do",
+          "title_es": "Decir lo que no se debe hacer",
+          "items": [
+            {
+              "en": "Don't rush.",
+              "es": "No te apures."
+            },
+            {
+              "en": "Don't drop your glove.",
+              "es": "No bajes el guante."
+            },
+            {
+              "en": "Don't stop your feet.",
+              "es": "No pares los pies."
+            }
+          ],
+          "note_es": "Para una instrucción negativa, usa \"Don't\" + verbo. Pero es mejor decir lo que SÍ debe hacer: en vez de \"Don't drop your glove\", di \"Keep your glove out in front\"."
+        },
+        "cues": [
+          {
+            "text": "Sometimes you need to say what not to do. Use don't, plus the verb.",
+            "es": "A veces necesitas decir lo que no se debe hacer. Usa don't, más el verbo."
+          },
+          {
+            "text": "Don't rush.",
+            "es": "No te apures.",
+            "reveal": 1,
+            "repeat": true
+          },
+          {
+            "text": "Don't drop your glove.",
+            "es": "No bajes el guante.",
+            "reveal": 2,
+            "repeat": true
+          },
+          {
+            "text": "Don't stop your feet.",
+            "es": "No pares los pies.",
+            "reveal": 3,
+            "repeat": true
+          },
+          {
+            "text": "But here is a coaching tip. A player understands faster when you say what to do. Instead of don't drop your glove, say: keep your glove out in front.",
+            "es": "Pero aquí va un consejo de entrenador. Un jugador entiende más rápido cuando le dices qué hacer. En vez de don't drop your glove, di: keep your glove out in front."
+          }
+        ]
+      },
+      {
+        "visual": {
+          "type": "phrases",
+          "title": "What American coaches say",
+          "title_es": "Lo que dicen los coaches estadounidenses",
+          "items": [
+            {
+              "en": "Good rep.",
+              "es": "Buena repetición."
+            },
+            {
+              "en": "Reset.",
+              "es": "Vuelve a tu posición inicial."
+            },
+            {
+              "en": "Stay through it.",
+              "es": "Mantente en el movimiento hasta el final."
+            },
+            {
+              "en": "Attaboy!",
+              "es": "¡Así se hace!"
+            }
+          ],
+          "note_es": "No tienes que usar todas estas expresiones, pero es importante entenderlas cuando las escuches."
+        },
+        "cues": [
+          {
+            "text": "You will also hear short expressions from American coaches. You don't have to use them all, but you should understand them.",
+            "es": "También vas a escuchar expresiones cortas de los coaches estadounidenses. No tienes que usarlas todas, pero debes entenderlas."
+          },
+          {
+            "text": "Good rep means good repetition.",
+            "es": "Good rep significa buena repetición.",
+            "reveal": 1,
+            "repeat": true
+          },
+          {
+            "text": "Reset means go back to your starting position.",
+            "es": "Reset significa vuelve a tu posición inicial.",
+            "reveal": 2
+          },
+          {
+            "text": "Stay through it means keep the movement going to the end.",
+            "es": "Stay through it significa mantén el movimiento hasta el final.",
+            "reveal": 3
+          },
+          {
+            "text": "And attaboy means great job. It is friendly and very common.",
+            "es": "Y attaboy significa muy bien hecho. Es amistoso y muy común.",
+            "reveal": 4
+          }
+        ]
+      },
+      {
+        "visual": {
+          "type": "phrases",
+          "title": "Going further: say why",
+          "title_es": "Un paso más: di por qué",
+          "level": "A2+",
+          "items": [
+            {
+              "en": "Stay low, so you can see the ball longer.",
+              "es": "Mantente bajo, así puedes ver la pelota por más tiempo."
+            },
+            {
+              "en": "Keep your head still, because it helps your eyes track the ball.",
+              "es": "Mantén la cabeza quieta, porque eso ayuda a tus ojos a seguir la pelota."
+            }
+          ],
+          "note_es": "Para jugadores y entrenadores con más nivel: después de la instrucción, agrega \"so…\" (así…) o \"because…\" (porque…) para explicar la razón."
+        },
+        "cues": [
+          {
+            "text": "If your English is a little stronger, add the reason. Use so, or because.",
+            "es": "Si tu inglés es un poco más fuerte, agrega la razón. Usa so, o because."
+          },
+          {
+            "text": "Stay low, so you can see the ball longer.",
+            "es": "Mantente bajo, así puedes ver la pelota por más tiempo.",
+            "reveal": 1,
+            "repeat": true
+          },
+          {
+            "text": "Keep your head still, because it helps your eyes track the ball.",
+            "es": "Mantén la cabeza quieta, porque eso ayuda a tus ojos a seguir la pelota.",
+            "reveal": 2,
+            "repeat": true
+          },
+          {
+            "text": "Now it's your turn. Practice the instructions, listen to a coach explain a drill, and then run a short drill yourself.",
+            "es": "Ahora es tu turno. Practica las instrucciones, escucha a un coach explicar un ejercicio y luego dirige tú un ejercicio corto."
+          }
+        ]
+      }
+    ]
+  },
+  "clips": {
+    "f03-d1": {
+      "title": "Coach Dave explains a drill",
+      "lines": [
+        {
+          "speaker": "coach",
+          "text": "Alright guys, bring it in. This drill is called short hops. Grab your glove and line up at the cone.",
+          "es": "Bueno, muchachos, acérquense. Este ejercicio se llama short hops. Agarren su guante y pónganse en fila en el cono."
+        },
+        {
+          "speaker": "coach",
+          "text": "First, I roll you a ball. Stay low and field it in front of you. Then, move your feet and throw to the bucket at second base.",
+          "es": "Primero, les tiro una pelota rodando. Manténganse bajos y fildéenla frente a ustedes. Luego, muevan los pies y tiren a la cubeta en segunda base."
+        },
+        {
+          "speaker": "coach",
+          "text": "We'll do ten each. Take your time, and watch the ball all the way into your glove. Any questions?",
+          "es": "Vamos a hacer diez cada uno. Tómense su tiempo y miren la pelota hasta que entre al guante. ¿Alguna pregunta?"
+        }
+      ]
+    },
+    "f03-d2": {
+      "title": "A correction",
+      "lines": [
+        {
+          "speaker": "coach",
+          "text": "Hey Tyler, nice effort on that one. Your glove was good, but your head moved. Keep your head still and watch the ball. OK? Show me.",
+          "es": "Oye, Tyler, buen esfuerzo en esa. El guante estuvo bien, pero se te movió la cabeza. Mantén la cabeza quieta y mira la pelota. ¿OK? Muéstrame."
+        },
+        {
+          "speaker": "player",
+          "text": "Like this?",
+          "es": "¿Así?"
+        },
+        {
+          "speaker": "coach",
+          "text": "Yes! That's it. Much better. Let's do three more.",
+          "es": "¡Sí! Eso es. Mucho mejor. Hagamos tres más."
+        }
+      ]
+    },
+    "f03-r1": {
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Keep your head still and watch the ball."
+        }
+      ]
+    },
+    "f03-r2": {
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Do you understand what we're working on?"
+        }
+      ]
+    },
+    "f03-r3": {
+      "lines": [
+        {
+          "speaker": "narrator",
+          "text": "Nice job. Let's do five more."
+        }
+      ]
+    },
+    "f03-q1": {
+      "lines": [
+        {
+          "speaker": "player",
+          "text": "Coach, what are we working on today?"
+        }
+      ]
+    },
+    "f03-q2": {
+      "lines": [
+        {
+          "speaker": "player",
+          "text": "Coach, I keep missing the ball. What am I doing wrong?"
+        }
+      ]
+    },
+    "f03-c1": {
+      "lines": [
+        {
+          "speaker": "player",
+          "text": "Hey Coach! What are we doing today?"
+        }
+      ]
+    },
+    "f03-c2": {
+      "lines": [
+        {
+          "speaker": "player",
+          "text": "OK. How many do we do?"
+        }
+      ]
+    },
+    "f03-c3": {
+      "lines": [
+        {
+          "speaker": "player",
+          "text": "How was that one? I think my feet stopped."
+        }
+      ]
+    },
+    "f03-c4": {
+      "lines": [
+        {
+          "speaker": "player",
+          "text": "Got it. Should I go again?"
+        }
+      ]
+    },
+    "f03-m1": {
+      "lines": [
+        {
+          "speaker": "coach",
+          "text": "Stay low and move your feet."
+        }
+      ]
+    }
+  },
+  "sections": [
+    {
+      "id": "learn",
+      "activities": [
+        {
+          "id": "f03-lec",
+          "type": "lecture"
+        },
+        {
+          "id": "f03-v1",
+          "type": "match",
+          "skill": "vocab",
+          "prompt": "Match each instruction with its meaning.",
+          "prompt_es": "Une cada instrucción con su significado.",
+          "pairs": [
+            [
+              "Keep your head still.",
+              "Mantén la cabeza quieta."
+            ],
+            [
+              "Move your feet.",
+              "Mueve los pies."
+            ],
+            [
+              "Stay balanced.",
+              "Mantente equilibrado."
+            ],
+            [
+              "Watch the ball.",
+              "Mira la pelota."
+            ],
+            [
+              "Take your time.",
+              "Tómate tu tiempo."
+            ],
+            [
+              "Try it again.",
+              "Inténtalo otra vez."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "listen",
+      "activities": [
+        {
+          "id": "f03-l1",
+          "type": "listen",
+          "skill": "listening",
+          "clip": "f03-d1",
+          "intro": "Coach Dave explains a drill to a group of infielders. Listen and answer.",
+          "intro_es": "El coach Dave explica un ejercicio a un grupo de jugadores de cuadro. Escucha y responde.",
+          "questions": [
+            {
+              "id": "q1",
+              "prompt": "Where do the players line up?",
+              "prompt_es": "¿Dónde se ponen en fila los jugadores?",
+              "options": [
+                "At the cone",
+                "At home plate",
+                "In the dugout"
+              ],
+              "answer": 0,
+              "explain": "\"Line up at the cone.\"",
+              "explain_es": "\"Line up at the cone\": en fila en el cono."
+            },
+            {
+              "id": "q2",
+              "prompt": "Where do they throw the ball?",
+              "prompt_es": "¿A dónde tiran la pelota?",
+              "options": [
+                "To first base",
+                "To the bucket at second base",
+                "To the coach"
+              ],
+              "answer": 1,
+              "explain": "\"Throw to the bucket at second base.\"",
+              "explain_es": "Tiran a la cubeta (bucket) en segunda base."
+            },
+            {
+              "id": "q3",
+              "prompt": "How many reps does each player do?",
+              "prompt_es": "¿Cuántas repeticiones hace cada jugador?",
+              "options": [
+                "Five",
+                "Ten",
+                "Three"
+              ],
+              "answer": 1,
+              "explain": "\"We'll do ten each.\"",
+              "explain_es": "\"We'll do ten each\": diez cada uno."
+            },
+            {
+              "id": "q4",
+              "prompt": "What does the coach want them to watch?",
+              "prompt_es": "¿Qué quiere el coach que miren?",
+              "options": [
+                "The bucket",
+                "The ball, all the way into the glove",
+                "The other players"
+              ],
+              "answer": 1,
+              "explain": "\"Watch the ball all the way into your glove.\"",
+              "explain_es": "Que miren la pelota hasta que entre al guante."
+            }
+          ]
+        },
+        {
+          "id": "f03-l2",
+          "type": "listen",
+          "skill": "listening",
+          "clip": "f03-d2",
+          "intro": "Listen to the coach correct Tyler.",
+          "intro_es": "Escucha al coach corregir a Tyler.",
+          "questions": [
+            {
+              "id": "q1",
+              "prompt": "What was the problem?",
+              "prompt_es": "¿Cuál fue el problema?",
+              "options": [
+                "His glove",
+                "His head moved",
+                "He threw late"
+              ],
+              "answer": 1,
+              "explain": "\"Your glove was good, but your head moved.\"",
+              "explain_es": "El guante estuvo bien, pero se le movió la cabeza."
+            },
+            {
+              "id": "q2",
+              "prompt": "What does the coach say first?",
+              "prompt_es": "¿Qué dice el coach primero?",
+              "options": [
+                "Something positive",
+                "A long explanation",
+                "\"Try harder.\""
+              ],
+              "answer": 0,
+              "explain": "\"Nice effort on that one.\" Positive first, then one correction.",
+              "explain_es": "Empieza con algo positivo (\"nice effort\") y luego da una corrección."
+            },
+            {
+              "id": "q3",
+              "prompt": "How many more reps?",
+              "prompt_es": "¿Cuántas repeticiones más?",
+              "options": [
+                "Three",
+                "Five",
+                "Ten"
+              ],
+              "answer": 0,
+              "explain": "\"Let's do three more.\"",
+              "explain_es": "\"Let's do three more\": hagamos tres más."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "activities": [
+        {
+          "id": "f03-p1",
+          "type": "choice",
+          "skill": "grammar",
+          "prompt": "Which is the clearest instruction?",
+          "prompt_es": "¿Cuál es la instrucción más clara?",
+          "options": [
+            "Move your feet.",
+            "You moving the feet.",
+            "Feet move you."
+          ],
+          "answer": 0,
+          "explain": "Instructions start with the verb: Move your feet.",
+          "explain_es": "Las instrucciones empiezan con el verbo: Move your feet."
+        },
+        {
+          "id": "f03-p2",
+          "type": "choice",
+          "skill": "vocab",
+          "prompt": "The player is rushing. What do you say?",
+          "prompt_es": "El jugador está apurado. ¿Qué le dices?",
+          "options": [
+            "Take your time.",
+            "Watch the bucket.",
+            "Line up."
+          ],
+          "answer": 0,
+          "explain": "\"Take your time\" means don't rush.",
+          "explain_es": "\"Take your time\": tómate tu tiempo, no te apures."
+        },
+        {
+          "id": "f03-p3",
+          "type": "choice",
+          "skill": "vocab",
+          "prompt": "Complete: \"Stay ___, with your knees bent.\"",
+          "prompt_es": "Completa: \"Stay ___, with your knees bent.\" (Mantente bajo, con las rodillas dobladas.)",
+          "options": [
+            "low",
+            "tall",
+            "late"
+          ],
+          "answer": 0,
+          "explain": "Stay low.",
+          "explain_es": "Stay low: mantente bajo."
+        },
+        {
+          "id": "f03-p4",
+          "type": "order",
+          "skill": "grammar",
+          "prompt": "Put the words in order.",
+          "prompt_es": "Ordena las palabras.",
+          "words": [
+            "head",
+            "your",
+            "still",
+            "keep"
+          ],
+          "answers": [
+            "keep your head still"
+          ],
+          "explain_es": "Verbo + your + parte del cuerpo + still: Keep your head still."
+        },
+        {
+          "id": "f03-p5",
+          "type": "choice",
+          "skill": "grammar",
+          "prompt": "Put the drill in order: field the ball → ___ → throw.",
+          "prompt_es": "Ordena el ejercicio: fildear → ___ → tirar.",
+          "options": [
+            "Then, move your feet.",
+            "First, move your feet.",
+            "Finally, line up."
+          ],
+          "answer": 0,
+          "explain": "First … then … after that.",
+          "explain_es": "First (primero), then (luego), after that (después)."
+        },
+        {
+          "id": "f03-p6",
+          "type": "choice",
+          "skill": "vocab",
+          "prompt": "You want to check if the player understands. You ask:",
+          "prompt_es": "Quieres verificar si el jugador entiende. Preguntas:",
+          "options": [
+            "Do you understand what we're working on?",
+            "Do you working on?",
+            "What you understand?"
+          ],
+          "answer": 0,
+          "explain": "\"Do you understand what we're working on?\"",
+          "explain_es": "\"Do you understand what we're working on?\" = ¿Entiendes lo que estamos trabajando?"
+        },
+        {
+          "id": "f03-p7",
+          "type": "choice",
+          "skill": "vocab",
+          "prompt": "Which is the best correction?",
+          "prompt_es": "¿Cuál es la mejor corrección?",
+          "options": [
+            "Good. Now keep your glove out in front.",
+            "Bad. Again.",
+            "No, no, no, everything is wrong."
+          ],
+          "answer": 0,
+          "explain": "Something positive + one clear change.",
+          "explain_es": "Algo positivo + un cambio claro."
+        },
+        {
+          "id": "f03-p8",
+          "type": "order",
+          "skill": "grammar",
+          "prompt": "Put the words in order.",
+          "prompt_es": "Ordena las palabras.",
+          "words": [
+            "more",
+            "do",
+            "five",
+            "let's"
+          ],
+          "answers": [
+            "let's do five more"
+          ],
+          "explain_es": "Let's + verbo: Let's do five more (hagamos cinco más)."
+        },
+        {
+          "id": "f03-p9",
+          "type": "choice",
+          "skill": "vocab",
+          "prompt": "The player did it well. You say:",
+          "prompt_es": "El jugador lo hizo bien. Le dices:",
+          "options": [
+            "That's it! Much better.",
+            "Try it again.",
+            "Move your feet."
+          ],
+          "answer": 0,
+          "explain": "That's it! Much better.",
+          "explain_es": "¡Eso es! Mucho mejor."
+        },
+        {
+          "id": "f03-p10",
+          "type": "choice",
+          "skill": "grammar",
+          "level": "A2",
+          "prompt": "Going further: choose the best reason. \"Stay low, ___ you can see the ball longer.\"",
+          "prompt_es": "Un paso más: elige la mejor opción. \"Stay low, ___ you can see the ball longer.\"",
+          "options": [
+            "so",
+            "but",
+            "or"
+          ],
+          "answer": 0,
+          "explain": "\"So\" introduces the result: stay low, so you can see the ball longer.",
+          "explain_es": "\"So\" introduce el resultado: así puedes ver la pelota por más tiempo."
+        }
+      ]
+    },
+    {
+      "id": "speak",
+      "activities": [
+        {
+          "id": "f03-s1",
+          "type": "repeat",
+          "skill": "speaking",
+          "clip": "f03-r1",
+          "text": "Keep your head still and watch the ball.",
+          "es": "Mantén la cabeza quieta y mira la pelota."
+        },
+        {
+          "id": "f03-s2",
+          "type": "repeat",
+          "skill": "speaking",
+          "clip": "f03-r2",
+          "text": "Do you understand what we're working on?",
+          "es": "¿Entiendes lo que estamos trabajando?"
+        },
+        {
+          "id": "f03-s3",
+          "type": "answer",
+          "skill": "speaking",
+          "clip": "f03-q1",
+          "prompt": "Coach, what are we working on today?",
+          "prompt_es": "Coach, ¿qué vamos a trabajar hoy?",
+          "goal": "The learner tells the player what they are working on today (a skill or drill) in one or two clear sentences, optionally with one instruction.",
+          "goal_es": "Dile al jugador qué van a trabajar hoy, en una o dos oraciones claras.",
+          "examples": [
+            "Today we're working on ground balls. Stay low and watch the ball.",
+            "We're working on your first step and your throws to first base."
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "f03-s4",
+          "type": "answer",
+          "skill": "speaking",
+          "clip": "f03-q2",
+          "prompt": "Coach, I keep missing the ball. What am I doing wrong?",
+          "prompt_es": "Coach, sigo fallando la pelota. ¿Qué estoy haciendo mal?",
+          "goal": "The learner gives one clear correction and one encouraging phrase. Intermediate learners may add why the correction helps.",
+          "goal_es": "Da una corrección clara y una frase de ánimo. Si tu nivel es más alto, explica por qué ayuda.",
+          "examples": [
+            "Your head is moving. Keep your head still and watch the ball into your glove. You can do it.",
+            "Stay low, so you can see the ball longer. Don't worry, try it again."
+          ],
+          "level": "A2"
+        }
+      ]
+    },
+    {
+      "id": "apply",
+      "activities": [
+        {
+          "id": "f03-c",
+          "type": "conversation",
+          "skill": "speaking",
+          "partner": "player",
+          "setting": "Defensive practice. Tyler, a young shortstop who speaks English, comes to you. Explain the drill, give one correction and encourage him before the next rep.",
+          "setting_es": "Práctica defensiva. Tyler, un campocorto joven que habla inglés, se te acerca. Explícale el ejercicio, dale una corrección y anímalo antes de la próxima repetición.",
+          "turns": [
+            {
+              "clip": "f03-c1",
+              "line": "Hey Coach! What are we doing today?",
+              "es": "¡Oye, coach! ¿Qué vamos a hacer hoy?",
+              "goal": "Explain the drill: what you are working on, and one or two steps.",
+              "goal_es": "Explica el ejercicio: qué van a trabajar y uno o dos pasos.",
+              "examples": [
+                "We're working on ground balls. First, field the ball in front of you. Then, throw to first.",
+                "Today we're doing short hops. Stay low and watch the ball into your glove."
+              ],
+              "fallback": {
+                "options": [
+                  "We're working on ground balls. First, field the ball in front of you. Then, throw to first.",
+                  "I'm from Santo Domingo.",
+                  "Good night, Tyler."
+                ],
+                "answer": 0
+              }
+            },
+            {
+              "clip": "f03-c2",
+              "line": "OK. How many do we do?",
+              "es": "OK. ¿Cuántas hacemos?",
+              "goal": "Say how many reps.",
+              "goal_es": "Di cuántas repeticiones.",
+              "examples": [
+                "Let's do ten.",
+                "We'll do ten, and then we switch."
+              ],
+              "fallback": {
+                "options": [
+                  "At ten o'clock.",
+                  "Let's do ten.",
+                  "Ten years."
+                ],
+                "answer": 1
+              }
+            },
+            {
+              "clip": "f03-c3",
+              "line": "How was that one? I think my feet stopped.",
+              "es": "¿Cómo estuvo esa? Creo que se me pararon los pies.",
+              "goal": "Say something positive, then give one correction about his feet.",
+              "goal_es": "Di algo positivo y luego da una corrección sobre sus pies.",
+              "examples": [
+                "Good effort. Yes, your feet stopped. Keep your feet moving through the ball.",
+                "Nice glove. Now move your feet toward the ball. Try it again."
+              ],
+              "fallback": {
+                "options": [
+                  "Bad. Again.",
+                  "Good effort. Keep your feet moving through the ball.",
+                  "Watch the bucket."
+                ],
+                "answer": 1
+              }
+            },
+            {
+              "clip": "f03-c4",
+              "line": "Got it. Should I go again?",
+              "es": "Entendido. ¿Voy otra vez?",
+              "goal": "Encourage him and send him to the next rep.",
+              "goal_es": "Anímalo y mándalo a la próxima repetición.",
+              "examples": [
+                "Yes, go again. Take your time. You've got this.",
+                "Yes! Nice job. Let's do five more."
+              ],
+              "fallback": {
+                "options": [
+                  "Yes, go again. Take your time. You've got this.",
+                  "No, I'm tired.",
+                  "Where are you from?"
+                ],
+                "answer": 0
+              },
+              "last": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "activities": [
+        {
+          "id": "f03-m",
+          "type": "mastery",
+          "pass": 4,
+          "items": [
+            {
+              "id": "m1",
+              "skill": "grammar",
+              "prompt": "Which instruction is correct?",
+              "prompt_es": "¿Cuál instrucción es correcta?",
+              "options": [
+                "Watch the ball.",
+                "You watching ball.",
+                "The ball watch."
+              ],
+              "answer": 0,
+              "explain": "Verb first: Watch the ball.",
+              "explain_es": "Verbo primero: Watch the ball."
+            },
+            {
+              "id": "m2",
+              "skill": "vocab",
+              "prompt": "The player rushes every throw. You say:",
+              "prompt_es": "El jugador apura cada tiro. Le dices:",
+              "options": [
+                "Take your time.",
+                "Let's go home.",
+                "Line up at the cone."
+              ],
+              "answer": 0,
+              "explain": "Take your time.",
+              "explain_es": "Tómate tu tiempo."
+            },
+            {
+              "id": "m3",
+              "skill": "grammar",
+              "prompt": "Complete: \"First, field the ball. ___, throw to first.\"",
+              "prompt_es": "Completa: \"First, field the ball. ___, throw to first.\"",
+              "options": [
+                "Then",
+                "Yesterday",
+                "Because"
+              ],
+              "answer": 0,
+              "explain": "First … then …",
+              "explain_es": "First … then … (primero … luego …)."
+            },
+            {
+              "id": "m4",
+              "skill": "vocab",
+              "prompt": "Best way to check understanding:",
+              "prompt_es": "La mejor forma de verificar que entiende:",
+              "options": [
+                "Do you understand what we're working on?",
+                "Do you have a car?",
+                "Are you tired?"
+              ],
+              "answer": 0,
+              "explain": "Do you understand what we're working on?",
+              "explain_es": "¿Entiendes lo que estamos trabajando?"
+            },
+            {
+              "id": "m5",
+              "skill": "listening",
+              "clip": "f03-m1",
+              "prompt": "Listen. What is the instruction?",
+              "prompt_es": "Escucha. ¿Cuál es la instrucción?",
+              "options": [
+                "Stay low and move your feet.",
+                "Stay late and move the bucket.",
+                "Throw low and move first."
+              ],
+              "answer": 0,
+              "explain": "\"Stay low and move your feet.\"",
+              "explain_es": "\"Mantente bajo y mueve los pies.\""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "en": "Keep your head still.",
+      "es": "Mantén la cabeza quieta."
+    },
+    {
+      "en": "Move your feet. / Stay balanced. / Stay low.",
+      "es": "Mueve los pies. / Mantente equilibrado. / Mantente bajo."
+    },
+    {
+      "en": "Watch the ball into your glove.",
+      "es": "Mira la pelota hasta que entre al guante."
+    },
+    {
+      "en": "Take your time. / Try it again.",
+      "es": "Tómate tu tiempo. / Inténtalo otra vez."
+    },
+    {
+      "en": "First … Then … After that …",
+      "es": "Primero … Luego … Después …"
+    },
+    {
+      "en": "Let's do five more.",
+      "es": "Hagamos cinco más."
+    },
+    {
+      "en": "Do you understand what we're working on? / Show me.",
+      "es": "¿Entiendes lo que estamos trabajando? / Muéstrame."
+    },
+    {
+      "en": "Good. Now keep your glove out in front.",
+      "es": "Bien. Ahora mantén el guante al frente."
+    },
+    {
+      "en": "Nice job! That's it! Much better!",
+      "es": "¡Buen trabajo! ¡Eso es! ¡Mucho mejor!"
+    },
+    {
+      "en": "Stay low, so you can see the ball longer.",
+      "es": "Mantente bajo, así puedes ver la pelota por más tiempo."
+    }
+  ],
+  "next_es": "Siguiente: repasa las frases que fallaste y practica las instrucciones en voz alta en tu próxima práctica."
+}

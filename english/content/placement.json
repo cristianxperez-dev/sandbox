@@ -1,0 +1,90 @@
+{
+  "id": "placement-v1",
+  "version": 1,
+  "note": "Internal estimated placement inspired by CEFR bands. Not an official certification.",
+  "levels": ["A0", "A1", "A2", "B1", "B2"],
+  "speakers": {
+    "anna": { "voice": "af_bella" },
+    "dave": { "voice": "am_fenrir" },
+    "tyler": { "voice": "am_puck" },
+    "sarah": { "voice": "af_kore" }
+  },
+  "clips": {
+    "pl-a0-l1": { "lines": [ { "speaker": "anna", "text": "Good morning!" } ] },
+    "pl-a0-l2": { "lines": [ { "speaker": "dave", "text": "Grab your glove." } ] },
+    "pl-a1-l1": { "lines": [ { "speaker": "anna", "text": "Hi, I'm Anna. I'm from Miami. I work with the pitchers." } ] },
+    "pl-a1-l2": { "lines": [ { "speaker": "dave", "text": "Practice starts at eight thirty tomorrow." } ] },
+    "pl-a2-l1": { "lines": [ { "speaker": "dave", "text": "Hey, the bus to the game leaves at one, not at two. Please tell the players to be in the parking lot by twelve forty-five." } ] },
+    "pl-a2-l2": { "lines": [
+      { "speaker": "tyler", "text": "Coach, can I hit in the first group today?" },
+      { "speaker": "dave", "text": "Not today. You're in the second group, after the infield work." }
+    ] },
+    "pl-b1-l1": { "lines": [ { "speaker": "sarah", "text": "So the plan for this week is to cut back on live batting practice. A lot of the guys are getting tired, so we'll do more tee work and front toss, and we'll go back to live BP on Friday." } ] },
+    "pl-b1-l2": { "lines": [
+      { "speaker": "dave", "text": "How's Martinez doing?" },
+      { "speaker": "sarah", "text": "Honestly, his effort is great, but he's still rushing his throws. I'd like to slow him down before we move him to shortstop." }
+    ] },
+    "pl-b2-l1": { "lines": [ { "speaker": "sarah", "text": "I don't think the issue is his arm strength. If you look at the video, he's catching the ball late and then trying to make up for it, which is why the throws sail. Clean up the exchange and the accuracy will follow." } ] },
+    "pl-b2-l2": { "lines": [ { "speaker": "dave", "text": "I hear you, but I'm not sure we can afford to sit him for two weeks. Let's check in with the medical staff before we make that call." } ] },
+    "pl-s1": { "lines": [ { "speaker": "anna", "text": "Tell me your name, where you're from, and what you do." } ] },
+    "pl-s2": { "lines": [ { "speaker": "anna", "text": "What time do you usually arrive at the academy?" } ] },
+    "pl-s3": { "lines": [ { "speaker": "dave", "text": "Explain what you normally do at work in the morning." } ] },
+    "pl-s4": { "lines": [ { "speaker": "tyler", "text": "Hey Coach, what time does practice start tomorrow? And where do we meet?" } ] },
+    "pl-s5": { "lines": [ { "speaker": "dave", "text": "One of your players keeps making the same mistake in practice. What would you tell him, and why?" } ] },
+    "pl-s6": { "lines": [ { "speaker": "sarah", "text": "Some coaches want shorter practices and more video sessions. What do you think about that idea? Explain your opinion." } ] }
+  },
+  "items": [
+    { "id": "a0-v1", "level": "A0", "skill": "vocab", "prompt": "\"Hello\" means…", "prompt_es": "\"Hello\" significa…", "options": ["Hola", "Adiós", "Gracias", "Perdón"], "answer": 0 },
+    { "id": "a0-v2", "level": "A0", "skill": "vocab", "prompt": "Which word is a baseball player's equipment?", "prompt_es": "¿Cuál palabra es equipo de un jugador de béisbol?", "options": ["glove", "kitchen", "window", "pillow"], "answer": 0 },
+    { "id": "a0-v3", "level": "A0", "skill": "vocab", "prompt": "\"Thank you\" means…", "prompt_es": "\"Thank you\" significa…", "options": ["Gracias", "Bienvenido", "Por favor", "Lo siento"], "answer": 0 },
+    { "id": "a0-g1", "level": "A0", "skill": "grammar", "prompt": "Complete: \"My name ___ Carlos.\"", "options": ["is", "are", "am", "be"], "answer": 0 },
+    { "id": "a0-g2", "level": "A0", "skill": "grammar", "prompt": "Complete: \"I ___ a coach.\"", "options": ["am", "is", "are", "be"], "answer": 0 },
+    { "id": "a0-r1", "level": "A0", "skill": "reading", "prompt": "Read the sign: \"PRACTICE 8:00 AM\". When is practice?", "prompt_es": "Lee el letrero. ¿Cuándo es la práctica?", "options": ["In the morning", "At night", "On Sunday only", "There is no practice"], "answer": 0 },
+    { "id": "a0-l1", "level": "A0", "skill": "listening", "clip": "pl-a0-l1", "prompt": "Listen. What does she say?", "prompt_es": "Escucha. ¿Qué dice?", "options": ["Good morning!", "Good night!", "Goodbye!", "Good game!"], "answer": 0 },
+    { "id": "a0-l2", "level": "A0", "skill": "listening", "clip": "pl-a0-l2", "prompt": "Listen. What does the coach want?", "prompt_es": "Escucha. ¿Qué quiere el coach?", "options": ["Get your glove", "Get your bat", "Go home", "Drink water"], "answer": 0 },
+
+    { "id": "a1-v1", "level": "A1", "skill": "vocab", "prompt": "\"What do you do?\" asks about your…", "options": ["job", "age", "family", "address"], "answer": 0 },
+    { "id": "a1-v2", "level": "A1", "skill": "vocab", "prompt": "A coach says: \"Move your feet.\" He means:", "options": ["Use your feet; don't stand still.", "Take off your shoes.", "Sit down.", "Run home."], "answer": 0 },
+    { "id": "a1-g1", "level": "A1", "skill": "grammar", "prompt": "Choose the correct sentence.", "options": ["I work with young players.", "I working with young players.", "Work with young players I.", "I works with young players."], "answer": 0 },
+    { "id": "a1-g2", "level": "A1", "skill": "grammar", "prompt": "Complete: \"She ___ from Texas.\"", "options": ["is", "am", "are", "be"], "answer": 0 },
+    { "id": "a1-g3", "level": "A1", "skill": "grammar", "prompt": "Complete: \"___ are you from?\"", "options": ["Where", "What time", "How much", "Who"], "answer": 0 },
+    { "id": "a1-r1", "level": "A1", "skill": "reading", "prompt": "Read: \"Hi! I'm Luis. I'm a strength coach. I usually start work at six and finish at two.\" When does Luis finish work?", "options": ["At two", "At six", "At eight", "At twelve"], "answer": 0 },
+    { "id": "a1-l1", "level": "A1", "skill": "listening", "clip": "pl-a1-l1", "prompt": "Listen. Who does Anna work with?", "options": ["The pitchers", "The hitters", "The catchers", "The managers"], "answer": 0 },
+    { "id": "a1-l2", "level": "A1", "skill": "listening", "clip": "pl-a1-l2", "prompt": "Listen. When does practice start?", "options": ["8:30 tomorrow", "8:30 today", "9:30 tomorrow", "8:00 tomorrow"], "answer": 0 },
+
+    { "id": "a2-v1", "level": "A2", "skill": "vocab", "prompt": "\"The game was postponed\" means the game…", "options": ["will happen on another day", "was cancelled forever", "ended early", "started late"], "answer": 0 },
+    { "id": "a2-v2", "level": "A2", "skill": "vocab", "prompt": "A player says: \"My shoulder is sore.\" He means his shoulder…", "options": ["hurts a little", "is very strong", "is broken", "is cold"], "answer": 0 },
+    { "id": "a2-g1", "level": "A2", "skill": "grammar", "prompt": "Complete: \"Yesterday we ___ two games.\"", "options": ["played", "play", "playing", "plays"], "answer": 0 },
+    { "id": "a2-g2", "level": "A2", "skill": "grammar", "prompt": "Complete: \"He is ___ than his brother.\"", "options": ["faster", "fast", "more fast", "fastest"], "answer": 0 },
+    { "id": "a2-r1", "level": "A2", "skill": "reading", "prompt": "Read: \"Team meeting moved to 3:00 in the video room. Bring your notebook. Lunch is at 12:30 as usual.\" What changed?", "options": ["The time and place of the meeting", "The lunch time", "The notebook", "Nothing changed"], "answer": 0 },
+    { "id": "a2-r2", "level": "A2", "skill": "reading", "prompt": "Read: \"Players who arrive late will not start in tonight's game.\" What happens if a player is late?", "options": ["He doesn't start the game.", "He plays the whole game.", "He goes home.", "He pays money."], "answer": 0 },
+    { "id": "a2-l1", "level": "A2", "skill": "listening", "clip": "pl-a2-l1", "prompt": "Listen. When should the players be in the parking lot?", "options": ["By 12:45", "By 1:00", "By 2:00", "By 1:45"], "answer": 0 },
+    { "id": "a2-l2", "level": "A2", "skill": "listening", "clip": "pl-a2-l2", "prompt": "Listen. When does the player hit?", "options": ["In the second group, after infield work", "In the first group", "He doesn't hit today", "Before infield work"], "answer": 0 },
+
+    { "id": "b1-v1", "level": "B1", "skill": "vocab", "prompt": "\"Let's cut back on throwing this week\" means…", "options": ["throw less", "throw more", "stop throwing forever", "throw at a different time"], "answer": 0 },
+    { "id": "b1-v2", "level": "B1", "skill": "vocab", "prompt": "\"He's struggling with his confidence\" means…", "options": ["He doesn't feel sure of himself.", "He is too confident.", "He is fighting with someone.", "He is injured."], "answer": 0 },
+    { "id": "b1-g1", "level": "B1", "skill": "grammar", "prompt": "Complete: \"I ___ here since 2019.\"", "options": ["have worked", "work", "am working", "worked since"], "answer": 0 },
+    { "id": "b1-g2", "level": "B1", "skill": "grammar", "prompt": "Complete: \"If he ___ his feet, the throw will be more accurate.\"", "options": ["moves", "will move", "moved", "moving"], "answer": 0 },
+    { "id": "b1-r1", "level": "B1", "skill": "reading", "prompt": "Read: \"Although his numbers look good, we'd like to see more consistency before promoting him.\" What is the decision?", "options": ["Wait before promoting him", "Promote him now", "Release him", "Change his position"], "answer": 0 },
+    { "id": "b1-l1", "level": "B1", "skill": "listening", "clip": "pl-b1-l1", "prompt": "Listen. Why will they do less live batting practice?", "options": ["The players are tired.", "It is raining.", "The field is closed.", "There are no pitchers."], "answer": 0 },
+    { "id": "b1-l2", "level": "B1", "skill": "listening", "clip": "pl-b1-l2", "prompt": "Listen. What does she want to do with Martinez?", "options": ["Slow him down before moving him to shortstop", "Move him to shortstop right away", "Work on his effort", "Rest him for a week"], "answer": 0 },
+    { "id": "b1-r2", "level": "B1", "skill": "reading", "prompt": "Read: \"Please submit your player evaluations by Thursday so the staff can review them before the weekend meeting.\" Why is Thursday important?", "options": ["Staff needs time to review before the meeting.", "The meeting is on Thursday.", "Players leave on Thursday.", "Evaluations are optional."], "answer": 0 },
+
+    { "id": "b2-v1", "level": "B2", "skill": "vocab", "prompt": "\"We need to make that call\" means we need to…", "options": ["make a decision", "phone someone", "call a timeout", "shout louder"], "answer": 0 },
+    { "id": "b2-v2", "level": "B2", "skill": "vocab", "prompt": "\"His approach at the plate has matured\" means…", "options": ["He makes better decisions as a hitter.", "He is older now.", "He walks to the plate slowly.", "He changed his bat."], "answer": 0 },
+    { "id": "b2-g1", "level": "B2", "skill": "grammar", "prompt": "Complete: \"If we ___ him earlier, he wouldn't have gotten hurt.\"", "options": ["had rested", "rested", "would rest", "have rested"], "answer": 0 },
+    { "id": "b2-g2", "level": "B2", "skill": "grammar", "prompt": "Choose the most natural sentence.", "options": ["I'd rather we focused on defense this week.", "I rather we focus on defense this week.", "I'd rather to focus on defense this week.", "I prefer that we focusing on defense this week."], "answer": 0 },
+    { "id": "b2-r1", "level": "B2", "skill": "reading", "prompt": "Read: \"While the pilot program showed promise, the sample was too small to draw firm conclusions.\" The author thinks the results are…", "options": ["encouraging but not conclusive", "definitely proven", "a total failure", "not interesting"], "answer": 0 },
+    { "id": "b2-l1", "level": "B2", "skill": "listening", "clip": "pl-b2-l1", "prompt": "Listen. According to the speaker, why do the throws sail?", "options": ["He catches the ball late and rushes.", "His arm is weak.", "The ball is wet.", "He throws too slowly."], "answer": 0 },
+    { "id": "b2-l2", "level": "B2", "skill": "listening", "clip": "pl-b2-l2", "prompt": "Listen. What does the speaker want to do?", "options": ["Talk to the medical staff before deciding", "Sit the player for two weeks", "Play the player every day", "Ignore the problem"], "answer": 0 },
+    { "id": "b2-r2", "level": "B2", "skill": "reading", "prompt": "Read: \"The new schedule isn't set in stone; we'll revisit it after the first month.\" The schedule…", "options": ["may change later", "will never change", "starts next year", "was rejected"], "answer": 0 }
+  ],
+  "speaking": [
+    { "id": "sp1", "level": "A1", "clip": "pl-s1", "prompt": "Tell me your name, where you're from, and what you do.", "prompt_es": "Dime tu nombre, de dónde eres y a qué te dedicas.", "goal": "Name, place of origin and job, in simple sentences.", "examples": ["My name is Carlos. I'm from Santo Domingo. I'm a baseball coach."] },
+    { "id": "sp2", "level": "A1", "clip": "pl-s2", "prompt": "What time do you usually arrive at the academy?", "prompt_es": "¿A qué hora llegas normalmente a la academia?", "goal": "A time, ideally in a sentence with usually.", "examples": ["I usually arrive at seven.", "At six thirty in the morning."] },
+    { "id": "sp3", "level": "A2", "clip": "pl-s3", "prompt": "Explain what you normally do at work in the morning.", "prompt_es": "Explica qué haces normalmente en el trabajo en la mañana.", "goal": "Two or more connected activities in a sequence, present simple.", "examples": ["First I have a meeting with the coaches, then I prepare the field, and at eight we start practice with stretching."] },
+    { "id": "sp4", "level": "A2", "clip": "pl-s4", "prompt": "Hey Coach, what time does practice start tomorrow? And where do we meet?", "prompt_es": "Un jugador pregunta a qué hora empieza la práctica mañana y dónde se reúnen.", "goal": "A time and a meeting place, answering both questions.", "examples": ["Practice starts at eight. We meet on field two, by the batting cages."] },
+    { "id": "sp5", "level": "B1", "clip": "pl-s5", "prompt": "One of your players keeps making the same mistake in practice. What would you tell him, and why?", "prompt_es": "Un jugador comete el mismo error varias veces. ¿Qué le dirías y por qué?", "goal": "A specific correction with a reason, tactful tone.", "examples": ["I'd tell him to slow down and focus on one thing, like keeping his glove in front, because if he tries to fix everything at once he gets frustrated."] },
+    { "id": "sp6", "level": "B2", "clip": "pl-s6", "prompt": "Some coaches want shorter practices and more video sessions. What do you think about that idea? Explain your opinion.", "prompt_es": "Algunos coaches quieren prácticas más cortas y más sesiones de video. ¿Qué opinas? Explica tu opinión.", "goal": "A clear opinion with reasons, acknowledging another view, connected discourse.", "examples": ["I think it depends on the player. Video helps older players understand their mechanics, but younger players need more reps on the field, so I'd keep practice long and add short video sessions."] }
+  ]
+}

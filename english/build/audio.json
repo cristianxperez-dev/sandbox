@@ -1,0 +1,946 @@
+{
+"files": {
+"f01": {
+"audio": "media/lectures/f01.mp3",
+"bytes": 1174413,
+"cues": [
+[
+0.0,
+9.877
+],
+[
+10.177,
+16.343
+],
+[
+17.193,
+24.339
+],
+[
+24.789,
+28.437
+],
+[
+28.887,
+32.13
+],
+[
+32.58,
+35.759
+],
+[
+36.209,
+37.723
+],
+[
+38.173,
+39.645
+],
+[
+40.495,
+46.277
+],
+[
+46.577,
+48.795
+],
+[
+49.095,
+52.125
+],
+[
+52.425,
+54.707
+],
+[
+55.557,
+58.309
+],
+[
+58.609,
+61.319
+],
+[
+61.619,
+63.816
+],
+[
+64.116,
+66.079
+],
+[
+66.379,
+68.192
+],
+[
+68.492,
+72.929
+],
+[
+73.229,
+82.445
+],
+[
+83.295,
+86.965
+],
+[
+87.265,
+90.401
+],
+[
+90.701,
+92.557
+],
+[
+92.857,
+96.739
+],
+[
+97.039,
+106.042
+],
+[
+106.892,
+113.377
+],
+[
+113.677,
+121.016
+],
+[
+121.316,
+127.289
+],
+[
+127.589,
+135.547
+],
+[
+136.397,
+142.455
+],
+[
+142.755,
+144.313
+],
+[
+144.613,
+146.405
+],
+[
+146.705,
+152.273
+],
+[
+153.123,
+158.179
+],
+[
+158.629,
+159.951
+],
+[
+160.401,
+162.108
+],
+[
+162.558,
+164.542
+],
+[
+164.992,
+168.917
+],
+[
+169.367,
+179.991
+],
+[
+180.841,
+185.727
+],
+[
+186.027,
+195.243
+]
+],
+"duration": 195.643,
+"hash": "e55347630beb609b2a25e7bcaf883472de4ecaa43dca7730b24a8f34770b7271",
+"kind": "lecture"
+},
+"f01-c1": {
+"audio": "media/clips/f01-c1.mp3",
+"bytes": 22701,
+"cues": [
+[
+0.0,
+3.285
+]
+],
+"duration": 3.685,
+"hash": "7e2ce3ea94cfe6087fb2000d722a99b34a59b772464c7ed9270790d0ffadad1e",
+"kind": "clip"
+},
+"f01-c2": {
+"audio": "media/clips/f01-c2.mp3",
+"bytes": 15213,
+"cues": [
+[
+0.0,
+2.027
+]
+],
+"duration": 2.427,
+"hash": "dbf9726ac994b1c448d1d1ea6ed33d57a1ea675d7f3e90b8d1e4a13e51c36466",
+"kind": "clip"
+},
+"f01-c3": {
+"audio": "media/clips/f01-c3.mp3",
+"bytes": 14925,
+"cues": [
+[
+0.0,
+1.984
+]
+],
+"duration": 2.384,
+"hash": "a1f46c28e695f9c4cc2c45d37788c905e365237ea558aa237d8b416927406371",
+"kind": "clip"
+},
+"f01-c4": {
+"audio": "media/clips/f01-c4.mp3",
+"bytes": 15933,
+"cues": [
+[
+0.0,
+2.155
+]
+],
+"duration": 2.555,
+"hash": "c0f77d4c6d87ed1d660bb30eed59c6d40494c39c2dc2f53c50e431ce7bfbd60e",
+"kind": "clip"
+},
+"f01-c5": {
+"audio": "media/clips/f01-c5.mp3",
+"bytes": 32061,
+"cues": [
+[
+0.0,
+4.843
+]
+],
+"duration": 5.243,
+"hash": "b5c9e3f94ef95ad1d69fb471c162d6d7d7cfaa689956b5e06cde0d2973ffa3e2",
+"kind": "clip"
+},
+"f01-d1": {
+"audio": "media/clips/f01-d1.mp3",
+"bytes": 160509,
+"cues": [
+[
+0.0,
+1.899
+],
+[
+2.349,
+6.167
+],
+[
+6.617,
+10.116
+],
+[
+10.566,
+13.126
+],
+[
+13.576,
+17.203
+],
+[
+17.653,
+22.367
+],
+[
+22.817,
+24.332
+],
+[
+24.782,
+26.254
+]
+],
+"duration": 26.654,
+"hash": "0df56641899ccaf6554fc6ee29e9e4731128a707beac30ea763c969df1097e71",
+"kind": "clip"
+},
+"f01-d2": {
+"audio": "media/clips/f01-d2.mp3",
+"bytes": 81885,
+"cues": [
+[
+0.0,
+13.141
+]
+],
+"duration": 13.541,
+"hash": "20c5b6a2a7185779adf68b5ec8278e9970e30901e7e462072153e6ee5211948d",
+"kind": "clip"
+},
+"f01-q1": {
+"audio": "media/clips/f01-q1.mp3",
+"bytes": 21261,
+"cues": [
+[
+0.0,
+3.051
+]
+],
+"duration": 3.451,
+"hash": "0bfa92654875e028b4a7f6a3aa63dd50f73921460b5adb9ad3c6bbc545bc7dbf",
+"kind": "clip"
+},
+"f01-q2": {
+"audio": "media/clips/f01-q2.mp3",
+"bytes": 18669,
+"cues": [
+[
+0.0,
+2.624
+]
+],
+"duration": 3.024,
+"hash": "a4a6b8f030bce15211e489452f5ff4c4ee2a81a801614d0b89df7928175f52ae",
+"kind": "clip"
+},
+"f01-r1": {
+"audio": "media/clips/f01-r1.mp3",
+"bytes": 22413,
+"cues": [
+[
+0.0,
+3.243
+]
+],
+"duration": 3.643,
+"hash": "216a7e10508991a3002ab1c2ea7a8718370602abd825717dc670539fa605b6ff",
+"kind": "clip"
+},
+"f01-r2": {
+"audio": "media/clips/f01-r2.mp3",
+"bytes": 14637,
+"cues": [
+[
+0.0,
+1.941
+]
+],
+"duration": 2.341,
+"hash": "b00a9c42856f8b4e05aeaaffe55c8b42d424b08fb678222035bf8024c4817f37",
+"kind": "clip"
+},
+"f01-r3": {
+"audio": "media/clips/f01-r3.mp3",
+"bytes": 12333,
+"cues": [
+[
+0.0,
+1.557
+]
+],
+"duration": 1.957,
+"hash": "4ff09102307191981f233c776ba0856ecc4348d5ca07ba60c34f18f129dc6003",
+"kind": "clip"
+},
+"f03": {
+"audio": "media/lectures/f03.mp3",
+"bytes": 1079517,
+"cues": [
+[
+0.0,
+8.128
+],
+[
+8.428,
+15.575
+],
+[
+16.425,
+21.225
+],
+[
+21.525,
+22.677
+],
+[
+22.977,
+23.979
+],
+[
+24.279,
+25.325
+],
+[
+25.625,
+26.649
+],
+[
+26.949,
+27.93
+],
+[
+28.23,
+29.233
+],
+[
+29.533,
+35.826
+],
+[
+36.676,
+42.607
+],
+[
+42.907,
+47.387
+],
+[
+47.687,
+52.551
+],
+[
+53.401,
+55.385
+],
+[
+55.685,
+58.927
+],
+[
+59.227,
+60.486
+],
+[
+60.786,
+62.237
+],
+[
+62.537,
+65.417
+],
+[
+66.267,
+72.069
+],
+[
+72.369,
+74.311
+],
+[
+74.611,
+76.723
+],
+[
+77.023,
+78.687
+],
+[
+78.987,
+82.379
+],
+[
+83.229,
+86.621
+],
+[
+87.071,
+93.065
+],
+[
+93.515,
+94.241
+],
+[
+94.691,
+99.491
+],
+[
+99.791,
+101.945
+],
+[
+102.795,
+109.366
+],
+[
+109.666,
+114.615
+],
+[
+114.915,
+121.273
+],
+[
+121.573,
+124.73
+],
+[
+125.58,
+129.335
+],
+[
+129.635,
+130.488
+],
+[
+130.788,
+132.025
+],
+[
+132.325,
+133.541
+],
+[
+133.841,
+142.161
+],
+[
+143.011,
+149.411
+],
+[
+149.711,
+151.439
+],
+[
+151.739,
+154.299
+],
+[
+154.599,
+157.266
+],
+[
+157.566,
+161.171
+],
+[
+162.021,
+166.181
+],
+[
+166.481,
+168.7
+],
+[
+169.0,
+172.072
+],
+[
+172.372,
+179.412
+]
+],
+"duration": 179.812,
+"hash": "3b1f96aff9d83839dd857ca6dd2c407f4e23c74a59144307615703c35e1d48fb",
+"kind": "lecture"
+},
+"f03-c1": {
+"audio": "media/clips/f03-c1.mp3",
+"bytes": 14061,
+"cues": [
+[
+0.0,
+1.856
+]
+],
+"duration": 2.256,
+"hash": "313da7edeab9f3a5781aa86dde7b9a6ec2636c0b9f234f35f02b9cebe602027f",
+"kind": "clip"
+},
+"f03-c2": {
+"audio": "media/clips/f03-c2.mp3",
+"bytes": 12477,
+"cues": [
+[
+0.0,
+1.579
+]
+],
+"duration": 1.979,
+"hash": "bbf9f903c15b2d0b9f7f23e8617951eebef32357e5ef40161c1bd81509c2b921",
+"kind": "clip"
+},
+"f03-c3": {
+"audio": "media/clips/f03-c3.mp3",
+"bytes": 16509,
+"cues": [
+[
+0.0,
+2.261
+]
+],
+"duration": 2.661,
+"hash": "b10bd1cd6e9051e6f16a3fede4968382480d46751a92d11b7e257f337277e8ba",
+"kind": "clip"
+},
+"f03-c4": {
+"audio": "media/clips/f03-c4.mp3",
+"bytes": 10893,
+"cues": [
+[
+0.0,
+1.323
+]
+],
+"duration": 1.723,
+"hash": "2e45387dd0fca7a6bbdb74fbabfd94d96b954062479615e3a7d320a0de7b3591",
+"kind": "clip"
+},
+"f03-d1": {
+"audio": "media/clips/f03-d1.mp3",
+"bytes": 123789,
+"cues": [
+[
+0.0,
+6.059
+],
+[
+6.509,
+13.719
+],
+[
+14.169,
+20.121
+]
+],
+"duration": 20.521,
+"hash": "31870220a36e15b734b72a6dc2aadefeb4ca6f3a7d7d041c371defcc91d74567",
+"kind": "clip"
+},
+"f03-d2": {
+"audio": "media/clips/f03-d2.mp3",
+"bytes": 73533,
+"cues": [
+[
+0.0,
+7.68
+],
+[
+8.13,
+8.919
+],
+[
+9.369,
+11.759
+]
+],
+"duration": 12.159,
+"hash": "51d17f4a4798a1bbec311abec8e6aeef6c95d6aa43593fcda79a5d09a30e696e",
+"kind": "clip"
+},
+"f03-m1": {
+"audio": "media/clips/f03-m1.mp3",
+"bytes": 11613,
+"cues": [
+[
+0.0,
+1.429
+]
+],
+"duration": 1.829,
+"hash": "7c75c910461ceb203ced8381afb107253591d45177c269f442fb5d880d4e76ac",
+"kind": "clip"
+},
+"f03-q1": {
+"audio": "media/clips/f03-q1.mp3",
+"bytes": 13917,
+"cues": [
+[
+0.0,
+1.813
+]
+],
+"duration": 2.213,
+"hash": "3bad3f3f09893b523ea07b6221c6093942f0af7f2bfe578bf70b8b031b51e90e",
+"kind": "clip"
+},
+"f03-q2": {
+"audio": "media/clips/f03-q2.mp3",
+"bytes": 20829,
+"cues": [
+[
+0.0,
+2.965
+]
+],
+"duration": 3.365,
+"hash": "3514f3fd0120db35e73d7981a4dc02e6fd36c78b67495a4630db307ceba5eef8",
+"kind": "clip"
+},
+"f03-r1": {
+"audio": "media/clips/f03-r1.mp3",
+"bytes": 15213,
+"cues": [
+[
+0.0,
+2.027
+]
+],
+"duration": 2.427,
+"hash": "95f4fc6515ea7bd375fc22e5765c010139ded2a1ea2d177f32fc85f35527ec29",
+"kind": "clip"
+},
+"f03-r2": {
+"audio": "media/clips/f03-r2.mp3",
+"bytes": 14205,
+"cues": [
+[
+0.0,
+1.877
+]
+],
+"duration": 2.277,
+"hash": "f67bb20028d3c4f0746a96dec3930a489a7e97c9d8588ecd8514d5cb4aada063",
+"kind": "clip"
+},
+"f03-r3": {
+"audio": "media/clips/f03-r3.mp3",
+"bytes": 15213,
+"cues": [
+[
+0.0,
+2.027
+]
+],
+"duration": 2.427,
+"hash": "8e7807a09a52f96fc59a77a8c8a4a17ef958ef272a26d304609c67fc70b7f98e",
+"kind": "clip"
+},
+"pl-a0-l1": {
+"audio": "media/clips/pl-a0-l1.mp3",
+"bytes": 8157,
+"cues": [
+[
+0.0,
+0.853
+]
+],
+"duration": 1.253,
+"hash": "809affabd206f8a65fd4d757063526d2e4101b06e0e5d6c8482cf24a1581370c",
+"kind": "clip"
+},
+"pl-a0-l2": {
+"audio": "media/clips/pl-a0-l2.mp3",
+"bytes": 8589,
+"cues": [
+[
+0.0,
+0.939
+]
+],
+"duration": 1.339,
+"hash": "04c31d522ea9140299949495f8e8831be238bcd572e4d7bd09bbdc4e79768e12",
+"kind": "clip"
+},
+"pl-a1-l1": {
+"audio": "media/clips/pl-a1-l1.mp3",
+"bytes": 24141,
+"cues": [
+[
+0.0,
+3.52
+]
+],
+"duration": 3.92,
+"hash": "f8087a513b8883d56a23c8e9d74a9e7add0820c7cc6cd9abb478739b925653bd",
+"kind": "clip"
+},
+"pl-a1-l2": {
+"audio": "media/clips/pl-a1-l2.mp3",
+"bytes": 15501,
+"cues": [
+[
+0.0,
+2.091
+]
+],
+"duration": 2.491,
+"hash": "d557e478d90f8c7db78d1b299d7f6aa5abb0bb46ed0e6237b3714cd012eec1d6",
+"kind": "clip"
+},
+"pl-a2-l1": {
+"audio": "media/clips/pl-a2-l1.mp3",
+"bytes": 48333,
+"cues": [
+[
+0.0,
+7.552
+]
+],
+"duration": 7.952,
+"hash": "d4ef6fd259399f24c2d359af7d39a13f9ec8e3bfb00a42dc39062f24fb38ece1",
+"kind": "clip"
+},
+"pl-a2-l2": {
+"audio": "media/clips/pl-a2-l2.mp3",
+"bytes": 38973,
+"cues": [
+[
+0.0,
+2.155
+],
+[
+2.605,
+5.997
+]
+],
+"duration": 6.397,
+"hash": "5b5405afce0ac1f5590c4fffc71a09ef728846c9733025a740afa7b25e663cec",
+"kind": "clip"
+},
+"pl-b1-l1": {
+"audio": "media/clips/pl-b1-l1.mp3",
+"bytes": 73677,
+"cues": [
+[
+0.0,
+11.776
+]
+],
+"duration": 12.176,
+"hash": "80abaa399dae73478188a6720b07b733d975b2ada3e2519af652a112dc1aa5c7",
+"kind": "clip"
+},
+"pl-b1-l2": {
+"audio": "media/clips/pl-b1-l2.mp3",
+"bytes": 61437,
+"cues": [
+[
+0.0,
+1.344
+],
+[
+1.794,
+9.73
+]
+],
+"duration": 10.13,
+"hash": "487f13e573c1b249b352e286895a1eabce5c56d43ec75af4e08dd1120d434ead",
+"kind": "clip"
+},
+"pl-b2-l1": {
+"audio": "media/clips/pl-b2-l1.mp3",
+"bytes": 79581,
+"cues": [
+[
+0.0,
+12.757
+]
+],
+"duration": 13.157,
+"hash": "07e845a462650493742858e291ccd30db756a48417a0b8322d62b526bd3ce9c1",
+"kind": "clip"
+},
+"pl-b2-l2": {
+"audio": "media/clips/pl-b2-l2.mp3",
+"bytes": 47757,
+"cues": [
+[
+0.0,
+7.467
+]
+],
+"duration": 7.867,
+"hash": "a81c0fd2884ada42f462042ee5311e1a1921d74a5477bf094f1ae033f294e1fe",
+"kind": "clip"
+},
+"pl-s1": {
+"audio": "media/clips/pl-s1.mp3",
+"bytes": 18381,
+"cues": [
+[
+0.0,
+2.56
+]
+],
+"duration": 2.96,
+"hash": "a7bca69c949e46894172f2d3253c6aba212dc52c847fefc0b50facd4b602a768",
+"kind": "clip"
+},
+"pl-s2": {
+"audio": "media/clips/pl-s2.mp3",
+"bytes": 17517,
+"cues": [
+[
+0.0,
+2.432
+]
+],
+"duration": 2.832,
+"hash": "f9dc1c20c39139e5ef4cdc6bc1a8a3c1d90da4bef7afd552324e73bc18031213",
+"kind": "clip"
+},
+"pl-s3": {
+"audio": "media/clips/pl-s3.mp3",
+"bytes": 18669,
+"cues": [
+[
+0.0,
+2.603
+]
+],
+"duration": 3.003,
+"hash": "6f190540dbe472f74d553712f1f55be70f0f37dcc02e4411fc0ee6411c1cf419",
+"kind": "clip"
+},
+"pl-s4": {
+"audio": "media/clips/pl-s4.mp3",
+"bytes": 26301,
+"cues": [
+[
+0.0,
+3.883
+]
+],
+"duration": 4.283,
+"hash": "ba8a04d871915a6165db7f98b7e769da01306332ec00963c996a2d55414a6a7a",
+"kind": "clip"
+},
+"pl-s5": {
+"audio": "media/clips/pl-s5.mp3",
+"bytes": 35229,
+"cues": [
+[
+0.0,
+5.376
+]
+],
+"duration": 5.776,
+"hash": "9f914642efe3cb98d2ddb05696a97c4016bc100c1ed2d1041406e8eed3f00203",
+"kind": "clip"
+},
+"pl-s6": {
+"audio": "media/clips/pl-s6.mp3",
+"bytes": 49485,
+"cues": [
+[
+0.0,
+7.744
+]
+],
+"duration": 8.144,
+"hash": "64e7fa011ca12965bf97f73c9a3cad72b7159ea14789bdf0a70799e1a3466fca",
+"kind": "clip"
+}
+},
+"narrator": {
+"cueGap": 0.3,
+"engine": "Kokoro-82M v1.0 (q8 ONNX) via kokoro-onnx",
+"label": "Voice C",
+"license": "Kokoro-82M model and voices: Apache-2.0",
+"speed": 1.02,
+"voice": "af_heart"
+}
+}
