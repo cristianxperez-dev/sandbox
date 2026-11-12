@@ -58,7 +58,7 @@ async function choose(p, slot, file) {
 }
 const P1 = "wwgw-v1-01-high-home-chaos", P3 = "wwgw-v1-03-three-extra-outs", P4 = "wwgw-v1-04-little-league-walk-off", P8 = "wwgw-v1-08-rundown-that-wouldnt-end", P12 = "wwgw-v1-12-two-runners-one-base";
 /* the default game (apps/baseball-feud-2/games/default-game.js): its plays 3 and 4, both broadcast-only MLB embeds */
-const G3 = "wwgw-v1-04-little-league-walk-off", G4 = "wwgw-v1-05-throw-throw-throw-again";
+const G2 = "wwgw-v1-07-bunt-chaos", G3 = "wwgw-v1-08-rundown-that-wouldnt-end", G4 = "wwgw-v1-12-two-runners-one-base";
 
 (async () => {
   const b = await chromium.launch();
@@ -196,7 +196,7 @@ const G3 = "wwgw-v1-04-little-league-walk-off", G4 = "wwgw-v1-05-throw-throw-thr
     const g0 = await game(p);
     ok(g0.revealed === 2 && g0.count === "PLAY 2 OF 4", "W4 · mid-round: play 2, two answers revealed, one strike");
     await libFromGame(p);
-    ok(/NOW PLAYING/.test(await p.locator("#bfLib .bf-nowbar").innerText()) && await p.locator(`${cardSel("wwgw-v1-02-the-wheel")}.now`).count() === 1, "W4 · the library highlights the play on screen");
+    ok(/NOW PLAYING/.test(await p.locator("#bfLib .bf-nowbar").innerText()) && await p.locator(`${cardSel(G2)}.now`).count() === 1, "W4 · the library highlights the play on screen");
     ok(/BACK TO GAME/.test(await p.locator('#bfLib [data-bf="close"]').innerText()), "W4 · an obvious Back to Game button");
     // keys pressed in the library never reach the game
     await p.fill('[data-bfin="q"]', "x 3"); await p.keyboard.press("Enter"); await p.fill('[data-bfin="q"]', "");
@@ -220,7 +220,9 @@ const G3 = "wwgw-v1-04-little-league-walk-off", G4 = "wwgw-v1-05-throw-throw-thr
     ok(g1.revealed === 2 && g1.title === g0.title, "W4 · same play, same two answers revealed — nothing revealed by accident");
     ok(g1.count === "PLAY 2 OF 5" && /The Rundown That Wouldn.t End/i.test(g1.queue.split(" / ")[3]) && /Two Runners, One Base/i.test(g1.queue.split(" / ")[4]) && g1.queue.split(" / ").slice(0, 3).join() === g0.queue.split(" / ").slice(0, 3).join(),
       "W4 · queue: plays 1–3 kept, upcoming play 4 replaced on purpose, a 5th added");
-    ok(/ihome-test/.test((await video(p)).cap), "W4 · the play on screen now shows the video edited in the library");
+    let vNow = await video(p);
+    if (!/ihome-test/.test(vNow.cap) && vNow.angles.some((x) => /^high-home/.test(x))) { await p.click('#mlbCap [data-g="angle"][data-a="high-home"]'); await wait(p, 600); vNow = await video(p); }   // a play that keeps Broadcast as its default angle
+    ok(/ihome-test/.test(vNow.cap), "W4 · the play on screen now has the video edited in the library");
     ok(errs.length === 0, "W4 · no app errors " + errs.join(" | ").slice(0, 300));
     await ctx.close();
   })();

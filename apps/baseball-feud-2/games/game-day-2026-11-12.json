@@ -1,0 +1,416 @@
+{
+  "app": "baseball-feud-2",
+  "version": 3,
+  "exportedAt": "2026-11-12T12:00:00.000Z",
+  "sessionName": "GAME DAY — NOV 12, 2026",
+  "settings": {
+    "teamMode": true,
+    "teamNames": [
+      "Petey & co",
+      "Keon's crew"
+    ],
+    "showX": true,
+    "showGood": true,
+    "sound": true,
+    "autoHide": true,
+    "rememberVideos": true,
+    "maxStrikes": 3,
+    "roundSummary": true,
+    "showHost": true,
+    "hostName": "Stevie rivera",
+    "reactions": true,
+    "fastMoneyOn": true,
+    "shotClock": true
+  },
+  "plays": [
+    {
+      "id": "d1-bal-bos",
+      "title": "Where's the Cutoff?",
+      "prompt": "WHAT DO YOU SEE?",
+      "videoName": "",
+      "mlb": {
+        "libId": "wwgw-v1-06-wheres-the-cutoff",
+        "embedUrl": "https://streamable.com/m/ryan-o-hearn-doubles-7-on-a-sharp-line-drive-to-center-fielder-ceddanne-r",
+        "pageUrl": "https://www.mlb.com/video/ryan-o-hearn-doubles-7-on-a-sharp-line-drive-to-center-fielder-ceddanne-r",
+        "title": "Ryan O'Hearn's Little League home run",
+        "angle": {
+          "category": "broadcast",
+          "label": "Broadcast — wide elevated replay 0:16–0:20",
+          "howVerified": "Frame-checked (MLB.com highlight). The rest of the clip is broadcast.",
+          "segments": [
+            {
+              "time": "0:16–0:20",
+              "view": "Wide elevated replay: outfield throw and relay positions",
+              "start": 16
+            }
+          ]
+        },
+        "situation": "TOP 8TH · 0 OUTS · Runner on 1st · BAL 3 – BOS 0",
+        "sit": {
+          "teams": "Baltimore Orioles at Boston Red Sox",
+          "date": "2025-05-25",
+          "venue": "Fenway Park",
+          "inning": "Top 8th",
+          "outs": 0,
+          "bases": {
+            "1B": true,
+            "2B": false,
+            "3B": false
+          },
+          "runners": "Runner on first",
+          "score": "BAL 3, BOS 0",
+          "count": "0-1",
+          "batter": "Ryan O'Hearn",
+          "pitcher": "Zack Kelly",
+          "batting": "Baltimore Orioles",
+          "fielding": "Boston Red Sox",
+          "away": "Baltimore Orioles",
+          "home": "Boston Red Sox",
+          "awayAbbr": "BAL",
+          "homeAbbr": "BOS"
+        }
+      },
+      "observations": [
+        {
+          "text": "Poor OF communication",
+          "points": 10,
+          "note": ""
+        },
+        {
+          "text": "Airmailing the cut guy(s)",
+          "points": 10,
+          "note": ""
+        },
+        {
+          "text": "Batter runner keeps moving",
+          "points": 10,
+          "note": ""
+        },
+        {
+          "text": "LF hanging out most of the play",
+          "points": 10,
+          "note": ""
+        },
+        {
+          "text": "1B nice job staying engaged",
+          "points": 10,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "d2-mia-pit",
+      "title": "Bunt Chaos",
+      "prompt": "WHAT DO YOU SEE?",
+      "videoName": "",
+      "mlb": {
+        "libId": "wwgw-v1-07-bunt-chaos",
+        "embedUrl": "https://streamable.com/m/janson-junk-in-play-run-s-to-ke-bryan-hayes",
+        "pageUrl": "https://www.mlb.com/video/janson-junk-in-play-run-s-to-ke-bryan-hayes",
+        "title": "Pirates score two on two errors",
+        "angle": {
+          "category": "broadcast",
+          "label": "Broadcast — High Home-style replays 0:04, 0:12, 0:16–0:18",
+          "howVerified": "Frame-checked (MLB.com highlight). The rest of the clip is broadcast.",
+          "segments": [
+            {
+              "time": "0:04",
+              "view": "High wide view from behind home, full infield",
+              "start": 4
+            },
+            {
+              "time": "0:12",
+              "view": "Same view",
+              "start": 12
+            },
+            {
+              "time": "0:16–0:18",
+              "view": "Same view: coverage at first and the backup",
+              "start": 16
+            }
+          ]
+        },
+        "situation": "BOT 6TH · 0 OUTS · Runners on 1st and 2nd · MIA 2 – PIT 5",
+        "sit": {
+          "teams": "Miami Marlins at Pittsburgh Pirates",
+          "date": "2025-06-09",
+          "venue": "PNC Park",
+          "inning": "Bottom 6th",
+          "outs": 0,
+          "bases": {
+            "1B": true,
+            "2B": true,
+            "3B": false
+          },
+          "runners": "Runners on first and second",
+          "score": "MIA 2, PIT 5",
+          "count": "0-1",
+          "batter": "Ke'Bryan Hayes",
+          "pitcher": "Janson Junk",
+          "batting": "Pittsburgh Pirates",
+          "fielding": "Miami Marlins",
+          "away": "Miami Marlins",
+          "home": "Pittsburgh Pirates",
+          "awayAbbr": "MIA",
+          "homeAbbr": "PIT"
+        }
+      },
+      "observations": [
+        {
+          "text": "Pitcher nowhere close to the correct spot backing the plate",
+          "points": 10,
+          "note": ""
+        },
+        {
+          "text": "Catcher does not clear bat from home plate area",
+          "points": 10,
+          "note": ""
+        },
+        {
+          "text": "Catcher does not secure the baseball",
+          "points": 10,
+          "note": ""
+        },
+        {
+          "text": "2B and SS both break to the bag to cover",
+          "points": 10,
+          "note": ""
+        },
+        {
+          "text": "2B standing in no man's land as the play is happening",
+          "points": 10,
+          "note": ""
+        },
+        {
+          "text": "RF immediately drifted toward backing up 1B on the bunt",
+          "points": 10,
+          "note": ""
+        },
+        {
+          "text": "No one backs up the plate following the error",
+          "points": 10,
+          "note": "Probably should have been 3B, because the pitcher rotated around to 3B."
+        }
+      ]
+    },
+    {
+      "id": "d3-az-sf",
+      "title": "The Rundown That Wouldn't End",
+      "prompt": "WHAT DO YOU SEE?",
+      "videoName": "",
+      "mlb": {
+        "libId": "wwgw-v1-08-rundown-that-wouldnt-end",
+        "embedUrl": "https://streamable.com/m/casey-schmitt-strikes-out-swinging-and-willy-adames-caught-stealing-home-x0135",
+        "pageUrl": "https://www.mlb.com/video/casey-schmitt-strikes-out-swinging-and-willy-adames-caught-stealing-home-x0135",
+        "title": "The D-backs turn two to escape a jam",
+        "angle": {
+          "category": "broadcast",
+          "label": "Broadcast fallback — no wide angle",
+          "howVerified": "Frame-checked (MLB.com highlight): broadcast angles only, including tight high-first-base shots. No High Home or wide replay found.",
+          "segments": []
+        },
+        "situation": "BOT 7TH · 1 OUT · Runners on 1st and 3rd · AZ 5 – SF 0",
+        "sit": {
+          "teams": "Arizona Diamondbacks at San Francisco Giants",
+          "date": "2025-09-10",
+          "venue": "Oracle Park",
+          "inning": "Bottom 7th",
+          "outs": 1,
+          "bases": {
+            "1B": true,
+            "2B": false,
+            "3B": true
+          },
+          "runners": "Runners on first and third",
+          "score": "AZ 5, SF 0",
+          "count": "3-2",
+          "batter": "Casey Schmitt",
+          "pitcher": "Jake Woodford",
+          "batting": "San Francisco Giants",
+          "fielding": "Arizona Diamondbacks",
+          "away": "Arizona Diamondbacks",
+          "home": "San Francisco Giants",
+          "awayAbbr": "AZ",
+          "homeAbbr": "SF"
+        }
+      },
+      "observations": [
+        {
+          "text": "2B secured the baseball on the throw from the C",
+          "points": 10,
+          "note": ""
+        },
+        {
+          "text": "2B made the runner at 3B commit to go to HP",
+          "points": 10,
+          "note": ""
+        },
+        {
+          "text": "Good throw from 2B to 3B",
+          "points": 10,
+          "note": ""
+        },
+        {
+          "text": "BR at 3B did a good job initially running inside the lane to block the throw attempt",
+          "points": 10,
+          "note": ""
+        },
+        {
+          "text": "Runner at 3B did a good job trying to run through the catcher to draw contact",
+          "points": 10,
+          "note": ""
+        },
+        {
+          "text": "Catcher secured the ball and recorded the out",
+          "points": 10,
+          "note": ""
+        },
+        {
+          "text": "C could've delayed the throw to 3B longer in the rundown",
+          "points": 10,
+          "note": "Delay the throw long enough for the 3B to catch and tag rather than requiring another throw back to the plate to record the out."
+        }
+      ]
+    },
+    {
+      "id": "d4-cws-min",
+      "title": "Two Runners, One Base",
+      "prompt": "WHAT DO YOU SEE?",
+      "videoName": "",
+      "mlb": {
+        "libId": "wwgw-v1-12-two-runners-one-base",
+        "embedUrl": "https://streamable.com/m/david-sandlin-in-play-out-s-to-kody-clemens-u1no5f",
+        "pageUrl": "https://www.mlb.com/video/david-sandlin-in-play-out-s-to-kody-clemens-u1no5f",
+        "title": "Jacob Gonzalez recovers wide throw for double play",
+        "angle": {
+          "category": "broadcast",
+          "label": "Broadcast — elevated side replay 0:20–0:22",
+          "howVerified": "Frame-checked (MLB.com highlight). Not a High Home camera.",
+          "segments": [
+            {
+              "time": "0:20–0:22",
+              "view": "Elevated side angle: both runners and second base",
+              "start": 20
+            }
+          ]
+        },
+        "situation": "BOT 3RD · 1 OUT · Runner on 1st · CWS 1 – MIN 1",
+        "sit": {
+          "teams": "Chicago White Sox at Minnesota Twins",
+          "date": "2026-06-01",
+          "venue": "Target Field",
+          "inning": "Bottom 3rd",
+          "outs": 1,
+          "bases": {
+            "1B": true,
+            "2B": false,
+            "3B": false
+          },
+          "runners": "Runner on first",
+          "score": "CWS 1, MIN 1",
+          "count": "0-0",
+          "batter": "Kody Clemens",
+          "pitcher": "David Sandlin",
+          "batting": "Minnesota Twins",
+          "fielding": "Chicago White Sox",
+          "away": "Chicago White Sox",
+          "home": "Minnesota Twins",
+          "awayAbbr": "CWS",
+          "homeAbbr": "MIN"
+        }
+      },
+      "observations": [
+        {
+          "text": "Good feed from 1B to SS for 1st out",
+          "points": 10,
+          "note": ""
+        },
+        {
+          "text": "Poor high throw to 1B from SS",
+          "points": 10,
+          "note": ""
+        },
+        {
+          "text": "Batter runner did not break down quickly",
+          "points": 10,
+          "note": "The batter runner did not break down quickly and turned an opportunity to advance to 2B into a bang-bang play."
+        },
+        {
+          "text": "Good tag from SS on 2nd out",
+          "points": 10,
+          "note": ""
+        },
+        {
+          "text": "1B coach gave no input",
+          "points": 10,
+          "note": ""
+        },
+        {
+          "text": "Catcher could begin drifting down the 1B line earlier",
+          "points": 10,
+          "note": "Catcher could begin drifting down the 1B line prior to the initial throw and, once the first out is secure, run harder to back up the base."
+        }
+      ]
+    }
+  ],
+  "practice": {
+    "enabled": true,
+    "play": {
+      "title": "Practice — How the Board Works",
+      "prompt": "NAME SOMETHING A HITTER CHECKS BEFORE THE PITCH",
+      "videoName": "",
+      "observations": [
+        {
+          "text": "Signs from the third-base coach",
+          "points": 30
+        },
+        {
+          "text": "Defensive positioning",
+          "points": 25
+        },
+        {
+          "text": "The count",
+          "points": 20
+        },
+        {
+          "text": "Outs and runners on base",
+          "points": 15
+        },
+        {
+          "text": "The pitcher’s tendencies",
+          "points": 10
+        }
+      ]
+    }
+  },
+  "fastMoney": {
+    "seconds": 60,
+    "questions": [
+      {
+        "q": "Ball hit into the right-center gap — which outfielder has priority?",
+        "answer": "The center fielder",
+        "points": 20
+      },
+      {
+        "q": "Runners on first and second, one out. Can the infield fly rule be called?",
+        "answer": "Yes",
+        "points": 15
+      },
+      {
+        "q": "Sacrifice bunt with a runner on first — who covers first base?",
+        "answer": "The second baseman",
+        "points": 20
+      },
+      {
+        "q": "Name the classic hitter’s count.",
+        "answer": "2–0 (or 3–1)",
+        "points": 10
+      },
+      {
+        "q": "Pop-up between the catcher and the first baseman — who has priority?",
+        "answer": "The first baseman",
+        "points": 25
+      }
+    ]
+  }
+}

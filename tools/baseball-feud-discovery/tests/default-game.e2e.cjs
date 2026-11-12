@@ -4,8 +4,11 @@
 const { chromium } = require("playwright");
 const fs = require("fs"), path = require("path"), os = require("os");
 const BASE = process.env.BASE || "http://127.0.0.1:4173/apps/baseball-feud-2/";
-const SRC = JSON.parse(fs.readFileSync(path.join(__dirname, "../../../apps/baseball-feud-2/games/sample-game-volume-1.json"), "utf8"));
-const DEF_ID = "g-sample-game-volume-1";
+/* whichever export games/default-game.js was generated from (games/make-default.mjs) */
+global.window = global.window || {}; require(path.join(__dirname, "../../../apps/baseball-feud-2/games/default-game.js"));
+const DEF = window.BF2_DEFAULT_GAME;
+const SRC = JSON.parse(fs.readFileSync(path.join(__dirname, "../../../apps/baseball-feud-2", DEF.file), "utf8"));
+const DEF_ID = DEF.id;
 const IGNORE = /streamable|ERR_TUNNEL|ERR_PROXY|ERR_NAME_NOT_RESOLVED|ERR_CONNECTION|socket\.|fonts\.g|mlbstatic|mlb\.com|ERR_ABORTED/i;
 let pass = 0, fail = 0;
 const ok = (c, m) => { console.log((c ? "PASS " : "FAIL ") + m); c ? pass++ : fail++; if (!c) process.exitCode = 1; };
@@ -71,7 +74,8 @@ const sameContent = (cur) => {
     emb: (document.querySelector("#vFrame iframe.emb") || {}).src || "", sit: document.querySelector("#sitStrip").innerText.replace(/\s+/g, " "), s0: document.querySelector("#gS0").textContent }));
   ok(g1.title.toUpperCase().includes(SRC.plays[0].title.toUpperCase()) && /PLAY 1 OF 4/.test(g1.count) && g1.tiles === SRC.plays[0].observations.length, `play 1 on the board: “${g1.title}”, ${g1.tiles} answers`);
   ok(g1.emb.startsWith(SRC.plays[0].mlb.embedUrl), "play 1 plays its MLB embed");
-  ok(/4TH/.test(g1.sit) && /1 OUT/i.test(g1.sit), "situation strip shows the base-out state: " + g1.sit.slice(0, 80));
+  const s1 = SRC.plays[0].mlb.sit, inn = String(s1.inning).match(/\d+/)[0];
+  ok(new RegExp(inn + "(ST|ND|RD|TH)").test(g1.sit) && new RegExp(s1.outs + " OUTS?", "i").test(g1.sit), "situation strip shows the base-out state: " + g1.sit.slice(0, 80));
   // play a little: reveal an answer, add a strike
   ok((await p.textContent("#gPrompt")).trim() === "WHAT DO YOU SEE?", "the default question reads WHAT DO YOU SEE?");
   const cam = await p.evaluate(() => { const i = document.querySelector("#hImg"), r = i.getBoundingClientRect(), b = document.querySelector("#board").getBoundingClientRect();
@@ -112,7 +116,7 @@ const sameContent = (cur) => {
   ok((await LS(p)).cur.sessionName === "OTHER TEST GAME", "the chosen game holds for the rest of the session (refresh)");
   await gamesUI(p);
   const list = await p.$$eval("#bfGames .bf-game", (r) => r.map((x) => x.innerText.replace(/\s+/g, " ")));
-  ok(list.some((t) => /SAMPLE GAME — VOLUME 1.*DEFAULT/.test(t)) && list.some((t) => /OTHER TEST GAME/.test(t)), "GAMES lists the default (tagged DEFAULT) and the other game");
+  ok(list.some((t) => t.includes(SRC.sessionName) && /DEFAULT/.test(t)) && list.some((t) => /OTHER TEST GAME/.test(t)), "GAMES lists the default (tagged DEFAULT) and the other game");
   ok(!(await p.$(`#bfGames [data-bf="gDel"][data-id="${DEF_ID}"]`)), "the default game can't be deleted");
   // 4. back to the default game
   await p.click(`#bfGames [data-bf="gPlay"][data-id="${DEF_ID}"]`); await wait(p, 5000);

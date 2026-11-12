@@ -94,7 +94,7 @@ const shown = (p, sel) => p.evaluate((q) => document.querySelector(q).classList.
   await p.keyboard.press("s"); await wait(p, 700);
   const k1 = await st(p);
   ok(k1.phase === "done" && k1.winner === k0.stealTeam && k1.outcome === "steal" && (k1.s0 + k1.s1) > total, "S during the steal = successful steal: the stealing team takes the bank");
-  ok(await p.evaluate(() => ["shocked", "celebratory"].includes(document.querySelector("#fxBig .fx-host").dataset.mood)), "a successful steal brings a shocked or celebratory host");
+  ok(await p.evaluate(() => ["excited", "celebratory", "surprised"].includes(document.querySelector("#fxBig .fx-host").dataset.mood)), "a successful steal brings an excited, celebratory or surprised host");
   await p.keyboard.press("x"); await wait(p, 400);
   ok((await st(p)).winner === k1.winner, "X right after the round settles changes nothing");
 
