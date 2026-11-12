@@ -23,6 +23,11 @@ const untilEnded = (p) => p.waitForFunction(() => { const v = document.querySele
   const b = await chromium.launch();
   const p = await (await b.newContext({ viewport: { width: 1600, height: 900 } })).newPage();
   const errs = []; p.on("pageerror", (e) => errs.push(e.message));
+  await p.addInitScript(() => {   // record the pitch of every tone the app plays
+    window.__tones = []; const orig = BaseAudioContext.prototype.createOscillator;
+    BaseAudioContext.prototype.createOscillator = function () { const o = orig.call(this), st = o.start.bind(o), sv = o.frequency.setValueAtTime.bind(o.frequency); let f = o.frequency.value;
+      o.frequency.setValueAtTime = (v, t) => { f = v; return sv(v, t); }; o.start = (t) => { window.__tones.push(Math.round(f * 100) / 100); return st(t); }; return o; };
+  });
   await p.goto(BASE); await wait(p, 1000);
   await p.evaluate(() => { const t = document.querySelector("#toast"); if (t) t.style.visibility = "hidden"; });
   if (await p.isVisible("#stLive")) await p.click("#stLive"); else await p.click("#stGo");
@@ -88,6 +93,7 @@ const untilEnded = (p) => p.waitForFunction(() => { const v = document.querySele
   s = await st(p); ok(s.rp === "· 0 LEFT" && s.spent, "Replay #3 (R key) leaves 0 and the Replay button looks spent");
   await untilEnded(p); await wait(p, 300);
   ok((await st(p)).shot === "10", "after Replay #3 a final 10-second clock starts");
+  await p.evaluate(() => { window.__tones = []; });
   // replay 4 is impossible
   await wait(p, 1200);
   await p.click("#bReplay", { force: true }); await wait(p, 300);   // aria-disabled: clicked anyway
@@ -96,6 +102,8 @@ const untilEnded = (p) => p.waitForFunction(() => { const v = document.querySele
   const e0 = await st(p);
   await p.waitForFunction(() => document.querySelector("#shotV").textContent === "TIME", null, { timeout: 15000 });
   s = await st(p);
+  const cd = await p.evaluate(() => window.__tones.filter((f) => f === 880 || f === 1046.5));
+  ok(JSON.stringify(cd) === JSON.stringify([880, 880, 880, 880, 1046.5]), "the post-replay 10-second clock beeps 5, 4, 3, 2, 1 once each " + JSON.stringify(cd));
   ok(/time/.test(s.shotCls) && s.revealed === e0.revealed && s.strikes === e0.strikes && s.bank === e0.bank, "at zero the clock shows TIME and nothing is revealed, struck or scored");
   // manual controls
   await p.click('[data-g="shotRestart"]'); await wait(p, 300);

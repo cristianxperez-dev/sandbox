@@ -540,14 +540,22 @@ body.team-off .set-row{opacity:.4}
 @keyframes stealpulse{50%{transform:scale(1.04)}}
 .bank{margin-left:auto;display:flex;align-items:baseline;gap:.8vw;white-space:nowrap}
 /* shot clock: one compact timer beside the board's FOUND line (20 after a judgment, 10 after a replay) */
-.shot{margin-left:auto;display:inline-flex;align-items:center;gap:.8vw;padding:.3vh 1vw .3vh 1.1vw;border-radius:999px;
+.shot{margin-left:auto;flex:none;white-space:nowrap;display:inline-flex;align-items:center;gap:.8vw;padding:.3vh 1vw .3vh 1.1vw;border-radius:999px;
   border:2px solid rgba(255,200,74,.7);background:linear-gradient(180deg,rgba(21,45,90,.95),rgba(8,18,38,.95));box-shadow:0 0 2.4vh rgba(255,180,60,.25)}
 .shot+.bank{margin-left:2vw}
-.shot small{font-family:var(--cond);font-weight:700;font-size:clamp(9px,1.35vh,20px);letter-spacing:.24em;color:var(--sky)}
+#gFoundT{white-space:nowrap}
+/* while the shot clock shows, the FOUND line tightens its spacing so pips, FOUND, the clock and the Round Bank share one line */
+.found.has-shot{gap:.7vw;letter-spacing:.14em}
+.found.has-shot .pips{gap:.35vh}
+.found.has-shot .bank{gap:.5vw}
+.found.has-shot .shot{gap:.55vw;padding:.3vh .75vw .3vh .85vw}
+.found.has-shot .shot small{letter-spacing:.14em}
+.found.has-shot .shot+.bank{margin-left:.8vw}
+.shot small{white-space:nowrap;font-family:var(--cond);font-weight:700;font-size:clamp(9px,1.35vh,20px);letter-spacing:.24em;color:var(--sky)}
 .shot b{font-family:var(--cond);font-weight:900;font-size:clamp(22px,4.6vh,76px);line-height:1;min-width:1.25em;text-align:center;color:#ffc93f;font-variant-numeric:tabular-nums}
 .shot.warn{border-color:#ff9a2e;box-shadow:0 0 3vh rgba(255,140,40,.4)} .shot.warn b{color:#ffb347}
 .shot.urgent{border-color:#ff4b4b;box-shadow:0 0 3.6vh rgba(255,60,60,.55)} .shot.urgent b{color:#ff5a4a;animation:shotbeat 1s ease-in-out infinite}
-.shot.time{border-color:#ff4b4b;background:linear-gradient(180deg,#8f1010,#4a0606)} .shot.time b{color:#fff;font-size:clamp(18px,3.6vh,60px);letter-spacing:.06em}
+.shot.time{border-color:#ff4b4b;background:linear-gradient(180deg,#8f1010,#4a0606)} .shot.time b{color:#fff;font-size:clamp(18px,3.6vh,60px);letter-spacing:.04em;min-width:0;padding:0 .08em}
 .shot.time small{color:#ffd0d0}
 .shot.paused{opacity:.6}
 @keyframes shotbeat{0%,100%{transform:none}50%{transform:scale(1.12)}}
@@ -2250,6 +2258,7 @@ const sfx = {
   award() { this.play(function () { this.tone(784, 0, .22, 'triangle', .12); this.tone(1175, .07, .3, 'triangle', .12); this.tone(1568, .14, .45, 'sine', .08); }); },
   undo() { this.play(function () { this.tone(660, 0, .18, 'triangle', .08); this.tone(440, .08, .25, 'triangle', .08); }); },
   tick() { this.play(function () { this.tone(1320, 0, .08, 'sine', .06); }); },
+  countdown(n) { this.play(function () { if (n === 1) { this.tone(1046.5, 0, .11, 'sine', .07); this.tone(2093, 0, .06, 'sine', .012); } else this.tone(880, 0, .07, 'sine', .045); }); },   // shot clock 5…1 (1 a touch brighter)
   timeUp() { this.play(function () { this.tone(523.25, 0, .22, 'square', .05); this.tone(392, .2, .45, 'square', .055); }); },   // shot clock expired (short, unlike the wrong-answer buzz)
   steal() { this.play(function () {
     this.tone(98, 0, 1.4, 'sine', .14);
@@ -2427,21 +2436,24 @@ const PACE = {
   warnAt: 10, urgentAt: 5 // shot clock emphasis thresholds (seconds left)
 };
 /* ----- shot clock: one timer at most; a pacing aid only — expiring never scores, strikes or reveals ----- */
-const shot = { mode: null, total: 0, endAt: 0, remMs: 0, left: 0, paused: false, expired: false, t: null };
+const shot = { mode: null, total: 0, endAt: 0, remMs: 0, left: 0, paused: false, expired: false, t: null, beeped: 99 };   // beeped: last second that sounded
 const shotAllowed = () => state.settings.shotClock && state.ui.mode === 'game' && !fmOpen();
 function shotStart(mode) {
   shotStop();
   if (!shotAllowed()) return;
   shot.mode = mode === 'replay' ? 'replay' : 'normal';
   shot.total = shot.mode === 'replay' ? PACE.replaySeconds : PACE.normalSeconds;
-  shot.left = shot.total; shot.endAt = Date.now() + shot.total * 1000;
+  shot.left = shot.total; shot.beeped = 99; shot.endAt = Date.now() + shot.total * 1000;
   shot.t = setInterval(shotTick, 200);
   shotRender();
 }
 function shotTick() {
   if (shot.paused || !shot.mode) return;
   const left = Math.max(0, Math.ceil((shot.endAt - Date.now()) / 1000));
-  if (left !== shot.left) { shot.left = left; shotRender(); }
+  if (left !== shot.left) {
+    shot.left = left; shotRender();
+    if (left >= 1 && left <= 5 && left < shot.beeped) { shot.beeped = left; sfx.countdown(left); }   // once per second, never repeated after a pause
+  }
   if (left <= 0) { clearInterval(shot.t); shot.t = null; shot.expired = true; sfx.timeUp(); shotRender(); }
 }
 function shotStop() {
@@ -2463,6 +2475,7 @@ let shotLaterT = null;
 function shotRender() {
   const el = $('#shot'); if (!el) return;
   el.hidden = !shot.mode;
+  el.parentElement.classList.toggle('has-shot', !!shot.mode);
   const pb = $('#bShotPause'); if (pb) pb.textContent = shot.paused ? '▶' : '❚❚';
   if (!shot.mode) return;
   $('#shotV').textContent = shot.expired ? 'TIME' : shot.left;
