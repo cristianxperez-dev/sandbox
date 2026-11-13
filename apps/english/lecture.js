@@ -17,8 +17,7 @@
     if (t === "phrases" || t === "summary") return h("div.vis", head(v.title, v.title_tr), h("ul.vis__list", v.items.map((it, i) => h("li", { class: t === "summary" ? "" : vis(i + 1) }, h("b", { lang: target }, it.text), it.answer ? h("span.vis__ans", " → " + it.answer) : null, h("span.vis__it-es", { lang: native }, it.tr)))), note);
     if (t === "pattern") return h("div.vis", head(v.title, v.title_tr), h("table.vis__tbl", h("tbody", v.rows.map((r, i) => h("tr", { class: vis(i + 1) }, h("th", { lang: target }, r.text), h("td", { lang: target }, r.example), h("td.vis__it-es", { lang: native }, r.tr))))), note);
     if (t === "steps") return h("div.vis", head(v.title, v.title_tr), h("ol.vis__steps", v.steps.map((s, i) => h("li", { class: vis(i + 1) }, h("b", { lang: target }, s.text), h("span.vis__it-es", { lang: native }, s.tr)))), note);
-    if (t === "figure") return h("div.vis.vis--fig", head(v.title, v.title_tr), window.CPEFig ? window.CPEFig.draw(v.figure) : null,
-      v.caption ? h("p.vis__note", v.caption, v.caption_tr ? [" ", h("span.muted", { lang: native }, v.caption_tr)] : null) : null);
+    if (t === "figure") return h("div.vis.vis--fig", window.CPEFig ? window.CPEFig.draw(v.figure, { title: v.title, caption: v.caption, caption_tr: v.caption_tr, highlight: v.highlight }) : head(v.title, v.title_tr));
     return h("div.vis", head(v.title || ""));
   }
 

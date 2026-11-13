@@ -82,6 +82,8 @@
   window.addEventListener("hashchange", route);
 
   /* ---------------- onboarding: language → specialty → placement ---------------- */
+  const stepProg = (n) => h("div.onb__prog", h("div.onb__segs", [1, 2, 3].map((i) => h("span", { class: i <= n ? "on" : "" }))),
+    h("span.onb__count", nativeText(`STEP ${n} OF 3`, `PASO ${n} DE 3`)));
   async function onboarding(step) {
     const cat = await catalog(), l = Store.learner(), p = l.profile;
     if (!step) {
@@ -90,7 +92,7 @@
         h("div.lockup.lockup--stack", h("span.lockup__mark"), h("span.lockup__word", "ENGLISH")),
         h("p.kicker.center", "CP Baseball Systems"),
         h("h1.center", "Language for the people you coach"), h("p.lead.center", { lang: "es" }, "El idioma de las personas que entrenas."),
-        h("p.onb__step", "1 / 3"),
+        stepProg(1),
         h("h2", "What language do you want to learn?"), h("p.muted", { lang: "es" }, "¿Qué idioma quieres aprender?"),
         h("div.choice-grid",
           h("button.choice", { type: "button", onclick: () => pick("en"), "data-lang": "en" }, h("span.choice__title", "English"), h("span.choice__sub", { lang: "es" }, "Aprender inglés"), h("span.choice__desc", { lang: "es" }, cat.languages.en.audience_es)),
@@ -102,7 +104,7 @@
     if (step === "specialty") {
       const pick = (s) => { Store.updateLearner((x) => { x.profile.specialty = s; }); go("#/start/level"); };
       main.replaceChildren(h("section.wrap.narrow.onb",
-        h("p.onb__step", "2 / 3"), h("p.kicker", nativeText(`Learning ${NAMES[p.target][0]}`, `Aprender ${NAMES[p.target][1].toLowerCase()}`)),
+        stepProg(2), h("p.kicker", nativeText(`Learning ${NAMES[p.target][0]}`, `Aprender ${NAMES[p.target][1].toLowerCase()}`)),
         h("h1", nativeText("What type of coach are you?", "¿Qué tipo de entrenador eres?")),
         h("p.muted", nativeText("Your course is built around your specialty. All three are planned; courses marked Coming soon are not available yet.", "Tu curso se basa en tu especialidad. Las tres están planificadas; las marcadas como Próximamente todavía no están disponibles.")),
         h("div.choice-grid.choice-grid--3", C.SPECIALTIES.map((s) => {
@@ -111,7 +113,7 @@
             h("span.choice__title", nativeText(sp.name_en, sp.name_es)), h("span.choice__desc", nativeText(sp.desc_en, sp.desc_es)),
             c && c.status === "active" ? h("span.chip.chip--ok", nativeText("Course available", "Curso disponible")) : h("span.chip.chip--muted", nativeText("Coming soon", "Próximamente")));
         })),
-        h("p", h("a.linkbtn", { href: "#/start" }, nativeText("← Change language", "← Cambiar idioma")))));
+        h("div.utility", h("a", { href: "#/start" }, nativeText("← Change language", "← Cambiar idioma")))));
       return;
     }
     // step 3: proficiency
@@ -124,16 +126,16 @@
       go(skip ? "#/" : "#/placement");
     };
     main.replaceChildren(h("section.wrap.narrow.onb",
-      h("p.onb__step", "3 / 3"), h("p.kicker", `${NAMES[p.target][0]} · ${specName(cat, p.specialty)}`),
+      stepProg(3), h("p.kicker", `${nativeText(NAMES[p.target][0], NAMES[p.target][1])} · ${specName(cat, p.specialty)}`),
       h("h1", nativeText("Assess your proficiency", "Evalúa tu nivel")),
       h("p", nativeText(`A short placement exam (10–15 minutes) estimates your everyday ${NAMES[p.target][0]} and your coaching communication separately, with listening and three spoken answers.`,
         `Una prueba corta (10–15 minutos) estima por separado tu ${NAMES[p.target][1].toLowerCase()} cotidiano y tu comunicación como coach, con audio y tres respuestas habladas.`)),
       course && course.status !== "active" ? h("p.note", nativeText(`${course.title} is coming soon. The exam still measures your general level; the coaching part is assessed when the course opens.`, `${course.title_es || course.title} estará disponible pronto. La prueba mide tu nivel general; la parte de coaching se evaluará cuando abra el curso.`)) : null,
-      h("div.row",
+      h("div.actions",
         h("button.btn.btn--primary.btn--lg", { type: "button", onclick: () => finish(false) }, nativeText("Take the placement exam", "Hacer la prueba de nivel")),
-        h("button.btn.btn--ghost", { type: "button", onclick: () => finish(true) }, nativeText("Skip for now", "Omitir por ahora"))),
-      h("p.muted.small", nativeText("If you skip, you start as a provisional beginner (labelled as such) and can take the exam any time from Level.", "Si omites, empiezas como principiante provisional y puedes hacer la prueba cuando quieras desde Nivel.")),
-      h("p", h("a.linkbtn", { href: "#/start/specialty" }, nativeText("← Change specialty", "← Cambiar especialidad")))));
+        h("button.btn.btn--lg", { type: "button", onclick: () => finish(true) }, nativeText("Skip for now", "Omitir por ahora"))),
+      h("p.support", nativeText("If you skip, you start as a provisional beginner and can take the exam any time from Level.", "Si omites, empiezas como principiante provisional y puedes hacer la prueba cuando quieras desde Nivel.")),
+      h("div.utility", h("a", { href: "#/start/specialty" }, nativeText("← Change specialty", "← Cambiar especialidad")))));
   }
 
   /* ---------------- home ---------------- */
@@ -143,7 +145,7 @@
     const rec = C.recommend(l, cat, found);
     const pl = C.currentPlacement(l, p.target);
     const levelCard = h("article.card",
-      h("p.kicker", L("Proficiency estimate", "Nivel estimado")),
+      h("p.kicker", nativeText("Proficiency estimate", "Nivel estimado")),
       pl ? [
         h("div.levels",
           h("div", h("span.level", pl.generalLevel || pl.level), h("span.muted.small", nativeText(`Everyday ${NAMES[p.target][0]}`, `${NAMES[p.target][1]} cotidiano`))),
@@ -157,31 +159,32 @@
     let next;
     if (!course || course.status !== "active") {
       const alt = cat.courses.find((c) => c.status === "active" && c.target === p.target);
-      next = h("article.card.card--accent", h("p.kicker", L("Your course", "Tu curso")), h("h2", courseTitle(course)), h("span.chip.chip--muted", L("Coming soon", "Próximamente")),
+      next = h("article.card.card--accent", h("p.kicker", nativeText("Your course", "Tu curso")), h("h2", courseTitle(course)), h("span.chip.chip--muted", L("Coming soon", "Próximamente")),
         h("p", course ? nativeText(course.summary, course.summary_es) : ""), course && course.topics ? h("ul.plain.small", course.topics.map((t) => h("li", t))) : null,
         alt ? h("p", h("a.btn", { href: "#/courses" }, L(`Available now: ${alt.title}`, `Disponible ahora: ${alt.title_es || alt.title}`))) : null,
         found ? h("p", h("a.btn.btn--ghost", { href: "#/foundation" }, L(`Everyday ${NAMES[p.target][0]} lessons`, `Lecciones de ${NAMES[p.target][1].toLowerCase()} cotidiano`))) : null);
     } else {
       const Ls = rec.lesson, ls = Ls && l.progress[C.lessonKey(rec.courseKey, Ls.id)];
       next = h("article.card.card--accent",
-        h("p.kicker", L("Continue learning", "Continuar")), h("p.muted.small", courseTitle(course)),
+        h("p.kicker", nativeText("Continue learning", "Continuar")), h("p.muted.small", courseTitle(course)),
         Ls ? [h("h2", lessonTitle(Ls, p.target)), p.target === "es" ? h("p.muted", { lang: "es" }, Ls.title_es) : null, h("p", nativeText(Ls.objective, Ls.objective_es)),
           ls && !ls.completed ? h("p.small", L(`In progress · ${Object.keys(ls.done).length} activities done`, "En progreso")) : null,
-          h("a.btn.btn--primary.btn--lg", { href: `#/lesson/${Ls.id}` }, `${ls && !ls.completed ? "Continue" : "Start"}: ${lessonTitle(Ls, p.target)}`)]
+          h("a.btn.btn--primary.btn--lg", { href: `#/lesson/${Ls.id}` }, ls && !ls.completed ? nativeText(`Continue lesson ${Ls.n}`, `Continuar la lección ${Ls.n}`) : nativeText(`Start lesson ${Ls.n}`, `Empezar la lección ${Ls.n}`))]
           : h("p", L("All available lessons in this course are complete. More are coming.", "Completaste todas las lecciones disponibles.")),
         rec.also ? h("p.small", L("Also recommended:", "También recomendado:"), " ", h("a", { href: `#/lesson/${rec.also.id}` }, nativeText(rec.also.title, rec.also.title_es)), h("span.muted", ` · ${nativeText(found.title, found.title_es)}`)) : null);
     }
-    const progress = h("article.card", h("p.kicker", L("Progress", "Progreso")),
+    const progress = h("article.card", h("p.kicker", nativeText("Progress", "Progreso")),
       course && course.status === "active" ? progressRow(l, course.key, course.lessons, courseTitle(course)) : null,
       found ? progressRow(l, found.key, found.lessons, nativeText(found.title, found.title_es)) : null,
       h("a.linkbtn", { href: "#/course" }, L("See the course →", "Ver el curso →")));
-    const review = h("article.card", h("p.kicker", L("Recommended review", "Repaso recomendado")),
+    const review = h("article.card", h("p.kicker", nativeText("Recommended review", "Repaso recomendado")),
       rec.due ? [h("p", L(`${rec.due} item${rec.due === 1 ? "" : "s"} due.`, `${rec.due} para repasar.`)), h("a.btn", { href: "#/review" }, L("Review now", "Repasar"))] : h("p.muted", L("Nothing due. Items you miss come back here, spaced out.", "Nada pendiente.")),
       rec.reasons.filter((r) => r.skill !== "review").length ? h("ul.plain.small.reasons", rec.reasons.filter((r) => r.skill !== "review").map((r) => h("li", nativeText(r.en, r.es)))) : null);
     main.replaceChildren(h("section.wrap",
-      h("p.kicker", `${nativeText("Learning", "Aprendiendo")} ${NAMES[p.target][0]} · ${specName(cat, p.specialty)}`, l.name ? ` · ${l.name}` : ""),
-      h("h1", nativeText("Welcome back", "Bienvenido")),
-      h("p", h("a.linkbtn", { href: "#/courses" }, L("Change language or specialty — your progress is kept", "Cambiar idioma o especialidad (tu progreso se guarda)"))),
+      h("div.homehead",
+        h("div", h("p.kicker", `${nativeText(NAMES[p.target][0], NAMES[p.target][1])} · ${specName(cat, p.specialty)}`, l.name ? ` · ${l.name}` : ""),
+          h("h1", nativeText("Welcome back", "Bienvenido"))),
+        h("a.switch", { href: "#/courses", title: nativeText("Change language or specialty — your progress is kept", "Cambiar idioma o especialidad — tu progreso se guarda") }, nativeText("Switch course", "Cambiar curso"))),
       h("div.grid2", next, levelCard), h("div.grid2", progress, review)));
   }
   const pct = (v) => (v == null ? "—" : `${Math.round(v * 100)}%`);
@@ -196,7 +199,7 @@
     const cat = await catalog(), l = Store.learner(), p = l.profile;
     const select = (t, s) => { Store.updateLearner((x) => { x.profile.target = t; x.profile.native = C.otherLang(t); x.profile.specialty = s; x.profile.onboarded = true; }); go("#/"); };
     main.replaceChildren(h("section.wrap",
-      h("p.kicker", L("Courses", "Cursos")), h("h1", L("Choose a language and a specialty", "Elige idioma y especialidad")),
+      h("p.kicker", nativeText("Courses", "Cursos")), h("h1", L("Choose a language and a specialty", "Elige idioma y especialidad")),
       h("p.muted", L("Switching keeps your progress in every course. Only available courses have playable lessons.", "Cambiar no borra tu progreso. Solo los cursos disponibles tienen lecciones.")),
       ["es", "en"].map((t) => h("section.matrix",
         h("h2", t === "en" ? "Learn English" : "Learn Spanish", " ", h("span.muted", t === "en" ? "· Aprender inglés" : "· Aprender español")),
@@ -272,7 +275,7 @@
       const prev = C.currentPlacement(l, lang);
       const hasCoach = b.items.some((i) => i.domain === p.specialty);
       main.replaceChildren(h("section.wrap.narrow",
-        h("p.kicker", L(`Placement exam · ${NAMES[lang][0]}`, `Prueba de nivel · ${NAMES[lang][1]}`)), h("h1", nativeText("Find your starting level", "Encuentra tu nivel")),
+        h("p.kicker", nativeText(`Placement exam · ${NAMES[lang][0]}`, `Prueba de nivel · ${NAMES[lang][1]}`)), h("h1", nativeText("Find your starting level", "Encuentra tu nivel")),
         h("p", nativeText(`About 10–15 minutes: everyday ${NAMES[lang][0]} (words, grammar, short readings, listening)${hasCoach ? `, a few ${specName(cat, p.specialty).toLowerCase()} coaching questions` : ""}, and three questions you answer out loud.`,
           `Unos 10–15 minutos: ${NAMES[lang][1].toLowerCase()} cotidiano (palabras, gramática, lecturas, audio)${hasCoach ? ", algunas preguntas de coaching" : ""} y tres preguntas que respondes en voz alta.`)),
         h("p.muted.small", nativeText("It starts easy and adapts to your answers. Everyday and coaching ability are scored separately. This exam is only for " + NAMES[lang][0] + "; each language has its own.", "Empieza fácil y se adapta. El nivel cotidiano y el de coaching se miden por separado. Cada idioma tiene su propia prueba.")),
@@ -356,7 +359,7 @@
     const fc = C.foundationKey(lang);
     void fc;
     main.replaceChildren(h("section.wrap.narrow",
-      h("p.kicker", L(`Placement results · ${NAMES[lang][0]}`, `Resultados · ${NAMES[lang][1]}`)),
+      h("p.kicker", nativeText(`Placement results · ${NAMES[lang][0]}`, `Resultados · ${NAMES[lang][1]}`)),
       h("div.levels.levels--big",
         h("div", h("span.level", pr.generalLevel || pr.level), h("span", nativeText(`Everyday ${NAMES[lang][0]}`, `${NAMES[lang][1]} cotidiano`))),
         h("div", h("span.level", pr.coachingLevel || "—"), h("span", nativeText(`Coaching communication${pr.specialty ? " · " + specName(cat, pr.specialty) : ""}`, `Comunicación de coaching${pr.specialty ? " · " + specName(cat, pr.specialty) : ""}`)),
@@ -370,12 +373,12 @@
         bar(L("Listening", "Comprensión auditiva"), pr.skills.listening), bar(L("Speaking", "Expresión oral"), pr.skills.speaking, pr.skills.speaking == null ? L("not evaluated", "no evaluado") : null),
         bar(L("Coaching communication", "Comunicación de coaching"), pr.skills.coaching, pr.skills.coaching == null ? L("not assessed", "no evaluado") : null),
         h("p.muted.small", L(`Based on ${pr.items} questions and ${pr.speakingTasks} spoken tasks. Percentages compare you with the questions you were given, weighted by difficulty.`, "Los porcentajes comparan tus respuestas con las preguntas que recibiste, ponderadas por dificultad."))),
-      h("div.card.card--accent", h("p.kicker", L("Recommended start", "Dónde empezar")),
+      h("div.card.card--accent", h("p.kicker", nativeText("Recommended start", "Dónde empezar")),
         rec.course && rec.course.status === "active" && rec.lesson ? [h("h2", courseTitle(rec.course)), h("a.btn.btn--primary", { href: `#/lesson/${rec.lesson.id}` }, `${rec.mode === "continue" ? "Continue" : "Start"}: ${lessonTitle(rec.lesson, lang)}`)]
           : h("p", L("Your course is coming soon. Choose an available course or start the shared foundation.", "Tu curso estará disponible pronto.")),
         rec.also ? h("p.small", L("Also:", "También:"), " ", h("a", { href: `#/lesson/${rec.also.id}` }, nativeText(rec.also.title, rec.also.title_es)), ` (${nativeText(found.title, found.title_es)})`) : null,
         h("ul.plain.small.reasons", rec.reasons.filter((r) => r.skill !== "review").map((r) => h("li", nativeText(r.en, r.es))))),
-      h("div.card", h("p.kicker", L("Work on", "Para mejorar")), h("ol", pr.focus.map((f) => h("li", h("b", nativeText(f.name, f.name_es)))))),
+      h("div.card", h("p.kicker", nativeText("Work on", "Para mejorar")), h("ol", pr.focus.map((f) => h("li", h("b", nativeText(f.name, f.name_es)))))),
       attempts.length > 1 ? h("details.card", h("summary", L("Assessment history", "Historial")), h("ul.plain.small", attempts.slice().reverse().map((a) => h("li", `${new Date(a.at).toLocaleDateString()} · ${a.generalLevel || a.level}${a.coachingLevel ? " / " + a.coachingLevel : ""}${a.specialty ? " · " + specName(cat, a.specialty) : ""}${a.provisional ? " (provisional)" : ""}`)))) : null,
       h("p", h("a.btn.btn--ghost", { href: "#/" }, L("Go to home", "Ir al inicio")))));
   }
@@ -394,10 +397,10 @@
     let idx = Math.min(flat.length - 1, flat.findIndex((x) => x.si === ls.section && x.ai === ls.activity));
     if (idx < 0) idx = 0;
     const stepper = h("ol.steps"), host = h("div.lesson__body");
-    const kicker = info.foundation ? `Everyday English · ${info.meta.week ? "Week " + info.meta.week : ""}` : `${courseTitle(info.course)} · ${L("Lesson", "Lección")} ${info.meta.n}`;
+    const kicker = info.foundation ? `Everyday English · ${info.meta.week ? "Week " + info.meta.week : ""}` : `${nativeText("Lesson", "Lección")} ${info.meta.n} · ${courseTitle(info.course)}`;
     const head = h("header.lesson__head", h("p.kicker", kicker),
       h("h1", info.meta.title), Ld.target === "es" ? h("p.muted", { lang: "es" }, info.meta.title_es) : h("p.muted", { lang: "es" }, info.meta.title_es),
-      h("p.can", h("b", L("You will be able to: ", "Podrás: ")), Ld.intro.can, " ", trToggle(Ld.intro.can_tr)), stepper);
+      h("details.lesson__goal.can", { open: window.matchMedia("(min-width: 760px)").matches }, h("summary", nativeText("You will be able to", "Podrás")), h("p", Ld.intro.can, " ", trToggle(Ld.intro.can_tr))), stepper);
     main.replaceChildren(h("section.wrap.lesson", head, host));
     let player = null;
     function show(i, opts) {
@@ -448,13 +451,13 @@
         s.completed ? h("h2", "Lesson complete ✓") : h("h2", "Almost there"),
         s.mastery ? h("p", `Mastery check: ${s.mastery.score} / ${s.mastery.of}.`) : h("p", L("Finish the mastery check to complete the lesson.", "Termina la prueba final para completar la lección.")),
         h("div.grid2",
-          h("div.card", h("p.kicker", L("Skills shown", "Habilidades")),
+          h("div.card", h("p.kicker", nativeText("Skills shown", "Habilidades")),
             h("ul.plain", Object.entries(skills).map(([k, v]) => h("li", h("b", SK[k] || k), ` ${Math.round(v * 100)}% correct`)),
               h("li", h("b", "Speaking"), ` ${speech} task${speech === 1 ? "" : "s"} practiced${evaluated ? `, ${evaluated} with automatic feedback` : ""}`))),
-          h("div.card", h("p.kicker", L("To improve", "Para mejorar")),
+          h("div.card", h("p.kicker", nativeText("To improve", "Para mejorar")),
             weak.length ? h("p", "Review: ", weak.join(", "), ".") : h("p", L("No weak areas in the graded activities. Keep speaking out loud.", "Sigue hablando en voz alta.")),
             missed ? h("a.btn", { href: "#/review" }, `Review ${missed} missed item${missed === 1 ? "" : "s"}`) : h("p.muted.small", L("Nothing to review from this lesson.", "Nada que repasar de esta lección.")))),
-        h("div.card", h("p.kicker", L("Useful phrases", "Frases útiles")), h("ul.phrases", Ld.phrases.map((p) => h("li", h("b", { lang: Ld.target }, p.text), " ", trToggle(p.tr), p.note ? h("span.muted.small", " · " + p.note) : null)))),
+        h("div.card", h("p.kicker", nativeText("Useful phrases", "Frases útiles")), h("ul.phrases", Ld.phrases.map((p) => h("li", h("b", { lang: Ld.target }, p.text), " ", trToggle(p.tr), p.note ? h("span.muted.small", " · " + p.note) : null)))),
         Ld.next_tr || Ld.next ? h("p.muted", Ld.next_tr || Ld.next) : null,
         h("div.row", nextLesson ? h("a.btn.btn--primary", { href: `#/lesson/${nextLesson.id}` }, `Next: ${nextLesson.title}`) : h("a.btn.btn--primary", { href: info.foundation ? "#/foundation" : "#/course" }, "See what's next"),
           h("a.btn.btn--ghost", { href: "#/" }, "Home"), h("button.btn.btn--ghost", { type: "button", onclick: () => show(0) }, "Go through the lesson again"))));
@@ -464,7 +467,7 @@
     cleanup.push(() => { if (player) player.destroy(); });
   }
   function comingSoon(info) {
-    main.replaceChildren(h("section.wrap.narrow", h("p.kicker", L("Coming soon", "Próximamente")), h("h1", info.meta.title), h("p.muted", { lang: "es" }, info.meta.title_es),
+    main.replaceChildren(h("section.wrap.narrow", h("p.kicker", nativeText("Coming soon", "Próximamente")), h("h1", info.meta.title), h("p.muted", { lang: "es" }, info.meta.title_es),
       h("p", nativeText(info.meta.objective, info.meta.objective_es)), h("p.note", L("This lesson is planned but not available yet.", "Esta lección está planificada pero todavía no está disponible.")),
       h("a.btn", { href: info.foundation ? "#/foundation" : "#/course" }, L("Back to the course", "Volver al curso"))));
   }
@@ -502,7 +505,7 @@
     specSel.onchange = () => { state.spec = specSel.value; draw(); };
     lvlSel.onchange = () => { state.level = lvlSel.value; draw(); };
     main.replaceChildren(h("section.wrap",
-      h("p.kicker", L("Glossary", "Glosario")), h("h1", L("Bilingual baseball terminology", "Terminología bilingüe de béisbol")),
+      h("p.kicker", nativeText("Glossary", "Glosario")), h("h1", L("Bilingual baseball terminology", "Terminología bilingüe de béisbol")),
       h("p.muted", L("Natural field usage, with alternatives, loanwords coaches really use, regional notes and sources. Audio: American English and Latin American Spanish voices.",
         "Uso natural en el terreno, con alternativas, préstamos del inglés, notas regionales y fuentes.")),
       h("div.row.filters", search, specSel, lvlSel), count, list));
@@ -515,7 +518,7 @@
     const l = Store.learner(), due = C.dueCards(l);
     const total = Object.values(l.review.cards).filter((x) => !x.mastered).length;
     if (!due.length) {
-      main.replaceChildren(h("section.wrap.narrow", h("p.kicker", L("Review", "Repaso")), h("h1", L("Nothing to review right now", "Nada que repasar ahora")),
+      main.replaceChildren(h("section.wrap.narrow", h("p.kicker", nativeText("Review", "Repaso")), h("h1", L("Nothing to review right now", "Nada que repasar ahora")),
         h("p", total ? L(`${total} item${total === 1 ? "" : "s"} will come back later, spaced out so you remember them.`, `${total} volverán más adelante.`) : L("Items you miss in lessons will appear here.", "Lo que falles en las lecciones aparece aquí.")),
         h("a.btn", { href: "#/" }, "Home")));
       return;
@@ -559,7 +562,7 @@
     for (const c of cat.courses.filter((c) => c.status === "active")) { const pr = C.courseProgress(l, c.key, c.lessons); if (pr.started) progressRows.push(h("li", `${c.title}: ${pr.done} / ${pr.available}`)); }
     const fd = foundationFor(cat, "en"); if (fd) { const pr = C.courseProgress(l, fd.key, fd.lessons); if (pr.started) progressRows.push(h("li", `Everyday English: ${pr.done} / ${pr.available}`)); }
     main.replaceChildren(h("section.wrap.narrow",
-      h("p.kicker", L("Settings & privacy", "Ajustes y privacidad")), h("h1", L("Your learning", "Tu aprendizaje")),
+      h("p.kicker", nativeText("Settings & privacy", "Ajustes y privacidad")), h("h1", L("Your learning", "Tu aprendizaje")),
       h("div.card", h("h2", L("Profile", "Perfil")),
         h("p", h("b", L("Learning: ", "Aprendiendo: ")), l.profile.target ? NAMES[l.profile.target][0] : "—", " · ", h("b", L("Specialty: ", "Especialidad: ")), specName(cat, l.profile.specialty)),
         h("p", h("a.btn", { href: "#/courses" }, L("Change language or specialty", "Cambiar idioma o especialidad"))),

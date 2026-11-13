@@ -783,7 +783,12 @@
           ],
           "answer": 0,
           "explain": "The play in the hole is usually a backhand.",
-          "explain_es": "La jugada en el hueco normalmente es de revés (backhand)."
+          "explain_es": "La jugada en el hueco normalmente es de revés (backhand).",
+          "figure": {
+            "id": "glove-position",
+            "caption": "Below the waist the fingers point down.",
+            "caption_es": "Abajo de la cintura los dedos apuntan hacia abajo."
+          }
         },
         {
           "id": "d02-p2",
@@ -798,7 +803,12 @@
           ],
           "answer": 0,
           "explain": "The angle is the path the fielder takes to the ball.",
-          "explain_es": "El ángulo es el camino que toma el fildeador hacia la bola."
+          "explain_es": "El ángulo es el camino que toma el fildeador hacia la bola.",
+          "figure": {
+            "id": "footwork-angle",
+            "caption": "First step, then a good angle through the ball.",
+            "caption_es": "Primer paso y luego un buen ángulo hacia la pelota."
+          }
         },
         {
           "id": "d02-p3",
@@ -832,7 +842,10 @@
           ],
           "answer": 0,
           "explain": "\"So you can\" gives the reason or purpose.",
-          "explain_es": "\"So you can\" = para que puedas. Da el propósito de la indicación."
+          "explain_es": "\"So you can\" = para que puedas. Da el propósito de la indicación.",
+          "figure": {
+            "id": "throwing-setup"
+          }
         },
         {
           "id": "d02-p5",
@@ -942,7 +955,10 @@
           ],
           "answer": 0,
           "explain": "To shade is to move a few steps to one side.",
-          "explain_es": "\"Shade\" es moverse unos pasos hacia un lado; aquí, hacia el medio (segunda base)."
+          "explain_es": "\"Shade\" es moverse unos pasos hacia un lado; aquí, hacia el medio (segunda base).",
+          "figure": {
+            "id": "infield-shade"
+          }
         }
       ]
     },
@@ -956,7 +972,12 @@
           "clip": "d02-r1",
           "text": "Set your feet before you throw.",
           "es": "Planta los pies antes de tirar.",
-          "tip_es": "Une \"set your\" como una sola palabra: \"SET-chur FEET\". Así suena natural."
+          "tip_es": "Une \"set your\" como una sola palabra: \"SET-chur FEET\". Así suena natural.",
+          "figure": {
+            "id": "throwing-setup",
+            "caption": "Feet set, glove shoulder to the target.",
+            "caption_es": "Pies plantados, hombro del guante hacia el objetivo."
+          }
         },
         {
           "id": "d02-s2",
@@ -987,7 +1008,12 @@
             "that gives you",
             "first step"
           ],
-          "level": "B1"
+          "level": "B1",
+          "figure": {
+            "id": "footwork-angle",
+            "caption": "Explain why the angle helps.",
+            "caption_es": "Explica por qué ayuda el ángulo."
+          }
         },
         {
           "id": "d02-s4",
@@ -1145,7 +1171,12 @@
               },
               "last": true
             }
-          ]
+          ],
+          "figure": {
+            "id": "infield-shade",
+            "caption": "The adjustment you will explain to Jake.",
+            "caption_es": "El ajuste que le vas a explicar a Jake."
+          }
         }
       ]
     },

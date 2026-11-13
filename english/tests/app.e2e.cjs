@@ -358,6 +358,44 @@ const learnerOf = (s) => s.learners[s.active];
     await ctx.close();
   }
 
+  /* ---------- 11 · mobile navigation + instructional graphics (v3 design pass) ---------- */
+  {
+    const { devices } = require("playwright");
+    const ctx = await b.newContext({ ...devices["iPhone 13"] }); const p = await ctx.newPage(); const errs = []; p.on("pageerror", (e) => errs.push(e.message));
+    await onboard(p, "es", "pitching", true);
+    ok(await p.isVisible(".tabbar") && !(await p.isVisible(".nav--top")) && await p.isVisible(".acct"), "11 · iPhone: bottom tab bar + account button; no wrapped top nav");
+    const hdr = await p.$eval(".top", (e) => e.getBoundingClientRect().height);
+    ok(hdr <= 64, `11 · compact header (${Math.round(hdr)}px)`);
+    for (const [nav, re] of [["course", /Spanish for Pitching Coaches/], ["review", /review|repasar/i], ["glossary", /Bilingual baseball terminology/], ["placement", /Find your starting level|placement/i], ["home", /Welcome back/]]) {
+      await p.click(`.tabbar a[data-nav="${nav}"]`); await p.waitForTimeout(400);
+      ok(re.test(await p.textContent("main")) && (await p.getAttribute(`.tabbar a[data-nav="${nav}"]`, "class")).includes("on"), `11 · tab ${nav} opens and is marked active`);
+    }
+    const tb = await p.$$eval(".tabbar a", (as) => as.map((a) => a.getBoundingClientRect()).map((r) => Math.min(r.width, r.height)));
+    ok(tb.every((x) => x >= 44), `11 · tab targets ≥ 44px (${tb.map(Math.round).join(", ")})`);
+    await p.click(".acct"); await p.waitForTimeout(400);
+    ok(/Settings & privacy/.test(await p.textContent("main")), "11 · Settings reached from the account button");
+    await p.goto(BASE + "#/lesson/sp01"); await p.waitForTimeout(600); await p.click("text=Continue to vocabulary"); await p.waitForTimeout(400);
+    ok(await p.isVisible(".act__fig svg.fg"), "11 · hand diagram embedded in the vocabulary activity");
+    const sizes = await p.$$eval(".act__fig .fg__lbl tspan", (ts) => ts.map((t) => t.getBoundingClientRect().height));
+    ok(sizes.length > 5 && Math.min(...sizes) >= 11, `11 · figure labels legible on iPhone (min rendered height ${Math.min(...sizes).toFixed(1)}px)`);
+    await p.click(".act__fig .fgc__expand"); await p.waitForTimeout(300);
+    ok(await p.isVisible("dialog.fgsheet svg.fg"), "11 · Expand opens a full-screen sheet");
+    await p.click("dialog.fgsheet >> text=Close"); await p.waitForTimeout(200);
+    ok(!(await p.isVisible("dialog.fgsheet")), "11 · the sheet closes");
+    let figs = 0;
+    for (const id of ["sp01", "sp02", "d01", "d02"]) figs += lessons[id].sections.flatMap((x) => x.activities).filter((a) => a.figure).length;
+    ok(figs >= 18, `11 · ${figs} activities across the four lessons carry a teaching figure`);
+    const over = await p.evaluate(() => document.documentElement.scrollWidth - innerWidth);
+    ok(over <= 1 && errs.length === 0, `11 · no overflow (${over}) and no errors ${errs.join(" | ")}`);
+    await ctx.close();
+    const d = await b.newContext({ viewport: { width: 1280, height: 900 } }); const q = await d.newPage();
+    await onboard(q, "en", "defense", true);
+    ok(await q.isVisible(".nav--top") && !(await q.isVisible(".tabbar")) && !(await q.isVisible(".acct")), "11 · desktop: top navigation, no tab bar");
+    await q.goto(BASE + "#/lesson/d01"); await q.waitForTimeout(500);
+    ok(await q.isVisible(".lesson__goal p"), "11 · desktop: the lesson goal is open by default");
+    await d.close();
+  }
+
   console.log(`\n${pass} passed, ${fail} failed`);
   await b.close();
 })().catch((e) => { console.error(e); process.exit(1); });

@@ -631,7 +631,12 @@
               "volver a tu posición"
             ]
           ],
-          "explain_es": "\"Field\" es para un roletazo; \"catch\" para un elevado o un tiro. \"Reset\" le dice al jugador que vuelva a su posición inicial para la próxima repetición."
+          "explain_es": "\"Field\" es para un roletazo; \"catch\" para un elevado o un tiro. \"Reset\" le dice al jugador que vuelva a su posición inicial para la próxima repetición.",
+          "figure": {
+            "id": "ready-position",
+            "caption": "Ready position, side view.",
+            "caption_es": "Posición de preparación, vista lateral."
+          }
         }
       ]
     },
@@ -754,7 +759,10 @@
           ],
           "answer": 0,
           "explain": "You field a ground ball. You catch a fly ball or a throw.",
-          "explain_es": "Un roletazo se fildea (field). Un elevado o un tiro se atrapa (catch)."
+          "explain_es": "Un roletazo se fildea (field). Un elevado o un tiro se atrapa (catch).",
+          "figure": {
+            "id": "ground-ball"
+          }
         },
         {
           "id": "d01-p2",
@@ -913,7 +921,12 @@
           "clip": "d01-r1",
           "text": "Stay low, and keep your eyes on the ball.",
           "es": "Quédate abajo y no le quites la vista a la bola.",
-          "tip_es": "Marca las palabras importantes: STAY LOW, EYES, BALL. Las indicaciones se entienden por esas palabras."
+          "tip_es": "Marca las palabras importantes: STAY LOW, EYES, BALL. Las indicaciones se entienden por esas palabras.",
+          "figure": {
+            "id": "ground-ball",
+            "caption": "Stay low, eyes on the ball, glove out front.",
+            "caption_es": "Quédate abajo, la vista en la pelota, el guante al frente."
+          }
         },
         {
           "id": "d01-s2",
@@ -944,7 +957,12 @@
             "move your feet",
             "ready position"
           ],
-          "level": "A2"
+          "level": "A2",
+          "figure": {
+            "id": "ready-position",
+            "caption": "Use the picture: give one or two instructions.",
+            "caption_es": "Usa la imagen: da una o dos instrucciones."
+          }
         },
         {
           "id": "d01-s4",
@@ -1072,7 +1090,12 @@
               },
               "last": true
             }
-          ]
+          ],
+          "figure": {
+            "id": "ground-ball",
+            "caption": "Tyler is taking ground balls.",
+            "caption_es": "Tyler está fildeando roletazos."
+          }
         }
       ]
     },

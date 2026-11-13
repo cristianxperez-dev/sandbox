@@ -794,7 +794,11 @@
               "to release the ball"
             ]
           ],
-          "explain_en": "\"Dedo medio\" and \"dedo del medio\" both mean the middle finger; the second is the everyday form. \"Soltar\" means to let go: \"cuando soltaste la pelota\" = when you let go of the ball."
+          "explain_en": "\"Dedo medio\" and \"dedo del medio\" both mean the middle finger; the second is the everyday form. \"Soltar\" means to let go: \"cuando soltaste la pelota\" = when you let go of the ball.",
+          "figure": {
+            "id": "hand-fingers",
+            "caption": "Numbers show each finger; tap Expand for a larger view."
+          }
         },
         {
           "id": "sp01-v2",
@@ -983,7 +987,11 @@
             "separa un poco los dedos",
             "separa los dedos un poco"
           ],
-          "explain_en": "Verb first: \"Separa\", then \"un poco\" and \"los dedos\". Spanish says \"los dedos\" (the fingers), not \"tus dedos\"."
+          "explain_en": "Verb first: \"Separa\", then \"un poco\" and \"los dedos\". Spanish says \"los dedos\" (the fingers), not \"tus dedos\".",
+          "figure": {
+            "id": "grip-adjust-spread",
+            "caption": "\"Separa un poco los dedos\" — a small change in spacing."
+          }
         },
         {
           "id": "sp01-p5",
@@ -996,7 +1004,14 @@
             "Junta los dedos."
           ],
           "answer": 0,
-          "explain": "\"Afloja\" means loosen. \"Aprieta\" means squeeze, the opposite. \"Junta los dedos\" (bring your fingers together) doesn't address pressure."
+          "explain": "\"Afloja\" means loosen. \"Aprieta\" means squeeze, the opposite. \"Junta los dedos\" (bring your fingers together) doesn't address pressure.",
+          "figure": {
+            "id": "grip-change",
+            "highlight": [
+              "circle"
+            ],
+            "caption": "A changeup sits deeper; pressure can ease off."
+          }
         },
         {
           "id": "sp01-p6",
@@ -1086,7 +1101,15 @@
           "clip": "sp01-r1",
           "text": "Pon los dedos sobre las costuras. Separa un poco los dedos.",
           "en": "Put your fingers on the seams. Spread them a little.",
-          "tip_en": "Spanish vowels are short and clear: \"cos-TU-ras\", \"SE-pa-ra\". Stress the verb at the start."
+          "tip_en": "Spanish vowels are short and clear: \"cos-TU-ras\", \"SE-pa-ra\". Stress the verb at the start.",
+          "figure": {
+            "id": "grip-4s",
+            "highlight": [
+              "index",
+              "middle"
+            ],
+            "caption": "Index and middle fingers across the seams."
+          }
         },
         {
           "id": "sp01-s2",
@@ -1118,7 +1141,11 @@
             "mueve",
             "un poquito"
           ],
-          "level": "A1"
+          "level": "A1",
+          "figure": {
+            "id": "grip-adjust-thumb",
+            "caption": "\"Mueve el pulgar un poquito\": where the thumb goes."
+          }
         },
         {
           "id": "sp01-s4",
@@ -1273,7 +1300,11 @@
               },
               "last": true
             }
-          ]
+          ],
+          "figure": {
+            "id": "grip-adjust",
+            "caption": "The two adjustments you will talk Luis through."
+          }
         }
       ]
     },

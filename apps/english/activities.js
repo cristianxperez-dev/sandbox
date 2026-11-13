@@ -230,5 +230,12 @@
     return box;
   };
 
-  window.CPEAct = { render: (a, ctx) => (R[a.type] ? R[a.type](a, ctx) : h("p", "Unsupported activity.")), choiceQ, feedbackBox };
+  /** an activity may carry a teaching figure: { figure: { id, highlight, caption, caption_tr } } — shown above it */
+  function withFigure(a, el) {
+    if (!a.figure || !window.CPEFig) return el;
+    const f = window.CPEFig.draw(a.figure.id, { highlight: a.figure.highlight, caption: a.figure.caption, caption_tr: a.figure.caption_tr, compact: true });
+    if (f) { f.classList.add("act__fig"); el.prepend(f); }
+    return el;
+  }
+  window.CPEAct = { render: (a, ctx) => (R[a.type] ? withFigure(a, R[a.type](a, ctx)) : h("p", "Unsupported activity.")), choiceQ, feedbackBox };
 })();

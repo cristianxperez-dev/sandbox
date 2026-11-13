@@ -84,7 +84,7 @@ function choiceOk(q, where) {
   if (new Set(q.options).size !== q.options.length) err(`${where}: duplicate options`);
 }
 const TYPES = new Set(["lecture", "match", "listen", "choice", "order", "repeat", "answer", "conversation", "mastery"]);
-const FIGURES = new Set(["ball-seams", "hand-fingers", "grip-4s", "grip-2s", "grip-change", "delivery-a", "delivery-b", "infield", "infield-shade", "ready-position"]);
+const FIGURES = new Set(["ball-seams", "seam-orientation", "hand-fingers", "grip-4s", "grip-2s", "grip-change", "grip-adjust", "grip-adjust-thumb", "grip-adjust-spread", "delivery-side", "delivery-a", "delivery-b", "infield", "infield-shade", "ready-position", "glove-position", "ground-ball", "footwork-angle", "throwing-setup"]);   // drawn by apps/english/figures.js
 const LEVELS = ["A0", "A1", "A2", "B1", "B2"];
 
 /* ---------------- catalog + foundations ---------------- */
@@ -162,6 +162,7 @@ for (const f of readdirSync(join(C, "lessons")).filter((x) => x.endsWith(".json"
   for (const sec of src.sections) for (const a of sec.activities) {
     uniq(a.id, where);
     if (!TYPES.has(a.type)) err(`${where}/${a.id}: unknown type ${a.type}`);
+    if (a.figure && !FIGURES.has(a.figure.id)) err(`${where}/${a.id}: unknown figure ${a.figure.id}`);
     if (a.clip && !clips[a.clip]) err(`${where}/${a.id}: unknown clip ${a.clip}`);
     if (a.type === "choice") { choiceOk(a, `${where}/${a.id}`); n.practice++; }
     if (a.type === "order") { if (!a.answers || !a.answers.length) err(`${where}/${a.id}: order needs answers`); n.practice++; n.order++; }

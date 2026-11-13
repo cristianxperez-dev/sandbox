@@ -58,9 +58,17 @@ A cue without `speaker` is the narrator (Voice C, English). Target ≈ 3–5 min
 ### Visuals (`lecture.scenes[].visual`)
 `title {kicker, title, sub}` · `dialogue {title, title_es}` · `phrases {title, items:[{en, es, answer?}], note_es|note_en}` ·
 `pattern {title, rows:[{en, example, es}], note_*}` · `steps {title, steps:[{en, es}], note_*}` · `summary {title, items}` ·
-`figure {title, figure: "<figure id>", caption, caption_*}` — figure ids are drawn by `apps/english/figures.js`:
-`ball-seams`, `hand-fingers`, `grip-4s`, `grip-2s`, `grip-change`, `delivery-a`, `delivery-b` (illustrated delivery,
-front side opens early vs. stays closed — always labelled "Illustration"), `infield`, `infield-shade`, `ready-position`.
+`figure {title, figure: "<figure id>", caption, caption_*, highlight?}` — drawn by the graphics system in
+`apps/english/figures.js` (SVG components: SeamDiagram, HandDiagram, GripDiagram, GripAdjustDiagram, DeliveryDiagram,
+ReadyPositionDiagram, GlovePositionDiagram, GroundBallDiagram, FootworkDiagram, ThrowingDiagram, InfieldDiagram). Ids:
+`ball-seams`, `seam-orientation`, `hand-fingers`, `grip-4s`, `grip-2s`, `grip-change`, `grip-adjust` (`-thumb`, `-spread`),
+`delivery-side`, `delivery-a` / `delivery-b` (illustrated reps, always labelled "Illustration"), `ready-position`,
+`glove-position`, `ground-ball`, `footwork-angle`, `throwing-setup`, `infield`, `infield-shade`.
+
+**Any activity** may carry a teaching figure, shown above it: `"figure": {"id": "grip-4s", "highlight": ["index", "middle"],
+"caption": "…", "caption_es": "…"}`. Labels are bilingual automatically (the language being learned first). Highlight keys:
+fingers (`thumb`, `index`, `middle`, `ring`, `pinky`, `tips`, `circle`), delivery (`balance`, `stride`, `release`, `frontSide`),
+ready position (`weight`, `glove`, `knees`, `feet`). Use a figure where it reduces reading, not as decoration.
 
 ### Activities
 | type | fields |
