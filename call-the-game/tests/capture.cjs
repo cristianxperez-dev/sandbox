@@ -4,7 +4,7 @@
 const { chromium } = require("playwright");
 const BASE = process.env.BASE || "http://localhost:4173/apps/call-the-game/";
 const out = process.argv[2] || ".", only = (process.argv[3] || "").split(",").filter(Boolean);
-const FPS = 20;
+const FPS = +(process.env.FPS || 20);
 const SCEN = {
   "rhh-take": { hand: "R", pitcher: "whitaker", rec: { code: "FF", target: { x: 0.1, z: 3.3 }, end: { x: 0.25, z: 3.4, velo: 95.8 }, result: "called", swing: false } },
   "lhh-whiff": { hand: "L", pitcher: "whitaker", rec: { code: "SL", target: { x: 0.6, z: 1.6 }, end: { x: 0.7, z: 1.45, velo: 85.4 }, result: "whiff", swing: true } },

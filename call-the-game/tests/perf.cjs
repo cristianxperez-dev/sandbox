@@ -27,7 +27,8 @@ const BASE = process.env.BASE || "http://localhost:4173/apps/call-the-game/";
       for (let i = 0; i < N; i++) { const t = (i / N) * 2.4; p.pose(p.clipName, t); b.pose(b.clipName, Math.min(2.3, 0.2 + t)); }
       const animMs = (performance.now() - t0) / N;
       // render cost (SwiftShader): time 60 renders
-      const t1 = performance.now(); for (let i = 0; i < 30; i++) d.renderer.render(d.scene, d.camera); const renderMs = (performance.now() - t1) / 30;
+      const gl = d.renderer.getContext(), px = new Uint8Array(4);
+      const t1 = performance.now(); for (let i = 0; i < 20; i++) { d.renderer.render(d.scene, d.camera); gl.readPixels(0, 0, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, px); } const renderMs = (performance.now() - t1) / 20;
       const info = d.renderer.info;
       return { animMs, renderMs, calls: info.render.calls, tris: info.render.triangles, textures: info.memory.textures, geometries: info.memory.geometries, pr: d.renderer.getPixelRatio(), shadows: d.renderer.shadowMap.enabled };
     });
