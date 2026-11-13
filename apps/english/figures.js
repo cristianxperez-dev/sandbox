@@ -452,7 +452,52 @@
     infield: ["The infield", "El cuadro"], "infield-shade": ["Shading a few steps", "Moverse unos pasos"],
   };
 
+  /* ---------------- illustrated plates (english/tools/studio → build-plates.py → plates.js + figs/*.webp) ----------------
+     Each plate: one or more panels (an editorial illustration rendered from a posed 3D athlete) with numbered markers placed
+     on 3D-projected anchors, an SVG overlay for lines/arrows, and a bilingual legend. Text in the image stays out of the art. */
+  const tr = (t) => { const c = ctx(); return c.target === "es" ? [t[1] || t[0], t[0]] : [t[0], c.native === "es" ? t[1] : ""]; };
+  function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function plate(id, o) {
+    const P = window.CPEPlates && window.CPEPlates[id]; if (!P) return null;
+    const hl = new Set([].concat(o.highlight || []));
+    const root = el("div", "plate plate--n" + P.panels.length); let n = 0; const legend = el("ol", "plate__legend");
+    const alt = [];
+    for (const p of P.panels) {
+      const panel = el("div", "plate__panel" + (p.tag ? " plate__panel--" + p.tag : ""));
+      const art = el("div", "plate__art"); art.style.setProperty("--ar", (p.w / p.h).toFixed(4));
+      const img = el("img", "plate__img"); img.src = p.src; img.width = p.w; img.height = p.h; img.loading = "lazy"; img.decoding = "async";
+      const pins = [], H = Math.round(1000 * p.h / p.w), svg = s("svg", { class: "plate__ov", viewBox: `0 0 1000 ${H}`, preserveAspectRatio: "none", "aria-hidden": "true" });
+      const X = (v) => v[0] * 1000, Y = (v) => v[1] * H;
+      for (const ov of p.overlays || []) {
+        if (ov.kind === "hline") { svg.append(s("line", { x1: 0, y1: ov.y * H, x2: 1000, y2: ov.y * H, class: "plate__line plate__line--belt" })); const [a] = tr(ov.text); svg.append(s("text", { x: 990, y: ov.y * H - 10, class: "plate__ovtx", "text-anchor": "end" }, a)); }
+        if (ov.kind === "arrow") {
+          const [x1, y1, x2, y2] = [X(ov.from), Y(ov.from), X(ov.to), Y(ov.to)], a = Math.atan2(y2 - y1, x2 - x1), L = ov.style === "foot" ? 22 : 30;
+          svg.append(s("line", { x1, y1, x2, y2, class: "plate__line plate__line--" + ov.style }));
+          svg.append(s("polygon", { points: `${x2},${y2} ${x2 - L * Math.cos(a - 0.42)},${y2 - L * Math.sin(a - 0.42)} ${x2 - L * Math.cos(a + 0.42)},${y2 - L * Math.sin(a + 0.42)}`, class: "plate__head plate__head--" + ov.style }));
+          if (ov.text) { const [t1] = tr(ov.text); svg.append(s("text", { x: Math.min(985, x2 - 6), y: y2 - 22, class: "plate__ovtx plate__ovtx--strong", "text-anchor": "end" }, t1)); }
+        }
+        if (ov.kind === "path") { const d = ov.pts.map((q, i) => (i ? "L" : "M") + X(q) + " " + Y(q)).join(" "); svg.append(s("path", { d, class: "plate__line plate__line--" + ov.style })); const q = ov.pts[ov.pts.length - 1], q0 = ov.pts[ov.pts.length - 2], a = Math.atan2(Y(q) - Y(q0), X(q) - X(q0)); svg.append(s("polygon", { points: `${X(q)},${Y(q)} ${X(q) - 30 * Math.cos(a - 0.42)},${Y(q) - 30 * Math.sin(a - 0.42)} ${X(q) - 30 * Math.cos(a + 0.42)},${Y(q) - 30 * Math.sin(a + 0.42)}`, class: "plate__head plate__head--" + ov.style })); }
+        if (ov.kind === "dot") { svg.append(s("circle", { cx: X(ov.at), cy: Y(ov.at), r: 14, class: "plate__ball" })); const [a] = tr(ov.text); svg.append(s("text", { x: X(ov.at), y: Y(ov.at) - 26, class: "plate__ovtx", "text-anchor": "middle" }, a)); }
+      }
+      for (const c of p.callouts) {
+        n++; const isHl = hl.has(c.key), pin = el("span", "plate__mk" + (isHl ? " plate__mk--hl" : ""), String(n));
+        pin.style.left = (c.at[0] * 100).toFixed(2) + "%"; pin.style.top = (c.at[1] * 100).toFixed(2) + "%"; pins.push(pin);
+        const [a, b] = tr(c.text), li = el("li", isHl ? "is-hl" : "");
+        li.append(el("span", "plate__num", String(n)), el("span", "plate__p", a)); if (b) li.append(el("span", "plate__s", b));
+        legend.append(li); alt.push(a);
+      }
+      art.append(img, svg, ...pins); panel.append(art);
+      if (p.cap) { const [a, b] = tr(p.cap), cp = el("p", "plate__cap"); cp.append(el("span", "", a)); if (b) cp.append(el("span", "plate__s", b)); panel.append(cp); }
+      root.append(panel);
+    }
+    root.setAttribute("role", "img"); root.setAttribute("aria-label", (TITLES[id] || [id])[0] + ". " + alt.join("; "));
+    if (legend.children.length) root.append(legend);
+    if (P.note) { const [a, b] = tr(P.note), nt = el("p", "plate__note"); nt.append(el("span", "", a)); if (b) nt.append(el("span", "plate__s", b)); root.append(nt); }
+    return root;
+  }
+
   function render(id, o) {
+    const pl = plate(id, o || {}); if (pl) return pl;
     const f = FIGURES[id]; if (!f) return null;
     return C[f[0]](Object.assign({}, f[1] || {}, o || {}));
   }
@@ -471,7 +516,7 @@
     const ex = document.createElement("button"); ex.type = "button"; ex.className = "fgc__expand"; ex.textContent = "Expand"; ex.setAttribute("aria-label", "Expand the figure: " + title);
     ex.onclick = () => expand(id, o, title, sub);
     head.append(ex);
-    const box = document.createElement("div"); box.className = "fgc__art"; box.append(g);
+    const box = document.createElement("div"); box.className = "fgc__art" + (window.CPEPlates && window.CPEPlates[id] ? " fgc__art--plate" : ""); box.append(g);
     box.onclick = (e) => { if (window.matchMedia("(max-width: 759px)").matches && !e.target.closest("button")) expand(id, o, title, sub); };
     fig.append(head, box);
     if (o.caption) { const cp = document.createElement("p"); cp.className = "fgc__cap"; cp.textContent = o.caption; fig.append(cp); if (o.caption_tr) { const tr = document.createElement("p"); tr.className = "fgc__cap fgc__cap--tr"; tr.textContent = o.caption_tr; fig.append(tr); } }
