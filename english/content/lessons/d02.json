@@ -1,0 +1,1289 @@
+{
+  "id": "d02",
+  "course": "en-defense",
+  "target": "en",
+  "native": "es",
+  "minutes": 15,
+  "intro": {
+    "can": "Run a footwork and throwing drill in English, explain why an adjustment helps, and give feedback that separates what you saw from what to try.",
+    "can_es": "Dirigir en inglés un ejercicio de pies y tiros, explicar por qué un ajuste ayuda y dar retroalimentación que separe lo que viste de lo que hay que probar.",
+    "outcomes": [
+      {
+        "en": "Use footwork and throwing words: first step, angle, backhand, forehand, transfer, throwing lane.",
+        "es": "Usar palabras de pies y tiros: first step, angle, backhand, forehand, transfer, throwing lane."
+      },
+      {
+        "en": "Give cues like \"Take a better angle\" and \"Set your feet before you throw.\"",
+        "es": "Dar indicaciones como \"Take a better angle\" y \"Set your feet before you throw.\""
+      },
+      {
+        "en": "Explain why with \"so you…\", \"because…\" and \"That gives you…\".",
+        "es": "Explicar el porqué con \"so you…\", \"because…\" y \"That gives you…\"."
+      },
+      {
+        "en": "Separate observation from instruction: \"I saw…\" then \"Try…\".",
+        "es": "Separar la observación de la instrucción: \"I saw…\" y luego \"Try…\"."
+      }
+    ]
+  },
+  "speakers": {
+    "ramirez": {
+      "name": "Coach Ramírez",
+      "role": "Infield coach, Dominican academy",
+      "role_es": "Coach de cuadro, academia dominicana",
+      "voice": "am_michael"
+    },
+    "jake": {
+      "name": "Jake",
+      "role": "Second baseman",
+      "role_es": "Segunda base",
+      "voice": "am_fenrir"
+    },
+    "tyler": {
+      "name": "Tyler",
+      "role": "Shortstop",
+      "role_es": "Campocorto",
+      "voice": "am_puck"
+    },
+    "megan": {
+      "name": "Megan",
+      "role": "Player development coordinator",
+      "role_es": "Coordinadora de desarrollo de jugadores",
+      "voice": "af_kore"
+    }
+  },
+  "lecture": {
+    "title": "Feet first, then the throw",
+    "title_es": "Primero los pies, después el tiro",
+    "scenes": [
+      {
+        "visual": {
+          "type": "title",
+          "kicker": "English Defense · Lesson 2",
+          "title": "Feet first, then the throw",
+          "sub": "Footwork, positioning and throwing"
+        },
+        "cues": [
+          {
+            "text": "In the last lesson, you gave short, clear instructions. In this one, you will add the words for footwork, positioning and throwing.",
+            "es": "En la lección anterior diste instrucciones cortas y claras. En esta vas a agregar las palabras para el juego de pies, el posicionamiento y los tiros."
+          },
+          {
+            "text": "You will also learn to explain why an adjustment helps. A player who understands the reason usually remembers the cue.",
+            "es": "También vas a aprender a explicar por qué un ajuste ayuda. Un jugador que entiende la razón normalmente recuerda la indicación."
+          }
+        ]
+      },
+      {
+        "visual": {
+          "type": "phrases",
+          "title": "The first step",
+          "title_es": "El primer paso",
+          "items": [
+            {
+              "en": "first step",
+              "es": "el primer paso"
+            },
+            {
+              "en": "direction",
+              "es": "la dirección"
+            },
+            {
+              "en": "angle",
+              "es": "el ángulo (el camino hacia la bola)"
+            },
+            {
+              "en": "Get your feet moving.",
+              "es": "Mueve los pies. / Arranca con los pies."
+            },
+            {
+              "en": "Take a better angle.",
+              "es": "Toma un mejor ángulo."
+            }
+          ],
+          "note_es": "\"Angle\" aquí es el camino que toma el fildeador hacia la bola, no un ángulo de geometría."
+        },
+        "cues": [
+          {
+            "text": "Defense starts with the first step. Its direction matters as much as its speed. Good first step. Your first step was late.",
+            "es": "La defensa empieza con el primer paso. Su dirección importa tanto como su rapidez. Buen primer paso. Tu primer paso fue tarde.",
+            "reveal": 2,
+            "repeat": true
+          },
+          {
+            "text": "The angle is the path he takes to the ball. Take a better angle.",
+            "es": "El ángulo es el camino que toma hacia la bola. Toma un mejor ángulo.",
+            "reveal": 3,
+            "repeat": true
+          },
+          {
+            "text": "When a player waits for the ball, say: get your feet moving.",
+            "es": "Cuando un jugador se queda esperando la bola, di: get your feet moving.",
+            "reveal": 4,
+            "repeat": true
+          },
+          {
+            "text": "Notice the verb take. In English, you take a step, you take an angle, and you take a ball on the backhand.",
+            "es": "Fíjate en el verbo take. En inglés se dice take a step, take an angle, y take a ball on the backhand."
+          }
+        ]
+      },
+      {
+        "visual": {
+          "type": "figure",
+          "figure": "infield",
+          "title": "Glove side and backhand side",
+          "title_es": "Lado del guante y lado del revés",
+          "caption": "Illustration of the infield. For a right-handed fielder, the glove side is his left; the backhand side is his right.",
+          "caption_es": "Ilustración del cuadro. Para un fildeador derecho, el lado del guante es su izquierda; el lado del revés es su derecha."
+        },
+        "cues": [
+          {
+            "text": "Now, side to side. The glove side is the side of the glove hand.",
+            "es": "Ahora, de lado a lado. El glove side es el lado de la mano del guante."
+          },
+          {
+            "text": "A ball on the glove side is a forehand. Open glove, palm to the ball.",
+            "es": "Una bola por el lado del guante se fildea de forehand: guante abierto, la palma hacia la bola.",
+            "repeat": true
+          },
+          {
+            "text": "A ball on the other side is a backhand. The shortstop's play in the hole is a backhand. Take it on the backhand.",
+            "es": "Una bola por el otro lado es de revés. La jugada del campocorto en el hueco es de revés. Tómala de revés.",
+            "repeat": true
+          },
+          {
+            "text": "The hole is the space between the shortstop and the third baseman.",
+            "es": "El hueco es el espacio entre el campocorto y el tercera base."
+          }
+        ]
+      },
+      {
+        "visual": {
+          "type": "steps",
+          "title": "From the catch to the throw",
+          "title_es": "Del fildeo al tiro",
+          "steps": [
+            {
+              "en": "Work through the ball.",
+              "es": "Sigue moviéndote hacia la bola, sin pararte en ella."
+            },
+            {
+              "en": "Get your body behind it.",
+              "es": "Ponte detrás de la bola."
+            },
+            {
+              "en": "Quick transfer.",
+              "es": "Pasa la bola del guante a la mano rápido."
+            },
+            {
+              "en": "Set your feet before you throw.",
+              "es": "Planta los pies antes de tirar."
+            },
+            {
+              "en": "Clear your throwing lane.",
+              "es": "Despeja tu línea de tiro."
+            }
+          ],
+          "note_es": "\"Work through the ball\" no tiene una traducción fija: es seguir moviéndose a través de la jugada, hacia el tiro, en vez de detenerse sobre la bola."
+        },
+        "cues": [
+          {
+            "text": "Here is the play from the ball to the throw. Work through the ball. Keep moving toward the throw. Don't stop on it.",
+            "es": "Esta es la jugada desde la bola hasta el tiro. Work through the ball: sigue moviéndote hacia el tiro, no te detengas sobre la bola.",
+            "reveal": 1,
+            "repeat": true
+          },
+          {
+            "text": "Get your body behind it.",
+            "es": "Ponte detrás de la bola.",
+            "reveal": 2,
+            "repeat": true
+          },
+          {
+            "text": "The transfer is the ball going from the glove to the throwing hand. Quick transfer.",
+            "es": "El transfer es cuando la bola pasa del guante a la mano de tirar. Pásala rápido.",
+            "reveal": 3,
+            "repeat": true
+          },
+          {
+            "text": "Set your feet before you throw.",
+            "es": "Planta los pies antes de tirar.",
+            "reveal": 4,
+            "repeat": true
+          },
+          {
+            "text": "And the throwing lane is a clear line to the target, with no runner in the way. Clear your lane.",
+            "es": "Y la línea de tiro es una línea libre hacia el objetivo, sin un corredor en el medio. Despeja tu línea.",
+            "reveal": 5,
+            "repeat": true
+          }
+        ]
+      },
+      {
+        "visual": {
+          "type": "pattern",
+          "title": "Explain why",
+          "title_es": "Explica el porqué",
+          "rows": [
+            {
+              "en": "… so you …",
+              "example": "Set your feet, so you can make a strong throw.",
+              "es": "… para que puedas …"
+            },
+            {
+              "en": "… because …",
+              "example": "Take a better angle, because it saves you a step.",
+              "es": "… porque …"
+            },
+            {
+              "en": "That gives you …",
+              "example": "That gives you more time.",
+              "es": "Eso te da …"
+            }
+          ],
+          "note_es": "Primero la instrucción, después la razón, en pocas palabras. \"So you can\" es la forma más común de decir \"para que puedas\"."
+        },
+        "cues": [
+          {
+            "text": "A command tells the player what to do. A short reason tells him why. Put the reason after the cue, and keep it short.",
+            "es": "Una orden le dice al jugador qué hacer. Una razón corta le dice por qué. Pon la razón después de la indicación y que sea corta."
+          },
+          {
+            "text": "Use so you. Set your feet, so you can make a strong throw.",
+            "es": "Usa so you. Planta los pies para que puedas hacer un tiro fuerte.",
+            "reveal": 1,
+            "repeat": true
+          },
+          {
+            "text": "Use because. Take a better angle, because it saves you a step.",
+            "es": "Usa because. Toma un mejor ángulo, porque te ahorra un paso.",
+            "reveal": 2,
+            "repeat": true
+          },
+          {
+            "text": "Or use that gives you. Play a step in. That gives you more time.",
+            "es": "O usa that gives you. Juega un paso más adentro. Eso te da más tiempo.",
+            "reveal": 3,
+            "repeat": true
+          },
+          {
+            "text": "Keep the reason honest. If you are not sure an adjustment will help, say: let's try it and see how it feels.",
+            "es": "Que la razón sea honesta. Si no estás seguro de que un ajuste va a ayudar, di: let's try it and see how it feels (vamos a probarlo y ver cómo se siente)."
+          }
+        ]
+      },
+      {
+        "visual": {
+          "type": "phrases",
+          "title": "What I saw, what to try",
+          "title_es": "Lo que vi, lo que hay que probar",
+          "items": [
+            {
+              "en": "I saw your feet stop before the throw.",
+              "es": "Vi que se te pararon los pies antes del tiro."
+            },
+            {
+              "en": "I noticed you rounded that ball.",
+              "es": "Noté que le diste la vuelta a esa bola."
+            },
+            {
+              "en": "Try a quicker first step.",
+              "es": "Prueba un primer paso más rápido."
+            },
+            {
+              "en": "Let's try it with your feet set.",
+              "es": "Vamos a probarlo con los pies plantados."
+            }
+          ],
+          "note_es": "\"I saw\" describe un hecho. \"Try\" invita a probar. Así el jugador no siente que lo estás juzgando, y la corrección es clara."
+        },
+        "cues": [
+          {
+            "text": "Good feedback keeps two things apart: what you saw, and what to try.",
+            "es": "Una buena retroalimentación separa dos cosas: lo que viste y lo que hay que probar."
+          },
+          {
+            "text": "Start with what you saw. I saw your feet stop before the throw. I noticed you rounded that ball.",
+            "es": "Empieza con lo que viste. Vi que se te pararon los pies antes del tiro. Noté que le diste la vuelta a esa bola.",
+            "reveal": 2,
+            "repeat": true
+          },
+          {
+            "text": "Then give one thing to try. Try a quicker first step. Let's try it with your feet set.",
+            "es": "Luego da una sola cosa para probar. Prueba un primer paso más rápido. Vamos a probarlo con los pies plantados.",
+            "reveal": 4,
+            "repeat": true
+          },
+          {
+            "text": "I saw, and try, are two short patterns. You can use them with any skill, even when your English is still growing.",
+            "es": "I saw y try son dos patrones cortos. Puedes usarlos con cualquier destreza, aunque tu inglés todavía esté creciendo."
+          }
+        ]
+      },
+      {
+        "visual": {
+          "type": "figure",
+          "figure": "infield-shade",
+          "title": "A positioning adjustment",
+          "title_es": "Un ajuste de posicionamiento",
+          "caption": "Illustration: an infielder shades a few steps to one side of his normal spot.",
+          "caption_es": "Ilustración: un jugador de cuadro se carga unos pasos hacia un lado de su posición normal."
+        },
+        "cues": [
+          {
+            "text": "Positioning is where a fielder stands before the pitch. To shade means to move a few steps to one side. Listen to Coach Ramírez with Jake, his second baseman.",
+            "es": "El posicionamiento es dónde se para el fildeador antes del lanzamiento. Shade es moverse unos pasos hacia un lado. Escucha al coach Ramírez con Jake, su segunda base."
+          },
+          {
+            "speaker": "ramirez",
+            "text": "Jake, shade two steps toward the middle. This hitter goes up the middle a lot, so that gives you a better angle on those balls.",
+            "es": "Jake, cárgate dos pasos hacia el medio. Este bateador batea mucho por el medio, así que eso te da un mejor ángulo para esas bolas.",
+            "repeat": true
+          },
+          {
+            "speaker": "jake",
+            "text": "Two steps toward the bag. Got it.",
+            "es": "Dos pasos hacia la base. Entendido."
+          },
+          {
+            "speaker": "ramirez",
+            "text": "And talk to Tyler, so he knows where you are.",
+            "es": "Y háblale a Tyler, para que sepa dónde estás.",
+            "repeat": true
+          },
+          {
+            "text": "Notice the last line. Communication is part of positioning. When one fielder moves, the fielder next to him needs to know.",
+            "es": "Fíjate en la última línea. La comunicación es parte del posicionamiento. Cuando un fildeador se mueve, el que está al lado necesita saberlo."
+          }
+        ]
+      },
+      {
+        "visual": {
+          "type": "summary",
+          "title": "Your turn",
+          "title_es": "Tu turno",
+          "items": [
+            {
+              "en": "Get your feet moving. Take a better angle.",
+              "es": "Mueve los pies. Toma un mejor ángulo."
+            },
+            {
+              "en": "Set your feet before you throw, so you can make a strong throw.",
+              "es": "Planta los pies antes de tirar, para que puedas hacer un tiro fuerte."
+            },
+            {
+              "en": "I saw … Try …",
+              "es": "Vi … Prueba …"
+            },
+            {
+              "en": "Good. Let's do three more.",
+              "es": "Bien. Vamos a hacer tres más."
+            }
+          ]
+        },
+        "cues": [
+          {
+            "text": "Let's review. One cue, one short reason. What you saw, then what to try. And when the work is good, keep it going. Let's do three more.",
+            "es": "Repasemos. Una indicación, una razón corta. Lo que viste y luego lo que hay que probar. Y cuando el trabajo va bien, sigue. Vamos a hacer tres más.",
+            "repeat": true
+          },
+          {
+            "text": "Next, you will listen to a drill and a positioning conversation, build sentences, and then walk Jake through a drill yourself.",
+            "es": "A continuación vas a escuchar un ejercicio y una conversación sobre posicionamiento, construir oraciones y después dirigir tú mismo a Jake en un ejercicio."
+          }
+        ]
+      }
+    ]
+  },
+  "clips": {
+    "d02-d1": {
+      "title": "Backhand and forehand drill",
+      "lines": [
+        {
+          "speaker": "ramirez",
+          "text": "OK, Tyler, Jake. Next drill: forehands and backhands. I roll it to one side, you get your feet moving.",
+          "es": "OK, Tyler, Jake. Siguiente ejercicio: forehands y reveses. Yo la ruedo hacia un lado y ustedes mueven los pies."
+        },
+        {
+          "speaker": "tyler",
+          "text": "Do we throw after each one?",
+          "es": "¿Tiramos después de cada una?"
+        },
+        {
+          "speaker": "ramirez",
+          "text": "Yes. Field it, quick transfer, set your feet, then throw to Jake at second. Set your feet first, so the throw is on line.",
+          "es": "Sí. Fildéala, pásala rápido a la mano, planta los pies y después tírale a Jake en segunda. Primero los pies, para que el tiro vaya en línea."
+        },
+        {
+          "speaker": "jake",
+          "text": "How many, Coach?",
+          "es": "¿Cuántas, coach?"
+        },
+        {
+          "speaker": "ramirez",
+          "text": "Six each side. Last one is a backhand in the hole.",
+          "es": "Seis por cada lado. La última es de revés en el hueco."
+        }
+      ]
+    },
+    "d02-d2": {
+      "title": "Talking about an adjustment",
+      "lines": [
+        {
+          "speaker": "megan",
+          "text": "Coach, what are you working on with Tyler today?",
+          "es": "Coach, ¿qué estás trabajando hoy con Tyler?"
+        },
+        {
+          "speaker": "ramirez",
+          "text": "His angle. I saw him round a lot of balls to his right, so he's late on the throw.",
+          "es": "Su ángulo. Vi que le daba la vuelta a muchas bolas por su derecha, así que llega tarde al tiro."
+        },
+        {
+          "speaker": "megan",
+          "text": "What are you having him try?",
+          "es": "¿Qué le estás poniendo a probar?"
+        },
+        {
+          "speaker": "ramirez",
+          "text": "A quicker first step, and a better angle. That gives him a shorter path, and he can work through the ball to first.",
+          "es": "Un primer paso más rápido y un mejor ángulo. Eso le da un camino más corto y puede trabajar a través de la bola hacia primera."
+        },
+        {
+          "speaker": "megan",
+          "text": "Makes sense. Is he getting it?",
+          "es": "Tiene sentido. ¿Lo está captando?"
+        },
+        {
+          "speaker": "ramirez",
+          "text": "Better every day. We'll do three more rounds tomorrow.",
+          "es": "Mejor cada día. Mañana hacemos tres rondas más."
+        }
+      ]
+    },
+    "d02-q1": {
+      "lines": [
+        {
+          "speaker": "tyler",
+          "text": "Coach, why do you want me to take a different angle?",
+          "es": "Coach, ¿por qué quieres que tome otro ángulo?"
+        }
+      ]
+    },
+    "d02-q2": {
+      "lines": [
+        {
+          "speaker": "jake",
+          "text": "What did you see on that one?",
+          "es": "¿Qué viste en esa?"
+        }
+      ]
+    },
+    "d02-r1": {
+      "lines": [
+        {
+          "speaker": "ramirez",
+          "text": "Set your feet before you throw.",
+          "es": "Planta los pies antes de tirar."
+        }
+      ]
+    },
+    "d02-r2": {
+      "lines": [
+        {
+          "speaker": "ramirez",
+          "text": "Get your body behind it, so the ball stays in front of you.",
+          "es": "Ponte detrás de la bola, para que se quede frente a ti."
+        }
+      ]
+    },
+    "d02-m5": {
+      "lines": [
+        {
+          "speaker": "ramirez",
+          "text": "Take a better angle. Let's do three more.",
+          "es": "Toma un mejor ángulo. Vamos a hacer tres más."
+        }
+      ]
+    },
+    "d02-c1": {
+      "lines": [
+        {
+          "speaker": "jake",
+          "text": "Morning, Coach. What's the drill today?",
+          "es": "Buenos días, coach. ¿Cuál es el ejercicio hoy?"
+        }
+      ]
+    },
+    "d02-c1a": {
+      "lines": [
+        {
+          "speaker": "jake",
+          "text": "OK, sounds good. Let's go.",
+          "es": "Está bien, suena bien. Vamos."
+        }
+      ]
+    },
+    "d02-c1b": {
+      "lines": [
+        {
+          "speaker": "jake",
+          "text": "Sorry, Coach, can you say that again? What are we doing?",
+          "es": "Perdón, coach, ¿puedes repetirlo? ¿Qué vamos a hacer?"
+        }
+      ]
+    },
+    "d02-c2": {
+      "lines": [
+        {
+          "speaker": "jake",
+          "text": "Before we start, where do you want me to play this hitter?",
+          "es": "Antes de empezar, ¿dónde quieres que le juegue a este bateador?"
+        }
+      ]
+    },
+    "d02-c2a": {
+      "lines": [
+        {
+          "speaker": "jake",
+          "text": "Got it. I'll let Tyler know where I am.",
+          "es": "Entendido. Le aviso a Tyler dónde estoy."
+        }
+      ]
+    },
+    "d02-c2b": {
+      "lines": [
+        {
+          "speaker": "jake",
+          "text": "Wait, which way do you want me to move, and why?",
+          "es": "Espera, ¿hacia dónde quieres que me mueva, y por qué?"
+        }
+      ]
+    },
+    "d02-c3": {
+      "lines": [
+        {
+          "speaker": "jake",
+          "text": "I got to that one, but my throw went high. What happened?",
+          "es": "Llegué a esa, pero el tiro se me fue alto. ¿Qué pasó?"
+        }
+      ]
+    },
+    "d02-c3a": {
+      "lines": [
+        {
+          "speaker": "jake",
+          "text": "OK, that makes sense. I'll try it.",
+          "es": "Está bien, tiene sentido. Lo voy a probar."
+        }
+      ]
+    },
+    "d02-c3b": {
+      "lines": [
+        {
+          "speaker": "jake",
+          "text": "Sorry, I didn't get that. What should I do differently?",
+          "es": "Perdón, no te entendí. ¿Qué debo hacer diferente?"
+        }
+      ]
+    },
+    "d02-c4": {
+      "lines": [
+        {
+          "speaker": "jake",
+          "text": "OK. Should I keep going?",
+          "es": "OK. ¿Sigo?"
+        }
+      ]
+    },
+    "d02-c4a": {
+      "lines": [
+        {
+          "speaker": "jake",
+          "text": "Let's go. Three more.",
+          "es": "Vamos. Tres más."
+        }
+      ]
+    },
+    "d02-c4b": {
+      "lines": [
+        {
+          "speaker": "jake",
+          "text": "Sorry, Coach. How many more do you want?",
+          "es": "Perdón, coach. ¿Cuántas más quieres?"
+        }
+      ]
+    }
+  },
+  "sections": [
+    {
+      "id": "learn",
+      "activities": [
+        {
+          "id": "d02-lec",
+          "type": "lecture"
+        },
+        {
+          "id": "d02-v1",
+          "type": "match",
+          "skill": "vocab",
+          "prompt": "Match each word with its meaning.",
+          "prompt_es": "Une cada palabra con su significado.",
+          "pairs": [
+            [
+              "first step",
+              "el primer paso"
+            ],
+            [
+              "angle",
+              "el camino hacia la bola"
+            ],
+            [
+              "glove side",
+              "el lado del guante"
+            ],
+            [
+              "backhand",
+              "de revés"
+            ],
+            [
+              "transfer",
+              "pasar la bola del guante a la mano"
+            ],
+            [
+              "throwing lane",
+              "la línea de tiro"
+            ],
+            [
+              "positioning",
+              "dónde se coloca el fildeador"
+            ]
+          ],
+          "explain_es": "\"Transfer\" y \"angle\" se explican mejor con una descripción que con una sola palabra en español. Muchos coaches dicen \"transfer\" tal cual."
+        }
+      ]
+    },
+    {
+      "id": "listen",
+      "activities": [
+        {
+          "id": "d02-l1",
+          "type": "listen",
+          "skill": "listening",
+          "clip": "d02-d1",
+          "intro": "Coach Ramírez explains a drill to Tyler and Jake. Listen and answer.",
+          "intro_es": "El coach Ramírez les explica un ejercicio a Tyler y a Jake. Escucha y responde.",
+          "questions": [
+            {
+              "id": "q1",
+              "prompt": "What is the drill?",
+              "prompt_es": "¿Cuál es el ejercicio?",
+              "options": [
+                "Forehands and backhands",
+                "Fly balls and cutoffs",
+                "Bunts and pickoffs"
+              ],
+              "answer": 0,
+              "explain": "\"Next drill: forehands and backhands.\"",
+              "explain_es": "El ejercicio es de forehands y reveses."
+            },
+            {
+              "id": "q2",
+              "prompt": "Why does the coach want them to set their feet first?",
+              "prompt_es": "¿Por qué quiere el coach que planten los pies primero?",
+              "options": [
+                "So the throw is on line",
+                "So they can rest",
+                "Because the field is wet"
+              ],
+              "answer": 0,
+              "explain": "\"Set your feet first, so the throw is on line.\"",
+              "explain_es": "Para que el tiro vaya en línea: \"so the throw is on line\"."
+            },
+            {
+              "id": "q3",
+              "prompt": "What is the last rep?",
+              "prompt_es": "¿Cuál es la última repetición?",
+              "options": [
+                "A backhand in the hole",
+                "A forehand to second",
+                "A throw home"
+              ],
+              "answer": 0,
+              "explain": "\"Last one is a backhand in the hole.\"",
+              "explain_es": "La última es de revés en el hueco."
+            }
+          ]
+        },
+        {
+          "id": "d02-l2",
+          "type": "listen",
+          "skill": "listening",
+          "clip": "d02-d2",
+          "intro": "Megan, a player development coordinator, asks Coach Ramírez about Tyler. Listen and answer.",
+          "intro_es": "Megan, coordinadora de desarrollo de jugadores, le pregunta al coach Ramírez sobre Tyler. Escucha y responde.",
+          "questions": [
+            {
+              "id": "q1",
+              "prompt": "What did the coach see?",
+              "prompt_es": "¿Qué vio el coach?",
+              "options": [
+                "Tyler rounded balls to his right.",
+                "Tyler's glove was too high.",
+                "Tyler threw to the wrong base."
+              ],
+              "answer": 0,
+              "explain": "\"I saw him round a lot of balls to his right.\"",
+              "explain_es": "Vio que Tyler le daba la vuelta a muchas bolas por su derecha."
+            },
+            {
+              "id": "q2",
+              "prompt": "What is Tyler trying?",
+              "prompt_es": "¿Qué está probando Tyler?",
+              "options": [
+                "A quicker first step and a better angle",
+                "A new glove",
+                "Throwing from his knees"
+              ],
+              "answer": 0,
+              "explain": "\"A quicker first step, and a better angle.\"",
+              "explain_es": "Un primer paso más rápido y un mejor ángulo."
+            },
+            {
+              "id": "q3",
+              "prompt": "Why does the coach think it helps?",
+              "prompt_es": "¿Por qué cree el coach que ayuda?",
+              "options": [
+                "It gives Tyler a shorter path.",
+                "It makes the drill easier.",
+                "It saves time in practice."
+              ],
+              "answer": 0,
+              "explain": "\"That gives him a shorter path.\"",
+              "explain_es": "\"That gives him a shorter path\": le da un camino más corto hacia la bola."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "activities": [
+        {
+          "id": "d02-p1",
+          "type": "choice",
+          "skill": "vocab",
+          "prompt": "A ground ball goes to a right-handed shortstop's right, in the hole. He takes it…",
+          "prompt_es": "Un roletazo va a la derecha de un campocorto derecho, en el hueco. La toma…",
+          "options": [
+            "on the backhand.",
+            "on the forehand.",
+            "with his bare hand."
+          ],
+          "answer": 0,
+          "explain": "The play in the hole is usually a backhand.",
+          "explain_es": "La jugada en el hueco normalmente es de revés (backhand)."
+        },
+        {
+          "id": "d02-p2",
+          "type": "choice",
+          "skill": "vocab",
+          "prompt": "\"Take a better angle\" is about…",
+          "prompt_es": "\"Take a better angle\" se refiere a…",
+          "options": [
+            "the path to the ball.",
+            "the angle of the bat.",
+            "the height of the throw."
+          ],
+          "answer": 0,
+          "explain": "The angle is the path the fielder takes to the ball.",
+          "explain_es": "El ángulo es el camino que toma el fildeador hacia la bola."
+        },
+        {
+          "id": "d02-p3",
+          "type": "order",
+          "skill": "grammar",
+          "prompt": "Put the words in order.",
+          "prompt_es": "Ordena las palabras.",
+          "words": [
+            "your",
+            "set",
+            "feet",
+            "before",
+            "throw",
+            "you"
+          ],
+          "answers": [
+            "set your feet before you throw"
+          ],
+          "explain_es": "Instrucción + before + you + verbo: Set your feet before you throw (planta los pies antes de tirar)."
+        },
+        {
+          "id": "d02-p4",
+          "type": "choice",
+          "skill": "grammar",
+          "prompt": "Complete: \"Set your feet, ___ you can make a strong throw.\"",
+          "prompt_es": "Completa: \"Set your feet, ___ you can make a strong throw.\"",
+          "options": [
+            "so",
+            "but",
+            "or"
+          ],
+          "answer": 0,
+          "explain": "\"So you can\" gives the reason or purpose.",
+          "explain_es": "\"So you can\" = para que puedas. Da el propósito de la indicación."
+        },
+        {
+          "id": "d02-p5",
+          "type": "choice",
+          "skill": "grammar",
+          "prompt": "Which sentence is an observation, not an instruction?",
+          "prompt_es": "¿Qué oración es una observación y no una instrucción?",
+          "options": [
+            "I saw your feet stop before the throw.",
+            "Set your feet.",
+            "Try a quicker first step."
+          ],
+          "answer": 0,
+          "explain": "\"I saw…\" describes what happened. \"Set…\" and \"Try…\" tell him what to do.",
+          "explain_es": "\"I saw…\" describe lo que pasó. \"Set…\" y \"Try…\" le dicen qué hacer."
+        },
+        {
+          "id": "d02-p6",
+          "type": "choice",
+          "skill": "vocab",
+          "prompt": "What is the transfer?",
+          "prompt_es": "¿Qué es el transfer?",
+          "options": [
+            "Moving the ball from the glove to the throwing hand",
+            "Changing positions with a teammate",
+            "The throw to first base"
+          ],
+          "answer": 0,
+          "explain": "Quick transfer: get the ball out of the glove fast.",
+          "explain_es": "Pasar la bola del guante a la mano de tirar."
+        },
+        {
+          "id": "d02-p7",
+          "type": "order",
+          "skill": "grammar",
+          "prompt": "Put the words in order.",
+          "prompt_es": "Ordena las palabras.",
+          "words": [
+            "gives",
+            "that",
+            "you",
+            "time",
+            "more"
+          ],
+          "answers": [
+            "that gives you more time"
+          ],
+          "explain_es": "\"That gives you…\" explica el beneficio: eso te da más tiempo."
+        },
+        {
+          "id": "d02-p8",
+          "type": "choice",
+          "skill": "vocab",
+          "prompt": "A runner is between the fielder and first base. The coach says:",
+          "prompt_es": "Hay un corredor entre el fildeador y primera. El coach dice:",
+          "options": [
+            "Clear your throwing lane.",
+            "Take it on the backhand.",
+            "Get in your ready position."
+          ],
+          "answer": 0,
+          "explain": "The throwing lane is the clear line to the target.",
+          "explain_es": "La línea de tiro tiene que estar libre: \"Clear your throwing lane.\""
+        },
+        {
+          "id": "d02-p9",
+          "type": "choice",
+          "skill": "grammar",
+          "prompt": "The player asks why. Which answer explains the adjustment best?",
+          "prompt_es": "El jugador pregunta por qué. ¿Qué respuesta explica mejor el ajuste?",
+          "options": [
+            "Take a better angle, because it saves you a step.",
+            "Because I say so.",
+            "Angle. Better. Go."
+          ],
+          "answer": 0,
+          "explain": "A short reason with \"because\" helps him remember the cue.",
+          "explain_es": "Una razón corta con \"because\" le ayuda a recordar la indicación."
+        },
+        {
+          "id": "d02-p10",
+          "type": "order",
+          "skill": "grammar",
+          "prompt": "Put the words in order.",
+          "prompt_es": "Ordena las palabras.",
+          "words": [
+            "three",
+            "do",
+            "more",
+            "let's"
+          ],
+          "answers": [
+            "let's do three more"
+          ],
+          "explain_es": "\"Let's do…\" invita a seguir trabajando juntos: vamos a hacer tres más."
+        },
+        {
+          "id": "d02-p11",
+          "type": "choice",
+          "skill": "vocab",
+          "prompt": "The coach says \"Shade two steps toward the middle.\" The player should…",
+          "prompt_es": "El coach dice \"Shade two steps toward the middle.\" El jugador debe…",
+          "options": [
+            "move two steps toward second base.",
+            "play two steps deeper.",
+            "run to the dugout."
+          ],
+          "answer": 0,
+          "explain": "To shade is to move a few steps to one side.",
+          "explain_es": "\"Shade\" es moverse unos pasos hacia un lado; aquí, hacia el medio (segunda base)."
+        }
+      ]
+    },
+    {
+      "id": "speak",
+      "activities": [
+        {
+          "id": "d02-s1",
+          "type": "repeat",
+          "skill": "speaking",
+          "clip": "d02-r1",
+          "text": "Set your feet before you throw.",
+          "es": "Planta los pies antes de tirar.",
+          "tip_es": "Une \"set your\" como una sola palabra: \"SET-chur FEET\". Así suena natural."
+        },
+        {
+          "id": "d02-s2",
+          "type": "repeat",
+          "skill": "speaking",
+          "clip": "d02-r2",
+          "text": "Get your body behind it, so the ball stays in front of you.",
+          "es": "Ponte detrás de la bola, para que se quede frente a ti."
+        },
+        {
+          "id": "d02-s3",
+          "type": "answer",
+          "skill": "speaking",
+          "clip": "d02-q1",
+          "prompt": "Coach, why do you want me to take a different angle?",
+          "prompt_es": "Coach, ¿por qué quieres que tome otro ángulo?",
+          "goal": "The learner gives a short reason for the adjustment using \"so you…\", \"because…\" or \"That gives you…\" (e.g. a shorter path, more time, momentum toward the throw, no rounding the ball). One or two sentences.",
+          "goal_es": "Explica en una o dos oraciones por qué ayuda el ajuste, con \"so you…\", \"because…\" o \"That gives you…\".",
+          "examples": [
+            "Because you're rounding the ball. A better angle gives you a shorter path.",
+            "So you can work through the ball and make a strong throw.",
+            "That gives you more time to set your feet before you throw."
+          ],
+          "focus": [
+            "angle",
+            "because",
+            "so you",
+            "that gives you",
+            "first step"
+          ],
+          "level": "B1"
+        },
+        {
+          "id": "d02-s4",
+          "type": "answer",
+          "skill": "speaking",
+          "clip": "d02-q2",
+          "prompt": "What did you see on that one?",
+          "prompt_es": "¿Qué viste en esa?",
+          "goal": "The learner describes one observation with \"I saw…\" or \"I noticed…\" and then gives one thing to try with \"Try…\" or \"Let's…\", about footwork, the transfer or setting the feet.",
+          "goal_es": "Describe lo que viste con \"I saw…\" o \"I noticed…\" y luego da una cosa para probar con \"Try…\" o \"Let's…\".",
+          "examples": [
+            "I saw your feet stop before the throw. Try to set your feet first.",
+            "I noticed your transfer was a little slow. Try to get it out of the glove faster.",
+            "I saw you round the ball. Let's try a better angle on the next one."
+          ],
+          "focus": [
+            "I saw",
+            "I noticed",
+            "try",
+            "set your feet",
+            "transfer",
+            "angle"
+          ],
+          "level": "B1"
+        }
+      ]
+    },
+    {
+      "id": "apply",
+      "activities": [
+        {
+          "id": "d02-c",
+          "type": "conversation",
+          "skill": "speaking",
+          "partner": "jake",
+          "setting": "Early work before practice. Jake, your second baseman, speaks English. Walk him through a footwork and throwing drill, explain a positioning adjustment, and give him feedback after a rep.",
+          "setting_es": "Trabajo temprano antes de la práctica. Jake, tu segunda base, habla inglés. Explícale un ejercicio de pies y tiros, explícale un ajuste de posicionamiento y dale retroalimentación después de una repetición.",
+          "objective": "Explain the drill, give a positioning adjustment with a reason, and give feedback that separates what you saw from what to try.",
+          "objective_es": "Explica el ejercicio, da un ajuste de posicionamiento con su razón y da retroalimentación que separe lo que viste de lo que hay que probar.",
+          "turns": [
+            {
+              "clip": "d02-c1",
+              "line": "Morning, Coach. What's the drill today?",
+              "es": "Buenos días, coach. ¿Cuál es el ejercicio hoy?",
+              "goal": "Explain the drill in one or two sentences (e.g. forehands and backhands, get your feet moving, set your feet before you throw).",
+              "goal_es": "Explica el ejercicio en una o dos oraciones.",
+              "examples": [
+                "Forehands and backhands. Get your feet moving, then set your feet before you throw.",
+                "We're working on your first step and your angle. Field it, quick transfer, and throw to first."
+              ],
+              "fallback": {
+                "options": [
+                  "Forehands and backhands. Get your feet moving, then set your feet before you throw.",
+                  "Good morning. I'm fine.",
+                  "The drill is very much."
+                ],
+                "answer": 0
+              },
+              "ack": {
+                "clip": "d02-c1a",
+                "line": "OK, sounds good. Let's go.",
+                "es": "Está bien, suena bien. Vamos."
+              },
+              "clarify": {
+                "clip": "d02-c1b",
+                "line": "Sorry, Coach, can you say that again? What are we doing?",
+                "es": "Perdón, coach, ¿puedes repetirlo? ¿Qué vamos a hacer?"
+              }
+            },
+            {
+              "clip": "d02-c2",
+              "line": "Before we start, where do you want me to play this hitter?",
+              "es": "Antes de empezar, ¿dónde quieres que le juegue a este bateador?",
+              "goal": "Give a positioning adjustment (e.g. shade a few steps toward the middle or the hole, a step in or back) and a short reason with so / because / that gives you. Optionally ask him to tell the shortstop.",
+              "goal_es": "Da un ajuste de posicionamiento y una razón corta. Si quieres, pídele que se lo diga al campocorto.",
+              "examples": [
+                "Shade two steps toward the middle, because he hits a lot of balls up the middle.",
+                "Play a step in. That gives you more time on slow rollers. And let Tyler know."
+              ],
+              "fallback": {
+                "options": [
+                  "Shade two steps toward the middle, because he hits a lot of balls up the middle.",
+                  "Play wherever you want.",
+                  "Two steps. Go."
+                ],
+                "answer": 0
+              },
+              "ack": {
+                "clip": "d02-c2a",
+                "line": "Got it. I'll let Tyler know where I am.",
+                "es": "Entendido. Le aviso a Tyler dónde estoy."
+              },
+              "clarify": {
+                "clip": "d02-c2b",
+                "line": "Wait, which way do you want me to move, and why?",
+                "es": "Espera, ¿hacia dónde quieres que me mueva, y por qué?"
+              }
+            },
+            {
+              "clip": "d02-c3",
+              "line": "I got to that one, but my throw went high. What happened?",
+              "es": "Llegué a esa, pero el tiro se me fue alto. ¿Qué pasó?",
+              "goal": "Say what you saw (I saw… / I noticed…), then one thing to try (Try… / Set your feet…), ideally with a short reason.",
+              "goal_es": "Di lo que viste y luego una cosa para probar, con una razón corta si puedes.",
+              "examples": [
+                "Good job getting there. I saw you throw before your feet were set. Try to set your feet first, so the throw stays on line.",
+                "I noticed you were still moving away from second. Get your body behind it and set your feet before you throw."
+              ],
+              "fallback": {
+                "options": [
+                  "Good job getting there. I saw you throw before your feet were set. Try to set your feet first.",
+                  "You throw bad.",
+                  "It was high because it was high."
+                ],
+                "answer": 0
+              },
+              "ack": {
+                "clip": "d02-c3a",
+                "line": "OK, that makes sense. I'll try it.",
+                "es": "Está bien, tiene sentido. Lo voy a probar."
+              },
+              "clarify": {
+                "clip": "d02-c3b",
+                "line": "Sorry, I didn't get that. What should I do differently?",
+                "es": "Perdón, no te entendí. ¿Qué debo hacer diferente?"
+              }
+            },
+            {
+              "clip": "d02-c4",
+              "line": "OK. Should I keep going?",
+              "es": "OK. ¿Sigo?",
+              "goal": "Encourage him and set the next reps (e.g. \"Yes. Let's do three more.\").",
+              "goal_es": "Anímalo y dile cuántas repeticiones más van a hacer.",
+              "examples": [
+                "Yes. Nice work. Let's do three more.",
+                "Yeah, keep going. Three more, and set your feet every time."
+              ],
+              "fallback": {
+                "options": [
+                  "Yes. Nice work. Let's do three more.",
+                  "No. We're done forever.",
+                  "I don't know."
+                ],
+                "answer": 0
+              },
+              "ack": {
+                "clip": "d02-c4a",
+                "line": "Let's go. Three more.",
+                "es": "Vamos. Tres más."
+              },
+              "clarify": {
+                "clip": "d02-c4b",
+                "line": "Sorry, Coach. How many more do you want?",
+                "es": "Perdón, coach. ¿Cuántas más quieres?"
+              },
+              "last": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "activities": [
+        {
+          "id": "d02-m",
+          "type": "mastery",
+          "pass": 4,
+          "items": [
+            {
+              "id": "m1",
+              "skill": "vocab",
+              "prompt": "A ball on the fielder's glove side is usually taken…",
+              "prompt_es": "Una bola por el lado del guante normalmente se toma…",
+              "options": [
+                "on the forehand.",
+                "on the backhand.",
+                "with a crow hop."
+              ],
+              "answer": 0,
+              "explain": "Glove side = forehand.",
+              "explain_es": "Por el lado del guante: forehand, con el guante abierto."
+            },
+            {
+              "id": "m2",
+              "skill": "grammar",
+              "prompt": "Complete: \"Take a better angle, ___ it saves you a step.\"",
+              "prompt_es": "Completa: \"Take a better angle, ___ it saves you a step.\"",
+              "options": [
+                "because",
+                "so that the",
+                "if"
+              ],
+              "answer": 0,
+              "explain": "\"Because\" gives the reason.",
+              "explain_es": "\"Because\" introduce la razón: porque te ahorra un paso."
+            },
+            {
+              "id": "m3",
+              "skill": "vocab",
+              "prompt": "Which is feedback that starts with an observation?",
+              "prompt_es": "¿Cuál es una retroalimentación que empieza con una observación?",
+              "options": [
+                "I saw your feet stop. Try to keep them moving.",
+                "Keep your feet moving.",
+                "Again."
+              ],
+              "answer": 0,
+              "explain": "\"I saw…\" first, then \"Try…\".",
+              "explain_es": "Primero lo que viste (I saw…) y luego lo que hay que probar (Try…)."
+            },
+            {
+              "id": "m4",
+              "skill": "vocab",
+              "prompt": "\"Work through the ball\" means…",
+              "prompt_es": "\"Work through the ball\" significa…",
+              "options": [
+                "keep moving through the catch toward the throw.",
+                "stop and wait for the ball.",
+                "throw the ball very hard."
+              ],
+              "answer": 0,
+              "explain": "Don't stop on the ball; keep your momentum toward the throw.",
+              "explain_es": "No te detengas sobre la bola; sigue moviéndote hacia el tiro."
+            },
+            {
+              "id": "m5",
+              "skill": "listening",
+              "clip": "d02-m5",
+              "prompt": "Listen. What does the coach say?",
+              "prompt_es": "Escucha. ¿Qué dice el coach?",
+              "options": [
+                "Take a better angle. Let's do three more.",
+                "Take a bigger glove. Let's do two more.",
+                "Make a better throw. Let's go to three."
+              ],
+              "answer": 0,
+              "explain": "\"Take a better angle. Let's do three more.\"",
+              "explain_es": "Dice: \"Toma un mejor ángulo. Vamos a hacer tres más.\""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "en": "Good first step.",
+      "es": "Buen primer paso."
+    },
+    {
+      "en": "Get your feet moving.",
+      "es": "Mueve los pies."
+    },
+    {
+      "en": "Take a better angle.",
+      "es": "Toma un mejor ángulo."
+    },
+    {
+      "en": "Take it on the backhand.",
+      "es": "Tómala de revés."
+    },
+    {
+      "en": "Work through the ball.",
+      "es": "Sigue moviéndote hacia el tiro; no te detengas sobre la bola.",
+      "note": "No standard Spanish equivalent; explain it with a demonstration."
+    },
+    {
+      "en": "Get your body behind it.",
+      "es": "Ponte detrás de la bola."
+    },
+    {
+      "en": "Set your feet before you throw.",
+      "es": "Planta los pies antes de tirar."
+    },
+    {
+      "en": "Clear your throwing lane.",
+      "es": "Despeja tu línea de tiro."
+    },
+    {
+      "en": "Shade two steps toward the middle.",
+      "es": "Cárgate dos pasos hacia el medio.",
+      "note": "Spanish field terms for \"shade\" vary; \"cargarse\" or \"correrse\" are common but unconfirmed."
+    },
+    {
+      "en": "… so you can make a strong throw. / That gives you more time.",
+      "es": "… para que puedas hacer un tiro fuerte. / Eso te da más tiempo."
+    },
+    {
+      "en": "I saw … Try …",
+      "es": "Vi … Prueba …"
+    },
+    {
+      "en": "Let's do three more.",
+      "es": "Vamos a hacer tres más."
+    }
+  ],
+  "next_es": "Siguiente: repasa las frases que fallaste y, en tu próxima práctica, usa una razón corta (\"so you…\", \"because…\") con cada ajuste."
+}

@@ -1,4 +1,5 @@
-/* CP English API (Cloudflare Pages Function). Behind the CP English access code (access-gate/apps.js).
+/* English (CP English) API (Cloudflare Pages Function). Public app; paid calls are protected here (switches, same-origin,
+   rate limits, spending ceilings). Language-aware: meta.task.lang / meta.lang = the language the learner is practising.
 
    GET  /apps/english/api/status   AI availability (presence only, never values), limits, this month's usage
    POST /apps/english/api/speech   multipart: audio (≤ 2 MB, ≤ 45 s) + meta (JSON)
@@ -13,7 +14,7 @@
    a reason, and the page says feedback is unavailable (never a made-up score). */
 import { aiState, settings } from "../../../../english/server/config.js";
 import * as Budget from "../../../../english/server/budget.js";
-import { compareRepeat, recognitionQuality, evalRequest, validateEval, readTask, words } from "../../../../english/server/evaluate.js";
+import { compareRepeat, recognitionQuality, evalRequest, validateEval, readTask, words, sttPrompt, LANGS, SPECIALTIES } from "../../../../english/server/evaluate.js";
 
 const HEADERS = { "Content-Type": "application/json", "Cache-Control": "no-store", "X-Content-Type-Options": "nosniff", "X-Robots-Tag": "noindex, nofollow" };
 const reply = (status, body) => new Response(JSON.stringify(body), { status, headers: HEADERS });
@@ -49,7 +50,7 @@ async function handle({ request, env }) {
     const task = readTask(body && body.task), text = String((body && body.text) || "").slice(0, 600).trim();
     if (!task || !text) return reply(400, { error: "bad-request" });
     const ev = await evaluate(env, lim, task, text);
-    log(env, { route: "text", kind: task.kind, status: ev.error || "ok", costUsd: ev.costUsd });
+    log(env, { route: "text", kind: task.kind, lang: task.lang, status: ev.error || "ok", costUsd: ev.costUsd });
     return ev.error ? reply(ev.status, { error: ev.error }) : reply(200, { typed: true, evaluation: ev.evaluation });
   }
 
@@ -69,16 +70,18 @@ async function handle({ request, env }) {
   if (!mode) return reply(400, { error: "bad-mode" });
   const task = mode === "repeat" ? null : readTask(Object.assign({}, meta.task, { kind: mode === "placement" ? "placement" : mode }));
   const reference = mode === "repeat" ? String(meta.reference || "").slice(0, 300) : "";
-  if (mode === "repeat" ? !words(reference).length : !task) return reply(400, { error: "bad-task" });
+  const lang = task ? task.lang : LANGS.includes(meta.lang) ? meta.lang : "en";
+  const specialty = task ? task.specialty : SPECIALTIES.includes(meta.specialty) ? meta.specialty : null;
+  if (mode === "repeat" ? !words(reference, lang).length : !task) return reply(400, { error: "bad-task" });
 
-  const tr = await transcribe(env, lim, audio, type, seconds);
+  const tr = await transcribe(env, lim, audio, type, seconds, lang, specialty);
   if (tr.error) { log(env, { route: "speech", mode, status: tr.error }); return reply(tr.status, { error: tr.error }); }
-  const recognition = recognitionQuality(tr.text, seconds, tr.logprobs);
+  const recognition = recognitionQuality(tr.text, seconds, tr.logprobs, lang);
   const out = { transcript: tr.text, recognition };
   if (!recognition.ok) { log(env, { route: "speech", mode, status: "unclear", sttUsd: tr.costUsd }); return reply(200, out); }
   if (mode === "repeat") {
-    out.compare = compareRepeat(reference, tr.text);
-    log(env, { route: "speech", mode, status: "ok", sttUsd: tr.costUsd });
+    out.compare = compareRepeat(reference, tr.text, lang);
+    log(env, { route: "speech", mode, lang, status: "ok", sttUsd: tr.costUsd });
     return reply(200, out);
   }
   const ev = await evaluate(env, lim, task, tr.text);
@@ -88,7 +91,7 @@ async function handle({ request, env }) {
 }
 
 /* ---------------- transcription ---------------- */
-async function transcribe(env, lim, audio, type, seconds) {
+async function transcribe(env, lim, audio, type, seconds, lang, specialty) {
   const price = Budget.sttPrice(env, lim.sttModel);
   if (price == null) return { error: "unknown-model-price", status: 503 };
   const r = await Budget.reserve(env, lim, "stt", Budget.sttWorstMicro(price, lim.maxSeconds));
@@ -96,8 +99,8 @@ async function transcribe(env, lim, audio, type, seconds) {
   const send = async (withLogprobs) => {
     const fd = new FormData();
     fd.append("file", new File([await audio.arrayBuffer()], "speech." + AUDIO[type], { type }));
-    fd.append("model", lim.sttModel); fd.append("language", "en"); fd.append("response_format", "json");
-    fd.append("prompt", "A baseball coach speaking English. Baseball words: infielder, shortstop, ground ball, bullpen, batting practice, glove, cone, bucket.");
+    fd.append("model", lim.sttModel); fd.append("language", lang === "es" ? "es" : "en"); fd.append("response_format", "json");
+    fd.append("prompt", sttPrompt(lang, specialty));
     if (withLogprobs) fd.append("include[]", "logprobs");
     return timed(STT_TIMEOUT, (signal) => fetch("https://api.openai.com/v1/audio/transcriptions", { method: "POST", signal, headers: { Authorization: `Bearer ${env.OPENAI_API_KEY}` }, body: fd }));
   };

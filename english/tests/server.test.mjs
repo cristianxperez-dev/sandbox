@@ -28,13 +28,14 @@ const envOn = (extra) => Object.assign({ OPENAI_API_KEY: KEY, EN_AI_ENABLED: "1"
 /* ---- OpenAI mock ---- */
 const realFetch = globalThis.fetch;
 let calls = [];
-function mockOpenAI({ transcript = "I work with young players.", logprobs = [-0.05, -0.1, -0.02, -0.08], evalOut, evalStatus = 200 } = {}) {
+let lastSTT = null;
+function mockOpenAI({ transcript = "I work with young players.", logprobs = [-0.05, -0.1, -0.02, -0.08], evalOut, evalStatus = 200, lang = "en" } = {}) {
   calls = [];
   globalThis.fetch = async (url, init) => {
     calls.push(String(url));
     if (String(url).endsWith("/audio/transcriptions")) {
-      const fd = init.body;
-      assert.equal(fd.get("language"), "en");
+      const fd = init.body; lastSTT = fd;
+      assert.equal(fd.get("language"), lang);
       return new Response(JSON.stringify({ text: transcript, logprobs: logprobs && logprobs.map((lp) => ({ token: "x", logprob: lp })) }), { status: 200 });
     }
     if (String(url).endsWith("/responses")) {
@@ -49,9 +50,9 @@ function mockOpenAI({ transcript = "I work with young players.", logprobs = [-0.
 }
 test.after(() => { globalThis.fetch = realFetch; });
 function goodEval(over) {
-  return Object.assign({ on_task: true, understandable: true, possible_recognition_issue: false, scores: { clarity: 3, grammar: 2, vocabulary: 3, completeness: 3 },
-    level_estimate: "A1", strengths: ["Clear answer"], corrections: [{ said: "I have 30 years", better: "I'm 30", why_es: "La edad se dice con \"I am\"." }],
-    better_sentence: "I'm a baseball coach. I work with young players.", feedback: "Good — your meaning was clear.", feedback_es: "Bien: se entendió lo que quisiste decir.", follow_up: "Nice! How long have you been coaching?" }, over);
+  return Object.assign({ on_task: true, understandable: true, in_target_language: true, possible_recognition_issue: false, scores: { clarity: 3, grammar: 2, vocabulary: 3, naturalness: 3, task: 3 },
+    level_estimate: "A1", strengths: ["Clear answer"], corrections: [{ said: "I have 30 years", better: "I'm 30", why: "La edad se dice con \"I am\"." }],
+    better_sentence: "I'm a baseball coach. I work with young players.", feedback: "Bien: se entendió lo que quisiste decir.", feedback_target: "Good — your meaning was clear.", follow_up: "Nice! How long have you been coaching?" }, over);
 }
 const audio = (bytes = 4000, type = "audio/webm") => new Blob([new Uint8Array(bytes)], { type });
 function speechReq(meta, opts = {}) {
@@ -80,11 +81,11 @@ test("recognition quality: empty, too little and low confidence are not judged",
 test("model output is validated before it is shown or saved", () => {
   assert.ok(E.validateEval(goodEval(), "conversation"));
   assert.equal(E.validateEval(goodEval(), "answer").follow_up, "", "follow-up only in conversations");
-  assert.equal(E.validateEval(goodEval({ scores: { clarity: 7, grammar: 2, vocabulary: 3, completeness: 3 } })), null);
+  assert.equal(E.validateEval(goodEval({ scores: { clarity: 7, grammar: 2, vocabulary: 3, naturalness: 3, task: 3 } })), null);
   assert.equal(E.validateEval(goodEval({ level_estimate: "C2" })), null);
   assert.equal(E.validateEval(goodEval({ feedback: "" })), null);
   assert.equal(E.validateEval({ hello: 1 }), null);
-  assert.equal(E.validateEval(goodEval({ corrections: [{ said: 1 }, { said: "a", better: "b", why_es: "c" }] })).corrections.length, 1);
+  assert.equal(E.validateEval(goodEval({ corrections: [{ said: 1 }, { said: "a", better: "b", why: "c" }] })).corrections.length, 1);
   const r = E.evalRequest("gpt-6-luna", { kind: "answer", level: "A1", prompt: "What do you do?", goal: "job", examples: ["I'm a coach."] }, "I am coach");
   assert.equal(r.text.format.strict, true); assert.ok(/never judge pronunciation/i.test(r.instructions));
 });
@@ -185,4 +186,31 @@ test("guards: cross-origin, too long, wrong type, no audio, rate limit, spending
   const broke = envOn({ EN_AI_DAILY_USD: "0.001" });                    // $0.001 < one worst-case minute ($0.003)
   const r = await call(speechReq({ mode: "repeat", reference: "Hello there", seconds: 2 }), broke);
   assert.equal(r.status, 402); assert.equal(r.body.error, "daily-limit-reached");
+});
+
+test("v2: Spanish — accents folded, Spanish numbers, no English contractions", () => {
+  const c = E.compareRepeat("¿Cómo se siente ese agarre?", "como se siente ese agarre", "es");
+  assert.equal(c.verdict, "match");
+  assert.equal(E.compareRepeat("Lanza dos rectas.", "lanza 2 rectas", "es").verdict, "match");
+  assert.deepEqual(E.words("Pon los dedos sobre las costuras.", "es"), ["pon", "los", "dedos", "sobre", "las", "costuras"]);
+});
+test("v2: evaluation request follows the target language, native language and specialty", () => {
+  const r = E.evalRequest("m", { kind: "conversation", lang: "es", native: "en", specialty: "pitching", prompt: "Coach, ¿cómo quieres que agarre la pelota?", goal: "Tell him where to put his fingers.", focus: ["costuras", "dedos"] }, "pon los dedos encima de las costuras");
+  assert.ok(/spoken Spanish responses/.test(r.instructions) && /English-speaking professional baseball coaches/.test(r.instructions));
+  assert.ok(/feedback: .* in English/.test(r.instructions) && /code-switching/.test(r.instructions) && /never judge pronunciation/i.test(r.instructions));
+  assert.ok(/specialty is pitching/.test(r.instructions));
+  assert.ok(/Target language: Spanish/.test(r.input[0].content) && /costuras, dedos/.test(r.input[0].content));
+  const e = E.evalRequest("m", { kind: "answer", lang: "en", native: "es", specialty: "defense", prompt: "Coach, what should I focus on?", goal: "x" }, "stay low");
+  assert.ok(/spoken English responses/.test(e.instructions) && /in Spanish, no grades/.test(e.instructions) && /direct commands are normal/.test(e.instructions));
+  assert.equal(E.readTask({ kind: "answer", prompt: "x", lang: "fr" }).lang, "en", "unknown language falls back to English");
+  assert.equal(E.validateEval(goodEval({ in_target_language: "yes" })), null, "in_target_language must be boolean");
+});
+test("v2: transcription is asked for the target language with specialty vocabulary", async () => {
+  mockOpenAI({ transcript: "pon los dedos sobre las costuras", lang: "es" });
+  const r = await call(speechReq({ mode: "repeat", seconds: 3, lang: "es", specialty: "pitching", reference: "Pon los dedos sobre las costuras." }), envOn());
+  assert.equal(r.status, 200); assert.equal(r.body.compare.verdict, "match");
+  assert.ok(/costuras/.test(lastSTT.get("prompt")));
+  mockOpenAI({ transcript: "pon los dedos encima de las costuras", lang: "es" });
+  const a = await call(speechReq({ mode: "conversation", seconds: 4, task: { prompt: "Coach, ¿cómo quieres que agarre la pelota?", goal: "fingers on the seams", lang: "es", native: "en", specialty: "pitching" } }), envOn());
+  assert.equal(a.status, 200); assert.ok(a.body.evaluation);
 });

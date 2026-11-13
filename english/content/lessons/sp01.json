@@ -1,0 +1,1424 @@
+{
+  "id": "sp01",
+  "course": "es-pitching",
+  "target": "es",
+  "native": "en",
+  "minutes": 14,
+  "intro": {
+    "can": "Name the fingers and the seams, explain a simple grip adjustment in short Spanish instructions, and ask the pitcher what he feels.",
+    "can_tr": "Nombrar los dedos y las costuras, explicar un ajuste sencillo de agarre con instrucciones cortas en español y preguntarle al pícher qué siente.",
+    "outcomes": [
+      {
+        "es": "Nombrar los dedos, las partes de la mano y las costuras.",
+        "en": "Name the fingers, the parts of the hand and the seams."
+      },
+      {
+        "es": "Decir dónde van los dedos: \"Pon los dedos sobre las costuras.\"",
+        "en": "Say where the fingers go: \"Pon los dedos sobre las costuras.\""
+      },
+      {
+        "es": "Dar instrucciones cortas y suaves: separa, junta, mueve, afloja, aprieta… un poquito.",
+        "en": "Give short, soft instructions: spread, bring together, move, loosen, squeeze… a tiny bit."
+      },
+      {
+        "es": "Elegir entre tú y usted, y usar las dos formas: pon / ponga.",
+        "en": "Choose between tú and usted, and use both forms: pon / ponga."
+      },
+      {
+        "es": "Preguntar qué siente: \"¿Cómo se siente ese agarre?\"",
+        "en": "Ask what he feels: \"¿Cómo se siente ese agarre?\""
+      }
+    ]
+  },
+  "speakers": {
+    "alex": {
+      "name": "Coach Alex",
+      "role": "Pitching coach, Dominican academy (bilingual)",
+      "role_es": "Coach de pitcheo, academia dominicana (bilingüe)",
+      "voice": "em_alex"
+    },
+    "luis": {
+      "name": "Luis",
+      "role": "Pitcher, 19, from San Pedro de Macorís",
+      "role_es": "Pícher, 19 años, de San Pedro de Macorís",
+      "voice": "em_santa"
+    },
+    "ana": {
+      "name": "Ana",
+      "role": "Bullpen coordinator and interpreter",
+      "role_es": "Coordinadora del bullpen e intérprete",
+      "voice": "ef_dora"
+    }
+  },
+  "lecture": {
+    "title": "Grips, fingers, and seams",
+    "title_es": "Agarres, dedos y costuras",
+    "scenes": [
+      {
+        "visual": {
+          "type": "title",
+          "kicker": "Spanish for Pitching · Lesson 1",
+          "title": "Grips, fingers, and seams",
+          "title_es": "Agarres, dedos y costuras",
+          "sub": "Explaining a grip adjustment in Spanish"
+        },
+        "cues": [
+          {
+            "text": "In this lesson, you will learn to talk about grips in Spanish: the fingers, the seams, where the fingers go, and how much pressure to use."
+          },
+          {
+            "text": "You already know grips. The goal here is to explain one small adjustment clearly, and then ask the pitcher what he feels."
+          },
+          {
+            "text": "You will hear Coach Alex, a bilingual pitching coach, and Luis, a nineteen-year-old pitcher from the Dominican Republic. Repeat each Spanish line out loud when you hear it."
+          }
+        ]
+      },
+      {
+        "visual": {
+          "type": "figure",
+          "figure": "hand-fingers",
+          "title": "The hand",
+          "title_es": "La mano",
+          "caption": "Illustration: the fingers and parts of the hand.",
+          "caption_es": "Ilustración: los dedos y las partes de la mano."
+        },
+        "cues": [
+          {
+            "text": "Start with the hand. Spanish names every finger, so you can be exact."
+          },
+          {
+            "speaker": "alex",
+            "text": "el dedo índice",
+            "en": "the index finger",
+            "repeat": true
+          },
+          {
+            "speaker": "alex",
+            "text": "el dedo medio… el dedo del medio",
+            "en": "the middle finger (both forms are common)",
+            "repeat": true
+          },
+          {
+            "speaker": "alex",
+            "text": "el pulgar",
+            "en": "the thumb",
+            "repeat": true
+          },
+          {
+            "speaker": "alex",
+            "text": "el anular y el meñique",
+            "en": "the ring finger and the pinky",
+            "repeat": true
+          },
+          {
+            "text": "Then the parts of the hand you will mention most in grip work."
+          },
+          {
+            "speaker": "alex",
+            "text": "la palma, la muñeca, las yemas de los dedos",
+            "en": "the palm, the wrist, the fingertip pads",
+            "repeat": true
+          },
+          {
+            "text": "On the field, many players simply say the tips of the fingers."
+          },
+          {
+            "speaker": "alex",
+            "text": "la punta de los dedos",
+            "en": "the tips of the fingers",
+            "repeat": true
+          }
+        ]
+      },
+      {
+        "visual": {
+          "type": "figure",
+          "figure": "ball-seams",
+          "title": "The ball and the seams",
+          "title_es": "La pelota y las costuras",
+          "caption": "Illustration: the seams and the horseshoe.",
+          "caption_es": "Ilustración: las costuras y la herradura."
+        },
+        "cues": [
+          {
+            "text": "Now the ball itself."
+          },
+          {
+            "speaker": "alex",
+            "text": "la pelota",
+            "en": "the ball",
+            "repeat": true
+          },
+          {
+            "text": "You will also hear this word. It also means a ball in the count, so for the object in his hand, the first word is clearer."
+          },
+          {
+            "speaker": "alex",
+            "text": "la bola",
+            "en": "the ball; also a ball in the count"
+          },
+          {
+            "speaker": "alex",
+            "text": "las costuras",
+            "en": "the seams",
+            "repeat": true
+          },
+          {
+            "speaker": "alex",
+            "text": "la herradura",
+            "en": "the horseshoe",
+            "repeat": true
+          },
+          {
+            "text": "The horseshoe is the U-shaped part of the seams. It gives you a quick way to name the seam you mean."
+          }
+        ]
+      },
+      {
+        "visual": {
+          "type": "figure",
+          "figure": "grip-4s",
+          "title": "Four-seam fastball",
+          "title_es": "La recta de cuatro costuras",
+          "caption": "Illustration: one common four-seam grip. Grips are individual.",
+          "caption_es": "Ilustración: un agarre común de cuatro costuras. Cada agarre es individual."
+        },
+        "cues": [
+          {
+            "text": "Here is a four-seam grip. The pitch is called…"
+          },
+          {
+            "speaker": "alex",
+            "text": "la recta de cuatro costuras",
+            "en": "the four-seam fastball",
+            "repeat": true
+          },
+          {
+            "text": "And the grip itself is…"
+          },
+          {
+            "speaker": "alex",
+            "text": "el agarre",
+            "en": "the grip",
+            "repeat": true
+          },
+          {
+            "text": "Listen to Coach Alex describe where the fingers go."
+          },
+          {
+            "speaker": "alex",
+            "text": "Pon los dedos sobre las costuras.",
+            "en": "Put your fingers on the seams.",
+            "repeat": true
+          },
+          {
+            "speaker": "alex",
+            "text": "El índice y el medio, encima de la herradura.",
+            "en": "Index and middle finger on top of the horseshoe.",
+            "repeat": true
+          },
+          {
+            "speaker": "alex",
+            "text": "El pulgar, debajo de la pelota.",
+            "en": "Thumb under the ball.",
+            "repeat": true
+          },
+          {
+            "text": "Notice that Spanish says the fingers, not your fingers. With parts of the body, that is normal, and it does not sound cold."
+          }
+        ]
+      },
+      {
+        "visual": {
+          "type": "figure",
+          "figure": "grip-2s",
+          "title": "Two-seam and sinker",
+          "title_es": "Dos costuras y sinker",
+          "caption": "Illustration: one common two-seam grip. Grips are individual.",
+          "caption_es": "Ilustración: un agarre común de dos costuras. Cada agarre es individual."
+        },
+        "cues": [
+          {
+            "text": "Pitch names mix Spanish and English. That is normal in Dominican baseball, and in Spanish-language baseball media."
+          },
+          {
+            "speaker": "alex",
+            "text": "la recta de dos costuras",
+            "en": "the two-seam fastball",
+            "repeat": true
+          },
+          {
+            "speaker": "alex",
+            "text": "el sinker, el slider, el cutter",
+            "en": "the sinker, the slider, the cutter",
+            "repeat": true
+          },
+          {
+            "text": "These English names are usually masculine. You may hear the feminine too, and either will be understood. Some pitches also have a Spanish name."
+          },
+          {
+            "speaker": "alex",
+            "text": "la recta cortada… la curva",
+            "en": "the cutter (Spanish name)… the curveball",
+            "repeat": true
+          },
+          {
+            "text": "And for the session itself, the English word stays."
+          },
+          {
+            "speaker": "alex",
+            "text": "la sesión de bullpen",
+            "en": "the bullpen session",
+            "repeat": true
+          }
+        ]
+      },
+      {
+        "visual": {
+          "type": "pattern",
+          "title": "Short instructions",
+          "title_es": "Instrucciones cortas",
+          "rows": [
+            {
+              "es": "Pon + los dedos…",
+              "example": "Pon los dedos sobre las costuras.",
+              "en": "Put your fingers on the seams."
+            },
+            {
+              "es": "Separa / Junta + los dedos",
+              "example": "Separa un poco los dedos.",
+              "en": "Spread your fingers a little."
+            },
+            {
+              "es": "Mueve + el pulgar",
+              "example": "Mueve el pulgar un poquito.",
+              "en": "Move your thumb a tiny bit."
+            },
+            {
+              "es": "Afloja / Aprieta + el agarre",
+              "example": "Afloja un poco el agarre.",
+              "en": "Loosen your grip a little."
+            }
+          ],
+          "note_en": "A verb, then the finger or the grip. \"Un poco\" (a little) and \"un poquito\" (a tiny bit) make a correction sound like a small adjustment, not a criticism."
+        },
+        "cues": [
+          {
+            "text": "Between pitches, short instructions are normal. Start with the verb, then the finger or the grip."
+          },
+          {
+            "speaker": "alex",
+            "text": "Separa un poco los dedos.",
+            "en": "Spread your fingers a little.",
+            "repeat": true,
+            "reveal": 2
+          },
+          {
+            "speaker": "alex",
+            "text": "Junta los dedos.",
+            "en": "Bring your fingers together.",
+            "repeat": true,
+            "reveal": 2
+          },
+          {
+            "speaker": "alex",
+            "text": "Mueve el pulgar un poquito.",
+            "en": "Move your thumb a tiny bit.",
+            "repeat": true,
+            "reveal": 3
+          },
+          {
+            "speaker": "alex",
+            "text": "Afloja un poco el agarre.",
+            "en": "Loosen your grip a little.",
+            "repeat": true,
+            "reveal": 4
+          },
+          {
+            "speaker": "alex",
+            "text": "Aprieta un poco más.",
+            "en": "Squeeze a little more.",
+            "repeat": true,
+            "reveal": 4
+          },
+          {
+            "text": "Listen to the small words at the end: a little, a tiny bit. They soften the instruction. It sounds like an adjustment you are trying together, not a mistake he made."
+          },
+          {
+            "speaker": "alex",
+            "text": "un poco… un poquito",
+            "en": "a little… a tiny bit",
+            "repeat": true
+          }
+        ]
+      },
+      {
+        "visual": {
+          "type": "phrases",
+          "title": "Two ways to say \"you\"",
+          "title_es": "Tú y usted",
+          "items": [
+            {
+              "es": "Pon / Ponga los dedos aquí.",
+              "en": "Put your fingers here."
+            },
+            {
+              "es": "Mueve / Mueva el pulgar.",
+              "en": "Move your thumb."
+            },
+            {
+              "es": "Separa / Separe los dedos.",
+              "en": "Spread your fingers."
+            },
+            {
+              "es": "Prueba / Pruebe así.",
+              "en": "Try it like this."
+            }
+          ],
+          "note_en": "First form: tú (informal), normal with young academy players. Second form: usted (formal), for older or veteran players, staff and parents, or when you're unsure. This is working guidance, not a fixed rule; when in doubt, ask."
+        },
+        "cues": [
+          {
+            "text": "Spanish has two ways to say you. The informal one is normal with young academy players."
+          },
+          {
+            "speaker": "alex",
+            "text": "tú",
+            "en": "you (informal)"
+          },
+          {
+            "text": "The formal one is for older or veteran players, staff and parents, or when you are not sure. That is guidance, not a fixed rule. Players may address you formally even when you speak informally to them."
+          },
+          {
+            "speaker": "alex",
+            "text": "usted",
+            "en": "you (formal)"
+          },
+          {
+            "text": "In instructions, the formal form usually changes the last vowel. Listen to each pair."
+          },
+          {
+            "speaker": "alex",
+            "text": "Pon… ponga.",
+            "en": "Put (informal… formal).",
+            "repeat": true,
+            "reveal": 1
+          },
+          {
+            "speaker": "alex",
+            "text": "Mueve… mueva.",
+            "en": "Move (informal… formal).",
+            "repeat": true,
+            "reveal": 2
+          },
+          {
+            "speaker": "alex",
+            "text": "Separa… separe.",
+            "en": "Spread (informal… formal).",
+            "repeat": true,
+            "reveal": 3
+          },
+          {
+            "speaker": "alex",
+            "text": "Prueba… pruebe.",
+            "en": "Try (informal… formal).",
+            "repeat": true,
+            "reveal": 4
+          },
+          {
+            "text": "If you are unsure which one a player prefers, ask him. It is a respectful question."
+          }
+        ]
+      },
+      {
+        "visual": {
+          "type": "figure",
+          "figure": "grip-change",
+          "title": "Changeup: depth and pressure",
+          "title_es": "El cambio: profundidad y presión",
+          "caption": "Illustration: one common changeup grip. Grips are individual.",
+          "caption_es": "Ilustración: un agarre común de cambio. Cada agarre es individual."
+        },
+        "cues": [
+          {
+            "text": "The changeup has two names. Both are standard."
+          },
+          {
+            "speaker": "alex",
+            "text": "el cambio… el cambio de velocidad",
+            "en": "the changeup",
+            "repeat": true
+          },
+          {
+            "text": "Pressure is part of the grip too."
+          },
+          {
+            "speaker": "alex",
+            "text": "la presión",
+            "en": "pressure",
+            "repeat": true
+          },
+          {
+            "text": "And depth: is the ball deep in the hand, or out in the fingertips?"
+          },
+          {
+            "speaker": "alex",
+            "text": "más adentro en la mano… en la punta de los dedos",
+            "en": "deeper in your hand… out in your fingertips",
+            "repeat": true
+          },
+          {
+            "text": "Finally, the moment the ball leaves the hand."
+          },
+          {
+            "speaker": "alex",
+            "text": "soltar la pelota",
+            "en": "to release the ball",
+            "repeat": true
+          }
+        ]
+      },
+      {
+        "visual": {
+          "type": "dialogue",
+          "title": "Listen to Coach Alex and Luis",
+          "title_es": "Escucha al coach Alex y a Luis"
+        },
+        "cues": [
+          {
+            "text": "Now listen to Coach Alex with Luis during a bullpen. Alex suggests one change, then asks how it feels."
+          },
+          {
+            "speaker": "alex",
+            "text": "Luis, separa un poco los dedos. Así.",
+            "en": "Luis, spread your fingers a little. Like this."
+          },
+          {
+            "speaker": "luis",
+            "text": "¿Así, coach?",
+            "en": "Like this, Coach?"
+          },
+          {
+            "speaker": "alex",
+            "text": "Eso. ¿Cómo se siente ese agarre?",
+            "en": "That's it. How does that grip feel?",
+            "repeat": true
+          },
+          {
+            "speaker": "luis",
+            "text": "Cómodo. Un poco raro, pero cómodo.",
+            "en": "Comfortable. A little strange, but comfortable."
+          },
+          {
+            "text": "After the pitch, ask about the release."
+          },
+          {
+            "speaker": "alex",
+            "text": "¿Qué sentiste cuando soltaste la pelota?",
+            "en": "What did you feel when you let go of the ball?",
+            "repeat": true
+          },
+          {
+            "speaker": "luis",
+            "text": "La sentí mejor en los dedos.",
+            "en": "It felt better in my fingers."
+          },
+          {
+            "text": "One change, then a question. His answer tells you whether to keep the adjustment or try something else. Next, you will practise these words, build sentences, and then coach Luis through a grip change yourself."
+          }
+        ]
+      }
+    ]
+  },
+  "clips": {
+    "sp01-d1": {
+      "title": "Starting the bullpen",
+      "lines": [
+        {
+          "speaker": "alex",
+          "text": "Luis, vamos a empezar con la recta de cuatro costuras.",
+          "en": "Luis, let's start with the four-seam fastball."
+        },
+        {
+          "speaker": "luis",
+          "text": "Ok, coach. ¿Cómo pongo los dedos?",
+          "en": "OK, Coach. How do I put my fingers?"
+        },
+        {
+          "speaker": "alex",
+          "text": "El índice y el medio sobre la herradura. El pulgar, debajo de la pelota.",
+          "en": "Index and middle finger on the horseshoe. Thumb under the ball."
+        },
+        {
+          "speaker": "luis",
+          "text": "¿Así?",
+          "en": "Like this?"
+        },
+        {
+          "speaker": "alex",
+          "text": "Eso. Ahora separa un poquito los dedos y tira cinco rectas.",
+          "en": "That's it. Now spread your fingers a tiny bit and throw five fastballs."
+        }
+      ]
+    },
+    "sp01-d2": {
+      "title": "A changeup adjustment",
+      "lines": [
+        {
+          "speaker": "luis",
+          "text": "Coach, el cambio se me queda arriba.",
+          "en": "Coach, my changeup keeps staying up."
+        },
+        {
+          "speaker": "alex",
+          "text": "¿Cómo lo estás agarrando?",
+          "en": "How are you gripping it?"
+        },
+        {
+          "speaker": "luis",
+          "text": "Bien fuerte, en la punta de los dedos.",
+          "en": "Really tight, out in my fingertips."
+        },
+        {
+          "speaker": "alex",
+          "text": "Vamos a probar algo. Ponla más adentro en la mano y afloja un poco el agarre.",
+          "en": "Let's try something. Set it deeper in your hand and loosen your grip a little."
+        },
+        {
+          "speaker": "luis",
+          "text": "¿Más adentro? Ok.",
+          "en": "Deeper? OK."
+        },
+        {
+          "speaker": "alex",
+          "text": "Tira tres. Después me dices cómo se siente.",
+          "en": "Throw three. Then tell me how it feels."
+        }
+      ]
+    },
+    "sp01-r1": {
+      "lines": [
+        {
+          "speaker": "alex",
+          "text": "Pon los dedos sobre las costuras. Separa un poco los dedos.",
+          "en": "Put your fingers on the seams. Spread them a little."
+        }
+      ]
+    },
+    "sp01-r2": {
+      "lines": [
+        {
+          "speaker": "alex",
+          "text": "¿Cómo se siente ese agarre? ¿Qué sentiste cuando soltaste la pelota?",
+          "en": "How does that grip feel? What did you feel when you let go of the ball?"
+        }
+      ]
+    },
+    "sp01-q1": {
+      "lines": [
+        {
+          "speaker": "luis",
+          "text": "Coach, ¿dónde pongo el pulgar?",
+          "en": "Coach, where do I put my thumb?"
+        }
+      ]
+    },
+    "sp01-q2": {
+      "lines": [
+        {
+          "speaker": "luis",
+          "text": "Coach, este agarre lo siento muy apretado.",
+          "en": "Coach, this grip feels really tight."
+        }
+      ]
+    },
+    "sp01-m5": {
+      "lines": [
+        {
+          "speaker": "alex",
+          "text": "Afloja un poco el agarre.",
+          "en": "Loosen your grip a little."
+        }
+      ]
+    },
+    "sp01-c1": {
+      "lines": [
+        {
+          "speaker": "luis",
+          "text": "Coach, ¿cómo quieres que agarre la pelota?",
+          "en": "Coach, how do you want me to grip the ball?"
+        }
+      ]
+    },
+    "sp01-c1a": {
+      "lines": [
+        {
+          "speaker": "luis",
+          "text": "Ok, así. Entendido.",
+          "en": "OK, like this. Got it."
+        }
+      ]
+    },
+    "sp01-c1b": {
+      "lines": [
+        {
+          "speaker": "luis",
+          "text": "Perdón, coach, no te entendí. ¿Dónde pongo los dedos?",
+          "en": "Sorry, Coach, I didn't understand. Where do I put my fingers?"
+        }
+      ]
+    },
+    "sp01-c2": {
+      "lines": [
+        {
+          "speaker": "luis",
+          "text": "Siento los dedos muy juntos. ¿Los dejo así?",
+          "en": "My fingers feel very close together. Should I leave them like this?"
+        }
+      ]
+    },
+    "sp01-c2a": {
+      "lines": [
+        {
+          "speaker": "luis",
+          "text": "Ok, un poquito más separados.",
+          "en": "OK, a little further apart."
+        }
+      ]
+    },
+    "sp01-c2b": {
+      "lines": [
+        {
+          "speaker": "luis",
+          "text": "¿Cómo, coach? ¿Los separo o los junto?",
+          "en": "Sorry, Coach? Should I spread them or bring them together?"
+        }
+      ]
+    },
+    "sp01-c3": {
+      "lines": [
+        {
+          "speaker": "luis",
+          "text": "¿Y el pulgar? Lo tengo al lado de la pelota.",
+          "en": "And my thumb? I have it on the side of the ball."
+        }
+      ]
+    },
+    "sp01-c3a": {
+      "lines": [
+        {
+          "speaker": "luis",
+          "text": "Ok. Voy a tirar una.",
+          "en": "OK. I'm going to throw one."
+        }
+      ]
+    },
+    "sp01-c3b": {
+      "lines": [
+        {
+          "speaker": "luis",
+          "text": "Perdón, ¿dónde va el pulgar?",
+          "en": "Sorry, where does the thumb go?"
+        }
+      ]
+    },
+    "sp01-c4": {
+      "lines": [
+        {
+          "speaker": "luis",
+          "text": "Listo, coach. Ya tiré con el agarre nuevo.",
+          "en": "Done, Coach. I threw it with the new grip."
+        }
+      ]
+    },
+    "sp01-c4a": {
+      "lines": [
+        {
+          "speaker": "luis",
+          "text": "Se siente cómodo. La pelota salió mejor de los dedos.",
+          "en": "It feels comfortable. The ball came off my fingers better."
+        }
+      ]
+    },
+    "sp01-c4b": {
+      "lines": [
+        {
+          "speaker": "luis",
+          "text": "Perdón, coach, ¿qué me preguntaste?",
+          "en": "Sorry, Coach, what did you ask me?"
+        }
+      ]
+    }
+  },
+  "sections": [
+    {
+      "id": "learn",
+      "activities": [
+        {
+          "id": "sp01-lec",
+          "type": "lecture"
+        },
+        {
+          "id": "sp01-v1",
+          "type": "match",
+          "skill": "vocab",
+          "prompt": "Match each Spanish word with its meaning.",
+          "pairs": [
+            [
+              "el agarre",
+              "the grip"
+            ],
+            [
+              "las costuras",
+              "the seams"
+            ],
+            [
+              "el dedo índice",
+              "the index finger"
+            ],
+            [
+              "el dedo medio",
+              "the middle finger"
+            ],
+            [
+              "el pulgar",
+              "the thumb"
+            ],
+            [
+              "las yemas de los dedos",
+              "the fingertip pads"
+            ],
+            [
+              "soltar la pelota",
+              "to release the ball"
+            ]
+          ],
+          "explain_en": "\"Dedo medio\" and \"dedo del medio\" both mean the middle finger; the second is the everyday form. \"Soltar\" means to let go: \"cuando soltaste la pelota\" = when you let go of the ball."
+        },
+        {
+          "id": "sp01-v2",
+          "type": "match",
+          "skill": "vocab",
+          "prompt": "Match each Spanish word with its meaning.",
+          "pairs": [
+            [
+              "el meñique",
+              "the pinky"
+            ],
+            [
+              "el anular",
+              "the ring finger"
+            ],
+            [
+              "la palma",
+              "the palm"
+            ],
+            [
+              "la muñeca",
+              "the wrist"
+            ],
+            [
+              "la herradura",
+              "the horseshoe (seams)"
+            ],
+            [
+              "la presión",
+              "pressure"
+            ],
+            [
+              "la recta de cuatro costuras",
+              "the four-seam fastball"
+            ]
+          ],
+          "explain_en": "\"La herradura\" is the U-shaped part of the seams. \"La recta\" is the everyday word for the fastball; \"la recta de cuatro costuras\" is the four-seamer."
+        }
+      ]
+    },
+    {
+      "id": "listen",
+      "activities": [
+        {
+          "id": "sp01-l1",
+          "type": "listen",
+          "skill": "listening",
+          "clip": "sp01-d1",
+          "intro": "Coach Alex starts a bullpen with Luis. Listen and answer.",
+          "questions": [
+            {
+              "id": "sp01-l1-q1",
+              "prompt": "Which pitch are they starting with?",
+              "options": [
+                "The four-seam fastball",
+                "The changeup",
+                "The slider"
+              ],
+              "answer": 0,
+              "explain": "\"Vamos a empezar con la recta de cuatro costuras\": let's start with the four-seam fastball."
+            },
+            {
+              "id": "sp01-l1-q2",
+              "prompt": "Where do the index and middle fingers go?",
+              "options": [
+                "On the horseshoe",
+                "Under the ball",
+                "Deep in the palm"
+              ],
+              "answer": 0,
+              "explain": "\"El índice y el medio sobre la herradura\": index and middle finger on the horseshoe. The thumb goes under the ball."
+            },
+            {
+              "id": "sp01-l1-q3",
+              "prompt": "What does Alex ask Luis to do at the end?",
+              "options": [
+                "Spread his fingers a tiny bit and throw five fastballs",
+                "Bring his fingers together and throw three changeups",
+                "Loosen his grip and rest"
+              ],
+              "answer": 0,
+              "explain": "\"Separa un poquito los dedos y tira cinco rectas\": spread your fingers a tiny bit and throw five fastballs."
+            }
+          ]
+        },
+        {
+          "id": "sp01-l2",
+          "type": "listen",
+          "skill": "listening",
+          "clip": "sp01-d2",
+          "intro": "Luis has a problem with his changeup. Listen and answer.",
+          "questions": [
+            {
+              "id": "sp01-l2-q1",
+              "prompt": "What is the problem with Luis's changeup?",
+              "options": [
+                "It keeps staying up.",
+                "It hurts his wrist.",
+                "It is too slow."
+              ],
+              "answer": 0,
+              "explain": "\"El cambio se me queda arriba\": my changeup keeps staying up."
+            },
+            {
+              "id": "sp01-l2-q2",
+              "prompt": "Which two changes does Alex suggest?",
+              "options": [
+                "Set the ball deeper in the hand and loosen the grip",
+                "Move the thumb and squeeze harder",
+                "Spread the fingers and throw harder"
+              ],
+              "answer": 0,
+              "explain": "\"Ponla más adentro en la mano y afloja un poco el agarre\": set it deeper in your hand and loosen your grip a little."
+            },
+            {
+              "id": "sp01-l2-q3",
+              "prompt": "What does Alex want after three pitches?",
+              "options": [
+                "Luis to tell him how it feels",
+                "Luis to watch the video",
+                "Luis to go back to the fastball"
+              ],
+              "answer": 0,
+              "explain": "\"Después me dices cómo se siente\": then tell me how it feels. He tests the change and asks about the feel."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "activities": [
+        {
+          "id": "sp01-p1",
+          "type": "choice",
+          "skill": "vocab",
+          "prompt": "Which Spanish word means \"the seams\"?",
+          "options": [
+            "las costuras",
+            "las yemas",
+            "las muñecas"
+          ],
+          "answer": 0,
+          "explain": "\"Las costuras\" are the seams. \"Las yemas\" are the fingertip pads; \"la muñeca\" is the wrist."
+        },
+        {
+          "id": "sp01-p2",
+          "type": "choice",
+          "skill": "grammar",
+          "prompt": "You're talking to a 17-year-old academy pitcher. Which instruction sounds most natural?",
+          "options": [
+            "Mueve el pulgar un poquito.",
+            "Mueva usted el pulgar, señor.",
+            "Mover el pulgar un poquito."
+          ],
+          "answer": 0,
+          "explain": "With a young academy player, the informal \"mueve\" is normal. The infinitive \"mover\" sounds like a written manual, and \"señor\" is far too formal here."
+        },
+        {
+          "id": "sp01-p3",
+          "type": "choice",
+          "skill": "grammar",
+          "prompt": "You've just met a veteran pitcher in his thirties. Which instruction is the safer choice?",
+          "options": [
+            "Ponga los dedos sobre las costuras.",
+            "Poner los dedos sobre las costuras.",
+            "Pones los dedos sobre las costuras."
+          ],
+          "answer": 0,
+          "explain": "\"Ponga\" is the formal (usted) instruction: a respectful default with an older player until you know what he prefers. This is guidance, not a rule; you can also simply ask."
+        },
+        {
+          "id": "sp01-p4",
+          "type": "order",
+          "skill": "grammar",
+          "prompt": "Build the sentence: \"Spread your fingers a little.\"",
+          "en": "Spread your fingers a little.",
+          "words": [
+            "separa",
+            "un",
+            "poco",
+            "los",
+            "dedos"
+          ],
+          "answers": [
+            "separa un poco los dedos",
+            "separa los dedos un poco"
+          ],
+          "explain_en": "Verb first: \"Separa\", then \"un poco\" and \"los dedos\". Spanish says \"los dedos\" (the fingers), not \"tus dedos\"."
+        },
+        {
+          "id": "sp01-p5",
+          "type": "choice",
+          "skill": "vocab",
+          "prompt": "Luis is squeezing his changeup very tight. Which instruction fits?",
+          "options": [
+            "Afloja un poco el agarre.",
+            "Aprieta más el agarre.",
+            "Junta los dedos."
+          ],
+          "answer": 0,
+          "explain": "\"Afloja\" means loosen. \"Aprieta\" means squeeze, the opposite. \"Junta los dedos\" (bring your fingers together) doesn't address pressure."
+        },
+        {
+          "id": "sp01-p6",
+          "type": "order",
+          "skill": "grammar",
+          "prompt": "Build the question: \"How does that grip feel?\"",
+          "en": "How does that grip feel?",
+          "words": [
+            "cómo",
+            "se",
+            "siente",
+            "ese",
+            "agarre"
+          ],
+          "answers": [
+            "cómo se siente ese agarre"
+          ],
+          "explain_en": "\"¿Cómo se siente…?\" = How does … feel? Written Spanish opens a question with ¿ and closes it with ?."
+        },
+        {
+          "id": "sp01-p7",
+          "type": "choice",
+          "skill": "vocab",
+          "prompt": "Which question asks about the release?",
+          "options": [
+            "¿Qué sentiste cuando soltaste la pelota?",
+            "¿Dónde pongo el pulgar?",
+            "¿Cuántos lanzamientos faltan?"
+          ],
+          "answer": 0,
+          "explain": "\"Soltaste la pelota\" = you let go of the ball. The other two mean \"Where do I put my thumb?\" and \"How many pitches are left?\""
+        },
+        {
+          "id": "sp01-p8",
+          "type": "choice",
+          "skill": "grammar",
+          "prompt": "Why does a coach say \"Pon los dedos…\" and not \"Pon tus dedos…\"?",
+          "options": [
+            "With body parts, Spanish normally uses \"the\". It isn't cold.",
+            "\"Tus\" is rude in the Dominican Republic.",
+            "\"Los dedos\" only means the index and middle fingers."
+          ],
+          "answer": 0,
+          "explain": "In Spanish, it's clear whose fingers they are, so the article \"los\" (the) is normal: \"Mueve el pulgar\", \"Separa los dedos\"."
+        },
+        {
+          "id": "sp01-p9",
+          "type": "order",
+          "skill": "grammar",
+          "prompt": "Build the sentence: \"Put your fingers on the seams.\"",
+          "en": "Put your fingers on the seams.",
+          "words": [
+            "pon",
+            "los",
+            "dedos",
+            "sobre",
+            "las",
+            "costuras"
+          ],
+          "answers": [
+            "pon los dedos sobre las costuras"
+          ],
+          "explain_en": "\"Pon\" (put) + \"los dedos\" (your fingers) + \"sobre las costuras\" (on the seams)."
+        },
+        {
+          "id": "sp01-p10",
+          "type": "choice",
+          "skill": "vocab",
+          "prompt": "Which instruction sounds like a small adjustment, not a criticism?",
+          "options": [
+            "Mueve el pulgar un poquito.",
+            "Ese pulgar está mal.",
+            "Siempre tienes que mover el pulgar."
+          ],
+          "answer": 0,
+          "explain": "\"Un poquito\" (a tiny bit) frames it as a small change to try. \"Ese pulgar está mal\" (that thumb is wrong) blames, and \"siempre tienes que\" (you always have to) turns one adjustment into a rule."
+        }
+      ]
+    },
+    {
+      "id": "speak",
+      "activities": [
+        {
+          "id": "sp01-s1",
+          "type": "repeat",
+          "skill": "speaking",
+          "clip": "sp01-r1",
+          "text": "Pon los dedos sobre las costuras. Separa un poco los dedos.",
+          "en": "Put your fingers on the seams. Spread them a little.",
+          "tip_en": "Spanish vowels are short and clear: \"cos-TU-ras\", \"SE-pa-ra\". Stress the verb at the start."
+        },
+        {
+          "id": "sp01-s2",
+          "type": "repeat",
+          "skill": "speaking",
+          "clip": "sp01-r2",
+          "text": "¿Cómo se siente ese agarre? ¿Qué sentiste cuando soltaste la pelota?",
+          "en": "How does that grip feel? What did you feel when you let go of the ball?",
+          "tip_en": "Let your voice rise slightly at the end of each question. \"Sentiste\" and \"soltaste\" are both stressed on the middle syllable."
+        },
+        {
+          "id": "sp01-s3",
+          "type": "answer",
+          "skill": "speaking",
+          "clip": "sp01-q1",
+          "prompt": "Coach, ¿dónde pongo el pulgar?",
+          "prompt_en": "Coach, where do I put my thumb?",
+          "goal": "The learner tells the pitcher, in Spanish, where to put his thumb (e.g. under the ball / debajo de la pelota, or move it a little / mueve el pulgar un poquito). Any clear, reasonable placement counts; a short informal (tú) instruction is expected, and adding a check such as \"prueba así\" or \"¿cómo se siente?\" is a plus. Do not require one exact sentence.",
+          "goal_en": "Tell Luis where to put his thumb, in a short instruction.",
+          "examples": [
+            "Ponlo debajo de la pelota. Prueba así.",
+            "Mueve el pulgar un poquito, debajo de la pelota. ¿Cómo se siente?",
+            "El pulgar, debajo de la pelota. Así."
+          ],
+          "focus": [
+            "el pulgar",
+            "debajo de la pelota",
+            "pon / ponlo",
+            "mueve",
+            "un poquito"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "sp01-s4",
+          "type": "answer",
+          "skill": "speaking",
+          "clip": "sp01-q2",
+          "prompt": "Coach, este agarre lo siento muy apretado.",
+          "prompt_en": "Coach, this grip feels really tight.",
+          "goal": "The learner responds to a grip that feels too tight: suggests loosening it a little (afloja / agárrala más suave / no aprietes tanto), ideally softened with \"un poco\" or \"un poquito\", and asks how it feels or invites him to try one. Communication matters more than exact wording.",
+          "goal_en": "Suggest loosening the grip a little, then ask how it feels.",
+          "examples": [
+            "Afloja un poco el agarre. ¿Cómo se siente ahora?",
+            "Ok, agárrala más suave. Prueba así.",
+            "No aprietes tanto. Afloja un poquito y tira otra."
+          ],
+          "focus": [
+            "afloja",
+            "el agarre",
+            "un poco",
+            "¿cómo se siente?",
+            "prueba"
+          ],
+          "level": "A2"
+        }
+      ]
+    },
+    {
+      "id": "apply",
+      "activities": [
+        {
+          "id": "sp01-c",
+          "type": "conversation",
+          "skill": "speaking",
+          "partner": "luis",
+          "setting": "Bullpen session at the academy. Luis, 19, is holding the ball before a set of four-seam fastballs and asks you about his grip. Speak Spanish and use tú with him.",
+          "objective": "Explain how to place and move his fingers, name the seam, and ask whether the new grip feels comfortable.",
+          "turns": [
+            {
+              "clip": "sp01-c1",
+              "line": "Coach, ¿cómo quieres que agarre la pelota?",
+              "en": "Coach, how do you want me to grip the ball?",
+              "goal": "Tell the pitcher where to put his fingers, naming the seams or the horseshoe (e.g. on/over the seams, index and middle on the horseshoe). Any clear placement counts.",
+              "goal_en": "Tell Luis where his fingers go, and name the seam.",
+              "examples": [
+                "Pon los dedos sobre las costuras.",
+                "El índice y el medio encima de la herradura."
+              ],
+              "fallback": {
+                "options": [
+                  "Pon el índice y el medio sobre la herradura.",
+                  "Soy de Texas, coach.",
+                  "La pelota está en el bullpen."
+                ],
+                "answer": 0
+              },
+              "ack": {
+                "clip": "sp01-c1a",
+                "line": "Ok, así. Entendido.",
+                "en": "OK, like this. Got it."
+              },
+              "clarify": {
+                "clip": "sp01-c1b",
+                "line": "Perdón, coach, no te entendí. ¿Dónde pongo los dedos?",
+                "en": "Sorry, Coach, I didn't understand. Where do I put my fingers?"
+              }
+            },
+            {
+              "clip": "sp01-c2",
+              "line": "Siento los dedos muy juntos. ¿Los dejo así?",
+              "en": "My fingers feel very close together. Should I leave them like this?",
+              "goal": "Give one adjustment to the finger spacing (e.g. spread them a little: separa un poco los dedos), ideally softened with un poco / un poquito. Suggesting he try it and see how it feels is also fine.",
+              "goal_en": "Suggest one small change to the spacing of his fingers.",
+              "examples": [
+                "Separa un poquito los dedos.",
+                "No, sepáralos un poco. Prueba así."
+              ],
+              "fallback": {
+                "options": [
+                  "Separa un poquito los dedos.",
+                  "Aprieta la muñeca.",
+                  "Tira el slider."
+                ],
+                "answer": 0
+              },
+              "ack": {
+                "clip": "sp01-c2a",
+                "line": "Ok, un poquito más separados.",
+                "en": "OK, a little further apart."
+              },
+              "clarify": {
+                "clip": "sp01-c2b",
+                "line": "¿Cómo, coach? ¿Los separo o los junto?",
+                "en": "Sorry, Coach? Should I spread them or bring them together?"
+              }
+            },
+            {
+              "clip": "sp01-c3",
+              "line": "¿Y el pulgar? Lo tengo al lado de la pelota.",
+              "en": "And my thumb? I have it on the side of the ball.",
+              "goal": "Tell him where to put or move his thumb (e.g. under the ball, move it a little underneath). Any clear, reasonable placement counts.",
+              "goal_en": "Tell Luis where to move his thumb.",
+              "examples": [
+                "Mueve el pulgar un poquito, debajo de la pelota.",
+                "Ponlo debajo de la pelota. Prueba así."
+              ],
+              "fallback": {
+                "options": [
+                  "Mueve el pulgar un poquito, debajo de la pelota.",
+                  "El pulgar es el dedo índice.",
+                  "Suelta el meñique."
+                ],
+                "answer": 0
+              },
+              "ack": {
+                "clip": "sp01-c3a",
+                "line": "Ok. Voy a tirar una.",
+                "en": "OK. I'm going to throw one."
+              },
+              "clarify": {
+                "clip": "sp01-c3b",
+                "line": "Perdón, ¿dónde va el pulgar?",
+                "en": "Sorry, where does the thumb go?"
+              }
+            },
+            {
+              "clip": "sp01-c4",
+              "line": "Listo, coach. Ya tiré con el agarre nuevo.",
+              "en": "Done, Coach. I threw it with the new grip.",
+              "goal": "Ask whether the new grip feels comfortable or natural, and/or what he felt when he released the ball (e.g. ¿Cómo se siente ese agarre? ¿Te sientes cómodo? ¿Qué sentiste cuando soltaste la pelota?).",
+              "goal_en": "Ask Luis whether the new grip feels comfortable.",
+              "examples": [
+                "¿Cómo se siente ese agarre? ¿Cómodo?",
+                "¿Qué sentiste cuando soltaste la pelota?"
+              ],
+              "fallback": {
+                "options": [
+                  "¿Cómo se siente ese agarre? ¿Cómodo?",
+                  "Tienes que usar este agarre siempre.",
+                  "¿Dónde está el cátcher?"
+                ],
+                "answer": 0
+              },
+              "ack": {
+                "clip": "sp01-c4a",
+                "line": "Se siente cómodo. La pelota salió mejor de los dedos.",
+                "en": "It feels comfortable. The ball came off my fingers better."
+              },
+              "clarify": {
+                "clip": "sp01-c4b",
+                "line": "Perdón, coach, ¿qué me preguntaste?",
+                "en": "Sorry, Coach, what did you ask me?"
+              },
+              "last": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "activities": [
+        {
+          "id": "sp01-m",
+          "type": "mastery",
+          "pass": 4,
+          "items": [
+            {
+              "id": "sp01-m1",
+              "skill": "vocab",
+              "prompt": "\"La herradura\" is…",
+              "options": [
+                "the U-shaped part of the seams",
+                "the palm of the hand",
+                "the tip of the index finger"
+              ],
+              "answer": 0,
+              "explain": "\"La herradura\" (the horseshoe) is the U-shaped seam pattern."
+            },
+            {
+              "id": "sp01-m2",
+              "skill": "grammar",
+              "prompt": "Which is the formal (usted) form of \"Prueba así\"?",
+              "options": [
+                "Pruebe así.",
+                "Probar así.",
+                "Pruebas así."
+              ],
+              "answer": 0,
+              "explain": "Informal \"prueba\" becomes formal \"pruebe\": the last vowel changes, as in pon / ponga and mueve / mueva."
+            },
+            {
+              "id": "sp01-m3",
+              "skill": "vocab",
+              "prompt": "You want Luis to spread his fingers a little. You say:",
+              "options": [
+                "Separa un poco los dedos.",
+                "Junta un poco los dedos.",
+                "Aprieta un poco los dedos."
+              ],
+              "answer": 0,
+              "explain": "\"Separa\" = spread. \"Junta\" = bring together. \"Aprieta\" = squeeze."
+            },
+            {
+              "id": "sp01-m4",
+              "skill": "vocab",
+              "prompt": "\"¿Cómo se siente ese agarre?\" means…",
+              "options": [
+                "How does that grip feel?",
+                "Where is your grip?",
+                "Do you want a new grip?"
+              ],
+              "answer": 0,
+              "explain": "\"¿Cómo se siente…?\" = How does … feel? Ask it after every change."
+            },
+            {
+              "id": "sp01-m5",
+              "skill": "listening",
+              "clip": "sp01-m5",
+              "prompt": "Listen. What does Coach Alex say?",
+              "options": [
+                "Loosen your grip a little.",
+                "Squeeze the ball a little more.",
+                "Move your thumb a little."
+              ],
+              "answer": 0,
+              "explain": "\"Afloja un poco el agarre\": loosen your grip a little."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "es": "Pon los dedos sobre las costuras.",
+      "en": "Put your fingers on the seams.",
+      "note": "Usted: \"Ponga los dedos…\""
+    },
+    {
+      "es": "El índice y el medio, encima de la herradura.",
+      "en": "Index and middle finger on top of the horseshoe."
+    },
+    {
+      "es": "El pulgar, debajo de la pelota.",
+      "en": "Thumb under the ball.",
+      "note": "\"El dedo gordo\" is a common colloquial name for the thumb in the Caribbean; \"pulgar\" is understood everywhere."
+    },
+    {
+      "es": "Separa un poco los dedos. / Junta los dedos.",
+      "en": "Spread your fingers a little. / Bring your fingers together.",
+      "note": "Usted: separe / junte."
+    },
+    {
+      "es": "Mueve el pulgar un poquito.",
+      "en": "Move your thumb a tiny bit.",
+      "note": "Usted: \"Mueva el pulgar…\". \"Un poquito\" softens any instruction."
+    },
+    {
+      "es": "Afloja un poco el agarre. / Aprieta un poco más.",
+      "en": "Loosen your grip a little. / Squeeze a little more.",
+      "note": "Usted: afloje / apriete. Field alternative: \"Agárrala más suave.\""
+    },
+    {
+      "es": "Ponla más adentro en la mano.",
+      "en": "Set the ball deeper in your hand.",
+      "note": "\"La\" refers to \"la pelota\"."
+    },
+    {
+      "es": "En la punta de los dedos.",
+      "en": "Out in your fingertips.",
+      "note": "Field form. \"Las yemas de los dedos\" is more precise and a little more formal."
+    },
+    {
+      "es": "Prueba así.",
+      "en": "Try it like this.",
+      "note": "Usted: \"Pruebe así.\""
+    },
+    {
+      "es": "¿Cómo se siente ese agarre?",
+      "en": "How does that grip feel?"
+    },
+    {
+      "es": "¿Qué sentiste cuando soltaste la pelota?",
+      "en": "What did you feel when you let go of the ball?",
+      "note": "Say \"¿Cómo te sentiste?\" or \"¿Qué sentiste?\" — not \"¿Cómo sentiste?\" on its own."
+    },
+    {
+      "es": "¿Te sientes cómodo? / ¿Se siente natural?",
+      "en": "Are you comfortable? / Does it feel natural?"
+    },
+    {
+      "es": "la recta de cuatro costuras / el sinker de dos costuras",
+      "en": "the four-seam fastball / the two-seam sinker",
+      "note": "Loanwords (sinker, slider, cutter, bullpen) are normal baseball Spanish and usually masculine; you may also hear \"la sinker\"."
+    },
+    {
+      "es": "el cambio (de velocidad)",
+      "en": "the changeup",
+      "note": "Both forms are standard; \"el cambio\" is the everyday one."
+    }
+  ],
+  "next": "Next: Lesson 2, delivery and mechanics — describing what you saw on a pitch, asking what he felt, and suggesting one adjustment to test. Before that, review the phrases you missed and say the grip instructions out loud."
+}

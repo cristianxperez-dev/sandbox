@@ -1,5 +1,1169 @@
 {
 "files": {
+"d01": {
+"audio": "media/lectures/d01.mp3",
+"bytes": 1041069,
+"cues": [
+[
+0.0,
+6.741
+],
+[
+7.041,
+14.892
+],
+[
+15.742,
+22.078
+],
+[
+22.378,
+26.367
+],
+[
+26.667,
+30.081
+],
+[
+30.381,
+38.039
+],
+[
+38.889,
+42.879
+],
+[
+43.179,
+46.251
+],
+[
+46.551,
+49.857
+],
+[
+50.157,
+53.997
+],
+[
+54.847,
+61.525
+],
+[
+61.825,
+64.086
+],
+[
+64.386,
+70.53
+],
+[
+70.83,
+79.278
+],
+[
+79.578,
+85.295
+],
+[
+86.145,
+91.948
+],
+[
+92.248,
+94.936
+],
+[
+95.236,
+98.863
+],
+[
+99.163,
+102.811
+],
+[
+103.661,
+109.037
+],
+[
+109.487,
+114.201
+],
+[
+114.651,
+115.59
+],
+[
+116.04,
+117.853
+],
+[
+118.303,
+122.805
+],
+[
+123.255,
+124.279
+],
+[
+124.729,
+132.153
+],
+[
+133.003,
+141.109
+],
+[
+141.409,
+142.945
+],
+[
+143.245,
+145.507
+],
+[
+145.807,
+148.623
+],
+[
+148.923,
+151.184
+],
+[
+151.484,
+157.969
+],
+[
+158.819,
+165.305
+],
+[
+165.605,
+173.007
+]
+],
+"duration": 173.407,
+"hash": "25bff2881f77e5d15c7e70272f5f8178d873dcc1bbe0bdb6efd4f3da2527d4c2",
+"kind": "lecture"
+},
+"d01-c1": {
+"audio": "media/clips/d01-c1.mp3",
+"bytes": 19101,
+"cues": [
+[
+0.0,
+2.688
+]
+],
+"duration": 3.088,
+"hash": "f2a53a1b50b42dd74af3a2f1425d42d70836ac3e88f6bbf97b7e430d3a09cf1b",
+"kind": "clip"
+},
+"d01-c1a": {
+"audio": "media/clips/d01-c1a.mp3",
+"bytes": 11901,
+"cues": [
+[
+0.0,
+1.493
+]
+],
+"duration": 1.893,
+"hash": "6e23b1df3eb37a77e24c82570139f90728daca33a0f8f09f6200bcf18c3f0311",
+"kind": "clip"
+},
+"d01-c1b": {
+"audio": "media/clips/d01-c1b.mp3",
+"bytes": 25581,
+"cues": [
+[
+0.0,
+3.755
+]
+],
+"duration": 4.155,
+"hash": "93f4ef8aa3fc3035efc601aba07ab601519daca48b9a8ba5ba5c0a416fbf132d",
+"kind": "clip"
+},
+"d01-c2": {
+"audio": "media/clips/d01-c2.mp3",
+"bytes": 17661,
+"cues": [
+[
+0.0,
+2.453
+]
+],
+"duration": 2.853,
+"hash": "9f4eecf1794e9fa9d7c9ccc4adb2237fdb170716be036a45d58174eb61afd7df",
+"kind": "clip"
+},
+"d01-c2a": {
+"audio": "media/clips/d01-c2a.mp3",
+"bytes": 14925,
+"cues": [
+[
+0.0,
+1.984
+]
+],
+"duration": 2.384,
+"hash": "9b4766970f29281a21af4ad1c3d7f85d339bcc0680c858c2db28159fbedb5d9d",
+"kind": "clip"
+},
+"d01-c2b": {
+"audio": "media/clips/d01-c2b.mp3",
+"bytes": 16509,
+"cues": [
+[
+0.0,
+2.261
+]
+],
+"duration": 2.661,
+"hash": "6da52708e8ae3595294c357b1c1809de0daa885f1efb71ca9cc53d07791c84fc",
+"kind": "clip"
+},
+"d01-c3": {
+"audio": "media/clips/d01-c3.mp3",
+"bytes": 10029,
+"cues": [
+[
+0.0,
+1.173
+]
+],
+"duration": 1.573,
+"hash": "c267129326c85d7150603a1cc4fbfeb569570b85a99b5c108f4f367d80d5af33",
+"kind": "clip"
+},
+"d01-c3a": {
+"audio": "media/clips/d01-c3a.mp3",
+"bytes": 12189,
+"cues": [
+[
+0.0,
+1.536
+]
+],
+"duration": 1.936,
+"hash": "0704d6e5a07492f1ee321ee467511c234174c27148e34327dd6af6a98b0f1130",
+"kind": "clip"
+},
+"d01-c3b": {
+"audio": "media/clips/d01-c3b.mp3",
+"bytes": 15789,
+"cues": [
+[
+0.0,
+2.133
+]
+],
+"duration": 2.533,
+"hash": "5beddfeb162016e8fe002a42d6a40316301d75cc280d046e75ddb4f56166959e",
+"kind": "clip"
+},
+"d01-d1": {
+"audio": "media/clips/d01-d1.mp3",
+"bytes": 126957,
+"cues": [
+[
+0.0,
+4.843
+],
+[
+5.293,
+6.765
+],
+[
+7.215,
+13.999
+],
+[
+14.449,
+15.366
+],
+[
+15.816,
+20.659
+]
+],
+"duration": 21.059,
+"hash": "22019a1dcbf1768321929e3c50d6909e800b23bc9b335a29eebd7450b5c53558",
+"kind": "clip"
+},
+"d01-d2": {
+"audio": "media/clips/d01-d2.mp3",
+"bytes": 104061,
+"cues": [
+[
+0.0,
+2.581
+],
+[
+3.031,
+5.527
+],
+[
+5.977,
+11.737
+],
+[
+12.187,
+13.211
+],
+[
+13.661,
+16.84
+]
+],
+"duration": 17.24,
+"hash": "3327e66860d1d26a32b6500736d48f27d5bb3a1e9d04b17eaa5286f27f3401cd",
+"kind": "clip"
+},
+"d01-m5": {
+"audio": "media/clips/d01-m5.mp3",
+"bytes": 12909,
+"cues": [
+[
+0.0,
+1.643
+]
+],
+"duration": 2.043,
+"hash": "4cab76cbf1f3635142a00af3fa093710aa28bbb33adade6a5532fc7be95b5424",
+"kind": "clip"
+},
+"d01-q1": {
+"audio": "media/clips/d01-q1.mp3",
+"bytes": 14637,
+"cues": [
+[
+0.0,
+1.941
+]
+],
+"duration": 2.341,
+"hash": "27a75b66770e10237bda5f5f7d8581fd57c1fe983d13d574447d4a97e6138263",
+"kind": "clip"
+},
+"d01-q2": {
+"audio": "media/clips/d01-q2.mp3",
+"bytes": 15357,
+"cues": [
+[
+0.0,
+2.069
+]
+],
+"duration": 2.469,
+"hash": "b749801edd580c1e95ecbcabf47cca5a83b2ba9cfb478b76a940d400f1defdab",
+"kind": "clip"
+},
+"d01-r1": {
+"audio": "media/clips/d01-r1.mp3",
+"bytes": 17805,
+"cues": [
+[
+0.0,
+2.475
+]
+],
+"duration": 2.875,
+"hash": "ea667cc98ac1b7b271b6382ad22f1b1b55c110a4fe65dee923542c748365b609",
+"kind": "clip"
+},
+"d01-r2": {
+"audio": "media/clips/d01-r2.mp3",
+"bytes": 20973,
+"cues": [
+[
+0.0,
+3.008
+]
+],
+"duration": 3.408,
+"hash": "791f1f4ee01f8a0e80b17aa244b0b99f7e39dcc4a58d2b95b967734083e9370a",
+"kind": "clip"
+},
+"d02": {
+"audio": "media/lectures/d02.mp3",
+"bytes": 1031997,
+"cues": [
+[
+0.0,
+7.36
+],
+[
+7.66,
+14.401
+],
+[
+15.251,
+22.462
+],
+[
+22.762,
+26.218
+],
+[
+26.518,
+29.462
+],
+[
+29.762,
+35.757
+],
+[
+36.607,
+40.447
+],
+[
+40.747,
+44.907
+],
+[
+45.207,
+51.457
+],
+[
+51.757,
+55.213
+],
+[
+56.063,
+62.186
+],
+[
+62.486,
+63.915
+],
+[
+64.215,
+68.653
+],
+[
+68.953,
+70.595
+],
+[
+70.895,
+76.037
+],
+[
+76.887,
+83.543
+],
+[
+83.843,
+87.128
+],
+[
+87.428,
+90.777
+],
+[
+91.077,
+94.491
+],
+[
+94.791,
+100.7
+],
+[
+101.55,
+105.262
+],
+[
+105.562,
+110.917
+],
+[
+111.217,
+115.953
+],
+[
+116.253,
+122.738
+],
+[
+123.588,
+133.167
+],
+[
+133.617,
+141.318
+],
+[
+141.768,
+143.688
+],
+[
+144.138,
+146.975
+],
+[
+147.425,
+154.849
+],
+[
+155.699,
+163.699
+],
+[
+163.999,
+171.509
+]
+],
+"duration": 171.909,
+"hash": "037362ad1e77349ef17da7dbfb4e4e1d0fc3b7bdd91b596fe4795f31e8c20836",
+"kind": "lecture"
+},
+"d02-c1": {
+"audio": "media/clips/d02-c1.mp3",
+"bytes": 14205,
+"cues": [
+[
+0.0,
+1.877
+]
+],
+"duration": 2.277,
+"hash": "42e2adbf84db29310f3b82780738d5a9fe8e8b677e1c6c73633ebd777456d34c",
+"kind": "clip"
+},
+"d02-c1a": {
+"audio": "media/clips/d02-c1a.mp3",
+"bytes": 14061,
+"cues": [
+[
+0.0,
+1.856
+]
+],
+"duration": 2.256,
+"hash": "5defbfcfb949157adc0d42f775478a10e12ba9a4dba6292017b9b2288252194b",
+"kind": "clip"
+},
+"d02-c1b": {
+"audio": "media/clips/d02-c1b.mp3",
+"bytes": 20109,
+"cues": [
+[
+0.0,
+2.859
+]
+],
+"duration": 3.259,
+"hash": "49e30182af5b37f377f9ebd5fc728531e85749a248b512c353205328b743a0c0",
+"kind": "clip"
+},
+"d02-c2": {
+"audio": "media/clips/d02-c2.mp3",
+"bytes": 18813,
+"cues": [
+[
+0.0,
+2.645
+]
+],
+"duration": 3.045,
+"hash": "5b3ceb8728f1d5072c951a4887aee1474a7d0fcdf481a0ca1209d157d69f0865",
+"kind": "clip"
+},
+"d02-c2a": {
+"audio": "media/clips/d02-c2a.mp3",
+"bytes": 15069,
+"cues": [
+[
+0.0,
+2.005
+]
+],
+"duration": 2.405,
+"hash": "cbf7e7dfccfbe4877912a72226a1eef6e736ca9a2bc1f1b26a280d287d9a65f5",
+"kind": "clip"
+},
+"d02-c2b": {
+"audio": "media/clips/d02-c2b.mp3",
+"bytes": 17517,
+"cues": [
+[
+0.0,
+2.411
+]
+],
+"duration": 2.811,
+"hash": "6cd4accf2dd94d3d24cea45cfc0db33582d8e8d38d5a346c067245f7c9cf7768",
+"kind": "clip"
+},
+"d02-c3": {
+"audio": "media/clips/d02-c3.mp3",
+"bytes": 21837,
+"cues": [
+[
+0.0,
+3.136
+]
+],
+"duration": 3.536,
+"hash": "6195adedbd58c786fb2753d5359dc824ac54c9ee4b94ac232acb4b66df39a2bd",
+"kind": "clip"
+},
+"d02-c3a": {
+"audio": "media/clips/d02-c3a.mp3",
+"bytes": 16221,
+"cues": [
+[
+0.0,
+2.197
+]
+],
+"duration": 2.597,
+"hash": "9541d304fd860e29a91c0bc4bab89b9b10fcf206ea0ec326cd08abdbaa19a97b",
+"kind": "clip"
+},
+"d02-c3b": {
+"audio": "media/clips/d02-c3b.mp3",
+"bytes": 20253,
+"cues": [
+[
+0.0,
+2.88
+]
+],
+"duration": 3.28,
+"hash": "f55ea88fd730ce1f934aaba323083e26f6a8b9d75f57814b1a53fef66ce78835",
+"kind": "clip"
+},
+"d02-c4": {
+"audio": "media/clips/d02-c4.mp3",
+"bytes": 11469,
+"cues": [
+[
+0.0,
+1.408
+]
+],
+"duration": 1.808,
+"hash": "5d003f4fcb2ab3f26749282b18a5566e0a3231069ef5e21cbbd645315487c74c",
+"kind": "clip"
+},
+"d02-c4a": {
+"audio": "media/clips/d02-c4a.mp3",
+"bytes": 10749,
+"cues": [
+[
+0.0,
+1.301
+]
+],
+"duration": 1.701,
+"hash": "33f71e5e0b89472a60ed9aa66b40de566055d4347b7f91f28b2e1b159b777577",
+"kind": "clip"
+},
+"d02-c4b": {
+"audio": "media/clips/d02-c4b.mp3",
+"bytes": 14925,
+"cues": [
+[
+0.0,
+1.984
+]
+],
+"duration": 2.384,
+"hash": "e484e5c2261b4d7625841a94f9a025155f5f2742866c36322b49394b804cab0a",
+"kind": "clip"
+},
+"d02-d1": {
+"audio": "media/clips/d02-d1.mp3",
+"bytes": 143517,
+"cues": [
+[
+0.0,
+7.339
+],
+[
+7.789,
+9.282
+],
+[
+9.732,
+17.775
+],
+[
+18.225,
+19.163
+],
+[
+19.613,
+23.411
+]
+],
+"duration": 23.811,
+"hash": "31920724713a23b19e9ba7f31f6014525258f7cbee9d1e0dbcd2f50d6f3b9b3e",
+"kind": "clip"
+},
+"d02-d2": {
+"audio": "media/clips/d02-d2.mp3",
+"bytes": 144093,
+"cues": [
+[
+0.0,
+2.603
+],
+[
+3.053,
+8.365
+],
+[
+8.815,
+10.351
+],
+[
+10.801,
+17.521
+],
+[
+17.971,
+19.635
+],
+[
+20.085,
+23.519
+]
+],
+"duration": 23.919,
+"hash": "f49654f055d370e939f59248fe08b02277c8428c8e2aa13cf7ac883a11bafe43",
+"kind": "clip"
+},
+"d02-m5": {
+"audio": "media/clips/d02-m5.mp3",
+"bytes": 19389,
+"cues": [
+[
+0.0,
+2.731
+]
+],
+"duration": 3.131,
+"hash": "7256ea3e7cb10f5dc474a489ae19c595dbc72afaf7eef6a24d69f443c6ed1f86",
+"kind": "clip"
+},
+"d02-q1": {
+"audio": "media/clips/d02-q1.mp3",
+"bytes": 18669,
+"cues": [
+[
+0.0,
+2.624
+]
+],
+"duration": 3.024,
+"hash": "0092e16c5be1f103ae83db812fdec74c65f63f2fb77ec5002eda72324ebb6aa2",
+"kind": "clip"
+},
+"d02-q2": {
+"audio": "media/clips/d02-q2.mp3",
+"bytes": 10749,
+"cues": [
+[
+0.0,
+1.301
+]
+],
+"duration": 1.701,
+"hash": "e3a9f4c9495852540fb63c19a521c1e80b49ba0228673e7e87964d60045f1e63",
+"kind": "clip"
+},
+"d02-r1": {
+"audio": "media/clips/d02-r1.mp3",
+"bytes": 14781,
+"cues": [
+[
+0.0,
+1.963
+]
+],
+"duration": 2.363,
+"hash": "2058c5c88ae5a92db4668b29dcdf6991b28a4d6353062c300afcaf16950d1cc0",
+"kind": "clip"
+},
+"d02-r2": {
+"audio": "media/clips/d02-r2.mp3",
+"bytes": 24429,
+"cues": [
+[
+0.0,
+3.584
+]
+],
+"duration": 3.984,
+"hash": "26cdf474a10124ae406a43fea8e8a8e0f89cb225530d74db431d8489574fc200",
+"kind": "clip"
+},
+"en-d-a1-l1": {
+"audio": "media/clips/en-d-a1-l1.mp3",
+"bytes": 29469,
+"cues": [
+[
+0.0,
+4.416
+]
+],
+"duration": 4.816,
+"hash": "54f341034f481b140391399ff196bf93c19fa9a9e5c68bfbe7ddc2e0bd17c901",
+"kind": "clip"
+},
+"en-d-a2-l1": {
+"audio": "media/clips/en-d-a2-l1.mp3",
+"bytes": 33501,
+"cues": [
+[
+0.0,
+5.077
+]
+],
+"duration": 5.477,
+"hash": "2203d9a40305beedeaedd1fde5e6cbcf99d937853c55958f837a9dc7e5eda1f3",
+"kind": "clip"
+},
+"en-d-b2-l1": {
+"audio": "media/clips/en-d-b2-l1.mp3",
+"bytes": 80589,
+"cues": [
+[
+0.0,
+12.928
+]
+],
+"duration": 13.328,
+"hash": "f8c94e6e855e75eee1401c76419ea325bcd7d005be96c73660718a8cbe992848",
+"kind": "clip"
+},
+"en-d-s1": {
+"audio": "media/clips/en-d-s1.mp3",
+"bytes": 23565,
+"cues": [
+[
+0.0,
+3.435
+]
+],
+"duration": 3.835,
+"hash": "25f695e65047c8be32ecae4fda977bf8369ba3a359a4cdf33cd38a64e0e08c21",
+"kind": "clip"
+},
+"en-d-s2": {
+"audio": "media/clips/en-d-s2.mp3",
+"bytes": 17949,
+"cues": [
+[
+0.0,
+2.496
+]
+],
+"duration": 2.896,
+"hash": "f498134c5eb3c23f2028df1bb0ad60c3e368af2244dafec45a89c8372fa7b0dd",
+"kind": "clip"
+},
+"es-pl-a0-l1": {
+"audio": "media/clips/es-pl-a0-l1.mp3",
+"bytes": 10749,
+"cues": [
+[
+0.0,
+1.301
+]
+],
+"duration": 1.701,
+"hash": "3cdf1d0203dea417a0bb4287ac2ca0d1c39e41ba1c96c63394dc4121b8c9cab0",
+"kind": "clip"
+},
+"es-pl-a0-l2": {
+"audio": "media/clips/es-pl-a0-l2.mp3",
+"bytes": 11757,
+"cues": [
+[
+0.0,
+1.472
+]
+],
+"duration": 1.872,
+"hash": "fbdfad9736bc8dbbba3f529ae3ffd2e0b06abd308565e7a8050e4ee9e04ca22e",
+"kind": "clip"
+},
+"es-pl-a1-l1": {
+"audio": "media/clips/es-pl-a1-l1.mp3",
+"bytes": 26013,
+"cues": [
+[
+0.0,
+3.84
+]
+],
+"duration": 4.24,
+"hash": "b0431eea278bc2a8d59e69c74cd1de6f96d97dd404548e8d185a7bc312554110",
+"kind": "clip"
+},
+"es-pl-a1-l2": {
+"audio": "media/clips/es-pl-a1-l2.mp3",
+"bytes": 18669,
+"cues": [
+[
+0.0,
+2.603
+]
+],
+"duration": 3.003,
+"hash": "12795d461c91b8cf69cb4dd7a83be8ef0ccb28b55746d4b3f0be0f0ba92df48d",
+"kind": "clip"
+},
+"es-pl-a2-l1": {
+"audio": "media/clips/es-pl-a2-l1.mp3",
+"bytes": 39549,
+"cues": [
+[
+0.0,
+6.101
+]
+],
+"duration": 6.501,
+"hash": "45a5d29f0e342e4a0e3dcb29ef10c1516bb1eeaf493fd3a0f927c8e8839b4bef",
+"kind": "clip"
+},
+"es-pl-a2-l2": {
+"audio": "media/clips/es-pl-a2-l2.mp3",
+"bytes": 32637,
+"cues": [
+[
+0.0,
+1.835
+],
+[
+2.285,
+4.951
+]
+],
+"duration": 5.351,
+"hash": "e8a257ebe8b0e0fa8d8dd87817c2546d96a84e941b930bc71bf2e1a0eb2e0309",
+"kind": "clip"
+},
+"es-pl-b1-l1": {
+"audio": "media/clips/es-pl-b1-l1.mp3",
+"bytes": 54813,
+"cues": [
+[
+0.0,
+8.64
+]
+],
+"duration": 9.04,
+"hash": "08d62f1ef09da6bd096ea196cef4a2ebbe1788c40e2a3cde8026821a011ff57b",
+"kind": "clip"
+},
+"es-pl-b1-l2": {
+"audio": "media/clips/es-pl-b1-l2.mp3",
+"bytes": 41421,
+"cues": [
+[
+0.0,
+6.4
+]
+],
+"duration": 6.8,
+"hash": "b674a5862c42f8cbed4a46af212ce314fe5c8e3180dc0f3f61ebb7cadbaf518f",
+"kind": "clip"
+},
+"es-pl-b2-l1": {
+"audio": "media/clips/es-pl-b2-l1.mp3",
+"bytes": 75117,
+"cues": [
+[
+0.0,
+12.011
+]
+],
+"duration": 12.411,
+"hash": "6b1b83b13cf1ec6b2ccb424b5b5e6873b3c33553b72dbbfedf439caa384d4624",
+"kind": "clip"
+},
+"es-pl-b2-l2": {
+"audio": "media/clips/es-pl-b2-l2.mp3",
+"bytes": 44589,
+"cues": [
+[
+0.0,
+6.933
+]
+],
+"duration": 7.333,
+"hash": "3d45e348338d4c863d9d632f67c1807e8de8bf80f323bff75fe75c9b9e665111",
+"kind": "clip"
+},
+"es-pl-p-a1-l1": {
+"audio": "media/clips/es-pl-p-a1-l1.mp3",
+"bytes": 19389,
+"cues": [
+[
+0.0,
+2.731
+]
+],
+"duration": 3.131,
+"hash": "f264c3ab3c07a4587b8f89cbda67da7861d4978ad91f443416d82ab67cb7bde6",
+"kind": "clip"
+},
+"es-pl-p-a2-l1": {
+"audio": "media/clips/es-pl-p-a2-l1.mp3",
+"bytes": 29037,
+"cues": [
+[
+0.0,
+4.331
+]
+],
+"duration": 4.731,
+"hash": "27efe4c48e8ddd08dcb61059000c92142e1172e87ca16a93d9440e04c4a964ab",
+"kind": "clip"
+},
+"es-pl-p-b1-l1": {
+"audio": "media/clips/es-pl-p-b1-l1.mp3",
+"bytes": 49917,
+"cues": [
+[
+0.0,
+1.664
+],
+[
+2.114,
+5.015
+],
+[
+5.465,
+7.812
+]
+],
+"duration": 8.212,
+"hash": "4478953ba6ab4cf2d01bd02a4dd4c6ea1c0b49041121d56aa60fe0db673533f2",
+"kind": "clip"
+},
+"es-pl-p-b2-l1": {
+"audio": "media/clips/es-pl-p-b2-l1.mp3",
+"bytes": 77997,
+"cues": [
+[
+0.0,
+12.501
+]
+],
+"duration": 12.901,
+"hash": "d5efa88defedcd0d298d7910b95ed1527f85f7c52765692924b3f46676eda753",
+"kind": "clip"
+},
+"es-pl-s1": {
+"audio": "media/clips/es-pl-s1.mp3",
+"bytes": 19533,
+"cues": [
+[
+0.0,
+2.752
+]
+],
+"duration": 3.152,
+"hash": "f21ca0b71ffef2970033df92959778fcc56483797fdb37bdeeea4b2432bffd41",
+"kind": "clip"
+},
+"es-pl-s2": {
+"audio": "media/clips/es-pl-s2.mp3",
+"bytes": 17373,
+"cues": [
+[
+0.0,
+2.389
+]
+],
+"duration": 2.789,
+"hash": "1491c91eee72be180bbb9adf6413643c3713eff6e2c403ca036a528dadfd19a0",
+"kind": "clip"
+},
+"es-pl-s3": {
+"audio": "media/clips/es-pl-s3.mp3",
+"bytes": 24861,
+"cues": [
+[
+0.0,
+3.648
+]
+],
+"duration": 4.048,
+"hash": "b34edbe4f576d0474d3ad65b5f61219d9141a88a98c5481ba009a98f9693eaa9",
+"kind": "clip"
+},
+"es-pl-s4": {
+"audio": "media/clips/es-pl-s4.mp3",
+"bytes": 26157,
+"cues": [
+[
+0.0,
+3.861
+]
+],
+"duration": 4.261,
+"hash": "0f88d8f8b4c1e67c6a91a4254d9c637141a2a2fa27ebee92f6b0b092d8e502d6",
+"kind": "clip"
+},
+"es-pl-s5": {
+"audio": "media/clips/es-pl-s5.mp3",
+"bytes": 32493,
+"cues": [
+[
+0.0,
+4.928
+]
+],
+"duration": 5.328,
+"hash": "087765f9bc5d171e74e991e57e5b4946a910ebc001405f4cd6135dd8a7362f50",
+"kind": "clip"
+},
+"es-pl-s6": {
+"audio": "media/clips/es-pl-s6.mp3",
+"bytes": 45021,
+"cues": [
+[
+0.0,
+6.997
+]
+],
+"duration": 7.397,
+"hash": "8bd5d887b62aabd5a6f4bc1d36df9dfd8be5c44bcf0ea46d941128bac553c796",
+"kind": "clip"
+},
+"es-pl-spp1": {
+"audio": "media/clips/es-pl-spp1.mp3",
+"bytes": 20973,
+"cues": [
+[
+0.0,
+2.987
+]
+],
+"duration": 3.387,
+"hash": "c0ec8b7225fb31f7dd5a940b8e826bfd37d43cbd57f662da2a663d53c774efac",
+"kind": "clip"
+},
+"es-pl-spp2": {
+"audio": "media/clips/es-pl-spp2.mp3",
+"bytes": 14061,
+"cues": [
+[
+0.0,
+1.856
+]
+],
+"duration": 2.256,
+"hash": "61881e195c9aed73cacafb2b9ecb9484cd4afe8af9ef91f031d8cd309b899e86",
+"kind": "clip"
+},
 "f01": {
 "audio": "media/lectures/f01.mp3",
 "bytes": 1174413,
@@ -933,13 +2097,6634 @@
 "duration": 8.144,
 "hash": "64e7fa011ca12965bf97f73c9a3cad72b7159ea14789bdf0a70799e1a3466fca",
 "kind": "clip"
+},
+"sp01": {
+"audio": "media/lectures/sp01.mp3",
+"bytes": 1493517,
+"cues": [
+[
+0.0,
+7.68
+],
+[
+7.98,
+14.999
+],
+[
+15.299,
+25.539
+],
+[
+26.389,
+30.549
+],
+[
+30.999,
+32.3
+],
+[
+32.6,
+34.712
+],
+[
+35.012,
+35.844
+],
+[
+36.144,
+37.659
+],
+[
+38.109,
+41.074
+],
+[
+41.524,
+44.041
+],
+[
+44.491,
+47.691
+],
+[
+48.141,
+49.528
+],
+[
+50.378,
+51.615
+],
+[
+52.065,
+52.94
+],
+[
+53.39,
+60.366
+],
+[
+60.816,
+61.52
+],
+[
+61.82,
+62.844
+],
+[
+63.144,
+64.083
+],
+[
+64.533,
+69.845
+],
+[
+70.695,
+73.233
+],
+[
+73.683,
+75.475
+],
+[
+75.925,
+77.248
+],
+[
+77.698,
+78.53
+],
+[
+78.98,
+81.753
+],
+[
+82.203,
+84.145
+],
+[
+84.445,
+86.962
+],
+[
+87.262,
+89.139
+],
+[
+89.589,
+96.864
+],
+[
+97.714,
+104.775
+],
+[
+105.225,
+106.889
+],
+[
+107.189,
+109.131
+],
+[
+109.581,
+118.199
+],
+[
+118.649,
+120.463
+],
+[
+120.913,
+123.579
+],
+[
+124.029,
+125.48
+],
+[
+126.33,
+131.599
+],
+[
+132.049,
+133.713
+],
+[
+134.013,
+135.165
+],
+[
+135.465,
+137.172
+],
+[
+137.472,
+139.072
+],
+[
+139.372,
+140.929
+],
+[
+141.379,
+150.979
+],
+[
+151.429,
+152.88
+],
+[
+153.73,
+158.978
+],
+[
+159.428,
+159.871
+],
+[
+160.321,
+172.396
+],
+[
+172.846,
+173.55
+],
+[
+174.0,
+179.376
+],
+[
+179.826,
+180.807
+],
+[
+181.107,
+182.11
+],
+[
+182.41,
+183.647
+],
+[
+183.947,
+185.014
+],
+[
+185.464,
+190.157
+],
+[
+191.007,
+193.717
+],
+[
+194.167,
+196.215
+],
+[
+196.665,
+198.457
+],
+[
+198.907,
+199.803
+],
+[
+200.253,
+203.943
+],
+[
+204.393,
+207.06
+],
+[
+207.51,
+209.985
+],
+[
+210.435,
+211.757
+],
+[
+212.607,
+219.007
+],
+[
+219.457,
+221.569
+],
+[
+222.019,
+222.979
+],
+[
+223.429,
+225.307
+],
+[
+225.757,
+227.826
+],
+[
+228.276,
+230.345
+],
+[
+230.795,
+233.313
+],
+[
+233.763,
+235.576
+],
+[
+236.026,
+248.421
+]
+],
+"duration": 248.821,
+"hash": "8263e8059c260a629b7fc44382c4240db681016f5545148dbd4af29e6a5a66d1",
+"kind": "lecture"
+},
+"sp01-c1": {
+"audio": "media/clips/sp01-c1.mp3",
+"bytes": 16365,
+"cues": [
+[
+0.0,
+2.219
+]
+],
+"duration": 2.619,
+"hash": "dcfb0d20935534572d33951bb82b9146ec29e2f4b6fbbb1235bff3953e4ca691",
+"kind": "clip"
+},
+"sp01-c1a": {
+"audio": "media/clips/sp01-c1a.mp3",
+"bytes": 11757,
+"cues": [
+[
+0.0,
+1.451
+]
+],
+"duration": 1.851,
+"hash": "c052870a7c785e2f9b76e34c262e786456d4bcec8b300ff4d4776d1561d814c8",
+"kind": "clip"
+},
+"sp01-c1b": {
+"audio": "media/clips/sp01-c1b.mp3",
+"bytes": 22269,
+"cues": [
+[
+0.0,
+3.221
+]
+],
+"duration": 3.621,
+"hash": "74d396c514f16e65ee2ac28754cd75d0013e0e8a57000d53f12a742a2fb7ae22",
+"kind": "clip"
+},
+"sp01-c2": {
+"audio": "media/clips/sp01-c2.mp3",
+"bytes": 19101,
+"cues": [
+[
+0.0,
+2.688
+]
+],
+"duration": 3.088,
+"hash": "d09880f1cee6229aa24eddd4945f5359f2fe9d90b3deefefbe98f636fd9ddde4",
+"kind": "clip"
+},
+"sp01-c2a": {
+"audio": "media/clips/sp01-c2a.mp3",
+"bytes": 14349,
+"cues": [
+[
+0.0,
+1.899
+]
+],
+"duration": 2.299,
+"hash": "891ee8c63321c309c4be42c97f49283abf8bb13e0f4db429ea6a4fafcc51cfe8",
+"kind": "clip"
+},
+"sp01-c2b": {
+"audio": "media/clips/sp01-c2b.mp3",
+"bytes": 15933,
+"cues": [
+[
+0.0,
+2.155
+]
+],
+"duration": 2.555,
+"hash": "843cc72042b16232365de90f3e9a9bb90086e7caaca9947ef8e3799e3e8c0c7a",
+"kind": "clip"
+},
+"sp01-c3": {
+"audio": "media/clips/sp01-c3.mp3",
+"bytes": 17517,
+"cues": [
+[
+0.0,
+2.411
+]
+],
+"duration": 2.811,
+"hash": "634d2a3363ddef56911e75ac77df8f7124284a848d4a69e5b3db7fbd9e5cdb3f",
+"kind": "clip"
+},
+"sp01-c3a": {
+"audio": "media/clips/sp01-c3a.mp3",
+"bytes": 11469,
+"cues": [
+[
+0.0,
+1.408
+]
+],
+"duration": 1.808,
+"hash": "22ecabc04ab8a1164782b069763baa1d410c7af8b7066c3c6b9f53ada0ec581a",
+"kind": "clip"
+},
+"sp01-c3b": {
+"audio": "media/clips/sp01-c3b.mp3",
+"bytes": 13053,
+"cues": [
+[
+0.0,
+1.685
+]
+],
+"duration": 2.085,
+"hash": "39317f438e727bce5ee7cb5f60694f31661a4424b741f88442b035b05184237d",
+"kind": "clip"
+},
+"sp01-c4": {
+"audio": "media/clips/sp01-c4.mp3",
+"bytes": 18237,
+"cues": [
+[
+0.0,
+2.539
+]
+],
+"duration": 2.939,
+"hash": "37aa548dcd8d071ba7e8b5694f4bd31db19ef1f7e2acf1356c83264e3237bd1a",
+"kind": "clip"
+},
+"sp01-c4a": {
+"audio": "media/clips/sp01-c4a.mp3",
+"bytes": 22413,
+"cues": [
+[
+0.0,
+3.243
+]
+],
+"duration": 3.643,
+"hash": "91e31333a252a62747744795c4d4c2bb747753409037e90e5a375115103be075",
+"kind": "clip"
+},
+"sp01-c4b": {
+"audio": "media/clips/sp01-c4b.mp3",
+"bytes": 15213,
+"cues": [
+[
+0.0,
+2.048
+]
+],
+"duration": 2.448,
+"hash": "9d12689601b3781a4123cc317b632f1cc399300ead5c0ef43c993f2e11fba709",
+"kind": "clip"
+},
+"sp01-d1": {
+"audio": "media/clips/sp01-d1.mp3",
+"bytes": 94269,
+"cues": [
+[
+0.0,
+3.179
+],
+[
+3.629,
+5.591
+],
+[
+6.041,
+10.265
+],
+[
+10.715,
+11.291
+],
+[
+11.741,
+15.219
+]
+],
+"duration": 15.619,
+"hash": "d88066241ae0691b008fb4a2f0cf1c76e6bf2f87adaf63292a4c9a5a060eeb5c",
+"kind": "clip"
+},
+"sp01-d2": {
+"audio": "media/clips/sp01-d2.mp3",
+"bytes": 104205,
+"cues": [
+[
+0.0,
+2.112
+],
+[
+2.562,
+4.162
+],
+[
+4.612,
+6.831
+],
+[
+7.281,
+11.803
+],
+[
+12.253,
+13.619
+],
+[
+14.069,
+16.863
+]
+],
+"duration": 17.263,
+"hash": "5c9106f282d41321585dab6e558cac2f5c1296d80d6dab94e3af80de1056da52",
+"kind": "clip"
+},
+"sp01-m5": {
+"audio": "media/clips/sp01-m5.mp3",
+"bytes": 12621,
+"cues": [
+[
+0.0,
+1.6
+]
+],
+"duration": 2.0,
+"hash": "8e0b9989fa3b214313528328a3741af15c4457064d90d3dc712a28691418a73c",
+"kind": "clip"
+},
+"sp01-q1": {
+"audio": "media/clips/sp01-q1.mp3",
+"bytes": 13629,
+"cues": [
+[
+0.0,
+1.771
+]
+],
+"duration": 2.171,
+"hash": "426d3188e868f61c6e18744d382dfdebc17f5c3a82a7a963af9deb1b6e865868",
+"kind": "clip"
+},
+"sp01-q2": {
+"audio": "media/clips/sp01-q2.mp3",
+"bytes": 18381,
+"cues": [
+[
+0.0,
+2.56
+]
+],
+"duration": 2.96,
+"hash": "2d381bf593db47ced90160faa3e21aa68f5f9b89d1cb209415bd14158e50c699",
+"kind": "clip"
+},
+"sp01-r1": {
+"audio": "media/clips/sp01-r1.mp3",
+"bytes": 23277,
+"cues": [
+[
+0.0,
+3.392
+]
+],
+"duration": 3.792,
+"hash": "72f5cb70f9d0dda145110fc50dbf178e771347a0f04049fc5992ab4b7b04f5d9",
+"kind": "clip"
+},
+"sp01-r2": {
+"audio": "media/clips/sp01-r2.mp3",
+"bytes": 26157,
+"cues": [
+[
+0.0,
+3.861
+]
+],
+"duration": 4.261,
+"hash": "cc138c8d5a3e05fcd2b779de2f3caebc47bbd75f536453de7a809de07c51a8db",
+"kind": "clip"
+},
+"sp02": {
+"audio": "media/lectures/sp02.mp3",
+"bytes": 1229853,
+"cues": [
+[
+0.0,
+8.256
+],
+[
+8.556,
+16.535
+],
+[
+17.385,
+19.838
+],
+[
+20.288,
+21.931
+],
+[
+22.231,
+23.169
+],
+[
+23.469,
+25.005
+],
+[
+25.305,
+26.713
+],
+[
+27.563,
+29.654
+],
+[
+30.104,
+31.427
+],
+[
+31.727,
+33.177
+],
+[
+33.627,
+38.214
+],
+[
+38.664,
+40.115
+],
+[
+40.415,
+42.292
+],
+[
+42.592,
+43.979
+],
+[
+44.429,
+46.925
+],
+[
+47.375,
+49.017
+],
+[
+49.317,
+50.896
+],
+[
+51.196,
+52.561
+],
+[
+53.411,
+58.702
+],
+[
+59.152,
+61.179
+],
+[
+61.479,
+63.228
+],
+[
+63.678,
+66.835
+],
+[
+67.285,
+69.483
+],
+[
+69.783,
+71.66
+],
+[
+72.51,
+78.121
+],
+[
+78.571,
+79.403
+],
+[
+79.703,
+80.727
+],
+[
+81.027,
+85.272
+],
+[
+85.722,
+91.653
+],
+[
+91.953,
+93.638
+],
+[
+94.088,
+97.267
+],
+[
+97.717,
+110.41
+],
+[
+111.26,
+112.817
+],
+[
+113.267,
+117.235
+],
+[
+117.535,
+119.989
+],
+[
+120.439,
+123.297
+],
+[
+123.747,
+125.795
+],
+[
+126.245,
+130.085
+],
+[
+130.535,
+132.391
+],
+[
+132.691,
+134.59
+],
+[
+135.04,
+143.957
+],
+[
+144.407,
+145.645
+],
+[
+146.495,
+154.921
+],
+[
+155.221,
+159.275
+],
+[
+159.725,
+163.927
+],
+[
+164.227,
+165.294
+],
+[
+165.744,
+168.197
+],
+[
+168.647,
+174.877
+],
+[
+175.727,
+182.105
+],
+[
+182.555,
+186.395
+],
+[
+186.845,
+188.744
+],
+[
+189.194,
+193.098
+],
+[
+193.548,
+204.471
+]
+],
+"duration": 204.871,
+"hash": "ba7af527a46accab6267bb4ad61ceb6e486e4e1c1283a52955c2520042fd0d95",
+"kind": "lecture"
+},
+"sp02-c1": {
+"audio": "media/clips/sp02-c1.mp3",
+"bytes": 11901,
+"cues": [
+[
+0.0,
+1.493
+]
+],
+"duration": 1.893,
+"hash": "d99013035df52dd6161cbce83b379db2ba2d125c9e1c315531bf62095c523dc9",
+"kind": "clip"
+},
+"sp02-c1a": {
+"audio": "media/clips/sp02-c1a.mp3",
+"bytes": 18381,
+"cues": [
+[
+0.0,
+2.56
+]
+],
+"duration": 2.96,
+"hash": "1af45a7d6bfa8b6bad519c4e2a87b7bfa10eb3c5b1cac7248fc6e1ca05624d22",
+"kind": "clip"
+},
+"sp02-c1b": {
+"audio": "media/clips/sp02-c1b.mp3",
+"bytes": 19965,
+"cues": [
+[
+0.0,
+2.837
+]
+],
+"duration": 3.237,
+"hash": "592adb8ed3d1beb2832d6192bd02e02b5429c2826c701cce2cfd896a75c63ae8",
+"kind": "clip"
+},
+"sp02-c2": {
+"audio": "media/clips/sp02-c2.mp3",
+"bytes": 11469,
+"cues": [
+[
+0.0,
+1.408
+]
+],
+"duration": 1.808,
+"hash": "a501844fb786a0967ea4b67a20e3ae8900b4ebb4f4d4e4d6ca069ee9a0ba5e0b",
+"kind": "clip"
+},
+"sp02-c2a": {
+"audio": "media/clips/sp02-c2a.mp3",
+"bytes": 17661,
+"cues": [
+[
+0.0,
+2.453
+]
+],
+"duration": 2.853,
+"hash": "e82b5bd1c73db9199acbec74bead8083e850cb5ab37ae8343f372f1df1a83527",
+"kind": "clip"
+},
+"sp02-c2b": {
+"audio": "media/clips/sp02-c2b.mp3",
+"bytes": 14637,
+"cues": [
+[
+0.0,
+1.941
+]
+],
+"duration": 2.341,
+"hash": "ae93896393cce72869bb1f2da8379e2cf72cff4d9d2407be55b08a76588b9053",
+"kind": "clip"
+},
+"sp02-c3": {
+"audio": "media/clips/sp02-c3.mp3",
+"bytes": 15213,
+"cues": [
+[
+0.0,
+2.048
+]
+],
+"duration": 2.448,
+"hash": "da05df95e81f7dbea3d1a1f42abb3c265cb3a612708333f453573e6e9ac319e9",
+"kind": "clip"
+},
+"sp02-c3a": {
+"audio": "media/clips/sp02-c3a.mp3",
+"bytes": 12333,
+"cues": [
+[
+0.0,
+1.557
+]
+],
+"duration": 1.957,
+"hash": "694137b35b206b9f6c590d8ec41f163ccd3d73d0f8b7b264b3d4cd834fb39c4c",
+"kind": "clip"
+},
+"sp02-c3b": {
+"audio": "media/clips/sp02-c3b.mp3",
+"bytes": 13341,
+"cues": [
+[
+0.0,
+1.728
+]
+],
+"duration": 2.128,
+"hash": "d92642561fb91077e623e9eb6c56c83d2086991dbe6560b45055a63c799313b9",
+"kind": "clip"
+},
+"sp02-c4": {
+"audio": "media/clips/sp02-c4.mp3",
+"bytes": 16365,
+"cues": [
+[
+0.0,
+2.24
+]
+],
+"duration": 2.64,
+"hash": "b14ad7c076c92cc7840625744dc17d1f66a22d066491a12b353724a21f3533ec",
+"kind": "clip"
+},
+"sp02-c4a": {
+"audio": "media/clips/sp02-c4a.mp3",
+"bytes": 18813,
+"cues": [
+[
+0.0,
+2.645
+]
+],
+"duration": 3.045,
+"hash": "276a9d105cf4de43f2ad28edd916b1b68f7202d66254bd4d760c2546a8371d98",
+"kind": "clip"
+},
+"sp02-c4b": {
+"audio": "media/clips/sp02-c4b.mp3",
+"bytes": 17373,
+"cues": [
+[
+0.0,
+2.389
+]
+],
+"duration": 2.789,
+"hash": "9542eb186c0a355e5a35e1e9eec25eab59191b37ef20f20eeb864f3eaeecbbd4",
+"kind": "clip"
+},
+"sp02-d1": {
+"audio": "media/clips/sp02-d1.mp3",
+"bytes": 106941,
+"cues": [
+[
+0.0,
+3.285
+],
+[
+3.735,
+5.655
+],
+[
+6.105,
+10.777
+],
+[
+11.227,
+13.83
+],
+[
+14.28,
+17.331
+]
+],
+"duration": 17.731,
+"hash": "fd6ece05937be5f6a8a0197c5e550e76df93d8367a5441b35d0ff56a1bd25703",
+"kind": "clip"
+},
+"sp02-d2": {
+"audio": "media/clips/sp02-d2.mp3",
+"bytes": 124509,
+"cues": [
+[
+0.0,
+1.6
+],
+[
+2.05,
+4.738
+],
+[
+5.188,
+10.223
+],
+[
+10.673,
+13.169
+],
+[
+13.619,
+18.952
+],
+[
+19.402,
+20.255
+]
+],
+"duration": 20.655,
+"hash": "8b1a3737d78891dfb0725d6523a7a2497a6206821b2ed38406105205b124367a",
+"kind": "clip"
+},
+"sp02-m5": {
+"audio": "media/clips/sp02-m5.mp3",
+"bytes": 13485,
+"cues": [
+[
+0.0,
+1.749
+]
+],
+"duration": 2.149,
+"hash": "ec627cce6891619b755a781bd23641e9095b8d18849d7a6e6fedca200bf6dab1",
+"kind": "clip"
+},
+"sp02-q1": {
+"audio": "media/clips/sp02-q1.mp3",
+"bytes": 12333,
+"cues": [
+[
+0.0,
+1.557
+]
+],
+"duration": 1.957,
+"hash": "1370e939935bd1b8a495608100e5ce5cfed84a6794ad9fa34d70fb20fb794272",
+"kind": "clip"
+},
+"sp02-q2": {
+"audio": "media/clips/sp02-q2.mp3",
+"bytes": 16365,
+"cues": [
+[
+0.0,
+2.24
+]
+],
+"duration": 2.64,
+"hash": "873ea5aad70ced42583efac30cccc19a2c913162325b4081c7807f70dca0baa1",
+"kind": "clip"
+},
+"sp02-r1": {
+"audio": "media/clips/sp02-r1.mp3",
+"bytes": 26445,
+"cues": [
+[
+0.0,
+3.904
+]
+],
+"duration": 4.304,
+"hash": "843be427f8c334101d301ae137b3b4c6434e1605c5e24b5daf18dee662abfc55",
+"kind": "clip"
+},
+"sp02-r2": {
+"audio": "media/clips/sp02-r2.mp3",
+"bytes": 23853,
+"cues": [
+[
+0.0,
+3.477
+]
+],
+"duration": 3.877,
+"hash": "c4c0339626d6f3453cf5e83272f9aeb0165ea90fb939971fedef5eab086f8470",
+"kind": "clip"
+},
+"t-en-d-again": {
+"audio": "media/terms/t-en-d-again.mp3",
+"bytes": 6717,
+"cues": [
+[
+0.0,
+0.875
+]
+],
+"duration": 1.025,
+"hash": "01d222986f3a629a1434ca0e8743b88c2a61d3f2053459a3bf5c07abf48bc1b2",
+"kind": "term"
+},
+"t-en-d-angle": {
+"audio": "media/terms/t-en-d-angle.mp3",
+"bytes": 6573,
+"cues": [
+[
+0.0,
+0.853
+]
+],
+"duration": 1.003,
+"hash": "3a256b22a3dc11b21387720288446658002b1c1f66c498f6ba61f2fdb1aceca0",
+"kind": "term"
+},
+"t-en-d-back-up": {
+"audio": "media/terms/t-en-d-back-up.mp3",
+"bytes": 14061,
+"cues": [
+[
+0.0,
+2.091
+]
+],
+"duration": 2.241,
+"hash": "43af0be228cee7352ddd1439770b70fbd460c639fd6edf6e12b56d4a34a8cf2f",
+"kind": "term"
+},
+"t-en-d-backhand": {
+"audio": "media/terms/t-en-d-backhand.mp3",
+"bytes": 7437,
+"cues": [
+[
+0.0,
+0.981
+]
+],
+"duration": 1.131,
+"hash": "953eac448980c5f6b7c2531a82dc332e8d872642b023388ac21f5dfc1958d3ef",
+"kind": "term"
+},
+"t-en-d-bad-hop": {
+"audio": "media/terms/t-en-d-bad-hop.mp3",
+"bytes": 7581,
+"cues": [
+[
+0.0,
+1.024
+]
+],
+"duration": 1.174,
+"hash": "d7419358e893b036bd4b4a85bc27ed42b50e80e50559c8ee6e948d69f2286d81",
+"kind": "term"
+},
+"t-en-d-ball-ball": {
+"audio": "media/terms/t-en-d-ball-ball.mp3",
+"bytes": 8589,
+"cues": [
+[
+0.0,
+1.173
+]
+],
+"duration": 1.323,
+"hash": "6e721dcf4d50d59bdf3f52b64e85d24856c97fe9d5287b0a399ca67be60c34ef",
+"kind": "term"
+},
+"t-en-d-bare-hand": {
+"audio": "media/terms/t-en-d-bare-hand.mp3",
+"bytes": 7437,
+"cues": [
+[
+0.0,
+0.981
+]
+],
+"duration": 1.131,
+"hash": "7acebb515c0346b449fe0d3844ceb321603a2bcc7995442b77149d3d40da4298",
+"kind": "term"
+},
+"t-en-d-better": {
+"audio": "media/terms/t-en-d-better.mp3",
+"bytes": 6141,
+"cues": [
+[
+0.0,
+0.768
+]
+],
+"duration": 0.918,
+"hash": "f0acb8b7e78909d284964d84b5bfba04b9e96b47b7a1a921a0f7769997de0292",
+"kind": "term"
+},
+"t-en-d-bring-it-in": {
+"audio": "media/terms/t-en-d-bring-it-in.mp3",
+"bytes": 8877,
+"cues": [
+[
+0.0,
+1.237
+]
+],
+"duration": 1.387,
+"hash": "8ba4d36892e7c8d0f4f0ed302bfecc9bc5c651218b13c6f61117e6e0bf87a5c0",
+"kind": "term"
+},
+"t-en-d-call-it": {
+"audio": "media/terms/t-en-d-call-it.mp3",
+"bytes": 6717,
+"cues": [
+[
+0.0,
+0.875
+]
+],
+"duration": 1.025,
+"hash": "91bb4e574e24767168839a71ff010e283a2ad6bcade6bddb0f8ce0ab6365a81e",
+"kind": "term"
+},
+"t-en-d-catch": {
+"audio": "media/terms/t-en-d-catch.mp3",
+"bytes": 5277,
+"cues": [
+[
+0.0,
+0.64
+]
+],
+"duration": 0.79,
+"hash": "fcb4df1a8271019f5677ff1b6cdd1a761557a988d5fa03d95ead43371460574d",
+"kind": "term"
+},
+"t-en-d-charge-the-ball": {
+"audio": "media/terms/t-en-d-charge-the-ball.mp3",
+"bytes": 9885,
+"cues": [
+[
+0.0,
+1.387
+]
+],
+"duration": 1.537,
+"hash": "734da60b40e5b69970410a94a27d5818a691cbd27d2c5c3e60c9384a09d290a6",
+"kind": "term"
+},
+"t-en-d-come-get-it": {
+"audio": "media/terms/t-en-d-come-get-it.mp3",
+"bytes": 8157,
+"cues": [
+[
+0.0,
+1.109
+]
+],
+"duration": 1.259,
+"hash": "053bd22d913f8df209a280827186f2861f7682f19a85d51f693e7bd027b5a9d0",
+"kind": "term"
+},
+"t-en-d-come-in": {
+"audio": "media/terms/t-en-d-come-in.mp3",
+"bytes": 7149,
+"cues": [
+[
+0.0,
+0.939
+]
+],
+"duration": 1.089,
+"hash": "f162e77413f7c68f0976ef1dd7131b04bbf80a68a5903b5c8fb05aff208069c9",
+"kind": "term"
+},
+"t-en-d-communication": {
+"audio": "media/terms/t-en-d-communication.mp3",
+"bytes": 9741,
+"cues": [
+[
+0.0,
+1.365
+]
+],
+"duration": 1.515,
+"hash": "2aed0da1f52029e24e3b0a4054ba85d23e20fde1ce0579cd6b7950cb1c0cfe3c",
+"kind": "term"
+},
+"t-en-d-cover-the-bag": {
+"audio": "media/terms/t-en-d-cover-the-bag.mp3",
+"bytes": 7725,
+"cues": [
+[
+0.0,
+1.045
+]
+],
+"duration": 1.195,
+"hash": "2e6540334358442985fea9418e16c203af0b6b72626ed85e9abb64f21c02d242",
+"kind": "term"
+},
+"t-en-d-creep-step": {
+"audio": "media/terms/t-en-d-creep-step.mp3",
+"bytes": 7725,
+"cues": [
+[
+0.0,
+1.045
+]
+],
+"duration": 1.195,
+"hash": "5811da65db7bf9d3414639a80e243b1978dccde25433c505e218be9e3bf9a74c",
+"kind": "term"
+},
+"t-en-d-crossover-step": {
+"audio": "media/terms/t-en-d-crossover-step.mp3",
+"bytes": 9741,
+"cues": [
+[
+0.0,
+1.365
+]
+],
+"duration": 1.515,
+"hash": "c5155cd27bdbe9f43a09520d0cd105512aeeccf68972548b5eeef63774499cad",
+"kind": "term"
+},
+"t-en-d-crow-hop": {
+"audio": "media/terms/t-en-d-crow-hop.mp3",
+"bytes": 7869,
+"cues": [
+[
+0.0,
+1.067
+]
+],
+"duration": 1.217,
+"hash": "32cc91293c0ea55c329a6a4fd0415eb9fddee52d6f49639827af3779fe146e77",
+"kind": "term"
+},
+"t-en-d-cut": {
+"audio": "media/terms/t-en-d-cut.mp3",
+"bytes": 5565,
+"cues": [
+[
+0.0,
+0.683
+]
+],
+"duration": 0.833,
+"hash": "2282c0e17abc4514d6fc994fe78ed4957713499a9c960565ef46c59d026b9ad0",
+"kind": "term"
+},
+"t-en-d-cutoff": {
+"audio": "media/terms/t-en-d-cutoff.mp3",
+"bytes": 6141,
+"cues": [
+[
+0.0,
+0.768
+]
+],
+"duration": 0.918,
+"hash": "ec1abe42a0037ebe08bf81905da22e8755d0a56e30c51c0b7606ddc6a8905bd9",
+"kind": "term"
+},
+"t-en-d-depth": {
+"audio": "media/terms/t-en-d-depth.mp3",
+"bytes": 5421,
+"cues": [
+[
+0.0,
+0.661
+]
+],
+"duration": 0.811,
+"hash": "e2d37fee798c46a2aa177c8583aca4f008406a56b953c7608b12a625a6c8667b",
+"kind": "term"
+},
+"t-en-d-direction": {
+"audio": "media/terms/t-en-d-direction.mp3",
+"bytes": 7437,
+"cues": [
+[
+0.0,
+0.981
+]
+],
+"duration": 1.131,
+"hash": "bb465c3f098fca80560f9066e1d0c0d721524a9435629ab990ba9706e7803aa4",
+"kind": "term"
+},
+"t-en-d-does-that-make-sense": {
+"audio": "media/terms/t-en-d-does-that-make-sense.mp3",
+"bytes": 10461,
+"cues": [
+[
+0.0,
+1.493
+]
+],
+"duration": 1.643,
+"hash": "ef8982464ace1f3ce825069e7c99a2b0d3643afc043a902c5664864233ec0f24",
+"kind": "term"
+},
+"t-en-d-dont-backpedal": {
+"audio": "media/terms/t-en-d-dont-backpedal.mp3",
+"bytes": 8733,
+"cues": [
+[
+0.0,
+1.216
+]
+],
+"duration": 1.366,
+"hash": "a3852f32a092af2d205353823c58c7a41cfb980bf13589de8e17e8e565d05510",
+"kind": "term"
+},
+"t-en-d-double-play": {
+"audio": "media/terms/t-en-d-double-play.mp3",
+"bytes": 8301,
+"cues": [
+[
+0.0,
+1.131
+]
+],
+"duration": 1.281,
+"hash": "bf7deea43276d803f39b180d7e9553362b1da32db610e0f76f43650d64665219",
+"kind": "term"
+},
+"t-en-d-drop-step": {
+"audio": "media/terms/t-en-d-drop-step.mp3",
+"bytes": 7725,
+"cues": [
+[
+0.0,
+1.045
+]
+],
+"duration": 1.195,
+"hash": "30fc9729d7541406edfcfd9f32e7eed581e77a649852e0a21343c6259ed95e3f",
+"kind": "term"
+},
+"t-en-d-error": {
+"audio": "media/terms/t-en-d-error.mp3",
+"bytes": 6429,
+"cues": [
+[
+0.0,
+0.811
+]
+],
+"duration": 0.961,
+"hash": "dc2fefbca44470bdd1efb68f53778985258bff8c24db1d79548561a87dec2195",
+"kind": "term"
+},
+"t-en-d-feed": {
+"audio": "media/terms/t-en-d-feed.mp3",
+"bytes": 6429,
+"cues": [
+[
+0.0,
+0.811
+]
+],
+"duration": 0.961,
+"hash": "5bb20e89ab3e7c0fc1fd35ff8ff6b7b4e95c786b22eb462c60f0353096dca682",
+"kind": "term"
+},
+"t-en-d-feet-to-throw": {
+"audio": "media/terms/t-en-d-feet-to-throw.mp3",
+"bytes": 9165,
+"cues": [
+[
+0.0,
+1.28
+]
+],
+"duration": 1.43,
+"hash": "4dede26137d5b5c31747f7c5906da8e7595db47aa50ec32c1da33045ffbd31ec",
+"kind": "term"
+},
+"t-en-d-field-the-ball": {
+"audio": "media/terms/t-en-d-field-the-ball.mp3",
+"bytes": 9309,
+"cues": [
+[
+0.0,
+1.301
+]
+],
+"duration": 1.451,
+"hash": "3873ecc1f04dc028d497aa4397c0bbc8b3dd62e55307d99eed5c999084e0ffd0",
+"kind": "term"
+},
+"t-en-d-first-step": {
+"audio": "media/terms/t-en-d-first-step.mp3",
+"bytes": 8013,
+"cues": [
+[
+0.0,
+1.088
+]
+],
+"duration": 1.238,
+"hash": "b99f8e4066e18f6459c3d1f47c8b305511380c068ae71cbc6ad527c8bf8c516d",
+"kind": "term"
+},
+"t-en-d-fly-ball": {
+"audio": "media/terms/t-en-d-fly-ball.mp3",
+"bytes": 8445,
+"cues": [
+[
+0.0,
+1.152
+]
+],
+"duration": 1.302,
+"hash": "682812cf2097b5a5dcc4828f9d691ddcc5f0da7012384a9e74af86918131ab92",
+"kind": "term"
+},
+"t-en-d-footwork": {
+"audio": "media/terms/t-en-d-footwork.mp3",
+"bytes": 7005,
+"cues": [
+[
+0.0,
+0.917
+]
+],
+"duration": 1.067,
+"hash": "18d74babde00e660e8f1a6f43da73aa322fa8ccde5ad24a347641f7f7d39f17c",
+"kind": "term"
+},
+"t-en-d-forehand": {
+"audio": "media/terms/t-en-d-forehand.mp3",
+"bytes": 7869,
+"cues": [
+[
+0.0,
+1.067
+]
+],
+"duration": 1.217,
+"hash": "b1c67459458a682912362d4f4fabbad841666ff9f272eb20256aee7cd3a7915e",
+"kind": "term"
+},
+"t-en-d-funnel": {
+"audio": "media/terms/t-en-d-funnel.mp3",
+"bytes": 6429,
+"cues": [
+[
+0.0,
+0.811
+]
+],
+"duration": 0.961,
+"hash": "e3186bfd8e90a2be57f039eebabeabcd8cf0fb0d1227cb2ea6c3cb75493e4d28",
+"kind": "term"
+},
+"t-en-d-gap": {
+"audio": "media/terms/t-en-d-gap.mp3",
+"bytes": 5565,
+"cues": [
+[
+0.0,
+0.683
+]
+],
+"duration": 0.833,
+"hash": "55c559e5e5020fa34bf4707fbcb6155f5da067b2411b5de414ceec3a3b7e3650",
+"kind": "term"
+},
+"t-en-d-get-behind-the-ball": {
+"audio": "media/terms/t-en-d-get-behind-the-ball.mp3",
+"bytes": 10173,
+"cues": [
+[
+0.0,
+1.451
+]
+],
+"duration": 1.601,
+"hash": "d369c8efcaa43ce198f814145f57d48a36eea585a25584e6f0d97afb1d95c1b4",
+"kind": "term"
+},
+"t-en-d-get-your-body-behind-it": {
+"audio": "media/terms/t-en-d-get-your-body-behind-it.mp3",
+"bytes": 11901,
+"cues": [
+[
+0.0,
+1.728
+]
+],
+"duration": 1.878,
+"hash": "ea723fbda3a3d5cb1f213d43be9c1ce9776988478e335d2c85dd79e0b50c5c6c",
+"kind": "term"
+},
+"t-en-d-get-your-feet-moving": {
+"audio": "media/terms/t-en-d-get-your-feet-moving.mp3",
+"bytes": 10029,
+"cues": [
+[
+0.0,
+1.429
+]
+],
+"duration": 1.579,
+"hash": "574a314977fdef06b9b408cc14d762d08a012ad661e3a035da0be1608a741506",
+"kind": "term"
+},
+"t-en-d-glove": {
+"audio": "media/terms/t-en-d-glove.mp3",
+"bytes": 4845,
+"cues": [
+[
+0.0,
+0.555
+]
+],
+"duration": 0.705,
+"hash": "50fbc9c4dbb1aa98949afa369f1f3e7b8f1faab5045a28eb1d46ca568a4296c8",
+"kind": "term"
+},
+"t-en-d-glove-down": {
+"audio": "media/terms/t-en-d-glove-down.mp3",
+"bytes": 9885,
+"cues": [
+[
+0.0,
+1.408
+]
+],
+"duration": 1.558,
+"hash": "e23b1102b15c35f8c0098bebd1310a8e9453fb0b8456e1ad8980ebccd16a761d",
+"kind": "term"
+},
+"t-en-d-glove-out-front": {
+"audio": "media/terms/t-en-d-glove-out-front.mp3",
+"bytes": 9885,
+"cues": [
+[
+0.0,
+1.387
+]
+],
+"duration": 1.537,
+"hash": "5377b0b719c222513d1d6eb59982eb4395abb09d451963ea4a3bac7ef76d0474",
+"kind": "term"
+},
+"t-en-d-glove-side": {
+"audio": "media/terms/t-en-d-glove-side.mp3",
+"bytes": 8589,
+"cues": [
+[
+0.0,
+1.173
+]
+],
+"duration": 1.323,
+"hash": "b465d91b4d547dee2f9d9b2c90432cebb72e5cb93b604ae05b73017f3f45eacd",
+"kind": "term"
+},
+"t-en-d-go-back": {
+"audio": "media/terms/t-en-d-go-back.mp3",
+"bytes": 7005,
+"cues": [
+[
+0.0,
+0.917
+]
+],
+"duration": 1.067,
+"hash": "ae6bf9fc528d7463223130bd4426fe2783a6ae38ef14da40e8fb247ac8e11ff5",
+"kind": "term"
+},
+"t-en-d-ground-ball": {
+"audio": "media/terms/t-en-d-ground-ball.mp3",
+"bytes": 8877,
+"cues": [
+[
+0.0,
+1.237
+]
+],
+"duration": 1.387,
+"hash": "992f3332a7c3e1631dd9e8c1f9b9a8cad1c963ffca76050c38d03e810c03b2d3",
+"kind": "term"
+},
+"t-en-d-hands-out-front": {
+"audio": "media/terms/t-en-d-hands-out-front.mp3",
+"bytes": 10173,
+"cues": [
+[
+0.0,
+1.451
+]
+],
+"duration": 1.601,
+"hash": "acbc389bb19e5070a16b134b3c7650b7d3f6b80944a10b60bc76c67116e9001f",
+"kind": "term"
+},
+"t-en-d-hit-the-cutoff": {
+"audio": "media/terms/t-en-d-hit-the-cutoff.mp3",
+"bytes": 8733,
+"cues": [
+[
+0.0,
+1.216
+]
+],
+"duration": 1.366,
+"hash": "f6d496bcafdce5912df50904daeb0685803156ce074aa2385866bc0dc14ce299",
+"kind": "term"
+},
+"t-en-d-hole": {
+"audio": "media/terms/t-en-d-hole.mp3",
+"bytes": 6861,
+"cues": [
+[
+0.0,
+0.896
+]
+],
+"duration": 1.046,
+"hash": "4be29d9b673c6eb1c449061660cfa002210c73262053b9e19747518ed050930f",
+"kind": "term"
+},
+"t-en-d-i-got-it": {
+"audio": "media/terms/t-en-d-i-got-it.mp3",
+"bytes": 7869,
+"cues": [
+[
+0.0,
+1.067
+]
+],
+"duration": 1.217,
+"hash": "3353d2b8be0da1ac7305b3eae274aef3260661dccd039b77ec7da0ce95de89ab",
+"kind": "term"
+},
+"t-en-d-keep-it-low": {
+"audio": "media/terms/t-en-d-keep-it-low.mp3",
+"bytes": 8733,
+"cues": [
+[
+0.0,
+1.195
+]
+],
+"duration": 1.345,
+"hash": "623eaea91040d053f263f67c2bfbf65ffa996c2f3fcf8616fc92fb2bcbf79c61",
+"kind": "term"
+},
+"t-en-d-keep-your-eyes-on-the-ball": {
+"audio": "media/terms/t-en-d-keep-your-eyes-on-the-ball.mp3",
+"bytes": 12477,
+"cues": [
+[
+0.0,
+1.835
+]
+],
+"duration": 1.985,
+"hash": "41303a1afcb6d82a5d70416cea083a9e1580c0357fe470d6f903865ce2adad6a",
+"kind": "term"
+},
+"t-en-d-knees": {
+"audio": "media/terms/t-en-d-knees.mp3",
+"bytes": 8733,
+"cues": [
+[
+0.0,
+1.195
+]
+],
+"duration": 1.345,
+"hash": "1450b75c52fb47dfd6262aa41081ab87ad7dae507e8b0d5c701303d2e612a581",
+"kind": "term"
+},
+"t-en-d-last-one": {
+"audio": "media/terms/t-en-d-last-one.mp3",
+"bytes": 8301,
+"cues": [
+[
+0.0,
+1.131
+]
+],
+"duration": 1.281,
+"hash": "36d1ee0c1e0ed2b3a214995d1638aa49aa50c2c41f5c93891296cf28afdbafd3",
+"kind": "term"
+},
+"t-en-d-let-it-go": {
+"audio": "media/terms/t-en-d-let-it-go.mp3",
+"bytes": 8589,
+"cues": [
+[
+0.0,
+1.173
+]
+],
+"duration": 1.323,
+"hash": "0f24b1a53de2fe5326bf5f9f3daa7a5419e154fca948b7ae25ad47dfb0cae1a7",
+"kind": "term"
+},
+"t-en-d-lets-go": {
+"audio": "media/terms/t-en-d-lets-go.mp3",
+"bytes": 7725,
+"cues": [
+[
+0.0,
+1.045
+]
+],
+"duration": 1.195,
+"hash": "8b6ed8af7384f78ba50026547af7345484e64aceb56a544946b5af5904c71cc6",
+"kind": "term"
+},
+"t-en-d-line-drive": {
+"audio": "media/terms/t-en-d-line-drive.mp3",
+"bytes": 8877,
+"cues": [
+[
+0.0,
+1.237
+]
+],
+"duration": 1.387,
+"hash": "b07651f20fb40fca9ea741a26493ab6ac0e6d8b1470188f5da55bac18af0e35a",
+"kind": "term"
+},
+"t-en-d-line-up": {
+"audio": "media/terms/t-en-d-line-up.mp3",
+"bytes": 7581,
+"cues": [
+[
+0.0,
+1.003
+]
+],
+"duration": 1.153,
+"hash": "fafa56b1b3b84df4cbd447c6a3f6205b3ebaefe7c2e89abfbb33d11844fbf251",
+"kind": "term"
+},
+"t-en-d-make-the-play": {
+"audio": "media/terms/t-en-d-make-the-play.mp3",
+"bytes": 7581,
+"cues": [
+[
+0.0,
+1.024
+]
+],
+"duration": 1.174,
+"hash": "f3b7d20ca3f3e16175364871e6005a5ec39d4add3fdec5487d931c65d651cc23",
+"kind": "term"
+},
+"t-en-d-mine": {
+"audio": "media/terms/t-en-d-mine.mp3",
+"bytes": 6573,
+"cues": [
+[
+0.0,
+0.853
+]
+],
+"duration": 1.003,
+"hash": "2fd0570ef63dddc0dac9031b6c31380ebae5848e73b91a15a27f11199d0bb721",
+"kind": "term"
+},
+"t-en-d-move-your-feet": {
+"audio": "media/terms/t-en-d-move-your-feet.mp3",
+"bytes": 9741,
+"cues": [
+[
+0.0,
+1.365
+]
+],
+"duration": 1.515,
+"hash": "3d272750232179c64c3a8b8f07fec7852c5d77c0ec4141b18a6fb88c3e57f6d0",
+"kind": "term"
+},
+"t-en-d-next-ball": {
+"audio": "media/terms/t-en-d-next-ball.mp3",
+"bytes": 8733,
+"cues": [
+[
+0.0,
+1.195
+]
+],
+"duration": 1.345,
+"hash": "0b0abeac690fa001b2c319869d80367b335bc03fdef30d7f406d42911fc7e5bd",
+"kind": "term"
+},
+"t-en-d-nice-job": {
+"audio": "media/terms/t-en-d-nice-job.mp3",
+"bytes": 8877,
+"cues": [
+[
+0.0,
+1.237
+]
+],
+"duration": 1.387,
+"hash": "3a25f5d3acd5285a54e90760a7b0b25c55f716466e2d69f2d8ed287918d62638",
+"kind": "term"
+},
+"t-en-d-one-hop": {
+"audio": "media/terms/t-en-d-one-hop.mp3",
+"bytes": 7725,
+"cues": [
+[
+0.0,
+1.045
+]
+],
+"duration": 1.195,
+"hash": "8987cdfd70c755194fdee0accd5ef866ec1078e29cacd79ee7628a217a322a47",
+"kind": "term"
+},
+"t-en-d-one-more-time": {
+"audio": "media/terms/t-en-d-one-more-time.mp3",
+"bytes": 9597,
+"cues": [
+[
+0.0,
+1.344
+]
+],
+"duration": 1.494,
+"hash": "6279a5e9c478e82544ff0ac383d4d0924a379f7fbf526b926998744539b852f4",
+"kind": "term"
+},
+"t-en-d-open-your-hips": {
+"audio": "media/terms/t-en-d-open-your-hips.mp3",
+"bytes": 9309,
+"cues": [
+[
+0.0,
+1.301
+]
+],
+"duration": 1.451,
+"hash": "1ca0d4c65347fba703fc165f894c83105533190e981ef4177cc695425482e5a4",
+"kind": "term"
+},
+"t-en-d-pivot": {
+"audio": "media/terms/t-en-d-pivot.mp3",
+"bytes": 5421,
+"cues": [
+[
+0.0,
+0.661
+]
+],
+"duration": 0.811,
+"hash": "84310c197b2e3c0ed085935a300a32405d52ad9eba51181848505713198fda37",
+"kind": "term"
+},
+"t-en-d-pop-up": {
+"audio": "media/terms/t-en-d-pop-up.mp3",
+"bytes": 6717,
+"cues": [
+[
+0.0,
+0.875
+]
+],
+"duration": 1.025,
+"hash": "81f4b10b4f22244434e66fe68cc8581456479ae6cf36514d21130a8da588efc4",
+"kind": "term"
+},
+"t-en-d-positioning": {
+"audio": "media/terms/t-en-d-positioning.mp3",
+"bytes": 7725,
+"cues": [
+[
+0.0,
+1.045
+]
+],
+"duration": 1.195,
+"hash": "546c71a2f84dd21bb9fb6ae56935ea70fc892e5fd3448f340cf8fb0f0b6a0f3f",
+"kind": "term"
+},
+"t-en-d-prep-step": {
+"audio": "media/terms/t-en-d-prep-step.mp3",
+"bytes": 7437,
+"cues": [
+[
+0.0,
+0.981
+]
+],
+"duration": 1.131,
+"hash": "87c5d6d090bf03dadaac51e296401b82adca62e13293ab96928285f2f22e15a5",
+"kind": "term"
+},
+"t-en-d-priority": {
+"audio": "media/terms/t-en-d-priority.mp3",
+"bytes": 8157,
+"cues": [
+[
+0.0,
+1.109
+]
+],
+"duration": 1.259,
+"hash": "8a5292d78c6bd24e274e3ef4c53b354ba60024b5e9c61a621932d300be3975b2",
+"kind": "term"
+},
+"t-en-d-pull-hitter": {
+"audio": "media/terms/t-en-d-pull-hitter.mp3",
+"bytes": 7581,
+"cues": [
+[
+0.0,
+1.003
+]
+],
+"duration": 1.153,
+"hash": "3161a0e0211092b620c0f4da458be47c264b47a03bb200098110f6ee8226a60a",
+"kind": "term"
+},
+"t-en-d-read": {
+"audio": "media/terms/t-en-d-read.mp3",
+"bytes": 5277,
+"cues": [
+[
+0.0,
+0.64
+]
+],
+"duration": 0.79,
+"hash": "c4682290077ad03491272a96134f1e5ce4c4a25fb37bbd6b7ea3b4383d4132b0",
+"kind": "term"
+},
+"t-en-d-read-the-hop": {
+"audio": "media/terms/t-en-d-read-the-hop.mp3",
+"bytes": 8877,
+"cues": [
+[
+0.0,
+1.237
+]
+],
+"duration": 1.387,
+"hash": "8d5d7771b0e3e7ebf1be0a4217fe42e696ed36c45d9d218fb0eb8ceb2cd31b8c",
+"kind": "term"
+},
+"t-en-d-ready-position": {
+"audio": "media/terms/t-en-d-ready-position.mp3",
+"bytes": 8445,
+"cues": [
+[
+0.0,
+1.152
+]
+],
+"duration": 1.302,
+"hash": "e8b0d2d18ada4771030e3463554e90524daccebaa84272fb3fa58db82b924f81",
+"kind": "term"
+},
+"t-en-d-relay": {
+"audio": "media/terms/t-en-d-relay.mp3",
+"bytes": 7437,
+"cues": [
+[
+0.0,
+0.981
+]
+],
+"duration": 1.131,
+"hash": "2a704ae94cb7140640f5d809d15f084fcfab5266e98c60222b9d8e5e260a6efa",
+"kind": "term"
+},
+"t-en-d-rep": {
+"audio": "media/terms/t-en-d-rep.mp3",
+"bytes": 5277,
+"cues": [
+[
+0.0,
+0.64
+]
+],
+"duration": 0.79,
+"hash": "45ec1af8b8795878c3cb631f688eabde47abbbf14fc94a0cd48ec52986efbcc9",
+"kind": "term"
+},
+"t-en-d-reset": {
+"audio": "media/terms/t-en-d-reset.mp3",
+"bytes": 6573,
+"cues": [
+[
+0.0,
+0.853
+]
+],
+"duration": 1.003,
+"hash": "6e6ac6bee5c05c8c33a0a258e0566fef70708a4cedb2d4dbc09d94793bd3360c",
+"kind": "term"
+},
+"t-en-d-route": {
+"audio": "media/terms/t-en-d-route.mp3",
+"bytes": 6285,
+"cues": [
+[
+0.0,
+0.789
+]
+],
+"duration": 0.939,
+"hash": "6ac109c9031ae0abddce0a6c70bded5a6e7a20eebf35cdc09df0d06dbf6bc7a8",
+"kind": "term"
+},
+"t-en-d-routine-play": {
+"audio": "media/terms/t-en-d-routine-play.mp3",
+"bytes": 8589,
+"cues": [
+[
+0.0,
+1.173
+]
+],
+"duration": 1.323,
+"hash": "e4b1d2c474c6acc2cfd3aede6501f93a91e84d56415ee476c39b6627a1817336",
+"kind": "term"
+},
+"t-en-d-see-it-into-the-glove": {
+"audio": "media/terms/t-en-d-see-it-into-the-glove.mp3",
+"bytes": 10893,
+"cues": [
+[
+0.0,
+1.557
+]
+],
+"duration": 1.707,
+"hash": "ec4e9ada3060afa433dc1b9100cde8139a4ff8bf1379b39e58f42a918b51192a",
+"kind": "term"
+},
+"t-en-d-set-your-feet": {
+"audio": "media/terms/t-en-d-set-your-feet.mp3",
+"bytes": 8445,
+"cues": [
+[
+0.0,
+1.152
+]
+],
+"duration": 1.302,
+"hash": "f0f37270fc8993b9ed0442c243b8cce319e9f56d427dbb882f3c5587610a97d4",
+"kind": "term"
+},
+"t-en-d-shade": {
+"audio": "media/terms/t-en-d-shade.mp3",
+"bytes": 6429,
+"cues": [
+[
+0.0,
+0.811
+]
+],
+"duration": 0.961,
+"hash": "c542e7e06cad96a6f92b9c5408a41ef2b81563d04cbc7b9ad86b89be82e394e7",
+"kind": "term"
+},
+"t-en-d-shift": {
+"audio": "media/terms/t-en-d-shift.mp3",
+"bytes": 5709,
+"cues": [
+[
+0.0,
+0.704
+]
+],
+"duration": 0.854,
+"hash": "e8366a22a3208a065d1bc0b3fd6353e592d9851d85b008889912aa00892f3190",
+"kind": "term"
+},
+"t-en-d-short-hop": {
+"audio": "media/terms/t-en-d-short-hop.mp3",
+"bytes": 7725,
+"cues": [
+[
+0.0,
+1.045
+]
+],
+"duration": 1.195,
+"hash": "bfaf940da674d3c1958d1cefdb594c8d798abe29115e8406fddd9ba89a630e80",
+"kind": "term"
+},
+"t-en-d-show-me": {
+"audio": "media/terms/t-en-d-show-me.mp3",
+"bytes": 6861,
+"cues": [
+[
+0.0,
+0.896
+]
+],
+"duration": 1.046,
+"hash": "5dc7168918f594f21713b665e5f86de844c7cd1cba2b407caa88c419374b5e71",
+"kind": "term"
+},
+"t-en-d-shuffle": {
+"audio": "media/terms/t-en-d-shuffle.mp3",
+"bytes": 6141,
+"cues": [
+[
+0.0,
+0.768
+]
+],
+"duration": 0.918,
+"hash": "2ef134e07e532357b5f0d8f74f3a3a67abb8d3ef31acab2c6523fd7fe834f918",
+"kind": "term"
+},
+"t-en-d-soft-hands": {
+"audio": "media/terms/t-en-d-soft-hands.mp3",
+"bytes": 8301,
+"cues": [
+[
+0.0,
+1.131
+]
+],
+"duration": 1.281,
+"hash": "fc0b12b4b0c7321dcac9bc804d484b5532a233d54821f1cfe0023167a0cd25bf",
+"kind": "term"
+},
+"t-en-d-stay-down": {
+"audio": "media/terms/t-en-d-stay-down.mp3",
+"bytes": 8157,
+"cues": [
+[
+0.0,
+1.109
+]
+],
+"duration": 1.259,
+"hash": "53ac128b630caaab147819833578f46caa63f80bc42a51266da8574cd33522b0",
+"kind": "term"
+},
+"t-en-d-stay-low": {
+"audio": "media/terms/t-en-d-stay-low.mp3",
+"bytes": 7869,
+"cues": [
+[
+0.0,
+1.067
+]
+],
+"duration": 1.217,
+"hash": "61a0123afd56099a9f2573cea11486b9981108beed49ec52221cadb430a276a2",
+"kind": "term"
+},
+"t-en-d-stop-the-ball": {
+"audio": "media/terms/t-en-d-stop-the-ball.mp3",
+"bytes": 9885,
+"cues": [
+[
+0.0,
+1.408
+]
+],
+"duration": 1.558,
+"hash": "2815ad884b05a8c74442dbfbcea4be812c1aac50b3df45f0f6e00218317c9b58",
+"kind": "term"
+},
+"t-en-d-take-a-better-angle": {
+"audio": "media/terms/t-en-d-take-a-better-angle.mp3",
+"bytes": 10173,
+"cues": [
+[
+0.0,
+1.451
+]
+],
+"duration": 1.601,
+"hash": "ff9ae5b6829cd302742989b02ff3d04e3b5c22c06270fe303b15b5c02c039d08",
+"kind": "term"
+},
+"t-en-d-take-your-time": {
+"audio": "media/terms/t-en-d-take-your-time.mp3",
+"bytes": 9309,
+"cues": [
+[
+0.0,
+1.301
+]
+],
+"duration": 1.451,
+"hash": "e875da6c557680114a7642ac62bb2fff5563ef8677300f3114a03c77ebebd790",
+"kind": "term"
+},
+"t-en-d-thats-it": {
+"audio": "media/terms/t-en-d-thats-it.mp3",
+"bytes": 7149,
+"cues": [
+[
+0.0,
+0.939
+]
+],
+"duration": 1.089,
+"hash": "22158698a86333a460509809e6978c888594d4187d4b2af2cd3566c51aee7dcf",
+"kind": "term"
+},
+"t-en-d-three-more": {
+"audio": "media/terms/t-en-d-three-more.mp3",
+"bytes": 10173,
+"cues": [
+[
+0.0,
+1.451
+]
+],
+"duration": 1.601,
+"hash": "17f6207a4b36165c8be5fe08486488c65160884755e0ac0aef2b6e3cde031b10",
+"kind": "term"
+},
+"t-en-d-throw": {
+"audio": "media/terms/t-en-d-throw.mp3",
+"bytes": 6429,
+"cues": [
+[
+0.0,
+0.832
+]
+],
+"duration": 0.982,
+"hash": "662d5cbffffc286a1a4a2f908efa73986fe065e7e8cb4c5c113ebf81db444623",
+"kind": "term"
+},
+"t-en-d-throw-to-first": {
+"audio": "media/terms/t-en-d-throw-to-first.mp3",
+"bytes": 9597,
+"cues": [
+[
+0.0,
+1.344
+]
+],
+"duration": 1.494,
+"hash": "06e65fa77bde5077c53ec7d3a19f2f6e0dda165a19d4d3c41f65696be54868d8",
+"kind": "term"
+},
+"t-en-d-throwing-lane": {
+"audio": "media/terms/t-en-d-throwing-lane.mp3",
+"bytes": 8301,
+"cues": [
+[
+0.0,
+1.131
+]
+],
+"duration": 1.281,
+"hash": "b602fb5561fdfd4158d8ba5dc79f4a8d70ba607e8a4419ea70696517f7a88287",
+"kind": "term"
+},
+"t-en-d-throwing-side": {
+"audio": "media/terms/t-en-d-throwing-side.mp3",
+"bytes": 9021,
+"cues": [
+[
+0.0,
+1.259
+]
+],
+"duration": 1.409,
+"hash": "48c482a8890dff62e112beb4b043d6deccdc7017e98b4c3350cc5fccb559ce18",
+"kind": "term"
+},
+"t-en-d-transfer": {
+"audio": "media/terms/t-en-d-transfer.mp3",
+"bytes": 7581,
+"cues": [
+[
+0.0,
+1.024
+]
+],
+"duration": 1.174,
+"hash": "5155ba006ef9d12b0988307548bb1cabdfe1929b92e25143d9013b7745371037",
+"kind": "term"
+},
+"t-en-d-try-again": {
+"audio": "media/terms/t-en-d-try-again.mp3",
+"bytes": 8157,
+"cues": [
+[
+0.0,
+1.109
+]
+],
+"duration": 1.259,
+"hash": "784a6730bda55f0b0b5a5515da8cbd8d78fbbf4118d7851c4e11e7ecddc75d18",
+"kind": "term"
+},
+"t-en-d-turn-two": {
+"audio": "media/terms/t-en-d-turn-two.mp3",
+"bytes": 7581,
+"cues": [
+[
+0.0,
+1.024
+]
+],
+"duration": 1.174,
+"hash": "244ce049620040979acd1ec52c7a4e81e82780bf4cdd36985cac05251783388f",
+"kind": "term"
+},
+"t-en-d-two-call": {
+"audio": "media/terms/t-en-d-two-call.mp3",
+"bytes": 5853,
+"cues": [
+[
+0.0,
+0.725
+]
+],
+"duration": 0.875,
+"hash": "2db60ed200c27a88d9c0e46c41101d20adc389ebf04fb0b36d8dc59430bde26b",
+"kind": "term"
+},
+"t-en-d-watch-me": {
+"audio": "media/terms/t-en-d-watch-me.mp3",
+"bytes": 7869,
+"cues": [
+[
+0.0,
+1.067
+]
+],
+"duration": 1.217,
+"hash": "ac967af742972990febe9a48d6bde0e260545c186056d606790ec5817e63e0ff",
+"kind": "term"
+},
+"t-en-d-weight-forward": {
+"audio": "media/terms/t-en-d-weight-forward.mp3",
+"bytes": 9165,
+"cues": [
+[
+0.0,
+1.28
+]
+],
+"duration": 1.43,
+"hash": "c14b6bddb77bb6aaf94ae2eeb6cb6e74e34002cce3a37340fc1ecbed008fa3b1",
+"kind": "term"
+},
+"t-en-d-what-did-you-feel": {
+"audio": "media/terms/t-en-d-what-did-you-feel.mp3",
+"bytes": 9885,
+"cues": [
+[
+0.0,
+1.408
+]
+],
+"duration": 1.558,
+"hash": "ffbe08be54ee76b77fcab0df35005533c73371ba4623c4bcfcaf0e13c6823b1d",
+"kind": "term"
+},
+"t-en-d-work-through-the-ball": {
+"audio": "media/terms/t-en-d-work-through-the-ball.mp3",
+"bytes": 9309,
+"cues": [
+[
+0.0,
+1.301
+]
+],
+"duration": 1.451,
+"hash": "624c7278e63c31e97c7b7b7c06243ef2f3fded1cb20c6c5bc76694cbcac32e90",
+"kind": "term"
+},
+"t-en-d-you-you": {
+"audio": "media/terms/t-en-d-you-you.mp3",
+"bytes": 7149,
+"cues": [
+[
+0.0,
+0.939
+]
+],
+"duration": 1.089,
+"hash": "3d14afcae4bc46947c74e096c4fa7edd1f66b31c8b3ef06afc3f89c5305ceb65",
+"kind": "term"
+},
+"t-en-d-your-turn": {
+"audio": "media/terms/t-en-d-your-turn.mp3",
+"bytes": 8013,
+"cues": [
+[
+0.0,
+1.088
+]
+],
+"duration": 1.238,
+"hash": "3c87a5d7f56d64e6937375f2b1588d6c4ec69d919be615e826fe6c707513fef2",
+"kind": "term"
+},
+"t-en-p-active-spin": {
+"audio": "media/terms/t-en-p-active-spin.mp3",
+"bytes": 16365,
+"cues": [
+[
+0.0,
+2.475
+]
+],
+"duration": 2.625,
+"hash": "b54392b5ab9be3791e9497d8ca19565b1b81e4e761ddaaddec28f8dcadb2ee97",
+"kind": "term"
+},
+"t-en-p-again": {
+"audio": "media/terms/t-en-p-again.mp3",
+"bytes": 6717,
+"cues": [
+[
+0.0,
+0.875
+]
+],
+"duration": 1.025,
+"hash": "01d222986f3a629a1434ca0e8743b88c2a61d3f2053459a3bf5c07abf48bc1b2",
+"kind": "term"
+},
+"t-en-p-arm": {
+"audio": "media/terms/t-en-p-arm.mp3",
+"bytes": 4989,
+"cues": [
+[
+0.0,
+0.576
+]
+],
+"duration": 0.726,
+"hash": "4734826f185982d52b504fff0a6db91e3acecdbc8d2e0e924e2229256de388ab",
+"kind": "term"
+},
+"t-en-p-arm-angle": {
+"audio": "media/terms/t-en-p-arm-angle.mp3",
+"bytes": 14637,
+"cues": [
+[
+0.0,
+2.197
+]
+],
+"duration": 2.347,
+"hash": "7a47c583392bfb8785f301b491c28ffaed8397414d59d41312fb3337dbdbd91f",
+"kind": "term"
+},
+"t-en-p-arm-path": {
+"audio": "media/terms/t-en-p-arm-path.mp3",
+"bytes": 8445,
+"cues": [
+[
+0.0,
+1.152
+]
+],
+"duration": 1.302,
+"hash": "c679ab82fc8e7e9da1482bfca369581efc76010d76c5530ca99be4e37b648ec3",
+"kind": "term"
+},
+"t-en-p-arm-soreness": {
+"audio": "media/terms/t-en-p-arm-soreness.mp3",
+"bytes": 11037,
+"cues": [
+[
+0.0,
+1.6
+]
+],
+"duration": 1.75,
+"hash": "df6d794ec3bff25b48efdd469cb171c8a305028f3894c660095738b24e6a366e",
+"kind": "term"
+},
+"t-en-p-balance": {
+"audio": "media/terms/t-en-p-balance.mp3",
+"bytes": 6573,
+"cues": [
+[
+0.0,
+0.853
+]
+],
+"duration": 1.003,
+"hash": "a190cecadcc02b4d48c6308e4191990e56eb79c3357038dfa556107abc404964",
+"kind": "term"
+},
+"t-en-p-ball": {
+"audio": "media/terms/t-en-p-ball.mp3",
+"bytes": 10749,
+"cues": [
+[
+0.0,
+1.536
+]
+],
+"duration": 1.686,
+"hash": "b62ec9900026f3016bea0bbd0721e37d1389317ef1e4e39f7085c7292d432bfc",
+"kind": "term"
+},
+"t-en-p-ball-count": {
+"audio": "media/terms/t-en-p-ball-count.mp3",
+"bytes": 9309,
+"cues": [
+[
+0.0,
+1.301
+]
+],
+"duration": 1.451,
+"hash": "49e79225218d2bac681d46a9d0fe01239880ef3be5aec5e371c4388fa37eb59e",
+"kind": "term"
+},
+"t-en-p-break": {
+"audio": "media/terms/t-en-p-break.mp3",
+"bytes": 5709,
+"cues": [
+[
+0.0,
+0.704
+]
+],
+"duration": 0.854,
+"hash": "da8810e4d8d0df7c85b5a20aebf7591b414479acd38a8af80886a8acb031578e",
+"kind": "term"
+},
+"t-en-p-bring-together": {
+"audio": "media/terms/t-en-p-bring-together.mp3",
+"bytes": 8445,
+"cues": [
+[
+0.0,
+1.152
+]
+],
+"duration": 1.302,
+"hash": "cf37a15207563f79f9edf39fbfa1d1797348f1c813a199e0028aa7785aebf280",
+"kind": "term"
+},
+"t-en-p-bullpen": {
+"audio": "media/terms/t-en-p-bullpen.mp3",
+"bytes": 7005,
+"cues": [
+[
+0.0,
+0.917
+]
+],
+"duration": 1.067,
+"hash": "6bb01480dbe5158166d0acb8a10741606daba9ee50a70850f4e4c12f8fea10f0",
+"kind": "term"
+},
+"t-en-p-bullpen-session": {
+"audio": "media/terms/t-en-p-bullpen-session.mp3",
+"bytes": 8733,
+"cues": [
+[
+0.0,
+1.216
+]
+],
+"duration": 1.366,
+"hash": "dea473d81869db046aa872db07d6a633d3784d1ba859c883c9147c915141520c",
+"kind": "term"
+},
+"t-en-p-carry": {
+"audio": "media/terms/t-en-p-carry.mp3",
+"bytes": 11037,
+"cues": [
+[
+0.0,
+1.579
+]
+],
+"duration": 1.729,
+"hash": "d59abb5eeb545577fb16c2be6bf14aeb5c1d030e0b7233ea4f4617a349e6bac3",
+"kind": "term"
+},
+"t-en-p-catcher": {
+"audio": "media/terms/t-en-p-catcher.mp3",
+"bytes": 7149,
+"cues": [
+[
+0.0,
+0.939
+]
+],
+"duration": 1.089,
+"hash": "8ccbeb98234404764bc3dafdf1b97864fe579c8ec17bd40ae1715c05965b2399",
+"kind": "term"
+},
+"t-en-p-changeup": {
+"audio": "media/terms/t-en-p-changeup.mp3",
+"bytes": 7581,
+"cues": [
+[
+0.0,
+1.003
+]
+],
+"duration": 1.153,
+"hash": "aaaa78c648efb32a7f08a9252b522b2fe5ec5d84d79f85d3e322245f67663d7f",
+"kind": "term"
+},
+"t-en-p-circle-change": {
+"audio": "media/terms/t-en-p-circle-change.mp3",
+"bytes": 9453,
+"cues": [
+[
+0.0,
+1.323
+]
+],
+"duration": 1.473,
+"hash": "27f4c14ab758a157965a56e025b94935c8b40d96d5259dabaf32402db8d836ea",
+"kind": "term"
+},
+"t-en-p-command": {
+"audio": "media/terms/t-en-p-command.mp3",
+"bytes": 12765,
+"cues": [
+[
+0.0,
+1.877
+]
+],
+"duration": 2.027,
+"hash": "f34a7e7fe750966e7a89cc21121879124165c4fc56a62e96253cfaef6d407240",
+"kind": "term"
+},
+"t-en-p-consistency": {
+"audio": "media/terms/t-en-p-consistency.mp3",
+"bytes": 16797,
+"cues": [
+[
+0.0,
+2.56
+]
+],
+"duration": 2.71,
+"hash": "9d4fc43e50b92c501b974c46364e2ffc838e3318396333f9acb8c3afe8986e61",
+"kind": "term"
+},
+"t-en-p-curveball": {
+"audio": "media/terms/t-en-p-curveball.mp3",
+"bytes": 7437,
+"cues": [
+[
+0.0,
+0.981
+]
+],
+"duration": 1.131,
+"hash": "8eba63a036b9762869f2865ad469b11c0e5732535c136e59b706068ff73da409",
+"kind": "term"
+},
+"t-en-p-cutter": {
+"audio": "media/terms/t-en-p-cutter.mp3",
+"bytes": 5853,
+"cues": [
+[
+0.0,
+0.725
+]
+],
+"duration": 0.875,
+"hash": "a6d1c5785fee1684227357f50c892d22b9c53974b73fa59e04d73fbc914d9432",
+"kind": "term"
+},
+"t-en-p-deep-grip": {
+"audio": "media/terms/t-en-p-deep-grip.mp3",
+"bytes": 7581,
+"cues": [
+[
+0.0,
+1.024
+]
+],
+"duration": 1.174,
+"hash": "2ba0efa20be829901c551cb907b63f55a1e4bc6305111c0c4f994196d40ab1f9",
+"kind": "term"
+},
+"t-en-p-does-it-feel-natural": {
+"audio": "media/terms/t-en-p-does-it-feel-natural.mp3",
+"bytes": 11469,
+"cues": [
+[
+0.0,
+1.664
+]
+],
+"duration": 1.814,
+"hash": "2d877c971b5c7d1eb468f2f12b66cf2c4939b459a48d86f01da44206dd852010",
+"kind": "term"
+},
+"t-en-p-drop": {
+"audio": "media/terms/t-en-p-drop.mp3",
+"bytes": 9885,
+"cues": [
+[
+0.0,
+1.408
+]
+],
+"duration": 1.558,
+"hash": "c3f5be874a318697ae493f5d405eaf2f3b387a7b658420c5b41424e719f4a3a0",
+"kind": "term"
+},
+"t-en-p-experiment-grip": {
+"audio": "media/terms/t-en-p-experiment-grip.mp3",
+"bytes": 12189,
+"cues": [
+[
+0.0,
+1.771
+]
+],
+"duration": 1.921,
+"hash": "2afa6ab155624103c1f742cef094d8a6277e5e73b99ae5f006bf263ea63b8a07",
+"kind": "term"
+},
+"t-en-p-extension": {
+"audio": "media/terms/t-en-p-extension.mp3",
+"bytes": 8301,
+"cues": [
+[
+0.0,
+1.131
+]
+],
+"duration": 1.281,
+"hash": "d70eea34f882366d908599cf7fd9faf9e3e4e8f9e7c5d8e1f12921a5593ebcad",
+"kind": "term"
+},
+"t-en-p-fastball": {
+"audio": "media/terms/t-en-p-fastball.mp3",
+"bytes": 8157,
+"cues": [
+[
+0.0,
+1.109
+]
+],
+"duration": 1.259,
+"hash": "2f613107a3a9d70d640ab8d734beaf11359ef782cd56d32bb26c33f1229a126f",
+"kind": "term"
+},
+"t-en-p-fingertips": {
+"audio": "media/terms/t-en-p-fingertips.mp3",
+"bytes": 13485,
+"cues": [
+[
+0.0,
+2.005
+]
+],
+"duration": 2.155,
+"hash": "62a9e4b5e446dde3801b0740f5fe47edc008d12586f45f44cc8771633e642e01",
+"kind": "term"
+},
+"t-en-p-follow-through": {
+"audio": "media/terms/t-en-p-follow-through.mp3",
+"bytes": 8445,
+"cues": [
+[
+0.0,
+1.152
+]
+],
+"duration": 1.302,
+"hash": "7ddfa603fd08e837b13619da6a4ccdab488513f900e9e033028200ff97c0497f",
+"kind": "term"
+},
+"t-en-p-four-seam-fastball": {
+"audio": "media/terms/t-en-p-four-seam-fastball.mp3",
+"bytes": 10461,
+"cues": [
+[
+0.0,
+1.493
+]
+],
+"duration": 1.643,
+"hash": "ceb1117ce6119622e65faf244d93622996bd3a02b409b748cb87a60bb1b57e4c",
+"kind": "term"
+},
+"t-en-p-four-seam-grip": {
+"audio": "media/terms/t-en-p-four-seam-grip.mp3",
+"bytes": 9453,
+"cues": [
+[
+0.0,
+1.323
+]
+],
+"duration": 1.473,
+"hash": "510893fba70b5835e7cb2558bcfbaf1133fb9d8f40431a6d2acd99ea038117a0",
+"kind": "term"
+},
+"t-en-p-good-pitch": {
+"audio": "media/terms/t-en-p-good-pitch.mp3",
+"bytes": 7437,
+"cues": [
+[
+0.0,
+0.981
+]
+],
+"duration": 1.131,
+"hash": "b4b075162d67380bd50b947e2f540d07945a6807ec9ee55146941cbd53503682",
+"kind": "term"
+},
+"t-en-p-grip": {
+"audio": "media/terms/t-en-p-grip.mp3",
+"bytes": 5565,
+"cues": [
+[
+0.0,
+0.683
+]
+],
+"duration": 0.833,
+"hash": "62df25a4de59bfa0ffc85a8a1070912015ae91f5c14367b500e88afd5b45062e",
+"kind": "term"
+},
+"t-en-p-grip-pressure": {
+"audio": "media/terms/t-en-p-grip-pressure.mp3",
+"bytes": 8733,
+"cues": [
+[
+0.0,
+1.195
+]
+],
+"duration": 1.345,
+"hash": "5e84defd7974c480d85a12598ea8503ac1cbd8b780cfbc45c441110e23db174a",
+"kind": "term"
+},
+"t-en-p-gyro-spin": {
+"audio": "media/terms/t-en-p-gyro-spin.mp3",
+"bytes": 9165,
+"cues": [
+[
+0.0,
+1.28
+]
+],
+"duration": 1.43,
+"hash": "70ec1908b54f3f6715b667e4a1f14d8d0bc1be43afca1564f136a4662fa5c992",
+"kind": "term"
+},
+"t-en-p-hip-shoulder-separation": {
+"audio": "media/terms/t-en-p-hip-shoulder-separation.mp3",
+"bytes": 11901,
+"cues": [
+[
+0.0,
+1.728
+]
+],
+"duration": 1.878,
+"hash": "c567bafd98134789e0ce7d4769e57865e2675219c934242ec5b51e206926262d",
+"kind": "term"
+},
+"t-en-p-hips": {
+"audio": "media/terms/t-en-p-hips.mp3",
+"bytes": 5565,
+"cues": [
+[
+0.0,
+0.683
+]
+],
+"duration": 0.833,
+"hash": "5b020f3de3e8769caf845eafff457d7d509359acaca2c7500f3f2b4d6d3ddf7e",
+"kind": "term"
+},
+"t-en-p-home-plate": {
+"audio": "media/terms/t-en-p-home-plate.mp3",
+"bytes": 8445,
+"cues": [
+[
+0.0,
+1.152
+]
+],
+"duration": 1.302,
+"hash": "55a61f109da59ff136459f89061dfde93a2f9d4304d8124f1936885aca3cfe12",
+"kind": "term"
+},
+"t-en-p-horizontal-break": {
+"audio": "media/terms/t-en-p-horizontal-break.mp3",
+"bytes": 10749,
+"cues": [
+[
+0.0,
+1.536
+]
+],
+"duration": 1.686,
+"hash": "02dd1033a575e1fea89d3563a8727afc6715816855f3d48f8d39057e6df1e9d6",
+"kind": "term"
+},
+"t-en-p-horseshoe": {
+"audio": "media/terms/t-en-p-horseshoe.mp3",
+"bytes": 11037,
+"cues": [
+[
+0.0,
+1.6
+]
+],
+"duration": 1.75,
+"hash": "3a205776f033d3f5826d8ddd4cab8afcedbd6bc1696b3e2ea3f6d96e20a32db7",
+"kind": "term"
+},
+"t-en-p-how-did-it-feel": {
+"audio": "media/terms/t-en-p-how-did-it-feel.mp3",
+"bytes": 9885,
+"cues": [
+[
+0.0,
+1.387
+]
+],
+"duration": 1.537,
+"hash": "1016e2604738e4cf153f97ddffbcb357aa45b60df3e737fdae354e23c44be351",
+"kind": "term"
+},
+"t-en-p-index-finger": {
+"audio": "media/terms/t-en-p-index-finger.mp3",
+"bytes": 9741,
+"cues": [
+[
+0.0,
+1.365
+]
+],
+"duration": 1.515,
+"hash": "18bef953755960d13a78c9fbf37fa5891a25bbe1b642f7483b7ced047683d9f7",
+"kind": "term"
+},
+"t-en-p-ivb": {
+"audio": "media/terms/t-en-p-ivb.mp3",
+"bytes": 12477,
+"cues": [
+[
+0.0,
+1.835
+]
+],
+"duration": 1.985,
+"hash": "dff2c782041c4c89310d33267e52f75a3888124aa9adf995875e4c56db8ed83f",
+"kind": "term"
+},
+"t-en-p-keep": {
+"audio": "media/terms/t-en-p-keep.mp3",
+"bytes": 10317,
+"cues": [
+[
+0.0,
+1.472
+]
+],
+"duration": 1.622,
+"hash": "d3b2428d8a80c63be1e512d71d3511f624e9733f831c87a7506274614847f8d1",
+"kind": "term"
+},
+"t-en-p-knuckle": {
+"audio": "media/terms/t-en-p-knuckle.mp3",
+"bytes": 6285,
+"cues": [
+[
+0.0,
+0.789
+]
+],
+"duration": 0.939,
+"hash": "cc7558b89eabb5499fcb75ea46b59b6212d95baf23087f8388d30604ac692f11",
+"kind": "term"
+},
+"t-en-p-lead-leg": {
+"audio": "media/terms/t-en-p-lead-leg.mp3",
+"bytes": 13485,
+"cues": [
+[
+0.0,
+2.005
+]
+],
+"duration": 2.155,
+"hash": "7b9394dc668e6640443b9329a87c43574ca837e00c6d712e076548196b82c228",
+"kind": "term"
+},
+"t-en-p-leg-lift": {
+"audio": "media/terms/t-en-p-leg-lift.mp3",
+"bytes": 7581,
+"cues": [
+[
+0.0,
+1.024
+]
+],
+"duration": 1.174,
+"hash": "a8a83cfeef3044baa25d26c2dbb846bdbcb89097ff04bbead7fdfdc72208319a",
+"kind": "term"
+},
+"t-en-p-loosen": {
+"audio": "media/terms/t-en-p-loosen.mp3",
+"bytes": 7293,
+"cues": [
+[
+0.0,
+0.96
+]
+],
+"duration": 1.11,
+"hash": "77b9a986b0cf1032ef97aae18e0d9203bd019a996cb760cd6d092cacd9d7069a",
+"kind": "term"
+},
+"t-en-p-mechanics": {
+"audio": "media/terms/t-en-p-mechanics.mp3",
+"bytes": 12909,
+"cues": [
+[
+0.0,
+1.899
+]
+],
+"duration": 2.049,
+"hash": "c3126e67410c6654b58ff8f5d055f888c8066994d770349edf0d8f6cefa67244",
+"kind": "term"
+},
+"t-en-p-middle-finger": {
+"audio": "media/terms/t-en-p-middle-finger.mp3",
+"bytes": 8733,
+"cues": [
+[
+0.0,
+1.195
+]
+],
+"duration": 1.345,
+"hash": "0c4f975a8cd198d8fb304bfd4d97be372bf3af764de1e82c0734bec25dc5335c",
+"kind": "term"
+},
+"t-en-p-mound": {
+"audio": "media/terms/t-en-p-mound.mp3",
+"bytes": 6717,
+"cues": [
+[
+0.0,
+0.875
+]
+],
+"duration": 1.025,
+"hash": "3e04a99a3f66f5da2b1e6551da164fd3311753a6f1075bf98d618fd3ec8027a3",
+"kind": "term"
+},
+"t-en-p-move": {
+"audio": "media/terms/t-en-p-move.mp3",
+"bytes": 5709,
+"cues": [
+[
+0.0,
+0.704
+]
+],
+"duration": 0.854,
+"hash": "9e792533ab4b6ea6fc928ff28916e6919edaba0df3d84033f80ce6a4e08d0bdc",
+"kind": "term"
+},
+"t-en-p-movement": {
+"audio": "media/terms/t-en-p-movement.mp3",
+"bytes": 7149,
+"cues": [
+[
+0.0,
+0.939
+]
+],
+"duration": 1.089,
+"hash": "e62031888ff93dd8328e21d5b9ec75c74e9d2ee7ffc5b4695fa777f13132ddfd",
+"kind": "term"
+},
+"t-en-p-objective": {
+"audio": "media/terms/t-en-p-objective.mp3",
+"bytes": 15645,
+"cues": [
+[
+0.0,
+2.347
+]
+],
+"duration": 2.497,
+"hash": "4b519587674d393e60aeb898f8f1d5079a8b8dcf12616a3b7fece0b06ec578e6",
+"kind": "term"
+},
+"t-en-p-one-more": {
+"audio": "media/terms/t-en-p-one-more.mp3",
+"bytes": 7869,
+"cues": [
+[
+0.0,
+1.067
+]
+],
+"duration": 1.217,
+"hash": "3b0d77db48e073730754402ec56315c7593e8fe1e9611c526dbfaadbcdc7c5ab",
+"kind": "term"
+},
+"t-en-p-palm": {
+"audio": "media/terms/t-en-p-palm.mp3",
+"bytes": 5709,
+"cues": [
+[
+0.0,
+0.704
+]
+],
+"duration": 0.854,
+"hash": "5669ab8cdf72b4e2bdc728142e343fed815e5a3e8278c716c83db5130291d64f",
+"kind": "term"
+},
+"t-en-p-pinky": {
+"audio": "media/terms/t-en-p-pinky.mp3",
+"bytes": 12909,
+"cues": [
+[
+0.0,
+1.899
+]
+],
+"duration": 2.049,
+"hash": "cf3a6ed9259aeb1053863c0c897b7f7cfa61b5db1f2af08e09fdbcbe4f22dd50",
+"kind": "term"
+},
+"t-en-p-pitch-count": {
+"audio": "media/terms/t-en-p-pitch-count.mp3",
+"bytes": 12333,
+"cues": [
+[
+0.0,
+1.813
+]
+],
+"duration": 1.963,
+"hash": "0fed7f4f6b8bdda6f47cac4184f5e69040f73b42eabb47b97104d7bb4630c9d4",
+"kind": "term"
+},
+"t-en-p-pitch-noun": {
+"audio": "media/terms/t-en-p-pitch-noun.mp3",
+"bytes": 10749,
+"cues": [
+[
+0.0,
+1.536
+]
+],
+"duration": 1.686,
+"hash": "ee80f11e88a502658daafe1d717c52ef24ae853e87da912f932c1d0ceb78e4a6",
+"kind": "term"
+},
+"t-en-p-pitcher": {
+"audio": "media/terms/t-en-p-pitcher.mp3",
+"bytes": 6429,
+"cues": [
+[
+0.0,
+0.832
+]
+],
+"duration": 0.982,
+"hash": "718a87d27aa381bf7cb5ba7ece5147a37aa84f7c81c92e55019b82b125ca905b",
+"kind": "term"
+},
+"t-en-p-pitching-coach": {
+"audio": "media/terms/t-en-p-pitching-coach.mp3",
+"bytes": 8445,
+"cues": [
+[
+0.0,
+1.152
+]
+],
+"duration": 1.302,
+"hash": "d75044c4cb1d6ea6fd64a30bddc751e0549947194a1869d2235da675774efd25",
+"kind": "term"
+},
+"t-en-p-posture": {
+"audio": "media/terms/t-en-p-posture.mp3",
+"bytes": 7293,
+"cues": [
+[
+0.0,
+0.96
+]
+],
+"duration": 1.11,
+"hash": "6584abba8df0dfe4bf151483e00762533d16c0b9e57bf620047c95b04ee7d1dd",
+"kind": "term"
+},
+"t-en-p-pronation": {
+"audio": "media/terms/t-en-p-pronation.mp3",
+"bytes": 7581,
+"cues": [
+[
+0.0,
+1.024
+]
+],
+"duration": 1.174,
+"hash": "9431c072eff3848d4f0d907d316c212106a84be687dccf69a321354481a92438",
+"kind": "term"
+},
+"t-en-p-put": {
+"audio": "media/terms/t-en-p-put.mp3",
+"bytes": 9885,
+"cues": [
+[
+0.0,
+1.408
+]
+],
+"duration": 1.558,
+"hash": "d62d3cd9c44bded0bc02a4db64979e116ab6cfdcdb3287ccae99f82418ee27fc",
+"kind": "term"
+},
+"t-en-p-release": {
+"audio": "media/terms/t-en-p-release.mp3",
+"bytes": 12189,
+"cues": [
+[
+0.0,
+1.792
+]
+],
+"duration": 1.942,
+"hash": "b959bca88960f1f828d6f141609e63ae7f5d05bc59323dacbf71aea43bd1363f",
+"kind": "term"
+},
+"t-en-p-release-point": {
+"audio": "media/terms/t-en-p-release-point.mp3",
+"bytes": 8733,
+"cues": [
+[
+0.0,
+1.195
+]
+],
+"duration": 1.345,
+"hash": "13979fa1b1023e8e5db53270fe24d6acfe6258935af4f82c00072bed64391d22",
+"kind": "term"
+},
+"t-en-p-repeat": {
+"audio": "media/terms/t-en-p-repeat.mp3",
+"bytes": 7005,
+"cues": [
+[
+0.0,
+0.917
+]
+],
+"duration": 1.067,
+"hash": "452da3986312d83dddb0bb9dbde37c0384c680ea3a7764cce060f4877e28301f",
+"kind": "term"
+},
+"t-en-p-ring-finger": {
+"audio": "media/terms/t-en-p-ring-finger.mp3",
+"bytes": 8733,
+"cues": [
+[
+0.0,
+1.195
+]
+],
+"duration": 1.345,
+"hash": "b915c901c929c3bfde9231a9746347f4bc73caa1409b605e24eabe38d786b818",
+"kind": "term"
+},
+"t-en-p-run": {
+"audio": "media/terms/t-en-p-run.mp3",
+"bytes": 13341,
+"cues": [
+[
+0.0,
+1.963
+]
+],
+"duration": 2.113,
+"hash": "00f54374cbe46b40671e499a85819ecfa5b3edcab220043568b51f83ef4933a9",
+"kind": "term"
+},
+"t-en-p-seam-orientation": {
+"audio": "media/terms/t-en-p-seam-orientation.mp3",
+"bytes": 10029,
+"cues": [
+[
+0.0,
+1.429
+]
+],
+"duration": 1.579,
+"hash": "56447015d355723c72884b68b74e713234c6ccfca8b119eb7f7f825e38553163",
+"kind": "term"
+},
+"t-en-p-seam-shifted-wake": {
+"audio": "media/terms/t-en-p-seam-shifted-wake.mp3",
+"bytes": 9885,
+"cues": [
+[
+0.0,
+1.408
+]
+],
+"duration": 1.558,
+"hash": "89bd41e3000567892e7f46e4ce1fa67b7f45f3a363e007aedc4f608612305cc3",
+"kind": "term"
+},
+"t-en-p-seams": {
+"audio": "media/terms/t-en-p-seams.mp3",
+"bytes": 6717,
+"cues": [
+[
+0.0,
+0.875
+]
+],
+"duration": 1.025,
+"hash": "e478c185bee194c3fd2f204227721e658f07b9fd35c101d0dcc6b0f59ed4515f",
+"kind": "term"
+},
+"t-en-p-separation": {
+"audio": "media/terms/t-en-p-separation.mp3",
+"bytes": 12909,
+"cues": [
+[
+0.0,
+1.899
+]
+],
+"duration": 2.049,
+"hash": "72d8eb213a7ad0dd45affeca2857452bfa024f5a459422f0e700da1c18508f03",
+"kind": "term"
+},
+"t-en-p-shoulders": {
+"audio": "media/terms/t-en-p-shoulders.mp3",
+"bytes": 7437,
+"cues": [
+[
+0.0,
+0.981
+]
+],
+"duration": 1.131,
+"hash": "26c68e6509a235d2021d28b7fcffbc4aa087ce82d41f690553bf819ae6a88e4f",
+"kind": "term"
+},
+"t-en-p-sinker": {
+"audio": "media/terms/t-en-p-sinker.mp3",
+"bytes": 6717,
+"cues": [
+[
+0.0,
+0.875
+]
+],
+"duration": 1.025,
+"hash": "3d3c9eef222abea2e26d14e00836139d0240aa7e4416b4b21151d3f6cf00ff5d",
+"kind": "term"
+},
+"t-en-p-slider": {
+"audio": "media/terms/t-en-p-slider.mp3",
+"bytes": 6861,
+"cues": [
+[
+0.0,
+0.896
+]
+],
+"duration": 1.046,
+"hash": "d4b137993b4f345c58e6432c44d9cd73754a1e35d1d265485d7256e7078799e3",
+"kind": "term"
+},
+"t-en-p-spin": {
+"audio": "media/terms/t-en-p-spin.mp3",
+"bytes": 6429,
+"cues": [
+[
+0.0,
+0.811
+]
+],
+"duration": 0.961,
+"hash": "d22ed0d49c41d2418842e1e67b02db91b187c1139119833f3d811efd9e64fecc",
+"kind": "term"
+},
+"t-en-p-spin-axis": {
+"audio": "media/terms/t-en-p-spin-axis.mp3",
+"bytes": 8877,
+"cues": [
+[
+0.0,
+1.237
+]
+],
+"duration": 1.387,
+"hash": "09f9c5c60132d6bdaabaca335f9c286fb30c4bd507da6e062eae4673666b415b",
+"kind": "term"
+},
+"t-en-p-spin-direction": {
+"audio": "media/terms/t-en-p-spin-direction.mp3",
+"bytes": 19245,
+"cues": [
+[
+0.0,
+2.965
+]
+],
+"duration": 3.115,
+"hash": "dd35bc4721d78ae7702175bb5f45e44e3350d629e8872a18cd30f16353a0772e",
+"kind": "term"
+},
+"t-en-p-spin-rate": {
+"audio": "media/terms/t-en-p-spin-rate.mp3",
+"bytes": 8157,
+"cues": [
+[
+0.0,
+1.109
+]
+],
+"duration": 1.259,
+"hash": "565a221c975254d56a439e56e49242c2549c3168b481349173633989ea616b61",
+"kind": "term"
+},
+"t-en-p-splitter": {
+"audio": "media/terms/t-en-p-splitter.mp3",
+"bytes": 12765,
+"cues": [
+[
+0.0,
+1.877
+]
+],
+"duration": 2.027,
+"hash": "1fad7bfbd73838e56a65c82862c372530abe9d1a53d54cb1d993d83ce6321bbb",
+"kind": "term"
+},
+"t-en-p-spread": {
+"audio": "media/terms/t-en-p-spread.mp3",
+"bytes": 10461,
+"cues": [
+[
+0.0,
+1.493
+]
+],
+"duration": 1.643,
+"hash": "014fb9e32372e6f6dc657b70ade8cb5e46c2de83e00cfabd06c6c8247cba5986",
+"kind": "term"
+},
+"t-en-p-squeeze": {
+"audio": "media/terms/t-en-p-squeeze.mp3",
+"bytes": 11469,
+"cues": [
+[
+0.0,
+1.664
+]
+],
+"duration": 1.814,
+"hash": "0ad6851bfcaaa97de35d86fcd0e6f7153563c88e1826df7d8d005b6a440f8c18",
+"kind": "term"
+},
+"t-en-p-stride": {
+"audio": "media/terms/t-en-p-stride.mp3",
+"bytes": 6861,
+"cues": [
+[
+0.0,
+0.896
+]
+],
+"duration": 1.046,
+"hash": "8e5db655eda9bfed90257eec0109286ccd5cb578a2e8bf826623d8a132cfa7b4",
+"kind": "term"
+},
+"t-en-p-stride-direction": {
+"audio": "media/terms/t-en-p-stride-direction.mp3",
+"bytes": 16941,
+"cues": [
+[
+0.0,
+2.581
+]
+],
+"duration": 2.731,
+"hash": "7ef4fb3e0cb09803467a3b24033f71e86073ca5f78c62b09c1b0214152a8e8d3",
+"kind": "term"
+},
+"t-en-p-strike": {
+"audio": "media/terms/t-en-p-strike.mp3",
+"bytes": 6285,
+"cues": [
+[
+0.0,
+0.789
+]
+],
+"duration": 0.939,
+"hash": "f0d3708dbb6a06b5466b42131ed320836e01bb0225942be60c803f09de33a303",
+"kind": "term"
+},
+"t-en-p-strike-zone": {
+"audio": "media/terms/t-en-p-strike-zone.mp3",
+"bytes": 8877,
+"cues": [
+[
+0.0,
+1.237
+]
+],
+"duration": 1.387,
+"hash": "b0445aeb4efa6fcb8549d31e15b9e5f27693187ad10d59623102f73ca817da12",
+"kind": "term"
+},
+"t-en-p-strikeout": {
+"audio": "media/terms/t-en-p-strikeout.mp3",
+"bytes": 14349,
+"cues": [
+[
+0.0,
+2.133
+]
+],
+"duration": 2.283,
+"hash": "f0af9f8bbad98f539c59cd8bf93ccb712d39ad74a797d7ea523427d6a8848b71",
+"kind": "term"
+},
+"t-en-p-sweeper": {
+"audio": "media/terms/t-en-p-sweeper.mp3",
+"bytes": 6861,
+"cues": [
+[
+0.0,
+0.896
+]
+],
+"duration": 1.046,
+"hash": "bb6a6c249ad5582a7e6f00db45988c8ef9f149293ed1054a01fd13f72c137180",
+"kind": "term"
+},
+"t-en-p-tempo": {
+"audio": "media/terms/t-en-p-tempo.mp3",
+"bytes": 11181,
+"cues": [
+[
+0.0,
+1.621
+]
+],
+"duration": 1.771,
+"hash": "dc8f5960d43b531c81024eaed603441497fb14f03e3d1d1da54742126efb92ab",
+"kind": "term"
+},
+"t-en-p-thumb": {
+"audio": "media/terms/t-en-p-thumb.mp3",
+"bytes": 5853,
+"cues": [
+[
+0.0,
+0.725
+]
+],
+"duration": 0.875,
+"hash": "56a3204664bd663d15eeee0a2cf568a6bea355fc1113bf5d57b37ce0811bf25f",
+"kind": "term"
+},
+"t-en-p-thumb-placement": {
+"audio": "media/terms/t-en-p-thumb-placement.mp3",
+"bytes": 8589,
+"cues": [
+[
+0.0,
+1.173
+]
+],
+"duration": 1.323,
+"hash": "3b4a9e0b4a14827142232c5759156cb726893ea62b534f8bf3563d452a8cf29d",
+"kind": "term"
+},
+"t-en-p-timing": {
+"audio": "media/terms/t-en-p-timing.mp3",
+"bytes": 12333,
+"cues": [
+[
+0.0,
+1.813
+]
+],
+"duration": 1.963,
+"hash": "32985848e20522522a8f14c37403831abadc427d34559ac444b0dac676ab673a",
+"kind": "term"
+},
+"t-en-p-to-grip": {
+"audio": "media/terms/t-en-p-to-grip.mp3",
+"bytes": 10893,
+"cues": [
+[
+0.0,
+1.557
+]
+],
+"duration": 1.707,
+"hash": "8ef4eed031b35a6e813458a870edb87d0c95f8629c54c6b51508eb35978ae014",
+"kind": "term"
+},
+"t-en-p-to-pitch": {
+"audio": "media/terms/t-en-p-to-pitch.mp3",
+"bytes": 12189,
+"cues": [
+[
+0.0,
+1.771
+]
+],
+"duration": 1.921,
+"hash": "400732f44c48f022a6d023a9455b2252c3c8543527aecb8a4e40e3837c9994ed",
+"kind": "term"
+},
+"t-en-p-tracking-device": {
+"audio": "media/terms/t-en-p-tracking-device.mp3",
+"bytes": 15213,
+"cues": [
+[
+0.0,
+2.283
+]
+],
+"duration": 2.433,
+"hash": "35e3de2e25b1d45eacf412dfe667c9058ab5a0e9ca226d4bfdc3d382aff6cc9b",
+"kind": "term"
+},
+"t-en-p-try": {
+"audio": "media/terms/t-en-p-try.mp3",
+"bytes": 5853,
+"cues": [
+[
+0.0,
+0.725
+]
+],
+"duration": 0.875,
+"hash": "03a391d20ae4aa52259a08f0a2aa8a2d968fe4a81e4acbd0fa5603abb2f70a50",
+"kind": "term"
+},
+"t-en-p-two-seam-fastball": {
+"audio": "media/terms/t-en-p-two-seam-fastball.mp3",
+"bytes": 10893,
+"cues": [
+[
+0.0,
+1.557
+]
+],
+"duration": 1.707,
+"hash": "87c8b4ced324dfad7d3fa9886fb8c91054a3d869203f9315fd5d758f080878de",
+"kind": "term"
+},
+"t-en-p-two-seam-grip": {
+"audio": "media/terms/t-en-p-two-seam-grip.mp3",
+"bytes": 8877,
+"cues": [
+[
+0.0,
+1.237
+]
+],
+"duration": 1.387,
+"hash": "6a224d6affae9b8933cea90de4fc5144914ef73946b09a03017d36e8d7f7f601",
+"kind": "term"
+},
+"t-en-p-umpire": {
+"audio": "media/terms/t-en-p-umpire.mp3",
+"bytes": 7869,
+"cues": [
+[
+0.0,
+1.067
+]
+],
+"duration": 1.217,
+"hash": "9c1d1a367cb0a412f1e587be6eee734ad722be86a405dd0e018aa772a1f1dcdf",
+"kind": "term"
+},
+"t-en-p-velocity": {
+"audio": "media/terms/t-en-p-velocity.mp3",
+"bytes": 8301,
+"cues": [
+[
+0.0,
+1.131
+]
+],
+"duration": 1.281,
+"hash": "01c3e8e76aea8d885afbe8143db85f544ca1adc9448ee311685e2d8515e3d225",
+"kind": "term"
+},
+"t-en-p-watch-video": {
+"audio": "media/terms/t-en-p-watch-video.mp3",
+"bytes": 10749,
+"cues": [
+[
+0.0,
+1.536
+]
+],
+"duration": 1.686,
+"hash": "b91a841b2915076f56c76bf6589746eb5099544d8bdb2b019e880580908d49bc",
+"kind": "term"
+},
+"t-en-p-workload": {
+"audio": "media/terms/t-en-p-workload.mp3",
+"bytes": 7581,
+"cues": [
+[
+0.0,
+1.003
+]
+],
+"duration": 1.153,
+"hash": "3c5d3abc36affc3de682bb17775f3eba969dd9076d5bbc7e208599c727f24ddb",
+"kind": "term"
+},
+"t-en-p-wrist": {
+"audio": "media/terms/t-en-p-wrist.mp3",
+"bytes": 5997,
+"cues": [
+[
+0.0,
+0.747
+]
+],
+"duration": 0.897,
+"hash": "4325301ad95ba01724e82d73b50e606ce1d46632d8efc4a3b6706e7fa4c1cd07",
+"kind": "term"
+},
+"t-es-d-again": {
+"audio": "media/terms/t-es-d-again.mp3",
+"bytes": 6861,
+"cues": [
+[
+0.0,
+0.896
+]
+],
+"duration": 1.046,
+"hash": "82ee85cdc4f87091d838c6718e1412d786b13ed8e67e348e5e9daef15e3cc0bd",
+"kind": "term"
+},
+"t-es-d-angle": {
+"audio": "media/terms/t-es-d-angle.mp3",
+"bytes": 6717,
+"cues": [
+[
+0.0,
+0.875
+]
+],
+"duration": 1.025,
+"hash": "c7d763a3aec3eab4fe06720df6cc577819aa20fd08225659bfd26a0fda44f0a5",
+"kind": "term"
+},
+"t-es-d-back-up": {
+"audio": "media/terms/t-es-d-back-up.mp3",
+"bytes": 7293,
+"cues": [
+[
+0.0,
+0.96
+]
+],
+"duration": 1.11,
+"hash": "6bef4a159e4353eb80c89b8b5cbd6a312a65ae9b04d59ccbccf96ed079009d65",
+"kind": "term"
+},
+"t-es-d-backhand": {
+"audio": "media/terms/t-es-d-backhand.mp3",
+"bytes": 6429,
+"cues": [
+[
+0.0,
+0.832
+]
+],
+"duration": 0.982,
+"hash": "b2a55f3633ed54b05a2c3155405b65ba3c22c86a786f49963aa508ed831c3eea",
+"kind": "term"
+},
+"t-es-d-bad-hop": {
+"audio": "media/terms/t-es-d-bad-hop.mp3",
+"bytes": 6861,
+"cues": [
+[
+0.0,
+0.896
+]
+],
+"duration": 1.046,
+"hash": "20ee754b9df66ea5c5604e126e09229fd99fa4c1261ff1f6efd4a7c3f69a84c5",
+"kind": "term"
+},
+"t-es-d-ball-ball": {
+"audio": "media/terms/t-es-d-ball-ball.mp3",
+"bytes": 7293,
+"cues": [
+[
+0.0,
+0.96
+]
+],
+"duration": 1.11,
+"hash": "f30e3539384fd699f3aea0a15c28d4d8a3c2962095824d3d2afbf2e70f31b390",
+"kind": "term"
+},
+"t-es-d-bare-hand": {
+"audio": "media/terms/t-es-d-bare-hand.mp3",
+"bytes": 8445,
+"cues": [
+[
+0.0,
+1.152
+]
+],
+"duration": 1.302,
+"hash": "37be7edbfb5862afc8d9c6befc36041f6c170e70be4df052acf979be9e5a512b",
+"kind": "term"
+},
+"t-es-d-better": {
+"audio": "media/terms/t-es-d-better.mp3",
+"bytes": 5421,
+"cues": [
+[
+0.0,
+0.661
+]
+],
+"duration": 0.811,
+"hash": "e31b25734e9b91e9f144b848829d4271a2a5feca7b27c3a6eaed6d647e0165d0",
+"kind": "term"
+},
+"t-es-d-bring-it-in": {
+"audio": "media/terms/t-es-d-bring-it-in.mp3",
+"bytes": 8157,
+"cues": [
+[
+0.0,
+1.109
+]
+],
+"duration": 1.259,
+"hash": "2c15f53fe093746fd1358d2bf4396fc588b806a793b98f04ba3e0f9d52377b6e",
+"kind": "term"
+},
+"t-es-d-call-it": {
+"audio": "media/terms/t-es-d-call-it.mp3",
+"bytes": 5709,
+"cues": [
+[
+0.0,
+0.704
+]
+],
+"duration": 0.854,
+"hash": "ccc937bb6a993889a100abf05a2434eb4f170b28c823980424fb5a46b0fd9784",
+"kind": "term"
+},
+"t-es-d-catch": {
+"audio": "media/terms/t-es-d-catch.mp3",
+"bytes": 6429,
+"cues": [
+[
+0.0,
+0.811
+]
+],
+"duration": 0.961,
+"hash": "cdf6c405697e08e81e22b867e1acfaf6c3fb52f8309d12f119774ac4173813ea",
+"kind": "term"
+},
+"t-es-d-charge-the-ball": {
+"audio": "media/terms/t-es-d-charge-the-ball.mp3",
+"bytes": 8733,
+"cues": [
+[
+0.0,
+1.195
+]
+],
+"duration": 1.345,
+"hash": "7309ee37d528d861e948d24a63467086a3420b95262c20d42c46ee5d292607ba",
+"kind": "term"
+},
+"t-es-d-come-get-it": {
+"audio": "media/terms/t-es-d-come-get-it.mp3",
+"bytes": 8589,
+"cues": [
+[
+0.0,
+1.173
+]
+],
+"duration": 1.323,
+"hash": "607606390cdfeab830b028dba5d4e4eba040d07c4b3f058d108b7873c70a6930",
+"kind": "term"
+},
+"t-es-d-come-in": {
+"audio": "media/terms/t-es-d-come-in.mp3",
+"bytes": 9885,
+"cues": [
+[
+0.0,
+1.408
+]
+],
+"duration": 1.558,
+"hash": "a39e56022e7a5965080407ca0738062ff35f22b67bd68703b9b05640e2fa2c2e",
+"kind": "term"
+},
+"t-es-d-communication": {
+"audio": "media/terms/t-es-d-communication.mp3",
+"bytes": 8301,
+"cues": [
+[
+0.0,
+1.131
+]
+],
+"duration": 1.281,
+"hash": "bf647e8b5359b828bdb8ee0374bd7130fa9504beeae31346876a10973e9d3095",
+"kind": "term"
+},
+"t-es-d-cover-the-bag": {
+"audio": "media/terms/t-es-d-cover-the-bag.mp3",
+"bytes": 8733,
+"cues": [
+[
+0.0,
+1.195
+]
+],
+"duration": 1.345,
+"hash": "ae31d1c419286c83e34b205dfd920d927add12dba686fde50d0ed0e9d4d5e4d2",
+"kind": "term"
+},
+"t-es-d-creep-step": {
+"audio": "media/terms/t-es-d-creep-step.mp3",
+"bytes": 11037,
+"cues": [
+[
+0.0,
+1.579
+]
+],
+"duration": 1.729,
+"hash": "8f4886a81dd2432dba18dce663a67dc614135c8bfb9e50efa5a9ec0fb69b10d4",
+"kind": "term"
+},
+"t-es-d-crossover-step": {
+"audio": "media/terms/t-es-d-crossover-step.mp3",
+"bytes": 8301,
+"cues": [
+[
+0.0,
+1.131
+]
+],
+"duration": 1.281,
+"hash": "91c568f6e4ada14f36f696255118342149d41905154b1b82b074d7e0928ccae5",
+"kind": "term"
+},
+"t-es-d-crow-hop": {
+"audio": "media/terms/t-es-d-crow-hop.mp3",
+"bytes": 8301,
+"cues": [
+[
+0.0,
+1.131
+]
+],
+"duration": 1.281,
+"hash": "9a0897451ae2c1be56a5ad383bad707f85cc00921652808936626829bf09b925",
+"kind": "term"
+},
+"t-es-d-cut": {
+"audio": "media/terms/t-es-d-cut.mp3",
+"bytes": 5853,
+"cues": [
+[
+0.0,
+0.725
+]
+],
+"duration": 0.875,
+"hash": "1e407ded1bfa48566f1d49405cdf45b2ceacec24d290d616baaa35d5d6488fba",
+"kind": "term"
+},
+"t-es-d-cutoff": {
+"audio": "media/terms/t-es-d-cutoff.mp3",
+"bytes": 7581,
+"cues": [
+[
+0.0,
+1.024
+]
+],
+"duration": 1.174,
+"hash": "02b26071aa0d88eb420cd8b86c0c8d8e930f7ee072c06235d326b932b4085e56",
+"kind": "term"
+},
+"t-es-d-depth": {
+"audio": "media/terms/t-es-d-depth.mp3",
+"bytes": 8445,
+"cues": [
+[
+0.0,
+1.152
+]
+],
+"duration": 1.302,
+"hash": "ae89660b850bf8784da52576a9e29b3f53e61b61689fecf3a947bf8ffb26d65d",
+"kind": "term"
+},
+"t-es-d-direction": {
+"audio": "media/terms/t-es-d-direction.mp3",
+"bytes": 7437,
+"cues": [
+[
+0.0,
+0.981
+]
+],
+"duration": 1.131,
+"hash": "40d7547757cf1ee31a31c8412e0ba43d22d3dfc8ba19b4bd6ef6805d6baa135d",
+"kind": "term"
+},
+"t-es-d-does-that-make-sense": {
+"audio": "media/terms/t-es-d-does-that-make-sense.mp3",
+"bytes": 7581,
+"cues": [
+[
+0.0,
+1.003
+]
+],
+"duration": 1.153,
+"hash": "015dd3c1e26b413307786aa1a15c90b1e3cf221f38c0f08790c8ea1349756dd7",
+"kind": "term"
+},
+"t-es-d-dont-backpedal": {
+"audio": "media/terms/t-es-d-dont-backpedal.mp3",
+"bytes": 9885,
+"cues": [
+[
+0.0,
+1.387
+]
+],
+"duration": 1.537,
+"hash": "7f92e95425f9009e953498f7e94489c202064c4f37fba30cab7f785448f41dba",
+"kind": "term"
+},
+"t-es-d-double-play": {
+"audio": "media/terms/t-es-d-double-play.mp3",
+"bytes": 7149,
+"cues": [
+[
+0.0,
+0.939
+]
+],
+"duration": 1.089,
+"hash": "9c5d652f5f673b7cb299cf500a7dfc1df8a6bf6a1ad541c33c183b295b541fa1",
+"kind": "term"
+},
+"t-es-d-drop-step": {
+"audio": "media/terms/t-es-d-drop-step.mp3",
+"bytes": 7581,
+"cues": [
+[
+0.0,
+1.003
+]
+],
+"duration": 1.153,
+"hash": "a6c32b62c31ef60ba3d8f5b63aeacc4b942415f9be050a9289796615c53dc1dd",
+"kind": "term"
+},
+"t-es-d-error": {
+"audio": "media/terms/t-es-d-error.mp3",
+"bytes": 5133,
+"cues": [
+[
+0.0,
+0.597
+]
+],
+"duration": 0.747,
+"hash": "7046875b520a47eaec46d3ef6cc6c0558cab01ddc91362007b80f65b33cf82af",
+"kind": "term"
+},
+"t-es-d-feed": {
+"audio": "media/terms/t-es-d-feed.mp3",
+"bytes": 7437,
+"cues": [
+[
+0.0,
+0.981
+]
+],
+"duration": 1.131,
+"hash": "43a5e3d467fb5bf82c0698528258ac792fc8b7c6cb05b977119a6034993a9bea",
+"kind": "term"
+},
+"t-es-d-feet-to-throw": {
+"audio": "media/terms/t-es-d-feet-to-throw.mp3",
+"bytes": 9021,
+"cues": [
+[
+0.0,
+1.259
+]
+],
+"duration": 1.409,
+"hash": "870dff5e3f506306d041dec88c116d13dc14ecadee0c9bb9a21c4d7f4bb47fb2",
+"kind": "term"
+},
+"t-es-d-field-the-ball": {
+"audio": "media/terms/t-es-d-field-the-ball.mp3",
+"bytes": 8877,
+"cues": [
+[
+0.0,
+1.237
+]
+],
+"duration": 1.387,
+"hash": "95c1c605d06179f386ab6962c8d857eca456f2aa66f50c2fb92319d45f41e609",
+"kind": "term"
+},
+"t-es-d-first-step": {
+"audio": "media/terms/t-es-d-first-step.mp3",
+"bytes": 9165,
+"cues": [
+[
+0.0,
+1.28
+]
+],
+"duration": 1.43,
+"hash": "a6a2e6fc026ff572a4db17d14c8633500c59c010051c518ee84c6c3e5a900143",
+"kind": "term"
+},
+"t-es-d-fly-ball": {
+"audio": "media/terms/t-es-d-fly-ball.mp3",
+"bytes": 6717,
+"cues": [
+[
+0.0,
+0.875
+]
+],
+"duration": 1.025,
+"hash": "5da670944b87bba7447735a3c6a8e1d4f0f217ea1971422553f30c924a282b38",
+"kind": "term"
+},
+"t-es-d-footwork": {
+"audio": "media/terms/t-es-d-footwork.mp3",
+"bytes": 8445,
+"cues": [
+[
+0.0,
+1.152
+]
+],
+"duration": 1.302,
+"hash": "f3a31292e4adb1e1296f58fe07c9a36c3bb877221de1c3f6479ccdba78fd81a1",
+"kind": "term"
+},
+"t-es-d-forehand": {
+"audio": "media/terms/t-es-d-forehand.mp3",
+"bytes": 6861,
+"cues": [
+[
+0.0,
+0.896
+]
+],
+"duration": 1.046,
+"hash": "5d84c28b2772e8c008ec1304d29272f302d7be1a0ad712cab119de694156163d",
+"kind": "term"
+},
+"t-es-d-funnel": {
+"audio": "media/terms/t-es-d-funnel.mp3",
+"bytes": 11325,
+"cues": [
+[
+0.0,
+1.643
+]
+],
+"duration": 1.793,
+"hash": "616f2b010e4e902728e28f9d2d282346fb2f1f5807c388a14a49613a1687849b",
+"kind": "term"
+},
+"t-es-d-gap": {
+"audio": "media/terms/t-es-d-gap.mp3",
+"bytes": 7149,
+"cues": [
+[
+0.0,
+0.939
+]
+],
+"duration": 1.089,
+"hash": "c1cc20d6f5efa1986aae7ced9438cab2149f24185915eda705a9bf43bbad36fa",
+"kind": "term"
+},
+"t-es-d-get-behind-the-ball": {
+"audio": "media/terms/t-es-d-get-behind-the-ball.mp3",
+"bytes": 11037,
+"cues": [
+[
+0.0,
+1.6
+]
+],
+"duration": 1.75,
+"hash": "88451203f19bd92a230b7a4c4edb9c58f665c1f351b430caccdbf41b0d10f1ee",
+"kind": "term"
+},
+"t-es-d-get-your-body-behind-it": {
+"audio": "media/terms/t-es-d-get-your-body-behind-it.mp3",
+"bytes": 11037,
+"cues": [
+[
+0.0,
+1.6
+]
+],
+"duration": 1.75,
+"hash": "88451203f19bd92a230b7a4c4edb9c58f665c1f351b430caccdbf41b0d10f1ee",
+"kind": "term"
+},
+"t-es-d-get-your-feet-moving": {
+"audio": "media/terms/t-es-d-get-your-feet-moving.mp3",
+"bytes": 11181,
+"cues": [
+[
+0.0,
+1.621
+]
+],
+"duration": 1.771,
+"hash": "b018dbbe66f184235c3d7407a57c3d174dc8935c99692065403a9a1290948cac",
+"kind": "term"
+},
+"t-es-d-glove": {
+"audio": "media/terms/t-es-d-glove.mp3",
+"bytes": 6861,
+"cues": [
+[
+0.0,
+0.896
+]
+],
+"duration": 1.046,
+"hash": "967679de2037c948a1deb5ee40aa7552827b017ca7d1af76615b70e7e4471ce2",
+"kind": "term"
+},
+"t-es-d-glove-down": {
+"audio": "media/terms/t-es-d-glove-down.mp3",
+"bytes": 8733,
+"cues": [
+[
+0.0,
+1.195
+]
+],
+"duration": 1.345,
+"hash": "d38dfb8346c7f830c497ab92514ec86d1e0e39f0649cd5a7e264f3aee0f54809",
+"kind": "term"
+},
+"t-es-d-glove-out-front": {
+"audio": "media/terms/t-es-d-glove-out-front.mp3",
+"bytes": 9885,
+"cues": [
+[
+0.0,
+1.387
+]
+],
+"duration": 1.537,
+"hash": "3f00f673f2a085df2661868422ca53e4d45a390297c23d050161777ac4d2515b",
+"kind": "term"
+},
+"t-es-d-glove-side": {
+"audio": "media/terms/t-es-d-glove-side.mp3",
+"bytes": 9885,
+"cues": [
+[
+0.0,
+1.387
+]
+],
+"duration": 1.537,
+"hash": "5dbe62e6450651d35bf25fd32cefd16012d8ed7b25093fe38a0ba41898264f73",
+"kind": "term"
+},
+"t-es-d-go-back": {
+"audio": "media/terms/t-es-d-go-back.mp3",
+"bytes": 8301,
+"cues": [
+[
+0.0,
+1.131
+]
+],
+"duration": 1.281,
+"hash": "ac8de903125a6ca58af59a6b2138791439759c6fe58ad2c69ed6ddc72e227092",
+"kind": "term"
+},
+"t-es-d-ground-ball": {
+"audio": "media/terms/t-es-d-ground-ball.mp3",
+"bytes": 7581,
+"cues": [
+[
+0.0,
+1.024
+]
+],
+"duration": 1.174,
+"hash": "054b5bd3b5d50e20cf25d20cddf6b7d0c347f7d2acbf70c2c6aaddead02f5fbc",
+"kind": "term"
+},
+"t-es-d-hands-out-front": {
+"audio": "media/terms/t-es-d-hands-out-front.mp3",
+"bytes": 10461,
+"cues": [
+[
+0.0,
+1.493
+]
+],
+"duration": 1.643,
+"hash": "5409d482296f98f924e1a78115ced694161686221ddd26fec25768f441984af8",
+"kind": "term"
+},
+"t-es-d-hit-the-cutoff": {
+"audio": "media/terms/t-es-d-hit-the-cutoff.mp3",
+"bytes": 9165,
+"cues": [
+[
+0.0,
+1.28
+]
+],
+"duration": 1.43,
+"hash": "e1cab744fc41a9dd550a1351f960421a21e9407d13b079714c75187070eca08e",
+"kind": "term"
+},
+"t-es-d-hole": {
+"audio": "media/terms/t-es-d-hole.mp3",
+"bytes": 6429,
+"cues": [
+[
+0.0,
+0.811
+]
+],
+"duration": 0.961,
+"hash": "a806c8645f0fdb13df079fb049e677cb5c208812ada81d738ae615be3ee5fc97",
+"kind": "term"
+},
+"t-es-d-i-got-it": {
+"audio": "media/terms/t-es-d-i-got-it.mp3",
+"bytes": 6717,
+"cues": [
+[
+0.0,
+0.875
+]
+],
+"duration": 1.025,
+"hash": "2885f5d1f6b817c166493a813950254ea0acecfc3344bcad1a513a3624a9c8ff",
+"kind": "term"
+},
+"t-es-d-keep-it-low": {
+"audio": "media/terms/t-es-d-keep-it-low.mp3",
+"bytes": 9021,
+"cues": [
+[
+0.0,
+1.259
+]
+],
+"duration": 1.409,
+"hash": "8c0cefbee83973315b069b69cee07c6848a2fb3929e930d10e70802fc5c0fec0",
+"kind": "term"
+},
+"t-es-d-keep-your-eyes-on-the-ball": {
+"audio": "media/terms/t-es-d-keep-your-eyes-on-the-ball.mp3",
+"bytes": 13197,
+"cues": [
+[
+0.0,
+1.941
+]
+],
+"duration": 2.091,
+"hash": "8ba29131d3ef9ac372b3d7b76c4bd96cb5dca931266afdef63bb9a19997f967c",
+"kind": "term"
+},
+"t-es-d-knees": {
+"audio": "media/terms/t-es-d-knees.mp3",
+"bytes": 9741,
+"cues": [
+[
+0.0,
+1.365
+]
+],
+"duration": 1.515,
+"hash": "a4242104a5ebaf55ef527c0e373f734b0550ee58b0d4802fb0fa6e1fbaedce4c",
+"kind": "term"
+},
+"t-es-d-last-one": {
+"audio": "media/terms/t-es-d-last-one.mp3",
+"bytes": 6861,
+"cues": [
+[
+0.0,
+0.896
+]
+],
+"duration": 1.046,
+"hash": "7f4adb1cdf0d7b346a7a8b1092974c64916cedf9ef1ad6b2d70809e914bebf09",
+"kind": "term"
+},
+"t-es-d-let-it-go": {
+"audio": "media/terms/t-es-d-let-it-go.mp3",
+"bytes": 8445,
+"cues": [
+[
+0.0,
+1.152
+]
+],
+"duration": 1.302,
+"hash": "acdaf7246c67fadec82b39c651aa650363aee618aa3452bbdf807c3c0943ce46",
+"kind": "term"
+},
+"t-es-d-lets-go": {
+"audio": "media/terms/t-es-d-lets-go.mp3",
+"bytes": 5565,
+"cues": [
+[
+0.0,
+0.683
+]
+],
+"duration": 0.833,
+"hash": "e58b5946fd74a5daac75c507abb46bce3ac2f6a140a803bd8757cfa74ec55fcf",
+"kind": "term"
+},
+"t-es-d-line-drive": {
+"audio": "media/terms/t-es-d-line-drive.mp3",
+"bytes": 5421,
+"cues": [
+[
+0.0,
+0.661
+]
+],
+"duration": 0.811,
+"hash": "45a1a7f676679c110ae47cf6c30adcd9856120eeb736fc8641ca1b4dff2bd0bd",
+"kind": "term"
+},
+"t-es-d-line-up": {
+"audio": "media/terms/t-es-d-line-up.mp3",
+"bytes": 7149,
+"cues": [
+[
+0.0,
+0.939
+]
+],
+"duration": 1.089,
+"hash": "95d2a945ef6c50556860817e682f29a8b03c47b1b997a48af4fd27f94bd6244d",
+"kind": "term"
+},
+"t-es-d-make-the-play": {
+"audio": "media/terms/t-es-d-make-the-play.mp3",
+"bytes": 8733,
+"cues": [
+[
+0.0,
+1.195
+]
+],
+"duration": 1.345,
+"hash": "fb06fc2013859414d2ce0f5b7f7cd1af891fdb585f2e0f77c2c4d845d7b6effb",
+"kind": "term"
+},
+"t-es-d-mine": {
+"audio": "media/terms/t-es-d-mine.mp3",
+"bytes": 5277,
+"cues": [
+[
+0.0,
+0.619
+]
+],
+"duration": 0.769,
+"hash": "0717a1510e31d59dc8dd32bf9f53966926cf79cf048b91708f16ab710711aad9",
+"kind": "term"
+},
+"t-es-d-move-your-feet": {
+"audio": "media/terms/t-es-d-move-your-feet.mp3",
+"bytes": 8013,
+"cues": [
+[
+0.0,
+1.088
+]
+],
+"duration": 1.238,
+"hash": "30b81c7e8a999e049a614e792c136621e7df2b6b3cd9839f8fd4c66af37ca6ef",
+"kind": "term"
+},
+"t-es-d-next-ball": {
+"audio": "media/terms/t-es-d-next-ball.mp3",
+"bytes": 8013,
+"cues": [
+[
+0.0,
+1.088
+]
+],
+"duration": 1.238,
+"hash": "5f78d6a8fc4811c7dafaa85a11011ae81051d9fda3d9f783fddffc78277fcc17",
+"kind": "term"
+},
+"t-es-d-nice-job": {
+"audio": "media/terms/t-es-d-nice-job.mp3",
+"bytes": 8301,
+"cues": [
+[
+0.0,
+1.131
+]
+],
+"duration": 1.281,
+"hash": "b11a8c96e7a74a091ded958164c5948cc48d189f95bd8f309f5ea84a14954c19",
+"kind": "term"
+},
+"t-es-d-one-hop": {
+"audio": "media/terms/t-es-d-one-hop.mp3",
+"bytes": 7725,
+"cues": [
+[
+0.0,
+1.045
+]
+],
+"duration": 1.195,
+"hash": "c9035b91c17a3c9f4c05973358cd0a7d7181e3eee5b9e8383d5281e711c5c66d",
+"kind": "term"
+},
+"t-es-d-one-more-time": {
+"audio": "media/terms/t-es-d-one-more-time.mp3",
+"bytes": 8013,
+"cues": [
+[
+0.0,
+1.088
+]
+],
+"duration": 1.238,
+"hash": "61f7d75ed57cd1307d394e8d05c81c7e6ff6b8a20f0cdf19b43124645b58708f",
+"kind": "term"
+},
+"t-es-d-open-your-hips": {
+"audio": "media/terms/t-es-d-open-your-hips.mp3",
+"bytes": 8733,
+"cues": [
+[
+0.0,
+1.216
+]
+],
+"duration": 1.366,
+"hash": "95e0ef6ecd42ab40be0db2be8103fa09298ff02c3aaf487ec8c51d5197902e84",
+"kind": "term"
+},
+"t-es-d-pivot": {
+"audio": "media/terms/t-es-d-pivot.mp3",
+"bytes": 7149,
+"cues": [
+[
+0.0,
+0.939
+]
+],
+"duration": 1.089,
+"hash": "e1688dd660f9f08dbeeefa47aae2e901369bf68aff03508f374f47c6179153fa",
+"kind": "term"
+},
+"t-es-d-pop-up": {
+"audio": "media/terms/t-es-d-pop-up.mp3",
+"bytes": 9165,
+"cues": [
+[
+0.0,
+1.28
+]
+],
+"duration": 1.43,
+"hash": "0f183da8668bf3dede49298a841e210f8882f38a160720086019011f9245c4cd",
+"kind": "term"
+},
+"t-es-d-positioning": {
+"audio": "media/terms/t-es-d-positioning.mp3",
+"bytes": 9453,
+"cues": [
+[
+0.0,
+1.323
+]
+],
+"duration": 1.473,
+"hash": "01c2895238ae752adc7d1eb6f7ead337037b449f50b66ee73868b560756e7bd7",
+"kind": "term"
+},
+"t-es-d-prep-step": {
+"audio": "media/terms/t-es-d-prep-step.mp3",
+"bytes": 10173,
+"cues": [
+[
+0.0,
+1.451
+]
+],
+"duration": 1.601,
+"hash": "01046c8cce167e846e176d2751de21d9c11c50722d1f5e5eedd9830d8fd0f74b",
+"kind": "term"
+},
+"t-es-d-priority": {
+"audio": "media/terms/t-es-d-priority.mp3",
+"bytes": 7005,
+"cues": [
+[
+0.0,
+0.917
+]
+],
+"duration": 1.067,
+"hash": "037a54c4ee00d867ed99336e2b3df20899a9d6bace8d051575056728e8cbf5e9",
+"kind": "term"
+},
+"t-es-d-pull-hitter": {
+"audio": "media/terms/t-es-d-pull-hitter.mp3",
+"bytes": 8877,
+"cues": [
+[
+0.0,
+1.237
+]
+],
+"duration": 1.387,
+"hash": "777fd402b03c7cd1d7078eb5c75b4d18dbd1b19e260d8a97582d4e5539497f4f",
+"kind": "term"
+},
+"t-es-d-read": {
+"audio": "media/terms/t-es-d-read.mp3",
+"bytes": 6429,
+"cues": [
+[
+0.0,
+0.811
+]
+],
+"duration": 0.961,
+"hash": "02b4732b72c778def11b63d140f74f740e29d06ddcd125cf715ecb48dd40ae70",
+"kind": "term"
+},
+"t-es-d-read-the-hop": {
+"audio": "media/terms/t-es-d-read-the-hop.mp3",
+"bytes": 7725,
+"cues": [
+[
+0.0,
+1.045
+]
+],
+"duration": 1.195,
+"hash": "02d9130157a24c2351a8f1d5420c312f24d7b5599754ab6eb60a3e68db099fc1",
+"kind": "term"
+},
+"t-es-d-ready-position": {
+"audio": "media/terms/t-es-d-ready-position.mp3",
+"bytes": 9741,
+"cues": [
+[
+0.0,
+1.365
+]
+],
+"duration": 1.515,
+"hash": "998fd7f508140beae60e455e3833056d2731a58e149471a4a069d00345e012e5",
+"kind": "term"
+},
+"t-es-d-relay": {
+"audio": "media/terms/t-es-d-relay.mp3",
+"bytes": 7005,
+"cues": [
+[
+0.0,
+0.917
+]
+],
+"duration": 1.067,
+"hash": "3343affe92e51ef5b464cab981623165b154f5cface8216cf3bea8794fdf837f",
+"kind": "term"
+},
+"t-es-d-rep": {
+"audio": "media/terms/t-es-d-rep.mp3",
+"bytes": 7581,
+"cues": [
+[
+0.0,
+1.003
+]
+],
+"duration": 1.153,
+"hash": "1b73a9cb8ed871de9f495a93ee6030320fcc44d14ade57a081ec49f76a4b9ecc",
+"kind": "term"
+},
+"t-es-d-reset": {
+"audio": "media/terms/t-es-d-reset.mp3",
+"bytes": 10605,
+"cues": [
+[
+0.0,
+1.515
+]
+],
+"duration": 1.665,
+"hash": "4427e5851e2c494148eaad627e42fdc7c97cbac3af77899c2564f69a24d0decc",
+"kind": "term"
+},
+"t-es-d-route": {
+"audio": "media/terms/t-es-d-route.mp3",
+"bytes": 6429,
+"cues": [
+[
+0.0,
+0.811
+]
+],
+"duration": 0.961,
+"hash": "839cb7e82ee5c9dc13592e140d799dbbda8eb31fa7262e27715dbd5caf35ddc8",
+"kind": "term"
+},
+"t-es-d-routine-play": {
+"audio": "media/terms/t-es-d-routine-play.mp3",
+"bytes": 9597,
+"cues": [
+[
+0.0,
+1.344
+]
+],
+"duration": 1.494,
+"hash": "c63a6a6a462bf094d270372a881ccfb66ae26dab24c09bd8e4ef292c4f979292",
+"kind": "term"
+},
+"t-es-d-see-it-into-the-glove": {
+"audio": "media/terms/t-es-d-see-it-into-the-glove.mp3",
+"bytes": 12765,
+"cues": [
+[
+0.0,
+1.877
+]
+],
+"duration": 2.027,
+"hash": "0fa33ef27f9c6bb012a02a846234a7ad80b2da592b9feb723424d64172091b29",
+"kind": "term"
+},
+"t-es-d-set-your-feet": {
+"audio": "media/terms/t-es-d-set-your-feet.mp3",
+"bytes": 8157,
+"cues": [
+[
+0.0,
+1.109
+]
+],
+"duration": 1.259,
+"hash": "e9854b97dd39138488eb86981709566ca9ac18d56b1ba8a945031b474c9cb7a2",
+"kind": "term"
+},
+"t-es-d-shade": {
+"audio": "media/terms/t-es-d-shade.mp3",
+"bytes": 6717,
+"cues": [
+[
+0.0,
+0.875
+]
+],
+"duration": 1.025,
+"hash": "f73dd4aabda1f1b0cb4f98fb51e172cf06f2f49cba8a955589a141ab2087022c",
+"kind": "term"
+},
+"t-es-d-shift": {
+"audio": "media/terms/t-es-d-shift.mp3",
+"bytes": 6285,
+"cues": [
+[
+0.0,
+0.789
+]
+],
+"duration": 0.939,
+"hash": "3b6150d2dab4e79cfdf5fa20a2bc53419a3b33aa671e93510748b1c1100a96fd",
+"kind": "term"
+},
+"t-es-d-short-hop": {
+"audio": "media/terms/t-es-d-short-hop.mp3",
+"bytes": 8013,
+"cues": [
+[
+0.0,
+1.088
+]
+],
+"duration": 1.238,
+"hash": "7d992a5c3fddd9dded32d817e5bb587a1dab4d59f872d9f1e3bded0d57a8b1d2",
+"kind": "term"
+},
+"t-es-d-show-me": {
+"audio": "media/terms/t-es-d-show-me.mp3",
+"bytes": 7293,
+"cues": [
+[
+0.0,
+0.96
+]
+],
+"duration": 1.11,
+"hash": "0d133517e5a914121712caeaec2e289c22d7b7476e4a5d56160a78a1677ffc17",
+"kind": "term"
+},
+"t-es-d-shuffle": {
+"audio": "media/terms/t-es-d-shuffle.mp3",
+"bytes": 10749,
+"cues": [
+[
+0.0,
+1.536
+]
+],
+"duration": 1.686,
+"hash": "fae098aaf6ab3012b599349967cfffe8291bf4b2c8e959c2ad64851048939011",
+"kind": "term"
+},
+"t-es-d-soft-hands": {
+"audio": "media/terms/t-es-d-soft-hands.mp3",
+"bytes": 7725,
+"cues": [
+[
+0.0,
+1.045
+]
+],
+"duration": 1.195,
+"hash": "4a6a44e0991e3ede22d82236f2cb027d1ccdaf7580f9c84452e3fa30b76c5f43",
+"kind": "term"
+},
+"t-es-d-stay-down": {
+"audio": "media/terms/t-es-d-stay-down.mp3",
+"bytes": 8589,
+"cues": [
+[
+0.0,
+1.173
+]
+],
+"duration": 1.323,
+"hash": "3f4a8398a22ead81b74fe36cd5e8d8c28258c5155b87e7bbcac4f2524a2c39bc",
+"kind": "term"
+},
+"t-es-d-stay-low": {
+"audio": "media/terms/t-es-d-stay-low.mp3",
+"bytes": 8301,
+"cues": [
+[
+0.0,
+1.131
+]
+],
+"duration": 1.281,
+"hash": "33f1d7eb59c26f80a0489f13afe82a2e909d64baad691b6b8112a457c07cd7b5",
+"kind": "term"
+},
+"t-es-d-stop-the-ball": {
+"audio": "media/terms/t-es-d-stop-the-ball.mp3",
+"bytes": 9885,
+"cues": [
+[
+0.0,
+1.408
+]
+],
+"duration": 1.558,
+"hash": "80c027e3ff24abd4af1e098a8f8b93b4693b6467076d3fdbc9edcc82aab7467f",
+"kind": "term"
+},
+"t-es-d-take-a-better-angle": {
+"audio": "media/terms/t-es-d-take-a-better-angle.mp3",
+"bytes": 10317,
+"cues": [
+[
+0.0,
+1.472
+]
+],
+"duration": 1.622,
+"hash": "95156333f578cb7ced89c08c04e62b41273e13a56e8d1da66d25a9cf024c9517",
+"kind": "term"
+},
+"t-es-d-take-your-time": {
+"audio": "media/terms/t-es-d-take-your-time.mp3",
+"bytes": 9885,
+"cues": [
+[
+0.0,
+1.387
+]
+],
+"duration": 1.537,
+"hash": "fccc82f92f80b7ce1e96e95891de46869729562391a3a1b607d3bd21a76e9c75",
+"kind": "term"
+},
+"t-es-d-thats-it": {
+"audio": "media/terms/t-es-d-thats-it.mp3",
+"bytes": 6429,
+"cues": [
+[
+0.0,
+0.832
+]
+],
+"duration": 0.982,
+"hash": "d37593756826cdab33f8dc2b1320d5397c6ac08e43a2f25016e7e7c5ab4a36ba",
+"kind": "term"
+},
+"t-es-d-three-more": {
+"audio": "media/terms/t-es-d-three-more.mp3",
+"bytes": 11469,
+"cues": [
+[
+0.0,
+1.664
+]
+],
+"duration": 1.814,
+"hash": "05a23bf1995b95a1164e25c6395887ae2c35f458fbd4dbd73ccc226be426b387",
+"kind": "term"
+},
+"t-es-d-throw": {
+"audio": "media/terms/t-es-d-throw.mp3",
+"bytes": 5421,
+"cues": [
+[
+0.0,
+0.661
+]
+],
+"duration": 0.811,
+"hash": "1b1b74ea29b5c171606b3455cf950499871f0d1f69b21031e74754e99417145c",
+"kind": "term"
+},
+"t-es-d-throw-to-first": {
+"audio": "media/terms/t-es-d-throw-to-first.mp3",
+"bytes": 8589,
+"cues": [
+[
+0.0,
+1.173
+]
+],
+"duration": 1.323,
+"hash": "c3d1907d378b97ab1e650e8ca3c0bb7330a9d987eb3c5b2260180534731b6b0d",
+"kind": "term"
+},
+"t-es-d-throwing-lane": {
+"audio": "media/terms/t-es-d-throwing-lane.mp3",
+"bytes": 8301,
+"cues": [
+[
+0.0,
+1.131
+]
+],
+"duration": 1.281,
+"hash": "b96c5b4afea8040ce603bc6fdce067bda7d7f686c680eee7e87e92ff832ee78e",
+"kind": "term"
+},
+"t-es-d-throwing-side": {
+"audio": "media/terms/t-es-d-throwing-side.mp3",
+"bytes": 8733,
+"cues": [
+[
+0.0,
+1.195
+]
+],
+"duration": 1.345,
+"hash": "af77d51308448d17a63c742e830276b33a146a5f34590692504090c493f3af19",
+"kind": "term"
+},
+"t-es-d-transfer": {
+"audio": "media/terms/t-es-d-transfer.mp3",
+"bytes": 8877,
+"cues": [
+[
+0.0,
+1.237
+]
+],
+"duration": 1.387,
+"hash": "fa86b53cdf648a3249a7389bdc35dce6aa4ac188a75352613bbbd613177c1b97",
+"kind": "term"
+},
+"t-es-d-try-again": {
+"audio": "media/terms/t-es-d-try-again.mp3",
+"bytes": 10893,
+"cues": [
+[
+0.0,
+1.557
+]
+],
+"duration": 1.707,
+"hash": "ff275bdc4b7ac3771d9befdd25ae96c5d7ee399a283d810dd02ba0dcb7c07458",
+"kind": "term"
+},
+"t-es-d-turn-two": {
+"audio": "media/terms/t-es-d-turn-two.mp3",
+"bytes": 9453,
+"cues": [
+[
+0.0,
+1.323
+]
+],
+"duration": 1.473,
+"hash": "2e8f2d51086a562f0ba7f0aa2e8d23a8bfd43b08e9396bec449c8b9072208915",
+"kind": "term"
+},
+"t-es-d-two-call": {
+"audio": "media/terms/t-es-d-two-call.mp3",
+"bytes": 5277,
+"cues": [
+[
+0.0,
+0.618
+]
+],
+"duration": 0.768,
+"hash": "bc927b7b14e4ba267fc1c36fd8fcc2a1a1fbeea40abaef1e2eeecbb83951cf0a",
+"kind": "term"
+},
+"t-es-d-watch-me": {
+"audio": "media/terms/t-es-d-watch-me.mp3",
+"bytes": 5853,
+"cues": [
+[
+0.0,
+0.725
+]
+],
+"duration": 0.875,
+"hash": "d0ae6aee16c64ac04bce728bac435bf26b6c3615a4338c0a15610de17b5ba007",
+"kind": "term"
+},
+"t-es-d-weight-forward": {
+"audio": "media/terms/t-es-d-weight-forward.mp3",
+"bytes": 11901,
+"cues": [
+[
+0.0,
+1.728
+]
+],
+"duration": 1.878,
+"hash": "ccecbd5cf306044a0704e0613547eb117028df2417dbbc11d1bc837601142d35",
+"kind": "term"
+},
+"t-es-d-what-did-you-feel": {
+"audio": "media/terms/t-es-d-what-did-you-feel.mp3",
+"bytes": 9453,
+"cues": [
+[
+0.0,
+1.323
+]
+],
+"duration": 1.473,
+"hash": "9827169152424d1ade660137912cb5fff7070a9c70dc653a24252a65ff377855",
+"kind": "term"
+},
+"t-es-d-work-through-the-ball": {
+"audio": "media/terms/t-es-d-work-through-the-ball.mp3",
+"bytes": 12333,
+"cues": [
+[
+0.0,
+1.813
+]
+],
+"duration": 1.963,
+"hash": "2c36fec4f758299646739e39d1c1aed1aee30e7a8a7c9f1e1c1547e620ceee72",
+"kind": "term"
+},
+"t-es-d-you-you": {
+"audio": "media/terms/t-es-d-you-you.mp3",
+"bytes": 7581,
+"cues": [
+[
+0.0,
+1.003
+]
+],
+"duration": 1.153,
+"hash": "15eb7eb8f752b99356bc563afa64baf323b41354541205409ea455b738a3aba9",
+"kind": "term"
+},
+"t-es-d-your-turn": {
+"audio": "media/terms/t-es-d-your-turn.mp3",
+"bytes": 6573,
+"cues": [
+[
+0.0,
+0.853
+]
+],
+"duration": 1.003,
+"hash": "0b98c3c359c08c1895af81127b29ea28746795c1cda52938c8b6f125f9be7641",
+"kind": "term"
+},
+"t-es-p-active-spin": {
+"audio": "media/terms/t-es-p-active-spin.mp3",
+"bytes": 10029,
+"cues": [
+[
+0.0,
+1.429
+]
+],
+"duration": 1.579,
+"hash": "e1a2ed9b129156795d1c30439bc1c4f543dab41b9c8a325061b3ee25860ee926",
+"kind": "term"
+},
+"t-es-p-again": {
+"audio": "media/terms/t-es-p-again.mp3",
+"bytes": 6861,
+"cues": [
+[
+0.0,
+0.896
+]
+],
+"duration": 1.046,
+"hash": "82ee85cdc4f87091d838c6718e1412d786b13ed8e67e348e5e9daef15e3cc0bd",
+"kind": "term"
+},
+"t-es-p-arm": {
+"audio": "media/terms/t-es-p-arm.mp3",
+"bytes": 6861,
+"cues": [
+[
+0.0,
+0.896
+]
+],
+"duration": 1.046,
+"hash": "d2193059129a983e5993df0a4ec7497829ffb4aba700ee8076fe519919232fec",
+"kind": "term"
+},
+"t-es-p-arm-angle": {
+"audio": "media/terms/t-es-p-arm-angle.mp3",
+"bytes": 9885,
+"cues": [
+[
+0.0,
+1.408
+]
+],
+"duration": 1.558,
+"hash": "e43ed14508cd66b6633a8a94fb68b6861cd4664271c861c7d237262463ef01de",
+"kind": "term"
+},
+"t-es-p-arm-path": {
+"audio": "media/terms/t-es-p-arm-path.mp3",
+"bytes": 11037,
+"cues": [
+[
+0.0,
+1.579
+]
+],
+"duration": 1.729,
+"hash": "dc2592602d56bac8bf7457e370f9f5768b033afebc00a8c48ef244d43f8b139f",
+"kind": "term"
+},
+"t-es-p-arm-soreness": {
+"audio": "media/terms/t-es-p-arm-soreness.mp3",
+"bytes": 6429,
+"cues": [
+[
+0.0,
+0.832
+]
+],
+"duration": 0.982,
+"hash": "82ac0074fdf6ffd2dcccd0997dae1d334f49b573aa65937e51621568189a6f8f",
+"kind": "term"
+},
+"t-es-p-balance": {
+"audio": "media/terms/t-es-p-balance.mp3",
+"bytes": 7869,
+"cues": [
+[
+0.0,
+1.067
+]
+],
+"duration": 1.217,
+"hash": "b4a42dc3b5f8f3edc8abec2256f9f4696ce879bea2030e29d24ea8b265c68446",
+"kind": "term"
+},
+"t-es-p-ball": {
+"audio": "media/terms/t-es-p-ball.mp3",
+"bytes": 6861,
+"cues": [
+[
+0.0,
+0.896
+]
+],
+"duration": 1.046,
+"hash": "62afd0831193595cbabd0a437bff58454df4b51b1197161b51ab083408bbfea6",
+"kind": "term"
+},
+"t-es-p-ball-count": {
+"audio": "media/terms/t-es-p-ball-count.mp3",
+"bytes": 5853,
+"cues": [
+[
+0.0,
+0.725
+]
+],
+"duration": 0.875,
+"hash": "b1a56a8d44eebdedbaa54e8e7264c5eca1dfd457efec28f8316d1c7d7b103200",
+"kind": "term"
+},
+"t-es-p-break": {
+"audio": "media/terms/t-es-p-break.mp3",
+"bytes": 7005,
+"cues": [
+[
+0.0,
+0.917
+]
+],
+"duration": 1.067,
+"hash": "8581147a53e6f2d4172d353050be22d2eb3f4b1dd8838f6338a89ded07e914f6",
+"kind": "term"
+},
+"t-es-p-bring-together": {
+"audio": "media/terms/t-es-p-bring-together.mp3",
+"bytes": 5853,
+"cues": [
+[
+0.0,
+0.725
+]
+],
+"duration": 0.875,
+"hash": "d521e5aaed88f8268b54138c593a8fe486d838f2ff4a863a9327073993ba7508",
+"kind": "term"
+},
+"t-es-p-bullpen": {
+"audio": "media/terms/t-es-p-bullpen.mp3",
+"bytes": 7149,
+"cues": [
+[
+0.0,
+0.939
+]
+],
+"duration": 1.089,
+"hash": "260c6342e60d658f43985ad6bae0f0e8087f7d5afbbf9a2ad0f793bfb60905b4",
+"kind": "term"
+},
+"t-es-p-bullpen-session": {
+"audio": "media/terms/t-es-p-bullpen-session.mp3",
+"bytes": 10173,
+"cues": [
+[
+0.0,
+1.451
+]
+],
+"duration": 1.601,
+"hash": "852bb190a27ac0d987df28787e1733f7946a630eb9300ddbec20a3b2a160120c",
+"kind": "term"
+},
+"t-es-p-carry": {
+"audio": "media/terms/t-es-p-carry.mp3",
+"bytes": 6429,
+"cues": [
+[
+0.0,
+0.811
+]
+],
+"duration": 0.961,
+"hash": "fa61db2475e518d32c431a66a2cfaf70349be911218fe9f9be90068d28fa68ba",
+"kind": "term"
+},
+"t-es-p-catcher": {
+"audio": "media/terms/t-es-p-catcher.mp3",
+"bytes": 7149,
+"cues": [
+[
+0.0,
+0.939
+]
+],
+"duration": 1.089,
+"hash": "3dcf78018b36be7c11235205ed808ccd0a32aafd1c6b43d32bb9bd8e5a68570e",
+"kind": "term"
+},
+"t-es-p-changeup": {
+"audio": "media/terms/t-es-p-changeup.mp3",
+"bytes": 7005,
+"cues": [
+[
+0.0,
+0.917
+]
+],
+"duration": 1.067,
+"hash": "f50086d8c47bd744d2e8fcbcdc741c126ae247aaf707fc03dd48055427ec0e6e",
+"kind": "term"
+},
+"t-es-p-circle-change": {
+"audio": "media/terms/t-es-p-circle-change.mp3",
+"bytes": 9885,
+"cues": [
+[
+0.0,
+1.387
+]
+],
+"duration": 1.537,
+"hash": "29fb37f3dc514500d2cfed3ebee8af26ed808aa698d7d585db5f72e287147980",
+"kind": "term"
+},
+"t-es-p-command": {
+"audio": "media/terms/t-es-p-command.mp3",
+"bytes": 7437,
+"cues": [
+[
+0.0,
+0.981
+]
+],
+"duration": 1.131,
+"hash": "58b18a89afe15e14522444e4b69856ab112f9a1637011ee1a51ee47cff1770db",
+"kind": "term"
+},
+"t-es-p-consistency": {
+"audio": "media/terms/t-es-p-consistency.mp3",
+"bytes": 8733,
+"cues": [
+[
+0.0,
+1.216
+]
+],
+"duration": 1.366,
+"hash": "8b21938059a1d1e80af63b53df125c8512ecec07f80354a4144ed5858574d494",
+"kind": "term"
+},
+"t-es-p-curveball": {
+"audio": "media/terms/t-es-p-curveball.mp3",
+"bytes": 6573,
+"cues": [
+[
+0.0,
+0.853
+]
+],
+"duration": 1.003,
+"hash": "a3b0f33d5d3173ca267b01bc3ce228af5344193ddd8005e84043e93d12f3e3b5",
+"kind": "term"
+},
+"t-es-p-cutter": {
+"audio": "media/terms/t-es-p-cutter.mp3",
+"bytes": 7149,
+"cues": [
+[
+0.0,
+0.939
+]
+],
+"duration": 1.089,
+"hash": "c746808532786217440ef44ef2a23234670d3b1cd21fab0d721200bea09f5273",
+"kind": "term"
+},
+"t-es-p-deep-grip": {
+"audio": "media/terms/t-es-p-deep-grip.mp3",
+"bytes": 9165,
+"cues": [
+[
+0.0,
+1.28
+]
+],
+"duration": 1.43,
+"hash": "71b02533436c76c8f954e40fcdd0c4cad76f9f0d048b0f874f2363f7ace6afb4",
+"kind": "term"
+},
+"t-es-p-does-it-feel-natural": {
+"audio": "media/terms/t-es-p-does-it-feel-natural.mp3",
+"bytes": 9453,
+"cues": [
+[
+0.0,
+1.323
+]
+],
+"duration": 1.473,
+"hash": "79f0fd5afb31b2f69888fd8917742a0c9d3af82353c1dab7b119280195cc2622",
+"kind": "term"
+},
+"t-es-p-drop": {
+"audio": "media/terms/t-es-p-drop.mp3",
+"bytes": 6861,
+"cues": [
+[
+0.0,
+0.896
+]
+],
+"duration": 1.046,
+"hash": "be0e1592a49ef94c3cf42ec24f1d58d9f4e997881006e2f4ee98ef7274ba6381",
+"kind": "term"
+},
+"t-es-p-experiment-grip": {
+"audio": "media/terms/t-es-p-experiment-grip.mp3",
+"bytes": 8733,
+"cues": [
+[
+0.0,
+1.195
+]
+],
+"duration": 1.345,
+"hash": "663ce75cf03681ce3e1c2bb42106b9553e0901dd5ebb19598c9bf6df1a45c15c",
+"kind": "term"
+},
+"t-es-p-extension": {
+"audio": "media/terms/t-es-p-extension.mp3",
+"bytes": 7725,
+"cues": [
+[
+0.0,
+1.045
+]
+],
+"duration": 1.195,
+"hash": "bb7d209a335be76e533474d458a12cb89eeeb64e47fe70a354eba8bf31ed36bd",
+"kind": "term"
+},
+"t-es-p-fastball": {
+"audio": "media/terms/t-es-p-fastball.mp3",
+"bytes": 6429,
+"cues": [
+[
+0.0,
+0.832
+]
+],
+"duration": 0.982,
+"hash": "9d525dcc30b9b1328e620c8132667ec93bbbbd3ef4664f5231c4ba170ba4260b",
+"kind": "term"
+},
+"t-es-p-fingertips": {
+"audio": "media/terms/t-es-p-fingertips.mp3",
+"bytes": 10461,
+"cues": [
+[
+0.0,
+1.493
+]
+],
+"duration": 1.643,
+"hash": "5a9b645c4acef093fc342982350f505d0dc74d99b5ffe757cbd205fe05772787",
+"kind": "term"
+},
+"t-es-p-follow-through": {
+"audio": "media/terms/t-es-p-follow-through.mp3",
+"bytes": 11037,
+"cues": [
+[
+0.0,
+1.579
+]
+],
+"duration": 1.729,
+"hash": "6f2d3336d08d8808d1b381b0853fb18d552edf573625c4501bb74116fc139a24",
+"kind": "term"
+},
+"t-es-p-four-seam-fastball": {
+"audio": "media/terms/t-es-p-four-seam-fastball.mp3",
+"bytes": 12765,
+"cues": [
+[
+0.0,
+1.877
+]
+],
+"duration": 2.027,
+"hash": "72ccfe5902f100f071393700ce1d94384a89f0258f2e5c8c761c38c7c84d9783",
+"kind": "term"
+},
+"t-es-p-four-seam-grip": {
+"audio": "media/terms/t-es-p-four-seam-grip.mp3",
+"bytes": 12621,
+"cues": [
+[
+0.0,
+1.856
+]
+],
+"duration": 2.006,
+"hash": "c653a32cd201f945c1320a42e9b9de63f24f5b8d5d215961a4074f6dafdb04cf",
+"kind": "term"
+},
+"t-es-p-good-pitch": {
+"audio": "media/terms/t-es-p-good-pitch.mp3",
+"bytes": 9021,
+"cues": [
+[
+0.0,
+1.259
+]
+],
+"duration": 1.409,
+"hash": "230412fd498b45776ae2c3b18159f2801c9b0df307ed1a0e82ae744012363ca6",
+"kind": "term"
+},
+"t-es-p-grip": {
+"audio": "media/terms/t-es-p-grip.mp3",
+"bytes": 6429,
+"cues": [
+[
+0.0,
+0.832
+]
+],
+"duration": 0.982,
+"hash": "db79d31e9bf613562f58f5e5162f8f46dc9f9eaf76867cc9034d73166935bad1",
+"kind": "term"
+},
+"t-es-p-grip-pressure": {
+"audio": "media/terms/t-es-p-grip-pressure.mp3",
+"bytes": 6861,
+"cues": [
+[
+0.0,
+0.896
+]
+],
+"duration": 1.046,
+"hash": "3430d3a43dcb1a52a0769451934a0b59fda6131f8dde390b8d0edc75ff4da026",
+"kind": "term"
+},
+"t-es-p-gyro-spin": {
+"audio": "media/terms/t-es-p-gyro-spin.mp3",
+"bytes": 6141,
+"cues": [
+[
+0.0,
+0.768
+]
+],
+"duration": 0.918,
+"hash": "8df2b59082204c5f1e38b5439bf37af1a318c9f5ea3ff70ff3b64ef4ddd5a37a",
+"kind": "term"
+},
+"t-es-p-hip-shoulder-separation": {
+"audio": "media/terms/t-es-p-hip-shoulder-separation.mp3",
+"bytes": 14061,
+"cues": [
+[
+0.0,
+2.091
+]
+],
+"duration": 2.241,
+"hash": "0e1fa8f10879a5d17f9ec8ce0adfaa53de20ff12ed2fdc3178e3676b9bd312b4",
+"kind": "term"
+},
+"t-es-p-hips": {
+"audio": "media/terms/t-es-p-hips.mp3",
+"bytes": 7581,
+"cues": [
+[
+0.0,
+1.003
+]
+],
+"duration": 1.153,
+"hash": "c1dd72de7e64b4a89e3243b62545c34638e6d05bb7ab125915ae0ea53396d045",
+"kind": "term"
+},
+"t-es-p-home-plate": {
+"audio": "media/terms/t-es-p-home-plate.mp3",
+"bytes": 6861,
+"cues": [
+[
+0.0,
+0.896
+]
+],
+"duration": 1.046,
+"hash": "2443ab6f574149255b2ae90f1902a2f7d8c8dc216923a5b96dad953713a6d536",
+"kind": "term"
+},
+"t-es-p-horizontal-break": {
+"audio": "media/terms/t-es-p-horizontal-break.mp3",
+"bytes": 11613,
+"cues": [
+[
+0.0,
+1.685
+]
+],
+"duration": 1.835,
+"hash": "c14f59398a77d7b4387d7f23bf0112ec0edaf0fb51ab904ac6788aecca176b33",
+"kind": "term"
+},
+"t-es-p-horseshoe": {
+"audio": "media/terms/t-es-p-horseshoe.mp3",
+"bytes": 7293,
+"cues": [
+[
+0.0,
+0.96
+]
+],
+"duration": 1.11,
+"hash": "58b44d7344c5fe4dcbc86919e8eac4bbbe7c0b7f2c32210e3537f57952f6a1d7",
+"kind": "term"
+},
+"t-es-p-how-did-it-feel": {
+"audio": "media/terms/t-es-p-how-did-it-feel.mp3",
+"bytes": 9885,
+"cues": [
+[
+0.0,
+1.408
+]
+],
+"duration": 1.558,
+"hash": "e4cba24dcd8750f24968f73c90296f6774e684b3d2149cd9a1ad0ff2bdf6c8b5",
+"kind": "term"
+},
+"t-es-p-index-finger": {
+"audio": "media/terms/t-es-p-index-finger.mp3",
+"bytes": 9309,
+"cues": [
+[
+0.0,
+1.301
+]
+],
+"duration": 1.451,
+"hash": "8b9c2d1d33645890180f9678b3f2649a2bc1b0763550a96ea00b7e0c95637272",
+"kind": "term"
+},
+"t-es-p-ivb": {
+"audio": "media/terms/t-es-p-ivb.mp3",
+"bytes": 14493,
+"cues": [
+[
+0.0,
+2.176
+]
+],
+"duration": 2.326,
+"hash": "1ce846036869eb558b6c7f6e4459d6e640b7ea4773ad78b463df19d1d61ae88b",
+"kind": "term"
+},
+"t-es-p-keep": {
+"audio": "media/terms/t-es-p-keep.mp3",
+"bytes": 6285,
+"cues": [
+[
+0.0,
+0.789
+]
+],
+"duration": 0.939,
+"hash": "330ad1b50c1db4dd6bb127f26e42f3ae97cd3de63404a652119e0d50a81be354",
+"kind": "term"
+},
+"t-es-p-knuckle": {
+"audio": "media/terms/t-es-p-knuckle.mp3",
+"bytes": 7005,
+"cues": [
+[
+0.0,
+0.917
+]
+],
+"duration": 1.067,
+"hash": "ab029f71c29f35f82067b9fd9ca7ab58eabdf233042e325ee832ea7b4a1719fc",
+"kind": "term"
+},
+"t-es-p-lead-leg": {
+"audio": "media/terms/t-es-p-lead-leg.mp3",
+"bytes": 10173,
+"cues": [
+[
+0.0,
+1.451
+]
+],
+"duration": 1.601,
+"hash": "59b0ff55c9383baf0729607f38ca012f178cb1405e741d435972e30159f2190e",
+"kind": "term"
+},
+"t-es-p-leg-lift": {
+"audio": "media/terms/t-es-p-leg-lift.mp3",
+"bytes": 9741,
+"cues": [
+[
+0.0,
+1.365
+]
+],
+"duration": 1.515,
+"hash": "6f2e7787501583689a02f62c40d42e752ab3e8cc6d25aea40a272717b62dc273",
+"kind": "term"
+},
+"t-es-p-loosen": {
+"audio": "media/terms/t-es-p-loosen.mp3",
+"bytes": 6429,
+"cues": [
+[
+0.0,
+0.811
+]
+],
+"duration": 0.961,
+"hash": "a5c75dd1501682374bc7300f39f33106f9f21e3b6b8403b2597155515d9ef6cc",
+"kind": "term"
+},
+"t-es-p-mechanics": {
+"audio": "media/terms/t-es-p-mechanics.mp3",
+"bytes": 7869,
+"cues": [
+[
+0.0,
+1.067
+]
+],
+"duration": 1.217,
+"hash": "35da450f7b019985495efa899a05103791fc80b4a8e14a61a049bd47705b6a47",
+"kind": "term"
+},
+"t-es-p-middle-finger": {
+"audio": "media/terms/t-es-p-middle-finger.mp3",
+"bytes": 9165,
+"cues": [
+[
+0.0,
+1.28
+]
+],
+"duration": 1.43,
+"hash": "e7e5d8d80db672965bcdc007b181f99a39cf5d192d7cedacc1985c364e3d7c62",
+"kind": "term"
+},
+"t-es-p-mound": {
+"audio": "media/terms/t-es-p-mound.mp3",
+"bytes": 7869,
+"cues": [
+[
+0.0,
+1.067
+]
+],
+"duration": 1.217,
+"hash": "b245fc169f905af20d257af9514ea6090d4a1c73195bece6ebcdc4065c82522a",
+"kind": "term"
+},
+"t-es-p-move": {
+"audio": "media/terms/t-es-p-move.mp3",
+"bytes": 5277,
+"cues": [
+[
+0.0,
+0.619
+]
+],
+"duration": 0.769,
+"hash": "d105fe89dc1a7fe9d5fccdde23c6d80fb3fbe2481a481349897aab8921c9668e",
+"kind": "term"
+},
+"t-es-p-movement": {
+"audio": "media/terms/t-es-p-movement.mp3",
+"bytes": 8301,
+"cues": [
+[
+0.0,
+1.131
+]
+],
+"duration": 1.281,
+"hash": "85ff26790726bc888f3a749524b7fa550492e4d93b688f5611fcae63b6dd85c8",
+"kind": "term"
+},
+"t-es-p-objective": {
+"audio": "media/terms/t-es-p-objective.mp3",
+"bytes": 8301,
+"cues": [
+[
+0.0,
+1.131
+]
+],
+"duration": 1.281,
+"hash": "e43e133f5cf537767e355c483f698761c80069b467d715fe618df1ceab2bf44b",
+"kind": "term"
+},
+"t-es-p-one-more": {
+"audio": "media/terms/t-es-p-one-more.mp3",
+"bytes": 6429,
+"cues": [
+[
+0.0,
+0.811
+]
+],
+"duration": 0.961,
+"hash": "26aebd5a9f8a6067463a8db305af39c130926b2c8d2689306cc8fce2f6eeae3c",
+"kind": "term"
+},
+"t-es-p-palm": {
+"audio": "media/terms/t-es-p-palm.mp3",
+"bytes": 9885,
+"cues": [
+[
+0.0,
+1.387
+]
+],
+"duration": 1.537,
+"hash": "d06843406293942d95e7a0148939708e195a93816f3a0409886368f06bead9ed",
+"kind": "term"
+},
+"t-es-p-pinky": {
+"audio": "media/terms/t-es-p-pinky.mp3",
+"bytes": 7437,
+"cues": [
+[
+0.0,
+0.981
+]
+],
+"duration": 1.131,
+"hash": "57902306d5f8aeea707fdd1a635aa824ea2626f9f0db6680bb4174f9e36527f0",
+"kind": "term"
+},
+"t-es-p-pitch-count": {
+"audio": "media/terms/t-es-p-pitch-count.mp3",
+"bytes": 8877,
+"cues": [
+[
+0.0,
+1.237
+]
+],
+"duration": 1.387,
+"hash": "9cc4252dc93be29fbfb2b3bd1923e13a14e2c4698e14cd8dc440584913fb3967",
+"kind": "term"
+},
+"t-es-p-pitch-noun": {
+"audio": "media/terms/t-es-p-pitch-noun.mp3",
+"bytes": 8301,
+"cues": [
+[
+0.0,
+1.131
+]
+],
+"duration": 1.281,
+"hash": "8a28bbc1939ad10f56f388b057ea1ded636d9896531fd5632b98c19e2111b07f",
+"kind": "term"
+},
+"t-es-p-pitcher": {
+"audio": "media/terms/t-es-p-pitcher.mp3",
+"bytes": 6573,
+"cues": [
+[
+0.0,
+0.853
+]
+],
+"duration": 1.003,
+"hash": "ec1c37d6ea386a31bd756db61da070e7a86c6e20a2057d4af1611fdf224f5cc3",
+"kind": "term"
+},
+"t-es-p-pitching-coach": {
+"audio": "media/terms/t-es-p-pitching-coach.mp3",
+"bytes": 10317,
+"cues": [
+[
+0.0,
+1.472
+]
+],
+"duration": 1.622,
+"hash": "6a8ece4b4ae2425cbea18ffbc60f1bdf6947e5a3c320cb5c1b26c89574883c97",
+"kind": "term"
+},
+"t-es-p-posture": {
+"audio": "media/terms/t-es-p-posture.mp3",
+"bytes": 7149,
+"cues": [
+[
+0.0,
+0.939
+]
+],
+"duration": 1.089,
+"hash": "58a62e67a23559444e640435e0442399ee55df8d4d283a6d3899dfd5a53e42f2",
+"kind": "term"
+},
+"t-es-p-pronation": {
+"audio": "media/terms/t-es-p-pronation.mp3",
+"bytes": 7581,
+"cues": [
+[
+0.0,
+1.003
+]
+],
+"duration": 1.153,
+"hash": "9c3bf3041b4d7dd8f9c06374ece6667c6e62702294f8dac4208dc9ec525fc1d4",
+"kind": "term"
+},
+"t-es-p-put": {
+"audio": "media/terms/t-es-p-put.mp3",
+"bytes": 4989,
+"cues": [
+[
+0.0,
+0.576
+]
+],
+"duration": 0.726,
+"hash": "b7139e208dfc1a1c221bb9579cca32c9ecb258b86124e14848f41a1b4142c437",
+"kind": "term"
+},
+"t-es-p-release": {
+"audio": "media/terms/t-es-p-release.mp3",
+"bytes": 5709,
+"cues": [
+[
+0.0,
+0.704
+]
+],
+"duration": 0.854,
+"hash": "89e6b94dc22154c557064d53f29a7d52cc37003adf68e4e12fb0dead6ab78680",
+"kind": "term"
+},
+"t-es-p-release-point": {
+"audio": "media/terms/t-es-p-release-point.mp3",
+"bytes": 10173,
+"cues": [
+[
+0.0,
+1.451
+]
+],
+"duration": 1.601,
+"hash": "768e6935de7e7b7e5a568a757b6ba1e15164c541dc5555e64a251cb5a9ac2fe4",
+"kind": "term"
+},
+"t-es-p-repeat": {
+"audio": "media/terms/t-es-p-repeat.mp3",
+"bytes": 6429,
+"cues": [
+[
+0.0,
+0.832
+]
+],
+"duration": 0.982,
+"hash": "0e7a29da6d2fe0268f6e8f74f8558baeea81b03324482fd7b96513f8674fcb2d",
+"kind": "term"
+},
+"t-es-p-ring-finger": {
+"audio": "media/terms/t-es-p-ring-finger.mp3",
+"bytes": 8301,
+"cues": [
+[
+0.0,
+1.131
+]
+],
+"duration": 1.281,
+"hash": "7feacd2dde70823a526042d784305e4c530ae105b7ab794bbbc309b620cc7e4e",
+"kind": "term"
+},
+"t-es-p-run": {
+"audio": "media/terms/t-es-p-run.mp3",
+"bytes": 7149,
+"cues": [
+[
+0.0,
+0.939
+]
+],
+"duration": 1.089,
+"hash": "1e1419f73c238e84d2a318b2179c5c09797faf6b153490f28997d7b9e7e1bbc4",
+"kind": "term"
+},
+"t-es-p-seam-orientation": {
+"audio": "media/terms/t-es-p-seam-orientation.mp3",
+"bytes": 12477,
+"cues": [
+[
+0.0,
+1.835
+]
+],
+"duration": 1.985,
+"hash": "0b948798edb4b5b4cdb33cbf249b7323154fe16e73f3d307da3ee0b565888ef1",
+"kind": "term"
+},
+"t-es-p-seam-shifted-wake": {
+"audio": "media/terms/t-es-p-seam-shifted-wake.mp3",
+"bytes": 11037,
+"cues": [
+[
+0.0,
+1.6
+]
+],
+"duration": 1.75,
+"hash": "22a20da3f20d46bab30e2914ef58e614b3b98236a78c6a8d70fa4608264be3d2",
+"kind": "term"
+},
+"t-es-p-seams": {
+"audio": "media/terms/t-es-p-seams.mp3",
+"bytes": 7869,
+"cues": [
+[
+0.0,
+1.067
+]
+],
+"duration": 1.217,
+"hash": "fd6c171a2d0ca375ed8d7ec42b9fadf7c2a9df93dd2062713c1a4644c9725745",
+"kind": "term"
+},
+"t-es-p-separation": {
+"audio": "media/terms/t-es-p-separation.mp3",
+"bytes": 8157,
+"cues": [
+[
+0.0,
+1.109
+]
+],
+"duration": 1.259,
+"hash": "4ed7128956282f4fcc69457f348874558ecab7af2ae5527692c002484ac9ca25",
+"kind": "term"
+},
+"t-es-p-shoulders": {
+"audio": "media/terms/t-es-p-shoulders.mp3",
+"bytes": 7149,
+"cues": [
+[
+0.0,
+0.939
+]
+],
+"duration": 1.089,
+"hash": "37c8c6d6d71d5baab7f26a4f7e1b4de470c9980c35db6645175fec5b9f19895e",
+"kind": "term"
+},
+"t-es-p-sinker": {
+"audio": "media/terms/t-es-p-sinker.mp3",
+"bytes": 7149,
+"cues": [
+[
+0.0,
+0.939
+]
+],
+"duration": 1.089,
+"hash": "0416d82584d0f3566af3bf75b34077b82683a7fdab6f3c9c682eae44b0ec8790",
+"kind": "term"
+},
+"t-es-p-slider": {
+"audio": "media/terms/t-es-p-slider.mp3",
+"bytes": 7149,
+"cues": [
+[
+0.0,
+0.939
+]
+],
+"duration": 1.089,
+"hash": "7e70ea603d69c4e99064d82a673a82b6ef8f370b916fc7985939addb808f1bee",
+"kind": "term"
+},
+"t-es-p-spin": {
+"audio": "media/terms/t-es-p-spin.mp3",
+"bytes": 5997,
+"cues": [
+[
+0.0,
+0.747
+]
+],
+"duration": 0.897,
+"hash": "0896f74cbb22118be85bf882498c5942302ead79af3ad14229bd18728aaa29c4",
+"kind": "term"
+},
+"t-es-p-spin-axis": {
+"audio": "media/terms/t-es-p-spin-axis.mp3",
+"bytes": 9885,
+"cues": [
+[
+0.0,
+1.387
+]
+],
+"duration": 1.537,
+"hash": "e8dcbae3477915f8c8c6a8df94a6cee8a998ff77e177d7510fc763ff84c50a9e",
+"kind": "term"
+},
+"t-es-p-spin-direction": {
+"audio": "media/terms/t-es-p-spin-direction.mp3",
+"bytes": 9741,
+"cues": [
+[
+0.0,
+1.365
+]
+],
+"duration": 1.515,
+"hash": "71195e0aa4c2ad349c7dc8ae66fb6943f397fcd7fe165208c752c39db664a1f2",
+"kind": "term"
+},
+"t-es-p-spin-rate": {
+"audio": "media/terms/t-es-p-spin-rate.mp3",
+"bytes": 8589,
+"cues": [
+[
+0.0,
+1.173
+]
+],
+"duration": 1.323,
+"hash": "e90ade75c2778a8c27d2f9c2d2c5d610aede99f1b1e30e3018c1a799ddb74bba",
+"kind": "term"
+},
+"t-es-p-splitter": {
+"audio": "media/terms/t-es-p-splitter.mp3",
+"bytes": 7293,
+"cues": [
+[
+0.0,
+0.96
+]
+],
+"duration": 1.11,
+"hash": "4b675e86a8c25aa8725ec65eb974c3d0d0f78776abe1fcdbbf185641e827d40e",
+"kind": "term"
+},
+"t-es-p-spread": {
+"audio": "media/terms/t-es-p-spread.mp3",
+"bytes": 6141,
+"cues": [
+[
+0.0,
+0.768
+]
+],
+"duration": 0.918,
+"hash": "4e1194a53bb5ee582796342356489d7a016bf00d321d313304a0aa128bca9731",
+"kind": "term"
+},
+"t-es-p-squeeze": {
+"audio": "media/terms/t-es-p-squeeze.mp3",
+"bytes": 6861,
+"cues": [
+[
+0.0,
+0.896
+]
+],
+"duration": 1.046,
+"hash": "e33e45ae56a0c7528bbdf12a12771bae4f0b600b593819715872eeb018ae5336",
+"kind": "term"
+},
+"t-es-p-stride": {
+"audio": "media/terms/t-es-p-stride.mp3",
+"bytes": 7437,
+"cues": [
+[
+0.0,
+0.981
+]
+],
+"duration": 1.131,
+"hash": "a25b30b05108f6ef6ff6145d5fc71fa54a38be09eeec5e174ecb88f42da81a2c",
+"kind": "term"
+},
+"t-es-p-stride-direction": {
+"audio": "media/terms/t-es-p-stride-direction.mp3",
+"bytes": 10173,
+"cues": [
+[
+0.0,
+1.451
+]
+],
+"duration": 1.601,
+"hash": "4ca7ed3631cf39f18991492acc65dcb52ae87f5f4c077bf99d0bda457f069402",
+"kind": "term"
+},
+"t-es-p-strike": {
+"audio": "media/terms/t-es-p-strike.mp3",
+"bytes": 7005,
+"cues": [
+[
+0.0,
+0.917
+]
+],
+"duration": 1.067,
+"hash": "dfa4b916f3d80d3df29fcd71670cb789440fbbc988ab9a3b41a1abbe17a25c00",
+"kind": "term"
+},
+"t-es-p-strike-zone": {
+"audio": "media/terms/t-es-p-strike-zone.mp3",
+"bytes": 9741,
+"cues": [
+[
+0.0,
+1.365
+]
+],
+"duration": 1.515,
+"hash": "0551e34974c9a79a3b9181ebb4578ef3ac034657566fd55c89f2d65f48a89444",
+"kind": "term"
+},
+"t-es-p-strikeout": {
+"audio": "media/terms/t-es-p-strikeout.mp3",
+"bytes": 7149,
+"cues": [
+[
+0.0,
+0.939
+]
+],
+"duration": 1.089,
+"hash": "bad38bff491e521cc8dd0846f71c9dfbc9e2f20e9da9798a1a370e2df155c85d",
+"kind": "term"
+},
+"t-es-p-sweeper": {
+"audio": "media/terms/t-es-p-sweeper.mp3",
+"bytes": 7581,
+"cues": [
+[
+0.0,
+1.003
+]
+],
+"duration": 1.153,
+"hash": "5fd521f0dee3cfa4ef7976c337c72d3729343b4e13ae9ecc33dbc193388a73a4",
+"kind": "term"
+},
+"t-es-p-tempo": {
+"audio": "media/terms/t-es-p-tempo.mp3",
+"bytes": 7005,
+"cues": [
+[
+0.0,
+0.917
+]
+],
+"duration": 1.067,
+"hash": "0fded224d6ca8889ab1ff27ca206205a2a45fa6d461dcfc0ad594d44626901ee",
+"kind": "term"
+},
+"t-es-p-thumb": {
+"audio": "media/terms/t-es-p-thumb.mp3",
+"bytes": 6717,
+"cues": [
+[
+0.0,
+0.875
+]
+],
+"duration": 1.025,
+"hash": "a627e5dbbee5fd0fa9982b0cdd465e14c1c06b68b132f408de381f759ea6530b",
+"kind": "term"
+},
+"t-es-p-thumb-placement": {
+"audio": "media/terms/t-es-p-thumb-placement.mp3",
+"bytes": 10317,
+"cues": [
+[
+0.0,
+1.472
+]
+],
+"duration": 1.622,
+"hash": "31f1040cf074750fdda420d231064546ab04ab52de056b77fbf1d941939eeaf2",
+"kind": "term"
+},
+"t-es-p-timing": {
+"audio": "media/terms/t-es-p-timing.mp3",
+"bytes": 6717,
+"cues": [
+[
+0.0,
+0.875
+]
+],
+"duration": 1.025,
+"hash": "b2a962f3cd44e54aa3c61ed1104e94d115f302bf514738a0e05c85fdb35e8dfd",
+"kind": "term"
+},
+"t-es-p-to-grip": {
+"audio": "media/terms/t-es-p-to-grip.mp3",
+"bytes": 6141,
+"cues": [
+[
+0.0,
+0.768
+]
+],
+"duration": 0.918,
+"hash": "6a48162a9a4a005ef528b11e6cb4e08aee5cb5322761fdc566d7b5f6fea489ad",
+"kind": "term"
+},
+"t-es-p-to-pitch": {
+"audio": "media/terms/t-es-p-to-pitch.mp3",
+"bytes": 5421,
+"cues": [
+[
+0.0,
+0.661
+]
+],
+"duration": 0.811,
+"hash": "1b1b74ea29b5c171606b3455cf950499871f0d1f69b21031e74754e99417145c",
+"kind": "term"
+},
+"t-es-p-tracking-device": {
+"audio": "media/terms/t-es-p-tracking-device.mp3",
+"bytes": 7437,
+"cues": [
+[
+0.0,
+0.981
+]
+],
+"duration": 1.131,
+"hash": "362634c3874f8b3b37f084d83f76dcabb00da77a44ea81ae85e1e9f38c97e572",
+"kind": "term"
+},
+"t-es-p-try": {
+"audio": "media/terms/t-es-p-try.mp3",
+"bytes": 5997,
+"cues": [
+[
+0.0,
+0.747
+]
+],
+"duration": 0.897,
+"hash": "a1b44b03f278aa876c96678957e2d4129621c5ac264a860aa7a765f8008ab722",
+"kind": "term"
+},
+"t-es-p-two-seam-fastball": {
+"audio": "media/terms/t-es-p-two-seam-fastball.mp3",
+"bytes": 11757,
+"cues": [
+[
+0.0,
+1.707
+]
+],
+"duration": 1.857,
+"hash": "5aec134645a1b1fa47a0a733e71d8e6c98a249424aea8e1b5d471f71ea937949",
+"kind": "term"
+},
+"t-es-p-two-seam-grip": {
+"audio": "media/terms/t-es-p-two-seam-grip.mp3",
+"bytes": 11613,
+"cues": [
+[
+0.0,
+1.685
+]
+],
+"duration": 1.835,
+"hash": "4ad9670832c6060171dfe4886649d2084135d8e73a238e3e7dbd12da01f00ecb",
+"kind": "term"
+},
+"t-es-p-umpire": {
+"audio": "media/terms/t-es-p-umpire.mp3",
+"bytes": 7293,
+"cues": [
+[
+0.0,
+0.96
+]
+],
+"duration": 1.11,
+"hash": "a4cb3102ce7659d66646756f93c708a9ab3b6c6803850cb34101905e72a5f500",
+"kind": "term"
+},
+"t-es-p-velocity": {
+"audio": "media/terms/t-es-p-velocity.mp3",
+"bytes": 7869,
+"cues": [
+[
+0.0,
+1.067
+]
+],
+"duration": 1.217,
+"hash": "211b5dbd4992abe4a8215f37980eb2e8b43d4cc47630ae1109279fadb5a07231",
+"kind": "term"
+},
+"t-es-p-watch-video": {
+"audio": "media/terms/t-es-p-watch-video.mp3",
+"bytes": 11901,
+"cues": [
+[
+0.0,
+1.728
+]
+],
+"duration": 1.878,
+"hash": "75dee8c6805825500af44fd5f7253d5adc111879e0571318c8d43e1e828b5464",
+"kind": "term"
+},
+"t-es-p-workload": {
+"audio": "media/terms/t-es-p-workload.mp3",
+"bytes": 10317,
+"cues": [
+[
+0.0,
+1.472
+]
+],
+"duration": 1.622,
+"hash": "c51790f35a7e9176f85e706444311d9104d95dac2f37db1728a42b57e6e2091d",
+"kind": "term"
+},
+"t-es-p-wrist": {
+"audio": "media/terms/t-es-p-wrist.mp3",
+"bytes": 7149,
+"cues": [
+[
+0.0,
+0.939
+]
+],
+"duration": 1.089,
+"hash": "2b46c365c3f6aab1fc7b2f6b7045f80866c13957ec527362845de6df1433a6fd",
+"kind": "term"
 }
 },
 "narrator": {
-"cueGap": 0.3,
 "engine": "Kokoro-82M v1.0 (q8 ONNX) via kokoro-onnx",
 "label": "Voice C",
 "license": "Kokoro-82M model and voices: Apache-2.0",
+"spanish": {
+"phonemes": "espeak es-419 (Latin American)",
+"voices": [
+"em_alex",
+"em_santa",
+"ef_dora"
+]
+},
 "speed": 1.02,
 "voice": "af_heart"
 }

@@ -1,0 +1,38 @@
+{
+  "id": "placement-en-coaching",
+  "version": 1,
+  "target": "en",
+  "native": "es",
+  "note": "Defensive coaching additions to the English placement bank (placement-v1) for Spanish-speaking coaches. CEFR-inspired estimate, not an official certification. All people are fictional.",
+  "levels": ["A0", "A1", "A2", "B1", "B2"],
+  "speakers": {
+    "mike": { "voice": "am_michael" },
+    "dave": { "voice": "am_fenrir" },
+    "tyler": { "voice": "am_puck" },
+    "anna": { "voice": "af_bella" },
+    "sarah": { "voice": "af_kore" }
+  },
+  "clips": {
+    "en-d-a1-l1": { "lines": [ { "speaker": "mike", "text": "Okay, ready position. Feet wide, knees bent, glove out front.", "es": "Bien, posición de listo. Pies separados, rodillas dobladas, guante al frente." } ] },
+    "en-d-a2-l1": { "lines": [ { "speaker": "dave", "text": "Your first step was late. Read it off the bat and go. And set your feet before you throw.", "es": "Tu primer paso fue tarde. Lee la bola cuando sale del bate y arranca. Y planta los pies antes de tirar." } ] },
+    "en-d-b2-l1": { "lines": [ { "speaker": "sarah", "text": "Good rep. Your glove was out front, and that's exactly what we wanted. The only thing is you came up a little early, so the ball got under your glove. Let's do three more, and this time see it all the way into the glove.", "es": "Buena repetición. Tenías el guante al frente, y eso es justo lo que queríamos. Lo único es que te levantaste un poco temprano, así que la bola se te pasó por debajo del guante. Hagamos tres más, y esta vez mira la bola hasta que entre en el guante." } ] },
+    "en-d-s1": { "lines": [ { "speaker": "tyler", "text": "Coach, I'm up next. Anything I should do on this ground ball?", "es": "Coach, me toca a mí. ¿Algo que deba hacer en este roletazo?" } ] },
+    "en-d-s2": { "lines": [ { "speaker": "tyler", "text": "Coach, what should I focus on during this drill?", "es": "Coach, ¿en qué me debo enfocar durante este ejercicio?" } ] }
+  },
+  "items": [
+    { "id": "en-d-a0-v1", "level": "A0", "skill": "vocab", "domain": "defense", "prompt": "\"Glove\" means…", "prompt_es": "\"Glove\" significa…", "options": ["guante", "gorra", "bate"], "answer": 0 },
+    { "id": "en-d-a1-v1", "level": "A1", "skill": "vocab", "domain": "defense", "prompt": "A coach says: \"Stay low.\" He means:", "prompt_es": "Un coach dice: \"Stay low.\" Quiere decir:", "options": ["Keep your body down; bend your knees.", "Speak more quietly.", "Stay behind the other players."], "answer": 0 },
+    { "id": "en-d-a1-g1", "level": "A1", "skill": "grammar", "domain": "defense", "prompt": "Choose the correct coaching cue.", "prompt_es": "Elige la instrucción correcta.", "options": ["Bend your knees.", "Bend you knees.", "Bending your knees."], "answer": 0 },
+    { "id": "en-d-a1-l1", "level": "A1", "skill": "listening", "domain": "defense", "clip": "en-d-a1-l1", "prompt": "Listen. Where should the glove be?", "prompt_es": "Escucha. ¿Dónde debe estar el guante?", "options": ["Out in front", "Behind his back", "On the ground next to him"], "answer": 0 },
+    { "id": "en-d-a2-v1", "level": "A2", "skill": "vocab", "domain": "defense", "prompt": "\"Take it on the backhand\" means: field the ball…", "prompt_es": "\"Take it on the backhand\" quiere decir: fildea la bola…", "options": ["on your throwing-hand side, with the glove turned over", "with your bare hand", "after it bounces twice"], "answer": 0 },
+    { "id": "en-d-a2-l1", "level": "A2", "skill": "listening", "domain": "defense", "clip": "en-d-a2-l1", "prompt": "Listen. What should the player do before he throws?", "prompt_es": "Escucha. ¿Qué debe hacer el jugador antes de tirar?", "options": ["Set his feet", "Take off his glove", "Look at the coach"], "answer": 0 },
+    { "id": "en-d-b1-g1", "level": "B1", "skill": "grammar", "domain": "defense", "prompt": "Complete the explanation: \"Get your feet under you, ___ your throw has something behind it.\"", "prompt_es": "Completa la explicación: \"Pon los pies debajo de ti, ___ tu tiro tenga fuerza detrás.\"", "options": ["so", "because of", "although"], "answer": 0 },
+    { "id": "en-d-b1-r1", "level": "B1", "skill": "reading", "domain": "defense", "prompt": "Read the coach's note: \"Shade him two steps toward the pull side. He hit almost every ground ball to that side last series.\" Why should the fielder move?", "prompt_es": "Lee la nota del coach. ¿Por qué debe moverse el fildeador?", "options": ["The hitter hits most of his ground balls to that side.", "The fielder needs a better throwing angle to first.", "The hitter is fast, so the fielder must play closer."], "answer": 0 },
+    { "id": "en-d-b2-r1", "level": "B2", "skill": "reading", "domain": "defense", "prompt": "Read: You have just explained a backhand drill to a young infielder. Which question checks his understanding best?", "prompt_es": "Lee: acabas de explicarle un ejercicio de revés a un infielder joven. ¿Qué pregunta comprueba mejor que entendió?", "options": ["Can you show me what you're going to focus on?", "Do you understand?", "You got it, right?"], "answer": 0 },
+    { "id": "en-d-b2-l1", "level": "B2", "skill": "listening", "domain": "defense", "clip": "en-d-b2-l1", "prompt": "Listen. According to the coach, what went wrong on the rep?", "prompt_es": "Escucha. Según la coach, ¿qué salió mal en la repetición?", "options": ["He came up too early.", "His glove wasn't out front.", "His first step was too slow."], "answer": 0 }
+  ],
+  "speaking": [
+    { "id": "sp-d1", "level": "A1", "domain": "defense", "clip": "en-d-s1", "prompt": "Coach, I'm up next. Anything I should do on this ground ball?", "prompt_es": "Antes de una repetición de roletazo, el jugador te pregunta qué debe hacer. Dale una o dos instrucciones.", "goal": "One or two short, clear imperative cues (e.g. stay low, glove out front, move your feet, come get it), with 'your' before body parts and equipment. Band A1–A2.", "goal_es": "Una o dos instrucciones cortas y claras (por ejemplo: stay low, glove out front, move your feet), con 'your' delante de las partes del cuerpo.", "examples": ["Stay low and keep your glove out front.", "Move your feet and come get it. Glove down early."] },
+    { "id": "sp-d2", "level": "B1", "domain": "defense", "clip": "en-d-s2", "prompt": "Coach, what should I focus on during this drill?", "prompt_es": "Un jugador te pregunta en qué debe enfocarse durante el ejercicio. Explícale el enfoque y por qué.", "goal": "Name one clear focus for the drill and explain why it helps (so, because, that way), optionally checking understanding or asking him to show it. Band B1–B2.", "goal_es": "Nombra un enfoque claro para el ejercicio y explica por qué ayuda; si puedes, comprueba que te entendió.", "examples": ["Just focus on your first step. If you read it off the bat and get a quick first step, you'll get a better angle and you won't have to rush the throw.", "Today I want you to set your feet before every throw, because that's where your accuracy comes from. Show me on the first one."] }
+  ]
+}

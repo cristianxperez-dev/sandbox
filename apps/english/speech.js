@@ -1,4 +1,4 @@
-/* CP English — microphone recording and the speech API client.
+/* English (CP English) — microphone recording and the speech API client.
    Recording stays in the browser (a Blob in memory) until the learner sends it for feedback; the server
    transcribes and evaluates it and keeps nothing. Without a microphone, consent or the AI service, every
    speaking task still works as practice (listen, record, play back and compare) and says plainly that
@@ -60,23 +60,24 @@
     } catch (e) { statusCache = { ai: { active: false, reason: "offline" } }; }
     return statusCache;
   }
-  /** human explanation of why feedback isn't available */
-  function unavailableReason(reason) {
-    const m = {
-      "no-key": "La retroalimentación automática todavía no está configurada en el servidor.",
-      disabled: "La retroalimentación automática está desactivada por el administrador.",
-      "production-not-approved": "La retroalimentación automática todavía no está aprobada para este sitio.",
-      "no-budget-store": "La retroalimentación automática todavía no está configurada (límites de gasto).",
-      "no-server": "La retroalimentación automática no está disponible en esta versión.",
-      offline: "Sin conexión: no se puede pedir retroalimentación ahora.",
-      "rate-limited": "Muchas grabaciones seguidas. Espera unos minutos y vuelve a intentarlo.",
-      "daily-limit-reached": "Se alcanzó el límite diario de retroalimentación automática. Vuelve mañana.",
-      "monthly-limit-reached": "Se alcanzó el límite mensual de retroalimentación automática.",
-      "too-long": "La grabación es demasiado larga (máximo 45 segundos).",
-      "too-large": "La grabación es demasiado grande.",
-      "unsupported-audio": "Este formato de audio no es compatible.",
-    };
-    return m[reason] || "La retroalimentación automática no está disponible en este momento.";
+  /** human explanation of why feedback isn't available, in the learner's language */
+  const REASONS = {
+    "no-key": ["Automatic feedback isn't set up on the server yet.", "La retroalimentación automática todavía no está configurada en el servidor."],
+    disabled: ["Automatic feedback is switched off by the administrator.", "La retroalimentación automática está desactivada por el administrador."],
+    "production-not-approved": ["Automatic feedback isn't approved for this site yet.", "La retroalimentación automática todavía no está aprobada para este sitio."],
+    "no-budget-store": ["Automatic feedback isn't set up yet (spending limits).", "La retroalimentación automática todavía no está configurada (límites de gasto)."],
+    "no-server": ["Automatic feedback isn't available in this version.", "La retroalimentación automática no está disponible en esta versión."],
+    offline: ["You're offline: feedback can't be requested now.", "Sin conexión: no se puede pedir retroalimentación ahora."],
+    "rate-limited": ["Many recordings in a row. Wait a few minutes and try again.", "Muchas grabaciones seguidas. Espera unos minutos y vuelve a intentarlo."],
+    "daily-limit-reached": ["Today's limit for automatic feedback has been reached. Try again tomorrow.", "Se alcanzó el límite diario de retroalimentación automática. Vuelve mañana."],
+    "monthly-limit-reached": ["This month's limit for automatic feedback has been reached.", "Se alcanzó el límite mensual de retroalimentación automática."],
+    "too-long": ["The recording is too long (45 seconds at most).", "La grabación es demasiado larga (máximo 45 segundos)."],
+    "too-large": ["The recording is too large.", "La grabación es demasiado grande."],
+    "unsupported-audio": ["This audio format isn't supported.", "Este formato de audio no es compatible."],
+  };
+  function unavailableReason(reason, native) {
+    const r = REASONS[reason] || ["Automatic feedback isn't available at the moment.", "La retroalimentación automática no está disponible en este momento."];
+    return native === "es" ? r[1] : r[0];
   }
   async function post(path, init) {
     try {

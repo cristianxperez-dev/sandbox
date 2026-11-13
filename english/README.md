@@ -1,26 +1,51 @@
-# CP English
+# English (CP English) — bilingual language education for baseball coaches
 
-Practical English for Spanish-speaking baseball coaches: an adaptive placement test, a 16-week roadmap in three tracks, and narrated lessons with listening and speaking practice. It is served at `<site>/apps/english/`, and it is separate from APERTURE: it has its own data, progress and storage key (`cpEnglish.v1`).
+Listed in the Sandbox as **English** (`<site>/apps/english/`), branded with the approved CP Baseball Systems monogram. It is
+separate from APERTURE: own data, progress and storage key (`cpEnglish.v1`, a v2 document).
+
+A coach chooses a **target language** (English or Spanish), a **specialty** (pitching, hitting, defense) and takes a
+language- and role-aware placement (or skips it as a provisional beginner). Courses are a language × specialty matrix:
+
+| Target | Pitching | Hitting | Defense |
+| --- | --- | --- | --- |
+| Spanish (for English-speaking coaches) | **Active** — `es-pitching`, lessons `sp01`, `sp02` (+ `sp03`–`sp05` planned with outlines) | Planned | Planned |
+| English (for Spanish-speaking coaches) | Planned | Planned | **Active** — `en-defense`, lessons `d01`, `d02` (+ `d03`–`d05` planned) |
+
+Shared general-language **foundations** per language: *Everyday English* (`en-general`, the original 16-week three-track
+program, lessons `f01`, `f03` available) is recommended inside any English course when the everyday level is low; *Everyday
+Spanish* is planned. Activating a course = lesson files + `status` in `english/content/catalog.json` + ≥ 8 coaching placement
+items and 2 scenarios for that specialty in the language's bank. No app code changes.
 
 | Path | What |
 | --- | --- |
-| `english/content/` | Source content: `course.json` (levels, tracks, 12 units, 48 lessons; 2 available), `placement.json` (40 items, 6 speaking tasks), `lessons/f01.json`, `lessons/f03.json` |
-| `english/tools/narrate.py` | Renders lectures and dialogue clips to `apps/english/media/` (incremental, hash-checked) |
-| `english/tools/build.mjs` | Validates content and compiles it, with audio timings, into `apps/english/data/`. `--check` validates only |
-| `english/server/` | Configuration, budget and rate limits, evaluation schema and validation, used by the Pages Function |
-| `functions/apps/english/api/[[path]].js` | `GET status`, `POST speech` (transcribe and evaluate), `POST text` (typed answers) |
-| `apps/english/` | The static app: `core.js` (placement, grading, progress, review, recommendations; pure), `speech.js`, `ui.js`, `activities.js`, `lecture.js`, `app.js` |
-| `english/tests/` | `core.test.mjs`, `server.test.mjs` (node --test) and `app.e2e.cjs` (Playwright journeys A–F) |
+| `english/content/` | `catalog.json` (languages, specialties, the six courses, roadmaps and planned-lesson schemas), `course.json` (Everyday English), `placement.json` + `placement-en-coaching.json` (English bank), `placement-es.json` (Spanish bank), `lessons/*.json`, **`SCHEMA.md`** (the content schema) |
+| `english/research/` | Sourced research summaries (`README.md`, `pitching.md`, `defense.md`) and terminology libraries (`terms-*.json`, 213 entries) |
+| `english/tools/build.mjs` | `--jobs` lists every audio file; default validates and compiles content into `apps/english/data/` (translations normalized to the learner's language); `--check` validates only |
+| `english/tools/narrate.py` | Renders the job list to `apps/english/media/` (incremental, hash-checked) |
+| `english/server/` | Configuration, budget and rate limits, language-aware evaluation schema / prompt / validation |
+| `functions/apps/english/api/[[path]].js` | `GET status`, `POST speech` (transcribe in the target language, then compare or evaluate), `POST text` |
+| `apps/english/` | `core.js` (placement, scoring, store + migration, progress per course, review, recommendations; pure), `ui.js`, `speech.js`, `activities.js`, `lecture.js`, `figures.js` (SVG illustrations), `app.js` (onboarding, home, courses, placement, lessons, glossary, review, settings), `brand/` (approved monogram files, unchanged) |
+| `english/tests/` | `core.test.mjs`, `server.test.mjs` (node --test), `app.e2e.cjs` (Playwright) |
 
-## Voice
+## Voices
 
-The narrator is **Voice C**, exactly as APERTURE's `aperture/content/narration.json` defines it: Kokoro-82M v1.0 (q8 ONNX), voice `af_heart`, speed 1.02, cue gap 0.3 s. Dialogues use other Kokoro voices: `am_michael`, `af_bella`, `am_fenrir`, `am_puck`, `af_kore`.
+- **Instructional narration:** Voice C, exactly as APERTURE's `aperture/content/narration.json` defines it (Kokoro-82M v1.0 q8,
+  `af_heart`, speed 1.02, cue gap 0.3 s). It narrates in **English only** — in both directions.
+- **English dialogue:** Kokoro American voices `am_michael`, `am_fenrir`, `am_puck`, `af_bella`, `af_kore`.
+- **Spanish:** Voice C reading Spanish sounds foreign (an English voice; it also scored lower in a speech-recognition round
+  trip), so Spanish is spoken by Kokoro's native Spanish voices `em_alex`, `em_santa`, `ef_dora` with **Latin American**
+  phonemes (espeak `es-419`: seseo and yeísmo — no Castilian "th"). In a round-trip test (render → Whisper small → compare)
+  all three transcribed ten coaching sentences word-perfect. Dominican features (aspirated or dropped final *s*) are not
+  available in any offline voice; naturalness has not been rated by a native listener.
+- Every Spanish sentence in a lecture is its own cue on a Spanish voice; the build refuses narration that would make Voice C
+  read Spanish.
 
-All audio is generated in advance and committed. No speech is generated at runtime. To re-render after a text change:
+All audio is generated in advance and committed (no runtime speech generation):
 
 ```bash
+node english/tools/build.mjs --jobs
 python english/tools/narrate.py        # needs kokoro-onnx + the model/voices files (see the script header)
-node english/tools/build.mjs           # fails if any audio is stale
+node english/tools/build.mjs           # fails if any audio is missing or stale
 ```
 
 ## Access
@@ -77,7 +102,7 @@ Prices are the last known values, not verified against OpenAI today:
 - transcription: $0.003 per audio minute;
 - `gpt-6-luna`: $0.10 per 1M input tokens and $0.50 per 1M output tokens.
 
-**Per lesson session:** about 12 spoken responses averaging 10 s gives about 2 audio minutes, which is roughly $0.006. Twelve evaluations at about 1,500 input and 400 output tokens each come to roughly $0.004. That is about **$0.01 per session**.
+**Per lesson session** (either direction): about 12 spoken responses averaging 10 s gives about 2 audio minutes, which is roughly $0.006. Twelve evaluations at about 1,500 input and 400 output tokens each come to roughly $0.004. That is about **$0.01 per session**.
 
 **Example academy:** 30 coaches doing 4 sessions a week is about 480 sessions a month, so roughly **$5 a month**. The placement test adds well under $0.01 per attempt.
 
@@ -87,7 +112,7 @@ The default $10 monthly ceiling covers this with room to spare. Check the real f
 
 Progress is stored in the browser (`localStorage` key `cpEnglish.v1`), the same approach as APERTURE's public beta. It is per device and never visible to other coaches.
 
-The store is versioned (`migrate`) and keeps placement attempts separate from lesson progress, so a server-side store and a coach/admin view can be added later without changing the shape of the data.
+Store v2: `learners[id]` (several learners can share a device) → `profile` (target, native, specialty) · `placements[en|es]` (attempt history per language: general level, coaching level and specialty, skills incl. listening and speaking) · `progress["<target>/<specialty>/<lesson>"]` (or `<target>/general/<lesson>` for the foundation) · `review` · `speaking`. v1 data migrates automatically (English lessons → `en/general`, placement → English). A server-side store and a coach/admin view can be added later without changing the shape.
 
 ## Tests
 
@@ -95,5 +120,5 @@ The store is versioned (`migrate`) and keeps placement attempts separate from le
 node english/tools/build.mjs --check
 node --test english/tests/core.test.mjs english/tests/server.test.mjs
 node scripts/build.mjs && node scripts/serve.mjs &   # then:
-node english/tests/app.e2e.cjs                        # journeys A–F + mobile + privacy (speech API mocked)
+node english/tests/app.e2e.cjs                        # both directions, placement, speech, switching, sync, logo, mobile, unavailable, regression
 ```

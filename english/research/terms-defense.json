@@ -1,0 +1,2055 @@
+[
+  {
+    "id": "ready-position",
+    "en": "ready position",
+    "es": "posición de listo",
+    "es_alt": [
+      "listo para fildear",
+      "posición básica de fildeo"
+    ],
+    "loanword": false,
+    "meaning": "The athletic stance a fielder is in as the pitch arrives: feet wider than the shoulders, knees bent, weight on the balls of the feet, hands out front.",
+    "example_en": "Get in your ready position before the pitch.",
+    "example_es": "Ponte en posición de listo antes del lanzamiento.",
+    "specialty": "defense",
+    "category": "stance",
+    "level": "A2",
+    "register": "both",
+    "region_note": "'Posición de listo' itself not confirmed in a Spanish baseball source; EFDeportes (Cuba) uses 'listo para fildear'.",
+    "sources": [
+      5,
+      6,
+      31
+    ]
+  },
+  {
+    "id": "stay-low",
+    "en": "stay low",
+    "es": "quédate abajo",
+    "es_alt": [
+      "mantente bajo",
+      "agáchate"
+    ],
+    "loanword": false,
+    "meaning": "Keep the knees bent and the body and glove low to the ground while fielding.",
+    "example_en": "Stay low and let the ball come to you.",
+    "example_es": "Quédate abajo y deja que la bola llegue.",
+    "specialty": "defense",
+    "category": "stance",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "stay-down",
+    "en": "stay down",
+    "es": "no te levantes",
+    "es_alt": [
+      "quédate abajo"
+    ],
+    "loanword": false,
+    "meaning": "Keep the head and glove down through the catch; do not pop up before the ball is in the glove.",
+    "example_en": "Stay down on that ball, you came up early.",
+    "example_es": "No te levantes con esa bola, te paraste temprano.",
+    "specialty": "defense",
+    "category": "stance",
+    "level": "A2",
+    "register": "field",
+    "region_note": "Phrasal verb: Spanish speakers may say 'stay below' or 'stay in the low'.",
+    "sources": []
+  },
+  {
+    "id": "weight-forward",
+    "en": "weight forward",
+    "es": "el peso hacia adelante",
+    "es_alt": [
+      "peso en la punta de los pies"
+    ],
+    "loanword": false,
+    "meaning": "Body weight on the front of the feet, not the heels, so the fielder can move quickly.",
+    "example_en": "Weight forward, you're on your heels.",
+    "example_es": "El peso hacia adelante, estás en los talones.",
+    "specialty": "defense",
+    "category": "stance",
+    "level": "A2",
+    "register": "field",
+    "region_note": "",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "id": "creep-step",
+    "en": "creep step",
+    "es": "pasitos de preparación",
+    "es_alt": [
+      "caminar hacia el home"
+    ],
+    "loanword": false,
+    "meaning": "Small walking steps toward the plate as the pitcher delivers, so the fielder is moving when the ball is hit.",
+    "example_en": "Creep in, then land as the ball gets to the zone.",
+    "example_es": "Da tus pasitos y cae cuando la bola llegue a la zona.",
+    "specialty": "defense",
+    "category": "stance",
+    "level": "B1",
+    "register": "technical",
+    "region_note": "No confirmed Spanish term; gloss descriptively.",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "id": "prep-step",
+    "en": "prep step",
+    "es": "paso de preparación",
+    "es_alt": [
+      "el salto de preparación"
+    ],
+    "loanword": false,
+    "meaning": "The timed hop or step at the end of the creep that lands as the ball reaches the hitting zone. Also called a ready step.",
+    "example_en": "Time your prep step with the swing.",
+    "example_es": "Coordina tu paso de preparación con el swing.",
+    "specialty": "defense",
+    "category": "stance",
+    "level": "B1",
+    "register": "technical",
+    "region_note": "Spanish term unverified.",
+    "sources": [
+      5
+    ]
+  },
+  {
+    "id": "hands-out-front",
+    "en": "hands out front",
+    "es": "las manos al frente",
+    "es_alt": [
+      "manos adelante"
+    ],
+    "loanword": false,
+    "meaning": "Hands and glove held in front of the body, where the fielder can see the ball into the glove.",
+    "example_en": "Hands out front, see it into the glove.",
+    "example_es": "Las manos al frente, mira la bola hasta el guante.",
+    "specialty": "defense",
+    "category": "stance",
+    "level": "A2",
+    "register": "field",
+    "region_note": "",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "id": "footwork",
+    "en": "footwork",
+    "es": "el juego de pies",
+    "es_alt": [
+      "los pies"
+    ],
+    "loanword": false,
+    "meaning": "How a player moves and places the feet to field and throw.",
+    "example_en": "Your footwork was much better today.",
+    "example_es": "Tu juego de pies estuvo mucho mejor hoy.",
+    "specialty": "defense",
+    "category": "footwork",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      7
+    ]
+  },
+  {
+    "id": "move-your-feet",
+    "en": "move your feet",
+    "es": "mueve los pies",
+    "es_alt": [
+      "muévete"
+    ],
+    "loanword": false,
+    "meaning": "Cue to get the feet moving to the ball instead of reaching with the glove.",
+    "example_en": "Move your feet, don't reach for it.",
+    "example_es": "Mueve los pies, no te estires por ella.",
+    "specialty": "defense",
+    "category": "footwork",
+    "level": "A1",
+    "register": "field",
+    "region_note": "English uses 'your feet', not 'the feet'.",
+    "sources": [
+      7
+    ]
+  },
+  {
+    "id": "get-your-feet-moving",
+    "en": "get your feet moving",
+    "es": "pon los pies a moverse",
+    "es_alt": [
+      "muévete rápido"
+    ],
+    "loanword": false,
+    "meaning": "Start moving the feet early and keep them active.",
+    "example_en": "Get your feet moving before the ball gets to you.",
+    "example_es": "Mueve los pies antes de que la bola te llegue.",
+    "specialty": "defense",
+    "category": "footwork",
+    "level": "A2",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "first-step",
+    "en": "first step",
+    "es": "el primer paso",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "The first move after the ball is hit; it should be quick and in the right direction.",
+    "example_en": "Good first step on that one.",
+    "example_es": "Buen primer paso en esa.",
+    "specialty": "defense",
+    "category": "footwork",
+    "level": "A1",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      31
+    ]
+  },
+  {
+    "id": "direction",
+    "en": "direction",
+    "es": "la dirección",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "The way a player or throw is moving; also the target the body should line up toward.",
+    "example_en": "Your first step went the wrong direction.",
+    "example_es": "Tu primer paso fue en la dirección equivocada.",
+    "specialty": "general",
+    "category": "general",
+    "level": "A1",
+    "register": "both",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "angle",
+    "en": "angle",
+    "es": "el ángulo",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "The path a fielder takes to the ball relative to its line; a good angle cuts the ball off.",
+    "example_en": "Take an angle so you cut the ball off.",
+    "example_es": "Toma un ángulo para cortarle el paso a la bola.",
+    "specialty": "defense",
+    "category": "footwork",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      9
+    ]
+  },
+  {
+    "id": "take-a-better-angle",
+    "en": "take a better angle",
+    "es": "toma un mejor ángulo",
+    "es_alt": [
+      "coge un mejor ángulo"
+    ],
+    "loanword": false,
+    "meaning": "Correction: approach the ball on a more efficient path, usually cutting in front of it rather than going straight sideways.",
+    "example_en": "Take a better angle, you let it play you.",
+    "example_es": "Toma un mejor ángulo, dejaste que la bola te jugara.",
+    "specialty": "defense",
+    "category": "footwork",
+    "level": "A2",
+    "register": "field",
+    "region_note": "'Coger' is vulgar in Mexico and Argentina; fine in the Caribbean.",
+    "sources": [
+      9
+    ]
+  },
+  {
+    "id": "set-your-feet",
+    "en": "set your feet",
+    "es": "planta los pies",
+    "es_alt": [
+      "cuadra los pies"
+    ],
+    "loanword": false,
+    "meaning": "Get the feet in a balanced, lined-up position before throwing.",
+    "example_en": "Set your feet and make a good throw.",
+    "example_es": "Planta los pies y haz un buen tiro.",
+    "specialty": "defense",
+    "category": "footwork",
+    "level": "A2",
+    "register": "field",
+    "region_note": "Spanish equivalents unverified.",
+    "sources": [
+      9
+    ]
+  },
+  {
+    "id": "feet-to-throw",
+    "en": "feet to throw",
+    "es": "los pies para tirar",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "Cue to move the feet into a throwing position after the catch instead of throwing flat-footed.",
+    "example_en": "Feet to throw, don't just flip it.",
+    "example_es": "Los pies para tirar, no la tires de cualquier forma.",
+    "specialty": "defense",
+    "category": "footwork",
+    "level": "B1",
+    "register": "field",
+    "region_note": "Coaching shorthand; not a full sentence.",
+    "sources": [
+      9
+    ]
+  },
+  {
+    "id": "shuffle",
+    "en": "shuffle",
+    "es": "desplazamiento lateral",
+    "es_alt": [
+      "paso de arrastre"
+    ],
+    "loanword": false,
+    "meaning": "Short side steps, feet not crossing, used to move into a throwing position or to cover a few feet.",
+    "example_en": "Shuffle your feet and throw.",
+    "example_es": "Desplázate de lado y tira.",
+    "specialty": "defense",
+    "category": "footwork",
+    "level": "B1",
+    "register": "both",
+    "region_note": "Spanish term unverified.",
+    "sources": []
+  },
+  {
+    "id": "crossover-step",
+    "en": "crossover step",
+    "es": "paso cruzado",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "Turning and crossing one leg over the other to run sideways quickly.",
+    "example_en": "Crossover and go, don't shuffle on a ball that far.",
+    "example_es": "Cruza y arranca, no te desplaces de lado con una bola tan lejos.",
+    "specialty": "defense",
+    "category": "footwork",
+    "level": "B1",
+    "register": "technical",
+    "region_note": "",
+    "sources": [
+      11
+    ]
+  },
+  {
+    "id": "drop-step",
+    "en": "drop step",
+    "es": "paso atrás",
+    "es_alt": [
+      "abrir la cadera hacia atrás"
+    ],
+    "loanword": false,
+    "meaning": "An outfielder's first step back with the foot on the ball's side, opening the hips to run back on a ball hit over his head.",
+    "example_en": "Drop step and go, don't backpedal.",
+    "example_es": "Paso atrás y arranca, no corras de espaldas.",
+    "specialty": "defense",
+    "category": "outfield",
+    "level": "B1",
+    "register": "technical",
+    "region_note": "Spanish term unverified.",
+    "sources": [
+      11
+    ]
+  },
+  {
+    "id": "dont-backpedal",
+    "en": "don't backpedal",
+    "es": "no corras de espaldas",
+    "es_alt": [
+      "no retrocedas de espaldas"
+    ],
+    "loanword": false,
+    "meaning": "Do not run backward facing the infield; turn and run instead.",
+    "example_en": "Don't backpedal, turn and run.",
+    "example_es": "No corras de espaldas, voltéate y corre.",
+    "specialty": "defense",
+    "category": "outfield",
+    "level": "B1",
+    "register": "field",
+    "region_note": "",
+    "sources": [
+      11
+    ]
+  },
+  {
+    "id": "open-your-hips",
+    "en": "open your hips",
+    "es": "abre la cadera",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "Turn the hips toward where you are going so you can run.",
+    "example_en": "Open your hips and go get it.",
+    "example_es": "Abre la cadera y ve a buscarla.",
+    "specialty": "defense",
+    "category": "footwork",
+    "level": "B1",
+    "register": "field",
+    "region_note": "",
+    "sources": [
+      11
+    ]
+  },
+  {
+    "id": "field-the-ball",
+    "en": "field the ball",
+    "es": "fildear la bola",
+    "es_alt": [
+      "atrapar la bola",
+      "coger la bola"
+    ],
+    "loanword": true,
+    "meaning": "Catch or stop a batted ball, especially a ground ball, and get control of it.",
+    "example_en": "Field the ball first, then worry about the throw.",
+    "example_es": "Fildea la bola primero, después piensa en el tiro.",
+    "specialty": "defense",
+    "category": "fielding",
+    "level": "A2",
+    "register": "both",
+    "region_note": "'Fildear' is a common loanword (field). Formal Spanish prefers 'atrapar'.",
+    "sources": [
+      32,
+      34
+    ]
+  },
+  {
+    "id": "catch",
+    "en": "catch",
+    "es": "atrapar",
+    "es_alt": [
+      "coger",
+      "cachar",
+      "agarrar"
+    ],
+    "loanword": false,
+    "meaning": "Take a thrown or batted ball in the air with the glove. For a ground ball, coaches usually say 'field' instead of 'catch'.",
+    "example_en": "Catch it with two hands, then throw.",
+    "example_es": "Atrápala con las dos manos, después tira.",
+    "specialty": "defense",
+    "category": "catching",
+    "level": "A1",
+    "register": "both",
+    "region_note": "'Coger' is vulgar in Mexico and Argentina. 'Cachar' is recorded in the Diccionario del español dominicano for the catcher's catch (via a secondary source).",
+    "sources": [
+      26
+    ]
+  },
+  {
+    "id": "ground-ball",
+    "en": "ground ball",
+    "es": "roletazo",
+    "es_alt": [
+      "rolin",
+      "rola",
+      "rolata",
+      "rolling"
+    ],
+    "loanword": true,
+    "meaning": "A batted ball that rolls or bounces along the ground. Also called a grounder.",
+    "example_en": "We'll take fifty ground balls today.",
+    "example_es": "Hoy vamos a coger cincuenta roletazos.",
+    "specialty": "defense",
+    "category": "fielding",
+    "level": "A2",
+    "register": "both",
+    "region_note": "'Rolin' is recorded in the Diccionario del español dominicano; 'rolling' is used in Cuba.",
+    "sources": [
+      25,
+      26,
+      31
+    ]
+  },
+  {
+    "id": "fly-ball",
+    "en": "fly ball",
+    "es": "elevado",
+    "es_alt": [
+      "flai",
+      "fly"
+    ],
+    "loanword": true,
+    "meaning": "A batted ball hit high in the air.",
+    "example_en": "Call every fly ball loud.",
+    "example_es": "Pide en voz alta cada elevado.",
+    "specialty": "defense",
+    "category": "outfield",
+    "level": "A2",
+    "register": "both",
+    "region_note": "'Flai' is the Caribbean adaptation of 'fly'.",
+    "sources": [
+      27,
+      28
+    ]
+  },
+  {
+    "id": "pop-up",
+    "en": "pop-up",
+    "es": "elevado al cuadro",
+    "es_alt": [
+      "palomita",
+      "flai al cuadro"
+    ],
+    "loanword": false,
+    "meaning": "A short, high fly ball, usually in or near the infield.",
+    "example_en": "That pop-up is yours, call it.",
+    "example_es": "Ese elevado es tuyo, pídelo.",
+    "specialty": "defense",
+    "category": "fielding",
+    "level": "A2",
+    "register": "both",
+    "region_note": "'Palomita' is regional; unverified for DR.",
+    "sources": []
+  },
+  {
+    "id": "line-drive",
+    "en": "line drive",
+    "es": "línea",
+    "es_alt": [
+      "lineazo",
+      "línea dura"
+    ],
+    "loanword": false,
+    "meaning": "A ball hit hard and low on a flat path.",
+    "example_en": "React to the line drive, don't guess.",
+    "example_es": "Reacciona a la línea, no adivines.",
+    "specialty": "defense",
+    "category": "fielding",
+    "level": "A2",
+    "register": "both",
+    "region_note": "Spanish terms from compiler knowledge, unverified here.",
+    "sources": []
+  },
+  {
+    "id": "charge-the-ball",
+    "en": "charge the ball",
+    "es": "ataca la bola",
+    "es_alt": [
+      "ven a buscar la bola",
+      "sal a la bola"
+    ],
+    "loanword": false,
+    "meaning": "Run in aggressively toward a slow or routine ground ball instead of waiting for it.",
+    "example_en": "Charge the ball, don't let it play you.",
+    "example_es": "Ataca la bola, no dejes que ella te juegue a ti.",
+    "specialty": "defense",
+    "category": "fielding",
+    "level": "A2",
+    "register": "field",
+    "region_note": "'Charge' here is not 'cobrar' (a false friend).",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "id": "come-get-it",
+    "en": "come get it",
+    "es": "ven a buscarla",
+    "es_alt": [
+      "sal a buscarla"
+    ],
+    "loanword": false,
+    "meaning": "Cue to move forward and take the ball rather than wait on it.",
+    "example_en": "Come get it! Be aggressive.",
+    "example_es": "¡Ven a buscarla! Sé agresivo.",
+    "specialty": "defense",
+    "category": "fielding",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "id": "work-through-the-ball",
+    "en": "work through the ball",
+    "es": "trabaja a través de la bola",
+    "es_alt": [
+      "sigue moviéndote a través de la bola"
+    ],
+    "loanword": false,
+    "meaning": "Keep moving through the catch toward the target so fielding and throwing are one motion; don't stop on the ball.",
+    "example_en": "Work through the ball and toward first.",
+    "example_es": "Sigue moviéndote a través de la bola hacia primera.",
+    "specialty": "defense",
+    "category": "fielding",
+    "level": "B2",
+    "register": "field",
+    "region_note": "No standard Spanish equivalent found; gloss by demonstration.",
+    "sources": [
+      10
+    ]
+  },
+  {
+    "id": "glove-out-front",
+    "en": "glove out front",
+    "es": "el guante al frente",
+    "es_alt": [
+      "guante adelante"
+    ],
+    "loanword": false,
+    "meaning": "Field the ball in front of the body where you can see it, not under or beside you.",
+    "example_en": "Glove out front, you're catching it under your body.",
+    "example_es": "El guante al frente, la estás cogiendo debajo del cuerpo.",
+    "specialty": "defense",
+    "category": "fielding",
+    "level": "A2",
+    "register": "field",
+    "region_note": "",
+    "sources": [
+      8
+    ]
+  },
+  {
+    "id": "glove-down",
+    "en": "get your glove down",
+    "es": "baja el guante",
+    "es_alt": [
+      "guante abajo"
+    ],
+    "loanword": false,
+    "meaning": "Put the glove on or near the ground early, so you come up with the ball rather than going down after it.",
+    "example_en": "Get your glove down early.",
+    "example_es": "Baja el guante temprano.",
+    "specialty": "defense",
+    "category": "fielding",
+    "level": "A1",
+    "register": "field",
+    "region_note": "English uses 'your glove', not 'the glove', in direct cues.",
+    "sources": []
+  },
+  {
+    "id": "funnel",
+    "en": "funnel",
+    "es": "llevar la bola al cuerpo",
+    "es_alt": [
+      "subir la bola al centro"
+    ],
+    "loanword": false,
+    "meaning": "After the catch, bring the glove and ball up into the belly area to start the transfer.",
+    "example_en": "Catch it and funnel it to your belly.",
+    "example_es": "Atrápala y llévala al estómago.",
+    "specialty": "defense",
+    "category": "fielding",
+    "level": "B2",
+    "register": "technical",
+    "region_note": "Spanish equivalent unverified.",
+    "sources": [
+      7
+    ]
+  },
+  {
+    "id": "soft-hands",
+    "en": "soft hands",
+    "es": "manos suaves",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "Relaxed hands that give with the ball so it stays in the glove.",
+    "example_en": "Soft hands, let the ball in.",
+    "example_es": "Manos suaves, deja que la bola entre.",
+    "specialty": "defense",
+    "category": "fielding",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "backhand",
+    "en": "backhand",
+    "es": "de revés",
+    "es_alt": [
+      "el revés",
+      "coger de revés"
+    ],
+    "loanword": false,
+    "meaning": "Fielding a ball on the throwing-hand side by reaching across the body with the glove turned over.",
+    "example_en": "Take that one on the backhand.",
+    "example_es": "Coge esa de revés.",
+    "specialty": "defense",
+    "category": "fielding",
+    "level": "B1",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      29
+    ]
+  },
+  {
+    "id": "forehand",
+    "en": "forehand",
+    "es": "de frente",
+    "es_alt": [
+      "por el lado del guante"
+    ],
+    "loanword": false,
+    "meaning": "Fielding a ball on the glove side with the glove open, palm toward the ball.",
+    "example_en": "Forehand, open glove, use your feet.",
+    "example_es": "Por el lado del guante, guante abierto, usa los pies.",
+    "specialty": "defense",
+    "category": "fielding",
+    "level": "B1",
+    "register": "both",
+    "region_note": "Spanish equivalent unverified.",
+    "sources": []
+  },
+  {
+    "id": "short-hop",
+    "en": "short hop",
+    "es": "bote corto",
+    "es_alt": [
+      "medio bote"
+    ],
+    "loanword": false,
+    "meaning": "Catching a ground ball right after it bounces, close to the ground; also the bounce itself.",
+    "example_en": "Pick the short hop, don't let it eat you up.",
+    "example_es": "Coge el bote corto, no dejes que te coma.",
+    "specialty": "defense",
+    "category": "fielding",
+    "level": "B1",
+    "register": "both",
+    "region_note": "No Spanish term confirmed; 'bote corto' and 'medio bote' are unverified.",
+    "sources": []
+  },
+  {
+    "id": "bad-hop",
+    "en": "bad hop",
+    "es": "mal bote",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "An unexpected bounce of a ground ball.",
+    "example_en": "Bad hop, nothing you could do.",
+    "example_es": "Mal bote, no podías hacer nada.",
+    "specialty": "defense",
+    "category": "fielding",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      30
+    ]
+  },
+  {
+    "id": "read-the-hop",
+    "en": "read the hop",
+    "es": "lee el bote",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "Judge how the ground ball will bounce and adjust your feet to get a good hop.",
+    "example_en": "Read the hop and pick a good one.",
+    "example_es": "Lee el bote y escoge uno bueno.",
+    "specialty": "defense",
+    "category": "fielding",
+    "level": "B1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "see-it-into-the-glove",
+    "en": "see it into the glove",
+    "es": "mira la bola hasta el guante",
+    "es_alt": [
+      "sigue la bola hasta el guante"
+    ],
+    "loanword": false,
+    "meaning": "Watch the ball all the way into the glove.",
+    "example_en": "See it into the glove, then throw.",
+    "example_es": "Mira la bola hasta el guante, después tira.",
+    "specialty": "defense",
+    "category": "fielding",
+    "level": "A2",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "keep-your-eyes-on-the-ball",
+    "en": "keep your eyes on the ball",
+    "es": "no le quites la vista a la bola",
+    "es_alt": [
+      "mira la bola"
+    ],
+    "loanword": false,
+    "meaning": "Keep watching the ball.",
+    "example_en": "Keep your eyes on the ball the whole way.",
+    "example_es": "No le quites la vista a la bola en todo el recorrido.",
+    "specialty": "general",
+    "category": "fielding",
+    "level": "A1",
+    "register": "field",
+    "region_note": "English uses 'your eyes', not 'the eyes'.",
+    "sources": []
+  },
+  {
+    "id": "get-your-body-behind-it",
+    "en": "get your body behind it",
+    "es": "ponte detrás de la bola",
+    "es_alt": [
+      "mete el cuerpo"
+    ],
+    "loanword": false,
+    "meaning": "Move so the body is behind the ball, blocking it and lined up to throw.",
+    "example_en": "Get your body behind it, don't stab at it.",
+    "example_es": "Ponte detrás de la bola, no le tires el guante.",
+    "specialty": "defense",
+    "category": "fielding",
+    "level": "B1",
+    "register": "field",
+    "region_note": "Phrasal verb 'get behind'; Spanish speakers may say 'put behind'.",
+    "sources": []
+  },
+  {
+    "id": "bare-hand",
+    "en": "bare-hand",
+    "es": "a mano pelada",
+    "es_alt": [
+      "a mano limpia"
+    ],
+    "loanword": false,
+    "meaning": "Field the ball with the throwing hand, without the glove, usually on a slow roller.",
+    "example_en": "Only bare-hand it if it's stopped or slow.",
+    "example_es": "Cógela a mano pelada solo si está parada o va lenta.",
+    "specialty": "defense",
+    "category": "fielding",
+    "level": "B1",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      30
+    ]
+  },
+  {
+    "id": "stop-the-ball",
+    "en": "keep it in front",
+    "es": "que no se te pase",
+    "es_alt": [
+      "bloquea la bola",
+      "mantenla al frente"
+    ],
+    "loanword": false,
+    "meaning": "Stop the ball even if you can't field it cleanly, so it does not get past you.",
+    "example_en": "If you can't catch it, keep it in front.",
+    "example_es": "Si no la puedes coger, que no se te pase.",
+    "specialty": "defense",
+    "category": "fielding",
+    "level": "A2",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "error",
+    "en": "error",
+    "es": "error",
+    "es_alt": [
+      "pifia"
+    ],
+    "loanword": true,
+    "meaning": "A misplay that the official scorer judges an average fielder should have made into an out. In baseball English you 'make' or 'commit' an error.",
+    "example_en": "Forget the error, next ball.",
+    "example_es": "Olvida el error, a la próxima.",
+    "specialty": "defense",
+    "category": "fielding",
+    "level": "A1",
+    "register": "both",
+    "region_note": "'Commit an error' is correct in baseball English, but 'commit a mistake' is not. 'Pifia' is colloquial in some countries; unverified for DR.",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "id": "throw",
+    "en": "throw",
+    "es": "tirar",
+    "es_alt": [
+      "el tiro",
+      "lanzar",
+      "tíra la bola"
+    ],
+    "loanword": false,
+    "meaning": "Send the ball to a teammate with the arm. Use 'pitch' only for the pitcher.",
+    "example_en": "Make a good, strong throw to first.",
+    "example_es": "Haz un tiro bueno y fuerte a primera.",
+    "specialty": "defense",
+    "category": "throwing",
+    "level": "A1",
+    "register": "both",
+    "region_note": "'Lanzar' also means 'pitch'; in English 'throw' covers fielders.",
+    "sources": []
+  },
+  {
+    "id": "throw-to-first",
+    "en": "throw to first",
+    "es": "tirar a primera",
+    "es_alt": [
+      "tírale a primera"
+    ],
+    "loanword": false,
+    "meaning": "Throw the ball to first base. No article and normally no 'base': 'to first', 'to second', 'to third'.",
+    "example_en": "Field it and throw to first.",
+    "example_es": "Fildéala y tira a primera.",
+    "specialty": "defense",
+    "category": "throwing",
+    "level": "A2",
+    "register": "field",
+    "region_note": "Spanish speakers may say 'to the first base'.",
+    "sources": [
+      33
+    ]
+  },
+  {
+    "id": "transfer",
+    "en": "transfer",
+    "es": "el cambio de mano",
+    "es_alt": [
+      "sacar la bola del guante"
+    ],
+    "loanword": false,
+    "meaning": "Moving the ball quickly from the glove to the throwing hand.",
+    "example_en": "Quick transfer, get it out of the glove.",
+    "example_es": "Cambio rápido, saca la bola del guante.",
+    "specialty": "defense",
+    "category": "throwing",
+    "level": "B1",
+    "register": "technical",
+    "region_note": "Spanish term unverified.",
+    "sources": []
+  },
+  {
+    "id": "throwing-lane",
+    "en": "throwing lane",
+    "es": "línea de tiro",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "A clear line from thrower to receiver, with no runner or fielder in the way.",
+    "example_en": "Step off the line and clear your throwing lane.",
+    "example_es": "Sal de la línea y limpia tu línea de tiro.",
+    "specialty": "defense",
+    "category": "throwing",
+    "level": "B1",
+    "register": "technical",
+    "region_note": "Spanish term unverified.",
+    "sources": []
+  },
+  {
+    "id": "crow-hop",
+    "en": "crow hop",
+    "es": "salto de cuervo",
+    "es_alt": [
+      "el crow hop"
+    ],
+    "loanword": true,
+    "meaning": "An outfielder's hop and step after the catch that turns momentum into a strong throw.",
+    "example_en": "Catch it coming in, crow hop and throw.",
+    "example_es": "Atrápala viniendo hacia adelante, haz el crow hop y tira.",
+    "specialty": "defense",
+    "category": "outfield",
+    "level": "B1",
+    "register": "technical",
+    "region_note": "Spanish calque 'salto de cuervo' unverified; the English term may be used as-is.",
+    "sources": []
+  },
+  {
+    "id": "hit-the-cutoff",
+    "en": "hit the cutoff",
+    "es": "dale al cortador",
+    "es_alt": [
+      "tírale al corte"
+    ],
+    "loanword": false,
+    "meaning": "Throw on a line through the cutoff man so he can catch it or let it go.",
+    "example_en": "Hit the cutoff, keep it low.",
+    "example_es": "Dale al cortador, mantenla baja.",
+    "specialty": "defense",
+    "category": "throwing",
+    "level": "B1",
+    "register": "field",
+    "region_note": "Spanish terms unverified.",
+    "sources": [
+      4,
+      12
+    ]
+  },
+  {
+    "id": "keep-it-low",
+    "en": "keep it low",
+    "es": "mantenla baja",
+    "es_alt": [
+      "tírala baja"
+    ],
+    "loanword": false,
+    "meaning": "Throw on a low line so the cutoff can handle it and the ball gets there fast.",
+    "example_en": "Keep it low through the cutoff.",
+    "example_es": "Mantenla baja a través del cortador.",
+    "specialty": "defense",
+    "category": "throwing",
+    "level": "A2",
+    "register": "field",
+    "region_note": "",
+    "sources": [
+      12
+    ]
+  },
+  {
+    "id": "one-hop",
+    "en": "one hop",
+    "es": "de un bote",
+    "es_alt": [
+      "a un bote"
+    ],
+    "loanword": false,
+    "meaning": "A throw meant to bounce once before reaching the base, usually from the outfield.",
+    "example_en": "One hop to the bag is fine.",
+    "example_es": "De un bote a la base está bien.",
+    "specialty": "defense",
+    "category": "throwing",
+    "level": "B1",
+    "register": "field",
+    "region_note": "",
+    "sources": [
+      12
+    ]
+  },
+  {
+    "id": "cutoff",
+    "en": "cutoff",
+    "es": "el cortador",
+    "es_alt": [
+      "el corte",
+      "el cutoff"
+    ],
+    "loanword": true,
+    "meaning": "The fielder, or the play, that takes an outfielder's throw and can redirect or stop it.",
+    "example_en": "Who's the cutoff on a single to right?",
+    "example_es": "¿Quién es el cortador en un sencillo al right?",
+    "specialty": "defense",
+    "category": "infield",
+    "level": "B1",
+    "register": "technical",
+    "region_note": "Spanish terms unverified; the English term may be used as-is.",
+    "sources": [
+      4,
+      12
+    ]
+  },
+  {
+    "id": "relay",
+    "en": "relay",
+    "es": "el relevo",
+    "es_alt": [
+      "tiro de relevo"
+    ],
+    "loanword": false,
+    "meaning": "A two-throw play: an infielder goes out to take a long outfield throw and relays it to a base.",
+    "example_en": "Line up the relay, he's going for three.",
+    "example_es": "Alinea el relevo, va para tercera.",
+    "specialty": "defense",
+    "category": "infield",
+    "level": "B1",
+    "register": "technical",
+    "region_note": "Caution: Insinga gives 'relevo' = bullpen, so the Spanish gloss is ambiguous.",
+    "sources": [
+      12,
+      25
+    ]
+  },
+  {
+    "id": "cut",
+    "en": "cut!",
+    "es": "¡corta!",
+    "es_alt": [
+      "¡córtala!"
+    ],
+    "loanword": false,
+    "meaning": "A call telling the cutoff man to catch the throw (often followed by the base: 'Cut two!').",
+    "example_en": "Cut! Cut two!",
+    "example_es": "¡Corta! ¡Corta y a segunda!",
+    "specialty": "defense",
+    "category": "communication",
+    "level": "A2",
+    "register": "field",
+    "region_note": "Call wording varies by team.",
+    "sources": []
+  },
+  {
+    "id": "let-it-go",
+    "en": "let it go!",
+    "es": "¡déjala pasar!",
+    "es_alt": [
+      "¡déjala!"
+    ],
+    "loanword": false,
+    "meaning": "A call telling the cutoff man not to touch the throw.",
+    "example_en": "Let it go! Let it go!",
+    "example_es": "¡Déjala pasar! ¡Déjala!",
+    "specialty": "defense",
+    "category": "communication",
+    "level": "A2",
+    "register": "field",
+    "region_note": "Call wording varies by team.",
+    "sources": []
+  },
+  {
+    "id": "double-play",
+    "en": "double play",
+    "es": "doble play",
+    "es_alt": [
+      "doble matanza",
+      "doble"
+    ],
+    "loanword": true,
+    "meaning": "A play that records two outs.",
+    "example_en": "Two outs on one play, that's a double play.",
+    "example_es": "Dos outs en una jugada, eso es un doble play.",
+    "specialty": "defense",
+    "category": "infield",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      34
+    ]
+  },
+  {
+    "id": "turn-two",
+    "en": "turn two",
+    "es": "hacer el doble play",
+    "es_alt": [
+      "virar el doble"
+    ],
+    "loanword": false,
+    "meaning": "Complete a double play.",
+    "example_en": "Get two, turn two!",
+    "example_es": "¡Saca dos, haz el doble!",
+    "specialty": "defense",
+    "category": "infield",
+    "level": "B1",
+    "register": "field",
+    "region_note": "'Virar' unverified.",
+    "sources": []
+  },
+  {
+    "id": "two-call",
+    "en": "two!",
+    "es": "¡dos!",
+    "es_alt": [
+      "¡a segunda!"
+    ],
+    "loanword": false,
+    "meaning": "Call meaning a double play is on, or 'throw to second'.",
+    "example_en": "Runner on first, nobody out, think two!",
+    "example_es": "Corredor en primera, sin outs, ¡piensa en dos!",
+    "specialty": "defense",
+    "category": "communication",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "feed",
+    "en": "feed",
+    "es": "dar la bola",
+    "es_alt": [
+      "el pase"
+    ],
+    "loanword": false,
+    "meaning": "The toss or throw a middle infielder gives to the man covering second on a double play.",
+    "example_en": "Give him a good feed, chest high.",
+    "example_es": "Dale una buena bola, a la altura del pecho.",
+    "specialty": "defense",
+    "category": "infield",
+    "level": "B1",
+    "register": "field",
+    "region_note": "Spanish equivalent unverified.",
+    "sources": []
+  },
+  {
+    "id": "pivot",
+    "en": "pivot",
+    "es": "el pivote",
+    "es_alt": [
+      "el giro en segunda"
+    ],
+    "loanword": false,
+    "meaning": "The footwork at second base to receive the feed, touch the bag and throw to first.",
+    "example_en": "Work on your pivot at second.",
+    "example_es": "Trabaja tu pivote en segunda.",
+    "specialty": "defense",
+    "category": "infield",
+    "level": "B2",
+    "register": "technical",
+    "region_note": "Spanish term unverified.",
+    "sources": []
+  },
+  {
+    "id": "cover-the-bag",
+    "en": "cover the bag",
+    "es": "cubrir la base",
+    "es_alt": [
+      "cubre la base"
+    ],
+    "loanword": false,
+    "meaning": "Go to a base to take a throw.",
+    "example_en": "Shortstop, cover the bag on the steal.",
+    "example_es": "Short, cubre la base en el robo.",
+    "specialty": "defense",
+    "category": "infield",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "back-up",
+    "en": "back up (a base / a play)",
+    "es": "respaldar",
+    "es_alt": [
+      "cubrir detrás",
+      "dar respaldo"
+    ],
+    "loanword": false,
+    "meaning": "Stand behind the base or fielder in line with the throw, in case the ball gets past. Also means 'move backward' as a plain instruction.",
+    "example_en": "Right fielder, back up first on every ground ball.",
+    "example_es": "Right, respalda primera en cada roletazo.",
+    "specialty": "defense",
+    "category": "infield",
+    "level": "B1",
+    "register": "field",
+    "region_note": "Two meanings: 'back up first' (support) vs 'back up!' (move back). Spanish 'respaldar' unverified for field use.",
+    "sources": []
+  },
+  {
+    "id": "read",
+    "en": "read",
+    "es": "lectura",
+    "es_alt": [
+      "leer la bola"
+    ],
+    "loanword": false,
+    "meaning": "Judging where a batted ball is going (height, speed, direction) from the moment it is hit.",
+    "example_en": "Good read off the bat.",
+    "example_es": "Buena lectura del batazo.",
+    "specialty": "defense",
+    "category": "outfield",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      11
+    ]
+  },
+  {
+    "id": "route",
+    "en": "route",
+    "es": "la ruta",
+    "es_alt": [
+      "el camino a la bola"
+    ],
+    "loanword": false,
+    "meaning": "The path an outfielder runs to the ball.",
+    "example_en": "Take a straight route, you drifted.",
+    "example_es": "Toma una ruta directa, te fuiste de lado.",
+    "specialty": "defense",
+    "category": "outfield",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      11
+    ]
+  },
+  {
+    "id": "get-behind-the-ball",
+    "en": "get behind the ball",
+    "es": "ponte detrás de la bola",
+    "es_alt": [
+      "colócate detrás"
+    ],
+    "loanword": false,
+    "meaning": "Outfield: get a step behind where the ball will land so you catch it moving toward your throw.",
+    "example_en": "Get behind the ball so you can come through it.",
+    "example_es": "Ponte detrás de la bola para venir hacia adelante.",
+    "specialty": "defense",
+    "category": "outfield",
+    "level": "B1",
+    "register": "field",
+    "region_note": "Phrasal-verb chunk; teach with demonstration.",
+    "sources": []
+  },
+  {
+    "id": "come-in",
+    "en": "come in",
+    "es": "ven hacia adelante",
+    "es_alt": [
+      "entra"
+    ],
+    "loanword": false,
+    "meaning": "Run forward toward the infield (for a short fly ball, or to play shallower).",
+    "example_en": "Come in! It's falling short.",
+    "example_es": "¡Ven! Se está quedando corta.",
+    "specialty": "defense",
+    "category": "outfield",
+    "level": "A2",
+    "register": "field",
+    "region_note": "Spanish uses one verb (entrar/venir); English uses verb + particle.",
+    "sources": []
+  },
+  {
+    "id": "go-back",
+    "en": "go back",
+    "es": "ve hacia atrás",
+    "es_alt": [
+      "atrás"
+    ],
+    "loanword": false,
+    "meaning": "Run back toward the fence.",
+    "example_en": "Go back, go back, it's over your head!",
+    "example_es": "¡Atrás, atrás, va por encima!",
+    "specialty": "defense",
+    "category": "outfield",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "gap",
+    "en": "gap",
+    "es": "la brecha",
+    "es_alt": [
+      "el hueco",
+      "el gap"
+    ],
+    "loanword": true,
+    "meaning": "The space between two outfielders (left-center or right-center).",
+    "example_en": "Cut that ball off in the gap.",
+    "example_es": "Córtale esa bola en la brecha.",
+    "specialty": "defense",
+    "category": "outfield",
+    "level": "B1",
+    "register": "both",
+    "region_note": "Spanish terms unverified; 'hueco' is attested for the infield 'hole' [29].",
+    "sources": []
+  },
+  {
+    "id": "hole",
+    "en": "the hole",
+    "es": "el hueco",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "The space between the shortstop and third baseman (or between first and second).",
+    "example_en": "Backhand in the hole, plant and throw.",
+    "example_es": "De revés en el hueco, planta y tira.",
+    "specialty": "defense",
+    "category": "infield",
+    "level": "B1",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      29
+    ]
+  },
+  {
+    "id": "i-got-it",
+    "en": "I got it",
+    "es": "¡la tengo!",
+    "es_alt": [
+      "¡mía!",
+      "¡yo!"
+    ],
+    "loanword": false,
+    "meaning": "Call meaning 'I am catching this ball; everyone else clear out'. Call it loud and more than once.",
+    "example_en": "I got it! I got it!",
+    "example_es": "¡La tengo! ¡La tengo!",
+    "specialty": "defense",
+    "category": "communication",
+    "level": "A1",
+    "register": "field",
+    "region_note": "Fixed form: 'I got it', not 'I have it' or 'I take it'.",
+    "sources": [
+      13
+    ]
+  },
+  {
+    "id": "ball-ball",
+    "en": "ball, ball!",
+    "es": "¡bola, bola!",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "Call some teams use for 'I'm catching it'.",
+    "example_en": "Ball, ball, ball!",
+    "example_es": "¡Bola, bola, bola!",
+    "specialty": "defense",
+    "category": "communication",
+    "level": "A1",
+    "register": "field",
+    "region_note": "Varies by team.",
+    "sources": [
+      13
+    ]
+  },
+  {
+    "id": "mine",
+    "en": "mine!",
+    "es": "¡mía!",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "Call meaning 'I am catching this'.",
+    "example_en": "Mine! Mine!",
+    "example_es": "¡Mía! ¡Mía!",
+    "specialty": "defense",
+    "category": "communication",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": [
+      13
+    ]
+  },
+  {
+    "id": "you-you",
+    "en": "you, you!",
+    "es": "¡tuya, tuya!",
+    "es_alt": [
+      "¡cógela tú!"
+    ],
+    "loanword": false,
+    "meaning": "Call telling a teammate to make the play.",
+    "example_en": "You, you! Take it!",
+    "example_es": "¡Tuya, tuya! ¡Cógela!",
+    "specialty": "defense",
+    "category": "communication",
+    "level": "A1",
+    "register": "field",
+    "region_note": "Common but not confirmed as standard in this review; treat as a team convention.",
+    "sources": []
+  },
+  {
+    "id": "communication",
+    "en": "communication",
+    "es": "la comunicación",
+    "es_alt": [
+      "hablar en el terreno"
+    ],
+    "loanword": false,
+    "meaning": "Fielders calling for balls and telling each other where to throw.",
+    "example_en": "Communication wins those plays. Talk to each other.",
+    "example_es": "La comunicación gana esas jugadas. Háblense.",
+    "specialty": "defense",
+    "category": "communication",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      13,
+      14
+    ]
+  },
+  {
+    "id": "priority",
+    "en": "priority",
+    "es": "prioridad",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "Which fielder has the right to a ball both can reach (e.g. the center fielder over the corners, outfielders over infielders).",
+    "example_en": "Center fielder has priority, so get out of his way.",
+    "example_es": "El center tiene prioridad, apártate.",
+    "specialty": "defense",
+    "category": "communication",
+    "level": "B1",
+    "register": "technical",
+    "region_note": "",
+    "sources": [
+      14
+    ]
+  },
+  {
+    "id": "call-it",
+    "en": "call it",
+    "es": "pídela",
+    "es_alt": [
+      "pide la bola"
+    ],
+    "loanword": false,
+    "meaning": "Say the call loudly to claim a ball.",
+    "example_en": "If you can get there, call it.",
+    "example_es": "Si llegas, pídela.",
+    "specialty": "defense",
+    "category": "communication",
+    "level": "A2",
+    "register": "field",
+    "region_note": "",
+    "sources": [
+      13
+    ]
+  },
+  {
+    "id": "positioning",
+    "en": "positioning",
+    "es": "el posicionamiento",
+    "es_alt": [
+      "la colocación"
+    ],
+    "loanword": false,
+    "meaning": "Where a fielder stands before the pitch, based on the hitter, count and situation.",
+    "example_en": "Check your positioning before every pitch.",
+    "example_es": "Revisa tu posicionamiento antes de cada lanzamiento.",
+    "specialty": "defense",
+    "category": "positioning",
+    "level": "B1",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "id": "shade",
+    "en": "shade",
+    "es": "cargarse",
+    "es_alt": [
+      "moverse un poco hacia",
+      "correrse"
+    ],
+    "loanword": false,
+    "meaning": "Move a few steps toward one side from normal position.",
+    "example_en": "Shade him to pull a couple of steps.",
+    "example_es": "Córrete un par de pasos hacia su lado de halar.",
+    "specialty": "defense",
+    "category": "positioning",
+    "level": "B2",
+    "register": "field",
+    "region_note": "Spanish terms unverified.",
+    "sources": []
+  },
+  {
+    "id": "depth",
+    "en": "depth",
+    "es": "la profundidad",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "How deep or shallow a fielder plays ('double-play depth', 'in', 'back').",
+    "example_en": "Double-play depth, two steps in.",
+    "example_es": "Profundidad de doble play, dos pasos adentro.",
+    "specialty": "defense",
+    "category": "positioning",
+    "level": "B1",
+    "register": "both",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "pull-hitter",
+    "en": "pull hitter",
+    "es": "bateador de halar",
+    "es_alt": [
+      "halador"
+    ],
+    "loanword": false,
+    "meaning": "A hitter who usually hits to his own side of the field (left side for a right-handed hitter).",
+    "example_en": "He's a pull hitter, cheat over a step.",
+    "example_es": "Es bateador de halar, córrete un paso.",
+    "specialty": "defense",
+    "category": "positioning",
+    "level": "B1",
+    "register": "both",
+    "region_note": "'Halar' (Caribbean) unverified in a cited source.",
+    "sources": []
+  },
+  {
+    "id": "shift",
+    "en": "shift",
+    "es": "el shift",
+    "es_alt": [
+      "la shift",
+      "desplazamiento defensivo"
+    ],
+    "loanword": true,
+    "meaning": "Moving fielders away from standard spots for a hitter. Since 2023 MLB requires four players on the infield dirt and two infielders on each side of second at the pitch.",
+    "example_en": "No full shift anymore. Two on each side of the bag.",
+    "example_es": "Ya no hay shift completo. Dos a cada lado de la base.",
+    "specialty": "defense",
+    "category": "positioning",
+    "level": "B1",
+    "register": "both",
+    "region_note": "Gender of the loanword varies; unverified.",
+    "sources": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": "glove",
+    "en": "glove",
+    "es": "el guante",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "The leather glove a fielder wears. Use 'mitt' for the catcher's or first baseman's.",
+    "example_en": "Glove up, let's go.",
+    "example_es": "Guante puesto, vamos.",
+    "specialty": "defense",
+    "category": "equipment",
+    "level": "A1",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      29
+    ]
+  },
+  {
+    "id": "glove-side",
+    "en": "glove side",
+    "es": "el lado del guante",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "The side of the body where the glove is (left side for a right-handed thrower).",
+    "example_en": "That ball's to your glove side, forehand it.",
+    "example_es": "Esa bola va por el lado del guante, cógela de frente.",
+    "specialty": "defense",
+    "category": "body",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "throwing-side",
+    "en": "throwing side",
+    "es": "el lado de tirar",
+    "es_alt": [
+      "el lado de la mano de tirar"
+    ],
+    "loanword": false,
+    "meaning": "The side of the body of the throwing arm.",
+    "example_en": "Ball to your throwing side, backhand it.",
+    "example_es": "Bola por tu lado de tirar, cógela de revés.",
+    "specialty": "defense",
+    "category": "body",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "knees",
+    "en": "bend your knees",
+    "es": "dobla las rodillas",
+    "es_alt": [
+      "flexiona las rodillas"
+    ],
+    "loanword": false,
+    "meaning": "Lower the body by bending the knees, not the back.",
+    "example_en": "Bend your knees, not your back.",
+    "example_es": "Dobla las rodillas, no la espalda.",
+    "specialty": "general",
+    "category": "body",
+    "level": "A1",
+    "register": "field",
+    "region_note": "English uses 'your knees'; 'the knees' sounds like a manual.",
+    "sources": []
+  },
+  {
+    "id": "lets-go",
+    "en": "let's go",
+    "es": "vamos",
+    "es_alt": [
+      "dale"
+    ],
+    "loanword": false,
+    "meaning": "Start the drill; also general encouragement.",
+    "example_en": "Okay, let's go, first group.",
+    "example_es": "Bueno, vamos, primer grupo.",
+    "specialty": "general",
+    "category": "drill",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "reset",
+    "en": "reset",
+    "es": "vuelve a tu posición",
+    "es_alt": [
+      "otra vez a tu sitio"
+    ],
+    "loanword": false,
+    "meaning": "Go back to the starting position for the next rep.",
+    "example_en": "Good. Reset.",
+    "example_es": "Bien. A tu posición.",
+    "specialty": "general",
+    "category": "drill",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "again",
+    "en": "again",
+    "es": "otra vez",
+    "es_alt": [
+      "de nuevo"
+    ],
+    "loanword": false,
+    "meaning": "Do the rep again.",
+    "example_en": "Good, again.",
+    "example_es": "Bien, otra vez.",
+    "specialty": "general",
+    "category": "drill",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "try-again",
+    "en": "try again",
+    "es": "inténtalo otra vez",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "Do it again after a mistake.",
+    "example_en": "No problem, try again.",
+    "example_es": "No hay problema, inténtalo otra vez.",
+    "specialty": "general",
+    "category": "drill",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "one-more-time",
+    "en": "One more time",
+    "es": "una vez más",
+    "es_alt": [
+      "otra más"
+    ],
+    "loanword": false,
+    "meaning": "Repeat once more.",
+    "example_en": "One more time, stay down.",
+    "example_es": "Una vez más, quédate abajo.",
+    "specialty": "general",
+    "category": "feedback",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "three-more",
+    "en": "let's do three more",
+    "es": "vamos a hacer tres más",
+    "es_alt": [
+      "tres más"
+    ],
+    "loanword": false,
+    "meaning": "Announce the number of reps left.",
+    "example_en": "Let's do three more and get water.",
+    "example_es": "Vamos a hacer tres más y a tomar agua.",
+    "specialty": "general",
+    "category": "drill",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "last-one",
+    "en": "last one",
+    "es": "la última",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "Final rep of the drill.",
+    "example_en": "Last one, make it a good one.",
+    "example_es": "La última, que sea buena.",
+    "specialty": "general",
+    "category": "drill",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "take-your-time",
+    "en": "take your time",
+    "es": "tómate tu tiempo",
+    "es_alt": [
+      "sin apuro"
+    ],
+    "loanword": false,
+    "meaning": "There is no hurry; do it under control.",
+    "example_en": "You've got time, take your time and make a good throw.",
+    "example_es": "Tienes tiempo, tómatelo y haz un buen tiro.",
+    "specialty": "general",
+    "category": "general",
+    "level": "A1",
+    "register": "both",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "rep",
+    "en": "rep",
+    "es": "repetición",
+    "es_alt": [
+      "la rep"
+    ],
+    "loanword": false,
+    "meaning": "One repetition of a drill.",
+    "example_en": "Every rep counts.",
+    "example_es": "Cada repetición cuenta.",
+    "specialty": "general",
+    "category": "drill",
+    "level": "A2",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "line-up",
+    "en": "line up",
+    "es": "hagan fila",
+    "es_alt": [
+      "fórmense"
+    ],
+    "loanword": false,
+    "meaning": "Get into a line for a drill.",
+    "example_en": "Line up behind the bag.",
+    "example_es": "Hagan fila detrás de la base.",
+    "specialty": "general",
+    "category": "drill",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "bring-it-in",
+    "en": "bring it in",
+    "es": "vengan todos",
+    "es_alt": [
+      "júntense"
+    ],
+    "loanword": false,
+    "meaning": "Gather the players around the coach.",
+    "example_en": "Bring it in, everybody.",
+    "example_es": "Vengan todos, júntense.",
+    "specialty": "general",
+    "category": "drill",
+    "level": "A2",
+    "register": "field",
+    "region_note": "Not about the ball: it means 'come here as a group'.",
+    "sources": []
+  },
+  {
+    "id": "watch-me",
+    "en": "watch me",
+    "es": "mírame",
+    "es_alt": [
+      "fíjate"
+    ],
+    "loanword": false,
+    "meaning": "Introduce a demonstration.",
+    "example_en": "Watch me first, then you try.",
+    "example_es": "Mírame primero, después lo intentas tú.",
+    "specialty": "general",
+    "category": "drill",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "your-turn",
+    "en": "your turn",
+    "es": "te toca",
+    "es_alt": [
+      "tu turno"
+    ],
+    "loanword": false,
+    "meaning": "Tell a player it's his turn in the drill.",
+    "example_en": "Okay, your turn.",
+    "example_es": "Bueno, te toca.",
+    "specialty": "general",
+    "category": "drill",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "nice-job",
+    "en": "Nice job",
+    "es": "Buen trabajo",
+    "es_alt": [
+      "¡Bien hecho!"
+    ],
+    "loanword": false,
+    "meaning": "General praise; best followed by what was good.",
+    "example_en": "Nice job, you stayed down.",
+    "example_es": "Buen trabajo, te quedaste abajo.",
+    "specialty": "general",
+    "category": "feedback",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "thats-it",
+    "en": "That's it",
+    "es": "¡Eso es!",
+    "es_alt": [
+      "¡Así!"
+    ],
+    "loanword": false,
+    "meaning": "Confirms the player did exactly what was asked.",
+    "example_en": "That's it! That's the footwork.",
+    "example_es": "¡Eso es! Ese es el juego de pies.",
+    "specialty": "general",
+    "category": "feedback",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "better",
+    "en": "Better",
+    "es": "Mejor",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "The rep improved; usually followed by the next cue.",
+    "example_en": "Better. Now get your feet set.",
+    "example_es": "Mejor. Ahora planta los pies.",
+    "specialty": "general",
+    "category": "feedback",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "does-that-make-sense",
+    "en": "Does that make sense?",
+    "es": "¿Me entiendes?",
+    "es_alt": [
+      "¿Tiene sentido?"
+    ],
+    "loanword": false,
+    "meaning": "Checks understanding of an explanation. A demonstration ('Show me') is a better check.",
+    "example_en": "Catch it out front so you can see it. Does that make sense?",
+    "example_es": "Atrápala al frente para verla. ¿Me entiendes?",
+    "specialty": "general",
+    "category": "feedback",
+    "level": "A2",
+    "register": "field",
+    "region_note": "Literal 'tiene sentido' is acceptable, but '¿me entiendes?' is closer in feel.",
+    "sources": []
+  },
+  {
+    "id": "show-me",
+    "en": "Show me",
+    "es": "Enséñame",
+    "es_alt": [
+      "Muéstrame"
+    ],
+    "loanword": false,
+    "meaning": "Ask the player to demonstrate, to check understanding.",
+    "example_en": "Show me your ready position.",
+    "example_es": "Enséñame tu posición de listo.",
+    "specialty": "general",
+    "category": "feedback",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "what-did-you-feel",
+    "en": "What did you feel there?",
+    "es": "¿Qué sentiste ahí?",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "Asks the player to describe the rep, building self-assessment.",
+    "example_en": "What did you feel there? Were you on your heels?",
+    "example_es": "¿Qué sentiste ahí? ¿Estabas en los talones?",
+    "specialty": "general",
+    "category": "feedback",
+    "level": "A2",
+    "register": "field",
+    "region_note": "",
+    "sources": [
+      19,
+      20
+    ]
+  },
+  {
+    "id": "make-the-play",
+    "en": "make the play",
+    "es": "hacer la jugada",
+    "es_alt": [
+      "sacar el out"
+    ],
+    "loanword": false,
+    "meaning": "Successfully field and throw for the out. English uses 'make', not 'do'.",
+    "example_en": "Make the routine play every time.",
+    "example_es": "Haz la jugada de rutina cada vez.",
+    "specialty": "defense",
+    "category": "general",
+    "level": "A2",
+    "register": "both",
+    "region_note": "Make vs do: Spanish 'hacer' covers both.",
+    "sources": []
+  },
+  {
+    "id": "routine-play",
+    "en": "routine play",
+    "es": "jugada de rutina",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "An ordinary play an average fielder is expected to make.",
+    "example_en": "Make the routine play first.",
+    "example_es": "Primero haz la jugada de rutina.",
+    "specialty": "defense",
+    "category": "general",
+    "level": "B1",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      3
+    ]
+  },
+  {
+    "id": "next-ball",
+    "en": "next ball",
+    "es": "a la próxima",
+    "es_alt": [
+      "la que viene"
+    ],
+    "loanword": false,
+    "meaning": "Forget the last play and focus on the next one.",
+    "example_en": "Shake it off, next ball.",
+    "example_es": "Olvídalo, a la próxima.",
+    "specialty": "general",
+    "category": "feedback",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  }
+]

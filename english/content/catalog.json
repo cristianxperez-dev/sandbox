@@ -1,0 +1,139 @@
+{
+  "v": 2,
+  "app": { "name": "English", "brand": "CP English", "tagline_en": "Bilingual language education for baseball coaches", "tagline_es": "Formación bilingüe en idiomas para entrenadores de béisbol" },
+  "languages": {
+    "en": { "name": "English", "name_es": "Inglés", "learn_en": "Learn English", "learn_es": "Aprender inglés", "native": "es",
+      "audience_en": "For Spanish-speaking coaches who work with English-speaking players and staff.",
+      "audience_es": "Para entrenadores que hablan español y trabajan con jugadores y personal que hablan inglés." },
+    "es": { "name": "Spanish", "name_es": "Español", "learn_en": "Learn Spanish", "learn_es": "Aprender español", "native": "en",
+      "audience_en": "For English-speaking coaches who work with Spanish-speaking players, especially in the Dominican Republic.",
+      "audience_es": "Para entrenadores que hablan inglés y trabajan con jugadores hispanohablantes." }
+  },
+  "specialties": {
+    "pitching": { "name_en": "Pitching", "name_es": "Pitcheo",
+      "desc_en": "Pitch grips, pitching mechanics, pitch design, throwing programs, bullpens, and pitcher communication.",
+      "desc_es": "Agarres, mecánica de pitcheo, diseño de lanzamientos, programas de tiro, bullpens y comunicación con lanzadores." },
+    "hitting": { "name_en": "Hitting", "name_es": "Bateo",
+      "desc_en": "Swing mechanics, approach, contact quality, bat path, drills, and hitter communication.",
+      "desc_es": "Mecánica del swing, enfoque, calidad de contacto, trayectoria del bate, ejercicios y comunicación con bateadores." },
+    "defense": { "name_en": "Defense", "name_es": "Defensa",
+      "desc_en": "Fielding fundamentals, positioning, footwork, throwing, receiving, drills, and defensive communication.",
+      "desc_es": "Fundamentos de fildeo, posicionamiento, juego de pies, tiro, recepción, ejercicios y comunicación defensiva." }
+  },
+  "foundations": {
+    "en-general": { "target": "en", "native": "es", "source": "course.json", "status": "active",
+      "title": "Everyday English", "title_es": "Inglés cotidiano",
+      "summary_en": "General conversation shared by every English course: introductions, routines, schedules and simple instructions.",
+      "summary_es": "Conversación general que comparten todos los cursos de inglés: presentaciones, rutinas, horarios e instrucciones sencillas." },
+    "es-general": { "target": "es", "native": "en", "status": "planned",
+      "title": "Everyday Spanish", "title_es": "Español cotidiano",
+      "summary_en": "General conversation shared by every Spanish course: greetings, introductions, schedules, family and travel. Planned.",
+      "summary_es": "Conversación general para todos los cursos de español. Planificado.",
+      "planned": ["Greetings and introductions", "Schedules, days and times", "Food, travel and getting around", "Family and life at the academy", "Health and how you feel"] }
+  },
+  "courses": [
+    {
+      "id": "es-pitching", "target": "es", "native": "en", "specialty": "pitching", "status": "active",
+      "title": "Spanish for Pitching Coaches", "title_es": "Español para coaches de pitcheo",
+      "audience": "English-speaking pitching coaches working with Spanish-speaking professional pitchers, particularly in the Dominican Republic.",
+      "objective": "Communicate pitching concepts naturally, clearly and respectfully in Spanish.",
+      "assumes": "Extensive baseball expertise, very limited Spanish. Baseball concepts are the context, not the subject.",
+      "foundation": "es-general",
+      "lessons": [
+        { "id": "sp01", "n": 1, "status": "available", "title": "Grips, fingers, and seams", "title_es": "Agarres, dedos y costuras", "skill": "Explaining grip adjustments",
+          "objective": "Name the fingers and seams, describe where the fingers go and how much pressure to use, explain a simple grip adjustment, and ask the pitcher what he feels." },
+        { "id": "sp02", "n": 2, "status": "available", "title": "Delivery and mechanics", "title_es": "La entrega y la mecánica", "skill": "Communicating movement cues",
+          "objective": "Talk about balance, posture, direction, hips and shoulders, stride, arm action, timing, release point and follow-through — observing, asking and suggesting rather than commanding." },
+        { "id": "sp03", "n": 3, "status": "planned", "title": "Pitch shape and movement", "title_es": "La forma y el movimiento del lanzamiento", "skill": "Discussing spin and pitch behavior",
+          "objective": "Describe how a pitch moved, compare two pitches, and explain a TrackMan or Rapsodo readout (spin, spin direction, vertical and horizontal movement) in plain Spanish.",
+          "plan": {
+            "vocabulary": ["la rotación / el spin", "el eje de rotación", "la dirección del spin (la hora en el reloj)", "el movimiento vertical / horizontal", "el quiebre", "la caída", "se corre / se va hacia el brazo", "la data / los números"],
+            "language": ["comparatives (más / menos … que, igual que)", "describing movement with se (se cae, se corre, se queda arriba)", "softened observations (parece que…, me da la impresión de que…)"],
+            "modules": ["lecture with an illustrated movement chart", "listening: a coach explains a Rapsodo readout", "sentence building: comparing two sliders", "speaking: describe the movement of the last pitch", "scenario: review a readout with the pitcher after a bullpen"],
+            "scenario": "After a bullpen, the coach shows the pitcher his slider readout and explains, in Spanish, how it moved compared with last week and what they might try next.",
+            "assessment": ["Describes the direction and amount of movement understandably", "Uses a comparison correctly", "Separates what the data shows from a suggestion", "Asks the pitcher's opinion"],
+            "audio": "Voice C narration (English) with Spanish model voices (es-419)"
+          } },
+        { "id": "sp04", "n": 4, "status": "planned", "title": "Bullpen conversations", "title_es": "Conversaciones en el bullpen", "skill": "Giving feedback and asking questions",
+          "objective": "Run a bullpen in Spanish: set one objective, count pitches, give short feedback after each throw and ask how it felt.",
+          "plan": {
+            "vocabulary": ["el bullpen / la sesión", "lanzamientos (¿cuántos lleva?)", "la zona, arriba, abajo, afuera, adentro", "buen lanzamiento", "otra vez / uno más", "descansa"],
+            "language": ["preterite for what just happened (se te fue alto, la soltaste temprano)", "questions about feel (¿cómo se sintió?)", "numbers and counts"],
+            "modules": ["lecture: the shape of a bullpen conversation", "listening: two short bullpens", "practice: feedback after a pitch", "speaking: one-objective briefing", "scenario: a full bullpen with three throws"],
+            "scenario": "A 15-pitch bullpen: the coach sets the objective, reacts to three throws and closes with a question.",
+            "assessment": ["States one clear objective", "Feedback is specific and brief", "Asks at least one open question", "Keeps a respectful, encouraging register"],
+            "audio": "Voice C narration (English) with Spanish model voices (es-419)"
+          } },
+        { "id": "sp05", "n": 5, "status": "planned", "title": "Coaching a pitch adjustment", "title_es": "Ajustar un lanzamiento", "skill": "Applying concepts in conversation",
+          "objective": "Combine grips, mechanics and movement language to introduce, test and review one adjustment with a pitcher over a short conversation.",
+          "plan": {
+            "vocabulary": ["review of Lessons 1–4"],
+            "language": ["suggestions and options (podríamos, ¿qué te parece si…?)", "checking agreement (¿te sientes cómodo con eso?)", "summarising a plan"],
+            "modules": ["lecture: introducing a change without imposing it", "listening: a coach and pitcher agree on a test", "speaking: explain the reason for an adjustment", "scenario: four-turn adjustment conversation", "cumulative mastery check"],
+            "scenario": "A pitcher wants more sink on his two-seamer. The coach suggests one grip change to test, explains why, and agrees on how they will judge it.",
+            "assessment": ["Explains the adjustment and the reason", "Frames it as a test, not a rule", "Agrees on how to evaluate it", "Uses Lessons 1–4 vocabulary accurately"],
+            "audio": "Voice C narration (English) with Spanish model voices (es-419)"
+          } }
+      ]
+    },
+    {
+      "id": "en-defense", "target": "en", "native": "es", "specialty": "defense", "status": "active",
+      "title": "English for Defensive Coaches", "title_es": "Inglés para coaches de defensa",
+      "audience": "Spanish-speaking baseball coaches, particularly at the Dominican Republic academies.",
+      "audience_es": "Entrenadores de béisbol hispanohablantes, sobre todo en las academias de República Dominicana.",
+      "objective": "Give defensive instruction in natural American English.",
+      "objective_es": "Dar instrucción defensiva en inglés natural de Estados Unidos.",
+      "foundation": "en-general",
+      "lessons": [
+        { "id": "d01", "n": 1, "status": "available", "title": "Defensive instruction and terminology", "title_es": "Instrucción y terminología defensiva", "skill": "Giving clear instructions", "skill_es": "Dar instrucciones claras",
+          "objective": "Give short, direct defensive instructions in English and check that the player understood.", "objective_es": "Dar instrucciones defensivas cortas y directas en inglés y verificar que el jugador entendió." },
+        { "id": "d02", "n": 2, "status": "available", "title": "Footwork, positioning, and throwing", "title_es": "Juego de pies, posicionamiento y tiro", "skill": "Explaining defensive adjustments", "skill_es": "Explicar ajustes defensivos",
+          "objective": "Walk a player through a drill, explain a positioning or footwork adjustment and why it helps, and give feedback after a rep.", "objective_es": "Guiar a un jugador en un ejercicio, explicar un ajuste de posición o de pies y por qué ayuda, y dar retroalimentación después de una repetición." },
+        { "id": "d03", "n": 3, "status": "planned", "title": "Infield fundamentals", "title_es": "Fundamentos del cuadro", "skill": "Teaching ground-ball technique", "skill_es": "Enseñar la técnica de rolatas",
+          "objective": "Teach the approach, glove work and footwork of a routine ground ball, with clear cues and demonstrations.", "objective_es": "Enseñar la aproximación, el trabajo de guante y los pies en una rolata de rutina.",
+          "plan": {
+            "vocabulary": ["approach", "funnel", "glove out front", "field it in the middle", "short hop / long hop", "feed", "pivot", "double play"],
+            "language": ["sequencing instructions (first…, then…, after that…)", "demonstrating (Watch me. Like this.)", "contrast (not…, but…)"],
+            "modules": ["lecture: a ground-ball progression in English", "listening: an infield coach runs a progression", "practice: order the steps", "speaking: explain one step and why", "scenario: correct a player who backs up on the ball"],
+            "scenario": "Morning infield: the coach explains the approach on a routine ground ball and corrects one habit.",
+            "assessment": ["Instructions in a clear sequence", "Uses demonstration language", "Gives one reason for the correction", "Checks understanding"],
+            "audio": "Voice C narration with American English dialogue voices"
+          } },
+        { "id": "d04", "n": 4, "status": "planned", "title": "Outfield fundamentals", "title_es": "Fundamentos de los jardines", "skill": "Teaching reads, routes, and positioning", "skill_es": "Enseñar lecturas, rutas y posicionamiento",
+          "objective": "Teach first-step reads, drop steps and routes to the ball, and adjust outfield positioning.", "objective_es": "Enseñar la primera lectura, el drop step y las rutas hacia la pelota, y ajustar la posición en los jardines.",
+          "plan": {
+            "vocabulary": ["read", "drop step", "route", "crow hop", "hit the cutoff", "go back on the ball", "come in", "shade", "depth"],
+            "language": ["directions and distance (two steps toward the line, a little deeper)", "conditionals (If the ball is over your head, …)"],
+            "modules": ["lecture with an outfield diagram", "listening: a fly-ball drill", "practice: direction words", "speaking: reposition an outfielder", "scenario: fly-ball communication drill"],
+            "scenario": "The coach moves the center fielder for a pull hitter and runs a fly-ball communication drill.",
+            "assessment": ["Gives a precise direction and distance", "Uses a conditional correctly", "Explains the reason for the positioning"],
+            "audio": "Voice C narration with American English dialogue voices"
+          } },
+        { "id": "d05", "n": 5, "status": "planned", "title": "Defensive communication", "title_es": "Comunicación defensiva", "skill": "Running drills and giving feedback", "skill_es": "Dirigir ejercicios y dar retroalimentación",
+          "objective": "Run a full defensive drill in English: set it up, call the plays, keep the tempo and give useful feedback.", "objective_es": "Dirigir un ejercicio defensivo completo en inglés: organizarlo, cantar las jugadas, mantener el ritmo y dar retroalimentación útil.",
+          "plan": {
+            "vocabulary": ["I got it / Ball, ball", "cut / relay", "back up", "two (double play)", "reset", "rotate", "let's go, three more"],
+            "language": ["giving roles (You take…, You're backing up…)", "feedback sandwich without filler", "questions that check understanding"],
+            "modules": ["lecture: running a drill in English", "listening: a cutoff-and-relay drill", "practice: calls and responses", "speaking: set up a drill", "scenario: run a three-rep drill with feedback"],
+            "scenario": "The coach sets up a cutoff-and-relay drill, calls three reps and gives feedback after each.",
+            "assessment": ["Sets up the drill clearly", "Uses the standard calls", "Feedback is specific", "Keeps sentences short under time pressure"],
+            "audio": "Voice C narration with American English dialogue voices"
+          } }
+      ]
+    },
+    { "id": "es-hitting", "target": "es", "native": "en", "specialty": "hitting", "status": "planned", "title": "Spanish for Hitting Coaches", "title_es": "Español para coaches de bateo",
+      "summary": "Swing, approach, contact and drill communication in Spanish. Planned: it will share the Everyday Spanish foundation with the pitching course.",
+      "topics": ["The swing: stance, load, stride, bat path", "Approach and the strike zone", "Contact quality and batted-ball data", "Cage and tee drills", "Game-plan conversations"] },
+    { "id": "es-defense", "target": "es", "native": "en", "specialty": "defense", "status": "planned", "title": "Spanish for Defensive Coaches", "title_es": "Español para coaches de defensa",
+      "summary": "Fielding, positioning and defensive communication in Spanish. Planned.",
+      "topics": ["Ready position and first step", "Ground balls and footwork", "Throwing and the transfer", "Outfield reads and routes", "Calls, cutoffs and relays"] },
+    { "id": "en-pitching", "target": "en", "native": "es", "specialty": "pitching", "status": "planned", "title": "English for Pitching Coaches", "title_es": "Inglés para coaches de pitcheo",
+      "summary": "Grips, mechanics, pitch design and bullpen communication in English. Planned: it will share the Everyday English foundation.",
+      "summary_es": "Agarres, mecánica, diseño de lanzamientos y comunicación en el bullpen, en inglés. Planificado.",
+      "topics": ["Grips and pitch types", "Delivery and mechanics", "Pitch design and data", "Bullpen feedback", "Adjustment conversations"] },
+    { "id": "en-hitting", "target": "en", "native": "es", "specialty": "hitting", "status": "planned", "title": "English for Hitting Coaches", "title_es": "Inglés para coaches de bateo",
+      "summary": "Swing, approach and drill communication in English. Planned.",
+      "summary_es": "Swing, enfoque y comunicación en ejercicios, en inglés. Planificado.",
+      "topics": ["The swing", "Approach", "Contact quality", "Cage drills", "Game plans"] }
+  ]
+}

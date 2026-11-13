@@ -1,0 +1,2115 @@
+[
+  {
+    "id": "index-finger",
+    "en": "index finger",
+    "es": "el dedo índice",
+    "es_alt": [
+      "el índice"
+    ],
+    "loanword": false,
+    "meaning": "First finger next to the thumb; on most grips it sits on or across a seam and can lead pressure.",
+    "example_en": "Put a little more pressure on your index finger.",
+    "example_es": "Ponle un poquito más de presión al dedo índice.",
+    "specialty": "pitching",
+    "category": "hand",
+    "level": "A1",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      33,
+      49
+    ]
+  },
+  {
+    "id": "middle-finger",
+    "en": "middle finger",
+    "es": "el dedo del medio",
+    "es_alt": [
+      "el dedo medio",
+      "el del medio"
+    ],
+    "loanword": false,
+    "meaning": "Longest finger; leads pressure on many sliders, curveballs and cutters.",
+    "example_en": "Keep your middle finger right on the seam.",
+    "example_es": "Mantén el dedo del medio encima de la costura.",
+    "specialty": "pitching",
+    "category": "hand",
+    "level": "A1",
+    "register": "both",
+    "region_note": "MLB.com en español writes 'dedo medio'; 'dedo del medio' is the everyday form (unverified in print).",
+    "sources": [
+      33,
+      49
+    ]
+  },
+  {
+    "id": "ring-finger",
+    "en": "ring finger",
+    "es": "el dedo anular",
+    "es_alt": [
+      "el anular"
+    ],
+    "loanword": false,
+    "meaning": "Fourth finger; usually rests on the side of the ball, and helps carry a circle changeup.",
+    "example_en": "Your ring finger is too far under the ball.",
+    "example_es": "Tienes el anular muy abajo de la pelota.",
+    "specialty": "pitching",
+    "category": "hand",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "pinky",
+    "en": "pinky / little finger",
+    "es": "el meñique",
+    "es_alt": [
+      "el dedo chiquito"
+    ],
+    "loanword": false,
+    "meaning": "Smallest finger; on most grips it rests off the ball or against the side.",
+    "example_en": "Tuck your pinky against the side of the ball.",
+    "example_es": "Pega el meñique al lado de la pelota.",
+    "specialty": "pitching",
+    "category": "hand",
+    "level": "A2",
+    "register": "both",
+    "region_note": "'Dedo chiquito' is informal; verify how common it is with Dominican players.",
+    "sources": []
+  },
+  {
+    "id": "thumb",
+    "en": "thumb",
+    "es": "el pulgar",
+    "es_alt": [
+      "el dedo gordo"
+    ],
+    "loanword": false,
+    "meaning": "Supports the ball from underneath or the side; its position changes how deep the ball sits and how it comes out.",
+    "example_en": "Move your thumb a little more under the ball.",
+    "example_es": "Mueve el pulgar un poquito más abajo de la pelota.",
+    "specialty": "pitching",
+    "category": "hand",
+    "level": "A1",
+    "register": "both",
+    "region_note": "'Dedo gordo' is common colloquial Caribbean usage for the thumb (and big toe); 'pulgar' is understood everywhere.",
+    "sources": [
+      49
+    ]
+  },
+  {
+    "id": "fingertips",
+    "en": "fingertips / finger pads",
+    "es": "las yemas de los dedos",
+    "es_alt": [
+      "la punta de los dedos"
+    ],
+    "loanword": false,
+    "meaning": "Pads at the end of the fingers; holding the ball 'on the fingertips' means less palm contact.",
+    "example_en": "Hold it more on your fingertips.",
+    "example_es": "Agárrala más con la punta de los dedos.",
+    "specialty": "pitching",
+    "category": "hand",
+    "level": "A2",
+    "register": "both",
+    "region_note": "'La punta de los dedos' is the more natural field phrase; 'yemas' is more precise.",
+    "sources": []
+  },
+  {
+    "id": "knuckle",
+    "en": "knuckle",
+    "es": "el nudillo",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "Finger joint; relevant for knuckle-curve grips where a fingertip is tucked.",
+    "example_en": "Tuck the index finger so the knuckle points at the catcher.",
+    "example_es": "Dobla el índice para que el nudillo apunte al cátcher.",
+    "specialty": "pitching",
+    "category": "hand",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "wrist",
+    "en": "wrist",
+    "es": "la muñeca",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "Joint between hand and forearm; wrist position at release (behind, on top of, or to the side of the ball) shapes spin.",
+    "example_en": "Keep your wrist behind the ball.",
+    "example_es": "Mantén la muñeca detrás de la pelota.",
+    "specialty": "pitching",
+    "category": "hand",
+    "level": "A1",
+    "register": "both",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "palm",
+    "en": "palm",
+    "es": "la palma (de la mano)",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "Inside of the hand; how much the ball touches the palm is part of grip depth.",
+    "example_en": "Don't let the ball touch your palm on the fastball.",
+    "example_es": "Que la pelota no te toque la palma en la recta.",
+    "specialty": "pitching",
+    "category": "hand",
+    "level": "A1",
+    "register": "both",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "ball",
+    "en": "baseball (the ball)",
+    "es": "la pelota",
+    "es_alt": [
+      "la bola",
+      "la esférica (prensa)"
+    ],
+    "loanword": false,
+    "meaning": "The ball itself.",
+    "example_en": "Show me how you hold the ball.",
+    "example_es": "Enséñame cómo agarras la pelota.",
+    "specialty": "general",
+    "category": "ball",
+    "level": "A1",
+    "register": "both",
+    "region_note": "'Bola' also means 'ball' in the count; use 'pelota' for the object to avoid confusion. 'Pelota' also names the sport in the DR ('la pelota').",
+    "sources": [
+      32
+    ]
+  },
+  {
+    "id": "seams",
+    "en": "seams",
+    "es": "las costuras",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "The raised red stitching; finger placement and seam orientation are described relative to them.",
+    "example_en": "Find the seams with your fingers.",
+    "example_es": "Busca las costuras con los dedos.",
+    "specialty": "pitching",
+    "category": "ball",
+    "level": "A1",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      1,
+      25,
+      26
+    ]
+  },
+  {
+    "id": "horseshoe",
+    "en": "horseshoe (seam pattern)",
+    "es": "la herradura",
+    "es_alt": [
+      "la U"
+    ],
+    "loanword": false,
+    "meaning": "The wide U-shaped seam pattern used as the reference for the four-seam grip.",
+    "example_en": "Put your fingers across the horseshoe.",
+    "example_es": "Pon los dedos atravesados sobre la herradura.",
+    "specialty": "pitching",
+    "category": "ball",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      33
+    ]
+  },
+  {
+    "id": "seam-orientation",
+    "en": "seam orientation",
+    "es": "la orientación de las costuras",
+    "es_alt": [
+      "cómo están las costuras",
+      "cómo pones las costuras"
+    ],
+    "loanword": false,
+    "meaning": "How the ball is turned in the hand, which determines which seams lead in flight and can create seam-shifted wake effects.",
+    "example_en": "Let's turn the ball a little so the seams are different.",
+    "example_es": "Vamos a girar un poco la pelota para cambiar las costuras.",
+    "specialty": "pitching",
+    "category": "ball",
+    "level": "B1",
+    "register": "technical",
+    "region_note": "",
+    "sources": [
+      1,
+      2,
+      14,
+      15
+    ]
+  },
+  {
+    "id": "grip",
+    "en": "grip",
+    "es": "el agarre",
+    "es_alt": [
+      "la forma de agarrar",
+      "el grip"
+    ],
+    "loanword": false,
+    "meaning": "How the pitcher holds the ball: finger placement, pressure and depth.",
+    "example_en": "Let's try a slightly deeper grip.",
+    "example_es": "Vamos a probar un agarre un poquito más profundo.",
+    "specialty": "pitching",
+    "category": "grip",
+    "level": "A2",
+    "register": "both",
+    "region_note": "'Agarre' confirmed in MLB.com en español ('ajustar el agarre', 'un agarre firme'). 'Grip' as a loanword is heard but unverified as dominant.",
+    "sources": [
+      1,
+      29,
+      32,
+      49
+    ]
+  },
+  {
+    "id": "to-grip",
+    "en": "to grip / hold",
+    "es": "agarrar",
+    "es_alt": [
+      "coger"
+    ],
+    "loanword": false,
+    "meaning": "To hold the ball in a grip.",
+    "example_en": "Grip it like your fastball.",
+    "example_es": "Agárrala como tu recta.",
+    "specialty": "pitching",
+    "category": "grip",
+    "level": "A1",
+    "register": "field",
+    "region_note": "'Coger' is normal in the DR and Caribbean; avoid it with Mexican or Argentine players, where it is vulgar.",
+    "sources": []
+  },
+  {
+    "id": "four-seam-grip",
+    "en": "four-seam grip",
+    "es": "el agarre de cuatro costuras",
+    "es_alt": [
+      "de cuatro"
+    ],
+    "loanword": false,
+    "meaning": "Index and middle fingers across the horseshoe so four seams rotate through the air each turn.",
+    "example_en": "Show me your four-seam grip.",
+    "example_es": "Enséñame tu agarre de cuatro costuras.",
+    "specialty": "pitching",
+    "category": "grip",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      1,
+      25,
+      33
+    ]
+  },
+  {
+    "id": "two-seam-grip",
+    "en": "two-seam grip",
+    "es": "el agarre de dos costuras",
+    "es_alt": [
+      "de dos"
+    ],
+    "loanword": false,
+    "meaning": "Index and middle fingers along or near the narrow seams; usually gives more run and sink than a four-seamer.",
+    "example_en": "Try the two-seam grip on this one.",
+    "example_es": "Prueba el agarre de dos costuras en este.",
+    "specialty": "pitching",
+    "category": "grip",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      1,
+      25,
+      26
+    ]
+  },
+  {
+    "id": "grip-pressure",
+    "en": "grip pressure",
+    "es": "la presión",
+    "es_alt": [
+      "la presión de los dedos",
+      "la fuerza del agarre"
+    ],
+    "loanword": false,
+    "meaning": "How firmly the ball is held and which finger leads pressure; it changes spin direction and feel.",
+    "example_en": "Less pressure with the index finger.",
+    "example_es": "Menos presión con el índice.",
+    "specialty": "pitching",
+    "category": "grip",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "id": "deep-grip",
+    "en": "deep grip",
+    "es": "el agarre profundo",
+    "es_alt": [
+      "más adentro en la mano"
+    ],
+    "loanword": false,
+    "meaning": "Ball held further back in the hand ('choked'); Driveline notes some pitchers do this on changeups to lessen spin and velocity, while others hold the changeup in the fingertips.",
+    "example_en": "Hold it deeper in your hand.",
+    "example_es": "Agárrala más adentro en la mano.",
+    "specialty": "pitching",
+    "category": "grip",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "id": "thumb-placement",
+    "en": "thumb placement",
+    "es": "la posición del pulgar",
+    "es_alt": [
+      "dónde pones el pulgar"
+    ],
+    "loanword": false,
+    "meaning": "Where the thumb sits: Driveline logs it as 0/25/50 and as flat or tucked. Under the ball may help 'stay through' it; to the side may help 'get around' it.",
+    "example_en": "Where do you put your thumb?",
+    "example_es": "¿Dónde pones el pulgar?",
+    "specialty": "pitching",
+    "category": "grip",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "id": "pronation",
+    "en": "pronation",
+    "es": "la pronación",
+    "es_alt": [
+      "voltear la mano hacia adentro",
+      "virar la mano"
+    ],
+    "loanword": false,
+    "meaning": "Forearm turning thumb-down/palm-out through release; associated with changeups and two-seamers.",
+    "example_en": "Let your hand turn over naturally.",
+    "example_es": "Deja que la mano se voltee natural.",
+    "specialty": "pitching",
+    "category": "grip",
+    "level": "B2",
+    "register": "technical",
+    "region_note": "'Pronación' is technical; with players describe the motion. 'Virar' is common Caribbean for 'turn'.",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "id": "experiment-grip",
+    "en": "to experiment with a grip",
+    "es": "probar un agarre",
+    "es_alt": [
+      "experimentar con el agarre"
+    ],
+    "loanword": false,
+    "meaning": "To test small grip changes and see (and measure) how the pitch changes.",
+    "example_en": "Let's experiment with this grip for five throws.",
+    "example_es": "Vamos a probar este agarre por cinco tiros.",
+    "specialty": "pitching",
+    "category": "grip",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      1
+    ]
+  },
+  {
+    "id": "fastball",
+    "en": "fastball",
+    "es": "la recta",
+    "es_alt": [
+      "la bola rápida",
+      "la rápida",
+      "el fastball"
+    ],
+    "loanword": false,
+    "meaning": "The pitcher's primary, hardest pitch.",
+    "example_en": "Throw me three fastballs.",
+    "example_es": "Tírame tres rectas.",
+    "specialty": "pitching",
+    "category": "pitch-type",
+    "level": "A1",
+    "register": "both",
+    "region_note": "Diario Libre uses both 'recta' (also 'rectazo' for a hard one) and 'bola rápida' (read in full). 'La rápida' alone was not found in any page read; confirm with a Dominican coach.",
+    "sources": [
+      25,
+      34,
+      51,
+      53
+    ]
+  },
+  {
+    "id": "four-seam-fastball",
+    "en": "four-seam fastball",
+    "es": "la recta de cuatro costuras",
+    "es_alt": [
+      "la de cuatro",
+      "el four-seam"
+    ],
+    "loanword": false,
+    "meaning": "Fastball thrown with the four-seam grip, usually with high backspin and carry.",
+    "example_en": "Your four-seamer had good carry today.",
+    "example_es": "Tu recta de cuatro costuras tuvo buen carry hoy.",
+    "specialty": "pitching",
+    "category": "pitch-type",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      25,
+      50
+    ]
+  },
+  {
+    "id": "two-seam-fastball",
+    "en": "two-seam fastball",
+    "es": "la recta de dos costuras",
+    "es_alt": [
+      "la de dos",
+      "el two-seam"
+    ],
+    "loanword": false,
+    "meaning": "Fastball with the two-seam grip; typically more arm-side run and sink.",
+    "example_en": "The two-seamer is running well.",
+    "example_es": "La de dos se está moviendo bien.",
+    "specialty": "pitching",
+    "category": "pitch-type",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      25,
+      26,
+      50
+    ]
+  },
+  {
+    "id": "sinker",
+    "en": "sinker",
+    "es": "el sinker",
+    "es_alt": [
+      "la recta de dos costuras",
+      "la sinker"
+    ],
+    "loanword": true,
+    "meaning": "Fastball designed to sink and run to the arm side; often overlaps with the two-seamer.",
+    "example_en": "Keep the sinker down.",
+    "example_es": "Mantén el sinker abajo.",
+    "specialty": "pitching",
+    "category": "pitch-type",
+    "level": "A2",
+    "register": "both",
+    "region_note": "MLB.com en español writes 'el sinker' (masculine) and 'sinker de dos costuras'; ESPN Deportes once wrote 'una sinker'. Teach the masculine.",
+    "sources": [
+      26,
+      50,
+      29
+    ]
+  },
+  {
+    "id": "cutter",
+    "en": "cutter",
+    "es": "el cutter",
+    "es_alt": [
+      "la recta cortada",
+      "la recta cortante"
+    ],
+    "loanword": true,
+    "meaning": "Fastball with a slightly off-centre grip that moves a little to the glove side.",
+    "example_en": "Your cutter is cutting too much.",
+    "example_es": "Tu cutter está cortando demasiado.",
+    "specialty": "pitching",
+    "category": "pitch-type",
+    "level": "A2",
+    "register": "both",
+    "region_note": "'Recta cortada' appears in MLB.com en español (Alcántara's repertoire, separate from the slider); Diario Libre wrote 'recta cortante'. 'Cutter' is the field word.",
+    "sources": [
+      25,
+      29,
+      38,
+      55
+    ]
+  },
+  {
+    "id": "slider",
+    "en": "slider",
+    "es": "el slider",
+    "es_alt": [
+      "la slider",
+      "el deslizador"
+    ],
+    "loanword": true,
+    "meaning": "Breaking ball thrown harder than a curve, with lateral break and often gyro spin.",
+    "example_en": "Your slider is spinning like a bullet, good.",
+    "example_es": "Tu slider está girando como una bala, bien.",
+    "specialty": "pitching",
+    "category": "pitch-type",
+    "level": "A2",
+    "register": "both",
+    "region_note": "'El slider' (masculine) in Diario Libre and MLB.com en español. 'Deslizador' is a literal translation rarely heard on the field.",
+    "sources": [
+      28,
+      29,
+      38,
+      51
+    ]
+  },
+  {
+    "id": "sweeper",
+    "en": "sweeper",
+    "es": "el sweeper",
+    "es_alt": [],
+    "loanword": true,
+    "meaning": "Slider with large horizontal (sweeping) break.",
+    "example_en": "This one looked more like a sweeper.",
+    "example_es": "Este pareció más un sweeper.",
+    "specialty": "pitching",
+    "category": "pitch-type",
+    "level": "B1",
+    "register": "both",
+    "region_note": "MLB.com en español also says 'slider tipo sweeper'.",
+    "sources": [
+      29,
+      48
+    ]
+  },
+  {
+    "id": "curveball",
+    "en": "curveball",
+    "es": "la curva",
+    "es_alt": [
+      "el curveball",
+      "el breaking ball (rompimiento)"
+    ],
+    "loanword": false,
+    "meaning": "Breaking ball with topspin that breaks downward.",
+    "example_en": "Get on top of the curveball.",
+    "example_es": "Ponte encima de la curva.",
+    "specialty": "pitching",
+    "category": "pitch-type",
+    "level": "A1",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      47,
+      29
+    ]
+  },
+  {
+    "id": "changeup",
+    "en": "changeup",
+    "es": "el cambio",
+    "es_alt": [
+      "el cambio de velocidad",
+      "el changeup"
+    ],
+    "loanword": false,
+    "meaning": "Off-speed pitch that looks like the fastball but arrives slower.",
+    "example_en": "Same arm speed on the changeup.",
+    "example_es": "La misma velocidad de brazo en el cambio.",
+    "specialty": "pitching",
+    "category": "pitch-type",
+    "level": "A1",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      27,
+      49
+    ]
+  },
+  {
+    "id": "circle-change",
+    "en": "circle changeup",
+    "es": "el cambio de círculo",
+    "es_alt": [
+      "el circle change",
+      "el cambio de circulito"
+    ],
+    "loanword": false,
+    "meaning": "Changeup grip with thumb and index finger forming an 'O' on the side of the ball.",
+    "example_en": "Make the circle with your thumb and index finger.",
+    "example_es": "Haz el círculo con el pulgar y el índice.",
+    "specialty": "pitching",
+    "category": "pitch-type",
+    "level": "B1",
+    "register": "both",
+    "region_note": "MLB.com en español describes the grip ('el pulgar y el dedo índice formando un círculo') but no Spanish name for the pitch was found; 'circle change' and 'cambio de círculo' both plausible. Confirm.",
+    "sources": [
+      49
+    ]
+  },
+  {
+    "id": "splitter",
+    "en": "splitter / split-finger",
+    "es": "el splitter",
+    "es_alt": [
+      "la recta de dedos separados",
+      "el split"
+    ],
+    "loanword": true,
+    "meaning": "Pitch held with index and middle fingers spread wide; low spin and late drop.",
+    "example_en": "Spread the fingers a little more on the splitter.",
+    "example_es": "Separa un poquito más los dedos en el splitter.",
+    "specialty": "pitching",
+    "category": "pitch-type",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      31,
+      26
+    ]
+  },
+  {
+    "id": "spin",
+    "en": "spin",
+    "es": "el spin",
+    "es_alt": [
+      "la rotación",
+      "el giro",
+      "el efecto"
+    ],
+    "loanword": true,
+    "meaning": "Rotation of the ball after release.",
+    "example_en": "Good spin on that one.",
+    "example_es": "Buen spin en ese.",
+    "specialty": "pitching",
+    "category": "spin",
+    "level": "A2",
+    "register": "both",
+    "region_note": "'Rotación' is the safe technical word; 'efecto' is everyday Spanish for spin on a ball.",
+    "sources": [
+      6
+    ]
+  },
+  {
+    "id": "spin-rate",
+    "en": "spin rate",
+    "es": "las revoluciones",
+    "es_alt": [
+      "la tasa de rotación",
+      "el spin rate",
+      "las RPM"
+    ],
+    "loanword": false,
+    "meaning": "Revolutions per minute at release.",
+    "example_en": "Your spin rate went up two hundred.",
+    "example_es": "Te subieron las revoluciones doscientas.",
+    "specialty": "pitching",
+    "category": "spin",
+    "level": "B1",
+    "register": "technical",
+    "region_note": "MLB.com en español uses 'tasa de rotación' and 'RPM'.",
+    "sources": [
+      6,
+      31,
+      49,
+      50
+    ]
+  },
+  {
+    "id": "spin-axis",
+    "en": "spin axis",
+    "es": "el eje de rotación",
+    "es_alt": [
+      "el eje",
+      "el spin axis"
+    ],
+    "loanword": false,
+    "meaning": "The line the ball spins around; with spin direction it predicts the direction of spin-induced movement.",
+    "example_en": "The spin axis tilted more than usual.",
+    "example_es": "El eje de rotación se inclinó más de lo normal.",
+    "specialty": "pitching",
+    "category": "spin",
+    "level": "B2",
+    "register": "technical",
+    "region_note": "",
+    "sources": [
+      2,
+      3,
+      13
+    ]
+  },
+  {
+    "id": "spin-direction",
+    "en": "spin direction / tilt (clock face)",
+    "es": "la dirección del spin",
+    "es_alt": [
+      "el tilt",
+      "la hora",
+      "estuvo a la una"
+    ],
+    "loanword": false,
+    "meaning": "Direction of spin read on a clock face; 12:00 is pure backspin, 6:00 pure topspin.",
+    "example_en": "That fastball was at one o'clock.",
+    "example_es": "Esa recta estuvo a la una.",
+    "specialty": "pitching",
+    "category": "spin",
+    "level": "B1",
+    "register": "technical",
+    "region_note": "Clock readings ('a la una y media') are natural Spanish; 'tilt' as a loanword is plausible but unverified. Savant shows spin direction from the hitter's perspective by default; say which view you mean.",
+    "sources": [
+      2,
+      3,
+      13
+    ]
+  },
+  {
+    "id": "active-spin",
+    "en": "active spin / spin efficiency",
+    "es": "la eficiencia del spin",
+    "es_alt": [
+      "el spin activo",
+      "la eficiencia"
+    ],
+    "loanword": false,
+    "meaning": "Share of total spin that contributes to movement; gyro spin is the rest.",
+    "example_en": "Your efficiency was low, so it moved less.",
+    "example_es": "La eficiencia estuvo baja, por eso se movió menos.",
+    "specialty": "pitching",
+    "category": "spin",
+    "level": "B2",
+    "register": "technical",
+    "region_note": "No Spanish source found for a standard term.",
+    "sources": [
+      3,
+      7,
+      9,
+      12
+    ]
+  },
+  {
+    "id": "gyro-spin",
+    "en": "gyro spin",
+    "es": "el gyro",
+    "es_alt": [
+      "la rotación de bala",
+      "el giro de bala"
+    ],
+    "loanword": true,
+    "meaning": "Spin around the direction of travel (like a bullet or football spiral); adds little movement.",
+    "example_en": "That slider has a lot of gyro.",
+    "example_es": "Ese slider tiene mucho gyro.",
+    "specialty": "pitching",
+    "category": "spin",
+    "level": "B2",
+    "register": "technical",
+    "region_note": "Comparing it to 'una bala' is a useful plain explanation.",
+    "sources": [
+      12
+    ]
+  },
+  {
+    "id": "seam-shifted-wake",
+    "en": "seam-shifted wake",
+    "es": "el seam-shifted wake",
+    "es_alt": [
+      "el efecto de las costuras"
+    ],
+    "loanword": true,
+    "meaning": "Research concept: seams can make the air leave one side of the ball differently, creating an asymmetric wake and a force separate from spin (Magnus); most studied on sinkers.",
+    "example_en": "The seams are giving you extra sink.",
+    "example_es": "Las costuras te están dando más caída.",
+    "specialty": "pitching",
+    "category": "spin",
+    "level": "B2",
+    "register": "technical",
+    "region_note": "No Spanish source found; in player talk describe the effect ('las costuras') rather than naming it. Not a coaching cue.",
+    "sources": [
+      2,
+      3,
+      14,
+      15,
+      17,
+      18
+    ]
+  },
+  {
+    "id": "movement",
+    "en": "movement",
+    "es": "el movimiento",
+    "es_alt": [
+      "se mueve"
+    ],
+    "loanword": false,
+    "meaning": "How far and in what direction the pitch deviates from a straight path.",
+    "example_en": "Good movement on that one.",
+    "example_es": "Buen movimiento en ese.",
+    "specialty": "pitching",
+    "category": "movement",
+    "level": "A1",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      3,
+      4,
+      11
+    ]
+  },
+  {
+    "id": "break",
+    "en": "break",
+    "es": "el quiebre",
+    "es_alt": [
+      "rompe",
+      "el rompimiento"
+    ],
+    "loanword": false,
+    "meaning": "Movement of a breaking ball or the amount a pitch moves.",
+    "example_en": "The slider had a late break.",
+    "example_es": "El slider tuvo un quiebre tarde.",
+    "specialty": "pitching",
+    "category": "movement",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      31
+    ]
+  },
+  {
+    "id": "drop",
+    "en": "drop / sink",
+    "es": "la caída",
+    "es_alt": [
+      "se cae",
+      "se hunde"
+    ],
+    "loanword": false,
+    "meaning": "Downward movement, more than a normal fastball's.",
+    "example_en": "The changeup dropped at the end.",
+    "example_es": "El cambio se cayó al final.",
+    "specialty": "pitching",
+    "category": "movement",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      26,
+      49
+    ]
+  },
+  {
+    "id": "run",
+    "en": "run / arm-side movement",
+    "es": "la corrida",
+    "es_alt": [
+      "corre",
+      "se mueve hacia tu lado del brazo"
+    ],
+    "loanword": false,
+    "meaning": "Horizontal movement toward the pitcher's throwing-arm side.",
+    "example_en": "Your sinker ran more today.",
+    "example_es": "Tu sinker corrió más hoy.",
+    "specialty": "pitching",
+    "category": "movement",
+    "level": "B1",
+    "register": "field",
+    "region_note": "'Correr' for run is the natural verb; 'la corrida' as a noun is unverified.",
+    "sources": []
+  },
+  {
+    "id": "carry",
+    "en": "carry / ride",
+    "es": "el carry",
+    "es_alt": [
+      "el ride",
+      "se mantiene arriba",
+      "sube"
+    ],
+    "loanword": true,
+    "meaning": "A fastball that drops less than the hitter expects because of backspin (high induced vertical break).",
+    "example_en": "That fastball had good carry.",
+    "example_es": "Esa recta tuvo buen carry.",
+    "specialty": "pitching",
+    "category": "movement",
+    "level": "B1",
+    "register": "both",
+    "region_note": "'Ride' appears in MLB.com en español; avoid literal 'llevar' or 'montar'.",
+    "sources": [
+      5,
+      30
+    ]
+  },
+  {
+    "id": "ivb",
+    "en": "induced vertical break",
+    "es": "el movimiento vertical inducido",
+    "es_alt": [
+      "el IVB",
+      "el movimiento vertical"
+    ],
+    "loanword": false,
+    "meaning": "Vertical movement caused by spin with gravity removed; positive means 'rise', negative extra drop.",
+    "example_en": "Your IVB was seventeen inches.",
+    "example_es": "Tu movimiento vertical fue de diecisiete pulgadas.",
+    "specialty": "pitching",
+    "category": "movement",
+    "level": "B2",
+    "register": "technical",
+    "region_note": "Spanish term is descriptive; 'IVB' (i-ve-be) is likely in data talk.",
+    "sources": [
+      4,
+      5
+    ]
+  },
+  {
+    "id": "horizontal-break",
+    "en": "horizontal break",
+    "es": "el movimiento horizontal",
+    "es_alt": [
+      "el movimiento de lado"
+    ],
+    "loanword": false,
+    "meaning": "Side-to-side movement caused by spin, in inches.",
+    "example_en": "More horizontal break than last week.",
+    "example_es": "Más movimiento horizontal que la semana pasada.",
+    "specialty": "pitching",
+    "category": "movement",
+    "level": "B1",
+    "register": "technical",
+    "region_note": "",
+    "sources": [
+      4,
+      11
+    ]
+  },
+  {
+    "id": "separation",
+    "en": "separation (between pitches)",
+    "es": "la separación",
+    "es_alt": [
+      "la diferencia entre los pitcheos"
+    ],
+    "loanword": false,
+    "meaning": "Difference in velocity and movement between two pitches.",
+    "example_en": "We want more separation between the fastball and the changeup.",
+    "example_es": "Queremos más diferencia entre la recta y el cambio.",
+    "specialty": "pitching",
+    "category": "movement",
+    "level": "B1",
+    "register": "both",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "velocity",
+    "en": "velocity",
+    "es": "la velocidad",
+    "es_alt": [
+      "las millas"
+    ],
+    "loanword": false,
+    "meaning": "Pitch speed, usually in miles per hour in the DR.",
+    "example_en": "You were at ninety-four today.",
+    "example_es": "Estuviste en noventa y cuatro millas hoy.",
+    "specialty": "pitching",
+    "category": "movement",
+    "level": "A1",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      34
+    ]
+  },
+  {
+    "id": "mechanics",
+    "en": "mechanics / delivery",
+    "es": "la mecánica",
+    "es_alt": [
+      "el movimiento",
+      "la entrega"
+    ],
+    "loanword": false,
+    "meaning": "The full pitching motion from setup to follow-through.",
+    "example_en": "Your mechanics looked smooth.",
+    "example_es": "La mecánica se vio suave.",
+    "specialty": "pitching",
+    "category": "delivery",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "balance",
+    "en": "balance",
+    "es": "el balance",
+    "es_alt": [
+      "el equilibrio"
+    ],
+    "loanword": false,
+    "meaning": "Control of the body over the back leg before moving to the plate.",
+    "example_en": "Stay balanced at the top.",
+    "example_es": "Mantén el balance arriba.",
+    "specialty": "pitching",
+    "category": "delivery",
+    "level": "A1",
+    "register": "both",
+    "region_note": "'Balance' is common Caribbean Spanish for this; 'equilibrio' is standard.",
+    "sources": []
+  },
+  {
+    "id": "posture",
+    "en": "posture",
+    "es": "la postura",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "Position of the trunk and head through the delivery.",
+    "example_en": "Keep your posture tall.",
+    "example_es": "Mantén la postura alta.",
+    "specialty": "pitching",
+    "category": "body",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "leg-lift",
+    "en": "leg lift",
+    "es": "levantar la pierna",
+    "es_alt": [
+      "el leg kick",
+      "la subida de la pierna"
+    ],
+    "loanword": false,
+    "meaning": "Raising the stride leg at the start of the delivery.",
+    "example_en": "A little higher leg lift.",
+    "example_es": "Levanta la pierna un poquito más.",
+    "specialty": "pitching",
+    "category": "delivery",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "stride",
+    "en": "stride",
+    "es": "la zancada",
+    "es_alt": [
+      "el paso"
+    ],
+    "loanword": false,
+    "meaning": "Step toward the plate with the lead leg; includes direction and length.",
+    "example_en": "Your stride was a little short.",
+    "example_es": "El paso te quedó un poquito corto.",
+    "specialty": "pitching",
+    "category": "delivery",
+    "level": "B1",
+    "register": "both",
+    "region_note": "'Zancada' is correct but formal; 'el paso' is more natural in field talk (unverified).",
+    "sources": []
+  },
+  {
+    "id": "stride-direction",
+    "en": "stride direction / line to the plate",
+    "es": "la dirección al plato",
+    "es_alt": [
+      "la línea al plato",
+      "caer cerrado / abierto"
+    ],
+    "loanword": false,
+    "meaning": "Where the lead foot lands relative to the line to the plate (closed, on line, open).",
+    "example_en": "Your foot landed closed. Aim it at the catcher.",
+    "example_es": "El pie te cayó cerrado. Apúntalo al cátcher.",
+    "specialty": "pitching",
+    "category": "delivery",
+    "level": "B1",
+    "register": "both",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "hips",
+    "en": "hips",
+    "es": "las caderas",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "Pelvis; begins rotation toward the plate before the trunk.",
+    "example_en": "Let your hips lead.",
+    "example_es": "Deja que las caderas vayan primero.",
+    "specialty": "pitching",
+    "category": "body",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      19
+    ]
+  },
+  {
+    "id": "shoulders",
+    "en": "shoulders",
+    "es": "los hombros",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "Trunk and shoulder line; rotates after the hips.",
+    "example_en": "Keep your shoulders closed a little longer.",
+    "example_es": "Mantén los hombros cerrados un poquito más.",
+    "specialty": "pitching",
+    "category": "body",
+    "level": "A1",
+    "register": "both",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "hip-shoulder-separation",
+    "en": "hip-shoulder separation",
+    "es": "la separación de cadera y hombros",
+    "es_alt": [
+      "la separación"
+    ],
+    "loanword": false,
+    "meaning": "Angle between the pelvis and the shoulders around foot strike; individual, no single correct value.",
+    "example_en": "Your separation looked better today.",
+    "example_es": "La separación se vio mejor hoy.",
+    "specialty": "pitching",
+    "category": "body",
+    "level": "B2",
+    "register": "technical",
+    "region_note": "",
+    "sources": [
+      19
+    ]
+  },
+  {
+    "id": "arm",
+    "en": "arm",
+    "es": "el brazo",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "Throwing arm; 'tener brazo' means to throw hard.",
+    "example_en": "How does your arm feel today?",
+    "example_es": "¿Cómo sientes el brazo hoy?",
+    "specialty": "pitching",
+    "category": "body",
+    "level": "A1",
+    "register": "both",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "arm-path",
+    "en": "arm path",
+    "es": "el recorrido del brazo",
+    "es_alt": [
+      "el camino del brazo"
+    ],
+    "loanword": false,
+    "meaning": "Route of the throwing arm from hand break to release.",
+    "example_en": "Your arm path looks shorter.",
+    "example_es": "El recorrido del brazo se ve más corto.",
+    "specialty": "pitching",
+    "category": "delivery",
+    "level": "B2",
+    "register": "technical",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "arm-angle",
+    "en": "arm angle / arm slot",
+    "es": "el ángulo del brazo",
+    "es_alt": [
+      "el slot",
+      "por dónde sale el brazo"
+    ],
+    "loanword": false,
+    "meaning": "Angle of the arm at release; Statcast scale 0 degrees (sidearm) to 90 degrees (over the top).",
+    "example_en": "Keep the same arm angle on the changeup.",
+    "example_es": "Mantén el mismo ángulo del brazo en el cambio.",
+    "specialty": "pitching",
+    "category": "delivery",
+    "level": "B1",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      10,
+      30,
+      50
+    ]
+  },
+  {
+    "id": "release-point",
+    "en": "release point",
+    "es": "el punto de salida",
+    "es_alt": [
+      "el release",
+      "donde sueltas la pelota",
+      "el punto de liberación"
+    ],
+    "loanword": false,
+    "meaning": "Where in space the ball leaves the hand.",
+    "example_en": "Your release point was more consistent.",
+    "example_es": "El punto de salida estuvo más consistente.",
+    "specialty": "pitching",
+    "category": "delivery",
+    "level": "B1",
+    "register": "both",
+    "region_note": "Which Spanish term is standard was not verified; 'donde sueltas la pelota' is safest with players.",
+    "sources": []
+  },
+  {
+    "id": "extension",
+    "en": "extension",
+    "es": "la extensión",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "How far in front of the rubber the ball is released, in feet; more extension raises perceived velocity.",
+    "example_en": "You got more extension today.",
+    "example_es": "Hoy tuviste más extensión.",
+    "specialty": "pitching",
+    "category": "delivery",
+    "level": "B1",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      3,
+      8
+    ]
+  },
+  {
+    "id": "lead-leg",
+    "en": "lead leg / front leg",
+    "es": "la pierna delantera",
+    "es_alt": [
+      "la pierna de alante"
+    ],
+    "loanword": false,
+    "meaning": "Stride leg, which lands and firms up.",
+    "example_en": "Firm up your front leg.",
+    "example_es": "Afirma la pierna delantera.",
+    "specialty": "pitching",
+    "category": "body",
+    "level": "A2",
+    "register": "both",
+    "region_note": "'Alante' is common Caribbean colloquial for 'adelante'.",
+    "sources": []
+  },
+  {
+    "id": "follow-through",
+    "en": "follow-through",
+    "es": "terminar el lanzamiento",
+    "es_alt": [
+      "el follow-through",
+      "la terminación"
+    ],
+    "loanword": false,
+    "meaning": "Deceleration of arm and body after release.",
+    "example_en": "Finish your pitch.",
+    "example_es": "Termina el lanzamiento.",
+    "specialty": "pitching",
+    "category": "delivery",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "tempo",
+    "en": "tempo / rhythm",
+    "es": "el ritmo",
+    "es_alt": [
+      "el tempo"
+    ],
+    "loanword": false,
+    "meaning": "Speed and rhythm of the delivery.",
+    "example_en": "Good tempo, keep it.",
+    "example_es": "Buen ritmo, mantenlo.",
+    "specialty": "pitching",
+    "category": "delivery",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "timing",
+    "en": "timing / sequencing",
+    "es": "el timing",
+    "es_alt": [
+      "la sincronización",
+      "la secuencia"
+    ],
+    "loanword": true,
+    "meaning": "Order and timing of body segments (hips, trunk, arm, hand).",
+    "example_en": "Your timing was off on that one.",
+    "example_es": "El timing se te fue en ese.",
+    "specialty": "pitching",
+    "category": "delivery",
+    "level": "B1",
+    "register": "both",
+    "region_note": "Loanword status inferred, not verified.",
+    "sources": [
+      19
+    ]
+  },
+  {
+    "id": "consistency",
+    "en": "consistency / repeatability",
+    "es": "la consistencia",
+    "es_alt": [
+      "repetir la mecánica"
+    ],
+    "loanword": false,
+    "meaning": "Doing the same delivery and release pitch after pitch.",
+    "example_en": "We want you to repeat this delivery.",
+    "example_es": "Queremos que repitas esta mecánica.",
+    "specialty": "pitching",
+    "category": "delivery",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "bullpen",
+    "en": "bullpen",
+    "es": "el bullpen",
+    "es_alt": [
+      "el bulpén"
+    ],
+    "loanword": true,
+    "meaning": "Practice area for warming up, and the relief staff; also a practice session.",
+    "example_en": "Go to the bullpen.",
+    "example_es": "Ve al bullpen.",
+    "specialty": "pitching",
+    "category": "bullpen",
+    "level": "A1",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      37,
+      40
+    ]
+  },
+  {
+    "id": "bullpen-session",
+    "en": "bullpen session",
+    "es": "la sesión de bullpen",
+    "es_alt": [
+      "el bullpen",
+      "tirar bullpen"
+    ],
+    "loanword": true,
+    "meaning": "Planned practice throwing session off a mound.",
+    "example_en": "Tomorrow you have a bullpen session.",
+    "example_es": "Mañana tienes sesión de bullpen.",
+    "specialty": "pitching",
+    "category": "bullpen",
+    "level": "A2",
+    "register": "both",
+    "region_note": "MLB.com en español writes both 'sesión del bullpen' and 'sesiones de bullpen'.",
+    "sources": [
+      29,
+      37,
+      49
+    ]
+  },
+  {
+    "id": "pitch-count",
+    "en": "pitches / pitch count",
+    "es": "los lanzamientos",
+    "es_alt": [
+      "los pitcheos",
+      "el conteo de lanzamientos"
+    ],
+    "loanword": false,
+    "meaning": "Number of pitches thrown; basis of workload limits.",
+    "example_en": "Twenty-five pitches today.",
+    "example_es": "Veinticinco lanzamientos hoy.",
+    "specialty": "pitching",
+    "category": "bullpen",
+    "level": "A1",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      24
+    ]
+  },
+  {
+    "id": "how-did-it-feel",
+    "en": "How did it feel?",
+    "es": "¿Cómo te sentiste?",
+    "es_alt": [
+      "¿Cómo la sentiste?",
+      "¿Qué sentiste?",
+      "¿Cómo se sintió? (usted)"
+    ],
+    "loanword": false,
+    "meaning": "Open question asking the pitcher for his own sensation first.",
+    "example_en": "How did that one feel?",
+    "example_es": "¿Cómo se sintió ese?",
+    "specialty": "pitching",
+    "category": "feedback",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "one-more",
+    "en": "one more",
+    "es": "uno más",
+    "es_alt": [
+      "otro",
+      "otra más"
+    ],
+    "loanword": false,
+    "meaning": "Request for one more pitch.",
+    "example_en": "One more just like that.",
+    "example_es": "Uno más igualito.",
+    "specialty": "pitching",
+    "category": "bullpen",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "again",
+    "en": "again",
+    "es": "otra vez",
+    "es_alt": [
+      "de nuevo",
+      "repite"
+    ],
+    "loanword": false,
+    "meaning": "Request to repeat.",
+    "example_en": "Again, same grip.",
+    "example_es": "Otra vez, el mismo agarre.",
+    "specialty": "pitching",
+    "category": "bullpen",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "good-pitch",
+    "en": "good pitch",
+    "es": "buen lanzamiento",
+    "es_alt": [
+      "¡eso es!",
+      "¡ahí!",
+      "¡así mismo!",
+      "buen pitcheo"
+    ],
+    "loanword": false,
+    "meaning": "Short positive feedback.",
+    "example_en": "Good pitch! That's it.",
+    "example_es": "¡Buen lanzamiento! Así mismo.",
+    "specialty": "pitching",
+    "category": "feedback",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "watch-video",
+    "en": "let's watch the video",
+    "es": "vamos a revisar el video",
+    "es_alt": [
+      "vamos a ver el video"
+    ],
+    "loanword": false,
+    "meaning": "Invitation to review high-speed or bullpen video together.",
+    "example_en": "Let's watch the video together.",
+    "example_es": "Vamos a ver el video juntos.",
+    "specialty": "pitching",
+    "category": "feedback",
+    "level": "A1",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      23
+    ]
+  },
+  {
+    "id": "does-it-feel-natural",
+    "en": "Does it feel natural?",
+    "es": "¿Se siente natural?",
+    "es_alt": [
+      "¿Te sientes cómodo?"
+    ],
+    "loanword": false,
+    "meaning": "Checking whether a change feels comfortable and repeatable before adopting it.",
+    "example_en": "Does this grip feel natural to you?",
+    "example_es": "¿Este agarre se te siente natural?",
+    "specialty": "pitching",
+    "category": "feedback",
+    "level": "A2",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "objective",
+    "en": "objective / focus for the set",
+    "es": "el objetivo",
+    "es_alt": [
+      "la meta",
+      "en lo que te vas a enfocar"
+    ],
+    "loanword": false,
+    "meaning": "One goal for a group of throws.",
+    "example_en": "These five, focus only on the location.",
+    "example_es": "En estos cinco, enfócate solo en la localización.",
+    "specialty": "pitching",
+    "category": "feedback",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "command",
+    "en": "command / control",
+    "es": "el control",
+    "es_alt": [
+      "el comando"
+    ],
+    "loanword": false,
+    "meaning": "Ability to throw strikes (control) and to hit specific spots (command).",
+    "example_en": "Today we're working on command.",
+    "example_es": "Hoy vamos a trabajar el control.",
+    "specialty": "pitching",
+    "category": "bullpen",
+    "level": "A2",
+    "register": "both",
+    "region_note": "'Comando' is used for command in Caribbean baseball (search hits); verify the distinction players make.",
+    "sources": []
+  },
+  {
+    "id": "put",
+    "en": "put / place",
+    "es": "pon",
+    "es_alt": [
+      "ponga (usted)",
+      "coloca"
+    ],
+    "loanword": false,
+    "meaning": "Command for placing a finger or the ball.",
+    "example_en": "Put your finger here.",
+    "example_es": "Pon el dedo aquí.",
+    "specialty": "pitching",
+    "category": "feedback",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "move",
+    "en": "move",
+    "es": "mueve",
+    "es_alt": [
+      "mueva (usted)",
+      "corre (el dedo)"
+    ],
+    "loanword": false,
+    "meaning": "Command for shifting a finger or the ball slightly.",
+    "example_en": "Move your thumb a little.",
+    "example_es": "Mueve el pulgar un poquito.",
+    "specialty": "pitching",
+    "category": "feedback",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "spread",
+    "en": "spread / separate",
+    "es": "separa",
+    "es_alt": [
+      "abre",
+      "separe (usted)"
+    ],
+    "loanword": false,
+    "meaning": "Command to spread fingers apart.",
+    "example_en": "Spread your fingers a little more.",
+    "example_es": "Separa los dedos un poquito más.",
+    "specialty": "pitching",
+    "category": "feedback",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "bring-together",
+    "en": "bring together",
+    "es": "junta",
+    "es_alt": [
+      "pega",
+      "junte (usted)"
+    ],
+    "loanword": false,
+    "meaning": "Command to bring fingers closer.",
+    "example_en": "Bring your fingers together.",
+    "example_es": "Junta los dedos.",
+    "specialty": "pitching",
+    "category": "feedback",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "loosen",
+    "en": "loosen",
+    "es": "afloja",
+    "es_alt": [
+      "agárrala más suave",
+      "afloje (usted)"
+    ],
+    "loanword": false,
+    "meaning": "Command to reduce grip pressure.",
+    "example_en": "Loosen your grip.",
+    "example_es": "Afloja el agarre.",
+    "specialty": "pitching",
+    "category": "feedback",
+    "level": "A2",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "squeeze",
+    "en": "squeeze / tighten",
+    "es": "aprieta",
+    "es_alt": [
+      "apriete (usted)"
+    ],
+    "loanword": false,
+    "meaning": "Command to increase pressure.",
+    "example_en": "Squeeze a little more with the middle finger.",
+    "example_es": "Aprieta un poquito más con el dedo del medio.",
+    "specialty": "pitching",
+    "category": "feedback",
+    "level": "A2",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "release",
+    "en": "release / let go",
+    "es": "suelta",
+    "es_alt": [
+      "suéltala",
+      "suelte (usted)"
+    ],
+    "loanword": false,
+    "meaning": "Command about letting the ball go; also 'soltar' for release in general.",
+    "example_en": "Let it go out front.",
+    "example_es": "Suéltala alante.",
+    "specialty": "pitching",
+    "category": "feedback",
+    "level": "A2",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "keep",
+    "en": "keep / hold",
+    "es": "mantén",
+    "es_alt": [
+      "mantenga (usted)",
+      "quédate"
+    ],
+    "loanword": false,
+    "meaning": "Command to maintain a position or feeling.",
+    "example_en": "Keep that feeling.",
+    "example_es": "Mantén esa sensación.",
+    "specialty": "pitching",
+    "category": "feedback",
+    "level": "A2",
+    "register": "field",
+    "region_note": "Use 'sensación', not 'sentimiento' (emotion).",
+    "sources": []
+  },
+  {
+    "id": "try",
+    "en": "try",
+    "es": "prueba",
+    "es_alt": [
+      "pruebe (usted)",
+      "trata"
+    ],
+    "loanword": false,
+    "meaning": "Command to test something new.",
+    "example_en": "Try this grip.",
+    "example_es": "Prueba este agarre.",
+    "specialty": "pitching",
+    "category": "feedback",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "repeat",
+    "en": "repeat",
+    "es": "repite",
+    "es_alt": [
+      "repita (usted)",
+      "otra igual"
+    ],
+    "loanword": false,
+    "meaning": "Command to do the same again.",
+    "example_en": "Repeat that one.",
+    "example_es": "Repite ese.",
+    "specialty": "pitching",
+    "category": "feedback",
+    "level": "A1",
+    "register": "field",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "pitcher",
+    "en": "pitcher",
+    "es": "el pícher",
+    "es_alt": [
+      "el lanzador",
+      "el serpentinero (prensa)"
+    ],
+    "loanword": true,
+    "meaning": "Player who pitches.",
+    "example_en": "Pitchers, to the bullpen.",
+    "example_es": "Píchers, al bullpen.",
+    "specialty": "general",
+    "category": "general",
+    "level": "A1",
+    "register": "both",
+    "region_note": "Spelled without 't' per RAE/Fundéu; 'serpentinero' is press language.",
+    "sources": [
+      41,
+      43,
+      35
+    ]
+  },
+  {
+    "id": "to-pitch",
+    "en": "to pitch / to throw",
+    "es": "tirar",
+    "es_alt": [
+      "lanzar",
+      "pichar",
+      "pichear"
+    ],
+    "loanword": false,
+    "meaning": "To throw the ball to the batter; 'tirar' is the everyday verb.",
+    "example_en": "Throw me a changeup.",
+    "example_es": "Tírame un cambio.",
+    "specialty": "general",
+    "category": "general",
+    "level": "A1",
+    "register": "both",
+    "region_note": "'Pichar' has non-baseball colloquial meanings in the DR (ignoring someone); 'tirar'/'lanzar' are safer.",
+    "sources": [
+      41,
+      44
+    ]
+  },
+  {
+    "id": "pitch-noun",
+    "en": "pitch (a single pitch)",
+    "es": "el lanzamiento",
+    "es_alt": [
+      "el pitcheo",
+      "el picheo",
+      "el tiro"
+    ],
+    "loanword": false,
+    "meaning": "One delivered ball; also a pitch type.",
+    "example_en": "That pitch was perfect.",
+    "example_es": "Ese lanzamiento fue perfecto.",
+    "specialty": "general",
+    "category": "general",
+    "level": "A1",
+    "register": "both",
+    "region_note": "Dominican press writes 'picheo'; MLB.com en español 'pitcheo'.",
+    "sources": [
+      31,
+      34,
+      43,
+      51
+    ]
+  },
+  {
+    "id": "mound",
+    "en": "mound",
+    "es": "el montículo",
+    "es_alt": [
+      "la loma",
+      "la lomita"
+    ],
+    "loanword": false,
+    "meaning": "Raised dirt area from which the pitcher throws.",
+    "example_en": "Get on the mound.",
+    "example_es": "Sube al montículo.",
+    "specialty": "general",
+    "category": "general",
+    "level": "A2",
+    "register": "both",
+    "region_note": "'Subir al montículo' confirmed in Diario Libre; columnists also write 'la colina'. DLE lists 'lomita' for Cuba, Nicaragua, Puerto Rico and Venezuela. 'La loma' for the DR is often cited but was not found in any page read.",
+    "sources": [
+      39,
+      42,
+      52,
+      54
+    ]
+  },
+  {
+    "id": "home-plate",
+    "en": "home plate",
+    "es": "el plato",
+    "es_alt": [
+      "el home"
+    ],
+    "loanword": false,
+    "meaning": "Five-sided plate the pitcher throws over.",
+    "example_en": "Finish toward the plate.",
+    "example_es": "Termina hacia el plato.",
+    "specialty": "general",
+    "category": "general",
+    "level": "A1",
+    "register": "both",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "strike-zone",
+    "en": "strike zone",
+    "es": "la zona de strike",
+    "es_alt": [
+      "la zona"
+    ],
+    "loanword": false,
+    "meaning": "Area over the plate where a pitch is a strike.",
+    "example_en": "Attack the zone.",
+    "example_es": "Ataca la zona.",
+    "specialty": "general",
+    "category": "general",
+    "level": "A2",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      40,
+      52
+    ]
+  },
+  {
+    "id": "strike",
+    "en": "strike",
+    "es": "el strike",
+    "es_alt": [
+      "el estrái (pronunciation)"
+    ],
+    "loanword": true,
+    "meaning": "Pitch in the zone or swung at and missed.",
+    "example_en": "First-pitch strike.",
+    "example_es": "Strike en el primer lanzamiento.",
+    "specialty": "general",
+    "category": "general",
+    "level": "A1",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      40
+    ]
+  },
+  {
+    "id": "ball-count",
+    "en": "ball (in the count)",
+    "es": "la bola",
+    "es_alt": [],
+    "loanword": false,
+    "meaning": "Pitch outside the zone not swung at.",
+    "example_en": "That was a ball, but close.",
+    "example_es": "Esa fue bola, pero cerca.",
+    "specialty": "general",
+    "category": "general",
+    "level": "A1",
+    "register": "both",
+    "region_note": "Distinct from 'la pelota' (the object).",
+    "sources": []
+  },
+  {
+    "id": "strikeout",
+    "en": "strikeout / to strike out",
+    "es": "el ponche",
+    "es_alt": [
+      "ponchar",
+      "poncharse"
+    ],
+    "loanword": false,
+    "meaning": "Out on three strikes.",
+    "example_en": "Two strikeouts in the inning.",
+    "example_es": "Dos ponches en el inning.",
+    "specialty": "general",
+    "category": "general",
+    "level": "A2",
+    "register": "both",
+    "region_note": "'Estás ponchao' colloquially means 'you're in trouble'.",
+    "sources": [
+      46
+    ]
+  },
+  {
+    "id": "catcher",
+    "en": "catcher",
+    "es": "el cátcher",
+    "es_alt": [
+      "el receptor"
+    ],
+    "loanword": true,
+    "meaning": "Player who receives the pitch.",
+    "example_en": "Look at the catcher's glove.",
+    "example_es": "Mira el guante del cátcher.",
+    "specialty": "general",
+    "category": "general",
+    "level": "A1",
+    "register": "both",
+    "region_note": "",
+    "sources": []
+  },
+  {
+    "id": "pitching-coach",
+    "en": "pitching coach",
+    "es": "el coach de pitcheo",
+    "es_alt": [
+      "el coach de lanzadores",
+      "el instructor de pitcheo"
+    ],
+    "loanword": true,
+    "meaning": "Coach responsible for pitchers.",
+    "example_en": "I'm your pitching coach this season.",
+    "example_es": "Soy tu coach de pitcheo esta temporada.",
+    "specialty": "general",
+    "category": "general",
+    "level": "A1",
+    "register": "both",
+    "region_note": "",
+    "sources": [
+      36
+    ]
+  },
+  {
+    "id": "umpire",
+    "en": "umpire",
+    "es": "el ampaya",
+    "es_alt": [
+      "el árbitro",
+      "el umpire"
+    ],
+    "loanword": false,
+    "meaning": "Official who calls balls and strikes.",
+    "example_en": "The umpire is calling the low pitch.",
+    "example_es": "El ampaya está cantando el bajito.",
+    "specialty": "general",
+    "category": "general",
+    "level": "A2",
+    "register": "field",
+    "region_note": "'Ampaya' is the DR and Cuba form.",
+    "sources": [
+      45
+    ]
+  },
+  {
+    "id": "tracking-device",
+    "en": "Rapsodo / TrackMan readout",
+    "es": "los números",
+    "es_alt": [
+      "la data",
+      "el Rapsodo",
+      "el TrackMan"
+    ],
+    "loanword": false,
+    "meaning": "Ball-flight data from tracking devices.",
+    "example_en": "Let's look at the numbers.",
+    "example_es": "Vamos a ver los números.",
+    "specialty": "pitching",
+    "category": "equipment",
+    "level": "A2",
+    "register": "both",
+    "region_note": "'La data' is a common Spanglish form in baseball; verify.",
+    "sources": [
+      23,
+      13
+    ]
+  },
+  {
+    "id": "workload",
+    "en": "workload",
+    "es": "la carga de trabajo",
+    "es_alt": [
+      "cuánto has tirado"
+    ],
+    "loanword": false,
+    "meaning": "Total amount of throwing over a period; guides limits and rest.",
+    "example_en": "We're watching your workload.",
+    "example_es": "Estamos cuidando tu carga de trabajo.",
+    "specialty": "general",
+    "category": "general",
+    "level": "B1",
+    "register": "technical",
+    "region_note": "",
+    "sources": [
+      24
+    ]
+  },
+  {
+    "id": "arm-soreness",
+    "en": "soreness / pain",
+    "es": "el dolor",
+    "es_alt": [
+      "la molestia",
+      "¿te molesta algo?"
+    ],
+    "loanword": false,
+    "meaning": "Discomfort the pitcher must report; any pain stops a session and goes to medical staff.",
+    "example_en": "Does anything hurt?",
+    "example_es": "¿Te duele algo?",
+    "specialty": "general",
+    "category": "body",
+    "level": "A1",
+    "register": "both",
+    "region_note": "Ask both: '¿Te duele?' (pain) and '¿Te molesta?' (discomfort).",
+    "sources": [
+      24
+    ]
+  }
+]

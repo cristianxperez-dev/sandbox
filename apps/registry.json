@@ -19,16 +19,19 @@
   },
   {
     "id": "english",
-    "name": "CP English",
-    "description": "Practical English for Spanish-speaking baseball coaches: a placement test, narrated lessons, and speaking practice with feedback.",
+    "name": "English",
+    "description": "Bilingual language courses for baseball coaches: Spanish for pitching coaches and English for defensive coaches, with speaking practice.",
     "discipline": "Baseball",
     "alsoIn": [
       "Other / Experimental"
     ],
     "status": "prototype",
     "returnLink": false,
+    "logoBackground": "#F2EBDD",
     "tags": [
       "english",
+      "spanish",
+      "bilingual",
       "language learning",
       "coaching",
       "dominican academy",
