@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Call the Game — Catcher Pitch-Calling Simulator</title>
+<meta name="description" content="Call the Game: a catcher pitch-calling simulator. Study the advance report, call every pitch, set the glove, and get graded on the plan.">
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#16202F">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="app.css?v=20261113a">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#/" aria-label="Call the Game, home"><span class="brand__mark" aria-hidden="true"></span><span class="brand__word">CALL THE GAME</span><span class="brand__tag">Do what you do</span></a>
+  <div class="top__tools">
+    <button class="tool" id="btn-report" type="button" hidden>Report</button>
+    <button class="tool" id="btn-speed" type="button" aria-label="Playback speed">1×</button>
+    <button class="tool" id="btn-sound" type="button" aria-pressed="false" aria-label="Sound on">Sound</button>
+    <a class="tool tool--link" href="../../">Sandbox</a>
+  </div>
+</header>
+<main id="app" tabindex="-1"><p class="boot">Loading the ballpark…</p></main>
+<dialog id="modal" class="modal" aria-labelledby="modal-title"><div class="modal__in" id="modal-body"></div></dialog>
+<div id="live" class="sr" aria-live="polite"></div>
+<script src="engine.js?v=20261113a"></script>
+<script src="rig.js?v=20261113a"></script>
+<script src="scene.js?v=20261113a"></script>
+<script src="audio.js?v=20261113a"></script>
+<script src="app.js?v=20261113a"></script>
+</body>
+</html>

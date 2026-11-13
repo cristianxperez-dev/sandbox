@@ -199,5 +199,22 @@
       "performance",
       "astros"
     ]
+  },
+  {
+    "id": "call-the-game",
+    "name": "Call the Game",
+    "description": "A catcher pitch-calling simulator: study the advance report, call every pitch, set the glove, get graded on the plan.",
+    "discipline": "Baseball",
+    "status": "prototype",
+    "returnLink": false,
+    "logoBackground": "#16202F",
+    "tags": [
+      "catcher",
+      "pitch calling",
+      "game planning",
+      "simulation",
+      "advance scouting",
+      "game"
+    ]
   }
 ]
