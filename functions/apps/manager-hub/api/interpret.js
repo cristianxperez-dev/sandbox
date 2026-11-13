@@ -26,11 +26,12 @@
 import DaySolve from "../../../../apps/manager-hub/assistant/day-solve.js";
 import DayKB from "../../../../apps/manager-hub/assistant/day-kb.js";
 import DayRead from "../../../../apps/manager-hub/assistant/day-read.js";
+import StDescribe from "../../../../apps/manager-hub/st/st-describe.js";
 import { aiState } from "../../../../manager-hub/server/ai-config.js";
 import * as Budget from "../../../../manager-hub/server/ai-budget.js";
 
 const MAX_TEXT = 1500, MAX_CTX = 16000, TIMEOUT_MS = 25000;
-const MAX_TOKENS = { build: 6000, refine: 3000 };
+const MAX_TOKENS = { build: 6000, refine: 3000, camp: 4000 };
 const JSON_HEADERS = { "Content-Type": "application/json", "Cache-Control": "private, no-store" };
 const reply = (status, body, extra = {}) => new Response(JSON.stringify(body), { status, headers: { ...JSON_HEADERS, ...extra } });
 
@@ -100,8 +101,30 @@ function planLines(plan) {
   return plan.items.slice(0, 60).map((i) => `${f(i.start)}–${f(i.end)} [${i.track}${i.group ? "/" + i.group : ""}] ${i.label} (activity ${i.actId || "-"}${i.fixed ? ", fixed" : ""})`).join("\n");
 }
 
+/* Camp / Spring Training master schedule: several groups across several facilities at once. */
+const CAMP_SYSTEM = () => `You are the language-understanding step of a scheduling assistant for a professional baseball organisation's Spring Training / camp complex. A coordinator types or dictates one day across several groups, fields, cages, bullpens and rooms. Turn exactly what they said into a list of schedule blocks for a human to review. Rules:
+- One item per block of work for one set of people in one place. When several groups go to several facilities in the same sentence ("Groups A and B take defense on Fields 1 and 2"), pair them in the order said: one item per group.
+- start is 24-hour "HH:MM". In camp, bare hours 6–11 are morning, 12 is noon, 1–5 are afternoon. dur is minutes: use a stated length or end time; otherwise the usual length for that work (stretch 15, defense 30, hitting 30, cage work 40, bullpens 30, lunch 45, meeting 20, lift 45) and add an assumption saying so.
+- groups: use the context's group names exactly when the coordinator means them ("Group C" → the group named "Group C" or "ST Group C"). all=true for everybody / all groups / the whole camp. roles for "pitchers", "catchers" or "position players" when no group is named for them.
+- facilities and staff: only names from the context, exactly as written there. Never invent groups, facilities, staff or activities that weren't said.
+- cat: fundamentals, hitting, pitching, strength, meetings or other.
+- Anything you can't place goes in notUnderstood, verbatim. Assumptions you made go in assumptions, briefly.
+A draft from a rule-based reader is included; it may be wrong or incomplete — correct it, don't copy its mistakes.`;
+
 /** OpenAI Responses API request body (strict JSON-schema output) */
 function makeBody(env, model, { mode, text, ctx, request, plan }) {
+  if (mode === "camp") {
+    let draft = null; try { draft = StDescribe.read(text, ctx); } catch (e) { draft = null; }
+    const body = {
+      model, instructions: CAMP_SYSTEM(),
+      input: [{ role: "user", content: `Context: ${JSON.stringify(ctx)}\n\nDraft from the rule-based reader (may be wrong or incomplete):\n${draft ? JSON.stringify({ items: draft.items.map((i) => Object.assign({}, i, { start: StDescribe.fmt(i.start) })), notUnderstood: draft.notUnderstood }) : "(none)"}\n\nCoordinator: ${text}` }],
+      text: { format: { type: "json_schema", name: "camp_day", strict: true, schema: StDescribe.CAMP_SCHEMA } },
+      max_output_tokens: MAX_TOKENS.camp, store: false, prompt_cache_key: "manager-hub-camp"
+    };
+    const effort = env.MH_AI_EFFORT || "low";
+    if (effort !== "none") body.reasoning = { effort };
+    return body;
+  }
   const schema = mode === "refine" ? DaySolve.REFINE_RESPONSE_SCHEMA : DaySolve.BUILD_RESPONSE_SCHEMA;
   let user;
   if (mode === "refine") {
@@ -196,7 +219,7 @@ async function handle({ request, env }) {
   const state = aiState(env, url.hostname);
   if (!state.active) return reply(503, { error: "not-configured", reason: state.reason });
   let body; try { body = await request.json(); } catch (e) { return reply(400, { error: "bad-json" }); }
-  const mode = body && body.mode === "refine" ? "refine" : "build";
+  const mode = body && (body.mode === "refine" || body.mode === "camp") ? body.mode : "build";
   const text = String((body && body.text) || "").trim();
   if (!text) return reply(400, { error: "empty" });
   if (text.length > MAX_TEXT) return reply(413, { error: "too-long" });
@@ -232,6 +255,11 @@ async function handle({ request, env }) {
   log(env, { mode, status: res.error || "ok", detail: res.detail || undefined, ms: res.ms, model: res.model || model, usage, costUsd: res.costUsd });
   if (res.error) return reply(res.status, { error: res.error, detail: res.detail || undefined, ms: res.ms, usage, model: res.model || model, budget });
   // the model's output is checked here and again in the page; anything malformed is refused, never repaired
+  if (mode === "camp") {
+    const v = StDescribe.validate(res.out);
+    if (!v.ok) return reply(502, { error: "invalid-output", details: v.errors.slice(0, 5), ms: res.ms, usage, model: res.model, budget });
+    return reply(200, { result: v.value, model: res.model, ms: res.ms, usage, costUsd: res.costUsd, budget });
+  }
   if (mode === "build") {
     const ir = res.out && res.out.request ? DaySolve.normalize(Object.assign({}, res.out.request, { source: "ai" })) : null;
     const v = ir ? DaySolve.validate(ir, { strict: true }) : { ok: false, errors: ["missing request"] };

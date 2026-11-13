@@ -46,6 +46,8 @@ async function createCamp(p, name) {
   await p.fill("#cfName", name);
   await p.fill("#cfStart", "2027-02-15"); await p.fill("#cfEnd", "2027-02-21");
   await p.click('[data-ca="create-camp"]'); await p.waitForTimeout(250);
+  // Manager Hub 3.0: a new camp opens on Today; these checks start on the Schedule
+  if (await p.$('[data-ca="tab"][data-k="schedule"]')) { await p.click('[data-ca="tab"][data-k="schedule"]'); await p.waitForTimeout(150); }
 }
 /** centre-x of a facility column and the y of a minute on the grid */
 async function slot(p, facName, minute) {
@@ -100,7 +102,7 @@ const actsOn = (st, date) => st.camps[0].draft.activities.filter((a) => a.date =
     await p.fill('[data-cf="pf-q"]', "62"); await p.waitForTimeout(100);
     ok((await p.$$(".c-pr:not(.c-phead)")).length === 1, "desktop: search by number");
     await p.click('[data-ca="pf-clear"]'); await p.waitForTimeout(100);
-    const filtersShown = await p.$$eval(".c-fchip", (els) => els.map((e) => e.innerText.split("\n")[0]));
+    const filtersShown = await p.$$eval(".c-affchips .c-fchip", (els) => els.map((e) => e.innerText.split("\n")[0]));
     ok(filtersShown.join(",") === "SL,CC,FAY", "desktop: affiliate filters list only levels present in the data");
     // shift-click range selection
     const cbs = await p.$$('.c-pr:not(.c-phead) [data-ca="p-cb"]');
@@ -126,7 +128,7 @@ const actsOn = (st, date) => st.camps[0].draft.activities.filter((a) => a.date =
     ok(await noOverflow(p), "desktop: players tab — no horizontal overflow");
 
     /* ---- groups ---- */
-    await p.click('[data-ca="tab"][data-k="groups"]'); await p.waitForTimeout(150);
+    await p.click('[data-ca="tab"][data-k="players"]'); await p.waitForTimeout(150);
     await p.click('[data-ca="g-preset"][data-k="Catchers"]'); await p.waitForTimeout(150);
     await p.click('[data-ca="g-preset"][data-k="Early Work"]'); await p.waitForTimeout(150);
     st = await campState(p);
@@ -141,7 +143,7 @@ const actsOn = (st, date) => st.camps[0].draft.activities.filter((a) => a.date =
     await shot(p, "desktop-03-groups");
 
     /* ---- staff ---- */
-    await p.click('[data-ca="tab"][data-k="staff"]'); await p.waitForTimeout(150);
+    await p.click('[data-ca="tab"][data-k="setup"]'); await p.waitForTimeout(150);
     await p.fill("#csName", "Test Coachone"); await p.click('[data-ca="s-add"]'); await p.waitForTimeout(150);
     await p.click('[data-ca="s-import"]'); await p.waitForTimeout(150);
     ok(await p.isVisible(".c-dlg"), "desktop: “pick from affiliate coach lists” opens");
@@ -305,6 +307,7 @@ const actsOn = (st, date) => st.camps[0].draft.activities.filter((a) => a.date =
     await shot(p, "phone-01-first-run");
     await p.fill("#cfName", "Phone Camp"); await p.fill("#cfStart", "2027-02-15"); await p.fill("#cfEnd", "2027-02-17");
     await p.click('[data-ca="create-camp"]'); await p.waitForTimeout(250);
+    await p.click('[data-ca="tab"][data-k="schedule"]'); await p.waitForTimeout(150);   // a new camp opens on Today (3.0)
     ok(await p.$eval('[data-ca="view"][data-k="agenda"]', (e) => e.getAttribute("aria-selected") === "true"), "phone: schedule opens on the agenda");
     await p.click('.c-tb [data-ca="add-act"]'); await p.waitForTimeout(200);
     ok(await p.isVisible("#cPanel #caTitle"), "phone: add opens the editor sheet");
@@ -317,7 +320,7 @@ const actsOn = (st, date) => st.camps[0].draft.activities.filter((a) => a.date =
     await p.click('[data-ca="view"][data-k="grid"]'); await p.waitForTimeout(150);
     ok(await noOverflow(p) && await p.evaluate(() => { const w = document.querySelector("#cGridWrap"); return w.scrollWidth > w.clientWidth; }), "phone: facility grid scrolls inside its own container");
     await shot(p, "phone-04-grid");
-    for (const t of ["players", "groups", "staff", "setup"]) {
+    for (const t of ["today", "players", "games", "setup"]) {   // 3.0: Players & Groups together, staff in Setup, plus Today and Games
       await p.click(`[data-ca="tab"][data-k="${t}"]`); await p.waitForTimeout(150);
       ok(await noOverflow(p), `phone: ${t} tab — no horizontal overflow`);
       if (t === "players") await shot(p, "phone-05-players");

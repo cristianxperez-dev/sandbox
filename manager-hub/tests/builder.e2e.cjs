@@ -22,7 +22,7 @@ async function open(b, aff, opts = {}) {
   if (opts.init) await ctx.addInitScript(opts.init);
   const p = await ctx.newPage(), errs = [];
   p.on("pageerror", (e) => errs.push(e.message));
-  p.on("response", (r) => { if (r.status() >= 400 && !/\/api\/(settings|usage|interpret)$/.test(r.url())) errs.push(r.status() + " " + r.url()); });
+  p.on("response", (r) => { if (r.status() >= 400 && !/\/api\/(settings|usage|interpret|ops)(\?|$)/.test(r.url())) errs.push(r.status() + " " + r.url()); });
   await p.goto(BASE); await p.evaluate((a) => { localStorage.clear(); localStorage.setItem("cs.affiliate", a); }, aff); await p.reload(); await wait(p, 2200);
   await p.evaluate(() => { const t = document.querySelector("#toast"); if (t) t.style.display = "none"; });
   return { ctx, p, errs };

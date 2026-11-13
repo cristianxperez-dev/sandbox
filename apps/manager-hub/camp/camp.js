@@ -28,9 +28,16 @@
   let storageNote = "", memoryOnly = false;
   let drag = null, gridMeta = null, menuOpen = null, dlgOpen = null;
   const blankFilter = () => ({ q: "", affs: [], role: "", position: "", throws: "", bats: "", status: "", group: "", inCamp: "" });
-  const ui = { tab: "schedule", date: null, view: null, sel: null, facFilter: "", confOpen: false, weekOf: null,
+  const ui = { grpFilter: "", tab: "schedule", date: null, view: null, sel: null, facFilter: "", confOpen: false, weekOf: null,
     pf: blankFilter(), psel: new Set(), lastIdx: null, flash: null, focusTitle: false };
 
+  /* ---------- extensions (Spring Training: st/st.js) ----------
+     An extension adds tabs, conflicts, games on the grid, toolbar buttons and a hook after every save.
+     Camp works exactly as before without one. */
+  const EXT = [];
+  const ext = (name, ...args) => { const out = []; EXT.forEach((x) => { if (typeof x[name] === "function") { try { const r = x[name](...args); if (r != null) out.push(r); } catch (err) { console.error("Camp extension", name, err); } } }); return out; };
+  const extTabs = (camp) => [].concat(...ext("tabs", camp)).filter(Boolean);
+  const extGames = (camp, date) => [].concat(...ext("gridItems", camp, date));
   const cur = () => state.camps.find((c) => c.id === state.activeCampId) || state.camps[0] || null;
   const actById = (id) => { const c = cur(); return c ? c.draft.activities.find((a) => a.id === id) : null; };
   const nameOf = (pid) => (index.get(pid) ? index.get(pid).name : "Unknown player");
@@ -90,6 +97,7 @@
     const r = fn(camp);
     if (camp) camp.updated = new Date().toISOString();
     persist();
+    ext("afterChange", camp, label);
     if (opts.render === "all") render();
     else if (opts.render !== "none") refresh(opts);
     return r;
@@ -99,6 +107,7 @@
     if (!last) { say("Nothing to undo"); return; }
     state = C.normalizeState(JSON.parse(last.json));
     persist();
+    ext("afterChange", cur(), "Undo: " + last.label);
     if (ui.sel && !actById(ui.sel)) ui.sel = null;
     render();
     say("Undone: " + last.label);
@@ -110,7 +119,7 @@
   function render() {
     closeMenu();
     const camp = cur();
-    if (!camp) { main.innerHTML = bannerHTML() + firstRunHTML(); bindTzSelect(main.querySelector("#cCreateForm")); return; }
+    if (!camp) { main.innerHTML = bannerHTML() + ext("firstRun").join("") + firstRunHTML(); bindTzSelect(main.querySelector("#cCreateForm")); return; }
     ensureDate(camp);
     if (ui.sel && !actById(ui.sel)) ui.sel = null;
     main.innerHTML = bannerHTML() + `<div id="cTop">${topHTML(camp)}</div><div class="c-body" id="cBody"></div>`;
@@ -152,7 +161,10 @@
     o = o || {};
     const tz = o.tz || C.DEFAULT_TZ;
     const tzOpts = C.COMMON_TZ.some(([z]) => z === tz) ? C.COMMON_TZ : C.COMMON_TZ.concat([[tz, tz]]);
-    return `<div class="field"><label for="cfName">Camp name</label><input type="text" id="cfName" value="${h(o.name || "")}" placeholder="e.g. Minor League Spring Training" autocomplete="off"></div>
+    const kind = o.kind || (o.edit ? "" : "spring");
+    const kinds = window.StCore ? window.StCore.KINDS : [];
+    return `${kinds.length ? `<div class="field"><label for="cfKind">Type</label><select id="cfKind">${o.edit && !o.kind ? `<option value="">${h((window.StCore.kindOf(o) || {}).name || "Camp")} (from the name)</option>` : ""}${kinds.map((k) => `<option value="${k.id}" ${k.id === kind ? "selected" : ""}>${h(k.name)}</option>`).join("")}</select></div>` : ""}
+      <div class="field"><label for="cfName">Name</label><input type="text" id="cfName" value="${h(o.name || "")}" placeholder="e.g. 2027 Minor League Spring Training" autocomplete="off"></div>
       <div class="grid2"><div class="field"><label for="cfStart">First day</label><input type="date" id="cfStart" value="${h(o.start || "")}"></div>
       <div class="field"><label for="cfEnd">Last day</label><input type="date" id="cfEnd" value="${h(o.end || "")}"></div></div>
       <div class="grid2"><div class="field"><label for="cfLoc">Location</label><input type="text" id="cfLoc" value="${h(o.location || "")}" placeholder="e.g. West Palm Beach, FL"></div>
@@ -168,7 +180,7 @@
     const err = !name ? "Give the camp a name." : !C.isDate(start) ? "Choose the first day." : !C.isDate(end) || end < start ? "The last day must be on or after the first day."
       : C.daysBetween(start, end) > 120 ? "A camp can run up to 120 days." : !C.isTimeZone(tz) ? "That timezone isn't recognised — use an IANA name such as America/New_York." : "";
     const presetEl = scope.querySelector("#cfPreset");
-    return { err, name, start, end, location, tz, preset: presetEl ? presetEl.checked : true };
+    return { err, name, start, end, location, tz, kind: v("cfKind") || null, preset: presetEl ? presetEl.checked : true };
   }
   function bindTzSelect(scope) {
     if (!scope) return;
@@ -204,7 +216,7 @@
       state.camps.push(camp);
       state.activeCampId = camp.id;
     }, { render: "none" });
-    ui.tab = "schedule"; ui.date = null; ui.sel = null; ui.psel.clear(); ui.pf = blankFilter();
+    ui.tab = extTabs(cur()).some((t) => t.id === "today") ? "today" : "schedule"; ui.date = null; ui.sel = null; ui.psel.clear(); ui.pf = blankFilter();
     render();
     say("Camp created — add players next, or start laying out the first day");
     return true;
@@ -222,16 +234,23 @@
   }
   function topHTML(camp) {
     const days = C.campDates(camp).length;
-    const tabs = [["schedule", "Schedule", ""], ["players", "Players", camp.players.length], ["groups", "Groups", camp.groups.length], ["staff", "Staff", camp.staff.length], ["setup", "Setup", ""]];
+    const tabs = [["schedule", "Schedule", "", 20], ["players", "Players & Groups", camp.players.length, 30], ["setup", "Setup", "", 90]]
+      .concat(extTabs(camp).map((t) => [t.id, t.label, t.count == null ? "" : t.count, t.order || 50]))
+      .sort((a, b) => a[3] - b[3]);
+    if (ui.tab === "groups") ui.tab = "players";
+    if (ui.tab === "staff") ui.tab = "setup";
+    if (!tabs.some((t) => t[0] === ui.tab)) ui.tab = tabs[0][0];
+    const kindName = window.StCore ? window.StCore.kindOf(camp).name : "Camp";
     return `<header class="c-head">
       <div class="c-title">
-        <div class="c-eyebrow">Camp · Organization-wide</div>
+        <div class="c-eyebrow">${h(kindName)} · Complex · Organization-wide${ext("headBadge", camp).join("")}</div>
         <div class="c-namerow"><h2 class="c-h1">${h(camp.name)}</h2>
-          ${state.camps.length > 1 ? `<label class="c-switch"><span class="c-sr">Switch camp</span><select data-cf="camp-switch" aria-label="Switch camp">${state.camps.map((c) => `<option value="${h(c.id)}" ${c.id === camp.id ? "selected" : ""}>${h(c.name)}</option>`).join("")}<option value="__new">+ New camp…</option></select></label>` : `<button class="btn sm quiet" data-ca="new-camp">${ICON.plus} New camp</button>`}
+          ${state.camps.length > 1 ? `<label class="c-switch"><span class="c-sr">Switch camp</span><select data-cf="camp-switch" aria-label="Switch camp">${state.camps.map((c) => `<option value="${h(c.id)}" ${c.id === camp.id ? "selected" : ""}>${h(c.name)}</option>`).join("")}${ext("switchOptions", camp).join("")}<option value="__new">+ New camp…</option></select></label>` : `${ext("switchOptions", camp).join("") ? `<label class="c-switch"><span class="c-sr">Switch camp</span><select data-cf="camp-switch" aria-label="Switch camp"><option value="${h(camp.id)}" selected>${h(camp.name)}</option>${ext("switchOptions", camp).join("")}<option value="__new">+ New camp…</option></select></label>` : `<button class="btn sm quiet" data-ca="new-camp">${ICON.plus} New camp</button>`}`}
         </div>
         <div class="c-meta">${camp.location ? `<span>${h(camp.location)}</span>` : ""}<span>${h(C.fmtRange(camp.start, camp.end))} · ${plural(days, "day")}</span><span class="c-tz" title="${h(camp.tz)}">${ICON.clock} Times in ${h(C.tzAbbr(camp.tz, ui.date || camp.start))} · ${h(C.tzCity(camp.tz))}</span></div>
       </div>
       <div class="c-headact">
+        ${ext("headActions", camp).join("")}
         ${statusHTML(camp)}
         <button class="btn sm quiet" data-ca="undo" ${hist.length ? "" : "disabled"} title="${hist.length ? "Undo: " + h(hist[hist.length - 1].label) : "Nothing to undo"}">${ICON.undo}<span class="c-hide-s">Undo</span></button>
         <button class="btn sm" data-ca="print">${ICON.print}<span class="c-hide-s">Print / export</span></button>
@@ -247,16 +266,19 @@
     if (ui.tab === "schedule") {
       b.innerHTML = `<div class="c-sched ${ui.sel ? "with-panel" : ""}"><div class="c-sched-main" id="cSchedMain"></div><aside class="c-panel" id="cPanel" aria-label="Edit activity"></aside></div>`;
       renderSchedMain(); renderPanel();
-    } else if (ui.tab === "players") { b.innerHTML = playersHTML(camp); renderPlayerTable(); }
-    else if (ui.tab === "groups") b.innerHTML = groupsHTML(camp);
-    else if (ui.tab === "staff") b.innerHTML = staffHTML(camp);
-    else { b.innerHTML = setupHTML(camp); bindTzSelect(b.querySelector("#cDetails")); }
+    } else if (ui.tab === "players") { b.innerHTML = `<div class="c-pg">${playersHTML(camp)}<div class="c-pg-groups">${groupsHTML(camp)}</div></div>`; renderPlayerTable(); }
+    else if (ui.tab === "setup") { b.innerHTML = setupHTML(camp).replace('<div class="c-setup">', '<div class="c-setup">' + staffHTML(camp) + ext("setupExtra", camp).join("")); bindTzSelect(b.querySelector("#cDetails")); }
+    else { const t = extTabs(camp).find((x) => x.id === ui.tab); if (t) t.render(b, API); }
   }
 
   /* =====================================================================
      SCHEDULE
      ===================================================================== */
-  function dayConflicts(camp) { return C.conflicts(camp, { index }); }
+  function dayConflicts(camp) {
+    const base = C.conflicts(camp, { index });
+    const more = [].concat(...ext("conflicts", camp));
+    return more.length ? base.concat(more).sort((x, y) => (x.level === y.level ? 0 : x.level === "error" ? -1 : 1) || x.date.localeCompare(y.date)) : base;
+  }
   function renderSchedMain() {
     const el = main.querySelector("#cSchedMain"); if (!el) return;
     const camp = cur();
@@ -292,6 +314,7 @@
     const warns = (ui.view === "week" ? all : today).filter((c) => c.level === "warning").length;
     const scope = ui.view === "week" ? "camp" : "day";
     const conf = errs ? `${plural(errs, "conflict")}${warns ? ` · ${plural(warns, "note")}` : ""}` : warns ? plural(warns, "note") : "No conflicts";
+    const grpOpts = ui.view === "agenda" && camp.groups.length ? `<label class="c-facfilter"><span class="c-sr">Group</span><select data-cf="grp-filter" aria-label="Show one group's day"><option value="">Every group</option>${camp.groups.map((g) => `<option value="${h(g.id)}" ${ui.grpFilter === g.id ? "selected" : ""}>${h(g.name)}</option>`).join("")}</select></label>` : "";
     const facOpts = ui.view === "agenda" ? `<label class="c-facfilter"><span class="c-sr">Facility</span><select data-cf="fac-filter" aria-label="Filter by facility"><option value="">All facilities</option>${camp.facilities.map((f) => `<option value="${h(f.id)}" ${ui.facFilter === f.id ? "selected" : ""}>${h(f.name)}</option>`).join("")}</select></label>` : "";
     return `<div class="c-tb">
       <div class="c-daynav">
@@ -302,10 +325,11 @@
       <div class="c-seg" role="tablist" aria-label="Schedule view">
         ${[["grid", "Facility grid"], ["agenda", "Agenda"], ["week", "Week"]].map(([v, l]) => `<button role="tab" aria-selected="${ui.view === v}" data-ca="view" data-k="${v}">${l}</button>`).join("")}
       </div>
-      ${facOpts}
+      ${facOpts}${grpOpts}
       <span class="c-tb-sp"></span>
       <button class="c-confbtn ${errs ? "err" : warns ? "warn" : "ok"}" data-ca="conf-toggle" aria-expanded="${ui.confOpen}" title="Conflicts this ${scope}">${errs ? ICON.warn : warns ? ICON.info : ICON.check}<span>${conf}</span></button>
       ${ui.view !== "week" ? `<button class="btn sm" data-ca="day-menu" aria-haspopup="menu">Day ${ICON.down}</button>` : ""}
+      ${ext("toolbar", camp, ui.date).join("")}
       <button class="btn sm primary" data-ca="add-act">${ICON.plus}<span>Activity</span></button>
     </div>`;
   }
@@ -351,7 +375,8 @@
   }
   function gridHTML(camp, byAct) {
     const acts = C.activitiesOn(camp.draft.activities, ui.date);
-    const win = gridWindow(camp, acts), cols = gridCols(camp, acts);
+    const games = extGames(camp, ui.date);
+    const win = gridWindow(camp, acts.concat(games)), cols = gridCols(camp, acts.concat(games));
     gridMeta = { win, cols };
     const H = (win.end - win.start) * PPM;
     const labels = [];
@@ -359,8 +384,8 @@
     const now = C.nowIn(camp.tz);
     const nowLine = now.date === ui.date && now.minute >= win.start && now.minute < win.end ? `<div class="c-now" style="top:${(now.minute - win.start) * PPM}px"><span>Now</span></div>` : "";
     const known = new Set(camp.facilities.map((f) => f.id));
-    const colActs = (col) => acts.filter((a) => (col.id ? a.facilityId === col.id : !a.facilityId || !known.has(a.facilityId)));
-    const empty = !acts.length ? `<div class="c-grid-empty"><b>Nothing scheduled on ${h(C.fmtDate(ui.date, { long: true }))}.</b><span>Click any slot on the grid to add an activity there, or <button class="c-link" data-ca="copy-day-in">copy another day</button>${state.templates.length ? ` / <button class="c-link" data-ca="apply-tpl">apply a template</button>` : ""}.</span></div>` : "";
+    const colActs = (col) => acts.concat(games).filter((a) => (col.id ? a.facilityId === col.id : !a.facilityId || !known.has(a.facilityId)));
+    const empty = !acts.length && !games.length ? `<div class="c-grid-empty"><b>Nothing scheduled on ${h(C.fmtDate(ui.date, { long: true }))}.</b><span>Click any slot on the grid to add an activity there, or <button class="c-link" data-ca="copy-day-in">copy another day</button>${state.templates.length ? ` / <button class="c-link" data-ca="apply-tpl">apply a template</button>` : ""}.</span></div>` : "";
     return `${empty}<div class="c-gridwrap" id="cGridWrap" style="--cols:${cols.length}">
       <div class="c-grow c-ghead">
         <div class="c-gcorner">${h(C.tzAbbr(camp.tz, ui.date))}</div>
@@ -370,12 +395,22 @@
         <div class="c-gtimes">${labels.join("")}</div>
         ${cols.map((c) => {
           const list = colActs(c), lanes = C.layoutLanes(list);
-          return `<div class="c-gcol" data-fid="${h(c.id)}" style="height:${H}px" aria-label="${h(c.name)} column — click an empty slot to add">${list.map((a) => blockHTML(camp, a, lanes[a.id], byAct[a.id], { win })).join("")}</div>`;
+          return `<div class="c-gcol" data-fid="${h(c.id)}" style="height:${H}px" aria-label="${h(c.name)} column — click an empty slot to add">${list.map((a) => (a.game ? gameBlockHTML(a, lanes[a.id], byAct[a.id], { win }) : blockHTML(camp, a, lanes[a.id], byAct[a.id], { win }))).join("")}</div>`;
         }).join("")}
         ${nowLine}
       </div>
     </div>
     <p class="c-hint">Drag a block to move it (5-minute steps) or across facilities; drag its bottom edge to change length. Keyboard: focus a block, arrows move it, Alt+arrows change length, Enter edits, Delete removes.</p>`;
+  }
+  /** a game on the grid: read-only here (edited in Games), so it isn't draggable */
+  function gameBlockHTML(g, lane, conf, opts) {
+    const e = conf ? conf.errors.length : 0;
+    const style = `top:${(g.start - opts.win.start) * PPM}px;height:${g.dur * PPM}px;left:calc(${lane.lane} * 100% / ${lane.lanes} + 2px);width:calc(100% / ${lane.lanes} - 4px)`;
+    return `<button class="c-blk c-game ${e ? "has-err" : ""}" data-aid="${h(g.id)}" data-ca="game-open" data-k="${h(g.id.slice(5))}" style="${style}" aria-label="${h("Game: " + g.title + ", " + C.fmtSpan(g.start, g.dur) + ", " + g.players.length + " players planned. Opens the game.")}">
+      <div class="c-blk-t"><span class="c-gtag">Game</span>${h(g.title)}</div>
+      <div class="c-blk-m"><span class="c-blk-time">${h(C.fmtSpan(g.start, g.dur))}</span>${g.players.length ? `<span class="c-blk-n">${ICON.users}${g.players.length}</span>` : ""}${g.status ? `<span class="c-blk-staff">${h(g.status)}</span>` : ""}</div>
+      ${e ? `<span class="c-flag err" title="${h(conf.errors.map((c) => c.msg).join("\n"))}">${e}</span>` : ""}
+    </button>`;
   }
   function facMeta(f) {
     const t = (C.FACILITY_TYPES.find((x) => x.id === f.type) || { name: "" }).name;
@@ -384,11 +419,12 @@
 
   /* ---------- agenda ---------- */
   function agendaHTML(camp, byAct) {
-    let acts = C.activitiesOn(camp.draft.activities, ui.date);
+    let acts = C.activitiesOn(camp.draft.activities.concat(extGames(camp, ui.date)), ui.date);
     if (ui.facFilter) acts = acts.filter((a) => a.facilityId === ui.facFilter);
+    if (ui.grpFilter) { const g = camp.groups.find((x) => x.id === ui.grpFilter); const who = new Set(g ? g.players : []); acts = acts.filter((a) => (a.groups || []).includes(ui.grpFilter) || (a.game ? a.players : Array.from(C.resolvePlayers(a, camp))).some((p) => who.has(p))); }
     const now = C.nowIn(camp.tz), isToday = now.date === ui.date;
     if (!acts.length) {
-      return `<div class="c-empty"><b>${ui.facFilter ? "Nothing booked at " + h(facName(camp, ui.facFilter)) : "Nothing scheduled"} on ${h(C.fmtDate(ui.date, { long: true }))}.</b>
+      return `<div class="c-empty"><b>${ui.facFilter ? "Nothing booked at " + h(facName(camp, ui.facFilter)) : ui.grpFilter ? "Nothing for this group" : "Nothing scheduled"} on ${h(C.fmtDate(ui.date, { long: true }))}.</b>
         <p>Add an activity, copy another day's plan, or apply a saved template.</p>
         <div class="c-row"><button class="btn sm primary" data-ca="add-act">${ICON.plus} Add activity</button><button class="btn sm" data-ca="copy-day-in">Copy another day</button>${state.templates.length ? `<button class="btn sm" data-ca="apply-tpl">Apply template</button>` : ""}</div></div>`;
     }
@@ -396,6 +432,7 @@
     const items = [];
     acts.forEach((a) => {
       if (!nowDone && a.start + a.dur > now.minute) { items.push(`<div class="c-ag-now"><span>Now · ${h(C.fmtTime(now.minute))}</span></div>`); nowDone = true; }
+      if (a.game) { const cfg = byAct[a.id]; items.push(`<button class="c-ag-item c-ag-game" data-ca="game-open" data-k="${h(a.id.slice(5))}" data-aid="${h(a.id)}"><span class="c-ag-time"><b>${h(C.fmtTime(a.start, { ampm: false }))}</b><small>${h(C.fmtTime(a.start + a.dur))}</small></span><span class="c-ag-main"><b><span class="c-gtag">Game</span> ${h(a.title)}</b><span>${h(a.facilityId ? facName(camp, a.facilityId) : a.site || "Site not set")} · ${plural(a.players.length, "player")} planned</span></span>${cfg && cfg.errors.length ? `<span class="c-flag err static">${cfg.errors.length}</span>` : ""}</button>`); return; }
       const res = C.resolvePlayers(a, camp), cf = byAct[a.id];
       const groups = a.groups.map((g) => camp.groups.find((x) => x.id === g)).filter(Boolean).map((g) => g.name);
       const staff = a.staff.map((s) => camp.staff.find((x) => x.id === s)).filter(Boolean).map((s) => s.name);
@@ -418,12 +455,12 @@
     const prevOk = dates[0] < ws, nextOk = dates[dates.length - 1] > week[6];
     return `<div class="c-weeknav"><button class="btn sm quiet c-icon" data-ca="week-prev" ${prevOk ? "" : "disabled"} aria-label="Previous week">${ICON.left}</button><b>Week of ${h(C.fmtDate(ws, { noDow: true }))}</b><button class="btn sm quiet c-icon" data-ca="week-next" ${nextOk ? "" : "disabled"} aria-label="Next week">${ICON.right}</button></div>
     <div class="c-week" style="--days:${shown.length}">${shown.map((d) => {
-      const acts = C.activitiesOn(camp.draft.activities, d);
+      const acts = C.activitiesOn(camp.draft.activities, d), wg = extGames(camp, d);
       const e = all.filter((c) => c.date === d && c.level === "error").length;
       const heads = new Set(); acts.forEach((a) => C.resolvePlayers(a, camp).forEach((p) => heads.add(p)));
       return `<div class="c-wday ${d === ui.date ? "cur" : ""}">
         <button class="c-wd-head" data-ca="open-day" data-k="${d}"><b>${h(C.fmtDate(d))}</b><span>Day ${dates.indexOf(d) + 1} · ${plural(acts.length, "activity", "activities")} · ${plural(heads.size, "player")}</span>${e ? `<span class="c-flag err static">${e}</span>` : ""}</button>
-        <div class="c-wd-list">${acts.length ? acts.map((a) => `<button class="c-wd-item" data-ca="open-day" data-k="${d}" data-k2="${h(a.id)}" style="--cat:${C.catOf(a.cat).color}"><span>${h(C.fmtTime(a.start, { ampm: false }))}</span><b>${h(a.title)}</b><small>${h(facName(camp, a.facilityId))}</small></button>`).join("") : `<p class="c-muted">Nothing yet</p>`}</div>
+        <div class="c-wd-list">${wg.map((g) => `<button class="c-wd-item c-wd-game" data-ca="game-open" data-k="${h(g.id.slice(5))}"><span>${h(C.fmtTime(g.start, { ampm: false }))}</span><b><span class="c-gtag">Game</span> ${h(g.title)}</b><small>${plural(g.players.length, "player")} planned</small></button>`).join("")}${acts.length ? acts.map((a) => `<button class="c-wd-item" data-ca="open-day" data-k="${d}" data-k2="${h(a.id)}" style="--cat:${C.catOf(a.cat).color}"><span>${h(C.fmtTime(a.start, { ampm: false }))}</span><b>${h(a.title)}</b><small>${h(facName(camp, a.facilityId))}</small></button>`).join("") : (wg.length ? "" : `<p class="c-muted">Nothing yet</p>`)}</div>
       </div>`;
     }).join("")}</div>`;
   }
@@ -1028,7 +1065,7 @@
       const ws = +f.querySelector("#cfWinS").value, we = +f.querySelector("#cfWinE").value;
       if (we <= ws) { if (err) err.textContent = "The grid must end after it starts."; return; }
       mutate("Edit camp details", (c) => {
-        Object.assign(c, { name: v.name, start: v.start, end: v.end, location: v.location, tz: v.tz, notes: f.querySelector("#cfNotes").value, dayWindow: { start: ws, end: we } });
+        Object.assign(c, { name: v.name, kind: v.kind || c.kind || null, start: v.start, end: v.end, location: v.location, tz: v.tz, notes: f.querySelector("#cfNotes").value, dayWindow: { start: ws, end: we } });
       }, { render: "all" });
       say("Camp details saved");
       return;
@@ -1055,6 +1092,7 @@
     }
     const a = t.dataset.ca, k = t.dataset.k, k2 = t.dataset.k2;
     const camp = cur();
+    if (ext("onAction", a, t, e).some(Boolean)) return;
     switch (a) {
       case "banner-x": storageNote = ""; render(); return;
       case "create-camp": return; // handled by submit
@@ -1231,20 +1269,24 @@
 
   function onInput(e) {
     const t = e.target, cf = t.dataset.cf; if (!cf) return;
+    if (ext("onInput", cf, t, e).some(Boolean)) return;
     if (cf === "pf-q") { ui.pf.q = t.value; renderPlayerTable(); return; }
     if (cf === "a-psearch") { suggestPlayers(t.value); return; }
     if (cf === "g-search") { suggestGroup(t.dataset.k, t.value); return; }
   }
   function onChange(e) {
     const t = e.target, cf = t.dataset.cf; if (!cf) return;
+    if (ext("onChange", cf, t, e).some(Boolean)) return;
     const camp = cur(), v = t.value, k = t.dataset.k;
     const a = ui.sel ? actById(ui.sel) : null;
     switch (cf) {
       case "camp-switch":
         if (v === "__new") { t.value = camp.id; return newCampDialog(); }
+        if (ext("switchTo", v).some(Boolean)) { t.value = camp.id; return; }
         state.activeCampId = v; persist(); ui.date = null; ui.sel = null; ui.psel.clear(); ui.pf = blankFilter(); render(); return;
       case "day": ui.date = v; ui.sel = null; refresh(); return;
       case "fac-filter": ui.facFilter = v; renderSchedMain(); return;
+      case "grp-filter": ui.grpFilter = v; renderSchedMain(); return;
       /* activity editor */
       case "a-title": if (!a) return; mutate("Rename activity", () => {
         a.title = v.trim() || "Activity";
@@ -1298,6 +1340,7 @@
       if (!printRoot.hidden) { closePrint(); e.stopPropagation(); return; }
       if (ui.sel && t.closest && t.closest("#cPanel")) { ui.sel = null; refresh(); e.stopPropagation(); return; }
     }
+    if (ext("onKey", e).some(Boolean)) return;
     if (meta && e.key.toLowerCase() === "z" && !e.shiftKey && !(t.matches && t.matches("input[type=text],input[type=search],textarea"))) {
       e.preventDefault(); e.stopPropagation(); undo(); return;
     }
@@ -1396,8 +1439,39 @@
     }
     closeDialog(); closeMenu(); if (printRoot && !printRoot.hidden) closePrint();
     loadAll();
+    if (!ui.started) { ui.started = true; if (cur() && extTabs(cur()).some((t) => t.id === "today")) ui.tab = "today"; }
     render();
+    ext("shown", API);
   }
 
-  window.CampUI = { show, ready: true, _debug: { state: () => state, ui, pool: () => pool } };
+  /* what an extension may use — the same functions Camp's own screens use */
+  const API = {
+    C, h, ICON, ui, say, plural, narrow,
+    cur, state: () => state, pool: () => pool, index: () => index, nameOf, facName,
+    mutate, render, refresh, persist, undo, renderSchedMain,
+    openDialog: (o) => openDialog(o), closeDialog: () => closeDialog(), openMenu: (a, items) => openMenu(a, items),
+    setTab: (id) => { ui.tab = id; ui.sel = null; render(); }, openActivity: (id) => openActivity(id),
+    goTo: (date, opts) => { ui.tab = "schedule"; ui.date = date; if (opts && opts.view) ui.view = opts.view; if (opts && opts.group != null) ui.grpFilter = opts.group; if (opts && opts.flash) ui.flash = opts.flash; render(); },
+    root: () => root, main: () => main, layer: () => layer, printRoot: () => printRoot,
+    affiliateCoaches: () => affiliateCoaches(), conflicts: (camp) => dayConflicts(camp),
+    /** put a camp from the shared store into this browser (replacing the local copy) without counting it as a local edit */
+    setCamp: (camp, opts) => {
+      const c = C.normalizeState({ camps: [camp] }).camps[0]; if (!c) return null;
+      const i = state.camps.findIndex((x) => x.id === c.id);
+      if (i >= 0) state.camps[i] = c; else state.camps.push(c);
+      if (opts && opts.activate) { state.activeCampId = c.id; ui.date = null; ui.sel = null; }
+      persist();
+      return c;
+    },
+    /** show prepared sheets (<section class="c-sheet">…) in the print preview; orient "portrait" | "landscape" */
+    printHTML: (html, title, opts) => {
+      opts = opts || {};
+      printRoot.innerHTML = `<div class="c-pv-bar"><button class="btn sm" data-ca="print-close">${ICON.left} Back</button><b>${h(title || "Print")}</b>${opts.sub ? `<span class="c-muted">${h(opts.sub)}</span>` : ""}<span class="c-tb-sp"></span><button class="btn sm primary" data-ca="print-go">${ICON.print} Print</button></div><div class="c-pv-pages ${opts.draft ? "draft" : ""} ${opts.orient === "landscape" ? "land" : "port"}">${html}</div>`;
+      printRoot.hidden = false; printRoot.dataset.orient = opts.orient || "portrait"; root.classList.add("printing"); printRoot.scrollTop = 0;
+      const b = printRoot.querySelector('[data-ca="print-go"]'); if (b) b.focus();
+    }
+  };
+  function extend(x) { if (x && typeof x === "object" && !EXT.includes(x)) { EXT.push(x); if (root && root.isConnected) render(); } }
+
+  window.CampUI = { show, extend, api: API, ready: true, _debug: { state: () => state, ui, pool: () => pool } };
 })();

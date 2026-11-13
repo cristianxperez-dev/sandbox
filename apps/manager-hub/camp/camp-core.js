@@ -183,6 +183,8 @@
   ];
 
   /* ---------- state ---------- */
+  /* the camp's operating context (Spring Training, instructs, offseason, workouts) — see st/st-core.js KINDS */
+  const CAMP_KINDS = ["spring", "instructs", "offseason", "workout"];
   const emptyState = () => ({ version: VERSION, camps: [], templates: [], activeCampId: null });
 
   function normActivity(a) {
@@ -217,7 +219,7 @@
       staff: arr(s.staff).map(normStaff).filter(Boolean)
     } : null);
     return {
-      id: str(c.id) || uid("c"), name: str(c.name) || "Camp", location: str(c.location),
+      id: str(c.id) || uid("c"), name: str(c.name) || "Camp", kind: CAMP_KINDS.includes(c.kind) ? c.kind : null, location: str(c.location),
       tz: isTimeZone(c.tz) ? c.tz : DEFAULT_TZ, start, end, notes: str(c.notes), dayWindow: win,
       facilities: arr(c.facilities).map(normFacility).filter(Boolean),
       staff: arr(c.staff).map(normStaff).filter(Boolean),
@@ -283,7 +285,7 @@
     const end = isDate(o.end) && o.end >= start ? o.end : start;
     const now = new Date().toISOString();
     return normCamp({
-      id: uid("c"), name: str(o.name).trim() || "Camp", location: str(o.location).trim(), tz: isTimeZone(o.tz) ? o.tz : DEFAULT_TZ,
+      id: uid("c"), name: str(o.name).trim() || "Camp", kind: o.kind || null, location: str(o.location).trim(), tz: isTimeZone(o.tz) ? o.tz : DEFAULT_TZ,
       start, end, notes: str(o.notes), dayWindow: clone(DEFAULT_WINDOW), facilities: o.preset === false ? [] : presetFacilities(),
       staff: [], players: [], groups: [], draft: { activities: [] }, published: null, created: now, updated: now
     });
@@ -661,7 +663,7 @@
 
   return {
     STORAGE_KEY, VERSION, DEFAULT_TZ, DEFAULT_WINDOW, CATEGORIES, catOf, ACTIVITY_CATALOGUE, FACILITY_TYPES, FLORIDA_PRESET, presetFacilities,
-    PRESET_GROUPS, GROUP_COLORS, COMMON_TZ, uid, clone, clamp, snap,
+    PRESET_GROUPS, GROUP_COLORS, COMMON_TZ, uid, clone, clamp, snap, uniq,
     isDate, addDays, daysBetween, dateRange, weekday, weekStart, fmtDate, fmtShort, fmtRange, fmtTime, fmtSpan, parseTime, toHHMM,
     isTimeZone, nowIn, tzAbbr, tzCity,
     emptyState, normalizeState, normCamp, loadState, saveState,

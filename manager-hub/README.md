@@ -103,6 +103,30 @@ Audit and priorities: [`UX-AUDIT.md`](UX-AUDIT.md).
   - Only the five affiliates' rosters exist in Manager Hub (no MLB or DSL data). Camp lists what is there and invents nothing.
 - Tests: `tests/dashboard.e2e.cjs`, `tests/camp-core.test.mjs`, `tests/camp.e2e.cjs`.
 
+## Manager Hub 3.0 — Spring Training (Nov 2026)
+
+Audit, architecture and workflows: [`ST-AUDIT.md`](ST-AUDIT.md).
+
+- **Where it lives.** Spring Training is a camp **type** inside the Complex workspace. The types are Spring Training, Instructional League, Offseason development and Camp / workouts. It is not a sixth affiliate.
+- **Camp tabs:** Today · Schedule · Players & Groups · Games · Setup.
+- **Code:**
+  - `apps/manager-hub/st/`:
+    - `st-core.js` — pure logic: games, plan/actual, summaries, lineups, workflow, merge
+    - `st-describe.js` — Describe the day reader
+    - `st-sync.js` — shared-store client
+    - `st.js` — UI, plugged into Camp through `CampUI.extend`
+    - `st.css`
+  - Server: `functions/apps/manager-hub/api/ops.js`, which stores versioned documents with an audit trail on the D1 binding `MH_AI_USAGE`.
+  - `interpret.js` gained a `camp` mode, under the same budget and fallback rules.
+- **Sharing:**
+  - A camp stays in the browser until a coordinator chooses **Share with staff**. After that every save goes to the server, the camp is re-read every 20 s, and conflicting writes are merged three ways. A true clash keeps the first-saved value and tells the other person.
+  - Coaches' lineup drafts and private notes never leave their browser.
+- **Roles:** names are self-reported ("Working as"). Set the secret `MH_COORDINATOR_CODE` to require it for approving, returning and publishing lineups and for publishing a shared schedule.
+- **Tests:**
+  - `node --test manager-hub/tests/st-core.test.mjs` — core, reader, store
+  - `node manager-hub/tests/st.e2e.cjs` — 94 checks: coordinator + two coaches + tablet + phone on one store, 160 fictional players
+  - `SHOTS=dir` writes screenshots.
+
 ## Describe Your Day
 
 The **✦ Assistant** button opens it. You describe the day in a few sentences ("10 AM stretch, 1 PM game. Team fundy, indy defense. 30-minute BP rounds and 30 minutes off pregame."), then:
