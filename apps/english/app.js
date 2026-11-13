@@ -382,8 +382,6 @@
         h("p.small", "Automatic feedback: ", status.ai && status.ai.active ? h("b", "available") : h("b", "not available — " + window.CPESpeech.unavailableReason(status.ai && status.ai.reason))),
         h("p.small", "Microphone consent: ", st.consent ? (st.consent.ok ? "given" : "declined") : "not asked yet", " ",
           st.consent ? h("button.linkbtn", { type: "button", onclick: () => { Store.update((s) => { s.consent = null; }); privacy(); } }, "Ask me again") : null)),
-      h("div.card", h("h2", "Sign out"), h("p.muted.small", "Leaves CP English on this device. Your progress stays saved here. — Tu progreso sigue guardado en este dispositivo."),
-        h("a.btn", { href: "access/" + "logout" }, "Sign out · Cerrar sesión")),
       h("div.card", h("h2", "Delete"),
         h("div.row",
           h("button.btn", { type: "button", onclick: () => { if (confirm("Delete your saved spoken answers and feedback?")) { Store.update((s) => { s.speaking = []; }); privacy(); } } }, `Delete speaking history (${st.speaking.length})`),

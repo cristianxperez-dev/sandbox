@@ -25,11 +25,7 @@ node english/tools/build.mjs           # fails if any audio is stale
 
 ## Access
 
-The whole app is behind the Sandbox access gate (`access-gate/apps.js`, entry `english`), because it handles voice recordings and paid AI calls.
-
-- **Required secret:** `ENGLISH_ACCESS_CODE`, in the Cloudflare Pages project (Production, and Preview if wanted).
-- Until it is set, `/apps/english/` answers **503**.
-- `/apps/english/access/status` shows what is configured. It never shows values.
+CP English is public: no access code (owner's decision, Nov 2026). Paid AI calls stay protected server-side (switches, same-origin check, rate limits, spending ceilings below). `GET /apps/english/api/status` reports whether feedback is available, never any value.
 
 ## AI feedback (off by default)
 
