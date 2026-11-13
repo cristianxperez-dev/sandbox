@@ -16,8 +16,14 @@
   --r: 3px; --tap: 48px;
 }
 @media (prefers-color-scheme: dark) {
-  :root { --bg: #252525; --surface: #313131; --sunken: #2B2B2B; --text: #F2EBDD; --muted: #C9BFAE; --mark: url('brand/cp-monogram-reversed.png'); --taupe-deep: #A28B77; --accent: #C98A88; --accent-strong: #E2A6A3; --accent-ink: #1C1A18;
-    --accent-wash: rgb(201 138 136 / 0.10); --line: rgb(238 231 218 / 0.14); --line-strong: rgb(238 231 218 / 0.30); --pos: #9CC3AF; --pos-wash: rgb(156 195 175 / 0.12); --neg: #E39B90; --neg-wash: rgb(227 155 144 / 0.10); }
+  :root { --bg: #252525; --surface: #2E2D2B; --sunken: #353331; --text: #F2EBDD; --muted: #C9BFAE; --mark: url('brand/cp-monogram-reversed.png'); --taupe-deep: #A28B77;
+    /* dark (brand guide: charcoal ground, cream actions, taupe labels — no bright accents) */
+    --accent: #E9DCC6; --accent-strong: #FFFFFF; --accent-ink: #252525; --accent-wash: rgb(242 235 221 / 0.08);
+    --line: rgb(242 235 221 / 0.14); --line-strong: rgb(242 235 221 / 0.30); --pos: #B4BFA8; --pos-wash: rgb(180 191 168 / 0.10); --neg: #D9A79E; --neg-wash: rgb(217 167 158 / 0.10); }
+  .kicker, .choice__sub { color: var(--taupe); }
+  .steps li.done .steps__n { background: var(--sunken); color: var(--text); }
+  .onb__segs span.on { background: var(--text); }
+  .fg--hl .fg__skin { fill: rgb(242 235 221 / 0.22); stroke: var(--text); } .fg__lbl--hl .fg__p { fill: var(--text); text-decoration: underline; }
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
