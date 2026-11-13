@@ -28,7 +28,7 @@ const setSpeed = (pg, sp) => pg.evaluate((sp) => { const s = JSON.parse(localSto
 
 async function run(name, ctxOpts) {
   console.log(name);
-  const b = await chromium.launch(); const ctx = await b.newContext(ctxOpts); const pg = await ctx.newPage();
+  const b = await chromium.launch({ args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] }); const ctx = await b.newContext(ctxOpts); const pg = await ctx.newPage();
   const errs = [], failed = [];
   pg.on("console", (m) => m.type() === "error" && errs.push(m.text())); pg.on("pageerror", (e) => errs.push(e.message));
   pg.on("requestfailed", (r) => failed.push(r.url()));

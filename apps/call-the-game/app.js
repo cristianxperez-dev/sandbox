@@ -45,6 +45,12 @@
     const X = mx(x), Y = mz(z), R = r || 22;
     return `<g class="glove ${cls || ""}" transform="translate(${X} ${Y})"><ellipse rx="${R}" ry="${R * 0.92}" class="glove__body"/><ellipse cx="${R * 0.8}" cy="${R * 0.2}" rx="${R * 0.27}" ry="${R * 0.5}" class="glove__thumb" transform="rotate(-20 ${R * 0.8} ${R * 0.2})"/><circle r="${Math.max(3, R * 0.16)}" class="glove__aim"/></g>`;
   }
+  /** the glove-target reticle — the same mark the 3D scene draws on the plate plane */
+  function reticleIcon(x, z, col, small) {
+    const X = mx(x), Y = mz(z), r = small ? 8 : 15, c = col || "#2a2622";
+    const ticks = [0, 90, 180, 270].map((a) => { const s = Math.sin((a * Math.PI) / 180), k = Math.cos((a * Math.PI) / 180); return `<line x1="${X + k * (r + 3)}" y1="${Y + s * (r + 3)}" x2="${X + k * (r + 10)}" y2="${Y + s * (r + 10)}"/>`; }).join("");
+    return `<g class="reticle" stroke="${c}"><circle cx="${X}" cy="${Y}" r="${r}"/>${small ? "" : ticks}<circle cx="${X}" cy="${Y}" r="2.5" fill="${c}" stroke="none"/></g>`;
+  }
   /** covariance ellipse (catcher x/z) for a miss model, k sigmas */
   function ellipse(M, k) {
     const sx = M.sdA, sz = M.sdz, cov = M.s * M.rho * sx * sz;
@@ -224,7 +230,7 @@
     const pad = $("#pad"); if (!pad) return;
     const b = C.batterOf(G.st), t = G.target, col = G.code ? C.PITCH_COLORS[G.code] : null;
     const recent = G.st.calls.filter((c) => c.batter.id === b.id).map((c) => `<circle cx="${mx(c.end.x)}" cy="${mz(c.end.z)}" r="7" fill="${C.PITCH_COLORS[c.code]}" class="pad__prev"/><text x="${mx(c.end.x)}" y="${mz(c.end.z) + 3.5}" class="pad__n">${c.count.balls + c.count.strikes + 1}</text>`).join("");
-    pad.innerHTML = svg(zoneBase(G.pitcher, { batter: b.hand }) + recent + (t ? gloveIcon(t.x, t.z, 24, col ? "glove--sel" : "") : ""), "zc--pad", "Glove target pad");
+    pad.innerHTML = svg(zoneBase(G.pitcher, { batter: b.hand }) + recent + (t ? reticleIcon(t.x, t.z, col) : ""), "zc--pad", "Glove target pad");
     if (col) pad.style.setProperty("--pc", col);
   }
   function syncGame() {
@@ -297,7 +303,7 @@
     const locCharts = p.arsenal.filter((a) => ev.byPitch[a.code]).map((a) => {
       const cs = st.calls.filter((c) => c.code === a.code), col = C.PITCH_COLORS[a.code];
       const marks = cs.map((c) => `<line class="rv__link" x1="${mx(c.target.x)}" y1="${mz(c.target.z)}" x2="${mx(c.end.x)}" y2="${mz(c.end.z)}"/>` +
-        `<path class="rv__opt" d="M${mx(c.eval.opt.x)} ${mz(c.eval.opt.z) - 8}l8 8l-8 8l-8 -8z"/>` + gloveIcon(c.target.x, c.target.z, 12, "glove--sm") + `<circle cx="${mx(c.end.x)}" cy="${mz(c.end.z)}" r="7" fill="${col}" class="rv__end"/>`).join("");
+        `<path class="rv__opt" d="M${mx(c.eval.opt.x)} ${mz(c.eval.opt.z) - 8}l8 8l-8 8l-8 -8z"/>` + reticleIcon(c.target.x, c.target.z, "#2a2622", true) + `<circle cx="${mx(c.end.x)}" cy="${mz(c.end.z)}" r="7" fill="${col}" class="rv__end"/>`).join("");
       const bp = ev.byPitch[a.code];
       return `<figure class="rv"><figcaption>${chip(a.code)} ${esc(C.PITCH_NAMES[a.code])} <span class="grade grade--${band(bp.grade)}">${bp.grade}</span><small>${bp.n} called</small></figcaption>${svg(zoneBase(p) + marks, "zc--rv", `${a.code} setups, actual locations and model-preferred setups`)}</figure>`;
     }).join("");
@@ -309,13 +315,13 @@
       <div class="fb"><div><h3>What you did well</h3>${list(ev.feedback.good, "Nothing stood out yet — a longer inning gives the grade more to work with.")}</div><div><h3>Opportunity</h3>${list(ev.feedback.opportunity, "No clear gaps in this inning.")}</div><div class="fb__key"><h3>Key takeaway</h3><p>${esc(ev.feedback.takeaway)}</p></div></div>
       <div class="replay"><canvas id="rscene" aria-label="Replay of the selected pitch"></canvas><p class="muted" id="rcap">Choose Replay on any pitch below.</p></div>
       <h2 class="h2">Planned vs actual usage</h2><div class="usplits">${usageBlock}</div>
-      <h2 class="h2">Glove targets by pitch <small>glove = your setup · dot = where it finished · ◆ = model-preferred setup (review only)</small></h2><div class="rvs">${locCharts}</div>
+      <h2 class="h2">Glove targets by pitch <small>ring = your setup · dot = where it finished · ◆ = model-preferred setup (review only)</small></h2><div class="rvs">${locCharts}</div>
       <h2 class="h2">Pitch by pitch</h2><ol class="plogs">${log}</ol>
       <div class="actions"><button class="btn btn--primary" id="retry" type="button">Retry inning <small>same hitters &amp; seed</small></button><button class="btn" id="new" type="button">New inning</button><a class="btn" href="#/">Change pitcher</a></div>
       <details class="weights"><summary>Grade weights</summary><label>Usage <input type="range" id="w" min="0" max="100" step="5" value="${wU}"> <output id="wout">${wU}% usage · ${100 - wU}% targets</output></label></details>
     </section>`;
     paint(app); app.focus(); window.scrollTo(0, 0);
-    const rs = window.CTGScene.create($("#rscene"), {});
+    const rs = window.CTGScene.create($("#rscene"), {}); G.rscene = rs;
     rs.set({ pitcher: p, batter: st.lineup[0], showZone: true });
     $$("[data-replay]").forEach((b) => b.addEventListener("click", async () => {
       const c = st.calls[+b.dataset.replay], bat = st.lineup.find((x) => x.id === c.batter.id);
@@ -345,5 +351,6 @@
     return `Target grade ${e.grade}. ${where} ${finish}; it actually finished ${missRel(c, s)}. In a ${ctx} vs ${c.batter.hand}HH the plan calls the ${C.PITCH_NAMES[c.code].toLowerCase()} about ${share}% of the time.`;
   }
 
+  window.CTGDebug = { scene: () => G.scene, replay: () => G.rscene, state: () => G.st };   // test hook (frame inspection)
   route();
 })();

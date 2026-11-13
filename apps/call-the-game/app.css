@@ -114,6 +114,7 @@ figcaption small { display: block; font-weight: 500; color: var(--graphite); }
 .zc__side { font: 600 13px var(--sans); fill: #6c665e; letter-spacing: .04em; }
 .zc__bat { fill: rgba(22, 32, 47, .08); }
 .zc__batl { font: 700 15px var(--mono); fill: rgba(22, 32, 47, .45); }
+.reticle { fill: none; stroke-width: 3; }
 .glove__body { fill: #6A3D20; stroke: #2a160b; stroke-width: 2; }
 .glove__thumb { fill: #7B4826; stroke: #2a160b; stroke-width: 1.5; }
 .glove__aim { fill: none; stroke: #FAF8F2; stroke-width: 2.5; }
