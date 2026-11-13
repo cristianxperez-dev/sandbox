@@ -1,0 +1,31 @@
+/* Reused unchanged from AGORA (cpbaseball-site, public/ephyra/apps/_shared/headshots.css @ f058159) — NMSBSBL keeps its own copy so it never depends on AGORA's deployment. */
+/* EPHYRA — shared player headshots (headshots.js). Used by AGORA and the Trade Deadline Board; an app may
+   size the box (width) and its container, nothing else. Fonts and colours fall back for apps with other tokens.
+   One 4:5 box everywhere. Uniform scaling only — never stretched.
+   .is-silo  MLB's transparent cut-out: no box background, so the head and shoulders sit directly on
+             the page (light or dark). A 2:3 cut-out fills the width, top-aligned like the photo and
+             raised by --shot-raise; a wider one (.is-wide — MLB's standard cut-out) is fitted to the
+             width with the shoulders on the bottom edge, then zoomed from its top by --silo-zoom and
+             lifted by --silo-lift (uniform scale, never stretched): MLB's template leaves headroom
+             above the cap (cap ≈ 23% and chin ≈ 66% down the box), so this puts the cap ≈ 10% from
+             the top and centres the face slightly high; --silo-nudge lifts it a further 6px. The box clips
+             the sides and bottom only (clip-path), so a cap lifted past the box top shows in the space
+             above it instead of being cut off; the outer shoulders are trimmed by the box.
+   .is-photo MLB's portrait on its grey backdrop (2:3): cover, raised by --shot-raise — the image
+             window moves down the photo, lifting the face; the cap keeps its headroom and only the
+             lower torso is trimmed.
+   Neither: the initials on warm off-white. The image stays invisible until it has loaded, so there is no
+   broken-image icon and no layout shift (the box keeps its size from the first paint). */
+.shot{--shot-raise:20%;position:relative;width:112px;aspect-ratio:4/5;height:auto;border-radius:2px;overflow:hidden;background:#ece6dc;display:grid;place-items:center;flex:none}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% var(--shot-raise);opacity:0}
+.shot.has-img img{opacity:1}
+.shot.has-img .shot__init{visibility:hidden}
+.shot.is-silo{background:transparent;border-radius:0}
+.shot.is-silo{--silo-zoom:1.25;--silo-lift:-19%;--silo-nudge:-6px;overflow:visible;clip-path:inset(-24px 0 0 0)}
+.shot.is-silo.is-wide img{object-fit:contain;object-position:50% 100%;transform-origin:50% 0;transform:translateY(var(--silo-lift)) translateY(var(--silo-nudge)) scale(var(--silo-zoom))}
+.shot__init{font-family:var(--serif,'Newsreader Variable','Iowan Old Style',Georgia,serif);font-size:38px;color:var(--muted,#5d5852);letter-spacing:.02em}
+/* smaller boxes keep the same framing; the nudge scales with the box */
+.shot.sm .shot__init{font-size:17px}
+.shot.xs{border-radius:1px}
+.shot.xs .shot__init{font-size:11px}
+.shot.xs.is-silo{--silo-nudge:-2px;clip-path:inset(-8px 0 0 0)}

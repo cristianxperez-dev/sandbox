@@ -95,6 +95,12 @@ function safeNext(app, v) {
   return s.startsWith(app.base) && canonicalPath(s.split(/[?#]/)[0]) === s.split(/[?#]/)[0] && !/[\\]|\/\//.test(s) ? s : app.base;
 }
 function accessPage(app, { next, error, status = 200 }) {
+  // an app may bring its own branded page (same form fields, same messages); it gets escaped values only
+  if (typeof app.accessPage === "function") {
+    const message = error === "wrong" ? "That code isn't right." : error === "locked" ? "Too many attempts. Try again in 15 minutes." : error === "config" ? "Access isn't configured yet." : error === "expired" ? "Your session ended. Enter the code again." : "";
+    const page = app.accessPage({ base: esc(app.base), action: esc(app.base + "access/login"), next: esc(next || app.base), message: esc(message), error: error || "", configured: error !== "config" });
+    return html(page.html, status, page.csp ? { "Content-Security-Policy": page.csp } : {});
+  }
   const msg = error === "wrong" ? "That code isn't right. Try again." : error === "locked" ? "Too many attempts. Try again in 15 minutes." : error === "config" ? "Access isn't configured yet." : error === "expired" ? "Your session ended. Enter the code again." : "";
   return html(`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(app.name)} — Access</title><meta name="robots" content="noindex">
@@ -175,7 +181,7 @@ export function createGate(apps, opts = {}) {
     // The access code in an X-MH-Access-Key header also admits a request — for smoke tests run through
     // an egress proxy that injects it (the tester never sees the code). Same constant-time check and
     // lockout as the login form; it grants nothing the code itself doesn't.
-    const headerKey = request.headers.get("X-MH-Access-Key");
+    const headerKey = app.headerKey ? request.headers.get("X-MH-Access-Key") : null;   // only apps that opt in
     if (!ok && headerKey) {
       const ip = request.headers.get("CF-Connecting-IP") || "unknown", id = `${app.id}|${ip}`;
       if (lockedFor(id, nowMs)) return new Response("Too many attempts", { status: 429, headers: PRIVATE });
@@ -193,7 +199,7 @@ export function createGate(apps, opts = {}) {
     const res = await next();
     const out = new Response(res.body, res);
     for (const [k, v] of Object.entries(PRIVATE)) out.headers.set(k, v);
-    if ((out.headers.get("Content-Type") || "").includes("text/html") && typeof HTMLRewriter !== "undefined") {
+    if (app.signoutLink !== false && (out.headers.get("Content-Type") || "").includes("text/html") && typeof HTMLRewriter !== "undefined") {
       return new HTMLRewriter().on("body", { element(el) {
         el.append(`<a href="${logoutPath}" class="sbx-signout" style="position:fixed;left:68px;bottom:24px;z-index:2147483000;font:500 12px/1 Inter,system-ui,sans-serif;color:#595552;background:rgba(252,249,243,.94);border:1px solid #E4DDD0;border-radius:999px;padding:6px 11px;text-decoration:none">Sign out</a>`, { html: true });
       } }).transform(out);

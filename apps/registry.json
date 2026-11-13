@@ -216,5 +216,22 @@
       "advance scouting",
       "game"
     ]
+  },
+  {
+    "id": "nmsbsbl",
+    "name": "NMSBSBL",
+    "description": "Pitching intelligence: MLB pitcher profiles, arsenals and an interactive break chart from public Statcast data.",
+    "discipline": "Baseball",
+    "status": "prototype",
+    "returnLink": false,
+    "logoBackground": "#0E1012",
+    "tags": [
+      "pitching",
+      "statcast",
+      "pitch movement",
+      "break chart",
+      "arsenal",
+      "pitcher profiles"
+    ]
   }
 ]

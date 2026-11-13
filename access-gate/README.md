@@ -18,9 +18,16 @@ outside a protected app pass straight through, so other apps are served exactly 
 | --- | --- | --- |
 | `SANDBOX_SESSION_SECRET` | Secret | Random, at least 32 characters, e.g. `openssl rand -base64 48`. Shared by every protected app. |
 | `MANAGER_HUB_ACCESS_CODE` | Secret | Manager Hub's code. |
+| `NMSBSBL_ACCESS_CODE` | Secret | NMSBSBL's code (`nmsbsbl/README.md`). |
 
 Set them for **Production and Preview**. Without them a protected app answers 503 (fails closed); other apps are unaffected.
 Changing a code signs out that app's users; changing `SANDBOX_SESSION_SECRET` signs out everyone. Never commit either.
+
+## Per-app options (`apps.js`)
+
+- `accessPage(fields)` — the app's own branded access screen. It gets escaped fields only and posts the same form. NMSBSBL uses this (`nmsbsbl-page.js`).
+- `signoutLink: false` — don't inject the floating Sign out link; the app has its own.
+- `headerKey: true` — also accept the code in `X-MH-Access-Key` for proxied smoke tests. Only Manager Hub opts in.
 
 ## How it behaves
 
