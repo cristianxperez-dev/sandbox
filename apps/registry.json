@@ -85,6 +85,7 @@
   },
   {
     "id": "baseball-iq",
+    "hidden": true,
     "name": "Baseball IQ",
     "description": "A game-show style film review: players watch a play, name what stands out, and teams compete for points.",
     "discipline": "Baseball",
@@ -134,6 +135,7 @@
   },
   {
     "id": "recollect",
+    "hidden": true,
     "name": "Recollect",
     "description": "A private memory bank to capture, organize, and recall your professional experiences, people, and lessons.",
     "discipline": "Productivity",
@@ -152,6 +154,7 @@
   },
   {
     "id": "replated-recipes",
+    "hidden": true,
     "name": "Replated Recipes",
     "description": "Restaurant-inspired dishes recreated for the home kitchen, each with a Simple and a Chef preparation mode.",
     "discipline": "Food & Wine",
