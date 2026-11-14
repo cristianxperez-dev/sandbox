@@ -20,7 +20,7 @@ const noOverflow = (p) => p.evaluate(() => document.documentElement.scrollWidth 
   let r = await p.goto(BASE);
   ok(r.ok() && /\/apps\/nmsbsbl\/access\//.test(p.url()), "1 · /apps/nmsbsbl/ resolves — signed out it lands on the access screen");
   const txt = await p.innerText("body");
-  ok(/NMSBSBL/.test(txt) && /PITCHING INTELLIGENCE|Pitching Intelligence/i.test(txt) && await p.isVisible("#code") && /continue/i.test(await p.innerText("button")), "2 · branded access screen: wordmark, subtitle, code input, Continue");
+  ok(/NMSBSBL/.test(txt) && /PITCHING\s+INTELLIGENCE/i.test(txt) && await p.isVisible("#code") && /continue/i.test(await p.innerText("button")), "2 · branded access screen: wordmark, subtitle, code input, Continue");
   ok(!(await p.content()).includes(S.env.NMSBSBL_ACCESS_CODE), "2 · the access code is nowhere in the page");
   await shot(p, "01-access");
   /* 6: direct profile URL and data endpoints need a session */
@@ -101,7 +101,7 @@ const noOverflow = (p) => p.evaluate(() => document.documentElement.scrollWidth 
   await p.click("[data-allon]"); await p.waitForTimeout(300);
   const total = await p.innerText("#bcSub");
   await p.click('[data-side="L"]'); await p.waitForTimeout(300);
-  ok((await p.innerText("#bcSub")) !== total && /vs LHH/.test(await p.innerText("#bcSub")), "11 · batter side filter (vs LHH) changes the selection");
+  ok((await p.innerText("#bcSub")) !== total && /vs LHH/i.test(await p.innerText("#bcSub")), "11 · batter side filter (vs LHH) changes the selection");
   await p.click('[data-side=""]'); await p.waitForTimeout(200);
   await p.click('[data-mode="averages"]'); await p.waitForTimeout(300);
   ok((await nPts()) === 0 && (await p.$$(".bc-avg")).length >= 4, "11 · aggregate view: averages only, no individual points");

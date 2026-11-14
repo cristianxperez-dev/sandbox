@@ -21,6 +21,24 @@ access-gate/nmsbsbl-page.js   the branded access screen
 nmsbsbl/tests/                core.test.mjs (unit), app.e2e.cjs (end to end), harness.cjs (local server: real gate + real functions)
 ```
 
+## Design system
+
+A light, editorial performance-brand look:
+- **Ground:** bone `#F4EFE6`.
+- **Accents:** cream, sand and taupe (`#E9DCC3`, `#C9B38E`, `#9C8F81`).
+- **Text:** ink `#141210`.
+- **Colour:** no bright colours in the interface. Colour is reserved for pitch types (AGORA's palette).
+
+**Type:**
+- Anton: condensed uppercase display.
+- Space Mono: labels, numbers and notes.
+- Space Grotesk: UI text.
+- Syncopate: the wide-tracked wordmark only.
+
+**Mark:** a sand ball with its seams, cut by one ink movement vector.
+
+Tokens live at the top of `apps/nmsbsbl/app.css`. The access screen (`access-gate/nmsbsbl-page.js`) uses the same values.
+
 ## Access code
 
 The app uses the Sandbox's existing per-app gate (`access-gate/`). Its entry in `access-gate/apps.js` has:

@@ -56,11 +56,12 @@
     state.profileKey = null; state.chart = null;
     document.title = "NMSBSBL — Pitchers";
     main.innerHTML = `<section class="dir">
-      <div class="dir-hero"><div><div class="eyebrow">Pitching Intelligence</div><h1 class="h1">Pitchers</h1></div>
+      <div class="dir-hero"><div class="eyebrow">Pitching Intelligence · Directory</div><h1 class="h1">Pitchers.</h1><div class="rule"></div>
+        <div class="dir-sub"><h2 class="h-sub">Arsenals · Movement · Release</h2><div class="count" aria-live="polite"></div></div></div>
         <div class="dir-tools">
           <label class="search"><span class="sr">Search pitchers</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" id="q" placeholder="Search name or team" autocomplete="off" value="${esc(state.dir.q)}"></label>
           <div class="seg" role="group" aria-label="Filter">${[["", "All"], ["R", "RHP"], ["L", "LHP"]].map(([v, l]) => `<button data-hand="${v}" aria-pressed="${state.dir.hand === v}">${l}</button>`).join("")}<span class="seg-sep"></span>${[["SP", "Starters"], ["RP", "Relievers"]].map(([v, l]) => `<button data-role="${v}" aria-pressed="${state.dir.role === v}">${l}</button>`).join("")}</div>
-        </div></div>
+        </div>
       <div class="grid" id="grid">${Array.from({ length: 8 }, () => `<div class="pc skel"><div class="pc-photo"></div><div class="pc-body"><i></i><i></i><i></i></div></div>`).join("")}</div>
     </section>`;
     let data;
@@ -73,10 +74,9 @@
       const shown = list.filter((p) => (!state.dir.hand || p.throws === state.dir.hand) && (!state.dir.role || role(p) === state.dir.role)
         && (!q || (p.name + " " + (p.team || "") + " " + (p.teamAbbr || "")).toLowerCase().includes(q)));
       const grid = main.querySelector("#grid"); if (!grid) return;
-      grid.innerHTML = shown.length ? shown.map((p) => cardHTML(p, role(p), data.season)).join("") : `<p class="none">No pitchers match “${esc(state.dir.q)}”.</p>`;
-      const c = main.querySelector(".count"); if (c) c.textContent = `${shown.length} of ${list.length}`;
+      grid.innerHTML = shown.length ? shown.map((p) => cardHTML(p, role(p), data.season)).join("") : `<div class="none"><b>No match.</b><span>No pitchers match “${esc(state.dir.q)}”.</span></div>`;
+      const c = main.querySelector(".count"); if (c) c.textContent = `${shown.length} of ${list.length} pitchers · ${data.season} MLB`;
     };
-    main.querySelector(".dir-hero h1").insertAdjacentHTML("afterend", `<div class="count" aria-live="polite"></div>`);
     draw();
     main.querySelector("#q").addEventListener("input", (e) => { state.dir.q = e.target.value; draw(); });
     main.querySelectorAll("[data-hand]").forEach((b) => b.addEventListener("click", () => { state.dir.hand = b.dataset.hand; main.querySelectorAll("[data-hand]").forEach((x) => x.setAttribute("aria-pressed", x === b)); draw(); }));
@@ -103,7 +103,7 @@
     }
     state.profileKey = key;
     state.ars = { mode: "pitches", side: "", hidden: new Set(), focus: null, spread: true };
-    main.innerHTML = `<div class="prof"><div class="hero skel"><div class="hero-in"><div class="hero-photo"></div><div class="hero-id"><i></i><i></i><i></i></div></div></div><div class="loading">Loading pitcher…</div></div>`;
+    main.innerHTML = `<div class="prof"><div class="hero skel"><div class="hero-in"><div class="hero-photo"></div><div class="hero-id"><i></i><i></i><i></i></div></div></div><div class="loading"><span>Loading pitcher</span><i></i></div></div>`;
     return renderProfile(id, tab, seasonQ, false);
   }
   async function renderProfile(id, tab, seasonQ, inPlace) {
@@ -118,7 +118,7 @@
     if (!inPlace || !main.querySelector(".hero:not(.skel)")) {
       main.innerHTML = `<div class="prof">
         <section class="hero"><div class="hero-in">
-          <div class="hero-photo"><span class="hero-team" aria-hidden="true">${esc(p.teamAbbr || "")}</span>${HS.html(p.id, p.name, { size: "lg", lazy: false })}</div>
+          <div class="hero-photo">${HS.html(p.id, p.name, { size: "lg", lazy: false })}</div>
           <div class="hero-id">
             <a class="back" href="#/">← Pitchers</a>
             <div class="eyebrow">${esc(p.team || "")}${p.number ? ` · #${esc(p.number)}` : ""}</div>
@@ -138,12 +138,12 @@
     main.querySelector("#ageFact").innerHTML = age ? `Age <b>${age}</b>${season < YEAR ? ` <small>(${season} season)</small>` : ""}` : "";
     main.querySelector("#heroLine").innerHTML = line ? heroLineHTML(line, season) : `<span class="muted">No ${season} MLB line</span>`;
     const body = main.querySelector("#tabBody");
-    body.innerHTML = `<div class="loading">Loading ${season} pitches…</div>`;
+    body.innerHTML = `<div class="loading"><span>Loading ${season} pitches</span><i></i></div>`;
     let px;
     try { px = await getPitches(p.id, season); }
     catch (e) { if (e.message === "signed-out") return; body.innerHTML = errorHTML(`${season} Statcast data couldn't load.`, e.message); return; }
     if (state.profileKey && !state.profileKey.startsWith(p.id + "|")) return;   // navigated away meanwhile
-    if (!px.pitches.length) { body.innerHTML = `<div class="err-box"><b>No tracked ${season} MLB pitches.</b><span>Choose another season.</span></div>`; return; }
+    if (!px.pitches.length) { body.innerHTML = `<div class="err-box empty"><b>No tracked ${season} MLB pitches.</b><span>Choose another season.</span></div>`; return; }
     const ctx = { p, d, line, season, pitches: px.pitches, stale: px.stale };
     if (tab === "arsenal") renderArsenal(body, ctx); else renderOverview(body, ctx);
   }
